@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_preparedness_transmission__hybrid_reading",
+    "measurement_id_prefix": "prep_hybrid",
+    "story_uid": "ffc1ec9a-1102-43de-b129-7e71488ffd85",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Preparedness Transmission Stratification: Engineering Competence vs. Coordination Decay",
+    "topic_domain": "disaster_risk_management/institutional_memory/civil_defense",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "engineering_infrastructure_maintainers",
+      "formal_inspection_agencies"
+    ],
+    "victims": [
+      "civilian_evacuation_coordination",
+      "cross_institutional_communication",
+      "surge_capacity_activation"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) — Structurally trapped in the coordination gap. Infrastructure performs (dams hold, shelters exist) but evacuation communication fails under actual stress. No exit from this geographic zone or social position. Maximum extraction of risk: civilians bear full catastrophic cost of coordination failure while the constraint extracts value from appearing prepared."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emergency Management Practitioners",
+      "comment": "PERSPECTIVE 2: EMERGENCY MANAGEMENT PRACTITIONERS (TANGLED ROPE) — Constrained by hierarchical authority and resource allocation but also benefit from the coordination framework during actual deployment. Experience both the genuine coordination function (protocols exist, trained cadre exists) and the extraction (knowledge gaps create liability, career risk when drills reveal brittleness, resource competition with engineering infrastructure)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Engineering Infrastructure Authority",
+      "comment": "PERSPECTIVE 3: ENGINEERING INFRASTRUCTURE AUTHORITY (ROPE) — Net beneficiary. Experiences the constraint as pure coordination: their infrastructure is maintained, validated through inspection, and insulated from operational coordination failure by the categorical distinction between 'physical system' and 'coordination system'. They benefit from the institutional prestige of working infrastructure while bearing no responsibility for evacuation cascade failures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Memory Holders",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL MEMORY HOLDERS / SENIOR PRACTITIONERS (TANGLED ROPE) — Organized but constrained by succession. They possess the tacit knowledge of coordination under stress and benefit from formal legitimacy. But they face extraction: their knowledge decays with retirement, institutional structures don't preserve operational context, and junior practitioners face perverse incentives (drill performance vs. real-world readiness are decoupled). Organized enough to see the decay but constrained by inability to enforce knowledge transmission across generational boundary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Formal Inspection and Drill Apparatus",
+      "comment": "PERSPECTIVE 5: FORMAL INSPECTION AND DRILL APPARATUS (PITON) — Persists through institutional inertia despite degraded operational function. Drills pass because they are designed to be passable; inspections validate infrastructure that functions; certification is issued. The theater (scheduled exercises, checklist compliance, after-action reports) continues at high ratio (0.64) while the actual operational knowledge transmission mechanism (real-world problem-solving under uncertainty, cross-institutional coordination under resource constraint) has atrophied. The apparatus maintains legitimacy through performance of process, not through actual preparedness validation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Candidate)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN / FALSE SUMMIT CANDIDATE) — At civilizational timescale, there is a tempting mountain view: 'Complex systems always have coordination lags' and 'Tacit knowledge is always harder to transmit than physical specifications'. This naturalizes the stratification as an inherent limit to institutional memory. However, the structural data reveals beneficiaries (engineering authorities) and victims (civilian coordination) whose interests are asymmetrically aligned with the decay pattern. The false summit flags: the stratification is not an immutable property of disaster response systems but a contingent institutional arrangement where engineering prestige and resources are decoupled from coordination system validation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tacit_vs_codified_transmission",
+      "question": "Is the coordination knowledge decay due to tacit knowledge transmission limits (inherent property of institutional memory) or to deliberate institutional choices that insulate engineering from coordination accountability?",
+      "resolution_mechanism": "Comparative analysis: systems that mandate joint engineering-coordination drills vs. systems that separate them; measurement of coordination failure rates as function of training integration; post-disaster analysis of whether coordination gaps correlate with infrastructure design or training architecture decisions.",
+      "impact": "If inherent: mountain or rope reading dominates (coordination lag is natural). If deliberate: tangled_rope or snare reading dominates (stratification is extraction mechanism). Classification outcome depends entirely on this omega's resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coordination decay is structural or institutional choice"
+    },
+    {
+      "id": "engineering_infrastructure_insulation",
+      "question": "Does maintaining separate accountability and training for engineering vs. coordination systems reflect genuine technical decoupling (different experts, different failure modes) or institutional insulation (engineering prestige and resources protected from coordination performance accountability)?",
+      "resolution_mechanism": "Design analysis of actual disaster response systems; examination of whether coordination failures trigger engineering re-evaluation; resource allocation tracking for infrastructure maintenance vs. coordination training over 20+ year cycles; post-disaster official investigations identifying whether coordination-layer fixes trigger infrastructure redesign.",
+      "impact": "If decoupling is technical: engineering extraction is coordination cost (rope reading). If insulation is institutional: the stratification enables engineering to maintain institutional status while coordination bears risk (tangled_rope to snare reading).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether engineering-coordination separation is technical necessity or institutional insulation"
+    },
+    {
+      "id": "drill_operationality_coupling",
+      "question": "Do drills that pass formal inspection criteria actually validate the coordination knowledge required for real disaster response, or do they validate only the ability to perform scripted exercises?",
+      "resolution_mechanism": "Comparison of drill performance (success rates on scheduled exercises with known parameters) vs. real disaster performance (actual evacuation completeness, communication reliability, surge capacity activation) in same jurisdiction; identification of failures that occurred despite passing pre-disaster drills.",
+      "impact": "If coupled: drills are live knowledge validation (competence reading, rope). If decoupled: drills are theater (husk reading, piton). Hybrid reading occupies the middle ground: drills validate infrastructure but not coordination, creating false confidence in overall preparedness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal drills validate actual disaster response capability"
+    },
+    {
+      "id": "successor_generation_tacit_knowledge_loss",
+      "question": "What proportion of operational knowledge degradation is due to unreplaceable tacit knowledge lost with retiring practitioners (inherent transmission limit) vs. institutional failure to codify or transfer that knowledge (institutional choice)?",
+      "resolution_mechanism": "Oral history and institutional memory interviews; comparison of knowledge codification efforts (training manuals, decision trees, scenario libraries) between high-performing and low-performing coordination systems; measurement of time-to-competence for new practitioners as function of mentorship and codification intensity.",
+      "impact": "If inherent: preparedness transmission of coordination knowledge is necessarily stratified (mountain or rope reading accommodates it). If institutional choice: the decay is extractive insulation mechanism (tangled_rope to snare reading becomes dominant).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tacit knowledge loss as inherent vs. institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Preparedness transmission in civil defense systems exhibits a critical stratification: engineering infrastructure competence remains validated through regular inspection and maintenance (dams function, shelters are structurally sound, communication equipment is calibrated), but civilian coordination knowledge — evacuation procedures, inter-agency communication under stress, surge capacity activation protocols — has decayed over generational timescales. This constraint is ONE READING of a contested kernel: the preparedness_transmission kernel itself (the foundational claim that civil defense institutions maintain disaster response capacity through documented protocols and regular validation). The hybrid reading, instantiated here, maintains that this kernel is partially realized: the engineering layer is live and validated, but the coordination layer has become hollow. This reading coexists with two siblings: the competence reading (drills and inspections ARE live exercised knowledge) and the husk reading (the entire apparatus is performative memorial). The hybrid reading's structural signature is that infrastructure performs as designed but evacuation/coordination fails under stress — the D5 break exists in the coordination layer, not the physical layer. This creates the extractive pattern: civilians bear catastrophic risk while engineering authorities benefit from institutional prestige, and the asymmetry is obscured by the visible success of physical systems.",
+    "key_agents": [
+      "Engineering Infrastructure Authority: Primary beneficiary (institutional/arbitrage) — infrastructure insulated from coordination accountability; maintains institutional prestige through visible competence.",
+      "Civilian Population: Primary victim (powerless/trapped) — structurally trapped in region; bears catastrophic risk from coordination failure while constraint extracts value from appearing prepared.",
+      "Emergency Management Practitioners: Secondary actor (moderate/constrained) — experience both genuine coordination function and extraction through knowledge gaps and liability.",
+      "Institutional Memory Holders / Senior Practitioners: Organized constraint bearer (organized/constrained) — possess tacit knowledge but unable to enforce transmission across generational boundary.",
+      "Formal Inspection and Drill Apparatus: Institutional actor (institutional/arbitrage) — maintains appearance of validation through process theater; passes because designed to be passable.",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional choices (separate training, distinct accountability) as inherent limits of disaster response systems."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The hybrid reading's extractiveness reflects that the engineering infrastructure genuinely functions (lowering extraction vs. pure snare) but the coordination system fails under stress (higher extraction than rope). The measurement trajectory (0.18 → 0.28 → 0.38) shows extraction accumulating as the older generation with tacit coordination knowledge retires and is not replaced. Suppression (0.58): Moderate-high and rising. Barriers to coordination knowledge transmission include: hierarchical institutional structures that don't preserve problem-solving context, separation of engineering and coordination training (personnel move between roles without cross-training), career incentives favoring formal certification over real-world learning, and resource concentration on infrastructure maintenance rather than coordination system validation. The trajectory (0.38 → 0.48 → 0.58) reflects increasing institutional lock-in as generations turn over and codification fails. Theater ratio (0.64): Moderate-high. Drills pass because they are designed to be passable; exercises use known parameters; after-action reports document compliance. The coordination knowledge tested in these drills (scripted evacuation routes, pre-assigned roles) is not the same as operational knowledge (problem-solving under uncertainty, real-time inter-agency coordination with resource constraints). The theater ratio rises (0.42 → 0.53 → 0.64) as the inspection apparatus becomes increasingly performative and decoupled from real disaster validation.",
+    "directionality_logic": "Directionality derivation follows from beneficiary/victim declarations and exit options. Engineering infrastructure maintainers are beneficiaries with arbitrage-level exit (institutional power, can relocate roles, infrastructure investment is portable). Their derived d ≈ 0.15 produces f(d) ≈ -0.01, making their effective extraction negative (they subsidize the system). Formal inspection agencies are beneficiaries with arbitrage exit (institutional); same d derivation. Civilian evacuation coordination is a victim with trapped exit (powerless, geographic and economic dependence); d ≈ 0.92, f(d) ≈ 1.42, maximum effective extraction. Cross-institutional communication is a victim with constrained exit (moderate power — agencies exist but lack horizontal coordination mechanisms); d ≈ 0.68, f(d) ≈ 1.02. Surge capacity activation is a victim with trapped exit (depends on prior knowledge transfer that has decayed); d ≈ 0.88, f(d) ≈ 1.35. No directionality overrides needed — the structural data produces coherent perspectival gap.",
+    "perspectival_gap": "The engineering authority and civilian population perceive the same constraint as fundamentally different types. Engineering sees infrastructure coordination working well (rope: drills pass, inspections validate, systems function). Civilians see catastrophic exposure from coordination failure (snare: trapped in region, no exit from evacuation lag, bearing full risk). Emergency management practitioners occupy the diagnostic middle ground (tangled_rope): they experience both the coordination function (protocols, training, formal authority) and the extraction (knowledge gaps, succession failures, performance pressure). The formal inspection apparatus sees its own process as validated (piton: maintains legitimacy through theater). Senior practitioners see the decay clearly but constrained by generational turnover (tangled_rope: organized but constrained). The analytical observer at civilizational scale risks naturalizing this as an inherent property of disaster response systems (mountain view: coordination lags are always harder to maintain than physical infrastructure) — but this naturalizes a contingent institutional choice (separate training systems, decoupled accountability) as an inherent limit.",
+    "kernel_context": "This constraint instantiates the 'hybrid reading' of the preparedness_transmission kernel. The kernel is the foundational claim: civil defense institutions maintain societal capacity to respond to disasters through documented protocols, regular drills, and formal inspections. The kernel exists as a fixed institutional text (national emergency management statutes, civil defense regulations, disaster response procedures manuals). The three readings of this kernel produce three different constraint stories, each with its own ε and classification: (1) COMPETENCE READING (ε=0.22, Rope): Drills and inspections ARE live exercised knowledge — repeated practice under controlled variation validates capability each generation. This reading emphasizes that the coordination function works because it is continuously re-validated through participation. (2) HUSK READING (ε=0.52, Snare): The apparatus persists as pure memorial ritual — drills are performed but operational knowledge has hollowed out entirely. This reading emphasizes that the constraint is extractive: civilians bear risk while institutions perform ceremony. (3) HYBRID READING (ε=0.38, Tangled Rope) — THIS READING: Physical infrastructure competence remains high and validated; civilian coordination knowledge has decayed. The constraint is partially realized: the engineering layer is live coordination, the coordination layer is extractive performance. The hybrid reading coexists with its siblings — different parties hold different readings within the same institutional framework. Engineering authorities tend toward the competence reading (because their drills pass). Civilians tend toward the husk reading (because coordination fails under stress). Emergency management practitioners and institutional memory holders occupy the hybrid reading (they see both the validated infrastructure and the decaying coordination). The three readings remain live in public discourse without foreclosing each other: all three are empirically defensible depending on which metrics (infrastructure performance vs. coordination performance) are emphasized.",
+    "mandatrophy_analysis": "The hybrid reading resolves the mandatrophy by stratifying preparedness across layers. The competence reading emphasizes repeated validation through drills — coordination knowledge is exercised. The husk reading emphasizes that drills are theater — knowledge has decayed. The hybrid reading specifies WHERE the boundary lies: engineering layer is competence-reading (live, validated), coordination layer is husk-reading (hollow, performative). This is not contradictory — it is a structural statement about institutional asymmetry. The mandatrophy is resolved by recognizing that 'preparedness' is not a monolithic property but a stratified one. The constraint prevents uniform assessment; instead, it requires perspectival measurement: ask whether infrastructure functions (engineering: yes), and ask whether civilian coordination works under stress (coordination: no). The tangled_rope classification reflects this mixture: genuine coordination exists (protocols, training) alongside genuine extraction (knowledge decay, risk asymmetry, institutional insulation)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__competence_reading",
+      "preparedness_transmission__husk_reading"
+    ],
+    "dual_formulation_note": "The preparedness_transmission kernel has three reading-based decompositions. The hybrid reading is the middle position: engineering layer remains competent (supporting competence_reading for physical systems), but coordination layer is hollow (supporting husk_reading for evacuation/communication). The three constraint stories share the same kernel but have different ε values (0.22, 0.52, 0.38) and different perspectival distributions because they emphasize different measurement domains (infrastructure performance, drill realism, cross-institutional coordination). All three remain live positions in disaster management discourse."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_transmission__competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_transmission__husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_layer_stratification_empirically_real",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_insulation_enables_stratification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "integrated_disaster_response_capability",
+    "drift_state": {
+      "moment": "contemporary_post_generational_transition",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}
