@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__deterrence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_state_killing_legitimacy__deterrence_reading",
+    "measurement_id_prefix": "state_kill_det",
+    "story_uid": "4fa33e34-8011-4e42-b63a-bd38fc32d2a3"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Execution Justified as Deterrent Signal",
+    "topic_domain": "criminal_justice/political_philosophy/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_future_victims",
+      "state_legitimacy_via_deterrence"
+    ],
+    "victims": [
+      "executed_offender",
+      "condemned_offender_family"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Condemned Offender",
+      "comment": "PERSPECTIVE 1: THE CONDEMNED OFFENDER (SNARE) — Faces irreversible extraction (death) justified as instrumental means to deter future actors. No exit, no negotiation, no appeal to desert or due process can alter the execution decision once the deterrence logic is activated. Maximum suppression and coercive overhead with minimal coordination function from the offender's perspective. The offender is pure instrumentality."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Offender's Family",
+      "comment": "PERSPECTIVE 2: THE OFFENDER'S FAMILY (SNARE) — Bears collateral extraction through grief, social stigma, and loss of economic support. No exit from the status of 'family of executed murderer.' Suppression operates through social shame and institutional indifference to family welfare. Trapped and powerless in their relationship to state killing legitimacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Potential Future Victims",
+      "comment": "PERSPECTIVE 3: POTENTIAL FUTURE VICTIMS (ROPE) — Benefit from deterrence logic if execution actually prevents murders. Constrained by inability to know whether deterrence works or whether the condemned would have killed anyway. Generational time horizon: deterrence benefit applies to future cohorts who will not be murdered because of fear of execution. No individual victim can verify the counterfactual. Pure coordination function: the state executes to protect the vulnerable through rational signal, not to extract from them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State (Executing Authority)",
+      "comment": "PERSPECTIVE 4: THE STATE EXECUTING AUTHORITY (TANGLED ROPE) — Combines coordination function (deterring murder through credible threat) with institutional extraction (consolidating state monopoly on violence, demonstrating power, controlling the discourse on legitimate killing). The state benefits from deterrence logic regardless of whether deterrence actually works—the performative demonstration of capacity to kill authorizes the state's claim to legitimate violence. Arbitrage exit: state can choose to execute or not execute; maintains leverage. Active enforcement required to maintain the deterrence signal's credibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legal/Philosophical Tradition",
+      "comment": "PERSPECTIVE 5: THE LEGAL/PHILOSOPHICAL TRADITION (PITON) — Deterrence theory persists as a legitimating frame for capital punishment despite empirical contestation. Meta-analyses show no robust deterrent effect, yet deterrence rhetoric maintains institutional investment in execution as rational policy. Theater ratio high: the deterrence justification is maintained through institutional inertia and selective citation of supportive studies. The tradition has become decoupled from its empirical base but persists because the authority structure (legislatures, judiciaries) depends on deterrence framing to authorize killing. Piton classification reflects the degradation of epistemic function while the institution persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Inevitable Tradeoff View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / INEVITABLE TRADEOFF VIEW (MOUNTAIN) — From a civilizational/universal perspective, the deterrence reading appears to encode an immutable tradeoff between individual sacrifice and collective welfare: some members of society must be instrumentalized as means to social ends, and this is an irreducible feature of rational governance under conditions of imperfect information. The logic appears natural and unchangeable—a law of rational choice. However, this perspective naturalizes what is actually a contingent decision about what counts as a legitimate use of state power. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrence_empirical_efficacy",
+      "question": "Does capital punishment actually deter murder at rates significantly above zero? Do executed offenders have measurably lower recidivism (counterfactually) than imprisoned offenders?",
+      "resolution_mechanism": "Meta-analysis of comparative criminology studies; longitudinal murder-rate data across jurisdictions with and without capital punishment, controlling for socioeconomic factors; studies of marginal deterrence (incremental effect of execution vs. long imprisonment)",
+      "impact": "If no measurable deterrent effect: deterrence reading collapses into pure extraction (snare reclassifies from all perspectives except state); coordination function evaporates; ε rises to 0.72+. If measurable effect exists: deterrence reading stabilizes; coordination function is real; ε remains moderate (0.45–0.55).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical efficacy of capital punishment as crime deterrent"
+    },
+    {
+      "id": "alternative_deterrence_mechanisms",
+      "question": "Could equivalent or superior deterrence be achieved through long-term imprisonment (life without parole) without execution? What is the marginal deterrent effect of death penalty over permanent incapacitation?",
+      "resolution_mechanism": "Comparative analysis of murder rates in death-penalty vs. life-imprisonment jurisdictions; studies of offender decision-making under different sentence structures; economic modeling of rational actor response to different penalty regimes",
+      "impact": "If equivalent deterrence available via imprisonment: execution becomes unnecessary means to coordination function; reclassifies as unjustified extraction (snare); undermines the deterrence reading's legitimacy claim. If execution has marginal deterrent advantage: coordination function justified; deterrence reading stabilizes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital punishment provides deterrence marginal to life imprisonment"
+    },
+    {
+      "id": "rationality_of_condemned_decision_maker",
+      "question": "Do offenders who commit murder-qualifying crimes (capital murder) make rational expected-utility calculations that would be affected by knowledge of execution risk? Or are capital crimes predominantly committed under passion, intoxication, mental illness, or cognitive incapacity that prevents rational response to deterrent signals?",
+      "resolution_mechanism": "Psychological autopsies of capital murders; analysis of offender decision-making processes in solved murders; empirical studies of whether rational actors actually respond to marginal changes in penalty severity",
+      "impact": "If offenders are predominantly non-rational at time of crime: deterrence logic fails at its core assumption; the condemned is being killed not to prevent future murders by rational actors but to satisfy retributive or institutional needs. Reclassifies from 'coordination with extraction' to pure extraction (snare). If rational decision-making predominates: deterrence logic valid; tangled rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rationality assumptions about offenders subject to capital punishment"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the deterrence reading a live normative commitment that remains holdable in contemporary governance frameworks, or has it been superseded by evidence and institutional change?",
+      "resolution_mechanism": "Tracking of legislative and judicial reliance on deterrence arguments; shifts in expert consensus in criminology and penology; international law developments (EU abolition of capital punishment, UN moratorium advocacy); persistence or decline of deterrence citations in appellate opinions",
+      "impact": "If deterrence reading is overridden in its own tradition (legal systems abandoning deterrence rationale while maintaining execution, or abandoning execution altogether): reading_status shifts to 'overridden' in cs_structure.axioms. If deterrence remains live across major legal traditions: status remains 'holdable' and deterrence reading persists as a structural pole in the kernel contest.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Holding status of deterrence reading within evolving legal traditions"
+    },
+    {
+      "id": "alternative_framing_as_retributive",
+      "question": "When courts invoke deterrence language, are they actually applying deterrence logic or using deterrence as rhetorical cover for retributive judgment (just deserts)?",
+      "resolution_mechanism": "Discourse analysis of judicial opinions invoking deterrence; comparison of deterrence-language opinions with retributive-language opinions on sentencing patterns; interview studies of judges on reasoning processes",
+      "impact": "If deterrence language is rhetorical cover for retribution: the deterrence reading is functionally piton-like (theater_ratio high); the actual constraint operating is retributive (different reading, different constraint file). Reclassifies the deterrence reading itself from tangled_rope to piton. If deterrence logic is genuinely applied: deterrence reading has its own structural integrity independent of retributive reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deterrence invocations mask retributive reasoning"
+    },
+    {
+      "id": "innocent_execution_risk",
+      "question": "What is the empirical risk that execution-eligible offenders are later exonerated through DNA evidence, witness recantation, or prosecutorial error? Does this risk change the deterrence calculation (by introducing uncertainty about guilt into the deterrent signal)?",
+      "resolution_mechanism": "Data on exonerations in death-penalty cases; statistical models of false-conviction risk in capital cases; analysis of whether publics update deterrence beliefs based on exoneration events",
+      "impact": "High innocent execution risk undermines the rationality assumption: the deterrent signal becomes unreliable (executions may not be of actual murderers), and rational actors cannot trust the punishment-crime linkage. The coordination function degrades (deterrence to whom, through what signal?). Theater_ratio rises; ε may rise to snare territory.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Risk of executing innocent people and impact on deterrence signal credibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "state_kill_det_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "state_kill_det_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "state_kill_det_extract_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "state_kill_det_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5,
+      "id_override": "state_kill_det_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55,
+      "id_override": "state_kill_det_theater_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The deterrence reading of state killing legitimacy justifies execution as a rational instrument to prevent future murders by signaling to potential offenders that capital crimes will result in death. This constraint instantiates one pole of a contested kernel about the legitimacy of state-imposed capital punishment. The kernel—whether and under what conditions the state may kill—admits of three major readings: the deterrence reading (execution justified by prospective crime prevention), the retributive reading (execution justified by proportional desert and offender moral status), and the abolition reading (execution categorically impermissible regardless of consequences or desert). This story generates ONLY the deterrence reading as a structurally independent constraint with its own empirical assumptions, beneficiary/victim structure, and legitimacy claims. The deterrence reading instruments the condemned offender as a means to a social end (protecting potential future victims) and justifies extraction (death) through rational calculation. The extractiveness value (0.48) reflects moderate empirical contestation: meta-analyses show weak or absent deterrent effects in most jurisdictions, yet deterrence rhetoric persists in legislative and judicial discourse, suggesting theater_ratio rising over time (0.42→0.55) as the empirical basis erodes and institutional inertia maintains the frame.",
+    "key_agents": [
+      "Condemned Offender: Primary victim (powerless/trapped) — instrumentalized as means to deterrence signal; bears absolute extraction (death); no exit or appeal available once deterrence logic activated",
+      "Potential Future Victims: Primary beneficiary (moderate/constrained) — benefit from hypothetical deterrence effect; cannot verify counterfactual (would they have been murdered without deterrent threat?); generational horizon means benefit is abstract and distributed",
+      "State Executing Authority: Secondary beneficiary (institutional/arbitrage) — maintains monopoly on legitimate violence; consolidates state power through execution authority; benefits from deterrence frame regardless of empirical efficacy",
+      "Offender's Family: Secondary victim (powerless/trapped) — collateral bearers of extraction through grief, stigma, loss of economic support; no exit from status of family of executed person",
+      "Legal Tradition (Courts, Legislatures): Institutional actor (institutional/arbitrage) — maintains deterrence rhetoric in sentencing justifications despite empirical contestation; theater_ratio high and rising as evidence erodes",
+      "Criminological/Penological Community: Analytical observer (analytical/analytical) — produces meta-analyses showing weak deterrent effects; institutional incentives not aligned with accepting findings (legislatures ignore; media selectively cites supportive older studies)"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate, reflecting empirical contestation. The deterrence reading justifies execution as coordination (protecting future victims) with instrumental extraction (using condemned as signal). If deterrence empirically works, the coordination function is real and ε ≈ 0.45 is defensible. If deterrence fails (as meta-analyses suggest), the coordination function evaporates and ε should rise toward snare territory (0.65+). At 0.48, the score reflects the actual institutional state: deterrence is invoked in ~95% of death-penalty jurisdictions' judicial discourse, yet criminological consensus shows negligible deterrent effect. This gap between rhetoric and evidence places extractiveness in the high-contention zone. Suppression (0.62): High. The condemned has no exit (trapped), no alternative, no appeal available once death sentence is rendered. The deterrence logic operates precisely by removing alternatives—the offender must die to send the signal, so no negotiation or substitute punishment is permitted. Suppression is structural and irreducible from the condemned's perspective. Theater ratio (0.55): Moderate-high and rising. Courts invoke deterrence arguments in sentencing but increasingly rely on citations to studies that are outdated or methodologically criticized. The performance of rational deterrence justification persists despite the empirical base eroding. Rising trajectory (0.42→0.55) reflects growing disconnect between discourse (deterrence works) and evidence (negligible effect). Claimed type: Tangled Rope. Genuine coordination function (protecting future victims) exists as a stated rationale, alongside asymmetric extraction (condemned is killed, beneficiaries are protected via signal). Active enforcement required (executions must actually occur to maintain the signal's credibility). Beneficiaries and victims are distinct groups. However, empirical contestation means the coordination may be partially or wholly illusory, placing the constraint at the rope/snare boundary.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence on a single structural phenomenon. The condemned sees pure extraction (Snare)—they are being killed for instrumental reasons unrelated to their desert or agency. The potential future victims see pure coordination (Rope)—the state is protecting them through rational deterrent threat. The state sees mixed coordination and extraction (Tangled Rope)—legitimizing killing power while protecting citizens. The legal tradition sees its own degraded ritual (Piton)—deterrence is invoked but empirically unsupported; the performance persists through institutional inertia. The analytical observer risks seeing an immutable rationality constraint (Mountain)—as if the tradeoff between individual sacrifice and collective safety is an irreducible feature of governance. The perspectival gap reveals how the same structural arrangement—state killing justified by deterrent effect—is experienced as snare by the victim, rope by the beneficiary, and tangled rope by the authority.",
+    "directionality_logic": "Directionality (d) represents each agent's structural relationship to the deterrence constraint. The condemned offender has d ≈ 0.95 (full target of extraction); the state has d ≈ 0.10 (beneficiary with arbitrage options); potential future victims have d ≈ 0.50 (symmetric: they benefit from deterrence but cannot guarantee it works). The f(d) sigmoid applies these values to produce experienced extractiveness. The condemned with d=0.95 experiences f(d) ≈ 1.42, amplifying the base extractiveness of 0.48 to effective χ ≈ 0.68 (snare territory). The state with d=0.10 experiences f(d) ≈ -0.01, reducing extraction to near-zero or negative (institutional beneficiary). Future victims with d=0.50 experience f(d) ≈ 0.65, producing χ ≈ 0.31 (rope territory—coordination with slight asymmetry). No directionality overrides needed; the automatic derivation from beneficiary/victim declarations and trapped/arbitrage/constrained exit options produces accurate d values.",
+    "mandatrophy_analysis": "The deterrence reading demonstrates the mandatrophy at its core: the same structural arrangement (execution) can be justified as coordination (protecting future victims via rational signal), as extraction (instrumentalizing condemned as means to social end), or as retribution (proportional desert)—or as a combination thereof. The mandatrophy is resolved by recognizing that deterrence is a READING of the kernel, not the kernel itself. The kernel (state killing legitimacy) admits of multiple legitimate-seeming framings. The deterrence reading is live insofar as: (a) rational choice theory genuinely predicts that potential offenders respond to marginal penalty changes, and (b) empirical evidence confirms deterrent effects. If (a) fails (offenders are not rational decision-makers), the reading collapses. If (b) fails (no deterrent effects exist), the reading loses its justificatory force and reclassifies as pure extraction (snare). The reading's holding status depends on resolving the omegas. Until those are resolved, all three readings (deterrence, retributive, abolition) remain live—the constraint exemplifies the oracle gap (Theorem 4): different measurement frameworks (consequentialist vs. deontological vs. abolitionist) produce incommensurable classifications.",
+    "kernel_context": "This constraint is the DETERRENCE READING of the kernel 'state_killing_legitimacy.' The kernel is a contested formal rule about whether and under what conditions the state may execute individuals. The reading being instantiated here justifies state killing as prevention of future murders via deterrent signal to potential offenders. Sibling readings include the RETRIBUTIVE READING (execution justified by proportional desert and offender moral status forfeited through capital crime) and the ABOLITION READING (execution categorically prohibited regardless of consequences or retributive justification). These are distinct constraints in separate JSON files; this file instantiates ONLY the deterrence reading. The deterrence reading assumes offenders are rational decision-makers who respond to penalty schedules; that execution signals credibly deter capital crimes; and that the instrumental value of prevention justifies killing as a policy tool. The retributive reading assumes offenders deserve capital punishment through proportional justice; that the state has authority to adjudicate moral desert; and that killing is permissible independent of consequences. The abolition reading rejects the permissibility of state killing entirely, treating it as a violation of human dignity or human rights regardless of consequences or desert. These readings coexist in contemporary legal discourse—different jurisdictions, different legal traditions, and different political movements hold them simultaneously. No single framework could hold all three simultaneously (they foreclose each other at the level of basic legitimacy claims), yet all three remain live positions in the global legal/political landscape."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_legitimacy__retributive_reading",
+      "state_killing_legitimacy__abolition_reading"
+    ],
+    "dual_formulation_note": "The deterrence reading, retributive reading, and abolition reading form a constraint family decomposed from the contested kernel 'state_killing_legitimacy.' Each reading has its own ε value, beneficiary/victim structure, and legitimacy claims. The deterrence reading (ε=0.48) instruments the condemned as means to future-crime prevention. The retributive reading (separate file) instrumentalizes the condemned as bearer of proportional desert. The abolition reading (separate file) rejects instrumentalization entirely. All three are linked via network.affects_constraints to show family membership. They are not alternative measurements of one constraint (per ε-invariance principle); they are structurally distinct readings of a single ambiguous kernel."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "state_killing_legitimacy__retributive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "state_killing_legitimacy__abolition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "offender_rational_deterrent_response",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "execution_credible_marginal_deterrent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rational_deterrence_framework",
+    "drift_state": {
+      "moment": "contemporary_meta_analysis_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

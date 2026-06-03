@@ -1,0 +1,298 @@
+{
+  "header": {
+    "constraint_id": "substance_control_legitimacy__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "subhr",
+    "story_uid": "bcc4ef88-486b-4646-8ab1-fe05ed62a307"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substance Control Legitimacy — Harm Reduction Reading",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_infrastructure",
+      "treatment_providers",
+      "harm_reduction_practitioners"
+    ],
+    "victims": [
+      "substance_users_subject_to_mandates",
+      "illicit_market_participants",
+      "informal_economy_workers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Criminalized User",
+      "comment": "PERSPECTIVE 1: CRIMINALIZED USER (SNARE) — Faces mandatory treatment or incarceration; cannot exit the system without compliance. Criminalization persists despite the harm-reduction reading's stated logic. Maximum suppression, no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Medicalized User",
+      "comment": "PERSPECTIVE 2: MEDICALIZED USER (TANGLED ROPE) — Identity fused with 'patient' or 'person in recovery.' Receives treatment access (genuine benefit) but also faces coercive mandates and surveillance. The identity frame makes voluntary exit unthinkable even when treatment barriers are lowered."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Health Authority",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITY (ROPE) — Coordinates access to treatment infrastructure, reduces overdose mortality through harm reduction services (needle exchange, medication-assisted treatment, supervised consumption sites). Experiences the constraint as coordination: distributing medical resources to minimize harm. Net beneficiary through expanded authority and budget."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Treatment Provider Network",
+      "comment": "PERSPECTIVE 4: TREATMENT PROVIDER NETWORK (TANGLED ROPE) — Benefits from public funding, treatment mandates, and expanded caseloads (extraction toward them). Also genuinely provides coordination function: managing scarce treatment slots, stabilizing dosing regimens, reducing overdose risk. High resource dependence but also real clinical mission."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Illicit Market Participant",
+      "comment": "PERSPECTIVE 5: ILLICIT MARKET PARTICIPANT (SNARE) — Criminalization drives supply into unregulated channels. Harm-reduction framing does NOT decriminalize the market itself — users may access treatment, but dealers remain felony targets. Market participants face ongoing criminalization, violence, arrest. Trapped with no legitimate alternative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Harm Reduction Coalition",
+      "comment": "PERSPECTIVE 6: HARM REDUCTION COALITION (TANGLED ROPE) — Organized advocates for needle exchange, medication-assisted treatment, supervised consumption. Experience genuine coordination function (reducing overdose death, preventing disease transmission). Also constrained by hostile policy environment, limited funding, and need to defend legitimacy constantly. Coordinating around a margin of legality."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Criminal Justice System",
+      "comment": "PERSPECTIVE 7: CRIMINAL JUSTICE SYSTEM (PITON) — Harm-reduction reading disputes the criminalization logic but the system persists through institutional inertia. Courts still process drug offenses, prisons still house drug offenders, police still enforce drug laws. The official reading is harm-reduction; the actual practice is criminalization. Theater_ratio high because the system performs drug war functions while nominally endorsing public health."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Inherent Conflict View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INHERENT CONFLICT VIEW (MOUNTAIN) — From civilizational/universal perspective, some tension between medicalization and autonomy is inherent to any regulation of substances. The observer may frame this as an immutable trade-off: either restrict access (limiting harm and autonomy) or permit access (protecting autonomy at risk of harm). However, the structural data reveals this as a false summit — the actual constraint is a contingent institutional arrangement conflating criminal and medical authority."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decriminalization_scope_ambiguity",
+      "question": "Does harm-reduction reading commit to full decriminalization of supply (dealers, manufacturers) or only decriminalization of possession and use?",
+      "resolution_mechanism": "Jurisdictional analysis: compare outcomes under harm-reduction regimes that legalize supply (Portugal supply-side partial decriminalization, Switzerland heroin-assisted treatment with legal acquisition) vs. those that decriminalize use but maintain supply criminalization (US drug courts, medication-assisted treatment without supply legalization). Measure market violence, overdose death, incarceration rates.",
+      "impact": "If supply remains criminalized: extractiveness remains 0.48–0.55 because illicit market participants face ongoing criminal penalty, and users depend on criminalized supply even after medicalization. If supply is decriminalized: extractiveness drops to 0.25–0.35 (genuine public health coordination with minimal extraction). The reading's legitimacy claim is incomplete without supply-side resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether harm-reduction reading extends to decriminalization of supply or only use"
+    },
+    {
+      "id": "mandate_coercion_threshold",
+      "question": "What threshold of coercive treatment mandates (drug courts, incarceration contingent on treatment compliance) marks the transition from harm-reduction to criminalization-adjacent enforcement?",
+      "resolution_mechanism": "Comparative outcome analysis: jurisdictions with voluntary treatment access vs. mandatory treatment contingent on criminal justice involvement. Measure: user retention in treatment, overdose mortality, recidivism, self-reported autonomy, quality of life.",
+      "impact": "If voluntary access yields equivalent harm reduction: coercive mandates are pure extraction (snare dominates). If mandatory treatment yields significantly better population outcomes: mandates are justified coordination cost (tangled rope holds). Current evidence suggests voluntary access with robust resources achieves near-identical outcomes to mandates; suggests mandates are extraction, not coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coercive treatment mandate threshold relative to voluntarism"
+    },
+    {
+      "id": "legalization_reading_logical_distance",
+      "question": "Is the harm-reduction reading logically compatible with the legalization reading, or does accepting medical state authority foreclose individual autonomy claims?",
+      "resolution_mechanism": "Doctrinal analysis: can a single legal framework (e.g., Swiss model, Portugal Decree-Law 30/2000) hold both 'substance use is a public health matter requiring state management' AND 'competent adults retain autonomy over their own substance use'? Or does accepting medical authority axiomatically override autonomy claims?",
+      "impact": "If compatible: harm-reduction and legalization coexist (relation: coexists_with). If incompatible: harm-reduction forecloses legalization (relation: forecloses). Current jurisdictional evidence suggests compatibility — states can medicalize while preserving autonomy over personal use. But philosophical tension remains: medical authority claims epistemic privilege in defining 'harm,' which implicitly limits autonomy.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical compatibility between harm-reduction authority claim and autonomy claim"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Does this reading naturalize a contingent institutional arrangement (state medical authority over substance use) as an immutable feature of public health governance?",
+      "resolution_mechanism": "Historical counterfactual: is substance use state-medicalized in ALL functional public health systems, or only in some jurisdictions? If variable across jurisdictions with similar health outcomes, the constraint is contingent institutional. If universal, it approaches natural law.",
+      "impact": "If contingent: the mountain perspective is a false summit. The 'inherent conflict' framing masks a political choice about whether to medicalize substance use at all (vs. treating as personal choice with minimal state role). If universal: mountain classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether state medical authority over substance use is natural law or contingent institutional arrangement"
+    },
+    {
+      "id": "black_market_persistence_mechanism",
+      "question": "Does the black market persist because supply remains criminalized, or because demand for untaxed/unregulated product is intrinsic to substance markets?",
+      "resolution_mechanism": "Comparative jurisdictional analysis: measure black market size and violence in jurisdictions with full legalization (Canada cannabis, Portugal supply decriminalization) vs. medicalization without supply legalization vs. prohibition. Identify whether black market size correlates with supply criminalization level or with baseline demand elasticity.",
+      "impact": "If criminalization-driven: decriminalizing supply could eliminate black market and associated harm (violence, contaminated product). Extractiveness drops. If demand-intrinsic: black market persists regardless of legalization status; harm-reduction constraint remains at current extractiveness level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Black market persistence driver — criminalization vs. demand elasticity"
+    },
+    {
+      "id": "identity_locked_medicalization_trap",
+      "question": "Does medicalization create an identity lock ('person in recovery,' 'patient') that prevents users from returning to unproblematic use patterns or full autonomy even when structural barriers are removed?",
+      "resolution_mechanism": "Longitudinal study of users who exit treatment and recovery narratives: measure whether users re-identify outside the patient frame after years of abstinence or stable use. Compare exit trajectories under medicalization vs. legalization frameworks (where no patient identity is institutionalized). Assess whether the patient identity persists as a cognitive binding mechanism even after structural barriers (legal penalties, treatment mandates) are removed.",
+      "impact": "If identity lock persists: medicalization creates psychological extraction mechanism beyond structural extraction. User autonomy remains constrained by internalized patient identity even when material barriers are removed. Theater_ratio understates actual control mechanism. If identity lock is reversible: medicalization is purely structural extraction; autonomy can be recovered through exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether medicalization creates persistent identity lock binding"
+    },
+    {
+      "id": "contradiction_between_readings",
+      "question": "Does this harm-reduction reading genuinely resolve the kernel contradiction between prohibition and legalization, or does it occupy an unstable middle position that ultimately forecloses neither sibling reading?",
+      "resolution_mechanism": "Historical analysis of jurisdictions that adopted harm-reduction framing: do they hold steady at medicalization, or do they trend toward legalization (as public accepts autonomy logic) or back toward prohibition (as political pressure reasserts criminalization)?",
+      "impact": "If stable: harm-reduction is a genuinely distinct reading (relation to siblings: coexists_with). If trend toward legalization: harm-reduction is a temporary way station that legalization will foreclose. If trend toward prohibition: harm-reduction creates conditions for prohibition re-emergence. Current evidence (Portugal → decriminalization trajectory, Vancouver → supervised consumption expansion) suggests drift toward legalization and supply decriminalization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of harm-reduction reading as distinct equilibrium vs. transitional state"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The harm-reduction reading of substance control legitimacy frames drug use as a public health issue requiring medical intervention and harm minimization, not criminal punishment. State authority derives from a duty to reduce overdose death, disease transmission, and social harms — decriminalization of users and provision of treatment, needle exchange, and supervised consumption sites. This reading occupies a contested middle position between prohibition (criminalize all use) and legalization (decriminalize autonomous choice). Unlike prohibition, harm-reduction rejects criminalization of users and accepts that some substance use is inevitable. Unlike legalization, it asserts state authority to mandate treatment and regulate access. The constraint exhibits extraction through treatment mandates, surveillance of compliance, and therapeutic coercion — medicalized control replacing criminal control. It exhibits genuine coordination through overdose prevention, disease reduction, and access to stabilizing medications. The reading's structural delta: users are medicalized not criminalized (lower suppression than prohibition); treatment infrastructure expands (beneficiary extraction toward providers); black markets persist because supply remains criminalized (victims trapped in illicit trade); identity locks form as users internalize patient/recovery identity. Theater_ratio increases over the interval (0.42 → 0.58) as the gap widens between official harm-reduction rhetoric and actual continued criminalization of supply and enforcement of mandates.",
+    "key_agents": [
+      "Substance users (criminalized): Face ongoing arrest for possession/use despite medicalization frame; trapped between criminal and medical systems (powerless/trapped → Snare)",
+      "Substance users (medicalized): Identity fused with 'patient' or 'person in recovery'; receive treatment access but face mandates and surveillance (powerless/identity_locked → Tangled Rope)",
+      "Public health authorities: Coordinate treatment infrastructure, reduce overdose mortality; expand jurisdiction and budgets; net beneficiaries (institutional/arbitrage → Rope)",
+      "Treatment providers and harm reduction practitioners: Benefit from public funding and treatment mandates; provide genuine clinical coordination; resource dependent (moderate/constrained → Tangled Rope)",
+      "Illicit market participants (dealers, manufacturers): Remain criminalized despite user medicalization; face violence and incarceration; trapped with no legitimate pathway (powerless/trapped → Snare)",
+      "Harm reduction coalitions: Organized advocates for expanded services; constrained by hostile policy, limited funding, legality margins (organized/constrained → Tangled Rope)",
+      "Criminal justice system: Performs drug war function despite official medicalization; high theater (institutional/arbitrage → Piton)",
+      "Analytical observer: Risks naturalizing contingent medicalization choice as immutable feature of public health (analytical/analytical → Mountain, false summit)"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. Users subject to coercive treatment mandates, surveillance of compliance, and loss of autonomy even within medicalization frame — genuine extraction. But extraction is lower than pure prohibition because medicalization provides access to medications, health services, and reduced overdose risk. Treatment providers and public health authorities extract significant benefit through expanded budgets and authority. The harm-reduction frame legitimizes this extraction as 'health intervention' rather than punishment. Suppression (0.52): Moderate. Criminal penalties for supply remain in place, maintaining black markets and limiting user autonomy; but user suppression has modestly decreased (decriminalization of possession in some jurisdictions, harm reduction services allowing some operation outside law). Over the interval, suppression decreases slightly (0.65 → 0.52) as harm reduction services expand and decriminalization of use spreads, but remains substantial because supply criminalization persists. Theater ratio (0.58): Moderate-high. The harm-reduction framing performs legitimacy work: the state claims to be helping users through medicine rather than punishing them through criminalization. But implementation often combines medicalization theater with continued criminal enforcement — drug courts present as treatment but carry criminal penalties; supervised consumption sites operate in legal gray zones; treatment compliance is often court-ordered. Theater increases over the interval (0.42 → 0.58) as the rhetoric-reality gap widens — more jurisdictions adopt harm-reduction language while continuing criminalization of supply and enforcement of user compliance.",
+    "perspectival_gap": "This constraint demonstrates deep perspectival fragmentation. Criminalized users see snare (no exit, maximum suppression). Medicalized users see tangled rope with identity lock (genuine treatment benefits alongside coercive mandates and internalized patient identity). Public health authorities see rope (coordinating harm reduction infrastructure, extracting expanded authority and budget). Treatment providers see tangled rope (funding and caseloads alongside genuine clinical mission). Illicit market participants see snare (ongoing criminalization, trapped). Harm reduction coalitions see tangled rope (organizing around margin of legality, constrained by hostile policy). Criminal justice system sees piton (official medicalization rhetoric masking continued drug war function and arrest activity). The analytical observer risks seeing mountain (inherent tension between harm reduction and user autonomy) but the structural data reveals false summit — the tension is between institutional medicalization and full legalization/decriminalization, not an immutable feature of substance governance.",
+    "directionality_logic": "Each perspective derives d from beneficiary/victim status and exit options. Criminalized users (trapped victims) experience maximum d ≈ 0.95 → high chi. Medicalized users (identity_locked victims) derive d from identity fusion + victim status, computing to d ≈ 0.85–0.89 (lower than trapped because they have some structural mobility, but internalized frame prevents exercise of exit). Public health authorities (beneficiary + arbitrage) derive d from extractive position but low cost to exit, computing to d ≈ 0.15–0.20 (strong beneficiary position). Treatment providers (mixed beneficiary + victim status, constrained exit) derive d from funding dependence balancing clinical mission, computing to d ≈ 0.45–0.55 (neutral position). The directionality derivation reflects the reading's core claim: medical authority extracts from users (high d, high chi) while providing coordinating services (moderate chi given the genuine health function).",
+    "mandatrophy_analysis": "The harm-reduction reading resolves mandatrophy by showing that the constraint is genuinely tangled_rope, not a false dichotomy between rope (pure coordination) and snare (pure extraction). Users receive real health benefits (overdose prevention, disease reduction, medication access) that constitute genuine coordination function. They also face real extraction (treatment mandates, surveillance, identity lock, loss of autonomy). Both are structural, not observational artifacts. The reading's mandatrophy: if medicalization is merely criminalization by another name (snare dominant), harm-reduction framing is pure theater and the reading should foreclose legalization (legalization would expose the extraction). If medicalization genuinely reduces extraction vs. prohibition (tangled rope with real coordination function), the reading coexists with legalization as a stable equilibrium. The empirical record suggests the former: continued black markets, persistent criminalization of supply, and mandated treatment that exceeds what voluntary health-seeking would produce indicate that medicalization is criminalization theater. This suggests the harm-reduction reading does NOT stably coexist with legalization — legalization would foreclose the reading's legitimacy claim (state medical authority) by removing the state's justification (preventing worst harms through mandatory intervention).",
+    "kernel_context": "This constraint is one reading of the contested kernel substance_control_legitimacy. The reading instantiates harm_reduction_reading: Substance use is a public health issue; state authority derives from duty to minimize harm without criminalization. Sibling readings are prohibition_reading (criminalize all use, state authority from moral duty to prevent harm through punishment) and legalization_reading (autonomy over substance use, state authority limited to preventing third-party harm). The harm-reduction reading claims to occupy a middle position — decriminalize users while maintaining state medical authority — but empirical evidence suggests it is unstable: continued black markets and criminal enforcement reveal that supply criminalization undermines the medicalization frame, while the legalization reading offers a logically simpler alternative (decriminalize supply, let markets handle distribution, state role limited to regulation of third-party harms). The kernel contest is about state authority's source and scope: moral duty to prevent harm (prohibition), medical duty to minimize harm (harm-reduction), or limited to preventing third-party harm (legalization)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_legitimacy__prohibition_reading",
+      "substance_control_legitimacy__legalization_reading",
+      "black_market_violence_dynamics",
+      "treatment_mandate_coercion_threshold"
+    ],
+    "dual_formulation_note": "The harm-reduction reading is one of three readings of the substance_control_legitimacy kernel. All three readings share the same underlying structural phenomena (substance use, state authority, harm reduction vs. criminalization) but frame them differently. The harm-reduction reading is downstream of the kernel contest but has its own independent extractiveness (0.48) reflecting specific institutional configurations: decriminalization of users + medicalization + continued supply criminalization = moderate extraction. The sibling readings (prohibition, legalization) would have different ε values reflecting their different institutional structures. Network edges link all three readings and their downstream structural effects (black market violence, treatment mandate coercion)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.89
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "substance_control_legitimacy__prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "substance_control_legitimacy__legalization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_is_inevitable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_medical_authority_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "user_criminalization_counterproductive",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "medical_public_health_authority",
+    "drift_state": {
+      "moment": "contemporary_post_opioid_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

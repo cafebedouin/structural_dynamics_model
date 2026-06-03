@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cevcrh",
+    "story_uid": "11cbce49-7652-4037-b5dc-bd6c9baaf33d"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Exercise Validity: Continuous Refresh Hybrid (Process-Dependent Retention)",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "operational_organizations"
+    ],
+    "victims": [
+      "competent_operators",
+      "public_safety_record"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Operator Under Continuous Cycle Burden",
+      "comment": "PERSPECTIVE 1: OPERATOR (SNARE) — Trapped in the continuous drill requirement. Cannot opt out of recertification cycles without losing operational license. Extraction: time and cognitive load from mandatory cycles that may exceed functional necessity. Suppression: regulatory mandate backed by legal penalty for non-compliance. No exit option within the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Safety-Conscious Organization",
+      "comment": "PERSPECTIVE 2: SAFETY-CONSCIOUS ORGANIZATION (TANGLED ROPE) — Both benefits from and bears costs of continuous-cycle requirement. Genuine coordination function: continuous drills demonstrably improve emergency response and prevent skill atrophy (the safety benefit is real). Asymmetric extraction: organization must maintain drill infrastructure and operator scheduling overhead at fixed cost per cycle, regardless of demonstrated operator competence. Constrained exit: could theoretically lobby for relaxed standards but faces reputational and liability barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 3: REGULATORY AUTHORITY (ROPE) — Primary beneficiary. Experiences continuous-cycle mandate as pure coordination: establishes measurable compliance signal (recertification completion) that decouples the regulator from liability for operator competence failures. Arbitrage exit: can revise standards without operational consequence. Net position: benefits from clear compliance metric and liability shield."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Competency-Assessment Innovation Coalition",
+      "comment": "PERSPECTIVE 4: ASSESSMENT INNOVATION COALITION (SCAFFOLD) — Organized agents (safety researchers, advanced simulation developers, competency psychologists) see the fixed-cycle requirement as a temporary proxy awaiting better alternatives. They are building competency-retention models that would replace one-size-fits-all cycles with individualized refresh schedules based on actual skill decay curves and operator-specific performance data. Mobile exit through technical innovation: if these models mature and gain regulatory acceptance, the uniform cycle sunset becomes feasible. Theater component: current cycles contain performative elements (checking boxes vs. testing competence) that newer assessment methods could eliminate."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Certification-Training Industry",
+      "comment": "PERSPECTIVE 5: CERTIFICATION-TRAINING INDUSTRY (PITON) — Institutional beneficiary with degraded primary function. The industry's activity (delivering mandated drills) was originally justified as ensuring competence. But the mechanism has become largely performative: pass-through certification that signals compliance to regulators, not genuine competence testing. Theater ratio: 0.70+ — most cycle time is administrative (form-filling, attendance logging) rather than testing actual emergency response. The industry persists through inertia and regulatory coupling, not because drills have demonstrable superior efficacy vs. alternative assessment methods."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Competence-as-Fixed-State View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPETENCE-AS-FIXED-STATE (MOUNTAIN) — From a civilizational view, competence could be treated as a validated state property: once an operator demonstrates mastery (through initial certification), the competence persists as a fixed capability. From this perspective, continuous drills appear to defy an immutable truth about human learning — that mastery, once achieved, is stable. However, this reading is a false summit. Empirical evidence contradicts the premise: operator performance in actual emergencies correlates strongly with recent drill frequency; skills genuinely decay without practice; initial certification predicts nothing about current capability. The mountain reading naturalizes what is actually a process-dependent fact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_decay_measurement_ambiguity",
+      "question": "How do we distinguish genuine skill decay (loss of procedural capability) from performance decay (stress response, situational decision-making) in high-consequence environments?",
+      "resolution_mechanism": "Longitudinal operator performance data: track operators with varying inter-drill intervals; measure actual emergency response times, error rates, and decision quality as function of time since last drill; distinguish performance variance attributable to skill loss vs. environmental/situational factors.",
+      "impact": "If decay is primarily skill-based: continuous cycles are necessary (constraint remains Tangled Rope/Snare). If decay is primarily performance/stress-based: skill-decay argument fails and cycles are revealed as extraction mechanism (constraint shifts toward pure Snare or Piton). If decay is mixed: the proportional split determines whether continuous cycles are proportionally justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether observed performance decay is skill loss or stress/performance decay"
+    },
+    {
+      "id": "simulation_sufficiency_boundary",
+      "question": "At what fidelity and complexity does simulation approach sufficiency as competence exercise? Does this boundary exist, or is real-world catastrophe irreducible?",
+      "resolution_mechanism": "Competency transfer studies: measure skill retention after scenario-based simulation vs. real-emergency exposure; test whether operators trained on high-fidelity simulation show equivalent performance in actual high-consequence situations; identify specific failure modes in simulation that don't appear in real emergencies.",
+      "impact": "If simulation approaches sufficiency at achievable fidelity: continuous cycles could be satisfied by periodic high-fidelity simulation (relocation of constraint, not elimination). If simulation fundamentally insufficient: only real catastrophe or sufficiently catastrophic mock-emergency can sustain competence (this reading forecloses simulation_as_proxy reading). If simulation shows asymptotic approach: there is a discontinuity between simulation adequacy and real-catastrophe necessity, and the choice between them is value-dependent, not factual.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation sufficiency boundary exists for competence exercise"
+    },
+    {
+      "id": "cycle_frequency_optimization_frontier",
+      "question": "Is there an optimal inter-drill interval that minimizes both skill decay and excessive cycle burden, or does the tradeoff have no single optimum?",
+      "resolution_mechanism": "Competency decay models: empirically identify skill-retention curves for domain-specific high-consequence tasks (emergency response, flight crew procedures, surgical technique, reactor operation); determine the inter-practice interval at which decay falls below some risk threshold; test whether this interval varies by operator, by task complexity, or by domain.",
+      "impact": "If sharp optimum exists and is narrower than current uniform intervals: continuous-cycle requirement is justified but oversized (constraint becomes Rope/Tangled Rope; cycles are necessary coordination). If optimum is wider than current cycles: current requirement is extraction (constraint becomes Snare). If no single optimum (highly individual or task-dependent): uniform cycles are crude proxy that over-regulate some operators and under-protect others (constraint degrades toward Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether optimal inter-drill interval exists and how it compares to current mandates"
+    },
+    {
+      "id": "reading_contest__continuous_vs_real_vs_proxy",
+      "question": "Is this constraint one instantiation of a deeper contest over what 'counts as competence exercise'? How do the three readings (continuous_refresh_hybrid, real_catastrophe_only, simulation_as_proxy) relate structurally?",
+      "resolution_mechanism": "Kernel analysis: the three readings hold incompatible assumptions about competence retention. Continuous_refresh_hybrid (this reading): process-dependent, exercises must be frequent and regular. Real_catastrophe_only: only high-stakes real events test true competence; simulation and drills are insufficient substitutes. Simulation_as_proxy: simulation counts as valid exercise; drills satisfy the requirement because they proxy catastrophe. Resolve by examining which reading's assumption is empirically defensible (the omega above on simulation_sufficiency_boundary) and which reading's authority grounding is operative (regulatory practice, safety science, or operator culture?).",
+      "impact": "If continuous_refresh_hybrid assumption is correct (skill decay is real and process-dependent): this reading stands; real_catastrophe_only is shown to accept unacceptable risk; simulation_as_proxy undercounts true exercise need. If real_catastrophe_only assumption is correct: continuous cycles are revealed as futile theater; only high-stakes incidents retain true competence (reading coexists with continuous reading through observer disagreement). If simulation_as_proxy assumption is correct: drills satisfy competence requirement through proxy mechanism; continuous cycles are unnecessary extraction on operators (this reading forecloses simulation_as_proxy). These outcomes are mutually exclusive for a SINGLE FRAMEWORK; different parties can hold them simultaneously.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural relationship among three readings of the competence_exercise_validity kernel"
+    },
+    {
+      "id": "false_summit_competence_as_state",
+      "question": "Is the mountain perspective (competence-as-validated-state) a genuine natural law of human learning, or a false summit that naturalizes what is actually a process-dependent fact?",
+      "resolution_mechanism": "Empirical evidence: if actual operator performance in real emergencies correlates strongly with recent drill frequency, the mountain is false (skill decay is empirically observable). If operators maintain competence indefinitely post-certification without further practice, the mountain may be real (but empirical evidence strongly contradicts this). The mountain reading assumes competence is like a diploma — once earned, it stays earned. Psychological and neuroscience evidence contradicts this: procedural skills decay without practice; stress-response patterns degrade; muscle memory fades; decision trees atrophy.",
+      "impact": "If false summit is confirmed: the mountain perspective is a rationalization used to argue against continuous-cycle requirements and lower training burden on operators. It naturalizes the (extractive) desire to minimize training load as if it were a fact about competence. If mountain is somehow correct: the entire continuous-cycle requirement is misguided; initial certification would suffice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether competence-as-fixed-state is a genuine natural law or false summit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The continuous-refresh hybrid reading asserts that competence retention is fundamentally process-dependent, not state-validated. A person certified as competent at time T0 is NOT guaranteed to remain competent at time T0+N years without intervening practice. This reading occupies the middle ground between two extreme positions: the real-catastrophe-only reading (only genuine high-stakes events exercise true competence) and the simulation-as-proxy reading (drills are sufficient proxy exercises that maintain competence). The continuous-refresh hybrid reading claims that empirical safety records demonstrate that regular drill cycles prevent both the atrophy that would occur under no-cycle regimes AND the false confidence that simulation-only cycles can induce. The constraint exhibits extraction from operators (mandatory cycle burden) alongside genuine coordination benefit (safety outcomes). Extractiveness has risen over the measurement interval (0.38 → 0.52) as regulatory scope has expanded and cycle frequency has increased, while theater_ratio has similarly increased (0.42 → 0.58), indicating that administrative overhead and compliance-signaling have grown faster than genuine competence testing content.",
+    "key_agents": [
+      "Operators: Primary targets (powerless/trapped) — bear mandatory cycle burden; cannot exit without losing licensure",
+      "Safety-Conscious Organizations: Mixed victims/beneficiaries (moderate/constrained) — benefit from demonstrably improved emergency response but bear infrastructure and scheduling costs",
+      "Regulatory Authority: Primary beneficiary (institutional/arbitrage) — gains compliance-verification mechanism and liability decoupling without operational consequence",
+      "Competency Assessment Coalition: Organized innovators (organized/mobile) — developing individualized competency models that could sunset the uniform-cycle requirement",
+      "Certification-Training Industry: Secondary beneficiary (institutional/arbitrage) — receives guaranteed contract flow from mandate; maintains through inertia despite degraded function",
+      "Analytical Observer: Civilization-level view (analytical/analytical) — risks naturalizing process-dependence as fixed-state law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The continuous-cycle requirement extracts operator time and cognitive load for mandatory drill participation. Initial extractiveness (0.38) reflected the genuine coordination benefit when cycles were less frequent and more competence-focused. Current extractiveness (0.52) reflects accumulation: regulatory scope has expanded, cycle frequency increased, and administrative burden has grown faster than competence-testing content. The value reflects that genuine safety coordination exists (preventing atrophy) alongside genuine extraction (over-cycle burden that exceeds minimum necessary refresh). Suppression (0.48): Moderate. The requirement is enforced via regulatory mandate backed by legal penalties (loss of licensure), but not via physical coercion. Operators can theoretically lobby for standard relaxation, though reputational and liability barriers make this costly. Theater ratio (0.58): Moderate-high and rising. Drill content includes genuine competence testing (emergency scenarios, decision-making under stress) but increasingly padded with administrative compliance-signaling (attendance logging, form completion, check-box audits). The rising trajectory reflects that bureaucratic overhead has grown faster than scenario fidelity, indicating Piton-type degradation in the certification-training industry's function.",
+    "directionality_logic": "Operator position (powerless/trapped): d ≈ 0.95. Trapped exit means no structural path out; full target of extraction. The regulatory mandate is non-negotiable. Experienced extractiveness chi is high. Organization position (moderate/constrained): d ≈ 0.50. Mixed beneficiary (safety outcomes) and victim (cycle costs); constrained exit (could theoretically relax but face liability/reputation barriers). Regulatory authority (institutional/arbitrage): d ≈ 0.05. Pure beneficiary; arbitrage exit (can revise standards without operational consequence). Low chi — extraction flows toward them. Assessment coalition (organized/mobile): d ≈ 0.35. Mobile exit through technical innovation (new assessment models); somewhat victim (excluded from current mandate structure) but with path to reshape it. Moderate-low chi. Certification industry (institutional/arbitrage): d ≈ 0.10. Pure beneficiary; arbitrage exit through regulatory lobbying. Low chi but stable contract flow.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence from the operator position (Snare: maximum extraction, no exit, full suppression) to the regulatory authority position (Rope: pure coordination, arbitrage exit, beneficiary). The organization position shows the constraint as mixed-benefit tangled rope: genuine safety coordination alongside extraction burden. The assessment coalition sees it as temporary (Scaffold) — the fixed-cycle regime is a placeholder awaiting better assessment science. The certification industry sees its own function as degraded (Piton) — maintenance through regulatory coupling rather than demonstrated efficacy. The analytical observer risks the false summit (Mountain) — treating process-dependence as if it were a fixed law of nature rather than an empirical fact about skill decay. This perspectival distribution reveals the constraint's structure: the uniform-cycle requirement is a coordination solution layered over with extraction that could be substantially reduced through better assessment methods.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that both the coordination function (preventing skill atrophy) and the extraction mechanism (operator burden, regulatory liability-shifting) are real and coexist. The continuous-refresh-hybrid reading asserts that the coordination is necessary — skill decay is empirically demonstrable — while rejecting both extremes: real-catastrophe-only (unacceptable risk tolerance) and simulation-as-proxy (undercounting true exercise need). The measurement trajectory (rising extractiveness and theater ratio) indicates that the extraction component is growing faster than the coordination component, suggesting the constraint is drifting toward Piton status or pure Snare. The false summit detection (mountain perspective) is crucial: if the mountain reading (competence-as-fixed-state) were correct, the entire constraint would be misguided. But empirical evidence contradicts it — skill decay IS real — so the mountain is false. The true mandatrophy is between two readings that the continuous-refresh-hybrid must navigate: Can we maintain the genuine safety coordination (skill retention) while reducing the extraction overhead? The assessment coalition's scaffold perspective suggests yes — individualized competency models could maintain safety outcomes at lower operator burden. The resolution path is not to abandon drills but to optimize them to the empirical decay curve rather than the current one-size-fits-all uniform cycle.",
+    "kernel_context": "This constraint instantiates one reading of the contested kernel 'competence_exercise_validity'. The kernel is: What mechanism actually exercises and retains human competence in high-consequence domains? Three readings compete: (1) continuous_refresh_hybrid (THIS reading): competence is process-dependent; regular drills prevent atrophy AND avoid false confidence from simulation-only regimes. (2) real_catastrophe_only: only genuine high-stakes events exercise true competence; simulation and drills are insufficient substitutes that create dangerous false confidence. (3) simulation_as_proxy: simulation counts as valid exercise; drills proxy-catastrophe sufficiently; continuous cycles are unnecessary extraction. The continuous-refresh-hybrid reading claims empirical support from safety records showing that organizations with regular drill cycles outperform those without them in actual emergencies, and that simulated competence without real-event exposure leads to stress-response atrophy. It rejects real-catastrophe-only as accepting unacceptable risk. It rejects simulation-as-proxy as undercounting true exercise need. These readings are not different measurements of one constraint — they are different claims about what competence IS and how it is retained. The empirical resolution point is the skill-decay-measurement-ambiguity omega above: if genuine skill decay is demonstrable, continuous-refresh-hybrid stands. If performance decay is primarily stress/situational rather than skill-based, the continuous-refresh-hybrid's justification weakens. Different parties hold these readings simultaneously (regulator believes continuous-refresh-hybrid; training industry leans simulation-as-proxy; some safety researchers lean real-catastrophe-only). They coexist because no single party controls the epistemic authority over what 'counts as competence exercise.'"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy",
+      "real_catastrophe_only"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a three-part kernel: competence_exercise_validity__continuous_refresh_hybrid, competence_exercise_validity__simulation_as_proxy, and competence_exercise_validity__real_catastrophe_only. All three are sisters, not parent-child. The continuous_refresh_hybrid reading claims empirical support from safety records showing drill-cycle effectiveness. It both influences (creates pressure on) and coexists with the other readings: influences by asserting empirical grounding for continuous cycles, coexists because different stakeholders hold different readings simultaneously (regulator, training industry, operators, safety researchers occupy different epistemic positions). The network links these readings so the constraint engine can track their interdependence and identify empirical resolution points (the omegas above)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.32
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "skill_decay_empiricism",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__simulation_as_proxy",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "procedural_skill_decay_empirically_demonstrable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "uniform_cycle_frequency_is_crude_proxy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

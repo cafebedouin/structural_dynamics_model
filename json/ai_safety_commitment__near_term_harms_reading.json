@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "ai_safety_commitment__near_term_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ai_safety_nt",
+    "module_name_override": "constraint_ai_safety_commitment__near_term_harms_reading",
+    "story_uid": "7771d7e5-6415-46e3-9936-32f80404d7b2"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Safety as Near-Term Harms Prevention (Deployed System Focus)",
+    "topic_domain": "ai_safety/technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technology_companies",
+      "incumbent_ai_vendors"
+    ],
+    "victims": [
+      "marginalized_populations",
+      "gig_workers",
+      "algorithmic_discrimination_targets",
+      "misinformation_exposed_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Algorithmic Discrimination Target",
+      "comment": "PERSPECTIVE 1: ALGORITHMIC DISCRIMINATION TARGET (SNARE) — Marginalized populations facing algorithmic bias in hiring, lending, housing, and criminal justice systems have no exit from systems they did not consent to enter. High suppression: the discrimination is embedded in deployment, data, and scoring functions. Minimal coordination function — the constraint exists to extract (advantage to those benefiting from biased systems), not to solve a collective problem. Trapped at biographical horizon with no arbitrage options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Gig Worker in Platform Labor Systems",
+      "comment": "PERSPECTIVE 2: GIG WORKER IN PLATFORM LABOR SYSTEMS (SNARE) — Workers in gig platforms (delivery, rideshare, task work) are constrained by labor market structure and algorithmic management systems. They can theoretically exit the platform but face high costs: loss of income, limited alternative employment, algorithmic deactivation as punishment for resistance. Suppression is structural and enforced — the system limits transparency into wage calculation, task assignment, and performance metrics. Coordination function is minimal (the platform does not solve a genuine collective action problem for workers). Extraction is primary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Auditing and Compliance Professional",
+      "comment": "PERSPECTIVE 3: AUDITING AND COMPLIANCE PROFESSIONAL (TANGLED ROPE) — Data scientists, auditors, and compliance officers working within tech companies experience this constraint as a genuine coordination problem (documenting and remediating documented harms) coupled with asymmetric extraction. They benefit from this constraint's existence (it creates their employment, their expertise becomes valuable), but they also bear costs: constrained by resource allocation, pressure to not find harms ('audit results' that threaten revenue), retaliation for whistleblowing. The constraint genuinely coordinates (company needs to identify and fix biases to avoid liability), but the coordination is asymmetric — the costs of remediation fall on the auditors and affected populations, benefits accrue to the company."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology Company (Near-Term Harms Definition)",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY COMPANY — NEAR-TERM HARMS DEFINITION (ROPE) — From the company's perspective using this reading (near-term harms as the relevant safety domain), the constraint is primarily coordination: documenting and remediating documented present-day harms keeps the system operational and reduces regulatory/reputational risk. The company has arbitrage options — it can choose transparency depth, remediation speed, scope of harm assessment. The company experiences the constraint as solvable through better documentation, auditing, and disclosure. High extractive advantage: regulations framed around 'near-term harms' leave speculative long-term risks (which might impose higher R&D costs) outside the scope of safety obligations. The constraint coordinates the company's relationship with regulators around documented harms specifically."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework (Near-Term Harms Mandate)",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK — NEAR-TERM HARMS MANDATE (SCAFFOLD) — Regulatory regimes (EU AI Act auditing requirements, algorithmic impact assessments, transparency mandates, labor classification reforms) that operationalize 'near-term harms' see this constraint as a temporary coordination mechanism with explicit sunset: as systems improve, as auditing becomes routine, as labor protections are embedded in platform design, the intensity of the constraint should decrease. The scaffold has a built-in pressure toward its own obsolescence — successful remediation should eventually make the constraint unnecessary. Low theater because the regulatory mechanism is directly verifiable (audits can be examined, wage formulas disclosed, bias metrics published)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier AI Developer (Capability vs. Safety Tradeoff)",
+      "comment": "PERSPECTIVE 6: FRONTIER AI DEVELOPER — CAPABILITY VS. SAFETY TRADEOFF (TANGLED ROPE) — Researchers and companies developing frontier AI systems experience the 'near-term harms' reading as constraining (safety testing, bias auditing, deployment delays), but also as coordinating (safety practices enable responsible scaling, public trust enables market access). However, the constraint contains asymmetric extraction: regulatory focus on near-term harms leaves capability development relatively unconstrained, while safety overhead is borne by the company. The developer has arbitrage options (can choose deployment scope, transparency level, remediation speed), but also experiences coordination benefit (the constraint's existence prevents race-to-the-bottom dynamics and provides cover for responsible practices)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Safety Research Community",
+      "comment": "PERSPECTIVE 7: ACADEMIC SAFETY RESEARCH COMMUNITY (PITON) — The academic AI safety research establishment, when framed around 'near-term harms prevention,' appears increasingly as a degraded institution. The research community produces auditing methodologies, bias detection frameworks, and fairness metrics that are simultaneously (a) valuable for the stated goal (preventing documented harms) and (b) largely theater — companies can pass audits without substantively changing systems, metrics can be gamed, recommendations can be published and ignored. The piton classification derives from high theater: much academic safety research on near-term harms produces publishable outputs that satisfy the form of accountability without changing outcomes. The community persists through institutional inertia (it is funded, students graduate, papers get citations) despite low functional impact on actual system deployment decisions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Civilizational Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: CIVILIZATIONAL ANALYTICAL OBSERVER — NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the logic of this constraint appears immutable: any large-scale technology system will produce harms; documenting and mitigating documented harms is an irreducible feature of responsible deployment. This reading naturalizes 'near-term harms prevention' as the fundamental structure of AI safety. However, this mountain classification is structurally suspect — the beneficiary set (technology companies) and the specific extraction mechanism (regulatory scope definition) are contingent, not natural. The engine's false summit detector will flag this: by declaring technology companies as beneficiaries who benefit from this constraint's framing, the JSON instantiates the ambiguity that this 'natural' reading of safety is actually a constructed institutional arrangement that advantages particular actors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_specification_boundary",
+      "question": "What constitutes a 'documented present-day harm' versus speculative risk or systemic externality not yet formally measured?",
+      "resolution_mechanism": "Definitional analysis: examine which harms regulatory frameworks and companies accept as 'documented' vs. which they exclude. Empirical audit of company internal risk assessments vs. public disclosures. Analysis of harm categories that were not measured until advocacy forced measurement.",
+      "impact": "Narrow definition: focuses resources on easily measurable, company-friendly harms (algorithmic bias in hiring where testing is possible); excludes harder-to-document harms (ecosystem-level misinformation amplification, long-tail discrimination in niche systems). Broad definition: expands scope to include anticipated harms and systemic effects; increases compliance burden; may trigger fuller regulatory intervention. The boundary is the key variable for extractiveness — narrow scope = higher extractiveness (company benefits, victim set shrinks), broad scope = lower extractiveness (more harms counted, more remediation required).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definitional boundary of what qualifies as a documented harm versus speculation"
+    },
+    {
+      "id": "remediation_vs_containment_distinction",
+      "question": "Does 'preventing documented harms' require eliminating the harm-producing system, or is harm mitigation (reducing severity while keeping the system operational) sufficient?",
+      "resolution_mechanism": "Examine company implementations: rate of actual system decommissioning vs. rate of algorithmic adjustment within deployed systems. Track harm levels pre- and post-audit. Distinguish between 'removing discriminatory feature' (elimination) and 'reducing discriminatory impact by X%' (containment with residual extraction). Meta-analysis of regulatory mandates to determine whether they require elimination or mitigation.",
+      "impact": "If elimination is required: extractiveness increases (companies face higher compliance costs, may delay deployment, victim set is protected at cost of service denial). If mitigation suffices: extractiveness decreases (companies can adjust features and remain operational, residual harms continue, victims bear residual costs). This is a gate function — the reading's commitment to 'prevention' depends on this distinction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether near-term harm prevention requires system elimination or harm mitigation"
+    },
+    {
+      "id": "reading_vs_existential_risk_scope_competition",
+      "question": "Does defining AI safety as 'near-term harms prevention' structurally foreclose the existential risk reading, or do both readings remain holdable within a single regulatory framework?",
+      "resolution_mechanism": "Policy analysis: examine whether regulatory mandates framed around near-term harms create resource allocation pressure that reduces funding for existential risk research. Examine whether companies emphasize near-term harms compliance to justify minimal spend on speculative long-term alignment. Assess whether the readings involve incompatible legitimacy claims or merely different priority orderings.",
+      "impact": "If foreclose relation holds: the two readings cannot coexist in a single regulatory framework; choosing this reading explicitly de-prioritizes existential risk. If coexists_with or influences: both readings remain live options; the question becomes institutional sequencing rather than logical incompatibility.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether near-term harms reading logically forecloses existential risk reading or allows coexistence"
+    },
+    {
+      "id": "technical_auditability_assumption",
+      "question": "Are documented harms in deployed AI systems technically auditable and remediable, or does the gap between auditing capability and actual system behavior create persistent opacity?",
+      "resolution_mechanism": "Empirical: audit effectiveness meta-analysis. Compare documented bias metrics to actual deployment outcomes. Test whether company-disclosed audit results correlate with independent testing. Examine cases where systems passed audits but continued producing documented harms in deployment.",
+      "impact": "If auditable and remediable: the near-term harms reading is structurally sound — companies can prevent harms, remediation is incentivized, regulation has leverage. If gap persists: the reading becomes aspirational theater — auditing produces reports that do not correspond to outcomes, extraction continues despite documentation, victims remain unprotected. High theater_ratio signals this ambiguity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether documented harms are technically auditable and remediable or structurally opaque"
+    },
+    {
+      "id": "kernel_reading_ambiguity__natural_vs_constructed",
+      "question": "Is the near-term harms reading a genuine commitment to preventing harm, or is it a constructed institutional arrangement that benefits technology companies by limiting regulatory scope to measurable, easily-remedied categories?",
+      "resolution_mechanism": "Historical analysis: trace the origin of 'near-term harms' framing in policy documents, company statements, and academic discourse. Identify which actors advocated for this framing and what interests it serves. Compare to alternative framings (existential risk, capabilities governance) and analyze which reading produces faster regulatory capture. Examine whether the reading's success correlates with company influence on policy definition.",
+      "impact": "If genuine commitment: the constraint is defensible as a legitimate safety approach grounded in precaution and documented evidence. If constructed: the constraint naturalizes a particular distribution of power and cost — benefiting technology companies while leaving systemic harms unaddressed. The false summit detector flags this ambiguity by the presence of beneficiaries on a mountain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether near-term harms reading represents genuine commitment or constructed institutional advantage"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "ai_safety_nt_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "ai_safety_nt_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "ai_safety_nt_extract_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "ai_safety_nt_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52,
+      "id_override": "ai_safety_nt_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "ai_safety_nt_theater_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "ai_safety_nt_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.62,
+      "id_override": "ai_safety_nt_suppress_t3"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65,
+      "id_override": "ai_safety_nt_suppress_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents one reading of a contested kernel: what 'AI safety' means as a commitment system. This specific reading — 'AI safety means preventing documented present-day harms from deployed systems' — frames the safety domain as protection against bias, discrimination, labor exploitation, and misinformation in systems already in deployment. The constraint exhibits a tangled rope structure: it contains a genuine coordination function (companies need to document and mitigate harms to maintain public trust and regulatory compliance) coupled with asymmetric extraction (the focus on 'near-term documented harms' excludes speculative long-term risks and allows companies to define the scope of 'documented' in ways that minimize compliance cost). The beneficiary set is clear: technology companies and incumbent AI vendors benefit from regulatory frameworks that focus on measurable harms in deployed systems, as opposed to frameworks that would mandate frontier capability restrictions or expensive long-term alignment research. The victim set includes present-day marginalized populations facing algorithmic discrimination, gig workers subject to algorithmic management, and communities exposed to AI-amplified misinformation. The rising theater_ratio (0.42 → 0.58) reflects that as this reading becomes institutionalized through auditing mandates and impact assessments, the performative element increases — companies produce audit reports and bias metrics that satisfy regulatory form without substantively changing deployment decisions or harm levels. The rising extractiveness (0.35 → 0.52) suggests that as the near-term harms reading becomes dominant in policy, its extractive advantage becomes clearer — the regulatory scope definition itself becomes a lever for limiting broader safety obligations.",
+    "key_agents": [
+      "Marginalized populations facing algorithmic discrimination: Primary victims (powerless/trapped) — subjected to biased hiring, lending, housing, and criminal justice systems with no exit or consent; suppression enforced through system opacity and algorithmic authority",
+      "Gig workers in platform labor systems: Secondary victims (moderate/constrained) — subject to algorithmic management, wage opacity, deactivation; structurally dependent on platform access despite labor market alternatives",
+      "Technology companies and incumbent AI vendors: Primary beneficiaries (institutional/arbitrage) — benefit from regulatory frameworks that focus on 'documented harms' specifically, leaving speculative risks and capability governance outside scope; can choose remediation depth and transparency level",
+      "Auditing and compliance professionals: Mixed position (moderate/constrained) — employed to implement harm detection and remediation, but constrained by company resource allocation and retaliation risk; experience genuine coordination function alongside asymmetric cost allocation",
+      "Frontier AI developers and capability researchers: Powerful/arbitrage position — experience this reading as constraining through safety overhead, but also as coordinating through enabling responsible scaling; benefit from capability-focused regulatory scope; face arbitrage options on deployment speed and transparency",
+      "Regulatory frameworks and policymakers: Organized/constrained (generational horizon) — see this reading as a temporary scaffold with sunset logic; responsible for defining what counts as 'documented harm' and at what point remediation is sufficient",
+      "Academic safety research community: Institutional/arbitrage (generational horizon) — produces frameworks for auditing and bias detection; increasingly appears as piton (degraded theater) as research output does not correlate with deployment outcomes",
+      "Analytical observer: Civilizational/analytical (universal scope) — at risk of naturalizing this reading as inherent to 'safety' itself, missing its contingent institutional framing and beneficiary set"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The reading establishes a regulatory domain (near-term documented harms) that benefits technology companies by excluding speculative long-term risks and allowing companies to define 'documented' through their own metrics and auditing practices. Companies have substantial arbitrage in this domain — they can choose audit depth, remediation speed, and transparency level. The measured extractiveness reflects that this reading structurally advantages companies while the victim set (marginalized populations, gig workers, misinformation-exposed communities) bears the cost of residual harms that pass the 'documented' threshold. The extractiveness is not maximal (that would require total harm perpetuation) because the reading does create genuine pressure to identify and mitigate specific documented harms. Suppression (0.65): High. The constraint requires significant suppression to maintain: alternatives must be suppressed (existential risk reading, capability governance) to prevent reframing of 'safety' beyond near-term harms; technical opacity must be maintained (auditing focuses on specific metrics while system-level harm patterns remain invisible); victim coordination must be suppressed (individual harm reports are framed as data points for metrics, not as evidence of systemic extraction). The suppression increases over time as the reading becomes institutionalized and alternatives are foreclosed. Theater ratio (0.58): Moderate-high and rising. The near-term harms reading produces substantial theater: companies produce audit reports, bias metrics, and impact assessments that satisfy regulatory form and create appearance of accountability, but the correlation between documented metrics and actual harm levels is ambiguous. Academic safety research adds additional theater layer (frameworks that are published and cited but do not correlate with deployment outcomes). The rising theater reflects that as the reading becomes standard practice, the gap between auditing activity and harm reduction grows.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The marginalized population facing algorithmic discrimination sees a snare (no exit, no coordination benefit, pure extraction). The gig worker sees a snare with constrained rather than trapped exit (theoretically could leave the platform, but labor market structure makes this costly and unstable). The auditing professional sees tangled rope (genuine coordination problem coupled with asymmetric cost allocation). The technology company sees rope (primarily coordination with some extractive advantage). The regulatory framework sees scaffold (temporary mechanism with sunset logic). The frontier developer sees tangled rope (coordination benefit mixed with capability constraints). The academic community sees piton (degraded institution with rising theater and declining functional impact). The civilizational analytical observer risks seeing mountain (immutable feature of technology systems) — but this is flagged as a false summit by the explicit beneficiary set. The perspectival gap reflects the constraint's fundamentally political character: defining 'safety' as 'near-term documented harms' is not a technical discovery, but an institutional choice that distributes costs and benefits differently depending on position.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position: power level, exit options, and relationship to the extraction flow. Marginalized populations (powerless/trapped) experience maximum directionality d ≈ 0.95 — full targeting with no exit, f(d) ≈ 1.42, producing high experienced extraction chi. Gig workers (moderate/constrained) experience d ≈ 0.85, f(d) ≈ 1.15, moderate-high chi. Auditing professionals (moderate/constrained but with coordination benefit) experience d ≈ 0.55, f(d) ≈ 0.75, moderate chi. Technology companies (institutional/arbitrage) experience d ≈ 0.15, f(d) ≈ -0.01, negative or near-zero chi (beneficiaries with exit options). Frontier developers (powerful/arbitrage with coordination benefit) experience d ≈ 0.48, f(d) ≈ 0.60, moderate chi reflecting mixed cost and benefit. The regulatory framework (organized/constrained with explicit sunset) experiences d ≈ 0.40, f(d) ≈ 0.40, moderate chi as temporary constraint. Academic community (institutional/arbitrage) experiences d ≈ 0.20, f(d) ≈ 0.02, near-zero chi despite producing theater. The analytical observer at civilizational scope experiences d ≈ 0.72, f(d) ≈ 1.15, but the classification is mountain at this context, producing a perspectival contradiction — the mountain view naturalizes what the structural analysis reveals as contingent.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is rooted in the kernel contest itself: the near-term harms reading, the existential risk reading, and the dual-priority reading represent three incompatible framings of what 'AI safety' commitment obligates. This reading resolves mandatrophy by establishing that the near-term harms framing is both (a) a genuine commitment to preventing documented harms and (b) a constructed institutional arrangement that benefits technology companies by limiting regulatory scope. The tangled rope classification captures this dual character: there is a real coordination function (companies need to identify and mitigate harms), but the constraint also functions as extraction (by excluding long-term risks and allowing company-defined metrics). The false summit element — the mountain perspective naturalized as inevitable feature of technology rather than contingent institutional choice — is the analytical marker that this reading instantiates a particular power distribution disguised as technical necessity.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: ai_safety_commitment. The kernel is a stabilized but ambiguous commitment to AI safety that different institutional actors read in incompatible ways. This specific reading instantiates: 'AI safety means preventing documented present-day harms from deployed systems (bias, discrimination, labor exploitation, misinformation).' Sibling readings include: (1) existential_risk_reading: 'AI safety means preventing extinction-level outcomes from misaligned superintelligent systems'; (2) dual_priority_reading: 'AI safety requires addressing both existential risk and near-term harms as non-competing priorities.' The near-term harms reading differs structurally from the existential risk reading in victim set (present-day marginalized populations vs. humanity-scale risks), beneficiary set (companies avoiding near-term regulation vs. frontier labs avoiding capability constraints), and extractiveness scope (documented present harms vs. speculative future risks). The dual-priority reading differs by attempting to hold both commitment obligations simultaneously, whereas this reading privileges near-term harms and implicitly de-prioritizes speculative long-term risks. The structural delta predicted: the near-term harms reading should show high extractiveness on transparency/auditing/labor protections (low ε = easy to audit, companies have arbitrage) and low extractiveness on speculative alignment research (not in scope, so no extraction mechanism to measure). The constraint story confirms this: ε = 0.52 reflects the mixed coordination-extraction character, with extractiveness driven by the scope definition itself (what counts as 'documented')."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_commitment__existential_risk_reading",
+      "ai_safety_commitment__dual_priority_reading",
+      "algorithmic_bias_audit_systems",
+      "platform_labor_algorithmic_management"
+    ],
+    "dual_formulation_note": "The ai_safety_commitment kernel produces three structurally distinct constraints through the three readings (near-term harms, existential risk, dual priority). Each reading has its own ε value reflecting different victim sets and beneficiary structures. This file represents the near-term harms reading; sibling readings are separate constraints in the network. The three readings exhibit affects_constraints relations: this reading influences (but does not foreclose) the dual-priority reading by establishing the near-term harms case, and coexists_with the existential-risk reading as a competing institutional commitment held by different actor coalitions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ai_safety_commitment__existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ai_safety_commitment__dual_priority_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "documented_present_harms_are_primary_safety_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "technical_auditability_enables_harm_remediation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "documented_harm_prevention_through_transparency_and_audit",
+    "drift_state": {
+      "moment": "contemporary_2025_2026",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

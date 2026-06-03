@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "preparedness_commitment__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prep_competence",
+    "story_uid": "1a94e5a7-d473-4ac4-b830-3e88c8c0a353",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Exercised Knowledge (Competence Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "trained_personnel",
+      "organizations_maintaining_competence",
+      "future_generations_inheriting_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Trained Response Organization",
+      "comment": "PERSPECTIVE 1: TRAINED RESPONSE ORGANIZATION (ROPE) — Sees preparedness as genuine coordination mechanism. Regular drills test real decision-making capacity, staff rotation is managed through apprenticeship and knowledge transfer, tabletop exercises expose gaps that training addresses. The constraint solves the collective action problem of maintaining readiness across personnel turnover. Benefits (capacity retention, institutional continuity) are distributed to the organization itself and reinvested in improved response capability. Low extraction because the constraint's function is its own reward."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Authority",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL AUTHORITY (ROPE) — Government or institutional actors mandating preparedness see genuine coordination value: drills expose vulnerabilities and drive operational improvements; training ensures institutional memory survives personnel changes. The constraint is enforced through regulation and budget (requires active resource commitment) but the enforcement returns value in improved response capacity. The beneficiary (the institution itself, in its future capacity to respond) is the same as the agent managing the constraint. Pure coordination from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Competent Practitioner",
+      "comment": "PERSPECTIVE 3: COMPETENT PRACTITIONER (ROPE) — Emergency responder or disaster management professional experiences preparedness as skill-building and career development. Drills sharpen decision-making; training provides professional identity and advancement. Exit options are available (can leave the profession) but the constraint itself coordinates professional growth and practical competence. The practitioner benefits directly from the knowledge-sharing and skill-testing that the constraint provides."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Obligated Community Member",
+      "comment": "PERSPECTIVE 4: OBLIGATED COMMUNITY MEMBER (SNARE) — Civilian who participates in drills or receives mandatory preparedness training experiences significant constraints. Participation is legally required (constrained exit); time cost is borne by the individual; benefits accrue to institutional continuity but not equally to the participant. From this perspective, preparedness drills extract labor time without transparent benefit distribution. The constraint is real coordination for the organization; extraction for the obligated participant."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Vestigial Bureaucracy",
+      "comment": "PERSPECTIVE 5: VESTIGIAL BUREAUCRACY (PITON) — At civilizational scale, the constraint degrades. Annual compliance exercises become checklist rituals detached from real risk assessment. Competence-testing protocols persist through inertia but loss of institutional memory (due to budget cuts, organizational restructuring, leadership turnover) means the drills no longer test decision-making capacity — they test the ability to perform the ritual. Theater ratio rises substantially when competence pathway degrades; the constraint becomes maintenance of the appearance of preparedness rather than actual capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From a long-horizon, global perspective, live exercised knowledge is a genuine coordination mechanism. Organizations that maintain high theater ratio (≥0.70, pure ritual) experience D5 catastrophic failure when real crisis occurs (Pearl Harbor, 9/11 pre-event warnings ignored, New Orleans emergency command center). Organizations maintaining low theater ratio (≤0.30, live competence testing) show adaptive capacity and contained failure when crisis hits. The constraint is a real solution to the intergenerational knowledge transfer problem — but only when theater remains low and competence-testing remains functionally coupled to drills."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_theater_decoupling",
+      "question": "At what point does rising theater ratio decouple from actual operational capacity? Is there a threshold beyond which drills become predictable performances that no longer test decision-making?",
+      "resolution_mechanism": "Post-crisis analysis: compare theater ratio (measured from drill complexity, surprise elements, real-time decision requirements) at time t0 against actual failure modes observed in real disaster response at time t1. Correlation between theater ratio and response failure rate across multiple organizations and disaster types.",
+      "impact": "If threshold exists below 0.40: competence reading remains valid only under strict theater discipline. If decoupling occurs smoothly: the husk reading (pure performance) is always latent and waiting to emerge. If decoupling is sharp (cliff): the constraint exhibits phase transition behavior, and managing theater ratio becomes the primary control variable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold at which rising theater decouples from operational capacity"
+    },
+    {
+      "id": "generational_knowledge_transmission_mechanism",
+      "question": "What specific mechanisms ensure live knowledge (tacit decision-making heuristics, pattern recognition in novel situations, rapid judgment under uncertainty) actually transmit across cohort turnover? Does apprenticeship model work, or does knowledge evaporate at each generational boundary?",
+      "resolution_mechanism": "Ethnographic study of knowledge transmission in high-reliability organizations (nuclear power, aviation, emergency response). Measure: retention of non-codified decision rules after 50%+ personnel turnover; comparison of disaster response quality before/after major generational transition; interviews identifying what training methods preserve tacit knowledge vs what is lost to replacement cohorts.",
+      "impact": "If transmission mechanism is robust: competence reading is stable across generations. If transmission is fragile: each generation must re-learn capacity, and the constraint defaults toward husk reading (performative maintenance without competence). If transmission requires specific organizational structures (long-term employment, mentorship relationships): the constraint's viability depends on labor market and organizational design choices outside the preparedness system itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tacit knowledge actually transmits across generational turnover"
+    },
+    {
+      "id": "reading_identity_recognition",
+      "question": "Does the institutional authority recognize the distinction between the competence reading (live exercised knowledge, low theater) and the husk reading (memorial performance, high theater)? Or does the authority treat both as valid preparedness?",
+      "resolution_mechanism": "Policy analysis: examine disaster preparedness mandates and evaluation criteria. Do policies require demonstration of decision-making competence in drills (competence reading)? Or do they only require ritual completion and documentation (husk reading)? If both are acceptable, institutional authority has not recognized the distinction. Interview institutional leaders: can they articulate the difference? Do they value one over the other?",
+      "impact": "If authority recognizes competence reading as distinct: institutional pressure maintains low theater and reinforces competence pathway. If authority conflates readings: husk reading becomes increasingly acceptable, theater ratio drifts upward, and the constraint gradually transitions from rope (genuine coordination) to piton (vestigial performance). The hybrid reading emerges when authorities attempt to mandate both simultaneously, creating permission for theater and competence to coexist.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether institutional authority recognizes the competence/husk distinction"
+    },
+    {
+      "id": "crisis_exposure_window",
+      "question": "How long can an organization maintain the appearance of competence (high theater, degraded actual capacity) before a real crisis exposes the gap? Is there a 'crisis exposure window' — a time period after which actual disaster risk has grown faster than theater can hide the incompetence?",
+      "resolution_mechanism": "Historical analysis of organizations that experienced catastrophic failures (Challenger explosion, post-Katrina NOLA emergency response, COVID-19 supply chain collapse, bank stress tests that missed 2008 indicators). Measure: time lag between competence loss (identifiable in hindsight as degraded training, institutional memory loss, or ritual-only exercises) and crisis exposure. Identify whether early-warning signals were present in theater-only drills.",
+      "impact": "If exposure window is short (<5 years): theater cannot sustain the appearance of competence for long. Organizations in husk reading will experience rapid D5 failure. If window is long (>10 years): theater can hide incompetence for a generation, allowing institutional inertia to fully degrade capacity. If window is variable by crisis type: some disasters (predictable, slow-onset) expose incompetence quickly; others (rare, complex) permit theater to persist longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Time lag between competence loss and crisis exposure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Preparedness as live exercised knowledge is a distinct reading of the preparedness_commitment kernel, emphasizing that genuine institutional readiness depends on continuous, functionally-coupled training, real-time decision-making drills, and effective intergenerational transmission of tacit knowledge. This reading holds that preparedness is a rope-type coordination mechanism — a genuine solution to the problem of maintaining operational capacity despite inevitable personnel turnover and generational change. The constraint exhibits low base extractiveness (0.18) and low theater ratio (0.25) because the mechanism is self-reinforcing: training that improves capacity directly benefits the trained personnel and the organization, creating alignment between the constraint's function and the interests of those it governs. However, this reading is vulnerable to degradation. As institutional memory fragments, as drills become increasingly ritualized, or as theater ratio rises (through proceduralization, checklist compliance, loss of genuine surprise testing), the constraint transitions toward the husk reading — the same formal structure persists but actual competence erodes. The competence reading asserts that the distinction is real and diagnostically critical: organizations that maintain low theater (genuine decision-making challenges in drills) survive crises with contained failure; organizations that allow theater to rise (ritual drills disconnected from real decision-making) experience catastrophic failure (D5 break) when actual disaster occurs.",
+    "key_agents": [
+      "Trained Response Organizations: Primary beneficiary (organized/mobile/generational) — organized actors that see preparedness as genuine coordination and reinvest in competence maintenance",
+      "Institutional Authority: Primary beneficiary and enforcer (institutional/arbitrage/national) — government or institutional actors mandating preparedness as a real solution to institutional continuity",
+      "Competent Practitioners: Secondary beneficiary (powerful/mobile/biographical) — individual responders or disaster managers who develop professional competence through live exercised knowledge",
+      "Obligated Community Members: Secondary victim (moderate/constrained/local) — civilians required to participate in drills or preparedness training who bear time costs without transparent benefit",
+      "Vestigial Bureaucracies: Institutional actor prone to degradation (institutional/arbitrage/civilizational) — authorities that maintain preparedness mandates but lose capacity to enforce competence-testing, allowing theater to rise",
+      "Analytical Observer: Structural position (analytical/analytical/global) — can identify the critical threshold between competence and husk readings by examining post-crisis failure analysis"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low and stable. This reading asserts that when preparedness is genuinely live-exercised, benefits align with those bearing the constraint's cost. Trained personnel gain professional competence and career advancement; organizations gain improved response capacity; future cohorts inherit operational readiness. The constraint does not extract value away from its beneficiaries — it coordinates their interests. The modest extractiveness (not zero) reflects the labor cost borne by participants (time in drills, study, simulations) and the resource cost to institutional authorities (funding for realistic training, facility access). But this cost is transparent and reinvested in the shared good. Suppression (0.12): Low. In the competence reading, personnel are not suppressed — they have mobile exit options (can leave the profession or organization) and the constraint operates through genuine benefit generation, not coercion. Obligated community members experience higher suppression (constrained exit, time cost), but from the competence reading's perspective, this suppression is the cost of institutional coordination, not extractive overhead. Theater ratio (0.25): Low and slightly rising. The measurement trajectory shows theater remaining consistently low, indicating that drills continue to test real decision-making (surprise elements, novel scenarios, genuine risk of failure). Slight rise reflects normal proceduralization (some standardized testing elements) but does not cross into ritual-only performance. The competence reading remains stable under this trajectory.",
+    "directionality_logic": "Directionality for the competence reading is derived from the genuine coordination function and aligned benefit structure. Beneficiary agents (trained personnel, institutional authorities, future response capacity) occupy low-d positions (low extractiveness experienced) because the constraint's function is their own interest. Moderately-powered agents with constrained exit (obligated community members) occupy higher-d positions because they bear costs without proportional voice in the coordination mechanism. Organizational-level agents with arbitrage options (institutional authorities) occupy the lowest-d positions because they both create and benefit from the constraint. The competence reading assumes that d remains relatively stable across the interval because the mechanism continues to align function with benefit. If theater ratio were to rise sharply (visible in measurements as theater_ratio → 0.65+), d values would shift upward for all agents except institutional authorities, indicating constraint degradation toward the husk reading.",
+    "perspectival_gap": "The critical perspectival gap in the competence reading is between the trained organization (rope) and the obligated community member (snare). Both perspectives acknowledge the same constraint structure — regular drills, mandatory training, institutional commitment to preparedness. But the trained organization sees genuine coordination and skill-building, while the community member sees mandatory time extraction. The gap widens when the community member cannot exit and cannot see how their participation benefits them directly. The competence reading resolves this gap by asserting that the gap itself is a measurement error: if true competence-testing is occurring, community member participation IS directly beneficial (they gain skills for self-protection and disaster response). If the gap persists despite competence-testing, the reading suspects the constraint has degraded toward the husk reading — the drills are ritual, and the community member's intuition about extraction is correct. The analytical observer sees this gap as the diagnostic signal: if competence-testing is real, gap should narrow as community members experience genuine skill development; if gap persists or widens, husk reading is emergent.",
+    "kernel_context": "This constraint instantiates the competence reading of the preparedness_commitment kernel. The kernel is the contested claim: 'preparedness is maintained through institutional routines that preserve operational capacity across generational change.' The competence reading asserts that this kernel is anchored in live exercised knowledge — drills test real decision-making, training transmits tacit knowledge, and the constraint solves genuine coordination problems. Two sibling readings contest this: the husk reading (preparedness is memorial performance — the same routines persist but competence erodes) and the hybrid reading (preparedness is a layered system where memorial elements stabilize institutional commitment while competence elements maintain function). The competence reading is distinguished by its claim that the distinction between theater and competence is functionally critical: organizations maintaining low theater retain adaptive capacity; organizations allowing theater to rise experience catastrophic failure. The empirical test is post-crisis analysis: does theater ratio at t0 predict response failure at t1? If yes, competence reading is empirically grounded. If theater and actual response quality diverge, the husk reading or hybrid reading may be more accurate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_commitment__husk_reading",
+      "preparedness_commitment__hybrid_reading",
+      "institutional_memory_fragmentation",
+      "generational_knowledge_loss"
+    ],
+    "dual_formulation_note": "The preparedness_commitment kernel admits three structurally distinct readings: competence_reading (this file) models preparedness as live exercised knowledge with low theater and genuine coordination function; husk_reading models the same institutional structure but with risen theater and eroded competence; hybrid_reading models layered systems where memorial elements stabilize commitment while competence elements maintain function. The three readings share the same external institutional structure but differ fundamentally in whether drills test real decision-making capacity. Each reading has its own ε value reflecting whether the constraint coordinates or extracts. They are linked as related constraints within a single kernel contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_competence_maintenance",
+    "drift_state": {
+      "moment": "contemporary_budget_constrained_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_commitment__husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_commitment__hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drills_test_real_decision_making",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "tacit_knowledge_transmits_across_generations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

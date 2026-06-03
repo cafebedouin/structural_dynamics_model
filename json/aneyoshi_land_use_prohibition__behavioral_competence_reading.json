@@ -1,0 +1,225 @@
+{
+  "header": {
+    "constraint_id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_aneyoshi_behavioral_competence",
+    "measurement_id_prefix": "aneyoshi_bc",
+    "story_uid": "aca00621-1183-4068-a9ac-0a980c8552b6",
+    "created_at": "2026-02-26T14:33:22Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Aneyoshi Stone Prohibition: Behavioral Competence Reading",
+    "topic_domain": "disaster_anthropology/commitment_systems/land_use_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "aneyoshi_residents",
+      "downstream_community_safety"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Aneyoshi Resident (Generational View)",
+      "comment": "Perspective 1: ANEYOSHI RESIDENT (ROPE, generational) — The stone directive coordinates survival behavior across time scales longer than individual memory. Residents are constrained by resource availability (topography, distance to resources) but the coordination function is genuine: the constraint enables collective continuation rather than extracting from any group. The stone operates as a persistent coordination signal — low extraction, high coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Younger Generation (Biographical Mobility)",
+      "comment": "Perspective 2: YOUNGER GENERATION (ROPE, biographical/mobile) — At individual biographical scale, younger Aneyoshi residents have geographic mobility (can relocate to jobs in Kamaishi or beyond) and could exit the prohibition's binding. But they classify as Rope rather than Snare because the directive imposes minimal extractive burden — building on lower land is inconvenient, not prohibitive, and the coordination benefit (tsunami safety) is clear and internalized. Mobile exit options available; low suppression of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Disaster-Resilience Institution (Immediate/Institutional)",
+      "comment": "Perspective 3: DISASTER-RESILIENCE INSTITUTION (ROPE, immediate) — National disaster-mitigation frameworks benefit from the stone directive as a case of successful long-term behavioral persistence. Aneyoshi's 2011 survival while neighboring Otsuchi Township (25 km away) suffered 1,184 deaths provides empirical validation of the coordination function. Institutional actors experience the stone as enabling coordination that produces measurable public goods — low extraction, high coordination payoff."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Civilizational/Universal)",
+      "comment": "Perspective 4: ANALYTICAL OBSERVER (MOUNTAIN, civilizational/universal) — From a civilizational scale, the stone directive instantiates an immutable constraint: tsunami cycles exceed generational memory; communities that fail to encode hazard knowledge across the non-catastrophe interval do not persist; those that do persist. Aneyoshi's 78-year interval without tsunami (1933 to 2011) represents the exact timescale at which institutional memory atrophies and only material anchors (stone) maintain operative constraint. The analytical perspective sees the binding mechanism as a structural necessity, not contingent institutional practice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_persistence_mechanism",
+      "question": "Does the stone directive operate through direct causal constraint on settlement behavior, or through ritualized commemoration that happens to reinforce adaptive behavior?",
+      "resolution_mechanism": "Longitudinal observational study: interview residents on their conscious motivations for settlement location (explicit knowledge of tsunami hazard vs. tradition/parent authority vs. aesthetic preference); track settlement decisions in newly migrated residents without embedded kinship ties to the prohibition; model statistical correlation between proximity to stone and actual tsunami mortality in 2011 against counterfactual settlement patterns in neighboring communities without such directive artifacts.",
+      "impact": "If direct causal: behavioral_competence_reading is correct (Rope from all perspectives, low ε). If primarily ritual-based with adaptive outcome: commemorative_husk_reading is more accurate (Piton or Snare, higher ε). If mixed: depends on proportion — strong ritual framing with occasional explicit hazard instruction may split into two constraints (behavioral_competence for explicit-instruction agents; commemorative_husk for tradition-transmission agents).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether stone directive operates through direct behavioral causation or through adaptive ritual"
+    },
+    {
+      "id": "post_2011_behavioral_shift",
+      "question": "Has the 2011 tsunami validation strengthened or weakened the stone directive's operative force among younger residents?",
+      "resolution_mechanism": "Comparative study: (a) pre-2011 resident interviews on stone significance and settlement decision factors; (b) post-2011 resident interviews on same factors; (c) construction permit applications and settlement pattern changes in Aneyoshi's reconstruction phase (2011-2020); (d) intergenerational transmission of explicit hazard-awareness narratives (did 2011 validation make hazard-talk more frequent or more specific in parental instruction?).",
+      "impact": "If strengthened: behavioral_competence_reading shows durable empirical grounding across episodic validation. If weakened (residents view it as 'we got lucky once'): suggests commitment system's authority derives from continuous re-encoding rather than single validation event — may shift toward commemorative_husk reading. If split by cohort (older strengthen, younger weaken): indicates two constraints operating simultaneously.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Post-2011 trajectory of stone directive's operative force"
+    },
+    {
+      "id": "committer_frame_ambiguity",
+      "question": "Is this constraint ONE behavioral commitment to land-use prohibition encoded in stone, or TWO distinct commitments (behavioral adaptation to long-interval tsunami hazard PLUS commemorative practice honoring ancestors/traditional authority)?",
+      "resolution_mechanism": "Kernel analysis: identify the single codified commitment whose behavioral reading I am instantiating (behavioral_competence) and the sibling reading's kernel (commemorative_husk). They parse the same artifact — Aneyoshi's stone marker inscribed '津波記念碑' (Tsunami Memorial Stone, 1933) with height marking — differently: as live behavioral directive vs. as memorial to ancestors. The resolution: is there one kernel (the stone directive about settlement location) or two kernels (one behavioral, one commemorative)? This omega documents why they are one kernel with two readings rather than two distinct constraints.",
+      "impact": "If one kernel, two readings: behavioral_competence_reading and commemorative_husk_reading are siblings in a contested kernel; the engine's reading_relations and axioms in cs_structure capture their relationship. If two kernels: each constraint should be decomposed as a separate JSON file per ε-invariance principle — behavioral ε ≈ 0.05, commemorative ε ≈ 0.40-0.60 (institutional theater maintaining memorial function). Current authoring treats it as one kernel, two readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the stone artifact grounds one kernel with two readings or two distinct constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 83,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.01
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 78,
+      "value": 0.01
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 83
+  },
+  "commentary": {
+    "narrative_context": "Aneyoshi is a 340-resident fishing village in Iwate Prefecture, Japan, situated 144 meters above the Pacific Ocean on a hillside marked by a 1.5-meter stone monument erected in 1933. The stone, inscribed '津波記念碑' (Tsunami Memorial Stone), marks the high-water line of the 1933 Showa tsunami and carries the directive: 'Do not build below this stone.' For 78 years (1933–2011), Aneyoshi residents maintained settlement exclusively above this marker despite economic pressure to develop lower land. In March 2011, the 9.0-magnitude Great East Japan Earthquake triggered a tsunami. Aneyoshi, sheltered by its adherence to the stone directive, experienced zero deaths. Neighboring Otsuchi Township, 25 km away, with settlements on lower terrain, suffered 1,184 deaths—the highest death toll of any municipality in the disaster. This constraint models Aneyoshi's stone as a live behavioral commitment—a directive that operationally determines settlement patterns and demonstrably saves lives. The constraint is resolved through this BEHAVIORAL COMPETENCE READING, which treats the stone as a causally efficacious coordination mechanism. A sibling reading, the COMMEMORATIVE HUSK reading, treats the same artifact as primarily a memorial to ancestors—ritual honoring rather than operative behavioral directive. Both readings parse the same physical artifact and social practice; they differ in how they account for the binding mechanism.",
+    "key_agents": [
+      "Aneyoshi residents (powerless/constrained): Primary actors who enact the settlement prohibition. Benefit from hazard avoidance coordination; constrained by economic opportunity cost of not developing lower land. Internalize the directive across 78-year non-catastrophe interval.",
+      "Younger generation (moderate/mobile): Demographic cohort with geographic mobility and modern economic opportunities; experience slight extractive pressure from the prohibition (inconvenience of distance to shore/commerce) but internalize hazard-avoidance coordination.",
+      "Disaster-resilience institutions (institutional/arbitrage): National frameworks for disaster mitigation and community-based adaptation. Benefit from Aneyoshi's behavioral persistence as proof-of-concept for long-interval hazard encoding.",
+      "Ancestral authority lineage (institutional/implicit): The 1933 settlers and their kin transmit the stone directive across generations. Not explicitly organized but functionally operative through kinship and community practice.",
+      "Otsuchi Township (comparative victim): Neighboring municipality lacking equivalent ancestral directive or stone marker. Settlement on lower terrain results in 1,184 deaths in 2011, providing stark empirical contrast validating Aneyoshi's commitment."
+    ],
+    "logic_rationale": "EXTRACTIVENESS (ε = 0.05): Very low. The stone directive coordinates behavior toward a collective benefit (tsunami hazard avoidance) with minimal asymmetric extraction. No beneficiary-victim split; all residents share the benefit of survival. The only extractive component is the opportunity cost imposed by the prohibition: residents cannot freely choose to settle on lower land for economic convenience. But this is not extraction in the technical sense — it is the legitimate cost of coordination. The measured value (0.05) reflects this minimal asymmetry. The measurement trajectory shows slight increases during the 1973–1993 period as opportunity costs accumulate (younger residents lack direct memory of 1933 tsunami), then a sharp drop in 2011 when the tsunami validates the directive's causal efficacy, re-synchronizing individual incentives with collective benefit. SUPPRESSION (0.02): Minimal. The prohibition is normatively endorsed; collective memory of the 1933 tsunami provides immediate justification; violation is socially unthinkable for most of the interval. Suppression requirement is low because consensus is high. The slight increase in the 1973–1993 period (to 0.03) reflects passive social sanction of the few residents who question the prohibition—a low-level suppression of dissent rather than coercion. THEATER RATIO (0.15): Low. The stone directive operates with high functional clarity: explicit behavioral rule, tied to material evidence, with causal mechanism understood (tsunami hazard → settlement location → survival). The modest theater component (0.15 rather than near-zero) reflects the interpretive layer that accumulates as direct memory fades—younger residents learn the prohibition through tradition and authority rather than causal reasoning. But the functional layer dominates; the behavioral outcome (no settlement below stone) is driven by understood causality, not performative compliance.",
+    "perspectival_gap": "The behavioral_competence_reading produces Rope from all four perspectives because the constraint genuinely coordinates behavior toward collective benefit with minimal extraction. The perspectival gap is not between Rope and Snare (as in typical extraction scenarios), but between operationally live Rope and the sibling reading's classification as Piton or Snare. The behavioral_competence reading sees the stone as causally efficacious; the commemorative_husk reading would see it as an inert memorial ritual that happens to correlate with adaptive settlement patterns. The empirical question—resolved by 2011—determines which reading is correct. The analytical observer's mountain perspective might be tempted to naturalize the constraint ('long-interval tsunamis necessarily require multi-generational memory encoding'), but the behavioral_competence reading anchors the constraint in contingent institutional practice (the specific community choice to erect a stone, maintain the tradition, and enforce settlement above it). The mount is false; the rope is real.",
+    "directionality_logic": "Directionality for each perspective is derived from beneficiary status and exit options. (1) Aneyoshi residents: powerless/constrained + beneficiary (hazard protection) → low d → low χ (Rope). (2) Younger generation: moderate/mobile + beneficiary (hazard protection) + exit options (could relocate) → moderate d, but beneficiary status dominates → moderate χ (still Rope). (3) Disaster-resilience institution: institutional/arbitrage + beneficiary (validation of coordination model) → low d → low χ (Rope). (4) Analytical observer: analytical/analytical (observer position, not agent position) → canonical d for analytical context → produces mountain perspective (natural-law framing). The sibling reading (commemorative_husk) would produce higher d for residents (treating them as bearers of ritual burden rather than beneficiaries of protection), pushing toward Snare or Tangled Rope. The difference in directionality between readings reflects their different accounts of the binding mechanism.",
+    "kernel_context": "This constraint instantiates the BEHAVIORAL COMPETENCE READING of the ANEYOSHI LAND-USE PROHIBITION kernel. The kernel is the stone directive (inscribed 1933, operationally enforced through community practice). The behavioral_competence reading treats the stone as a causally efficacious coordination mechanism: the directive directly determines settlement location, which determines survival in tsunami events. The sibling reading, commemorative_husk_reading, treats the same artifact as primarily a memorial to ancestral authority and 1933-tsunami victims—the binding mechanism is ritual transmission and identity fusion with ancestors rather than explicit behavioral coordination. Both readings parse the stone's role in Aneyoshi's 2011 survival, but differ in causal attribution: behavioral_competence attributes survival to the prohibition's causal efficacy; commemorative_husk attributes survival partly to the ritual's capacity to sustain adaptive behavior as a side effect, not as its primary function. The empirical validation (2011 tsunami) supports behavioral_competence but does not logically foreclose commemorative_husk (which can argue the ritual happened to reinforce adaptive behavior). The readings coexist as live positions held by different analytical frameworks: disaster-risk reduction science emphasizes causal mechanisms (behavioral_competence); anthropology of memory and ritual practice emphasizes commemorative and identity functions (commemorative_husk). The kernel contest is resolved empirically by the measurement trajectory, which shows the stone's behavioral directive as operationally live across the 78-year interval, with 2011 validation."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "aneyoshi_land_use_prohibition__commemorative_husk_reading"
+    ],
+    "dual_formulation_note": "The Aneyoshi stone constraint family consists of two readings of a single kernel (the 1933 stone directive and settlement prohibition). The behavioral_competence_reading (ε ≈ 0.05) models the stone as causally determining settlement location through explicit behavioral coordination. The commemorative_husk_reading (ε ≈ 0.40–0.60, likely Piton or Snare) models the stone as primarily performing commemorative function—ritual honoring of ancestors and 1933 victims—with behavioral persistence as a side effect. Both readings use identical artifact (the stone marker) and identical historical outcome (2011 survival). They differ in causal attribution and in how they account for the binding mechanism. The readings are linked because the empirical validation (2011) provides evidence for or against each causal model. The behavioral_competence reading's low ε depends on the claim that the prohibition directly causes settlement location decisions; the commemorative_husk reading's higher ε depends on the claim that ritual maintenance and identity fusion are primary, and behavioral adaptation is emergent. Network link is directional: behavioral_competence_reading influences commemorative_husk_reading because if behavioral causation is demonstrated, the commemorative reading must account for how ritual can be performative while still coordinating adaptive behavior."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "aneyoshi_land_use_prohibition__commemorative_husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "stone_directive_causally_determines_settlement_location",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "multi_generational_memory_requires_material_anchor",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "ancestral_hazard_knowledge_encoded_in_stone",
+    "drift_state": {
+      "moment": "contemporary_post_2011",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "aneyoshi_land_use_prohibition"
+    ]
+  }
+}

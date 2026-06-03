@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "income_dep",
+    "story_uid": "988a751d-2887-4d66-9424-60d60de1dbd3",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Dependency Trap (Skill Atrophy Reading)",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "welfare_administering_state",
+      "employers_suppressing_wages"
+    ],
+    "victims": [
+      "ubi_recipients_trapped_in_idleness",
+      "taxpayers_funding_non_productive_transfers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "UBI Recipient Caught in Idleness Cycle",
+      "comment": "PERSPECTIVE 1: UBI RECIPIENT (SNARE) — Unconditional income removes immediate survival pressure but simultaneously removes work incentives and skill-development pathways. Long-term: cognitive decline, erosion of work discipline, atrophy of labor-market-relevant skills. Exit is costly — returning to work after years outside the labor market requires overcoming employer skepticism, re-entry barriers, and internalized belief that 'I'm not a worker anymore.' Trapped by both external barriers (employer discrimination) and internal identity shift (identity_locked dynamics). Maximum experienced extraction because the agent bears full cost of skill loss and faces compounding exit barriers over time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Low-Skill Worker Navigating Labor Market",
+      "comment": "PERSPECTIVE 2: LOW-SKILL WORKER (TANGLED ROPE) — Experiences UBI as both coordination and extraction. The income floor enables refusal of exploitative work (positive freedom) AND suppresses wages throughout the low-skill sector (extraction). Employers can offer lower wages when workers have UBI subsistence; labor market coordination happens at depressed wage levels. Constrained exit because quitting means losing both wage and UBI (most programs claw back income) — the constraint is real but surmountable with significant cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Welfare-Administering State",
+      "comment": "PERSPECTIVE 3: WELFARE-ADMINISTERING STATE (ROPE) — Experiences UBI as a coordination mechanism that achieves poverty reduction and social stability with minimal bureaucratic overhead compared to means-tested systems. The state benefits from reduced administrative cost and simplified eligibility verification. Extractiveness is minimal because the state's primary interest (population stability) aligns with the program's ostensible function. Arbitrage exit available — can modify program structure, funding level, or withdrawal rules at will."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Low-Wage Employers Benefiting from Wage Suppression",
+      "comment": "PERSPECTIVE 4: LOW-WAGE EMPLOYERS (SNARE) — Experience UBI as extraction subsidy. The income floor allows them to suppress wages below productivity-justified levels while maintaining worker subsistence. This is pure extraction with minimal coordination function — the constraint exists to transfer employer surplus to the firm. Technically mobile (can relocate business, automate, adjust wages) but in practice sticky within local labor markets and willing to maintain the status quo. For this agent, the constraint is massively beneficial (negative extraction) despite formal snare classification — the label captures the structural mechanism (pure extraction), not the direction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Taxpayer Funding Non-Productive Transfers",
+      "comment": "PERSPECTIVE 5: TAXPAYER (SNARE) — Experiences UBI as extraction when recipients remain outside the labor market. The taxation funds consumption without proportional productive contribution or tax revenue generation. This reading emphasizes the fiscal drain and assumes that skill atrophy prevents future tax recovery. Constrained exit because changing tax structure requires political mobilization; individual taxpayers cannot opt out without penalty. Extraction is significant but not total — some taxpayers benefit from aggregate demand effects if UBI spending circulates productively."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Program Administration and Policy Discourse",
+      "comment": "PERSPECTIVE 6: PROGRAM ADMINISTRATION (PITON) — The dependency-trap framing persists through institutional inertia and selective evidence interpretation. Early pilot results showing modest employment effects are reified into permanent claims about 'UBI creating dependency,' while contradictory evidence is treated as exceptional or short-term. The theater ratio (0.35) reflects moderate but notable performative content — the 'welfare trap' narrative is politically salient and reinforces means-testing advocacy, but is decoupled from actual longitudinal outcome data. Not quite rope (too much theater, too much motivated reasoning) but not quite snare (the institutional actor has some genuine interest in program stability). Piton classification reflects institutional degradation: the dependency-trap framing is maintained because it serves political interests in downsizing universal programs, not because it accurately summarizes evidence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some behavioral response to income transfers is inherent to human incentive structure: unconditional income always reduces work incentive at the margin — this is an immutable behavioral law. However, the structural data contradicts pure mountain status. The claim naturalizes what is actually a contingent institutional outcome: whether skill atrophy occurs depends on labor market structure (availability of re-entry pathways), macroeconomic conditions (job density, wage floors), program design (asset limits, duration, wage-subsidy interactions), and social mechanisms (stigma, identity, community). The 'natural law' framing conceals these contingencies. Engine false-summit detection will identify this as naturalization of institutional artifacts."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "work_incentive_elasticity_threshold",
+      "question": "At what UBI level does the work incentive reduction cross from negligible to significant, and does this threshold vary by demographic, labor market condition, and job quality?",
+      "resolution_mechanism": "Randomized controlled trials with varying UBI levels; longitudinal employment tracking across income deciles and skill categories; cross-national comparison of employment rates at equivalent UBI purchasing-power levels",
+      "impact": "If threshold is high (UBI > 70% of median wage): skill atrophy risk is real and significant. If threshold is low (UBI < 40% of median wage): behavioral effects are marginal and skill atrophy is primarily demographic (age, education) rather than causal. If threshold varies by job quality: the constraint is not a snare (pure extraction) but tangled rope (mixed effects) or even rope (coordination with distributional fairness).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Behavioral response threshold to unconditional income transfers"
+    },
+    {
+      "id": "skill_atrophy_causation_vs_selection",
+      "question": "Do lower employment rates among UBI recipients represent true skill atrophy and motivation loss (causal, this reading's claim) or selection effects (people with lower productivity or motivation are more likely to accept UBI, pre-existing differences)?",
+      "resolution_mechanism": "Matched-pair longitudinal studies comparing UBI recipients to non-recipients on skill measures (literacy, numeracy, technical certifications) before and after program enrollment; instrumental variable analysis using program rollout variation; assessment of re-employment wage trajectories (declining wages = atrophy; stable wages = selection).",
+      "impact": "If atrophy is causal: snare classification confirmed, victims include both recipients (trapped in skill loss) and taxpayers. If selection dominates: the constraint may be rope (efficient matching) or even positive coordination (people better suited to non-market activities are enabled to pursue them). Skill atrophy becomes a measurement artifact of pre-existing heterogeneity, not a structural extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal vs. selection explanation for lower employment rates"
+    },
+    {
+      "id": "wage_suppression_empirical_magnitude",
+      "question": "How much of the low-wage labor market's stagnation is attributable to UBI's existence (employers can suppress wages because UBI provides subsistence), versus macro factors (weak productivity growth, excess labor supply, globalization, union decline)?",
+      "resolution_mechanism": "Difference-in-differences analysis comparing wage trajectories in regions with vs. without UBI programs, controlling for macroeconomic conditions; employer survey data on wage-setting rationales; historical comparison of wage floors before and after UBI introduction in pilot jurisdictions.",
+      "impact": "If UBI suppression is large (≥15% wage depression): the constraint is snare (pure extraction benefiting employers). If UBI suppression is negligible (≤3% wage depression): wages are set by structural factors and UBI's effect is primarily distributional (shifting surplus from taxpayers to recipients, not creating new extraction). If suppression is moderate (5-10%) but recoverable through tight labor markets: the constraint is tangled rope (mixed coordination and extraction), not snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical magnitude of wage suppression attributable to UBI"
+    },
+    {
+      "id": "reading_contest_kernel_specification",
+      "question": "Which reading of the income-support-conditionality kernel is correct? Does unconditional income function primarily as skill-atrophy trap (dependency reading), positive-freedom enabler (freedom reading), or employer subsidy (wage-subsidy reading)?",
+      "resolution_mechanism": "This is the fundamental reading contest. No single empirical fact resolves it — the three readings emphasize different structural outcomes and have different empirical signatures. Resolution requires value commitments: Which outcome matters most — labor market participation, individual autonomy, or wage floor? Which causal pathway is primary — behavioral response to incentives, liberation from coercive labor, or institutional extraction by employers? Empirical resolution pathway: longitudinal study of countries at different UBI levels (Finland, Kenya, Stockton CA, South Korea) measuring simultaneously (1) employment/skill trajectories, (2) subjective autonomy and choice, (3) wage levels and employer surplus. The sibling readings' empirical signatures (freedom reading expects employment to remain stable or rise due to better job matching and less desperation; wage-subsidy reading expects wages to stagnate and employer profitability to rise; dependency reading expects long-term employment decline and skill loss) should diverge at program scale > 40% of median wage.",
+      "impact": "Determines constraint type: dependency reading → snare (extraction). Freedom reading → rope or tangled rope (coordination with positive freedom effects). Wage-subsidy reading → tangled rope (mixed coordination and employer extraction). Also determines victim set and beneficiary set. If freedom reading is correct, UBI recipients are beneficiaries (gaining autonomy) not victims. If wage-subsidy reading is correct, UBI recipients are victims of wage suppression and employers are primary beneficiaries. This reading contest is not resolvable from within the dependency-trap framing — requires cross-position analysis.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Fundamental contest between three readings of the income-support-conditionality kernel"
+    },
+    {
+      "id": "program_design_constraint_variability",
+      "question": "Does the snare classification depend on specific UBI program design choices (unconditional, flat-rate, permanent, clawback-free), or is it inherent to any unconditional income support?",
+      "resolution_mechanism": "Comparative analysis of UBI variants: conditional vs. unconditional, flat vs. means-tested, temporary vs. permanent, clawback vs. no-clawback. Empirical tracking of outcomes across design variants. Historical case studies of program modifications and their effects on employment, skill, wages.",
+      "impact": "If snare classification depends on design choices: the constraint is contingent and can be remedied through program restructuring (e.g., combining UBI with mandatory training, adding clawback for non-participation, making program temporary with sunset). If inherent: the snare is a fundamental structural feature of any unconditional income support. Design variability enables the scaffold reading (UBI as temporary until labor market conditions improve) or rope reading (UBI combined with job guarantees or training).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether snare classification is inherent or contingent on specific program design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "income_dep_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "income_dep_extractiveness_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "income_dep_extractiveness_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "id_override": "income_dep_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62,
+      "id_override": "income_dep_suppression_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65,
+      "id_override": "income_dep_suppression_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "income_dep_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "id_override": "income_dep_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "income_dep_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the dependency-trap reading of the income-support-conditionality kernel. The reading holds that unconditional income support (UBI) undermines work incentives, creating long-term dependency and skill atrophy. UBI recipients become trapped in idleness as work incentives decline; skills atrophy from disuse; re-entry barriers accumulate over time (employer skepticism of employment gaps, internalized identity shift away from worker role). Simultaneously, the constraint extracts from taxpayers who fund transfers to non-productive recipients, and from low-wage workers whose wages are suppressed because employers can offer lower compensation when workers have UBI subsistence. This reading focuses on behavioral responses to incentives and the accumulation of human capital loss over time. It contrasts with the freedom-floor reading (which emphasizes positive freedom from coercive labor) and the wage-subsidy reading (which emphasizes the structural benefit flowing to employers). This is one coherent reading of a contested empirical and normative claim about what unconditional income support actually does in the world.",
+    "key_agents": [
+      "UBI Recipients Trapped in Idleness: Primary victims (powerless/trapped, generational) — face skill atrophy, internalized identity loss, compounding re-entry barriers. Extractiveness accumulates over time.",
+      "Low-Skill Workers in Labor Market: Secondary victims (moderate/constrained, biographical) — experience both positive freedom (refusal of exploitative work) and negative constraint (wage suppression). Constrained rather than trapped.",
+      "Taxpayers Funding Non-Productive Transfers: Secondary victims (moderate/constrained, generational) — bear fiscal cost when recipients don't return to labor market. Extraction is conditional on long-term non-participation.",
+      "Welfare-Administering State: Primary beneficiary (institutional/arbitrage, immediate) — achieves poverty reduction and social stability with lower administrative cost. Experiences coordination, not extraction.",
+      "Low-Wage Employers: Secondary beneficiary (powerful/mobile, biographical) — benefit from wage suppression enabled by UBI subsistence. This is pure extraction mechanism from their perspective, but the reading treats them as beneficiaries extracting surplus.",
+      "Program Administration: Institutional actor (organized/constrained, generational) — maintains dependency-trap narrative through institutional inertia and political interest in downsizing programs. Theater ratio indicates moderate motivated reasoning."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over time from 0.35 to 0.58. The constraint exhibits extraction accumulation — the extraction mechanism (skill atrophy, wage suppression, fiscal drain) intensifies as the program persists. Initially, extractiveness is lower (0.35) because some recipients remain employed at UBI-supplemented wages (coordination function). Over time (5-10 year horizon), extractiveness increases as employment rates decline and skill atrophy becomes measurable. This measurement trajectory supports the snare classification — extraction accumulates rather than stabilizing. Suppression (0.65): Moderate-high and stable. The suppression mechanism operates through work-incentive reduction (behavioral) and low-wage employer capacity to suppress wages (structural). Suppression is not total — some recipients remain employed, wage-floor effects exist in tight labor markets — but significantly constrains exit options. Theater ratio (0.35): Low-to-moderate. This reading has substantial empirical content (employment rate tracking, skill measurement, wage trajectory analysis) but also significant narrative and rhetorical elements (the term 'dependency trap' carries moral valence; the causation from UBI to atrophy is contested; the comparison group is often implicit). Theater increases slightly over time (0.28 to 0.35) as the narrative hardens and becomes more resistant to contrary evidence.",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence across power levels and time horizons. UBI recipients at powerless/trapped context classify the constraint as snare (maximum extraction, no exit). Low-skill workers at moderate/constrained context classify as tangled rope (mixed coordination and extraction, significant but surmountable costs). The welfare state at institutional/arbitrage context classifies as rope (pure coordination, program works as designed). Low-wage employers at powerful/mobile context classify as snare with negative extraction (pure benefit). The program administration at organized/constrained context classifies as piton (performative maintenance of a degraded framing). The analytical observer risks classifying as mountain (immutable behavioral law). The gap between the UBI recipient's snare and the welfare state's rope represents the core contest: does the program function as intended (rope: reduce poverty, enable dignity) or does it trap recipients in idleness while achieving state goals incidentally (snare: extraction via skill loss and wage suppression)? No single type is correct — the presheaf of perspectives reveals the structure. However, the freedom-floor and wage-subsidy readings would produce different perspectival landscapes entirely, with UBI recipients as beneficiaries (freedom) or victims of wage suppression (wage-subsidy).",
+    "kernel_context": "This constraint is ONE reading of the contested kernel 'income-support-conditionality.' The kernel is the stabilized social commitment (written policy, normative debate, institutional practice) around whether unconditional income transfers (UBI) improve or degrade individual and collective welfare. This dependency-trap reading interprets the kernel as establishing that UBI undermines work incentives and creates long-term skill atrophy. Sibling readings include: (1) freedom-floor reading — interprets the kernel as establishing that UBI decommodifies labor and creates positive freedom, enabling better job matching and refusal of coercive work. (2) wage-subsidy reading — interprets the kernel as establishing that UBI functions as an employer subsidy, allowing systematic wage suppression while maintaining worker subsistence. These three readings are logically incompatible in their empirical claims but coexist as live positions held by different policy advocates, researchers, and political movements. The reading contest is not a simple disagreement about facts but a fundamental difference in which causal mechanisms and outcomes are treated as primary. This reading emphasizes behavioral responses to incentives and accumulation of human capital loss. The freedom reading emphasizes liberation from coercive labor and improved bargaining power. The wage-subsidy reading emphasizes structural mechanisms of wage suppression and employer extraction.",
+    "directionality_logic": "Directionality (d) is computed from beneficiary/victim declarations and exit options. The dependency-trap reading places UBI recipients in the victim set (trapped, identity-locked pathway into long-term non-participation). This produces high d (~0.85-0.95) for powerless agents with trapped or identity_locked exit. Taxpayers enter the victim set (moderate/constrained), producing moderate d (~0.60-0.70). The welfare state enters beneficiary set (institutional/arbitrage), producing low d (~0.05-0.15). Low-wage employers enter beneficiary set (powerful/mobile), producing low d despite mobile exit (~0.10-0.25) because they benefit structurally from wage suppression. The engine derives d from these declarations and applies the sigmoid f(d) to compute experienced extractiveness χ. The high-d victims experience χ amplified by f(d) ≈ 1.28-1.42 (powerless with trapped exit), while low-d beneficiaries experience χ dampened or negative. The national scope (σ=1.0) does not amplify or dampen relative to baseline. Final χ = 0.58 × f(d) × 1.0 — for a trapped victim, χ ≈ 0.74 (high); for an institutional beneficiary with arbitrage, χ ≈ -0.07 (massively negative). This directionality structure captures why the snare classification emerges: pure extraction mechanism (high ε), targeting specific victims while benefiting institutional actors, with suppression preventing escape."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__wage_subsidy_reading",
+      "labor_market_wage_suppression",
+      "means_testing_surveillance_burden"
+    ],
+    "dual_formulation_note": "The income-support-conditionality kernel decomposes into three structurally distinct constraint stories with different ε values and beneficiary/victim structures. The dependency-trap reading (this file) emphasizes behavioral responses and skill atrophy, yielding ε=0.58 and snare classification. The freedom-floor reading emphasizes positive autonomy and improved labor market matching, yielding lower ε and rope/tangled-rope classification. The wage-subsidy reading emphasizes structural wage suppression mechanisms, yielding ε~0.55 and tangled-rope classification. Each reading instantiates a different causal theory about what UBI actually does. They are not the same constraint measured differently — they are logically incompatible claims about the same institutional phenomenon. Link them through network edges to enable contamination and comparative analysis across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reference_frame": "labor_market_participation_as_normalcy",
+    "drift_state": {
+      "moment": "contemporary_automation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_conditionality__freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "income_support_conditionality__wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_income_reduces_work_incentive_at_margin",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_atrophy_from_non_participation_compounds_over_generations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

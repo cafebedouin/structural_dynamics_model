@@ -1,0 +1,252 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_preparedness_retention__competence_reading",
+    "measurement_id_prefix": "prep_comp",
+    "story_uid": "e1219070-70da-4a37-8d60-ce7131a7cdd3",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Exercised Knowledge (Competence Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory/governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "population_safety",
+      "adaptive_capacity"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Water Board Practitioner",
+      "comment": "PERSPECTIVE 1: WATER BOARD PRACTITIONER (ROPE) — The organized technician (dike inspector, flood coordinator, water management engineer) experiences preparedness drills as genuine coordination mechanisms. Live exercised knowledge translates directly into operational capacity. Drills solve a collective action problem: maintaining competence across rotating personnel, distributed infrastructure, and slow-turnover threats. Low theater (drilling is functional rehearsal), low extraction (the practitioner benefits from the same system they maintain). Classification: Rope — pure coordination with minimal coercive overhead."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Water Authority (Rijkswaterstaat Model)",
+      "comment": "PERSPECTIVE 2: WATER AUTHORITY / RIJKSWATERSTAAT (ROPE) — Institutional actors committed to dike maintenance and flood response experience preparedness as a coordination mechanism that directly serves their operational mandate. Drills test real infrastructure, train rotating personnel, and maintain institutional memory across decades. The authority benefits from low-theater preparedness (functional rehearsal) because it enables the actual function (flood control). No extraction — the constraint's existence is justified by genuine coordination need. Extraction value is negligible because the authority's interests align with competence preservation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Rural Municipality",
+      "comment": "PERSPECTIVE 3: RURAL MUNICIPALITY (ROPE) — Municipal governments responsible for evacuation coordination and civil protection experience preparedness as coordination with mild constraints. Drills maintain local competence networks, test evacuation routes, and preserve institutional knowledge across electoral cycles. Extraction is low because the municipality's competence directly serves its statutory obligations. Some constraint (resource costs of drills, time commitment) but genuine coordination function — municipalities cannot exit without abandoning their core function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Resident in High-Risk Area",
+      "comment": "PERSPECTIVE 4: RESIDENT IN HIGH-RISK AREA (TANGLED ROPE) — Individuals living in dike-protected zones experience preparedness as mixed coordination and extraction. Genuine coordination: drills and inspections maintain actual safety infrastructure that protects them. But also extraction: required participation in evacuation drills, restricted land use, constrained building codes, dependence on institutional capacity they cannot influence. Trapped by geography; constrained by competence requirements of living in flood-vulnerable area. Classification: Tangled Rope — real coordination function (dike safety) alongside asymmetric constraints on individual choice."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Disaster Response Network",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL DISASTER RESPONSE NETWORK (SCAFFOLD) — Global organizations (UN OCHA, Red Cross, humanitarian NGOs) experience preparedness drills as temporary coordination scaffolds that build capacity for crisis response. International drills have explicit sunset logic: they are investments in rapid mobilization capacity for when actual disaster strikes. Once deployed in real crisis, the scaffold serves its function and dissolves back into specialized expertise. Low extraction (resources directed to actual preparedness), explicit temporal boundary, genuine coordination. Classification: Scaffold — temporary support with built-in sunset (when crisis occurs, scaffold is replaced by operational response)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Civilizational View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (ROPE) — From a long-term perspective, preparedness as live exercised knowledge is a pure coordination mechanism that solves the civilizational problem: maintaining competence to respond to rare, high-consequence threats across generations. No extraction — the constraint exists to preserve adaptive capacity in the face of entropy. Theater is low because the drills ARE the competence; there is no gap between ritual and function. The analytical observer sees this constraint as a rope — the foundational reading that all others are perturbations of."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_measurement_ambiguity",
+      "question": "How do we empirically distinguish live exercised knowledge (functional competence) from ceremonial performance that mimics competence?",
+      "resolution_mechanism": "Crisis event analysis: compare organizational behavior in actual floods or disasters to pre-crisis drill performance. Track whether drill procedures transfer to real-world execution without degradation.",
+      "impact": "If drills demonstrate transfer fidelity (>80% procedure adoption in actual crisis): competence reading confirmed. If transfer fidelity is low (<50%): competence claim fails and constraint may reclassify toward husk reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measurement of whether drills translate to actual competence"
+    },
+    {
+      "id": "kernel_interpretation_ambiguity",
+      "question": "Is this constraint one reading of a contested kernel (preparedness_retention) or a fundamental property of competence systems?",
+      "resolution_mechanism": "Institutional analysis: compare competence-reading drills (Netherlands water boards, Singapore civil defense) with husk-reading drills (ceremonial disaster response in low-experience jurisdictions, memorial hurricane preparedness in areas without recent hurricanes). If both appear legitimate to different communities, the kernel contest is real.",
+      "impact": "If kernel contest is real: this is one reading among coexisting alternatives, and the competence-reading axioms are holdable but not foreclosing. If one reading is empirically superior: that reading may foreclose or substantially influence the others.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether preparedness_retention is a contested kernel"
+    },
+    {
+      "id": "hybrid_reading_coexistence",
+      "question": "Can the competence reading and hybrid reading (technical competence in specialized institutions, ceremonial in broader society) coexist as valid readings of the same kernel?",
+      "resolution_mechanism": "Institutional stratification analysis: study multi-level preparedness systems (e.g., Netherlands: Rijkswaterstaat technical competence + municipal ceremonial performance + public awareness campaigns). Assess whether this is a single constraint read differently or two distinct constraints at different institutional levels.",
+      "impact": "If coexistent: both competence and hybrid readings are live and the kernel contest involves influences relationships, not foreclosures. If one is foundational: the other is downstream perturbation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hybrid and competence readings coexist"
+    },
+    {
+      "id": "atrophy_trajectory_risk",
+      "question": "In the absence of live exercises, does competence degrade toward husk-reading status even if the formal drill machinery persists?",
+      "resolution_mechanism": "Historical analysis: trace competence trajectories in jurisdictions that reduced drill frequency (e.g., post-Cold War civil defense reductions in NATO countries). Track whether competence degradation precedes the formal sunset of preparedness programs.",
+      "impact": "If atrophy trajectory is confirmed: the competence reading is vulnerable to drift toward husk reading through decay rather than reinterpretation. Maintenance cost implications: what frequency and fidelity of drills prevents atrophy?",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Risk of competence degradation without active drill maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "id_override": "prep_comp_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15,
+      "id_override": "prep_comp_extract_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18,
+      "id_override": "prep_comp_extract_t20"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "prep_comp_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32,
+      "id_override": "prep_comp_theater_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35,
+      "id_override": "prep_comp_theater_t20"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "prep_comp_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.11,
+      "id_override": "prep_comp_suppress_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.12,
+      "id_override": "prep_comp_suppress_t20"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Preparedness as live exercised knowledge is a reading of the contested kernel preparedness_retention that emphasizes functional competence over ceremonial performance. This reading holds that drills and inspections are not rituals that merely feel like retention but genuine exercises in which knowledge is actively maintained through practice. The constraint operates in disaster preparedness and institutional memory systems where competence across decades and generational turnover is required for rare, high-consequence events. Water management (Netherlands dike system), civil protection (earthquake response), and public health systems exemplify this reading. The structural signature is low theater-to-competence ratio: drills are functional rehearsals, not performances; resources optimize for skill retention and adaptive capacity; beneficiary is population safety and systemic resilience; victims are none (in the pure reading) or fiscal opportunity costs if over-invested. This reading competes with two sibling interpretations: the husk reading (preparedness is memorial performance lacking live competence) and the hybrid reading (technical competence retained in specialized institutions while broader societal memory becomes ceremonial). The three readings coexist in contemporary preparedness practice, each grounding legitimacy in different institutional traditions and empirical claims about what drills actually accomplish.",
+    "key_agents": [
+      "Specialized Water Authority (Rijkswaterstaat model): Primary coordinator (institutional/arbitrage) — maintains technical competence through functional drills; benefits from low-theater rehearsal; embodies competence reading.",
+      "Water Boards / Regional Managers: Primary coordinator (organized/mobile) — organized practitioners who experience drills as genuine coordination solving personnel turnover and distributed knowledge maintenance.",
+      "Municipal Civil Protection Offices: Secondary coordinator (moderate/constrained) — statutory obligation for preparedness; experience drills as mixed coordination and constraint; constrained by resource and time costs.",
+      "Residents in High-Risk Areas: Partial victims (powerless/trapped) — benefit from competence-maintained infrastructure; experience extraction through mandatory participation, restricted land use, dependence on institutional capacity.",
+      "Population Safety (abstract beneficiary): Non-agent beneficiary — aggregate well-being enabled by maintained competence.",
+      "International Disaster Response Organizations: Temporary coordinator (organized/constrained) — experience preparedness as scaffold with explicit sunset; coordinate crisis response training and capacity building.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — sees preparedness as fundamental coordination solving the problem of maintaining rare-event competence across generations."
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The competence reading minimizes extraction because the constraint's function (maintaining adaptive capacity) aligns with all major agents' interests. Water authorities benefit from functional drills. Practitioners benefit from preserved competence. Residents benefit from maintained safety infrastructure. The extractiveness value reflects mild friction costs (time spent on drills, resource allocation) rather than asymmetric capture. Measurement trajectory shows slight upward drift (0.12 → 0.18 over 20 years) reflecting gradual bureaucratization and administrative overhead accumulation, but remaining well below rope ceiling (0.45). Suppression (0.12): Very low. The competence reading presumes consensus on preparedness value. Suppression of alternatives (husk reading, skepticism about drills) exists but is mild — jurisdictions can and do question drill utility without facing severe barriers. The measurement trajectory is stable (0.10 → 0.12) indicating that suppression is not the constraint's mechanism. Theater ratio (0.35): Low-moderate. This reading characterizes drills as functional exercises rather than performances. Theater reflects the minimum ceremonial content required for legitimacy (formal reporting, documentation, participation credentials), not the core function. Measurement trajectory shows modest drift (0.28 → 0.35) reflecting institutional tendency toward increased documentation and formality as organizational size increases, but theater remains well below piton threshold (0.70). The low theater ratio is diagnostic: if theater rose above 0.50, the constraint would risk reclassification toward the husk reading.",
+    "perspectival_gap": "The six perspectives reveal how the same structural data (drills, inspections, resource allocation) are classified differently depending on the observer's power position and time horizon. Organized practitioners (water boards, specialists) classify the constraint as pure Rope — functional coordination with no extraction. Institutions (Rijkswaterstaat) also see Rope — their mandate aligns with competence preservation. Residents (powerless/trapped) see Tangled Rope — genuine safety coordination mixed with personal constraint. International organizations see Scaffold — temporary coordination with sunset logic. The municipal perspective (moderate/constrained) bridges Rope and Tangled Rope, experiencing both coordination and constraint. The analytical/civilizational observer sees Rope at the foundational level: preparedness is solving the civilizational problem of maintaining competence across generations. No perspective classifies as Snare or Mountain. The gap between organized/institutional and powerless perspectives (both Rope vs Tangled Rope) reveals the distributional structure: those organizing the constraint experience it as pure coordination; those participating in it (without organizing authority) experience mixed coordination and constraint.",
+    "directionality_logic": "Directionality (d) in this constraint is determined by the agent's relationship to competence preservation — whether they benefit from maintained adaptive capacity and whether they bear costs of drill participation. Rijkswaterstaat (institutional/arbitrage) has d ≈ 0.05: strong beneficiary of competence maintenance, can arbitrage by integrating drills into operations. Water board practitioners (organized/mobile) have d ≈ 0.35: benefit from preserved competence, but mobile — could theoretically exit to non-preparedness roles (though most don't). Residents (powerless/trapped) have d ≈ 0.70: depend on maintained competence for safety but cannot exit high-risk geography; trapped position means they cannot arbitrage. All d values reflect the structure that the competence reading presumes: no agent is extracting from another; all agents benefit from maintained adaptive capacity. The gradations reflect differential power to influence the constraint's operation, not asymmetric extraction. This is why the constraint classifies as Rope from most perspectives — d values do not distribute in the high-extraction (d > 0.70) range that would produce Snare or Tangled Rope.",
+    "mandatrophy_analysis": "This reading resolves potential mandatrophy by maintaining tight alignment between claimed function (maintaining competence) and observed mechanism (drills as functional rehearsal). The analytical observer might be tempted to see preparedness as a natural law (Mountain — rare catastrophes require maintained competence, inherently) or as performance without function (Piton — elaborate drill machinery with low real-world transfer). The competence reading rejects both. It is not natural law (competence is contingent on active maintenance, not inevitable). It is not piton (drills are functional, not performative). It is pure coordination (Rope) — a constraint that solves a collective action problem (maintaining competence despite generational turnover and infrastructure distribution) without extracting from anyone. The mandatrophy is avoided by insisting on empirical transfer fidelity: if drills do not translate to real-world competence, the reading itself fails, and the constraint reclassifies toward husk reading. The reading is self-correcting through the omega variables.",
+    "kernel_context": "This JSON instantiates the competence_reading of the contested kernel preparedness_retention. The kernel itself is the abstract claim: 'What is preparedness?' The three readings offer competing answers: (1) competence_reading: preparedness is live exercised knowledge maintained through functional drills; (2) husk_reading: preparedness is memorial performance that feels like retention but lacks functional competence; (3) hybrid_reading: preparedness is stratified across institutional levels — technical competence in specialized organizations, ceremonial knowledge in broader society. These are not different constraints. They are different authority-grounded interpretations of what the kernel (preparedness) means and what drills accomplish. The competence reading grounds its authority in practice and expertise — this is how water boards and civil protection organizations actually talk about their work. The husk reading grounds authority in ritual critique — this is how skeptics and reformed bureaucrats critique preparedness. The hybrid reading grounds authority in empirical observation of institutional stratification. All three coexist in contemporary governance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__husk_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "preparedness_retention is decomposed into three readings differing by authority grounding and axiom sets. The competence_reading emphasizes practice and expertise; the husk_reading emphasizes ritual critique; the hybrid_reading emphasizes institutional stratification. Each reading is a constraint story with its own ε and perspectives. They are linked via network.affects_constraints and documented in their respective kernel_context fields. The kernel contest is real — different agents genuinely adopt different readings, and no single agent framework contains all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_retention__husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_retention__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drills_functionally_transfer_to_crises",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_requires_active_maintenance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "functional_preparedness",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

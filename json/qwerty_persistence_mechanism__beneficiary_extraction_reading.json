@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qwerty_benef",
+    "story_uid": "0ecb3209-1ffc-4efb-858d-3a6977565ec5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Persistence via Beneficiary Extraction (Incumbent Protection Reading)",
+    "topic_domain": "economic_history/technology_standards/path_dependence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_typewriter_manufacturers",
+      "typing_schools_capital_invested"
+    ],
+    "victims": [
+      "alternative_keyboard_developers",
+      "typing_efficiency_general_public"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Typist and Keyboard Alternative Users",
+      "comment": "PERSPECTIVE 1: TYPIST / ALTERNATIVE KEYBOARD DEVELOPERS (SNARE) — Trapped by installed base lock-in. Individual users cannot exit QWERTY without coordinating mass defection. Alternative keyboard developers (Dvorak, Colemak) cannot gain traction because switching costs are artificially maintained by incumbent control of training infrastructure and default implementations. Maximum extraction experienced: must accept suboptimal ergonomics to participate in the typing labor market."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Typing Schools and Small Office Equipment Retailers",
+      "comment": "PERSPECTIVE 2: TYPING SCHOOLS / SMALL EQUIPMENT RETAILERS (TANGLED ROPE) — Constrained by sunk costs in QWERTY-specific curricula and equipment inventory. These actors both benefit from the QWERTY coordination (standardized skill certification, predictable market) and bear extraction costs (curriculum lock-in, inability to adopt superior alternatives without coordinating across the industry). Active enforcement: major manufacturers bundled QWERTY exclusively with standard machines and withheld licensing for alternative layouts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Typewriter Manufacturers (Remington, Union, etc.)",
+      "comment": "PERSPECTIVE 3: INCUMBENT MANUFACTURERS (ROPE) — Primary beneficiaries. Experience QWERTY as a coordination mechanism that benefits them: training investments in QWERTY are specific capital that generates rents by raising switching costs. Can exit through arbitrage: if alternative layouts threatened their market position, incumbents could switch manufacturing and actively promoted alternatives (they did not). Net beneficiary perspective — extraction runs toward these actors via the protection mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Typewriter Industry Maintenance Ritual (Post-Computer Transition)",
+      "comment": "PERSPECTIVE 4: TYPEWRITER INDUSTRY POST-DIGITAL TRANSITION (PITON) — After computers displaced typewriters, QWERTY persisted not because incumbents actively protected it but through institutional inertia. The original extraction mechanism (manufacturer control, training school lock-in) atrophied as the industry declined. Yet QWERTY remained the default keyboard layout through path dependency and network effects — the constraint's original enforcement function (active beneficiary protection) became obsolete, but the constraint's structure persisted via theater (software defaults, training inertia, interface convention). Theater ratio high because the mechanism is now self-perpetuating rather than actively maintained."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Lock-In View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LOCK-IN VIEW (MOUNTAIN) — From a universal timescale, once a coordination standard is established, path-dependent switching costs make alternatives unviable regardless of technical merit. The constraint appears as an immutable consequence of coordination game dynamics: the installed base creates a natural barrier to supersession. This perspective risks naturalizing what is actually a choice by beneficiaries to enforce the standard through active mechanisms. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "active_vs_passive_maintenance",
+      "question": "Did incumbents ACTIVELY ENFORCE QWERTY (licensing restrictions, exclusive manufacturing, deliberate suppression of alternative keyboard layouts) or did QWERTY persist passively through coordination lock-in after initial adoption?",
+      "resolution_mechanism": "Historical record: licensing agreements, patent strategy, manufacturer correspondence, documented alternatives rejected or suppressed. Comparative analysis of typewriter manufacturers' treatment of QWERTY vs. other technical specifications.",
+      "impact": "Active enforcement → Tangled Rope / Snare (deliberate extraction). Passive persistence → Rope / Piton (coordination game without beneficiary malice). This omega distinguishes the beneficiary-extraction reading from the lock-in reading at the mechanism level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether QWERTY persistence involved active enforcement or passive coordination lock-in"
+    },
+    {
+      "id": "dvorak_suppression_evidence",
+      "question": "What evidence exists that Dvorak and other superior alternatives were actively suppressed rather than simply failing to overcome coordination costs?",
+      "resolution_mechanism": "Analysis of Dvorak adoption attempts: government standardization efforts (Navy study, GSA evaluation), software accessibility, typing school promotion attempts, financial support or lack thereof. Comparison to how successful keyboard alternatives (Colemak, etc.) eventually gained adoption despite similar or worse initial lock-in.",
+      "impact": "Strong suppression evidence → beneficiary-extraction reading confirmed (ε ≥ 0.58). Weak evidence → lock-in reading more defensible (ε lower, mechanism is passive coordination). This resolution directly determines which reading's ε value is empirically justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evidence of active suppression vs. passive failure of alternatives"
+    },
+    {
+      "id": "typing_school_collusion_scope",
+      "question": "Were typing schools part of a coordinated enforcement mechanism with manufacturers, or did they independently adopt QWERTY curricula following market signals?",
+      "resolution_mechanism": "Historical documents: typing school association records, curriculum adoption timelines, manufacturer influence on school curricula, presence or absence of formal agreements. Comparison to adoption of alternative keyboards in regions where manufacturers had less control over training institutions.",
+      "impact": "Coordinated enforcement → confirms active suppression mechanism; beneficiary-extraction ε ≥ 0.58. Independent adoption → suggests coordination lock-in rather than conspiracy; lock-in reading more defensible. Mechanism clarity affects classification confidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether typing schools coordinated with manufacturers or independently adopted QWERTY"
+    },
+    {
+      "id": "reading_kernel_disambiguation",
+      "question": "The beneficiary-extraction reading instantiates a specific framing of the QWERTY kernel: that identifiable beneficiaries DELIBERATELY PROTECTED their investment through suppressive mechanisms. Do the sibling readings (lock-in and naturalization) logically rule out this framing, or do they coexist as different parties' legitimate positions?",
+      "resolution_mechanism": "Epistemic analysis: Can a single institutional actor (e.g., Remington management, the typewriter industry cartel, government standards bodies) simultaneously believe both that QWERTY was actively protected AND that it persisted through natural lock-in dynamics? If yes, coexists_with; if the core premises contradict within any unified framework, forecloses.",
+      "impact": "If forecloses → one reading must be rejected as internally contradictory (high confidence in beneficiary-extraction). If coexists_with → multiple readings remain live across different actors/epochs. This determines cs_structure.reading_relations for sibling mappings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between beneficiary-extraction reading and sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "qwerty_benef_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "qwerty_benef_extract_t20"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "qwerty_benef_extract_t50"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "qwerty_benef_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62,
+      "id_override": "qwerty_benef_suppress_t20"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62,
+      "id_override": "qwerty_benef_suppress_t50"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "qwerty_benef_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48,
+      "id_override": "qwerty_benef_theater_t20"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65,
+      "id_override": "qwerty_benef_theater_t50"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the BENEFICIARY-EXTRACTION READING of the QWERTY persistence kernel. The core claim: QWERTY persists because manufacturers (Remington, Union Typewriter) and typing schools with sunk costs in QWERTY-specific training actively maintained the standard to protect their investments and suppress technically superior alternatives like Dvorak. This reading treats QWERTY not as a natural outcome of coordination games or fair competition, but as a deliberately enforced extraction mechanism. Incumbent typewriter manufacturers benefited from training-specific switching costs; they had every incentive to prevent alternatives and the market power to enforce exclusivity. Typing schools, having invested in QWERTY curricula and standardized testing, became enforcement partners. Alternative keyboard developers were suppressed through: (1) exclusive manufacturing arrangements that bundled QWERTY by default; (2) patent strategy and licensing control; (3) deliberate blockage of alternative keyboard adoption in dominant platforms; (4) defunding or regulatory obstruction of government standardization efforts (e.g., the Navy's Dvorak study was buried, GSA procurement favored incumbent specifications). The constraint exhibits Tangled Rope structure: genuine coordination function (training standardization enables the typing labor market) layered with asymmetric extraction (beneficiaries capture rents by maintaining artificial switching costs). The theater_ratio increases over the interval (0.32 → 0.65) as the original enforcement mechanisms become less visible and the constraint persists through institutional inertia rather than active maintenance — the theater increases as the original function degrades.",
+    "key_agents": [
+      "Incumbent Typewriter Manufacturers (Remington, Union Typewriter, Underwood): Primary beneficiaries (institutional/arbitrage) — capture rents from sunk training investments; actively enforce QWERTY through exclusive manufacturing and licensing",
+      "Typing Schools (YMCA schools, commercial typing academies, early computer training programs): Secondary beneficiary / enforcement partner (institutional/constrained) — sunk costs in QWERTY curricula; collude with manufacturers to maintain standard; also victims of constraint as capital becomes locked into single layout",
+      "Dvorak and Alternative Keyboard Developers: Primary victims (moderate/constrained) — cannot gain traction despite technical merit; face suppression through default-setting, licensing control, and refusal of adoption support",
+      "Individual Typists and Keyboard Users: Secondary victims (powerless/trapped) — must accept suboptimal ergonomics to participate in typing labor market; cannot switch without coordinating mass defection",
+      "Government Standards Bodies (Navy, GSA, federal procurement): Contested institutional actor (powerful/mobile) — could theoretically override incumbent control through standardization mandates but were actively discouraged or blocked; possessed power but not will to enforce alternative",
+      "Analytical Observer: Sees the constraint as natural lock-in (analytical/analytical) — risks naturalizing beneficiary protection as inevitable consequence of coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The reading quantifies extraction via switching costs maintained by beneficiaries. Typists face real ergonomic losses (~10-15% speed penalty relative to Dvorak, per ergonomic studies) that compound over careers. Alternative keyboard developers are suppressed entirely. However, extractiveness is not maximal (0.70+) because the mechanism relies partly on legitimate coordination benefits (standardized training IS valuable) and because suppression is incomplete (alternatives exist and have advocates, just lack market power). The value reflects asymmetric extraction layered on genuine coordination. Suppression (0.62): Moderate-high. Measured barriers to adopting alternatives: (1) exclusive manufacturing by incumbents; (2) typing school standardization enforced by industry association coordination; (3) default-setting in machines and software; (4) active obstruction of government standardization efforts (Navy Dvorak study suppression is documented). But suppression is not total (0.80+) because alternatives can and do exist, and some adoption occurred despite enforcement (Dvorak had dedicated users). Theater ratio (0.48 → 0.65): Rising over time. Initially (t=0, early typewriter era), the enforcement mechanism is functional and active — manufacturers genuinely prefer QWERTY for technical reasons (mechanical advantages in early typewriter design) AND for commercial advantage (training lock-in). The theater ratio starts low because the mechanism's function is real. By t=20-50 (post-computer transition), the original technical advantage dissolves but QWERTY persists through institutional inertia — software defaults, training tradition, interface convention — rather than active enforcement. Theater rises as the mechanism becomes performative.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options per the standard pipeline. Incumbents: beneficiary + arbitrage → low d → negative chi (institution benefits). Typing schools: mixed (benefit from standardization + victim of lock-in) + constrained → moderate d. Typists: victim + trapped → high d → high chi (experience maximum extraction). No overrides needed; structural data produces the correct perspectival gap.",
+    "perspectival_gap": "This reading produces significant perspectival divergence from the sibling readings. The beneficiary-extraction reading sees QWERTY as an actively maintained snare (powerless victims) and tangled rope with enforcement (moderate constrained actors), while the lock-in reading would see pure coordination failure (rope or tangled rope from all perspectives, with no active suppression). The naturalization reading would see legitimate competition (rope from all perspectives, with superior alternatives failing through fair market process). The gaps reflect different empirical claims: does the historical record show active suppression or passive persistence? The reading's own internal structure shows perspectival coherence: the piton perspective (institutional/arbitrage/immediate) correctly identifies the mechanism as having atrophied over time, while the snare perspective (powerless/trapped/biographical) correctly identifies the extraction experienced by users.",
+    "mandatrophy_analysis": "The beneficiary-extraction reading resolves the mandatrophy by making explicit the asymmetric extraction mechanism. The classification is NOT 'QWERTY is a natural lock-in' (which would hide the beneficiary protection) but 'QWERTY is actively maintained extraction with coordination benefits' (Tangled Rope). The mandatrophy is resolved by distinguishing legitimate coordination costs (typing standardization is genuinely valuable) from extractive overhead (the artificial suppression of alternatives). The piton perspective shows the secondary mandatrophy: once enforcement mechanisms atrophy, the constraint persists through theater — institutional inertia maintaining a structure that no longer serves its original function.",
+    "kernel_context": "This constraint instantiates the BENEFICIARY-EXTRACTION READING of the QWERTY persistence kernel. The kernel itself is the contested claim: 'Why does QWERTY persist despite technical inferiority?' Three readings compete: (1) BENEFICIARY-EXTRACTION (this one): incumbents actively protected QWERTY through suppression. (2) LOCK-IN: QWERTY persists through path-dependent coordination failure — no active suppression required, just coordination costs. (3) NATURALIZATION: QWERTY was technically adequate or became so; alternatives failed through fair competition, not suppression. These readings represent different empirical/epistemic claims about the same historical phenomenon. They coexist across different scholarly communities and historical actors, though they do not rule out each other within the same institutional framework. This reading is epistemically committed to the premise that identifiable beneficiaries (manufacturers, typing schools) deliberately protected their investment — this premise would be false in the lock-in reading's framework, but both framings remain live in contemporary scholarship."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ],
+    "dual_formulation_note": "The QWERTY persistence kernel decomposes into three structurally distinct constraint stories, each with different ε values and beneficiary/victim structures. This file (beneficiary_extraction_reading) has ε=0.58, active enforcement, and identifiable suppression. The lock-in reading would have ε≈0.35–0.45, no active suppression, and coordination failure as the mechanism. The naturalization reading would have ε≤0.25, no suppression, and fair competition. All three are linked via network.affects_constraints, forming the constraint family that resolves the contested QWERTY claim."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reference_frame": "incumbent_manufacturer_protection",
+    "drift_state": {
+      "moment": "post_digital_keyboard_transition",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__lock_in_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__naturalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incumbents_actively_protected_qwerty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "switching_costs_deliberately_maintained_via_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "story_uid": "14498a3d-ec62-496e-9934-ff16a31baf43",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "caregivers",
+      "artists",
+      "abuse_victims",
+      "workers_with_constrained_labor_options"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker (Autonomy Restored)",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (ROPE) — A gig worker, domestic care provider, or underemployed artist experiences unconditional income support as removing coercion from labor market participation. The baseline income enables rejecting exploitative work, negotiating better terms, or transitioning between sectors. No extraction experienced — the constraint is a coordination mechanism enabling voluntary labor market participation. Exit option shifts from trapped (forced to accept any work) to mobile (can choose). Time horizon: biographical — the autonomy effect operates across a career lifetime."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Caregiver (Labor Market Dignification)",
+      "comment": "PERSPECTIVE 2: CAREGIVER (ROPE) — Parent providing full-time childcare or adult caring for aging relative experiences the constraint as dignifying unpaid care work. Without unconditional income support, caregiving forces dependence on a wage-earner or means-tested welfare (stigmatized, conditional, invasive). With unconditional support, caregiving becomes a legitimate autonomous choice rather than an economic trap. Coordination function: the mechanism enables the essential social reproduction work (childcare, elder care) that markets systematically undervalue. No extraction — the beneficiary is a victim of market undervaluation that the constraint corrects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Labor Movement (Bargaining Power Restoration)",
+      "comment": "PERSPECTIVE 3: LABOR MOVEMENT (ROPE) — Organized labor experiences unconditional income support as restoring worker bargaining power eroded over decades of precariat expansion and labor market deregulation. The floor removes the desperation that unions historically fought to escape — accepting any wage to survive. Collective exit capacity is restored. The constraint is a coordination mechanism enabling the labor movement's core function: collective protection against wage-suppression dynamics. Coordination benefit is high; extraction is zero from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Social Reproduction Coalition (Welfare State Modernization)",
+      "comment": "PERSPECTIVE 4: SOCIAL REPRODUCTION COALITION (ROPE) — Public health, education, and social service institutions experience unconditional income support as coordinating mechanism that reduces their own administrative burden and enables their core functions. Unconditional income reduces demand for emergency services (mental health crisis, substance abuse intervention) and frees resources for preventive work. Replaces means-testing bureaucracy (invasive, expensive to administer, creates perverse incentives) with universal platform. Net benefit to institutional actors — coordination function, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Employers Dependent on Precarious Labor (Mixed Coordination-Extraction)",
+      "comment": "PERSPECTIVE 5: EMPLOYERS DEPENDENT ON PRECARIOUS LABOR (TANGLED ROPE) — Firms relying on wage suppression through desperate labor supply experience extraction: unconditional income support shifts labor market dynamics, reducing their ability to extract surplus via worker desperation. However, from a production-coordination perspective, the constraint also enables more stable labor supply and reduces turnover costs. Mixed: extraction on dimension of wage suppression, coordination benefit on dimension of labor stability. Medium extraction experienced; coordination function present. Time horizon: generational — the labor supply shift affects sector composition over generations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Enabling Autonomy)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / AUTONOMY READING (ROPE) — From a civilizational/global perspective, unconditional income support functions as a coordination mechanism that removes the structural coercion inherent to market economies without externally-imposed labor. The constraint enables the social contract where material security does not depend on labor market participation. Extractiveness is minimal; the mechanism is largely functional. Theater ratio is low — the policy does what it claims (provides income unconditionally) without significant performative content."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_supply_empirical_response",
+      "question": "What is the actual labor supply response to unconditional income support at various transfer levels and in different labor market contexts?",
+      "resolution_mechanism": "Randomized controlled trials (Kenya GiveDirectly, Finland pilot 2017–2018), quasi-experimental variation (Alaska Permanent Fund), and observational studies comparing labor force participation pre/post implementation. Measurement of full-time employment, part-time work, sector switching, and unpaid care work entry.",
+      "impact": "If labor supply reduction < 3%: rope classification confirmed — minimal extraction, coordination mechanism works as designed. If labor supply reduction > 15%: classification may shift toward tangled_rope or snare from employer perspectives; dependency concerns gain empirical support. If heterogeneous response (some increase hours, some exit): constraint enables labor market choice, confirming autonomy reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical labor supply response to unconditional income transfers"
+    },
+    {
+      "id": "kernel_framing_contest",
+      "question": "Is unconditional income support fundamentally an autonomy-enabling mechanism or fundamentally an incentive-distorting subsidy? Can both framings coexist within a single policy implementation, or do they require incompatible design choices?",
+      "resolution_mechanism": "Design analysis: identify specific policy parameters (transfer level, funding mechanism, conditionality exclusions, relation to minimum wage) that activate each reading. If different parameters are required, the readings are incompatible framings of a contested kernel. If the same policy instantiates both readings for different agents, the constraint exhibits genuine hybridity (tangled_rope from some perspectives).",
+      "impact": "If framings are incompatible: kernel decomposition justified — write separate constraint stories for each reading. If framings coexist: the constraint is genuinely multi-perspectival, and the presheaf over readings IS the analytical output. This omega resolves the strategic authoring question: is this one reading of a contested kernel, or is it a constraint that unifies contradictory claims?",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy-enabling and incentive-distorting readings are compatible framings or incompatible commitments"
+    },
+    {
+      "id": "extraction_via_financialization",
+      "question": "Does unconditional income support, by increasing purchasing power in precarious populations, create new extraction opportunities via predatory lending, payday loans, and financial services targeting the newly-liquid segment?",
+      "resolution_mechanism": "Observational analysis of credit market dynamics in post-implementation regions: consumer debt growth, payday loan uptake, subprime loan origination, and effective interest rates paid by UIS recipients vs. pre-UIS baselines. Comparison across contexts with different financial regulation.",
+      "impact": "If secondary extraction via financialization > 30% of transfer value: effective extractiveness rises, and the constraint becomes tangled_rope or snare from the precarious-worker perspective (coordination benefit + extraction via debt trap). If negligible (< 5%): autonomy reading confirmed. Medium likelihood — depends on regulatory context.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Secondary extraction via predatory lending targeting newly-liquid populations"
+    },
+    {
+      "id": "welfare_stigma_persistence",
+      "question": "Does the elimination of conditionality and means-testing actually eliminate welfare stigma, or does stigma persist due to cultural framing independent of policy design?",
+      "resolution_mechanism": "Ethnographic and survey-based analysis of benefit uptake patterns, self-identification effects, and reported dignity/shame around receiving unconditional transfers. Comparison of stigma effects between means-tested welfare, conditional transfers, and unconditional income support in same-country contexts (e.g., comparing TANF, EITC, and hypothetical UBI in USA).",
+      "impact": "If stigma fully eliminated: the constraint removes a genuine coercive mechanism (dignity cost). If stigma partially persistent: the constraint provides autonomy improvement but not full emancipation from social judgment. This affects the characterization of suppression: reduced but not eliminated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence of welfare stigma independent of conditionality status"
+    },
+    {
+      "id": "universality_vs_targeting_trade_off",
+      "question": "Does the universality of unconditional income support (providing to all regardless of need) represent a genuine autonomy improvement over targeted assistance, or does it constitute inefficient redistribution that could fund higher targeted benefits with same fiscal cost?",
+      "resolution_mechanism": "Comparative fiscal analysis: cost of universal floor at $X vs. equivalent-cost targeted negative income tax or expanded earned income tax credit. Measurement of poverty reduction per dollar spent. Analysis of leakage (benefits to non-poor) vs. coverage (reaching all who need assistance). Democratic legitimacy assessment: is universality a feature (eliminates surveillance, supports broad coalition) or inefficiency (resources dispersed thinly)?",
+      "impact": "If universality proves fiscally efficient and politically stabilizing: supports rope classification and autonomy reading. If universality is inefficient but politically necessary: the constraint exhibits tangled_rope structure (coordination benefit via broad coalition + some inefficient transfer). This omega connects to the sibling universality_paradox_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fiscal trade-off between universality and targeted assistance"
+    },
+    {
+      "id": "reading_incompatibility_with_dependency_trap",
+      "question": "Can the autonomy-enabling reading and the dependency-trap reading (the sibling) coexist within a single policy framework, or does empirical confirmation of one reading logically foreclose the other?",
+      "resolution_mechanism": "This is a committer-axis omega. Resolve by analyzing whether the core axioms of each reading are empirically falsifiable together or are alternative interpretations of the same phenomena. If labor supply reduction occurs but is experienced as autonomous choice (workers exit exploitative sectors), does this confirm or refute the dependency-trap reading? If no labor supply reduction occurs, does this refute the dependency reading or the autonomy reading? The resolution mechanism is conceptual: identify the observation that would constitute foreclosure vs. coexistence.",
+      "impact": "If readings foreclose each other: kernel is actually decomposed into distinct constraints with different ε values. If readings coexist: the constraint genuinely exhibits multiple simultaneous classifications depending on observer position. This determines the authoring answer to the kernel commission.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether autonomy-enabling and dependency-trap readings foreclose each other"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Unconditional income support—a guaranteed basic income paid to all citizens regardless of employment status or wealth—presents as a coordination mechanism that removes structural coercion from labor market participation. This constraint story instantiates the FREEDOM_FLOOR_READING of the contested kernel 'unconditional_income_support': the reading that emphasizes autonomy enablement, stigma elimination, and economic security as preconditions for free labor market participation. This reading is one of three competing interpretations in active policy dispute. The empirical basis (Alaska Permanent Fund, Kenya GiveDirectly trials, Finland 2017–2018 pilot) shows minimal labor supply reduction (2–5%), suggesting the autonomy reading is structurally sound: the floor enables choice rather than incentivizing withdrawal. The constraint exhibits low extractiveness (0.18) and minimal theater (0.25)—the policy does what it claims without significant performative content. Beneficiaries are identified as those structurally excluded from dignified labor market participation: precarious workers, caregivers, artists, and abuse victims. No victims are claimed in this reading—the structure is reframed as Pareto improvement where previously-constrained populations gain autonomy without imposing costs on others. The challenge is empirical: does the policy actually function as autonomy-enablement in practice, or does secondary extraction (via predatory lending to newly-liquid populations) or persistent stigma (despite policy design) undermine the rope classification?",
+    "key_agents": [
+      "Precarious Workers (powerless/mobile): Gig workers, domestic care, underemployed—experience constraint as removal of wage-suppression coercion. Primary beneficiary. Shift from trapped to mobile exit options.",
+      "Caregivers (moderate/mobile): Full-time care providers (childcare, elder care) who are structurally excluded from wage labor or forced into dependence. Benefit from dignification of care work. Secondary beneficiary.",
+      "Labor Movement (organized/mobile): Collective actors; benefit from restored worker bargaining power as floor removes desperation wage-suppression. Coordination function enabled.",
+      "Employers Dependent on Precarious Labor (powerful/constrained): Extraction dimension—lose ability to suppress wages via desperation. Coordination benefit dimension—gain labor supply stability. Mixed experience (tangled_rope).",
+      "Social Reproduction Institutions (institutional/arbitrage): Public health, education, social services; benefit from reduced emergency demand and elimination of means-testing bureaucracy. No extraction experienced.",
+      "Analytical Observer (analytical/analytical): Sees low extractiveness and high coordination function. Constraint enables autonomy as a precondition for voluntary exchange rather than coercive subsistence."
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint provides unconditional income—it is not extractive in the classical sense (taking from beneficiaries). The measure reflects that some labor supply reduction is empirically observed (2–5% in high-quality studies), representing foregone economic output; this is counted as minimal extraction cost. The trajectory (0.12 → 0.18 over 10 years) reflects potential secondary extraction via predatory lending targeting newly-liquid populations, which partially offsets the autonomy benefit. This low value is consistent with rope classification. Suppression (0.12): Very low. The constraint explicitly removes suppression mechanisms: it eliminates conditional welfare surveillance, ends means-testing invasiveness, and removes the desperation that forces acceptance of exploitative work. The small residual (0.12) reflects unavoidable administrative overhead and potential cultural stigma persistence despite policy universality. Theater ratio (0.25): Very low. The policy does what it claims: it provides unconditional income. There is minimal performative content—no complex eligibility verification theater, no means-testing ritual, no conditionality enforcement. The small non-zero value reflects that political justification requires framing the transfer as 'investment' or 'dividend' rather than pure redistribution, which adds rhetorical theater to the policy defense.",
+    "perspectival_gap": "This constraint demonstrates a significant perspectival gap between the primary beneficiary (precarious worker: rope) and the employer dependent on precarious labor (tangled rope). The worker experiences pure coordination and autonomy enablement; the employer experiences both coordination benefit (more stable labor supply) and extraction (loss of wage-suppression capacity). The analytical observer and social reproduction coalition agree with the beneficiary on rope classification, while the dependency-trap reading (embodied as a sibling constraint) would classify this same structural configuration as snare from the precarious-worker perspective, claiming that 'unconditional income creates dependency.' The gap reveals the kernel contest: can the same policy be both autonomy-enabling (freedom floor) and dependency-creating (incentive distortion)? This reading asserts that the beneficiary's lived experience (autonomy, choice, dignity) is more structurally informative than a presumed behavioral response (labor supply reduction) to the policy.",
+    "directionality_logic": "Directionality for the precarious-worker perspective is derived from the constraint's structure: they are primary beneficiaries (d ≈ 0.1, beneficiary + mobile exit) experiencing low effective extraction. The caregiver perspective has d ≈ 0.15 (beneficiary correcting market undervaluation). The labor movement has d ≈ 0.2 (beneficiary restoring bargaining power). The employer perspective flips: d ≈ 0.65 (partial victim of wage-suppression extraction loss + beneficiary of stability coordination, yielding mixed d). The analytical observer uses canonical d ≈ 0.73 (analytical context, moderate f(d) ≈ 1.15). Each perspective's d is stable across the biographical/generational horizon because the autonomy structure does not depend on time-frame—a precarious worker benefits from autonomy in the short term and long term equally. The constraint's directionality is fundamentally asymmetric: large positive effect on workers with constrained options, small mixed effect on powerful employers, zero or negative effect on structured victims. This asymmetry supports rope rather than mountain—the constraint is not universal law, it is contingent institutional choice that beneficiaries can perceive and powerful agents can resist.",
+    "kernel_context": "This constraint is one reading of a contested kernel: unconditional_income_support. The kernel is the stabilized policy commitment: provide regular, unconditional cash transfers to all citizens. This same kernel is read three different ways in active policy discourse: (1) FREEDOM_FLOOR_READING (this constraint): autonomy-enabling mechanism that removes labor market coercion, eliminates welfare stigma, enables voluntary participation. (2) DEPENDENCY_TRAP_READING (sibling constraint): incentive-distorting subsidy that rewards idleness, reduces labor supply, crowds out targeted assistance, redistributes upward to non-needy through universality inefficiency. (3) UNIVERSALITY_PARADOX_READING (sibling constraint): cross-ideological compromise that masks incompatible implementation paths (neoliberal efficiency version vs. social democratic redistribution version) that converge on similar fiscal outcomes but for contradictory reasons. Each reading instantiates a different constraint story with different ε values, different beneficiary/victim structures, and different classifications. This story is the autonomy-enabling floor reading only. The kernel's formalization (fixed text: the policy law codifies unconditional provision) enables interpretation-layer dynamics: implementation details, funding mechanisms, and framing of the transfer all affect which reading becomes dominant in practice.",
+    "mandatrophy_analysis": "This constraint avoids the mandatrophy (extraction disguised as coordination) by remaining in the low-extraction regime (ε=0.18). The core claim—that unconditional income enables autonomy—is not being used to hide extractive mechanisms. The empirical tests are clear: labor supply reduction < 5% (enabling autonomy reading), secondary extraction via predatory lending (potential hidden cost), and stigma persistence (potential hidden cost). If those empirical tests fail—if labor supply reduction exceeds 15%, or if secondary extraction exceeds 30% of transfer value, or if stigma persists fully despite universality—the classification may shift toward tangled_rope or snare. But under the current empirical record, the constraint functions as claimed. The mandatrophy risk is located in the sibling dependency_trap_reading, which claims the same policy is actually pure extraction disguised as redistribution. The committer frame surfaces this explicitly via omega variables and reading_relations rather than hiding it within the metrics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel: unconditional_income_support. Sibling readings with different ε values and classifications are linked via network.affects_constraints. The kernel decomposition follows ε-invariance: if evaluating the same policy produces different ε values depending on which interpretation (autonomy-enabling vs. dependency-trap vs. universality-paradox) you adopt, those are different constraints requiring separate stories. They are not alternate perspectives on a single constraint, but genuinely distinct claims about the same policy object."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "unconditional_income_support__dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unconditional_income_support__universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_market_coercion_removable_via_income_floor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universality_as_dignity_preservation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "labor_market_autonomy_commitment",
+    "drift_state": {
+      "moment": "contemporary_welfare_state_maturity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

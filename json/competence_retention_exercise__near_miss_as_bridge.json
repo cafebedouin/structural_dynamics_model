@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cre_nmb",
+    "story_uid": "cd006456-53ae-4886-abf8-053d7e84f5ff",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Miss as Competence Validation Bridge",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulator_fidelity_programs",
+      "incident_investigation_infrastructure"
+    ],
+    "victims": [
+      "front_line_operators",
+      "resource_allocation_in_prevention"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Front-Line Operator",
+      "comment": "PERSPECTIVE 1: FRONT-LINE OPERATOR (SNARE) — Trapped in dual-validation requirement: must demonstrate competence in both simulator and real-world near-miss response, with career consequences for failures in either context. Simulator training is mandatory; near-miss participation is involuntary incident investigation. No exit option from the integrated system; trapped within both modalities. Experiences extraction without coordination benefit — the system exists to validate institutional competence claims, not to serve the operator's learning."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Safety Culture Advocate (Moderate Power)",
+      "comment": "PERSPECTIVE 2: SAFETY CULTURE ADVOCATE (TANGLED ROPE) — Constrained by institutional resistance to near-miss disclosure (organizational shame, legal liability), but also genuinely benefits from the hybrid system: near-miss investigations improve simulator design and reveal real-world gaps. Mixed experience: coordination benefit (improved training) alongside extraction (career risk when investigations expose institutional failures). Constrained exit — can leave the organization but cannot fully exit the constraint while remaining in safety-critical industry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Simulator Program Authority",
+      "comment": "PERSPECTIVE 3: SIMULATOR PROGRAM AUTHORITY (ROPE) — Primary beneficiary with arbitrage exit. Benefits from near-miss integration: each incident becomes validation data for simulator investment ROI, justifying budget and expansion. Experiences the constraint as pure coordination: using real-world failures to improve training systems. Exit at arbitrage level — can shift to different training methodologies or redirect funding if simulator effectiveness is questioned. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Predictive Analytics Coalition",
+      "comment": "PERSPECTIVE 4: PREDICTIVE ANALYTICS COALITION (SCAFFOLD) — Organized agents (data scientists, ML practitioners, regulatory bodies) see near-miss classification and pattern extraction as temporary problem: advanced predictive systems will identify failure modes before near-misses occur, enabling transition to purely preventive training focused on rare-event signatures. Low extraction because the coalition has agency and sees a clear sunset: as predictive tools mature, near-miss incident investigation shifts from reactive to proactive, and the dual-validation constraint dissolves into pure simulation-plus-monitoring."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Compliance Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY COMPLIANCE FRAMEWORK (PITON) — The documented requirement for 'real-world validation of training efficacy' persists largely as institutional theater: regulators require certification that near-miss data is incorporated into training, but the actual feedback loop is often decoupled from operational improvements. Theater ratio high because compliance documentation (checklist completion, incident report filing) does not necessarily translate to simulator update or procedural change. The requirement maintains itself through regulatory inertia — removing it would invite liability questions, so the ritual persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Independent Safety Standards Body",
+      "comment": "PERSPECTIVE 6: INDEPENDENT SAFETY STANDARDS BODY (TANGLED ROPE) — Organized but structurally constrained by liability cascade (if they endorse simulation-only training and a near-miss escalates, they face institutional liability). The hybrid approach (simulation + near-miss validation) distributes liability across multiple stakeholders. Benefits from the constraint: dual validation provides justification for rigorous standards. Constrained by institutional liability exposure — cannot fully exit to pure simulation without absorbing risk that member organizations will shed. Mixed coordination (rigorous standards setting) and extraction (liability protection via distributed accountability)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, human competence maintenance in catastrophe-avoidance domains has an irreducible requirement: simulation cannot fully substitute for real-world feedback because tacit knowledge and embodied responses only update when predictions meet reality with stakes. The constraint appears as an immutable natural law: any system that removes catastrophic feedback entirely risks atrophy. However, the structural data contradicts the mountain classification — this is a false summit, naturalizing what is actually a contestable institutional and epistemic arrangement around how competence is validated and maintained."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "near_miss_fidelity_threshold",
+      "question": "What magnitude and type of near-miss incident provides sufficient feedback for simulator validation, and what incidents are too minor to update training?",
+      "resolution_mechanism": "Comparative analysis of simulator updates triggered by different incident classes; longitudinal tracking of operator performance on subsequent near-misses after simulator updates; identification of incident severity thresholds where feedback loops activate vs. deactivate",
+      "impact": "If threshold is low: routine incidents drive constant simulator changes, creating theater (documentation churn without performance gain). If threshold is high: many preventable failure modes are not captured until they escalate to catastrophe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum incident severity required for simulator training feedback"
+    },
+    {
+      "id": "simulation_fidelity_saturation",
+      "question": "Can simulator fidelity ever reach a point where real-world near-miss data provides zero additional improvement signal?",
+      "resolution_mechanism": "Measurement of marginal simulator updates per incident as function of simulator age and sophistication; correlation between incident frequency and update frequency; identification of constraints where learning curve plateaus",
+      "impact": "If saturation is reachable: the constraint can transition to pure simulation (simulation_as_sufficient reading becomes valid). If saturation is theoretically infinite: near-miss validation will always be required (this reading's hybrid approach is permanent, not transitional).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulator fidelity can reach asymptotic sufficiency"
+    },
+    {
+      "id": "tacit_knowledge_capture_mechanism",
+      "question": "Are the critical competencies in catastrophe-avoidance domains (emergency response, crisis decision-making, system failure diagnosis) primarily epistemic (learnable via simulation) or ontologically dependent on real-world stakes and embodied response histories?",
+      "resolution_mechanism": "Comparison of operator performance on simulator scenarios vs. real-world near-misses; analysis of reported decision-making process for identical failure signatures in simulation vs. reality; identification of classes of competence that transfer vs. degrade without real-world validation",
+      "impact": "If primarily epistemic: simulation_as_sufficient reading becomes structurally viable (near-miss data is coordination layer, not core competence requirement). If ontologically dependent: this reading is correct — hybrid approach is not temporary bridge but permanent necessity.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether critical competence is purely epistemic or stakes-dependent"
+    },
+    {
+      "id": "catastrophe_necessity_vs_sufficiency",
+      "question": "Does the catastrophe_as_necessary reading conflate necessity with sufficiency? Can catastrophes be necessary for certain competence validation yet insufficient for competence maintenance (since repeated catastrophe-scale events destroy systems)?",
+      "resolution_mechanism": "Theoretical analysis of high-reliability organization literature; examination of whether organizations cite catastrophes as training events vs. system failures; comparison of competence decay rates in systems that have experienced catastrophe vs. systems maintained by near-miss feedback",
+      "impact": "If sufficiency is not claimed: catastrophe_as_necessary is about information gain, not training methodology; this reading forecloses a different claim. If sufficiency is claimed: the readings coexist in conceptual space with different implications for training resource allocation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical distinction between catastrophe necessity and sufficiency in competence validation"
+    },
+    {
+      "id": "reading_kernel_identity",
+      "question": "What is the kernel that these three readings contest? Is it 'what constitutes valid competence maintenance' or 'what event types provide learning signal' or 'what is the proper role of catastrophic vs routine experience'?",
+      "resolution_mechanism": "Mapping of each reading's core commitment to common referent. Identification of whether readings differ on empirical facts (simulation fidelity can reach threshold X) or normative claims (competence requires Y type of experience) or both.",
+      "impact": "If empirical disagreement: measurement and observation can resolve. If normative disagreement: readings may be permanently coexistent (committer frame valid). If kernel identity is disputed: the three readings may not be readings of the same constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identity of the contested kernel across the three readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The competence retention problem in high-reliability organizations (aviation, nuclear operations, emergency response) creates a structural tension between the need to maintain catastrophe-avoidance skills and the impossibility of practicing on actual catastrophes. Three readings of the competence-maintenance kernel contest how this tension should be resolved. This story instantiates the 'near-miss as bridge' reading: near-miss incidents and minor failures provide sufficient real-world feedback to validate and update simulator training without requiring full catastrophes. The near-miss reading claims that a hybrid system (high-fidelity simulation for routine skill preservation plus active near-miss investigation and integration into training systems) is both necessary and sufficient for maintaining competence. Catastrophes are neither necessary (because near-miss feedback is richer than catastrophe data) nor sufficient (because learning from catastrophe destroys the system that was learning). The reading coexists with catastrophe_as_necessary (which claims only visceral stakes enable real learning) and simulation_as_sufficient (which claims cognitive and procedural demands of high-fidelity simulation are structurally equivalent to real events). The constraint exhibits tangled rope structure: simulator program authorities genuinely benefit from near-miss integration (validation for training investment), while front-line operators bear extraction (involuntary participation in incident investigation with career consequences). The system coordinates improved training design while extracting from operators. Theater ratio rising from 0.35 to 0.55 reflects regulatory documentation requirements (incident reports, compliance checklists) increasingly decoupling from actual simulator updates.",
+    "key_agents": [
+      "Front-Line Operators: Primary victim (powerless/trapped) — involuntary participation in both simulator validation and near-miss incident investigation; no exit from dual-validation requirement",
+      "Simulator Program Authority: Primary beneficiary (institutional/arbitrage) — uses near-miss data to justify simulator investment ROI and expansion; can exit to alternative training methodologies if simulator effectiveness questioned",
+      "Safety Culture Advocates: Secondary actor (moderate/constrained) — benefit from near-miss investigation feedback but constrained by organizational resistance to incident disclosure and liability exposure",
+      "Regulatory Compliance Framework: Institutional actor (institutional/arbitrage) — maintains documentary requirement for near-miss integration but decoupled from operational improvement (piton perspective)",
+      "Independent Safety Standards Body: Organized actor (organized/constrained) — constrained by liability cascade; dual-validation approach distributes accountability across stakeholders",
+      "Predictive Analytics Coalition: Organized agent (organized/mobile) — sees near-miss integration as temporary bridge toward predictive systems that eliminate need for incident investigation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contested epistemic claim (tacit knowledge requires real stakes) as immutable natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The near-miss bridge mechanism extracts from operators through mandatory incident investigation participation and career risk exposure, but the extraction is not total because the system does generate genuine training improvements. The measurement trajectory (0.22 → 0.38) reflects increasing extraction as regulatory documentation requirements expand without corresponding operational improvement — rising theater ratio indicates that compliance activities are decoupling from actual simulator updates. Suppression (0.48): Moderate-high. Operators face organizational barriers to incident disclosure (shame, liability concerns, career risk), tacit knowledge requirements that resist translation into explicit training modules, and structural barriers to exiting the validation requirement. However, suppression is not total — some organizations have strong near-miss reporting cultures, and operators can exit through career change. Theater ratio (0.55): High-moderate. The regulatory requirement to 'incorporate near-miss data into training' has increasingly become documentary theater: incident report filing, compliance checklists, and formalized review processes that do not necessarily translate to simulator updates or procedural changes. The rise from 0.35 to 0.55 reflects this decoupling.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position: beneficiary status, power level, and exit options. Simulator program authorities (institutional/arbitrage) experience low effective extraction because they benefit from the system and can exit to alternative training methods — their d value is low (approximately 0.15), producing negative χ (they are subsidized). Front-line operators (powerless/trapped) experience maximum effective extraction because they bear costs and have no exit — their d value is high (approximately 0.92), producing high χ (approximately 1.28). Safety culture advocates (moderate/constrained) occupy mixed position: benefit from training improvements but constrained by liability and organizational resistance — their d value is moderate (approximately 0.55), producing moderate χ (approximately 0.75). The organized agents (safety standards body, analytics coalition) have intermediate d values reflecting their agency within constraints. The mountain perspective's d value (analytical/0.72) is canonical for that power atom.",
+    "perspectival_gap": "The near-miss reading exhibits strong perspectival gaps across power axes. The simulator authority sees pure coordination (rope) — using real-world incidents to improve training. The predictive analytics coalition sees a temporary problem with a sunset (scaffold) — predictive systems will eliminate need for incident-based feedback. The regulatory framework sees its own performative ritual (piton) — compliance documentation without operational consequence. Front-line operators see pure extraction (snare) — mandatory participation without agency or benefit. Safety advocates see mixed coordination and extraction (tangled rope, this reading) — genuine training improvement coupled with extraction through liability exposure. The civilizational analytical observer risks seeing immutable natural law (mountain) — tacit knowledge in catastrophe-avoidance requires real stakes — but the structural data reveals this as naturalization of a contested epistemic claim. The perspectival gaps are not measurement artifacts but genuine differences in how the constraint functions across different structural positions.",
+    "mandatrophy_analysis": "COMMITTER FRAME DIAGNOSTIC: This constraint resolves mandatrophy by instantiating one specific reading of a contested kernel. The mandatrophy is not 'which reading is correct?' but 'which epistemic commitments and empirical assumptions define each reading?' The near-miss reading assumes: (1) tacit knowledge can transfer from real-world incidents to simulator training at sufficient fidelity; (2) near-miss incidents provide learning signal without system destruction; (3) hybrid approach is superior to pure simulation because of fidelity gains and to catastrophe-dependence because of sustainability. The catastrophe_as_necessary reading assumes: (1) only visceral stakes (threat of catastrophic failure) enable genuine competence maintenance; (2) simulation is rehearsal but not real exercise; (3) catastrophes are necessary for knowledge update. The simulation_as_sufficient reading assumes: (1) cognitive and procedural demands are structurally equivalent; (2) fidelity is achievable; (3) real-world incidents add no information gain beyond simulation design feedback. These are not empirically decidable from a single observation point — different studies with different outcome measures will support different readings. The engine's omega variables document the empirical and conceptual ambiguities that prevent universal adjudication.",
+    "kernel_context": "This constraint is one reading of the contested kernel: competence_retention_exercise. The kernel concerns how organizations maintain competence in catastrophe-avoidance domains when practicing on actual catastrophes is impossible. Three readings contest the kernel: (1) catastrophe_as_necessary: only visceral stakes enable real competence; simulation is rehearsal; (2) near_miss_as_bridge (THIS READING): near-miss incidents plus high-fidelity simulation constitute sufficient system; catastrophes neither necessary nor sufficient; (3) simulation_as_sufficient: high-fidelity simulation's cognitive/procedural demands are structurally equivalent to real events; additional feedback unnecessary. This reading claims a hybrid approach: simulators for routine skill preservation plus active near-miss investigation and integration into training. The sibling readings are captured in cs_structure.reading_relations and omegas document the empirical and conceptual uncertainties that prevent foreclosure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__catastrophe_as_necessary",
+      "competence_retention_exercise__simulation_as_sufficient"
+    ],
+    "dual_formulation_note": "The competence_retention_exercise kernel has three structurally distinct readings with different ε values, different beneficiary/victim structures, and different terminal states. Each reading is instantiated in a separate constraint story: catastrophe_as_necessary (ε≈0.65, snare-dominant), near_miss_as_bridge (ε=0.38, tangled_rope), simulation_as_sufficient (ε≈0.15, rope). The reading-specific stories are linked via network.affects_constraints to enable contamination analysis and committer frame reasoning. Each story instantiates one consistent reading; no single story attempts to adjudicate between them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__simulation_as_sufficient",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "hybrid_system_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_neither_necessary_nor_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "hybrid_validation_framework",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

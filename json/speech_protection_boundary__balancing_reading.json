@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_boundary__balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_protection_boundary__balancing_reading",
+    "measurement_id_prefix": "speech_bal",
+    "story_uid": "80d31b4c-4944-457e-ae13-b28265202830"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Boundary (Balancing Reading)",
+    "topic_domain": "constitutional_law/free_speech/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "judicial_discretion_wielders",
+      "majoritarian_safety_coalitions"
+    ],
+    "victims": [
+      "marginalized_speech_targets",
+      "categorical_rights_believers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Speech Target",
+      "comment": "PERSPECTIVE 1: MARGINALIZED SPEECH TARGET (SNARE) — Has no exit from hate speech or harassment; suppression is total (no categorical protection, outcome depends on judge's balancing judgment). Experiences pure extraction: their dignity/safety are weighed against speaker's freedom case-by-case, with no guarantee they win. Maximum structural entrapment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Liberties Advocate (Non-Majoritarian)",
+      "comment": "PERSPECTIVE 2: CIVIL LIBERTIES ADVOCATE / NON-MAJORITARIAN (TANGLED ROPE) — Constrained by fear of establishing precedent that judicial discretion to restrict speech will be weaponized against dissidents. But also benefits from access to courts when speech is restricted — the balancing framework offers some protection through reasoned adjudication rather than legislative fiat. Coordination (access to courts) coexists with extraction (risk that balancing favors majority)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Judicial Discretion Wielder",
+      "comment": "PERSPECTIVE 3: JUDICIAL DISCRETION WIELDER (ROPE) — Judges benefit from balancing framework: it grants them interpretive authority to resolve competing constitutional claims without fixed categorical rules. The constraint coordinates judicial power across different cases by institutionalizing judicial discretion as the legitimate mechanism. Net beneficiary; experiences constraint as empowering, not restrictive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Majoritarian Safety Coalition",
+      "comment": "PERSPECTIVE 4: MAJORITARIAN SAFETY COALITION (ROPE) — Benefits from balancing framework because it enables restrictions on speech that threatens majority interests (public safety, social stability) without requiring categorical amendment to free speech doctrine. The coalition can pursue case-by-case victories without changing the formal rule. Experiences constraint as pure coordination: the balancing mechanism allocates speech permissions to coalitions powerful enough to win judicial arguments."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) — From a civilizational perspective, all rights conflict (speech vs. dignity, liberty vs. safety) and no categorical rule can resolve all cases. Balancing is presented as inherent to rights adjudication — an immutable property of how legal reasoning works. However, structural data contradicts this: balancing is a choice about institutional authority (who decides: judge, legislature, or categorical text), not a law of nature. Engine's false summit detector will flag this."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Balancing Doctrine Itself",
+      "comment": "PERSPECTIVE 6: BALANCING DOCTRINE (PITON) — The institutional practice of case-by-case balancing in speech jurisprudence is largely performative. Courts declare they are balancing interests but apply similar outcomes across cases — outcomes that correlate with majoritarian preferences rather than genuine weight-assignment. The doctrine persists through institutional inertia (it looks like reasoned adjudication) despite degraded functional verification. Theater ratio captures this performativity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "balancing_vs_discretionary_extraction",
+      "question": "Does case-by-case balancing constitute legitimate adjudication of genuinely incommensurable values, or does it institutionalize judicial discretion as a mechanism for majoritarian preference-satisfaction?",
+      "resolution_mechanism": "Empirical analysis of balancing outcomes: correlation between judge identity/court ideology and speech restriction decisions; statistical likelihood of marginal speakers losing balancing disputes across jurisdictions; comparison of outcome variance with outcomes under categorical rules",
+      "impact": "If balancing is functional (outcomes reflect genuine weight assignment): Tangled Rope classification sustained. If balancing is discretionary cover (outcomes correlate with ideology): Snare or Piton classification becomes dominant; doctrine is exposed as extractive theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether balancing reflects adjudication or disguised discretionary extraction"
+    },
+    {
+      "id": "judicial_neutrality_assumption",
+      "question": "Can judges applying balancing tests actually achieve neutrality across competing constitutional values, or does the absence of categorical rules inevitably bias outcomes toward majoritarian coalitions?",
+      "resolution_mechanism": "Comparative constitutional analysis: countries with categorical vs. balancing speech doctrines; longitudinal study of marginalized speech protection rates; analysis of how balancing doctrine differs between strong-majoritarian and competitive-pluralist democracies",
+      "impact": "If judges are neutral: Balancing sustains Tangled Rope legitimacy. If structural bias exists: Balancing is extraction mechanism (higher suppression, higher effective extractiveness for marginalized speakers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial neutrality in balancing tests is achievable"
+    },
+    {
+      "id": "categorical_alternative_feasibility",
+      "question": "Can categorical rules (near-absolutist or dignitary-harm-boundary readings) actually resolve speech conflicts without producing perverse outcomes or requiring equally discretionary line-drawing at the boundary?",
+      "resolution_mechanism": "Historical case analysis of categorical doctrine failures; comparison of dispute resolution costs under categorical vs. balancing frameworks; analysis of boundary cases in near-absolutist regimes (incitement, fighting words, true threats)",
+      "impact": "If categorical rules fail similarly: balancing choice is not about reducing extraction but about distributing discretion. If categorical rules succeed: balancing reading's claim that no single right categorically overrides others is exposed as contingent institutional preference, not logical necessity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether categorical speech rules can practically replace balancing"
+    },
+    {
+      "id": "reading_identity_commitment",
+      "question": "Does this balancing reading constitute a genuine reading of the kernel (speech protection boundary), or does it constitute a methodological choice about how courts should adjudicate competing rights?",
+      "resolution_mechanism": "Textual analysis of First Amendment language ('Congress shall make no law'); comparison with how other constitutional rights (equal protection, due process) are adjudicated; examination of whether balancing is required by the text or selected as institutional strategy",
+      "impact": "If balancing is inherent to the text: reading instantiates an unavoidable interpretation of the kernel. If balancing is institutional strategy: reading is evidence of method choice, not constitutional necessity; the near-absolutist and dignitary-harm readings are equally defensible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether balancing is a reading of the kernel or a choice of judicial methodology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The balancing reading of the speech protection boundary instantiates a constitutional doctrine in which no single right categorically overrides others; instead, courts weigh speech protection against competing interests (dignity, equality, public safety) on a case-by-case basis. This reading reflects the dominant approach in U.S. free speech jurisprudence since the mid-20th century, exemplified by strict scrutiny balancing tests. The doctrine operates as a Tangled Rope: it provides a coordination mechanism (courts can adjudicate competing claims through reasoned balancing) while simultaneously institutionalizing asymmetric extraction (judicial discretion systematically favors powerful speech (majoritarian coalitions) over marginal speech (dissidents, marginalized groups)). The constraint's theater_ratio (0.68) reflects that courts perform the ritual of balancing (citing competing values, examining proportionality) but outcome patterns suggest balancing serves as a legitimizing cover for ideology-driven decisions. The suppression value (0.65) captures that case-by-case adjudication offers no categorical guarantee to marginalized speakers — their silence can be enforced through the appearance of neutral balancing.",
+    "key_agents": [
+      "Marginalized Speech Targets: Primary victims (powerless/trapped) — have no exit from hate speech or harassment; suppression is total because outcome depends on judge's discretionary balancing judgment",
+      "Majoritarian Safety Coalitions: Primary beneficiary (institutional/arbitrage) — benefits from balancing framework that enables case-by-case restrictions on speech threatening majority interests without requiring categorical amendment",
+      "Judicial Discretion Wielders: Institutional beneficiary (institutional/arbitrage) — granted interpretive authority over competing constitutional claims; experiences balancing doctrine as empowering",
+      "Civil Liberties Advocates (Non-Majoritarian): Secondary victim (moderate/constrained) — constrained by fear that discretionary balancing will be weaponized against dissidents, but also benefit from reasoned adjudication compared to legislative fiat",
+      "Balancing Doctrine Itself: Institutional actor (institutional/constrained) — maintains performative ritual of weighing competing values; institutional inertia preserves doctrine despite degraded functional verification",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the balancing choice as inherent to rights adjudication rather than contingent institutional preference"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The balancing framework extracts from marginalized speakers who bear the cost of case-by-case uncertainty while majoritarian coalitions gain predictable access to speech restrictions. The extraction is not total (balancing sometimes protects marginal speech) but systematic (balancing outcomes correlate with ideology). The trajectory rises over the interval (0.48 → 0.58) as decades of balancing case law accumulate patterns favoring majoritarian preferences. Suppression (0.65): High. Case-by-case adjudication provides no categorical protection; marginalized speakers face suppression unless they can win a balancing argument, which requires demonstrating their interests outweigh the speaker's protected liberty. This is a high barrier — suppression is conditional on judicial discretion rather than structural barrier, but no less real. Theater ratio (0.68): High-moderate. Courts perform elaborate balancing rituals (citing competing values, examining means-ends fit, applying multi-factor tests) that create appearance of neutral adjudication, but outcome patterns suggest balancing serves as legitimizing cover for ideology-driven decisions. The ratio rises over time (0.55 → 0.68) as balancing doctrine accumulates case law and judicial performance becomes more elaborate despite stable outcome patterns.",
+    "perspectival_gap": "This constraint exhibits the full range of classification from a single set of base properties. Marginalized speakers experience Snare: no categorical protection, total suppression, pure extraction. Civil liberties advocates experience Tangled Rope: genuine coordination benefit (reasoned adjudication vs. legislative suppression) coexists with extraction risk (discretion weaponized against dissidents). Majoritarian coalitions experience Rope: the balancing framework allocates speech permissions to coalitions powerful enough to win arguments. Judicial discretion wielders experience Rope: balancing grants interpretive authority and empowers judges. Balancing doctrine itself, viewed institutionally, appears as Piton: performative ritual maintained through inertia. The analytical observer risks seeing Mountain: balancing as inherent to rights adjudication, a natural law of constitutional reasoning. However, the structural data contradicts the mountain classification — balancing is a choice about institutional authority (who decides: judge, legislature, or categorical text), not a law of nature. The false summit detector will identify this as naturalization of a contingent institutional arrangement.",
+    "kernel_context": "This constraint is the BALANCING READING of the contested kernel 'speech_protection_boundary'. The balancing reading instantiates the constitutional doctrine that no single right categorically overrides others; courts weigh speech protection against competing interests (dignity, equality, public safety) on a case-by-case basis. Sibling readings: (1) NEAR-ABSOLUTIST READING — First Amendment 'no law' language prohibits content-based restrictions except narrow categorical exceptions (incitement, fighting words) defined by imminent physical harm. (2) DIGNITARY-HARM READING — Speech causing demonstrable dignitary harm (bigotry, harassment constructing systemic oppression) can be restricted when harm is tangible and non-speculative. The balancing reading coexists with near-absolutism (different factions of the judiciary hold each view) and influences dignitary-harm reading (establishes framework within which dignitary harm must be weighed). The reading's core axiom: 'no_single_right_categorically_overrides' — the claim that competing constitutional values require contextual adjudication rather than categorical rules.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and structural position. Majoritarian safety coalitions (beneficiaries with arbitrage exit) derive low d → negative f(d) → effectively subsidized by the constraint. Marginalized speakers (victims with trapped exit) derive high d → high f(d) → high experienced extraction. Judicial discretion wielders (beneficiaries with arbitrage exit) derive low d, experiencing the constraint as enabling rather than extractive. Civil liberties advocates (moderate power, constrained exit, secondary victims of discretion weaponization) derive d ≈ 0.55, producing moderate experienced extraction. The balancing framework institutionalizes this directionality asymmetry: it appears neutral but systematically advantages those with power to win balancing arguments.",
+    "mandatrophy_analysis": "Mandatrophy resolution: The balancing reading instantiates genuine Tangled Rope structure — there is a real coordination function (reasoned adjudication of competing constitutional claims) embedded within asymmetric extraction (judicial discretion favors majoritarian coalitions). The reading does not collapse into pure extraction (Snare) or pure coordination (Rope) because both functions are structurally present. The mandatrophy is not 'which type is correct?' but 'how is the coordination function leveraged to mask and legitimize extraction?' The balancing doctrine maintains its Tangled Rope status through performative sophistication — the elaborate ritual of balancing tests creates appearance of neutral adjudication while outcome patterns reveal systematic bias. This is exactly what Tangled Rope structure enables: the coordination mechanism (courts adjudicating competing claims) provides legitimacy cover for the extraction mechanism (discretion systematically favoring powerful speech)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_boundary__near_absolutist_reading",
+      "speech_protection_boundary__dignitary_harm_reading"
+    ],
+    "dual_formulation_note": "The speech protection boundary kernel has three structurally distinct readings with different extractiveness values and victim sets. This balancing reading (ε=0.58) instantiates the dominant institutional approach; sibling readings have different ε values reflecting different victim distributions and suppression structures. All three are readings of the same kernel but should be decomposed into separate constraint stories to avoid averaging ε across incomparable institutional frameworks."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "constitutional_balancing_framework",
+    "drift_state": {
+      "moment": "contemporary_pluralist_democracy",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "speech_protection_boundary__near_absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_protection_boundary__dignitary_harm_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_single_right_categorically_overrides",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_discretion_institutionalized",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "neutrality_through_reasoned_adjudication",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "instrumental"
+      }
+    ]
+  }
+}

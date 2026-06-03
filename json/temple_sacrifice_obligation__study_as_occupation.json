@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_obligation__study_as_occupation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tso",
+    "story_uid": "a9f9830e-706c-4b8b-8482-4ff971a2b588",
+    "created_at": "2026-02-26T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Study of Sacrifice Law as Legitimate Occupation of Obligation (Temple Absent)",
+    "topic_domain": "religious_studies/halakhic_authority/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "talmudic_interpretive_community"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Rabbinic Authority (Obligation Fulfilled via Study)",
+      "comment": "PERSPECTIVE 1: RABBINIC AUTHORITY (ROPE) — The institutional interpreters of Jewish law declare that intensive study of sacrifice law constitutes legitimate fulfillment of the obligation when Temple performance is impossible. This is a pure coordination mechanism: the community coordinates its obligation-bearing through collective intellectual engagement rather than ritual performance. Beneficiary of the reading — the interpretive community's authority and legitimacy rest on this framework. Low extraction, minimal suppression, minimal theater. The ruling coordinates a scattered diaspora community around a shared hermeneutical practice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Observant Community (Study as Obligation)",
+      "comment": "PERSPECTIVE 2: OBSERVANT COMMUNITY (ROPE) — Individual Jews practicing diaspora Judaism experience the obligation as genuinely coordinated through study. They participate in a collective hermeneutical practice that honors the original obligation structure without requiring Temple performance. Experiences low extraction — the study requirement is onerous but not coercive; engagement is volitional and identity-constituting. Exit is mobile (one can leave the community, the practice, or the faith) but the frame makes exit unthinkable from within. Theater is minimal — the study engages real textual and legal complexity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Individual Observant Practitioner (Identity-Locked)",
+      "comment": "PERSPECTIVE 3: INDIVIDUAL OBSERVANT PRACTITIONER (TANGLED ROPE) — An individual embedded in the community who experiences genuine obligation-bearing through study but also experiences the constraint as partially extractive: the community enforces study norms, there are career/social costs to non-participation, and the obligation structure subordinates other obligations or pursuits. Exit is constrained (cost is high: social estrangement, identity dissolution, loss of community). Some coordination benefit (shared hermeneutical practice, intellectual engagement) paired with asymmetric extraction (enforcement of norms, social cost)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Institutional Legitimacy Gap)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) — From a civilizational/universal view, this constraint is a pure coordination mechanism: the rabbinic authority has solved a real coordination problem (how to maintain obligation-bearing when the original obligatory act is impossible) through a hermeneutical innovation. The reading coordinates the community around the principle that intensive engagement with law constitutes legitimate fulfillment. Low extractiveness because the mechanism serves the declared coordination goal. The theater is minimal — the study genuinely engages the complexity of sacrifice law. The constraint is a structural solution, not a cover story."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_interpretive_closure",
+      "question": "Does the rabbinic declaration that 'study occupies the obligation' close the kernel (make revision of the obligation structure unnecessary) or merely defer revision until messianic restoration?",
+      "resolution_mechanism": "Analysis of rabbinic textual debate: do later authorities dispute whether study truly fulfills the obligation or do they extend/refine the same principle? Does any authority claim the obligation remains unfulfilled despite study?",
+      "impact": "If closure: study_as_occupation reading is stable and the obligation structure is fully absorbed into the interpretive framework. If deferral: the obligation remains formally unresolve and study is a temporary substitute, shifting classification toward piton or tangled_rope. If disputed: the kernel remains genuinely contested across rabbinic sources.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether study closes the obligation or defers it"
+    },
+    {
+      "id": "study_intensity_threshold",
+      "question": "What level of engagement with sacrifice law constitutes 'legitimate occupation'? Is this threshold well-defined in rabbinic sources or ambiguous?",
+      "resolution_mechanism": "Textual analysis of rabbinic responsa: how much study is required? Are there disputes about sufficiency? Do authorities differentiate between casual study and intensive engagement?",
+      "impact": "If well-defined: the reading has clear enforcement criteria (not piton-theater). If ambiguous: the reading relies on interpretive discretion and becomes more theater-heavy (shift toward piton). If radically demanding: the reading becomes more extractive (shift toward tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sufficiency threshold for study is well-defined"
+    },
+    {
+      "id": "reading_instantiation_scope",
+      "question": "Is this reading (study as occupation) the hegemonic interpretation in contemporary Jewish practice, or is it one competing reading among the three siblings?",
+      "resolution_mechanism": "Survey of contemporary Jewish communities: which reading do they adopt or combine? Do different communities hold different readings?",
+      "impact": "If hegemonic: the constraint's classification from institutional perspective is Rope (coordinating framework). If sectarian: the reading has lower authority and the classification may shift to piton (theater-maintained interpretation). If syncretic: multiple readings coexist, affecting how the kernel-reading structure is modeled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether study-as-occupation is hegemonic or contested"
+    },
+    {
+      "id": "sibling_reading_coexistence",
+      "question": "Can an observant Jew simultaneously hold that study occupies the obligation AND that the obligation remains suspended pending restoration AND that study merely archives for future performance?",
+      "resolution_mechanism": "Textual analysis of sources that combine two or more of the three readings. Analysis of how different streams (Orthodoxy, Conservative, Reconstructionism) position the readings relative to each other.",
+      "impact": "If logically compatible: reading_relations should be coexists_with (different parties hold different readings within a single tradition). If mutually exclusive: forecloses relations may be more accurate. If layered (study both occupies AND defers): the kernel itself may be more complex than the three-reading decomposition suggests.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three readings are logically compatible"
+    },
+    {
+      "id": "authority_structure_revision_visibility",
+      "question": "If study is the legitimate occupation, why do rabbinic sources continue to discuss the Temple's destruction as a catastrophe and the obligation as suspended/unfulfilled? Is this discourse about a genuinely unresolved obligation, or is it performative recollection?",
+      "resolution_mechanism": "Textual analysis: do authorities treat the obligation-via-study as settled or disputed? Is there ongoing argument about sufficiency? Do they mourn the impossibility of Temple sacrifice while declaring study sufficient?",
+      "impact": "If genuinely unresolved: the authority structure has NOT absorbed the impossibility, and the classification shifts toward piton (maintaining theater around an unresolved obligation). If settled: the reading is stable. If mourning-without-resolution is itself the obligation (obligation to remember and lament): the reading instantiates a different obligation structure entirely.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether study-as-occupation resolves or defers the obligation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested kernel of Temple sacrifice obligation in diaspora Judaism. The kernel is a formalized, authoritative commitment (mishnaic and talmudic law specifying obligatory sacrifice acts in the Temple) that became impossible to perform after the Temple's destruction in 70 CE. Three distinct readings have emerged: (1) study_as_occupation — study of sacrifice law constitutes legitimate fulfillment of the obligation; (2) study_as_archiving — study preserves knowledge for future restoration but does not fulfill the obligation; (3) messianic_suspension — the obligation is suspended (neither fulfilled nor violated) pending messianic restoration and Temple rebuilding. This story models reading (1): study-as-occupation. The constraint is a pure coordination mechanism with minimal extraction. The rabbinic authority declares that intensive engagement with sacrifice law (textual analysis, legal reasoning, creative interpretation) constitutes the legitimate form of obligation-bearing when Temple performance is impossible. This reading coordinates the diaspora Jewish community around a hermeneutical practice that honors the original obligation structure without requiring ritual performance. The authority structure absorbs the impossibility of performance (Temple destroyed, return impossible in the immediate historical frame) without surfacing a revision of the obligation itself — the obligation is not canceled but transformed into a textual and intellectual form.",
+    "key_agents": [
+      "Rabbinic Authority: Institutional actor (institutional/arbitrage) — declares study as legitimate occupation; benefits from the authority and legitimacy that accrues to a hermeneutical innovation that solves a real coordination problem",
+      "Observant Community: Moderate agents (moderate/mobile at civilizational scale; moderate/constrained at biographical scale) — participate in collective hermeneutical practice; identity-constituted by the obligation-via-study frame",
+      "Individual Practitioner: Moderate agents at biographical scale (moderate/constrained, identity_locked) — experience the obligation as identity-binding and somewhat extractive (community enforcement, social cost); genuine obligation-bearing but with asymmetric enforcement",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees a pure coordination solution: the reading uses hermeneutical innovation to maintain obligation-bearing when the original obligatory act becomes impossible"
+    ],
+    "kernel_context": "This constraint is ONE READING of kernel 'temple_sacrifice_obligation'. The kernel is a formalized, authoritative commitment: mishnaic and talmudic law obligating Jews to bring sacrifices in the Temple. After the Temple's destruction, three readings emerged: (1) study_as_occupation (this reading) — study of sacrifice law constitutes legitimate fulfillment; (2) study_as_archiving (sibling) — study preserves knowledge but does not fulfill the obligation; (3) messianic_suspension (sibling) — obligation is suspended pending messianic restoration. This reading declares that textual-legal engagement with sacrifice law IS the legitimate form of obligation-bearing in the Temple's absence. The sibling readings have different authority structures and different extractiveness profiles. Study-as-archiving treats study as a temporary substitute, implying the obligation remains technically unfulfilled (higher theater, potentially piton-ish). Messianic_suspension treats the obligation as deferred, not transformed (obligation remains in abeyance, not occupied). Study-as-occupation declares the obligation genuinely fulfilled through study, closing the kernel-revision loop: the obligation is not canceled, not suspended, but transformed into a form that can be performed in diaspora.",
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint is fundamentally a coordination mechanism — the rabbinic authority has solved a real coordination problem through hermeneutical innovation. The reading benefits the interpretive community's authority and legitimacy, but this is a legitimate institutional benefit (they solved a problem), not extractive overhead. Extractiveness is low because the mechanism serves the declared goal: maintaining obligation-bearing when the original obligatory act is impossible. The study requirement is genuinely what the obligation has become; there is no hidden mechanism extracting from the community for an external beneficiary. Suppression (0.08): Minimal. There are community norms enforcing study (social pressure, reputation), but suppression is low because the frame makes suppression nearly invisible — from within the frame, study is not coerced but self-evident. The obligation-bearing community accepts the study requirement as the legitimate form of the obligation. Suppression appears only from a biographical, constrained perspective (PERSPECTIVE 3). Theater ratio (0.25): Low-minimal. The textual study engages real legal and hermeneutical complexity. The interpretation is not a performative substitute but a genuine intellectual practice. Theater is minimal because the study requirement is what it claims to be: engagement with legal texts and their implications. The constraint is stable across the 1000-year measurement interval because the reading has been hegemonic in Jewish practice for nearly 2000 years and shows no sign of degradation. The slight rise in theater_ratio (0.20 → 0.25) reflects increasing formalization and ritual-ization of study practices (yeshiva structures, prayer-integrated study, canonical commentaries) but this is not piton-level theater — it is the natural elaboration of a stable coordination mechanism.",
+    "perspectival_gap": "The perspectival gap is minimal in this constraint because all agents experience the coordination mechanism in roughly the same way. The rabbinic authority and the observant community both see this as a legitimate solution (Rope). The analytical observer also sees it as a pure coordination solution (Rope). The individual practitioner at biographical scale experiences some extraction (constrained exit, community enforcement) and thus sees Tangled Rope — but this is a secondary effect of identity-locking and community norms, not a structural feature of the reading itself. The gap exists primarily between this reading and its siblings: study-as-occupation sees low extractiveness; study-as-archiving would see higher theater (study is a substitute, not a fulfillment); messianic_suspension would see the obligation as deferred, not occupied. The within-reading perspectival gap is small because the reading has achieved hermeneutical consensus across institutional and individual scales.",
+    "directionality_logic": "Directionality is low across all perspectives because the constraint is fundamentally a coordination mechanism with minimal extraction. The rabbinic authority is the beneficiary (d ≈ 0.15) — they benefit from the innovation and the authority it confers, but this is legitimate institutional benefit, not extractive overhead. Derived from: institutional power + arbitrage exit + beneficiary status. The observant community is both beneficiary and participant (d ≈ 0.35) — they benefit from a coordination solution that enables diaspora Judaism to persist, but also bear the cost of the study requirement. Derived from: moderate power + mobile exit (civilizational) + beneficiary status. The individual practitioner at biographical scale has higher d (≈ 0.55) — constrained exit + some victim status (enforcement of norms, social cost) paired with genuine benefit (identity constitution, obligation fulfillment). Derived from: moderate power + constrained exit + mixed beneficiary/victim. The analytical observer (d ≈ 0.72) sees the structure clearly and notes the innovation's elegance — no override needed.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy because it instantiates a pure coordination mechanism that has achieved hermeneutical consensus. There is no hidden extraction masquerading as coordination, and no hidden coordination masquerading as extraction. The reading declares that study IS the obligation, and the community has accepted this declaration for nearly 2000 years. The reading works because: (1) it preserves the obligation structure (not canceling or suspending it), (2) it makes the obligation performable in diaspora (transforming it into textual-legal engagement), (3) it provides intellectual and spiritual fulfillment (genuine engagement with legal complexity). The theater is minimal because the study requirement is what it claims to be. No mandatrophy resolution is needed."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_obligation__study_as_archiving",
+      "temple_sacrifice_obligation__messianic_suspension"
+    ],
+    "dual_formulation_note": "The Temple sacrifice obligation kernel has three structurally distinct readings with different ε values and different authority structures. Study-as-occupation (this story) treats study as fulfillment (ε=0.12, Rope). Study-as-archiving treats study as preservation without fulfillment (ε≈0.35, likely Tangled Rope or Piton). Messianic_suspension treats the obligation as deferred (ε≈0.25, likely Piton). Each reading has its own perspectives and its own classification. They are linked as constraint family via affects_constraints network edges."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "temple_sacrifice_obligation__study_as_archiving",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "temple_sacrifice_obligation__messianic_suspension",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_constitutively_fulfills_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "obligation_transformed_not_suspended",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "diaspora_obligation_through_hermeneutical_transformation",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vmbap",
+    "story_uid": "1ed3daf2-3c9e-4c79-9e04-8a028a8b07a2",
+    "created_at": "2026-02-26T14:23:45Z",
+    "module_name_override": "constraint_vaccine_mandate_balance__bodily_autonomy_primary"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Vaccine Mandate Under Bodily Autonomy Primary Reading",
+    "topic_domain": "public_health_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "unvaccinated_coerced_individuals"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Coerced Unvaccinated Individual",
+      "comment": "PERSPECTIVE 1: COERCED UNVACCINATED (SNARE) — Individual facing employment loss, school exclusion, or health care denial has no meaningful exit. The mandate's suppressive force is total: employment, education, and medical access are non-negotiable. The extraction is straightforward — bodily autonomy is compelled in exchange for participation in civil society. This agent experiences maximum chi: powerless + trapped + national scope amplifies extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Risk-Averse Unvaccinated",
+      "comment": "PERSPECTIVE 2: RISK-AVERSE UNVACCINATED (TANGLED ROPE) — Individual with medical concerns or prior adverse events faces constrained exit: can seek exemptions, relocate, or delay employment. Some agency exists but costs are high. Experiences both extraction (mandate coercion) and coordination benefit (community disease reduction, even if unwilling participant). The constraint has mixed character from this position — genuine resistance to the mandate but also structural entanglement in the collective action problem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Health Authority",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITY (ROPE) — State agency views mandate as pure coordination: achieving vaccination thresholds solves the collective action problem (free-rider problem in vaccination). The authority has arbitrage options (mandate vs incentive vs information campaigns) and implements the mandate strategically. From this perspective, the constraint solves a genuine coordination problem. No extraction is experienced — the authority sees itself as managing risk, not coercing. Effective extraction chi is low: institutional power + arbitrage exit means beneficiary directionality."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Immunocompromised Exposed",
+      "comment": "PERSPECTIVE 4: IMMUNOCOMPROMISED EXPOSED (SNARE) — Under bodily autonomy primary reading, the immunocompromised bear their own risk. They cannot exit (cannot avoid unvaccinated contacts without isolating), and the state does not compel others' vaccination to protect them. This reading treats their exposure as a consequence of living in a society where bodily autonomy is inviolable. High suppression (cannot control others' vaccination choices); high extraction (forced to accept risk without recourse). This perspective reveals the reading's harsh structural consequence: vulnerable populations are sacrificed to the autonomy principle."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Constitutionalist Authority",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONALIST AUTHORITY (PITON) — Legal institutions charged with enforcing bodily autonomy principles increasingly perform a ritual defense of the principle while mandates persist through administrative pressure, employer-level enforcement, and de facto coercion. Constitutional courts in some jurisdictions have declared mandates impermissible while simultaneously allowing them to operate through parallel mechanisms (health pass requirements, workplace policies). The authority sees its own constitutional framework as degraded — the principle is maintained performatively while circumvented structurally. Theater ratio (0.48) reflects that constitutional theater persists alongside functional mandate enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a civilizational standpoint, bodily autonomy is treated as a foundational right, inviolable regardless of collective benefit — an immutable principle like fundamental human dignity. This perspective naturalizes bodily autonomy as a civilizational constant. However, this classification triggers false summit detection: the principle is a contested normative commitment, not a natural law. Empirical observation shows that bodily autonomy is regularly overridden (quarantine, organ donation law, mandatory vaccination), and the principle's strength varies across historical periods and jurisdictions. The mountain classification naturalizes what is actually a contingent normative choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the vaccine mandate kernel is structurally correct: bodily autonomy primary, proportionality, or public health primary?",
+      "resolution_mechanism": "This is a conceptual/preference omega — no empirical data resolves which normative axiom should dominate. Resolution depends on constitutional tradition (does this jurisdiction ground legitimacy in individual rights or collective welfare?), on axiom_overriding evidence (has empirical science invalidated any axiom?), and on political choice (which reading does the polity commit to?).",
+      "impact": "If bodily autonomy primary is adopted: ε=0.68 (high extraction from coercion). If public health primary is adopted: ε=0.35 (high cooperation benefit, moderate coordination cost). If proportionality reading is adopted: ε=0.42 (context-dependent, varying by disease severity and vaccine safety profile).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Which foundational axiom (autonomy, collective welfare, or proportionality) should govern mandate legitimacy"
+    },
+    {
+      "id": "coercion_mechanism_classification",
+      "question": "Are employment-based and school-based vaccine mandates truly coercive (forced choice between bodily autonomy and civil participation), or are they conditions on access to state-provided or state-regulated services (legitimate quid pro quo)?",
+      "resolution_mechanism": "Conceptual analysis of the coercion threshold: Does exclusion from public employment constitute coercion, or merely consequences of refusing a condition of service? Does school exclusion fall differently than employment exclusion? This turns on how 'coercion' is defined — instrumental coercion (threat to vital interests) vs normative coercion (violation of inviolable rights). Different legal traditions resolve this differently.",
+      "impact": "If employment/school mandates count as coercive: suppression ≥ 0.70, snare classification. If they count as legitimate conditions: suppression drops to 0.40, tangled_rope classification. The ε value hinges on this classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether service exclusion conditions constitute coercive mandates"
+    },
+    {
+      "id": "autonomy_inviolability_limits",
+      "question": "Does 'inviolable bodily autonomy' have any exceptions, or is it truly categorical? If exceptions exist (quarantine, quarantine during plague, organ conscription for life-saving transplants), where does the exception boundary lie relative to vaccine mandates?",
+      "resolution_mechanism": "Historical and comparative analysis: Which medical interventions are recognized as permissible despite bodily autonomy concerns? Does the principle hold differently for infectious disease vs non-infectious? For voluntary participation in institutions vs mandatory inclusion? This is an empirical question about how the principle has been actually applied across jurisdictions and periods.",
+      "impact": "If truly categorical (no exceptions): mandates are categorically impermissible, ε=0.72, snare. If categorical only for vaccines but not quarantine: inconsistent principle application, suggests extractive motivation. If exceptions exist and include pandemic prevention: mandate may be permissible within exception bounds, ε ≤ 0.42, tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical application boundaries of bodily autonomy principle"
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Does the bodily autonomy primary reading logically foreclose the public health primary reading, or do they coexist as live competing commitments?",
+      "resolution_mechanism": "Logical analysis: If the core axiom of bodily autonomy is truly inviolable, then the public health reading's core axiom (collective welfare can override autonomy) is logically incompatible with any single legal framework. If both readings can coexist within different parties' interpretive traditions (constitutional courts recognizing autonomy while policy makers implement mandates), the relation is coexists_with rather than forecloses.",
+      "impact": "If forecloses: only one reading can be institutionalized consistently. If coexists_with: both readings remain live, creating persistent institutional conflict and the piton observation (constitutional theater masking administrative reality). The engine uses reading_relations to compute which framings are stable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between autonomy and public health readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "vmbap_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.62,
+      "id_override": "vmbap_extractiveness_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68,
+      "id_override": "vmbap_extractiveness_t4"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "vmbap_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.68,
+      "id_override": "vmbap_suppression_t2"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.72,
+      "id_override": "vmbap_suppression_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "vmbap_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42,
+      "id_override": "vmbap_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48,
+      "id_override": "vmbap_theater_t4"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents ONE READING of a contested kernel: the vaccine mandate balance. The reading instantiated here is bodily autonomy primary — the position that individual consent to medical intervention is inviolable and that the state cannot compel vaccination regardless of collective benefit. This is a kernel reading, not an independent constraint. Sibling readings (public_health_primary and proportionality_reading) are OTHER constraint stories in the same family; they are not part of this story. This story models ONLY the bodily autonomy primary reading as a structurally consistent normative commitment. The core empirical claim within this reading is that mandates constitute direct coercion of bodily autonomy (suppression ≥ 0.70) without sufficient coordination benefit to justify the coercion (extractiveness ≥ 0.65). The measurement trajectory shows extraction and suppression rising as mandates intensify (employment-level enforcement, school exclusion, health-pass requirements), while theater ratio rises modestly as constitutional objections accumulate without blocking enforcement. The constraint family decomposes a single contested institutional question into three structurally distinct constraint stories: each reading has its own ε, its own beneficiary/victim structure, its own measurement trajectory. Together they model the persistent institutional conflict over vaccine mandate legitimacy.",
+    "key_agents": [
+      "Unvaccinated coerced individuals (powerless/trapped): Primary victims under this reading — bear full extraction cost through employment loss, school exclusion, medical access denial. Suppressions operate at maximum force.",
+      "Risk-averse unvaccinated (moderate/constrained): Secondary victims — face constrained exit (exemptions, relocation, employment delay) rather than complete trap. Experience mixed extraction and some agency.",
+      "Public health authority (institutional/arbitrage): Beneficiary in institutional sense (mandate is state's tool to solve collective action problem). Experiences no extraction — sees mandate as coordination function. Can arbitrage between mandate and alternative policies.",
+      "Immunocompromised exposed (moderate/trapped): Under this reading, treated as bearing their own risk. Cannot force vaccination of others; must isolate or accept exposure. Victims of the autonomy principle's harsh consequences.",
+      "Constitutionalist authority (institutional/arbitrage): Institutional actor maintaining constitutional principle while permitting administrative circumvention. Performs constitutional theater (courts reject mandates) while mandates persist (employers, schools implement them). Piton classification captures the degradation.",
+      "Analytical observer (analytical/analytical): Risk of naturalizing a contested normative commitment (bodily autonomy as inviolable principle) as a civilizational constant."
+    ],
+    "logic_rationale": "Extractiveness (0.68): HIGH. Within the bodily autonomy primary reading, vaccine mandates constitute direct extraction of bodily autonomy without compensating coordination benefit. The reading rejects the public health framing (collective benefit justifies coercion) and the proportionality framing (thresholds of severity/safety can permit intervention). From this reading's internal logic, the mandate extracts bodily autonomy directly and without remainder. The trajectory shows extraction rising as enforcement mechanisms intensify: voluntary guidance (ε≈0.15) → employer policies (ε≈0.45) → school exclusion (ε≈0.60) → employment-level enforcement (ε≈0.68). Suppression (0.72): VERY HIGH. The suppressive force is overwhelming: employment, education, and medical access are non-negotiable civil participation routes. An unvaccinated person cannot realistically exit these requirements without abandoning economic participation, education, or health care. The trajectory shows suppression rising as jurisdictions close exemption pathways and as enforcement extends to private employment (not just government). Theater ratio (0.48): MODERATE-LOW. This reading presents relatively straightforward coercion with minimal performative content. The mandate is enforced directly through concrete mechanisms (termination, school exclusion, health pass requirements). Constitutional objections accumulate in some jurisdictions, creating a piton layer (courts reject mandates, employers implement them anyway), which raises theater ratio slightly. But the underlying mechanism is functional extraction, not theatrical maintenance.",
+    "perspectival_gap": "The perspectival gap between the public health authority and the coerced individual is maximum. The authority experiences the mandate as coordination (rope/low extraction); the individual experiences it as extraction (snare/high extraction). This gap is irreducible within the bodily autonomy primary reading: if autonomy is truly inviolable, then ANY coercion is extractive (not coordinate), and the authority's coordination framing is self-deception masking extraction. The gap between the coerced individual (snare) and the constitutionalist authority (piton) shows institutional degradation: the constitutional principle (bodily autonomy is protected) is maintained in court decisions while being circumvented through employment and administrative mechanisms. The gap between the coerced individual and the immunocompromised exposed (both snare but for different reasons) reveals the reading's harsh distributional consequence: under bodily autonomy primary, vulnerable populations cannot demand that others be vaccinated to protect them. They must isolate or accept exposure — their vulnerability is not sufficient grounds to override the unvaccinated's autonomy. This is a real structural consequence of the reading, not a contingent policy choice.",
+    "directionality_logic": "The bodily autonomy primary reading centers extraction through coercion of protected interests. The unvaccinated-coerced individual is structurally positioned as the primary target (victim): powerless individuals facing trapped exit options experience maximum d ≈ 0.95, producing f(d) ≈ 1.42, amplifying chi to 0.68 × 1.42 × 1.0 = 0.96 (full snare classification). The public health authority is positioned as beneficiary (institutional power, arbitrage exit) with d ≈ 0.05, producing f(d) ≈ -0.12, yielding negative chi (rope/coordination classification). The immunocompromised exposed occupy a secondary victim position: moderate power, trapped exit (cannot compel others' vaccination), d ≈ 0.85, producing f(d) ≈ 1.15. The constitutional authority performs the principle while permitting violation — institutional power, arbitrage exit, but captured by both readings (enforcement pressure + autonomy principle) — d ≈ 0.50, producing piton's performative asymmetry. These directionality values are derived from the reading's own structural logic, not from empirical outcomes: the reading claims autonomy is inviolable, so anyone subjected to coercion is a victim, regardless of health consequences.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint resolves the mandatrophy (high extraction and high enforcement) by making the extraction explicit and primary. The bodily autonomy primary reading does NOT claim that mandates are coordination solutions with side effects (which would be mandatrophy: calling extraction 'coordination'). Instead, it claims mandates ARE extraction — direct compulsion of protected bodily autonomy — and that this extraction is categorically impermissible regardless of collective benefit. The reading is logically coherent: if autonomy is inviolable, extraction is the problem, not a necessary cost of coordination. The mandatrophy is resolved by accepting the snare classification and rejecting the tangled_rope compromise position (the proportionality reading's frame). The sibling public_health_primary reading resolves mandatrophy differently: it claims high execution masks successful coordination (collective protection outweighs individual extraction), making the constraint rope or tangled_rope rather than snare. These are genuinely different metaphysical commitments about whether coercion can be justified by collective benefit. They cannot both be true within a single legal framework — one reading forecloses the other's core premise.",
+    "kernel_context": "This constraint instantiates the bodily_autonomy_primary reading of the vaccine_mandate_balance kernel. The kernel is contested among three normative readings: (1) bodily autonomy primary (individual consent is inviolable, this story), (2) public_health_primary (collective protection overrides consent when voluntary compliance fails), (3) proportionality_reading (mandates permissible only when disease severity, transmission risk, and vaccine safety meet strict proportionality thresholds). This reading treats bodily autonomy as foundational and inviolable. The sibling public_health_primary reading reverses the priority, making collective welfare the constraint on autonomy claims. The proportionality_reading attempts to balance both principles through threshold-based permission. The bodily_autonomy_primary reading coexists_with both siblings in different jurisdictions and judicial traditions; it forecloses the public_health_primary reading's core claim (that collective benefit can override autonomy) within any single framework committed to its axioms."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_balance__public_health_primary",
+      "vaccine_mandate_balance__proportionality_reading"
+    ],
+    "dual_formulation_note": "The vaccine mandate balance is a contested kernel decomposed into three constraint stories with different ε values and different victim/beneficiary structures. The bodily_autonomy_primary reading (this story, ε=0.68, snare) treats mandates as extraction of protected autonomy. The public_health_primary reading (sibling story, ε≈0.35, rope/tangled_rope) treats mandates as coordination solution for collective action problem. The proportionality_reading (sibling story, ε≈0.42-0.55, context-dependent) treats mandates as permissible only within strict thresholds. All three are linked via network.affects_constraints; together they model the persistent institutional conflict over mandate legitimacy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "vaccine_mandate_balance__public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "vaccine_mandate_balance__proportionality_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_autonomy_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "collective_benefit_cannot_override_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "liberal_individual_rights_primacy",
+    "drift_state": {
+      "moment": "pandemic_enforcement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

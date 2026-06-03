@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "kodashim_commandment_status__performance_only",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_kodashim_commandment_status__performance_only",
+    "measurement_id_prefix": "kodashim_perf",
+    "story_uid": "57ee74e9-1155-4f43-adc2-7131a3ea6533"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Kodashim Commandment Status: Performance-Only Reading (Temple Contingency)",
+    "topic_domain": "religious_studies/halakhic_theory/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rabbinic_institutional_authority"
+    ],
+    "victims": [
+      "jewish_religious_community",
+      "potential_alternative_scholarship_allocation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Observant Believer Bound by Commandment",
+      "comment": "PERSPECTIVE 1: OBSERVANT BELIEVER (SNARE) — Trapped within the legal framework that declares the sacrifice commandment suspended yet remains binding in study form. Perceives the constraint as extractive: expected to invest cognitive resources in mastering laws that cannot be performed, with no exit. The suppression is structural — religious identity makes exit unthinkable; the trap is that study obligations persist despite functional suspension of the actual commandment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Jewish Scholarly Community",
+      "comment": "PERSPECTIVE 2: JEWISH SCHOLARLY COMMUNITY (SNARE) — Constrained by institutional expectations to maintain expertise in laws that cannot be performed. High career costs for deprioritizing Kodashim study. Resources diverted from applied halakha or other pressing communal needs. The extractive mechanism: maintaining the fiction that studying suspended laws is equivalent to performing them, thereby justifying continued resource allocation to a framework disconnected from actual Jewish practice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Rabbinic Authority (Traditional Institutional View)",
+      "comment": "PERSPECTIVE 3: RABBINIC INSTITUTIONAL AUTHORITY (ROPE) — Benefits from the suspended-yet-binding framework. Maintains interpretive monopoly over which laws are active vs. suspended. The constraint serves as coordination mechanism: it preserves textual authority and hermeneutic control by keeping the entire corpus binding regardless of performability. Experiences low extraction cost because the framework can arbitrage between performance-based and study-based readings as institutional interest dictates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Progressive/Reconstructionist Movements",
+      "comment": "PERSPECTIVE 4: PROGRESSIVE MOVEMENTS (TANGLED ROPE) — Organized but constrained. See genuine coordination function (preserving textual knowledge across exile) alongside extractive overlay (maintaining authority asymmetry through complicated law status). Partial exit is possible (reinterpreting the framework) but carries community cost. Mixed perspective: some benefit from reformed interpretation, but still bound by traditional framework for legitimacy-seeking."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Halakhic Study Ritual",
+      "comment": "PERSPECTIVE 5: HALAKHIC STUDY RITUAL (PITON) — The institutional practice of studying sacrifice laws has become largely performative. The ritual persists through institutional inertia and status maintenance rather than functional necessity. The theater is high: detailed discussion of Temple procedures, altar dimensions, and sacrifice protocols continues with the same hermeneutic intensity as binding law, despite universal acknowledgment that performance is impossible. The piton captures that the practice has atrophied functionally but is maintained through institutional commitment."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Frameing)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — Risks naturalizing the performance-only reading as an immutable logical consequence: 'Without altar, sacrifice laws cannot be performed; therefore they are suspended.' This perspective treats the contingency as a law of logic rather than as a theological choice. However, the false summit detector should flag this: the performance-only reading is ONE reading of the kernel, not a natural law. Alternative readings (study_as_performance, messianic_deferral) show the kernel admits multiple legitimacy structures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "performance_vs_readiness_boundary",
+      "question": "Is the commandment genuinely suspended (performance-only reading), or is study itself a form of readiness that keeps the commandment alive in displaced form (study_as_performance reading)?",
+      "resolution_mechanism": "Textual analysis of Talmudic sources declaring suspension vs. sources framing study as alternative fulfillment; historical tracking of whether the performance-only reading gained dominance through logical argument or through institutional authority assertion",
+      "impact": "If suspension is absolute: performance-only reading correct; extractiveness ≈ 0.58 (snare). If study counts as fulfillment: study_as_performance reading correct; extractiveness ≈ 0.25 (rope). This is THE core omega: the entire classification turns on what counts as commandment fulfillment.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether commandment is suspended or study counts as alternative fulfillment"
+    },
+    {
+      "id": "messianic_restoration_timeline",
+      "question": "Does the performance-only reading acknowledge messianic restoration as the terminal state, or does it treat suspension as indefinite/permanent?",
+      "resolution_mechanism": "Comparison of halakhic sources: does the performance-only reading explicitly reference Temple restoration, or treat it as outside the scope of contemporary law? Survey of rabbinical authority positions on whether suspension is temporary or terminal.",
+      "impact": "If restoration is acknowledged: messianic_deferral reading has legitimate claim; performance-only is shown as interim framework. If suspension is treated as permanent: performance-only reading stands alone as terminal authority structure; classification and extractiveness remain stable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suspension is temporary (awaiting messianic restoration) or permanent"
+    },
+    {
+      "id": "institutional_authority_concentration",
+      "question": "Does the performance-only reading require a centralized halakhic authority to declare suspension, or can authority be distributed across interpreters?",
+      "resolution_mechanism": "Historical analysis: which institutional body (if any) formally declared the suspension? Do subsequent authorities treat suspension as binding precedent or as revisable interpretation? Does performance-only reading depend on Sanhedrin authority (now absent) or on distributed rabbinic consensus?",
+      "impact": "If centralized authority required: performance-only reading is vulnerable to authority vacuum (post-Sanhedrin challenge). If distributed: performance-only reading is more stable but less powerful (rabbinic consensus can shift). Affects whether the snare classification persists under institutional reorganization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suspension requires centralized halakhic authority"
+    },
+    {
+      "id": "resource_allocation_counterfactual",
+      "question": "If the performance-only reading were replaced by study_as_performance or messianic_deferral, would released scholarly resources actually redirect to high-priority halakhic areas, or would Kodashim remain dominant through institutional inertia?",
+      "resolution_mechanism": "Counterfactual analysis: survey of scholars deprioritizing Kodashim study; assess whether reallocation is blocked by tradition (all law is equally binding) or by institutional status (Kodashim expertise confers prestige). Track resource flows in movements that have challenged performance-only reading (Progressive Judaism) to measure actual reallocation.",
+      "impact": "If reallocation is real: performance-only reading genuinely extracts resources; snare classification justified. If reallocation does not occur: extractiveness is lower; victim set is smaller; classification should shift toward tangled_rope. This omega determines whether the high extractiveness is structural or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether replacing performance-only reading would free scholarly resources"
+    },
+    {
+      "id": "reading_council_authority",
+      "question": "Does the performance-only reading coexist with study_as_performance and messianic_deferral as three legitimate readings held by different communities, or does it foreclose the others through logical contradiction?",
+      "resolution_mechanism": "Detailed exegetical analysis: Do the three readings rest on incompatible premises about what fulfills a commandment, or do they represent different theological priorities that could coexist in a single framework? Can a community hold all three as valid interpretations for different contexts?",
+      "impact": "If coexist: reading_relations should be coexists_with; sibling readings are live alternatives. If foreclose: reading_relations should be forecloses; performance-only reading eliminates logical space for alternatives. This determines the political and epistemic status of the sibling readings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether performance-only reading coexists with or forecloses sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The performance-only reading of Kodashim commandment status asserts that sacrifice laws are contingent on Temple existence; without the altar, the commandment is suspended, reducing to a legal husk. This reading instantiates one strand of a contested kernel about whether the halakhic status of sacrifice laws remains active, is actively suspended (performance-only), is maintained through study as alternative performance (study_as_performance), or is temporally deferred pending messianic restoration (messianic_deferral). The performance-only reading treats the contingency as absolute: no Temple means no commandment, only its historical and textual preservation. This creates a structural extraction dynamic. The observant community remains bound to study laws it cannot perform; rabbinic authority maintains interpretive control over suspension status; scholarly resources continue flowing to a framework disconnected from contemporary Jewish practice. The constraint demonstrates how a theological choice (treating suspension as terminal) becomes a structural mechanism for maintaining authority asymmetry and extracting continued engagement from a community. The theater ratio rises from 0.48 to 0.68 over the measurement interval, indicating increasing performativity of Kodashim study as the distance from Temple sacrifice grows and functional rationalization becomes more elaborate. Extractiveness rises from 0.42 to 0.58 as alternative readings (study_as_performance, messianic_deferral) lose cultural salience and the performance-only reading consolidates institutional dominance.",
+    "key_agents": [
+      "Observant Jewish Community: Primary victims (powerless/trapped) — religiously bound to master suspended laws; cannot exit without identity dissolution",
+      "Jewish Scholarly Community: Secondary victims (moderate/constrained) — institutionally expected to maintain expertise in non-performable law; face career costs for deprioritization",
+      "Rabbinic Authority: Primary beneficiary (institutional/arbitrage) — maintains interpretive monopoly over suspension status; controls which frameworks are legitimate",
+      "Progressive/Reconstructionist Movements: Organized challengers (organized/constrained) — see coordination function but resist extractive overlay; partial exit available through reinterpretation",
+      "The Halakhic Study Ritual: Institutional practice (institutional/arbitrage) — persists through status maintenance and inertia despite functional atrophy (piton classification)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing performance-only reading as logical necessity rather than theological choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the core extraction mechanism. The performance-only reading requires continued investment in mastering laws that cannot be performed, with the justification that study preserves the legal corpus for hypothetical future restoration. However, extractiveness is not extreme (>0.70) because: (a) the preservation function is genuine — the community does maintain halakhic knowledge through study; (b) some interpreters find genuine intellectual satisfaction in the legal analysis regardless of performability; (c) the constraint can be challenged through alternative readings (study_as_performance, messianic_deferral). Suppression (0.65): Moderate-high. The suppression reflects multiple barriers: religious identity makes exiting the framework unthinkable; authority concentration in rabbinic interpretation prevents unilateral redefinition; institutional prestige attaches to Kodashim expertise, making deprioritization costly; textual tradition treats all law as binding regardless of performability. Theater ratio (0.68): High and rising. The performativity reflects the elaborate hermeneutic activity surrounding laws that everyone acknowledges cannot be performed. The measurement progression shows theater increasing as direct functional connection to Temple sacrifice fades and intellectual justification becomes more elaborate. This rising theater is diagnostic of extraction consolidation: as the functional basis erodes, the performative justification intensifies.",
+    "directionality_logic": "Each perspective derives its directionality from the agent's structural position relative to the suspension mechanism. The observant believer (victim + trapped) has d ≈ 0.95, producing maximum f(d) ≈ 1.42 and high experienced extraction. The scholarly community (victim + constrained) has d ≈ 0.72, producing f(d) ≈ 1.15 and moderate-high extraction. Rabbinic authority (beneficiary + arbitrage) has d ≈ 0.08, producing f(d) ≈ -0.10, giving them negative effective extraction (the constraint subsidizes their authority position). Progressive movements (partial beneficiary, partial victim + constrained) have d ≈ 0.55, producing f(d) ≈ 0.75 and tangled rope experience. The piton perspective reflects that the study ritual has become functionally disconnected from its original purpose — the institutional practice persists through inertia rather than through active extraction, giving it a performative rather than extractive signature.",
+    "perspectival_gap": "The performance-only reading produces a wide perspectival gap across power levels. Rabbinic authority sees the framework as coordination (Rope) — it preserves textual knowledge and maintains interpretive authority. The observant community sees extraction (Snare) — they are trapped in obligations to master non-performable law. The scholarly community sees mixed dynamics (Tangled Rope) — genuine preservation function alongside extractive burden. Progressive movements see a degraded but contestable system (Piton or Tangled Rope) — the performativity is visible but the authority structure shields it from direct challenge. The civilizational analytical observer risks seeing logical necessity (Mountain) — but the false summit detector identifies this as naturalization of a contingent reading choice. The gap reveals that the performance-only reading's apparent logical inevitability ('no Temple, no commandment') is actually a particular theological stance that other readings contest.",
+    "kernel_context": "This constraint instantiates the PERFORMANCE-ONLY reading of the kodashim_commandment_status kernel. The kernel is the contested question: What is the halakhic status of sacrifice laws after Temple destruction? The three sibling readings are: (1) messianic_deferral — commandment is temporally suspended but remains binding in principle, maintaining readiness for restoration; (2) study_as_performance — studying sacrifice laws fulfills the commandment itself, keeping it active through intellectual engagement; (3) performance_only (THIS READING) — without altar, the commandment is suspended, reducing to a legal husk. The performance-only reading treats the Temple contingency as terminal (not awaiting restoration) and study as preservation rather than fulfillment. This reading produces the highest extractiveness of the three (0.58 vs. estimated 0.25–0.35 for the alternatives) because it creates the most elaborate justification for continued resource investment in non-performable law."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "kodashim_commandment_status__study_as_performance",
+      "kodashim_commandment_status__messianic_deferral"
+    ],
+    "dual_formulation_note": "The Kodashim commandment status kernel admits three structurally distinct readings with different extractiveness values. Each reading is a separate constraint story linked via network.affects_constraints. The performance-only reading (this file) has ε ≈ 0.58 (Snare). The study_as_performance reading has estimated ε ≈ 0.28 (Rope) — study as fulfillment reduces extraction by providing genuine functional equivalence. The messianic_deferral reading has estimated ε ≈ 0.32 (Rope/Tangled Rope) — deferral to future restoration maintains readiness without terminal extraction. Institutional consolidation toward performance-only represents a drift from lower-extraction readings toward higher extraction, not a drift within a single constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "kodashim_commandment_status__study_as_performance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "kodashim_commandment_status__messianic_deferral",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "suspension_is_terminal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_is_preservation_not_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "temple_sacrificial_obligation_active",
+    "drift_state": {
+      "moment": "contemporary_post_exile",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

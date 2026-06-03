@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__naturalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_qwerty_persistence_mechanism__naturalization_reading",
+    "measurement_id_prefix": "qwerty_nat",
+    "story_uid": "7d73d127-4b1d-4074-96e7-6959a8bb451c",
+    "created_at": "2026-02-27T14:23:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Persistence as Market-Equilibrium Coordination (Naturalization Reading)",
+    "topic_domain": "economic_history/technology_standards/path_dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [],
+    "victims": [],
+    "accessibility_collapse": 0.35,
+    "resistance": 0.18,
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Typist (Skill Investment View)",
+      "comment": "PERSPECTIVE 1: TYPIST (ROPE) — QWERTY adoption represents genuine coordination on a standard that enabled skill portability and employment flexibility. Switching costs are real but reflect legitimate human capital investment in muscle memory and pattern recognition on QWERTY layouts. The constraint solves a genuine coordination problem (many-to-one skill mapping) with low coercive overhead. Classification: Rope. The typist benefits from standard stability; the arrangement benefits all parties who care about keyboard skill transferability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Keyboard Manufacturer",
+      "comment": "PERSPECTIVE 2: MANUFACTURER (ROPE) — From the institutional perspective, QWERTY became the dominant standard through fair competitive process. Manufacturers that invested in QWERTY gained coordination benefits (suppliers, skill pools, aftermarket support), but these benefits are available to any competitor adopting the standard. No systematic extraction from manufacturers to users — both benefit from standardization. The arrangement is stable because the coordination benefit (universal skill) exceeds switching costs. Classification: Rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Fair Competition View)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) — From the civilizational/analytical view, QWERTY persisted because it was adequate and alternatives (Dvorak, Colemak, etc.) failed to achieve sufficient superiority to overcome switching costs. The empirical claim: Dvorak's theoretical speed advantage over QWERTY was never conclusively demonstrated in field conditions with trained typists. The switching cost (retraining human muscle memory) was not justified by empirical performance gains. Under fair competition, QWERTY won. Classification: Rope. This reading treats the persistence as market equilibrium rather than lock-in or extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Dvorak Advocate (Counterfactual Frustration)",
+      "comment": "PERSPECTIVE 4: DVORAK ADVOCATE (TANGLED ROPE) — From the advocate's perspective, alternative layouts offer genuine benefits (reduced finger travel, lower strain, ergonomic optimization) but are suppressed by coordination inertia and psychological identification with early-learned patterns. The advocate experiences this as coordinated extraction: their superior alternative is available but suppressed by collective action failure. However, this perspective requires accepting the empirical claim that Dvorak IS superior — a claim the naturalization reading explicitly contests. Classification: Tangled Rope, because the advocate sees both coordination (everyone learning Dvorak would solve the problem) and extraction (the collective choosing suboptimal outcome). The identity_locked exit reflects that early typing experience becomes constitutive of muscle memory and professional identity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural-Law View (Inevitable Equilibrium)",
+      "comment": "PERSPECTIVE 5: NATURAL LAW VIEW (MOUNTAIN) — This reading risks naturalizing the market equilibrium outcome as immutable law: 'Under fair competition, the adequate standard wins out.' The false-summit detector will flag this if the naturalization reading declares beneficiaries or if the empirical claims prove contested. From a mathematical/economic theory perspective, market efficiency theorems suggest that in the long run, fair competition selects adequate or superior technologies. This perspective treats QWERTY persistence as a consequence of those theorems, not contingent institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dvorak_empirical_superiority",
+      "question": "Is Dvorak objectively faster/more efficient than QWERTY for trained typists under real-world conditions, or is the empirical evidence inconclusive?",
+      "resolution_mechanism": "Systematic meta-analysis of typing-speed studies comparing trained QWERTY and Dvorak typists under controlled conditions; longitudinal data on professional typists who switched to Dvorak (speed gain, error rates, long-term retention)",
+      "impact": "If Dvorak is objectively superior: naturalization reading is empirically false; lock-in or extraction readings become more credible (ε rises). If evidence is inconclusive or negative: naturalization reading is supported (ε remains low); QWERTY persistence reflects fair competition outcome.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical status of Dvorak technical superiority claims"
+    },
+    {
+      "id": "switching_cost_magnitude",
+      "question": "What is the true switching cost (in training time, error rate, productivity loss) for a skilled QWERTY typist to learn Dvorak?",
+      "resolution_mechanism": "Controlled retraining studies; longitudinal tracking of productivity during transition; comparison to other skill-transfer paradigms (ambidextrous handwriting, instrument switching in music)",
+      "impact": "If switching cost >> Dvorak advantage: naturalization reading correct. If switching cost << Dvorak advantage: lock-in reading correct; inadequate justification exists for QWERTY persistence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of learning costs for alternative layouts"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of a contested kernel: qwerty_persistence_mechanism. Which sibling reading (lock_in vs beneficiary_extraction) most plausibly describes QWERTY persistence?",
+      "resolution_mechanism": "Historical analysis of QWERTY standardization (1870s-1920s): Did Sholes/Remington systematically suppress alternatives (extraction reading)? Or did QWERTY win fair competition but created coordination inertia (lock-in reading)? Or did QWERTY persist because it was adequate (naturalization reading)? The three readings coexist as live positions; empirical evidence on Dvorak performance and switching costs will shift probability distributions across them.",
+      "impact": "Determines which constraint story is epistemically dominant. Naturalization reading ε=0.15 (Rope). Lock-in reading ε~0.40-0.50 (Tangled Rope / Snare). Extraction reading ε~0.50-0.70 (Tangled Rope / Snare). The three cannot coexist in a single explanatory framework; they represent genuine scholarly dispute.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which theoretical reading of QWERTY persistence is correct"
+    },
+    {
+      "id": "beneficiary_invisibility",
+      "question": "Does the naturalization reading's claim of 'no systematic beneficiary' hold, or are there identifiable groups who benefited from QWERTY standardization and suppressed alternatives?",
+      "resolution_mechanism": "Historical records of manufacturer marketing, advertising, and industry coordination (1900-1970s); archival evidence on Dvorak rejection by manufacturers and typing schools; longitudinal analysis of who profited from QWERTY standardization vs. who would have profited from alternatives",
+      "impact": "If clear beneficiary groups identifiable: shifts reading toward extraction or lock-in (beneficiaries had motive and means to suppress alternatives). If no clear beneficiary: naturalization reading supported (persistence reflects genuine adequacy, not systematic extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identifiable beneficiaries suppressed alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "id_override": "qwerty_nat_theater_1880"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22,
+      "id_override": "qwerty_nat_theater_1905"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25,
+      "id_override": "qwerty_nat_theater_1930"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "qwerty_nat_extract_1880"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.13,
+      "id_override": "qwerty_nat_extract_1905"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.15,
+      "id_override": "qwerty_nat_extract_1930"
+    }
+  ],
+  "interval": {
+    "start": 1880,
+    "end": 1930
+  },
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout persists globally despite persistent claims that alternatives (Dvorak Simplified Keyboard, Colemak, etc.) are ergonomically or biomechanically superior. This constraint story instantiates ONE reading of a contested kernel: the naturalization reading. Under this reading, QWERTY persists not because of extraction by beneficiaries or because of path-dependent lock-in, but because it was adequate and became standard through fair competitive processes. The switching costs (human capital investment in muscle memory, coordination burden of changing standards) are real but represent genuine skin-in-the-game learning, not suppressed alternatives. From this perspective, alternatives like Dvorak failed to demonstrate sufficient empirical superiority to justify retraining costs. The constraint is a Rope (pure coordination) rather than Tangled Rope (coordination + extraction) or Snare (extraction with minimal coordination). The naturalization reading treats QWERTY as a stable market equilibrium outcome, not as a contingent institutional arrangement maintained through systematic suppression or as a path-dependent trap with a potentially superior alternative locked out.",
+    "key_agents": [
+      "Typists: Moderate power, generationally constrained (skill investment lock). Benefit from QWERTY standardization through skill portability and employment flexibility. Bear switching costs if alternatives prove superior.",
+      "Keyboard manufacturers: Institutional power, globally arbitrageable. Benefit from QWERTY standardization through supplier networks and skill pools. No systematic motive to suppress alternatives — any manufacturer can adopt alternative layouts if market demand exists.",
+      "Dvorak advocates: Moderate power, locally identity-locked (early learning constitutive of professional identity). Perceive alternatives as suppressed by inertia; experience frustration at collective failure to adopt superior layouts (their empirical claim).",
+      "Analytical observer: Civilizational, universal scope. Assesses QWERTY persistence as market equilibrium outcome reflecting fair competition and adequate sufficiency of the standard."
+    ],
+    "logic_rationale": "Extractiveness (0.15): Low. Under the naturalization reading, QWERTY persistence reflects genuine adequacy rather than systematic extraction. The low value reflects that no identifiable beneficiary group maintains QWERTY through suppression of alternatives. Manufacturers compete on QWERTY because it is the standard, but any manufacturer can switch if alternatives prove superior. The switching cost (human capital retraining) is real but reflects the costs of coordination change, not coercive extraction. Suppression (0.12): Low. Barriers to Dvorak adoption are primarily coordination costs (retraining), not active suppression. No evidence in the naturalization reading of systematic marketing campaigns against alternatives or collusive manufacturer behavior. Theater ratio (0.25): Very low. QWERTY standardization is functional, not performative. The standard genuinely solves a coordination problem (many-to-one skill mapping). The arrangement is stable because it works, not because it is theatrical. Measurements show stable low theater and gradual rising extractiveness over the interval, reflecting that as QWERTY standardization deepened, some coordination overhead accumulated (more manufacturers, more rigidity in retraining), but without crossing into extraction or lock-in territory.",
+    "perspectival_gap": "The naturalization reading produces Rope classifications from all moderate-to-institutional perspectives, but the Dvorak advocate (Perspective 4) sees Tangled Rope because they accept the empirical claim that alternatives are superior. The analytical/natural-law perspective (Perspective 5) risks over-naturalizing the outcome as inevitable law rather than contingent market equilibrium. The perspectival gap is primarily about empirical disagreement (Is Dvorak actually superior?) rather than structural disagreement about the constraint's nature. If Dvorak's superiority is empirically established, the naturalization reading becomes false, and one of the sibling readings (lock-in or extraction) becomes more credible. If Dvorak's superiority is empirically contested or refuted, the naturalization reading stands.",
+    "directionality_logic": "Under the naturalization reading, no systematic beneficiary exists — both typists and manufacturers benefit from QWERTY standardization through reduced transaction costs and skill portability. The directionality (d) values are symmetric across beneficiary and victim groups (there are no victims under this reading). Both agents experience the constraint as coordination (low d → low f(d) → low χ). If evidence emerged of systematic suppression (manufacturer collusion, advertising campaigns against Dvorak, etc.), the directionality would shift — some agents would become clear targets, others clear beneficiaries, and d values would differentiate (some approaching 0.0 for beneficiaries, others approaching 1.0 for victims). The naturalization reading's empirical premise is that such evidence does not exist.",
+    "kernel_context": "This constraint instantiates the NATURALIZATION READING of the kernel qwerty_persistence_mechanism. The kernel is the stabilized commitment underlying QWERTY standardization — the claim that 'QWERTY persists because of X,' where X differs across three sibling readings: (1) extraction reading: X = beneficiary groups actively suppress alternatives; (2) lock-in reading: X = path-dependent coordination failure despite technical inferiority; (3) naturalization reading: X = adequacy and fair competition, no systematic suppression, no locked-out superior alternative. The three readings coexist as live scholarly positions; no single reading forecloses the others within the academic tradition of technology history and economic history. The naturalization reading emphasizes empirical adequacy, fair competition, and the absence of systematic beneficiary suppression. The lock-in reading emphasizes coordination inertia and the possibility of a technically superior alternative being suppressed by switching costs (though not by deliberate beneficiary action). The extraction reading emphasizes manufacturer collusion and deliberate suppression. All three remain plausible interpretations of QWERTY persistence; they differ in empirical claims (Dvorak superiority), historical claims (systematic suppression), and causal mechanisms (fair competition vs. path dependence vs. extraction).",
+    "mandatrophy_analysis": "The naturalization reading avoids mandatrophy by treating QWERTY as pure coordination (Rope) rather than attempting to classify it as both coordination and extraction simultaneously. The three sibling readings (extraction, lock-in, naturalization) represent genuine competing explanations, not different observational perspectives on a single constraint. The choice among them depends on empirical evidence about Dvorak's actual performance, historical records of manufacturer behavior, and switching cost magnitudes. The mandatrophy is resolved at the kernel level: the reading contest acknowledges that multiple theoretical framings are defensible and that empirical evidence will shift probability distributions across them."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__beneficiary_extraction_reading"
+    ],
+    "dual_formulation_note": "QWERTY persistence is one kernel with three structurally distinct readings. This story (naturalization_reading, ε=0.15, Rope) treats QWERTY as market equilibrium and fair competition outcome. The lock_in_reading (ε~0.40-0.50, Tangled Rope) treats it as path-dependent coordination failure with a suppressed superior alternative. The extraction_reading (ε~0.50-0.70, Tangled Rope/Snare) treats it as beneficiary suppression. The three readings cannot coexist in a single constraint story; they represent fundamental disagreement about causal mechanisms, empirical superiority, and beneficiary intentionality. All three are linked via network.affects_constraints to document the kernel structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reference_frame": "fair_competition_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_post_dvorak_studies",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__lock_in_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dvorak_superiority_empirically_unestablished",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "qwerty_adequacy_sufficient_for_persistence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "directionality_overrides": []
+}

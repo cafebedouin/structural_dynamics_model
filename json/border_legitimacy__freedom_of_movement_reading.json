@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "border_legitimacy__freedom_of_movement_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "blfm",
+    "story_uid": "0fe606de-d31c-4037-a583-1e84b05adf12"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Border Enforcement as Restriction on Freedom of Movement (Freedom-of-Movement Reading)",
+    "topic_domain": "political_philosophy/international_law/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_citizens",
+      "state_fiscal_authorities"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "displaced_workers",
+      "welfare_excluded_noncitizens",
+      "global_poor"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Migrant",
+      "comment": "PERSPECTIVE 1: EXCLUDED MIGRANT (SNARE) — Structurally immobilized by border enforcement; no exit from the restriction itself. Faces maximum suppression: legal prohibition, physical barriers, deportation threat. Trapped geographically and legally. No alternative is recognized by the enforcing authority. Pure extraction from this agent's structural position — zero coordination benefit, maximum coercive overhead."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Displaced Worker (Incumbent Citizen)",
+      "comment": "PERSPECTIVE 2: DISPLACED WORKER / INCUMBENT CITIZEN (SNARE) — Under this reading, the worker experiences border restriction as extractive: it preserves wage suppression by limiting labor supply competition, maintains nationalist framing that obscures labor exploitation, and prevents them from exercising freedom of movement themselves. High suppression (constrained exit — cannot easily emigrate without state permission, visa requirements, skill gatekeeping). Extracted from through wage depression and nationalist ideology that identifies their interests with border enforcement rather than with migrant workers facing identical suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Fiscal Authority",
+      "comment": "PERSPECTIVE 3: STATE FISCAL AUTHORITY (ROPE) — Experiences border enforcement as coordination mechanism: it enables welfare-state resource allocation, labor-market regulation, and tax revenue collection by defining the beneficiary and tax-paying group. From this perspective, borders solve a collective action problem (how to fund redistributive institutions). The state has arbitrage exit options (can renegotiate borders, labor agreements, regional blocs). Beneficiary experiencing the constraint as enabling coordination, not extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Capital",
+      "comment": "PERSPECTIVE 4: GLOBAL CAPITAL / INVESTOR CLASS (TANGLED ROPE) — Experiences borders as mixed: coordination function enables territorial property rights and labor-cost arbitrage (access cheap labor in low-wage zones, restrict labor mobility in high-wage zones). Extractive function enables selective mobility for capital and high-skilled workers while restricting low-skilled workers. Powerful agents (corporations, wealthy individuals) can move across borders; borders restrict competition from below. Mobile exit options (can relocate operations, wealth, nationality). Both beneficiary and partial victim: benefits from labor-cost differential but constrained by nation-state regulation and worker organizing. Moderate extraction experienced because this agent has agency and exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Borders Coalition",
+      "comment": "PERSPECTIVE 5: OPEN BORDERS COALITION / ADVOCACY ORGANIZATIONS (TANGLED ROPE) — Organized agents (migrant-rights groups, labor unions, some human-rights NGOs) perceive borders as an extractive constraint with a sunset: regional freedom-of-movement frameworks (EU model, though contested), labor-union cross-border organizing, and international human-rights norms are gradually delegitimizing restrictive border regimes. Coordination function: borders enable temporary regulation during transition. Extractive function: borders restrict movement now. Organized agents have mobile exit options (advocacy, coalition-building, institutional capture). See the constraint as transformable rather than immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (State Sovereignty Naturalizer)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SOVEREIGNTY PERSPECTIVE (MOUNTAIN) — From a civilizational/universal perspective, territorial sovereignty and border enforcement appear as immutable features of the international system: states are recognized units; they claim exclusive authority over territory; this is simply how the world is organized. However, this perspective naturalizes the sovereignty-reading, not the freedom-of-movement reading. The engine's false summit detector will flag this: the 'immutable' status of borders is a reading-dependent artifact, not a universal constant. This perspective instantiates the oracle gap — the analytical observer's native position (state-centric realism) cannot see that freedom of movement is an equally coherent reading of the kernel."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "right_vs_capability_distinction",
+      "question": "Is 'freedom of movement as a human right' a deontological entitlement (you have the right *in principle*) or an instrumental capability (you have the *power* to move)?",
+      "resolution_mechanism": "Jurisprudential analysis of how freedom-of-movement claims are adjudicated in human-rights courts; correlation between rights declarations and actual mobility outcomes by class and nationality",
+      "impact": "If deontological: borders are unjust regardless of whether they prevent actual movement (rights violation occurs at the level of principle). If instrumental: borders are unjust only if they prevent actual movement capacity (empirical question about who can and cannot move). Affects classification across all perspectives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether freedom of movement is a deontological right or instrumental capability"
+    },
+    {
+      "id": "reading_foreclosure_mutual_exclusion",
+      "question": "Does this reading's core axiom (freedom of movement is a human right) logically foreclose the sovereignty_reading's core axiom (states have legitimate border authority)?",
+      "resolution_mechanism": "Formal logical analysis of the two axioms' relationship within a single normative framework; examination of whether liberal-democratic theory can coherently hold both or requires choosing one",
+      "impact": "If foreclosed: the two readings are in genuine conflict (one must be false). If coexistent: both readings remain live positions and the kernel contest is a genuine political dispute, not a logical error. Determines whether reading_relations edge is 'forecloses' or 'coexists_with'.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether freedom-of-movement and sovereignty axioms logically exclude each other"
+    },
+    {
+      "id": "welfare_state_dependency_mechanism",
+      "question": "Does border restriction function primarily to preserve wage suppression for incumbent workers, or primarily to gate redistributive welfare benefits, or are both mechanisms equally operative?",
+      "resolution_mechanism": "Labor economics analysis of wage suppression under restriction vs. open borders; welfare-state fiscal modeling of benefit sustainability under different migration scenarios; qualitative analysis of policy framing in incumbent-worker coalitions",
+      "impact": "If wage suppression dominant: displaced workers are extractive victims of borders (high d → high chi). If benefit gatekeeping dominant: welfare beneficiaries are ambiguous (partly victim of restriction's impact on fiscal base, partly beneficiary of exclusion). Affects whether perspective 2 classifies as snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether border restriction's primary mechanism targets wages or welfare benefits"
+    },
+    {
+      "id": "global_poor_aggregated_harm",
+      "question": "How should the aggregated harm to billions globally excluded from high-wage zones be weighted against incumbent citizens' labor-market and welfare interests?",
+      "resolution_mechanism": "Utilitarian calculus of total welfare under open vs. restricted movement; empirical migration-impact studies; population-weighted analysis of who benefits and loses",
+      "impact": "High weighting on global poor → borders appear highly extractive (ε→0.8+). High weighting on incumbent citizens → borders appear as legitimate coordination (ε→0.3). The weighting is axiomatically determined, not empirically resolvable.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "How to aggregate harms across the global poor vs. incumbent citizens"
+    },
+    {
+      "id": "this_is_a_reading_not_universal_truth",
+      "question": "Is this constraint a description of an objective feature of border legitimacy, or a description of one coherent reading of a contested kernel?",
+      "resolution_mechanism": "Comparative analysis of sibling readings' internal coherence and structural consistency; examination of whether each reading survives scrutiny or self-destructs under its own axioms",
+      "impact": "If objective feature: this reading is *the* correct classification of border legitimacy. If one reading among coherent alternatives: this reading is valid but not universal; sibling readings are equally structurally consistent. Affects how the compiled constraint is used in policy reasoning.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint describes objective border legitimacy or one reading of a contested kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Under the freedom-of-movement reading, border enforcement is an extractive mechanism that restricts a fundamental human capacity — mobility across territory — without coherent justification beyond the preservation of privilege for incumbent citizens and state fiscal control. The reading treats borders as presumptively illegitimate unless justified by compelling necessity (life-threatening persecution, disaster). This constraint instantiates one coherent reading of the contested kernel 'border legitimacy' alongside two sibling readings: the sovereignty_reading (borders are legitimate expressions of territorial self-determination) and the humanitarian_obligation_reading (borders are justified for citizens but require humanitarian exceptions). Each reading produces a different constraint classification, victim set, and ε value. The freedom-of-movement reading produces the highest ε (0.68, Snare) because it casts the widest victim net: not only migrants but also displaced incumbent workers and the global poor are characterized as victims of border enforcement, which suppresses their capacity for self-movement and traps them in low-wage or resource-scarce zones.",
+    "key_agents": [
+      "Excluded Migrants: Primary victim (powerless/trapped) — structurally immobilized by legal prohibition and physical enforcement; no recognized alternatives",
+      "Displaced Workers / Incumbent Citizens: Secondary victim (moderate/constrained) — characterized as victims of wage suppression and nationalist ideology under this reading, though they may self-identify as beneficiaries",
+      "State Fiscal Authorities: Institutional beneficiary (institutional/arbitrage) — experience borders as coordination mechanism enabling welfare allocation and tax collection",
+      "Global Capital / Investor Class: Powerful mixed agent (powerful/mobile) — benefit from labor-cost arbitrage and selective mobility, but experience some constraint from nation-state regulation",
+      "Open Borders Coalition: Organized advocates (organized/mobile) — perceive borders as extractive but transformable through norm-change and regional frameworks",
+      "Analytical Observer (Sovereignty Perspective): Civilizational naturalizer (analytical/analytical) — risks treating sovereignty-reading as universal law rather than one competing reading"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Under the freedom-of-movement reading, borders extract substantial value from those excluded while redistributing it to incumbent citizens and state fiscal authorities. The extraction includes: (1) wage suppression for incumbent workers (borders limit labor supply competition, maintaining artificially high wages); (2) welfare-benefit gatekeeping (borders restrict access to redistributive programs, allowing higher per-capita redistribution to citizens); (3) global poverty traps (borders prevent billions from accessing high-wage zones, perpetuating low-income equilibrium). The extraction increases over the measurement interval (0.52→0.68) as border enforcement infrastructure intensifies and alternative migration pathways are progressively closed (family reunification restrictions, skill gatekeeping, visa hardening). Suppression (0.75): Very high. Border enforcement employs legal prohibition, physical barriers, deportation threats, and state violence. Exit options are structurally unavailable — excluded migrants cannot voluntarily choose to move without state permission. Incumbent citizens face constrained exit (visa requirements, skill-based selection, expensive relocation). The suppression requirement increases slightly (0.65→0.75) as enforcement machinery expands. Theater ratio (0.58): Moderate. Border rhetoric emphasizes security and sovereignty, which are partly performative (national security framing that obscures economic extraction, sovereignty claims that naturalize contingent institutional arrangements) and partly functional (borders do regulate population movement, however unjustly). The theater increases (0.48→0.58) as human-rights framing becomes more visible — states must justify borders on humanitarian grounds rather than naked exclusion, adding rhetorical layer without reducing extraction.",
+    "directionality_logic": "Directionality (d) is computed from structural position relative to the extraction flow. Excluded migrants (d≈0.95): Trapped agents bearing maximum extraction → high f(d). Displaced incumbent workers (d≈0.70, not classic victim): Constrained agents partly benefiting from wage-suppression effect but also victimized by nationalist ideology that prevents alliance with migrant workers → moderate f(d). State fiscal authorities (d≈0.10): Beneficiary with arbitrage exit → negative f(d). Open borders coalition (d≈0.55): Organized agents with mobile options, perceiving transformation possible → moderate f(d). Global capital (d≈0.40): Powerful agents with arbitrage options, mixed position → low f(d). The analytical observer (d≈0.72): Canonical d for analytical position, perceives the constraint structurally but from outside beneficiary/victim positions. The perspectival gaps reflect real differences in structural position, not mere disagreement about values.",
+    "perspectival_gap": "The primary perspectival gap lies between the excluded migrant (Snare — pure extraction, zero exit) and the state fiscal authority (Rope — coordination mechanism for welfare allocation). The same infrastructure that traps migrants enables welfare coordination. This is a genuine structural ambiguity: borders do solve a collective-action problem (how to fund redistributive welfare) while also extracting from those excluded. A secondary gap lies between incumbent workers' objective structural position and their perceived interests. Under this reading, incumbent workers are victims of wage suppression (displaced by border scarcity) but benefit from welfare gatekeeping. The reading's analytical move is to reframe incumbent workers as victims of the same extraction mechanism that benefits from their exclusionary sentiment. The open borders coalition perceives this reading as achievable — they see a sunset through norm change and regional frameworks. The sovereignty perspective naturalizes borders as immutable (Mountain), but this is the false summit the engine detects: the appearance of immutability is contingent on accepting the sovereignty axiom.",
+    "kernel_context": "This constraint instantiates the 'freedom_of_movement_reading' of the contested kernel 'border_legitimacy'. The kernel is the question: What makes border enforcement legitimate? The freedom-of-movement reading answers: Nothing. Freedom of movement is a human right; borders are presumptively illegitimate restrictions absent compelling necessity. The sibling readings are: (1) sovereignty_reading: Border authority derives from territorial self-determination; states have legitimate right to exclude. (2) humanitarian_obligation_reading: States legitimately exclude economic migrants but must admit those fleeing persecution or disaster. This reading (freedom-of-movement) forecloses neither sibling — it coexists with both as a live political position. However, its foundational axiom (freedom of movement as human right) directly conflicts with the sovereignty_reading's axiom (territorial authority to exclude). Different parties hold these readings simultaneously, making the kernel genuinely contested. The engine will generate three separate constraint stories — one per reading — linked by the network.affects_constraints field, each with its own ε, perspectives, and classifications. This story describes only the freedom-of-movement reading's internal logical structure.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying the reading-dependent nature of border legitimacy classification. The question is not 'are borders extractive?' (they are under the freedom-of-movement reading, they are coordinative under the sovereignty reading, they are mixed under the humanitarian reading). The question is 'which reading of the kernel legitimacy question are we adopting?' Once the reading is chosen, the classification follows. The high ε (0.68) reflects this reading's specific framing: it counts incumbent workers as victims (wage suppression) and the global poor as victims (mobility exclusion), making borders appear maximally extractive. A different reading with different victim sets would produce a different ε. The mandatrophy dissolves when we recognize that each reading is internally consistent but the contest is political (which axioms should govern border policy), not empirical (how much borders extract)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "border_legitimacy__sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "border_legitimacy__humanitarian_obligation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_of_movement_human_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "borders_presumptively_illegitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "unrestricted_movement_baseline",
+    "drift_state": {
+      "moment": "contemporary_hardening_regimes",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "border_legitimacy__sovereignty_reading",
+      "border_legitimacy__humanitarian_obligation_reading"
+    ],
+    "dual_formulation_note": "The contested kernel 'border legitimacy' decomposes into three structurally distinct constraints, each representing a coherent reading. This story (freedom-of-movement reading) produces ε=0.68 (Snare). The sovereignty_reading produces ε≈0.15-0.25 (Rope or Mountain depending on whether sovereignty is treated as justified or natural law). The humanitarian_obligation_reading produces ε≈0.40-0.50 (Tangled Rope — genuine humanitarian coordination function with embedded economic extraction). Each reading has different victim sets, different beneficiaries, and different classifications from identical institutional positions. The network links all three, enabling analysis of how the readings compete and influence each other. The freedom-of-movement reading influences the humanitarian reading (if freedom of movement is a right, the humanitarian carve-out is inadequate); the humanitarian reading influences the sovereignty reading (humanitarian obligations constrain what sovereignty permits). None forecloses the others within their respective frameworks, but the readings are genuinely incompatible — policy cannot simultaneously adopt all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

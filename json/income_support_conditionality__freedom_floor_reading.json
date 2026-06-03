@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "incsupp_ff",
+    "story_uid": "ece425c3-5686-42ef-8632-12dd544a6075",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Labor Decommodification (Freedom Floor Reading)",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "excluded_labor_market_participants"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker (Exit Enabled)",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (ROPE) — Unconditional income support provides genuine exit option from coercive labor arrangements. Worker can refuse exploitative conditions without destitution. The constraint is pure coordination: income support enables negotiation on terms of work rather than suppressing alternatives. No victim status — worker's structural position improved by constraint's existence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Wage Employer (Coercive Power Eroded)",
+      "comment": "PERSPECTIVE 2: LOW-WAGE EMPLOYER (SNARE) — Experiences income support as constraint on labor market coercion. Previously could extract labor through wage suppression (threat of destitution if worker refuses). Now faces worker mobility and wage pressure. Employer experiences extraction: coercive firing and wage-setting power are reduced. However, this is extraction FROM the employer (loss of previous privilege), not extraction OF the employer. Classification reflects employer's reduced capacity to coerce, not the employer's victimization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Welfare State Coordination System",
+      "comment": "PERSPECTIVE 3: WELFARE STATE COORDINATION (ROPE) — The constraint is fundamentally coordinative from the state's administrative perspective. Income support solves the collective action problem of labor market instability: prevents poverty-driven desperation (social unrest, health crises, crime), enables skill investment and geographic mobility, reduces administrative costs of poverty management. Pure coordination with minimal coercive overhead. No extractive mechanism from this perspective — the system redistributes without asymmetric gain to the state."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Excluded Labor Market Participant (Reintegration Enabled)",
+      "comment": "PERSPECTIVE 4: EXCLUDED PARTICIPANT (ROPE) — Populations structurally unable to participate in formal labor markets (caregivers, disabled workers, rural populations with limited employment) gain capacity to participate on terms that do not require total commodification of their time. Income support enables partial labor market participation, skill development, or non-market contribution (care work, community service) without destitution. Pure coordination benefit with no extraction mechanism — the constraint dissolves structural barriers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Temporary Decommodification Model)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SCAFFOLD) — From civilizational scope, unconditional income support represents a temporary coordination mechanism with a sunset condition. If labor market institutions restructure to eliminate coercive wage suppression on their own (through full-employment policies, strong collective bargaining, or alternative work arrangements), the decommodification function becomes redundant and the income support transfers into pure redistribution. The scaffold classification reflects that this reading sees the constraint as solving a transitional problem in labor commodification, with an exit condition when structural labor market dynamics change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Freedoms View)",
+      "comment": "PERSPECTIVE 6: NATURAL FREEDOMS (MOUNTAIN) — From a philosophical perspective grounded in freedom theory, the constraint appears as an immutable property of human dignity: the capacity to refuse coercive arrangements is a foundational human freedom, not a contingent policy choice. Income support merely makes manifest a freedom that should always have existed. This perspective risks naturalizing what is actually a contingent institutional choice about labor market structure. The engine's false summit detector will flag this as a candidate for FSM evaluation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "work_incentive_vs_freedom_threshold",
+      "question": "At what income support level does decommodification begin (worker has genuine exit option) versus dependency trap begins (work disincentive dominates)?",
+      "resolution_mechanism": "Empirical labor supply elasticity studies; comparison of wage/employment outcomes across income support generosity levels; longitudinal tracking of career investment and skill accumulation by beneficiary cohorts",
+      "impact": "If threshold is low (10-20% of median wage): freedom reading dominates — income support enables exit. If threshold is high (40%+ of median wage): dependency trap reading gains credibility — income support suppresses work incentives. If no stable threshold (outcome varies by individual, skill, context): both readings coexist and the kernel allows multiple framings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor supply elasticity threshold distinguishing decommodification from disincentive"
+    },
+    {
+      "id": "employer_wage_response_mechanism",
+      "question": "Do employers respond to income support by reducing wages (wage subsidy reading), maintaining wages despite lost coercive power (freedom reading), or adjusting job composition/automation (alternative mechanism)?",
+      "resolution_mechanism": "Comparative wage analysis in jurisdictions with/without income support; matched-pair studies controlling for sector, skill level, labor market conditions; analysis of labor-demand changes (hours offered, job quality, automation investment)",
+      "impact": "If wage suppression dominant: wage_subsidy_reading correct — income support subsidizes employers. If wages stable despite lost coercion: freedom_floor_reading correct — decommodification genuine. If automation/job displacement dominant: neither reading captures mechanism; constraint classification shifts to infrastructure/employment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Employer response to income support: wage suppression, maintenance, or job destruction"
+    },
+    {
+      "id": "labor_market_coercion_baseline",
+      "question": "What is the counterfactual labor market structure absent income support? Does income support create exit options (freedom reading) or merely reduce severity of existing coercion (dependency trap reading with qualification)?",
+      "resolution_mechanism": "Historical analysis of labor market coercion mechanisms pre-income support; comparative institutional analysis across countries with/without income support; ethnographic studies of worker decision-making under threat of destitution",
+      "impact": "If baseline includes absolute destitution threat: income support creates qualitatively new exit capacity (freedom reading confirmed). If baseline includes partial safety nets (unemployment insurance, food assistance): income support's marginal decommodification effect is smaller (wage subsidy or dependency trap readings gain relative weight).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Counterfactual labor market coercion baseline"
+    },
+    {
+      "id": "kernel_identity_ambiguity",
+      "question": "Is the kernel 'income support' vs 'labor coercion' OR is it 'work incentives' vs 'human dignity'? Different kernel identities produce different reading structures.",
+      "resolution_mechanism": "Analyze which institution or norm bears authority for the kernel definition. If labor market efficiency doctrines dominate (employer authority), kernel is framed as work-incentive question (dependency trap reading). If human-rights traditions dominate (international labor conventions), kernel is framed as dignity/freedom question (freedom floor reading). If mixed authority, kernel remains genuinely ambiguous.",
+      "impact": "If authority is ambiguous, all three readings remain live in different institutional contexts. If authority consolidates, one reading gains institutional legitimacy and others shift to minority positions. Classification outcomes depend partly on this meta-kernel about what the contested kernel is.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Meta-kernel ambiguity: is the kernel about work incentives or human dignity?"
+    },
+    {
+      "id": "reading_change_via_policy_design",
+      "question": "Can policy design choices (conditionality, benefit duration, eligibility criteria) shift which reading is structurally correct without changing the underlying economic reality?",
+      "resolution_mechanism": "Policy mechanism analysis: does adding work requirements change labor supply elasticity? Does time-limiting benefits change incentive structures? Does means-testing change exit option availability? Distinguish between reading-change via design versus reading-change via actual behavioral/economic outcome shift.",
+      "impact": "If policy design can shift reading without changing outcomes: readings are partly performative (policy choice about which constraint narrative dominates). If outcomes change first and readings follow: readings track real structural changes. This affects whether the kernel framing is genuinely contested or merely rhetorically contested.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether policy design choices can shift reading without changing outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "incsupp_ff_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22,
+      "id_override": "incsupp_ff_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "incsupp_ff_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "incsupp_ff_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "incsupp_ff_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "incsupp_ff_theater_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "incsupp_ff_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.18,
+      "id_override": "incsupp_ff_suppress_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12,
+      "id_override": "incsupp_ff_suppress_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates one specific reading of the contested kernel 'income support conditionality' — the freedom floor reading. Unconditional income support is understood as a mechanism that decommodifies labor power by providing genuine exit options from coercive labor arrangements. In this reading, the constraint is fundamentally about enabling workers to refuse exploitative conditions without facing destitution. The structural claim is that labor coercion (the employer's ability to suppress wages through threat of absolute deprivation) is not a natural law or necessary feature of labor markets, but a contingent institutional arrangement that can be disrupted through income support. The freedom floor reading produces a rope classification: the constraint solves a collective action problem (labor market stability, worker dignity) with minimal coercive overhead and without extracting asymmetrically from identifiable agents. This contrasts sharply with the dependency trap reading (which sees income support as creating disincentives to work and long-term dependency) and the wage subsidy reading (which sees income support as allowing employers to suppress wages while the state subsidizes worker survival). These are not disagreements about facts alone — they are disputes over which institutional commitment (freedom from coercion, work incentive preservation, or labor market efficiency) should ground policy legitimacy. The kernel itself (the formalized commitment to provide income support) is formally specified but subject to fundamentally different interpretations.",
+    "key_agents": [
+      "Precarious workers (primary beneficiary, moderate/mobile): gain genuine exit option from coercive wage suppression; experience constraint as enabling coordination",
+      "Low-wage employers (power erosion target, institutional/constrained): lose coercive firing and wage-setting capacity; experience constraint as external extraction of previous privilege",
+      "Excluded labor market participants (beneficiary, powerless/mobile): gain capacity for partial labor market participation without total commodification; experience constraint as barrier removal",
+      "Welfare state administrative system (coordination provider, institutional/arbitrage): solves collective action problems of labor instability; experiences constraint as coordination mechanism with net social benefit",
+      "Dependency trap advocates (competing reading authority, analytical): hold that work incentives are the foundational commitment and income support violates this",
+      "Wage subsidy advocates (competing reading authority, analytical): hold that labor market efficiency is the foundational commitment and income support distorts wage signals",
+      "Freedom floor advocates (this reading's authority, analytical): hold that positive freedom (capacity to refuse coercion) is the foundational commitment and income support protects this"
+    ],
+    "logic_rationale": "Extractiveness (0.18, declining from 0.35): This reading frames income support as decommodifying labor rather than extracting. The metric is low because the reading identifies zero victim groups — no agent bears extractive cost in this framing. The declining trajectory (0.35→0.18 over the interval) models institutional maturation: as income support norms consolidate and employer adaptation occurs, the coercive labor market dynamics that income support disrupts begin to dissolve (wages adjust upward under worker bargaining power, job quality improves). The initial higher value (0.35) represents the transition cost to employers and the institutional friction of norm-change; the terminal value (0.18) represents the new equilibrium where workers' exit option becomes normal and extraction through coercion drops to background level. Suppression (0.12, declining from 0.25): Very low because the reading explicitly identifies income support as reducing suppression. The declining trajectory models progressive norm internalization: initial pushback against income support (welfare stigma, policy resistance) declines as the policy becomes established and workers' behavioral adaptation occurs. Theater ratio (0.35, declining from 0.55): Moderate-low, declining. In this reading, income support is substantive (genuine exit option) rather than performative. The initial theater ratio reflects administrative performance and political ritual around income support implementation; as the mechanism matures and becomes normalized, the theatrical component (political debate, administrative verification) declines and the functional component (redistribution, exit option provision) dominates.",
+    "kernel_context": "This constraint is one of THREE READINGS of the contested kernel 'income_support_conditionality'. The kernel is formally specified (income support policy) and subject to fundamentally different interpretations across different institutional authorities. THIS reading instantiates the 'freedom_floor_reading': unconditional income support is a decommodification mechanism that creates positive freedom to refuse coercive labor arrangements. The SIBLING readings are: (1) dependency_trap_reading — income support undermines work incentives and creates long-term dependency, and (2) wage_subsidy_reading — income support functions as indirect employer subsidy allowing wage suppression. The expected structural delta for this reading versus the dependency trap reading: in the freedom floor reading, low-wage workers EXIT the victim set (they gain exit options and bargaining power) while employers ENTER the victim set (they lose coercive wage-setting capacity). The constraint type shifts from snare (coercive labor market) to rope (coordination on exit option). The differences are not merely empirical — they reflect different foundational commitments: this reading grounds legitimacy in human dignity and freedom from coercion; the dependency trap reading grounds it in work incentive preservation; the wage subsidy reading grounds it in labor market efficiency. See cs_structure for reading_relations and axioms specifying how this reading relates to its siblings.",
+    "directionality_logic": "Direction from structurally positive to worker-benefit: In this reading, beneficiaries are clearly identified (precarious workers, excluded participants) and no victims exist in the system. This produces very low directionality (d near 0.0) from the worker perspective and directional inversion from the employer perspective. The employer experiences loss of coercive power (previous privilege eroded), which the sigmoid function treats as directionality toward the employer (d near 1.0 for employer), BUT this is loss of extractive capacity, not victimization — the employer is not extracted FROM; rather, the employer's previous extraction mechanism (coercive wage suppression) is blocked. The analytical observer derives d from the structural fact that no agent is systematically harmed by income support provision in this reading — the mechanism is purely coordinative. The power atoms (moderate, institutional, powerless, analytical) are assigned based on agents' capacity to shape policy and labor market dynamics; exit options (mobile, arbitrage, analytical) reflect capacity to leave or opt out of the constraint. Workers gain mobile exit because income support provides alternative to wage dependence.",
+    "perspectival_gap": "The largest perspectival gap appears between the low-wage employer (snare, constrained exit) and precarious worker (rope, mobile exit). The employer experiences the constraint as loss of previous capacity (which the snare classification captures), while the worker experiences it as gain of new capacity (which the rope classification captures). Both are empirically accurate from their respective positions — the constraint does reduce employer coercive power AND does increase worker bargaining power. The gap reveals that the same institutional mechanism can be simultaneously liberating (from worker perspective) and restrictive (from employer perspective). The analytical observer's scaffold perspective introduces temporal dimension: if labor market restructuring eventually eliminates the need for income support (through other mechanisms), the constraint becomes transitional. The mountain perspective attempts to naturalize positive freedom as an immutable property, but the structural data contradicts this — income support is a contingent institutional choice, not a law of nature. The gap between rope/scaffold perspectives (all positive or neutral) and the mountain perspective (all perspectives converge on mountain type, suggesting invariance) reveals that this reading does not support the mountain classification from structural grounds alone.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by explicitly choosing which commitment (positive freedom from coercion) grounds policy legitimacy, rather than trying to optimize work incentives or labor market efficiency simultaneously. The reading accepts that different readings prioritize different commitments and occupy different institutional authorities — labor rights traditions emphasize freedom; welfare economics emphasizes efficiency; developmentalism emphasizes skill investment. By making positive freedom the explicit kernel commitment, the freedom floor reading clarifies what the constraint is protecting and accepts that other readings (dependency trap, wage subsidy) prioritize different commitments. This is not a resolution through empirical fact (all three readings face real empirical questions about labor supply elasticity, wage response, etc.), but through institutional alignment: which authority gets to define what income support is for? The freedom floor reading answers: positive freedom (capacity to refuse coercive arrangements). Under this answer, the other readings become misframings rather than alternative truths."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__dependency_trap_reading",
+      "income_support_conditionality__wage_subsidy_reading",
+      "labor_market_coercion_mechanism",
+      "poverty_driven_wage_suppression"
+    ],
+    "dual_formulation_note": "This is one of three constraint stories instantiating different readings of the 'income_support_conditionality' kernel. Each reading produces a different classification type and different beneficiary/victim structure from the same base policy. The freedom_floor_reading (this story) produces rope classification with workers as beneficiaries. The dependency_trap_reading produces snare with workers as victims. The wage_subsidy_reading produces tangled_rope with workers as both beneficiaries (survive) and victims (trapped in low-wage subsidy). All three share the same base institution (income support) but structure it through fundamentally different institutional commitments. Link all three stories with network.affects_constraints for contamination analysis."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_conditionality__dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "income_support_conditionality__wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "positive_freedom_from_coercion_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "labor_coercion_contingent_not_natural",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "decommodified_labor_market",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "income_support_conditionality__dependency_trap_reading",
+      "income_support_conditionality__wage_subsidy_reading"
+    ]
+  }
+}

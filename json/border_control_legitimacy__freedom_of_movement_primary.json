@@ -1,0 +1,252 @@
+{
+  "header": {
+    "constraint_id": "border_control_legitimacy__freedom_of_movement_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bclfm",
+    "story_uid": "081a6347-9f4c-467b-b9a9-eea1f08a3ae0"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Border Control Legitimacy: Freedom of Movement Reading",
+    "topic_domain": "political_philosophy/international_law/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_demanding_labor",
+      "receiving_nation_employers"
+    ],
+    "victims": [
+      "displaced_workers",
+      "asylum_seekers",
+      "stateless_persons",
+      "freedom_of_movement_principle"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Displaced Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED WORKER (SNARE) — Faces absolute exclusion enforced by border apparatus with no legitimate voice in closure decisions. Extraction mechanism: capital benefits from labor shortage/wage suppression while workers bear enforcement costs and exclusion. No exit option; cannot challenge the legitimacy of their own exclusion within the closure framework."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Asylum Seeker",
+      "comment": "PERSPECTIVE 2: ASYLUM SEEKER (SNARE) — Faces closure authority presented as absolute sovereign right despite humanitarian obligations and freedom of movement principle. Cannot credibly claim rights or exit; suppression includes legal delegitimation of their exit status (classification as illegal, criminal, or security threat). Extraction: states benefit from maintaining labor control and border apparatus; asylum seekers bear full cost of exclusion including death in transit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capital Demanding Labor",
+      "comment": "PERSPECTIVE 3: CAPITAL DEMANDING LABOR (ROPE) — Experiences border closure as enabling labor shortage, wage suppression, and workforce precarity. Coordination function: border control solves the coordination problem of preventing worker organization across borders (capital cannot organize globally but labor can). The constraint legitimates labor market segmentation. Net beneficiary with full arbitrage options (can lobby for exceptions, points-based systems, temporary worker programs)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Receiving Nation Citizens",
+      "comment": "PERSPECTIVE 4: RECEIVING NATION CITIZENS (TANGLED ROPE) — Mix of genuine coordination (labor market stability, public services allocation) and extraction. Citizens face genuine uncertainty about wage/employment effects and public service capacity. Constraint provides coordination function (allocates entry rights) alongside asymmetric extraction (workers bear costs of exclusion that citizens experience as benefits). Exit options constrained by political participation costs and border enforcement dependence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Border Enforcement Apparatus",
+      "comment": "PERSPECTIVE 5: BORDER ENFORCEMENT APPARATUS (PITON) — Maintains elaborate procedural legitimacy (due process, humanitarian exceptions, appeals mechanisms) that is substantially performative. The apparatus claims to balance freedom of movement with sovereignty, but the balance is theater — enforcement systematically excludes absent genuine humanitarian override. Theater persists through institutional inertia despite recognition that the apparatus is degraded relative to its stated mission. High arbitrage options (can redirect toward immigration control, security focus, or selective labor migration)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Freedom of Movement Reading)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FREEDOM OF MOVEMENT READING (TANGLED ROPE) — From the freedom-of-movement frame, border closure extracts from workers (denies fundamental right) while coordinating labor market segmentation for capital. The sibling sovereignty readings would classify this as mountain (closure is inherent right) or rope (jurisdiction without closure authority). From this reading, the constraint is structurally extraction-and-coordination hybrid: genuine coordination of labor supply AND asymmetric extraction from those excluded. This perspectival gap reveals the kernel contest."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fundamental_right_grounding",
+      "question": "Is freedom of movement grounded in natural rights (deontological) or in instrumental human flourishing (consequentialist)?",
+      "resolution_mechanism": "Philosophical coherence analysis; review of international humanitarian law grounding statements; examination of whether restrictions are justified instrumentally or denied as categorically impermissible",
+      "impact": "If deontological: sovereignty reading forecloses freedom-of-movement reading (cannot restrict fundamental rights). If consequentialist: both readings coexist (right can be weighed against state interests). This omega determines reading_relations classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Philosophical grounding of freedom of movement as fundamental right"
+    },
+    {
+      "id": "sovereignty_entailment",
+      "question": "Does territorial sovereignty logically entail authority to exclude non-citizens, or is sovereignty only jurisdictional (power to regulate within territory)?",
+      "resolution_mechanism": "Analysis of state practice vs. legal doctrine; examination of whether states without closure authority (Schengen zone, historical open borders) lose sovereignty; assessment of whether closure is definitional or contingent",
+      "impact": "If closure is entailed: sovereignty_primary reading is logically necessary (forecloses freedom-of-movement). If sovereignty is only jurisdictional: freedom_of_movement_primary and jurisdictional_sovereignty coexist as alternative readings of the same sovereignty foundation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether sovereignty logically entails border closure authority"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "Does the border control apparatus primarily coordinate labor markets / public services, or primarily extract from excluded workers?",
+      "resolution_mechanism": "Empirical analysis of wage effects, employment stability, and public service provision with/without closure; examination of whether documented benefits flow to capital vs. receiving-nation workers; assessment of counterfactual outcomes under open borders",
+      "impact": "If primarily coordination: tangled_rope classification holds for moderate agents. If primarily extraction: snare classification rises; coordination function becomes cover story for pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether border control primarily serves coordination or extraction function"
+    },
+    {
+      "id": "humanitarian_exception_efficacy",
+      "question": "Do humanitarian exceptions (asylum, refugee status, family reunification) constitute genuine escape valves from the border closure snare, or are they theater that systematically excludes vulnerable populations?",
+      "resolution_mechanism": "Empirical analysis of exception grant rates, processing times, and outcomes for vulnerable populations; comparison of humanitarian exception criteria against actual displacement drivers; assessment of whether exceptions reduce overall extraction magnitude",
+      "impact": "If genuine escape valves: suppression metric (0.72) is overstated; constraint reclassifies toward tangled_rope. If theater: suppression is understated and extraction floor rises; constraint reclassifies toward pure snare (ε > 0.66, χ > 0.75).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether humanitarian exceptions provide genuine relief or function as performative theater"
+    },
+    {
+      "id": "reading_kernel_identity",
+      "question": "Is this reading instantiating a genuine alternative kernel interpretation, or is it a normative claim about what the kernel SHOULD entail?",
+      "resolution_mechanism": "Examination of whether freedom-of-movement-primary is a coherent reading of actual state practice and legal doctrine, or a prescriptive claim about what legitimacy requires. Assessment of whether any state system has adopted this reading as its operative principle.",
+      "impact": "If coherent reading: the kernel contest is real and both sides claim the same underlying authority structure. If prescriptive: the reading is a reformist claim, not an alternative kernel interpretation — should be modeled as a distinct prescriptive constraint rather than a sibling reading of the same kernel.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether freedom-of-movement-primary is a kernel reading or a normative prescription"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of a contested kernel in political philosophy and international law: the relationship between territorial sovereignty and border control authority. The reading presented here — freedom_of_movement_primary — asserts that freedom of movement is a fundamental human right and that territorial sovereignty does NOT entail authority to absolutely exclude non-citizens. Under this reading, state authority is limited to jurisdictional regulation: determining what rights and obligations apply to persons within the territory, not whether persons may enter at all. The constraint describes a snare from the perspective of the powerless (workers, asylum seekers) who are absolutely excluded; a rope from the perspective of capital which benefits from labor scarcity and precarity; a tangled rope from the perspective of receiving-nation citizens who experience both coordination benefits and extraction costs; a piton from the perspective of the border apparatus which maintains performative legitimacy despite degraded humanitarian function; and a tangled rope from the analytical observer who sees this reading as one coherent interpretation of the sovereignty kernel competing with the sovereignty_primary and jurisdictional_sovereignty readings. The measurement trajectory shows increasing extractiveness (0.38→0.58), suppression (0.52→0.72), and theater (0.48→0.65) over the 40-year interval, reflecting intensifying border enforcement apparatus, rising enforcement budgets, expanding digital surveillance and biometric systems, and simultaneously rising humanitarian rhetoric alongside rising exclusions — a classic pattern of extraction masked by performative exception-making.",
+    "key_agents": [
+      "Displaced Workers: Primary victims (powerless/trapped) — excluded from labor markets and fundamental freedom of movement; no voice in legitimacy of closure decisions",
+      "Asylum Seekers & Stateless Persons: Primary victims (powerless/trapped) — systematically excluded despite humanitarian obligations; suppression includes legal delegitimation",
+      "Capital Demanding Labor: Primary beneficiaries (institutional/arbitrage) — benefits from labor shortage, wage suppression, and workforce precarity; can arbitrage through lobbying for worker visas, points systems, exemptions",
+      "Receiving Nation Citizens: Mixed position (organized/constrained) — benefit from perceived labor market stability and public service capacity; constrained by political participation costs and identification with border enforcement",
+      "Border Enforcement Apparatus: Institutional actor (institutional/arbitrage) — maintains performative legitimacy (humanitarian exceptions, due process) while systematically excluding vulnerable populations; high arbitrage options for redirecting focus",
+      "Freedom of Movement Principle: Abstract victim — the normative principle itself is suppressed and delegitimized by being declared subordinate to sovereignty"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from excluded workers (denies them labor opportunities, income, freedom of movement) while benefiting capital (suppressed wages, precarious workforce) and capital-receiving states (labor control, political advantage). The extraction is not maximal (0.66+) because some legitimate public goods coordination exists — societies do coordinate public service capacity and labor market adjustment. But the extraction is substantial because the coordination justification is applied selectively: wealthy, skilled workers face far lower barriers than poor, low-skilled workers, revealing that the stated coordination function masks labor market stratification. Suppression (0.72): High. Barriers to exit include: (1) legal prohibition enforced by state violence, (2) criminalization of undocumented migration, (3) exclusion from legal remedies and appeals, (4) lack of organized voice for excluded populations, (5) physical barriers (walls, checkpoints, maritime blockades), (6) documentation requirements that stateless/displaced persons cannot meet. Suppression rising over the interval reflects increasing enforcement infrastructure, biometric systems, employer sanctions, and digital surveillance. Theater ratio (0.65): Moderate-high. The border apparatus maintains elaborate humanitarian exceptions (asylum, refugee status, family reunification), humanitarian rhetoric, and procedural legitimacy (due process, appeals) while systematically denying protection and creating conditions that push vulnerable populations toward dangerous routes. The ratio rises over the interval as the gap widens between stated humanitarian commitments and exclusion outcomes.",
+    "perspectival_gap": "The freedom_of_movement_primary reading produces snare/tangled_rope/piton classifications from different agents, while the sibling sovereignty_primary reading would produce rope/mountain/piton from the same agent positions. The perspectival gap reveals the kernel contest: whether border closure is a legitimate exercise of sovereignty (sovereignty_primary, mountain from the state), a mechanism of labor market coordination (jurisdictional_sovereignty, tangled_rope from the state), or extraction masked by sovereignty rhetoric (freedom_of_movement_primary, snare from workers). The analytical observer at the tangled_rope level sees this reading as coherent but structurally contested — the other readings are not incoherent, they are alternative readings of the same kernel with different normative grounding.",
+    "directionality_logic": "Directionality values for each perspective are derived from structural relationship to the exclusion mechanism. Displaced workers (powerless/trapped) have d≈0.95 (full target): they bear all costs of closure and receive no benefits. Asylum seekers (powerless/trapped) have d≈0.93 (slight variation due to humanitarian exception possibility): similarly positioned but with marginally non-zero exit possibility through exception channels. Capital (institutional/arbitrage) has d≈0.12 (partial beneficiary): benefits from labor scarcity and precarity but also experiences some costs (skilled worker retention, brain drain, consumer base reduction). Receiving-nation citizens (organized/constrained) have d≈0.52 (symmetric): both benefit from perceived security/service provision and bear costs of labor shortage, cultural friction, and enforcement apparatus burden. The border apparatus (institutional/arbitrage) has d≈0.25 (partial beneficiary): benefits from budget expansion and political importance but experiences costs of humanitarian criticism and operational complexity. These d values feed the sigmoid f(d) to produce experienced extractiveness (χ) for each perspective.",
+    "kernel_context": "This constraint instantiates the freedom_of_movement_primary reading of the border_control_legitimacy kernel. The kernel is a contested claim about the relationship between territorial sovereignty and border control authority. Three coherent readings compete: (1) FREEDOM_OF_MOVEMENT_PRIMARY (this story): Freedom of movement is fundamental; sovereignty does not entail closure authority; state power is limited to jurisdictional regulation. (2) JURISDICTIONAL_SOVEREIGNTY (sibling reading): Sovereignty is jurisdictional only; closure authority is neither entailed nor forbidden; legitimacy requires balancing protection, labor needs, and public consent. (3) SOVEREIGNTY_PRIMARY (sibling reading): Territorial sovereignty entails absolute discretion to exclude non-citizens; closure authority is constitutive of statehood itself. These readings share the same kernel (the nature of sovereignty) but reach different conclusions about whether closure is entailed, permitted, or forbidden. The expected structural delta for this reading: displaced citizens/workers enter victim set; enforcement apparatus is delegitimized; state authority is limited to jurisdictional regulation (who gets what rights once present) rather than exclusion power.",
+    "mandatrophy_analysis": "This constraint resolves the potential mandatrophy by clarifying that the classification (snare for workers, tangled_rope for citizens, piton for apparatus, tangled_rope for analytical observer) is perspectival and kernel-dependent. If the sovereignty_primary reading were adopted, the same constraint would classify as rope or mountain (closure is a natural right). If the jurisdictional_sovereignty reading were adopted, the same constraint would classify more clearly as tangled_rope with lower extraction (legitimacy is conditional, not absolute). The mandatrophy is not 'what is the true classification' but 'which kernel reading are you adopting?' The structure is stable; the classification is reading-relative."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_control_legitimacy__jurisdictional_sovereignty",
+      "border_control_legitimacy__sovereignty_primary"
+    ],
+    "dual_formulation_note": "The border_control_legitimacy kernel decomposes into three constraint stories, one for each reading. Each story instantiates a different kernel interpretation with different ε values and victim/beneficiary structures. The freedom_of_movement_primary reading (this story) treats displaced workers as victims and produces ε=0.58, snare; the sovereignty_primary reading treats sovereignty as immutable and produces ε≈0.15, mountain/rope; the jurisdictional_sovereignty reading treats closure as contingent on consent and produces ε≈0.40, tangled_rope. These are not the same constraint viewed from different angles — they are genuinely different structural claims about which agents are victimized and whether closure is entailed by sovereignty. Link them via affects_constraints to show they are alternative readings of one contested kernel."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "border_control_legitimacy__jurisdictional_sovereignty",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "border_control_legitimacy__sovereignty_primary",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_of_movement_fundamental",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sovereignty_not_closure_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_human_rights_regime",
+    "drift_state": {
+      "moment": "contemporary_border_intensification_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "classical_latin_standard__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clsc",
+    "story_uid": "9317e9d5-b4bf-4b81-bfe1-2633b48ce635"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.32,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Classical Latin Standard (Continuity Reading)",
+    "topic_domain": "historical_linguistics/philology/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ecclesiastical_institutions",
+      "legal_scribal_practitioners",
+      "university_latin_masters"
+    ],
+    "victims": [
+      "vernacular_speakers",
+      "peripheral_linguistic_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Ecclesiastical Institution",
+      "comment": "PERSPECTIVE 1: ECCLESIASTICAL INSTITUTION (ROPE) — Experiences the continuity reading as pure coordination. The unbroken transmission narrative justifies institutional continuity across centuries; drift becomes a feature (Divine Will working through language) rather than a corruption. Institutional authority derives legitimacy from the chain of transmission. Benefits from gatekeeping through Latin literacy. Low experienced extraction — the constraint enables their institutional function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Scribal Practitioner",
+      "comment": "PERSPECTIVE 2: SCRIBAL PRACTITIONER (TANGLED ROPE) — Learns Latin through living practice (apprenticeship, copying, liturgical participation); experiences both coordination and gatekeeping. The continuity reading legitimates their actual practice (medieval syntax, ecclesiastical vocabulary); they are solving a real problem of maintaining textual accuracy and liturgical correctness. But they also depend on institutional access for training and employment; their Latin is devalued relative to 'correct' Classical forms by reconstructionist critique. Mixed experience: genuine coordination function + asymmetric extraction via status hierarchy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Vernacular Speaker",
+      "comment": "PERSPECTIVE 3: VERNACULAR SPEAKER (SNARE) — Trapped in linguistic subordination. The continuity reading denies legitimacy to their native speech by defining 'correct Latin' as institutionally transmitted form, not their own spoken practice. They cannot access institutional Latin literacy without abandoning their vernacular. The constraint suppresses their linguistic agency through status asymmetry and institutional gatekeeping. Maximum experienced extraction — no exit, full subordination to institutional norm."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Reconstructionist Coalition",
+      "comment": "PERSPECTIVE 4: RECONSTRUCTIONIST COALITION (TANGLED ROPE) — Organized scholars who argue for return to Classical forms through textual archaeology. They experience the continuity reading as extraction because it legitimates institutional control over what counts as 'correct Latin' without requiring textual justification. They have exit options (printing, university networks, manuscript publication) and genuine agency. The constraint does benefit them by providing a coherent standard to critique and organize against. Moderate extraction with significant agency — they are mobile within the scholarly ecosystem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, linguistic transmission through unbroken practice IS a natural law of how languages persist. All languages change through use; institutional transmission of norms is a natural feature of linguistic evolution. The continuity reading appears as a description of inevitable linguistic reality. However, the structural data contradicts the mountain classification: beneficiaries and victims exist; institutional gatekeeping is real; alternatives are suppressed. The engine will detect this as a false summit, revealing that 'language naturally evolves through practice' naturalizes what is actually a contestable institutional reading of how Latin authority should be grounded."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "drift_legitimacy_threshold",
+      "question": "At what point does linguistic drift exceed legitimate development and become illegitimate corruption?",
+      "resolution_mechanism": "Historical comparison of documented Latin usage patterns; identification of explicit institutional decisions to accept or reject specific innovations; correlation between institutional acceptance and subsequent adoption rates",
+      "impact": "If threshold is clear and stable: drift is genuinely integrated into the standard (strengthens continuity reading). If threshold is implicit or shifting: institutional gatekeeping is the real mechanism (strengthens reconstructionist critique).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy threshold for linguistic drift within institutional transmission"
+    },
+    {
+      "id": "sibling_reading_foreclose_status",
+      "question": "Does the continuity reading's core premise (unbroken practice legitimates drift) logically foreclose the reconstructionist reading's core premise (Classical textual forms are the only legitimate standard)?",
+      "resolution_mechanism": "Logical analysis of whether a single institutional framework could coherently hold both: that drift is legitimate AND that only Classical forms are correct. If both positions can be held by different parties within the Church simultaneously, they coexist; if one framework cannot hold both without contradiction, one forecloses the other.",
+      "impact": "If foreclose: this reading's acceptance invalidates reconstructionism within the same authority structure. If coexist: both readings remain live within the Church (different orders, different regions, different historical moments). Classification of reading_relations in cs_structure depends on this resolution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether continuity and reconstruction readings logically foreclose each other"
+    },
+    {
+      "id": "institutional_extraction_mechanism",
+      "question": "Is the extractiveness (0.38) driven by gatekeeping-via-literacy control, or by suppression-of-alternatives-to-legitimize-change, or by both?",
+      "resolution_mechanism": "Documentation of institutional decisions to teach medieval Latin vs Classical Latin; analysis of whether scribal deviation from medieval norms is penalized; comparison of social mobility for Latin-literate vs vernacular speakers",
+      "impact": "If gatekeeping dominates: extractiveness could fall to 0.28 (pure coordination with access control). If suppression dominates: extractiveness could rise to 0.52 (active delegitimization of alternatives). Current 0.38 assumes balanced mix.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction flows from literacy gatekeeping vs. alternative suppression"
+    },
+    {
+      "id": "continuity_vs_hybrid_reading_distinction",
+      "question": "Can the continuity reading coherently acknowledge post-Classical ecclesiastical and legal Latin as legitimate without collapsing into the hybrid reading?",
+      "resolution_mechanism": "Examination of whether technical/domain-specific Latin development can be defended as natural linguistic evolution (continuity frame) vs. as requiring explicit recognition of non-Classical legitimacy (hybrid frame). If continuity can absorb domain-specific development without additional justification, readings are genuinely distinct; if continuity must add 'but technical developments are special,' hybrid reading is being smuggled in.",
+      "impact": "If continuity can absorb it: reading remains clean ε-invariant constraint. If not: the reading may actually be hybrid in disguise, and a separate story should be written.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether continuity reading can accommodate technical Latin without collapsing into hybrid reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "commentary": {
+    "narrative_context": "The continuity reading of Classical Latin standard treats correct Latin as the living form transmitted through unbroken institutional practice (ecclesiastical, legal, scribal), in which natural linguistic drift is recognized as legitimate development rather than corruption. This reading emerged as a response to the reconstructionist claim that Classical forms were recoverable only through textual archaeology and that medieval drift represented decline. The continuity reading asserts that institutional transmission itself IS the legitimating mechanism — what the Church has preserved and used across centuries is ipso facto correct Latin, because correctness follows institutional continuity, not textual purity. This positions the constraint as a tangled rope: it genuinely solves the coordination problem of maintaining a shared written language across centuries and diverse regions (legitimate coordination function), but it also creates asymmetric extraction by gatekeeping linguistic legitimacy through institutional access and by systematically devaluing vernacular and peripheral linguistic communities (asymmetric extraction). The theater ratio (0.45) reflects moderate performative content: institutional emphasis on the 'unbroken chain' of transmission involves theatrical narrative work, but the underlying coordination function (maintaining textual standards across a dispersed literacy community) is genuine.",
+    "key_agents": [
+      "Ecclesiastical Institutions (Church, monastic orders): Primary beneficiary (institutional/arbitrage) — gatekeeps Latin literacy, derives institutional legitimacy from continuity narrative, experiences the constraint as pure coordination",
+      "Legal and Scribal Practitioners: Secondary beneficiary and victim (moderate/constrained) — benefit from institutional access to training and employment, but devalued relative to Classical standard; experience mixed coordination-extraction",
+      "Vernacular Speakers and Peripheral Communities: Primary victim (powerless/trapped) — excluded from linguistic legitimacy through institutional gatekeeping, trapped in subordination to institutional norm",
+      "Reconstructionist Scholars: Organized critic (organized/mobile) — have exit options through university networks and printing, experience extraction through delegitimization of their textual standard, but also benefit from providing a coherent alternative to critique",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the continuity narrative ('unbroken transmission IS how language works') as inevitable linguistic law rather than as a contestable institutional reading"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate, reflecting gatekeeping-via-institutional-access control combined with suppression of alternative standards. The continuity reading does not violently delegitimize alternatives (unlike the reconstructionist reading's explicit claims of corruption); rather, it makes alternatives systematically invisible by defining correctness through institutional transmission. Beneficiaries include ecclesiastical and legal institutions that control Latin literacy access; victims include vernacular speakers whose language is devalued and peripheral communities whose linguistic practices are delegitimized as barbarisms. The extractiveness is not as severe as pure snare (0.72) because the constraint does perform genuine coordination work — maintaining text standards across centuries and regions is a real problem the continuity reading solves. Suppression (0.32): Moderate-low, reflecting the reading's claim that drift is legitimate. The continuity reading explicitly permits linguistic change within institutional transmission, which reduces suppression of alternatives relative to the reconstructionist reading. However, suppression is not zero because the reading defines 'correct Latin' narrowly as institutionally transmitted form, excluding vernacular Latin and oral practices from legitimacy. Theater ratio (0.45): Moderate. The 'unbroken chain of transmission' is partly narrative and partly real institutional practice — the theatricality is in the genealogical claim (that transmission has been unbroken despite documented discontinuities), while the underlying coordination function (maintaining shared literacy standards) is genuine.",
+    "perspectival_gap": "The ecclesiastical institution sees rope (pure coordination); the scribal practitioner sees tangled rope (mixed coordination and extraction); the vernacular speaker sees snare (pure extraction); the reconstructionist coalition sees tangled rope (extraction via delegitimization of their textual standard, but with agency to organize against it); the analytical observer risks seeing mountain (naturalizing institutional transmission as linguistic inevitability). The gap reveals that the same constraint (defining correct Latin through institutional continuity) appears as coordination, extraction, suppression, or natural law depending on the observer's structural position and exit options. The convergence of multiple perspectives on 'tangled rope' (institutional practitioner, scribal practitioner, reconstructionist coalition) signals that the constraint does contain both genuine coordination and asymmetric extraction — it solves a real problem while extracting status rent from those excluded from institutional access.",
+    "directionality_logic": "Each perspective's directionality derives from structural position: beneficiaries with institutional access and arbitrage options (Church, university) experience low or negative effective extraction; moderate practitioners with constrained exit (scribal practitioners) experience mixed extraction-coordination; trapped agents with no exit (vernacular speakers) experience maximum extraction; organized agents with mobile exit (reconstructionist scholars) experience moderate extraction with agency. The piton classification does not apply because the coordination function is genuine (not merely theatrical). The mountain classification from the analytical perspective is a false summit: the naturalizing narrative ('unbroken transmission is how language works') obscures the institutional choices embedded in defining which transmission counts as legitimate and which linguistic practices are excluded.",
+    "mandatrophy_analysis": "This constraint demonstrates how one kernel (the Classical Latin standard) admits multiple structurally distinct readings. The continuity reading resolves potential mandatrophy between coordination (which it genuinely performs) and extraction (which it genuinely enables) by explicitly incorporating both: the reading asserts that institutional transmission legitimates drift, which solves the coordination problem while simultaneously gatekeeping who gets to participate in legitimate transmission. This is not mandatrophy but rather a deliberate institutional design that combines both functions. The false summit (analytical mountain perspective) reveals the risk: the naturalizing narrative can be used to hide the extraction mechanism by framing institutional gatekeeping as inevitable linguistic necessity rather than as a contestable policy choice.",
+    "kernel_context": "This constraint is the CONTINUITY READING of the contested kernel 'classical_latin_standard'. The kernel itself is a stabilized commitment (the Church's decision to standardize Latin transmission) that different parties read differently. The continuity reading treats unbroken institutional practice as the legitimating mechanism; the reconstructionist reading treats Classical textual forms as the only legitimate source; the hybrid reading treats both textual fidelity AND post-Classical developments as legitimate in their respective domains. The continuity reading's core axiom is that institutional transmission itself legitimates linguistic form. The reconstructionist reading's core axiom is that only recoverable Classical forms are legitimately correct. These readings do not logically foreclose each other within a single institutional framework (the Church can tolerate both positions across different communities and historical moments), making their relation 'coexists_with' rather than 'forecloses'. The continuity reading influences the reconstructionist reading by providing an institutional alternative that delegitimizes textual archaeology (if transmission is legitimate, why return to sources?), but does not logically rule it out."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "classical_latin_standard__reconstruction_reading",
+      "classical_latin_standard__hybrid_reading"
+    ],
+    "dual_formulation_note": "The Classical Latin standard kernel has three structurally distinct readings with different ε values and different victim/beneficiary structures. The continuity_reading (this constraint) has ε=0.38, emphasizes institutional transmission legitimacy, and includes vernacular speakers as victims. The reconstructionist_reading will have higher ε (0.55+) because it more aggressively delegitimizes medieval drift. The hybrid_reading will have intermediate ε reflecting domain-specific recognition. All three stories share the kernel but have different cs_structure values, different perspectives, and different classifications."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unbroken_ecclesiastical_transmission",
+    "drift_state": {
+      "moment": "contemporary_philological_challenge",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "classical_latin_standard__reconstruction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "classical_latin_standard__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "institutional_transmission_legitimates_form",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "drift_within_transmission_is_legitimate_development",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

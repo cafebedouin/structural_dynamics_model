@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_occupation__simulation_sufficiency",
+    "measurement_id_prefix": "comp_sim",
+    "story_uid": "113239bd-ea0a-4cce-b621-79f7519ee894"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation Sufficiency for Competence Occupation",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_training_vendors",
+      "compliance_certification_bodies"
+    ],
+    "victims": [
+      "line_operators",
+      "actual_safety_outcomes"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Line Operator",
+      "comment": "PERSPECTIVE 1: LINE OPERATOR (SNARE) — Trapped in mandatory simulation-based compliance regimen; cannot exit training requirement or refuse certification; skill decay unmonitored unless failure occurs in field. Extraction mechanism: operator bears cost of training time, certification maintenance, and degraded competence (if simulation fidelity insufficient) while organization captures compliance checkmark and insurance benefit. Operator experiences maximum suppression — refusal to participate results in termination or grounding."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Operating Organization",
+      "comment": "PERSPECTIVE 2: OPERATING ORGANIZATION (ROPE) — Institutional actor (airlines, nuclear plants, military squadrons) benefits from simulation certification: demonstrates compliance to regulators, reduces insurance premiums, avoids catastrophic incident liability. Experiences constraint as coordination mechanism — the simulation protocol solves the legitimate problem of demonstrating competence to external authorities. Net beneficiary but also genuinely coordinates (reduces true operational risk when simulation fidelity is adequate)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Simulation Training Vendor",
+      "comment": "PERSPECTIVE 3: SIMULATION TRAINING VENDOR (SNARE) — Powerful institutional actor (CAE, THALES, military training contractors) with arbitrage exit. Benefits from expansion of simulation-based training mandates; revenue scales with frequency and fidelity requirements. Extraction mechanism: vendor captures compliance margin — training compliance becomes the observable, not actual competence. Vendor has strong incentive to frame simulation sufficiency as settled (axiom: simulation_fidelity_occupation) and resist real-incident feedback as 'outlier learning'. Acts as primary beneficiary through regulatory capture and standards-setting influence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Safety Engineering Community",
+      "comment": "PERSPECTIVE 4: SAFETY ENGINEERING COMMUNITY (TANGLED ROPE) — Organized agents (human factors researchers, HRO researchers, incident investigators) with mobile exit options. Coordinate on safety mechanisms but also experience extraction: research funding increasingly tied to simulation validation; critical incident data often restricted to legal/insurance proceedings (suppressed from research). Mixed function — genuine coordination on competence mechanisms but also asymmetric incentive to validate vendor claims (publication bias toward 'simulation works' because funding from simulation industry)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competence Assessment Reform Coalition",
+      "comment": "PERSPECTIVE 5: COMPETENCE ASSESSMENT REFORM COALITION (SCAFFOLD) — Organized agents (incident investigation boards, pilot unions, safety advocates) proposing alternative verification pathways: line audits, competency observation programs, incident-driven recertification triggers. Sees simulation-sufficiency mandate as temporary coordination failure with structural sunset. Exit path: hybrid occupation protocols (simulation + line observation + incident-triggered recertification) that de-center simulation as sole occupier. Sunset mechanism: as competence science improves, simulation fidelity requirements become obsolete or are supplemented by more sensitive measures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Certification Authority",
+      "comment": "PERSPECTIVE 6: REGULATORY CERTIFICATION AUTHORITY (PITON) — Institutional actor (FAA, NRC, national aviation authorities) that mandates simulation-based certification. Sees its own process as largely performative: certification passes or fails based on simulation metrics, but these metrics are weak proxies for actual skill. Maintains simulation requirement through institutional inertia — alternative verification (line audits, incident tracking) would require deeper engagement with operators and organizations. Theater ratio (0.68) reflects that certification checklist is largely ritual; actual competence verification remains epistemically weak. Maintains because alternatives aren't fully in place, not because it works."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational/universal scope, skill maintenance in complex domains inherently requires distributed practice over time. No single intervention (simulation, lecture, incident exposure) can occupy the competence kernel. This perspective frames the debate as reflecting an immutable law of human motor learning and complex skill maintenance — decay is inevitable without continuous multi-mechanism reinforcement. However, this reading is a false summit: the structural data reveals that treating simulation sufficiency as natural law naturalizes a contingent institutional choice (privileging simulation fidelity metrics over actual field performance metrics). The constraint operates through regulatory mandate and vendor incentive, not through laws of learning."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fidelity_sufficiency_threshold",
+      "question": "What simulation fidelity threshold constitutes 'sufficient occupation' of the competence kernel for a given operational task?",
+      "resolution_mechanism": "Longitudinal competence tracking: correlate simulator performance (across fidelity levels) with actual line performance metrics (error rates, critical decision quality); identify fidelity floor below which correlation breaks. Compare against real-incident learning curves.",
+      "impact": "If threshold exists and is measurable: simulation sufficiency becomes a technical engineering problem (optimize fidelity). If threshold is task-dependent or context-dependent without stable empirical anchor: current mandates may be extractive theater disguised as competence maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation fidelity has a measurable threshold for competence occupation"
+    },
+    {
+      "id": "decay_measurement_accessibility",
+      "question": "Can skill decay be measured directly in operational personnel without incident, or only inferred from incident rates?",
+      "resolution_mechanism": "Development of non-incident competence metrics (line observation protocols, decision-tree performance scoring, tacit knowledge probes); validation against actual incident frequency; comparison of decay rates measured proactively vs retroactively via incident analysis.",
+      "impact": "If measurable proactively: competence occupation becomes observable independent of incident frequency; simulation sufficiency claim can be falsified. If measurable only retroactively via incidents: current compliance model is fundamentally reactive, and simulation-based prediction claims are speculative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether skill decay can be measured directly without incident"
+    },
+    {
+      "id": "authenticity_of_simulation_threat",
+      "question": "Does the absence of authentic catastrophic consequence (death, injury, system failure) in simulation create a fundamental occupancy gap that fidelity cannot bridge?",
+      "resolution_mechanism": "Comparative study: competence decay trajectories in simulation-trained cohorts vs incident-exposed cohorts vs hybrid-trained cohorts (simulation + line observation + controlled incident exposure). Measure via objective task performance, decision quality under time pressure, and error recovery.",
+      "impact": "If authenticity is fundamental: real_incident_necessity reading becomes structurally dominant; simulation-sufficiency claim is falsified, and hybrid occupation becomes required. If authenticity effects are marginal (< 5% variance): simulation sufficiency claim is supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether authentic catastrophic consequence is necessary for competence occupation"
+    },
+    {
+      "id": "reading_vs_natural_law_ambiguity",
+      "question": "Is the debate over competence occupation driven by genuine empirical uncertainty about human skill maintenance, or by institutional incentives to frame simulation sufficiency as settled?",
+      "resolution_mechanism": "Textual and historical analysis: track how competence occupation has been framed in regulatory documents (1990s-present); identify moments when empirical contestation was classified as 'settled' vs when new evidence prompted reclassification. Analyze funding flows and publication bias in competence research.",
+      "impact": "If institutional incentives dominate: current 'simulation sufficiency' mandate is a reading of the competence kernel, not a natural law. If genuine empirical uncertainty: debate reflects legitimate scientific pluralism. This omega documents whether the false summit detector should fire.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether debate reflects empirical uncertainty or institutional incentive capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of the contested kernel 'competence occupation' — the claim that simulation-based drills constitute sufficient exercise to occupy the competence kernel and prevent skill decay. The reading emerges from a specific institutional settlement: regulatory mandates (FAA, NRC) have converged on simulation-based training as the primary evidence of competence maintenance, simulation vendors have become economically powerful through this standardization, and the empirical question ('is simulation sufficient?') has been largely removed from active contestation. This constraint exhibits high extractiveness (0.58) and high suppression (0.62) because the regulatory mandate prevents experimentation with alternative verification methods, line operators cannot refuse the training requirement, and the simulation industry benefits financially from expansion of fidelity/frequency mandates. Theater ratio (0.68) reflects that certification compliance is decoupled from actual competence measurement — passing a simulator does not guarantee operational competence, but certification requires simulator passage. The measurement trajectory shows extractiveness and theater increasing over the 10-year interval (t=0 to t=10), modeling the regulatory ratchet: as simulation fidelity requirements expand and compliance becomes the primary observable, the constraint's extraction mechanism strengthens. This constraint is the upstream pump that supplies demand to the simulation industry; actual skill decay rates remain largely invisible unless catastrophic failure occurs.",
+    "key_agents": [
+      "Line Operators: Primary victims (powerless/trapped) — mandated to spend training hours in simulation, cannot refuse certification, skill decay unmonitored except via failure",
+      "Operating Organizations: Institutional actors (institutional/arbitrage) — benefit from compliance demonstration and insurance reductions; coordinate on safety via simulation but also subject to vendor influence",
+      "Simulation Training Vendors: Primary beneficiaries (powerful/arbitrage) — capture recurring revenue through certification expansion; influence regulatory standards-setting; have strong incentive to frame simulation sufficiency as settled",
+      "Regulatory Certification Authorities: Institutional actors (institutional/arbitrage) — maintain simulation requirements through mandate enforcement; see their own process as performative (piton perspective); resist deeper competence verification mechanisms",
+      "Safety Engineering Community: Organized actors (organized/mobile) — experience mixed function — coordinate on safety mechanisms but also extract publication opportunity and funding by validating vendor claims",
+      "Competence Assessment Reform Coalition: Organized actors (organized/constrained) — propose alternative verification pathways (line audits, hybrid protocols); structural sunset logic via competence science advancement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the institutional choice as an immutable law of human skill maintenance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The simulation industry captures recurring revenue through mandated training expansion; regulators capture compliance evidence without investing in deeper competence verification; line operators bear cost (time, opportunity cost, potential skill gap if fidelity insufficient) without corresponding benefit. The extraction is substantial but not maximal because operating organizations genuinely benefit (insurance reduction, liability protection) and the coordination function (demonstrating safety to external stakeholders) is real. Suppression (0.62): High. Multiple mechanisms prevent experimentation with alternative verification: regulatory mandate prohibits most alternatives; incident data restricted by legal/insurance privilege; career risk for operators who refuse or criticize training; publication bias in competence research favoring simulation industry findings. Theater ratio (0.68): High-moderate. Certification compliance is primarily performative: passing a simulator demonstrates regulatory adherence, not actual operational skill. Reviewers of certification cannot access operational performance data to validate the simulator-to-field transfer. The theater has increased over the measurement interval as fidelity requirements have expanded without corresponding competence validation.",
+    "directionality_logic": "Directionality (d) derives from structural position — who benefits, who bears costs, what exit options exist. Simulation vendors have low d (beneficiaries with strong exit — they can arbitrage between regulatory markets, customer bases, and alternative training products). Line operators have high d (victims with no exit — trapped by employment and regulatory mandate). Operating organizations have moderate-low d (mixed beneficiary/victim — capture compliance benefit but also trapped by regulatory requirement). Safety engineering community has moderate d (they benefit from research funding tied to simulation validation but have some exit — can propose alternatives or seek independent funding). Reform coalition has moderate d (organized actors with mobile exit but constrained by regulatory barriers to implementation). The analytical observer has d ≈ 0.72 (derived from canonical analytical power value). The false summit detection will flag the mountain perspective: because the constraint declares beneficiaries (simulation vendors), the engine computes that a genuine natural law would not concentrate benefits on identifiable actors. FSM fires and the mountain is reclassified (typically to tangled_rope) — revealing that the 'natural law of skill decay' framing naturalizes what is actually a contingent institutional arrangement.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival range from structured institutional incentives. The vendor sees rope (coordination) — they are solving a real problem (demonstrating competence to regulators). The operating organization sees rope (coordination) — the constraint demonstrates safety to external stakeholders and reduces insurance costs. The line operator sees snare (pure extraction) — trapped in mandatory training with no choice and no corresponding skill verification. The reform coalition sees scaffold (temporary problem with sunset) — hybrid occupation protocols and improved competence metrics will replace simulation-only mandates. The regulatory authority sees piton (degraded ritual) — certification requirement is maintained through inertia, not function. The safety engineering community sees tangled rope (mixed coordination and extraction) — genuine safety function but also captured by vendor incentives. The civilizational analytical observer risks seeing a mountain (immutable law) but the structural data reveals false summit: simulation sufficiency is framed as natural law but operates through regulatory mandate and vendor benefit concentration.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'competence_occupation'. The reading instantiates the claim that SIMULATION SUFFICIENCY is the correct framework for occupying the competence kernel and preventing skill decay. Sibling readings include: (1) HYBRID_OCCUPATION — competence requires continuous multi-mechanism exercise (simulation + refresher + procedural reinforcement + line audits) without consensus on optimal mix; (2) REAL_INCIDENT_NECESSITY — only authentic catastrophic incidents provide conditions necessary to occupy the competence kernel. This reading treats competence occupation as solvable via simulation fidelity and training frequency optimization. It forecloses the real_incident_necessity reading (which holds that authenticity is necessary) only insofar as they compete for the status of 'sufficient occupier' — a single organization cannot simultaneously hold that simulation IS sufficient and that only real incidents ARE sufficient within the same regulatory framework. The hybrid_occupation reading COEXISTS_WITH this reading because organizations currently employ both simulation and incident-driven learning; the readings reflect different parties' emphasis, not logical contradiction. The simulation_sufficiency reading INFLUENCES hybrid_occupation by establishing simulation as the baseline against which alternative mechanisms are evaluated — resources, regulatory approval, and implementation priority flow toward simulation, making alternative mechanisms supplementary rather than primary. Applied to high-reliability organizations: airlines and nuclear plants implement this reading through FAA and NRC mandates; they simultaneously enact hybrid_occupation through line audits and incident review (but simulation remains primary). The real_incident_necessity reading is held by some safety researchers and incident investigators who argue that competence decay cannot be meaningfully detected or corrected without actual failure experience. The debate is not empirically settled — all three readings remain live positions held by different institutional actors and research communities."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__hybrid_occupation",
+      "competence_occupation__real_incident_necessity"
+    ],
+    "dual_formulation_note": "The competence_occupation kernel has three structurally distinct readings, each corresponding to a different constraint story with different epsilon values and different beneficiary/victim structures. All three readings compete to define what constitutes sufficient occupation of the competence kernel. They are linked via network.affects_constraints and share the same kernel_id. Each story is ε-invariant within its own reading, but the three stories differ in epsilon because they measure different observables: simulation_sufficiency treats training compliance as the observable (medium epsilon = 0.58); hybrid_occupation treats consensus on multi-mechanism configuration as the observable (higher epsilon because consensus is hard to achieve); real_incident_necessity treats incident frequency as the observable (potentially lower epsilon if incidents are genuinely rare, or higher if the reading claims incidents are suppressed from analysis). The three readings do not merge into one constraint — they are three separate stories linked by kernel identity, not three perspectives within one story."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_occupation__real_incident_necessity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_occupation__hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_occupation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "compliance_as_competence_proxy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "simulation_first_competence_assurance",
+    "drift_state": {
+      "moment": "contemporary_competence_science_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

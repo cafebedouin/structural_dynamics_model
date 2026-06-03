@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_decision_authority__sanctity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_end_of_life_decision_authority__sanctity_reading",
+    "measurement_id_prefix": "eol_sanctity",
+    "story_uid": "62b923f3-e824-4668-91cb-ed7757882fb8",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-of-Life Decision Authority (Sanctity Reading)",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sanctity_doctrine_holders"
+    ],
+    "victims": [
+      "pressured_vulnerable_patients",
+      "individuals_with_intractable_suffering"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Pressured Vulnerable Patient",
+      "comment": "PERSPECTIVE 1: PRESSURED VULNERABLE PATIENT (SNARE) — Terminal diagnosis, intractable suffering, economic burden on family, explicit prohibition of life-ending creates maximum extraction: the patient bears unbearable suffering while the constraint denies the only exit. Powerless, trapped, biographical horizon. No alternatives exist within the constraint's framework."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compassionate Physician",
+      "comment": "PERSPECTIVE 2: COMPASSIONATE PHYSICIAN (TANGLED ROPE) — Constrained by both sanctity doctrine and duty to relieve suffering. Genuine coordination function: protecting life and maintaining trust in the healing relationship. Asymmetric extraction: the physician is forbidden from action while bearing witness to suffering, creating professional identity strain. Not fully trapped (can practice palliative care, advocate for doctrine revision) but constrained by institutional enforcement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sanctity-Doctrine Community",
+      "comment": "PERSPECTIVE 3: SANCTITY-DOCTRINE COMMUNITY (ROPE) — Organized religious and philosophical communities derive coherence and identity from the sanctity doctrine. Genuine coordination function: maintaining a shared framework for meaning-making around death and human dignity. Experiences the constraint as coordination — shared commitment to protecting inherent human value. Constrained by countervailing movements toward autonomy-based frameworks but able to sustain doctrine through institutional reproduction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare Institution",
+      "comment": "PERSPECTIVE 4: HEALTHCARE INSTITUTION (TANGLED ROPE) — Required by law and professional liability to enforce the sanctity doctrine prohibition. Genuine coordination function: standardized end-of-life protocols prevent inconsistency and arbitrary decision-making. Asymmetric extraction: institutions bear regulatory burden while ceding decision authority to doctrine holders. Constrained by liability law, professional ethics boards, and shifting public opinion but unable to unilaterally reframe doctrine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Doctrine Enforcement",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL DOCTRINE ENFORCEMENT (PITON) — The ritual of sanctity-based end-of-life protocols (advance directives framed around 'do not resuscitate' rather than positive choice, spiritual counseling, family mediation through sanctity lens) persists largely through institutional inertia. The enforcement mechanism has degraded as consent-based decision frameworks have matured: the doctrine persists because it was codified and institutions have not fully reorganized around alternatives, not because it remains functionally dominant. Theater ratio reflects that much of the enforcement is performative (ritual language, theological justification) rather than structural necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, human life's intrinsic value is foundational to ethical reasoning itself; any framework that permits intentional life-ending violates this irreducible commitment. Appears as an invariant across all ethical systems — a mountain. However, the structural data contradicts this: identifiable beneficiaries (doctrine-holding communities), victims (pressured vulnerable patients), and enforcement requirements reveal this as a constructed institutional arrangement, not a natural law. The engine's false summit detector will identify this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intrinsic_value_foundation",
+      "question": "Is the sanctity doctrine grounded in genuine metaphysical properties of human life, or does it represent a contingent institutional and cultural commitment?",
+      "resolution_mechanism": "Cross-cultural analysis of how different traditions ground human dignity; historical tracking of when sanctity doctrine codification occurred relative to pre-existing medical practices; examination of whether the doctrine's core claims (that ending life is categorically impermissible) survive removal of the institutional enforcement structure.",
+      "impact": "If metaphysically grounded: mountain classification is correct and the reading reflects genuine constraint on all ethical systems. If contingent: false-summit signature should trigger and classification should downgrade to tangled_rope. Alternative readings (autonomy, vulnerability) would be interpretations of the same kernel, not falsifications of the foundation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sanctity is metaphysical or institutional"
+    },
+    {
+      "id": "suffering_externalization_mechanism",
+      "question": "By restricting life-ending options, does the sanctity reading externalize unbearable suffering costs onto patients, or does it prevent a different harm (normalization of lethal decision-making that eventually captures vulnerable populations)?",
+      "resolution_mechanism": "Comparative harm analysis: jurisdictions with vs without sanctity-based restrictions; longitudinal tracking of whether removal of restrictions leads to coercive practice (Netherlands, Belgium data); analysis of palliative-care access and quality across regimes to determine whether suffering is truly unavoidable or a function of resource allocation.",
+      "impact": "If suffering is genuinely unavoidable and imposed: victim set is correct (pressured vulnerable enter at high magnitude). If suffering is resource-dependent and removal of restrictions creates new coercive dynamics: victim set may be incomplete or mis-identified, and tangled_rope classification obscures the true harm structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sanctity doctrine externalizes unavoidable or remediable suffering"
+    },
+    {
+      "id": "physician_role_definition_authority",
+      "question": "Who has authority to define the physician's role — the healing mandate, the boundary between healing and harm? Does the sanctity reading inherit this authority from medical tradition (physicians as life-preservers) or impose it via doctrine over physician practice?",
+      "resolution_mechanism": "Historical analysis of medical role definitions pre- and post-sanctity codification; examination of physician statements of conscience and role conflict; comparative analysis of how autonomy and vulnerability readings reframe the physician's mandate and whether physicians accept or resist those reframings.",
+      "impact": "If physicians inherit the healing-only role from tradition: the sanctity reading is continuous with medical practice, not imposed against it. If the sanctity reading is doctrine imposed over physician judgment: the constraint is more extractive (physicians are victims of doctrine enforcement) and the classification may need revision.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Authority over physician role definition"
+    },
+    {
+      "id": "kernel_reading_contest_structure",
+      "question": "How do the three readings of the end-of-life decision authority kernel logically relate to one another? Can a single framework hold two readings simultaneously, or does commitment to one reading logically foreclose others?",
+      "resolution_mechanism": "Philosophical analysis of the core premises: Does autonomy-reading (individual sovereignty over death) logically contradict sanctity-reading (intrinsic value independent of will)? Does vulnerability-protection-reading (distributed institutional checkpoints) depend on accepting or rejecting either autonomy or sanctity premises? Examination of actual jurisdictions that have attempted to hold multiple readings simultaneously (e.g., legally permitting assisted dying while codifying sanctity-based safeguards).",
+      "impact": "If readings foreclose one another: the kernel contest is zero-sum and mandatrophy is irreducible. If readings coexist: the constraint landscape is multiplex and the engine should classify the set of readings as a three-point presheaf, not pick a single type. If one reading influences others: causality runs upstream to downstream and the network effects become visible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical structure of kernel reading relationships"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.44
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The sanctity-of-life reading of end-of-life decision authority represents one axis of a three-way contest over who possesses legitimate authority to decide when human life should end. This reading declares that human life possesses intrinsic value independent of individual will or preference, and that intentional life-ending violates that value categorically, regardless of circumstances or consent. The constraint creates a tangled coordination-and-extraction hybrid: it coordinates meaning-making around human dignity within doctrine-holding communities (rope-like coordination function) while simultaneously extracting from pressured-vulnerable patients by denying them decision authority over their own death (snare-like asymmetric extraction). The structural delta — that pressured-vulnerable individuals enter the victim set specifically when euthanasia becomes available, that the physician is constrained to healer-only roles, and that individual suffering is externalized as an acceptable cost of doctrine maintenance — reveals how this reading operationalizes its metaphysical claim into institutional practice. The measurement trajectory shows increasing suppression (0.55 → 0.68) as enforcement mechanisms strengthen in response to countervailing movements, and modest increase in extractiveness (0.42 → 0.58) reflecting accumulating burden on pressured populations as autonomy-friendly jurisdictions create geographic arbitrage opportunities. Theater ratio remains low (0.38 → 0.44) because the sanctity doctrine's enforcement is substantially structural (legal prohibition, physician liability, resource allocation) rather than performative.",
+    "key_agents": [
+      "Sanctity-doctrine communities: Beneficiaries (organized/constrained) — maintain institutional coherence around meaning-making frameworks grounded in human dignity doctrine; experience the constraint as coordination rather than extraction",
+      "Pressured-vulnerable patients: Primary victims (powerless/trapped) — terminal diagnosis, intractable suffering, economic burden on family; denied decision authority and trapped within the constraint's framework",
+      "Individuals with intractable suffering: Primary victims (powerless/trapped) — bear unbearable pain that the constraint frameworks (both sanctity and institutional enforcement) define as non-negotiable cost of doctrine maintenance",
+      "Healthcare institutions: Secondary beneficiary-victims (institutional/constrained) — required by law and professional liability to enforce sanctity doctrine; bear regulatory burden while ceding decision authority to doctrine holders",
+      "Compassionate physicians: Secondary victims (moderate/constrained) — constrained by both sanctity doctrine obligation and duty to relieve suffering; experience identity strain between healing mandate and prohibited actions",
+      "Analytical observer: Civilizational context (analytical/analytical) — risks naturalizing the contingent institutional commitment (sanctity doctrine) as an irreducible law of ethics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The sanctity reading extracts substantially from pressured-vulnerable populations by denying them decision authority while bearing the cost (unbearable suffering) of doctrine maintenance. The extraction is not maximal (0.70+) because some agents (compassionate physicians, healthcare institutions) experience only constrained rather than trapped conditions, and because the doctrine is sustained through institutional rather than purely coercive mechanisms. Suppression (0.68): High. Significant barriers to exercise of alternative end-of-life options include legal prohibition in sanctity-based jurisdictions, physician liability and conscience protection framed as enforcing sanctity doctrine, religious institutional pressure, family dynamics shaped by doctrine, and the absence of institutional infrastructure for autonomous decision-making. Suppression is not total (not 0.85+) because some jurisdictions have created legal pathways (advanced directives, medical assistance in dying in Canada/Netherlands/Belgium) that lower suppression for some populations, creating geographic arbitrage. Theater ratio (0.44): Moderate-low. The sanctity doctrine's enforcement is substantially structural — law, institutional rules, physician training — rather than performative. The piton perspective classification reflects that some institutional enforcement (ritual language around sanctity, spiritual counseling, family mediation through doctrine lens) has degraded as consent-based frameworks have matured, though the core legal and institutional structures remain intact. The modest theater ratio indicates the constraint retains genuine structural force (not merely performative) distinguishing it from piton-level degradation.",
+    "perspectival_gap": "The sanctity reading produces maximum perspectival divergence across positions. Doctrine-holder sees coordination (Rope); pressured-vulnerable sees pure extraction (Snare); compassionate physician sees mixed hybrid (Tangled Rope); institutional enforcement sees degraded ritual (Piton); analytical observer risks naturalizing (Mountain). This gap is not noise — it is diagnostic of the constraint's structure as a tangled coordination-extraction hybrid where institutional beneficiaries use coherent meaning-making language to justify extraction from vulnerable populations.",
+    "directionality_logic": "Directionality (d) follows from beneficiary/victim status and exit options. Sanctity-doctrine communities are beneficiaries with constrained exit options (ability to maintain doctrine within their institutional sphere, but constrained by countervailing movements toward autonomy readings) — derive moderate-to-low d, producing low-to-negative chi. Pressured-vulnerable patients are victims with trapped exit — derive high d (0.95+), producing maximum chi via f(d). Healthcare institutions are dual-positioned: beneficiaries of standardized protocols (institutional/constrained), victims of liability enforcement (institutional/constrained) — derive moderate d (~0.50). Physicians are victims with constrained exit — derive moderate-to-high d. The engine's derivation chain operates on these declared relationships, producing the perspectival gap: beneficiaries perceive low extractiveness while victims perceive maximum extraction from identical structural data.",
+    "kernel_context": "This constraint instantiates the SANCTITY READING of the contested end-of-life decision authority kernel. The kernel itself — 'who has authority to decide when human life should end?' — is stabilized through legal codification, religious doctrine, and institutional practice, but three incompatible readings circulate: the AUTONOMY READING (competent individuals possess sovereign authority over their own death), the SANCTITY READING (human life possesses intrinsic value independent of individual will; intentional life-ending violates this value), and the VULNERABILITY-PROTECTION READING (end-of-life authority must be distributed across institutional checkpoints to prevent both denial and coercion). This constraint represents ONLY the sanctity reading and should NOT describe the contest as internal to a single constraint. The sibling readings are separate constraint stories (separate .pl files) with different victim sets, different beneficiaries, and different ε values. The SANCTITY READING's core premise — human life has intrinsic value independent of will — is distinct from and incommensurable with the AUTONOMY READING's core premise (individual will is sovereign). The VULNERABILITY-PROTECTION READING creates institutional structure that pressures both SANCTITY and AUTONOMY readings toward compromise, but does not logically foreclose either.",
+    "mandatrophy_analysis": "The mandatrophy in end-of-life authority is irreducible: the three readings cannot be held simultaneously in a single framework because they make incompatible claims about the locus of authority (doctrine, individual, institution). This constraint resolves mandatrophy by showing that the SANCTITY READING has specific structural consequences (pressured-vulnerable become victims, physician role narrows, suffering is externalized) that distinguish it from alternative readings. The tangled_rope classification captures that the constraint is genuinely coordinative for doctrine-holding communities while genuinely extractive for pressured-vulnerable populations — not a category mistake, but a structural fact that coordination and extraction coexist in this constraint. The false-summit perspective (mountain) reveals the analytical risk: the SANCTITY READING naturalizes its contingent institutional commitment (intrinsic human value) as an irreducible law of ethics, foreclosing the alternative readings at the level of logic rather than acknowledging them as live interpretive options within the contested kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_decision_authority__autonomy_reading",
+      "end_of_life_decision_authority__vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "The end-of-life decision authority kernel decomposes into three structurally distinct readings: SANCTITY_READING (this constraint, ε=0.58, Tangled Rope); AUTONOMY_READING (separate story, autonomy-centered, different victim/beneficiary set, likely different ε); VULNERABILITY_PROTECTION_READING (separate story, institutional-distribution-centered, likely different ε and type). All three link to one another via network.affects_constraints. Each reading instantiates the same kernel but produces different classifications and different structural deltas because they make incommensurable claims about authority locus."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_decision_authority__autonomy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_decision_authority__vulnerability_protection_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_life_intrinsic_value_independent_of_will",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intentional_life_ending_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "sacred_life_preservation_mandate",
+    "drift_state": {
+      "moment": "contemporary_jurisdictional_pluralism",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}
