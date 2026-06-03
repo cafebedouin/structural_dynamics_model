@@ -80,6 +80,17 @@ working tree mixing committed + an active ~1h generation run; the .md/.tsv repor
 `main`→`repair-affects-constraint-typos` then merged `docs-corpus-size-hypothesis` (ISSUES.md conflict
 resolved by keeping both OQ entries); `main` = `repair` = the merge commit. NOT pushed to origin.
 
+**OQ-59 #4 axiom-diff DONE (2026-06-03).** `prolog/axiom_diff.pl` (wired into `stack.pl`) lifts the
+reading_diff partition to the cs_axiom layer; value compared = **grounding** (cs_axiom_status/2 is keyed
+on the axiom NAME = global, so it cannot vary per reading — do not compare it). **Sharpened-seat finding:
+0 of 935 within-kernel reading-pairs share even one axiom NAME** — no mechanical cross-reading axiom
+identity; `exact_name` is structurally all-blind, and the `concept` key reads a caller-declared
+`axiom_concept/2` map (multifile/dynamic, EMPTY by default — the seat is never baked; an empty map ⇒
+all-blind, and report_axiom_pair says so). Demo (westphalian absolute pair, 4 axioms → 2 declared
+concepts): grounding INVERSION — sovereignty_absolute A=conventional/B=deontological,
+noninterference A=deontological/B=conventional → key_fragile. Tests `tests/test_axiom_diff.pl` (4, pass).
+**OQ-59 fully disposed (#1–#4).** Don't compare cs_axiom_status across readings; don't bake axiom_concept.
+
 ---
 
 ## 2026-06-02 — Reading-reference linter + the "complete kernels, not patch edges" finding

@@ -2587,7 +2587,8 @@ decision once sized).
 **edge-repair #1 DONE (2026-06-03)** — 4 `absolutist_reading` edges retargeted → `absolute_sovereignty`,
 R1 dangling 89→87, affects_constraint 1668→1666, corpus loads 803. Remaining: #3 corpus-wide run, #4
 axiom diff; plus 1 flagged prose mention (`governance_quality_reading.pl:226`) — a content judgment, not
-an edge. (Earlier: sized via linter R3; gradated→governance_quality_reading rename done.)
+an edge. **#3 census + #4 axiom-diff DONE (2026-06-03)** — all of #1–#4 complete; OQ-59 fully disposed
+except the 1 flagged prose mention. (Earlier: sized via linter R3; gradated→governance_quality_reading rename done.)
 **Origin:** OQ-58 narrative-disposition pass, Bucket C, 2026-06-02.
 **Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`;
 detector `python/audits/reading_reference_linter.py` (R3).
@@ -2690,7 +2691,17 @@ committed corpus (803 testsets @`90bb5a6b`, 189 multi-reading kernels, 615 withi
 the 256 in-flight uncommitted testsets are included: 40.9/52.0/7.2). Finding: the alignment seat
 governs the binocular/undersampled verdict for a *majority* of reading-pairs — the cyclopean seat
 operates corpus-wide, not just on westphalian. Results: `outputs/reading_diff_census.md` + `.tsv`.
-**Still OPEN:** #4 axiom-level diff over `cs_axiom`/`cs_axiom_grounding`. See AGENDA.md.
+**#4 axiom-level diff DONE (2026-06-03):** `prolog/axiom_diff.pl` lifts the partition to the cs_axiom
+layer (value compared = grounding; status is name-global so can't vary). **Sharpened-seat finding:**
+**0 of 935 within-kernel reading-pairs share even one axiom NAME** — every reading authors bespoke
+names, so unlike the type-cell layer there is NO mechanical cross-reading axiom identity; `exact_name`
+is structurally all-blind and aligning axioms requires a DECLARED concept map (`axiom_concept/2`,
+empty by default — the seat is never baked, cf. reading_diff throwing on defaulted `weighted`). Demo on
+the westphalian absolute pair under a declared 4-axiom→2-concept seat reveals a **grounding INVERSION**:
+both readings hold a sovereignty-absolute axiom and a non-interference axiom, but A grounds them
+conventional/deontological and B inverts to deontological/conventional → `key_fragile`. Tests:
+`prolog/tests/test_axiom_diff.pl` (4, all pass). **OQ-59 fully disposed** (#1–#4 done); the only residue
+is the flagged prose at `governance_quality_reading.pl:226` (a content pass, not tracked here).
 
 ---
 
