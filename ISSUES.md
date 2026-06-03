@@ -2684,8 +2684,13 @@ reading. **NOT repaired (flagged, content judgment):** the prose at `governance_
 also names `westphalian_sovereignty__absolutist_reading` AND characterizes it ("binary and equal — Rope
 or Mountain from all perspectives") inconsistently with `absolute_sovereignty`'s authored cells
 (snare/tangled_rope/rope/mountain) — a narrative claim, not a mechanical edge, left for a content pass.
-**Still OPEN:** #3 corpus-wide twin run via `reading_diff` over the `outputs/cross_reading_diff.md`
-set; #4 axiom-level diff over `cs_axiom`/`cs_axiom_grounding`. See AGENDA.md.
+**#3 corpus-wide within-kernel census DONE (2026-06-03):** `prolog/reading_diff_census.pl` over the
+committed corpus (803 testsets @`90bb5a6b`, 189 multi-reading kernels, 615 within-kernel pairs) →
+**53.7% key_fragile / 39.5% robustly_binocular / 6.8% robustly_undersampled** (distribution stable if
+the 256 in-flight uncommitted testsets are included: 40.9/52.0/7.2). Finding: the alignment seat
+governs the binocular/undersampled verdict for a *majority* of reading-pairs — the cyclopean seat
+operates corpus-wide, not just on westphalian. Results: `outputs/reading_diff_census.md` + `.tsv`.
+**Still OPEN:** #4 axiom-level diff over `cs_axiom`/`cs_axiom_grounding`. See AGENDA.md.
 
 ---
 

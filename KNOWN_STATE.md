@@ -70,6 +70,16 @@ target arg changed (4 lines); R1 dangling `cs_reading_relation` **89→87**, `af
 **Left flagged (NOT repaired):** prose at `governance_quality_reading.pl:226` names the alias AND
 mis-characterizes it vs `absolute_sovereignty`'s authored cells — a content judgment for a later pass.
 
+**OQ-59 #3 corpus-wide census DONE (2026-06-03).** `prolog/reading_diff_census.pl` over committed 803
+testsets (189 multi-reading kernels, 615 within-kernel pairs): **53.7% key_fragile / 39.5%
+robustly_binocular / 6.8% robustly_undersampled** — the alignment seat governs the verdict for a
+majority of pairs (cyclopean seat is corpus-wide). Distribution stable if the in-flight 256 uncommitted
+testsets are included (40.9/52.0/7.2). Results: `outputs/reading_diff_census.{md,tsv}`. Census ran on a
+working tree mixing committed + an active ~1h generation run; the .md/.tsv report the committed-only
+615 (citable); re-run after the generation lands. NOTE this session also consolidated branches: FF
+`main`→`repair-affects-constraint-typos` then merged `docs-corpus-size-hypothesis` (ISSUES.md conflict
+resolved by keeping both OQ entries); `main` = `repair` = the merge commit. NOT pushed to origin.
+
 ---
 
 ## 2026-06-02 — Reading-reference linter + the "complete kernels, not patch edges" finding
