@@ -2423,6 +2423,12 @@ must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
 quarantine view `cs_kernel_registry:cs_reading_relation_unresolved/4`; linter/reporter
 `python/audits/reading_reference_linter.py`.
 
+**Cross-ref (2026-06-02):** the *network-layer* analog — dangling `affects_constraint/2` targets
+(1710/2548 edges, no referential-integrity guard), the 9 delimiter typos there, and the finding that
+such danglers resolve into a **bounded** structural-class space (not an open frontier) — is tracked in
+**GAP-07** (`docs/design/design_gaps.md`). Its structural-resolver basis is gated behind repairing
+those 9 typos first.
+
 **FINDING (2026-06-02, linter-as-reporter) — it's "complete kernels," not "patch edges."** A
 reference-census linter (`reading_reference_linter.py`; census of `cs_reading_relation` +
 `affects_constraint`; three rules each with a synthetic positive control) gives the
@@ -2650,6 +2656,14 @@ stem-judgment needing a seat), and all of Bucket B (generate-vs-delete needs the
 `cross_kernel = 0` confirmed a *finding* (positive control: an injected cross-kernel target flags). Also
 noted: the same delimiter typo appears in `affects_constraint/2` (logos:340, paris:345) — a separate
 network-layer referential issue, NOT touched here.
+
+**Cross-ref (2026-06-02):** that network-layer issue is now sized and tracked in **GAP-07**
+(`docs/design/design_gaps.md`). The affects_constraint typo subclass is **9 edges across 5 kernels**
+(article_51, gelassenheit, john_1_1_logos, paris — not the 2 lines first noted), against **1710/2548
+dangling targets total**. The bounded-attractor finding there (shift = ~1.4% of its 4096 cap;
+coupon-collector rate-vs-S linear with finite intercept) is *upstream* of OQ-59: at scale the structural
+target space closes into ~10^2 classes, so the duplication this OQ flags is the saturation, not a defect
+appearing late. Drift-order over that bounded set remains an open measurement.
 
 **DISPOSITION (2026-06-03): preserve-and-diff, not merge.** The user ruled against merging near-doctrine
 readings — averaging two readings is the cyclopean move; the disparity *is* the depth. Built
