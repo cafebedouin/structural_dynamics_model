@@ -2511,6 +2511,28 @@ kernel should move from artificial under-count toward its true structure; verify
 before generating 21 nodes on faith. **Exclude `westphalian` from the generate-backlog** — its "1
 missing" is the OQ-59 `absolutist_reading` alias (rename/edge fix, not a generate).
 
+**ROOT CAUSE FOUND + FIXED AT SOURCE (2026-06-02).** The dangling edges / incompleteness are an artifact
+of a **declared-vs-queued cap**: the SCOPE manifest's `commitment_system_recognition.readings` declares
+the full reading set (with siblings), but `generation_sequence` is capped (axes=3, an orchestrator-era
+limit) and queues only a subset; `generate_kernel_corpus.py:flatten_manifests` seeded from the *queue*,
+so declared readings were silently dropped — their siblings' edges then dangled. Witnessed in
+`outputs/decompose/manifests/indian_personal_law_pluralism.manifest.json` (marriage_authority): `readings`
+declared **5**, `generation_sequence` queued **3**; the 2 dropped are exactly `federalist_millet_reading`
++ `judicial_harmonization_reading`. **Fix (corpus script, not the orchestrator):** `flatten_manifests`
+now also emits a seed for every *declared* reading not already queued (bare reading_id, deduped) — so
+completion is automatic and **cap-independent**, fixing existing manifests (their `readings` already name
+the dropped siblings) and future ones in one place. Witnessed: flatten on the marriage_authority manifest
+now emits **5/5** seeds, 0 duplicates.
+
+**AUTHORITATIVE BACKLOG (manifest source, supersedes the dangling-edge proxy):** scanning all 595
+manifests for `len(readings) > len(generation_sequence)` gives **49 declared-but-dropped readings across
+32 contested kernels** — the provably-intended generate-backlog (cleaner than the 21/119 dangling-edge
+estimate, which mixed in typos/noise and kernels lacking manifests). The fixed flatten produces exactly
+these 49 seeds. (3 of the 32 carry `kernel_id=None` — a separate SCOPE data quirk the fix correctly
+skips.) Generation of the seeds is still the LLM step (Sonnet/API) — the fix only ensures the seeds are
+*complete*; the obstruction re-measure gate (author marriage_authority first, verify sensible movement)
+is unchanged.
+
 **The commentary-only tail (98 readings / 49 kernels) is parked behind the defensible set — as the
 LINTER'S STANDING JOB, not "ignore."** `python/audits/reading_reference_linter.py` is the recurring
 referential-integrity + incompleteness check: run it as the corpus grows to (a) catch new dangling /

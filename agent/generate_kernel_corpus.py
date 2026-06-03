@@ -268,6 +268,44 @@ def flatten_manifests(manifests):
                 "expected_structural_delta": reading.get("expected_structural_delta", ""),
                 "summary": _axis_summary(axis, m),
             })
+
+        # --- Seed from the DECLARED reading set, not just generation_sequence ---
+        # SCOPE declares every reading in csr.readings (with full sibling_readings),
+        # but the pipeline caps generation_sequence at axes=3 (an orchestrator-era
+        # limit) and may queue only a subset. Honoring the queue silently drops
+        # declared readings: their siblings' edges then dangle and the kernel ships
+        # incomplete (witnessed: marriage_authority declared 5, queued 3 — the 2
+        # dropped were federalist_millet_reading and judicial_harmonization_reading).
+        # The manifest's `readings` list is the authoritative intended set, so emit a
+        # seed for every declared reading not already queued. This makes completion
+        # automatic and cap-independent — it fixes existing manifests (their readings
+        # already name the dropped siblings) and future ones in one place.
+        if is_kernel and kernel_id:
+            for r in csr.get("readings", []):
+                rid = r.get("reading_id")
+                if not rid:
+                    continue
+                # Bare reading_id — matches the generation_sequence claim_id convention
+                # (downstream prefixes header.constraint_id to <kernel>__<reading> and
+                # generate_constraint_pl derives kernel_id by split). Dedup on the bare
+                # id so readings already queued by generation_sequence are not re-emitted.
+                cid = rid
+                if cid in seen:
+                    continue
+                seen.add(cid)
+                delta = r.get("expected_structural_delta", "")
+                commitment = (r.get("commitment") or cid).strip()
+                gen_seeds.append({
+                    "constraint_id": cid,
+                    "human_readable": commitment,
+                    "topic_domain": domain,
+                    "family_id": family,
+                    "kernel_id": kernel_id,
+                    "reading_id": rid,
+                    "sibling_reading_ids": r.get("sibling_readings", []),
+                    "expected_structural_delta": delta,
+                    "summary": commitment + (f"\n{delta}" if delta else ""),
+                })
     return gen_seeds, recovery_count
 
 
