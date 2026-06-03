@@ -2498,6 +2498,26 @@ the policy above — each unresolved edge → {generate the missing reading | re
 | delete the edge}, decided on the source narrative. Closing it reclassifies the OQ-54 `untyped`/
 absent-referent residue.
 
+**SCOPED BACKLOG + RANKING (2026-06-02, linter witness-split).** The 119 missing readings split by
+in-degree (distinct source readings per missing target): **in-degree≥2 (commentary + independent edges)
+= 21 readings / 20 kernels — the DEFENSIBLE backlog**; in-degree==1 = 98 / 49 (the long tail, below).
+The 20 defensible kernels are ranked by incompleteness (missing / intended); **first batch =
+`marriage_authority` (40%: 3 generated, 2 missing — `federalist_millet_reading` ε≈0.25 Rope,
+`judicial_harmonization_reading` ε≈0.40 Scaffold; both spec'd in its own decomposition statement, line
+323 "decomposed into five")**. Then a 33% band (1 of 3: rome_statute, constitutional_text, basic_law,
+cultural_property, us_constitution_1787, second_amendment_boundary, …). **Method (user-set):** author
+the most-incomplete kernel first, **re-measure the obstruction before authoring all 21** — a completed
+kernel should move from artificial under-count toward its true structure; verify it moves sensibly
+before generating 21 nodes on faith. **Exclude `westphalian` from the generate-backlog** — its "1
+missing" is the OQ-59 `absolutist_reading` alias (rename/edge fix, not a generate).
+
+**The commentary-only tail (98 readings / 49 kernels) is parked behind the defensible set — as the
+LINTER'S STANDING JOB, not "ignore."** `python/audits/reading_reference_linter.py` is the recurring
+referential-integrity + incompleteness check: run it as the corpus grows to (a) catch new dangling /
+non-canonical refs at the source, and (b) keep the in-degree split current so newly-corroborated tail
+items graduate into the defensible backlog. *(Candidate: wire it as a non-gating reporting step in
+`run_pipeline.py`.)*
+
 ---
 
 ## OQ-59 — Within-kernel reading duplication corrupts the obstruction cover (westphalian instance)
@@ -2534,6 +2554,15 @@ duplicate. **Merge direction is the user's to confirm against this comparison; u
 merge** (the alternative fix is to rename for de-confusion and keep both). `conditional_sovereignty` vs
 `r2p_reading` **held distinct** — the text distinguishes them (gradated's own summary names absolutist
 and R2P as separate readings), so they do not collapse.
+
+**RESOLVED (2026-06-02): keep distinct, renamed for de-confusion.** `gradated_reading` →
+`governance_quality_reading` (id + module + 9 prose mentions + the "Graduated…" display title;
+`graduated_sovereignty` kept as-is). 50 refs across 2 files (the reading + an external ref in
+`r2p_reading`); witnessed: corpus loads, new id registered, old id gone, R1 dangling unchanged at 143
+(rename created none), westphalian obstruction unchanged (`licensed_plurality`). R3 will no longer flag
+westphalian (the names are no longer near-twins). The held `absolutist_reading` edge is the remaining
+OQ-59 item — it's an alias of `absolute_sovereignty` (a rename/edge fix, NOT a missing-reading generate);
+it must NOT enter the OQ-58 generate-backlog.
 
 **Specific question:** `westphalian_sovereignty` holds readings `[gradated_reading, graduated_sovereignty,
 absolute_sovereignty, r2p_reading, conditional_sovereignty]`. Several look like one position under

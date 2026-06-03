@@ -137,7 +137,7 @@ narrative_ontology:cs_kernel_codification('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b'
 narrative_ontology:cs_authority_grounding('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', extraction).
 narrative_ontology:cs_interpretation_layer_present('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b').
 narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__absolutist_reading, forecloses).
-narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__gradated_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__governance_quality_reading, coexists_with).
 narrative_ontology:cs_axiom('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', foundational, mass_atrocity_threshold_conditions_sovereignty).
 narrative_ontology:cs_axiom_status(mass_atrocity_threshold_conditions_sovereignty, holdable).
 narrative_ontology:cs_axiom_grounding('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', mass_atrocity_threshold_conditions_sovereignty, deontological).
@@ -285,7 +285,7 @@ narrative_ontology:omega_variable(intervention_effectiveness_doctrine_coupling, 
 
 omega_variable(
     reading_interpretation_divergence,
-    'Which sibling reading (absolutist vs gradated) is the doctrine actually implementing through UNSC practice? Does actual UNSC behavior instantiate the R2P reading''s claim of conditional sovereignty with residual international responsibility, or does it revert to absolutist sovereignty (with R2P as normative aspiration rather than binding practice)?',
+    'Which sibling reading (absolutist vs governance-quality) is the doctrine actually implementing through UNSC practice? Does actual UNSC behavior instantiate the R2P reading''s claim of conditional sovereignty with residual international responsibility, or does it revert to absolutist sovereignty (with R2P as normative aspiration rather than binding practice)?',
     'Comparison of UNSC voting patterns and authorization practices over time: are P5 states treating R2P as conditioning sovereignty (willingness to authorize intervention in peer states), or as a doctrine applicable only to weaker states (preserving veto-backed exemption from R2P scrutiny)? Historical trajectory of doctrine interpretation.',
     'If practice instantiates R2P reading: constraint is as described (tangled rope with snare experiences). If practice reverts to absolutism: the R2P reading is theater (piton) and the actual constraint is absolutist sovereignty. Classification of UNSC institutional perspective may shift from rope to piton.',
     confidence_without_resolution(high)
@@ -339,13 +339,13 @@ narrative_ontology:measurement(r2p_su_t15, westphalian_sovereignty__r2p_reading,
 
 narrative_ontology:coordination_type(westphalian_sovereignty__r2p_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__absolutist_reading).
-narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__gradated_reading).
+narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__governance_quality_reading).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, unsc_permanent_member_veto_authority).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, humanitarian_intervention_legitimacy).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, post_colonial_state_autonomy).
 
 % DUAL FORMULATION NOTE:
-% The Westphalian sovereignty kernel decomposes into three structurally distinct constraint stories: absolutist reading (sovereignty is inviolable, ε ≈ 0.15, mountain), R2P reading (sovereignty is conditional on protection, ε ≈ 0.58, tangled rope), and gradated reading (sovereignty degrades continuously with humanitarian performance, ε ≈ 0.42, tangled rope). Each reading has different beneficiaries, victims, and enforcement mechanisms. They are linked through network.affects_constraints because UNSC practice (actual implementation) instantiates one reading while discursively invoking another, creating institutional tension. The R2P reading is upstream of UNSC authority and post-colonial autonomy constraints — it enables and conditions them.
+% The Westphalian sovereignty kernel decomposes into three structurally distinct constraint stories: absolutist reading (sovereignty is inviolable, ε ≈ 0.15, mountain), R2P reading (sovereignty is conditional on protection, ε ≈ 0.58, tangled rope), and governance-quality reading (sovereignty degrades continuously with humanitarian performance, ε ≈ 0.42, tangled rope). Each reading has different beneficiaries, victims, and enforcement mechanisms. They are linked through network.affects_constraints because UNSC practice (actual implementation) instantiates one reading while discursively invoking another, creating institutional tension. The R2P reading is upstream of UNSC authority and post-colonial autonomy constraints — it enables and conditions them.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
