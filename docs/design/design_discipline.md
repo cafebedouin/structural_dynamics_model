@@ -241,6 +241,45 @@ and the engine-first provenance (§1) is the only defense against that, which is
 about history one has to trust. So §3 is strong but not decisive, and it is labeled evidence, not
 derivation, deliberately.
 
+### 3a — The same cut, read as a method: perturbation (the one move under all the instruments)
+
+The trifurcation has been read here two ways — as a taxonomy of *failures* (Axiom T: which kind of
+paradox is this) and of *resolutions* (the Ω types: measurement / definition / stakeholder). There is
+a third reading that unifies them and is the engine's actual operating procedure: **Type A/B/C are the
+three dimensions you perturb.** A Type-X failure is axis X having varied *unmarked*; the method is to
+vary axis X *on purpose*, hold the rest fixed, and read what stays against what moves. What moves is
+variant → seated → the depth (the deferential half). What stays is invariant **under the probes
+actually run** — and the procedure licenses only that, not "real" simpliciter: a flat axis and a
+perturbation never run (or run along the wrong sub-axis) present the identical flat result (the
+cyclopean §4 point; the "I-didn't-find-it ≠ it-isn't-there" gap the framework polices everywhere).
+So invariance-under-perturbation licenses **defer provisionally** — Axiom R's realist half held
+exactly as §2 already holds it: *seat-identified, fallible, revisable*, with the **false-mountain
+diagnostic** as the operationalized catch for the residual gap (a constraint deferred-to as invariant
+that a not-yet-run perturbation would have moved). The honest consequence, stated not smuggled:
+**Axiom R's realist pole reached this way is unfalsified-so-far invariance, not certified floor** —
+the framework is more search-relative than a naive reading of "defer to the mountain" admits, which
+is consistent with §2 (the boundary is identified from within a seat), not a new concession. The
+genuine seat-independent operationals (gravity) are the limit this search approaches, not something
+the procedure ever hands you finished.
+
+- **Axis C — perturb the observer** (the indexical (P,T,E,S)): `reading_diff`.
+- **Axis B — perturb the axiom** (the kernel's commitments / which reading): `axiom_diff`; cross-kernel
+  the Westphalia near-kernels, where two near-identical kernels held side by side make the invariant
+  legible as their agreement and the divergence as their disparity.
+- **Axis A — perturb time**: the drift/lifecycle machinery.
+- and the reflexive fourth, **perturb the apparatus** (`perturb.py`, the stability band, the
+  `ε`-stability rule §7): which verdicts survive the choice of calibration, which were the threshold's
+  verdict and not the constraint's (§5).
+
+This is not new machinery — it is the operational form of the commitments already stated. **The seat
+of a verdict (S1, S2) *is* the perturbation that flips it:** a verdict is seated in axis X exactly when
+some variation along X changes it, and contentless exactly when none does. So "declare the seat" and
+"name the axis your verdict is sensitive to" are one act, and the engine surfaces the seat *by* finding
+the axis along which the classification is not invariant. The recurrence of §3 is therefore also a
+recurrence of *one move* across independently-built instruments (observer, axiom, temporal,
+calibration), which is the §3 evidence-argument carried into method. Full statement:
+`docs/the_perturbation_principle.md` (theory) and `docs/design/the_perturbation_move.md` (code).
+
 ---
 
 ## 4. What the engine is for (consequence of S3)

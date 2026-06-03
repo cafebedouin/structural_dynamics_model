@@ -541,6 +541,47 @@ directions of the absence-as-value sin and that it composes on itself:
 
 ---
 
+## Perturbation is the probe; invariance is the read (a claimed invariant needs a perturbation that moves it)
+
+The engine's whole read is **perturb one axis, hold the rest, sort what stays (invariant) from what
+moves (variant)** — observer (`reading_diff`), axiom (`axiom_diff`), time (the drift machinery), and
+the apparatus itself (`perturb.py`, the stability band). Theory: `docs/the_perturbation_principle.md`;
+code shape: `docs/design/the_perturbation_move.md`. The build-discipline consequence is one sentence:
+**an invariance claim is the null result one level up, so it inherits the spine.** "Invariant under
+perturbation" is byte-identical to "I never perturbed," "I perturbed the wrong axis," or "my probe
+didn't dispatch" — the same absence-as-presence the five patterns share, now wearing the costume of a
+*stability* finding instead of a clean grep.
+
+So a claimed invariant is unfalsified until a **perturbation you know in advance must move a seated
+verdict** fires on it — the positive control of the section above, specialized. The canonical one is
+**self-diff**: a reading diffed against itself must return all-invariant under the strict key
+(`reading_diff(X,X,exact,_,[],[])`; `axiom_diff(X,X,exact_name,Ag,[],[])`), and the operator must be
+shown to *find* variance on a known-variant case before its "invariant" on the real case counts. An
+operator that cannot see "no difference" cannot be trusted to see difference.
+
+Two failure shapes specific to the invariance read, both already in the patterns above:
+
+- **The phantom invariant (Patterns 4–5 in stability clothing).** Zero variation has two causes that
+  present identically: a genuinely fixed axis, and a perturbation never run / an absent datum
+  defaulted. The `Supp=0.5` fallback (Pattern 4) injects a value that does not move *because it was
+  never authored*, indistinguishable at the read site from a value that does not move *because it is
+  fixed*. Tripwire the fallback (perturb it to an out-of-range value); if the "invariants" flip, they
+  were phantoms. An invariant you *found* and an invariant you *failed to probe for* are the same flat
+  result until the control separates them.
+- **The baked axis (S2's no-seat pose in code).** The perturbation key is the seat; defaulting it
+  silently is a concealed seat. The substrate refuses this on purpose: `reading_diff` **throws**
+  rather than fake a `weighted` partition it cannot honestly form, and `axiom_diff`'s `axiom_concept/2`
+  is empty by default with the report stating that concept-alignment is therefore all-blind. A
+  perturbation operator that picks its own axis without being told is not "convenient" — it is
+  reporting a seated verdict while concealing the seat, which is the one inconsistency the framework
+  names. **Make the axis a required argument; let the operator fail loud rather than choose for you.**
+
+When you add the *next* diagnostic, recognize whether it is this move (object, perturbed axis, authored
+value read, declared key) and give it the same shape and the same self-diff control — do not rebuild it
+bespoke and do not let it assert an invariant it never tried to break.
+
+---
+
 ## Separate fallible judgment from action at the tool boundary
 
 The meta-lesson behind several patterns above (Pattern 4 fabricated default, Pattern 5
