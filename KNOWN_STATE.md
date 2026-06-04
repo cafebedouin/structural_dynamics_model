@@ -20,6 +20,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — OQ-71 depth-lineage probe: machinery pilot complete (generator run-tag routing, fingerprint probe validated by exact reproduction)
+
+Full experiment record in ISSUES.md OQ-71 (status `investigating`); canonical artifacts in
+`audits/2026-06-04_oq71_depth_lineage/` (NOT `outputs/` — outputs/ is gitignored, and the
+salvaged dumps there are irreplaceable). Items a future editor needs:
+
+- **`run_no_scope` now honors `--run-tag`** (`agent/generate_kernel_corpus.py:1087`): output
+  routes via `run_dirs()` (json/<tag>/, testsets/<tag>/, run-scoped processed ladder); flag-off
+  path unchanged. **The regression gate for this change is REQUEST-PAYLOAD identity, not
+  story identity** — generation is stochastic (no temperature pinned in batch params), so
+  comparing generated story bytes across runs is an invalid gate that can both false-fail
+  (noise) and false-pass (rubber-stamp). The correct invariant: the constructed batch-request
+  payloads, captured WITHOUT submission via the stubbed-client harness
+  (`audits/2026-06-04_oq71_depth_lineage/gate2_capture.py`), byte-compared pre/post-change and
+  flag-on/flag-off. Both gates witnessed 2026-06-04. Re-gate any future edit to the no-scope
+  request path the same way.
+- **`validate_reading_relation_integrity` writes its quarantine to the FLAT path**
+  `prolog/testsets/cs_reading_relation_quarantine.json` even when called on run-tagged dirs —
+  a run-tagged sweep silently clobbers any flat-corpus quarantine present (pilot's copy
+  relocated to the audit dir). Pass/patch a run-scoped path before the OQ-71 scale-run sweep,
+  or before relying on a flat sweep's quarantine after any run-tagged sweep.
+- **`python/lineage_fingerprint_probe.py`** is a validated six-dim fingerprint dumper: its
+  output reproduced the original v5 dump **exactly** (multiset equality, 3,380/3,380 lines,
+  after the documented `catholic_church_1200` exclusion — the non-corpus demo that
+  `known_constraint/1` finds under any `corpus_path` overlay because `[stack]` asserts it from
+  `constraint_instances.pl`). The salvaged originals (`/tmp/v5_sixdim.txt`, 772-line cur) now
+  live in the audit dir with md5s recorded in OQ-71.
+- **Pilot (109/112 stories, run-tagged `lineage_probe_01`): machinery HOLDS; the pilot excess
+  number is QUARANTINED** — n=83 matched < 300 pre-registered, so it is not an H1 readout and
+  must not anchor the scale run (OQ-71 pilot ruling). Main flat corpus verified untouched
+  (exactly 1,106 files before and after).
+
 ## 2026-06-04 — Probe/loading infrastructure hardening (gotchas → utilities; two commits)
 
 The existence of `swipl_load_path_and_probe_gotchas.md` traced to five structural decisions;
