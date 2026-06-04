@@ -253,6 +253,19 @@ awaiting a controlled generator-to-generator comparison that holds story count f
 `audits/2026-06-04_oq71_depth_lineage/` are the witnesses; this prose is the summary. Full
 design, pre-registration, gates, and rulings: ISSUES.md OQ-71.*
 
+**The verdict, stated first and at its true width — the finding is a disjunction, and citing
+either branch alone overstates it.** A 438-story arm differing from the breadth control in two
+bundled ways — kernel-nesting depth AND seed-authorship — minted distinct structural classes at
+~1.5× the control at every matched n, beyond resampling noise. **Either** nesting depth re-opens
+structural discovery, **or** a different seed-author constitutes a new generator regime (§9's
+punctuation, observed semi-controlled). This run cannot tell them apart; the
+authorship-controlled breadth arm in OQ-71 can. What is settled regardless of branch:
+*unconditional* boundedness and coupling-invariance are falsified — §0 survives only as
+within-regime. And the single strongest item is not the 1.5× (which carries the confound) but
+the **pre-registered shape-match**: novelty rises, turns down at the deepest bands, and the arm
+saturates toward its own S_max — the punctuated-equilibrium shape §9 conjectured *before* this
+data existed, met at a non-obvious shape no branch of the disjunction disturbs.
+
 **The test.** A designed kernel-nesting lineage (social_coordination ⊃ government ⊃
 constitutional_government ⊃ ten constitutions ⊃ instruments ⊃ clauses ⊃ doctrines; 449 seeds,
 438 generated, 10 levels deep, fan 2–5 throughout) against a 300-story breadth control from the
