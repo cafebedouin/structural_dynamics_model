@@ -20,6 +20,73 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-03 — FSM agency gate: agent_beneficiary/2 two-site narrowing (maxwell un-stripped; one-row manifest diff, derived then confirmed)
+
+**What changed (code):**
+- `narrative_ontology.pl`: new exported `non_agent_beneficiary/1` registry (exactly two ruled
+  entries: `entropic_universe_hypothesis`, `international_humanitarian_law_framework`) + derived
+  `agent_beneficiary/2` (`constraint_beneficiary` minus registry; **unlisted = agent**, fail-open
+  to status quo). The TWO-GATE PRINCIPLE for NON-AGENT entries is documented at the registry:
+  gate 1 ontology-true (proposition-kind referent), gate 2 host-deserves-the-released-certification
+  (metrics AND narrative/omegas converge on genuine-law). Agency test is ONTOLOGICAL; authorial
+  purpose / counterfactual-ness / placeholder-ness never flip a tag (user rulings, this date).
+- `signature_detection.pl`, two sites narrowed to `agent_beneficiary/2`: the FSM gate
+  (`false_summit_mountain/2`) and `count_power_beneficiaries/2` (the NL profile's
+  `BeneficiaryCount == 0`). FSM-ONLY narrowing was witnessed insufficient pre-write: with the raw
+  beneficiary still visible to CI_Rope, maxwell would certify `coupling_invariant_rope` → rope×4.
+- NO authored `constraint_beneficiary/2` facts edited. Untouched consumers + reasons: see
+  ISSUES.md OQ-63 (directionality — HIGHEST STAKES, χ corpus-wide, undetermined) and OQ-66
+  (`drl_core.pl:287` — agency-dependent but witnessed inert; full consumer surface
+  :333/:362/maxent 173-176 on record).
+- New `prolog/tests/test_agent_beneficiary.pl` (plunit, 7 tests + 10 sub-instances, all pass):
+  registry-exact-contents guard, view dispatch controls, maxwell positive control
+  (natural_law + mountain×4), 11 per-item FSM non-regression instances, and the **:287 inertness
+  tripwire** — classifies every divergence candidate raw-vs-filtered (dr_type ×4 canonical
+  contexts + maxent_top_type) via test-local redefinition with restore; fails loudly when the
+  OQ-66 deferral goes stale. Gotcha encountered: `setup_call_cleanup/3` defers cleanup while the
+  goal holds CHOICEPOINTS — the restore hadn't run when the post-control executed; goal must be
+  wrapped in `once/1`.
+
+**Witnesses (this session, all pasted in-conversation):**
+- Before: maxwell = TR/scaffold/scaffold/TR, signature false_summit_mountain (pipeline manifest
+  2026-06-03T16:10:13Z, n=1106, 669eab5 dirty). After: **mountain×4, natural_law**.
+- Per-item FSM table over all 41 claimed mountains, before vs after: maxwell FSM YES→no is the
+  ONLY flip; humane_treatment still fires with agent-count 2→1; other 10 firing + 29 non-firing
+  unchanged.
+- Manifest diff DERIVED pre-write (each registry value has exactly ONE host, main+SOTU, probe
+  positive-controlled), then confirmed: classification-level diff = **exactly 1 row (maxwell)**
+  out of 1106; zero maxent_top_type flips elsewhere.
+- **Corpus-aggregate ripple (expected footprint, attributed):** all rows show small numeric
+  drift in corpus-fitted fields (max |Δ|: raw_maxent_probs 0.015, arakelov_height 0.013,
+  wasserstein 0.036) — pipeline proven DETERMINISTIC (same-code rerun diff = 0 rows), so the
+  ripple is the real propagation of one reclassification through corpus-fitted aggregates, not
+  noise. maxwell's own shadow: mountain 0.990 → 0.95, still top.
+- Falsification check: debt-ceiling (statutory_debt_ceiling__constitutional_nullity_reading)
+  UNCHANGED at both levels — cascade TR/rope/rope/TR + false_summit_mountain; shadow still
+  rope=1.0/entropy=0 vacuum. Fix A did not resolve it (predicted; its
+  `constitutional_supremacy_doctrine` is scoped out of the registry — OQ-66).
+- Regression attribution: corpus-wide `run_tests` failures 851 (worktree) vs 850 (HEAD baseline
+  worktree); failure-name diff = exactly the 3 `perspectival_gap` tests of the three NEW
+  untracked testsets (chip/export/predictive_surveillance — prior session's files, absent at
+  HEAD). Zero failures attributable to this change. `run_dynamic_suite` still aborts at the
+  pre-existing OQ-57 throw — reproduced at BOTH endpoints (HEAD worktree + working tree) and
+  root-caused: `drift_events.pl:230` queries `narrative_ontology:requires_active_enforcement/1`
+  but the predicate is authored/bridged under `domain_priors:` everywhere — wrong-module
+  qualifier, not a data gap (OQ-57 evidence updated).
+
+**Detector-bait finding ([EDGE] scan):** 4/12 FSM firings were expectation-authored (explicit
+bait: maxwell + total_war; omega-routed: env-instability + nuclear_impossibility) under a uniform
+FSM-as-extraction-evaluator misconception; 445/1106 files co-discuss beneficiaries with the
+detector (template-wide FSM-awareness); phrase scans undercount (maxwell's bait found only by
+per-file read). Filed as OQ-65 — framed as a committer-axis DISCRIMINATOR, not only an ε-caveat.
+
+**Open questions filed:** OQ-63 (directionality agency-dependence — ranked first, χ corpus-wide),
+OQ-64 (constraint_vindicates/2 split), OQ-65 (detector-bait discriminator), OQ-66 (gate-two
+holds ledger: press_reformation gate-2-fail with omega text; debt-ceiling scope-out; :287
+deferral surface + tripwire pointer).
+
+---
+
 ## 2026-06-03 — Purity audit: structural_purity/2 was dead (bound-probe bug, now fixed); correction key for purity readings
 
 **Audit:** `docs/audits/purity_audit_20260603.md` (raw evidence `outputs/purity_audit_20260603/`,

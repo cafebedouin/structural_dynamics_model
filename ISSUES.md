@@ -2401,6 +2401,18 @@ the per-constraint JSON (`requires_active_enforcement` key), so the data exists 
 consistent with a per-constraint authored-fact gap rather than a wholesale missing predicate. Build
 Discipline Pattern 5 lens: an unguarded call where absence should fail-closed/skip, not throw.
 
+**Root cause identified (2026-06-03, agency-gate session):** it is neither a missing fact nor a
+missing declaration — it is a **wrong-module qualifier**. `requires_active_enforcement/1` is
+authored and bridged under `domain_priors:` everywhere (testset multifile declarations,
+`drl_core.pl:86` bridge, `narrative_ontology.pl` itself queries `domain_priors:` at its
+is_tangled_rope clause); `narrative_ontology:requires_active_enforcement/1` has never existed, so
+`drift_events.pl:230` throws whenever its guard is REACHED — i.e. for any constraint with
+ε<0.10 ∧ theater>0.70 (kodashim: ε=0.08, theater=0.85). Witnessed at BOTH endpoints: direct call
+throws identically in the working tree and in a HEAD-baseline worktree (669eab5). Fix is the
+one-token qualifier change `narrative_ontology:` → `domain_priors:` at drift_events.pl:230 —
+deliberately NOT bundled into the agency-gate change (output-affecting in its own right: drift
+events start firing where they previously threw).
+
 **What resolution changes:** Either (a) author the missing fact for the affected constraint(s) and add a
 generation-template check, or (b) guard the call in `drift_events.pl:230` to treat an absent
 `requires_active_enforcement` as a defined default (skip / `false`) — which is the more robust fix if the
@@ -2753,8 +2765,6 @@ applies: a surprising-*clean* reading on a sparse-data story is suspect-by-const
 
 ---
 
----
-
 ## OQ-61 — Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count
 
 **Ω-type:** Ω_C (conceptual/design — three operator rulings, none resolvable from code).
@@ -2789,8 +2799,6 @@ text/aggregation only — no classification path is touched.
 
 ---
 
----
-
 ## OQ-62 — Purity band vocabulary fork: fpn_zone vs purity_zone, and sentinel→worst-zone in both banders
 
 **Ω-type:** Ω_C (conceptual — which vocabulary wins is a design ruling; the guard is mechanical).
@@ -2821,6 +2829,142 @@ latent unknown→worst mechanism to fail-closed and can land independently of (a
 vocabulary ruling if desired.
 
 ---
+
+## OQ-63 — Directionality's beneficiary read: agency-dependent or not? (corpus-wide χ stakes — HIGHEST-STAKES item of the agency-gate family)
+
+**Ω-type:** Ω_C (design ruling: which beneficiary view should d-derivation consume), with an
+Ω_E diagnostic attached.
+
+**Status:** open — ranked FIRST among the OQ-63..66 agency-gate family. NOT co-equal with the
+inert drl_core:287 site (OQ-66): :287 is witnessed behaviorally inert today;
+this one feeds χ for every constraint with beneficiary/victim facts.
+**Origin:** FSM agency-gate session 2026-06-03 (KNOWN_STATE entry of same date). The two-site
+fix (signature_detection.pl FSM gate + count_power_beneficiaries) deliberately did NOT touch
+this consumer.
+**File:** `constraint_indexing.pl:420` (`beneficiary_victim_directionality/3` —
+`HasBeneficiaries` from a raw `constraint_beneficiary/2` existence check, → `power_role_heuristic`
+→ d → f(d) → χ).
+
+**Specific question:** `beneficiary_victim_directionality` treats ANY authored beneficiary —
+including proposition-kind values (a doctrine/hypothesis the constraint vindicates, see
+`narrative_ontology:non_agent_beneficiary/1`) — as evidence of gain-flow when deriving d. Is the
+d-derivation's beneficiary read agency-dependent (a proposition cannot be a flow endpoint, so it
+should read `agent_beneficiary/2`) or agency-independent (the authored fact marks the reading's
+asymmetry structure regardless of referent kind)? Unresolved either way at the 2026-06-03 ruling;
+status honestly: **undetermined**.
+
+**Stakes:** corpus-wide χ. Every constraint whose ONLY beneficiaries are proposition-kind currently
+gets structural d instead of canonical d(P) fallback — if the read is ruled agency-dependent, χ has
+been mis-derived for that class (today: maxwell_demon_impossibility — masked because the natural_law
+signature override decides its type upstream; the class grows with the corpus). This is the
+highest-stakes instance of the beneficiary-field overloading, NOT a 12-mountain question.
+
+**Diagnostic when picked up:** enumerate {C : has constraint_beneficiary, no agent_beneficiary, no
+constraint_victim}; for each, compare d/χ at the 4 canonical contexts under raw vs agent-filtered
+HasBeneficiaries; any type flip or χ shift is the measured blast radius.
+
+---
+
+## OQ-64 — constraint_vindicates/2 split: proposition-vindication is overloaded into constraint_beneficiary
+
+**Ω-type:** Ω_C (schema design).
+
+**Status:** open
+**Origin:** FSM agency-gate session 2026-06-03, Steps 1–2 calibration reads.
+**Files:** `narrative_ontology.pl` (agent_beneficiary/2 + non_agent_beneficiary/1 registry — the
+split's forerunner; see its comment block), generation templates (`agent/generate_*`).
+
+**Specific question:** `constraint_beneficiary/2` is authored with at least three distinct
+intents: (i) actual agent beneficiaries; (ii) propositions the constraint vindicates
+(maxwell's `entropic_universe_hypothesis`, debt-ceiling's `constitutional_supremacy_doctrine`,
+press_reformation's `technological_inevitability_interpretation`); (iii) detector-bait /
+adjudication-expectation entries written so FSM would "evaluate" them (see OQ-65). Should (ii)
+get its own authored field `constraint_vindicates/2` so generation stops overloading the
+beneficiary slot?
+
+**Evidence so far (authored text, witnessed 2026-06-03):**
+- total_war_winnability_post1945 `:212`: beneficiary "included to trigger false-summit (FSM)
+  evaluation only … FSM will correctly identify the lack of true beneficiary extraction and
+  confirm the Mountain classification" — explicit bait + the misconception.
+- maxwell_demon: "The beneficiary declaration … is included to evaluate whether this genuine
+  natural law might contain a false-summit candidate" — the flagship case is also bait.
+- environmental_instability `:193/:196` + omega `false_summit_beneficiary_ambiguity`: author
+  expects FSM to adjudicate beneficiary-vs-less-victimized empirically; FSM is presence-only.
+All share one misconception: **FSM-as-extraction-evaluator** (it is a presence trigger).
+
+**What resolution changes:** the registry (non_agent_beneficiary/1) becomes a migration shim:
+proposition-kind values move to `constraint_vindicates/2` facts at generation time; the agency
+predicate stops needing per-value rulings for new corpus. Ruling 2026-06-03 stands meanwhile:
+authorial purpose NEVER flips an agency tag.
+
+---
+
+## OQ-65 — Detector-bait authoring as committer-axis discriminator (and FSM-statistics validity)
+
+**Ω-type:** Ω_E (corpus measurement), with a committer-axis Ω_C edge.
+
+**Status:** open
+**Origin:** [EDGE] directive + scan, FSM agency-gate session 2026-06-03.
+
+**Specific question:** How much of FSM's corpus-wide firing measures authored convention rather
+than detected naturalization — and can the bait-vs-omega-routed split be used as a SIGNAL, not
+just a caveat? Framing per 2026-06-03 ruling: the gaming is *structured and checkable against
+the authored omega* — explicit-bait (beneficiary authored to exercise the detector) vs
+omega-routed (author routes the open question through an omega and expects adjudication) are
+distinguishable committer-axis postures, i.e. a discriminator, not only contamination.
+
+**Evidence so far (witnessed 2026-06-03):**
+- Per-item read of the 12 FSM-firing constraints: explicit bait 2 (maxwell, total_war);
+  omega-routed adjudication-expectation 2 (environmental_instability, nuclear_impossibility);
+  FSM-aware substantive 6; no FSM commentary 2 (article_27, statutory_debt_ceiling).
+  ⇒ 4/12 firings were expectation-authored.
+- 445/~1106 corpus files co-discuss beneficiaries with the false-summit detector within 200
+  chars — the generation TEMPLATE is FSM-aware corpus-wide.
+- Phrase-level scans UNDERCOUNT: exact "included to trigger" found only total_war; maxwell's
+  bait uses "included to evaluate" — found only by per-file reading. Any corpus-wide bait census
+  needs per-file reads (or an LLM pass), not greps.
+
+**What resolution changes:** §4.4 ("false positives corrupt corpus-level statistics") and the §6
+ε-caveat get a measured input; the committer axis gains a checkable signature (asserted structure
+in tension with authored doubt — the press_reformation "suspicious uniformity" pattern that did
+the gate-two discriminating work in this session's registry ruling).
+
+---
+
+## OQ-66 — Agency-gate boundary ledger: gate-two holds, scoped-out twins, and the :287 deferral surface
+
+**Ω-type:** Ω_C (taxonomy/ruling record).
+
+**Status:** open (ledger — items graduate individually)
+**Origin:** FSM agency-gate session 2026-06-03; rulings recorded in KNOWN_STATE same date.
+**Files:** `narrative_ontology.pl` (registry + two-gate principle comment block),
+`prolog/tests/test_agent_beneficiary.pl` (the :287 inertness tripwire), `drl_core.pl:284-287/:333/:362`,
+`maxent_classifier.pl:173,176,191`.
+
+**Held at gate two** (two-gate principle: a NON-AGENT registry entry needs gate 1 ontology-true
+AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only):
+- `technological_inevitability_interpretation` (press_reformation_causality__technological_
+  inevitability): gate 1 passes (an interpretation is proposition-kind); gate 2 FAILS on authored
+  openness — metrics/shadow are maxwell-identical (MaxEnt mountain 0.990 / entropy 0.031, a
+  near-perfect forgery the shadow cannot separate), but `:215` self-describes the 4×mountain
+  uniformity as "suspicious", omegas `natural_law_vs_contingent_framework` and
+  `technology_determinism_assumption` are authored OPEN ("if deployment requires choice:
+  false_summit fires"), and the file forecloses its beneficiary_deployment sibling. Stays
+  unlisted ⇒ default-agent ⇒ FSM keeps firing. Graduation: the host's omegas close toward
+  genuine-law and the convergence read passes.
+- `constitutional_supremacy_doctrine` (statutory_debt_ceiling__constitutional_nullity_reading):
+  scoped OUT by ruling — maxwell's metric twin (NL profile identical except BC); no honest agency
+  line separates them; the separating lever is its authored `emerges_naturally` (a statute) or
+  Fix-C taxonomy work, NOT the registry. Its shadow remains the rope=1.0/entropy=0 vacuum.
+- `drl_core.pl:287` (`natural_law_without_beneficiary`) deferral: semantically agency-dependent
+  ("no identifiable human beneficiary" — filtering would be correct) but witnessed behaviorally
+  inert for the current divergence set. Consumer surface ON RECORD: snare block (drl_core.pl:333),
+  tangled_rope block (drl_core.pl:362), MaxEnt shadow forbidden-features for snare AND
+  tangled_rope (maxent_classifier.pl:173,176,191), plus diagnostics (invertibility_analysis.pl:123,
+  omega1_audit.pl:128). Staleness guard: `test_agent_beneficiary:nlwb_287_inertness_direct`
+  classifies every divergence candidate raw-vs-filtered (dr_type ×4 canonical contexts +
+  maxent_top_type) and fails loudly on first divergence — when that test fails, this deferral has
+  expired; do not silently re-green it.
 
 ---
 

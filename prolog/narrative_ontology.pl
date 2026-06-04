@@ -36,6 +36,10 @@
     has_coordination_function/1,
     has_asymmetric_extraction/1,
 
+    % Agency-filtered beneficiary view (June 2026 — FSM agency gate)
+    agent_beneficiary/2,
+    non_agent_beneficiary/1,
+
     % Scaffold
     has_sunset_clause/1,
     
@@ -283,6 +287,72 @@ has_coordination_function(ConstraintID) :-
 %  A bare cut or once/1 here prevents enumeration with unbound C.
 has_asymmetric_extraction(ConstraintID) :-
     constraint_victim(ConstraintID, _).
+
+/* ==========================================================================
+   AGENCY-FILTERED BENEFICIARY VIEW (June 2026 — FSM agency gate)
+   ==========================================================================
+   constraint_beneficiary/2 is overloaded: most values name agents (actors or
+   actor-classes that can want and gain — persons, institutions, industries,
+   states), but a few name PROPOSITIONS the constraint vindicates (a doctrine,
+   hypothesis, framework). A proposition cannot capture rent from enforcement,
+   so proposition-kind values must not satisfy beneficiary-presence gates that
+   read presence as evidence of constructed extraction (FSM,
+   natural_law_signature's BeneficiaryCount==0).
+
+   Agency test is ONTOLOGICAL (ruling 2026-06-03): is the referent agent-kind
+   (a thing that can want and gain) or proposition-kind (a claim the constraint
+   vindicates or entails)? Authorial purpose (detector-bait, omega-routing),
+   counterfactual-ness, and placeholder-ness are generator-scoping properties
+   and NEVER flip an agency tag.
+
+   TWO-GATE PRINCIPLE for adding a non_agent_beneficiary/1 entry (standing
+   rule, ruled 2026-06-03): the two tag directions fail asymmetrically. An
+   AGENT tag withholds natural-law certification (fail-safe; needs gate 1
+   only). A NON-AGENT entry RELEASES a certification on its host, so it needs
+   BOTH gates:
+     Gate 1 — ontology-true: the referent is proposition-kind.
+     Gate 2 — the host independently deserves the certification the entry
+       releases: host metrics AND narrative/omegas converge on genuine-law.
+   Default for unlisted values: AGENT (fail-open to status quo). A new
+   proposition-kind value not yet ruled keeps current FSM behavior rather than
+   silently granting a natural-law certification.
+
+   Held at gate 2 (gate-1-pass, gate-2-fail — see ISSUES.md OQ):
+     - technological_inevitability_interpretation (press_reformation_causality:
+       authored-OPEN omegas, self-described "suspicious" uniformity)
+     - constitutional_supremacy_doctrine (statutory_debt_ceiling: scoped out;
+       maxwell's metric twin — separation needs a different lever)
+   A later constraint_vindicates/2 split (proposition-vindication as its own
+   authored field) is the continuation of this view, not a rewrite.
+   ========================================================================== */
+
+%% non_agent_beneficiary(?Value)
+%  Curated registry of proposition-kind beneficiary values. Each entry carries
+%  its two-gate provenance. Do NOT add entries without the gate-2 convergence
+%  read (host ε/omega/narrative) — see comment block above.
+
+% Gate 1: a hypothesis (the entropic-universe worldview), proposition-kind.
+% Gate 2: host maxwell_demon_impossibility is the witnessed genuine law —
+%   MaxEnt shadow 0.990 mountain / entropy 0.031, omegas authored empty,
+%   narrative asserts the Second Law. Ruled 2026-06-03.
+non_agent_beneficiary(entropic_universe_hypothesis).
+
+% Gate 1: a body of norms (legal framework), proposition-kind — ":231 the IHL
+%   framework benefits from having a stable standard" is vindication-talk.
+% Gate 2: moot by inertness — host humane_treatment_standard__absolute_
+%   prohibition keeps an agent co-beneficiary (detainees_under_armed_conflict),
+%   so FSM keeps firing; this entry releases nothing. Ruled 2026-06-03.
+non_agent_beneficiary(international_humanitarian_law_framework).
+
+%% agent_beneficiary(?ConstraintID, ?Beneficiary)
+%  constraint_beneficiary/2 filtered to agent-kind referents. Consumers that
+%  read beneficiary-presence as evidence of constructed extraction should read
+%  THIS view; consumers whose use is agency-independent (epistemic visibility,
+%  coordination-function evidence) keep the raw fact. No cut — same
+%  enumeration contract as has_coordination_function/1.
+agent_beneficiary(ConstraintID, Beneficiary) :-
+    constraint_beneficiary(ConstraintID, Beneficiary),
+    \+ non_agent_beneficiary(Beneficiary).
 
 /* ==========================================================================
    INDEXICAL GATE (v3.1)

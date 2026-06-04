@@ -77,22 +77,25 @@ constraint_signature(C, false_natural_law) :-
 constraint_signature(C, false_ci_rope) :-
     false_ci_rope(C, _), !.
 
-% Metric-derived: False Summit Mountain (v6.9)
+% Metric-derived: False Summit Mountain (v6.9; agency gate June 2026)
 % Intercepts constraints that meet all mountain metric thresholds but have
-% identifiable beneficiaries. Genuine natural laws have zero beneficiaries;
-% a mountain with beneficiaries indicates a naturalized constructed constraint.
-% Checked BEFORE natural_law so beneficiary-bearing constraints are not
-% certified as natural law. NOTE (2026-05-31 gap check): FSM is NOT
-% belt-and-suspenders backup for natural_law_signature's BeneficiaryCount==0
-% gate — it is the ONLY live beneficiary screen. By cascade construction FSM
-% catches every mountain-metric + emerges_naturally constraint that carries a
-% constraint_beneficiary/2 fact, so the constraints that fall through to the
-% natural_law clause below are exactly the beneficiary-blind residue. Measured
-% on testsets_3000: 0/404 NL-signature constraints carry a constraint_beneficiary
-% fact (corpus holds 6739 such facts, none on the 404). NL's own BeneficiaryCount
-% gate reads intent_power_change, which is empty corpus-wide (0 facts) — so that
-% gate is dormant-over-empty-table, satisfied by absence, NOT a redundant check
-% of this one. See ISSUES.md OQ on the satisfy-on-absence gate class.
+% identifiable AGENT beneficiaries. Genuine natural laws have zero agent
+% beneficiaries; a mountain with agent beneficiaries indicates a naturalized
+% constructed constraint. Proposition-kind beneficiaries (doctrines/hypotheses
+% the constraint vindicates) are filtered by narrative_ontology:agent_beneficiary/2
+% and do NOT trip FSM. Checked BEFORE natural_law so agent-beneficiary-bearing
+% constraints are not certified as natural law. NOTE (2026-05-31 gap check):
+% FSM is NOT belt-and-suspenders backup for natural_law_signature's
+% BeneficiaryCount==0 gate — it is the ONLY live beneficiary screen. By cascade
+% construction FSM catches every mountain-metric + emerges_naturally constraint
+% that carries an agent_beneficiary/2 solution, so the constraints that fall
+% through to the natural_law clause below are exactly the agent-beneficiary-blind
+% residue. Measured on testsets_3000 (pre-agency-gate): 0/404 NL-signature
+% constraints carry a constraint_beneficiary fact (corpus held 6739 such facts,
+% none on the 404). NL's own BeneficiaryCount gate read intent_power_change,
+% which is empty corpus-wide (0 facts) — that gate was dormant-over-empty-table,
+% satisfied by absence; it now counts agent beneficiaries (see
+% count_power_beneficiaries). See ISSUES.md OQ on the satisfy-on-absence class.
 constraint_signature(C, false_summit_mountain) :-
     false_summit_mountain(C, _), !.
 
@@ -185,7 +188,11 @@ count_power_beneficiaries(C, Count) :-
     % "the gate stops passing on absence," NOT "the NL/mountain count stayed fixed" — a count
     % shift here is a possibly-correct outcome (the gate declining to certify on absence),
     % recorded as a finding, not reverted as a regression.
-    findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries),
+    % June 2026 agency gate: count AGENT beneficiaries only (a proposition the
+    % constraint vindicates is not an "asymmetric winner"), so natural_law's
+    % BeneficiaryCount==0 stops being blocked by proposition-kind values.
+    % Registry + two-gate principle: narrative_ontology:non_agent_beneficiary/1.
+    findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),
     sort(Beneficiaries, UniqueBeneficiaries),
     length(UniqueBeneficiaries, Count).
 
@@ -1193,18 +1200,22 @@ fcr_test_failure(C, nonsensical_coupling(Strength)) :-
    ================================================================
    FSM(C) :-
        mountain_metric_profile(C),       % low ε, low suppression, emerges naturally
-       constraint_beneficiary(C, _).     % has identifiable beneficiaries
+       agent_beneficiary(C, _).          % has identifiable AGENT beneficiaries
 
    Unlike FNL (which requires Boltzmann non-compliance) and FCR
    (which requires rope-appearing metrics), FSM targets the specific
    case where a Mountain meets ALL metric thresholds but has
    beneficiaries that reveal its constructed origin.
 
-   Genuine natural laws have zero beneficiaries: they benefit no
+   Genuine natural laws have zero AGENT beneficiaries: they benefit no
    particular agent because they are structural features of reality.
-   A "natural law" with beneficiaries is a naturalized construct —
+   A "natural law" with agent beneficiaries is a naturalized construct —
    a constraint whose constructed origin has been made invisible
-   through historical accumulation.
+   through historical accumulation. A PROPOSITION-kind beneficiary (a
+   doctrine/hypothesis the constraint vindicates, e.g. maxwell_demon's
+   entropic_universe_hypothesis) is not an agent and must not trip FSM
+   (June 2026 agency gate — registry and two-gate principle in
+   narrative_ontology.pl at non_agent_beneficiary/1).
 
    Key design decision: coupling is NOT a hard gate. Mountains are
    immune to contamination (type_contamination_strength = 0.0,
@@ -1237,10 +1248,13 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore)) :-
     Supp =< SuppCeil,
     domain_priors:emerges_naturally(C),
 
-    % Primary gate: must have at least one identifiable beneficiary.
-    % Genuine natural laws have none — beneficiary presence is the
-    % structural signal of constructedness.
-    findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries),
+    % Primary gate: must have at least one identifiable AGENT beneficiary.
+    % Genuine natural laws have none — agent-beneficiary presence is the
+    % structural signal of constructedness. Proposition-kind values
+    % (doctrines/hypotheses the constraint vindicates) are filtered out via
+    % narrative_ontology:agent_beneficiary/2 (June 2026 agency gate; ruling
+    % and two-gate registry principle documented at the registry).
+    findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),
     Beneficiaries \= [],
     length(Beneficiaries, BeneficiaryCount),
 
