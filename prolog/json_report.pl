@@ -1280,6 +1280,15 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     ;   format(S, '    "corpus_wasserstein_fracture": null,~n', [])
     ),
 
+    % arakelov_threshold (corpus p75 of non-trivial heights, memoized this run;
+    % governs the genuine_sheaf/fragile_presheaf split in per-constraint
+    % sheaf_status — recorded so the split is reproducible from this file
+    % without recomputing the percentile)
+    (   catch(arakelov_height:arakelov_threshold(ArakThresh), _, fail)
+    ->  format(S, '    "arakelov_threshold": ~6f,~n', [ArakThresh])
+    ;   format(S, '    "arakelov_threshold": null,~n', [])
+    ),
+
     % contextuality (Abramsky-Brandenburger: corpus fraction + by-type breakdown)
     (   catch(grothendieck_cohomology:contextuality_fraction(CorpusCF), _, fail)
     ->  format(S, '    "contextuality": {"corpus_fraction": ~6f, "by_type": ', [CorpusCF]),

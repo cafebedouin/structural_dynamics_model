@@ -20,6 +20,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — sheaf_status provenance traced end-to-end; arakelov_threshold now emitted + cited
+
+Follow-up trace of the sheaf_status chain (json_report.pl → pipeline_output.json →
+enriched_pipeline.json → enhanced_report.py). **Coherent:** H¹, heights, and sheaf_status all
+run on the same site (`site_contexts/1`, `site_mode=canonical` config.pl:575 — and `site_mode`
+was already recorded in the output's `config` dump, which `findall`s every param; a literal grep
+misses it). Cross-field check on n=1107: `manifest_presheaf ⟺ h1_band>0` 0 violations;
+genuine/fragile split exactly reproduces from co-emitted heights + recomputed p75, 0 mismatches.
+**Gap fixed:** the governing `arakelov_threshold` (memoized corpus p75, arakelov_height.pl:127)
+was not recorded anywhere — now emitted as `diagnostic.arakelov_threshold` (json_report.pl,
+beside corpus_wasserstein_fracture) and consumed by enhanced_report.py, which cites
+`[p75 this run: N]` on the two height-dependent regimes only. Witnessed: emitted 0.400076 ==
+independent recompute (n=964 non-trivial heights); passes through enrich; per-file report check
+across all three regimes (citation present on genuine/fragile, absent on manifest). No schemas.py
+change needed (diagnostic section has no field whitelist). **Gap deferred (already ruled):**
+`catholic_church_1200` reaches `genuine_sheaf` via *uncomputable height* (ε unauthored ⇒
+`arakelov_height_pair` fails ⇒ fragile clause can't fire) — a second absence route independent of
+OQ-51's all-unknown-seats route; recorded as OQ-51 evidence ("Second absence route") with the
+build requirement that the ruled 4th value also fail-N/A on uncomputable height, not only on
+RealSeats < 2. Do not patch sheaf_analysis.pl piecemeal — OQ-51's ruling moves ~30 consumers
+together under output-changing discipline.
+
+---
+
 ## 2026-06-04 — Schema drift fixed: `sheaf_status` added to `PIPELINE_FIELDS` (schemas.py)
 
 Commit `205a8187` (2026-06-02) added per-constraint `sheaf_status` emission to

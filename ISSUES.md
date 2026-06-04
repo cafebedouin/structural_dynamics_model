@@ -2201,6 +2201,17 @@ real W1 threshold (≥~0.05) rather than `1e-9`.
   (this is *how H1 consumes* the honest `unknown`; do **not** re-suppress `unknown` in `dr_type`). One
   remaining sub-decision before building: the exact name/encoding of the N/A `sheaf_status` value and
   the JSON representation of N/A H1.
+
+  **Second absence route (evidence, 2026-06-04):** `sheaf_status/2`'s fragile clause reads
+  `arakelov_height/2`, which fails when `base_extractiveness` is unauthored — so a constraint with
+  H1=0 and *uncomputable height* falls through to `genuine_sheaf` by absence (Pattern 5 via the
+  height leg, independent of the seat-count leg above). Today coextensive with the all-unknown case
+  (n=1: `catholic_church_1200`, h1_band=0, arakelov_height=null in the 2026-06-04 run), but a
+  constraint with ≥2 real agreeing seats and missing ε would pass the `RealSeats < 2` guard and
+  still slip through. **The 4th-value build must also fail-N/A on uncomputable height for the
+  genuine/fragile sub-split, not only on RealSeats < 2.** Run-level provenance for the split is now
+  emitted: `diagnostic.arakelov_threshold` in pipeline_output.json (json_report.pl, 2026-06-04) and
+  cited per-report by enhanced_report.py; `site_mode` was already in the `config` dump.
 - **36 cell (resolved):** confirmed type-invariant MaxEnt drift for ~6 constraints, so W1 and H1 are
   **non-redundant** (W1 sees intra-type drift H1 cannot) — but the practical value is limited by W1's
   chain-conditional scope and corpus-dependence (above). The off-chain analogue (mass moving into

@@ -209,15 +209,22 @@ _SHEAF_STATUS_EXPLAIN = {
 }
 
 
-def _render_sheaf_status(status):
+def _render_sheaf_status(status, threshold=None):
     """Render sheaf_status. Renders explicitly when null/absent (do not silently
-    omit — a missing value must be visible, not invisible) and when unrecognized."""
+    omit — a missing value must be visible, not invisible) and when unrecognized.
+
+    threshold: diagnostic.arakelov_threshold from the same pipeline run — the
+    actual p75 value that governed the genuine/fragile split. Cited on the two
+    height-dependent regimes so the split is auditable from the report alone."""
     if status is None:
         return "null — not computed (sheaf_status absent from pipeline output)"
     expl = _SHEAF_STATUS_EXPLAIN.get(status)
     if expl is None:
         return f"{status} — unrecognized sheaf status"
-    return f"{status} — {expl}"
+    out = f"{status} — {expl}"
+    if threshold is not None and status in ("genuine_sheaf", "fragile_presheaf"):
+        out += f" [p75 this run: {threshold:.4f}]"
+    return out
 
 
 def find_constraint_entry(pipeline_data, constraint_id):
@@ -879,7 +886,9 @@ def build_level2_convergence(constraint_id, pipeline_data):
 
     # Sheaf status (discrete gluing regime — synthesis of H^1 + Arakelov height).
     # Rendered unconditionally incl. null: a missing value must be seen, not omitted.
-    lines.append(f"    Sheaf status:     {_render_sheaf_status(entry.get('sheaf_status'))}")
+    # Threshold provenance: diagnostic.arakelov_threshold (same run as the regimes).
+    arak_thresh = (pipeline_data.get("diagnostic") or {}).get("arakelov_threshold")
+    lines.append(f"    Sheaf status:     {_render_sheaf_status(entry.get('sheaf_status'), arak_thresh)}")
 
     return "\n".join(lines)
 
