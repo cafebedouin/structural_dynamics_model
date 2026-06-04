@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "fourteenth_amendment__citizenship_clause",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "citizenship",
+    "story_uid": "7adb3603-aeb2-4a48-b150-89d2a7fef637",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.04,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Fourteenth Amendment Citizenship Clause — Birthright Citizenship as Irreversible Legal Status",
+    "topic_domain": "constitutional_law/citizenship",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [
+      "native_born_persons",
+      "naturalized_persons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Native-Born Person (Non-White Ancestry)",
+      "comment": "PERSPECTIVE 1: NATIVE-BORN PERSON — From the perspective of a person born on US soil whose ancestry would have rendered them ineligible for citizenship under pre-1868 law or contemporary nativist frameworks, the Citizenship Clause appears as an immutable legal fact. Birth confers citizenship regardless of ancestry, parental status, or political will to revoke. This is not contingent on ongoing enforcement, petition, or demonstration of loyalty — it is automatic and irrevocable. The alternative (statelessness, denizen status, revocable membership) is foreclosed by the constitutional text itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Constitutional Immutability)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER — From the standpoint of constitutional law as a formal system, the Citizenship Clause establishes a brightline rule: jus soli citizenship (born on soil) is the default; Congress can narrow the definition of 'born in the United States' but cannot retroactively strip citizenship. The rule's force derives from constitutional text, not from political consensus or enforcement capacity. Amendment would require Article V formality, not legislative whim. Within the formal system, the Clause appears as a fixed point."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Nation-State (Coordinating Membership)",
+      "comment": "PERSPECTIVE 3: NATION-STATE INSTITUTIONAL PERSPECTIVE — The nation-state benefits from clear, automatic membership rules. The Citizenship Clause solves a coordination problem: rather than adjudicating each person's eligibility through discretionary processes (as Dred Scott effectively required), the state declares birthright citizenship as the default. This reduces administrative overhead, prevents arbitrary exclusion, and aligns state membership with actual territorial presence. The state experiences the clause as beneficial coordination that simplifies governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_reading",
+      "question": "Is the Citizenship Clause a natural law of political community (persons born on soil belong to that polity) or a constructed legal doctrine that benefits identifiable agents (those who would have been excluded under prior regimes)?",
+      "resolution_mechanism": "Comparative constitutionalism: identify whether jus soli citizenship appears naturally in multiple constitutional traditions or only in post-slavery/post-exclusion contexts. Historical analysis of which actors argued for vs. against birthright citizenship before and after Dred Scott.",
+      "impact": "If natural law: the mountain classification is genuine; alternative readings are incoherent. If constructed: the beneficiary declaration (native-born persons, naturalized persons) indicates potential false summit — the constraint may be a snare on ancestry-gatekeeping interests. The engine's FSM detector will flag this.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether birthright citizenship is a natural law or constructed doctrine benefiting identified agents"
+    },
+    {
+      "id": "definitional_boundary_contestation",
+      "question": "Does the Citizenship Clause's irreversibility extend to all legal definitional boundaries of 'born in the United States' (jus soli scope, temporal scope, parental immigration status scope), or only to the core conferral rule?",
+      "resolution_mechanism": "Jurisprudential analysis: examine cases where Congress has redefined 'born in the United States' (e.g., Wong Kim Ark, nationality of children born to non-resident aliens, territorial incorporation doctrine). Identify which redefinitions treat the core rule as immutable vs. which permit legislative narrowing of the citizenship category post-hoc.",
+      "impact": "If the core rule is truly immutable but boundaries are revisable: the constraint is mountain for the core (birth confers citizenship) but rope for definitional scope (Congress can narrow who counts as 'born in the US'). If boundaries are also immutable: genuine mountain. If the core has been revised through doctrine: not a mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scope of irrevocability: does immutability extend to definitional boundaries or only to the core conferral rule"
+    },
+    {
+      "id": "remedial_vs_naturalized_asymmetry",
+      "question": "Do naturalized citizens and native-born citizens occupy the same constitutional citizenship status, or does the Clause create a structural distinction between remedy (overruling Dred Scott's exclusion) and ongoing enrollment (naturalization)?",
+      "resolution_mechanism": "Constitutional doctrine review: compare the Court's treatment of deprivation, loss of citizenship, and rights between native-born and naturalized categories. Examine whether the 14th Amendment's scope applies equally or whether remedial intent (overruling Dred Scott) narrows the clause to certain populations.",
+      "impact": "If asymmetry exists: the constraint may not be a unified mountain but two related constraints with different extraction profiles. Native-born status becomes immutable (mountain); naturalized status might be more conditional (rope or tangled rope). If equivalence is strict: single mountain constraint for all citizenship-bearers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether native-born and naturalized citizenship occupy identical constitutional status"
+    },
+    {
+      "id": "loss_of_citizenship_doctrine_exception",
+      "question": "Can the United States government revoke citizenship through denaturalization, expatriation, or loss-of-citizenship statutes, and if so, does this constitute a breach of the Citizenship Clause or permissible legislative specification?",
+      "resolution_mechanism": "Statutory and case law analysis: examine denaturalization grounds (Weissmann, felony conviction, fraud in naturalization application), expatriation doctrine (voluntary relinquishment, acquisition of foreign nationality), and whether these are treated as consistent with or contrary to the Clause. Identify the constitutional basis for any permitted loss mechanisms.",
+      "impact": "If loss mechanisms exist but require affirmative individual action (voluntary relinquishment, fraud-based revocation): mountain for automatic conferral remains intact, but constraint is not absolute. If involuntary loss is permitted: significant exception to immutability, downgrading classification from mountain to rope or tangled rope. If loss is forbidden entirely: mountain is genuinely absolute.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether citizenship can be revoked and whether revocation mechanisms violate or are consistent with the Clause"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1924,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1964,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1924,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1964,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 1868,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The Fourteenth Amendment's Citizenship Clause (Section 1: 'All persons born or naturalized in the United States, and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside') represents the post-Civil War constitutional overruling of Dred Scott v. Sandford, which had held that enslaved and free Black persons could not be citizens. The Clause makes citizenship automatic and birthright-based (jus soli), placing membership beyond political revocation or ancestor-based exclusion. This constraint story instantiates ONE READING of the Fourteenth Amendment kernel — the citizenship reading. Sibling readings include due_process_clause (procedural and substantive liberty), equal_protection_clause (antidiscrimination mandate), and privileges_or_immunities_clause (substantive national rights). The citizenship reading focuses on the automatic conferral mechanism: birth or naturalization triggers membership irreversibly. This is structurally distinct from the equal protection reading (which addresses equal treatment within the law) and the due process reading (which addresses procedures for deprivation). The Citizenship Clause generates a mountain-type classification because the rule appears irreversible and immutable from within the constitutional framework: once a person is born on US soil, no amount of subsequent political pressure, nativist sentiment, or legislative effort can retroactively strip that status without an Article V amendment. The constraint is remedial (overruling Dred Scott) and prospective (establishing an automatic rule going forward).",
+    "key_agents": [
+      "Native-born persons (especially those of ancestry that would have been excluded pre-1868): Primary beneficiaries — receive automatic, irrevocable citizenship by birth",
+      "Naturalized persons: Secondary beneficiaries — receive irrevocable citizenship through statutory process; gain protection against retroactive exclusion",
+      "Nativist political coalitions/ancestry-gatekeeping interests: Primary victims — suffer suppression of their preferred membership mechanism (ancestry-based or discretionary citizenship)",
+      "The nation-state: Institutional beneficiary — gains coordination benefit of automatic, clear membership rules",
+      "Congress: Institutional actor with constrained power — can define 'born in the United States' narrowly but cannot retroactively strip citizenship",
+      "Analytical observer: Sees the constraint as a fixed constitutional point requiring Article V amendment to alter"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The Citizenship Clause does not extract resources, wealth, or labor from any group. It confers a status (citizenship) and prevents its revocation. This is the opposite of extraction — it is a membership guarantee. The beneficiary (native-born persons) gains irreversible legal status; the victim (nativist gatekeeping interests) loses the ability to exclude based on ancestry or discretion. Extractiveness measures the constraint's capacity to transfer value from one group to another; citizenship conferral is a status allocation, not a transfer. The non-zero value (0.08 rather than 0.0) reflects that the legal certainty the Clause provides creates administrative efficiencies that benefit the state, which could theoretically be characterized as an infinitesimal transfer from those who would prefer discretionary membership. This is at the absolute floor of the mountain category. Suppression (0.04): Minimal. The Clause suppresses certain alternatives: one cannot legally exclude persons born on soil from citizenship based on ancestry, race, or parental status. This suppression is the core function of the constraint — it prevents nativist membership gatekeeping. However, suppression is not high because the Clause works through constitutional prohibition, not through active coercion of agents. The nation-state's administrative apparatus enforces the rule, but enforcement requires only passive application of the birthright principle, not active suppression of resistant agents. Theater ratio (0.15): Minimal. The Citizenship Clause is a formal rule with clear application. When a person is born on US soil, citizenship follows without ceremony, petition, or performative loyalty demonstration (distinct from naturalization, which involves oath-taking). The small non-zero theater value (0.15 rather than 0.0) reflects that naturalization does require performative elements (oath of allegiance, civics test in some eras) and that citizenship claims can be contested in boundary cases (jus soli definition, 'subject to the jurisdiction thereof' interpretation). But the core rule is minimally theatrical — the default is presumptively citizenship, not a status that must be continually claimed or performed.",
+    "perspectival_gap": "All three perspectives arrive at mountain or rope classifications, with no Snare or Tangled Rope readings. This is consistent with the constraint's remedial and constitutional character — there is no coherent perspective from which the automatic birthright conferral appears as pure extraction. A 'nativist interest' perspective (if included) might classify as tangled_rope (the Clause coordinates national membership while suppressing ancestry-based gatekeeping), but such a perspective would be that of an agent opposing the constraint, not an agent positioned within its structure. The powerless/trapped perspective (native-born person) and analytical perspective both see mountain because the rule's immutability is its defining feature from both angles. The institutional perspective (nation-state) sees rope because the constraint coordinates membership without significant extraction cost. The perspectival convergence itself is diagnostic: constraints that appear as the same type from radically different observer positions are often genuine structural laws rather than contingent institutional arrangements.",
+    "directionality_logic": "Directionality (d) is derived from the agent's structural relationship to the constraint. Native-born persons benefit from the Citizenship Clause (low d, beneficiary status) but have trapped exit options (cannot choose not to be born on US soil, cannot contract out of citizenship). The engine's derivation chain produces d ≈ 0.08 (beneficiary + trapped + powerless power atom). Naturalized persons also benefit (low d) but have constrained exit (can renounce citizenship, but doing so is costly and politically fraught). The nation-state benefits from the coordination (d ≈ 0.05, beneficiary + arbitrage + institutional) and experiences chi close to zero — the constraint is pure coordination with minimal extraction. The analytical observer (d ≈ 0.72 canonical) sees the constraint from the perspective of understanding its structural properties, which derives a moderate d reflecting the perspective's analytical position relative to the constraint's operation.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by being a genuine mountain: the classification is stable across perspectives because the constraint's irreversibility is a fixed constitutional fact, not a contingent institutional arrangement. There is no meaningful dispute about whether the Citizenship Clause generates automatic citizenship for the native-born — the dispute is about what 'born in the United States' and 'subject to the jurisdiction thereof' mean in edge cases (children of diplomatic staff, territories, undocumented immigrants). But these boundary disputes do not affect the core rule's classification as mountain. The Clause is immutable absent Article V amendment; it cannot be revoked by legislative, executive, or state action; it operates automatically without ongoing enforcement or performance. These are the hallmarks of a mountain constraint.",
+    "kernel_context": "This constraint story instantiates the citizenship_clause reading of the fourteenth_amendment kernel. The kernel is the Fourteenth Amendment as a whole — a formalized constitutional text with authority grounded in lineage (ratification history, constitutional amendment process) and distribution of interpretation across the federal judiciary. The citizenship_clause reading focuses on the automatic conferral of membership through birth or naturalization, reading the kernel to establish jus soli citizenship beyond political revocation. Sibling readings — due_process_clause, equal_protection_clause, privileges_or_immunities_clause — extract different structural provisions from the same constitutional text and generate different constraints with different extractiveness profiles and victim sets. The citizenship reading coexists with all three siblings: the same constitutional text can be read to generate multiple constraints, and no single reading logically forecloses another within the framework of constitutional interpretation. However, the citizenship reading influences the equal_protection reading (if membership is automatic and irrevocable, equal protection applies to all citizens as a baseline category) and the due_process reading (if citizenship is immutable, deprivation of it requires due process). The privileges_or_immunities reading is influenced by the citizenship reading (substantive rights of citizens presume the person is first a citizen), but the Slaughter-House Cases hollowed that clause despite the citizenship guarantee, showing that coexistence does not prevent one reading from constraining another's institutional efficacy."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "fourteenth_amendment__due_process_clause",
+      "fourteenth_amendment__equal_protection_clause",
+      "fourteenth_amendment__privileges_or_immunities_clause",
+      "dred_scott_overruling",
+      "denaturalization_doctrine"
+    ],
+    "dual_formulation_note": "The Citizenship Clause is one constraint story extracted from the Fourteenth Amendment kernel. The due_process_clause, equal_protection_clause, and privileges_or_immunities_clause readings are separate constraint stories with different ε values and victim sets, all grounded in the same constitutional text. This is not an observable-dependent classification — the readings are structurally distinct doctrinal claims that happen to coexist in the same amendment. The citizenship reading has minimal extractiveness (0.08, mountain); the due_process and equal_protection readings have higher extractiveness reflecting the ongoing litigation and doctrinal contestation they generate. The privileges_or_immunities reading, hollowed by Slaughter-House, has degraded into a piton or rope depending on perspective."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fourteenth_amendment__due_process_clause",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "fourteenth_amendment__equal_protection_clause",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "fourteenth_amendment__privileges_or_immunities_clause",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jus_soli_birthright_automatic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "citizenship_irrevocable_absent_amendment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_dred_scott_overruling_birthright_regime",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

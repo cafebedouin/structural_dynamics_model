@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "civil_rights_era_amendments__twenty_fourth_amendment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "t24a",
+    "story_uid": "f7f6384e-25e8-49fa-839b-9e6850a452ad",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Poll Tax Abolition (Twenty-Fourth Amendment)",
+    "topic_domain": "political/legal/civil_rights",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "poor_voters_all_races",
+      "disenfranchised_southern_poor"
+    ],
+    "victims": [
+      "fiscal_gatekeeping_regimes"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Poor (Pre-Ratification)",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED POOR (ROPE) — Before the Amendment, trapped by wealth barriers. After ratification, the constraint shifts from 'you cannot vote because you are poor' to 'you can vote, and the Amendment coordinates this with enforcement'. The poor voter experiences the Amendment as pure coordination: a collective commitment to remove the payment barrier. Effective extraction is near zero — the beneficiary experiences no cost, only access gain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Coalitions (Ratifying Coalitions)",
+      "comment": "PERSPECTIVE 2: CIVIL RIGHTS COALITIONS (ROPE) — Organized movements (NAACP, church networks, labor unions) coordinated the ratification campaign. They experience the constraint as a coordination mechanism: mobilizing voting participation, coordinating registration drives, enforcing the Amendment's implementation against southern resistance. Extraction is low — the benefit (expanded democratic participation) is genuinely shared. The Amendment is pure coordination from this perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Southern Gatekeeping Regimes (Fiscal/Administrative)",
+      "comment": "PERSPECTIVE 3: SOUTHERN GATEKEEPING REGIMES (SNARE) — Southern states' fiscal and administrative establishment relied on poll taxes as a wealth-conditioned suppression mechanism. The Amendment forecloses their extraction mechanism entirely. They experience the constraint as pure suppression: they lose a tool they were using to extract (control voting access in exchange for payment or exemption). From their structural position, the Amendment is a snare — it traps them out of their preferred governance model."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Electoral Authority (Enforcement Machinery)",
+      "comment": "PERSPECTIVE 4: FEDERAL ELECTORAL AUTHORITY (ROPE) — From the federal/national government perspective, the Amendment coordinates a single national standard for electoral access. The federal authority benefits from enforcing uniform franchise rules (arbitrage: can leverage the Amendment against state gatekeeping). Extraction is minimal — the coordination function is genuine, the enforcement mechanism is legitimate, and the federal authority gains legitimacy from enforcing equal access. Pure rope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Republican Electoral Strategy (National Party Perspective)",
+      "comment": "PERSPECTIVE 5: REPUBLICAN ELECTORAL STRATEGY (TANGLED ROPE) — From the perspective of national Republican party leadership in the 1960s, the Amendment coordinates access (beneficiary: ability to mobilize poor and minority voters) with enforcement costs (victim: having to compete in newly expanded electorate without traditional suppression tools). The constraint is mixed: genuine coordination function (universal franchise enables broader coalition-building) alongside asymmetric extraction (forced to abandon wealth-based voter suppression, a tool they did not invent but were using). Time horizon: generational reveals that the extraction mechanism decays as new voters integrate into the electorate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law / Constitutional Foundation View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, equal access to the franchise independent of wealth is a foundational principle of democratic self-government — an immutable commitment once constitutionalized. The Amendment appears as an irreducible constraint: the idea that 'voting is conditioned on ability to pay' is structurally impossible within a framework that treats democratic participation as a fundamental right. However, the structural data contradicts the mountain classification — this Amendment is a contingent historical choice (not all democracies made this choice; many democracies elsewhere still use wealth tests). The engine will compute this as a false summit, revealing that the 'inherent to democracy' framing naturalizes what is actually a reading-specific normative commitment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "poll_tax_evasion_mechanisms",
+      "question": "After federal abolition, could southern states substitute alternative wealth-conditioned suppression mechanisms (literacy tests, grandfather clauses, property ownership requirements for registration) that achieve similar gatekeeping without explicit poll taxes?",
+      "resolution_mechanism": "Historical analysis of state-level substitution: comparison of voter suppression mechanisms pre- and post-1964; identification of legal successors to poll tax suppression",
+      "impact": "If substitution is widespread and effective: the Amendment's extractiveness rises substantially (0.18 → 0.40+) because the gatekeeping regime persists under different names. If substitution fails: the Amendment successfully forecloses the suppression mechanism and extractiveness remains low.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether southern states substituted alternative wealth-conditioned suppression mechanisms"
+    },
+    {
+      "id": "reading_specificity_federal_only",
+      "question": "Does the Amendment's restriction to federal elections represent a genuine constitutional limit (states retain police power over state/local elections) or a deliberate compromise that perpetuates state-level wealth conditioning?",
+      "resolution_mechanism": "Constitutional history: did ratifiers understand 'federal elections' as a jurisdictional boundary or as a ratification compromise? Comparison with later Twenty-Sixth Amendment (not limited by election type); analysis of state poll tax persistence post-1964",
+      "impact": "If genuine jurisdictional boundary: this reading is structurally distinct from a universal franchise reading (different constraint). If compromise: this reading instantiates partial gatekeeping foreclosure, and the victim set includes 'state-level poor voters' who remain trapped. The sibling reading (universal poll tax abolition) would foreclose this reading entirely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether federal-only restriction is a jurisdictional boundary or a deliberate compromise"
+    },
+    {
+      "id": "committer_frame_true_victor",
+      "question": "Who was the ultimate structural victor of this Amendment: poor voters (freed from wealth barrier), northern Republicans (electoral gain in newly enfranchised populations), federal authority (jurisdictional expansion against state gatekeeping), or civil rights movements (precedent-setting)?",
+      "resolution_mechanism": "Electoral analysis: voter registration and participation trends post-1964; party realignment; state compliance timelines; southern resistance mechanisms",
+      "impact": "This is a committer-axis question: different readings answer it differently. The poor-voter reading sees themselves as victors. The Republican reading sees constraints. The southern reading sees loss. The federal reading sees institutional gain. No single answer; the presheaf over all readings is the structure.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Who was the ultimate structural victor of this Amendment"
+    },
+    {
+      "id": "twenty_sixth_amendment_foreclosure",
+      "question": "Does the Twenty-Sixth Amendment (voting age 18) foreclose or coexist with this reading? If age-18 threshold and wealth-free access are both mandatory, can a reading that accepts wealth conditioning but opposes age conditioning remain coherent?",
+      "resolution_mechanism": "Logical analysis: Do the foundational axioms of this reading (franchise independence from wealth) logically entail or foreclose franchise independence from age? Constitutional precedent: have courts treated wealth and age as analogous suspect classifications?",
+      "impact": "If foreclosure: this reading and a hypothetical 'age-conditioned franchise' reading cannot coexist in a single interpretive framework. If coexistence: the readings occupy different parties' commitments (some democracies condition on age, others on wealth). The sibling Twenty-Sixth Amendment reading may show different relationship.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Twenty-Sixth Amendment forecloses wealth-conditioning readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "t24a_theater_baseline"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.32,
+      "id_override": "t24a_theater_post_ratification"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35,
+      "id_override": "t24a_theater_enforcement_phase"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "t24a_extract_pre_amendment"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.28,
+      "id_override": "t24a_extract_immediate_post"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.18,
+      "id_override": "t24a_extract_stabilized"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The Twenty-Fourth Amendment (ratified 1964) represents a constitutional pivot point: the formal severing of voting franchise from wealth capacity. The constraint instantiated by this Amendment is the binding commitment that 'no citizen's right to vote in any primary or general election... shall be denied or abridged by reason of failure to pay any poll tax or other tax.' This reading treats the Amendment not as a historical event but as a stabilized normative kernel that commits the federal electoral system to wealth-independent suffrage. The structural delta is precise: suppression of wealth-conditioned voting mechanisms; beneficiary is poor voters across all races (especially the disenfranchised southern poor); victim set is fiscal gatekeeping regimes that relied on poll taxes as a proxy for maintaining racial and economic control over the electorate. The Amendment is a pure coordination mechanism in its aspirational form (rope) — it solves the collective-action problem of ensuring franchise equality — but from the perspective of southern gatekeeping regimes, it is a snare that forecloses their extraction tool. The extractiveness value (0.18 at stabilization) reflects that the Amendment's primary function is coordination (removing a barrier, not imposing new costs), with residual extractiveness from the regime's forced abandonment of a suppression mechanism.",
+    "key_agents": [
+      "Poor voters of all races: Primary beneficiary (powerless/trapped pre-amendment) — franchised by the Amendment; experience it as pure coordination",
+      "Disenfranchised southern poor: Primary beneficiary (powerless/trapped pre-amendment) — trapped by wealth barrier and racial suppression; freed by Amendment",
+      "Civil rights coalitions (NAACP, church networks, labor unions): Organized beneficiary (organized/constrained) — ratified and enforced the Amendment; coordinated voter registration and participation",
+      "Southern fiscal/administrative gatekeeping regimes: Primary victim (institutional/constrained) — loss of wealth-conditional franchise control; forced to abandon poll tax extraction mechanism",
+      "Federal electoral authority: Institutional beneficiary (institutional/arbitrage) — gains jurisdiction to enforce uniform franchise standards nationally; benefits from legitimacy of enforcing equal access",
+      "Republican national party leadership: Powerful mixed perspective (powerful/constrained) — coordination gain (access to newly enfranchised voters) alongside extraction loss (cannot use wealth-based suppression)",
+      "Analytical observer: Civilizational view (analytical/analytical) — risks naturalizing a specific reading's normative commitment as an immutable principle of democracy"
+    ],
+    "logic_rationale": "Extractiveness (0.18, stabilized): Low. The Amendment's primary structural function is coordination: removing a barrier (wealth requirement) from electoral access. The residual extractiveness reflects the cost to southern gatekeeping regimes (they can no longer extract control via poll taxes), not a cost imposed on beneficiaries. Base extractiveness at t=0 (pre-amendment) is coded as 0.52, reflecting the poll tax system itself — a high-extraction wealth barrier on voting. Post-ratification, extractiveness drops to 0.28 (immediate enforcement phase: ongoing state resistance, litigation, substitution attempts) and stabilizes at 0.18 (normalized federal enforcement, diminished gatekeeping capacity). The trajectory shows the Amendment's effect: it suppresses the extraction mechanism. Suppression (0.52): Moderate-high. The Amendment directly targets suppression mechanisms (poll taxes, wealth barriers). However, 0.52 reflects not the Amendment's own suppressive force but the suppressive mechanisms it abolishes — coded as 'suppression' in the pre-amendment regime. The Amendment's own suppressive capacity (enforcement against non-compliant states) is lower (≈0.35). Theater ratio (0.35): Low-moderate. The Amendment's implementation involves genuine electoral machinery (registration, enforcement) but relatively low performative content compared to, e.g., literacy tests (which are pure theater) or slow-walking implementation (which adds theater). The low theater reflects that the Amendment's coordination function is direct and measurable: voters are or are not paying poll taxes. No ambiguity in verification.",
+    "perspectival_gap": "This constraint demonstrates perspectival inversion: from poor voters' position, the Amendment is liberatory coordination (rope); from southern gatekeeping regimes' position, the Amendment is foreclosure of their extraction mechanism (snare). The analytical observer risks naturalizing one reading as inevitable law (mountain) when it is actually a contingent constitutional choice specific to this Amendment's committer frame. The southern regime's experienced classification (snare) reveals the Amendment as successfully targeted suppression foreclosure, not just access grant. The Republican party's tangled rope classification shows that the Amendment is not purely beneficial — it coordinates access but forecloses a tool some beneficiaries had been using. The federal authority's rope classification reveals the Amendment as a genuine coordination mechanism for uniform franchise rules at the national level.",
+    "directionality_logic": "Directionality (d) flows from the structural position of each agent relative to the wealth-condition barrier. Poor voters (pre-amendment) have d ≈ 0.95 (full targets of wealth extraction). Southern gatekeeping regimes have d ≈ 0.05 (full beneficiaries of the old system, now foreclosed). Civil rights coalitions have d ≈ 0.10 (beneficiaries of the Amendment, low extraction cost). Federal authority has d ≈ 0.20 (beneficiary of jurisdictional expansion, low personal cost). Republican party has d ≈ 0.55 (mixed position: benefits from new voters, constrained by loss of suppression tool). The engine derives d from beneficiary/victim status and exit options; beneficiaries show low d, victims show high d. The Amendment's chi values range from negative (beneficiaries experience no extraction) to positive (southern regimes experience foreclosure).",
+    "mandatrophy_analysis": "This constraint does not trigger mandatrophy gates (extractiveness < 0.70). The classification is stable across all perspectives: rope (coordination mechanism) is the modal type, with snare (regime perspective) and mountain (false summit at analytical level) as perspectival variants. The mandatrophy would ask: 'Is this Amendment a genuine coordination mechanism or a hidden extraction on states?' The answer is structure-dependent: it coordinates for poor voters, extracts from gatekeeping regimes, and falsely appears immutable from the civilizational view. The presheaf over all perspectives resolves the mandatrophy.",
+    "kernel_context": "This constraint is one reading of the civil_rights_era_amendments kernel. THIS reading instantiates twenty_fourth_amendment: the formal severing of franchise from wealth capacity, restricting the Amendment's scope to federal elections. SIBLING readings: twenty_fifth_amendment (presidential disability/succession), twenty_sixth_amendment (voting age 18), twenty_third_amendment (DC electoral votes). These siblings are other constraints in the civil rights amendments family — not part of this story. This reading's distinctive commitment: franchise independence from wealth (axiom: wealth_conditioned_voting_forbidden). The Twenty-Fifth Amendment's distinctive commitment: orderly succession during executive incapacity. These are logically independent — one reading does not foreclose the others. They coexist as different amendments addressing different structural problems within the broader civil rights apparatus."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "twenty_sixth_amendment",
+      "voting_rights_act_1965",
+      "literacy_test_bans"
+    ],
+    "dual_formulation_note": "Poll tax abolition is one reading of civil rights-era franchise expansion. Upstream: the general principle of democratic equality (uncontested, near-natural-law status). Downstream: specific substitution mechanisms (literacy tests, grandfather clauses, voter ID requirements) that southern states attempted to maintain gatekeeping after poll tax abolition. Each downstream constraint has its own extractiveness value reflecting its specific mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "wealth_independent_franchise",
+    "reading_relations": [
+      {
+        "sibling_id": "twenty_fifth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "twenty_sixth_amendment",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "twenty_third_amendment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wealth_conditioned_voting_forbidden",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "federal_jurisdiction_supremacy_franchise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "drift_state": {
+      "moment": "contemporary_voter_suppression_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

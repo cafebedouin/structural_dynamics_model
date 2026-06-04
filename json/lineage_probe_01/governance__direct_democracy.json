@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "governance__direct_democracy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_governance__direct_democracy",
+    "story_uid": "6bc4d3b3-d915-4733-b0b3-d8dec90919d8"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Direct Democracy Governance (Assembled Citizens Authority)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mobilized_majority",
+      "participating_citizens"
+    ],
+    "victims": [
+      "persistent_minorities",
+      "excluded_populations",
+      "deliberative_capacity_constraints"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Persistent Minority",
+      "comment": "PERSPECTIVE 1: PERSISTENT MINORITY (SNARE) — Trapped by direct majoritarian rule with no constitutional shelter or counter-majoritarian institution. The assembled citizens can vote away minority rights, protections, or resources. High suppression of exit (no appeal to higher law); high extraction (majority appetite is the only limit). Cannot exit the jurisdiction without material loss; cannot block decisions through institutional design."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Episodically Mobilized Citizen",
+      "comment": "PERSPECTIVE 2: EPISODICALLY MOBILIZED CITIZEN (TANGLED ROPE) — Experiences genuine coordination (assembly makes collective decisions binding on all) but also asymmetric extraction: participation requires constant attention and preparation; non-participation costs voice; the majority's preference becomes binding. Benefits from direct voice when mobilized but bears cost of perpetual civic engagement or systematic exclusion from decisions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Organized Majority Coalition",
+      "comment": "PERSPECTIVE 3: ORGANIZED MAJORITY COALITION (ROPE) — Experiences the constraint as pure coordination: assembly enables the majority to aggregate preferences and enforce binding decisions. No barrier to exit (can defect to alternative governing arrangements if majority loses cohesion). High agency; experiences extraction only if internal coalition discipline fails. Direct democracy is a coordination mechanism for this agent — it solves the collective action problem of who governs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Deliberative Institution (Historical Perspective)",
+      "comment": "PERSPECTIVE 4: DELIBERATIVE INSTITUTION / HISTORICAL VIEW (PITON) — The assembly ritual persists as the legitimacy mechanism for governance even when actual deliberation is impossible at scale. As the polity grows beyond face-to-face assembly (scaling from 500 to 500,000 citizens), the direct democracy form remains but the substance degrades: voting replaces deliberation, media cycles replace collective reasoning, abstraction replaces presence. The institutional form is maintained for legitimacy (it looks like the people govern) while the actual mechanism is delegation. Theater ratio: high. Functional deliberation: minimal. The assembly survives through inertia and symbolic power, not through restored deliberative capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Civic Entrepreneur / Rhetor",
+      "comment": "PERSPECTIVE 5: CIVIC ENTREPRENEUR / RHETOR (TANGLED ROPE) — Coordinating role: organizes the assembly, frames issues, enables collective decision-making. Extractive role: controls the agenda, shapes the frame, and benefits disproportionately from influence over what the majority votes on. Has mobile exit (can withdraw from politics) and powerful position (can shape majority preference). The constraint both enables and extracts: it coordinates the majority's will AND concentrates power in those who control persuasion and agenda-setting."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, direct democracy is an immutable principle: legitimate authority can only flow from those subject to it, and any other principle (hereditary rule, constitutional limits, divine delegation, custom) is a violation of that axiom. This perspective naturalizes the direct democracy principle as a logical necessity. However, the structural data contradicts the mountain classification: the high suppression of minorities, the extractiveness from rhetorical control, and the beneficiary status of the mobilized majority reveal that 'pure popular sovereignty' is a contingent institutional arrangement, not a natural law. The engine's false summit detector will flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scale_deliberation_tradeoff",
+      "question": "Can direct democracy at scale (nation-state populations) maintain authentic deliberation, or does assembly become a ritual legitimating delegation?",
+      "resolution_mechanism": "Comparison of actual deliberation time, reasoning depth, and minority voice integration in face-to-face assemblies (500–5,000 participants) vs mass voting systems (5,000+ participants); measurement of information quality and preference formation patterns",
+      "impact": "If authentic deliberation persists at scale: majority extraction is constrained by collective reasoning and minority perspective integration. If assembly becomes ritual: constraint reclassifies toward snare or piton (high suppression, high theater, low functional deliberation). This determines whether the tangled_rope classification is stable across temporal horizons.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether authentic deliberation scales with direct democracy"
+    },
+    {
+      "id": "minority_protection_mechanism",
+      "question": "Is suppression of minority protection (no counter-majoritarian shelter) inherent to direct democracy, or is it a design choice within the reading?",
+      "resolution_mechanism": "Historical/comparative analysis: do direct democracies with internal protections (super-majority requirements for rights-affecting decisions, minority veto triggers, deliberative cooling-off periods) remain direct democracies? What mechanisms preserve minority voice without foreclosing majority rule?",
+      "impact": "If protection is compatible: suppression can be engineered downward; constraint reclassifies toward rope or scaffold. If protection forecloses pure majoritarianism: the 'any delegation is usurpation' axiom forecloses compromise forms. This determines whether the direct_democracy reading logically excludes designs with minority shelter.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether minority protection is compatible with direct democracy axiom"
+    },
+    {
+      "id": "majority_appetite_extraction_relationship",
+      "question": "Does extractiveness track majority appetite (more extraction when mobilized majority is hungry for redistribution/oppression) or is it constant structural property of the form?",
+      "resolution_mechanism": "Longitudinal measurement of majority coalition composition, redistribution appetite, and minority burden across election cycles; correlation between majority sentiment and actual minority extraction; distinction between structural extraction (always present) and appetite-driven extraction (varies with majority preference)",
+      "impact": "If appetite-driven: extractiveness is observable-dependent (different under different majority coalitions); constraint family should decompose into separate stories per coalition type. If structural: extractiveness is stable and independent of majority sentiment. This determines whether ε=0.58 is invariant or observable-relative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is appetite-driven or structurally constant"
+    },
+    {
+      "id": "delegation_minimization_mechanism",
+      "question": "How does direct democracy institutionally minimize delegation without collapsing into role differentiation? If some citizens must coordinate at scale (agenda-setting, vote administration, implementation), at what point does delegation become necessary rather than corrupt?",
+      "resolution_mechanism": "Study of actual delegation patterns in functioning direct democracies; distinction between legitimate functional roles (vote counting, agenda compilation) and usurpation (policy interpretation, selective enforcement, agenda control); identification of the minimum delegation required for scale.",
+      "impact": "If delegation is minimizable: constraint is stable; civic entrepreneurs can be constrained. If delegation is unavoidable at scale: the reading's core axiom (delegation is usurpation) becomes incompatible with large-scale polities; the constraint reclassifies toward constitutional government or scaffold with sunset clause at the scale transition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Minimization of delegation vs functional necessity"
+    },
+    {
+      "id": "kernel_contest_foreclosure",
+      "question": "Does the direct_democracy reading logically foreclose the other readings (autocratic, constitutional, customary, theocratic) or do they coexist as live options held by different parties?",
+      "resolution_mechanism": "Philosophical and historical analysis: can a single polity hold both direct democracy (no delegation) and constitutional government (delegation bounded by higher law) within the same legitimacy framework? Can citizens choose theocratic authority while reserving popular sovereignty? Do these readings compete within polities or across them?",
+      "impact": "If the reading forecloses siblings: reading_relations should use 'forecloses'. If coexistence is possible: use 'coexists_with'. This determines the strength of the contest and whether the sibling readings are genuine alternatives or incoherent positions.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical relationship between direct democracy and sibling readings"
+    },
+    {
+      "id": "false_summit_popular_sovereignty_axiom",
+      "question": "Is the 'all authority from the assembled citizens' axiom a natural law of legitimate government, or is it a contingent commitment that some polities have chosen and others can legitimately reject?",
+      "resolution_mechanism": "Meta-analysis of how different governance traditions (theocratic, hereditary, customary, constitutional) justify their own legitimacy; examination of whether direct democracy is universally recognized as the foundation or one option among contested claims to legitimacy; study of whether rejection of direct democracy is understood as delegitimizing or merely alternative.",
+      "impact": "If natural law: the mountain perspective is correct and the structure naturalizes a contingent claim. If contingent: the constraint is a false summit — the reading's core axiom is a choice, not a law, and the engine's false summit detector should flag the naturalization. This determines whether the analytical perspective's mountain classification is validly grounded or is itself a form of extraction (naturalizing a particular reading's axiom).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Natural law vs contingent choice status of popular sovereignty"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Direct democracy as a governance principle asserts that legitimate authority derives solely from the assembled citizens themselves and that any delegation of that authority constitutes a usurpation to be minimized. This reading of the governance kernel instantiates a constraint that exhibits the full spectrum of Deferential Realism types depending on observer position. The constraint coordinates the majority's collective will while systematically suppressing protection for persistent minorities. It benefits the mobilized majority and civic entrepreneurs who control agenda-setting, while imposing high costs on those with no effective voice in the assembly — excluded populations, historically marginalized minorities, and those unable to participate in constant civic engagement. The extractiveness rises over time as the polity scales from face-to-face deliberation to mass voting, the theater ratio increases as ritual deliberation replaces functional deliberation, and suppression intensifies as the majority finds mechanisms to insulate itself from counter-majoritarian challenge.",
+    "key_agents": [
+      "Mobilized Majority: Primary beneficiary (organized/mobile) — experiences pure coordination through assembly mechanism; captures binding authority over collective decisions",
+      "Persistent Minorities: Primary victim (powerless/trapped) — no institutional shelter from majority will; no counter-majoritarian veto or constitutional protection; systematic suppression of voice and protection",
+      "Excluded Populations: Secondary victim (powerless/trapped) — populations unable to participate in assembly (non-residents, non-citizens, disenfranchised, those without civic capacity) bear costs of majority decisions without voice",
+      "Civic Entrepreneur / Rhetor: Powerful beneficiary (powerful/mobile) — shapes agenda, controls framing, concentrates influence through rhetorical mastery; benefits from both coordination and extraction",
+      "Episodic Participant: Moderate agent (moderate/constrained) — experiences both benefit (voice in assembly) and cost (participation burden, majority tyranny when not mobilized); constrained by attention limitations and majority dominance",
+      "Deliberative Institution (Historical): Institutional actor (institutional/constrained) — maintains the assembly form for legitimacy even as actual deliberation degrades at scale; constrained by the need to preserve appearance of popular participation while managing actual governance through delegation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint benefits the mobilized majority while extracting from persistent minorities and excluded populations. The extractiveness is not maximal (0.72+) because some genuine coordination benefit flows from the assembly mechanism itself — collective decisions are binding and binding decisions do solve coordination problems. But the benefit concentrates in the majority while costs concentrate in minorities, creating significant asymmetric extraction. The measurement trajectory shows extractiveness rising from 0.42 (early assembly phase with small, homogeneous polity) to 0.68 (large-scale polity where deliberation is impossible and voting replaces reasoning). Suppression (0.72): High. The direct democracy reading explicitly minimizes delegation and thus provides no counter-majoritarian shelter — no constitutional limits, no minority veto, no institutional refuge from majority will. The core axiom requires suppression of institutional alternatives that might protect minorities. Suppression is both structural (no institutions exist to protect minorities) and enforced (the majoritarian assembly will actively resist creation of such institutions as 'usurpation'). Suppression intensity rises over time as the majority develops mechanisms to formalize its control. Theater ratio (0.55–0.72): Moderate to high. At small scale (assembly of 500), deliberation is functional and theater is lower. At large scale (voting of millions), the assembly ritual persists for legitimacy while actual policy is made through delegation and bureaucracy; theater rises as the form disconnects from the function.",
+    "perspectival_gap": "The perspectival gap between the mobilized majority's rope experience and the persistent minority's snare experience is not a measurement disagreement — it is the structural reality of direct democracy. Both perspectives are correct within their observational contexts. The majority genuinely experiences coordination (the assembly binds everyone and makes collective decisions possible). The minority genuinely experiences extraction with no exit (the assembled majority can vote away their protections and they have no constitutional appeal). The gap is not a communication problem — it is the logical consequence of the reading's core axiom (no delegation = no counter-majoritarian shelter = minority suppression). The piton perspective adds a temporal dimension: the assembly form persists as legitimacy theater even when actual deliberation is impossible, revealing a gap between the reading's aspirations (assembled citizens themselves) and the reading's actual function (delegated decision-making through voting rituals).",
+    "directionality_logic": "Directionality values (d) are derived from structural position in the extraction flow. The mobilized majority are beneficiaries with mobile exit (can abandon direct democracy for alternative forms) — low d → negative χ. Persistent minorities are victims with trapped exit (cannot exit without migration) — high d → high χ. The civic entrepreneur is a powerful beneficiary with mobile exit but also partially a victim of their own rhetorical competition — moderate d reflecting mixed position. The episodic participant is constrained both by participation burden and by majority dominance — d reflects simultaneous benefit (voice) and cost (tyranny). The analytical observer is at d=0.73 (canonical for analytical position), but the false summit flag suggests that this observer risks naturalizing a contingent reading as a universal law.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by clarifying what direct democracy actually coordinates and what it actually extracts. It coordinates the majority's binding authority and enables aggregate preference enforcement. It extracts from minorities and excluded populations by denying them counter-majoritarian shelter. The tangled rope classification is stable: the constraint has a genuine coordination function (enabling the majority to make binding collective decisions) AND a genuine extraction mechanism (systematically suppressing minority protection). The classical mandatrophy confusion — is this a coordination tool or an extraction mechanism? — is resolved by recognizing that it IS both, and the beneficiary set (majority) overlaps only partially with the victim set (minorities), making the net classification tangled rope rather than rope or snare. The piton perspective captures a second mandatrophy: the assembly form survives for legitimacy but degraded function, creating a tension between 'we the people assembled' and 'actually we the people voting' that the constraint partially occludes.",
+    "kernel_context": "This constraint is ONE READING of the contested governance kernel. The reading instantiated here is DIRECT_DEMOCRACY: legitimate authority derives solely from the assembled citizens themselves, and any delegation of that authority is a usurpation to be minimized. The kernel admits five readings: (1) autocratic_rule — authority from the unmediated will of a ruler; (2) constitutional_government — authority constituted and limited by higher law; (3) customary_rule — authority from accumulated immemorial custom; (4) direct_democracy (THIS READING) — authority from assembled citizens with minimal delegation; (5) theocratic_rule — authority delegated from the divine order and administered by sacred interpreters. The direct_democracy reading is a live political claim held by some polities and movements, contested by others. It is not universally recognized as the legitimate form — the sibling readings remain active positions within the global contest over governing authority. The structural delta distinguishes this reading: it exhibits low suppression of voice (all citizens participate in decision-making) but high suppression of insulation (no constitutional shelter from majority will, no counter-majoritarian institutions). The beneficiary is the mobilized majority; the victim set is persistent minorities unable to resist majority preferences. Extractiveness tracks majority appetite — in periods where the majority demands redistribution or collective action, extraction from minorities rises; in periods of majority moderation, extraction falls. The constraint is readable as a natural law (from the mountain perspective) or as a contingent institutional choice (from the false summit detector), and the committer-axis omega variables track this ambiguity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "governance__constitutional_government",
+      "governance__autocratic_rule",
+      "governance__customary_rule",
+      "governance__theocratic_rule"
+    ],
+    "dual_formulation_note": "The direct_democracy constraint is one reading of the governance kernel. Five constraint stories instantiate the five readings: each has its own base_properties, perspectives, and ε value. They are linked via network.affects_constraints to mark their membership in the constraint family. Do NOT combine them into a single story with measurement parameters or observable-dependent ε values. Each reading is a distinct constraint story with a stable ε representing how that reading actually functions as a governance mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.52
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "governance__autocratic_rule",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "governance__constitutional_government",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "governance__customary_rule",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "governance__theocratic_rule",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authority_from_assembled_citizens_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "delegation_is_usurpation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "popular_sovereignty_principle",
+    "drift_state": {
+      "moment": "industrial_scale_modernity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

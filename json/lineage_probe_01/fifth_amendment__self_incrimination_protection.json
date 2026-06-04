@@ -1,0 +1,267 @@
+{
+  "header": {
+    "constraint_id": "fifth_amendment__self_incrimination_protection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fifth_amendment__self_incrimination_protection",
+    "measurement_id_prefix": "fifth_si",
+    "story_uid": "5265cc2e-dcc4-4d1e-a635-2cc6a8a38a7c",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fifth Amendment Privilege Against Self-Incrimination",
+    "topic_domain": "legal/constitutional_doctrine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "suspects_under_interrogation",
+      "defendants_at_trial"
+    ],
+    "victims": [
+      "confession_dependent_prosecution",
+      "truth_discovery_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Suspect Under Interrogation",
+      "comment": "PERSPECTIVE 1: SUSPECT UNDER INTERROGATION (ROPE) — Immediate time, trapped exit. The Fifth Amendment functions as pure coordination mechanism at this moment: it solves the collective-action problem of asymmetric information and coercive pressure. The suspect cannot exit the interrogation room, but the privilege provides a coordination solution that prevents coerced confession. Experienced as minimal extraction because the function is genuine protection, not exploitation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Defendant at Trial",
+      "comment": "PERSPECTIVE 2: DEFENDANT AT TRIAL (TANGLED ROPE) — Biographical horizon, constrained exit (can testify or remain silent but both carry strategic costs). The privilege simultaneously protects and constrains: it prevents coerced self-incrimination but also prevents the defendant from being forced to exculpate themselves through testimony. The constraint coordinates trial procedure while extracting a strategic disadvantage (prosecution benefits from the defendant's silence as probative of guilt despite explicit instruction to the jury). Genuine coordination function mixed with asymmetric extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Confession-Dependent Prosecution",
+      "comment": "PERSPECTIVE 3: CONFESSION-DEPENDENT PROSECUTION (SNARE) — For prosecution strategies built on suspect confessions, the privilege operates as pure extraction: it removes the mechanism for obtaining the confession. No coordination benefit to the prosecution; high suppression of the confession route; effective extraction against investigative leverage. The prosecution faces suppression (Miranda exclusionary rule) with minimal coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Criminal Justice System",
+      "comment": "PERSPECTIVE 4: THE CRIMINAL JUSTICE SYSTEM (TANGLED ROPE) — Generational view. The privilege coordinates a procedural framework (Miranda warnings, in-custody interrogation rules) that provides legitimacy and predictability to the system itself. But it also extracts efficiency costs: confession rates drop, interrogation must be recorded and procedurally regulated, investigative strategy becomes more expensive. The system coordinates its own legitimacy while paying extraction costs in investigation efficiency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Police Practice Reform",
+      "comment": "PERSPECTIVE 5: POLICE PRACTICE REFORM (SCAFFOLD) — The privilege operates as temporary scaffolding for interrogation reform. Body cameras, recorded custodial interrogations, and legal representation during questioning are coordinating mechanisms that could eventually replace the privilege if they become sufficient (everyone can see the interrogation process, so coercion becomes visible and actionable through civil liability rather than exclusionary rule). Current state: χ ≤ 0.30, theater moderate. Sunset clause implicit: if procedural transparency reaches legal standards, the privilege's suppression mechanism becomes redundant."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Philosophical Doctrine of Involuntary Confession",
+      "comment": "PERSPECTIVE 6: PHILOSOPHICAL DOCTRINE (PITON) — Civilizational/universal view. The principle that the state cannot make the accused the instrument of his own conviction has become substantially performative. Modern investigation (forensics, digital data, witness testimony, physical evidence) generates convictions with or without confessions. The doctrine persists through institutional inertia and legitimacy narrative ('the Fifth Amendment protects us') even though its functional necessity has degraded. Theater ratio high: the ritual of asserting the right persists, but the actual exclusion of confessions rarely determines outcomes in the total investigative picture."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Deontological Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / DEONTOLOGICAL NATURAL LAW (MOUNTAIN) — A civilizational/universal perspective grounded in the deontological claim that the state simply cannot, as a matter of fundamental right, compel a person to incriminate themselves. This is a principle, not a pragmatic arrangement. From this view, the privilege is immutable — it does not depend on empirical effectiveness or institutional efficiency, but on moral necessity. The privilege emerges naturally from the principle that human persons possess rights that cannot be violated regardless of state interest. However, this classification is vulnerable to false summit detection: if the deontological axiom is contingent (grounded in 18th-century political theory, not in timeless right), then the mountain is constructed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "confessions_empirical_reliability",
+      "question": "Are confessions empirically more reliable for establishing guilt than other evidence sources (forensics, witness testimony, physical evidence)?",
+      "resolution_mechanism": "Meta-analysis of wrongful conviction databases (Innocence Project); comparison of conviction rates by evidence type; false confession rates in cases with external corroboration",
+      "impact": "If confessions unreliable: privilege is a necessary coordination mechanism (confessions create false convictions). If confessions reliable but suppression prevents their use: privilege extracts efficiency costs from prosecution without truth-discovery benefit. If confessions highly reliable and suppressible: the tradeoff between accuracy and procedural fairness becomes acute — the mountain/piton distinction hinges on whether this tradeoff is axiological (fundamental right) or instrumental (empirical cost-benefit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether confessions are empirically more reliable than alternative evidence"
+    },
+    {
+      "id": "miranda_effectiveness_degradation",
+      "question": "Has Miranda prophylaxis maintained its effectiveness over time, or has police practice evolved to circumvent it while maintaining technical compliance?",
+      "resolution_mechanism": "Longitudinal analysis of confession rates pre- and post-Miranda; analysis of police interrogation techniques that remain compliant with Miranda (psychological manipulation, false evidence ploys, sleep deprivation) and their coercive effects; comparison of Miranda compliance documentation vs actual interrogation coerciveness measured by third-party observers",
+      "impact": "If Miranda remains effective: privilege continues to suppress coerced confessions. If circumvented: the privilege persists as theater (piton) without functional suppression. If partially degraded: constraint transitions from tangled_rope toward piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Miranda warnings maintain their effectiveness over time"
+    },
+    {
+      "id": "deontological_vs_instrumental_grounding",
+      "question": "Is the axiom 'persons cannot be made instruments of their own conviction' grounded in a deontological right (fundamental, timeless) or in instrumental reasoning (18th-century prudential concern about state power)?",
+      "resolution_mechanism": "Genealogical analysis of the Fifth Amendment's drafting history, comparative constitutional law (which jurisdictions lack self-incrimination privilege and what consequences follow), philosophical investigation of whether the axiom survives when empirical premises change (e.g., if confessions became more reliable, would the axiom hold?)",
+      "impact": "If deontological: the privilege is immutable (mountain classification confirmed). If instrumental: the privilege is contingent on empirical premises that may change (piton or scaffold classification becomes appropriate). If mixed: the reading contains both axioms, and the privileged classification becomes reading_dependent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the axiom is grounded in deontological right or instrumental reasoning"
+    },
+    {
+      "id": "interrogation_transparency_sufficiency",
+      "question": "Can interrogation transparency (recording, observation, legal counsel) sufficiently prevent coercion without the exclusionary rule?",
+      "resolution_mechanism": "Comparative jurisdiction study (jurisdictions with mandatory recording vs without); analysis of false confession rates with and without third-party observation; psychological research on visibility effects on coercive interrogation techniques",
+      "impact": "If transparency sufficient: scaffold sunset is real — procedural reforms could replace the exclusionary rule. If transparency insufficient: the privilege remains necessary, and scaffold perspective is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interrogation transparency sufficiently prevents coercion"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading captures the Fifth Amendment's actual doctrinal core: self-incrimination protection, double jeopardy bar, or just compensation requirement?",
+      "resolution_mechanism": "Constitutional history of the Fifth Amendment's drafting and early interpretation; doctrine analysis of which clause receives primary judicial attention; empirical analysis of which reading generates the most litigation and exclusions",
+      "impact": "If self-incrimination protection is core: this reading instantiates the doctrine's primary function. If another reading is core: this reading is derivative or subsidiary. If all three are equally weighted: the kernel is distributed (no single core), and each reading is a legitimate independent constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which reading instantiates the Fifth Amendment's doctrinal core"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "fifth_si_theater_1970s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5,
+      "id_override": "fifth_si_theater_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55,
+      "id_override": "fifth_si_theater_2020s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "fifth_si_extract_1970s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35,
+      "id_override": "fifth_si_extract_1995"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38,
+      "id_override": "fifth_si_extract_2020s"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "fifth_si_suppress_1970s"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "id_override": "fifth_si_suppress_1995"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62,
+      "id_override": "fifth_si_suppress_2020s"
+    }
+  ],
+  "interval": {
+    "start": 1973,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "The Fifth Amendment's self-incrimination privilege is one reading of a contested constitutional kernel with multiple competing interpretations. This reading instantiates the privilege as a protection against compelled self-testimony in interrogation and trial — the core claim that the state cannot make the accused the instrument of his own conviction. The privilege operates structurally as a tangled-rope constraint: it provides genuine coordination (prevents coerced confessions, establishes procedural legitimacy) while simultaneously extracting costs from truth-discovery (suppresses reliable confessions, prevents defendants from being forced to exculpate themselves, creates asymmetric trial strategy advantages for prosecution). The extractiveness value (0.38) reflects moderate baseline extraction — the privilege does suppress confessions, but modern investigation generates convictions through forensics and witness testimony, reducing the privilege's functional necessity. The suppression value (0.62) is high because the exclusionary rule and Miranda prophylaxis create significant barriers to confession-based prosecution. The theater ratio (0.55) reflects the privilege's dual nature: some interrogation procedure is genuinely regulated (recording, warnings, counsel presence), but the ritual of asserting and denying the right persists even when confessions would not determine outcomes in the empirical investigation picture.",
+    "key_agents": [
+      "Suspects under interrogation (powerless/trapped): Primary beneficiaries — the privilege prevents coerced confession. Trapped because they cannot exit the interrogation; rope classification because the privilege provides genuine coordination solution to asymmetric pressure.",
+      "Defendants at trial (moderate/constrained): Beneficiaries with strategic ambiguity — the privilege protects but also constrains (remaining silent creates adverse inference). Tangled rope because genuine protection mixed with asymmetric extraction.",
+      "Confession-dependent prosecution (moderate/constrained): Victims of the privilege's suppression — confession routes eliminated by exclusionary rule. Snare classification because extraction is severe (confessions suppressed) with no coordination benefit.",
+      "Criminal justice system (institutional/constrained): Experiences the privilege as a coordination mechanism for procedural legitimacy balanced against investigation efficiency costs. Tangled rope because genuine coordination (legitimacy) and efficiency extraction.",
+      "Police practice reform (institutional/mobile): Sees the privilege as temporary scaffolding for interrogation reform. Emerging alternatives (transparency, legal counsel, recording) could replace the exclusionary rule if they reach sufficient reliability.",
+      "Philosophical doctrine (institutional/analytical): The deontological principle persists through institutional inertia even as its functional necessity has degraded. Piton classification because the principle is maintained largely through theater (ritual assertion) rather than functional suppression.",
+      "Analytical observer (analytical/analytical): From the civilizational/universal perspective, the privilege appears as an immutable principle grounded in human dignity. Vulnerable to false summit detection: if the deontological grounding is contingent, the mountain is constructed."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The privilege suppresses confessions, but baseline interrogation-dependent conviction rates have declined as forensic and digital evidence have become primary investigative tools. Modern prosecution generates convictions without confessions in a substantial subset of cases. The measurement trajectory shows rising extractiveness (0.28 → 0.38) over 50 years, indicating that the privilege's suppression mechanism persists while the empirical necessity for confessions has declined — confessions remain valuable but not dominant. Suppression (0.62): High. The exclusionary rule and Miranda prophylaxis create significant barriers: custodial interrogation requires warnings, legal counsel, recording in many jurisdictions, and documented voluntariness. These are genuine suppression mechanisms, not theater — they reduce confession rates empirically. Theater ratio (0.55): Moderate-high. The privilege's functional necessity has degraded (modern investigation succeeds without confessions) but the doctrinal ritual persists (Miranda warnings remain required, rights are asserted, interrogation is regulated). The increase from 0.35 to 0.55 over 50 years reflects the gap growing between the doctrine's symbolic authority and its empirical necessity. Tangled rope classification: Genuine coordination (legitimacy of interrogation procedure) combined with asymmetric extraction (prosecution suppressed from confession route, defendant constrained by silence inference) justifies the type. The privilege is not pure extraction (snare) because it does prevent coercion and establish procedural legitimacy. The privilege is not pure coordination (rope) because it extracts real costs from confession-dependent investigation.",
+    "perspectival_gap": "The core perspectival gap is between the deontological (mountain/piton) reading and the empirical (tangled rope/scaffold) reading. From the deontological perspective, the privilege is immutable because it rests on the principle that persons have intrinsic rights that cannot be violated for state efficiency. From the empirical perspective, the privilege is contingent — its necessity depends on whether confessions are reliably probative and whether alternatives exist. As forensic evidence has strengthened and interrogation transparency has improved, the empirical case for the exclusionary rule has weakened, shifting the constraint toward piton (maintained through legitimacy theater rather than functional necessity). The deontological observer does not see this shift because the axiom (persons cannot be instruments of conviction) persists regardless of empirical sufficiency.",
+    "directionality_logic": "Directionality in this reading derives from the structural relationship of each perspective to the privilege's mechanism. Suspects and defendants benefit from the suppression of coerced confession (low d toward beneficiary, producing negative or low f(d) → low χ). Confession-dependent prosecution bears the cost of exclusionary rule (high d toward victim, producing high f(d) → high χ from the prosecution's perspective). The criminal justice system experiences mixed directionality: institutional actors both benefit from legitimacy and pay efficiency costs, producing mid-range d values. The analytical observer's directionality depends on whether the analysis is grounded in deontological axiom (non-empirical, hence d-independent) or in instrumental premises (empirical, hence sensitive to confession reliability rates). No overrides are required; the derivation chain produces appropriate d values from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy through its tangled-rope classification, which acknowledges both the coordination function (preventing coercion, establishing procedural legitimacy) and the extraction cost (suppressing reliable evidence, constraining trial strategy). The constraint is not pure extraction masquerading as coordination (snare), nor is it pure coordination (rope). The mixed classification explains why the privilege persists despite its declining empirical necessity — it provides legitimacy value to the criminal justice system that would not exist if interrogations were conducted without procedural constraints. The false summit perspective (mountain) is a temptation — the deontological axiom is compelling — but the structural data (beneficiaries, measured extraction, declining empirical necessity) reveals this as naturalization of a contingent institutional arrangement. The privilege coordinates and extracts simultaneously; both functions are real.",
+    "kernel_context": "This constraint instantiates one reading of the Fifth Amendment kernel — specifically, the self-incrimination protection reading. The sibling readings (double_jeopardy_bar and takings_just_compensation) are structurally distinct constraints with different beneficiary sets, victim sets, and extraction mechanisms. The double jeopardy reading focuses on verdict finality and the state's inability to retry the acquitted. The takings reading focuses on property rights and just compensation. This reading focuses on the interrogation-and-trial privilege: the state cannot compel self-incriminating testimony. Each reading instantiates a different structural constraint because each suppresses a different state power and benefits a different constituency. The three readings coexist as live constitutional doctrine — they are not logically foreclosed by each other, because a single amendment can carry multiple independent protections. However, they do create institutional coupling: if one reading expands, it may constrain the scope available to the others under the amendment's umbrella."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_amendment__double_jeopardy_bar",
+      "fifth_amendment__takings_just_compensation",
+      "miranda_exclusionary_rule",
+      "interrogation_coercion_suppression"
+    ],
+    "dual_formulation_note": "This is one reading of the Fifth Amendment kernel. The self-incrimination protection reading decomposes from the broader fifth_amendment constraint into its own ε-invariant story because the empirical status (confessions as evidence), suppression mechanism (exclusionary rule), and beneficiary structure (suspects and defendants) are distinct from the double jeopardy and takings readings. The kernel network link captures the constraint-family relationship: all three readings inherit authority from the same text, but each suppresses a different state power and instantiates different extractiveness values."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fifth_amendment__double_jeopardy_bar",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "fifth_amendment__takings_just_compensation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "persons_not_instruments_own_conviction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "interrogation_coercion_empirically_harmful",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "protection_against_compelled_testimony",
+    "drift_state": {
+      "moment": "contemporary_forensic_evidence_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

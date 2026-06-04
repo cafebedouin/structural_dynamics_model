@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "criminal_procedure_amendments__fifth_amendment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_criminal_procedure_amendments__fifth_amendment",
+    "measurement_id_prefix": "fifth",
+    "story_uid": "cfdd9ed2-9fb6-4811-bbdd-a2581f7d5a1f"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fifth Amendment: Charter Against Compelled Self-Conviction and Uncompensated Taking",
+    "topic_domain": "political/legal/criminal_procedure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "accused_persons",
+      "property_holders"
+    ],
+    "victims": [
+      "prosecutorial_convenience",
+      "state_eminent_domain_power"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accused Without Resources",
+      "comment": "PERSPECTIVE 1: ACCUSED WITHOUT RESOURCES (SNARE) — A defendant facing serious charges but lacking means for adequate counsel experiences the Fifth Amendment's protections as largely theoretical. Miranda rights and takings doctrine exist but enforcement requires resources (appeals, expert witnesses, land appraisals) the powerless cannot access. Suppression is high: indigent defendants are trapped within the criminal justice system with no meaningful exit. The constraint appears as pure extraction despite its nominal protections — the procedural guarantees are shadowed by resource barriers that render them inert for those who need them most."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Moderate-Resource Defendant",
+      "comment": "PERSPECTIVE 2: MODERATE-RESOURCE DEFENDANT (ROPE) — A defendant with sufficient means for competent counsel experiences the Fifth Amendment primarily as a coordination mechanism. Double jeopardy doctrine prevents harassment through repetitive prosecution; self-incrimination privilege enables attorney-client strategy; due process creates procedural predictability. These are genuine coordination functions that enable defense. Extraction is real (discovery asymmetries, prosecutorial discretion) but the constraint also protects against state overreach. The beneficiary relationship is mixed — the accused benefits from the structure even as they bear some extraction cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Defense Bar",
+      "comment": "PERSPECTIVE 3: DEFENSE BAR (TANGLED ROPE) — Criminal defense attorneys see the Fifth Amendment as both coordinating their professional function and constraining prosecutorial overreach. The constraint enables privileged communication (attorney-client), provides leverage points (exclusionary rules, Miranda), and creates litigation space. But enforcement requires active advocacy — without defense counsel invoking protections, they do not self-execute. The defense bar benefits from having these levers available (enables their professional value) and bears costs (resource-intensive litigation, adversarial burden). Requires active enforcement: no cooperation with prosecutors means fewer negotiated settlements; adversarial activation of Fifth Amendment protections raises case complexity and discovery burdens. Classification derives from the mixed benefit-extraction relationship combined with the active enforcement requirement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Prosecutorial System",
+      "comment": "PERSPECTIVE 4: PROSECUTORIAL SYSTEM (TANGLED ROPE) — Prosecutors experience the Fifth Amendment as constraining their reach but also as enabling their legitimacy. Self-incrimination doctrine prevents coerced confessions (which create appellate reversals and undermine conviction reliability). Double jeopardy prevents wasteful re-prosecution. Due process requirements create consistency (defendants know the rules, can prepare defenses, reducing unfair surprise). These are coordination functions — the constraint structures how prosecutors work, forcing case quality over case quantity. But coordination comes with extraction: prosecutors lose certain investigative shortcuts (compelled testimony from the accused, ex post facto charges), must honor plea negotiation outcomes, must respect finality. The constraint requires active enforcement by defense counsel to activate — passive defendants cannot self-invoke protections, so the prosecutorial convenience survives longer. Classification reflects that prosecution both benefits from the procedural legitimacy the constraint provides AND bears real extraction (limited investigative tools, finality requirement)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Appellate Judiciary",
+      "comment": "PERSPECTIVE 5: APPELLATE JUDICIARY (ROPE) — Federal appellate courts experience the Fifth Amendment as a pure coordination mechanism: it structures how lower courts must operate, provides clear standards for review, and enables uniform application across jurisdictions. Appeals courts benefit from having stable doctrinal rules (reduces cognitive burden of case-by-case adjudication). The constraint requires active enforcement by appellate counsel (raising Fifth Amendment issues on appeal) but does not extract from the judiciary — judicial resources are deployed according to established procedure, not redirected. This is coordination with near-zero experienced extraction for the institutional actor managing the system."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legislative Branch",
+      "comment": "PERSPECTIVE 6: LEGISLATIVE BRANCH (PITON) — Congress experiences the Fifth Amendment as a largely performative constraint. Congress cannot override Fifth Amendment protections (constitutional supremacy), but legislators can (and do) enact procedural rules that shadow the Fifth Amendment's protections: asset forfeiture statutes that bypass due process, plea bargaining regimes that pressure guilty pleas even for innocent defendants, bail structures that effectively trap the indigent. The Amendment's theater consists of affirmations of principle (victims' rights legislation, bail reform rhetoric) coupled with rules that neutralize protection (civil forfeiture, mandatory minimums that force plea deals). Theater_ratio is high because legislative activity preserves nominal conformity with the Fifth Amendment while enabling prosecutorial overreach through shadow procedures. The constraint is inert from the legislature's perspective — it does not require enforcement against legislative action, only against executive/judicial action."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law of Adversarial Process)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the Fifth Amendment's core commitments (that no person shall be compelled to be a witness against themselves, that no person shall be deprived of property without due process) reflect an inviolable principle of human dignity and proportional state power. This perspective sees the constraint as emerging naturally from the logic of adversarial procedure itself: if the state is empowered to coerce testimony and seize property, some structural barrier is required or the power becomes unlimited. However, the structural data contradicts the mountain classification — the constraint shows measurable extractiveness (0.38), requires active enforcement, and has identifiable beneficiaries and victims. The engine will compute this as a false summit, revealing that 'natural law of adversarial process' is a framing choice rather than a discovered invariant."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fifth_amendment_scope_ambiguity",
+      "question": "Does the Fifth Amendment protect a natural right against self-incrimination, or is it a procedural rule allocating investigative burden between state and accused?",
+      "resolution_mechanism": "Historical analysis of framing intent, comparative analysis with non-adversarial legal systems, assessment of whether the protection appears in systems without adversarial procedure",
+      "impact": "If natural right: mountain classification from all perspectives. If procedural rule: tangled_rope from most perspectives, with variation based on actor position.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Fifth Amendment protects a natural right or allocates procedural burden"
+    },
+    {
+      "id": "compelled_testimony_baseline",
+      "question": "Is the Fifth Amendment's suppression of compelled self-conviction a constraint on the state, or does it merely specify a different investigative baseline?",
+      "resolution_mechanism": "Comparison of criminal conviction rates and case outcomes under systems with and without self-incrimination protection; analysis of whether prosecutions are less successful or merely directed differently",
+      "impact": "If genuine suppression: extractiveness lower (0.30–0.40 range). If baseline shift only: extractiveness higher (0.55–0.70 range) because the state simply uses alternative mechanisms (wiretaps, financial records, witness coercion).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Fifth Amendment suppresses extraction or redirects investigative method"
+    },
+    {
+      "id": "takings_doctrine_compensation_adequacy",
+      "question": "Is just compensation under the Takings Clause adequate, or does it systematically undervalue what is taken?",
+      "resolution_mechanism": "Empirical analysis of compensation awards vs fair market value vs replacement cost; assessment of whether owners can afford equivalent property with awarded compensation",
+      "impact": "If adequate: takings protection is genuine coordination (fair exchange). If systematically inadequate: takings clause is a nominal protection with high extractiveness (0.60+).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether takings compensation is adequate"
+    },
+    {
+      "id": "resource_asymmetry_fatal_flaw",
+      "question": "Do resource asymmetries between state and accused render Fifth Amendment protections inert for poor defendants, making the constraint effectively a snare from their perspective?",
+      "resolution_mechanism": "Comparison of Fifth Amendment invocation rates and success rates across wealth quintiles; analysis of whether public defender constraints prevent meaningful assertion of protections",
+      "impact": "If fatal flaw: constraint reclassifies to snare from powerless perspective even though nominal protections exist. Current classification assumes constrained exit can access counsel; if counsel is structurally unavailable, exit_options should be trapped, driving snare classification across all perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether resource asymmetry renders Fifth Amendment protections inert for poor defendants"
+    },
+    {
+      "id": "kernel_contest_double_jeopardy_double_counting",
+      "question": "Does the Fifth Amendment's double jeopardy clause logically coexist with the Eighth Amendment's proportionality requirement, or do they instantiate contradictory baselines for finality vs punishment review?",
+      "resolution_mechanism": "Doctrinal analysis of how appeals courts navigate cases where a conviction survives double jeopardy (finality) but appears to violate proportionality (harsh sentence). Which doctrine prevails?",
+      "impact": "If coexist: siblings classified as coexists_with. If contradictory baselines: siblings classified as forecloses relationship.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether double jeopardy and proportionality can coexist"
+    },
+    {
+      "id": "kernel_contest_due_process_overlap",
+      "question": "Does the Fifth Amendment's due process guarantee overlap structurally with the Sixth Amendment's fair trial machinery, or do they protect different dimensions (substance vs procedure)?",
+      "resolution_mechanism": "Doctrinal mapping of Fifth Amendment due process cases vs Sixth Amendment fair trial cases. Identification of overlap cases and exclusivity cases.",
+      "impact": "If overlap: both amendments protect the same constraint from different angles — may split into separate stories with shared kernel. If distinct dimensions: no overlap, coexists_with relation holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Fifth Amendment due process overlaps Sixth Amendment fair trial guarantees"
+    },
+    {
+      "id": "historical_drift_miranda_erosion",
+      "question": "Has the Miranda doctrine, which operationalizes the self-incrimination protection, systematically eroded through exceptions and narrow application?",
+      "resolution_mechanism": "Doctrinal analysis of Miranda exceptions (public safety, impeachment use, derivative evidence); statistical analysis of confession rates and Miranda invocation success rates over time",
+      "impact": "If substantial erosion: contemporary base_extractiveness may be higher (0.45+) than framing intent suggests. Theater_ratio may rise as nominal protections are preserved while functional effect narrows.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Miranda doctrine has eroded Fifth Amendment protection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "The Fifth Amendment bundles five nominally distinct protections (grand jury indictment, double jeopardy, self-incrimination, due process, takings) into a unified charter against state overreach. This reading instantiates one interpretation of the contested criminal_procedure_amendments kernel. The structural delta distinguishes it from sibling readings: the Fifth Amendment's core concern is SUPPRESSION of compelled self-conviction and uncompensated taking, with beneficiary set (accused persons, property holders) and victim set (prosecutorial convenience, state eminent-domain power) derived from that core. The constraint exhibits tangled rope structure: it coordinates the criminal process (requires clear procedures, prevents harassment through double jeopardy, creates attorney-client privilege) while simultaneously extracting (prosecutorial advantage persists despite nominal protections, resource asymmetries render protections inert for the poor, takings compensation is often inadequate). The theater_ratio trajectory (0.42 → 0.58 across 80-year interval) reflects increasing performativity: nominal Fifth Amendment compliance coexists with shadow procedures (civil forfeiture, plea bargaining regimes, asset seizure) that neutralize protections while preserving formal adherence. The analytically observed natural law frame — that adversarial procedure requires some baseline protection against compelled self-incrimination — is contradicted by the structural data showing measurable extractiveness, active enforcement requirements, and identifiable beneficiaries. This generates a false-summit diagnostic signal: the constraint is framed as immutable but behaves as a contingent institutional arrangement.",
+    "key_agents": [
+      "Accused persons (powerless/trapped): Primary nominal beneficiary but often trapped by resource barriers; experience the constraint as snare when indigent, rope/tangled_rope when resourced",
+      "Property holders (moderate/constrained): Beneficiaries of takings clause but face resource-intensive litigation to establish just compensation; experience rope/tangled_rope depending on property value and state capacity",
+      "Defense bar (institutional/constrained): Institutional beneficiary; protection requires active enforcement through adversarial litigation; experiences tangled_rope (benefits from leverage points, constrained by enforcement burden)",
+      "Prosecutorial system (institutional/constrained): Institutional victim (loses certain investigative tools); experiences tangled_rope (constrained by Fifth Amendment rules but benefits from procedural legitimacy and case-quality incentives)",
+      "Appellate judiciary (institutional/arbitrage): Manages coordination; experiences rope (pure coordination mechanism with no experienced extraction)",
+      "Legislative branch (institutional/arbitrage): Formally subordinate to Fifth Amendment but enacts shadow procedures that neutralize protections; experiences piton (performative constraint with high theater)",
+      "Analytical observer (analytical/analytical): Risks naturalizing contingent institutional arrangement as a natural law of adversarial process"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Fifth Amendment genuinely constrains state power in specific dimensions (no compelled self-incrimination, no double jeopardy, due process requirements). But extractiveness is not negligible because resource asymmetries, prosecutorial discretion, and shadow procedures (civil forfeiture, plea bargaining) enable the state to capture investigative advantage through alternative mechanisms. The trajectory (0.28 → 0.38) shows rising extractiveness as shadow procedures accumulate and Miranda doctrine narrows through exceptions. Suppression (0.52): Moderate-high. Structural barriers to exiting the criminal justice system are substantial: bail structures trap the poor, plea bargaining regimes coerce guilty pleas even for innocent defendants, public defender constraints prevent meaningful assertion of Fifth Amendment protections. But suppression is not total — resourced defendants can hire competent counsel and invoke protections effectively. Theater ratio (0.58): Moderate-high and rising. Legislative affirmations of Fifth Amendment principles coexist with statutes that shadow its protections. Asset forfeiture doctrine invokes due process language while stripping property without traditional criminal conviction. Bail reform rhetoric coexists with bail structures that effectively detain the poor. Miranda warnings preserve nominal compliance while exceptions have narrowed the privilege. The rising trajectory reflects accumulating procedural theater: more doctrinal complexity, more judicial language affirming principle, more functional erosion through exceptions. Claimed type (tangled_rope): The constraint coordinates the criminal process (prevents harassment, creates privilege, ensures due process) while simultaneously extracting (prosecutorial advantage persists, resource asymmetries render protections inert, shadow procedures neutralize specific protections). Both functions are genuine, neither is negligible.",
+    "perspectival_gap": "The powerless accused experiences the Fifth Amendment as a snare despite its nominal protections — resource barriers render the self-incrimination privilege, double jeopardy protection, and due process guarantees largely inaccessible. The resourced accused experiences rope or tangled rope — they can hire counsel, invoke protections, and negotiate from a position of relative strength. The defense bar experiences tangled rope — protections enable their professional function but require active, resource-intensive enforcement. The prosecutorial system experiences tangled rope — the constraint reduces investigative shortcuts but improves case quality and legitimacy. The judiciary experiences rope — the constraint coordinates judicial procedure without extracting from judges. The legislature experiences piton — nominally subordinate to the Fifth Amendment but practically free to enact shadow procedures that preserve performative compliance while neutralizing functional effect. The analytical observer risks mountain — seeing compelled self-incrimination as a natural law of justice — but the structural data reveals this as a false summit: the protection is contingent on resources, enforcement, and procedural compliance that vary dramatically across actors and time.",
+    "directionality_logic": "Each perspective's directionality derives from structural position. Powerless accused: victim status (compelled to participate in system), trapped exit options → high d → high experienced extractiveness despite nominal protections. Resourced accused: beneficiary status (can invoke protections), constrained exit options (still captured but with options) → moderate d → moderate experienced extractiveness. Defense bar: beneficiary status (leverage points enable professional value), constrained exit options (cannot exit adversarial system) → low d → low/neutral experienced extractiveness. Prosecutorial system: victim status (loses investigative shortcuts), constrained exit options (bound by constitutional requirement) → high d → high experienced extractiveness. Appellate judiciary: beneficiary status (coordination mechanism), arbitrage options (can reinterpret doctrine) → low d → negative experienced extractiveness. Legislative branch: beneficiary status (can shadow protections with alternative statutes), arbitrage options (can enact workarounds) → very low d → near-zero experienced extractiveness. Analytical observer: analytical exit options apply canonical d, and observer position yields moderate d reflecting that any analysis of the constraint from outside involves acknowledging both its protective function and its erosion mechanisms.",
+    "kernel_context": "This constraint instantiates the FIFTH_AMENDMENT reading of the contested CRIMINAL_PROCEDURE_AMENDMENTS kernel. The kernel bundles five distinct criminal procedure protections into a single constitutional clause. The Fifth Amendment reading grounds legitimacy in COMPELLED SELF-CONVICTION SUPPRESSION and UNCOMPENSATED TAKING PREVENTION. Sibling readings (Sixth Amendment, Eighth Amendment, Fourth Amendment, Seventh Amendment) instantiate different focal points from the same underlying procedural commitments. The Sixth Amendment focuses on FAIR TRIAL MACHINERY (speed, jury, counsel, confrontation). The Eighth Amendment focuses on PROPORTIONAL PUNISHMENT. The Fourth Amendment focuses on SEARCH AND SEIZURE CONSTRAINTS. The Seventh Amendment focuses on CIVIL JURY PRESERVATION. These are genuinely distinct constraints with different beneficiary sets, different extraction mechanisms, and different doctrinal trajectories. The Fifth Amendment reading is coexistent with all siblings — no single reading logically forecloses another within the constitutional framework. The United States legal system holds all five simultaneously as distinct (sometimes overlapping) protective doctrines. However, the Fifth Amendment reading influences the others: if compelled testimony is prohibited, interrogation doctrines (Fourth Amendment context) must navigate the privilege boundary; if takings require just compensation, eminent domain doctrine (Fifth Amendment takings clause) creates procedural constraints that ripple into property law (affecting the Seventh Amendment's civil jury preservation). The kernel is FORMALIZED (written text) with authority grounded in LINEAGE (constitutional supremacy and chain of transmission through appellate doctrine). The reference frame is ADVERSARIAL_ACCUSED_PROTECTION_FRAMEWORK (the baseline state this reading assumes: the accused begins from a position of structural vulnerability and requires procedural protections to achieve procedural parity). The drift_state from t0 (framing-era baseline) to t1 (contemporary) is SUBSTANTIAL AXIOM_OVERRIDING: empirical evidence has accumulated that resource asymmetries, plea bargaining regimes, and prosecutorial discretion systematically erode Fifth Amendment protections despite nominal compliance (Miranda exceptions, civil forfeiture doctrine, bail structures). This drift is NOT explicitly acknowledged by appellate courts (acknowledged: false), creating an interpretive gap between professed doctrine and functional reality.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by showing that the tangled_rope classification is accurate: it genuinely coordinates the criminal process (prevents certain prosecutorial tactics, creates privilege, requires due process) while genuinely extracting (prosecutorial advantage persists, resource asymmetries render protections inert, shadow procedures neutralize effect). Both functions are real. The false-summit diagnostic for the analytical observer's mountain classification reveals the mandatrophy resolution: the Fifth Amendment is NOT an immutable natural law of adversarial process, but rather a contingent institutional arrangement that has drifted (theater_ratio rising, extractiveness rising) as shadow procedures accumulate. The constraint is maintainable in its current form only because the performative layer (doctrinal affirmations) is sufficiently thick to preserve nominally compliant jurisprudence while the functional layer (actual protections) has eroded. Resolving the false summit would require either (a) genuine commitment to resource equity (making protections functional for the poor) or (b) explicit abandonment of the protection framework in favor of a different legitimacy claim (e.g., cost-benefit analysis of prosecutorial efficiency). The current state is sustainable because neither resolution is politically feasible — the constraint persists as theatrical naturalization of a degraded coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "criminal_procedure_amendments__sixth_amendment",
+      "criminal_procedure_amendments__fourth_amendment",
+      "criminal_procedure_amendments__eighth_amendment"
+    ],
+    "dual_formulation_note": "The Fifth Amendment is one reading of the criminal_procedure_amendments kernel. Related constraints (Sixth, Fourth, Eighth Amendment stories) decompose the broader Bill of Rights criminal procedure protections. The Fifth Amendment's focus on self-incrimination suppression and takings compensation distinguishes it from siblings' foci (fair trial machinery, search constraints, proportional punishment). Network links model institutional coupling: Fifth Amendment doctrine influences Fourth Amendment interrogation boundaries, Sixth Amendment counsel requirements, and Eighth Amendment proportionality review. These are not separate phenomena — they are interdependent readings of a single constitutional commitment to constrained state power in criminal matters."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "criminal_procedure_amendments__sixth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "criminal_procedure_amendments__eighth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "criminal_procedure_amendments__fourth_amendment",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "criminal_procedure_amendments__seventh_amendment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "compelled_self_incrimination_prohibited",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "uncompensated_taking_prohibited",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "adversarial_accused_protection_framework",
+    "drift_state": {
+      "moment": "contemporary_shadow_procedure_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

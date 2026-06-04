@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "due_process_clause__procedural_due_process",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_due_process_clause__procedural_due_process",
+    "measurement_id_prefix": "proc_due",
+    "story_uid": "da0834c7-1a99-4120-b28d-4124a1fda1b6",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Procedural Due Process: Notice, Hearing, and Neutral Decider",
+    "topic_domain": "legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_rights_holders",
+      "accused_defendants"
+    ],
+    "victims": [
+      "administrative_speed",
+      "state_resource_capacity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accused Without Counsel",
+      "comment": "PERSPECTIVE 1: ACCUSED WITHOUT COUNSEL (SNARE) — Individual facing state deprivation with minimal procedural protections. Trapped by dependency on state-provided counsel or inability to afford representation. The procedural requirement exists but the extraction mechanism (cost burden, delay, complexity) remains severe. Experiences the constraint as high-theater: notice received but incomprehensible, hearings conducted but outcome predetermined by resource asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Represented Defendant",
+      "comment": "PERSPECTIVE 2: REPRESENTED DEFENDANT (TANGLED ROPE) — Individual with counsel facing state deprivation. The procedural constraint genuinely coordinates: notice, hearing, and neutral adjudication are real protections that reduce arbitrary state action. Simultaneously, the constraint extracts: litigation costs, delay, and strategic disadvantage persist. Benefits from procedure (protection against summary deprivation) coexist with costs (time, money, emotional labor). Constrained exit because challenging procedure itself is structurally difficult."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Judicial System",
+      "comment": "PERSPECTIVE 3: JUDICIAL SYSTEM (ROPE) — Administers procedural due process; experiences it as coordination mechanism. The requirement to provide notice, conduct hearings, and ensure neutral adjudication solves the collective action problem of legitimacy: the state needs to appear lawful to maintain authority. Procedural due process enables state power by legitimizing deprivation through process. The judicial system has substantial agency (arbitrage) — it can modify procedures within bounds (Mathews balancing), interpret notice requirements, shape hearing standards. Net beneficiary from the procedure's legitimating function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Organizations",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS ORGANIZATIONS (TANGLED ROPE) — Organized advocates for procedural expansion (discovery rights, appellate review, expert witness access). The constraint both coordinates (they use procedure to challenge deprivation) and extracts (the asymmetric resource burden on challengers vs. government counsel). Over generational time, they have changed procedural norms (discovery rules, Brady obligations), but each gain is limited by state resource capacity constraints and the procedural requirement's own theater. Constrained exit because alternative dispute resolution mechanisms (administrative abolition, summary state action) would be worse."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Administrative Expediency Norm",
+      "comment": "PERSPECTIVE 5: ADMINISTRATIVE EXPEDIENCY NORM (PITON) — Institutional inertia toward summary deprivation persists despite procedural requirement. Police conduct warrantless stops (suppressed via exclusionary rule but theater remains), immigration agencies conduct expedited removal (with 'credible fear' hearing that is largely performative), administrative agencies conduct benefits termination (with oral hearing that is substantially formatted in advance). The performance of procedure masks de facto summary deprivation. Theater ratio high: procedure is observed but its protective function has atrophied in domains where state speed is prioritized. Maintained through institutional habit and perceived administrative necessity rather than through conscious coordination function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, procedural due process appears as an immutable structural requirement: any legitimate legal system requires notice, opportunity to be heard, and neutral adjudication before deprivation. This appears as a law of governance itself — irreducible to contingent institutional arrangements. However, the structural data contradicts this: beneficiaries exist (the state's legitimacy interest, judicial power maintenance), suppression is active (cost burdens, delay weaponization, complexity barriers), and the constraint requires active enforcement (exclusionary rule, appellate review, Brady obligations). The engine's false summit detection will identify this perspective as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mathews_balancing_indeterminacy",
+      "question": "Does Mathews v. Eldridge balancing produce determinate procedural requirements or does it collapse into ad hoc judicial preference masquerading as constitutional necessity?",
+      "resolution_mechanism": "Analysis of Mathews balancing across 40+ years of doctrine: correlation between stated balancing factors and actual outcomes; examination of whether private interest weight is independently applied or post-hoc rationalization; comparison of outcomes when identical factors appear across different doctrinal domains",
+      "impact": "If determinate: extractiveness drops to 0.28–0.32 (rope or scaffold dominates). If indeterminate: extractiveness rises to 0.48–0.62 (snare/tangled rope dominates) because procedure becomes theater masking state discretion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Mathews balancing produces determinate procedural requirements"
+    },
+    {
+      "id": "kernel_identity_under_contest",
+      "question": "Is this reading's core claim—that due process is PROCEDURAL and distinct from substance—a stable doctrinal distinction or does it collapse when substantive rights (parental control, marriage, bodily autonomy) are invoked?",
+      "resolution_mechanism": "Historical analysis of doctrinal stability: cases where courts honored procedure while denying substantive protection (forced sterilization, custody deprivation, bodily searches); cases where courts recognized procedure as inadequate to protect fundamental interests (Cruzan, Obergefell). Examine whether procedural sufficiency can be coherently maintained across all domains of liberty.",
+      "impact": "If the procedure/substance distinction is stable: this reading remains coherent (Tangled Rope with clear beneficiary/victim sets). If the distinction collapses: this reading is instrumentally used to deny substantive protection (morphs into Piton or Snare from the powerless perspective); the substantive reading foreclosed this one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether procedural/substance distinction is stable or collapses under doctrinal stress"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what extent is procedural suppression (high cost, delay, complexity) structural (external barriers: filing fees, attorney costs, discovery limitations) versus internalized (the accused believes they deserve expedited deprivation, internalizes the state's time-pressure narrative)?",
+      "resolution_mechanism": "Post-deprivation interview data: do defendants perceive procedure as protection or as prolonged punishment? Comparative analysis of suppression effects in domains with strong counsel (capital punishment with appellate review) versus weak counsel (civil rights deprivation with summary adjudication). Exit analysis: when procedure is genuinely available, what proportion of eligible individuals invoke it versus waive it?",
+      "impact": "If predominantly structural: the 0.48 suppression figure is accurate (external barriers). If internalized: suppression is higher than the metric suggests because the accused carry the barrier with them after procedural resolution. If mixed: the constraint's extractiveness varies by counsel quality and cognitive capture state.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "sibling_reading_foreclosure_status",
+      "question": "Does this procedural reading genuinely coexist with the substantive reading, or does the substantive reading logically foreclose this one within a unified framework?",
+      "resolution_mechanism": "Doctrinal analysis: can a single constitutional theory hold both that (1) procedure + stakes balancing determines due process AND (2) some liberties are so fundamental that no process suffices? If a liberty is fundamental, does Mathews balancing become merely ceremonial? Does recognizing 'fundamental' interests collapse back into substantive criteria that render procedure secondary?",
+      "impact": "If coexists: two independent readings of the kernel, both live (expected for contested constitutional doctrine). If foreclosed: the substantive reading dominates at the fundamental liberty boundary, and this procedural reading is narrowed to non-fundamental deprivations. This omega routes to the axioms section as the foreclosure condition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether procedural and substantive due process readings coexist or foreclose each other"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The procedural due process reading of the Due Process Clause constrains the state's power to deprive individuals of liberty or property by requiring notice, an opportunity to be heard, and a neutral decision-maker before such deprivation occurs. This constraint operates at the intersection of legitimacy (the state's need to appear lawful) and protection (the individual's need for safeguards against arbitrary action). The Mathews v. Eldridge three-factor test (private interest, government interest, risk of error) aims to scale the process required by the stakes of deprivation. However, this balancing produces indeterminacy: courts have applied identical factors to reach different conclusions across domains, and the balancing itself becomes a site of extraction—high-cost litigation where procedural disputes displace substantive resolution. The constraint exhibits Tangled Rope structure: it genuinely coordinates by preventing summary deprivation and establishing legitimacy for state action, while simultaneously extracting through delay, cost burdens, and the asymmetric resource burden on individual challengers. The theater ratio has increased over 50 years as procedural complexity has grown (discovery rules, expert witness standards, appellate review standards) while the protective function of procedure has atrophied in high-speed domains (immigration, police stops, administrative benefits termination). The analytical observer risks seeing procedural due process as an immutable requirement of any legitimate legal system (mountain perspective), but the structural data reveals contingent institutional arrangements: the state's ability to suppress substantive challenges through procedural complexity, the judicial system's interest in maintaining legitimacy through procedure rather than substantive justice, and the civil rights movement's generational struggle to expand procedural protections despite resource constraints.",
+    "key_agents": [
+      "Individual rights holders: Primary beneficiary (institutional/arbitrage) — benefit from procedural protections against arbitrary state deprivation; but realize benefit only with adequate counsel and resources",
+      "Accused defendants: Primary beneficiary and victim (powerless/trapped and moderate/constrained, depending on counsel availability) — nominally protected by procedure but often unable to exercise protections effectively",
+      "Judicial system: Beneficiary (institutional/arbitrage) — maintains legitimacy and authority through procedural compliance; experiences procedure as coordination mechanism that enables state power",
+      "Administrative agencies: Victim (institutional/mobile) — constrained by procedural requirement to provide hearings; extract from suppression (delay, complexity, resource burden); have arbitrage options (summary procedures, expedited removal, informal adjudication)",
+      "Civil rights organizations: Organized beneficiary/victim (organized/constrained) — use procedure to challenge state action but bear asymmetric cost burden compared to government counsel",
+      "Police and enforcement: Victim (institutional/mobile) — constrained by procedural requirements (warrant requirement, Miranda rule, suppression doctrine); have arbitrage options (summary stop-and-frisk justified by Terry, qualified immunity protecting from damages liability)",
+      "Analytical observer: Sees potential natural law (analytical/analytical) — risks naturalizing contingent arrangements as immutable requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint requires genuine process (notice, hearing, neutral adjudicator) which reduces pure arbitrary deprivation. However, the process itself becomes a site of extraction through cost, delay, and complexity. Mathews balancing gives courts discretion to reduce process requirements when government interests are high (e.g., termination of disability benefits, immigration proceedings), and courts consistently weight government speed and efficiency heavily. The extracted value is primarily borne by accused individuals with limited resources; institutional actors and repeat players extract through procedural complexity exploitation. Suppression (0.48): Moderate-high. Multiple barriers suppress the constraint's protective function: (1) cost of legal representation; (2) complexity of procedure that advantages sophisticated actors; (3) delay weaponization (lengthy pretrial proceedings, extended administrative reviews); (4) informality and theater in high-volume contexts (police warnings, benefits termination hearings). Suppression is not total because appellate review, exclusionary rule, and Brady obligations maintain some procedural enforcement. Theater ratio (0.55): Moderate-high. Procedural formality persists in many contexts but protective function has eroded: (1) police conduct stop-and-frisk encounters outside formal procedure then exclude evidence afterwards; (2) immigration agencies hold 'credible fear' hearings that are largely formatted in advance with high removal rates (~80-90% after hearing); (3) welfare agencies conduct hearings after benefits termination (post-deprivation process insufficient per Fuentes but used anyway); (4) discovery limitations in civil rights litigation transform the hearing into theater when plaintiffs cannot access evidence. The theater has increased as administrative volume has increased—the state cannot provide meaningful process at scale, so the process becomes performative.",
+    "perspectival_gap": "Different power levels and exit options produce radically different classifications. The powerless trapped defendant perceives snare (high extraction, no exit, no benefit). The moderate constrained defendant perceives tangled rope (both protection and extraction, constrained exit). The institutional judicial system perceives rope (coordination mechanism, arbitrage exit). The institutional administrative agency perceives constraints (victim perspective) but with mobile exit options. The organized civil rights sector perceives tangled rope with generational progress. The piton perspective shows degraded procedure maintained through institutional inertia. The mountain perspective risks naturalizing contingent arrangements. The perspectival gaps reveal the true structure: procedure is a contested good. Beneficiaries (individuals, the accused, rights holders) experience it as protection requiring enforcement. Victims (administrative speed, police speed, state efficiency) work to reduce it. The state's relationship to procedure is paradoxical: it benefits from procedure's legitimating function (rope perspective) while working to minimize procedure's protective function (suppression and theater ratio analysis). This paradox is the constraint's signature: the state needs procedure to appear legitimate but works to hollow out procedure to maintain speed.",
+    "directionality_logic": "Directionality values derive from structural relationship to deprivation. The individual defendant without counsel is trapped (no exit from criminal prosecution, civil judgment, or administrative deprivation) and is the deprivation's target (d ≈ 0.90, high extraction experienced). The represented defendant is constrained (can appeal, negotiate, or pursue civil remedy but at high cost) and is nominally protected but also constrained by procedure (d ≈ 0.65, moderate extraction). The judicial system benefits from procedural legitimacy and has substantial exit/entry options (can interpret procedures broadly or narrowly, can implement Mathews balancing favorably or unfavorably) (d ≈ 0.10, low extraction experienced). Administrative agencies are targets of procedural constraint (must provide hearings, follow notice rules) but have exit options (summary procedures, expedited processes, informal adjudication) and derive benefit from speed (d ≈ 0.40, moderate extraction). Civil rights organizations benefit from procedure as challenge mechanism but bear cost burden and are constrained by resource limitations (d ≈ 0.50, balanced extraction). The analytical observer has analytical exit (no institutional stake in the outcome) (d ≈ 0.72, moderate extraction experienced as uncertainty about natural law status).",
+    "kernel_context": "This constraint is ONE reading of the contested kernel 'due_process_clause'. The kernel is the Fifth (and Fourteenth) Amendment text: 'nor shall be deprived of life, liberty, or property, without due process of law.' This reading instantiates the 'procedural_due_process' interpretation: due process is fundamentally about PROCESS—notice, hearing, neutral adjudication—and the quantum of process required scales by the stakes of deprivation (Mathews balancing). This reading coexists with two sibling readings: (1) 'incorporation_doctrine' — due process is the conduit through which enumerated Bill of Rights guarantees bind the states one by one; and (2) 'substantive_due_process' — due process has substance, some liberties are so fundamental that no process suffices to take them. These readings share a kernel (the constitutional text) but diverge on what 'due process' MEANS. The procedural reading does not foreclose the incorporation doctrine reading (the incorporation mechanism works within the procedural framework). The procedural reading and substantive reading create pressure on each other at the boundary of fundamental liberties: when substantive rights (marriage, bodily autonomy, parental control) are at stake, does procedure suffice, or is the procedural reading inadequate? This is documented in the omega variables and reading_relations below."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "due_process_clause__incorporation_doctrine",
+      "due_process_clause__substantive_due_process"
+    ],
+    "dual_formulation_note": "The due_process_clause kernel decomposes into three independent constraint stories reflecting three distinct readings of the constitutional text. Procedural due process (this story) focuses on process scaling by stakes. Substantive due process (sibling story) focuses on content constraints on state authority. Incorporation doctrine (sibling story) focuses on the federalism mechanism binding the states. Each reading has its own epsilon value (procedural: 0.38, substantive: 0.55+, incorporation: 0.30), its own perspectival structure, and its own dominating type. The network links show how the readings affect each other: incorporation doctrine provides the structural mechanism by which due process constrains states; substantive due process creates pressure on procedural reading at fundamental liberty boundaries; procedural reading attempts to remain neutral on what liberties are fundamental."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "due_process_clause__incorporation_doctrine",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "due_process_clause__substantive_due_process",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "process_scales_with_stakes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "procedure_content_agnostic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "due_process_requires_scaled_procedure",
+    "drift_state": {
+      "moment": "contemporary_high_volume_administration",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "fifteenth_amendment__formal_franchise_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fifteenth_amendment__formal_franchise_reading",
+    "measurement_id_prefix": "fif_formal",
+    "story_uid": "4d2a81aa-9e72-4449-8418-ec6476a36a99",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Fifteenth Amendment Formal Franchise Reading: Facially Neutral Disfranchisement",
+    "topic_domain": "legal/constitutional/voting_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "southern_states",
+      "state_governments_deploying_neutral_devices"
+    ],
+    "victims": [
+      "african_american_voters",
+      "disenfranchised_racial_minorities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "African American Voters Under Jim Crow",
+      "comment": "PERSPECTIVE 1: AFRICAN AMERICAN VOTERS (SNARE) — Trapped by literacy tests, poll taxes, and grandfather clauses that are facially race-neutral but operationally targeted. The formal reading confines the Fifteenth Amendment's reach to explicit racial bars, leaving these proxy devices untouched. Voters have no exit option: they cannot vote elsewhere, cannot change jurisdictions effectively, and have no legal recourse because the suppressive mechanism is formal-language compliant. Maximum experienced extraction — the entire structure is designed to achieve disfranchisement by indirection while appearing constitutional."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Southern State Governments",
+      "comment": "PERSPECTIVE 2: SOUTHERN STATE GOVERNMENTS (ROPE) — Under the formal reading, states benefit from a coordination solution: they can preserve racial disfranchisement through facially neutral devices without violating the Fifteenth Amendment's explicit bar on racial conditions. This perspective sees the constraint as coordination — the federal constitution and state practice align through a narrow reading that permits states to achieve their electoral objectives. States experience the constraint as enabling rather than restricting; they have arbitrage options (deploy literacy tests, poll taxes, grandfather clauses; or enforce explicit bars) and face no suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Courts Interpreting the Fifteenth Amendment",
+      "comment": "PERSPECTIVE 3: FEDERAL COURTS (TANGLED ROPE) — Courts face a genuine coordination problem (how do we adjudicate voting rights under the Constitution?) alongside asymmetric extraction (their interpretive choice constrains voter access and enables state disfranchisement). Under the formal reading, courts interpret the Fifteenth Amendment narrowly — protecting only against explicit racial bars — while the practical consequence is to license proxy disfranchisement. Courts experience suppression: they are constrained by the text's apparent scope ('race shall not be a qualification'), yet their interpretive choice generates enormous asymmetric extraction of voting rights. The coordination function is real (providing a rule for adjudication); the extraction is also real (the rule permits disfranchisement by proxy)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal-Language Doctrine Itself",
+      "comment": "PERSPECTIVE 4: FORMAL-LANGUAGE DOCTRINE (PITON) — The interpretive rule 'read the text literally; if race is not explicitly mentioned, the rule does not apply' is largely theater. By the 1960s, the doctrine's performative function had become apparent: it preserved a veneer of race-neutral legality while everyone knew the devices were targeting race operationally. The doctrine persists through institutional inertia — legal formalism, precedent, and the legitimacy of narrow textualism — even as its functional verification capacity collapsed. The constraint's theater_ratio reflects that the doctrine's credibility depends on not noticing its operational purpose."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Coalition",
+      "comment": "PERSPECTIVE 5: CIVIL RIGHTS COALITION (SCAFFOLD) — Organized agents (NAACP, voting rights advocates) recognized the formal-reading constraint as a temporary institutional arrangement vulnerable to legislative action. The Voting Rights Act (1965) imposed a sunset clause: federal oversight of voting practices in jurisdictions with clear patterns of racial disfranchisement. The coalition saw the formal reading's extractive mechanism as tied to a specific reading of constitutional text that Congress could reframe. The constraint operates under a sunset: the moment Congress invokes Section 2 of the Fifteenth Amendment (giving Congress enforcement power) and applies results-based tests, the formal reading's exclusion of proxy devices collapses. Low effective extraction from this perspective because exit path is visible and achievable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From the civilizational analytical context, the formal reading appears as an immutable principle of constitutional interpretation: 'The Amendment forbids only what it explicitly forbids; silent on the mechanism means the mechanism is unregulated.' This reading treats textual silence as a natural interpretive law. However, the structural data reveals this as a false summit: the formal reading is a contingent interpretive choice (chosen by particular justices, in particular historical moments, producing particular distributional consequences), not a deduction from the text's logical structure. The analytical observer risks naturalizing what is actually a reading selection."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "textual_silence_interpretation",
+      "question": "Does textual silence on a regulatory mechanism mean Congress intended no regulation, or does it leave regulatory space for Congress to occupy?",
+      "resolution_mechanism": "Historical legislative record from the Reconstruction Congress (39th-40th sessions) showing explicit debates over whether Section 1 or Section 2 of the Fifteenth Amendment was intended to reach proxy devices; analysis of how other constitutional provisions (e.g., Fourth Amendment silence on digital surveillance) have been interpreted to evolve with operational contexts.",
+      "impact": "If silence means no Congress power: formal reading is locked into original 1870 understanding, and proxy devices remain untouched absent constitutional amendment. If silence permits Congress to regulate by results: Congress can reframe the amendment's reach via Section 2 enforcement authority, and the formal reading becomes provisional, not immutable.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether textual silence on mechanisms precludes congressional regulation by results"
+    },
+    {
+      "id": "operational_vs_facial_targeting",
+      "question": "At what level of knowledge does a state's deployment of a facially neutral device constitute racial discrimination for constitutional purposes — intent only, or intent plus operation?",
+      "resolution_mechanism": "Comparative constitutional law analysis; examination of how other democracies (Canada, South Africa, Germany) distinguish between formal and operative discrimination; historical reconstruction of state legislative debates contemporaneous with literacy test and poll tax adoption showing explicit intent to target race.",
+      "impact": "If intent alone: states can shield themselves by claiming neutrality even when operational targeting is certain (formal reading holds). If intent plus operation, or operation alone: literacy tests and poll taxes are discriminatory regardless of facial language, and the Fifteenth Amendment reaches them (effective reading holds).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What triggers constitutional violation: facial language, intent, or operational effect"
+    },
+    {
+      "id": "congressional_enforcement_authority_scope",
+      "question": "Does the Fifteenth Amendment's Section 2 ('Congress shall have power to enforce this article by appropriate legislation') permit results-based regulation of voting practices, or only prohibition of explicitly racial conditions?",
+      "resolution_mechanism": "Textual analysis of Section 2 language versus Section 5 of the Fourteenth Amendment (explicitly authoritative over state action), which courts have interpreted expansively; legislative history of Section 2 Fifteenth Amendment debates; comparative interpretation across other constitutional enforcement clauses.",
+      "impact": "If Section 2 permits results-based enforcement: Congress can override the formal reading through legislation (Voting Rights Act is constitutionally grounded). If Section 2 is narrow: Congress's authority is limited to remedying explicit racial bars, and facially neutral devices remain unreachable absent constitutional amendment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of congressional enforcement power under Fifteenth Amendment Section 2"
+    },
+    {
+      "id": "knowledge_of_proxy_operation",
+      "question": "From which historical moment should we measure the formal reading's extractiveness — from 1870 (when the amendment's scope was genuinely unclear), or from 1896 (when Plessy v. Ferguson sanctified separation), or from the 1950s (when proxy operation became universally documented)?",
+      "resolution_mechanism": "Historical reconstruction of legal consciousness: when did jurists and legislators have access to evidence that literacy tests were disfranchising Black voters operationally? Comparison with modern interpretations of constitutional provisions applied retroactively.",
+      "impact": "If 1870: the formal reading was a defensible interpretation given contemporary knowledge, and the constraint's extractiveness should reflect that epistemic position. If 1950s: the formal reading became complicit in documented racial targeting, and extractiveness should reflect knowledge of operation. This shifts mandatrophy analysis: is the constraint a good-faith interpretive dispute or a chosen blindness?",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical knowledge of proxy disfranchisement effects at time of formal reading's establishment"
+    },
+    {
+      "id": "effective_reading_logical_containment",
+      "question": "Does the formal reading logically foreclose the effective reading, or can both readings coexist as competing interpretations held by different constitutional authorities?",
+      "resolution_mechanism": "Modal logic analysis: if a jurisdiction adopts the formal reading, can it simultaneously honor the effective reading via Congress's Section 2 power? Or does the formal reading's constraint on amendment scope necessarily exclude Congress's enforcement authority?",
+      "impact": "If foreclosure: only one reading can be constitutionally correct, and the other must be wrong (gate is binary). If coexistence: both readings remain live positions, and the constitutional contest is resolved by institutional power (which branch prevails), not by logical necessity. This determines whether the kernel reading_relations should be 'forecloses' or 'coexists_with'.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether formal and effective readings are logically exclusive or coexistent interpretations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "fif_formal_extr_1870"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62,
+      "id_override": "fif_formal_extr_1900"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.68,
+      "id_override": "fif_formal_extr_1960"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "fif_formal_theater_1870"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48,
+      "id_override": "fif_formal_theater_1900"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.58,
+      "id_override": "fif_formal_theater_1960"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "fif_formal_supp_1870"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65,
+      "id_override": "fif_formal_supp_1900"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.72,
+      "id_override": "fif_formal_supp_1960"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 95
+  },
+  "commentary": {
+    "narrative_context": "The formal franchise reading of the Fifteenth Amendment represents a specific constitutional interpretation: the Amendment forbids only explicit racial conditions on voting ('race, color, or previous condition of servitude shall not be a qualification'); devices that are facially race-neutral—literacy tests, poll taxes, grandfather clauses, property requirements—stand outside the Amendment's terms even when operationally deployed to achieve racial disfranchisement. This reading generates a constraint because it determines which agents can regulate voting access and which disfranchisement mechanisms are constitutionally permissible. The constraint's extractiveness has increased over time (from 0.45 in 1870 to 0.68 by 1960) as proxy devices proliferated and their racial operation became documented and undeniable. The theater_ratio (0.58) reflects that the formal reading's interpretive justification—'read the text literally'—is performative rather than functionally verifiable; the reading's survival depends on sustained attention to the text's explicit language and deliberate inattention to operational effects. The suppression requirement (0.72) reflects the coercive infrastructure needed to sustain the reading as operational targeting intensified: greater enforcement effort to prevent courts or Congress from recognizing the proxy mechanisms as discriminatory. This reading stands in structural opposition to the effective franchise reading, which interprets the Fifteenth Amendment to reach any device that operates to deny the vote by race, enabling Congress to impose results-based regulation via the Voting Rights Act.",
+    "key_agents": [
+      "African American Voters and Racial Minorities: Primary victims (powerless/trapped) — subjected to disfranchisement by proxy devices with no legal recourse under the formal reading",
+      "Southern State Governments: Primary beneficiaries (institutional/arbitrage) — can deploy literacy tests, poll taxes, and grandfather clauses without violating the Fifteenth Amendment's explicit bar on racial conditions",
+      "Federal Courts: Secondary actors (moderate/constrained) — constrained by the formal reading to adjudicate voting disputes narrowly, generating extractive outcomes they did not choose",
+      "Congress (Reconstruction Era): Institutional authority (institutional/arbitrage) — chose the formal reading by drafting only an explicit racial bar rather than a functional disfranchisement ban",
+      "Civil Rights Coalition: Organized agents (organized/mobile) — recognized the formal reading as a temporary institutional arrangement vulnerable to legislative reframing via Section 2 enforcement authority",
+      "Analytical Observer: Civilization-scale perspective (analytical/analytical) — risks treating the formal reading as a deduction from constitutional text rather than a contingent interpretive choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): Moderate-high. The formal reading benefits states by permitting proxy disfranchisement and harms voters by confining constitutional protection to explicit racial language. The extractiveness increased from 1870 (0.45) to 1960 (0.68) because the gap between text (explicit racial bars only) and operation (widespread racial disfranchisement via neutral devices) widened as proxy mechanisms proliferated. The measurement reflects growing knowledge of operational targeting—the constraint's extractive mechanism became less deniable over time. Suppression (0.72): High. Maintaining the formal reading required significant enforcement effort: restricting access to legislative records of intent, minimizing visibility of operational effects, preventing courts from applying results-based tests. As evidence of proxy targeting accumulated, the suppressive infrastructure had to strengthen (documentation of voter disfranchisement was actively suppressed until the 1960s). Theater ratio (0.58): Moderate-high. The formal reading's justification ('read the text literally; if race is not explicit, regulation does not apply') is performative rather than functionally verifiable. The reading persists through adherence to a textual rule, not through demonstrated epistemic accuracy. Theater increased from 1870 (0.35) to 1960 (0.58) as everyone involved (legislators, judges, observers) could see the operational disfranchisement, yet the formal reading continued to shield it. The theater-ratio rise reflects growing disconnect between what the rule says and what everyone knows it does.",
+    "perspectival_gap": "The perspectival gap is maximal. Voters see a snare; states see a rope; courts see tangled rope; the doctrine becomes piton; the coalition sees scaffold; the analytical observer risks naturalizing a contingent choice as immutable law. The gap reflects that the formal reading generates structurally distinct experiences depending on agent position: beneficiaries experience enabling coordination; victims experience extraction; institutional actors experience constraint; observers risk misclassification. The mandatrophy is resolved by recognizing that all six types are real perspectival readings of the same structure—the formal reading is not 'really' any one type but produces different types depending on the observer's structural relationship to disfranchisement.",
+    "directionality_logic": "Directionality is determined by beneficiary/victim status and exit options. Voters (victim + trapped) derive d → 0.95, experiencing maximum extraction. States (beneficiary + arbitrage) derive d → 0.05, experiencing enabling coordination. Courts (neither + constrained) derive d → 0.65, experiencing moderate tension. The formal-language doctrine (institutional + arbitrage) derives low d—the doctrine itself benefits from the narrow reading—but the doctrine's theater ratio (0.58) reveals its performative character: it persists through adherence to a rule whose operational justification has collapsed. The civil rights coalition (organized + mobile) derives d → 0.40: they have agency and can mobilize Congress to reframe Section 2 authority, reducing experienced extraction. The analytical observer (analytical + analytical) derives d → 0.72: they see the full structure but their native instruments cannot detect that the formal reading is a constructed choice rather than a logical law.",
+    "kernel_context": "This constraint is the formal_franchise_reading of the fifteenth_amendment kernel. The reading instantiates this specific constitutional interpretation: the Amendment forbids only explicit racial conditions on voting; facially neutral devices (literacy tests, poll taxes) fall outside its terms. The sibling reading (effective_franchise_reading) interprets the Amendment to reach any device that operates to deny the vote by race, empowering Congress via Section 2 to dismantle disfranchisement by results. The two readings coexist as competing interpretations held by different historical authorities: the formal reading dominated through approximately 1965 (Supreme Court, state legislatures); the effective reading became ascendant with the Voting Rights Act (1965, Congress, and subsequent Supreme Court decisions like South Carolina v. Katzenbach). The kernel contest is not resolved by textual logic alone—both readings cite the Amendment's language in support—but by institutional authority and distributional consequence.",
+    "mandatrophy_analysis": "This constraint's mandatrophy is resolved by recognizing that all six types are real perspectival readings. The classification is not 'the constraint is really a snare' but 'the constraint produces snare experiences for victims, rope experiences for beneficiaries, tangled rope for courts, piton for the doctrine, scaffold for the organized coalition, and mountain misclassification for the analytical observer.' The constraint exists because the formal reading allocates power: it permits states to regulate voting access via proxy devices, confines federal authority to explicit racial bars, and places victims in a position with no exit. The perspectival variety reflects that the formal reading generates structurally distinct relationships for each observer—no single type captures the constraint's full structure. The mandatrophy resolves by showing that the apparent inconsistency (snare for victims, rope for states, mountain at analytical scale) is not a classification error but an observation that the constraint's extractiveness, suppression, and theater depend on the agent's position within the disfranchisement structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fifteenth_amendment__effective_franchise_reading",
+      "voting_rights_act_1965__preclearance_mandate",
+      "literacy_test_as_proxy_disfranchisement"
+    ],
+    "dual_formulation_note": "The formal and effective franchise readings of the Fifteenth Amendment are siblings in a constraint kernel. They have structurally distinct ε values because they reach different mechanisms: the formal reading (this story) confines disfranchisement reach to explicit racial bars (ε=0.68, snare), while the effective reading reaches proxy devices by operational targeting (ε would be lower for proxy mechanisms individually measured, but the effective reading as a constitutional interpretation has higher authority-enforcement coupling). The two readings are not mutually exclusive in logical scope—both cite the Amendment's language—but in practical authority: they represent different institutional choices about what the Amendment permits Congress to regulate. The Voting Rights Act instantiates the effective reading by imposing results-based preclearance, which the formal reading treats as exceeding congressional Section 2 authority. Both readings are live constitutional positions (the formal reading persists in current jurisprudence for provisions outside the VRA's scope); they coexist as competing frameworks held by different authorities."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fifteenth_amendment__effective_franchise_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "explicit_racial_bar_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "congress_section_two_enforcement_narrow",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "narrow_textual_federalism",
+    "drift_state": {
+      "moment": "contemporary_voting_rights_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

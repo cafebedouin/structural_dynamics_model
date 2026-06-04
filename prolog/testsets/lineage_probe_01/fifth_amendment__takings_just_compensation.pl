@@ -1,0 +1,346 @@
+% ============================================================================
+% CONSTRAINT STORY: fifth_amendment__takings_just_compensation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_fifth_amendment__takings_just_compensation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: fifth_amendment__takings_just_compensation
+ *   human_readable: Fifth Amendment Takings Clause: Just Compensation Requirement
+ *   domain: constitutional_law/property_rights
+ *
+ * SUMMARY:
+ *   The Fifth Amendment's takings clause — 'nor shall private property be
+ *   taken for public use, without just compensation' — instantiates one
+ *   reading of the Fifth Amendment's contested core. This reading positions
+ *   the Amendment's primary protective function as preventing uncompensated
+ *   expropriation of property, rather than protecting against double jeopardy
+ *   or self-incrimination (the sibling readings). The takings clause creates
+ *   a structured extraction dynamic: the state retains the power to take
+ *   property via eminent domain for public use, but the takings clause prices
+ *   this power by requiring just compensation. The constraint transforms
+ *   potential naked expropriation into a compensated transaction, making the
+ *   extraction visible and contestable through valuation and 'public use'
+ *   litigation. The constraint exhibits tangled_rope characteristics: it
+ *   coordinates the state's eminent domain power with property-holder
+ *   expectations (genuine coordination function), while simultaneously
+ *   extracting value from government budgets by requiring compensation and
+ *   enabling property-holder challenges to valuations and use classifications
+ *   (asymmetric extraction). The beneficiaries are property holders in the
+ *   state's path; the victims are government acquisition budgets and the
+ *   public interest in cost-absorption. The constraint's theater has
+ *   increased over time as doctrinal innovations (Penn Central multi-factor
+ *   test, regulatory takings distinctions) have narrowed the class of
+ *   compensable takings while maintaining elaborate procedural formality,
+ *   suggesting piton-like degradation of the functional protection.
+ *
+ * KEY AGENTS:
+ *   - Property Holders (Organized Coalition): Primary beneficiaries (organized/constrained exit) — benefit from compensation requirement, litigation leverage over valuations, and 'public use' challenges. Have real but constrained exit options: litigation, political advocacy, negotiated purchase counter-offers.
+ *   - Dispossessed Holdouts: Secondary beneficiaries, primary victims of extraction (powerless/trapped exit) — face forced taking with no refusal option; compensation is the only protection available. Maximum experienced suppression: no arbitrage escape.
+ *   - Municipal and State Governments: Primary victims / coordination partners (institutional/arbitrage exit) — bear cost of compensation; use takings clause as legal framework enabling large-scale property acquisition for infrastructure. Arbitrage options available: negotiated purchase, regulatory alternatives, project redesign.
+ *   - Courts and Takings Jurisprudence: Institutional maintainers (institutional/arbitrage exit) — apply and enforce the takings clause; have evolved doctrine toward narrower compensation (regulatory takings distinctions) while maintaining elaborate procedural theater. High institutional necessity but degrading functional capacity (piton characteristics).
+ *   - Urban Planners and Development Coalitions: Secondary institutional actors (organized/constrained exit) — increasingly view eminent domain as temporary, substituting market-based acquisition and community land trusts for formal takings. Constrained by existing legal framework but building alternatives.
+ *   - Analytical Observer (Civilizational): Views takings clause as natural law inherent to property rights; risks false-summit classification by naturalizing what is a specific distributional choice.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(fifth_amendment__takings_just_compensation, 0.38).
+domain_priors:suppression_score(fifth_amendment__takings_just_compensation, 0.42).
+domain_priors:theater_ratio(fifth_amendment__takings_just_compensation, 0.48).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(fifth_amendment__takings_just_compensation, extractiveness, 0.38).
+narrative_ontology:constraint_metric(fifth_amendment__takings_just_compensation, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(fifth_amendment__takings_just_compensation, theater_ratio, 0.48).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(fifth_amendment__takings_just_compensation, tangled_rope).
+narrative_ontology:human_readable(fifth_amendment__takings_just_compensation, "Fifth Amendment Takings Clause: Just Compensation Requirement").
+narrative_ontology:topic_domain(fifth_amendment__takings_just_compensation, "constitutional_law/property_rights").
+
+domain_priors:requires_active_enforcement(fifth_amendment__takings_just_compensation).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(fifth_amendment__takings_just_compensation, 'f1b9212a-b8be-4ac8-b9cb-57441eb8752d').
+narrative_ontology:cs_kernel_codification('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', formalized).
+narrative_ontology:cs_authority_grounding('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', lineage).
+narrative_ontology:cs_interpretation_layer_present('f1b9212a-b8be-4ac8-b9cb-57441eb8752d').
+narrative_ontology:cs_reading_relation('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', fifth_amendment__double_jeoparty_bar, coexists_with).
+narrative_ontology:cs_reading_relation('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', fifth_amendment__self_incrimination_protection, coexists_with).
+narrative_ontology:cs_axiom('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', foundational, property_right_state_protection).
+narrative_ontology:cs_axiom_status(property_right_state_protection, holdable).
+narrative_ontology:cs_axiom_grounding('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', property_right_state_protection, deontological).
+narrative_ontology:cs_axiom('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', secondary, public_use_legitimacy_gate).
+narrative_ontology:cs_axiom_status(public_use_legitimacy_gate, holdable).
+narrative_ontology:cs_axiom_grounding('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', public_use_legitimacy_gate, conventional).
+narrative_ontology:cs_reference_frame('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', property_rights_baseline_protection).
+narrative_ontology:cs_drift_state('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', contemporary_regulatory_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('f1b9212a-b8be-4ac8-b9cb-57441eb8752d', '2026-02-26T14:32:18Z').
+narrative_ontology:cs_kernel_id(fifth_amendment__takings_just_compensation, fifth_amendment).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(fifth_amendment__takings_just_compensation, property_holders).
+narrative_ontology:constraint_beneficiary(fifth_amendment__takings_just_compensation, affected_landowners).
+narrative_ontology:constraint_victim(fifth_amendment__takings_just_compensation, public_interest_in_cost_absorption).
+narrative_ontology:constraint_victim(fifth_amendment__takings_just_compensation, government_acquisition_budgets).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE DISPOSSESSED HOLDOUT (SNARE) — A property owner in the path of a highway, airport, or public project faces the takings clause as structured extraction: the state will take the property regardless of consent. The 'just compensation' requirement appears as a consolation prize, not genuine negotiation. The holdout has no exit option — the taking is inevitable. Compensation must be litigated, often delayed, and assessed by state appraisers with perverse incentives (undervaluation saves public money). High suppression: no refusal available, no arbitrage escape, only forced transaction at state-determined price. The extraction is conversion of an unwilling party's property into a public good without consent.
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE PROPERTY RIGHTS COALITION (TANGLED ROPE) — Organized property-holder groups (property rights advocates, home-owner associations, farming coalitions) see the takings clause as both coordinating mechanism and extraction regulator. The clause coordinates the state's eminent domain power with individual property rights — it permits public acquisition for genuine public use but requires compensation, preventing naked theft. This is a genuine coordination function: defining what 'public use' means, what 'just' compensation means, and how disputes are adjudicated requires a stable framework. Simultaneously, the clause extracts value from the state: property holders benefit from the compensation requirement and from the judicial scrutiny of 'public use' and 'just compensation' definitions. Organized actors have constrained but real exit options — they can litigate compensation amounts, challenge the 'public use' claim in sympathetic courts, and shift political power via property-rights advocacy. The constraint exhibits both real coordination (stabilizing property expectations) and asymmetric extraction (beneficiaries = property holders, victims = government budgets).
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE MUNICIPAL GOVERNMENT (ROPE) — State and local governments experience the takings clause as a coordination framework that enables public projects to proceed with legitimacy and finality. By compensating property holders, the state obtains clear title and extinguishes future claims. The compensation requirement is a price of doing business, not an extraction against the state — it enables the coordination of private property into public goods at scale. Governments have arbitrage options: they can plan projects to minimize displacements, phase acquisitions to spread costs, or negotiate pre-emptive purchase agreements. The constraint functions as pure coordination for this institutional actor: it defines the rules under which large-scale public infrastructure can proceed with property-owner consent (obtained through compensation) rather than resistance. The state sees the takings clause as establishing a stable market for acquiring property interests through lawful, compensated means.
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: THE URBAN PLANNING COALITION (SCAFFOLD) — Modern urban planners and environmental groups increasingly see eminent domain as a temporary mechanism, phased out in favor of market-based land acquisition, mixed-use development that avoids displacement, and community-land-trust models that separate land ownership from use rights. This perspective treats the takings clause as a transitional rule with an implicit sunset: as cities develop denser neighborhoods with higher land values, direct purchase (not taking) becomes economically competitive. Mixed-use development reduces the displacement calculus entirely by integrating residential, commercial, and public uses. Community land trusts decouple land ownership from housing, reducing the stakes of individual property claims. The scaffold classification reflects that this perspective sees the takings clause as a temporary coordination device being superseded by mechanisms that avoid the extraction dynamic entirely (by making compensation-through-purchase the natural equilibrium rather than a legal mandate). Theater ratio is low: the planning coalition is focused on functional outcomes (reducing displacement, enabling infrastructure) rather than performative compliance with takings doctrine.
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: THE COURTS AND TAKINGS JURISPRUDENCE (PITON) — The takings clause, as implemented by courts, has evolved into a partially degraded doctrinal system. The core function — preventing uncompensated expropriation — has been hollowed by doctrinal innovations (Penn Central multi-factor test for regulatory takings, distinction between physical and regulatory takings, Lucas background-principles exception) that shift the burden of proof and narrow the class of actions requiring compensation. Courts maintain the takings jurisprudence through institutional inertia: the clause is binding constitutional law, so courts must apply it. But the application has become increasingly performative — elaborate multi-factor balancing tests that rarely find regulatory takings, narrow interpretations of 'public use' that have contracted over time, and compensation calculations that systematically undervalue intangible harms. The piton classification reflects that takings doctrine persists as a formal constraint (high institutional necessity) but with degraded functional capacity (theater_ratio ≈ 0.70+). Courts see themselves as bound by the clause but increasingly frustrated by its application to modern regulatory takings (zoning, environmental rules, healthcare mandates).
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some form of compensation requirement is an immutable feature of any legitimacy structure that recognizes both public power and private property rights. If the state has eminent domain (necessary for public infrastructure, national defense, urban planning), then some requirement to compensate displaced owners is inherent to the rule of law — arbitrary expropriation without compensation dissolves the distinction between law-governed power and pure coercion. This perspective risks naturalizing what is actually a specific constitutional reading (the takings clause as natural-law protection for property) into an invariant principle. The false summit detector will identify the beneficiaries (property holders) and reveal that the 'natural law' framing obscures a specific distributional choice: who bears the cost of public infrastructure, and whether that cost is visible (compensated takings) or hidden (regulatory takings, zoning externalities). The mountain classification is perspectival and subject to FSM evaluation.
+constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(fifth_amendment__takings_just_compensation_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fifth_amendment__takings_just_compensation, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(fifth_amendment__takings_just_compensation, TR),
+    TR >= 0.70.
+
+:- end_tests(fifth_amendment__takings_just_compensation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.38): Moderate. The takings clause requires compensation, which prevents naked expropriation and makes extraction visible. However, the compensation requirement is limited to 'just compensation' defined narrowly (fair market value, excluding subjective losses and future opportunities), and regulatory takings often proceed without compensation under Penn Central analysis. The trajectory shows increasing extractiveness over time as doctrinal innovations have narrowed the class of compensable takings (regulatory takings exceptions, Lucas background-principles doctrine) while maintaining high procedural theater. Measured at t=100 (modern era), extractiveness reflects the functional narrowing of the takings clause's protective scope. Suppression (0.42): Moderate-high. Property owners in the path of public projects face structural barriers to refusing the taking: the state has the legal power, judicial review of 'public use' is highly deferential, and compensation is set through appraisal and litigation processes where the state holds informational and procedural advantages. However, suppression is not total — organized property-holder coalitions can challenge valuations, negotiate pre-emptive purchases, and shift political dynamics via advocacy. The trajectory reflects rising suppression as doctrinal innovations (regulatory takings doctrine) have expanded government power while maintaining formal compensation requirement. Theater ratio (0.48): Moderate-low baseline, rising to 0.48. The takings clause initially functioned with moderate procedural formality (clear compensation requirement, judicial oversight of 'public use'). Over time, doctrine has become increasingly procedurally complex (Penn Central multi-factor test, Lucas exceptions, regulatory takings analysis) while narrowing actual compensation. This suggests rising theater as the procedural apparatus becomes more elaborate relative to protective function. At t=100, theater ratio reflects the significant performative element in modern takings jurisprudence: elaborate doctrinal balancing that systematically suppresses compensation claims.
+ *
+ * PERSPECTIVAL GAP:
+ *   The constraint exhibits wide perspectival variation reflecting deep disagreement about its function. The dispossessed holdout (powerless/trapped) experiences pure extraction (snare) — the taking is inevitable, and compensation is litigated under rules favoring government valuation. The organized property-rights coalition (organized/constrained) experiences genuine coordination with beneficiary asymmetry (tangled_rope) — the clause both enables legitimate coordination (defining public use, stabilizing expectations) and creates leverage for property-holder claims (litigation, challenge rights). The municipal government (institutional/arbitrage) experiences pure coordination (rope) — the clause enables large-scale infrastructure via lawful, compensated property acquisition. Urban planners (organized/constrained) see a temporary coordination mechanism with sunset (scaffold) — increasingly substituted by market-based acquisition and community land trusts. The courts (institutional/arbitrage) maintain the constraint through institutional inertia with degraded protective function (piton) — high procedure, low effective protection against regulatory takings. The analytical observer (analytical/analytical) risks seeing natural law (mountain) — property protection inherent to rule of law — when the constraint is actually a specific distributional choice benefiting property holders. The perspectival gaps reveal that disagreement is not about whether the clause protects property (it does, but narrowly) but about whether protection-via-compensation is a natural constraint or a contingent policy choice.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality derivation for each perspective: Dispossessed holdout (powerless/trapped) derives d ≈ 0.95 from victim status + trapped exit, producing high f(d) ≈ 1.42 and high experienced extraction; the powerless agent bears full cost of taking and compensation undervaluation. Organized property-rights coalition (organized/constrained) derives d from beneficiary status + constrained exit + litigation leverage; d ≈ 0.35–0.45, producing moderate f(d) and moderate experienced extraction that reflects real but limited ability to challenge government valuations and 'public use' determinations. Municipal government (institutional/arbitrage) derives d ≈ 0.15–0.25 from victim-to-budgets status + arbitrage exit (can negotiate pre-emptive purchases, phase acquisitions, design projects to minimize displacement); low d produces negative or low f(d), reflecting that the constraint functions as coordination infrastructure rather than extraction against this actor. Urban planners (organized/constrained) derive d from beneficiary-to-development status + constrained exit (bound by legal framework while building alternatives); d ≈ 0.40, producing moderate extraction experience. Courts (institutional/arbitrage) derive d ≈ 0.20 from institutional beneficiary status (maintaining their doctrinal authority) with arbitrage exit (can modulate doctrine within constraint bounds); low d reflects that courts experience the takings clause as enabling their role rather than constraining it. Analytical observer (analytical/analytical) derives canonical d ≈ 0.73, producing moderate-to-high f(d) reflecting the observer's detachment from beneficiary or victim status.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The takings clause resolves potential mandatrophy by showing that coordination and extraction coexist structurally. The clause MUST coordinate public and private interests (enabling infrastructure while protecting property expectations) AND permit extraction (by limiting compensation to narrow definitions and excepting regulatory takings). Attempts to eliminate extraction (pure mountain — natural property protection) falsely naturalize what is a specific distributional choice; attempts to eliminate coordination (pure snare — arbitrary government expropriation) fail to account for the genuine coordination function in defining public use and stabilizing property expectations. The tangled_rope classification reflects that both functions are structurally necessary: governments need eminent domain to serve genuine public purposes (coordination function), and property holders need protection against uncompensated expropriation (extraction-limiting function). The mandatrophy is resolved not by claiming purity but by explicitly modeling both functions and their tension. The constraint's evolution toward higher theater and narrower de facto protection (regulatory takings exceptions) suggests possible drift toward piton classification if the procedural apparatus continues elaborating while functional protection continues narrowing.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    public_use_scope_ambiguity,
+    'What constitutes ''public use'' — literal use by the public (streets, parks, utilities) or broader public benefit (economic development, job creation, tax base expansion)?',
+    'Doctrinal analysis of takings clause jurisprudence evolution; comparison of strict and expansive readings across state and federal courts; historical tracking of ''public use'' definitions from 19th century to present',
+    'Strict reading (literal public use): takings clause is protective, narrowing when governments can use eminent domain; narrower class of compensable interests. Expansive reading (public benefit): takings clause permits most development takings; compensation requirement becomes a pricing rule for coordinating private/public, not a constraint on power. Classification shifts from mountain (narrow protection) to tangled_rope or rope (pricing rule) under broad reading.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(public_use_scope_ambiguity, conceptual, 'Scope of ''public use'' in takings clause jurisprudence').
+
+omega_variable(
+    just_compensation_measurement,
+    'What constitutes ''just compensation'' — fair market value alone, replacement cost, lost business opportunity, relocation expenses, subjective loss (community displacement, cultural harm)?',
+    'Empirical analysis of compensation awards across jurisdictions; comparison of awarded compensation to actual replacement costs and subjective losses; historical trend analysis of compensation philosophy (objective vs subjective)',
+    'If just compensation = fair market value only: property owner bears non-economic losses; extractiveness moderate-to-high. If just compensation includes relocation and subjective loss: compensation is more complete; extractiveness lower. Doctrine has trended toward narrow (objective) valuation, increasing effective extraction from displaced owners.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(just_compensation_measurement, empirical, 'Definition and measurement of ''just compensation''').
+
+omega_variable(
+    regulatory_takings_doctrine_fragility,
+    'Does the doctrine distinguishing physical takings (requiring compensation) from regulatory takings (compensation discretionary) represent a stable legal principle or a performative distinction obscuring state extraction?',
+    'Doctrinal analysis of Penn Central multi-factor test and Lucas exception; historical tracking of regulatory takings claims granted vs denied; comparison to international takings jurisprudence (EU, Canada, Australia); analysis of whether multi-factor tests suppress legitimate compensation claims',
+    'If stable principle: the takings clause genuinely protects against economic regulation while permitting public health/safety rules — tangled_rope classification is accurate (mixed coordination/extraction). If performative: regulatory takings doctrine permits indefinite extraction through regulation-without-compensation — constraint reclassifies toward snare, theater_ratio rises above 0.70.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_takings_doctrine_fragility, empirical, 'Stability and coherence of regulatory takings doctrine').
+
+omega_variable(
+    natural_law_vs_distributional_choice,
+    'Is the takings clause instantiating a natural-law protection for property against state confiscation, or is it a specific distributional choice about who bears the cost of public infrastructure — a choice that could legitimately be made differently (e.g., via general taxation instead)?',
+    'Historical analysis of constitutional debates (Framers'' intent vs modern doctrine); comparative constitutional law (how other democracies structure property/eminent domain); analysis of whether compensation requirement is logically entailed by property rights doctrine or is contingent distributional policy',
+    'If natural law: mountain classification appropriate (property protection is inherent); beneficiaries are not meaningfully beneficiaries (they are claiming their due). If distributional choice: false-summit trigger fires; takings clause is a specific policy choice benefiting property holders at state expense, masquerading as natural law.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(natural_law_vs_distributional_choice, conceptual, 'Whether takings clause represents natural law or distributional choice').
+
+omega_variable(
+    bargaining_power_asymmetry_in_compensation,
+    'When governments acquire property via negotiated purchase (as opposed to formal taking), do holdout problems and information asymmetries create compensation patterns that functionally resemble takings-clause extractions?',
+    'Empirical analysis of negotiated purchases vs formal takings; comparison of compensation amounts; analysis of government negotiating leverage (ability to threaten formal taking) on purchase prices; behavioral economics of information asymmetry in land transactions',
+    'If negotiated purchases are systematically lower than formal-taking compensation: the takings clause''s compensation requirement is actual constraint on extraction, confirming tangled_rope classification. If negotiated purchases approximate formal compensation: the clause functions mainly as procedural formality, theater_ratio rises.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(bargaining_power_asymmetry_in_compensation, empirical, 'Whether negotiated government land acquisition exhibits compensation-suppression patterns').
+
+omega_variable(
+    kernel_reading_naturalness,
+    'Is the takings-clause reading a natural or forced interpretation of the Fifth Amendment''s text and original meaning?',
+    'Originalist historical analysis (Framers'' intent, contemporaneous usage); doctrinal coherence with other Fifth Amendment protections (double jeopardy, self-incrimination); comparative constitutional law analysis; modern scholarly consensus on takings clause genealogy',
+    'If natural/original: takings reading has strong authority grounding (lineage + formalized text); constraint is stable constitutional law. If forced/modern interpolation: takings reading competes with alternative readings; constraint is more contingent on interpretive community acceptance. Affects authority_grounding and codification_stability in cs_structure.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_naturalness, conceptual, 'Naturalness and originalist defensibility of takings-clause reading').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(fifth_amendment__takings_just_compensation, 0, 100).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(takings_theater_t0, fifth_amendment__takings_just_compensation, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(takings_theater_t50, fifth_amendment__takings_just_compensation, theater_ratio, 50, 0.42).
+narrative_ontology:measurement(takings_theater_t100, fifth_amendment__takings_just_compensation, theater_ratio, 100, 0.48).
+
+% Extraction over time
+narrative_ontology:measurement(takings_extract_t0, fifth_amendment__takings_just_compensation, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(takings_extract_t50, fifth_amendment__takings_just_compensation, base_extractiveness, 50, 0.35).
+narrative_ontology:measurement(takings_extract_t100, fifth_amendment__takings_just_compensation, base_extractiveness, 100, 0.38).
+
+% Suppression requirement over time
+narrative_ontology:measurement(takings_supp_t0, fifth_amendment__takings_just_compensation, suppression_requirement, 0, 0.3).
+narrative_ontology:measurement(takings_supp_t50, fifth_amendment__takings_just_compensation, suppression_requirement, 50, 0.4).
+narrative_ontology:measurement(takings_supp_t100, fifth_amendment__takings_just_compensation, suppression_requirement, 100, 0.42).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(fifth_amendment__takings_just_compensation, resource_allocation).
+narrative_ontology:boltzmann_floor_override(fifth_amendment__takings_just_compensation, 0.18).
+narrative_ontology:affects_constraint(fifth_amendment__takings_just_compensation, fifth_amendment__double_jeopardy_bar).
+narrative_ontology:affects_constraint(fifth_amendment__takings_just_compensation, fifth_amendment__self_incrimination_protection).
+narrative_ontology:affects_constraint(fifth_amendment__takings_just_compensation, regulatory_taking_doctrine).
+narrative_ontology:affects_constraint(fifth_amendment__takings_just_compensation, public_use_doctrine_evolution).
+
+% DUAL FORMULATION NOTE:
+% The takings clause is one reading of the Fifth Amendment kernel. The sibling readings (double_jeopardy_bar, self_incrimination_protection) are separate constraint stories instantiating alternative interpretations of what the Amendment's core protective function is. All three readings operate within the same constitutional text but have different beneficiary/victim structures and different extractiveness values reflecting their different structural relationships to property rights, criminal procedure, and individual dignity. The takings reading is downstream of the public_use doctrine evolution (how 'public use' definitions have broadened affects the constraint's functional scope) and upstream of regulatory_taking_doctrine (the distinction between physical and regulatory takings instantiates the takings clause in modern practice).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(fifth_amendment__takings_just_compensation, organized, 0.4).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

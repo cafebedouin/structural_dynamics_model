@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "later_amendment_eras__civil_rights_era_amendments",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crea",
+    "story_uid": "a86aa6b3-85e9-4358-a385-c982a5ead663",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Civil Rights Era Franchise Amendments (23rd, 24th, 25th, 26th Amendments)",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "disenfranchised_poor_voters",
+      "district_of_columbia_residents",
+      "young_voters_under_21",
+      "african_american_voters_targeted_by_poll_tax"
+    ],
+    "victims": [
+      "southern_restrictionist_regimes",
+      "state_gatekeeping_authorities"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Voter (Pre-Amendment)",
+      "comment": "PERSPECTIVE 1: PRE-AMENDMENT DISENFRANCHISED VOTER (SNARE) — Poll taxes, literacy tests, and residency barriers trap poor voters in a pure extraction regime. No alternatives exist; gatekeeping is enforced through legal machinery. The constraint prior to amendment is experienced as immovable suppression with no coordination function. Maximum extraction from a powerless, trapped agent at national scope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Reform Coalition (Mid-Amendment Period)",
+      "comment": "PERSPECTIVE 2: REFORM COALITION IN RESTRICTIONIST STATES (TANGLED ROPE) — Civil rights and voting rights advocates face high costs (arrest, violence, economic retaliation) but also generate coordination benefits by uniting disenfranchised populations. The amendments represent both genuine movement power (coordination function) and externally enforced change (requiring federal intervention to suppress state gatekeeping). Constrained exit at regional scope reflects that exit from anti-voting organizing in the South is possible but costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Authority (Amendment-Enforcing)",
+      "comment": "PERSPECTIVE 3: FEDERAL AUTHORITY POST-AMENDMENT (ROPE) — Federal enforcement of the amendments (via Voting Rights Act mechanisms, federal examiners, federal oversight) sees the constraint as pure coordination: extending the franchise solves the collective action problem of assuring all citizens can vote, without imposing asymmetric extraction on the federal level. The federal authority is the beneficiary of its own enforcement — it gains legitimacy through expansion of democratic participation. Low experienced extraction from a position of institutional power with arbitrage access to alternative governance models."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Amendment Ratification Process (Temporary Mechanism)",
+      "comment": "PERSPECTIVE 4: AMENDMENT RATIFICATION AS TEMPORARY COORDINATION (SCAFFOLD) — The constitutional amendment process itself is a temporary coordination mechanism with a sunset: once ratified, the amendment becomes permanent constitutional law. The ratification campaign (roughly 1960–1971 for the four amendments) exhibits scaffold properties: coordinating disparate state legislatures and public opinion, low effective extraction during the campaign window, clear endpoint at ratification. Post-ratification, the amendment transitions to mountain or rope status as law, not as a coordination problem. Theater is low during ratification because the mechanism is transparent (public legislative votes)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Residual Poll Tax / Literacy Test Apparatus (Post-Amendment Decay)",
+      "comment": "PERSPECTIVE 5: RESIDUAL GATEKEEPING APPARATUS POST-AMENDMENT (PITON) — State election officials who previously wielded poll taxes and literacy tests face the new constitutional requirement but maintain vestigial gatekeeping practices and voter suppression theater (purge lists, closing polling places in minority neighborhoods, voter ID requirements not directly addressed by the amendments). The apparatus persists through institutional inertia long after its primary legal instrument (the poll tax) is abolished. Theater is high because enforcement of suppression increasingly relies on informal, performative mechanisms rather than explicit law. Extractiveness is low because the primary extraction mechanism (the poll tax revenue) is gone, but suppression persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law of Democratic Maturation)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, democratic maturation inexorably expands the franchise as a natural historical law: all democracies eventually enfranchise excluded groups, driven by logic internal to democratic legitimacy itself. Suppression and gatekeeping are temporary deviations from the underlying democratic trajectory. This perspective sees the amendments as inevitable products of democratic logic rather than contested political achievements. The engine flags this as a false summit: the amendments were not inevitable; they were hard-won political victories against determined resistance. The 'naturalness' of franchise expansion is a cover story that obscures the power required to overcome restrictionist regimes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "poll_tax_extractiveness_measurement",
+      "question": "Is the poll tax primarily a revenue mechanism (extracting money from poor voters) or a gatekeeping mechanism (pricing poor voters out of participation)?",
+      "resolution_mechanism": "Historical accounting of poll tax revenues vs. enforcement costs; comparison of revenue impact across states with differential poll tax amounts; analysis of state justifications for maintaining vs. repealing the tax",
+      "impact": "If primarily revenue: abolition represents significant economic extraction loss for state governments (ε increase post-abolition). If primarily gatekeeping: abolition removes pure suppression mechanism with minimal revenue function (ε decrease post-abolition). The constraint's extractiveness depends on this distinction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the poll tax functioned as revenue or gatekeeping"
+    },
+    {
+      "id": "amendment_inevitability_vs_contingency",
+      "question": "Were the Civil Rights era amendments inevitable products of democratic logic, or contingent political victories that could have failed to achieve ratification?",
+      "resolution_mechanism": "Historical counterfactual analysis: tracking opposition to each amendment, how close ratification votes were, what political conditions would have changed outcomes. Comparison with democracies that delayed franchise expansion without constitutional crisis.",
+      "impact": "If inevitable: mountain perspective is defensible (natural law of democratic maturation). If contingent: mountain is false summit (naturalizes contested institutional arrangement). This determines whether the analytical observer's perspective should classify as mountain or as tangled_rope concealed as mountain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether amendments followed inevitable democratic logic or contingent political victories"
+    },
+    {
+      "id": "federal_enforcement_extraction",
+      "question": "Does federal enforcement of the Civil Rights era amendments represent coordination (expanding the franchise for all) or extraction (federal power imposing its will on resistant states)?",
+      "resolution_mechanism": "Examination of voting outcomes pre- and post-enforcement; analysis of whether voting rights actually expanded for target populations or merely created formal legal rights; study of secondary suppression mechanisms (voter intimidation, purging, precinct closure) that emerged post-amendment in response to federal enforcement",
+      "impact": "If coordination: federal perspective is genuinely rope (low extraction). If extraction: federal enforcement is itself a snare for state governments, making the overall structure more extractive than amendments alone suggest. This affects whether the federal authority's classification as rope is defensible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal enforcement serves coordination or becomes secondary extraction"
+    },
+    {
+      "id": "kernel_reading_contest_amendment_family",
+      "question": "Is this constraint one reading of the 'later amendment eras' kernel, or does it belong to a separate 'voting rights amendments' kernel with its own siblings?",
+      "resolution_mechanism": "Structural analysis of whether the Civil Rights era amendments cohere as a family distinct from Progressive era, Reconstruction, and housekeeping amendments. Analysis of whether they share a common beneficiary structure, common suppression mechanism, and common temporal logic.",
+      "impact": "If separate kernel: this constraint's ε, beneficiaries, and mandatrophy analysis change (it is a more cohesive family with higher coherence). If part of later amendments: this reading's relationship to siblings becomes more clear and the constraint serves as a lens on the larger kernel's structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading belongs to later_amendment_eras kernel or constitutes a separate kernel"
+    },
+    {
+      "id": "young_voters_heterogeneity",
+      "question": "Do eighteen-year-olds constitute a unified beneficiary group with the poll-tax abolition beneficiaries (poor and African American voters), or are they a separate constituency with different extraction mechanisms and exit options?",
+      "resolution_mechanism": "Demographic analysis of voting patterns 1971-present; comparison of disenfranchisement barriers facing young voters vs. poll-tax targeted voters; examination of whether eighteen-year-old suffrage motivated by similar voting-rights logic or by different political reasoning",
+      "impact": "If unified: the amendment family is coherent (ε ~0.18). If heterogeneous: the young-voter amendment may warrant separate constraint status with different ε reflecting different suppression mechanisms. This affects whether all four amendments (23rd, 24th, 25th, 26th) belong in one constraint or should decompose.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether young voters and poll-tax disenfranchised share unified beneficiary status"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "crea_extractiveness_t0_1960"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "crea_extractiveness_t5_1965"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "crea_extractiveness_t10_1970"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.88,
+      "id_override": "crea_suppression_t0_1960"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.72,
+      "id_override": "crea_suppression_t5_1965"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "id_override": "crea_suppression_t10_1970"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "crea_theater_t0_1960"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25,
+      "id_override": "crea_theater_t5_1965"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "crea_theater_t10_1970"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Civil Rights era amendments (23rd, 24th, 25th, and 26th Amendments, ratified 1961–1971) collectively dismantled key franchise gatekeeping devices that had enabled the extraction of political power from poor, young, and minority voters. The poll tax (abolished by the 24th Amendment in 1964) was a direct extraction mechanism: poor voters faced a price barrier to voting, and Southern states collected revenue from the tax while using it to suppress Black voter participation post-Reconstruction. The 23rd Amendment (1961) granted presidential voting rights to D.C. residents, removing their exclusion from the highest office. The 26th Amendment (1971) extended the franchise to eighteen-year-olds, removing age-based gatekeeping. The 25th Amendment (1967), while primarily addressing presidential succession, also implicitly legitimized broader democratic participation norms that supported the other expansions. This constraint is ONE READING of the contested 'later_amendment_eras' kernel — a reading that emphasizes suppression of franchise gatekeeping and beneficiaries as the previously disenfranchised. Sibling readings (Reconstruction amendments, Progressive era amendments, structural housekeeping) emphasize different aspects of constitutional amendment dynamics: founding moments vs. procedural maintenance vs. economic/political restructuring. This reading's distinctiveness lies in its focus on the specific extraction mechanism of the poll tax and the specific beneficiary populations (poor voters, D.C. residents, young voters) whom it targeted. The constraint's extractiveness declines sharply over the measurement interval (0.65 → 0.18) as the amendments move from proposal through ratification to enforcement. Suppression declines as legal gatekeeping mechanisms are removed, but remains elevated (0.62 post-amendment) because secondary gatekeeping mechanisms (voter purges, precinct closures, voter ID requirements) partially persist. Theater is low throughout because the suppression mechanism is primarily structural (legal barriers, resource allocation) rather than performative.",
+    "key_agents": [
+      "Disenfranchised poor voters: Primary victims (powerless/trapped) — bear full cost of poll taxes and gatekeeping barriers; experience the constraint as unmovable suppression with no coordination function",
+      "D.C. residents: Beneficiaries with compound status (moderate/constrained) — excluded from presidential voting despite full federal taxation; gain voting power through 23rd Amendment but remain subordinate to Congress",
+      "Young voters (age 18-20): Beneficiaries (moderate/mobile) — excluded by age-based gatekeeping; gain franchise through 26th Amendment with lower cost than poll-tax abolition required",
+      "Southern restrictionist state regimes: Primary extractors/victims of amendment (institutional/arbitrage pre-amendment → constrained post-amendment) — benefit from poll tax revenue and suppression mechanisms; lose gatekeeping power as amendments are enforced",
+      "Civil rights and voting rights advocacy movements: Organized beneficiaries (organized/constrained) — coordinate disenfranchised populations and federal allies to push ratification; bear costs of organizing under hostile conditions",
+      "Federal government (Congress and courts): Enforcer/beneficiary (institutional/arbitrage) — enforces amendments through Voting Rights Act, federal examiners, and judicial oversight; gains legitimacy from expanded democratic participation; benefits from compliance framing",
+      "Analytical observer: Civilizational view (analytical/analytical) — risks naturalizing contingent political victories as inevitable democratic logic"
+    ],
+    "logic_rationale": "Extractiveness (0.18 final): Low. The poll tax was a direct extraction mechanism — it extracted money from poor voters while suppressing their participation. Abolishing the poll tax removes this revenue stream and suppression tool. Post-amendment extractiveness is low because the primary extraction mechanism is gone, though secondary suppression mechanisms (voter purges, precinct closures, voter ID laws not addressed by these amendments) persist. The 23rd Amendment imposes minimal extraction on the federal system; presidential voting for D.C. is a coordination benefit. The 26th Amendment is similarly low-extraction — eighteen-year-old suffrage expands the electorate without imposing asymmetric costs on the federal or state systems (except loss of voting power concentration through age-restricted franchise). The temporal decline in extractiveness (0.65 → 0.18) reflects the progressive removal of gatekeeping mechanisms through the measurement interval. Suppression (0.62 final): Moderate-high. Legal suppression mechanisms (poll taxes, literacy tests, residency requirements) are explicitly abolished by constitutional amendment, dramatically reducing formal suppression. However, secondary suppression mechanisms persist: voter purges (many targeting minority voters under the guise of list maintenance), precinct closures in minority neighborhoods, voter ID requirements, provisional ballot procedures, and felony disenfranchisement. The decline in suppression (0.88 → 0.62) reflects removal of explicit legal barriers but not elimination of informal gatekeeping. Theater (0.35 final): Moderate-low. The actual suppression mechanisms (poll taxes, literacy tests, age restrictions) are structural and transparent — they are codified in law or practice, not performative. The amendment ratification process itself has low theater (transparent legislative voting). However, secondary suppression mechanisms that emerge post-amendment (voter purges framed as 'list maintenance,' precinct closures framed as 'efficiency improvements,' voter ID requirements framed as 'election security') exhibit higher theater — the suppression is performatively reframed as administrative necessity rather than gatekeeping. The rising theater over time reflects increasing reliance on informal, reframed mechanisms as explicit legal barriers become constitutionally impermissible.",
+    "directionality_logic": "Directionality (d) for each perspective derives from structural position: beneficiary status, power level, and exit options determine how much extraction the agent experiences. Disenfranchised poor voters (powerless/trapped) experience maximum extraction prior to amendment — they have no exit option and bear the full cost of gatekeeping. The civil rights coalition (organized/constrained) experiences moderate extraction — they are organized enough to coordinate and create federal pressure, but face high costs (violence, arrest, economic retaliation) from restrictionist regimes. Federal authority (institutional/arbitrage) experiences negative extraction — it is the beneficiary of expanded franchise, which enhances its legitimacy. Southern restrictionist regimes experience the amendments as extraction removal (their privilege is reduced), but this is not extraction directed at them in the classical sense — rather, their monopoly on franchise control is removed. The measurement interval shows declining d values for the victim agents (as their exit options improve post-amendment) and increasing d values for the restrictionist regimes (as their enforcement capacity erodes). No override is needed; the structural derivation produces the correct directionality across all perspectives.",
+    "perspectival_gap": "The disenfranchised voter's perspective (snare pre-amendment) and the federal authority's perspective (rope post-amendment) represent the core perspectival gap. Before amendment, the constraint is experienced as pure extraction and suppression with no coordination function (snare). After amendment, the constraint is experienced as coordination (enabling all citizens to vote) with minimal asymmetric extraction on the federal level (rope). The civil rights coalition sees the constraint as tangled rope — genuine movement power (coordination) mixed with asymmetric costs borne by organizing under hostile conditions. The analytical observer risks seeing the amendments as an inevitable natural law of democratic maturation (mountain), but the structural data reveals this as a false summit: the amendments were contingent political victories that required sustained organization, federal intervention, and overcoming determined resistance. The perspectival gap reveals that the 'inevitability' framing naturalizes contested institutional achievements.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through temporal dynamics: the same structural phenomenon appears as pure extraction (snare) before amendment, as tangled coordination-and-extraction during the ratification period (tangled rope), and as near-pure coordination (rope) post-amendment enforcement. The mandatrophy is resolved by recognizing that extractiveness itself changed as the legal mechanism changed. The initial measurement (ε=0.65, 1960) reflects the poll tax as active extraction mechanism. The final measurement (ε=0.18, 1970) reflects the poll tax as abolished legal mechanism with secondary suppression remaining. The constraint does not waver between coordination and extraction — rather, the enforcement landscape shifted the balance from extraction-dominant to coordination-dominant. The piton perspective (residual gatekeeping theater post-amendment) represents the tension between formal amendment and persistent informal suppression, capturing how institutional inertia keeps gatekeeping mechanisms alive long after their primary legal instrument is removed.",
+    "kernel_context": "This constraint is ONE READING of the contested 'later_amendment_eras' kernel — the commitment to how constitutional amendments function in mid-to-late twentieth century American democracy. This reading instantiates the 'civil_rights_era_amendments' interpretation, emphasizing the suppression of franchise gatekeeping devices and beneficiaries as poor voters, D.C. residents, and young voters. The sibling readings are: (1) reconstruction_amendments — a second founding that abolished slavery and nationalized citizenship; (2) progressive_era_amendments — restructuring of federal power through income taxation, direct election of senators, and woman suffrage; (3) structural_housekeeping_amendments — maintenance of electoral mechanics and term limits. The core distinction of THIS reading is that it focuses on SUPPRESSION OF EXTRACTION (the poll tax as a revenue and gatekeeping mechanism) rather than on transformation of federal-state relations (reconstruction, progressive era) or maintenance of constitutional machinery (housekeeping). The kernel contest is over what constitutional amendments fundamentally DO: do they transform the foundational structure of government (reconstruction, progressive), expand participation within a stable structure (civil rights), or maintain the machinery itself (housekeeping)? This reading argues that the Civil Rights era amendments suppress specific extraction mechanisms (the poll tax, age-based voting gates) without fully transforming federal-state relations or the constitutional machinery itself — they are a repair within the existing democratic structure, not a restructuring of democracy's foundation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "reconstruction_amendments",
+      "progressive_era_amendments",
+      "structural_housekeeping_amendments",
+      "secondary_voter_suppression_mechanisms"
+    ],
+    "dual_formulation_note": "The Civil Rights era amendments belong to a constraint family spanning multiple amendment eras. This story focuses on the specific extractiveness and suppression mechanisms of the 23rd, 24th, 25th, and 26th Amendments. The Reconstruction amendments have different extractiveness (higher, focused on slavery abolition and citizenship), different beneficiaries (freedmen), and different temporal dynamics. The Progressive era amendments focus on federal-state restructuring rather than franchise gatekeeping. The housekeeping amendments maintain existing machinery. All members of the later_amendment_eras family affect each other through institutional precedent and constitutional interpretation."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "federal_republic_universal_suffrage_aspiration",
+    "drift_state": {
+      "moment": "contemporary_post_amendment_enforcement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "reconstruction_amendments",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "progressive_era_amendments",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "structural_housekeeping_amendments",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "poll_tax_and_gatekeeping_suppression_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "federal_power_prerequisite_for_franchise_protection",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "reconstruction_amendments",
+      "progressive_era_amendments"
+    ]
+  }
+}

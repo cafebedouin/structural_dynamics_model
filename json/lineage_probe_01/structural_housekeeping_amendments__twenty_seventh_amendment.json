@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "structural_housekeeping_amendments__twenty_seventh_amendment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_twenty_seventh_amendment",
+    "measurement_id_prefix": "t27",
+    "story_uid": "00284d78-f9f2-4f0b-b010-7ef4b70f797b",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Twenty-Seventh Amendment Pay Delay Mechanism",
+    "topic_domain": "political/constitutional/legislative",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "electoral_accountability_principle"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral System (Beneficiary)",
+      "comment": "PERSPECTIVE 1: ELECTORAL SYSTEM (ROPE) — The constraint solves the collective action problem of preventing legislators from voting themselves immediate raises during a term they expect to defend. The electoral accountability mechanism provides genuine coordination value: it aligns incentive timing with electoral accountability. Low extraction because the beneficiary (the democratic process itself) experiences this as pure coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Incumbents (Mixed)",
+      "comment": "PERSPECTIVE 2: CONGRESSIONAL INCUMBENTS (ROPE) — Individual legislators experience a coordination mechanism, not extraction. The constraint prevents a tragedy of the commons (all voting themselves raises, all suffering electoral backlash). The delay is a coordination device that creates incentive alignment. Low suppression because the constraint is transparent, formally enacted, and legislators retain full decision-making power — they can vote for raises; the delay simply changes the verification point from during-term to post-election."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Electorate (Diffuse Beneficiary)",
+      "comment": "PERSPECTIVE 3: THE ELECTORATE (ROPE) — Voters benefit from the coordination mechanism without bearing extraction. The constraint makes self-dealing compensation visible to them at the moment of electoral judgment. Low theater because the mechanism is mechanical and transparent — no performative activity obscures the pay-raise fact. Voters have mobility (they can vote); they are powerless at the institutional level but not trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) — From a civilizational frame, the Twenty-Seventh Amendment is a pure coordination mechanism: it solves the problem of temporal misalignment between vote and accountability. The constraint introduces no asymmetric extraction, no suppression of alternatives, and no theater. It is a formal rule that reorganizes decision-making timing to align incentives. The 203-year gap between proposal and ratification does not change the constraint's structural role — it reflects institutional inertia in the ratification process, not the constraint's function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ratification_delay_mechanism",
+      "question": "Why did the Twenty-Seventh Amendment take 203 years to ratify if it represents a pure coordination solution to an obvious problem?",
+      "resolution_mechanism": "Historical analysis of state-by-state ratification timing; identification of periods when state legislatures were incentivized to delay (e.g., periods of state legislative pay disputes); correlation with federal pay raise cycles",
+      "impact": "If ratification was suppressed by beneficiaries of self-dealing: the constraint may have extraction built into its ratification mechanism (a snare at the meta-level), even though the constraint itself is rope. If ratification delay was simply institutional drift: the long timeline is inert and does not indicate suppression of the coordination mechanism itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Why did Twenty-Seventh Amendment ratification take 203 years?"
+    },
+    {
+      "id": "pay_raise_deferral_effectiveness",
+      "question": "Does the election-deferral mechanism actually prevent self-serving compensation votes, or do legislators work around it through salary vehicles not subject to the amendment (expense accounts, per diem, leadership bonuses)?",
+      "resolution_mechanism": "Comparative analysis of compensation structures before and after ratification; audit of non-salary income streams that may substitute for direct pay increases; correlation between amendment ratification and total compensation growth rates",
+      "impact": "If effective: rope classification confirmed — the constraint achieves its coordination goal. If circumvented: the constraint is theatrical (piton) — the formal rule persists while the problem it was meant to solve is solved through workarounds, and the amendment becomes a performance of accountability without substance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pay-raise deferral prevents self-dealing compensation"
+    },
+    {
+      "id": "election_timing_verification_logic",
+      "question": "Does deferring a pay vote to after an election actually create meaningful electoral accountability, or is the post-election window (lame-duck congresses, members-elect without accountability incentive) structurally incapable of providing the verification promised by the constraint?",
+      "resolution_mechanism": "Analysis of post-election pay-raise votes; comparison of electoral punishment for post-election versus in-term pay increases; historical record of whether lame-duck pay votes faced greater or lesser electoral backlash than contemporaneous votes",
+      "impact": "If election provides meaningful accountability: rope classification holds. If lame-duck window decouples vote from accountability: the constraint is theater (piton) — it performs accountability without delivering it, and the mechanism is degraded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether post-election timing creates meaningful electoral accountability"
+    },
+    {
+      "id": "kernel_reading_distinctness",
+      "question": "Is the Twenty-Seventh Amendment a reading of the broader kernel 'structural housekeeping amendments,' or is it a distinct constraint with its own kernel of 'legislative compensation self-dealing'?",
+      "resolution_mechanism": "Analysis of whether the amendment's structural role (timing of decision-making) is continuous with other structural housekeeping amendments (separation of electoral votes, lame-duck elimination, presidential term limits, prohibition repeal), or whether the compensation-specific content creates a separate kernel about the legitimacy of self-voting legislative pay",
+      "impact": "If structural housekeeping kernel: the reading is one among several distinct coordination mechanisms; the constraint's ε value and beneficiary structure are appropriate. If separate compensation kernel: the constraint should be decomposed into a reading about compensation governance distinct from the structural timing amendments, with potentially different ε and different beneficiary characterization.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the amendment is a structural housekeeping reading or a distinct compensation kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05,
+      "id_override": "t27_extractiveness_1789"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 101,
+      "value": 0.08,
+      "id_override": "t27_extractiveness_1890"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 203,
+      "value": 0.18,
+      "id_override": "t27_extractiveness_1992"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "t27_theater_1789"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 101,
+      "value": 0.18,
+      "id_override": "t27_theater_1890"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 203,
+      "value": 0.25,
+      "id_override": "t27_theater_1992"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 203
+  },
+  "commentary": {
+    "narrative_context": "The Twenty-Seventh Amendment constrains congressional compensation votes by delaying implementation of raises until after an election. Proposed by James Madison in 1789 as part of the original Bill of Rights package, it languished unratified for over two centuries — until 1992, when a grassroots ratification campaign driven by a college student succeeded in securing the final state needed. The constraint solves a structural problem: legislators voting for their own immediate salary increases face no electoral accountability at the moment of the vote. By deferring the raise to take effect after the next election, the amendment creates a temporal gap where voters can judge the legislator before the compensation increase applies. This is a pure coordination mechanism — it reorganizes decision-making timing to align incentive verification (electoral judgment) with extraction (pay increase) rather than suppressing either. The amendment contains no coercive mechanism; it is a formal constraint on the timing of implementation, not on the right to vote for raises. Its 203-year ratification delay is itself a diagnostic puzzle: if the constraint solves an obvious coordination problem, why was it dormant for so long? The answer implicates the kernel structure — structural housekeeping amendments succeed when they solve problems that transcend partisan interest; the Twenty-Seventh Amendment succeeded not because Congress supported it (they did not), but because it was already part of the original proposal package and grassroots activism finally pushed the needed states to ratify.",
+    "kernel_context": "This constraint is ONE READING of the 'structural_housekeeping_amendments' kernel. The kernel is the stabilized constitutional commitment to structural reforms that repair procedural defects discovered in practice. This reading (twenty_seventh_amendment) instantiates the constraint on legislative self-compensation timing. Sibling readings include the Twelfth Amendment (separating electoral votes), Twentieth Amendment (eliminating lame-duck sessions), Twenty-First Amendment (repeal of prohibition), and Twenty-Second Amendment (presidential term limits). Each sibling is a distinct structural repair with its own coordinate role within the broader kernel of constitutional housekeeping. The Twenty-Seventh Amendment differs from its siblings in two ways: (1) it targets legislative self-dealing rather than electoral machinery or executive power, and (2) it remained unratified for 203 years despite being part of the original Madison package, suggesting that structural housekeeping can be dormant when no political coalition benefits from enforcing it. The kernel contest is NOT whether the amendment is good policy (preference-class) but whether it belongs to the 'structural housekeeping' family or whether compensation governance should be treated as a separate kernel with its own reading structure.",
+    "key_agents": [
+      "Electoral System / Electoral Accountability Principle: Primary beneficiary (institutional/arbitrage) — gains verification capacity by aligning pay votes with electoral judgment",
+      "Congressional Incumbents: Secondary agent (organized/constrained) — experience coordination benefit (prevent mutual defection to pay-raise races) but face constraint on timing, not on ability to raise compensation",
+      "The Electorate: Tertiary beneficiary (powerless/mobile) — gains information point at which to evaluate legislators in light of recent pay votes",
+      "State Legislatures (as ratifying bodies): Historical agent (institutional/arbitrage) — possessed veto power over ratification; lack of ratification for 203 years suggests low incentive alignment until grassroots pressure emerged",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — can assess the constraint's structural role within the broader constitutional housekeeping kernel"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low-to-moderate. The constraint does not suppress alternatives or enforce asymmetric outcomes — it simply relocates the decision-making timeline. The measured value reflects that congressional compensation is affected by the constraint, but the constraint solves rather than creates a problem. The 203-year dormancy and low theater ratio (0.25) both point to rope rather than extraction-dominant types. The value increased over the interval (from 0.05 at proposal to 0.18 post-ratification) because the constraint was inert until 1992 — before ratification, it had no extractive force (no mechanism to enforce). Post-ratification, the extractiveness value reflects the actual deferral mechanism now operating. Suppression (0.12): Minimal. There is no coercive mechanism, no suppression of alternatives, and no enforcement through threat. The amendment is a formal rule requiring transparent public voting. Congressional members can still vote for their own raises — the constraint merely changes when the raise takes effect. The transparency and mechanical nature of the rule mean that the measured suppression reflects only the friction of timing (the inability to vote for immediate personal benefit), not institutional coercion. Theater ratio (0.25): Low. The mechanism is transparent and mechanical. There is no performative activity masking a degraded function. The one-vote mechanism has not been routinized or replaced by theatrical substitutes. The modest increase in theater ratio over time (to 0.25) reflects growing awareness that lame-duck pay votes may not provide the accountability the amendment promises — but this is below the piton threshold of 0.70, indicating the constraint has not yet degraded to pure theater.",
+    "directionality_logic": "The constraint's directionality is determined by the structural relationship between the decision-timing mechanism and the verification point (electoral judgment). The beneficiary is the electoral system / accountability principle (institutional power, arbitrage exit) — they benefit from the temporal alignment without bearing any cost. The electorate is a diffuse beneficiary (powerless but mobile) — they gain accountability information without bearing extraction. Congressional incumbents experience coordination benefit (powerless/trapped agents collectively benefit from preventing mutual defection to pay races), which maps to low d-values and low effective extraction chi. No agent bears systematic asymmetric cost — the constraint is a positive-sum reorganization of when decisions take effect relative to when voters judge them. The 203-year gap between proposal and ratification reflects that the amendment had zero extracted value during dormancy — no mechanism existed to enforce the timing rule. Post-ratification, the extractiveness reflects the constraint now operating as designed: pay raises are deferred, creating a temporal gap where electoral accountability can operate. The rope classification derives from the absence of suppression, asymmetric extraction, or coercive enforcement — the constraint is pure coordination.",
+    "perspectival_gap": "All four perspectives classify the constraint as Rope, with minimal perspectival variation. This is characteristic of genuine coordination mechanisms — they appear coordinating from all observation sites because they solve a genuine collective action problem without suppressing alternatives. The unified classification indicates that there is no hidden extraction or coercive mechanism waiting to be discovered from a different perspective. The analytical observer's civilizational view does not reveal a mountain (natural law); the organized incumbents' view does not reveal a snare (trap); the electorate's view does not reveal a piton (theatrical degradation). This uniformity is the diagnostic signature of successful coordination — the constraint's function is transparent across all power levels and time horizons. The only variation (organized vs powerless agents) reflects different exit capacities and strategic positions, but both perceive coordination benefit rather than extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "twelfth_amendment",
+      "twentieth_amendment",
+      "twenty_first_amendment",
+      "twenty_second_amendment"
+    ],
+    "dual_formulation_note": "The Twenty-Seventh Amendment is one reading of the 'structural_housekeeping_amendments' kernel. It is linked to its sibling amendments (Twelfth, Twentieth, Twenty-First, Twenty-Second) via the shared kernel structure. Each sibling is a separate constraint story with its own ε value and beneficiary/victim declarations. The network relationship is 'part of the same kernel family' rather than causal dependence. The 203-year ratification gap distinguishes this reading from its siblings — it was proposed simultaneously but remained dormant while other structural housekeeping amendments succeeded quickly. This delay is diagnostic: structural amendments succeed when they solve problems transcending partisan interest; the Twenty-Seventh only succeeded when grassroots pressure overcame legislative indifference."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "twelfth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "twentieth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "twenty_first_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "twenty_second_amendment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electoral_accountability_temporal_alignment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legislative_self_compensation_deferral",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "constitutional_self_dealing_prevention",
+    "drift_state": {
+      "moment": "contemporary_post_ratification",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "free_speech_clause__public_forum_doctrine",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "forum",
+    "story_uid": "41c49dd1-7af5-4eb4-b281-4386895f0b74"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Forum Doctrine: Speech Geography Under the First Amendment",
+    "topic_domain": "constitutional_law/first_amendment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speakers_in_traditional_forums"
+    ],
+    "victims": [
+      "speakers_in_nonpublic_forums"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Street Speaker in Traditional Forum",
+      "comment": "PERSPECTIVE 1: SPEAKER IN TRADITIONAL FORUM (ROPE) — Experiences the doctrine as pure coordination. Streets and parks are presumptively open; speaker can use the space with minimal permits. Regulation requires compelling state interest and narrow tailoring. Coordination benefit: the forum doctrine protects their access without demanding content review. Low experienced extraction because doctrine creates presumptive right."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Activist in Nonpublic Forum",
+      "comment": "PERSPECTIVE 2: SPEAKER IN NONPUBLIC FORUM (SNARE) — Courthouse corridors, military bases, school grounds, and private property designated nonpublic forums are foreclosed from presumptive access. Government can exclude speakers based on subject matter and speaker identity with rational basis review only. Maximum suppression: no effective exit because the alternative forums (traditional streets) are geographically unavailable for their target audience (courthouse staff, military personnel, students). Trapped by property classification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Permit Administrator",
+      "comment": "PERSPECTIVE 3: PERMIT ADMINISTRATOR (TANGLED ROPE) — Government actors regulating speech access in traditional forums navigate the doctrine's hybrid structure. They have genuine coordination function (preventing mob violence, scheduling simultaneous events, maintaining traffic flow) alongside asymmetric extraction (conditioning permits on viewpoint approval, applying differential fees by speaker category). The doctrine permits content-neutral time-place-manner regulation but supplies no principled method for distinguishing coordination from hidden content discrimination. Constrained by doctrine's ambiguity regarding permit standardization and fee caps."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Rights Litigation Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS COALITION (SCAFFOLD) — Organized agents (ACLU, media defendants, press advocacy groups) view the forum doctrine as a temporary structural solution with an implicit sunset: as digital platforms replace traditional forums for public discourse, the doctrine's geographic grounding becomes functionally obsolete. The coalition sees the doctrine as a scaffolding protecting speech pending a technological and social transition to non-geographic public forums. Constraint is temporary because the underlying problem it solves (government monopoly over physical gathering spaces) is being superceded by distributed digital speech infrastructure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "School District Administrator",
+      "comment": "PERSPECTIVE 5: SCHOOL DISTRICT (PITON) — Schools operate under the doctrine's nonpublic-forum classification, permitting exclusion of outside speakers based on subject matter and speaker identity. The doctrine justifies this through the traditional regulatory role of schools, but the actual enforcement is largely performative: schools cite 'student safety' and 'educational mission' while applying content-based screening criteria indistinguishable from viewpoint discrimination. The theater persists because the doctrine provides cover for viewpoint-based exclusion under the rational basis standard. Theater ratio high because the doctrine's neutral-sounding language masks what are often content and viewpoint discriminations."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From the civilizational view, the forum doctrine reflects an immutable structural fact: government necessarily owns and controls public property, and ownership carries regulatory authority. The doctrine merely allocates that ownership-derived authority across property categories. Under this reading, suppression variation by forum type is not extraction but inevitable consequence of property rights. However, the structural data contradicts this: the doctrine's beneficiaries (speakers in traditional forums) and explicit victims (speakers in nonpublic forums) reveal that property classification serves as a mechanism for allocating suppressive power asymmetrically across speakers — a characteristic of tangled rope, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "property_classification_discretion",
+      "question": "Can government unilaterally reclassify a traditional forum as nonpublic to exclude disfavored speakers, and does the doctrine supply a principled check on such reclassification?",
+      "resolution_mechanism": "Doctrinal analysis of reclassification standards (Hague v. CIO, Adderley v. Florida, Frisby v. Schultz, Pleasant Grove v. Summum); survey of state court divergence on forum classification criteria",
+      "impact": "If reclassification is unchecked: forum doctrine becomes pure mechanism for ex post facto suppression (Snare from government perspective, full Snare for nontraditional speakers). If principled check exists: doctrine supplies genuine coordination function limiting arbitrary exclusion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether government can unilaterally reclassify forums to exclude speech"
+    },
+    {
+      "id": "permit_fee_discrimination_boundary",
+      "question": "Where is the doctrinal boundary between legitimate cost-recovery permit fees and discriminatory fee-based suppression of disfavored speakers?",
+      "resolution_mechanism": "Doctrinal review of content-neutral fee cases (Forsyth County v. Nationalist Movement, Renton v. Playtime Theatres); empirical comparison of permit fee schedules across jurisdictions; analysis of fee correlations with speaker viewpoint and speaker power",
+      "impact": "If boundary is determinate: permits supply coordination function with acceptable asymmetry. If boundary is indeterminate: permits become disguised extraction mechanism (high asymmetric suppression with doctrine cover).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between cost-recovery and discriminatory permit fees"
+    },
+    {
+      "id": "nontraditional_forum_emergence",
+      "question": "As digital platforms become primary public forums, does the forum doctrine's geographic grounding become functionally obsolete, triggering automatic reclassification to scaffold status?",
+      "resolution_mechanism": "Empirical tracking of discourse concentration: percentage of political discourse occurring on traditional forums vs digital platforms (historical and projected); doctrinal evolution in cases addressing digital speech (Knight First Amendment Institute v. Trump, citing traditional forum doctrine by analogy); survey of legislative responses (Digital Millennium Communications Act proposals)",
+      "impact": "If platforms already primary: scaffold reading confirmed — sunset is imminent and structural (doctrine being superseded). If geographic forums remain primary: scaffold reading is aspirational rather than structural (constraints persist longer).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital platforms are becoming primary public forums"
+    },
+    {
+      "id": "categorical_exceptions_interaction",
+      "question": "Does the categorical exceptions doctrine (incitement, obscenity, etc.) operate independently of forum classification, or does forum type modulate the exceptions' application?",
+      "resolution_mechanism": "Doctrinal analysis of high-value speech in nontraditional forums; case survey (Brandenburg v. Ohio, Miller v. California, New York Times v. Sullivan) applied across forum contexts; identification of cases where forum type lowered the exception's threshold or raised the government's burden",
+      "impact": "If independent: categorical exceptions and forum doctrine are parallel constraint systems (separate stories). If modulated: forum doctrine influences how categorical exceptions apply, creating network dependency.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Interaction between forum doctrine and categorical exceptions"
+    },
+    {
+      "id": "reading_contest_indexicality",
+      "question": "Is the distinction between public_forum_doctrine, categorical_exceptions_doctrine, and content_neutrality_doctrine real structural differences in how courts apply the First Amendment, or are all three readings of the same constraint through different observables?",
+      "resolution_mechanism": "Doctrinal architecture analysis: identify cases that cite all three doctrines and trace which doctrine controls the outcome; identify cases that would be decided differently if one reading were adopted vs another; survey of doctrinal primacy across circuits and time periods",
+      "impact": "If real differences: three separate constraints with different ε values (decompose to three stories). If same constraint from different angles: all three readings inhere in a single network-linked constraint family. If partially overlapping: some cases controlled by forum doctrine, others by categorical exceptions, requiring careful case-by-case analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether forum doctrine, categorical exceptions, and content neutrality are independent constraints or readings of the same kernel"
+    },
+    {
+      "id": "false_summit_marker",
+      "question": "Is the forum doctrine's grounding in property ownership a genuine natural law (government ownership entails regulatory authority — mountain), or is it a constructed doctrine that happens to rest on a natural principle but serves identifiable beneficiary interests — false summit candidate?",
+      "resolution_mechanism": "Historical analysis: trace doctrine origins (Hague v. CIO, 1939) and evolution; identify moments of deliberate expansion or contraction of forum categories; survey beneficiary effects (which speaker categories gained vs lost access after key doctrine shifts); identify whether property-ownership reasoning is logically necessary to the doctrine's operation or merely post-hoc justification",
+      "impact": "If natural law: suppress false summit signal, treat as genuine mountain. If false summit: engine reclassifies via FSM signature to tangled_rope, revealing property-based gatekeeping as constructed beneficiary protection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether forum doctrine's property-ownership grounding is natural law or false summit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The public forum doctrine represents one canonical reading of the First Amendment's Speech Clause. Under this reading, the doctrine's central claim is that the government's power to regulate speech varies inversely with the forum's traditional role in public discourse. Streets and parks—traditional forums for assembly and expression—are presumptively open to all speakers; government regulation requires compelling state interest and narrow tailoring. Nonpublic forums (military bases, courthouses, school grounds)—spaces where expressive activity is ancillary to the forum's primary function—permit government exclusion of speakers and subject matter with minimal justification (rational basis review only). The doctrine allocates suppressive power by grounding it in property ownership: government owns nontraditional forums absolutely and can exclude speakers at will; government's ownership of traditional forums is limited by a doctrine-imposed fiduciary duty to hold them open for expression. This geographic structure creates a constraint with clear beneficiaries (speakers using traditional forums) and victims (activists excluded from nonpublic forums where their target audience is present). The constraint exhibits all the marks of tangled rope: genuine coordination function (preventing mob violence, managing simultaneous events, protecting minors in schools) combined with asymmetric extraction (permit fees differentially applied, venue denial to disfavored speakers, viewpoint-based forum reclassification). The theater ratio has risen over the constraint's interval as the doctrine has accumulated doctrinal complexity without corresponding clarification of its core principles—permit administrators and school officials increasingly invoke the doctrine's language (content neutrality, forum classification) while applying content-based and viewpoint-based screening criteria that the doctrine nominally prohibits.",
+    "key_agents": [
+      "Speakers in Traditional Forums: Primary beneficiary (powerful/mobile) — presumptive access to streets and parks; minimal permit barriers; doctrine supplies strict scrutiny against exclusion",
+      "Activists and Marginalized Speakers Targeting Nonpublic Audiences: Primary victims (powerless/trapped) — courthouses, military bases, schools, administrative offices are forecast by forum classification; cannot access target audiences through alternative traditional forums",
+      "Permit Administrators: Government agents (moderate/constrained) — navigate the tension between legitimate coordination (traffic, scheduling, mob prevention) and subtle content discrimination masked as content-neutral time-place-manner regulation; constrained by doctrine's ambiguous boundaries",
+      "School Districts and Government Institutions: Beneficiaries of broad regulatory authority (institutional/arbitrage) — nonpublic forum classification permits viewpoint-based speaker exclusion under rational basis review; doctrine supplies doctrinal cover for what courts acknowledge is often viewpoint discrimination",
+      "Civil Rights Litigation Organizations: Organized agents (organized/constrained) — challenge permit denials and forum reclassifications; view the doctrine as structurally temporary (being superseded by digital platforms); constrained by the doctrine's doctrinal entrenchment despite its geographic obsolescence",
+      "Doctrinal Courts: Institutional authorities (institutional/arbitrage) — interpret the doctrine; hold the power to expand or contract forum categories; benefit from the doctrine's ambiguity because it permits outcome-flexibility while maintaining doctrinal legitimacy"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-to-high. The doctrine creates measurable asymmetries in suppressive power across speaker categories. Speakers in traditional forums experience low suppression (strict scrutiny requires compelling state interest); speakers in nonpublic forums can be excluded by rational basis review—a vastly lower threshold. This asymmetry is not a natural law flowing from property ownership but rather a constructed categorization that benefits some speakers and harms others. The 0.48 value reflects that extraction is significant but not maximal: speakers in traditional forums are not completely exempt from regulation (time-place-manner restrictions still apply), and the doctrine does supply some principled limits on forum reclassification. Suppression (0.62): Moderate-high. For speakers in nonpublic forums, suppression is severe—they can be excluded from spaces where their target audience is present (courthouse, military base, school), with the government needing only to show rational basis for the exclusion. For speakers in traditional forums, suppression is lower. The 0.62 aggregate value reflects the asymmetry: the doctrine creates high suppression for a victim class (speakers in nonpublic forums) while protecting beneficiaries. Theater ratio (0.55): Moderate. The doctrine's language emphasizes content neutrality and property-based distinctions, but empirical application reveals that forum reclassifications sometimes follow viewpoint patterns, permit fees track speaker power, and the rational basis standard for nonpublic forums supplies minimal scrutiny of discriminatory intent. The theater is not maximal because courts do occasionally enforce the doctrine's constraints (invalidating viewpoint-based permit denials), and the permitting process does sometimes achieve genuine coordination rather than hidden extraction. The rising trajectory (0.38 → 0.55) reflects the accumulation of doctrinal complexity: as courts developed subcategories (limited open forums, designated public forums), the doctrine became more elaborate while its core principles became harder to apply consistently.",
+    "perspectival_gap": "This reading (public forum doctrine) diverges sharply from its sibling readings in how they classify the First Amendment's constraint structure. The categorical exceptions doctrine (incitement, obscenity, true threats, fighting words, defamation) emphasizes that some speech categories are inherently unprotected—they fall outside the Amendment's scope entirely. Content neutrality doctrine emphasizes that regulations targeting the content of speech receive strict scrutiny, while time-place-manner restrictions receive intermediate scrutiny—the key axis is whether the regulation turns on what is said, not where it is said. The public forum doctrine makes geography primary: the same speech receives different protection depending on which government property it occurs on. These readings coexist (courts cite all three), but they supply different analytical paths to outcomes. A permit denial in a park might be analyzed under forum doctrine (park is traditional forum, regulation requires compelling interest) or under content neutrality doctrine (is the permit denial based on the content of speech?) or under categorical exceptions doctrine (does the excluded speech fall into a categorical exception?). The sibling readings would classify differently on various perspectives—especially the analytical observer, which might see categorical exceptions as a natural law (incitement genuinely harmful), content neutrality as a principle (equal protection across viewpoints), and forum geography as a constructed doctrine.",
+    "directionality_logic": "The public forum doctrine creates directional asymmetries grounded in property classification, not just power level. A speaker in a traditional forum experiences low d (beneficiary status, high mobility, low suppression costs). A speaker in a nonpublic forum experiences high d (victim status, no mobility alternative—cannot reach their target audience through other forums, trapped exit options). A permit administrator experiences moderate d—they experience extraction (constrained by the doctrine's requirement to apply strict scrutiny in traditional forums) but also benefit from regulatory discretion in ambiguous cases (where forum classification is contested). The engine computes d from beneficiary/victim declarations and exit options; the output is high χ for victims and low χ for beneficiaries, reflecting the doctrine's asymmetric suppression. No directionality override is needed—the structural data maps cleanly onto the framework.",
+    "kernel_context": "This constraint instantiates the public_forum_doctrine reading of the contested kernel free_speech_clause. The kernel is the First Amendment's Speech Clause, which multiple readings interpret differently. The categorical_exceptions_doctrine reading grounds protection in speech categories (incitement, obscenity, etc. are unprotected by definition). The content_neutrality_doctrine reading grounds protection in whether regulations target speech content (strict scrutiny if content-based). The public_forum_doctrine reading (this constraint) grounds protection in the property or forum where speech occurs (traditional forums presumptively open, nonpublic forums can exclude). Each reading supplies a different constraint structure with different beneficiaries, victims, and suppression mechanics. The public forum reading places geographic property classification at the center—suppression varies by forum type, beneficiaries are speakers in traditional forums, and victims are speakers excluded from nonpublic forums. This reading would be foreclosed if content neutrality doctrine proved the master rule (content-based vs. content-neutral would dominate geographic categories), but currently the readings coexist across different judicial opinions and applications."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "free_speech_clause__categorical_exceptions_doctrine",
+      "free_speech_clause__content_neutrality_doctrine"
+    ],
+    "dual_formulation_note": "The public forum doctrine is one of three interdependent readings of the First Amendment's Speech Clause kernel. All three readings apply to the same constitutional text but emphasize different constraint mechanisms: geographic property (this reading), speech categories (categorical exceptions), and regulation modality (content neutrality). The three readings form a constraint family linked by network dependency rather than decomposition via ε-invariance. Each reading has its own constraint story with its own ε values and perspectives. The three stories are linked because courts often cite multiple doctrines in a single case, and the doctrines interact (e.g., categorical exceptions might be inapplicable to certain forums, or forum rules might be waived for certain high-value speech categories)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "traditional_forum_presumptive_openness",
+    "drift_state": {
+      "moment": "digital_platform_era",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "free_speech_clause__categorical_exceptions_doctrine",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "free_speech_clause__content_neutrality_doctrine",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "geographic_forum_determines_scrutiny",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "traditional_forums_presumptively_open",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

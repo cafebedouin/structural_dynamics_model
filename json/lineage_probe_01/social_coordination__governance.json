@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "social_coordination__governance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_social_coordination__governance",
+    "measurement_id_prefix": "socgov",
+    "story_uid": "97ce57ef-51fd-47e9-a83f-2d4a800a35a4"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.58,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Governance Authority as Large-Scale Coordination Mechanism",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "office_holders",
+      "institutional_access_elite"
+    ],
+    "victims": [
+      "politically_marginal",
+      "non_institutionalized_coordination_modes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Politically Marginal (Snare)",
+      "comment": "PERSPECTIVE 1: POLITICALLY MARGINAL — Cannot exit governance structures (territorial residence, legal jurisdiction, birth status confer involuntary membership). Suppressed from using alternative coordination modes (kinship networks, voluntary exchange, ritual consensus) via criminal law, administrative penalty, or institutional exclusion. Bears costs of compliance (taxation, labor obligation, dispute resolution loss) while receiving minimal benefit of dispute adjudication. High experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ordinary Subject (Tangled Rope)",
+      "comment": "PERSPECTIVE 2: ORDINARY SUBJECT — Constrained exit (migration costly, renunciation of citizenship difficult). Benefits from governance as a coordination mechanism: conflict resolution that prevents blood feuds, property law enabling commerce, public goods provisioning. Also bears extraction: taxation, forced conscription, subordination to bureaucratic rules. Mixed experience of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Office Holder (Rope)",
+      "comment": "PERSPECTIVE 3: OFFICE HOLDER — Primary beneficiary. Achieves power, revenue extraction, and authority through institutional standing. Views governance constraint as coordination mechanism that solves the collective action problem of large-scale coordination without private extraction cost. Can arbitrage between formal authority and informal networks (nepotism, graft, rent-extraction). Experiences constraint as legitimate coordination structure that serves them."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Administrative Bureaucracy (Piton)",
+      "comment": "PERSPECTIVE 4: ADMINISTRATIVE BUREAUCRACY — Institutional actor that has become the performance of governance. Procedural compliance, rule-following, and ritual of legitimacy have partly decoupled from actual coordination function. Theater of law and order persists (ceremonies, documentation, hierarchy) even when coordination could be achieved through simpler mechanisms. Bureaucracy maintains itself through institutional inertia and the belief that formal procedures confer legitimacy."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transitional Governance Reform Movement (Scaffold)",
+      "comment": "PERSPECTIVE 5: TRANSITIONAL GOVERNANCE REFORM — Organized actors (civil society, reform movements, democratic activists) see authoritative governance as a temporary coordination mechanism that can sunset into distributed consensus structures or subsidiary-principle federalism. Sunset logic: as education, communication infrastructure, and civic participation deepen, need for top-down authority diminishes. Alternative coordination modes (deliberative democracy, participatory budgeting, local consensus) can scale if enforcement burden is reduced. Low effective extraction because the movement has agency and sees an exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational scale, large-scale coordination without centralized authority is treated as impossible or prohibitively costly. Hobbesian framing: without a sovereign to bind all members, coordination devolves to kinship, tribe, or anarchy. This perspective treats authority structures as an immutable natural law, an irreducible feature of the human condition at population scale. However, this risks false summitry — treating a specific institutional choice as inevitable when alternative coordination modes have historically scaled and could scale again."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Can non-authoritative coordination modes (kinship obligation, market exchange, ritual consensus, digital consensus) actually scale to state or continental population sizes, or is top-down authority inherently necessary above a threshold population?",
+      "resolution_mechanism": "Historical and contemporary case analysis: Swiss cantons, Icelandic Commonwealth (pre-1262), Acephalous societies (Ibibio, Nuer, Somali), digital consensus systems (blockchain governance, online deliberation at scale). Threshold analysis: at what population does distributed coordination provably fail?",
+      "impact": "If alternative coordination scales: governance constraint is contingent institutional choice (Tangled Rope from most perspectives). If scaling fails above threshold: governance is closer to immutable (Mountain may be appropriate). If scaling succeeds at some scales but not others: constraint is scope-dependent; separate stories per scale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility and scale limits of non-authoritative coordination modes"
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Is this reading one interpretation of an enduring kernel of 'social coordination' (the kernel remains stable; readings differ), or do the four sibling readings (governance, kinship, market, ritual) actually refer to four distinct kernels that are wrongly grouped under a single label?",
+      "resolution_mechanism": "Philosophical reconstruction: identify the transhistorical commitment that all four readings share. If no shared commitment exists — if 'kinship obligation' and 'governance authority' address structurally incompatible coordination problems — then the kernel is misnamed and the readings are separate constraints.",
+      "impact": "If single kernel with multiple readings: this story's cs_structure, reading_relations, and axioms capture the structure correctly. If four separate kernels: this story should be de-linked from siblings; each should declare its own network relationships independently. Affects the entire kernel context frame.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether four sibling readings share a single kernel or represent separate kernels mislabeled"
+    },
+    {
+      "id": "extraction_mechanism_ambiguity",
+      "question": "Is the measured extractiveness (0.48) a genuine feature of authoritative governance, or does it reflect the specific institutional *form* (hierarchy, centralization, bureaucracy) rather than an inherent property of large-scale coordination itself?",
+      "resolution_mechanism": "Comparative institutional analysis: measure extractiveness of governance structures with different organizational forms (centralized state, federal subsidiarity, multi-tiered delegation, distributed adjudication). If extractiveness correlates with centralization rather than scale, the constraint should be decomposed into (a) large-scale coordination (separate constraint, lower extractiveness), and (b) centralized authority mechanism (separate constraint, higher extractiveness).",
+      "impact": "If extracted via form, not via scale: ε for 'governance as coordination' is lower (~0.30); ε for 'centralized authority mechanism' is higher (~0.60). Decomposition creates separate stories per ε-invariance principle. If extracted inherently at scale: this constraint is correctly classified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extractiveness is inherent to large-scale coordination or attributable to specific institutional form"
+    },
+    {
+      "id": "suppression_subordination_distinction",
+      "question": "Is the measured suppression (0.58) an active suppression mechanism (formal prohibition of rival coordination modes), or is it subordination (rival modes permitted but delegitimized / ranked below authority)?",
+      "resolution_mechanism": "Historical-legal analysis: documentation of formal prohibition vs. hierarchical ranking. Compare societies that actively criminalize kinship-law adjudication vs. those that permit it but rank it below state law. Suppress = criminal penalty; subordinate = legal standing but lower priority. The distinction affects the snare classification for the powerless agent.",
+      "impact": "If active suppression: measured suppression ≥ 0.58 is accurate; snare classification is robust. If subordination only: suppression should be ~0.40 (lower intensity); powerless agent may experience tangled_rope rather than snare. Affects multiple perspective classifications.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rival coordination modes are actively suppressed or hierarchically subordinated"
+    },
+    {
+      "id": "reading_naturalness_contest",
+      "question": "This reading instantiates the governance authority frame, one of four competing readings of the social_coordination kernel. That contest is real, persistent, and unresolved — it is the structure the committer frame is meant to capture. What is the epistemic status of treating this reading as a single constraint rather than an inherently contested site?",
+      "resolution_mechanism": "Metatheoretical: the Deferential Realism framework's architectural commitment to kernel/reading structure is designed to handle exactly this case. A contested kernel is a single contested commitment (the social_coordination claim); the readings differ in how that commitment is interpreted. Treating the governance reading as a single constraint is correct IF it represents one coherent interpretation (Axiom: 'Authoritative institutions provide necessary large-scale coordination'). Treating it as inherently fragmented would require abandoning the kernel structure.",
+      "impact": "If this reading is inherently fragmented: no single constraint story can capture it; the kernel framework fails on this case. If the reading is coherent: this story is correctly authored. The question is philosophical, not empirical.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Epistemic status of treating the governance reading as a single constraint given its contested nature"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "commentary": {
+    "narrative_context": "Large-scale social coordination through authoritative institutions represents one contested reading of the social_coordination kernel. This reading claims that centralizing authority to bind members and adjudicate disputes is necessary for coordination at population scale. The constraint exhibits the core tangled_rope signature: genuine coordination function (resolving conflicts, provisioning public goods, enabling commerce through property law) paired with asymmetric extraction (taxation, conscription, enforcement of hierarchy). The extractiveness has accumulated over the interval (0.32 → 0.48) as bureaucratic apparatus has grown; suppression has intensified (0.35 → 0.58) as alternative coordination modes have been systematically subordinated to state authority; theater has increased slightly (0.38 → 0.52) as the legitimation ritual has become more elaborate relative to actual adjudication function. This reading competes with three structural alternatives: kinship_obligation (coordination through inherited reciprocity), market_exchange (coordination through voluntary exchange under price), and ritual_consensus (coordination through sacralized collective choice). The governance reading forecloses none of them logically — different populations have coordinated at scale through each mechanism — but it does influence them by establishing legal hierarchies that rank governance authority above rival modes. The analytical observer risks a false summit (mountain classification) by naturalizing governance authority as immutable at civilizational scale, when historical and contemporary evidence shows alternative coordination modes can scale if authority's enforcement burden is reduced.",
+    "key_agents": [
+      "Office Holders: Primary beneficiary (institutional/arbitrage) — capture revenue, authority, and prestige through institutional position. Depend on governance structure for their power; arbitrage between formal authority and informal networks (graft, nepotism).",
+      "Institutionalized Access Elite: Secondary beneficiary (institutional/arbitrage) — professionals, merchants, clergy with formal standing; benefit from rule of law, predictable adjudication, and market coordination enabled by governance structure.",
+      "Politically Marginal: Primary victim (powerless/trapped) — unable to exit jurisdiction; excluded from formal institutional access; suppressed from using alternative coordination modes (kinship courts, religious adjudication, voluntary assembly); bear taxation and conscription with minimal input.",
+      "Non-Institutionalized Coordination Modes: Structural victim — kinship law, merchant guilds, religious authority, local consensus mechanisms are subordinated to state law and delegitimized as official authority.",
+      "Ordinary Subject: Mixed experience (moderate/constrained) — benefits from conflict resolution and public goods, but constrained by fixed borders and subordination to hierarchical rules.",
+      "Administrative Bureaucracy: Institutional actor maintaining itself (institutional/arbitrage) — the apparatus has become self-perpetuating; theater of legitimacy persists partly via inertia.",
+      "Transitional Reform Movement: Organized agent seeking alternative (organized/constrained) — civil society, democratic movements working toward distributed governance or subsidiarity-principle alternatives.",
+      "Analytical Observer: Risks naturalizing contingent choice (analytical/analytical) — treats governance authority as inevitable at civilizational scale; obscures the contested kernel structure."
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate. Governance structures do extract substantial resources (taxation, conscription, property control, labor obligation), but the extraction is not maximal because genuine coordination benefits are real — contract enforcement, conflict resolution, public goods provisioning, and infrastructure enable commerce and reduce violence. The 0.48 value reflects this hybrid: meaningful coordination function alongside asymmetric extraction. Suppression (0.58): Moderate-high. Rival coordination modes are substantially suppressed — kinship law is denied official standing, merchant guilds are subordinated to state commerce regulation, religious authority is restricted to spiritual domains, local consensus is overridden by hierarchy. However, suppression is not total in most modern states — kinship networks persist informally, merchant codes operate parallel to commercial law, religious adjudication continues in some contexts. The 0.58 reflects the systematic legal subordination of alternatives. Theater ratio (0.52): Moderate. Governance legitimacy is partly performative (ceremonies, proclamations, formal procedures) but also functional (adjudication does resolve disputes, law does coordinate behavior). The theater component has increased over the interval as states have developed more elaborate bureaucratic ritual. The interval measurements (0 to 400) represent roughly 400 years of institutional development in Europe and its colonial/post-colonial extensions. Over this period, extractiveness has risen as tax bureaucracy developed, suppression has intensified as alternative coordination modes were systematically delegitimized, and theater has increased as legitimate procedure became more elaborate.",
+    "directionality_logic": "Each perspective's directionality is determined by the agent's structural position relative to the extraction flow and exit capacity. Office holders (beneficiary + arbitrage) experience low or negative effective extraction — the constraint exists to serve them. Politically marginal (victim + trapped) experience maximum extraction — they cannot exit and are excluded from institutional voice. Ordinary subjects (mixed + constrained) experience moderate extraction — they benefit from coordination but pay costs. The piton perspective (bureaucracy maintaining itself) emerges from theater_ratio exceeding functional necessity; the scaffold perspective (reform movement with sunset vision) emerges from organized agents with exit paths and alternative models. The mountain perspective (analytical/natural law) risks false summitry by naturalizing what is revealed as a contested kernel reading once the alternative modes are examined.",
+    "perspectival_gap": "The governance reading creates a wide perspectival gap. The office holder sees legitimate coordination (Rope) — the constraint solves the collective action problem of binding large populations. The ordinary subject sees mixed coordination and extraction (Tangled Rope) — real benefits but real costs. The politically marginal sees pure extraction (Snare) — suppressed from alternatives, forced to comply, minimal benefit. The bureaucracy sees its own degradation (Piton) — procedure has become largely self-perpetuating ritual. The reform movement sees a temporary apparatus with alternatives emerging (Scaffold) — distributed deliberation and subsidiarity could replace centralized authority. The analytical observer risks seeing immutable natural law (Mountain) — treating governance authority as inherent to large-scale coordination rather than one contingent institutional form among alternative reading options. This gap reflects the genuine contest between the governance reading and its siblings (kinship, market, ritual) — different population structures, communication technologies, and institutional developments have favored different coordinate modes at different scales and times.",
+    "kernel_context": "This constraint is ONE reading of the contested social_coordination kernel. The kernel captures the transhistorical question: How is large-scale social coordination achieved? The governance reading answers: through centralizing authority to bind members and adjudicate disputes. Sibling readings — kinship_obligation (through inherited reciprocity networks), market_exchange (through voluntary exchange under price signals), and ritual_consensus (through shared sacralized collective choice) — provide structurally distinct answers grounded in different mechanisms. These readings coexist as live options in contemporary discourse and have coexisted historically in different populations. The governance reading does not foreclose them (societies have successfully coordinated through kinship, market, and ritual); it influences them by establishing legal hierarchies that rank governance authority above alternatives. This reading is one committer-axis interpretation of the kernel, not the sole legitimate reading."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_coordination__kinship_obligation",
+      "social_coordination__market_exchange",
+      "social_coordination__ritual_consensus",
+      "bureaucratic_legitimacy_theater",
+      "state_monopoly_on_force"
+    ],
+    "dual_formulation_note": "This is the governance reading of the social_coordination kernel. The upstream kernel is the contested claim about how large-scale coordination is achieved; this story instantiates one interpretation (authority-based). The downstream constraints are specific mechanisms (bureaucratic theater, state force monopoly) that the governance reading depends on. The kinship, market, and ritual siblings are sibling readings of the same kernel, not derivative constraints."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "social_coordination__kinship_obligation",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "social_coordination__market_exchange",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "social_coordination__ritual_consensus",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authoritative_institution_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "hierarchy_efficiency_at_scale",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "centralized_authority_legitimacy",
+    "drift_state": {
+      "moment": "contemporary_post_industrial",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

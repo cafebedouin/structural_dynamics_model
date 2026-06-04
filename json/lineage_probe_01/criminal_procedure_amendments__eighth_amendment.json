@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "criminal_procedure_amendments__eighth_amendment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eighth",
+    "story_uid": "1cc76013-49fa-4b44-9aab-0cdd9747c218",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Eighth Amendment Proportionality Constraint on Penal Power",
+    "topic_domain": "political/legal/criminal_procedure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "convicted_and_detained_persons"
+    ],
+    "victims": [
+      "maximal_deterrence_policy",
+      "retributive_excess_prevention"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Prisoner Subject to Cruel Punishment",
+      "comment": "PERSPECTIVE 1: IMPRISONED PERSON (SNARE) — Faces maximum extraction through excessive bail, fines calibrated beyond capacity to pay, and punishments designed without proportionality constraint. No exit from the penal system except through sentence completion or clemency. The Eighth Amendment's proportionality requirement is their only structural protection against extraction of suffering as a primary goal rather than incidental effect. Suppression is total: confinement itself prevents alternative arrangements."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Bail-Eligible Detainee Pre-Trial",
+      "comment": "PERSPECTIVE 2: BAIL-ELIGIBLE DETAINEE (TANGLED ROPE) — Subject to bail systems that provide genuine coordination function (securing court appearance) but also extract through excessive amounts. Constrained but not trapped: bail-eligible means structural exit exists (posting bail, release conditions) at a price. The Eighth Amendment's excessive-bail clause provides partial protection but coordination and extraction coexist — the system genuinely needs security but also accumulates wealth from those who cannot meet it."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Courts Enforcing Proportionality",
+      "comment": "PERSPECTIVE 3: COURTS / JUDICIAL SYSTEM (ROPE) — Experience the Eighth Amendment as a coordination mechanism: establishing proportionality floors prevents races-to-the-bottom in punitiveness between jurisdictions and maintains legitimacy of sentencing. Institutional arbitrage: courts gain legitimacy and reduced appellate burden by using proportionality review. The constraint structures judicial authority without severely limiting it — judges still control sentencing within bounds."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Criminal Justice Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (SCAFFOLD) — Organized actors (public defenders, civil rights groups, some prosecutors) see the Eighth Amendment as a temporary scaffolding enabling criminal justice reform. The amendment provides legitimacy for arguments against mass incarceration, three-strikes laws, and mandatory minimums. Sunset dynamic: as sentencing norms shift and reformation becomes default framing, the Eighth Amendment's proportionality constraint becomes normalized rather than exceptional. Low extraction from this view because the constraint enables exit from punitive excess."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Originalist Text-Bound Interpretation",
+      "comment": "PERSPECTIVE 5: ORIGINALIST JURISPRUDENCE (PITON) — The Eighth Amendment, read as a fixed 18th-century prohibition on 'cruel and unusual punishments,' has become substantially theater. The constraint persists through institutional inertia and invocation of original meaning, but the contemporary force of 'cruel and unusual' is mostly performative — courts invoke it sparingly, allow massive mandatory sentences to stand, and struggle with application. The original constitutional reference to 'unusual' (meaning unusual relative to established practice at ratification) no longer functions; 'cruel' has become the only operative term, and courts treat it as requiring extreme circumstances. Theater ratio rises because the constraint is repeatedly invoked without producing systematic constraints on actual sentencing practices."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law of Proportionality)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, proportionality between offense and punishment is an irreducible requirement of legitimate penal power. Any system claiming legitimacy must bound punishment by proportionality; without this, punishment becomes indistinguishable from torture. This perspective treats proportionality as a natural law of justice itself, not a contingent constitutional choice. However, the structural data contradicts this classification: identifiable beneficiaries (those protected from excessive punishment), victims (deterrence-maximalist policies), and active enforcement requirements all signal a contingent institutional arrangement, not a law of nature. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proportionality_metric_indeterminacy",
+      "question": "What constitutes 'proportionality' between offense and punishment? Is proportionality an objective scalar (years-of-imprisonment-to-offense-severity ratio) or a constitutional delegated judgment?",
+      "resolution_mechanism": "Comparative jurisprudence: analyze whether courts across jurisdictions converge on proportionality ratios or consistently diverge; track appellate reversal rates for disproportionality claims",
+      "impact": "If objective metric exists and courts apply it systematically: extractiveness drops (clear rule, predictable enforcement). If delegated judgment: extractiveness rises (discretion enables extraction, theater increases as proportionality claims lack anchor).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether proportionality is objective scalar or delegated constitutional judgment"
+    },
+    {
+      "id": "cruel_and_unusual_temporal_shift",
+      "question": "Does 'cruel and unusual' mean 'unusual relative to 1791 practice' (originalist anchor) or 'cruel by contemporary standards' (evolving standards doctrine)? How does the reading chosen affect which punishments are prohibited?",
+      "resolution_mechanism": "Historical analysis of Supreme Court precedent (Trop v. Dulles, Weems v. United States, Estelle v. Gamble); comparison of outcomes under originalist vs. evolving-standards interpretations applied to specific punishments (solitary confinement duration, execution methods, mandatory minimums)",
+      "impact": "Originalist reading: extractiveness rises (most contemporary punishments are not 'unusual' by 1791 standards, constraint becomes theatrical). Evolving-standards reading: extractiveness drops (constraint adapts to changing justice norms, enforcement capacity increases).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Originalist vs. evolving-standards interpretation of cruel and unusual"
+    },
+    {
+      "id": "bail_excessiveness_interaction_with_poverty",
+      "question": "Does the excessive-bail clause protect against quantitatively excessive amounts (e.g., bail set above the defendant's net worth) or against the structural effect of bail as a wealth filter that detains poor people pre-trial?",
+      "resolution_mechanism": "Empirical data on detention rates by bail amount relative to socioeconomic status; pre-trial detention outcomes by bail level; correlation between bail excessiveness (defined by multiple standards: absolute amount, percentage of income, payment capacity) and pre-trial jail time",
+      "impact": "If quantitative standard: courts can calibrate bail amounts mathematically, extractiveness is bounded. If structural effect: bail systems inherently extract detention-as-punishment from poor defendants, extractiveness remains high regardless of calibration (extraction is structural, not incidental).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether excessive bail is quantitative or structural-impact problem"
+    },
+    {
+      "id": "eighth_amendment_kernel_reading_ambiguity",
+      "question": "Is the Eighth Amendment's core commitment a fixed prohibition on specific cruelties (18th-century meaning of 'unusual') or a constitutional requirement that all penal power be bounded by proportionality (living principle)? Which sibling reading of the criminal_procedure_amendments kernel is the Eighth Amendment actually aligned with?",
+      "resolution_mechanism": "Examine whether the Eighth Amendment's primary function is defensive (protecting against specific harms: torture, disproportionate punishment) or structural (constraining how all five amendments relate to each other in penal contexts). Analyze whether proportionality claims require integration with Sixth Amendment fair-trial guarantees and Fifth Amendment due-process protections, or whether the Eighth stands alone.",
+      "impact": "If defensive-only: the Eighth Amendment is structurally independent from its siblings (coexists_with or influences weakly). If structural-integrating: the Eighth Amendment forecloses or influences readings of the Fifth and Sixth that would allow penal processes without proportionality bounds. Classification of sibling reading_relations may need revision.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Eighth Amendment's core commitment: fixed prohibition vs. living proportionality principle"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Eighth Amendment forbids excessive bail, excessive fines, and cruel and unusual punishments, instantiating a proportionality principle into American penal power. This constraint operates as a reading of the broader criminal_procedure_amendments kernel — a contested commitment spanning the Fourth, Fifth, Sixth, Seventh, and Eighth Amendments — each of which structures different aspects of criminal procedure. The Eighth Amendment's specific contribution is the proportionality boundary: punishment must be bounded not only by procedure (Fourth, Fifth, Sixth, Seventh) but also by substance — the severity of the punishment must bear rational relationship to the offense. This reading distinguishes itself from its siblings by importing a substantive constraint on *outcomes* rather than only on *processes*. The constraint exhibits the classic structure of a commitment system: a fixed text ('cruel and unusual punishments') that grounds authority claims, an interpretive tradition that has substantially shifted from originalist to evolving-standards doctrine, and active enforcement through appellate review. The Eighth Amendment is simultaneously protective (defending imprisoned and detained persons from excess), coordinative (establishing baseline legitimacy for sentencing systems across jurisdictions), and extractive (permitting incarceration as long as it remains within proportionality bounds, thus enabling massive punishment volumes that would be foreclosed by alternative proportionality readings).",
+    "key_agents": [
+      "Imprisoned and detained persons: Primary beneficiary (powerless/trapped) — protected from excess bail, fines, and cruel punishment; but protection is bounded and proportionality itself may permit vast incarceration",
+      "Bail-eligible detainees: Secondary beneficiary (moderate/constrained) — protected from excessive bail but still subject to bail systems that function as wealth filters and pre-trial extraction",
+      "Maximal-deterrence policy advocates: Primary victim (institutional/mobile) — Eighth Amendment proportionality bounds limit deterrence-maximizing strategies (extremely long sentences, novel punishments)",
+      "Courts and judiciary: Primary coordinator (institutional/arbitrage) — enforce proportionality, gain legitimacy from constraint, maintain sentencing discretion within bounds",
+      "Criminal justice reform coalition: Secondary coordinator (organized/constrained) — use Eighth Amendment proportionality principle to argue against mass incarceration, three-strikes laws, mandatory minimums",
+      "Originalist jurisprudence: Institutional interpreter (institutional/mobile) — invokes Eighth Amendment while treating 'unusual' as historically bounded, reducing its contemporary force",
+      "Evolving-standards doctrine: Institutional interpreter (institutional/mobile) — invokes Eighth Amendment while treating proportionality as living principle, expanding its contemporary force"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Eighth Amendment structures the constraint as protective (beneficiaries clearly defined) but also permits substantial incarceration within proportionality bounds. The key insight is that proportionality does not eliminate extraction — it bounds it. A jurisdiction can incarcerate massive populations as long as individual sentences remain proportional to offenses. This differs from constraints that would eliminate incarceration entirely (abolitionist reading) or cap total incarceration volume (resource-allocation constraint). The extractiveness value reflects that the Eighth Amendment permits extraction of liberty as long as it remains bounded. Suppression (0.52): Moderate-high. Significant barriers to challenging excessive punishments: appellate review is narrow (courts defer to trial judges), proportionality claims require expensive appellate litigation, standard-of-review doctrine places burden on defendant to show 'grossly disproportionate' punishment (high bar), and clemency alternatives are rare. However, suppression is not total — some successful challenges exist, proportionality review is conducted (even if rarely overturned), and reform movements can mobilize proportionality rhetoric. Theater ratio (0.48): Moderate. The Eighth Amendment is genuinely enforced through appellate review (not purely performative) but enforcement is selective and limited: courts rarely overturn sentences as disproportionate, originalist interpretation has narrowed 'unusual' to mean 'unusual by historical practice' rather than 'unusual by contemporary standards,' and the constraint coexists with mandatory minimums, three-strikes laws, and life-without-parole sentences that seem to violate proportionality by any reasonable metric. The theater has increased over time as the constraint is invoked more often in appellate briefs but overturned less frequently.",
+    "directionality_logic": "The Eighth Amendment's directionality varies sharply across perspectives based on structural position. Imprisoned persons occupy maximum victim status (d ≈ 0.95) — they are maximally extracted-from, completely trapped, with no exit except sentence completion. Bail-eligible detainees occupy moderate victim status (d ≈ 0.65) — extracted from through bail systems but structurally able to exit via posting bail. Courts occupy moderate beneficiary status (d ≈ 0.45) — they benefit from the constraint's legitimacy-providing function and maintain discretionary authority within bounds. Maximal-deterrence policy advocates occupy moderate victim status (d ≈ 0.70) — their preferred policies are constrained, though not foreclosed. The Eighth Amendment's proportionality principle generates beneficial treatment for those protected from excess and constraining treatment for those implementing deterrence-maximum strategies. This asymmetry is the core tangled-rope signature: genuine coordination function (establishing baseline legitimacy for sentencing) alongside asymmetric extraction (benefiting confined persons at the cost of deterrence-maximalist policies).",
+    "perspectival_gap": "The range of classifications (snare through mountain) reveals deep structural contestation. The imprisoned person perceives the constraint as inadequate (snare — proportionality is a floor that permits vast punishment volumes). The reform coalition perceives it as a temporary scaffold toward abolition (sunset as norms shift). The originalist interpreter perceives it as degraded theater (piton — historical 'unusual' no longer constrains contemporary practice). The court perceives it as coordination (rope — establishes legitimacy and discretionary room). The analytical observer risks perceiving it as natural law (mountain — proportionality as intrinsic to justice) but the structural data reveals false-summit pathology: identifiable beneficiaries, active enforcement, and contingent institutional grounding contradict the natural-law reading. The deepest gap is between the originalist (piton — theater) and evolving-standards (rope/scaffold — functioning protection) interpretations: they disagree on what 'cruel and unusual' means, producing radically different classifications from the same text.",
+    "kernel_context": "This constraint instantiates the eighth_amendment reading of the criminal_procedure_amendments kernel. The kernel is the set of criminal procedure guarantees (Fourth, Fifth, Sixth, Seventh, Eighth Amendments) that structure how American penal power is exercised. The Eighth Amendment reading is distinguished by its focus on substantive proportionality — bounding punishment by relationship to offense — rather than procedural fairness (Fourth, Sixth) or process participation (Fifth, Seventh). Sibling readings include: Fifth Amendment (bundles grand jury, double jeopardy, self-incrimination, due process, and takings into a charter against overreach); Fourth Amendment (warrants and probable cause for searches and seizures); Sixth Amendment (fair trial machinery: speed, publicity, jury, confrontation, compulsory process, counsel); Seventh Amendment (civil jury preservation). Each reading of the kernel imports different structural constraints on penal power. The Eighth Amendment's reading emphasizes substantive bounds on punishment severity, while siblings emphasize procedural safeguards. The readings coexist in the sense that all five amendments are simultaneously operative in American criminal procedure, but they also influence each other: a reading that emphasizes Fifth Amendment due-process rights might strengthen the case for Eighth Amendment proportionality review, while an originalist reading that narrows the Eighth Amendment's scope might reduce pressure on Fifth Amendment self-incrimination protections to compensate.",
+    "mandatrophy_analysis": "The tangled_rope classification resolves the mandatrophy by showing that proportionality is genuinely coordinative (establishing baseline legitimacy for sentencing systems) but also extractive (permitting massive punishment volumes within proportionality bounds). The constraint does not pit coordination against extraction — it combines them. The Eighth Amendment enables both the coordination function (courts gain legitimacy from proportionality review) and the extraction function (incarceration proceeds unchecked as long as individual sentences remain proportional). The false-summit perspective (mountain) reveals the mandatrophy most clearly: if proportionality were a natural law of justice, it would foreclose extraction entirely. But proportionality is a bounded principle — it permits extraction as long as bounds are respected. This is the signature of tangled_rope, not mountain. The measurement trajectory showing rising theater_ratio reflects that as jurisprudence has shifted toward originalism, the Eighth Amendment has become more theatrical (invoked but less frequently overturned), while extractiveness has remained stable (the constraint bounds punishment but does not eliminate it). The stable suppression trajectory reflects that barriers to challenging excessive punishment have remained consistent — appellate deference, high burden of proof, rare clemency."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_amendment",
+      "sixth_amendment",
+      "sentencing_discretion_structure",
+      "bail_as_pretrial_detention"
+    ],
+    "dual_formulation_note": "The Eighth Amendment reading is part of a constraint family covering criminal procedure amendments. The Fifth Amendment reading covers double jeopardy, self-incrimination, and due process protections; the Fourth Amendment covers search and seizure; the Sixth Amendment covers fair trial machinery; the Seventh Amendment covers civil jury preservation. Each reading has distinct extractiveness and type, reflecting different structural arrangements. The Eighth Amendment is downstream of the Sixth Amendment's fair trial guarantee (proportionality review presupposes a trial occurred) and interacts with the Fifth Amendment's due-process protections (proportionality is a component of due process). Network links enable contamination analysis: if the Sixth Amendment's fair trial guarantee is degraded (faster trials, reduced counsel quality), the Eighth Amendment's proportionality review becomes less meaningful because proportionality is bounded by the trial record available for appeal."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "historical_unusual_and_cruel_baseline",
+    "drift_state": {
+      "moment": "contemporary_mass_incarceration",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "fifth_amendment",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "fourth_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sixth_amendment",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "seventh_amendment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "punishment_must_be_proportional_to_offense",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "cruel_and_unusual_means_historically_unusual_at_ratification",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

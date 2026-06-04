@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "free_speech_clause__categorical_exceptions_doctrine",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fsc_cat",
+    "story_uid": "9c0d1203-754a-4513-8790-0dca40d22915",
+    "created_at": "2026-02-26T14:23:45Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Free Speech Clause: Categorical Exceptions Doctrine",
+    "topic_domain": "legal/doctrinal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speakers_outside_enumerated_categories"
+    ],
+    "victims": [
+      "speakers_within_categories",
+      "harms_unconstrained_by_categories"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Incitement Defendant",
+      "comment": "PERSPECTIVE 1: INCITEMENT DEFENDANT (SNARE) — Powerless speaker trapped within the enumerated category 'incitement' by judicial interpretation of Brandenburg standard. No exit option; category membership is structurally determined. High experienced extraction: loses protection *by definition*, not by content analysis. The category confines the victim's options and forecloses remedy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Obscenity Publisher",
+      "comment": "PERSPECTIVE 2: OBSCENITY PUBLISHER (TANGLED ROPE) — Moderate power speaker constrained by the enumerated category 'obscenity' but able to contest category membership (Miller test, contemporary community standards). Some coordination benefit exists: the category clarifies what is outside protection, enabling surrounding speakers to navigate the law. Some extraction: the category's vagueness (community standards) creates suppression. Constrained exit — can try to reframe as non-obscene, at cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Mainstream Media Corporation",
+      "comment": "PERSPECTIVE 3: MAINSTREAM MEDIA CORPORATION (ROPE) — Institutional power speaker with arbitrage options. Benefits from clear categorical boundaries: knows what is protected (news, commentary, fiction) and what is not (incitement, defamation). The enumerated categories function as coordination mechanism, not extraction. Can navigate by genre and context. Low experienced extraction because categories are predictable and the speaker has resources to work within them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Movement",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS MOVEMENT (TANGLED ROPE) — Organized agents (ACLU, plaintiffs, activist groups) see categorical doctrine as both enabling (clear rules to challenge) and constraining (categories must be stretched or reinterpreted to protect new forms of speech). Generate-and-test strategy: each new category gets questioned (was student armband-wearing incitement? Brandenburg 1969; was nude dancing speech? Barnes 1991). Moderate extraction because the organized sector can contest and reshape categories over time, but also coordinated benefit from knowing the rule structure. Generational time horizon because category expansion takes decades of litigation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Harms Outside Categories",
+      "comment": "PERSPECTIVE 5: HARMS OUTSIDE ENUMERATED CATEGORIES (SNARE) — Victims of speech that causes harm but fits no enumerated exception (e.g., algorithmic recommendation amplification, harassment via repeated lawful speech, coordinated inauthentic behavior, deepfake manipulation) are trapped. The categorical structure protects speakers outside the categories unconditionally. Victims trapped in generational time because creating new categories requires constitutional amendment or Supreme Court reversal of settled doctrine. Pure extraction from the victim's perspective: harm is real but unconstrained by law."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Judicial Enforcement System",
+      "comment": "PERSPECTIVE 6: JUDICIAL ENFORCEMENT SYSTEM (PITON) — Courts apply categorical doctrine through ritual: Brandenburg test for incitement, Miller test for obscenity, defamation elements, true threats analysis, fighting words context. The ritual persists as the standard form even though technological change (internet speech, algorithms, synthetic media) has outpaced the categorical frame. The system maintains theatrical application of historical categories to novel harms. Piton classification: high theater (0.35 is deceptively low — the Miller test itself is nearly 50 years old and applied to digital images it was never designed for), degraded function (categories no longer map cleanly to technological speech forms), inertial maintenance (courts continue because the doctrine is settled, not because it works)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some speech causes such clear and direct harm (incitement to imminent lawless action, true threats of immediate violence) that protection must be withheld. This perspective sees the categorical exceptions as discovering immutable boundaries, not constructing them. However, the structural data reveals this as a false summit: the beneficiaries are identifiable (speakers outside categories), victims exist (trapped speakers within categories), and enforcement is active (courts apply tests). The 'natural' categories are institutional artifacts maintained by a specific doctrine, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "category_membership_determination",
+      "question": "Who determines membership in enumerated categories? Is the determination objective (Brandenburg imminent lawlessness test) or subjective (Miller contemporary community standards)?",
+      "resolution_mechanism": "Empirical analysis of appellate reversal rates; comparison of category application consistency across jurisdictions and time periods",
+      "impact": "If objective: categories function as true coordination boundaries. If subjective: categories become instruments of selective suppression, shifting classification from tangled_rope toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Objectivity of categorical membership determination"
+    },
+    {
+      "id": "new_category_creation_resistance",
+      "question": "Can the categorical doctrine be extended to new harms (algorithmic amplification, coordinated inauthentic behavior, deepfakes), or does the doctrine's closed set of historic categories resist expansion?",
+      "resolution_mechanism": "Case law tracking: whether courts propose new categorical exceptions or refuse to extend existing ones; whether Congress attempts statutory extension (e.g., FOSTA-SESTA as category expansion for online facilitation)",
+      "impact": "If extendable: doctrine can accommodate new harms, limiting victim-trapping at the snare perspective. If closed: harms outside categories remain unconstrained, and the snare perspective's extraction intensifies over time as technology creates novel harm vectors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether categorical doctrine resists or accepts new exceptions"
+    },
+    {
+      "id": "reading_vs_content_neutrality_precedence",
+      "question": "When categorical exceptions doctrine conflicts with content-neutrality doctrine (e.g., can government ban a category of speech based on content when the category is enumerated?), which reading controls?",
+      "resolution_mechanism": "Supreme Court doctrine clarification; analysis of how content-neutrality cases treat categorical exceptions (e.g., does strict scrutiny apply to categorical restrictions?)",
+      "impact": "If categorical doctrine controls: categories can suppress content by definition, foreclosing content-neutrality reading. If content-neutrality controls: categorical exceptions themselves are subject to content-neutrality review, influencing and constraining this reading. Current doctrine appears to coexist, but the relationship is under-theorized.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Precedence relationship between categorical and content-neutrality doctrines"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the categorical exceptions doctrine a *reading* of the First Amendment's meaning (one interpretation among others) or the *substance* of the constitutional rule itself?",
+      "resolution_mechanism": "Historical jurisprudence analysis: trace whether the categories predate constitutional interpretation (common law origins) or were constructed by modern courts (Chaplinsky 1942 onward)",
+      "impact": "If reading: this constraint is subject to the oracle gap — other readings (content-neutrality, public-forum) may be equally valid. If substance: this constraint defines the constitutional rule and foreclosed other readings. The committer frame assumes reading status.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether categorical exceptions doctrine is constitutional reading or substance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The categorical exceptions doctrine is one reading of how the First Amendment constrains government speech regulation. This reading holds that certain categories of speech — incitement, obscenity, defamation, true threats, and fighting words — fall outside constitutional protection *by definition*. Once a utterance fits a category, suppression is permitted without content-based scrutiny. This constraint exhibits tangled-rope structure: it coordinates speech regulation through clear categorical boundaries (benefiting speakers outside the categories) while extracting from speakers whose speech fits the categories (the victims). The categorical doctrine creates a dual regime: protected speech receives no suppression; categorical speech receives automatic suppression. The constraint's extractiveness (0.38) reflects moderate asymmetry — the categories are specific enough to provide some predictability, but their application is contested (especially for obscenity, incitement, and true threats), creating suppression (0.52) through legal uncertainty. The theater ratio (0.35) is relatively low because categorical application is genuinely doctrinal — courts apply specific tests (Brandenburg for incitement, Miller for obscenity) rather than performing pure ritual. However, the theater is rising (0.25→0.35 over 50 years) as technological change has outpaced the categories' original design. This constraint is ONE READING of the free_speech_clause kernel. Other readings (content_neutrality_doctrine, public_forum_doctrine) offer different structural logics for the same constitutional text. The categorical reading is the oldest (common law origins in Chaplinsky 1942) and remains the formal rule, but it is being pressed by rival readings and by technological harms that fit no category.",
+    "key_agents": [
+      "Speakers Outside Enumerated Categories: Primary beneficiary (institutional/arbitrage) — receives unconditional protection; knows the law is clear",
+      "Speakers Within Enumerated Categories: Primary victim (powerless/trapped) — loses protection by categorical membership; no escape route",
+      "Harms Outside Categories: Secondary victim (powerless/trapped) — victims of speech that causes real harm but fits no exception; harm is unconstrained by law",
+      "Judicial System: Institutional enforcer (institutional/arbitrage) — applies categorical tests through established doctrine; maintains the categorical frame through repeated application",
+      "Civil Rights Litigation Sector: Organized challenger (organized/constrained) — generates test cases that push category boundaries; can reshape doctrine over generational time",
+      "Congressional Actors: Institutional potential modifier (institutional/arbitrage) — could create new categories via statute (rare; FOSTA-SESTA as example) or could amend the Constitution (unprecedented for free speech exceptions)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the categorical boundaries as immutable features of speech itself rather than contingent doctrinal constructions"
+    ],
+    "kernel_context": "This constraint instantiates the CATEGORICAL_EXCEPTIONS_DOCTRINE reading of the FREE_SPEECH_CLAUSE kernel. The kernel is formalized (the First Amendment text is a fixed, authoritative document), and authority grounds itself in lineage (transmission of interpretive doctrine through judicial precedent beginning with Chaplinsky v. New Hampshire, 1942). This reading interprets the kernel to mean that certain speech categories are inherently outside protection — the constitutional meaning IS those categories. Sibling readings interpret the same kernel differently: CONTENT_NEUTRALITY_DOCTRINE reads the kernel to mean that government cannot suppress speech based on the *content* of the message (the master rule is process-neutral review, not categorical membership). PUBLIC_FORUM_DOCTRINE reads the kernel to mean that the constitutional rule is about *geography* — where speech can be regulated, not what categories are protected (streets and parks get maximal protection; nonpublic forums allow more regulation). The categorical reading coexists with content-neutrality and public-forum readings in contemporary case law, but the relationships are undertheorized — it is unclear whether they are siblings of equal weight or whether one is primary and the others derivative. The categorical reading is the oldest and most formally settled, making it the baseline doctrine in most law school curricula and judicial practice.",
+    "logic_rationale": "Extractiveness (0.38): Moderate. The categorical doctrine creates moderate asymmetry between speakers inside and outside the enumerated categories. Speakers outside categories receive robust protection; speakers inside categories lose protection by definition. However, the extraction is not severe (not >0.46) because: (1) category membership is theoretically contestable through litigation (Brandenburg test, Miller test) — speakers have some exit option through appellate challenge; (2) the categories are historically specific (incitement, obscenity) rather than open-ended (content-based suppression), which limits category creep; (3) enforcement is procedurally bounded by constitutional review. If the categories were expandable at will, or if membership determination were purely subjective, extractiveness would be higher. Suppression (0.52): Moderate-high. Speakers within categories face significant suppression: legal barriers to publication, criminal penalties, civil liability. But suppression is not total (not ≥0.60 for snare threshold) because: (1) the categories are specific — not all speech is within them; (2) some speakers can navigate by reframing (e.g., sexual speech as artistic rather than obscene); (3) some categories have narrow triggers (Brandenburg requires imminence, true threats require specificity). Theater ratio (0.35): Low-moderate. The categorical doctrine is genuinely doctrinal — courts apply specific, named tests rather than performing pure theatrical review. However, theater is present and rising because: (1) the tests themselves (Miller's three-prong obscenity test, Brandenburg's imminence standard) were designed for mid-20th century speech forms and are applied to internet speech, synthetic media, and algorithmic amplification they were never designed to address; (2) courts continue to apply categorical review to novel harms that fit no category, creating a kind of theatrical gap-filling. The rising theater_ratio (0.25→0.35) reflects increasing mismatch between doctrinal categories and technological speech forms.",
+    "perspectival_gap": "This constraint demonstrates significant perspectival divergence. The speaker outside categories (institutional, arbitrage) sees pure coordination (Rope) — the categorical structure clarifies what is protected, enabling confident speech. The mainstream media corporation experiences only low extraction because it has resources to navigate categorical boundaries. The speaker inside a category (powerless, trapped) sees snare — the category confines them by definition, with no exit. The harms outside categories (also snare) perceive unconstrained harm — the categorical structure protects speakers but leaves victims unprotected. The organized litigators (ACLU, civil rights groups) see tangled-rope because they can contest categories over generational time but operate under constraints (resource limits, appellate deference to doctrine). The courts themselves see piton — they maintain the categorical review ritual even as it becomes increasingly theatrical. The analytical observer at civilizational scale risks seeing mountain (categorical boundaries as natural laws of speech itself), but the structural data reveals this as a false summit: the categories are historically contingent (Chaplinsky, 1942), beneficiaries are identifiable (speakers outside categories), and the doctrine is actively enforced.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to this constraint. Beneficiaries (speakers outside categories) with arbitrage options get low d (~0.15) — they can easily exit the constraint's suppressive effects by speaking outside categories. Victims within categories (trapped speakers) get high d (~0.85) — they cannot exit; their speech by definition fits a suppressed category. Victims whose harms are unconstrained (harms outside categories) also get high d (~0.85) — they cannot exit; the constraint actively protects the speakers who harm them. The judicial system (institutional, arbitrage) gets low d because it can reframe, reinterpret, and reshape categorical doctrine over time (arbitrage). The organized litigators (organized, constrained) get moderate d (~0.55) because they can contest categories but face resource and precedential constraints. The analytical observer (analytical) gets the canonical d for the analytical power atom (~0.72), reflecting that the observer is not structurally embedded in the constraint but can model it.",
+    "mandatrophy_analysis": "READING-SPECIFIC MANDATROPHY: This constraint exemplifies how a single constitutional kernel (free_speech_clause) can instantiate different mandatrophies depending on which reading is adopted. Under categorical_exceptions_doctrine: the mandatrophy is whether enumerated categories are exhaustive and immutable, or whether new harms can create new exceptions. Under content_neutrality_doctrine: the mandatrophy is whether the rule is content-based or content-neutral, shifting the analytical focus from category membership to regulatory intent. Under public_forum_doctrine: the mandatrophy is about geographic forum classification, not categorical membership at all. Each reading resolves the tension between free speech and legitimate harm-prevention differently. The categorical reading concentrates suppression on specific, historic categories — it trades off coverage (doesn't protect all speech) for clarity (speakers know what is suppressed). The content-neutrality reading trades off specificity for process-neutrality (any category could be valid if neutrally applied). The public-forum reading trades off both for geography (speech in streets is maximally protected regardless of category). The engine does not declare one reading as 'correct' — the mandatrophy is resolved by making explicit which reading you are measuring from. This constraint instantiates categorical_exceptions_doctrine, and from that reading's perspective, the mandatrophy is resolved: yes, categorized speech can be suppressed without content-based review, and this is legitimate because the categories are narrowly drawn and historically specific."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "free_speech_clause__content_neutrality_doctrine",
+      "free_speech_clause__public_forum_doctrine"
+    ],
+    "dual_formulation_note": "The free_speech_clause kernel decomposes into three structurally distinct constraint readings: categorical_exceptions_doctrine (this story), content_neutrality_doctrine (sibling), and public_forum_doctrine (sibling). Each reading offers a different ε-invariant interpretation of how the First Amendment constrains speech regulation. The categorical reading has ε≈0.38 and structures suppression around enumerated category membership. The content-neutrality reading has different ε (likely ≈0.42) and structures suppression around regulatory intent (content-based vs. content-neutral). The public-forum reading has different ε (likely ≈0.35) and structures suppression around geographic forum classification. All three are live readings in contemporary case law; none fully forecloses the others (though they create pressure on each other)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "free_speech_clause__content_neutrality_doctrine",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "free_speech_clause__public_forum_doctrine",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "enumerated_categories_exhaustive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "categorical_membership_determinable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "chaplinsky_categorical_baseline",
+    "drift_state": {
+      "moment": "contemporary_internet_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "governance__theocratic_rule",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "theoc",
+    "story_uid": "a0dc9377-ec75-4f05-9e71-3467a29ba6c1"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Theocratic Rule: Divine Authority and Clerical Interpretation",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "interpreting_clerisy"
+    ],
+    "victims": [
+      "religious_minorities",
+      "heterodox_believers",
+      "secular_subjects"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Religious Minority",
+      "comment": "PERSPECTIVE 1: RELIGIOUS MINORITY (SNARE) — Powerless, trapped within the territorial jurisdiction of theocratic rule. Cannot exit without leaving family, property, and identity. Disobedience is framed as sin and heresy, not merely crime — suppression targets the conscience itself. Maximum extraction experienced: compliance is extracted through doctrinal enforcement, property confiscation, social exclusion, and the constant threat of damnation framed as cosmic justice rather than coercive punishment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Heterodox Believer",
+      "comment": "PERSPECTIVE 2: HETERODOX BELIEVER (TANGLED ROPE) — Moderate power, constrained exit. Shares the religious framework but interprets doctrine differently. Experiences both coordination function (the shared religious law provides order and meaning) and extraction (forced conformity to official interpretation, loss of teaching authority, exclusion from communal roles). Exit is costly but thinkable — some heterodox communities survive through retreat to remote regions or internal secrecy. Mixed classification reflects both coordination benefit and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Interpreting Clerisy",
+      "comment": "PERSPECTIVE 3: INTERPRETING CLERISY (ROPE) — Primary beneficiary with institutional power and arbitrage options. Experiences the constraint as pure coordination: the divine order requires authorized interpreters to guide the faithful. Their authority derives from access to sacred knowledge, and maintaining that knowledge monopoly is the core coordination function. Extraction runs toward this agent — they control doctrine, legal interpretation, and property allocation. But they frame this as service to the divine order, not personal aggrandizement, and the beneficiary status is asymmetric."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Secular Magistrate",
+      "comment": "PERSPECTIVE 4: SECULAR MAGISTRATE (TANGLED ROPE) — Powerful but structurally constrained. Exercises temporal authority but legitimacy is delegated from divine order via the clerical establishment. Benefits from coordination: the religious law provides stable ordering of subjects and inheritance of authority. But constrained by clerical interpretation — cannot unilaterally change law, and contradicting official doctrine risks delegitimation. Mixed experience: coordination function is real (stable hierarchical order) and so is extraction (dependence on clerical blessing, loss of temporal autonomy)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Formal Theological Structure",
+      "comment": "PERSPECTIVE 5: FORMAL THEOLOGICAL STRUCTURE (PITON) — Over generational timescales, the apparatus of theological justification becomes increasingly performative. Theological commentaries multiply to explain away contradictions in doctrine; elaborate ritual preserves the claim to divine connection even as practical authority has decoupled from doctrine. Theater ratio is moderate-to-high: the visual and linguistic apparatus (liturgy, judicial ceremony, clerical vestment) maintains the cosmic framing while the actual mechanism is institutional power delegation. This is not yet fully degraded (see analytical observer), but the trajectory is visible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational timescale, the constraint appears as an immutable law of human organization: authority must be grounded in some transcendent source (divine order, natural law, reason itself), and those who claim access to that source will inevitably exercise power. The specificity of theocratic framing is incidental — every authority system performs this naturalization. However, the structural data contradicts the mountain classification. The beneficiary (clerisy) is identifiable; the victims are identifiable; the extractiveness is real and moderate, not negligible. The engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "divine_access_monopoly_justification",
+      "question": "Is the clerisy's claimed monopoly on divine interpretation a genuine epistemic barrier (no layperson can access sacred knowledge) or a social convention enforced by institutional power?",
+      "resolution_mechanism": "Comparison across theocratic systems: do literacy barriers, initiation requirements, and language control constitute real epistemic barriers or performative gatekeeping? Test cases of layperson theological comprehension, forbidden scripture reading, and institutional response to lay interpretation.",
+      "impact": "If genuine epistemic barrier: clerisy function is coordination (Mountain-shifted interpretation). If convention: monopoly is extraction mechanism (Snare-shifted interpretation). This omega resolves ambiguity in whether beneficiary status is legitimate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clerical monopoly on divine interpretation rests on real epistemic barriers or institutional gatekeeping"
+    },
+    {
+      "id": "suppression_as_cosmic_vs_coercive",
+      "question": "To what extent does the theocratic system's suppression operate through internalized sin/damnation (cognitive frame) versus coercive apparatus (punishment, exile, property seizure)?",
+      "resolution_mechanism": "Historical analysis of compliance patterns: In periods where clerical enforcement capacity is degraded, does suppression persist through internalized fear of damnation? Do populations continue compliance when physical punishment is absent? Comparative analysis across high-literacy and low-literacy populations within the same system.",
+      "impact": "If primarily internalized: suppression is identity-locked, measuring closer to 0.50 (identity_coordination type, moderate floor). If primarily coercive: suppression measures 0.72–0.85 (enforcement_mechanism type, higher floor). This affects whether classification remains Tangled Rope or shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of suppression: internalized cosmic obligation versus coercive apparatus"
+    },
+    {
+      "id": "clerical_extraction_as_offering_or_rent",
+      "question": "Are the material benefits the clerisy extracts (tithes, property, labor service) understood by the system itself as offerings freely given to the divine, or as institutional revenue that happens to be framed in religious language?",
+      "resolution_mechanism": "Textual analysis of clerical justifications: do they center on voluntary devotion (offering frame) or on duty and obligation (rent frame)? Behavioral analysis: what happens when subjects refuse to provide the benefit? If framed as offering, refusal is sin; if framed as obligation, refusal is crime. The frame determines whether extractiveness is legitimated (offering) or exposed (rent).",
+      "impact": "If offering frame is genuine (subjects internalize the legitimacy): extractiveness measures 0.30–0.40 and Rope classification is more accurate. If offering frame is cover story (institutional rent extraction): extractiveness measures 0.60–0.75 and Snare classification becomes more accurate. Current estimate (0.48) reflects ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether clerical material benefits are understood as voluntary offerings or as institutional rent extraction"
+    },
+    {
+      "id": "alternative_authority_readiness",
+      "question": "Are the sibling readings (constitutional government, customary rule, direct democracy) present as suppressed alternatives within the theocratic system, or are they epistemically unavailable to subjects?",
+      "resolution_mechanism": "Textual evidence of internal critique: do theological or legal documents acknowledge and refute alternative authority principles? Do layperson petitions invoke customary law or consent frameworks? Is there a class (educated elites, merchants, rural nobility) that is aware of alternatives but chooses the theocratic frame for institutional stability?",
+      "impact": "If alternatives are present but suppressed: suppression operates on visible options (higher actual suppression, Snare-shifted). If alternatives are genuinely epistemically unavailable: suppression operates through frame closure (identity_locked exit, different classification structure). If aware elites choose theocratic frame for stability: constraint is negotiated fiction (lower extractiveness, Rope-shifted from institutional perspective).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative authority principles are suppressed options or epistemically unavailable"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint instantiates the theocratic_rule reading of the governance kernel. Sibling readings (autocratic_rule, constitutional_government, customary_rule, direct_democracy) represent alternative authority legitimacy claims. Which reading(s) coexist with this one, which foreclose it, and which are merely different?",
+      "resolution_mechanism": "For each sibling: analyze whether the reading's core premise contradicts theocratic_rule's core premise such that no single framework could hold both (forecloses), or whether different political actors or traditions can hold both simultaneously without logical contradiction (coexists_with), or whether one reading creates structural pressure on the other without logical contradiction (influences). This is a structural analysis, not an empirical one.",
+      "impact": "Mapping reading relations clarifies which alternatives are live political options, which are ruled out by theocratic commitment, and which are suppressed but viable. The network of relations shapes political possibility — a fully connected graph (all coexist) differs from a partially foreclosing graph (some combinations are impossible).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationships between theocratic_rule and sibling authority readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Theocratic rule establishes political authority as a delegated power flowing from a divine order, with political obligation framed as a species of religious obligation. Those who claim interpretive access to the sacred law (the clerisy) administer this authority. The constraint exhibits a core ambiguity: to what extent does this system coordinate genuine collective goods (moral ordering, inheritance of stable authority, coherent law) versus extract material and spiritual benefits for the interpreting clerisy while presenting extraction as cosmic necessity? The suppression is particularly high (0.72) because disobedience is framed as sin rather than crime—it targets conscience and soul, not merely behavior. Extractiveness is moderate (0.48) because the system delivers real coordination benefits (stable succession, moral order, unified law) alongside extraction. The theater ratio is moderate-to-high (0.58) because theological elaboration increasingly becomes performative over time—commentaries multiply to explain away contradictions, liturgy becomes ornate, and the apparatus of cosmic justification grows even as institutional power has become the real mechanism. This reading of the governance kernel differs from autocratic rule (which grounds authority in the unmediated will of the ruler), constitutional government (which limits authority through higher law), customary rule (which grounds authority in immemorial practice), and direct democracy (which vests authority in the assembled citizens). The theocratic reading claims a unique source of authority legitimacy: alignment with transcendent divine order.",
+    "kernel_context": "This constraint is one reading of the contested governance kernel. The kernel is the foundational question: what makes political authority legitimate? Theocratic rule answers: legitimacy flows from alignment with divine order, administered by those with interpretive access to sacred law. Sibling readings answer differently: autocratic rule (the ruler's will itself), constitutional government (a higher law that binds all including rulers), customary rule (the weight of immemorial practice), direct democracy (the will of assembled citizens). These readings coexist historically across different societies and sometimes within the same society held by different factions—they are not logically foreclosing. However, theocratic rule does influence the sibling readings by establishing a particular form of clerical authority that competes with secular alternatives. The core distinguishing premise is axiom_divine_delegation: governing authority derives legitimacy from transcendent source knowable through authorized interpretation.",
+    "key_agents": [
+      "Interpreting Clerisy: Primary beneficiary (institutional/arbitrage) — controls doctrine, legal interpretation, property allocation; benefits from monopoly on sacred knowledge",
+      "Religious Minorities: Primary victims (powerless/trapped) — cannot exit without leaving community; suppression targets conscience through framing of disobedience as sin",
+      "Heterodox Believers: Secondary victims (moderate/constrained) — share religious framework but different interpretation; experience mixed coordination and extraction",
+      "Secular Magistrate: Tertiary victim (powerful/constrained) — exercises temporal authority but legitimacy delegated from clerical establishment; constrained by clerical interpretation",
+      "Religious Subjects (Compliant): Beneficiary-victims (moderate/identity_locked) — benefit from moral order and stable succession; identity fused with religious obligation; cannot perceive exit from within frame",
+      "Analytical Observer: Observational stance (analytical/analytical) — risks naturalizing clerical authority as cosmic necessity rather than institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-to-high. The clerisy extracts material benefits (tithes, property, labor service) and spiritual authority (monopoly on interpretation, control of conscience through sin/damnation framing). However, the system delivers real coordination benefits—stable moral order, coherent law, predictable succession of authority—that legitimate at least some of the extraction. The measurement reflects 48% of potential extractiveness, indicating that approximately half the institutional revenue could be understood as payment for coordination services and half as institutional rent. Measurement trajectory (0.38→0.44→0.48) shows gradual increase as clerical apparatus expands and extraction mechanisms become more elaborate. Suppression (0.72): High. The system suppresses alternatives through multiple mechanisms: literacy control (access to sacred texts restricted), institutional gatekeeping (only clerics can interpret law), social enforcement (heresy is communal shame and exile), and cosmic framing (disobedience is damnation, not merely crime). Importantly, suppression is internalized—subjects come to believe disobedience is objectively sinful, not just institutionally forbidden. This cognitive capture (identity_locked dynamic) makes measured suppression higher than coercive apparatus alone would suggest. Theater ratio (0.58): Moderate-to-high. The apparatus of theocratic legitimacy becomes increasingly performative over time. Theological commentaries multiply to explain contradictions; liturgical elaboration increases; doctrinal rigidity hardens even as practical authority decouples from doctrine. The theater is not as high as a fully degraded piton (0.70+), but the trajectory is toward piton-hood. The measurement trajectory (0.42→0.50→0.58) shows increasing theatricality as the system ages.",
+    "perspectival_gap": "The constraint produces stark perspectival disagreement. The interpreting clerisy sees Rope—pure coordination of divine order, their authority as service to transcendence. Religious minorities see Snare—no exit, maximum extraction, suppression targeting conscience. Heterodox believers see Tangled Rope—mixed coordination (shared moral order) and extraction (forced conformity to official interpretation). Secular magistrates see Tangled Rope—genuine coordination benefits (stable succession, coherent law) but constrained by clerical veto. The formal theological structure, viewed over generational timescales, appears as Piton—increasingly performative apparatus maintaining claim to cosmic authority. The analytical observer at civilizational scale risks seeing Mountain—treating theocratic rule as a natural law of authority (transcendence always requires priests). The false summit detector will flag this last perspective: the apparent immutability of theocratic rule is actually the institutional power of an identifiable beneficiary group (the clerisy) naturalizing their extraction as cosmic necessity. The perspectival gap reveals the constraint's core function: presenting institutional power as cosmic inevitability.",
+    "directionality_logic": "Directionality (d) measures each agent's structural position relative to the extraction flow. The interpreting clerisy (beneficiary + institutional + arbitrage) derives d≈0.05-0.15, producing f(d)≈-0.10-0.02 and negative effective extraction from their perspective—they benefit from the constraint. Religious minorities (victims + powerless + trapped) derive d≈0.95, producing f(d)≈1.40+, experiencing maximum effective extraction. Heterodox believers (victims + moderate + constrained) derive d≈0.70, producing f(d)≈1.10, experiencing moderate-to-high effective extraction. Secular magistrates (ambiguous + powerful + constrained) derive d≈0.50-0.60, producing f(d)≈0.65-0.90, experiencing moderate effective extraction and coordination benefit. The scope modifier σ(S) scales extractiveness by regional (0.9): a 0.48 base extractiveness becomes 0.43 effective extractiveness at regional scope, before directionality multiplication. The suppression metric (0.72) is not scaled—it is a raw structural property of how alternatives are suppressed.",
+    "mandatrophy_analysis": "KERNEL READING RESOLUTION: This constraint instantiates the theocratic_rule reading of the governance kernel. The mandatrophy—the apparent incompatibility between the constraint's classification as Tangled Rope (has real coordination) and its classification as Snare (high extraction and suppression)—resolves by recognizing that theocratic rule genuinely coordinates some collective goods (moral order, stable succession, coherent law) while extracting material and spiritual benefits for the clerisy. The classification as Tangled Rope is not a compromise between two incompatible types; it is the correct classification for a constraint that has both functions. The false summit perspective (the analytical observer seeing Mountain/natural law) is exposed by the structural data: the constraint is not a natural law but an institutional arrangement that benefits identifiable agents (the clerisy) and harms identifiable others (minorities, heretics). The mandatrophy resolves when we accept that theocratic rule is a real coordination mechanism overlaid with real extraction, and stop trying to force it into one pure type."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "governance__autocratic_rule",
+      "governance__constitutional_government",
+      "governance__customary_rule",
+      "governance__direct_democracy"
+    ],
+    "dual_formulation_note": "The governance kernel contains five distinct constraint readings: theocratic_rule, autocratic_rule, constitutional_government, customary_rule, and direct_democracy. Each reading has its own ε, its own beneficiary/victim structure, and its own type distribution across perspectives. They are not variants of a single constraint; they are distinct structural arrangements that compete for legitimacy in different political contexts. All five stories link via affects_constraints, forming a kernel family."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "governance__autocratic_rule",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "governance__constitutional_government",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "governance__customary_rule",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "governance__direct_democracy",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "axiom_divine_delegation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "axiom_clerical_monopoly_interpretation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "divinely_ordered_cosmos",
+    "drift_state": {
+      "moment": "contemporary_secular_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

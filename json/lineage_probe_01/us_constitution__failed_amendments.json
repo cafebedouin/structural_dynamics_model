@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "us_constitution__failed_amendments",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "story_uid": "319f81bc-e6db-47fc-b292-936464213687",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutional Definition by Refused Amendments",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ratified_status_quo_beneficiaries"
+    ],
+    "victims": [
+      "constituencies_with_failed_guarantees"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Constituencies Denied Failed Amendments",
+      "comment": "PERSPECTIVE 1: CONSTITUENCIES DENIED FAILED AMENDMENTS (SNARE) — Groups whose proposed constitutional guarantees failed ratification (women seeking suffrage 1878–1920, Black citizens seeking equal protection in 19th century, indigenous peoples, working-class advocates for labor guarantees) remain trapped in the structural absence of those protections. The suppression is enforced by the very fact of non-ratification — the refused amendment defines what the Constitution does NOT protect. No exit from this constraint; it structures their legal status generationally."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Successive Reform Coalitions",
+      "comment": "PERSPECTIVE 2: SUCCESSIVE REFORM COALITIONS (TANGLED ROPE) — Groups organizing to ratify new amendments (suffragists, abolitionists, civil rights advocates) experience genuine coordination — they must mobilize sufficient support to achieve ratification. But the constraint also extracts from them: the requirement for supermajority ratification (3/5 of states) tilts power toward the status quo and toward states with concentrated beneficiaries from the refusal. Reform coalitions benefit from the amendment framework (it is their only constitutional pathway) but face asymmetric costs in persuasion and mobilization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Status Quo Beneficiaries and State Governments",
+      "comment": "PERSPECTIVE 3: STATUS QUO BENEFICIARIES AND STATE GOVERNMENTS (ROPE) — Entities that benefit from the current constitutional allocation (slaveholding states, industrial-era capital, patriarchal property structures, segregationist states) experience the failed-amendment constraint as pure coordination: they coordinate their veto power through the ratification threshold, preventing unwanted change. For these agents, the constraint is low-extraction coordination of common interests. They have arbitrage options — if federal constitutional protection were granted, they could lobby for carve-outs or exemptions — but they can exercise veto power here without paying those costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Amendment Governance Institutions",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL AMENDMENT GOVERNANCE INSTITUTIONS (TANGLED ROPE) — Congress, state legislatures, and ratification conventions experience this constraint as both coordination mechanism (Articles V provides a formal pathway for revision) and extraction mechanism (the supermajority threshold concentrates power, making changes expensive and slow). These institutions benefit from having a stable constitutional process (they are the guardians of it), but they also suffer under it — reform-minded majorities in Congress are structurally impotent if supermajority coalitions cannot be built. Institutional agents face genuine coordination tasks and genuine asymmetric costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Constitutional Mythology and Civic Ritual",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL MYTHOLOGY AND CIVIC RITUAL (PITON) — The narrative that failed amendments represent the polity's considered refusal (rather than the structural suppression created by the ratification threshold) has become largely performative. Civics education teaches that the Constitution's meaning is set by its text and ratified amendments, not by what was refused. The mythology persists through institutional repetition — courts invoke the 'original understanding' as though only ratified amendments matter, schools teach the Constitution as a completed document rather than an ongoing contested field. The piton classification reflects theater_ratio (0.35): the narrative is relatively low-theater (constitutional scholars and jurists genuinely engage with the question), but the operative function — preventing consideration of what the refusal reveals about structural power — is largely ceremonial."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Structural Immutability of Refusal",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL IMMUTABILITY VIEW (MOUNTAIN) — From a civilizational/universal perspective, the refusal of amendments may appear structurally immutable: once a polity refuses an amendment, that refusal enters the historical record as a fact about what the polity was willing to accept. The constraint appears natural — the constitutional record simply is what it is. However, the structural data contradicts the mountain classification. The 'fact' of refusal is not natural law; it is the outcome of a specific institutional structure (the supermajority requirement, the state-based ratification process, the geographic concentration of veto power). The engine will detect this as a false summit: what appears immutable from a civilizational timescale is actually the product of contingent institutional design that benefits identifiable agents."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "refusal_vs_non_consideration",
+      "question": "Does a failed amendment represent the polity's considered refusal, or the structural impossibility of bringing certain proposals to successful ratification votes?",
+      "resolution_mechanism": "Historical analysis of failed amendment proposals: did the polity actively debate and reject them, or were they never mobilized for ratification because their failure was structurally predetermined? Track amendment campaigns that achieved majority support in Congress but failed in state ratification.",
+      "impact": "If true refusal: the failed amendments are legitimate data about constitutional limits on the polity's willingness to change. If structural impossibility: the failed amendments reveal veto power concentration, not democratic judgment. Classification shifts from rope (coordinated rejection) to snare (structural suppression).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether failed amendments represent considered refusal or structural impossibility of ratification"
+    },
+    {
+      "id": "counterfactual_amendment_ratification",
+      "question": "If the ratification threshold had been lower (simple majority, or proportional ratification), which failed amendments would have succeeded?",
+      "resolution_mechanism": "Simulation of historical amendment campaigns under alternative ratification rules; analysis of state-by-state voting patterns and estimated probability of success under different thresholds. Historical case: the 19th Amendment (women's suffrage) passed with 36 ratifications in 1920 when 36 were required (3/5 of 48 states). Counterfactual: would it have passed earlier under a lower threshold?",
+      "impact": "If many failed amendments had succeeded under lower thresholds: the constraint is institutional design (extractive for reform coalitions, beneficial for status quo). If few would have succeeded regardless: the constraint reflects genuine constitutional limits. Extractiveness interpretation shifts from 0.52 (institutional design) to 0.25 (institutional expression of deeper consensus).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Counterfactual ratification likelihood under alternative thresholds"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the failed-amendments reading a claim about the Constitution's actual meaning (what it is), or a methodological claim about how to interpret it (how to read it)?",
+      "resolution_mechanism": "Distinguish between: (A) the Constitution's operative meaning IS set by refused amendments as much as ratified ones (descriptive claim about what the document means), versus (B) interpreting the Constitution requires attending to failed amendments as methodological context (interpretive practice, not substance). The two have different epistemological status and different implications for classification.",
+      "impact": "If (A): the constraint is structural — refused amendments are part of the constitutional order. If (B): the constraint is epistemic — failed amendments reveal structural biases in interpretation. The two readings have different relationships to beneficiary/victim structure and may warrant different extractiveness values.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether failed-amendments reading is ontological or methodological"
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Does the failed-amendments reading foreclose any of its siblings (original_constitution_1787, bill_of_rights_1791, later_amendment_eras)?",
+      "resolution_mechanism": "Test logical consistency: can a single framework hold both failed-amendments reading AND (for each sibling) the sibling's core premise? If any sibling's premise is logically incompatible with the failed-amendments claim, the relation is forecloses. Otherwise, coexists_with or influences.",
+      "impact": "Affects cs_structure.reading_relations declarations. If any sibling is foreclosed, the reading exerts hard logical constraint on the kernel interpretation space. If all coexist, the kernel admits multiple incompatible readings held by different interpretive communities.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Foreclosure relations between this reading and sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "extractiveness_1787_baseline"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48,
+      "id_override": "extractiveness_19th_century_rise"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52,
+      "id_override": "extractiveness_20th_century_plateau"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "id_override": "suppression_1787_baseline"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.68,
+      "id_override": "suppression_19th_century_intensification"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.68,
+      "id_override": "suppression_20th_century_stable"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "theater_1787_low"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.32,
+      "id_override": "theater_19th_century_rise"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35,
+      "id_override": "theater_20th_century_plateau"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Constitution is defined as much by the amendments the polity considered and refused as by those it ratified. This reading claims that constitutional meaning is not exhausted by the text and ratified amendments (the conventional view) but is shaped structurally by the failed amendments — the proposals that achieved political support but could not reach the supermajority threshold required by Article V. The constraint emerges from the tension between two facts: (1) proposed amendments that reflect genuine political movements (women's suffrage, labor guarantees, child welfare, representation reform) failed ratification; (2) the formal constitutional record treats these failures as though they represent the considered judgment of the polity, when in fact they may represent the structural suppression created by the ratification threshold itself. This reading instantiates ONE interpretation of the contested kernel 'us_constitution' — other readings include the original_constitution_1787 (the unamended text is complete), bill_of_rights_1791 (the Constitution required the Bill of Rights to achieve legitimacy), later_amendment_eras (the Constitution's meaning is set by successive waves of formal revision), and pre_constitutional_frameworks (the Constitution replaced confederal compacts). The failed-amendments reading differs from these by attending to what was NOT ratified as constitutive of constitutional meaning.",
+    "kernel_context": "Kernel: us_constitution. Reading: failed_amendments. Sibling readings: original_constitution_1787 (the unamended 1787 text is a complete constitutional machine), bill_of_rights_1791 (the Constitution required the Bill of Rights as the price of union), later_amendment_eras (the Constitution is a living amendment record set by successive waves of revision), pre_constitutional_frameworks (the Constitution replaced sovereign-state confederalism). The failed-amendments reading is distinctive in claiming that refusal is as constitutive as ratification — the Constitution is defined by what it does NOT protect as much as what it does. This creates an alternative ontology of constitutional meaning: instead of a fixed text plus authorized amendments, the Constitution is a field of contestation marked by successful and failed claims. The reading coexists with all siblings — different interpretive communities maintain different readings simultaneously — but influences later_amendment_eras (shows that amendment history is inherently selective about which proposed changes are remembered).",
+    "key_agents": [
+      "Constituencies denied failed amendments (powerless/trapped) — women denied suffrage until 1920, Black citizens denied equal protection guarantees in 19th century, labor advocates denied workplace guarantees, indigenous peoples denied representation. Structurally suppressed by the very fact of non-ratification.",
+      "Status quo beneficiaries and state governments (institutional/arbitrage) — slaveholding states, industrial capital, patriarchal property regimes, segregationist states. Benefit from suppression of unwanted constitutional changes. Experience constraint as low-extraction coordination of veto power.",
+      "Reform coalitions across eras (moderate/constrained) — suffragists, abolitionists, labor organizers, civil rights advocates. Face asymmetric mobilization costs and supermajority threshold. Experience constraint as tangled coordination/extraction.",
+      "Constitutional governance institutions (organized/constrained) — Congress, state legislatures, courts, ratification conventions. Benefit from stable amendment process but suffer under supermajority requirement when reform majorities form.",
+      "Constitutional scholarship and civic education (institutional/arbitrage) — legal scholars, judges, schools maintaining the mythology that the Constitution is 'what it says' (implicitly: what was ratified), not what was refused.",
+      "Analytical observer (analytical/analytical) — cross-temporal perspective seeing the structure of refusal as either natural law or institutional design."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint preserves asymmetric power through the structural fact of refusal. Status quo beneficiaries captured value by preventing unwanted constitutional expansion from 1787 forward — the 19th Amendment (women's suffrage) was proposed in 1878 but not ratified until 1920 (42-year lag). The extractiveness is not as severe as a pure snare (which would be ~0.70+) because the reform coalitions did eventually succeed with some amendments, and the constraint is functionally a coordination mechanism (Article V is available). But it is high enough to mark tangled rope because the supermajority requirement creates genuine asymmetry: status quo forces need only 13 states to block any change, while reformers need 36 to mandate it (under historical ratios). Suppression (0.68): High. The constraint actively suppresses alternatives — refused amendments are not merely 'not adopted,' they are structurally absent from the constitution's operative protection. The suppression is enforced through institutional design (the ratification threshold). This is not suppression in the sense of violent coercion, but suppression as structural impossibility: certain changes, even when commanding majority support in Congress and a significant portion of states, cannot be realized. Theater ratio (0.35): Low-to-moderate. The failed-amendments reading is not primarily a theater about what the Constitution is; it is a methodological claim about what constitutional interpretation must attend to. The constraint has real structural work: the refusal shapes what protections exist and who bears the costs. Theater has increased over time as constitutional mythology (the 'complete document' framing) has become more institutionalized in legal education and judicial practice.",
+    "directionality_logic": "The directionality (d) for each perspective is derived from the agent's structural position relative to the constraint. Status quo beneficiaries (institutional/arbitrage) have d ≈ 0.05–0.15: they benefit from non-change and can exercise veto power without friction. Constituencies denied failed amendments (powerless/trapped) have d ≈ 0.95: they bear the full cost of the suppression. Reform coalitions (moderate/constrained) have d ≈ 0.65–0.75: they face mobilization asymmetry but retain some agency through the amendment process. The engine derives these d values from the beneficiary/victim declarations and exit options; no override is needed because the structural data is clear: refusal benefits status quo, extracts from reform constituencies.",
+    "perspectival_gap": "This constraint exhibits a severe perspectival gap between the powerless/trapped perspective (snare: pure suppression through structural impossibility) and the institutional/arbitrage perspective (rope: low-extraction coordination of veto). The same constraint — the requirement for supermajority ratification — appears as entrapment to reform constituencies unable to achieve constitutional change and as elegant coordination mechanism to status quo forces exercising veto. The analytical observer risks naturalizing this asymmetry as an immutable constitutional feature (mountain), when in fact it is the product of specific institutional design (the 3/5 threshold, the state-based ratification mechanism, the electoral college's bias toward lower-population states). The piton perspective reveals that the mythology of the 'completed Constitution' is largely performative — courts and schools teach that constitutional meaning is fixed in ratified text, not by attending to refused amendments, which would foreground the constraint's extractive structure.",
+    "mandatrophy_analysis": "The failed-amendments constraint resolves the mandatrophy by showing that the perspectival gap IS the mandatrophy. The same institutional design (Article V's supermajority requirement) is experienced as pure coordination by beneficiaries and as pure extraction by those denied. The constraint is tangled rope precisely because it performs both functions simultaneously from different perspectives. The false summit (the mountain view) is the most dangerous classification here — if failed amendments are treated as expressions of the polity's 'considered judgment' rather than as artifacts of institutional design, the constraint's extractive structure becomes invisible. The failed-amendments reading resists this false summit by foregrounding the refused alternatives: the moment you ask 'what would the Constitution look like under a lower ratification threshold?' the machinery of suppression becomes visible."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "bill_of_rights_1791",
+      "later_amendment_eras",
+      "original_constitution_1787",
+      "pre_constitutional_frameworks"
+    ],
+    "dual_formulation_note": "The failed-amendments reading is one of five constraints jointly interpreting the contested kernel 'us_constitution'. Each sibling constraint has its own ε value: original_constitution_1787 is likely mountain (ε ≤ 0.25); bill_of_rights_1791 is likely rope or tangled_rope; later_amendment_eras is likely rope (ε ≤ 0.35); pre_constitutional_frameworks is likely rope. The failed-amendments reading (ε = 0.52) foregrounds the extraction mechanism hidden when other readings dominate. No single reading is 'correct' — they are simultaneous interpretations held by different legal and political communities."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "original_constitution_1787",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bill_of_rights_1791",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "later_amendment_eras",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "pre_constitutional_frameworks",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "refusal_constitutes_meaning",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "ratification_threshold_is_contingent_design",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "amendment_contestation_framework",
+    "drift_state": {
+      "moment": "contemporary_constitutional_scholarship",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

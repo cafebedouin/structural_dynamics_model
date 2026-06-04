@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "establishment_clause__history_tradition_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_establishment_clause__history_tradition_reading",
+    "story_uid": "81188edd-9aee-4113-a54c-02926261c5bf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Establishment Clause (History-Tradition Reading)",
+    "topic_domain": "legal/constitutional/religious_freedom",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "longstanding_religious_practices",
+      "traditional_government_religious_endorsements"
+    ],
+    "victims": [
+      "novel_establishment_claims",
+      "religious_minorities_asserting_new_rights"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Government Maintaining Traditional Practices",
+      "comment": "PERSPECTIVE 1: GOVERNMENT MAINTAINING TRADITION (ROPE) — The government benefits from the history-tradition reading because longstanding religious endorsements (legislative prayer, religious monuments, military chaplaincies) are grandfathered in and protected from challenge. The reading provides coordination: government agents understand what is permitted (old practices) and what is forbidden (new impositions). This is experienced as pure coordination with no extraction — the beneficiary of the reading agrees it clarifies boundaries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Religious Minorities Asserting Novel Claims",
+      "comment": "PERSPECTIVE 2: RELIGIOUS MINORITIES / NOVEL CLAIMANTS (TANGLED ROPE) — Groups asserting new Establishment Clause violations (e.g., religious monuments on public property erected in the last 50 years, new government religious endorsements) face a constraint with genuine asymmetry. The history-tradition reading extracts from them by grandfathering old violations while blocking new ones. But the constraint also provides coordination: the rule is predictable and applies equally to all novel claims. Constrained exit because challenging the historical baseline requires constitutional revision, not just litigation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Religious Minorities Under Longstanding Endorsements",
+      "comment": "PERSPECTIVE 3: MINORITIES UNDER HISTORICAL ENDORSEMENTS (SNARE) — Groups disadvantaged by longstanding religious practices (e.g., legislative prayer benefiting Christian traditions, religious monuments from the founding era) have no exit from the constraint. They cannot sue to remove established practices because the history-tradition reading grandfathers them in. They are trapped: powerless to change the status quo, bearing the ongoing cost of government religious endorsement, with suppression (no legal avenue) maintained by the reading's durability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The history-tradition reading functions as both coordination and extraction. Coordination: it provides clear boundaries (old practices permitted, new ones scrutinized). Extraction: it locks in power asymmetries from the founding era (the founding generation was Christian-majority; practices favoring Christianity are grandfathered). The reading coordinates by freezing a particular historical snapshot as immutable. The snapshot happens to benefit established traditions at the expense of religious minorities with novel claims. This is the analytical position from which mandatrophy resolves: the reading is NOT pure coordination (it has asymmetric extraction) but also NOT pure extraction (it provides genuine boundary-clarity coordination). The misclassification risk is calling it pure coordination (Rope) when it is actually Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "founding_era_baseline_ambiguity",
+      "question": "What counts as the 'founding generation and unbroken tradition' — only practices predating 1789, or practices established by 1950, or all longstanding practices with some minimum duration?",
+      "resolution_mechanism": "Historical and jurisprudential analysis: examine how courts have actually applied the history-tradition test to determine the working threshold. Cases like Town of Greece v. Galloway show courts accepting 19th-century legislative prayer as falling within the tradition; other courts may accept earlier cutoffs.",
+      "impact": "If threshold is strict (pre-1789 only): many 19th and 20th century practices are vulnerable. If threshold is lenient (50+ years continuous): nearly all existing practices are grandfathered. The reading's suppression value depends on where the threshold is drawn.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The historical cutoff for 'founding-era tradition'"
+    },
+    {
+      "id": "tradition_continuity_requirement",
+      "question": "Does a practice need to be continuous from the founding era, or is resurrection of an abandoned practice (reintroduction after decades of absence) enough to claim 'tradition'?",
+      "resolution_mechanism": "Case law analysis: whether courts allow practices that were dropped and then reestablished. If continuity is required, practices interrupted by periods of suppression lose tradition status. If resurrection counts, practices can be revived.",
+      "impact": "If strict continuity required: suppression of discontinued practices is durable. If resurrection counts: suppression is weaker, and new practices can claim grandfathering if they can be traced to historical precedent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tradition requires unbroken continuity or allows practice resurrection"
+    },
+    {
+      "id": "tradition_test_versus_coercion_test_foreclosure",
+      "question": "Does the history-tradition reading logically foreclose the coercion-test reading, or can both readings coexist with different institutional domains?",
+      "resolution_mechanism": "Jurisprudential analysis: examine whether history-tradition and coercion-test produce contradictory outcomes for the same government action. If they classify the same practice differently, which reading's core premise must be abandoned?",
+      "impact": "If they foreclose each other: only one reading can be constitutionally valid. If they coexist: different courts or jurisdictions can adopt different tests. The kernel contest hinges on whether these readings are logically incompatible or merely empirically different.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether history-tradition reading forecloses coercion-test reading"
+    },
+    {
+      "id": "originalism_versus_living_constitution_presupposition",
+      "question": "Does the history-tradition reading presuppose an originalist constitutional hermeneutics, or can it be adopted from a living-constitution framework?",
+      "resolution_mechanism": "Doctrinal analysis: trace whether courts adopting the history-tradition test ground it in originalist premises (founders' original understanding immutable) or in common-law traditionalism (practices acquire legitimacy through continuity). The same test can rest on different meta-constitutional assumptions.",
+      "impact": "If originalist presupposition required: the reading is tied to strict originalism and forecloses living-constitution readings of the Establishment Clause. If traditionalism works independent of originalism: the reading is compatible with multiple constitutional hermeneutics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether history-tradition reading requires originalist presuppositions"
+    },
+    {
+      "id": "asymmetry_between_grandfathering_and_novel_scrutiny",
+      "question": "Is the asymmetry between grandfathered old practices and scrutinized new practices a feature of the history-tradition reading (intentionally protects tradition) or a bug (inconsistently applies the Constitution's text)?",
+      "resolution_mechanism": "Constitutional theory: whether the Establishment Clause is better read as protecting stability of longstanding arrangements (feature) or as a timeless rule applying equally regardless of historical timing (bug). This determines whether extractiveness (0.52) is justified coordination overhead or unjustified asymmetric extraction.",
+      "impact": "If feature: suppression is legitimate stability mechanism; extractiveness is coordination cost. If bug: suppression is unconstitutional grandfather clause; extractiveness is illicit extraction. The classification itself depends on this normative judgment.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether grandfathering old practices is constitutionally justified"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The history-tradition reading of the Establishment Clause holds that government action cannot establish religion if longstanding practices from the founding generation and unbroken tradition permitted it. This reading produces a distinctive power asymmetry: practices grandfathered by historical pedigree are protected from Establishment Clause challenge, while novel government religious endorsements are strictly scrutinized. The reading appears to government agents and defenders of traditional religious practices as pure coordination — a clear rule distinguishing what is permitted. But from the perspective of religious minorities asserting novel Establishment Clause claims, the reading is an asymmetric extraction mechanism that locks in power from the founding era. From the powerless victims of longstanding endorsements (e.g., religious minorities disadvantaged by centuries-old legislative prayer), the reading is a snare — they cannot exit from grandfathered violations. The constraint exemplifies how a single constitutional interpretation can yield different types depending on the observer's structural position relative to the grandfathered baseline.",
+    "key_agents": [
+      "Government Maintaining Traditional Practices: Institutional beneficiary (institutional/arbitrage) — grandfathering longstanding practices provides clear authority to continue them without Establishment Clause scrutiny",
+      "Religious Minorities Asserting Novel Claims: Moderate victim (moderate/constrained) — face higher scrutiny for new Establishment Clause violations but can theoretically organize litigation; extraction is asymmetric but not total",
+      "Religious Minorities Under Historical Endorsements: Powerless victim (powerless/trapped) — disadvantaged by grandfathered practices (e.g., legislative prayer, religious monuments established before the 20th century); no legal avenue to challenge them",
+      "The Analytical Observer: Civilizational position (analytical/analytical) — sees the reading as both coordinating (clear boundaries) and extracting (locks in historical power asymmetry)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The history-tradition reading benefits practices that have longstanding pedigree and extracts from novel claims. The asymmetry is real — new government religious endorsements face strict scrutiny while old ones are grandfathered. But the extraction is not maximal because the rule is predictable and applies uniformly to all novel claims (coordination function). The rising measurement trajectory (0.35 → 0.58) reflects that as more practices acquire historical pedigree (religious monuments, legislative prayer traditions become older), the grandfathering benefit compounds, increasing the extraction from novel challengers. Suppression (0.68): Moderate-high. Religious minorities harmed by grandfathered practices face substantial barriers: they cannot sue to remove established practices; the reading denies them the legal avenue of the Establishment Clause. However, suppression is not maximal (0.68, not 0.90) because new practices CAN be challenged, and theoretically new religious minorities could file test cases. Theater ratio (0.58): Moderate. The history-tradition reading requires judicial determination of what counts as 'founding-era tradition' and whether a practice has maintained 'unbroken continuity.' This involves historical and textual argument that is partly substantive (does the history actually support the claim?) and partly performative (the court's authority to declare what counts as tradition). The rising trajectory reflects increasing courtroom ritual around historical justification as more practices claim grandfathering status.",
+    "perspectival_gap": "The government and defenders of traditional religious practices perceive the history-tradition reading as Rope: a coordination mechanism that clarifies what is permissible (old) and what is not (new). Religious minorities asserting novel Establishment Clause violations perceive Tangled Rope: the rule provides some coordination (predictability) but extracts by raising the bar for novel claims. Religious minorities trapped under grandfathered practices perceive Snare: the reading provides no exit and no remedy. The analytical observer perceives Tangled Rope as the accurate classification: the reading coordinates while extracting, and misclassifying it as pure Rope ignores the real asymmetry that harms minorities under historical endorsements.",
+    "directionality_logic": "The history-tradition reading creates directionality asymmetry through the grandfathering mechanism. Government agents and traditional practice defenders have arbitrage options: they can continue old practices without legal risk, giving them low d (beneficiary position, low effective extraction). Religious minorities with novel claims have constrained exit: they must convince courts that practices are novel enough to scrutinize, a high bar. Minorities under grandfathered practices have trapped exit: they have no legal remedy. The reading's d values range from ~0.15 (government beneficiary) to ~0.85 (powerless victim under grandfathered practice), producing a wide perspectival gap. The moderate victim (religious minority asserting novel claim) occupies middle ground at ~0.55, experiencing both some extraction and some coordination function.",
+    "mandatrophy_analysis": "The history-tradition reading resolves mandatrophy by acknowledging that it is genuinely Tangled Rope, not pure Rope. The misclassification risk is treating it as pure coordination (Rope) because it clarifies boundaries. But the boundaries are asymmetric: old practices are protected while new ones are scrutinized. This asymmetry is not a bug in the reading but its core feature — it intentionally preserves traditional practices. The mandatrophy is resolved by accepting that constitutional readings can coordinate while extracting, and that the extraction serves the reading's core function (protecting tradition). The misclassification that the reading prevents is calling it pure extraction (Snare), which would ignore the genuine coordination function it provides to government agents and defenders of tradition.",
+    "kernel_context": "This constraint instantiates the history-tradition reading of the Establishment Clause kernel. The kernel is the contested claim about what makes a government action an 'establishment of religion' under the First Amendment. The history-tradition reading is one of four competing interpretations: it holds that establishment is measured against what the founding generation and unbroken tradition accepted. The sibling readings are: (1) the coercion-test reading, which holds that establishment requires compulsion; (2) the endorsement-test reading, which holds that establishment is measured by whether a reasonable observer perceives government favoritism toward religion; (3) the Lemon-test reading, which holds that establishment requires a secular purpose, primary effect neither advancing nor inhibiting religion, and no excessive entanglement. These readings compete in contemporary constitutional jurisprudence. They produce different outcomes on the same government actions (e.g., legislative prayer in state legislatures, religious monuments on public property). The history-tradition reading has been articulated most clearly in recent Supreme Court decisions favoring traditional practices (e.g., Town of Greece v. Galloway, 2014). This story is ONE reading, not a description of all four."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "establishment_clause__coercion_test_reading",
+      "establishment_clause__endorsement_test_reading",
+      "establishment_clause__lemon_test_reading"
+    ],
+    "dual_formulation_note": "The Establishment Clause kernel has been decomposed into four structurally distinct constraint stories, one for each competing reading. Each reading produces a different classification when applied to the same government actions. The history-tradition reading is the most protective of longstanding practices and the most extractive toward novel claimants. Each story has its own epsilon value, beneficiary/victim structure, and perspectives. They are linked by network.affects_constraints to show how different constitutional interpretations create different constraint structures."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "establishment_clause__coercion_test_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "establishment_clause__endorsement_test_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "establishment_clause__lemon_test_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "longstanding_practice_immunized_from_establishment_clause",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "founding_generation_consent_legitimates_government_religious_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "founding_generation_practice_baseline",
+    "drift_state": {
+      "moment": "contemporary_religious_pluralism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ]
+}

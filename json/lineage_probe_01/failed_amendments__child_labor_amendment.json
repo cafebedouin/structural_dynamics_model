@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "failed_amendments__child_labor_amendment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_failed_amendments__child_labor_amendment",
+    "measurement_id_prefix": "cla",
+    "story_uid": "bcc353a8-cb3e-4e57-b02f-17a9e417c3c3",
+    "created_at": "2026-02-26T14:32:15Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Child Labor Amendment (1924–1938): Blocked Constitutional Grant to Suppress Child Exploitation",
+    "topic_domain": "political/legal/labor_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "working_children",
+      "federal_regulatory_power"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Working Child (1924–1938)",
+      "comment": "PERSPECTIVE 1: WORKING CHILD (SNARE) — Trapped in exploitative labor with no legal protection. The amendment's failure means no federal regulatory power exists to constrain state-level permissiveness on working hours, minimum age, or hazardous conditions. The child bears full cost of extraction through lost education, physical harm, and wage suppression. Suppression is maximal: state laws often explicitly permit or facilitate child labor; alternatives (schooling, parental support) are economically unavailable to poor families."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform Coalition (1924–1932)",
+      "comment": "PERSPECTIVE 2: REFORM COALITION (SNARE) — Child welfare advocates, union organizers, and progressive legislators see the amendment as the only viable path to federal authority. State ratification is constrained by political economy: state legislatures are dominated by manufacturing interests who benefit from child labor's wage suppression. The reform coalition faces suppression through legislative stalling, false ratifications, and political isolation. They can exit only by accepting state-level compromise (insufficient) or shifting strategy (which occurs with the New Deal)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Manufacturing-Dependent State Legislature",
+      "comment": "PERSPECTIVE 3: MANUFACTURING-DEPENDENT STATE LEGISLATURE (ROPE) — From the state legislature's view, the amendment represents a coordination problem it solves by refusal: preserving state labor cost advantage. However, this perspective classifies as Rope rather than pure Snare because the mechanism involves genuine coordination of state-level manufacturing interests — textile mills, mining operations, agricultural processors coordinate through state political systems to prevent federal preemption. The extraction is a side effect of coordination, not its primary function. This perspective experiences the constraint as preserving inter-state competitive order."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Government (Pre-New Deal)",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT PRE-NEW DEAL (PITON) — The amendment process itself becomes a degraded theater: Congress passes the amendment (1924), it gets sent to the states, and there it stalls — formally alive but functionally inert. The constraint persists through the amendment's institutional form (it remains technically pending until 1938) despite the underlying problem being solved through statutory commerce clause authority post-1937. Theater ratio is high because the constraint exists as a constitutional proposal that everyone acknowledges is 'the right answer' while the real mechanism (New Deal Fair Labor Standards Act) operates in parallel. The constraint has become vestigial institutional performance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Interstate Manufacturing Coalition (1924–1937)",
+      "comment": "PERSPECTIVE 5: INTERSTATE MANUFACTURING COALITION (ROPE) — Textile manufacturers, mining companies, agricultural processors coordinate interstate labor cost suppression through political opposition to the amendment. From their perspective, the constraint is pure coordination: they use the federal ratification mechanism (requiring three-fourths of states) as a coordination solution to maintain labor cost advantages. Exit for them is high (they could accept federal regulation without existential threat), so this classifies as Rope despite the extraction others bear — their experience is coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "New Deal Coalition (1933–1938)",
+      "comment": "PERSPECTIVE 6: NEW DEAL COALITION (TANGLED ROPE) — Roosevelt's coalition coordinates labor protection AND economic recovery through the Fair Labor Standards Act (1938), which solves the child labor problem through commerce clause authority rather than constitutional amendment. This perspective sees the constraint as having both coordination function (building interstate agreement on minimum labor standards to prevent destructive wage competition) and extraction (manufacturers must accept higher labor costs). The New Deal eventually moots the amendment by achieving its outcome through statute, making the constitutional route unnecessary. Requires active enforcement through federal inspection."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Constitutional Deadlock Structure)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) — From a civilizational view, the constraint exhibits the structural logic of constitutional deadlock: a clear normative claim (children should not be exploited in labor) requires constitutional authority (federal power to regulate child labor), but the amendment process distributes veto power to the interests it would constrain (states benefiting from child labor wage suppression). The extraction is built into the constitutional structure itself: the victims (working children) have zero power to ratify; the beneficiaries (labor-cost-suppressing manufacturers) have veto power in state legislatures. This is a snare masquerading as a coordination problem (the amendment framing) that gets resolved only when a parallel mechanism (commerce clause) becomes available."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_path_mooting",
+      "question": "Did the New Deal's commerce clause authority genuinely moot the Child Labor Amendment, or did the Fair Labor Standards Act depend on the amendment's existence as a legitimating precedent?",
+      "resolution_mechanism": "Doctrinal analysis of FLSA judicial rationale; examination of whether courts cited the proposed amendment as evidence of constitutional intent; counterfactual: would FLSA have passed without the amendment raising child labor as a constitutional question?",
+      "impact": "If FLSA was independent: the amendment was genuinely redundant and extraction ended through an alternative mechanism. If FLSA depended on amendment legitimacy: the amendment continued to extract through a delegitimizing mechanism even after statutory mooting.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the amendment was truly mooted or continued to extract through constitutional legitimation"
+    },
+    {
+      "id": "ratification_counterfactual",
+      "question": "Would the amendment have been ratified if the New Deal had not occurred? What was the actual trajectory of state ratifications before and after 1933?",
+      "resolution_mechanism": "Historical record of state ratification votes; comparison of ratification momentum pre-1933 vs. 1933-1938 vs. post-1938; analysis of whether manufacturing states ever showed movement toward ratification or maintained constant opposition",
+      "impact": "If trajectory was toward ratification: the extraction was temporary and structural factors were shifting. If trajectory was static/declining: the extraction was structurally locked and only mooted, not resolved, by the New Deal.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical trajectory of state ratification attempts"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the Child Labor Amendment a failed attempt to grant federal power (reading: victim is federal authority), or a blocked protection of children (reading: victim is working children), or a stalled constitutional process (reading: victim is constitutional law itself)?",
+      "resolution_mechanism": "Interpretive: depends on which normative commitment grounds the amendment's legitimacy. If grounded in child welfare rights, victim is children. If grounded in federalism, victim is federal power. If grounded in constitutional amendment process integrity, victim is the process. These framings are not resolvable through empirical data alone — they are readings of the contested kernel.",
+      "impact": "Different victim framings change the snare classification: if victim is children, extractiveness is 0.68 (high). If victim is federal authority, extractiveness is 0.54 (moderate). If victim is constitutional process, extractiveness is 0.45 (moderate).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which normative framing defines the victim set and thus the snare's severity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.78,
+      "id_override": "cla_extract_1924"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.72,
+      "id_override": "cla_extract_1931"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58,
+      "id_override": "cla_extract_1938"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85,
+      "id_override": "cla_supp_1924"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.82,
+      "id_override": "cla_supp_1931"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.76,
+      "id_override": "cla_supp_1938"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "cla_theater_1924"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48,
+      "id_override": "cla_theater_1931"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.62,
+      "id_override": "cla_theater_1938"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Child Labor Amendment (1924) represents a constitutional attempt to grant Congress plenary authority to regulate the labor of persons under eighteen. Proposed in response to Hammer v. Dagenhart (1918), which struck down the federal Child Labor Tax Act as exceeding Congress's commerce clause authority, the amendment passed both houses and was sent to the states for ratification. It stalled: manufacturing states (particularly in textiles and mining) refused ratification, and the amendment languished without reaching three-fourths ratification. The constraint captures this structural deadlock: a clear normative objective (protecting children from exploitation) required constitutional authority (federal power), but the ratification mechanism distributed veto power to the interests that benefited from child labor wage suppression. The constraint was eventually mooted — not resolved, but bypassed — when the New Deal's Fair Labor Standards Act (1938) and the Supreme Court's expansion of commerce clause authority in West Coast Hotel Co. v. Parrish (1937) and subsequent cases made the constitutional amendment unnecessary. Yet the amendment remained formally pending in the states until 1938. The extractiveness trajectory shows a slight decline over the period as the New Deal coalition built alternative pathways, but suppression remained high throughout: manufacturing states maintained legislative opposition, and children in exploitative labor continued to bear the full cost of the constraint's failure.",
+    "key_agents": [
+      "Working children: Primary victims (powerless/trapped) — bear the extraction through lost education, physical harm, wage suppression, and dangerous conditions; have zero power to ratify",
+      "Federal government (pre-1937): Secondary victim (institutional/constrained) — lacks constitutional authority to regulate child labor until commerce clause is reinterpreted",
+      "Reform coalition (unions, child welfare advocates, progressive legislators): Organized opponents (organized/constrained) — push for amendment but face veto power held by beneficiaries",
+      "Manufacturing-dependent state legislatures: Primary beneficiaries (institutional/arbitrage) — maintain competitive labor cost advantages through refusal to ratify; coordinate through state political systems",
+      "Interstate manufacturing coalition (textile, mining, agricultural processors): Secondary beneficiaries (powerful/mobile) — extract wage suppression through political opposition; could exit without existential threat but choose not to",
+      "New Deal coalition (1933–1938): Alternative mechanism (organized/constrained) — eventually moots the constraint by achieving child labor suppression through statute rather than constitutional amendment",
+      "Analytical observer: Structural analyst (analytical/analytical) — sees the constitutional deadlock as a snare whose beneficiaries have veto power over their own constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The child labor system extracts from working children through suppressed wages, lost education, and physical harm. The constraint's failure to grant federal regulatory authority perpetuates this extraction. The value reflects that the extraction is substantial but not maximal — the system is not perfectly sealed; some children escape into schooling, some states provide partial protection, and the New Deal eventually creates an exit path. The measurement trajectory (0.78→0.72→0.58) shows declining extractiveness as the FLSA and commerce clause authority create alternative mechanisms, though the decline is modest because suppression remains high even as statutory authority substitutes for constitutional authority. Suppression (0.82): Very high. The structural barriers to ending child labor are severe: state legislatures dominated by manufacturing interests maintain legal permission for child labor; working families face economic necessity that makes schooling alternatives unavailable; political opposition from business interests blocks federal action; constitutional amendment process distributes veto power to the constrained interests. Theater ratio (0.55): Moderate. The amendment itself is not highly theatrical — it is a straightforward constitutional grant of power. However, the constraint as a whole involves theater: the amendment remains formally pending for 14 years despite universal acknowledgment that it is 'the right answer,' while real child labor suppression occurs through statutory FLSA authority. The rising theater ratio (0.35→0.62) reflects this divergence: as the New Deal provides alternative paths, the constitutional amendment becomes increasingly performative, a symbolic commitment divorced from actual mechanism.",
+    "perspectival_gap": "This constraint exhibits a fundamental perspectival inversion. The working child and the reform coalition see a snare (blocked protective power). Manufacturing states see a rope (coordinate labor cost coordination through constitutional veto). The federal government before 1937 sees itself as constrained (lacks authority). The New Deal coalition sees a tangled rope (coordinating labor protection through an alternative mechanism). The piton perspective (post-1938 institutional survival) sees the amendment as a vestigial form that everyone agrees is 'correct' but that nobody needs anymore — institutional theater. The analytical observer sees a snare masquerading as a coordination problem, with veto power distributed to the interests the constraint would constrain. The gap reveals that what appears as a 'neutral' constitutional amendment process is actually a mechanism for distributing veto power, and that distribution is not neutral.",
+    "directionality_logic": "Directionality is derived from structural position. Working children have zero power and zero exit options (trapped) — they experience maximum extraction. Manufacturing interests have high power and exit options (they could accept federal regulation without existential threat, hence arbitrage classification) — they experience low or negative extraction. The reform coalition has moderate power (organized institutions can mobilize) but constrained exit (they cannot ratify the amendment unilaterally) — they experience high extraction. The analytical observer is positioned outside the constraint (analytical context) and sees the structure clearly: veto power is distributed to beneficiaries, creating a snare. No directionality overrides are needed; the structural data produces the correct d values through the derivation chain.",
+    "kernel_context": "This constraint is one reading of the 'failed_amendments' kernel — a contested constitutional artifact. The reading instantiated here is: child_labor_amendment (the constitutional attempt to grant federal regulatory power, stalled in states until mooted by the New Deal). Sibling readings include: balanced_budget_amendment (constitutional constraint on federal spending, repeatedly passed one chamber, never sent to states), dc_voting_rights_amendment (full representation for Washington D.C., passed Congress 1978, stalled at 16 ratifications), and equal_rights_amendment (sex equality guarantee, passed Congress 1972, never validly ratified). The kernel is the constitutional amendment process itself — a mechanism for fundamental legal change that requires three-fourths state agreement. Each reading activates different structural tensions in this mechanism. The child labor reading emphasizes the problem when beneficiaries of the status quo have veto power in state ratification. The balanced budget reading emphasizes the problem when one chamber uses the amendment process as political theater. The D.C. voting rights reading emphasizes the problem when states vote to alter the constitutional structure in ways that reduce their own power (rare). The ERA reading emphasizes the problem when one generation's constitutional proposal outlives its moment and subsequent generations lack sufficient consensus to complete ratification. All four readings are live — no reading logically forecloses another within a single constitutional framework.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing extraction (child labor wage suppression) from coordination (interstate labor cost alignment). Manufacturing states genuinely coordinate through their opposition to the amendment — they align their ratification votes to preserve labor cost advantages. But this coordination is asymmetric and extractive: it serves the manufacturers' interests while devastating working children. The constraint is not a pure coordination problem (which would suggest a Rope classification) because the beneficiaries' coordination actively prevents the protective mechanism. This is the defining feature of a Tangled Rope that looks like a Snare: both coordination and extraction are structurally present, but extraction dominates because the coordination is asymmetric. In this case, the manufacturing coalition's perfect coordination on refusal creates the snare for children. The New Deal moots the constraint not by achieving consensus on the amendment, but by creating an alternative mechanism (statutory authority) that bypasses the deadlocked constitutional process. The piton perspective (post-1938) sees the amendment as vestigial theater because both mechanisms (constitutional and statutory) would achieve the same outcome, but only the statutory route ever gets implemented."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "failed_amendments__balanced_budget_amendment",
+      "failed_amendments__dc_voting_rights_amendment",
+      "failed_amendments__equal_rights_amendment",
+      "fair_labor_standards_act_1938",
+      "commerce_clause_reinterpretation_1937"
+    ],
+    "dual_formulation_note": "The Child Labor Amendment constraint family contains two structurally distinct claims: (1) the constitutional mechanism for suppressing child labor through direct federal grant of power (ε=0.68, Snare in failed state), and (2) the statutory mechanism for suppressing child labor through commerce clause interpretation (ε=0.25, Rope via FLSA). These are not the same constraint viewed from two angles — they have different extractiveness values, different beneficiary/victim structures, and different terminal states. The amendment story (this file) focuses on the constitutional deadlock. The FLSA story (separate file) focuses on the alternative statutory pathway that eventually renders the amendment moot."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "failed_amendments__balanced_budget_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "failed_amendments__dc_voting_rights_amendment",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "failed_amendments__equal_rights_amendment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "federal_child_labor_protection_constitutionally_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "constitutional_amendment_requires_three_fourths_state_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "federal_constitutional_authority_required",
+    "drift_state": {
+      "moment": "post_west_coast_hotel_1937",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

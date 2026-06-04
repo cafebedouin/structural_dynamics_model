@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "fourth_amendment__warrant_preference_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fourth_amendment__warrant_preference_reading",
+    "measurement_id_prefix": "fa_wp",
+    "story_uid": "5c1169d2-01ce-4e46-ae1e-1ee765e6e48d"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.78,
+    "theater_ratio": 0.22,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fourth Amendment Warrant Preference Doctrine (Textual Linkage Reading)",
+    "topic_domain": "constitutional_law/criminal_procedure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "searched_individuals",
+      "magistrate_gatekeeping_authority"
+    ],
+    "victims": [
+      "law_enforcement_operational_flexibility"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Searched Individual (Without Remedy)",
+      "comment": "PERSPECTIVE 1: SEARCHED INDIVIDUAL (SNARE) — Structurally powerless, trapped in jurisdiction, with no exit. The warrant requirement provides formal protection, but enforcement barriers (exclusionary rule limitations, qualified immunity, procedural complexity) severely constrain remedy. The individual bears the cost of warrantless searches and cannot easily exit the legal jurisdiction or contest the intrusion after the fact. Experiences the constraint as maximally extractive of privacy — the warrant-preference rule exists but has limited practical force."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Searched Individual (With Exclusionary Remedy)",
+      "comment": "PERSPECTIVE 2: SEARCHED INDIVIDUAL WITH EXCLUSIONARY RULE ACCESS (ROPE) — The same individual, but with access to exclusionary rule remedy in criminal prosecution. The warrant-preference rule provides a genuine coordination mechanism: the magistrate's role is to coordinate between individual privacy and state investigative needs. The exclusionary rule creates a cost to warrantless search that incentivizes the state to seek warrants. From this perspective, the constraint solves a collective action problem — it prevents both the individual from having no recourse AND the state from operating without any process. Low effective extraction because the remedy exists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Law Enforcement (Constrained by Doctrine)",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT AGENCIES (TANGLED ROPE) — Organized but structurally constrained by the warrant requirement. Law enforcement benefits from the coordination function: the magistrate approval process legitimizes searches and provides a legitimate pathway for evidence gathering. But the warrant-preference reading imposes suppression through the exceptions doctrine — exigency, consent, plain view, and other carve-outs are strictly construed, limiting workarounds. The constraint both enables (through legitimation) and constrains (through enumerated exceptions) law enforcement action. Moderate extraction experienced because agencies have coordinated pathways but face suppressive barriers to flexibility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Magistrate Authority (Gatekeeper Role)",
+      "comment": "PERSPECTIVE 4: MAGISTRATE/JUDICIAL AUTHORITY (ROPE) — The magistrate benefits from the warrant-preference reading by capturing gatekeeper authority. The doctrine treats the magistrate as the neutral arbiter, positioned between privacy and search authority. This is a coordination mechanism at the institutional level: the magistrate's role is to aggregate individual interests (privacy) with state interests (investigation) and produce a single decision. The magistrate experiences low extraction because the doctrine grants institutional prestige and functional authority. No meaningful cost; primary benefit is institutional role-consolidation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Magistrate Gate (Performative Function)",
+      "comment": "PERSPECTIVE 5: MAGISTRATE GATE AS THEATRICAL CHECK (PITON) — At a longer civilizational horizon, the magistrate's gatekeeper role may be substantially performative. Magistrates issue warrants at high rates (typically 98%+); the gate rarely closes. The warrant-preference reading creates a ritual of neutral adjudication without necessarily constraining search authority in practice. The doctrine persists through institutional inertia and legitimacy theater — the appearance of constraint matters more than constraint itself. Theater ratio is low (0.22) because the doctrine's real suppressive force is high, but the magistrate gate's actual filtering capacity is degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer (Doctrinal Coherence)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The warrant-preference reading exhibits genuine doctrinal coherence at the text level (two clauses, unified principle) combined with extractive gaps in practice (weak exceptions enforcement, magistrate approval rates, civil damages unavailability). The constraint genuinely coordinates between privacy and investigation through the warrant requirement but extractively suppresses alternatives to warrant-based search through the exceptions doctrine. The analytical view confirms tangled-rope classification: real coordination function married to structural suppression."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "magistrate_gate_filtering_efficacy",
+      "question": "Does the magistrate warrant gate actually filter searches, or do high approval rates (98%+) indicate the gate is performative theater masking state discretion?",
+      "resolution_mechanism": "Longitudinal analysis of warrant denial rates across jurisdictions; correlation with warrant approval patterns and suppression of evidence claims; comparison to civilian review boards or alternative gatekeeping models",
+      "impact": "If gate is filtering: warrant-preference reading maintains tangled-rope classification with genuine suppression. If gate is performative: classification drifts toward piton (institutional theater) or snare (suppression without filtering). This determines whether the doctrine's suppression value (0.78) reflects real constraint or institutional ritual.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether magistrate warrant approval acts as a real constraint or performative filter"
+    },
+    {
+      "id": "exceptions_doctrine_scope_ambiguity",
+      "question": "Does the warrant-preference reading truly 'jealously confine' exceptions, or do exigency, consent, plain view, and vehicle search doctrines create workable routes around the warrant requirement?",
+      "resolution_mechanism": "Doctrinal mapping of exception scope and frequency; empirical count of warrantless searches justified by each exception; analysis of how courts define 'exigency' and 'plain view' breadth",
+      "impact": "If exceptions are narrow: suppression (0.78) is accurate, warrant-preference reading is binding. If exceptions are broad: suppression is overstated, exceptions doctrine undermines the presumption against warrantless search, and the reading is coexistent with reasonableness-balancing reading rather than foreclosing it.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope and practical breadth of Fourth Amendment exceptions under warrant-preference reading"
+    },
+    {
+      "id": "kernel_reading_contest_framing",
+      "question": "Is the contest between warrant-preference and reasonableness-balancing readings a genuine logical foreclosure (one rules out the other) or a coexistence of different legitimacy frameworks held by different institutional actors?",
+      "resolution_mechanism": "Jurisprudential analysis of how courts frame the two readings; whether warrant-preference advocates claim reasonableness-balancing is logically incoherent or merely incorrect; whether the readings have been held simultaneously within the same court or same doctrinal era",
+      "impact": "If genuine foreclosure: reading_relations.relation = 'forecloses'. If coexistence: reading_relations.relation = 'coexists_with'. If the readings create mutual pressure but neither eliminates the other logically: reading_relations.relation = 'influences'. This determines the kernel structure itself.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between warrant-preference and reasonableness-balancing readings of the Fourth Amendment"
+    },
+    {
+      "id": "exclusionary_rule_remedial_sufficiency",
+      "question": "Does the exclusionary rule provide adequate remedy for warrantless searches, or are evidentiary suppression and qualified immunity gaps rendering the warrant preference substantively unenforceable?",
+      "resolution_mechanism": "Comparative analysis of exclusionary rule application in different search contexts; frequency of qualified immunity grants in warrantless search claims; extent of civil damages recovery for Fourth Amendment violations; measurement of deterrent effect on police conduct",
+      "impact": "If exclusionary rule is sufficient: beneficiary status (searched individuals) is accurate and the tangled-rope classification holds. If remedy is inadequate: victims experience snare-level suppression and beneficiary claims are nominal. This affects whether suppression (0.78) represents real structural constraint or formal doctrine without enforcement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Adequacy of exclusionary rule as remedy for Fourth Amendment violations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "fa_wp_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72,
+      "id_override": "fa_wp_suppression_t50"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.78,
+      "id_override": "fa_wp_suppression_t100"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "fa_wp_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32,
+      "id_override": "fa_wp_extractiveness_t50"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.35,
+      "id_override": "fa_wp_extractiveness_t100"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "fa_wp_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2,
+      "id_override": "fa_wp_theater_t50"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22,
+      "id_override": "fa_wp_theater_t100"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Fourth Amendment's warrant-preference reading treats the two clauses as structurally linked: the Reasonableness Clause establishes a presumption against warrantless search, and the Warrant Clause provides the mechanism (magistrate approval) for overriding that presumption in specific instances. Exceptions to the warrant requirement (exigency, consent, plain view, vehicle search, etc.) must be strictly construed to preserve the presumption. This reading generates a tangled-rope constraint: it provides a genuine coordination mechanism (the magistrate gate aggregates individual privacy and state investigative authority) while simultaneously suppressing law enforcement's operational flexibility through enumerated exceptions. The constraint benefits searched individuals (by establishing presumptive protection) and magistrate authority (by consolidating gatekeeper power), while imposing costs on law enforcement (by limiting workarounds). The extractiveness value reflects that law enforcement must invest resources in warrant procedures, but can still achieve investigative goals through legitimate pathways. The suppression value (0.78) reflects the doctrine's aggressive closure of exceptions — the reading intentionally creates high barriers to warrantless search to enforce the presumption. The theater ratio (0.22) is low because the doctrine's suppression is genuine and structural, not performative — the warrant requirement creates real friction in police procedure, not ceremonial theater.",
+    "key_agents": [
+      "Searched Individuals: Primary beneficiaries (powerless/trapped, constrained/with-remedy) — the warrant requirement creates presumptive protection against warrantless intrusion, though enforcement through exclusionary rule is incomplete",
+      "Law Enforcement Agencies: Primary victims (organized/constrained) — the warrant-preference reading suppresses operational flexibility by requiring magistrate approval and strictly limiting exceptions",
+      "Magistrate Authority: Secondary beneficiary (institutional/arbitrage) — the doctrine consolidates gatekeeper power and institutional prestige through the warrant-approval role",
+      "Exigency-Claiming Officers: Specific victim group (organized/constrained) — emergency-based warrantless searches are strictly scrutinized; exigency must be contemporaneous and particularized",
+      "Analytical Observer: Systemic view (analytical/analytical) — sees coordination function (presumption + magistrate gate) coupled with extraction through suppression of alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. Law enforcement can still conduct searches through the warrant pathway and limited exceptions, so the extractive cost is not prohibitive. The constraint does not prevent investigation; it channels investigation through a gatekeeping process. Extractiveness reflects the resource cost of warrant procedure and the risk of suppression if warrant procedure is not followed, but not a total prohibition. Suppression (0.78): High. This is the reading's defining feature: exceptions are meant to be jealously confined, not broadly construed. The suppression value reflects the doctrine's aggressive closure of workarounds — exigency must be genuine, consent must be knowing, plain view requires lawful initial intrusion, vehicle searches are now limited by Riley v. California (cell phone exception). The warrant-preference reading intentionally maintains high suppression to enforce the presumption against warrantless search. Theater ratio (0.22): Low. The warrant requirement creates real friction in police procedure — magistrates must be approached, probable cause must be established, warrants must be obtained before most searches. This is structural constraint, not theater. The low theater ratio reflects that the suppression is genuine, not ritualistic.",
+    "perspectival_gap": "This reading generates a wide perspectival gap between beneficiaries and victims. Searched individuals (if they have exclusionary rule access) see coordination (rope). Law enforcement agencies see mixed benefit/burden (tangled rope). Magistrates see pure coordination benefit (rope). The gap reveals the constraint's asymmetry: the warrant requirement benefits some groups (individuals with remedy access, institutional gatekeepers) while extracting from others (law enforcement flexibility). The reasonableness-balancing reading collapses this gap by questioning whether the presumption against warrantless search is actually mandated by the text or is a judicial interpretation that could be reweighed.",
+    "directionality_logic": "Directionality (d) values are derived from each agent's structural relationship to the warrant requirement. Searched individuals are beneficiaries with limited (constrained) exit options — high exit cost to leaving jurisdiction, but high benefit to warrant protection; d ≈ 0.35. Law enforcement agencies are victims with organized response capacity and constrained (not trapped) exit — they face suppression but can adapt procedure; d ≈ 0.55. Magistrates are beneficiaries with arbitrage options — they gain gatekeeper authority and can selectively approve/deny based on institutional interests; d ≈ 0.10. The f(d) sigmoid maps these to effective powerfulness modifiers: beneficiaries with modest exit costs experience negative χ (the constraint subsidizes them); victims with organized response experience moderate χ (they bear suppression but have agency); beneficiaries with arbitrage experience very negative χ (the constraint strongly benefits them). The overall χ formula scales extractiveness by these directionality components and applies scope modifier for national scope (σ ≈ 1.0).",
+    "mandatrophy_analysis": "The warrant-preference reading does not face mandatrophy because suppression (0.78) is genuinely high and coordination function is real. The doctrine both coordinates (magistrate approval as neutral arbiter) and suppresses (exceptions are narrow). The mandate is stable: the reading commits to high suppression as a feature, not a bug. No contradiction exists between claiming the reading coordinates while maintaining severe suppression — the whole point is that the suppression IS the coordination mechanism (it channels search through a neutral gatekeeper rather than leaving it to police discretion alone).",
+    "kernel_context": "This constraint instantiates the WARRANT PREFERENCE READING of the contested kernel FOURTH_AMENDMENT. The kernel is a fixed text (the two clauses of the Fourth Amendment) but open to interpretation about their logical relationship and prescriptive force. The warrant-preference reading holds that the two clauses are structurally linked — the reasonableness requirement applies a presumption, and the warrant clause provides the mechanism for overriding that presumption, with exceptions strictly confined. The sibling reading (reasonableness-balancing reading) holds that the text does not establish a presumption against warrantless search but instead directs courts to balance interests on a case-by-case basis, with the warrant as one relevant factor but not a categorical requirement. These readings coexist in contemporary constitutional law — different courts and eras have weighted them differently. The warrant-preference reading reflects a stronger constitutional protection against warrantless search; the reasonableness-balancing reading permits more flexible police practice. The contest is not purely doctrinal but also reflects different institutional preferences: courts committed to privacy protection favor warrant-preference; courts committed to law enforcement efficacy favor reasonableness-balancing."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fourth_amendment__reasonableness_balancing_reading"
+    ],
+    "dual_formulation_note": "The Fourth Amendment kernel admits two structurally distinct readings that produce different constraints with different extractiveness and suppression profiles. The warrant-preference reading establishes high suppression and moderate extractiveness through strict exception enforcement; the reasonableness-balancing reading permits flexible case-by-case balancing, producing lower suppression and potentially higher extractiveness. These are not two observations of one constraint but two different constraints instantiated by the same contested text. Both stories link via network to clarify the kernel contest."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fourth_amendment__reasonableness_balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "warrantless_search_presumptively_unreasonable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "exceptions_must_be_jealously_confined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "presumption_against_warrantless_search",
+    "drift_state": {
+      "moment": "contemporary_post_riley_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

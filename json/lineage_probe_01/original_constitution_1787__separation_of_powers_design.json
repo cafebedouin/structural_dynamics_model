@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "original_constitution_1787__separation_of_powers_design",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_original_constitution_1787__separation_of_powers_design",
+    "measurement_id_prefix": "sopd",
+    "story_uid": "1e75d32a-0a5b-4988-a8b3-97db7bc6a3c0"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Separation of Powers Design (1787 Constitution)",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_interests",
+      "institutional_veto_holders"
+    ],
+    "victims": [
+      "reform_coalitions",
+      "rapid_policy_coordination"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Reform Coalition Under Gridlock",
+      "comment": "PERSPECTIVE 1: REFORM COALITION (SNARE) — Trapped by the veto structure. A coalition seeking to coordinate a new policy (abolition, suffrage expansion, labor regulation) faces supermajority requirements across three branches plus two-chamber Senate design. Each chokepoint is controlled by interests benefiting from inaction. No exit — the reformers cannot simply opt out of the national constitutional framework. Maximum extraction: their energy is dissipated in negotiating vetoes rather than implementing coordinated policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Majority Faction",
+      "comment": "PERSPECTIVE 2: CONGRESSIONAL MAJORITY FACTION (TANGLED ROPE) — Constrained by presidential veto, Senate supermajority requirements, and judicial review. But also coordinates through the separation-of-powers framework: the House can block Senate initiatives, the President can block both, the courts can invalidate legislation. This faction experiences both extraction (its policies are vetoed) and coordination benefit (it has veto power over others' initiatives). The constraint is hybrid — genuine coordination function (preventing tyranny of a single branch) combined with asymmetric extraction (costs are borne differentially by reform coalitions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Status Quo Interest / Veto-Holder Bloc",
+      "comment": "PERSPECTIVE 3: STATUS QUO INTEREST / VETO-HOLDER BLOC (ROPE) — For the coalition that controls one or more veto points (e.g., Southern slaveholding senators, later conservative justices), the separation of powers is pure coordination: it enables them to block unwanted change through institutional means (filibuster, judicial review, executive refusal) without needing to argue the merits. The constraint is experienced as coordination — the institutional structure lets their bloc resist without constant mobilization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Institutional Design Analyst (Checks-and-Balances Frame)",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL ANALYST / CHECKS-AND-BALANCES FRAME (ROPE) — From the design perspective, separation of powers is a coordination mechanism solving the tyranny problem: by giving each branch the means and motives to resist the others, the constitution prevents concentrated power. No single branch can dominate; each must negotiate with the others. This is purely coordination logic — no agent perceives their interests as extracted in the framework's own terms. The framework treats the veto function as a protective feature, not as extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Amendment-Era Reform Movement",
+      "comment": "PERSPECTIVE 5: AMENDMENT-ERA REFORM MOVEMENT (TANGLED ROPE) — Organized reformers (abolitionists, suffragists, New Deal coalitions) coordinate through and against the separation-of-powers framework. They use the framework (mobilizing electoral coalitions, shifting Senate composition) to shift veto-holder composition, effectively re-weighting the separation of powers. This faction experiences both extraction (the initial gridlock) and coordination (the constitutional amendment pathway, though arduous, eventually enables major policy shifts). The 13th, 15th, 19th, and 26th Amendments show the constraint is not absolute — organized movements can overcome it through generational effort."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Constitutional Rhetoric / Legitimacy System",
+      "comment": "PERSPECTIVE 6: CONSTITUTIONAL RHETORIC / LEGITIMACY SYSTEM (PITON) — Over centuries, the separation of powers has become a legitimacy incantation. Invoked equally by those defending the status quo and by those seeking change. 'The separation of powers requires...', 'The founders intended...', 'Checks and balances demand...' — the rhetoric persists with high theater_ratio because the actual institutional function has become rigid or has atrophied in specific areas (e.g., war powers: the President operates as unilateral war-maker despite textual vesting in Congress; the separation-of-powers doctrine is invoked theatrically to justify post-hoc Congressional acquiescence). The piton classification reflects degradation: the original design intent (mutual checking) has given way to presidential dominance in some domains, while the constitutional language is maintained performatively."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_as_tyranny_check_vs_anti_majoritarian_extraction",
+      "question": "Is the separation-of-powers veto structure a protection against tyranny (coordination function) or an extraction mechanism favoring entrenched minorities (snare function)?",
+      "resolution_mechanism": "Historical counterfactual analysis: trace patterns of reform delay and policy blockage to identify whether veto system reliably blocks majoritarian tyranny (protects minorities from numeric disadvantage) or reliably blocks majoritarian will in domains where numerical majorities favor reform (extracts by suppressing coordination). Key signal: does veto power concentrate on defending human rights, or on defending property/status interests?",
+      "impact": "If tyranny-check framing is accurate: constraint is Rope from all non-revolutionary perspectives. If extraction framing is accurate: constraint is Snare from reform coalition perspective and Tangled Rope from moderate-power faction perspective. The empirical record (slavery, civil rights delays, suffrage) suggests extraction framing is more structurally accurate than tyranny-check framing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether veto structure functions as tyranny-check or extraction mechanism"
+    },
+    {
+      "id": "friction_cost_vs_deliberate_obstruction",
+      "question": "Does the separation-of-powers structure slow policy-making to improve deliberation (friction cost), or deliberately obstruct policy change benefiting majorities in order to protect minority interests (extraction mechanism)?",
+      "resolution_mechanism": "Comparative constitutional study: do other democracies (Westminster systems, proportional legislatures) achieve equivalent deliberation with lower veto points? Do policy delays in US system show temporal patterning correlated with minority-interest protection vs. with time for thoughtful deliberation?",
+      "impact": "If friction-for-deliberation thesis holds: extractiveness is ≤0.25 and constraint is Rope. If deliberate-obstruction thesis holds: extractiveness is ≥0.40 and constraint is Tangled Rope or Snare depending on perspective. Current evidence (UK House of Lords delays, bicameral review in proportional systems) suggests veto structure exceeds deliberation-optimization requirements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether separation of powers optimizes for deliberation or enables extraction"
+    },
+    {
+      "id": "reading_boundary_between_sop_and_slavery_compromises",
+      "question": "Is the separation-of-powers reading of the 1787 Constitution the true kernel, or is it a rationalization layered atop the real kernel (slavery compromise protections)?",
+      "resolution_mechanism": "Historical intentionality analysis: did the Framers emphasize separation of powers as the primary design principle in their writings and debates, or is it a post-hoc rationalization? Did the specific veto mechanisms (supermajority Senate, presidential veto, judicial review) receive equal emphasis in Federalist arguments, or was slavery protection the binding constraint? Did slaveholding states demand the veto mechanisms for slavery protection, or were they abstract tyranny-checks?",
+      "impact": "If SOP is the true kernel: this reading is autonomous and the slavery-compromises reading is parasitic on it. If slavery compromise is the true kernel: this reading provides ideological cover for race-based extraction, and the two readings are not simply 'different perspectives' but 'self-serving rationalization vs. structural truth.' This is the deepest structural uncertainty in the constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether SOP is authentic reading or ideological cover for slavery protection"
+    },
+    {
+      "id": "constitutional_amendment_as_safety_valve_or_illusory_escape",
+      "question": "Does the existence of the Article V amendment procedure (difficult but possible) mean the separation-of-powers veto is not truly extractive, or does the amendment difficulty itself constitute the extraction mechanism?",
+      "resolution_mechanism": "Quantitative: measure amendment success rates for majority-backed reforms (those that poll above 60% public support) and calculate average time-to-passage. Compare to parliamentary systems' policy-implementation timelines for equivalent majorities. If US amendments for majority-backed reforms take >50 years average, the difficulty of amendment means majorities are structurally suppressed for at least 1–2 generations.",
+      "impact": "If amendments are genuinely accessible: extractiveness drops to ≤0.30 and constraint becomes Scaffold with clear sunset. If amendments are systematically difficult for majority reforms: extractiveness remains ≥0.35 and the constraint is validly Tangled Rope (amendment exists but is subordinate veto point).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether amendment procedure is functional relief valve or illusory escape"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The separation-of-powers design of the 1787 Constitution instantiates a constraint that exhibits both genuine coordination function and systematic extraction. The core logic is Madisonian: liberty is protected by giving each branch 'the constitutional means and personal motives to resist' the others. Veto mechanisms (presidential veto, Senate supermajority for treaties/appointments, judicial review) prevent any single branch from accumulating power. However, this same veto structure has systematic effects: it suppresses coalitional coordination for reform, particularly when status-quo interests control key veto points. The constraint has evolved over 235 years from a high-friction coordination mechanism (1787) toward an increasingly theatrical legitimacy system (contemporary) — the constitutional language of checks and balances is invoked to justify structures that bear little resemblance to the original veto logic (e.g., presidential war-making despite textual vesting in Congress). The separation of powers is one reading of the 1787 Constitution's kernel; other readings (Article V amendment procedure, federal supremacy, slavery compromises) contest whether this reading identifies the Constitution's true binding commitment or a rationalization layered atop a different core.",
+    "key_agents": [
+      "Status Quo Interest / Veto-Holder Bloc: Primary beneficiary (institutional/arbitrage) — controls one or more constitutional veto points (Senate, courts, presidency) and uses separation-of-powers structure to block unwanted change",
+      "Reform Coalition: Primary victim (powerless/trapped) — seeking policy coordination (abolition, suffrage, labor rights, civil rights) faces supermajority requirements and veto points designed to resist change",
+      "Congressional Majority Faction: Secondary victim and partial beneficiary (moderate/constrained) — experiences extraction when blocked but also benefits from veto power over opposing initiatives",
+      "Amendment-Era Reform Movement: Organized victim (organized/constrained) — can overcome gridlock through generational effort and electoral coalition-building, showing the constraint is not absolute",
+      "Constitutional System Analyst: Analytical observer (analytical/analytical) — risks naturalizing the veto structure as necessary tyranny-check when empirical evidence suggests it systematically favors entrenched interests",
+      "Constitutional Rhetoric / Legitimacy System: Institutional actor (institutional/arbitrage) — maintains performative invocation of checks and balances while actual institutional function has degraded or been superseded in specific domains"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The separation-of-powers structure imposes genuine costs on coalitional policy-making — supermajority requirements, veto points, amendment difficulty. But the extraction is not maximal because: (1) the mechanism is transparent and legible; (2) organized movements can overcome gridlock over generational timescales through electoral coalition-building; (3) the structure does prevent some forms of power concentration. A Snare (ε≥0.46) would require more opaque suppression or permanent entrenchment. Suppression (0.52): Moderate-high. Significant barriers to reform coordination include: supermajority requirements (Senate filibuster, amendment two-thirds threshold); veto distribution (presidency, courts); geographical dispersion of veto-holder interests; implicit anti-majoritarian design. But suppression is not absolute — the amendment mechanism, though costly, exists. Theater ratio (0.58): Moderate-high. Over time, the separation-of-powers rhetoric has become increasingly performative. Contemporary invocation of 'checks and balances' often justifies structures that deviate significantly from the original veto logic (e.g., presidential dominance in war powers, delegation of legislative authority to executive agencies). The theater has grown as the functional veto mechanisms have become rigid or asymmetrical — the rhetoric maintains legitimacy despite functionality degradation.",
+    "perspectival_gap": "The maximum perspectival gap in this constraint is between the status-quo veto-holder (Rope) and the reform coalition (Snare). The veto-holder experiences the constraint as pure coordination — their institutional position lets them block unwanted change through structural means. The reformer experiences extraction — their electoral and policy energy is dissipated in negotiating vetoes they cannot overcome in a single generation. The institutional analyst risks seeing only the Rope perspective (checks and balances protect against tyranny) and missing the Snare perspective (systematic suppression of reform coalitions). The amendment-era reform movement shows the constraint is not truly a Snare — organized, generational effort can overcome the veto structure — but this requires treating the veto system as a problem to be solved rather than as a system working as designed.",
+    "directionality_logic": "The separation-of-powers structure produces different directionality values for different agents: Status-quo interests that control veto points derive d≈0.15 (beneficiaries with arbitrage exit); reform coalitions derive d≈0.90 (victims with trapped exit until they achieve supermajority); moderate-power factions derive d≈0.55 (both beneficiary and victim, depending on initiative). The engine derives these automatically from beneficiary/victim declarations and exit options. No overrides are needed — the beneficiary/victim structure is clear, and the exit options differentiate the perspectives naturally.",
+    "kernel_context": "This constraint instantiates the 'separation_of_powers_design' reading of the kernel 'original_constitution_1787'. The kernel is contested by four readings: (1) separation_of_powers_design (this constraint) — the Constitution's core is mutual veto among branches; (2) article_v_amendment_procedure — the Constitution's deepest commitment is its own alterability via supermajority amendment; (3) federal_supremacy_design — the Constitution replaces confederation with national government acting directly on individuals; (4) slavery_compromises — the Constitution is structured by slavery protections (3/5 clause, fugitive rendition, non-interference with slave trade until 1808). These readings offer different accounts of what the 1787 text's true kernel is. The separation-of-powers reading emphasizes the Madisonian logic of mutual checking. The slavery-compromises reading emphasizes that the specific veto mechanisms (Senate equality regardless of population, presidential election via electors, federal slave-hunt clauses) were designed to protect slaveholding interests from majoritarian attack. The kernel ambiguity is unresolved: is the separation of powers the true core, or is it ideological cover for slavery protection?"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "original_constitution_1787__slavery_compromises",
+      "original_constitution_1787__federal_supremacy_design",
+      "original_constitution_1787__article_v_amendment_procedure"
+    ],
+    "dual_formulation_note": "The separation-of-powers reading is one of four competing readings of the 1787 Constitution kernel. The other readings (slavery compromises, federal supremacy, Article V amendment procedure) are implemented as separate constraint stories with different ε values and beneficiary/victim structures. The network links establish that these readings are siblings in a kernel contest, not independent constraints. The separation-of-powers reading's ε (0.38) reflects the pure veto-suppression mechanism; the slavery-compromises reading's ε would reflect racial entrenchment through representation; the federal-supremacy reading's ε would reflect centralization and loss of state autonomy. Each reading produces its own classification profile from perspectives sensitive to that reading's core claim."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "original_constitution_1787__slavery_compromises",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "original_constitution_1787__federal_supremacy_design",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "original_constitution_1787__article_v_amendment_procedure",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liberty_secured_by_institutional_competition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "veto_as_structural_necessity_not_extractive_accident",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "competitive_institutional_liberty_framework",
+    "drift_state": {
+      "moment": "contemporary_presidential_dominance_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}
