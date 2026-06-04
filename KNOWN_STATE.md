@@ -20,9 +20,22 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-04 — OQ-71 depth-lineage probe: machinery pilot complete (generator run-tag routing, fingerprint probe validated by exact reproduction)
+## 2026-06-04 — OQ-71 depth-lineage probe: SCALE RUN COMPLETE — H1/H3 falsified beyond noise (boundedness is within-regime only)
 
-Full experiment record in ISSUES.md OQ-71 (status `investigating`); canonical artifacts in
+Full record + numbers in ISSUES.md OQ-71 (status `partial`); finding written into
+`docs/design/a_hypothesis_about_corpus_size.md` §10. Headline: the 438-story depth-lineage arm
+minted distinct 5-dim structural classes at ~1.5× the same-generator breadth control at every
+matched n (95% bands non-overlapping), with list-richness matched, and the "generator-invariant"
+MI couplings reshaped (props↔actors −0.23 bits, voids↔zone +0.26). **Citation discipline: this
+falsifies UNCONDITIONAL boundedness/coupling-invariance only — the arm bundled nesting-depth
+with seed-authorship (Opus-authored seeds vs SCOPE-derived control), so do not cite it as
+depth-specific discovery until the authorship-controlled breadth arm in OQ-71 runs.** Corpus
+note: `prolog/testsets/lineage_probe_01/` now holds 438 glob-isolated stories; flat corpus
+verified unchanged at 1,106. One story lacks `cs_structure` (unstampable; named in OQ-71).
+
+## 2026-06-04 — OQ-71 depth-lineage probe: machinery pilot (generator run-tag routing, fingerprint probe validated by exact reproduction)
+
+Pilot record; superseded operationally by the scale run above. Canonical artifacts in
 `audits/2026-06-04_oq71_depth_lineage/` (NOT `outputs/` — outputs/ is gitignored, and the
 salvaged dumps there are irreplaceable). Items a future editor needs:
 

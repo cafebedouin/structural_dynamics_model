@@ -246,3 +246,54 @@ cleanly: the corpus is Dewey-like (bounded by structure) **within a regime**, an
 Colon-like-only-because-someone-stopped **only if** generators and config are frozen by fiat. The
 evidence supports the within-regime boundedness (§3); the punctuation structure is conjecture
 awaiting a controlled generator-to-generator comparison that holds story count fixed.
+
+## 10. The depth-lineage probe (2026-06-04) — §0's verdict stressed, and what broke
+
+*Added after the OQ-71 experiment. The scripts and artifacts in
+`audits/2026-06-04_oq71_depth_lineage/` are the witnesses; this prose is the summary. Full
+design, pre-registration, gates, and rulings: ISSUES.md OQ-71.*
+
+**The test.** A designed kernel-nesting lineage (social_coordination ⊃ government ⊃
+constitutional_government ⊃ ten constitutions ⊃ instruments ⊃ clauses ⊃ doctrines; 449 seeds,
+438 generated, 10 levels deep, fan 2–5 throughout) against a 300-story breadth control from the
+same frozen generator (Haiku 4.5, identical prompt/schema/example — the 2026-06-03
+never-generated batch). Depth-correlated authoring is the hardest test §0's boundedness can
+face: breadth samples the territory loosely; a lineage drills one region. Pre-registered:
+H1 excess-over-control ≤ 0 within sibling-length strata; H2 within-band saturation with
+persisting ε-spread; H3 coupling invariance. The fingerprint probe was validated by **exact
+multiset reproduction of this document's own v5 dump** (3,380/3,380 lines) before any depth
+number was read.
+
+**What fired.**
+- **H1 falsified, beyond noise at every matched n.** Distinct 5-dim structural classes at
+  matched n in the powered (length-2+) stratum: depth 71.3/88.0/103.4 vs control
+  47.8/58.7/68.7 at n=150/200/250 — 95% resample bands non-overlapping at all three; discovery
+  slope also higher (0.271 vs 0.192 at n=294). The depth arm realized 156 distinct classes in
+  438 stories — more than the entire 806-story live baseline's 118.
+- **Not list-inflation:** mean |props| 3.83 vs control 3.77, |voids| 1.98 vs 2.25 — the excess
+  is new *combinations* at matched richness, not richer fingerprints.
+- **H3 falsified — the coupling pattern reshaped, not dissolved.** Matched-n=300 plug-in MI:
+  props↔actors 0.48±0.03 vs live 0.71±0.07 (weaker, ~5σ); voids↔zone 1.31±0.03 vs 1.05±0.05
+  (stronger). §5's "generator-invariant coupling" is not depth-invariant.
+- **H2 mixed.** Within-band novelty at matched n=100: L5 47.9 → L6 57.9 → L7+ 51.0 — no early
+  saturation, but the deepest band turns down (new-vs-shallower falls to 5 then 3 at L8/L9),
+  consistent with the arm saturating toward its *own* S_max. ε-spread persists at every band
+  (sd 0.13–0.18, full range throughout).
+
+**What it means for §0 — read this with §9's frame, not against it.** The probe bundled two
+changes by design (named threat, sibling-shape and richness controlled; authorship not):
+kernel-nesting *depth* and seed *authorship* (lineage commitments hand-designed by a different
+model than the control's SCOPE-derived seeds). These are confounded in this run, and they are
+exactly the two arms of §9's conjecture: either depth re-opens the territory, or a new
+seed-author is a new generator regime and this is a **generator punctuation observed
+semi-controlled** — the first evidence §9 has. Either way, **§0's boundedness survives only as
+within-regime**: the realized class set is not closed against a deliberately different way of
+writing into the same engine. The one §0 claim that needed revision either way: coupling
+invariance, which held across two *breadth* generators, does not hold across this regime
+change.
+
+**The discriminating experiment (open, OQ-71):** an authorship-controlled breadth arm —
+~300 non-nested seeds authored by the same hand/model as the lineage, same template. If it
+also mints ~1.5×, authorship explains the excess and depth adds nothing; if it tracks the old
+control, depth itself re-opens discovery. Until that runs, cite this probe as falsifying
+*unconditional* boundedness and coupling-invariance, not as proving depth-specific discovery.
