@@ -122,6 +122,61 @@ def main():
                          "slope_depth": sd, "slope_control": sc,
                          "control_resample_band": [lo, hi]}
 
+    # H2 — within-band rarefaction (depth arm only): bands L<=4 / L5 / L6 / L7+,
+    # expected distinct classes at matched within-band n. Prediction (OQ-71 H2):
+    # matched-n novelty NOT rising with depth, while epsilon spread persists.
+    def band(lvl):
+        return "L<=4" if lvl <= 4 else ("L5" if lvl == 5 else ("L6" if lvl == 6 else "L7+"))
+    bands = {}
+    for c in depth:
+        if c in lineage:
+            bands.setdefault(band(lineage[c]["level"]), []).append(depth[c][1])
+    deep_bands = {b: fs for b, fs in bands.items() if b != "L<=4"}
+    if all(len(fs) >= 50 for fs in deep_bands.values()) and len(deep_bands) >= 3:
+        nb = min(len(fs) for fs in deep_bands.values())
+        print(f"\nH2 within-band rarefaction @ matched n={nb}:")
+        h2 = {}
+        for b in ("L5", "L6", "L7+"):
+            fs = deep_bands.get(b, [])
+            e = expected_distinct(fs, nb, args.K, rng)
+            print(f"  {b}: n={len(fs):>3}  E[distinct@{nb}]={e:.1f}")
+            h2[b] = {"n": len(fs), "E_distinct_matched": e}
+    else:
+        h2 = {"verdict": "bands_underpowered", "sizes": {b: len(fs) for b, fs in bands.items()}}
+        print(f"\nH2 bands underpowered: { {b: len(fs) for b, fs in bands.items()} }")
+
+    # H3 — MI couplings voids<->zone, props<->actors: depth arm vs live baseline,
+    # computed identically on both (plug-in MI over categorical pairs).
+    import math
+
+    def parse5(f):
+        props = f[: f.index("]") + 1]
+        rest = f[f.index("]") + 2:]
+        voids = rest[: rest.index("]") + 1]
+        rest2 = rest[rest.index("]") + 2:]
+        actors = rest2[: rest2.index(")") + 1]
+        rest3 = rest2[rest2.index(")") + 2:]
+        drift = rest3[: rest3.index(")") + 1]
+        zone = rest3[rest3.index(")") + 2:]
+        return props, voids, actors, drift, zone
+
+    def mi(pairs):
+        n = len(pairs)
+        cx, cy, cxy = Counter(p[0] for p in pairs), Counter(p[1] for p in pairs), Counter(pairs)
+        return sum(c / n * math.log2(c / n / ((cx[x] / n) * (cy[y] / n)))
+                   for (x, y), c in cxy.items())
+
+    print("\nH3 MI couplings (bits): voids<->zone, props<->actors")
+    h3 = {}
+    for label, pool in (("depth", [f for _, f in depth.values()]),
+                        ("live_baseline", [f for c, (_, f) in live.items() if c not in ctl_ids]),
+                        ("control", [f for _, f in ctl.values()])):
+        parsed = [parse5(f) for f in pool]
+        vz = mi([(p[1], p[4]) for p in parsed])
+        pa = mi([(p[0], p[2]) for p in parsed])
+        print(f"  {label:>14} (n={len(pool):>4}): voids-zone {vz:.2f}   props-actors {pa:.2f}")
+        h3[label] = {"n": len(pool), "voids_zone": vz, "props_actors": pa}
+
     # per-level census (descriptive; H2 needs within-level matched n at scale)
     print("\nper-level census (level -> stories, distinct classes, new vs baseline, "
           "new vs shallower levels):")
@@ -138,7 +193,7 @@ def main():
 
     if args.out:
         Path(args.out).write_text(json.dumps(
-            {"strata": results, "per_level": lvl_rows,
+            {"strata": results, "h2_bands": h2, "h3_mi": h3, "per_level": lvl_rows,
              "diagnostic_novel": {"depth": len(nov_d), "control": len(nov_c)},
              "params": {"K": args.K, "seed": args.seed}}, indent=2))
         print(f"\nwrote {args.out}")
