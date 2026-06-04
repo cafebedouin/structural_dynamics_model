@@ -39,6 +39,11 @@ the tell.
   load prefixes incrementally, probe `predicate_property(m:p(_), defined)` after each.
 - **Rule: test a module-resolution hypothesis on the CONSUMER'S exact load path**, not in a
   convenient REPL. The two paths witnessed opposite behaviors for the same line of code.
+- **Smoothed (2026-06-04):** `prolog/check_stack.pl` runs library(check) over the full stack
+  (`cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"`), surfacing
+  undefined-predicate references of exactly this class as a command instead of forensics.
+  Compare against the recorded baseline (KNOWN_STATE.md 2026-06-04) — new findings are
+  regressions.
 
 ---
 
@@ -92,6 +97,11 @@ still returns a plausible value (the session-scope version of §2's trap).
   structural and canonical d paths, so an override-bearing control host shows "no movement"
   that means OVERRIDE, not "filter has no effect". Enumerate overrides for control hosts too
   (`constitutional_text_authority...:360` was found by anomaly, not by plan).
+- **Smoothed (2026-06-04):** `probe_harness:with_retracted/2` / `with_overlay/3` encapsulate
+  §§2–4 (snapshot-first, setup_call_cleanup + once, VERIFIED restore that throws
+  `probe_restore_failed` on mismatch) plus the §7 cache clears. Fact overlays only; rule
+  clauses matching a template are left untouched with a warning. Tested:
+  `prolog/tests/test_probe_harness.pl`. Prefer it over hand-rolled retract/assert probes.
 
 ---
 
@@ -107,9 +117,124 @@ still returns a plausible value (the session-scope version of §2's trap).
   classification level (`perspectives`/`signature`/`claimed_type` — where "exactly N rows"
   expectations live) and the full-record level (where the ripple shows). A 1106-row
   full-record diff is NOT automatically a stop signal; an unexpected classification row is.
-- **The manifest is injected by `run_pipeline.py`, not by `run_json_report`**: re-running the
-  swipl export goal directly rewrites `pipeline_output.json` WITHOUT a `manifest` key. If you
-  re-export for a diff, preserve the manifest-bearing artifact and restore it (or accept the
-  provenance loss knowingly).
+- **Single-writer (changed 2026-06-04):** `run_json_report` writes
+  `pipeline_output.raw.json`; `run_pipeline.py`'s manifest step is the SOLE writer of the
+  canonical `pipeline_output.json` (raw + manifest). A direct swipl re-export rewrites the
+  raw file only — it can no longer clobber the canonical artifact's provenance (witnessed:
+  re-export after a pipeline run left the canonical md5 unchanged). Historical note: before
+  this change, both wrote the same filename and a direct re-export silently destroyed the
+  manifest.
 - `per_constraint` has 1107 entries vs manifest `n_constraints` 1106: `constraint_instances.pl`
-  contributes a demo constraint (`carbon_tax_2026`) outside `testsets/`.
+  (loaded by `stack.pl:13`) contributes a demo constraint outside `testsets/`. **The surfacing
+  demo is `catholic_church_1200`, not `carbon_tax_2026`** (witnessed 2026-06-04: per_constraint
+  ids ∖ testset ids = {catholic_church_1200}, exactly one element — OQ-70 Probe 0,
+  `audits/2026-06-04_fnl_bait_confound/fnl_probe0_file_constraint_map.json`). Both demos exist
+  in the file; catholic_church_1200 enters the export via its authored
+  `constraint_classification/3` CLAUSES — it has **zero** `constraint_metric/3` facts even
+  after corpus load (witnessed: `findall` = `[]`). carbon_tax_2026 defines only `drl_core:*`
+  facts and does not surface. Consequences: (a) exclude `catholic_church_1200` from any
+  corpus statistic computed over per_constraint (it is also the one `claimed_type: None`
+  row); (b) which demo your probe sees depends on the enumeration predicate — a
+  `constraint_metric/3` sweep never sees it, a `constraint_classification/3` sweep does.
+  **Closed for runs from 2026-06-04 on:** the export now enumerates
+  `corpus_loader:corpus_constraint/1` (the membership registry asserted per loaded testset),
+  so per_constraint == manifest n_constraints (witnessed: 1106 == 1106; removal diff was
+  exactly the demo row with ZERO classification- or full-record-level collateral). Outputs
+  from EARLIER runs still carry the extra row — check `manifest.pipeline_run_at`.
+
+---
+
+## 6. Validated in-session signature sweep (reproduces the pipeline exactly)
+
+A one-shot probe that re-derives every constraint's signature in-session, witnessed
+byte-equal to the pipeline's per_constraint signatures (0/1106 mismatches, 2026-06-04,
+OQ-70 Probe 1):
+
+```prolog
+% from prolog/:
+:- [stack], corpus_loader:load_all_testsets.
+setof(C, M^V^(narrative_ontology:constraint_metric(C, M, V), atom(C)), Cs0),
+exclude(==(catholic_church_1200), Cs0, Cs),          % defensive; see §5
+forall(member(C, Cs),
+       ( signature_detection:constraint_signature(C, Sig) -> ... ; Sig = none )).
+```
+
+Rules that make it faithful:
+- **`Sig` must be UNBOUND** — `constraint_signature(C, false_natural_law)` with the atom
+  bound bypasses the lock cuts and lies about clause order (Pattern 3 /
+  build_discipline.md). One solution via `->` matches what the pipeline records.
+- **Enumerate ids via `corpus_loader:corpus_constraint/1`** (the authoritative membership
+  registry, available since 2026-06-04 — same enumeration the export now uses). The older
+  `constraint_metric/3` setof recipe still works (testset ids are 1:1 with files; `atom(C)`
+  guard drops list-wrapped ids) but is a derived proxy, not the registry.
+- Before trusting any downstream analysis, paste the consistency check: in-session signature
+  counts vs the pipeline JSON. If they differ, your load path differs from the pipeline's —
+  stop there (§1).
+
+---
+
+## 7. Boltzmann memo caches make in-session overlay/retract probes read STALE — clear them, then prove the recompute ran
+
+`boltzmann_compliance` memoizes per-constraint results in two dynamic predicates:
+`cached_classification/3` (12 grid cells per constraint) and `cached_coupling/2` — and five
+other modules carry memo caches of their own (covering_analysis, grothendieck_cohomology,
+drl_fpn, trajectory_mining, arakelov_height). Any in-session retract/assertz overlay that
+should change a memoized result **silently reads the pre-overlay cache** unless cleared.
+
+**Smoothed (2026-06-04):** clear them ALL with one call —
+
+```prolog
+cache_registry:clear_all_caches.   % multifile clear_hook/0 per caching module
+```
+
+(`probe_harness:with_overlay/3` does this automatically, before the goal and after restore.
+maxent_* state is deliberately NOT cleared — it is fitted model state, re-established only by
+its own fit runner; see cache_registry.pl header.)
+
+The failure is unreadable at the read site: a stale-cache "no change" is byte-identical to a
+real null result. **Therefore a corpus-wide counterfactual needs BOTH controls, pasted
+before the headline diff is read:**
+- **Sensitivity (the null-branch guard):** one pre-selected constraint whose result is KNOWN
+  to flip under the overlay, with the predicted destination **named in advance** (derive it
+  from the clause chain). "Flipped to something" does not pass; "did not flip" means the
+  recompute is stale and the corpus diff is untrusted.
+- **Specificity:** a population the overlay must NOT touch, shown unchanged.
+
+Also report the counterfactual as a **destination histogram** (where did each changed row
+land), never as an aggregate delta — if the removed mechanism has a sibling clause that
+catches the released population, the aggregate reads null and inverts the conclusion.
+Witnessed end-to-end: OQ-70 Probe 2 (`audits/2026-06-04_fnl_bait_confound/`), where 809/827
+ex-FNL rows migrated to the next clause (FCR) and the FNL+FCR aggregate moved only 1046→1042.
+
+---
+
+## 8. Evidence-term slots give clause-ordered attribution for free
+
+Detector predicates that return structured evidence record WHICH internal source fired,
+because the source predicates are cut-ordered: `false_natural_law(C, fnl_evidence(Claim,
+…))` puts the FIRST matching `claimed_natural/2` source in the `Claim` slot
+(`explicit_mountain_claim` | `indexed_mountain_classification` |
+`natural_law_signature_match`); `false_ci_rope(C, fcr_evidence(AppearanceType, …))` does the
+same for `appears_as_rope/2`. Sweeping the slot over the corpus is a full attribution probe
+with zero instrumentation — no tracing, no predicate swaps. Positive control: a constraint
+known to carry the rarest source (e.g. an explicit `constraint_claim(C, mountain)`) must
+report that source when queried directly. Witnessed: OQ-70 Probe 1 (827/827 FNL =
+`indexed_mountain_classification`; control returned `explicit_mountain_claim`).
+
+---
+
+## 9. Agent-harness cwd persists across tool calls — `cd prolog` poisons later repo-relative paths
+
+For models working in this repo: the Bash tool's working directory persists between calls.
+After a `cd prolog && swipl …` call, a later `python3` analysis call using repo-relative
+paths (`outputs/pipeline_output.json`) fails with FileNotFoundError — or worse, a relative
+glob silently resolves against `prolog/` (the corpus-loading trap in reverse). Witnessed
+twice in one session (2026-06-04). Rule: in mixed swipl/python workflows, either prefix
+every analysis call with `cd /abs/repo/root` or use absolute paths; never assume the cwd of
+the previous call.
+
+**Partially smoothed (2026-06-04):** corpus LOADING is now cwd-independent
+(`corpus_loader:resolve_corpus_dir/2` anchors relative `corpus_path` to `prolog/`, and a
+0-file glob throws `corpus_empty` instead of silently proceeding). Output WRITES are still
+cwd-relative (`../outputs/...` in exporters and probe scripts) — keep `cd prolog/` for
+anything that writes; full write-path anchoring is a recorded follow-up (ISSUES.md OQ-69).

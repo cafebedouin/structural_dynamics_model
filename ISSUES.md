@@ -3271,6 +3271,22 @@ canonical χ).
 - **T4 (confirmed_liminal) one-case category**: re-examine when a second T4 case appears.
 - **framing_notes invitation calibration**: does it produce conceptual or empirical-leaning
   omegas? Calibration signal for generation.
+- **check_stack baseline cleanup → then wire as pipeline gate** (infra hardening 2026-06-04,
+  KNOWN_STATE same date): `prolog/check_stack.pl` baseline holds 4 undefined-predicate refs —
+  `data_repair:constraint_beneficiary/2` + `data_repair:constraint_victim/2`
+  (data_repair.pl:123/136/163 — wrong-qualifier candidates, OQ-57 class; each needs a
+  per-call-site witness before fixing), `narrative_ontology:requires_active_enforcement/1`
+  (drift_events.pl:175 — verify against the resolved OQ-57 fix), `validation_suite:test_case/4`
+  (test_harness.pl:26 — generated-file coupling). When the baseline is empty, wire
+  `run_check_stack` next to the ISSUES status-grammar gate at run_pipeline entry.
+- **Incremental tabling to replace hand-rolled memo caches**: SWI `:- table ... as incremental`
+  with `as incremental` dynamics auto-invalidates on retract/assert, retiring the manual
+  `cache_registry:clear_all_caches/0` discipline. Output-affecting on the hottest path
+  (classify_at_context) — OQ-02's LCO history says zero-diff witness first.
+- **Output write-path anchoring**: exporters/probe scripts still write cwd-relative
+  `../outputs/...`; anchoring writes the way corpus reads are now anchored
+  (`resolve_corpus_dir/2`) would complete swipl location-independence and retire the
+  remaining `cd prolog/` requirement (gotchas §9).
 
 ---
 

@@ -82,7 +82,9 @@ or confusion, not general architecture. Read the relevant file before modifying
 `config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema. Read
 `swipl_load_path_and_probe_gotchas.md` before diagnosing module-resolution behavior
 (REPL ≠ pipeline for wrong-qualifier calls), writing test-local predicate swaps or
-retract/re-assert probes, or interpreting a pipeline_output.json diff.
+retract/re-assert probes, running an in-session corpus sweep or overlay counterfactual
+(validated signature-sweep recipe; Boltzmann memo caches read stale unless cleared), or
+interpreting a pipeline_output.json diff.
 `build_discipline.md` documents five recurring cross-subsystem defect patterns
 (produced-but-not-consumed; silent fork; bound-probe bypasses clause-order; fabricated default;
 absence satisfies the gate) with diagnostics — consult before adding a step that writes output,
@@ -134,7 +136,14 @@ pre-rebuild `testsets_3000/` archive; live `testsets/` is now 223 (see Critical 
 
 ## Running the System
 
-**All `swipl` calls require `cd prolog/` first.** The corpus glob (`testsets/*.pl`) resolves relative to swipl's working directory. Running swipl from the repo root silently loads 0 testsets. Python scripts enforce this via `cwd=PROLOG_DIR` in every subprocess call.
+**Run `swipl` from `prolog/` (convention), but corpus LOADING no longer depends on it
+(2026-06-04).** `corpus_loader` resolves a relative `corpus_path` against its own source
+directory and **throws `corpus_empty` on a 0-file glob** instead of proceeding silently
+(escape hatch: assert `config:param(allow_empty_corpus, true)` first). The old failure mode —
+running from the repo root silently loads 0 testsets — is gone. **Output writes are still
+cwd-relative** (`../outputs/...` in exporters and probe scripts), so keep `cd prolog/` for
+any command that writes; a wrong cwd there fails loudly or writes outside the repo. Python
+scripts enforce `cwd=PROLOG_DIR` in every subprocess call regardless.
 
 - Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
   - `run_pipeline()` opens with the **ISSUES.md status-grammar gate** (calls
@@ -144,6 +153,8 @@ pre-rebuild `testsets_3000/` archive; live `testsets/` is now 223 (see Critical 
     Grammar is in the ISSUES.md footer.
 - Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
 - Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl` which is a variant harness, not a plunit test)
+- Stack consistency check (OQ-57-class wrong-qualifier detection): `cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"` — library(check) over the full stack. Compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are regressions. Not a pipeline gate while the baseline is non-empty.
+- In-session overlay probes: use `probe_harness:with_retracted/2` / `with_overlay/3` (snapshot-first, verified restore, automatic cache clearing via `cache_registry:clear_all_caches/0`) instead of hand-rolled retract/assert — see `swipl_load_path_and_probe_gotchas.md` §§2–4, 7.
 - Linter: must be imported as library (`from linter import lint_file`), not run directly
 - Config sensitivity: `python3 python/config_sensitivity_sweep.py`
 - Directionality sensitivity: `python3 python/directionality_sensitivity_sweep.py`
@@ -174,15 +185,19 @@ Testsets are loaded on demand, not at stack load time.
   `use_module(product_site_export)` AND call `run_product_export_to/1`. `[stack]`
   alone is not enough; `product_site_export` must be explicitly loaded.
 
-**Corpus path and working directory:** controlled by `config:param(corpus_path, Dir)`
-(default `testsets`). The glob is `Dir/*.pl` and resolves **relative to swipl's cwd**.
-All frozen CLI commands use `cd prolog && swipl ...` so `testsets/` resolves correctly.
-Running swipl from the repo root with the default `corpus_path` will find nothing.
-To load testsets_3000, overlay `corpus_path` before calling `load_all_testsets`.
+**Corpus path resolution (changed 2026-06-04):** controlled by `config:param(corpus_path, Dir)`
+(default `testsets`). A RELATIVE `Dir` is anchored against `corpus_loader.pl`'s own source
+directory (`prolog/`) via `resolve_corpus_dir/2` — **loading is cwd-independent**; absolute
+paths pass through. A glob matching **0 files throws `corpus_empty`** (fail-closed; escape:
+`config:param(allow_empty_corpus, true)`). To load testsets_3000, overlay `corpus_path`
+before calling `load_all_testsets` (relative overlays resolve against `prolog/`, same as the
+old behavior under the cd-prolog convention).
 
-**Confirmation:** After `load_all_testsets` completes, `corpus_loaded/0` is asserted.
-Check with `corpus_loader:corpus_loaded` in a REPL. The count is printed to stderr:
-`[corpus] Loaded N testsets successfully.`
+**Confirmation:** After `load_all_testsets` completes, `corpus_loaded/0` is asserted and
+**`corpus_loader:corpus_constraint/1`** holds one fact per loaded testset (id = file base
+name) — this is the authoritative corpus membership/denominator; enumerate it in probes and
+exporters instead of constraint_metric/classification unions (those pick up engine demo
+constraints). The count is printed to stderr: `[corpus] Loaded N testsets successfully.`
 
 **Run-tagged subdirs (`prolog/testsets/<run_tag>/`) are isolated by the glob, not by dedup.**
 `corpus_loader.pl` uses a non-recursive glob (`testsets/*.pl`), so subdir stories are NOT loaded
@@ -361,9 +376,11 @@ perspective is a generation-template convention copied from the one-shot example
 Counterfactual witnessed 2026-06-04: retracting the template perspectives migrates FNL→FCR
 almost wholesale (bait fungibility — FCR's `appears_as_rope` source 2 is the same gate
 pattern), with zero mass landing in genuine natural_law/CI_rope. Until OQ-70 is ruled,
-signature-prevalence statistics measure authoring convention. Also: `pipeline_output.json`
-per_constraint carries ONE non-corpus entry (`catholic_church_1200`, an engine demo from
-`constraint_instances.pl`) — exclude it, or corpus counts silently run one high vs the manifest.
+signature-prevalence statistics measure authoring convention. Also: in pipeline outputs from
+runs BEFORE 2026-06-04, per_constraint carries ONE non-corpus entry (`catholic_church_1200`,
+an engine demo from `constraint_instances.pl`) — exclude it, or corpus counts run one high vs
+the manifest. Runs from 2026-06-04 on enumerate `corpus_loader:corpus_constraint/1` and match
+the manifest exactly; check `manifest.pipeline_run_at` to know which regime an output is in.
 
 **`json/` files are LLM-generated constraint specifications, not analysis output.**
 Each file in `json/` is produced by step 3 of the orchestrator (Sonnet generates it

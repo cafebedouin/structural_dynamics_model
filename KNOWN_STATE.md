@@ -20,6 +20,56 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Probe/loading infrastructure hardening (gotchas → utilities; two commits)
+
+The existence of `swipl_load_path_and_probe_gotchas.md` traced to five structural decisions;
+four got standard-SWI fixes. Commit A (`1460e873`, behavior-preserving) + Commit B
+(`801390a5`, output-affecting, separate per the output-changing discipline).
+
+**Commit A:**
+- **corpus_loader**: relative `corpus_path` now anchored to `prolog/` via
+  `resolve_corpus_dir/2` (loading is cwd-independent — witnessed: from repo root 1106, was
+  silent 0; from prolog/ unchanged 1106); 0-file glob **throws `corpus_empty`** (escape:
+  `allow_empty_corpus`; witnessed throw with anchored path in the error term); new
+  **`corpus_constraint/1`** membership registry, one fact per loaded file (1106; demo
+  excluded by construction).
+- **cache_registry.pl**: `clear_all_caches/0` over multifile `clear_hook/0`; hooks in
+  boltzmann_compliance, covering_analysis, grothendieck_cohomology, drl_fpn,
+  trajectory_mining, arakelov_height (nb_delete — a sentinel value would read back as a real
+  threshold). maxent_* deliberately excluded (fitted model state, not a memo). Witnessed:
+  6/6 cleared.
+- **probe_harness.pl**: `with_retracted/2` / `with_asserted/2` / `with_overlay/3` —
+  snapshot-first, setup_call_cleanup+once, cache clears before goal and after restore,
+  VERIFIED restore (throws `probe_restore_failed`), fact-only with rule-clause warning,
+  module-qualification required. 10 plunit tests passing
+  (`prolog/tests/test_probe_harness.pl`).
+- **check_stack.pl**: library(check) over the stack. **Baseline (2026-06-04, engine-only):
+  4 undefined-predicate references** — `data_repair:constraint_beneficiary/2` (:123, :163),
+  `data_repair:constraint_victim/2` (:136), `narrative_ontology:requires_active_enforcement/1`
+  (drift_events.pl:175), `validation_suite:test_case/4` (test_harness.pl:26) — plus load
+  warnings (constraint_instances weak-import overrides, one singleton, one not-exported
+  import in arakelov_height). Findings beyond this list = regressions. NOT wired as a
+  pipeline gate while the baseline is non-empty (cleanup tracked in OQ-69).
+
+**Commit B (output-affecting, witnessed by full pipeline run 2026-06-04T14:15:56Z):**
+- `run_json_report` enumerates `corpus_constraint/1` instead of
+  `logical_fingerprint:known_constraint/1` (whose metric/claim/classification union admitted
+  the `catholic_church_1200` demo via its classification clauses). Diff vs prior output:
+  removed exactly that row; **classification-level changed rows 0; full-record changed rows
+  0** (the demo had no metric facts → no corpus-fitted ripple). per_constraint now == manifest
+  `n_constraints` (1106 == 1106).
+- **Manifest single-writer**: swipl export writes `pipeline_output.raw.json`;
+  `run_pipeline.py` is the sole writer of canonical `pipeline_output.json` (raw + manifest).
+  Witnessed: direct re-export rewrote raw only, canonical md5 unchanged (`md5sum -c` OK).
+- Consumers unchanged: enhanced_report/enrich/Tier-1/Tier-2 all read the canonical file
+  post-manifest, exactly as before.
+
+Deferred (recorded as OQ-69 bullets): check_stack baseline cleanup then gate-wiring;
+incremental tabling to retire manual cache clearing (zero-diff witness first, per OQ-02
+precedent); output write-path anchoring (the remaining cwd dependency, gotchas §9).
+
+---
+
 ## 2026-06-04 — OQ-65 detector-bait census COMPLETE: bait=2 (no new), omega-routed=75, 6/10 firings expectation-authored
 
 The per-file census OQ-65 demanded (greps known to undercount) ran end-to-end in one session.

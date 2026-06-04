@@ -349,6 +349,25 @@ python3 python/run_pipeline.py
 ```
 
 This re-classifies the full corpus and updates `outputs/pipeline_output.json`.
+Single-writer convention (2026-06-04): the swipl export writes
+`outputs/pipeline_output.raw.json`; `run_pipeline.py` alone writes the canonical
+manifest-bearing `pipeline_output.json`. A direct swipl re-export cannot clobber it.
+
+### Stack consistency check (wrong-qualifier / undefined-predicate detection)
+
+```bash
+cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"
+```
+
+Compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are
+regressions introduced by your change.
+
+### In-session overlay probes
+
+Use `probe_harness:with_retracted/2` / `with_overlay/3` (snapshot-first, verified restore,
+automatic cache clearing via `cache_registry:clear_all_caches/0`) instead of hand-rolled
+retract/assert. Corpus membership/denominator: enumerate `corpus_loader:corpus_constraint/1`.
+Tests: `cd prolog && swipl -g "[stack], [tests/test_probe_harness], run_tests, halt" -t "halt(1)"`.
 
 ### Run the linter on a testset
 
