@@ -154,31 +154,13 @@ stories.
 ## OQ-05 — §2.3 paper correction: empirical work complete, v6 not yet authored
 
 **Status:** resolved
-**Origin:** alt_power_transform full-corpus run + Arm A/B sweep, May 2026.  
-**Resolution:** v6 authored 2026-05-28. See `docs/observers_not_humans_v6.md`.  
-**Witness files:** `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`
-
-**Evidence resolved:**
-
-- H0 conditionally confirmed: sign-flip is load-bearing when Hub 1 spans the snare
-  gate AND rope-gate bypass behavior is treated as given. Tangled_rope shows T4 gap
-  +0.21 vs snare+rope +0.014 (14.6× concentration).
-- H1 eliminated: Arm B is range-inert (max drop 0.099, non-monotone across span
-  1.70→1.20→0.85 with Hub 1 live throughout).
-- H2 rejected: T3 smoothness gradient non-monotone (0.886→0.782→0.827→0.145;
-  gradient erasure, not smoothness, is the variable).
-- H3 resolved: existing controls (piecewise_no_flip, sigmoid_shifted) ARE confounded
-  as diagnosed; T1 pair is the clean test.
-
-**What was changed:** v6 corrects v5's interpretation of the alternative-functions
-robustness test. The empirical numbers reproduce (Jaccard 0.685–0.828 within the
-full-corpus rerun 0.697–0.833), but sign-flip is load-bearing only in tangled_rope,
-not corpus-wide. The universality-class claim is localized to the constraint family
-where institutional beneficiaries sit below d_zero. §2.3 and §3.3 are resolved as one
-finding (institutional sign-flip mechanism producing both the robustness and the
-[+,+,−,+] chi pattern), not two independent findings. The rope-gate bypass (OQ-01)
-is flagged as a conditional assumption whose resolution would clarify the mechanism's
-theoretical status. Witnesses cited per seat-theorem §3 Correction style.
+**Origin:** alt_power_transform full-corpus run + Arm A/B sweep, May 2026.
+**Resolution:** v6 authored 2026-05-28 (`docs/observers_not_humans_v6.md`). Sign-flip is
+load-bearing only in tangled_rope (T4 gap +0.21 vs +0.014 in snare+rope, 14.6×), not corpus-wide;
+§2.3 and §3.3 unified as one mechanism (institutional sign-flip at d < d_zero); rope-gate bypass
+(OQ-01) flagged as the conditional assumption. Witnesses:
+`outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`.
+*(Body compressed 2026-06-04 per footer rule; full hypothesis ledger in git history.)*
 
 ---
 
@@ -263,17 +245,11 @@ clarity value for any external reader of mismatch output.
 ## OQ-09 — sqrt_flip and quadratic_flip Jaccard slightly above paper §2.3 ceiling
 
 **Status:** resolved
-**Origin:** alt_power_transform full-corpus run (testsets_3000, 3380 constraints), May
-2026.  
-**Resolution:** v6 corrected the claimed range to 0.697–0.833 (2026-05-28).
-
-**What was changed:** V5 §2.3 claimed Jaccard 0.685–0.828. The full-corpus rerun
-(3,380 constraints, testsets_3000) produced 0.697–0.833. Four of six original variants
-fall within the corrected range; sqrt_flip (0.833) and quadratic_flip (0.830) now sit
-at the upper end rather than above the ceiling. The shift reflects corpus-snapshot drift
-(the original range was computed on an earlier snapshot; the full 3,380-constraint run
-was the first test on complete testsets_3000). Within acceptable tolerance. V6
-accordingly uses the full-corpus range (0.697–0.833) as the empirical witness.
+**Origin:** alt_power_transform full-corpus run (testsets_3000, 3380 constraints), May 2026.
+**Resolution:** v6 corrected the claimed Jaccard range to 0.697–0.833 (2026-05-28); sqrt_flip
+(0.833) and quadratic_flip (0.830) sit at the upper end of the corrected range, not above it.
+The shift was corpus-snapshot drift (original range computed on an earlier snapshot).
+*(Body compressed 2026-06-04 per footer rule; details in git history.)*
 
 ---
 
@@ -335,25 +311,11 @@ showing what it cannot say about readings it was not asked to run.
 ## OQ-11 — Two truly dead config params: `logic_engine` and `version`
 
 **Status:** resolved — (2026-06-04, ledger close — already done in substrate). Both params are
-commented out at `config.pl:291-292` (`% param(version, 3.4).` / `% param(logic_engine, 3.3).`);
-grep finds zero live references in `prolog/ python/ agent/` (archives excluded) and zero
-`config_schema.pl` entries. The work happened at some earlier pass without closing this entry.
-**Origin:** AUDIT.md finding W3, 2026-02-28.  
-**File:** `prolog/config.pl`; `prolog/config_schema.pl`
-
-**Specific question:** `logic_engine` and `version` are declared as `param/2` facts in
-`config.pl` but are referenced nowhere in executable Prolog code and have no entry in
-`config_schema.pl`. Are they safe to remove?
-
-**Evidence so far:** Audit confirmed both are unreferenced in executable `.pl` code
-(`audits/2026-02-28_codebase_audit_data/config_params_unused.txt`). They are non-numeric atoms, invisible to the
-±25% sensitivity sweep by construction. 38 other unused params are in `config_schema.pl`
-(documentation-only); these two are not even there. Audit verdict: "Confirmed removable."
-Removal requires coordinating `config.pl` and `config_schema.pl`; no Python scripts
-reference them by name.
-
-**What resolution changes:** Reduces config noise. Establishes a precedent for cleaning
-up future dead params. Low risk, ~5 minutes of work.
+commented out at `config.pl:291-292`; grep finds zero live references in `prolog/ python/ agent/`
+(archives excluded) and zero `config_schema.pl` entries.
+**Origin:** AUDIT.md finding W3, 2026-02-28. Audit evidence:
+`audits/2026-02-28_codebase_audit_data/config_params_unused.txt`.
+*(Body compressed 2026-06-04 per footer rule.)*
 
 ---
 
@@ -361,19 +323,8 @@ up future dead params. Low risk, ~5 minutes of work.
 
 **Status:** resolved — (2026-06-04, ledger close — already done in substrate). `.gitignore:27`
 contains `.env`; `git ls-files` confirms no `.env` is tracked. Closed without a change.
-**Origin:** AUDIT.md finding §6 security review, 2026-02-28.  
-**File:** `.gitignore` (repo root)
-
-**Specific question:** `.gitignore` does not contain a `.env` entry. No `.env` file
-currently exists, but if one is created (e.g., for local API key storage) it would be
-committed silently.
-
-**Evidence so far:** Audit confirmed the omission. All current API keys are sourced from
-`os.environ` or `st.secrets` — no hardcoded credentials exist. The risk is latent, not
-active. Audit recommended adding `.env` to `.gitignore` as a one-minute preventive fix.
-
-**What resolution changes:** Eliminates a credential-leak risk if a `.env` file is ever
-created locally. One-line fix.
+**Origin:** AUDIT.md finding §6 security review, 2026-02-28.
+*(Body compressed 2026-06-04 per footer rule.)*
 
 ---
 
@@ -388,28 +339,8 @@ E1131 unsupported-binary-operation on PEP-604 unions (`dict | None`, valid at ru
 pylint config false positive; note `.pylintrc:1` itself carries an unrecognized-option E0015).
 None are engine bugs; the OQ's specific question (genuine bugs vs dead code in the four audited
 sites) is moot. Pylint-config hygiene, if ever wanted, is new work, not this question.
-**Origin:** AUDIT.md §5 pylint summary, 2026-02-28.  
-**Files:** `python/classification_confidence.py:370`;
-`agent/orchestrator.py:1052`; `agent/perspective_experiment.py:796` (and one other)
-
-**Specific question:** Are the four E-level pylint errors genuine bugs or safe dead code?
-
-**Evidence so far:** Audit identified:
-1. `classification_confidence.py:370` — `all_metrics_by_id` undefined variable. Line 370
-   uses it in `if 'all_metrics_by_id' in dir()`, immediately overwritten at 372. Dead code
-   from a refactor — harmless.
-2. `agent/orchestrator.py:1052` — `topic` possibly used before assignment. Safe in
-   practice: `parser.error()` at line 1043 exits if no topic source, so line 1052 is only
-   reached when `topic` is bound.
-3. `agent/perspective_experiment.py:796` — `constraints` possibly used before assignment.
-   Needs inspection to confirm safety.
-4. One additional possibly-used-before-assignment (file not recorded in audit notes).
-
-Overall pylint score at audit time: 9.07/10.
-
-**What resolution changes:** Confirms or eliminates latent bugs. Items 1 and 2 appear
-safe to close with a comment or minor refactor. Item 3 needs a read before closing.
-None are blocking; all are low priority.
+**Origin:** AUDIT.md §5 pylint summary, 2026-02-28.
+*(Body compressed 2026-06-04 per footer rule; the four audited sites in git history.)*
 
 ---
 
@@ -790,36 +721,28 @@ only when that range was deliberately altered.
 `drl_purity_network.pl:compute_edge_contamination/7` — structural exclusion stated
 (gradient-orthogonality, inert-or-inverting), witness pointer to
 `prolog/tests/test_forecloses_fpn_injection.pl`, and an explicit "absent BY THIS DECISION, not by
-omission" tripwire. Note: a pointer at `drl_purity_network.pl:63` ("see OQ-24 comment at
-compute_edge_contamination") had been written EARLIER without the comment it cited — a dangling
-doc-pointer, the produced-but-not-consumed defect in documentation form; the comment now makes
-the pointer true. Module load verified post-edit.
-**Origin:** FPN convergence-test run, May 2026.  
-**Files:** `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl` (where forecloses is consumed on the committer axis); `prolog/drl_purity_network.pl` (where it is correctly absent)
-
-**Specific question:** The run established that forecloses is gradient-orthogonal to the contamination model — points up the purity gradient (high-purity foreclosing reading → low-purity foreclosed reading), the network flows only down it, so the correct-direction edge is inert (Delta = 0) and any active injection inverts causation. This is a structural property of the relation, not a property of any specific test corpus. The engine currently has no record that this property is the reason forecloses is absent from constraint_neighbors/3 — the absence is enforced by the fact that nothing was ever wired to do otherwise. Should the engine carry a comment or assertion documenting why forecloses is structurally excluded, so a future contributor doesn't add a routing on the assumption that it's just an unimplemented feature?
-
-**Evidence so far:** The architecture note (post-rewrite) carries the gradient-orthogonality finding. The engine itself does not. compute_edge_contamination/7 has no comment explaining why no cs_reading_relation(_, _, forecloses) ever reaches it. A future contributor reading the code would see: edge types exist, only one (the bridge via influences → detect_necessity_inheritance) is wired, no comment explains why the other two are absent. The asymmetry between document-level explanation and code-level silence is the same documentation/enforcement gap as OQ-23, but inverted — there the question is whether to enforce; here the question is whether to explain.
-
-**What resolution changes:** One comment at compute_edge_contamination/7 (or at the top of drl_purity_network.pl) citing the FPN injection test and stating that forecloses is structurally excluded by gradient-orthogonality, with a pointer to test_forecloses_fpn_injection.pl for the witness, would prevent a future contributor from "fixing" an apparent gap. Without it, the architectural decision lives only in the architecture note, and the next person editing the network module would not encounter it. Low cost, prevents an unmarked-drift re-litigation.
+omission" tripwire. Note: a pointer at `drl_purity_network.pl:63` citing that comment had been
+written EARLIER without the comment it cited — a dangling doc-pointer (produced-but-not-consumed
+in documentation form); the comment now makes the pointer true. Module load verified post-edit.
+**Origin:** FPN convergence-test run, May 2026.
+*(Body compressed 2026-06-04 per footer rule.)*
 
 ---
 
 ## OQ-25 — testset directory chimera: resolved-inert but resolution mechanism is latent
 
 **Status:** resolved — (2026-05-28)
-**Origin:** Corpus cleanup, May 2026 (in response to ε-variability investigation).  
-**Files:** `prolog/testsets/` (working tree); `testsets_archive_20260525/` (archive)
-
-**Resolution:** Both options implemented.
-- **(a) Documentation:** `docs/cs_load_discipline.md` — states the invariant, grouping-key decision (ConstraintAtom, not KernelAtom; OQ-26 evidence), regeneration protocol, pointer to the guard.
-- **(b) Enforcement:** `prolog/config_validation.pl` — new `config_violation/1` clause wired into `validate_config_postcorpus/0` (called at end of `corpus_loader:load_all_testsets/0`). Fires when any ConstraintAtom carrying `cs_story_uid/2` has two or more distinct `constraint_metric(C, extractiveness, E)` values in the DB. Halts with exit 1 before any CS-layer predicate can run. Verified: clean load passes; injected conflict (`synthetic_conflict_test`, ε={0.42, 0.58}) correctly rejected with `CS ERROR (OQ-25)`. Divergence count post-guard: 79 reading-pair divergences across 34 kernels (unchanged from §5.11).
-
-**Grouping-key decision:** ConstraintAtom (reading name), NOT KernelAtom. Rationale: OQ-26 confirmed ε is reading-relative; grouping by KernelAtom would false-positive on legitimate multi-reading kernels. The chimera failure mode (same ConstraintAtom from two runs, conflicting ε) is caught by ConstraintAtom grouping.
-
-**Specific question:** The testset directory passed through three exploratory generation runs (during schema stabilization) that reused constraint IDs, leaving the directory a chimera of multiple runs with substantially different authored ε per ID. The cleanup resolved it: collisions triaged (stale duplicates dropped, genuinely-distinct readings archived rather than silently merged), directory reduced to the single committer-axis run as canonical. The §5.11 trifurcation numbers were verified byte-identical before and after, confirming the chimera was computationally inert because every CS-layer predicate gates on cs_kernel_id, which only CS-run stories carry. The mitigation works by construction — but the construction is implicit. What documents the load-discipline that any future multi-run testset directory must follow to remain inert?
-
-**Evidence so far:** Cleanup performed; archive retained at testsets_archive_20260525/. All §5.11 numbers (axiom_foreclosure 25, husk 57, stable_pattern 19, repudiation 2; cs_axiom_foreclosed 30; cs_drift_unacknowledged 84; conflicts 39/15/35/1; kernel divergence 79/34) identical pre/post. The hermetic sealing — non-CS stories invisible to CS predicates — is a property of the current state, not a guarantee. If any future regeneration adds cs_kernel_id to a non-CS-run story (or merges runs in a way that produces inconsistent ε for a single cs_kernel_id), the chimera becomes live and the divergence count (the one ε-dependent number in §5.11, via classify_at_time) silently contaminates.
+**Origin:** Corpus cleanup, May 2026 (ε-variability investigation).
+**Resolution:** both options implemented. (a) Documentation: `docs/cs_load_discipline.md`
+(invariant, grouping-key decision, regeneration protocol). (b) Enforcement:
+`prolog/config_validation.pl` `config_violation/1` wired into `validate_config_postcorpus/0`
+(end of `load_all_testsets`) — halts (exit 1) when any ConstraintAtom carries two distinct
+`constraint_metric(C, extractiveness, E)` values. Grouping key = **ConstraintAtom, NOT
+KernelAtom** (OQ-26: ε is reading-relative; KernelAtom would false-positive on legitimate
+multi-reading kernels). Verified: clean load passes; injected conflict rejected with
+`CS ERROR (OQ-25)`; §5.11 divergence count unchanged (79 pairs / 34 kernels). See also
+`docs/technical/config_validation_wiring.md`.
+*(Body compressed 2026-06-04 per footer rule; chimera history in git.)*
 
 ---
 
@@ -828,20 +751,15 @@ the pointer true. Module load verified post-edit.
 **Ω-type:** Ω_C (design choice — what ε-invariance the framework claims; RESOLVED via Axiom 2 amendment).
 
 **Status:** resolved
-**Origin:** ε-variability investigation, May 2026; cleanup of testset chimera surfaced the underlying mechanism.  
-**Resolution:** Option (a) implemented 2026-05-28. See `docs/deferential_realism_paper_v6.13.1.md` Axiom 2 (lines 66–91).
-
-**What was changed:** Axiom 2 amended to clarify that ε-invariance holds **across observer positions** but **not across generation runs**. New **Generation-dependence note** explicitly scopes all ε-dependent statistics (H¹ distributions, classification proportions, divergence counts) to "one coherent generation" rather than treating them as population estimates. This makes v6.13.1 consistent with v7 §6's caveat and prevents the published record from asserting an invariance it doesn't have.
-
-**Evidence resolved:**
-- Birth ε=0.58 ("tangled hybrid") vs ε=0.12 ("coordination mechanism") under different SCOPE decompositions
-- Mourning: 0.18 vs 0.58; Domain_partition: 0.08 vs 0.35
-- These are genuinely different readings (confirmed by narrative inspection), not generation noise
-- ε is a property of a reading, not of a topic; topic has no fixed ε
-- The prohibition anchor for Theorem 7 validated as ε-stable (0.68 in both states) only *because* ε is generation-dependent
-- Every corpus statistic the framework cites downstream is now scoped durably
-
-**Option (b) deferred:** Constraining generation for run-reproducibility (same seed, same SCOPE, same prompt → reproducible ε) is a separate architectural item, deferred as future work. The present resolution addresses the published record: option (a) is honest about what the framework has; option (b) would buy an invariance not currently provided.
+**Origin:** ε-variability investigation, May 2026; testset-chimera cleanup surfaced the mechanism.
+**Resolution:** option (a) implemented 2026-05-28 — Axiom 2 amended
+(`docs/deferential_realism_paper_v6.13.1.md` lines 66–91): ε-invariance holds **across observer
+positions** but **not across generation runs**; all ε-dependent statistics (H¹, classification
+proportions, divergence counts) are scoped to "one coherent generation." Key evidence: same topic
+yields genuinely different readings with different ε under different SCOPE decompositions (birth
+0.58 vs 0.12; mourning 0.18 vs 0.58) — ε is a property of a reading, not a topic. **Option (b)
+(constraining generation for run-reproducible ε) deferred** as separate architectural work.
+*(Body compressed 2026-06-04 per footer rule.)*
 
 ---
 
@@ -928,53 +846,17 @@ The current `outputs/product_site_orbits.json` was stamped in place without rege
 ## OQ-31 — enhanced_report.py: five sections stubbed, not deleted — record why
 
 **Status:** resolved — option (a) taken, deletion confirmed by git diff
-**Resolved:** 2026-05-29 (same session as origin; see commit 7af6b945)  
+**Resolved:** 2026-05-29 (commit 7af6b945)
 **Origin:** Phase 2 restructure, 2026-05-29.
-
-**What happened:** Five section-building functions were replaced with `return ""` stubs
-rather than deleted, because the plan required getting the line count below 2836 without
-time for a full deletion pass. The stubs pass `wc -l < 2836` but leave dead code that a
-future instance could un-stub without knowing why each section was cut.
-
-**Resolution:** All five definitions were deleted in commit 7af6b945 (not left as stubs).
-Confirmed by: `git show 7af6b945 -- python/enhanced_report.py | grep '^[-+].*def build_'`
-shows five `-def` removals. Zero `return ""` bodies remain among the five. Current file:
-2670 lines. Render verified: `python3 python/enhanced_report.py autonomy_reading`
-completes with COMPLETED SUCCESSFULLY and E5 stability band section rendered.
-The "how to apply" / "why each was cut" rationale below remains valid for anyone
-considering re-adding these sections.
-
-**Stubbed functions and why each was cut:**
-- `build_level3_distribution`: corpus statistics display (type distributions, constraint
-  percentiles). Cut because: value-stack that gives the model a false sense of corpus
-  positioning without actionable signal. H¹ and orbit data already in Level 1; distribution
-  statistics add overhead without feeding the iteration-prompt contract.
-- `build_structural_section`: pattern mining output (structural twins, covering analysis,
-  Erdős-Selfridge table). Cut because: reads from `pattern_mining.md` and
-  `covering_analysis.md` which are rarely current and never consumed by the iteration loop.
-  Pattern data is available from `corpus_data.json` directly if needed.
-- `build_wasserstein_section`: Wasserstein transport between perspective types. Cut because:
-  highly technical metric that feeds neither the iteration prompt nor the essay synthesis
-  significantly; the inter-lens divergence it measures is better captured by the verdict
-  banner and hard_disagreement fields already in the sidecar.
-- `build_cohomology_section`: H¹ contextuality / monotonicity display. Cut because: H¹ is
-  already rendered in `build_level1_identity` and the sidecar; the full sectional cohomology
-  details are redundant for the model reader.
-- `build_game_theory_section`: Nash profiles and institutional observer vulnerability. Cut
-  because: the game-theoretic analysis depends on pre-computed sweep data that may be stale
-  (OQ-29 population), and the stability band (Section E5) now provides a more rigorous
-  perturbation-based stability measurement.
-
-**What resolution changes:** Either (a) delete the function definitions entirely and remove
-the function names from this OQ entry (cleaner), or (b) promote them to explicit "archived"
-status with a comment block stating why they were cut and the evidence that informed the
-decision, so the record is in the code not just in ISSUES.md. Option (b) is safer: the
-code documents its own provenance.
-
-**How to apply:** Before un-stubbing any of the above, read this OQ entry. The sections were
-cut because they feed neither the iteration-prompt contract (orchestrator.py:785–807) nor
-the model-flinch layer (c-orchestrator.py:694). Un-stubbing requires a reason that these
-criteria have changed, not just that the section "might be useful."
+**Resolution:** all five section builders DELETED (not stubbed) in 7af6b945 — five `-def`
+removals confirmed; render verified end-to-end. Cut because none fed the iteration-prompt
+contract (orchestrator.py:785–807) or the model-flinch layer: `build_level3_distribution`
+(corpus stats, no actionable signal), `build_structural_section` (stale pattern_mining/covering
+inputs), `build_wasserstein_section` (verdict banner + hard_disagreement cover it),
+`build_cohomology_section` (H¹ already in Level 1 + sidecar), `build_game_theory_section`
+(stale sweep data — OQ-29; E5 stability band supersedes). **Re-adding any requires showing those
+criteria changed, not "might be useful."**
+*(Body compressed 2026-06-04 per footer rule; full per-section rationale in git history.)*
 
 ---
 
@@ -1245,21 +1127,14 @@ population, but only changes the final type where the metric type differs from `
 ## OQ-32 — bifurcation_sweep.py: path resolution broken after 2026-05-28 reorg
 
 **Status:** resolved — 2026-05-29 (6 scripts fixed)
-**Origin:** Task 5 probe run, 2026-05-29.  
-**Files:** `python/sweeps/bifurcation_sweep.py` and 5 others (see below)
-
-**Fix applied 2026-05-29:** Changed `Path(__file__).resolve().parent.parent` to
-`Path(__file__).resolve().parents[2]` in all 6 affected sweep scripts:
-`bifurcation_sweep.py` (line 380), `cognitive_displacement_sweep.py` (line 30),
-`persistence_sweep.py` (lines 32, 720), `product_site_delta_sweep.py` (line 33),
-`representation_robustness_sweep.py` (line 26), `structural_config_sensitivity.py` (line 42).
-Output path in `bifurcation_sweep.py` left as `python/bifurcation_results.json` (existing file
-location). The 6 stale result files (python/*.json) are still HELD pending re-run confirmation.
-
-**Remaining:** A current-corpus bifurcation witness for no-kernel readings is still UNWITNESSED
-on the live 223-testset corpus. The old witness (14 flips, `snare_chi_floor=0.655`, testsets_3000)
-is a different corpus. OQ-32 scripts can now be run against the live corpus; whether to re-run
-is a backlog decision, not a path-bug blocker.
+**Origin:** Task 5 probe run, 2026-05-29.
+**Resolution:** `parent.parent` → `parents[2]` in 6 sweep scripts (bifurcation,
+cognitive_displacement, persistence ×2 sites, product_site_delta, representation_robustness,
+structural_config_sensitivity). **Remaining (backlog, not a path bug):** a current-corpus
+bifurcation witness for no-kernel readings is UNWITNESSED on the live corpus — the old witness
+(14 flips, `snare_chi_floor=0.655`) was testsets_3000; the 6 stale `python/*.json` result files
+are HELD pending re-run.
+*(Body compressed 2026-06-04 per footer rule.)*
 
 ---
 
@@ -1677,13 +1552,11 @@ satisfy-on-absence pattern (`get_metric_average:169`).
 ## OQ-42 — Documentation correction: `affects_constraint` is NOT empty in testsets_3000
 
 **Status:** resolved — (2026-06-04, ledger close — correction already in substrate). The correction
-lives at `KNOWN_STATE.md:1144` ("**CORRECTION (D8/OQ-42): `affects_constraint` is NOT empty** —
-it is a populated network edge…"), and the original wrong sentence ("empty across all of
-testsets_3000") no longer appears in KNOWN_STATE.md or CLAUDE.md (grep witnessed). Original
-finding for the record: the census grep found **9305 emitted facts** in the archive (520 live);
-the 2026-05-31 note had conflated `affects_constraint/2` with the genuinely-empty `intent_*`
-tables (OQ-36). No corpus-coverage divergence exists.
-
+lives in KNOWN_STATE.md (2026-05-31 "Empty-table pattern scoped" entry: "`affects_constraint` is
+NOT empty — a populated network edge"), and the original wrong sentence ("empty across all of
+testsets_3000") no longer appears in KNOWN_STATE.md or CLAUDE.md (grep witnessed). For the record:
+the census grep found **9305 emitted facts** in the archive (520 live); the 2026-05-31 note had
+conflated `affects_constraint/2` with the genuinely-empty `intent_*` tables (OQ-36).
 ## OQ-43 — Satisfy-on-absence gate class: the NL beneficiary gate is the fourth instance
 
 **Ω-type:** Ω_C (design choice — one fail-closed-vs-vacuous-pass policy across the class; generalized by OQ-44).
@@ -2044,187 +1917,38 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 
 ## OQ-51 — Discrete (H1) vs continuous (W1) obstruction disagree on 58 constraints: what does the off-diagonal mean?
 
-**Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures that the framework
+**Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures the framework
 calls complements).
 
-**Status:** resolved — (both off-diagonal cells probed and explained, 2026-06-02) — **22 cell
-(H1>0 ∧ W1≈0) = `unknown`-driven**; **36 cell (H1=0 ∧ W1>0) = chain-conditional MaxEnt movement**.
-Two downstream caveats surfaced that gate any use of W1 (see "Result — the 36"): **W1 is
-chain-conditional only** (blind to scaffold/piton/naturalized mass) and **strongly corpus-dependent**
-(licensing 1.30→0.01 between n=563 and n=771). **Related:** OQ-37 (honest `unknown`), OQ-26 (MaxEnt/ε
-reading-relative across runs — the corpus-dependence here is an instance), OQ-52 (false-mountain cross
-— must recompute W1 on its own corpus snapshot and also join `wasserstein_incomparable_mass`).
-**Origin:** W1 × sheaf_status join, 2026-06-02 (n=563, commit b5ccee0). Tool:
-`python/w1_sheaf_join.py`; output `outputs/w1_sheaf_join.{json,md}`.
-**Files:** `prolog/grothendieck_cohomology.pl:149` (`cohomological_obstruction/3`, H1) and `:128`
-(`orbit_vector/2`) and `count_disagreeing_pairs/2`; `prolog/measurement_layer.pl:264`
-(`wasserstein_total_fracture/2`, W1); `prolog/json_report.pl:389` (calls W1 the "continuous complement
-to H1").
+**Status:** resolved — (both off-diagonal cells probed and explained, 2026-06-02). 2×2 at n=563:
+430 / **36** (H1=0∧W1>0) / **22** (H1>0∧W1≈0) / 76. **The 22 = `unknown`-driven** — MaxEnt
+distributions byte-identical across all 4 seats while `dr_type` returns `unknown` at ≥1 seat;
+`count_disagreeing_pairs` counts the abstention as a disagreeing type (absence-as-presence), so
+these manifest classifications have zero distributional support. **The 36 = chain-conditional
+MaxEnt movement under a constant type label** — real for ~6 constraints, threshold-dust (W1<0.06)
+for ~30. Root cause: **two classifiers, not one** (H1 reads `dr_type`, W1 reads MaxEnt); the
+"continuous complement" framing (`json_report.pl:389`) is inexact. Evidence:
+`outputs/w1_sheaf_join.{json,md}` (n=563, commit b5ccee0); probe narratives in git history.
 
-**Specific question:** H1 (count of disagreeing context-pairs on the 4-point site) and W1 (transport
-cost between MaxEnt distributions across the power axis) are framed as discrete/continuous readings of
-the *same* gluing failure — so H1=0 should track W1≈0 and H1>0 should track W1>0. The join's 2×2
-concordance shows **58 of 563 off-diagonal**:
+**RULED 2026-06-02 (design decision, human) — decided, NOT yet built (output-changing task):**
+`unknown` is N/A, not a disagreeing type. `count_disagreeing_pairs` counts only real-type pairs;
+**<2 real seats ⇒ H1=N/A (never 0)** — else an all-unknown constraint reads `genuine_sheaf`
+(Pattern 5). `sheaf_status/2` gains a 4th value (`undetermined`/`insufficient_data`); H1 emits
+`null`, not `0`; `contextuality_fraction` = H1/comparable-pairs. Projected impact (n=771): 741
+unaffected, 26 manifest→genuine/fragile, 5 →N/A. ~30 consumers + paper figures move together
+under output-changing discipline, positive control = all-unknown constraint reaches
+`undetermined`. **Second absence route (2026-06-04):** the fragile clause reads
+`arakelov_height/2`, which fails on unauthored ε ⇒ falls through to `genuine_sheaf` by absence —
+the 4th-value build must also fail-N/A on uncomputable height, not only on RealSeats < 2.
+(`diagnostic.arakelov_threshold` now emitted for run-level provenance.)
 
-| | W1≈0 | W1>0 |
-|---|---|---|
-| **H1=0** | 430 | **36** |
-| **H1>0** | **22** | 76 |
-
-What do the two off-diagonal cells mean, and is the "complement" framing (`json_report.pl:389`) exact
-or only approximate?
-
-- **36 with H1=0 ∧ W1>0** (sections glue, distributions still far apart). The top ones —
-  `monopoly_rulebook__tournament_orthodoxy_reading` (W1=1.79), `lausanne_minority_protections__expansive_reading`
-  (1.68), `licensing_statute_mandate__public_safety_coordination` (1.30) — read **uniform
-  `tangled_rope` across all 4 seats** (so H1=0 by type-agreement) yet carry the corpus's *highest* W1
-  outside the manifest set. Hypothesis: H1 is computed from the discrete *type* per context
-  (`orbit_vector` → `type_at_context`), which is invariant under intra-type distributional drift,
-  while W1 measures the MaxEnt mass shift that the type label discards. If so, W1>0 ∧ H1=0 is the
-  *expected* signature of "same type, drifting distribution," not a contradiction — and these 36 are
-  the constraints where the type label hides the most movement.
-- **22 with H1>0 ∧ W1≈0** (types disagree across seats, but transport mass does not move). *Original
-  hypothesis — adjacent-type threshold-crossing — **REFUTED** 2026-06-02; see "Result: the 22" below.*
-
-### Result — the 22 (H1>0 ∧ W1≈0), probed 2026-06-02
-
-Direct probe on the maxent-first path (temp script, removed after): for each of the 22, the raw H1,
-the per-seat type vector, the disagreeing position-pairs (count cross-checked `== H1` — **OK for all
-22**), and the four-seat MaxEnt distributions. *Probe caveat:* it ran against the live corpus, which
-had grown to n=771 (the join was n=563); per-constraint MaxEnt distributions and H1 are
-corpus-independent and the H1 values matched the join, so the finding holds.
-
-1. **`h1_band` is the raw disagreeing-pair count, not banded.** `cohomological_obstruction/3` returns
-   `count_disagreeing_pairs(TypeVector, H1)` directly (0..6 = C(4,2)); `json_report.pl` emits it
-   unbanded. There is no pre-band value — "raw H1" *is* `h1_band`.
-
-2. **Every disagreement involves `unknown`, over MaxEnt distributions identical across all 4 seats.**
-   In 21 of 22 the four seat distributions are byte-identical (`tangled_rope=0.950`, every other type
-   `0.010`) while the type vector is e.g. `[unknown, tangled_rope, tangled_rope, tangled_rope]` — the
-   disagreeing pairs are *exactly* the `unknown`↔`tangled_rope` crossings. The lone partial exception,
-   `ietf_openness_commitment__commons_stewardship_reading`, is `unknown`↔`rope` with near-identical
-   rope-dominant distributions (seat3 rope=0.738 vs 0.999 elsewhere — minor, still W1≈0).
-
-**Interpretation (refutes the original hypothesis).** These are *not* adjacent-type threshold
-disagreements. The MaxEnt distribution is the **same at every seat** (so W1=0 is correct — no mass
-moves), while `dr_type` returns **`unknown`** at one or more seats (the honest-unknown surfaced by
-OQ-37). `orbit_vector` → `count_disagreeing_pairs` treats `unknown` as **a type that disagrees with
-`tangled_rope`**, inflating H1 and producing `manifest_presheaf`. So these 22 manifest classifications
-are **driven solely by `unknown`-as-disagreement** — a classifier *abstention* counted as a
-perspectival *disagreement*, with zero distributional support. Drop the `unknown` seat and the
-remaining seats agree (all `tangled_rope` / all `rope`) → H1 would be 0 → `genuine`/`fragile`, **not
-manifest**. This is the absence-presenting-as-presence pattern (build_discipline.md): `unknown` (an
-*absence* of classification) entering the H1 type vector as a *present* disagreeing type.
-
-**Root cause for OQ-51 as a whole — two classifiers, not one.** H1 is computed from `dr_type` (which
-emits `unknown`); W1 is computed from the MaxEnt distribution (which never goes `unknown` — it stays a
-6-type simplex). The "continuous complement to H1" framing (`json_report.pl:389`) assumes one
-underlying classification; there are two. The 22 are the `dr_type`-emits-`unknown`-where-MaxEnt-is-
-confident corner of that gap.
-
-**Evidence so far:** all 58 ids with per-id W1/H1/sheaf_status are in `outputs/w1_sheaf_join.md`
-("Off-diagonal rows"); the 22-cell probe output is the witness for the above. On-diagonal bulk is
-506/564, so the measures *largely* coincide; the 58 are the residual the complement-framing does not
-cover.
-
-### Result — the 36 (H1=0 ∧ W1>0), probed 2026-06-02
-
-Same one-query treatment (temp script, removed; maxent-first path; n=771 — corpus had grown from the
-n=563 join). **All 36 are uniform `tangled_rope` across all 4 seats, with zero `unknown`** (0
-"not-uniform" warnings) — so this corner carries **no second `unknown` artifact**; it is the clean
-type-agreement corner. But three facts qualify it heavily:
-
-1. **Genuine fine-structure exists, but only in a minority.** The chain-conditional MaxEnt distribution
-   genuinely moves across seats for ~6 constraints (n=771: monopoly 1.46, notability 0.42,
-   lausanne_guarantor 0.34, copyright 0.18, creed 0.11, lausanne_expansive 0.10) — e.g. monopoly's
-   on-chain mountain/rope split shifts seat-to-seat under a constant `tangled_rope` label. The other
-   ~30 are a **threshold-dust tail** (W1 < 0.06, many ~1e-4 to 0): the `1e-9` join cutoff inflates the
-   cell. So "36" is really "~6 real + ~30 dust."
-
-2. **W1 is chain-conditional, not total-variation.** `wasserstein_l1` builds a CDF over
-   `extraction_chain([mountain,rope,tangled_rope,snare])` after `renormalize/2` divides by the on-chain
-   mass; off-chain types (scaffold/piton/naturalized) are **excluded** and tracked as
-   `wasserstein_incomparable_mass`. Consequence: **W1≈0 does not mean "distributions identical."**
-   `rfc9293_tcp_specification__strict_invariance_reading` swings rope 0.70→0.015 / scaffold 0.30→0.985
-   at seat3 (institutional), yet W1=0.000 — its on-chain mass is rope-only at every seat, so the
-   chain-conditional renormalizes to rope=1.0 everywhere and the entire scaffold swing is invisible to
-   W1. The join did **not** carry `incomparable_mass`, so this off-chain fracture is a blind spot of the
-   whole 2×2.
-
-3. **`dr_type` ≠ chain-conditional argmax, and W1 is corpus-dependent.** For most of the 36 the
-   on-chain MaxEnt mass is dominated by **rope**, not the `dr_type` label `tangled_rope` (monopoly:
-   tangled_rope=0.000, rope≈0.5; licensing: rope=0.984, tangled_rope=0.013) — so the dual-classifier
-   split is on the *label*, deeper than the 22 showed, and W1's movement lives in a different type than
-   the label. And W1 magnitude is **strongly corpus-relative**: recomputed at n=771, licensing fell
-   1.301→0.012, lausanne_expansive 1.684→0.103, fifth_republic 0.743→0.002, magna_carta 0.678→0.003,
-   tenure 0.452→0.002 (monopoly/notability/lausanne_guarantor partly survive). The n=563 W1 ranking —
-   and therefore the off-diagonal *membership* — does not survive corpus growth. This is an instance of
-   OQ-26 (MaxEnt is reading/run-relative), now shown to swing W1 by ~100×.
-
-**Verdict on the 36 (answer to "genuine fine-structure or second artifact?"):** neither a clean signal
-nor an artifact — a *real but partial and unstable* measure. The fine structure is real for ~6
-constraints (chain-conditional movement under type-agreement), there is no `unknown` artifact, but W1
-ignores off-chain mass and its magnitude is corpus-ephemeral. **Gate for the false-mountain pass
-(OQ-52): do not rank/select on inherited W1.** Recompute W1 on the exact analysis corpus snapshot,
-**join `wasserstein_incomparable_mass`** to recover the off-chain fracture W1 cannot see, and apply a
-real W1 threshold (≥~0.05) rather than `1e-9`.
-
-**What resolution changes:**
-- **Engine question — RULED 2026-06-02 (design decision, human): `unknown` is N/A, not a disagreeing
-  type.** "The data needed to run this diagnostic isn't available, where it isn't." So
-  `count_disagreeing_pairs` must count only pairs where *both* seats carry a real (non-`unknown`) type,
-  and a pair touching `unknown` is N/A — neither agreement nor disagreement. **Critical guard
-  (Pattern 5):** a constraint with **<2 real-type seats** must return **H1=N/A, not H1=0** — excluding
-  unknown-pairs naively makes an all-unknown constraint read as "glues perfectly" (genuine_sheaf), which
-  is absence-satisfying-the-gate. Fail-N/A on absence, not fail-0.
-
-  **Design (for the implementer):** `cohomological_obstruction/3` and `count_disagreeing_pairs` →
-  compute H0/H1 over the real-type seats only; if `RealSeats < 2` ⇒ H0=H1=`na` (insufficient data);
-  `sheaf_status/2` gains a 4th value (e.g. `undetermined_sheaf`/`insufficient_data`) for the N/A case —
-  **never** `genuine_sheaf`; `contextuality_fraction` = H1 / (count of comparable pairs), and `null`
-  when no comparable pairs (sub-decision: denominator = comparable-pairs vs fixed 6 — pick
-  comparable-pairs to match "N/A where data is absent"). H1 emits `null`/`na` in JSON, not `0`, for the
-  N/A case.
-
-  **Projected impact (from the corpus-stable vectors, n=771): 741/772 unaffected; 26 drop H1>0→0**
-  (≥2 real seats that agree — the 22-cell set, now 26 — moving `manifest_presheaf`→`genuine`/`fragile`,
-  a real partial global section, correct); **5 become H1=N/A** (<2 real seats; 1 all-unknown:
-  `catholic_church_1200`); **0 retain H1>0-reduced**. The 16 false-mountain rows (OQ-52) are untouched
-  (no unknown). So the 98-manifest set shrinks by ~26 and 5 leave the genuine/fragile space into a new
-  undetermined state.
-
-  **Status of the ruling: decided, not yet built — scoped output-changing task (declare-don't-build).**
-  ~30 consumers of `cohomological_obstruction`/`h1_band`/`contextuality_fraction`/`sheaf_status` (Prolog
-  + Python) and paper figures (v6.11–6.13 cite H1/contextuality) must move together; land under
-  output-changing-commit discipline with positive controls (an all-unknown constraint must reach
-  `undetermined`, not `genuine_sheaf`), then re-run the pipeline and reconcile the paper. Tied to OQ-37
-  (this is *how H1 consumes* the honest `unknown`; do **not** re-suppress `unknown` in `dr_type`). One
-  remaining sub-decision before building: the exact name/encoding of the N/A `sheaf_status` value and
-  the JSON representation of N/A H1.
-
-  **Second absence route (evidence, 2026-06-04):** `sheaf_status/2`'s fragile clause reads
-  `arakelov_height/2`, which fails when `base_extractiveness` is unauthored — so a constraint with
-  H1=0 and *uncomputable height* falls through to `genuine_sheaf` by absence (Pattern 5 via the
-  height leg, independent of the seat-count leg above). Today coextensive with the all-unknown case
-  (n=1: `catholic_church_1200`, h1_band=0, arakelov_height=null in the 2026-06-04 run), but a
-  constraint with ≥2 real agreeing seats and missing ε would pass the `RealSeats < 2` guard and
-  still slip through. **The 4th-value build must also fail-N/A on uncomputable height for the
-  genuine/fragile sub-split, not only on RealSeats < 2.** Run-level provenance for the split is now
-  emitted: `diagnostic.arakelov_threshold` in pipeline_output.json (json_report.pl, 2026-06-04) and
-  cited per-report by enhanced_report.py; `site_mode` was already in the `config` dump.
-- **36 cell (resolved):** confirmed type-invariant MaxEnt drift for ~6 constraints, so W1 and H1 are
-  **non-redundant** (W1 sees intra-type drift H1 cannot) — but the practical value is limited by W1's
-  chain-conditional scope and corpus-dependence (above). The off-chain analogue (mass moving into
-  scaffold/piton/naturalized) is invisible to W1 and lives in `wasserstein_incomparable_mass`; that
-  channel is the unprobed complement now (a third corner the 2×2 never showed because the join omitted
-  the field).
-- **W1 stability (new, blocking for any W1-based result):** W1 magnitude is corpus-relative (OQ-26) and
-  swings ~100× with corpus growth. Any analysis or paper claim using W1 must pin the corpus snapshot
-  and recompute; the `outputs/w1_sheaf_join.{json,md}` ranking is valid only for n=563/commit b5ccee0.
-- **Framing:** the paper should state W1 and H1 as readings of **two different classifiers** (MaxEnt
-  vs `dr_type`), reconciled, not as discrete/continuous views of one — and note W1 measures the
-  *chain-conditional* distribution only.
-
+**Standing gates:** W1 is chain-conditional only (off-chain mass invisible — join
+`wasserstein_incomparable_mass` to see it) and corpus-relative (~100× swings between n=563 and
+n=771, an OQ-26 instance) — **never rank/select on inherited W1**; recompute on the analysis
+snapshot with a real threshold (≥~0.05), and state W1/H1 as readings of two different
+classifiers. Related: OQ-37 (do not re-suppress `unknown`), OQ-52 (false-mountain cross gated by
+the W1 rules above).
+*(Investigation narratives compressed 2026-06-04 per footer rule; full probes in git history.)*
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
 **Ω-type:** Ω_C (design choice — what the false-mountain / false-summit read is *for*, and whether the
@@ -2413,69 +2137,21 @@ should run before the taxonomy is declared, and the taxonomy is the user's to ru
 
 **Status:** resolved — 2026-06-04 — wrong-module qualifier fixed at `drift_events.pl:230`
 (`narrative_ontology:` → `domain_priors:`). Witnesses: before = direct call throws
-`existence_error` (pasted, both working tree and HEAD worktree); after = kodashim fires
-`evidence(extraction,0.08,theater,0.85)` (the exact values the original stack trace carried);
-corpus-wide emitter set derived pre-edit then confirmed = exactly
-{kodashim_obligation__memorial_archival, statutory_debt_ceiling__constitutional_nullity_reading};
-`run_dynamic_suite` now completes end-to-end (0 [FAIL], Errors: 0, one pre-existing unrelated
-warning); pipeline `run_json_report` re-run diff vs pre-fix = **0 per_constraint rows differ**.
+`existence_error` (both working tree and HEAD worktree); after = kodashim fires
+`evidence(extraction,0.08,theater,0.85)`; corpus-wide emitter set derived pre-edit then
+confirmed = exactly {kodashim_obligation__memorial_archival,
+statutory_debt_ceiling__constitutional_nullity_reading}; `run_dynamic_suite` completes
+(0 [FAIL] / Errors: 0); pipeline re-run diff = 0 per_constraint rows.
 
-**Resolution finding — the bug had TWO behaviors, one per load path (worth keeping):** the
-suite/REPL path (`[stack], [validation_suite]`) had no definition for
-`narrative_ontology:requires_active_enforcement/1` → existence_error → whole drift scan aborted
-(this OQ's symptom). The PIPELINE path never threw and was **correct by accident**:
-`json_report.pl` has no `:- module` header, so its `use_module(drl_core)` imports drl_core's
-exports into `user`; SWI modules inherit from `user`, so the wrong-qualified call silently
-resolved to drl_core's bridge (`requires_active_enforcement(C) :-
-domain_priors:requires_active_enforcement(C)`) — which is why pre-fix pipeline JSON already
-carried correct `internalized_piton` events (witnessed: HEAD worktree pipeline-goal run emits
-them while the same worktree's suite-path call throws). General tripwire: **a module-qualified
-call to an undefined predicate can throw on one load path and silently resolve through
-user-inheritance on another whenever any non-module file imports the predicate's home module —
-REPL behavior is not pipeline behavior for wrong-qualifier bugs.** The `\+` reads
-absence-as-no-enforcement, matching generation convention (fact emitted when true); the
-fail-open-vs-authored question for this field generally is Pattern-5 adjacent but unchanged
-by this fix.
-
-**Status (historical):** open
-**Origin:** Dynamic validation suite run, 2026-06-02 (surfaced while regression-checking the coupling
-liveness wire — pre-existing, unrelated to that change).
-**File:** `drift_events.pl:230` (`drift_event/3` calls `narrative_ontology:requires_active_enforcement/1`).
-
-**Specific question:** `run_dynamic_suite` throws
-`existence_error(procedure, narrative_ontology:requires_active_enforcement/1)` for
-`kodashim_obligation__memorial_archival` during the lifecycle drift scan. Is this a missing **fact** for
-that one constraint (data-completeness gap in the rebuilt corpus), or a missing **predicate
-declaration** (`:- dynamic`/`:- discontiguous`) that would bite any constraint lacking the fact, masked
-in the live corpus only because other constraints happen to author it?
-
-**Evidence so far:** Witnessed pre-existing: the failure reproduces with the coupling-liveness edits
-reverted (`git stash` of `boltzmann_compliance.pl`/`json_report.pl`), and the failing frames
-(`drift_report` → `drift_events:230` → `narrative_ontology:requires_active_enforcement`) are in files
-untouched this session. `drift_event/3` calls the predicate **unguarded** (no `catch`, no existence
-check), so the constraint's drift scan aborts rather than degrading. The same field is emitted fine in
-the per-constraint JSON (`requires_active_enforcement` key), so the data exists for most constraints —
-consistent with a per-constraint authored-fact gap rather than a wholesale missing predicate. Build
-Discipline Pattern 5 lens: an unguarded call where absence should fail-closed/skip, not throw.
-
-**Root cause identified (2026-06-03, agency-gate session):** it is neither a missing fact nor a
-missing declaration — it is a **wrong-module qualifier**. `requires_active_enforcement/1` is
-authored and bridged under `domain_priors:` everywhere (testset multifile declarations,
-`drl_core.pl:86` bridge, `narrative_ontology.pl` itself queries `domain_priors:` at its
-is_tangled_rope clause); `narrative_ontology:requires_active_enforcement/1` has never existed, so
-`drift_events.pl:230` throws whenever its guard is REACHED — i.e. for any constraint with
-ε<0.10 ∧ theater>0.70 (kodashim: ε=0.08, theater=0.85). Witnessed at BOTH endpoints: direct call
-throws identically in the working tree and in a HEAD-baseline worktree (669eab5). Fix is the
-one-token qualifier change `narrative_ontology:` → `domain_priors:` at drift_events.pl:230 —
-deliberately NOT bundled into the agency-gate change (output-affecting in its own right: drift
-events start firing where they previously threw).
-
-**What resolution changes:** Either (a) author the missing fact for the affected constraint(s) and add a
-generation-template check, or (b) guard the call in `drift_events.pl:230` to treat an absent
-`requires_active_enforcement` as a defined default (skip / `false`) — which is the more robust fix if the
-predicate is legitimately optional. Diagnostic first: count how many corpus constraints lack the fact
-(`\+ narrative_ontology:requires_active_enforcement(C)`); a count >1 favors the guard, ==1 favors the
-data repair.
+**Resolution finding — the bug had TWO behaviors, one per load path (keep):** suite/REPL path
+threw (no definition under `narrative_ontology:`); the PIPELINE path was **correct by
+accident** — `json_report.pl` is a non-module file, its `use_module(drl_core)` imports into
+`user`, and modules inherit from `user`, so the wrong-qualified call silently resolved to
+drl_core's bridge. General tripwire: **a wrong-module-qualified call can throw on one load path
+and silently resolve through user-inheritance on another whenever any non-module file imports
+the predicate's home module — REPL behavior is not pipeline behavior.** Diagnose on the
+consumer's exact `-l` chain (see `docs/technical/swipl_load_path_and_probe_gotchas.md`).
+*(Body compressed 2026-06-04 per footer rule; investigation history in git.)*
 
 ---
 
@@ -2652,136 +2328,33 @@ items graduate into the defensible backlog. *(Candidate: wire it as a non-gating
 **Ω-type:** Ω_E (empirical — detectable by scanning reading-name stems per kernel; a content/merge
 decision once sized).
 
-**Status:** disposed — **(2026-06-03): preserve-and-diff, not merge** — operator built (`reading_diff.pl`);
-**edge-repair #1 DONE (2026-06-03)** — 4 `absolutist_reading` edges retargeted → `absolute_sovereignty`,
-R1 dangling 89→87, affects_constraint 1668→1666, corpus loads 803. Remaining: #3 corpus-wide run, #4
-axiom diff; plus 1 flagged prose mention (`governance_quality_reading.pl:226`) — a content judgment, not
-an edge. **#3 census + #4 axiom-diff DONE (2026-06-03)** — all of #1–#4 complete; OQ-59 fully disposed
-except the 1 flagged prose mention. (Earlier: sized via linter R3; gradated→governance_quality_reading rename done.)
-**Origin:** OQ-58 narrative-disposition pass, Bucket C, 2026-06-02.
-**Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`;
-detector `python/audits/reading_reference_linter.py` (R3).
+**Status:** disposed — **(2026-06-03): preserve-and-diff, not merge** — all four follow-ons done.
+The user ruled against merging near-doctrine readings (averaging two readings is the cyclopean
+move; the disparity *is* the depth); near-named readings are usually DISTINCT positions
+(gradated=governance-values vs graduated=state-capacity; nws/nnws; homoousios/homoiousios), so
+the linter's R3 is a review-trigger, never a verdict. Rename for de-confusion where needed
+(`gradated_reading` → `governance_quality_reading`, witnessed clean), never auto-merge.
 
-**Sized + ruled (2026-06-02).** The linter's R3 (near-duplicate reading-stems per kernel) flags **9
-candidate pairs** — and it **over-flags by design**: near-naming is usually *intentional* for
-contrasting positions (`nws/nnws` = nuclear vs non-nuclear; `homoousios/homoiousios` = same- vs
-similar-substance — the iota that split Christendom; `created/uncreated` = opposite Qur'an-ontology
-positions; `arian/semi_arian`, `hanbali/hanafi`, etc. all DISTINCT). R3 is a **review-trigger, not a
-verdict**. Of the 9, **only `westphalian_sovereignty: gradated_reading ≈ graduated_sovereignty` is a
-confirmed-looking duplicate by NAME (gradated ≈ graduated).
+**Disposition record (#1–#4, all witnessed 2026-06-03):**
+- **#1 edge-repair:** 4 dangling `absolutist_reading` edges retargeted → `absolute_sovereignty`
+  (alias ruled); R1 dangling 89→87, affects_constraint 1668→1666.
+- **#2 operator:** `prolog/reading_diff.pl` + `report_pair/3` (authored-cells-only,
+  kernel-agnostic, order-independent stability verdict). See KNOWN_STATE.md 2026-06-03 +
+  `tests/test_reading_diff.pl`.
+- **#3 census:** `prolog/reading_diff_census.pl`, 615 within-kernel pairs → 53.7% key_fragile /
+  39.5% robustly_binocular / 6.8% undersampled — the alignment seat governs the verdict
+  corpus-wide. Results: `audits/2026-06-03_reading_diff_census/`.
+- **#4 axiom diff:** `prolog/axiom_diff.pl` — 0 of 935 reading-pairs share an axiom NAME;
+  alignment requires a DECLARED `axiom_concept/2` map (empty by default, never baked); demo
+  found a grounding INVERSION on the westphalian absolute pair. `tests/test_axiom_diff.pl`.
 
-**Content comparison (2026-06-02) — merge QUESTIONED, not confirmed** (R3's over-flag risk
-materializing on the one case I called a true dup). Reading both files in full:
-- `gradated_reading` — "Legitimacy Scaled to Domestic **Governance Quality**" (ε 0.58, claim
-  **tangled_rope**): legitimacy by *liberal-democratic governance values*; explicitly positions itself
-  *against* the absolutist and R2P readings.
-- `graduated_sovereignty` — "State **Capacity** as Legitimacy Threshold" (ε 0.58, claim **snare**):
-  legitimacy by *measurable administrative/technocratic capacity*; derives *from* R2P + capacity-building
-  development economics.
-
-Same STRUCTURE (graded sovereignty → external intervention) but a real difference of axis (values vs
-capacity — a state can be high-capacity/illiberal or low-capacity/democratic) and **different engine
-claims** (tangled_rope vs snare). So they may be **distinct readings that are merely near-named**, not a
-duplicate. **Merge direction is the user's to confirm against this comparison; until confirmed, do NOT
-merge** (the alternative fix is to rename for de-confusion and keep both). `conditional_sovereignty` vs
-`r2p_reading` **held distinct** — the text distinguishes them (gradated's own summary names absolutist
-and R2P as separate readings), so they do not collapse.
-
-**RESOLVED (2026-06-02): keep distinct, renamed for de-confusion.** `gradated_reading` →
-`governance_quality_reading` (id + module + 9 prose mentions + the "Graduated…" display title;
-`graduated_sovereignty` kept as-is). 50 refs across 2 files (the reading + an external ref in
-`r2p_reading`); witnessed: corpus loads, new id registered, old id gone, R1 dangling unchanged at 143
-(rename created none), westphalian obstruction unchanged (`licensed_plurality`). R3 will no longer flag
-westphalian (the names are no longer near-twins). The held `absolutist_reading` edge is the remaining
-OQ-59 item — it's an alias of `absolute_sovereignty` (a rename/edge fix, NOT a missing-reading generate);
-it must NOT enter the OQ-58 generate-backlog.
-
-**Specific question:** `westphalian_sovereignty` holds readings `[gradated_reading, graduated_sovereignty,
-absolute_sovereignty, r2p_reading, conditional_sovereignty]`. Several look like one position under
-multiple names: `gradated_reading` ≈ `graduated_sovereignty`; `absolute_sovereignty` ≈ the dangling
-Bucket-C target `absolutist_reading`; `r2p_reading` ≈ `conditional_sovereignty` (R2P *is* conditional
-sovereignty). How many **distinct** positions does this kernel actually hold?
-
-**Why this is upstream of the edge disposition (and bigger than its edge):** the obstruction counts
-reading-**pairs** over the cover from `cs_readings_for_kernel/2` and has **no notion of semantic
-identity** — duplicate-named readings inflate the cover, and two names for one position can *manufacture*
-a foreclosure pair (each duplicate foreclosing the other's foreclosed sibling) or *mask* one. So the
-`real_closure`/`licensed_plurality` verdict for a duplicate-suspect kernel is provisional. The
-westphalian `absolutist_reading` Bucket-C edge **cannot be ruled** (alias-repair to `absolute_sovereignty`
-vs distinct) until the kernel's true reading count is known. This is a **different failure mode from
-OQ-58**: OQ-58 is *target names a reading that does not exist*; OQ-59 is *the kernel may hold the same
-reading twice*.
-
-**What resolution changes:** (a) if westphalian has duplicates, merge them (a source-narrative content
-decision, like OQ-58 — human seat, no auto-merge) and the obstruction recomputes; (b) generalize — a
-cheap Ω_E scan of all kernels for near-duplicate reading stems sizes the problem corpus-wide. Until then,
-duplicate-suspect kernels' obstruction counts are provisional.
-
-**Progress on OQ-58 (this pass):** of the 13 forecloses-dangling edges, **2 genuine one-character
-delimiter typos repaired** (`john_1_1_logos` `_orthodox` → `__orthodox`; `paris_article_4_ndc`
-`_supranational` → `__supranational`) — witnessed `real_closure` 94→95, quarantine 99→97, diff shows only
-the target arg changed. **Held** (moved to the source-narrative queue, NOT auto-repaired): `fair_use`
-(truncated-kernel + stem match, *not* a delimiter typo — same class as `magna_carta`/`genesis`, so a
-stem-judgment needing a seat), and all of Bucket B (generate-vs-delete needs the source opened).
-`cross_kernel = 0` confirmed a *finding* (positive control: an injected cross-kernel target flags). Also
-noted: the same delimiter typo appears in `affects_constraint/2` (logos:340, paris:345) — a separate
-network-layer referential issue, NOT touched here.
-
-**Cross-ref (2026-06-02):** that network-layer issue is now sized and tracked in **GAP-07**
-(`docs/design/design_gaps.md`). The affects_constraint typo subclass is **9 edges across 5 kernels**
-(article_51, gelassenheit, john_1_1_logos, paris — not the 2 lines first noted), against **1710/2548
-dangling targets total**. The bounded-attractor finding there (shift = ~1.4% of its 4096 cap;
-coupon-collector rate-vs-S linear with finite intercept) is *upstream* of OQ-59: at scale the structural
-target space closes into ~10^2 classes, so the duplication this OQ flags is the saturation, not a defect
-appearing late. Drift-order over that bounded set remains an open measurement.
-
-**DISPOSITION (2026-06-03): preserve-and-diff, not merge.** The user ruled against merging near-doctrine
-readings — averaging two readings is the cyclopean move; the disparity *is* the depth. Built
-`prolog/reading_diff.pl` (`reading_diff/6` + `report_pair/3`, authored-cells-only, kernel-agnostic): it
-partitions any two readings, per declared alignment key, into agreement (situation-fixed) / disparity
-(standpoint-set) / blind-spots (coverage gap), and ships an order-independent stability verdict
-(robustly_binocular / key_fragile / robustly_undersampled). Witnessed on the two westphalia↔westphalian
-**cross-kernel** pairs (the spellings are distinct sibling kernels per the user's ruling, NOT duplicates):
-absolute pair robustly_binocular (disparity piton↔rope at the establishment cell); graded + conditional
-pairs key_fragile (undersampled under exact, binocular under fuzzy_agent_power). See KNOWN_STATE.md
-2026-06-03 and `tests/test_reading_diff.pl`. **#1 edge-repair DONE (2026-06-03):** the 4 dangling
-`westphalian_sovereignty__absolutist_reading` edges (2 `cs_reading_relation` + 2 `affects_constraint`, in
-`governance_quality_reading.pl` lines 130/321 and `r2p_reading.pl` lines 139/341) retargeted →
-`westphalian_sovereignty__absolute_sovereignty` (alias ruled at lines 2560–2561 above). Witnessed:
-git diff shows only the target arg changed; R1 dangling **89→87**, affects_constraint **1668→1666**,
-`absolutist` absent from the dangling report (was 1); corpus loads 803, edges resolve to a loaded
-reading. **NOT repaired (flagged, content judgment):** the prose at `governance_quality_reading.pl:226`
-also names `westphalian_sovereignty__absolutist_reading` AND characterizes it ("binary and equal — Rope
-or Mountain from all perspectives") inconsistently with `absolute_sovereignty`'s authored cells
-(snare/tangled_rope/rope/mountain) — a narrative claim, not a mechanical edge, left for a content pass.
-**#3 corpus-wide within-kernel census DONE (2026-06-03):** `prolog/reading_diff_census.pl` over the
-committed corpus (803 testsets @`90bb5a6b`, 189 multi-reading kernels, 615 within-kernel pairs) →
-**53.7% key_fragile / 39.5% robustly_binocular / 6.8% robustly_undersampled** (distribution stable if
-the 256 in-flight uncommitted testsets are included: 40.9/52.0/7.2). Finding: the alignment seat
-governs the binocular/undersampled verdict for a *majority* of reading-pairs — the cyclopean seat
-operates corpus-wide, not just on westphalian. Results: `audits/2026-06-03_reading_diff_census/reading_diff_census.md` + `.tsv`.
-**#4 axiom-level diff DONE (2026-06-03):** `prolog/axiom_diff.pl` lifts the partition to the cs_axiom
-layer (value compared = grounding; status is name-global so can't vary). **Sharpened-seat finding:**
-**0 of 935 within-kernel reading-pairs share even one axiom NAME** — every reading authors bespoke
-names, so unlike the type-cell layer there is NO mechanical cross-reading axiom identity; `exact_name`
-is structurally all-blind and aligning axioms requires a DECLARED concept map (`axiom_concept/2`,
-empty by default — the seat is never baked, cf. reading_diff throwing on defaulted `weighted`). Demo on
-the westphalian absolute pair under a declared 4-axiom→2-concept seat reveals a **grounding INVERSION**:
-both readings hold a sovereignty-absolute axiom and a non-interference axiom, but A grounds them
-conventional/deontological and B inverts to deontological/conventional → `key_fragile`. Tests:
-`prolog/tests/test_axiom_diff.pl` (4, all pass). **OQ-59 fully disposed** (#1–#4 done); the only residue
-is the flagged prose at `governance_quality_reading.pl:226` (a content pass, not tracked here).
-
-**OQ-58 progress (2026-06-03, never-generated generation, commit `64cc249a`):** generating the 300
-never-generated kernel readings surfaced **16 dangling `cs_reading_relation` edges** via the integrity
-sweep (which the no-scope generation path does NOT run automatically — see KNOWN_STATE.md 2026-06-03).
-**5 repaired** (naming-variant typos of readings that DID generate, fixed across `cs_reading_relation`
-+ `affects_constraint` + the json `sibling_readings` list, json AND pl, with per-edit count guards):
-`vatican composite_reading→composite_overdetermination_reading`; `federation integration/sovereignty_primary_reading→`
-strip spurious `_reading`; `ai_safety ai_safety_*_reading→` strip spurious `ai_safety_` prefix. Witnessed
-16→8 after repair; corpus loads 1103. The **residual 8 are quarantined collateral of 4 hard-fail readings**
-(`outputs/no_scope_runs/failures.json`) — they target readings that failed generation, so they resolve only
-if those readings are regenerated, NOT a disposition question. Quarantine: `prolog/cs_reading_relation_quarantine.json`.
+**Residue (content pass, not tracked here):** prose at `governance_quality_reading.pl:226`
+names the old alias AND mis-characterizes it vs `absolute_sovereignty`'s authored cells.
+**Cross-refs:** westphalia vs westphalian = distinct sibling kernels (user ruling), so those
+pairs are cross-kernel probes; OQ-58 repair progress that was logged here (2 delimiter typos;
+5 naming-variant edges, 16→8 dangling after never-generated generation; quarantine
+`prolog/cs_reading_relation_quarantine.json`) is OQ-58's record — see OQ-58 and GAP-07.
+*(Body compressed 2026-06-04 per footer rule; sizing/comparison narratives in git history.)*
 
 ---
 
@@ -3374,6 +2947,17 @@ prevalence at 3000-scale).
 *Last updated: 2026-06-04. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
+
+*Compress-on-close (added 2026-06-04): when an entry's status transitions to
+resolved/disposed, compress its body in place — keep the header, Ω-type, the canonical
+Status line, Origin, and a short resolution note with evidence pointers (commit hash,
+KNOWN_STATE.md entry date, `audits/<date>_<slug>/`, witness files); drop the
+investigation narrative (full history stays in git). Target ≤ 10 lines; exception: a
+closed entry carrying a still-operative ruling or build spec (e.g. OQ-51's ruled-not-
+yet-built 4th sheaf value) keeps that block intact. Entries are compressed in place,
+never moved to a second file (single-tracker rule, Build Discipline Pattern 2), so
+`grep OQ-NN ISSUES.md` keeps resolving every cross-reference. mitigated/partial
+entries stay full-bodied — they are semi-live.*
 
 *Status grammar (normalized 2026-06-04, machine-readable): each entry's first
 Status line is exactly `**Status:** <token>` optionally followed by ` — <detail>`,
