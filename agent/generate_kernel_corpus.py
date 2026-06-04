@@ -1095,7 +1095,19 @@ def run_no_scope(args):
                 s["constraint_id"] = f"{s['kernel_id']}__{s['reading_id']}"
             elif s.get("kernel_id"):
                 s["constraint_id"] = s["kernel_id"]
-    processed = load_processed_log(BETA_PROCESSED)
+
+    # OQ-71: optional run-tagged routing. Request CONSTRUCTION is identical either
+    # way (gate-witnessed payload identity); only output destinations and the
+    # idempotence ladder differ. Run-tagged output is glob-isolated from the main
+    # corpus (corpus_loader's non-recursive testsets/*.pl glob).
+    if getattr(args, "run_tag", None):
+        json_dir, testsets_dir, manifests_dir, processed_log = run_dirs(args.run_tag)
+        out_dir = manifests_dir
+    else:
+        json_dir, testsets_dir, processed_log = JSON_DIR, TESTSETS_DIR, BETA_PROCESSED
+        out_dir = REPO_ROOT / "outputs" / "no_scope_runs"
+
+    processed = load_processed_log(processed_log)
     pending = [s for s in seeds if s["constraint_id"] not in processed]
     n = args.n if (args.n and args.n > 0) else len(pending)
     batch_seeds = pending[:n]
@@ -1106,7 +1118,11 @@ def run_no_scope(args):
     # Collision-proof naming, checked against the live corpus + ladder. The constraint_id
     # is the module name / filename and may exceed 64 chars (the batch custom_id cap applies
     # only to the transport key, which is a short index — see build_indexed_batch_requests).
-    registry = {p.stem for p in TESTSETS_DIR.glob("*.pl")} | set(processed)
+    # Run-tagged runs check BOTH the main corpus and their own dir (ids must stay
+    # globally unique so a later overlay/flatten cannot collide).
+    registry = ({p.stem for p in TESTSETS_DIR.glob("*.pl")}
+                | {p.stem for p in testsets_dir.glob("*.pl")}
+                | set(processed))
     final_seeds = []
     for s in batch_seeds:
         fid = unique_constraint_id(s["constraint_id"], registry)
@@ -1114,8 +1130,7 @@ def run_no_scope(args):
         registry.add(fid)
         final_seeds.append(s)
 
-    JSON_DIR.mkdir(parents=True, exist_ok=True)
-    out_dir = REPO_ROOT / "outputs" / "no_scope_runs"
+    json_dir.mkdir(parents=True, exist_ok=True)
     out_dir.mkdir(parents=True, exist_ok=True)
     client = get_client()
 
@@ -1128,16 +1143,16 @@ def run_no_scope(args):
         print(f"  batch {batch.id}")
         poll_batch(client, batch.id, args.poll_interval)
         process_batch_results(
-            client, batch.id, JSON_DIR, TESTSETS_DIR, BETA_PROCESSED,
+            client, batch.id, json_dir, testsets_dir, processed_log,
             gen_seeds_by_id=gen_by_id,
             rejections_path=out_dir / "rejections.json",
             # overwrite=True: the no-scope rebuild's idempotence source is the
-            # beta_processed.txt ladder (pending is already filtered by it above), NOT
+            # processed ladder (pending is already filtered by it above), NOT
             # json-file existence. json/ still holds the PRE-REBUILD corpus (~4067 files),
             # so plain seeds reuse archive ids whose stale json/<id>.json exists — without
             # overwrite they hit the out_json.exists() SKIP and silently never save.
             overwrite=True, id_map=id_map)
-        done = load_processed_log(BETA_PROCESSED)
+        done = load_processed_log(processed_log)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
         if not remaining:
             break
@@ -1150,7 +1165,7 @@ def run_no_scope(args):
               f"{out_dir / 'failures.json'}")
     succeeded = len(final_seeds) - len(remaining)
     print(f"\nNo-scope run complete: {succeeded}/{len(final_seeds)} generated into "
-          f"prolog/testsets/ (ladder: {BETA_PROCESSED.name}).")
+          f"{testsets_dir.relative_to(REPO_ROOT)} (ladder: {processed_log.name}).")
 
 
 def main():
