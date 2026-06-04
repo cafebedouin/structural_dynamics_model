@@ -98,6 +98,9 @@ structural_dynamics_model/
 │   ├── c-orchestrator.py         # Primary authoring entry point (6-step chain)
 │   └── generate_json_haiku.py    # Batch corpus expansion via Haiku
 ├── json/                         # LLM-generated constraint specs (INPUTS, not outputs)
+├── audits/                       # Completed audits — one audits/<YYYY-MM-DD>_<slug>/ per
+│                                 # audit, writeup + evidence together (MANDATE: new audits
+│                                 # go here, not docs/ or outputs/; see audits/README.md)
 ├── outputs/                      # All pipeline output (classifications, reports, essays)
 │   ├── pipeline_output.json      # Pre-computed H¹, heights, classifications
 │   ├── constraint_reports/       # Per-constraint enhanced reports
