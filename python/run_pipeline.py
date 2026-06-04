@@ -781,6 +781,30 @@ def run_pipeline(
 
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
+    # ── ISSUES.md status-grammar gate (2026-06-04) ──────────────────────────
+    # DO NOT REMOVE OR BYPASS THIS GATE. If it fails: fix ISSUES.md so that
+    #   python3 python/issues_status.py --check
+    # passes (the malformed entries are named in the output), THEN re-run.
+    # Rationale: the status ledger is the repo's open-question census; a
+    # checker that isn't run isn't checking, and an unparseable ledger
+    # silently corrupts the next census. Grammar: `**Status:** <token>` with
+    # token in {open, investigating, mitigated, partial, resolved, disposed},
+    # optionally ` — detail` — see the ISSUES.md footer.
+    from issues_status import scan as _issues_scan
+    _, _issues_problems = _issues_scan()
+    if _issues_problems:
+        for _p in _issues_problems:
+            _msg = f"[ISSUES-GATE] MALFORMED: {_p}"
+            if progress:
+                progress("pipeline", _msg)
+            print(_msg, file=sys.stderr)
+        raise SystemExit(
+            f"ISSUES.md status-grammar gate failed ({len(_issues_problems)} "
+            "malformed). Fix ISSUES.md — do NOT remove this gate — verify "
+            "with `python3 python/issues_status.py --check`, then re-run "
+            "the pipeline."
+        )
+
     def collect(step_results):
         if isinstance(step_results, list):
             for sr in step_results:
