@@ -3215,6 +3215,87 @@ canonical χ).
 
 ---
 
+## OQ-70 — FNL fires on template-authored bait perspectives: FNL prevalence measures authoring convention, not detection
+
+**Ω-type:** Ω_E (corpus measurement), with an Ω_C committer-axis edge (same family as OQ-65).
+
+**Status:** open — mechanism witnessed end-to-end; remediation lever is a design ruling (see below)
+**Origin:** 2026-06-04 session: "is the ~95% disguise-signature dominance substantive or a
+generator artifact?" (older-evaluation question re-examined on the live corpus). Probes 0–5;
+raw artifacts: `outputs/fnl_probe0_file_constraint_map.json`,
+`outputs/fnl_probe0_reconciliation.json`, `outputs/fnl_probe1_attribution.{pl,jsonl}`,
+`outputs/fnl_probe2_counterfactual.{pl,jsonl}`, `outputs/fnl_probe3_coupling_by_band.json`.
+
+**Specific question:** FNL (827/1106 readings) is supposed to detect constraints that *claim
+naturality* and fail Boltzmann independence. All 827 firings ride `claimed_natural/2` source 2
+(`constraint_classification(C, mountain, _)` — any single authored perspective), and that
+perspective is a generation-template convention (the one-shot example
+`agent/verification_bottleneck.json` contains "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL
+LAW VIEW (MOUNTAIN)" at (analytical, analytical); 908/1106 constraints author one at exactly
+that tuple, 922 at some context). Which remediation lever applies — and until one is ruled,
+**no FNL prevalence figure may be cited as a detection result**.
+
+**Evidence (all witnessed 2026-06-04, denominator 1106 = testset constraints, 1:1 with files;
+per_constraint's 1107th entry is `catholic_church_1200`, an engine demo in
+`constraint_instances.pl`, excluded — the extra is NON-testset and no testset constraint is
+missing from per_constraint: only_pc = {catholic_church_1200}, only_files = ∅):**
+- **Probe 0 (funnel, exact):** FNL ⟺ (≥1 authored mountain perspective) ∧ Boltzmann
+  non_compliant, with zero exceptions both directions. 922 mountain-authoring → 827 FNL +
+  {48 FCR, 26 NL, 11 CI, 10 FSM} (the 95 non-FNL are exactly the 93 compliant + 2
+  inconclusive). 184 complement → 0 FNL. FNL ∩ inconclusive = ∅ (asserted).
+- **Probe 1 (attribution):** `fnl_evidence` Claim slot = `indexed_mountain_classification`
+  for **827/827**. Sources 1 (explicit claim, 41 files) and 3 (NL profile) contribute zero.
+  Controls: source-1 dispatch proven live; no natural_law id in the FNL set. In-session
+  signatures reproduce the pipeline 1106/1106.
+- **Probe 2 (counterfactual, the load-bearing witness):** retracting the 915 tuple-T
+  mountain FACTS (= 908 constraints holding ≥1; clearing
+  `cached_coupling`/`cached_classification`) gives the destination histogram FNL→FCR **809**,
+  FNL→FNL 14 (every one holds a non-T mountain perspective — set-equal; 922−908 = 14, the
+  plan's "~7" was a files-minus-facts subtraction; 13 hold only non-T mountains, 1 held both
+  and the non-T fact kept source 2 alive), FNL→constructed_high_extraction 4 (no rope
+  perspective, ε ≥ 0.62), FNL→{genuine natural_law, CI_rope} **0**. 809+14+4 = 827, closed. Sensitivity control flipped to its pre-named prediction
+  (`abrahamic_covenant__land_promise_constraint` → false_ci_rope); specificity control: 41
+  explicit-claim constraints unchanged; collateral: 0. **Read as bait fungibility, NOT
+  substance:** the disguise aggregate barely moves (1046→1042) because the ex-FNL mass lands
+  in FCR via the *other* template perspective (`appears_as_rope` source 2 — 1063/1106 files
+  author a rope perspective, the prompt's Mandatory Perspective #2). An aggregate FNL+FCR
+  delta is the wrong observable; the histogram is the witness.
+- **Probe 1b (FCR is the same gate pattern, attribution-level):** FCR appearance source:
+  indexed_rope_classification 174 / explicit_rope_claim 45 / low_extraction_profile 0.
+  No FCR counterfactual was run — conclusions about the combined "94.5% disguise" figure are
+  NOT licensed by this session's witnesses.
+- **Probe 5 (the detector did ZERO discriminating work on FNL):** of the 189 FNL firings that
+  overrode a non-tangled_rope authored claim (snare 166, rope 13, scaffold 5, piton 5), the
+  discriminating subset {override} ∩ {source 1 or 3} = **∅**; 188/189 were metrically
+  consistent with their own claimed type's context-free gates — the lock steamrolled
+  consistent claims. The single gate-inconsistent case
+  (`decalogue_image_prohibition__moderate_iconoclast_reading`: snare claim, supp 0.58 vs the
+  0.60 floor — a 0.02 miss; ε 0.52 passes) ALSO fired via source-2 bait
+  (`fnl_claim_source: indexed_mountain_classification`, probe1 jsonl; bait perspective at
+  `.pl:181`) — a coincidental landing on a marginally mislabeled file, credit to author
+  error, not detection. Substantive yield of 827 firings: 0 detected, 1 coincidental. Second
+  bait witness: `acceptable_risk_energy__catastrophic_tail_reading.pl:186` ("Engine will flag
+  this as false summit").
+- **Probe 3 (context, confounded run):** non-compliance ≥ 85% for every ε band ≥ 0.3 (100%
+  at 0.3 and ≥ 0.6); compliance lives almost entirely at ε < 0.2. Mid-ε constraints fail the
+  4×3 grid essentially by construction.
+- Downstream stakes: the tangled_rope ~70% dominance is inherited from authored
+  `claimed_type` (779/1106 tangled_rope; 638/827 FNL were already claimed tangled_rope — the
+  FNL→tangled_rope lock confirms the authored claim). Any paper text citing the trifurcation
+  / tangled_rope dominance / "95% disguised" inherits the artifact.
+
+**What resolution changes:** Three levers, mutually compatible, ruling is the user's:
+(1) narrow `claimed_natural` source 2 / `appears_as_rope` source 2 (engine change; reshapes
+current-corpus statistics and cascades into papers); (2) de-bait the generation example/prompt
+(`agent/verification_bottleneck.json`, `prompts/constraint_story_generation_prompt_json.md`
+mandatory perspectives — future generation only); (3) adopt the OQ-65 framing corpus-wide
+(bait as committer-axis signal; bucket FNL statistics into bait-driven vs substantive in all
+reporting). Cross-links: OQ-65 (same phenomenon, FSM, n=12), OQ-43/OQ-44 (gate-quality
+family), OQ-48 (threshold recalibration would change Probe 3's bands), OQ-49 (override
+prevalence at 3000-scale).
+
+---
+
 *Last updated: 2026-06-04. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

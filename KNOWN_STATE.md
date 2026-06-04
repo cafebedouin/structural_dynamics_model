@@ -20,6 +20,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — FNL prevalence is template-bait-confounded (OQ-70): mechanism witnessed end-to-end, counterfactual run
+
+Question (from an older evaluation): is the ~95% disguise-signature dominance (FNL 827 + FCR
+219 of 1106) substantive or a generator artifact? **Answer for FNL: artifact, witnessed at
+every link.** Full evidence + artifact paths in ISSUES.md OQ-70; probe outputs under
+`outputs/fnl_probe*`.
+
+- **Denominator ruling:** corpus = 1106 (testset constraints, 1:1 with files).
+  `pipeline_output.json` per_constraint has 1107 entries — the extra is
+  `catholic_church_1200`, an engine demo from `constraint_instances.pl` (loaded by
+  `stack.pl:13`), claimed_type None. Exclude it from corpus statistics.
+- **Mechanism (each link witnessed):** the one-shot generation example
+  (`agent/verification_bottleneck.json`) authors an "ANALYTICAL OBSERVER / NATURAL LAW VIEW
+  (MOUNTAIN)" perspective at (analytical, analytical); 908/1106 constraints copy it (922
+  author a mountain perspective at some context; 1063 author a rope one — Mandatory
+  Perspective #2). `claimed_natural/2` source 2 reads ANY authored mountain perspective as a
+  naturality claim (827/827 FNL fire via that source — Probe 1); the Boltzmann 4×3 grid is
+  non-compliant for ≥85% of every ε band ≥ 0.3 (Probe 3). FNL ⟺ mountain-perspective ∧
+  non_compliant, exactly (Probe 0 funnel).
+- **Counterfactual (Probe 2):** retract the 915 tuple-T mountain facts (908 constraints hold
+  ≥1; some files author two) → FNL→FCR 809, FNL→FNL 14 (all hold non-T mountains; = 922−908
+  exactly), FNL→CHE 4, FNL→genuine{NL, CI_rope} **0**; 809+14+4 = 827, closed. Controls:
+  sensitivity (pre-named prediction false_ci_rope) PASS, specificity (41 explicit-claim
+  unchanged) PASS, collateral 0. **Read as bait fungibility:** ex-FNL mass lands in FCR via
+  the parallel rope-perspective gate; the FNL+FCR aggregate (1046→1042) is the WRONG
+  observable — destination histogram only.
+- **Override slice (Probe 5): zero discriminating work.** Of 189 FNL firings overriding a
+  non-tangled_rope claim, discriminating subset (source 1/3) = ∅; 188/189 metrically
+  consistent with their own claimed type's gates — steamrolled, not caught. The 1
+  gate-inconsistent case (decalogue_image_prohibition, snare supp 0.58 vs 0.60 floor) also
+  fired via source-2 bait — coincidental landing, credit to author error. Substantive yield
+  of 827 firings: 0 detected, 1 coincidental.
+- **Standing rule until OQ-70 is ruled:** do not cite FNL prevalence (or the FNL-driven
+  tangled_rope ~70% dominance — inherited from authored claimed_type, 779/1106) as a
+  detection result. FCR is the same gate pattern by static analysis + attribution (Probe 1b:
+  174/219 via indexed rope perspective), counterfactual pending — the combined "94.5%"
+  figure is unlicensed either way.
+- **Probe discipline notes that paid off:** in-session signature sweep reproduced the
+  pipeline 1106/1106 (load-path control); `constraint_signature/2` always called with the
+  signature unbound (bound probe bypasses lock cuts, ISSUES.md OQ-49 note); facts findall'd
+  before retract; caches (`cached_coupling`, `cached_classification`) cleared post-retract.
+
+---
+
 ## 2026-06-04 — sheaf_status provenance traced end-to-end; arakelov_threshold now emitted + cited
 
 Follow-up trace of the sheaf_status chain (json_report.pl → pipeline_output.json →

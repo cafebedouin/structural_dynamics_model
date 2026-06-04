@@ -353,6 +353,18 @@ v7 §5.11). Cleanup reduced `testsets/` to a single coherent run (kernel_run_03:
 manifest** (`n_constraints`). The `testsets_3000/` directory (3,380 constraints) is the archived
 pre-rebuild corpus, used only for retrospective audits that explicitly overlay `corpus_path`.
 
+**FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope
+dominance) as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2,
+which reads ANY single authored mountain perspective as a naturality claim — and that
+perspective is a generation-template convention copied from the one-shot example
+(`agent/verification_bottleneck.json`, "ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN)").
+Counterfactual witnessed 2026-06-04: retracting the template perspectives migrates FNL→FCR
+almost wholesale (bait fungibility — FCR's `appears_as_rope` source 2 is the same gate
+pattern), with zero mass landing in genuine natural_law/CI_rope. Until OQ-70 is ruled,
+signature-prevalence statistics measure authoring convention. Also: `pipeline_output.json`
+per_constraint carries ONE non-corpus entry (`catholic_church_1200`, an engine demo from
+`constraint_instances.pl`) — exclude it, or corpus counts silently run one high vs the manifest.
+
 **`json/` files are LLM-generated constraint specifications, not analysis output.**
 Each file in `json/` is produced by step 3 of the orchestrator (Sonnet generates it
 from an axis in the UKE_SCOPE manifest). The orchestrator writes the JSON to `json/`
