@@ -2380,7 +2380,33 @@ should run before the taxonomy is declared, and the taxonomy is the user's to ru
 
 **Ω-type:** Ω_E (empirical — data-completeness defect; run the corpus, find the gap).
 
-**Status:** open
+**Status:** RESOLVED 2026-06-04 — wrong-module qualifier fixed at `drift_events.pl:230`
+(`narrative_ontology:` → `domain_priors:`). Witnesses: before = direct call throws
+`existence_error` (pasted, both working tree and HEAD worktree); after = kodashim fires
+`evidence(extraction,0.08,theater,0.85)` (the exact values the original stack trace carried);
+corpus-wide emitter set derived pre-edit then confirmed = exactly
+{kodashim_obligation__memorial_archival, statutory_debt_ceiling__constitutional_nullity_reading};
+`run_dynamic_suite` now completes end-to-end (0 [FAIL], Errors: 0, one pre-existing unrelated
+warning); pipeline `run_json_report` re-run diff vs pre-fix = **0 per_constraint rows differ**.
+
+**Resolution finding — the bug had TWO behaviors, one per load path (worth keeping):** the
+suite/REPL path (`[stack], [validation_suite]`) had no definition for
+`narrative_ontology:requires_active_enforcement/1` → existence_error → whole drift scan aborted
+(this OQ's symptom). The PIPELINE path never threw and was **correct by accident**:
+`json_report.pl` has no `:- module` header, so its `use_module(drl_core)` imports drl_core's
+exports into `user`; SWI modules inherit from `user`, so the wrong-qualified call silently
+resolved to drl_core's bridge (`requires_active_enforcement(C) :-
+domain_priors:requires_active_enforcement(C)`) — which is why pre-fix pipeline JSON already
+carried correct `internalized_piton` events (witnessed: HEAD worktree pipeline-goal run emits
+them while the same worktree's suite-path call throws). General tripwire: **a module-qualified
+call to an undefined predicate can throw on one load path and silently resolve through
+user-inheritance on another whenever any non-module file imports the predicate's home module —
+REPL behavior is not pipeline behavior for wrong-qualifier bugs.** The `\+` reads
+absence-as-no-enforcement, matching generation convention (fact emitted when true); the
+fail-open-vs-authored question for this field generally is Pattern-5 adjacent but unchanged
+by this fix.
+
+**Status (historical):** open
 **Origin:** Dynamic validation suite run, 2026-06-02 (surfaced while regression-checking the coupling
 liveness wire — pre-existing, unrelated to that change).
 **File:** `drift_events.pl:230` (`drift_event/3` calls `narrative_ontology:requires_active_enforcement/1`).

@@ -227,7 +227,13 @@ drift_event(C, extraction_dried_up, evidence(extraction, E, suppression, S)) :-
 drift_event(C, internalized_piton, evidence(extraction, E, theater, TR)) :-
     safe_metric(C, extractiveness, E), E < 0.10,
     safe_metric(C, theater_ratio, TR), TR > 0.70,
-    \+ narrative_ontology:requires_active_enforcement(C).
+    % OQ-57 fix (2026-06-04): requires_active_enforcement/1 is authored and
+    % bridged under domain_priors: everywhere; narrative_ontology: never
+    % defined it, so this guard threw existence_error whenever reached
+    % (eps<0.10 AND theater>0.70 — first hit: kodashim memorial_archival),
+    % aborting the whole drift scan. The \+ reads absence-as-no-enforcement,
+    % which matches generation convention (the fact is emitted when true).
+    \+ domain_priors:requires_active_enforcement(C).
 
 %% drift_event(+ConstraintID, +Context, -EventType, -Evidence)
 %  Context-indexed drift detection.

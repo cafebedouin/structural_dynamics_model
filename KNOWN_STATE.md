@@ -20,6 +20,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — OQ-57 RESOLVED: drift_events.pl:230 wrong-module qualifier (one-token fix, land-alone)
+
+`\+ narrative_ontology:requires_active_enforcement(C)` → `\+ domain_priors:requires_active_enforcement(C)`
+at the internalized_piton guard. Derived-then-confirmed: exactly 2 corpus emitters
+(kodashim_obligation__memorial_archival, statutory_debt_ceiling__constitutional_nullity_reading);
+`run_dynamic_suite` completes (0 FAIL / Errors 0) where it previously aborted at kodashim;
+pipeline JSON diff = 0 rows (the pipeline path was already correct).
+
+**Mechanism worth remembering (full story in ISSUES.md OQ-57 resolution):** the bug behaved
+differently per load path. Suite/REPL: predicate undefined → existence_error → scan abort.
+Pipeline: `json_report.pl` is a NON-module file, so its `use_module(drl_core)` imports into
+`user`, and modules inherit from `user` — the wrong-qualified call silently resolved to
+drl_core's bridge and produced correct events. Tripwire: wrong-qualifier bugs can throw in the
+REPL and silently work in the pipeline (or vice versa); when diagnosing module-resolution
+behavior, test on the SAME load path as the consumer, and bisect `-l` chains when predicate
+existence differs between paths.
+
+---
+
 ## 2026-06-04 — OQ-63 diagnostic run: directionality's beneficiary read measured (read-only; no engine change)
 
 Measured the d→χ blast radius of `beneficiary_victim_directionality` (constraint_indexing.pl:417)
