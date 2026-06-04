@@ -20,6 +20,22 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Schema drift fixed: `sheaf_status` added to `PIPELINE_FIELDS` (schemas.py)
+
+Commit `205a8187` (2026-06-02) added per-constraint `sheaf_status` emission to
+`json_report.pl:390–393` without updating the validator whitelist in
+`python/shared/schemas.py` → 1107 `[WARN] unexpected field: sheaf_status` per pipeline run
+(Build Discipline Pattern 1 in miniature: additive-to-producer still requires same-change
+consumer-side schema sync). Fix: `("sheaf_status", str, True)` in `PIPELINE_FIELDS` beside
+`h1_band`; `_SHEAF_STATUS_VALUES` enum (genuine_sheaf/fragile_presheaf/manifest_presheaf)
+checked in `_check_structure`. Enriched validator inherits via `_ALL_ENRICHED_FIELD_NAMES`.
+Witnessed: full `run_pipeline.py` clean (exit 0, 0 warnings, manifest
+`2026-06-04T07:10:37Z`, n=1107, sheaf_status present on all 1107 in both
+pipeline_output.json and enriched_pipeline.json); positive controls — bogus field still
+warns, bad enum value errors.
+
+---
+
 ## 2026-06-04 — Engine/shadow split anatomy (debt-ceiling probe): confidence-0 is wiring-determined for victim-less FSM hosts; filed on OQ-65/OQ-66
 
 **Probe (read-only, no engine change):** per-type MaxEnt log-likelihoods for
