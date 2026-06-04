@@ -455,15 +455,16 @@ open question — whether or not the session ends with a PR — review and offer
 - **AGENTS.md** — any change to architecture, testing commands, naming conventions, or
   invariants that a future agent would need to know before touching the relevant files
 - **`ISSUES.md`** — status changes (open → mitigated → resolved), new OQ
-  items surfaced by the work, updated evidence or file references
-- **AGENDA.md** — work packages started, completed, or newly identified
-- **PRIORITIES.md** — promote, demote, or retire items based on what the session
-  completed or unblocked; add new blockers that emerged
+  items surfaced by the work, updated evidence or file references. **ISSUES.md is the
+  SINGLE tracking surface** (status grammar + checker in its footer): work packages,
+  priorities, and backlog items live there as OQs (research-frontier backlog: OQ-69).
+  AGENDA.md, AUDIT.md, TODO.md, PRIORITIES.md were consolidated into it and deleted
+  (2026-06-04) — do not recreate parallel trackers (Build Discipline Pattern 2).
 
-Offer the updates as a diff or edit proposal, not just a verbal summary. The four files
+Offer the updates as a diff or edit proposal, not just a verbal summary. The files
 only stay useful if they reflect the current state of the code and open questions.
 
-**Before any `git push`:** verify the four files above are current with respect to the
+**Before any `git push`:** verify the three files above are current with respect to the
 changes being pushed. A push that makes the docs stale is documentation debt that
 compounds across sessions.
 
@@ -473,8 +474,8 @@ the repo (not this conversation), could pick up the next forward
 move. If the session surfaced a next step, a sequencing
 constraint, or a fact that currently lives only in the
 conversation, write it where the cold read will find it: the
-relevant OQ in ISSUES.md, the ordering note in
-PRIORITIES.md/AGENDA.md, or a comment at the code it concerns. A
+relevant OQ in ISSUES.md (including ordering/sequencing notes —
+ISSUES.md is the single tracker), or a comment at the code it concerns. A
 next step spoken in chat and not written to substrate is a handoff
 that did not happen — the produced-but-not-consumed defect at the
 seam between sessions. State the next step and its sequencing

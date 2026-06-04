@@ -20,6 +20,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Tracking-surface consolidation: AGENDA.md, AUDIT.md, TODO.md deleted; ISSUES.md is the single tracker
+
+Reviewed all three item-by-item against the substrate (not the entries) before deletion.
+Verified shipped: maxent_profile/4 context-indexing (AGENDA I-1); reading_diff follow-ons #1–#4
+(OQ-59 fully disposed); never-generated pipeline reclassify. Verified already-tracked:
+regen-polish lint backlog + 4 hard-fail readings (OQ-58). Verified moot: 17
+UNRESOLVED_MANDATROPHY (pre-rebuild corpus); "scope has zero classification effect" (σ(S) is in
+canonical χ now); jinja2 CVEs (pins already >=3.1.6 in requirements.txt + pyproject.toml — NOTE:
+installed env lags at 3.0.3, `pip install -U jinja2` is machine maintenance, not repo work).
+Still-live items got OQs: **OQ-67** (legacy power-modifier χ path in drl_audit_core — in-code
+TODO at :18 is live), **OQ-68** (qualification-bypass reads of unexported maxent_dist/3 — the
+AGENDA I-3 class, re-verified against tree), **OQ-69** (research-frontier ledger: scope-design
+validator + MaxEnt-arbitrary-sites + Arakelov-10-slice, spec-encoding tests, Packages B/C/D/E/F/G,
+python toolset consolidation, directionality-constant parameterization, T4, framing_notes).
+References fixed: CLAUDE.md End-of-Session list (AGENDA/PRIORITIES bullets removed —
+PRIORITIES.md had already ceased to exist), AGENTS.md + README.md trees, OQ-10's PRIORITIES.md
+citation, this file's AUDIT.md pointer. Full text of all three files: git history (last at
+commit a1140d0d).
+
+---
+
 ## 2026-06-04 — Ledger sweep: five trivial OQs closed (11, 12, 13, 24, 42)
 
 Four were ALREADY DONE in substrate with stale ledger entries — OQ-11 (dead params commented out
@@ -958,7 +979,7 @@ Original prep notes (the framings that guided B):
   This is **load-time** safety, not generation-time dedup. If `corpus_path` is ever changed
   to include a run-tagged subdir, or runs are flattened together, duplicate loading becomes
   live. The shield is the glob; removing it reopens the question.
-- Last audit (2026-02-28): passing tests / param sweep — live items migrated to ISSUES.md (OQ-11 – OQ-13); historical record in AUDIT.md
+- Last audit (2026-02-28): passing tests / param sweep — live items migrated to ISSUES.md (OQ-11 – OQ-13, all resolved 2026-06-04); historical record was AUDIT.md, deleted at tracking-surface consolidation 2026-06-04 (full text in git history, last at commit a1140d0d)
 - Config params: see `prolog/config.pl` for current count (`grep -c "^param(" prolog/config.pl`)
 - All numeric params inert at ±25%; all 17 directionality constants inert at ±25%
 - Corpus is actively growing; param count and testset numbers will drift — cite the manifest

@@ -109,8 +109,7 @@ structural_dynamics_model/
 │   ├── ISSUES.md                 # Unresolved engine/schema issues (OQ-01 – OQ-13)
 │   └── [100+ specialized docs]
 ├── CLAUDE.md                     # Development instructions (read before editing code)
-├── AUDIT.md                      # Point-in-time audit (2026-02-28, not updated)
-├── AGENDA.md                     # Active work tracker
+├── ISSUES.md                     # Single tracking surface (OQs; status grammar + checker in footer)
 └── README.md                     # Framework overview and documentation index
 ```
 

@@ -164,9 +164,7 @@ structural_dynamics_model/
 ├── scripts/                   # Shell utilities
 ├── CLAUDE.md                  # Development instructions (human-facing)
 ├── AGENTS.md                  # Bot onboarding: tech stack, naming, testing, architecture
-├── PRIORITIES.md              # Current work priorities (Active / Near-term / Backlog)
-├── ISSUES.md                  # Open questions and issue tracker (OQ-01 – OQ-13)
-└── AGENDA.md                  # Work packages and sequencing
+└── ISSUES.md                  # Single tracking surface: open questions, work packages, backlog (OQ-NN)
 ```
 
 ---

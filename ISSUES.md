@@ -305,7 +305,7 @@ The review document (`docs/unknown_reading_review.md` §4) notes this explicitly
 a single run." It is not an architectural impossibility — it requires authoring
 multiple readings and a comparison tool.
 
-**Precondition:** Gap A (OQ-04 / PRIORITIES.md item 2) must be closed first — the
+**Precondition:** Gap A (OQ-04) must be closed first — the
 cyclopean-point testsets need `cs_kernel_id` and `cs_reading_relation` populated before
 the comparison tool has a real multi-reading kernel to operate on.
 
@@ -3081,6 +3081,106 @@ AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only
   classifies every divergence candidate raw-vs-filtered (dr_type ×4 canonical contexts +
   maxent_top_type) and fails loudly on first divergence — when that test fails, this deferral has
   expired; do not silently re-green it.
+
+---
+
+## OQ-67 — Legacy power-modifier χ path in drl_audit_core: migrate or rule exempt
+
+**Ω-type:** Ω_C (design ruling — one classification formula, or a declared-separate audit path).
+
+**Status:** open
+**Origin:** TODO.md item 1 ("Kill the Legacy Chi Path"), inherited at tracking-surface
+consolidation 2026-06-04; the in-code TODO predates it.
+**Files:** `drl_audit_core.pl:18` ("TODO: Migrate to sigmoid pipeline. See issue:
+legacy-power-modifier-migration."), `config.pl:67` (same tag; notes zero dr_type flips at
+[0.5x, 2.0x]).
+
+**Specific question:** `drl_audit_core` still computes on the legacy power-modifier χ path
+(χ = ε × π) rather than the canonical sigmoid pipeline (χ = ε × f(d) × σ(S)). Every other
+deprecated caller was migrated 2026-05-17 (`classify_at_time/4`, `snapshot_type/3`). Is the
+audit-core path (a) the last unmigrated caller — finish the migration — or (b) deliberately
+separate by design (it is a quick-check operating on pre-computed Chi values, documented as
+"deliberately separate, different purpose")? If (b), the TODO at :18 should be replaced by a
+declared-exemption comment so the migration tag stops reading as unfinished work; if (a), the
+migration needs an old-vs-new diff per Build Discipline Pattern 3 before the legacy path is
+removed. config.pl:67's note (zero dr_type flips across [0.5x, 2.0x]) suggests low blast radius
+either way — verify, don't assume.
+
+---
+
+## OQ-68 — Module-internal dynamic facts read cross-module by qualification bypass (maxent_dist/3 instance)
+
+**Ω-type:** Ω_C (API-boundary design), with the load-path gotcha as context.
+
+**Status:** open
+**Origin:** AGENDA.md Item I-3 (2026-05-18, then about `maxent_profile/3`), inherited at
+tracking-surface consolidation 2026-06-04 and re-verified against the live tree.
+**Files:** `maxent_diagnostic.pl:129,137,183` (reads `maxent_classifier:maxent_dist/3`),
+`maxent_classifier.pl:69` (`:- dynamic maxent_dist/3.` — NOT in the module export list).
+
+**Specific question:** the original I-3 instance (`maxent_profile/3`) was overtaken by the
+profile-indexing fix (`maxent_profile/4` shipped), but the CLASS is live: `maxent_diagnostic`
+reaches past `maxent_classifier`'s public API into the unexported dynamic fact `maxent_dist/3`
+by module qualification. Any internal signature change fails silently at the bypass sites (the
+exact mechanism that made the profile-accumulation bug's blast radius hard to enumerate).
+Should internal dynamic stores get public read accessors (export a `maxent_dist/3` accessor or
+a dump predicate), or is qualification-bypass acceptable for diagnostic-only consumers if
+declared? Related context: `docs/technical/swipl_load_path_and_probe_gotchas.md` §1 — module
+boundaries in this repo are already porous via non-module report files importing into `user`,
+so the export list is the only honest API statement there is.
+
+**Diagnostic when picked up:** grep for `maxent_classifier:` qualified calls outside the module;
+classify each against the export list; the unexported set is the leak inventory (repeat for the
+other stateful modules: purity caches, fingerprint stores).
+
+---
+
+## OQ-69 — Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)
+
+**Ω-type:** Ω_P (research program — items graduate to their own OQ or work package when picked up).
+
+**Status:** open — ledger; items graduate individually
+**Origin:** Tracking-surface consolidation 2026-06-04: AGENDA.md, AUDIT.md, TODO.md reviewed
+item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker).
+Items below were verified STILL UNTRACKED and still live at consolidation; everything else in
+those files was verified shipped (maxent_profile/4; OQ-59 #1–#4; never-generated #1), already
+tracked (regen-polish backlog + 4 hard-fails in OQ-58), or moot (UNRESOLVED_MANDATROPHY count
+from the pre-rebuild corpus; "scope has zero classification effect" — σ(S) is now in the
+canonical χ).
+
+- **Engine-hardening pair from the apparatus paper** (`when_apparatus_sharpens_taxonomy.md`,
+  "Two engine extensions… remain unimplemented"): (a) scope-design validator on
+  `site_contexts/N` predicates (catch the σ(universal)=1.0 class of site-design failure before
+  the next site is added); (b) MaxEnt parameterization for arbitrary sites — unlocks
+  (c) **Arakelov fragility on 10-slice contexts** (`project_orientation.md` §8.3, marked Open).
+- **Spec-encoding unit tests for load-bearing measurement primitives** (AGENDA D-1): encode
+  paper-documented behavior as assertions — χ argument structure (d, σ), entropy normalization,
+  H¹ (signature-resolved orbit — pairs with OQ-27), MaxEnt profile context-independence, purity
+  propagation rate. Two witnessed spec-vs-code drifts motivate it; drift detection moves to
+  commit-time.
+- **Cover-story detector enrichments** (AGENDA Package B): wire drift_event predicates into
+  `cs_pattern_detection.pl` verdict clauses (e.g. extraction_accumulation + coupling_drift →
+  anchored_fixity_with_accretion). One-clause additions + regression test each; ship as
+  drive-bys.
+- **Scaffold/renewal audit** (Package D): exercised renewal = scaffold without drift;
+  performative renewal = scaffold + extraction_accumulation + theater_rising. Testable with
+  existing predicates.
+- **Cluster-level analysis** (Package F): cluster-signature statistics + cluster-level CS
+  inference in `enhanced_report.py`; then Package G (systematic clustering exploration) after.
+- **Empirical second/third cases** (Package C): 2026 US midterm constitutional-legitimacy axes,
+  Colombia 2026; Roman Empire backtest queued for a dedicated session.
+- **δ → baseline-deviation reframing** (Package E): theory session first; δ not load-bearing in
+  current implementation.
+- **Python toolset consolidation** (TODO.md item 2): group `python/` scripts into
+  subdirectories + a single CLI entry point. Pure maintainability; note OQ-32's lesson (the
+  last reorg broke 6 scripts' path resolution — budget for the witness pass).
+- **Parameterize the 17 directionality constants** (AUDIT W2/E1): hardcoded in
+  `constraint_indexing.pl` (`power_role_heuristic/4`, `exit_modulation/2`); swept inert at
+  ±25%, so maintainability-only — but OQ-63's d-derivation work touches the same table, so do
+  them together if either is picked up.
+- **T4 (confirmed_liminal) one-case category**: re-examine when a second T4 case appears.
+- **framing_notes invitation calibration**: does it produce conceptual or empirical-leaning
+  omegas? Calibration signal for generation.
 
 ---
 
