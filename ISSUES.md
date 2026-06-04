@@ -3039,6 +3039,22 @@ distinguishable committer-axis postures, i.e. a discriminator, not only contamin
 - Phrase-level scans UNDERCOUNT: exact "included to trigger" found only total_war; maxwell's
   bait uses "included to evaluate" — found only by per-file reading. Any corpus-wide bait census
   needs per-file reads (or an LLM pass), not greps.
+- **Engine/shadow "maximal disagreement" is wiring-determined for the FSM class, not per-item
+  calibration signal (2026-06-04, witnessed; LL table in KNOWN_STATE same date):** FSM's
+  override target is tangled_rope (config.pl:469 → `resolve_modal_signature_conflict`
+  signature_detection.pl:779), but the shadow's tangled_rope carries three `required` boolean
+  specs (maxent_classifier.pl:177–179); `has_asymmetric_extraction` reads `constraint_victim/2`,
+  so for every victim-less FSM host the shadow assigns p(tangled_rope)≈0 *by boolean gate*
+  (witnessed: debt-ceiling TR boolean LL = −8.0, two missing required features —
+  `requires_active_enforcement` is the characteristic second). Engine=TR vs shadow≈0-on-TR is
+  therefore structurally guaranteed for the class; a confidence≈0 row cannot distinguish FSM
+  miscalibration from this wiring (the diagnostic layer already patterns it as
+  `signature_override_artifact`, yellow). Any FSM/shadow disagreement census under this OQ must
+  bucket these rows separately. The residual discriminator that DOES carry signal is the
+  shadow's top type: mountain at high p (maxwell pre-fix, 0.990) ⇒ beneficiary-field dirt →
+  registry/OQ-64; non-mountain at artifact certainty (debt-ceiling rope=1.0/entropy=0, an
+  ~11-nat least-bad win over a constraint authored outside every cluster's support) ⇒
+  outside-support/taxonomy hole, not classifier error.
 
 **What resolution changes:** §4.4 ("false positives corrupt corpus-level statistics") and the §6
 ε-caveat get a measured input; the committer axis gains a checkable signature (asserted structure
@@ -3071,7 +3087,11 @@ AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only
 - `constitutional_supremacy_doctrine` (statutory_debt_ceiling__constitutional_nullity_reading):
   scoped OUT by ruling — maxwell's metric twin (NL profile identical except BC); no honest agency
   line separates them; the separating lever is its authored `emerges_naturally` (a statute) or
-  Fix-C taxonomy work, NOT the registry. Its shadow remains the rope=1.0/entropy=0 vacuum.
+  Fix-C taxonomy work, NOT the registry. Its shadow remains the rope=1.0/entropy=0 vacuum —
+  per the OQ-65 wiring-determined-disagreement evidence (2026-06-04), that vacuum is the
+  outside-support case (no type cluster admits ε=0 ∧ theater=0.95: corpus pitons are degraded
+  snares, μ_ε=0.65 — a zero-extraction-pure-ceremony cell does not exist), so its confidence≈0
+  is not FSM-calibration evidence either way.
 - `drl_core.pl:287` (`natural_law_without_beneficiary`) deferral: semantically agency-dependent
   ("no identifiable human beneficiary" — filtering would be correct) but witnessed behaviorally
   inert for the current divergence set. Consumer surface ON RECORD: snare block (drl_core.pl:333),

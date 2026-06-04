@@ -20,6 +20,44 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Engine/shadow split anatomy (debt-ceiling probe): confidence-0 is wiring-determined for victim-less FSM hosts; filed on OQ-65/OQ-66
+
+**Probe (read-only, no engine change):** per-type MaxEnt log-likelihoods for
+`statutory_debt_ceiling__constitutional_nullity_reading` at analytical context, profiles
+precomputed over the loaded corpus (n=1106, post-agency-gate working tree):
+mountain −168.91 (theater Gaussian: authored 0.95 vs profile μ=0.02/σ=0.05 ⇒ 18.6σ out),
+rope −9.88 (least-bad; +1.0 boolean via `has_coordination_function` ← raw
+`constraint_beneficiary/2`), piton −20.75 (killed by ε=0 vs μ_ε=0.65 and supp=0 vs μ=0.69),
+tangled_rope −29.81 (boolean −8.0: two missing `required` features), snare −32.39,
+scaffold −27.03. Rope wins by ~11 nats ⇒ softmax p(rope)=1.0, entropy 0. **The certainty is
+least-bad selection over a constraint authored outside every cluster's support**, by design:
+the reading's content is "void statute, persistent ritual" (ε=0 mountain claim + 0.95
+piton-grade theater), and the taxonomy has no zero-extraction-pure-ceremony cell — corpus
+pitons are degraded snares (μ_ε=0.65).
+
+**Composed finding (recorded at OQ-65 evidence; cross-ref on OQ-66 debt-ceiling row):** FSM's
+override target is tangled_rope (`config.pl:469`); the shadow's tangled_rope requires
+`requires_active_enforcement` + `has_coordination_function` + `has_asymmetric_extraction`
+(`maxent_classifier.pl:177–179`), and `has_asymmetric_extraction` reads `constraint_victim/2`.
+So for every victim-less FSM host, engine=tangled_rope vs shadow p(tangled_rope)≈0 is
+structurally guaranteed — confidence≈0 / "starkest engine-shadow split" is wiring, not
+per-item calibration evidence (diagnostic layer already patterns it:
+`signature_override_artifact`, yellow). Residual discriminator that does carry signal: the
+shadow's TOP type — mountain at high p ⇒ beneficiary-field dirt (registry/OQ-64);
+non-mountain at artifact certainty ⇒ outside-support/taxonomy hole.
+
+**Post-fix FSM count witnessed this session:** 41 claimed mountains, FSM fires 11 (12
+pre-agency-gate); maxwell_demon_impossibility does NOT fire; debt-ceiling still fires
+(registry-scoped-out — OQ-66).
+
+**Disposition:** no new OQ — the proposed item ("FSM gate reduces to beneficiary-presence /
+non-agent false positives incl. maxwell / shadow-zero guarantee") was already 2/3 landed by
+the 2026-06-03 agency-gate session (gate narrowed to `agent_beneficiary/2`; maxwell
+un-stripped); only the composed shadow-guarantee clause was unrecorded, and it is now an
+OQ-65 evidence bullet qualifying any FSM/shadow disagreement census.
+
+---
+
 ## 2026-06-04 — Tracking-surface consolidation: AGENDA.md, AUDIT.md, TODO.md deleted; ISSUES.md is the single tracker
 
 Reviewed all three item-by-item against the substrate (not the entries) before deletion.
