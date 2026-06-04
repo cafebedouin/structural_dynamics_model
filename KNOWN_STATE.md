@@ -2,12 +2,37 @@
 
 This is the dated session log split out of `CLAUDE.md` (2026-05-31) to cut the
 auto-loaded instruction file's per-session token cost (~3,050 tokens / 45% of CLAUDE.md
-were this section). **It is NOT auto-loaded** — read it on demand.
+were this section). **It is NOT auto-loaded** — read it on demand, and prefer the
+query below to reading the whole file.
 
-**Read this file before touching:** `signature_detection.pl`, `product_site_export.pl`,
-`enhanced_report.py`, `python/sweeps/perturb.py`, `python/demotion_pass.py`,
-`config_validation.pl`, `drl_composition.pl`, or the `corpus_loader` glob. Recent changes
-and mitigations to those files are recorded below.
+**Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
+
+```
+## YYYY-MM-DD — <title>
+**Files:** <comma-separated paths the entry concerns>
+**Tier:** tripwire | correction-key | landed | history
+```
+
+Tiers: `tripwire` = standing do-not / silent-mistake warning; `correction-key` =
+corrects prior claims or qualifies how results may be cited; `landed` = change/audit
+shipped and witnessed; `history` = narrative/archival (roll-off candidate). Checker:
+`python3 python/known_state_status.py --check` (run after editing this file; sibling of
+`issues_status.py`).
+
+**Before touching a file, query instead of reading everything:**
+`python3 python/known_state_status.py --file <path>` lists the entries whose `Files:`
+line names it — read those. (The old hand-maintained "read before touching" list is
+superseded by the `Files:` lines; high-traffic files currently include
+`signature_detection.pl`, `drl_composition.pl`, `json_report.pl`,
+`generate_kernel_corpus.py`, `enhanced_report.py`.)
+
+**Roll-off rule (monthly, with the CLAUDE.md "Memory Consolidation Review"):** entries
+older than ~30 days get the CLAUDE.md promotion test once more, then are **compressed in
+place** — keep the header + `Files:`/`Tier:` lines + a 2–4 line verdict + pointers
+(commit hash, `audits/<date>_<slug>/`, OQ number); drop the body. Full text stays in
+this file's git history; never create a separate archive file (Build Discipline
+Pattern 2). `tripwire` entries are compressed only if their warning is promoted to an
+always-loaded CLAUDE.md section or superseded.
 
 **Standing warnings lifted into auto-loaded `CLAUDE.md` sections** (the tripwire lives there;
 full provenance stays here):
@@ -21,6 +46,8 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-06-04 — Probe/loading infrastructure hardening (gotchas → utilities; two commits)
+**Files:** prolog/corpus_loader.pl, prolog/cache_registry.pl, prolog/probe_harness.pl, prolog/check_stack.pl, prolog/json_report.pl, python/run_pipeline.py
+**Tier:** tripwire
 
 The existence of `swipl_load_path_and_probe_gotchas.md` traced to five structural decisions;
 four got standard-SWI fixes. Commit A (`1460e873`, behavior-preserving) + Commit B
@@ -71,6 +98,8 @@ precedent); output write-path anchoring (the remaining cwd dependency, gotchas �
 ---
 
 ## 2026-06-04 — OQ-65 detector-bait census COMPLETE: bait=2 (no new), omega-routed=75, 6/10 firings expectation-authored
+**Files:** python/audits/oq65_bait_census.py, audits/2026-06-04_oq65_bait_census/
+**Tier:** landed
 
 The per-file census OQ-65 demanded (greps known to undercount) ran end-to-end in one session.
 Tool: `python/audits/oq65_bait_census.py` — 5 read channels (A beneficiary×FSM sentences 492
@@ -115,6 +144,8 @@ pre-registry-fix. OQ-65 → mitigated; OQ-63 filtering-ruling precondition MET. 
 ---
 
 ## 2026-06-04 — Audit corpus consolidated into `audits/<YYYY-MM-DD>_<slug>/` (location mandate)
+**Files:** audits/, python/audits/false_ci_rope_audit.py, python/audits/scaffold_piton_gate_audit.py, python/audits/bc_coupling_audit.py
+**Tier:** tripwire
 
 Audits were scattered (Pattern 2 at directory scale): writeups in `docs/`, one each in
 `docs/audits/` and `docs/technical/`, findings unversioned in gitignored `outputs/`,
@@ -168,6 +199,8 @@ behavior: the file was always gitignored).
 ---
 
 ## 2026-06-04 — FNL prevalence is template-bait-confounded (OQ-70): mechanism witnessed end-to-end, counterfactual run
+**Files:** prolog/signature_detection.pl, agent/verification_bottleneck.json, audits/2026-06-04_fnl_bait_confound/
+**Tier:** tripwire
 
 Question (from an older evaluation): is the ~95% disguise-signature dominance (FNL 827 + FCR
 219 of 1106) substantive or a generator artifact? **Answer for FNL: artifact, witnessed at
@@ -212,6 +245,8 @@ every link.** Full evidence + artifact paths in ISSUES.md OQ-70; probe outputs u
 ---
 
 ## 2026-06-04 — sheaf_status provenance traced end-to-end; arakelov_threshold now emitted + cited
+**Files:** prolog/json_report.pl, prolog/arakelov_height.pl, prolog/sheaf_analysis.pl, python/enhanced_report.py
+**Tier:** tripwire
 
 Follow-up trace of the sheaf_status chain (json_report.pl → pipeline_output.json →
 enriched_pipeline.json → enhanced_report.py). **Coherent:** H¹, heights, and sheaf_status all
@@ -236,6 +271,8 @@ together under output-changing discipline.
 ---
 
 ## 2026-06-04 — Schema drift fixed: `sheaf_status` added to `PIPELINE_FIELDS` (schemas.py)
+**Files:** python/shared/schemas.py, prolog/json_report.pl
+**Tier:** landed
 
 Commit `205a8187` (2026-06-02) added per-constraint `sheaf_status` emission to
 `json_report.pl:390–393` without updating the validator whitelist in
@@ -252,6 +289,8 @@ warns, bad enum value errors.
 ---
 
 ## 2026-06-04 — Engine/shadow split anatomy (debt-ceiling probe): confidence-0 is wiring-determined for victim-less FSM hosts; filed on OQ-65/OQ-66
+**Files:** prolog/maxent_classifier.pl, prolog/config.pl, prolog/signature_detection.pl
+**Tier:** correction-key
 
 **Probe (read-only, no engine change):** per-type MaxEnt log-likelihoods for
 `statutory_debt_ceiling__constitutional_nullity_reading` at analytical context, profiles
@@ -290,6 +329,8 @@ OQ-65 evidence bullet qualifying any FSM/shadow disagreement census.
 ---
 
 ## 2026-06-04 — Tracking-surface consolidation: AGENDA.md, AUDIT.md, TODO.md deleted; ISSUES.md is the single tracker
+**Files:** ISSUES.md, CLAUDE.md, AGENTS.md, README.md
+**Tier:** landed
 
 Reviewed all three item-by-item against the substrate (not the entries) before deletion.
 Verified shipped: maxent_profile/4 context-indexing (AGENDA I-1); reading_diff follow-ons #1–#4
@@ -311,6 +352,8 @@ commit a1140d0d).
 ---
 
 ## 2026-06-04 — Ledger sweep: five trivial OQs closed (11, 12, 13, 24, 42)
+**Files:** ISSUES.md, prolog/config.pl, prolog/drl_purity_network.pl
+**Tier:** landed
 
 Four were ALREADY DONE in substrate with stale ledger entries — OQ-11 (dead params commented out
 at config.pl:291-292, zero live refs), OQ-12 (.gitignore:27 has .env, none tracked), OQ-13 (the
@@ -327,6 +370,8 @@ same witness discipline as a fix (verify the claim against the tree, not the ent
 ---
 
 ## 2026-06-04 — OQ-57 RESOLVED: drift_events.pl:230 wrong-module qualifier (one-token fix, land-alone)
+**Files:** prolog/drift_events.pl, prolog/json_report.pl
+**Tier:** tripwire
 
 `\+ narrative_ontology:requires_active_enforcement(C)` → `\+ domain_priors:requires_active_enforcement(C)`
 at the internalized_piton guard. Derived-then-confirmed: exactly 2 corpus emitters
@@ -346,6 +391,8 @@ existence differs between paths.
 ---
 
 ## 2026-06-04 — OQ-63 diagnostic run: directionality's beneficiary read measured (read-only; no engine change)
+**Files:** prolog/constraint_indexing.pl, ISSUES.md
+**Tier:** correction-key
 
 Measured the d→χ blast radius of `beneficiary_victim_directionality` (constraint_indexing.pl:417)
 reading raw vs agency-filtered beneficiaries. Full per-item evidence in ISSUES.md OQ-63 (updated
@@ -381,6 +428,8 @@ snare_chi_floor (0.66) — knife-edge independent of this question.
 ---
 
 ## 2026-06-03 — FSM agency gate: agent_beneficiary/2 two-site narrowing (maxwell un-stripped; one-row manifest diff, derived then confirmed)
+**Files:** prolog/narrative_ontology.pl, prolog/signature_detection.pl, prolog/tests/test_agent_beneficiary.pl
+**Tier:** tripwire
 
 **What changed (code):**
 - `narrative_ontology.pl`: new exported `non_agent_beneficiary/1` registry (exactly two ruled
@@ -448,6 +497,8 @@ deferral surface + tripwire pointer).
 ---
 
 ## 2026-06-03 — Purity audit: structural_purity/2 was dead (bound-probe bug, now fixed); correction key for purity readings
+**Files:** prolog/signature_detection.pl, prolog/boltzmann_compliance.pl, prolog/purity_scoring.pl, docs/logic_extensions.md
+**Tier:** tripwire
 
 **Audit:** `audits/2026-06-03_purity/purity_audit_20260603.md` (raw evidence `audits/2026-06-03_purity/`,
 12 files; pinned N=1106, manifest `669eab5`). Five purity surfaces audited: scalar
@@ -499,6 +550,8 @@ shape).
   present at pipeline time, absent now).
 
 ## 2026-06-03 — never-generated kernels generated (300/304); corpus 803→1103
+**Files:** agent/generate_kernel_corpus.py, agent/build_never_generated_seeds.py, prolog/validation_suite.pl
+**Tier:** tripwire
 
 The never-generated set (SCOPE-declared contested kernels with **zero** declared readings
 on disk) was examined read-only, then generated. Examination found the ~102 are
@@ -539,6 +592,8 @@ corpus. Do not investigate or `git checkout` it as a surprise change (it desyncs
 Same posture as `pipeline_output.json`.
 
 ## 2026-06-03 — `reading_diff.pl`: the cyclopean disparity operator (OQ-59 disposition)
+**Files:** prolog/reading_diff.pl, prolog/axiom_diff.pl, prolog/stack.pl, prolog/reading_diff_census.pl
+**Tier:** tripwire
 
 **New module `prolog/reading_diff.pl`** (wired into `stack.pl` diagnostic load list; queryable after
 `[stack]`). Diffs two readings cell-by-cell over the closed `(P,T,E,S)` tuple, keyed on a **declared
@@ -612,6 +667,8 @@ noninterference A=deontological/B=conventional → key_fragile. Tests `tests/tes
 ---
 
 ## 2026-06-02 — Reading-reference linter + the "complete kernels, not patch edges" finding
+**Files:** python/audits/reading_reference_linter.py
+**Tier:** landed
 
 **Tool:** `python/audits/reading_reference_linter.py` — a reporter (not a fixer). Census of every
 reference to a reading/constraint name (`cs_reading_relation` + `affects_constraint`), three rules each
@@ -638,6 +695,8 @@ transformative-right sibling) — held-then-narrative-confirmed, not auto-applie
 ---
 
 ## 2026-06-02 — Reading-axis structural obstruction built + cs_reading_relation name-form repair
+**Files:** prolog/cs_kernel_registry.pl, agent/generate_constraint_pl.py, agent/generate_kernel_corpus.py, prolog/cs_corpus_analysis.pl, prolog/json_report.pl
+**Tier:** tripwire
 
 **Built (OQ-54, "establish").** `cs_kernel_obstruction/4` + `cs_kernel_obstruction_status/2` +
 `cs_kernel_obstruction_report/0` in `cs_kernel_registry.pl` — the committer-axis analog of the observer
@@ -689,6 +748,8 @@ green (manifest after repair, 49.6s, all steps ok).
 ---
 
 ## 2026-06-02 — Coupling liveness profile wired into per-constraint JSON (seat structure, not just verdict)
+**Files:** prolog/boltzmann_compliance.pl, prolog/json_report.pl, python/query.py, python/enhanced_report.py
+**Tier:** landed
 
 **What & why.** The Boltzmann coupling test computed scope-violations and power-violations
 separately inside `count_coupling_violations/4` and then summed them, discarding *which* observer
@@ -727,6 +788,8 @@ The reading-axis analog is NOT built — see GAP-04/05/06 and OQ-53..56.
 ---
 
 ## 2026-06-02 — Toy corpus finished 769/770; generator repair + 3 robustness fixes
+**Files:** agent/generate_kernel_corpus.py, python/story_repair.py, prompts/constraint_story_generation_prompt_json.md
+**Tier:** tripwire
 
 **Result.** The kernel-aware toy corpus is complete at **769/770** (ladder `beta_processed.txt`;
 ~772 `.pl` in `testsets/` incl. 3 user-added). Composition: ~566 kernel readings (200 kernels
@@ -767,6 +830,8 @@ residual; (3) the static-ε-below-series-max authoring finding (70/499, prior en
 an OQ.
 
 ## 2026-06-02 — `sheaf_status` now persisted (W1×sheaf join built); orbit provenance is a sidecar
+**Files:** prolog/json_report.pl, python/run_pipeline.py, python/w1_sheaf_join.py, prolog/sheaf_analysis.pl
+**Tier:** tripwire
 
 **If you are editing `json_report.pl`, `run_pipeline.py`'s `_manifest_step`, or anything that reads
 `orbit_data.json` — read this.** Two additive changes landed plus a new join tool. The pipeline ran
@@ -811,6 +876,8 @@ larger archived `testsets_3000` (3,380), **not** staleness or field-misidentific
 max unverified). 2×2 concordance: 58 off-diagonal (36 with H1=0∧W1>0, 22 with H1>0∧W1≈0) — see OQ-51.
 
 ## 2026-06-02 — Dirac Axis-1 (`derived_from/3`) removed → design gap; `gauge_fixed/3` straggler fixed
+**Files:** prolog/dirac_classification.pl, docs/design/design_gaps.md
+**Tier:** tripwire
 
 **If you are editing `dirac_classification.pl` or looking for primary/secondary constraint
 tracking — read this.** Two changes landed together; neither is output-changing for the live
@@ -848,6 +915,8 @@ now, but if it stays unconsumed it is a candidate for the same removal treatment
 ---
 
 ## 2026-06-02 — False-summit forensic detector repaired (was vacuous) + two report bugs + stale comment
+**Files:** prolog/drl_core.pl, prolog/report_generator.pl, prolog/drl_composition.pl
+**Tier:** tripwire
 
 **If you are editing `drl_core.pl` false-mountain detection, `report_generator.pl`'s forensic
 audit, or `drl_composition.pl`'s `classify_at_time` temporal comment — read this first.** Four
@@ -928,6 +997,8 @@ clause-head unification, not empty-table — see `build_discipline.md` Pattern 5
 ---
 
 ## 2026-06-02 — Removed superseded observer-axis husk (saturation_floor) — commit ef92a61d
+**Files:** prolog/drl_composition.pl, python/enrich_pipeline_json.py, python/enhanced_report.py, python/run_pipeline.py, python/shared/schemas.py
+**Tier:** tripwire
 
 **If you are looking for the `--- HUSK SIGNATURE ---` report section or `saturation_floor` /
 `born_saturated` / `husk_metrics` and cannot find them: they were deleted, deliberately.**
@@ -970,6 +1041,8 @@ removed symbol.
    concern.
 
 ## 2026-06-01 — Corpus rebuild pipeline built + validated on N=1 (decompose → no-scope gen)
+**Files:** agent/generate_kernel_corpus.py, python/merge_kernels.py, python/partition_probe.py
+**Tier:** tripwire
 
 **New CLI on `agent/generate_kernel_corpus.py` (default behavior CHANGED).** The script now
 has three modes:
@@ -1025,6 +1098,8 @@ some seeds on first try but the 3× retry usually recovers; persistent ones land
 - Post-fix corpus loads clean: 102 testsets, 99 cs_story_uid, 33 kernels, swipl exit 0.
 
 ## 2026-06-01 — Corpus rebuild Phase 0: old corpora archived, `testsets/` emptied
+**Files:** prolog/testsets/, prolog/archives/, python/sweeps/range_sweep.py
+**Tier:** tripwire
 
 **What changed.** Start of the kernel-aware corpus rebuild (plan:
 `~/.claude/plans/i-rough-sketch-of-steady-squid.md`). Two `git mv`s and a retarget:
@@ -1051,6 +1126,8 @@ is the *archive convention* `prolog/archives/prolog_vN` matching the existing v1
 top-level `archives/`.
 
 ## 2026-06-01 — `signature_detection.pl`: honest `unknown` now SURFACES (override removed, OQ-37)
+**Files:** prolog/signature_detection.pl, python/sweeps/regenerate_orbits.py, python/enhanced_report.py
+**Tier:** tripwire
 
 **What changed (commit `c90c5482`).** The FNL/FCR overrides no longer launder an honest
 `unknown` modal type into tangled_rope. Two guards added:
@@ -1092,6 +1169,8 @@ config param — it is **not** perturb-sweepable; documented in-comment, do not 
 ---
 
 ## 2026-05-31 — Surface-2 primitive built; lock hypothesis witnessed (lever was misnamed)
+**Files:** python/sweeps/surface2_lock_sweep.py, prolog/boltzmann_compliance.pl, prolog/signature_detection.pl
+**Tier:** correction-key
 
 **New tool.** `python/sweeps/surface2_lock_sweep.py` — the Surface-2 primitive (PoL graduated to
 instrument). One swipl process, corpus loaded once, in-memory `retract/assertz` overlay of THREE
@@ -1134,6 +1213,8 @@ re-paste needed; regenerate from the per-value `sig`/`final` fields if the rows 
 ---
 
 ## 2026-05-31 — Commit A: row-23 fail-close in `drl_composition.pl` `classify_at_time` (OQ-41)
+**Files:** prolog/drl_composition.pl
+**Tier:** tripwire
 
 **What changed.** `classify_at_time/4` no longer fabricates `Supp=0.5` when the temporal
 `suppression_requirement` measurement is absent. New order: temporal measurement → else authored
@@ -1190,6 +1271,8 @@ fix changed exactly one producer, `classify_at_time/4`. Traced every consumer of
 per-context shift touches only regenerating live diagnostics + the now-flagged doc/memory numbers.
 
 ## 2026-05-31 — Commit B LANDED (behavior-preserving batch behind Commit A)
+**Files:** prolog/signature_detection.pl, prolog/constraint_bridge.pl, python/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md
+**Tier:** tripwire
 
 Applied: **B1** NL-gate fail-close (`signature_detection.pl` `count_power_beneficiaries` now reads the
 authored `constraint_beneficiary` table, not the empty `intent_power_change` join) — gate discriminates
@@ -1235,6 +1318,10 @@ Original prep notes (the framings that guided B):
   `data_validation.pl:300/309`, all reached by live report paths; the metric is 0/0 so the read always
   defaults, but removing it changes report output. Handle deliberately (drop the emitted field + its
   consumers in one change, or leave it).
+
+## 2026-05-31 — Legacy bullets imported from CLAUDE.md (2026-05-28 → 2026-05-31 items)
+**Files:** prolog/product_site_export.pl, prolog/config_validation.pl, python/sweeps/perturb.py, python/sweeps/demotion_pass.py, python/enhanced_report.py, agent/generate_kernel_corpus.py, prolog/signature_detection.pl, prolog/drl_composition.pl
+**Tier:** history
 
 <!-- BODY: verbatim from CLAUDE.md Known State section as of 2026-05-31 -->
 - **Corpus is 223 constraints (not 3,337).** The reduction reflects a deliberate rebuild:
