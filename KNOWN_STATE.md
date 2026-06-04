@@ -20,6 +20,22 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Ledger sweep: five trivial OQs closed (11, 12, 13, 24, 42)
+
+Four were ALREADY DONE in substrate with stale ledger entries — OQ-11 (dead params commented out
+at config.pl:291-292, zero live refs), OQ-12 (.gitignore:27 has .env, none tracked), OQ-13 (the
+four audited pylint sites refactored away; current `pylint -E` output is environmental false
+positives: E0401 root-cwd imports, E1131 on PEP-604 unions valid on Python 3.10), OQ-42
+(correction already at KNOWN_STATE.md:1144, wrong sentence gone). One needed real work: OQ-24 —
+the forecloses structural-exclusion comment now written at
+`drl_purity_network.pl:compute_edge_contamination/7` (load verified); notable: a pointer at :63
+citing that comment had existed WITHOUT the comment — a dangling doc-pointer
+(produced-but-not-consumed in documentation form). Lesson for ledger hygiene: "open" in ISSUES.md
+is a claim about the substrate that can go stale in BOTH directions; a closure sweep needs the
+same witness discipline as a fix (verify the claim against the tree, not the entry).
+
+---
+
 ## 2026-06-04 — OQ-57 RESOLVED: drift_events.pl:230 wrong-module qualifier (one-token fix, land-alone)
 
 `\+ narrative_ontology:requires_active_enforcement(C)` → `\+ domain_priors:requires_active_enforcement(C)`

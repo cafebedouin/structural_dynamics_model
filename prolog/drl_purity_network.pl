@@ -220,6 +220,19 @@ compute_total_contamination(C, MyPurity, [neighbor(Other, EdgeStrength, _Src)|Re
 %% compute_edge_contamination(+C, +MyPurity, +Other, +EdgeStrength, +Context, -Contam, -Detail)
 %  Computes contamination from one neighbor.
 %  Contamination flows downward only (from lower purity to higher purity).
+%
+%  OQ-24: `forecloses` edges are STRUCTURALLY EXCLUDED from this network, on
+%  purpose — do not "fix" the apparent gap by routing
+%  cs_reading_relation(_, _, forecloses) into constraint_neighbors/3. The FPN
+%  injection test established that forecloses is gradient-orthogonal to the
+%  contamination model: the relation points UP the purity gradient (a
+%  high-purity foreclosing reading → a low-purity foreclosed reading) while
+%  this network flows only DOWN it, so a correct-direction forecloses edge is
+%  inert (Delta = 0) and any active injection inverts causation. This is a
+%  structural property of the relation, not an artifact of any test corpus.
+%  Witness: prolog/tests/test_forecloses_fpn_injection.pl. Of the committer
+%  edge types, only `influences` is wired (via detect_necessity_inheritance);
+%  forecloses is absent BY THIS DECISION, not by omission. See ISSUES.md OQ-24.
 compute_edge_contamination(_C, MyPurity, Other, EdgeStrength, Context, Contam, edge(Other, Delta, Contam)) :-
     purity_scoring:purity_score(Other, OtherPurity),
     OtherPurity >= 0.0,

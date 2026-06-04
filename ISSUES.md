@@ -334,7 +334,10 @@ showing what it cannot say about readings it was not asked to run.
 
 ## OQ-11 — Two truly dead config params: `logic_engine` and `version`
 
-**Status:** open  
+**Status:** resolved (2026-06-04, ledger close — already done in substrate). Both params are
+commented out at `config.pl:291-292` (`% param(version, 3.4).` / `% param(logic_engine, 3.3).`);
+grep finds zero live references in `prolog/ python/ agent/` (archives excluded) and zero
+`config_schema.pl` entries. The work happened at some earlier pass without closing this entry.
 **Origin:** AUDIT.md finding W3, 2026-02-28.  
 **File:** `prolog/config.pl`; `prolog/config_schema.pl`
 
@@ -356,7 +359,8 @@ up future dead params. Low risk, ~5 minutes of work.
 
 ## OQ-12 — `.env` not in `.gitignore`
 
-**Status:** open  
+**Status:** resolved (2026-06-04, ledger close — already done in substrate). `.gitignore:27`
+contains `.env`; `git ls-files` confirms no `.env` is tracked. Closed without a change.
 **Origin:** AUDIT.md finding §6 security review, 2026-02-28.  
 **File:** `.gitignore` (repo root)
 
@@ -375,7 +379,15 @@ created locally. One-line fix.
 
 ## OQ-13 — Four pylint E-level errors in Python code
 
-**Status:** open  
+**Status:** resolved (2026-06-04 — the four audited sites no longer exist). Witness:
+`all_metrics_by_id` appears nowhere in `classification_confidence.py` (item 1 refactored away);
+the audited line targets no longer match (3+ months of drift). A fresh `pylint -E` (pylint 4.0.5,
+Python 3.10.12) on the three named files reports a DIFFERENT, environmental error set: E0401
+import-errors (repo-root cwd path resolution — the modules import fine on their runtime paths),
+E1131 unsupported-binary-operation on PEP-604 unions (`dict | None`, valid at runtime on 3.10 —
+pylint config false positive; note `.pylintrc:1` itself carries an unrecognized-option E0015).
+None are engine bugs; the OQ's specific question (genuine bugs vs dead code in the four audited
+sites) is moot. Pylint-config hygiene, if ever wanted, is new work, not this question.
 **Origin:** AUDIT.md §5 pylint summary, 2026-02-28.  
 **Files:** `python/classification_confidence.py:370`;
 `agent/orchestrator.py:1052`; `agent/perspective_experiment.py:796` (and one other)
@@ -774,7 +786,14 @@ only when that range was deliberately altered.
 
 **Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
 
-**Status:** open  
+**Status:** resolved (2026-06-04). The comment now exists at
+`drl_purity_network.pl:compute_edge_contamination/7` — structural exclusion stated
+(gradient-orthogonality, inert-or-inverting), witness pointer to
+`prolog/tests/test_forecloses_fpn_injection.pl`, and an explicit "absent BY THIS DECISION, not by
+omission" tripwire. Note: a pointer at `drl_purity_network.pl:63` ("see OQ-24 comment at
+compute_edge_contamination") had been written EARLIER without the comment it cited — a dangling
+doc-pointer, the produced-but-not-consumed defect in documentation form; the comment now makes
+the pointer true. Module load verified post-edit.
 **Origin:** FPN convergence-test run, May 2026.  
 **Files:** `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl` (where forecloses is consumed on the committer axis); `prolog/drl_purity_network.pl` (where it is correctly absent)
 
@@ -1657,12 +1676,13 @@ satisfy-on-absence pattern (`get_metric_average:169`).
 
 ## OQ-42 — Documentation correction: `affects_constraint` is NOT empty in testsets_3000
 
-**Status: open (doc fix).** CLAUDE.md's 2026-05-31 note states `affects_constraint` is "empty
-across all of testsets_3000." The census grep finds **9305 emitted facts** in the archive (520
-live). The note conflated `affects_constraint/2` (a populated network edge, read at arity 2 and
-matching arity-2 facts) with the genuinely-empty `intent_*` tables. The empty-table finding holds
-only for the `intent_*` family (OQ-36). **No corpus-coverage divergence exists** — every predicate
-agrees across both corpora. **Resolution:** correct the CLAUDE.md `Known State` note.
+**Status: resolved (2026-06-04, ledger close — correction already in substrate).** The correction
+lives at `KNOWN_STATE.md:1144` ("**CORRECTION (D8/OQ-42): `affects_constraint` is NOT empty** —
+it is a populated network edge…"), and the original wrong sentence ("empty across all of
+testsets_3000") no longer appears in KNOWN_STATE.md or CLAUDE.md (grep witnessed). Original
+finding for the record: the census grep found **9305 emitted facts** in the archive (520 live);
+the 2026-05-31 note had conflated `affects_constraint/2` with the genuinely-empty `intent_*`
+tables (OQ-36). No corpus-coverage divergence exists.
 
 ## OQ-43 — Satisfy-on-absence gate class: the NL beneficiary gate is the fourth instance
 
