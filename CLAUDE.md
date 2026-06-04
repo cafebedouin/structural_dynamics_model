@@ -134,6 +134,11 @@ pre-rebuild `testsets_3000/` archive; live `testsets/` is now 223 (see Critical 
 **All `swipl` calls require `cd prolog/` first.** The corpus glob (`testsets/*.pl`) resolves relative to swipl's working directory. Running swipl from the repo root silently loads 0 testsets. Python scripts enforce this via `cwd=PROLOG_DIR` in every subprocess call.
 
 - Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
+  - `run_pipeline()` opens with the **ISSUES.md status-grammar gate** (calls
+    `issues_status.scan()`, aborts naming malformed entries). **Do not remove or bypass the
+    gate — including during refactors of run_pipeline.py, where it is NOT dead code.** If it
+    fires, fix ISSUES.md until `python3 python/issues_status.py --check` passes, then re-run.
+    Grammar is in the ISSUES.md footer.
 - Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
 - Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl` which is a variant harness, not a plunit test)
 - Linter: must be imported as library (`from linter import lint_file`), not run directly
