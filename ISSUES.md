@@ -12,7 +12,7 @@ Statuses: **open** | **investigating** | **mitigated** | **resolved**
 
 **Ω-type:** Ω_C (design choice — modeling decision to ratify, guard, or record in logic.md).
 
-**Status:** open  
+**Status:** open
 **Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.  
 **File:** `prolog/drl_core.pl:356`
 
@@ -51,7 +51,7 @@ requiring an explicit design-decision record in logic.md.
 
 ## OQ-02 — write_entries choice-point accumulation: cut hides symptom
 
-**Status:** mitigated  
+**Status:** mitigated
 **Origin:** T2 OOM diagnosis, May 2026.  
 **Files:** `prolog/product_site_export.pl:75–77`; `prolog/drl_core.pl` (rope gate
 disjunction at lines 357–358)
@@ -85,7 +85,7 @@ first solution is always correct.
 
 **Ω-type:** Ω_P (constitutively-open design choice — the engine witnesses, a declared seat settles).
 
-**Status:** open  
+**Status:** open
 **Origin:** `docs/deferential_realism_paper_v6.13.md` §6 open questions; reinforced by
 `docs/seat-theorem-v1.md` §7–§8.  
 **File:** `prolog/tests/test_forecloses_fpn_injection.pl` (closest precedent)
@@ -116,7 +116,7 @@ framework itself and running the pipeline.
 
 **Ω-type:** Ω_C (design choice — schema-expressiveness cut: add a 1:N predicate or accept 1:1).
 
-**Status:** open  
+**Status:** open
 **Origin:** `docs/unknown_reading_review.md` audit; `docs/altar-to-the-unknown-reading.md`;
 `agent/analysis/essays/cyclopean_point_epistemic_synthesis.md` [path corrected — item
 originally cited docs/; file is in agent/analysis/essays/].  
@@ -153,7 +153,7 @@ stories.
 
 ## OQ-05 — §2.3 paper correction: empirical work complete, v6 not yet authored
 
-**Status:** resolved  
+**Status:** resolved
 **Origin:** alt_power_transform full-corpus run + Arm A/B sweep, May 2026.  
 **Resolution:** v6 authored 2026-05-28. See `docs/observers_not_humans_v6.md`.  
 **Witness files:** `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`
@@ -184,7 +184,7 @@ theoretical status. Witnesses cited per seat-theorem §3 Correction style.
 
 ## OQ-06 — cs_drift_unacknowledged / cs_axiom_foreclosed: off-case fixtures missing
 
-**Status:** open  
+**Status:** open
 **Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.  
 **Files:** `prolog/cs_drift_engine.pl` (predicates); `prolog/cs_corpus_analysis.pl:158–162`
 (callers); `prolog/json_report.pl:531–533` (report emission)
@@ -214,7 +214,7 @@ direction=stable or magnitude=minor and observe that the predicate stays silent.
 
 ## OQ-07 — Hand-traced mismatch candidate unverified at runtime
 
-**Status:** open  
+**Status:** open
 **Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.  
 **File:** `prolog/testsets/conceptual_emergence_reading.pl`  
 **UID:** `72c8aa61-6909-40a1-83ef-a460510f3b82` (verified present in file, 13 occurrences)
@@ -238,7 +238,7 @@ Prolog REPL after loading the CS schema and conceptual_emergence_reading testset
 
 ## OQ-08 — DR/CS context asymmetry not surfaced in mismatch reports
 
-**Status:** open  
+**Status:** open
 **Origin:** Tranche 2 audit Item 2.  
 **File:** `prolog/cs_drift_mismatch.pl` (~line 52, "by design" comment)
 
@@ -262,7 +262,7 @@ clarity value for any external reader of mismatch output.
 
 ## OQ-09 — sqrt_flip and quadratic_flip Jaccard slightly above paper §2.3 ceiling
 
-**Status:** resolved  
+**Status:** resolved
 **Origin:** alt_power_transform full-corpus run (testsets_3000, 3380 constraints), May
 2026.  
 **Resolution:** v6 corrected the claimed range to 0.697–0.833 (2026-05-28).
@@ -279,7 +279,7 @@ accordingly uses the full-corpus range (0.697–0.833) as the empirical witness.
 
 ## OQ-10 — Cross-reading comparison: no tooling to compare engine output across readings of the same kernel
 
-**Status:** open  
+**Status:** open
 **Origin:** User-identified capability gap, May 2026; architectural context in
 `docs/unknown_reading_review.md` §4 and §5.  
 **Files:** `prolog/testsets/autonomy_reading.pl` (template with cs_reading_relation);
@@ -334,7 +334,7 @@ showing what it cannot say about readings it was not asked to run.
 
 ## OQ-11 — Two truly dead config params: `logic_engine` and `version`
 
-**Status:** resolved (2026-06-04, ledger close — already done in substrate). Both params are
+**Status:** resolved — (2026-06-04, ledger close — already done in substrate). Both params are
 commented out at `config.pl:291-292` (`% param(version, 3.4).` / `% param(logic_engine, 3.3).`);
 grep finds zero live references in `prolog/ python/ agent/` (archives excluded) and zero
 `config_schema.pl` entries. The work happened at some earlier pass without closing this entry.
@@ -359,7 +359,7 @@ up future dead params. Low risk, ~5 minutes of work.
 
 ## OQ-12 — `.env` not in `.gitignore`
 
-**Status:** resolved (2026-06-04, ledger close — already done in substrate). `.gitignore:27`
+**Status:** resolved — (2026-06-04, ledger close — already done in substrate). `.gitignore:27`
 contains `.env`; `git ls-files` confirms no `.env` is tracked. Closed without a change.
 **Origin:** AUDIT.md finding §6 security review, 2026-02-28.  
 **File:** `.gitignore` (repo root)
@@ -379,7 +379,7 @@ created locally. One-line fix.
 
 ## OQ-13 — Four pylint E-level errors in Python code
 
-**Status:** resolved (2026-06-04 — the four audited sites no longer exist). Witness:
+**Status:** resolved — (2026-06-04 — the four audited sites no longer exist). Witness:
 `all_metrics_by_id` appears nowhere in `classification_confidence.py` (item 1 refactored away);
 the audited line targets no longer match (3+ months of drift). A fresh `pylint -E` (pylint 4.0.5,
 Python 3.10.12) on the three named files reports a DIFFERENT, environmental error set: E0401
@@ -415,7 +415,7 @@ None are blocking; all are low priority.
 
 ## OQ-14 — Two-axis architecture doc stale on `influences` bridge
 
-**Status:** open  
+**Status:** open
 **Origin:** Cross-axis comparison layer design pass, May 2026.  
 **File:** `docs/two_axis_architecture_v7.md` (lines 41, 109, 116, 139, 143)
 
@@ -449,7 +449,7 @@ exactly the unmarked-drift failure the doc was written to prevent.
 
 **Ω-type:** Ω_C (design choice — architecture decided, build deferred).
 
-**Status:** open  
+**Status:** open
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
 **Files:** `prolog/cs_drift_mismatch.pl`, `prolog/cs_kernel_registry.pl`,
 `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl`,
@@ -495,7 +495,7 @@ keystone is the mediator design itself.
 
 ## OQ-16 — Temporal vocabulary rename pass deferred
 
-**Status:** open  
+**Status:** open
 **Origin:** Temporal excavation audit, May 2026.  
 **Files:** `prolog/drift_events.pl`, `prolog/drift_report.pl`,
 `prolog/trajectory_mining.pl`, `prolog/trajectory_report.pl`,
@@ -536,7 +536,7 @@ the `stack.pl` discipline established during Phase A of the UUID work).
 
 ## OQ-17 — `testsets_3000/` quarantined from loader: abandoned or unwired?
 
-**Status:** open  
+**Status:** open
 **Origin:** Temporal excavation, May 2026.  
 **Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob);
 `prolog/cs_drift_mismatch.pl:113` and `prolog/cs_corpus_analysis.pl:194`
@@ -574,7 +574,7 @@ should be on the record; "sitting there ignored" is the unmarked state.
 
 ## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
 
-**Status:** open  
+**Status:** open
 **Origin:** Temporal wiring spike, faithfulness audit, May 2026.  
 **File:** `prolog/drift_events.pl:72-79`
 
@@ -614,7 +614,7 @@ becoming an unmarked assumption.
 
 ## OQ-19 — Temporal-shape trigger thresholds are corpus-specific magic numbers
 
-**Status:** open  
+**Status:** open
 **Origin:** Temporal-shape report section build, May 2026.  
 **File:** `python/enhanced_report.py` (build_drift_trajectory section,
 trigger logic)
@@ -652,7 +652,7 @@ recalibrate" marker.
 
 ## OQ-20 — DR-regression baseline diff against `v3-dev-baseline` tag never run
 
-**Status:** open  
+**Status:** open
 **Origin:** Tranche 2 correctness pass, May 2026.  
 **Files:** git tag `v3-dev-baseline` (pre-CS-work); current DR pipeline
 output
@@ -687,7 +687,7 @@ output, return to HEAD, run again, byte-diff.
 
 ## OQ-21 — A12 multi-instance render branch never exercised on pipeline data
 
-**Status:** open  
+**Status:** open
 **Origin:** UUID surrogate migration, May 2026.  
 **File:** `prolog/json_report.pl` (A12 per-constraint CS block,
 `cs_instance_count` > 1 branch)
@@ -725,7 +725,7 @@ load multi-reading data and incidentally validate the branch.
 
 ## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
 
-**Status:** open  
+**Status:** open
 **Origin:** alt_power_transform first T2 run (compressed variants), May 2026. Diagnosed
 during the H1 investigation but not pursued as a separate item once the corrected Arm A/B
 sweep resolved H1.
@@ -770,7 +770,7 @@ only when that range was deliberately altered.
 
 **Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
 
-**Status:** open  
+**Status:** open
 **Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
 **Files:** `prolog/drl_purity_network.pl` (constraint_neighbors/3, compute_edge_contamination/7); `prolog/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness)
 
@@ -786,7 +786,7 @@ only when that range was deliberately altered.
 
 **Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
 
-**Status:** resolved (2026-06-04). The comment now exists at
+**Status:** resolved — (2026-06-04). The comment now exists at
 `drl_purity_network.pl:compute_edge_contamination/7` — structural exclusion stated
 (gradient-orthogonality, inert-or-inverting), witness pointer to
 `prolog/tests/test_forecloses_fpn_injection.pl`, and an explicit "absent BY THIS DECISION, not by
@@ -807,7 +807,7 @@ the pointer true. Module load verified post-edit.
 
 ## OQ-25 — testset directory chimera: resolved-inert but resolution mechanism is latent
 
-**Status:** resolved (2026-05-28)  
+**Status:** resolved — (2026-05-28)
 **Origin:** Corpus cleanup, May 2026 (in response to ε-variability investigation).  
 **Files:** `prolog/testsets/` (working tree); `testsets_archive_20260525/` (archive)
 
@@ -827,7 +827,7 @@ the pointer true. Module load verified post-edit.
 
 **Ω-type:** Ω_C (design choice — what ε-invariance the framework claims; RESOLVED via Axiom 2 amendment).
 
-**Status:** resolved  
+**Status:** resolved
 **Origin:** ε-variability investigation, May 2026; cleanup of testset chimera surfaced the underlying mechanism.  
 **Resolution:** Option (a) implemented 2026-05-28. See `docs/deferential_realism_paper_v6.13.1.md` Axiom 2 (lines 66–91).
 
@@ -849,7 +849,7 @@ the pointer true. Module load verified post-edit.
 
 **Ω-type:** Ω_C (design choice — definitional: which orbit H¹ measures).
 
-**Status:** open  
+**Status:** open
 **Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).  
 **Files:** `prolog/cohomological_obstruction.pl` (or wherever orbit_vector is constructed); `prolog/drl_core.pl` (dr_type, integrate_signature_with_modal); `docs/deferential_realism_paper_v6.13.md` (theorem 2 statement)
 
@@ -863,7 +863,7 @@ the pointer true. Module load verified post-edit.
 
 ## OQ-28 — Seat Theorem v1.1 honesty edits batched but not all witnessed by runs
 
-**Status:** open  
+**Status:** open
 **Origin:** Seat Theorem amendment work, May 2026.  
 **File:** `docs/seat-theorem-v1.md` (now v1.1 with three pending edits)
 
@@ -927,7 +927,7 @@ The current `outputs/product_site_orbits.json` was stamped in place without rege
 
 ## OQ-31 — enhanced_report.py: five sections stubbed, not deleted — record why
 
-**Status:** resolved — option (a) taken, deletion confirmed by git diff  
+**Status:** resolved — option (a) taken, deletion confirmed by git diff
 **Resolved:** 2026-05-29 (same session as origin; see commit 7af6b945)  
 **Origin:** Phase 2 restructure, 2026-05-29.
 
@@ -980,7 +980,7 @@ criteria have changed, not just that the section "might be useful."
 
 ## OQ-30 — Stability band witness set incomplete (one confirmed pair only)
 
-**Status:** mitigated (2026-05-30); Surface-2 lock front WITNESSED (2026-05-31). 24 params
+**Status:** mitigated — (2026-05-30); Surface-2 lock front WITNESSED (2026-05-31). 24 params
 witnessed across 18 kernels; the Surface-1-unwitnessable remainder are signature-locked.
 Signature audit (2026-05-30) + Surface-2 sweep (2026-05-31, see end of this OQ): of 96
 Boltzmann-gated locked readings, 56 load-bearing / 40 over-included; `boltzmann_coupling_threshold`
@@ -1244,7 +1244,7 @@ population, but only changes the final type where the metric type differs from `
 
 ## OQ-32 — bifurcation_sweep.py: path resolution broken after 2026-05-28 reorg
 
-**Status:** resolved — 2026-05-29 (6 scripts fixed)  
+**Status:** resolved — 2026-05-29 (6 scripts fixed)
 **Origin:** Task 5 probe run, 2026-05-29.  
 **Files:** `python/sweeps/bifurcation_sweep.py` and 5 others (see below)
 
@@ -1265,7 +1265,7 @@ is a backlog decision, not a path-bug blocker.
 
 ## OQ-33 — classify_at_time fabricates suppression on 100% of temporal corpus; 279/647 temporal classifications misclassified as tangled_rope instead of snare
 
-**Status:** investigating — 2026-05-30  
+**Status:** investigating — 2026-05-30
 **Origin:** Fabricated-default inventory session, 2026-05-30. Tripwire graduated 2026-05-30.  
 **Files:** `prolog/drl_composition.pl:179` (temporal fallback), `prolog/drl_core.pl:96`
 (static fallback — DORMANT, see below), `prolog/testsets/*.pl` (223 testsets,
@@ -1362,7 +1362,7 @@ defect class.
 
 ## OQ-34 — Estimator-classifier independence audit: does the prompt expose MI-decision-rule thresholds to authors?
 
-**Status: open**
+**Status:** open
 
 **Question:** The NL circularity audit (2026-05-31) established a design principle:
 thresholds that are *definitional bounds* on the substrate (what the author is
@@ -1484,7 +1484,7 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
-**Status: open.** Census rows 1–6.
+**Status:** open — Census rows 1–6.
 - Row 1 `mandatrophy_resolved`: schema requires `=true` at ε>0.70; compiler emits no fact; engine
   uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names, `narrative_ontology.pl:317-318`).
   **DECISION (D6, 2026-05-31): document and defer — do NOT wire.** Read-only count is near-zero: the
@@ -1506,7 +1506,7 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 **Ω-type:** Ω_C (design choice — populate the subsystem or delete it; part of the satisfy-on-absence policy, OQ-44).
 
-**Status: open.** Census row 7. `intent_power_change`, `intent_beneficiary_class`,
+**Status:** open — Census row 7. `intent_power_change`, `intent_beneficiary_class`,
 `intent_viable_alternative`, `intent_alternative_rejected`, `intent_suppression_level`,
 `intent_resistance_level`, `intent_norm_strength` — **all 0 facts in BOTH corpora**. Read by
 `intent_engine` (loaded `stack.pl:43`, empty import) + `signature_detection`; `intent_engine` is
@@ -1523,7 +1523,7 @@ delete `intent_engine` and its readers. **High-judgment.**
 
 **Ω-type:** Ω_E (design-relevant — taxonomy-coverage; χ-partition closed structurally, suppression-floor recalibration deferred to OQ-48).
 
-**Status: open.** Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
+**Status:** open — Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
 `internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
 (`data_validation`/`json_report`/`utils`), `accumulation_speed` (`utils.pl:211`, explicit 0.0
 default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurement metrics
@@ -1581,7 +1581,7 @@ changes"; scoped output-changing task, not yet built.
 
 ## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
 
-**Status: open.** Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
+**Status:** open — Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
 (`drl_composition.pl`, 0 callers anywhere), `cs_reference_frame/2`. The exhaustive sweep yields
 528 exports → 422 zero-external-caller → {65 `/0` CLI, 114 meta-called, 26 ext-only, **217 candidate**}.
 The 217 is an **upper bound**, not an orphan list — it conflates genuinely-dead with
@@ -1594,7 +1594,7 @@ read-vs-declare canary).
 
 **Ω-type:** Ω_C (design choice — where the prompt/engine enforcement boundary sits).
 
-**Status: open.** Census rows 14–18.
+**Status:** open — Census rows 14–18.
 - Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
   uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
 - Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
@@ -1607,7 +1607,7 @@ read-vs-declare canary).
 
 **Ω-type:** Ω_C (design choice — authoritative representation per metric, or document the axis split as intended).
 
-**Status: open.** Census rows 19–22. `extractiveness`, `base_extractiveness`,
+**Status:** open — Census rows 19–22. `extractiveness`, `base_extractiveness`,
 `suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
 `measurement/5` (committer `drl_composition`/`drift_events`) — the two representations can carry
 different values per axis. Plus `compute_temporal_stability` (`signature_detection`) folds scalar
@@ -1629,7 +1629,7 @@ generation template first authoring a temporal series, the split reopens. The `e
 
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
-**Status: row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below).** Census rows 23–27. A silent
+**Status:** partial — row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below). Census rows 23–27. A silent
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
 nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
 - **Row 23 `drl_composition.pl` `classify_at_time` `Supp=0.5` — FIXED via scalar-fallback STOPGAP.**
@@ -1676,7 +1676,7 @@ satisfy-on-absence pattern (`get_metric_average:169`).
 
 ## OQ-42 — Documentation correction: `affects_constraint` is NOT empty in testsets_3000
 
-**Status: resolved (2026-06-04, ledger close — correction already in substrate).** The correction
+**Status:** resolved — (2026-06-04, ledger close — correction already in substrate). The correction
 lives at `KNOWN_STATE.md:1144` ("**CORRECTION (D8/OQ-42): `affects_constraint` is NOT empty** —
 it is a populated network edge…"), and the original wrong sentence ("empty across all of
 testsets_3000") no longer appears in KNOWN_STATE.md or CLAUDE.md (grep witnessed). Original
@@ -1688,7 +1688,7 @@ tables (OQ-36). No corpus-coverage divergence exists.
 
 **Ω-type:** Ω_C (design choice — one fail-closed-vs-vacuous-pass policy across the class; generalized by OQ-44).
 
-**Status: open. Policy decision should be made once across the class, not per site.**
+**Status:** open — Policy decision should be made once across the class, not per site.
 
 A recurring structural pattern, now seen in four places: an engine gate is **satisfied by the
 absence of data**, so it passes vacuously and the result reads as a positive finding when it is
@@ -1732,8 +1732,8 @@ natural laws yields zero beneficiaries and zero flips; it only bites a mis-autho
 
 **Ω-type:** Ω_C (design choice — the engine-wide fail-closed-on-absence policy; decided once for OQ-41/36/37/43).
 
-**Status: open (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
-class (OQ-41, OQ-36/OQ-37, OQ-43).**
+**Status:** open — (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
+class (OQ-41, OQ-36/OQ-37, OQ-43).
 
 **Premise:** the engine must distinguish "authored to be zero" from "absent" everywhere, and
 never let absence satisfy a gate. Zero-because-measured and zero-because-missing collapse to the
@@ -1774,7 +1774,7 @@ OQ-43, OQ-41, OQ-36/OQ-37. Build-discipline Pattern 5 records the pattern and di
 
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
-**Status: open (corpus-quality audit, NOT engine maintenance).** Spun off from the D3 ruling so the
+**Status:** open — (corpus-quality audit, NOT engine maintenance). Spun off from the D3 ruling so the
 wiring fix (NL beneficiary gate fail-close, Commit B1) and the content question stay separate. The
 gate fail-close makes "no beneficiary authored" honestly-conditional rather than a vacuous pass; it
 does **not** decide whether any of the 404 natural-law certifications are *mis-authored* false-naturals
@@ -1784,7 +1784,7 @@ Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance
 
 ## OQ-46 — D4-for-suppression is a GENERATION-TEMPLATE requirement; it retires the row-23 stopgap
 
-**Status: open. Sequencing constraint for the row-23 fix (OQ-41).** The row-23 fix
+**Status:** open — Sequencing constraint for the row-23 fix (OQ-41). The row-23 fix
 (`classify_at_time`) currently bridges absent temporal `suppression_requirement` to the authored
 **scalar** value — a **labeled stopgap**, not a sanctioned second representation. The real fix is
 **upstream, in generation**: the story template must author a *temporal* `suppression_requirement`
@@ -1800,7 +1800,7 @@ bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Com
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 
-**Status: open. Gating constraint on the regeneration arc.** The behavior-preserving prompt/schema
+**Status:** open — Gating constraint on the regeneration arc. The behavior-preserving prompt/schema
 changes (D5 row-14 strip, D7 schema-gate strip) only take effect on **regenerated** stories. Sequencing:
 - **De-stamp A/B is the FIRST regeneration batch** (the D7 schema-gate strip + row-14 removal, run as
   an A/B against current stories) and it **gates batch two** — do not bulk-regenerate until the A/B
@@ -1836,7 +1836,7 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
 
 **Ω-type:** Ω_E (design-relevant — closeable by recalibration; deferred by policy until the corpus is worth calibrating against).
 
-**Status: open (table-setting for the rebuild).** The χ / ε / suppression classification
+**Status:** open — (table-setting for the rebuild). The χ / ε / suppression classification
 thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
 corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
 calibration corpus is **Western/WEIRD** and needs non-WEIRD validation (`logic_thresholds.md:58–59`,
@@ -1875,7 +1875,7 @@ convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recal
 
 **Ω-type:** Ω_C (design choice — is the override layer laundering or correction; FNL→tangled_rope correction RESOLVED v6.13.2). The coupling-score-validity sub-question is Ω_P (constitutively open).
 
-**Status: open — escalated for (a)/(b) ruling. Read-only audit; no clause removed.**
+**Status:** open — escalated for (a)/(b) ruling. Read-only audit; no clause removed.
 
 **Corpus:** `testsets_3000` (3380 readings; `[corpus] Loaded 3380 testsets successfully`). Replaces
 the toy-derived 96/56/40 — that did not carry; prevalence re-established at scale.
@@ -1998,7 +1998,7 @@ coupling is real but was not exercised by Move 1 — decouple moves from "deferr
 **Ω-type:** OPEN-1 is Ω_C (design choice — what "false summit" explains against). OPEN-2 is an
 engine-hardening question, not a design Omega.
 
-**Status: open (two follow-ups). The core detector bug is RESOLVED** — see KNOWN_STATE.md
+**Status:** partial — open (two follow-ups). The core detector bug is RESOLVED — see KNOWN_STATE.md
 2026-06-02 "False-summit forensic detector repaired." Summary of what was fixed (do not re-open):
 `drl_core.pl:548` `type_1_false_summit` used `is_mountain(C, Context, fail)`, which matches the
 unconditional catch-all clause `is_mountain(_,_,fail)` (`:123`) and never ran a test; with the cut it
@@ -2047,7 +2047,7 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 **Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures that the framework
 calls complements).
 
-**Status:** resolved (both off-diagonal cells probed and explained, 2026-06-02) — **22 cell
+**Status:** resolved — (both off-diagonal cells probed and explained, 2026-06-02) — **22 cell
 (H1>0 ∧ W1≈0) = `unknown`-driven**; **36 cell (H1=0 ∧ W1>0) = chain-conditional MaxEnt movement**.
 Two downstream caveats surfaced that gate any use of W1 (see "Result — the 36"): **W1 is
 chain-conditional only** (blind to scaffold/piton/naturalized mass) and **strongly corpus-dependent**
@@ -2221,7 +2221,7 @@ beneficiary channel is the right disqualifier). Related: OQ-43 (NL certification
 *authored*," not "none exists"), OQ-50 (false-summit detector repaired but post-fix firings unwitnessed
 at scale).
 
-**Status:** core question resolved (provisional, type-vector based, 2026-06-02); W1-magnitude ranking
+**Status:** partial — core question resolved (provisional, type-vector based, 2026-06-02); W1-magnitude ranking
 deferred behind the OQ-51 W1 rebuild. **Result:** of the 98 `manifest_presheaf`, **16 are
 false-mountain-shaped** (13 strict: powerless=`naturalized` ∧ analytical=`snare`; 3 loose:
 `naturalized`+`snare` both present), and **all 16 carry both an authored beneficiary AND an authored
@@ -2400,7 +2400,7 @@ should run before the taxonomy is declared, and the taxonomy is the user's to ru
 
 **Ω-type:** Ω_E (empirical — data-completeness defect; run the corpus, find the gap).
 
-**Status:** RESOLVED 2026-06-04 — wrong-module qualifier fixed at `drift_events.pl:230`
+**Status:** resolved — 2026-06-04 — wrong-module qualifier fixed at `drift_events.pl:230`
 (`narrative_ontology:` → `domain_priors:`). Witnesses: before = direct call throws
 `existence_error` (pasted, both working tree and HEAD worktree); after = kodashim fires
 `evidence(extraction,0.08,theater,0.85)` (the exact values the original stack trace carried);
@@ -2473,7 +2473,7 @@ data repair.
 **Ω-type:** Ω_P (content decision). **Disposition policy ruled 2026-06-02 (below); the per-edge
 missing-vs-typo-vs-noise sort is a later narrative-read pass, not a mechanical rule.**
 
-**Status:** policy ruled; narrative-read pass run on the 13 forecloses (6 repaired); the residue is a
+**Status:** partial — policy ruled; narrative-read pass run on the 13 forecloses (6 repaired); the residue is a
 **kernel-completeness** problem, not edge-patching — see the finding below.
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
@@ -2641,7 +2641,7 @@ items graduate into the defensible backlog. *(Candidate: wire it as a non-gating
 **Ω-type:** Ω_E (empirical — detectable by scanning reading-name stems per kernel; a content/merge
 decision once sized).
 
-**Status:** **disposed (2026-06-03): preserve-and-diff, not merge** — operator built (`reading_diff.pl`);
+**Status:** disposed — **(2026-06-03): preserve-and-diff, not merge** — operator built (`reading_diff.pl`);
 **edge-repair #1 DONE (2026-06-03)** — 4 `absolutist_reading` edges retargeted → `absolute_sovereignty`,
 R1 dangling 89→87, affects_constraint 1668→1666, corpus loads 803. Remaining: #3 corpus-wide run, #4
 axiom diff; plus 1 flagged prose mention (`governance_quality_reading.pl:226`) — a content judgment, not
@@ -2778,7 +2778,7 @@ if those readings are regenerated, NOT a disposition question. Quarantine: `prol
 
 **Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
 
-**Status:** open (log-only by ruling — do NOT fix in auto; see "What resolution changes")
+**Status:** open — (log-only by ruling — do NOT fix in auto; see "What resolution changes")
 **Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §3, K5).
 **Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
 (`scope_invariance_test` — `variant([])` case; `compute_cross_index_coupling` — `GridSize < 2 ->
@@ -3051,7 +3051,7 @@ the gate-two discriminating work in this session's registry ruling).
 
 **Ω-type:** Ω_C (taxonomy/ruling record).
 
-**Status:** open (ledger — items graduate individually)
+**Status:** open — (ledger — items graduate individually)
 **Origin:** FSM agency-gate session 2026-06-03; rulings recorded in KNOWN_STATE same date.
 **Files:** `narrative_ontology.pl` (registry + two-gate principle comment block),
 `prolog/tests/test_agent_beneficiary.pl` (the :287 inertness tripwire), `drl_core.pl:284-287/:333/:362`,
@@ -3084,6 +3084,13 @@ AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only
 
 ---
 
-*Last updated: 2026-06-03. Add new items with sequential OQ-NN labels. Mark
-resolved items with **Status: resolved** and a resolution note rather than
-deleting — provenance matters.*
+*Last updated: 2026-06-04. Add new items with sequential OQ-NN labels. Mark
+resolved items with a status change and a resolution note rather than deleting —
+provenance matters.*
+
+*Status grammar (normalized 2026-06-04, machine-readable): each entry's first
+Status line is exactly `**Status:** <token>` optionally followed by ` — <detail>`,
+with token ∈ {open, investigating, mitigated, partial, resolved, disposed}.
+Census: `python3 python/issues_status.py` (table + counts; pass a token to filter);
+`--check` exits 1 on any malformed entry — run it after editing this file.
+One-liner equivalent: `awk '/^## OQ-/{oq=$2} /^\*\*Status:\*\* /{print oq, $2}' ISSUES.md`.*
