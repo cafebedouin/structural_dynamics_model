@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "roman_republican_constitution__crisis_machinery",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_roman_republican_constitution__crisis_machinery",
+    "measurement_id_prefix": "rrc_crisis",
+    "story_uid": "0292c5f0-9a54-40c6-9a14-c13f14bfbbb7"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Roman Republican Crisis Machinery: Dictatorship and Final Decree",
+    "topic_domain": "political/historical/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_survival_apparatus",
+      "strongman_magistrate"
+    ],
+    "victims": [
+      "ordinary_checks_and_vetoes",
+      "plebeian_tribunes",
+      "senate_authority"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Plebeian During Crisis",
+      "comment": "PERSPECTIVE 1: PLEBEIAN ASSEMBLIES & TRIBUNATE (SNARE) — During dictatorship or senatus consultum ultimum, the tribunes' sacrosanct veto is suspended, the assemblies cannot pass law, and the plebs have no appeal. Extraction is maximal: survival authority flows entirely to the strongman. The crisis machinery traps the powerless in absolute submission. Their ordinary constitutional protections are removed by the same constitution that granted them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Senate During Crisis",
+      "comment": "PERSPECTIVE 2: SENATE AUTHORITY (TANGLED ROPE) — The Senate benefits from crisis machinery because it preserves the state, which preserves the Senate's role. But the Senate also loses its auctoritas: the dictator or consul acting under senatus consultum ultimum can override Senate deliberation. The Senate coordinates the state's survival but also experiences extraction — its authority is temporarily neutered. Mixed benefit and cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Apparatus",
+      "comment": "PERSPECTIVE 3: STATE SURVIVAL (ROPE) — From the collective perspective of the state as a coordinating body, the crisis machinery is pure coordination: it solves the collective action problem of rapid, unified response to existential threats. The state experiences no extraction; it experiences coordination. The machinery is self-referential: the constraint that saves the Republic IS the Republic's constitution recognizing its own limit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Strongman During Crisis",
+      "comment": "PERSPECTIVE 4: STRONGMAN MAGISTRATE (SNARE) — The dictator or consul acting under senatus consultum ultimum appears to have supreme power. But this perspective reveals extraction: the strongman is constitutionally bound to return power at the crisis's end. The term-limit is enforced socially and legally — violating it breaks the entire constitutional order and triggers the victimization of the strongman themselves (e.g., Sulla proscriptions, Caesar's assassination). The machinery extracts from the strongman too: they must accept supreme power and then release it, or face exile, proscription, or death. Extractiveness is unbounded INSIDE the window but bounded by the constitutional sunset."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Republican Institutional Coalition",
+      "comment": "PERSPECTIVE 5: REPUBLICAN INSTITUTIONAL COALITION (SCAFFOLD) — From the perspective of the institutions that maintain the Republic's constitution — Senate families, magistrates, tribunes, assemblies — the crisis machinery is a temporary coordination mechanism with built-in sunset. It solves the crisis AND it has a term-limit gate. The coalition's effectiveness depends on enforcing the sunset: when the emergency passes, the crisis machinery must be deactivated. This is structurally low-extraction (χ ≤ 0.30) because the beneficiaries (the state, the institutions) have agency to enforce the sunset."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL / CONSTITUTIONAL NATURAL LAW (MOUNTAIN) — From a civilizational analytical view, the crisis machinery appears as an immutable structural principle: every republic must include its own suspension, or it cannot survive genuine existential threats. The principle appears to be a natural law of political organization: states without crisis machinery cannot defend themselves; states that cannot suspend their ordinary rules cannot defend their rules. This perspective risks naturalizing the contingent institutional design as if it were a law of nature. However, the empirical data shows extractiveness ≥ 0.68 and suppression ≥ 0.78, which contradicts the mountain classification. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "definition_of_existential_crisis",
+      "question": "What constitutes an existential threat sufficient to invoke the crisis machinery? Who determines the boundary?",
+      "resolution_mechanism": "Historical analysis of declared vs. actual crises; comparison of invocation rates in genuine military threats (Hannibal, Gauls) vs. internal political conflicts (Gracchi, Catiline, Antony). Correlation between declared urgency and actual outcome.",
+      "impact": "If the boundary is clear and narrowly enforced: crisis machinery is genuine temporary suspension (Scaffold/Rope). If the boundary is ambiguous and exploited: crisis machinery becomes standing extraction mechanism (Snare/Tangled Rope). If boundary definition itself becomes contested: reading is foreclosed by practice_drift.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary definition for existential crisis — who determines, how narrow the gate"
+    },
+    {
+      "id": "sunset_enforcement_mechanism",
+      "question": "What institutional mechanism actually enforces the return of power after the crisis ends? Is it law, social norm, or threat of violence?",
+      "resolution_mechanism": "Longitudinal tracking of term-limit compliance: how many strongmen returned power on schedule? Correlation between early return and institutional pressure vs. coerced return and resistance. Analysis of penalties for extending the dictatorship (proscriptions, civil war, assassination).",
+      "impact": "If enforcement is automatic/legal: crisis machinery is self-limiting (Scaffold). If enforcement is social/norm-based: machinery is reliable but depends on elite consensus (Rope/Tangled Rope). If enforcement is by threat of violence: machinery is extraction trap masked as temporary (Snare). If enforcement fails: reading is foreclosed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement mechanism for sunset clause — legal, social, or coercive"
+    },
+    {
+      "id": "crisis_machinery_versus_sibling_readings",
+      "question": "Does the existence of crisis machinery foreclose, coexist with, or influence the sibling readings of the Republican constitution?",
+      "resolution_mechanism": "Textual analysis of sources: does the crisis machinery reading presuppose the Twelve Tables' codification? Do the magistracies' collegiality principles apply during dictatorship? Do the popular assemblies retain veto rights during senatus consultum ultimum? Does the Senate's auctoritas override the dictator's emergency powers or vice versa?",
+      "impact": "If crisis machinery forecloses sibling readings: the constitution has multiple incompatible kernels (constitutional crisis). If sibling readings coexist: the constitution can be read coherently from multiple starting points. If crisis machinery influences siblings: the constitutional order has a hierarchy where emergency power is the supreme principle. Resolution determines reading_relations classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical and structural relationships between crisis machinery reading and sibling readings"
+    },
+    {
+      "id": "extraction_inside_versus_outside_window",
+      "question": "Is extractiveness during the crisis window (0.68) structurally the same as extractiveness if the machinery persisted indefinitely?",
+      "resolution_mechanism": "Counterfactual analysis: if a dictator abolished the term-limit and held power indefinitely, what would change? Would the beneficiary set expand? Would suppression remain at 0.78 or increase? Would theater_ratio increase as legitimacy rhetoric intensifies? Comparison with post-Republic regimes (Principate, Dominate) that made emergency powers permanent.",
+      "impact": "If extractiveness would increase substantially under indefinite power: current classification as Tangled Rope (mixed coordination/extraction) is correct because the term-limit is doing real work. If extractiveness would remain stable: the crisis machinery is pure extraction masked as temporary (true Snare). If extractiveness would become infinite: the sunset is the entire constraint's redemptive feature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative extractiveness: bounded emergency window vs. indefinite power"
+    },
+    {
+      "id": "false_summit_risk_on_mountain",
+      "question": "Is the civilizational analytical view's classification of this machinery as a natural law (Mountain) a genuine insight into political necessity, or a naturalization of a contingent institutional design that benefits the state apparatus?",
+      "resolution_mechanism": "Comparative constitutional analysis: do all stable republics include crisis machinery? Do republics without formal crisis provisions survive crises? Do republics with unchecked emergency powers remain republics? Cross-case evidence from Athens, Venice, United States, etc.",
+      "impact": "If all functional republics require crisis machinery: Mountain classification is defensible (natural law of political order). If republics can survive crises without formal suspension mechanisms: Mountain classification is false summit (contingent design naturalized). If republics WITH formal machinery have worse outcomes: classification is inverted.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether crisis machinery is natural law or naturalized contingency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "rrc_crisis_extractiveness_t0_precrisis"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68,
+      "id_override": "rrc_crisis_extractiveness_t5_during"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42,
+      "id_override": "rrc_crisis_extractiveness_t10_postcrisis"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "rrc_crisis_suppression_t0_precrisis"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.78,
+      "id_override": "rrc_crisis_suppression_t5_during"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28,
+      "id_override": "rrc_crisis_suppression_t10_postcrisis"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5,
+      "id_override": "rrc_crisis_theater_t0_precrisis"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35,
+      "id_override": "rrc_crisis_theater_t5_during"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55,
+      "id_override": "rrc_crisis_theater_t10_postcrisis"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Roman Republic's constitution included its own suspension mechanism: the dictatorship (dictatura) and the senatus consultum ultimum (final decree). When the state faced existential threat — invasion, plague, internal collapse — the Senate could declare a crisis and appoint a single magistrate with supreme power, temporarily removing the checks that normally constrained authority: the collegiality of offices, the veto power of tribunes, the right of appeal to assemblies. The dictator or consul acting under final decree could issue commands without consultation, conscript armies without assembly vote, execute citizens without trial. This machinery was explicitly framed as temporary: the dictatorship had a term-limit (originally 6 months, later adjusted), and the final decree was implicitly revoked when the crisis passed. The mechanism was rationalized as the constitution recognizing its own limit — that ordinary rules cannot govern the moment when those rules themselves are threatened. However, the crisis machinery also enabled extraction. Strongmen could exploit ambiguity about when a crisis 'truly' ended to extend their power (Sulla, Caesar, Pompey). The suppression of ordinary checks created space for the strongman to accumulate wealth, clientage, and legitimacy. The victims were multiple: the tribunes lost their veto, the assemblies lost their law-making power, the Senate lost its deliberative role, and the plebs lost their constitutional protections. This reading of the Republican constitution — the crisis machinery reading — instantiates one contested kernel. Other readings emphasize the Twelve Tables' codification (law wrested from priestly control), the magistracies' collegiality (power parceled into pieces), the popular assemblies and tribunes' veto (plebeian protection), or the Senate's auctoritas (permanent authority). The crisis machinery reading claims that the constitution's deepest principle is its own suspendability — that the Republic recognized it could not survive rigidly adhering to its ordinary rules during existential threat.",
+    "key_agents": [
+      "The State Apparatus: Collective institutional body (institutional/arbitrage) — benefits from crisis machinery as coordination mechanism for survival; experiences no extraction",
+      "The Plebeian Body: Powerless agents (powerless/trapped) — loses tribunes' veto, assemblies' power, and right of appeal during crisis; bears full extraction",
+      "The Senate: Moderate-to-powerful institutional actor (powerful/constrained) — preserves itself through crisis machinery but loses its auctoritas during the emergency; mixed benefit and cost",
+      "The Strongman Magistrate: Powerful individual with supreme power (powerful/constrained) — appears to benefit but is trapped by term-limit: must return power or face proscription/assassination; bounded extraction",
+      "Republican Institutional Coalition: Organized actors (organized/mobile) — tribunes, magistrates, families maintaining constitutional norms; enforce the sunset and maintain the machinery as temporary",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks seeing crisis machinery as natural law of political order; may naturalize contingent design"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but bounded. During the crisis window, the strongman extracts maximum authority — supreme power, immunity from veto and appeal. But the term-limit is real: when the crisis ends, the strongman must return power. The extractiveness value reflects that the window is measurable (not indefinite) and that return is constitutionally and socially enforced. If the term-limit were not enforced, extractiveness would approach 1.0 (true indefinite dictatorship). The current value (0.68) reflects the bounded extraction inside a defined temporal window. Suppression (0.78): Very high during crisis. The tribunes' veto is suspended. The assemblies cannot pass law. Appeals are blocked. The plebs have no exit and no voice. Suppression is the entire mechanism: the crisis machinery works BY suppressing ordinary checks. However, suppression is explicitly temporary — when the crisis ends, the checks return. Outside the window, suppression falls to 0.28 (low). This cyclical suppression profile is characteristic of scaffold-like mechanisms. Theater ratio (0.35): Low. The crisis machinery is functionally active — orders are issued, armies are conscripted, enemies are defeated. There is minimal performative content: the strongman acts, not merely gestures. This low theater distinguishes the crisis machinery from ritual institutions. However, the theater increases after the crisis (0.55) as the machinery's legitimacy rhetoric must justify why this time of exceptional power was necessary and how it was truly bounded.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. From the plebeian perspective, the crisis machinery is pure extraction (Snare): ordinary protections are removed, extraction is maximal, exit is impossible. From the state perspective, it is pure coordination (Rope): the machinery solves the collective action problem of unified response to existential threat. From the strongman perspective, it is mixed extraction (Snare): the strongman has supreme power but must release it, enforced by proscription or assassination. From the Senate perspective, it is mixed extraction (Tangled Rope): the Senate preserves itself but loses authority. From the Republican coalition perspective, it is temporary coordination (Scaffold): the machinery has a sunset and the coalition enforces it. From the civilizational analytical view, it appears as natural law (Mountain): every republic needs crisis machinery — but this is a false summit revealing that a contingent design is being naturalized. The perspectival gaps reveal the constraint's inner structure: the machinery distributes costs and benefits asymmetrically across time (immediate suppression, ultimate return), across actors (plebs lose, state gains, strongman is trapped), and across observational positions (powerless agents see extraction, institutional agents see coordination, analytical view sees necessity).",
+    "directionality_logic": "The engine derives directionality (d) from beneficiary/victim status and exit options. The state apparatus is a pure beneficiary with arbitrage exit (can choose to invoke or not invoke the machinery) → d ≈ 0.05 → f(d) ≈ -0.12 → χ ≈ ε × (-0.12) = negative (coordination, no extraction). The plebeian is a pure victim with trapped exit (cannot avoid the machinery) → d ≈ 0.95 → f(d) ≈ 1.42 → χ ≈ ε × 1.42 = very high extraction. The strongman is a beneficiary-but-trapped (has supreme power but must release it, enforced by threat) → d ≈ 0.65 → f(d) ≈ 1.0 → χ ≈ ε × 1.0 = high extraction despite beneficiary status. The Senate is mixed (benefits from state survival but loses authority) → d ≈ 0.55 → f(d) ≈ 0.75 → χ ≈ ε × 0.75 = moderate extraction. The Republican coalition is organized with mobile exit (can enforce or not enforce the sunset) → d ≈ 0.45 → f(d) ≈ 0.45 → χ ≈ ε × 0.45 = low-to-moderate extraction (Scaffold range). These derivations show why the same constraint is classified differently from each perspective: the d values differ, driving different χ and classification outcomes.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is legitimately a Tangled Rope from the overall system perspective. It has genuine coordination function (saving the state during existential threat — Rope component) AND genuine asymmetric extraction (suppressing checks and concentrating power — Snare component). The two functions are not contradictory; they are concurrent. The machinery coordinates the state's survival AND extracts from those without power to enforce the sunset. The mandatrophy would be irresolvable if the constraint were ONLY coordination or ONLY extraction — but it is manifestly both. The Tangled Rope classification says: this constraint solves a real coordination problem (temporal centralization during crisis) while simultaneously extracting from those who cannot resist (plebs, tribunes, assemblies). The measurement profile confirms this: extractiveness is high (0.68) but the theater is low (0.35), indicating that the functional coordination is real, not performative. If the machinery were pure extraction masked as coordination (Snare masquerading as Rope), the theater would be high. Here, theater is low: the machinery actually does coordinate state response to crisis.",
+    "kernel_context": "This constraint instantiates the 'crisis_machinery' reading of the contested kernel 'roman_republican_constitution'. The kernel is the constitutional order itself — the set of rules and principles that defined the Republic. This reading claims that the kernel's deepest principle is its own suspendability: the constitution included the authority to suspend itself during existential threat. The sibling readings offer different kernels: (1) legal_codification_twelve_tables claims the kernel is written law accessible to all; (2) magistracies_and_collegiality claims the kernel is the distribution of power among annual, collegial, vetoable offices; (3) popular_assemblies_and_tribunate claims the kernel is popular sovereignty and plebeian veto; (4) senate_authority claims the kernel is the Senate's permanent auctoritas. The crisis_machinery reading coexists with all four but introduces tension: can a constitution be founded on written law AND on the authority to suspend written law? Can power be truly distributed among colleagues AND concentrated in a single dictator? Can popular sovereignty exist if the assemblies can be silenced? Can Senate auctoritas be supreme if the dictator can ignore it? The reading_relations capture these tensions: the crisis machinery influences all sibling readings by subordinating them to the principle that survival overrides ordinary rules."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_republican_constitution__legal_codification_twelve_tables",
+      "roman_republican_constitution__magistracies_and_collegiality",
+      "roman_republican_constitution__popular_assemblies_and_tribunate",
+      "roman_republican_constitution__senate_authority"
+    ],
+    "dual_formulation_note": "The crisis_machinery reading is part of the roman_republican_constitution constraint family. All sibling readings address different foundational principles of the same kernel — the Constitution itself. The crisis_machinery reading claims that the supremest principle is the constitution's ability to suspend itself. This influences (and partly forecloses) how the other readings can be interpreted: the magistracies are subject to dictatorship, the assemblies can be silenced, the Senate's auctoritas is subordinate to emergency power, and the written law yields to survival necessity. Each sibling reading should include the crisis_machinery in its network.affects_constraints array."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "roman_republican_constitution__legal_codification_twelve_tables",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__magistracies_and_collegiality",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__popular_assemblies_and_tribunate",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__senate_authority",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_threat_overrides_ordinary_rules",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "temporal_centralization_preserves_distributed_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "constitutional_suspension_as_constitutional_principle",
+    "drift_state": {
+      "moment": "late_republic_crisis_proliferation",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "terror_coincidence__plebiscitary_theater_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_terror_coincidence_plebiscitary_theater_reading",
+    "measurement_id_prefix": "terr_plebi",
+    "story_uid": "b7559db5-e59c-4c5b-a83b-0af4e7eb11ab",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.91,
+    "claimed_type": "snare",
+    "human_readable": "Plebiscitary Theater: Participation as Spectacle in Terror-Era Constitutional Process",
+    "topic_domain": "legal/political/doctrinal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regime_apparatus",
+      "central_authority"
+    ],
+    "victims": [
+      "genuine_deliberation",
+      "constituent_voice",
+      "amendment_submitters"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Amendment Submitter",
+      "comment": "PERSPECTIVE 1: THE AMENDMENT SUBMITTER (SNARE) — Participates in millions of meetings believing input will shape the constitution. Trapped by the expectation of participation and the social pressure to contribute. No genuine exit: refusal to participate signals disloyalty. Input is harvested as endorsement regardless of content — the regime's extraction mechanism converts participation into legitimation spectacle. Maximum experienced extraction because the submitter bears the cost of mobilization while the regime captures all value."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Local Party Official",
+      "comment": "PERSPECTIVE 2: THE LOCAL PARTY OFFICIAL (SNARE) — Must organize and report participation metrics; constrained by reporting quotas and pressure to demonstrate mobilization. Receives recognition for high participation numbers, but the performance metrics themselves become the extraction target. The official reports thousands of amendments, knowing structural change is impossible, but cannot exit without career consequences. Extraction: their administrative labor and credibility are harvested for legitimation theater."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Genuine Deliberation (Collective)",
+      "comment": "PERSPECTIVE 3: GENUINE DELIBERATION / THE EPISTEMIC COMMONS (SNARE) — The constraint's primary victim. Structural amendments that would alter the regime's character are systematically suppressed. The space for genuine deliberation — for input that could actually reshape the constitutional order — is closed. The millions of meetings and thousands of amendments create the illusion of an open deliberative process while the actual constitutional text (preserving the Terror's prerogatives) is predetermined. No exit from the systematic suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Central Authority / Regime Apparatus",
+      "comment": "PERSPECTIVE 4: THE REGIME APPARATUS (ROPE) — Experiences the plebiscitary theater as a coordination mechanism: mobilizing millions of meetings for participation ensures buy-in for a predetermined constitution. The regime solves the legitimation problem (how to govern without consent while claiming democratic authority) through managed spectacle. Net beneficiary: participation is harvested as endorsement; the appearance of authorship accrues to the regime. The regime's effective extraction is high, but from its own perspective, it is solving a genuine coordination problem — how to appear democratic while maintaining total control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Constitutional Document Itself",
+      "comment": "PERSPECTIVE 5: THE CONSTITUTIONAL TEXT (PITON) — Over time, the text becomes inert ritual. The discussion process that surrounded its adoption is glossed over; the millions of meetings are forgotten; the thousands of amendments are archived unread. The constitution persists as a performative object — invoked to legitimize regime action but carrying no real constraint on power. Theater ratio is nearly total: the document itself becomes a stage prop maintained through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the constraint exhibits both genuine coordination and pure extraction. The regime does solve a real problem (legitimating authority in a revolutionary state) through managed participation. But the coordination mechanism is fundamentally extractive: it harvests the legitimacy-generating potential of participation without permitting any genuine input. The analytical view captures both functions: coordination disguised as extraction, or extraction disguised as coordination — the same mechanism, read from different institutional positions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sincerity_of_drafter_intent",
+      "question": "Did the constitutional drafters (Bukharin, other core group) intend any genuine structural amendments from public participation, or was the entire plebiscitary process designed as theater from inception?",
+      "resolution_mechanism": "Archival analysis of drafting records, internal memos, selection criteria for reported amendments, comparison of submitted amendments to final text; analysis of which officials praised high participation vs. structural incorporation",
+      "impact": "If sincere intent existed at draft stage: constraint may be Tangled Rope from drafters' perspective (genuine coordination corrupted by terror politics). If designed as theater: confirms Snare classification across all perspectives. This omega encodes the struggle between sincere_blueprint_reading and plebiscitary_theater_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drafters intended genuine structural incorporation from public participation"
+    },
+    {
+      "id": "participation_suppression_mechanism",
+      "question": "What is the primary mechanism suppressing structural amendments: explicit censorship of dangerous proposals, selection bias in reporting (filtering out structural amendments), or systematic reframing (coding structural changes as technical clarifications)?",
+      "resolution_mechanism": "Comparison of archived amendment proposals to officially reported amendments; analysis of amendment categories and frequency; examination of official guidance to local officials on which amendments to prioritize in reporting",
+      "impact": "If explicit censorship: suppression metric accurate at 0.82. If selection bias: actual suppression may be higher (0.90+) because genuine proposals never reach the record. If reframing: extractiveness increases because structural intent is appropriated and repackaged. Affects interpretation of how institutional memory falsifies the process.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mechanism of structural amendment suppression in reported process"
+    },
+    {
+      "id": "institutional_memory_decay",
+      "question": "Does the constitutional text's Piton character emerge naturally from institutional inertia, or is the forgetting of the plebiscitary process deliberately maintained (e.g., through archives kept closed, oral history suppressed)?",
+      "resolution_mechanism": "Longitudinal analysis of how the constitution is cited and taught; examination of access to archives and official historical narratives; study of punishment of historians or officials who publicize the theater aspect",
+      "impact": "If natural decay: Piton classification is stable. If deliberately maintained: the constraint is not degraded but actively enforced oblivion — the Snare's extraction mechanism includes preventing accurate historical memory. Theater_ratio would increase further if the suppression of memory is itself an active extraction process.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constitutional Piton status reflects natural decay or deliberate memory suppression"
+    },
+    {
+      "id": "regime_learning_from_theater",
+      "question": "Did the regime's participation machinery generate any actionable intelligence for governance, or was the entire apparatus purely legitimation theater with zero feedback into actual policy?",
+      "resolution_mechanism": "Analysis of regime documents to trace whether amendments or participation patterns influenced subsequent policy; comparison of official rationales for policy choices to amendments submitted; examination of whether regime officials claimed to use participation data",
+      "impact": "If zero feedback: pure extraction (Snare confirmed). If minimal feedback used selectively: extraction mechanism includes co-optation of participation for selective regime benefit. If substantial feedback: coordination function was genuinely present, constraining classification toward Tangled Rope. This omega encodes the distinction between theater and degraded-but-functional coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regime extracted actionable intelligence from participation machinery"
+    },
+    {
+      "id": "reading_contest_foreclosure",
+      "question": "Does the plebiscitary_theater_reading logically foreclose the sincere_blueprint_reading, or can both readings coexist as different frameworks held by different parties?",
+      "resolution_mechanism": "Examination of whether sincere drafters' intent (axiom of the blueprint reading) is logically incompatible with systematic participation theater (axiom of this reading). If sincere intent can coexist with theater (drafters meant well but were overruled by terror apparatus), readings coexist. If theater was always the design, sincere intent is empirically false but not logically impossible.",
+      "impact": "If readings foreclose each other: one reading wins and displaces the other in institutional memory. If readings coexist: both remain live — different parties adopt different narratives. This determines whether the kernel contest is resolvable or permanent.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical relationship between plebiscitary theater and sincere blueprint readings of the kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.75,
+      "id_override": "terr_plebi_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.88,
+      "id_override": "terr_plebi_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.91,
+      "id_override": "terr_plebi_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "terr_plebi_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62,
+      "id_override": "terr_plebi_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "terr_plebi_extract_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7,
+      "id_override": "terr_plebi_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.78,
+      "id_override": "terr_plebi_suppress_t3"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.82,
+      "id_override": "terr_plebi_suppress_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested kernel terror_coincidence: specifically, the PLEBISCITARY_THEATER_READING. The constraint models the Soviet constitutional process (1936) as a systematized apparatus for harvesting participation as endorsement while suppressing genuine structural deliberation. Millions of meetings convened across the USSR, thousands of amendments reported through official channels, yet none would alter the regime's core powers. The participation machinery's extractiveness lies in its conversion of involvement into legitimation spectacle: the regime claims authorship of a 'democratic' constitution while the actual constitutional text is predetermined. The apparatus suppresses structural amendments through multiple mechanisms: screening by local officials, reporting only non-threatening proposals, and the systematic administrative capacity to absorb input without permitting feedback into the final text. Theater ratio is extremely high (0.91) because the entire process is performative: the appearance of mass deliberation is the product, not a side effect. The constraint is Snare from the powerless participant's perspective (trapped, bearing full cost while the regime extracts legitimacy) and from the perspective of genuine deliberation itself (which is systematically suppressed). It is Rope from the regime's perspective (solving a genuine coordination problem: how to govern revolutionary transformation while maintaining the appearance of democratic legitimation). The Analytical Observer sees Tangled Rope: real coordination function (mobilizing the population) wrapped around extractive function (harvesting legitimacy without permitting constraint). This reading coexists with two sibling readings: the LEGITIMATION_DURING_PURGE_READING (the constitution legitimated the Terror's prerogatives while the troikas sentenced by quota) and the SINCERE_BLUEPRINT_READING (some drafters meant structural promises that the regime later betrayed). The three readings occupy different institutional positions and temporal vantage points.",
+    "key_agents": [
+      "Amendment Submitters (powerless/trapped): Citizens mobilized into participation meetings; input harvested as endorsement regardless of content; no exit",
+      "Local Party Officials (moderate/constrained): Organize and report participation metrics; pressured by reporting quotas; recognize structural amendments are impossible but cannot exit without career damage",
+      "Genuine Deliberation (powerless/trapped): The epistemic commons; systematic suppression of structural amendments; no institutional voice",
+      "Central Authority / Regime Apparatus (institutional/arbitrage): Primary beneficiary; solves legitimation problem through managed spectacle; harvests participation as authority",
+      "The Constitutional Text (institutional/arbitrage): Over time becomes inert ritual; maintained through institutional inertia; the discussion process forgotten",
+      "Analytical Observer (analytical/analytical): Civilizational perspective capturing both coordination and extraction functions simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The regime captures legitimacy-generating value from participation without permitting genuine structural input. Citizens invest effort (attending meetings, formulating amendments, reporting through channels) expecting influence; the regime appropriates this legitimacy while delivering no substantive constraint. The extracted value accrues to the regime's claim to democratic authority. Theater ratio (0.91): Extremely high. The entire apparatus is performative. Millions of meetings staged to generate the appearance of mass deliberation. Thousands of amendments reported to create the record of 'public participation.' Official guidance to local officials emphasizes participation numbers over amendment substance. The appearance of authorship ('the most democratic constitution in the world') is the product. Suppression (0.82): Very high. Structural amendments that would limit the regime's prerogatives (on the secret police, the party's monopoly, emergency powers) are systematically filtered. Selection bias in reporting means dangerous proposals never reach official record. Administrative capacity to absorb input without implementing feedback ensures that visible suppression is minimal — the suppression is structural, not visible. The constraint's extractiveness increased over the interval (0.55 → 0.68) as the regime learned to manage the machinery more effectively, concentrating on metrics (number of meetings, amendments reported) rather than on the substance of participation. Theater ratio increased (0.75 → 0.91) as the performative character became more refined and more thoroughly separated from any deliberative function.",
+    "perspectival_gap": "The gap between perspectives reveals the constraint's extractive structure. The amendment submitter experiences maximal extraction (trapped, powerless): their input vanishes into the administrative machinery. The regime apparatus experiences coordination (institutional, arbitrage): the machinery solves the legitimation problem perfectly. Genuine deliberation experiences total suppression (powerless, trapped): there is no deliberative function to coordinate around. The analytical observer sees both functions simultaneously: coordination disguised as extraction, extraction disguised as coordination. The Piton perspective (the constitutional text over time) reveals how the apparatus creates institutional memory loss — the theater is so total that later generations learn the constitution as a formal document, not as the spectacle that produced it. The constrast between the Snare (participant's view) and the Rope (regime's view) is the diagnostic marker: when the same mechanism appears as extraction from one position and coordination from another, the gap reveals that the 'coordination' is actually extraction with institutional consent.",
+    "directionality_logic": "Each perspective's structural position determines its experienced extractiveness (chi). Amendment submitters: beneficiary status = no (they are targets), exit options = trapped, power = powerless → directionality d ≈ 0.95, f(d) ≈ 1.42 (maximum). The regime apparatus: beneficiary status = yes, exit options = arbitrage, power = institutional → directionality d ≈ 0.05, f(d) ≈ -0.12 (institutional beneficiary receives institutional benefit, experienced as negative extraction). Local officials: beneficiary status = ambiguous (they receive recognition for metrics, but are constrained by quotas they know are fabricated), exit options = constrained, power = moderate → directionality d ≈ 0.60, f(d) ≈ 0.90 (moderate extraction). Genuine deliberation: beneficiary status = no (it is suppressed), exit options = trapped (systematic suppression), power = powerless → directionality d ≈ 0.97, f(d) ≈ 1.42 (maximum). Spatial scope is national for most perspectives, amplifying χ slightly via σ(S) = 1.0. The regime's perspective shows the lowest experienced extraction because the mechanism is working as designed from their position — they are solving a problem, not being extracted from.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by rejecting the false dichotomy: the constraint is neither 'genuine coordination' nor 'pure extraction' — it is pure extraction disguised as coordination. The regime's perspective reports experiencing it as coordination (solving the legitimation problem), but this is the extractive apparatus's own self-description, not an independent verification. The analytical observer's Tangled Rope classification captures both the coordination and extraction functions, but the distribution (theater ratio 0.91, extractiveness 0.68) shows that extraction dominates coordination. The mandatrophy is resolved by centering the victim's perspective (amendment submitter, genuine deliberation): from their view, the constraint is unambiguously Snare. The regime's Rope classification is not an alternative reality but a description of how extraction appears from the beneficiary's position.",
+    "kernel_context": "This constraint is the PLEBISCITARY_THEATER_READING of the contested kernel terror_coincidence. The kernel is the Soviet constitutional process of 1936, which can be read three ways: (1) legitimation_during_purge_reading — the constitution legitimated the Terror while troikas sentenced by quota; (2) plebiscitary_theater_reading — THIS READING — the participation machinery was theater, converting involvement into endorsement while suppressing structural amendments; (3) sincere_blueprint_reading — some drafters intended genuine structural promises that the regime later betrayed. This reading diverges from the blueprint reading by denying that sincere intent in the draft text translates to genuine participation in the adoption process. This reading diverges from the purge-legitimation reading by focusing on the plebiscitary apparatus's function (harvesting participation) rather than on the Terror's coordination with constitutional authority (using the constitution to legitimize the purge). The three readings can coexist: different parties adopt different narratives about the same historical event. The plebiscitary theater reading emphasizes the extraction mechanism (how participation was converted into legitimation without substantive input) rather than either the sincere drafters' intent or the constitution's role in the Terror's legitimation."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "terror_coincidence__legitimation_during_purge_reading",
+      "terror_coincidence__sincere_blueprint_reading"
+    ],
+    "dual_formulation_note": "The terror_coincidence kernel has three constraint readings corresponding to three structural readings of the same historical event. Each reading extracts a different constraint by fixing different observables: this reading focuses on the plebiscitary apparatus and participation harvesting; the purge-legitimation reading focuses on the constitution's authorization of Terror prerogatives; the sincere-blueprint reading focuses on the text's deferred promises. Each story has its own extractiveness value reflecting what is being extracted and from whom. All three are linked through the kernel and represent a constraint family, not three unrelated historical claims."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "vanguard_democratic_legitimacy",
+    "drift_state": {
+      "moment": "contemporary_historical_examination",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "terror_coincidence__legitimation_during_purge_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "terror_coincidence__sincere_blueprint_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "participation_spectacle_excludes_structural_input",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "legitimacy_harvested_without_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

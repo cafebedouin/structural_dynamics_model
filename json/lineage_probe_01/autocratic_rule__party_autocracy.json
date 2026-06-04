@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "autocratic_rule__party_autocracy",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "party_auto",
+    "story_uid": "7a886b73-b17c-4985-912b-79ebb212a75c"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Party Autocracy: Single-Party Monopoly on Political Organization",
+    "topic_domain": "political/comparative_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nomenklatura_class",
+      "party_leadership"
+    ],
+    "victims": [
+      "non_party_members",
+      "inner_party_losers",
+      "competing_organizations"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Party Citizen",
+      "comment": "PERSPECTIVE 1: NON-PARTY CITIZEN (SNARE) — Citizens outside the party apparatus have no structural path to political influence or career advancement in state institutions. Exit from the political system entirely is constrained by geography and economic dependence on state employment. The party monopoly extracts compliance and loyalty while offering zero influence. Maximum suppression, maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Rank Party Member",
+      "comment": "PERSPECTIVE 2: MID-RANK PARTY MEMBER (TANGLED ROPE) — Mid-rank cadres benefit from party membership (career security, access to state resources, professional community) but face extraction through mandatory party discipline, ideological conformity requirements, and risk of purge or demotion if they fall out of favor with superiors. Exit from the party costs career advancement and social position. Mixed coordination (party provides career pathway) and extraction (party demands loyalty and conformity)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Nomenklatura Elite",
+      "comment": "PERSPECTIVE 3: NOMENKLATURA ELITE (ROPE) — Senior party members and nomenklatura experience the single-party system as a coordination mechanism that delivers succession stability, ideological legitimacy, and career predictability. They benefit from the monopoly (guaranteed power, no external competition, controlled circulation through ranks). The party apparatus solves their coordination problem: how to manage succession and prevent throne wars. For this group, the system functions as pure coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Opposition Movement (Suppressed)",
+      "comment": "PERSPECTIVE 4: OPPOSITION MOVEMENT (TANGLED ROPE) — Organized opposition groups outside the party face suppression (bans on organizing, surveillance, arrest) but also benefit from the single-party system's structural clarity — the party defines itself through opposition to them, which can paradoxically sustain opposition identity and mobilization. Opposition also derives delegitimacy from the party's monopoly claim: if the party claims to represent all political will, opposition must prove it doesn't. The constraint is mixed: severe suppression of organizing capacity, but also provides opposition with a clear antagonist and legitimacy challenge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Diaspora Elite",
+      "comment": "PERSPECTIVE 5: DIASPORA ELITE (TANGLED ROPE) — Diaspora members with mobile exit options (international professional mobility, external funding, global media platforms) can coordinate opposition to the party autocracy while enjoying safety of exit. They benefit from some party system functions (clear definition of the regime they oppose, predictable organizational structure of their antagonist) but experience extraction through suppression of family members, asset seizure, exile pressure. Mixed experience: significant agency through exit mobility, but ongoing extraction through hostage effects."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Rituals of Party Congresses",
+      "comment": "PERSPECTIVE 6: RITUALS OF PARTY CONGRESSES (PITON) — The formal institutions of the party (congresses, plenums, ideological certifications) are substantially theatrical: they ratify decisions made in private, perform consensus, and exist primarily to legitimize elite decisions rather than to distribute power. The party's formal apparatus persists through institutional inertia long after real power has consolidated in a smaller core. Theater ratio is high — the rituals still function as performances of democratic procedure within the party elite, but their actual decision-making role has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) — From a purely comparative-historical stance, some degree of party monopoly appears as an immutable feature of autocratic rule across centuries and cultures: every successful autocracy develops an organizing apparatus to manage succession and prevent internal fragmentation. The single-party form appears as a natural law of political organization under authoritarian constraint. This perspective risks naturalizing what is structurally a contingent institutional arrangement maintained through suppression and extracted loyalty."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "party_apparatus_exit_barrier_structural_vs_internalized",
+      "question": "Is suppression of non-party organizing primarily structural (legal bans, violence, surveillance) or internalized (citizens believe party monopoly is legitimate or inevitable)?",
+      "resolution_mechanism": "Comparative analysis across party autocracies: countries with relaxed suppression (still legal monopoly but reduced enforcement) show whether non-party organizing spontaneously emerges. Exit surveys of defectors reveal whether they cite external barriers or internalized legitimacy.",
+      "impact": "If primarily structural: suppression floor is accurate and constraint can be reduced by enforcement withdrawal. If primarily internalized: suppression persists after structural removal, and the constraint's true mechanism is deeper (hegemonic ideology, not force alone).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    },
+    {
+      "id": "nomenklatura_extraction_mechanism",
+      "question": "Does the cadre system actually extract value from mid-rank party members (through loyalty demands, unpaid labor, suppression of exit), or does it genuinely distribute career security and state resource access?",
+      "resolution_mechanism": "Comparative income/wealth analysis of party members vs non-members; career interruption rates from purges; measurements of actual influence mid-rank members exercise over policy.",
+      "impact": "If extraction exceeds coordination benefit: constraint is Snare from mid-rank perspective. If coordination benefit exceeds extraction: constraint is Rope from mid-rank perspective. Mixed outcome confirms Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative extraction vs coordination benefit for mid-rank cadres"
+    },
+    {
+      "id": "succession_stability_counterfactual",
+      "question": "Does the single-party apparatus actually reduce succession crises, or does it create predictable cycles of factional struggle between competing party elite factions?",
+      "resolution_mechanism": "Historical comparison of succession transitions in party autocracies vs monarchies vs personalist dictatorships; measurement of power concentration shifts during transitions; elite purge rates post-succession.",
+      "impact": "If genuinely stabilizing: party apparatus is solving a real coordination problem and Rope classification is justified. If merely redistributing struggle to intra-party domain: the party is Snare that concentrates extraction within elite while appearing to stabilize succession.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether single-party apparatus reduces succession crises or concentrates them intra-party"
+    },
+    {
+      "id": "reading_boundary_party_vs_personalist",
+      "question": "Is this reading (party autocracy) distinct from the personalist dictatorship reading, or are 'party' monopolies in practice ruled by a single person above the party machinery?",
+      "resolution_mechanism": "Structural analysis of leadership succession mechanisms: does a new leader inherit the party machinery and must work through it, or does the person simply take control and party apparatus becomes ornamental?",
+      "impact": "If party genuinely constrains the leader: this is a distinct reading with genuine Rope/Tangled Rope dynamics. If the leader rules above/through/against the party: the reading collapses into personalist dictatorship and extractiveness rises significantly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether party autocracy is structurally distinct from personalist dictatorship"
+    },
+    {
+      "id": "alternative_autocratic_forms_reading_stability",
+      "question": "Are the sibling readings (monarchy, junta, personalism) genuinely distinct equilibria that a state can transition between, or are they different analytical frames on the same underlying monopoly?",
+      "resolution_mechanism": "Historical case analysis of regimes that shifted between forms (e.g., post-party states that revert to military or personalist rule, monarchies that institutionalize party mechanisms). Do the transitions represent genuine structural changes or reframing of the same extraction apparatus?",
+      "impact": "If genuinely distinct equilibria: this reading's boundary is real and the kernel contest is meaningful. If reframing: the readings may collapse under alternative analytic framing and the ε-invariance principle requires decomposition into sub-constraints.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings are distinct equilibria or analytic frames"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Party autocracy — the single-party monopoly on organized politics — is one reading of how autocratic rule stabilizes itself. This reading claims that autocracy's distinctive organized form is a disciplined party apparatus that manages succession, legitimacy, and careers inside the system while suppressing all external competition. The party monopoly solves the succession problem (no throne wars between rival factions) and provides ideological legitimacy (the party claims to represent the people/nation/historical progress). But this coordination function coexists with severe extraction: the nomenklatura as a class benefits from monopoly power, while non-members are locked out of political influence and mid-rank members face forced conformity and extraction. The single party is neither pure coordination (Rope) nor pure extraction (Snare) — it is Tangled Rope: the party genuinely coordinates succession and elite stability while simultaneously extracting compliance and suppressing alternatives. The constraint's extractiveness has increased over the interval (0.35 → 0.58) as the apparatus has consolidated and suppression has hardened, suggesting that over time the coordination function becomes ornamental and extraction becomes dominant. The theater ratio (rising from 0.55 to 0.65) reflects that party rituals — congresses, plenums, ideological certifications — have become increasingly performative: they ratify decisions made in inner circles rather than distributing power. This reading coexists with sibling readings (hereditary monarchy, military junta, personalist dictatorship) that each claim different organizing principles for autocratic rule.",
+    "key_agents": [
+      "Nomenklatura Elite: Primary beneficiary (institutional/arbitrage) — benefits from party monopoly guarantee of power, succession stability, controlled access to state resources",
+      "Non-Party Citizens: Primary victim (powerless/trapped) — locked out of political influence and career advancement in state institutions; exit options constrained by dependence on state employment",
+      "Mid-Rank Party Members: Secondary victim (moderate/constrained) — benefit from party career pathway but face extraction through loyalty demands, purge risk, ideological conformity requirements",
+      "Inner-Party Losers: Secondary victim (moderate/trapped) — party members who fall out of favor face demotion, purge, or exile with no exit pathway outside the apparatus",
+      "Organized Opposition: Tertiary victim (organized/constrained) — outside the monopoly, suppressed from organizing, but also benefits from clear definition of antagonist (the party defines opposition through negation)",
+      "Party Apparatus Itself: Institutional structure (institutional/arbitrage) — the formal rituals and mechanisms that perform legitimacy while real power concentrates in inner circles"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The party autocracy extracts from non-members (complete political exclusion), from mid-rank members (forced loyalty and conformity), and from society (monopoly suppression). But the extraction is not maximal (as it would be in a pure Snare like personalist dictatorship) because the party provides genuine coordination services: it manages succession without throne wars, provides career pathways for ambitious members, and distributes power through nomenklatura rotation rather than concentrating it in one person's hands. The rising extractiveness over the interval (0.35 → 0.58) reflects that as the apparatus consolidates, extraction mechanisms harden and coordination benefits narrow to smaller elite circles. Suppression (0.78): High. Legal bans on outside organizing, surveillance of non-party groups, arrest of opposition, controls on speech and association. The suppression is structural (law-based) not merely coercive (violence alone). Theater ratio (0.65): Moderate-high. Party congresses, plenums, ideological meetings, and certification rituals perform legitimacy (consensus, representation, participation) while actual power is concentrated in steering committees and informal networks. The theater has increased over the interval as elite consolidation makes the formal apparatus more ornamental. Claimed type (Tangled Rope): The constraint has genuine coordination function (succession, elite stability, career pathways) AND asymmetric extraction (non-members excluded, members suppressed). Requires active enforcement (suppression apparatus). Beneficiaries (nomenklatura class, party leadership) and victims (non-members, inner-party losers, competing organizations) are clearly distinguished.",
+    "kernel_context": "This constraint is one reading of the contested kernel: autocratic_rule. The reading instantiated here is party_autocracy — the claim that autocracy's distinctive organized form is the single-party monopoly. The sibling readings are: (1) hereditary_monarchy — succession by blood removes throne wars; (2) military_junta — emergency committee rule; (3) personalist_dictatorship — one ruler above all institutions. Each sibling represents a different claim about autocracy's core organizing principle. This reading (party_autocracy) claims succession and stability come from institutional apparatus, not blood or emergency or fear. The boundaries between readings are not sharp — in practice, personalist rulers often capture party machinery, and monarchies often institutionalize party-like structures. But analytically, each reading instantiates a distinct structural claim about what coordinates the autocratic elite.",
+    "perspectival_gap": "The perspectival gap reflects the split between those inside and outside the party monopoly, and between different ranks within it. The non-party citizen sees a snare (complete political exclusion, trapped). The mid-rank member sees tangled rope (career benefits mixed with extraction). The nomenklatura elite sees rope (pure coordination and guaranteed power). The opposition movement sees tangled rope (suppression mixed with clarity of antagonist). The diaspora elite sees tangled rope (mobile exit mixed with hostage effects on family). The party rituals appear as piton (performative apparatus). The civilizational observer risks seeing mountain (naturalized as immutable law of autocratic organization). The engine will likely flag the mountain perspective as false summit — the constraint is contingent institutional arrangement, not natural law.",
+    "directionality_logic": "Each perspective's directionality is derived from the agent's power level, exit options, and relationship to the party monopoly. Non-party citizens: powerless/trapped → high d → high extraction experienced. Mid-rank members: moderate/constrained → moderate d → mixed experience. Nomenklatura: institutional/arbitrage → low d → low extraction (net beneficiary). Opposition: organized/constrained → moderate d → mixed (suppression + clarity). Diaspora: powerful/mobile → low-to-moderate d → can exit but faces extraction through family hostages. The party apparatus itself: institutional/arbitrage → low d (the apparatus is the beneficiary). The civilization observer: analytical/analytical → moderate d → at-risk position that naturalizes the constraint. The beneficiary/victim declarations feed the directionality chain: nomenklatura are declared beneficiaries, driving their d downward; non-members and inner-party losers are declared victims, driving their d upward. The resulting perspectival gap is the signature of Tangled Rope at analytical level.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the party apparatus is genuinely a Tangled Rope (not pure coordination or pure extraction) because it provides real succession coordination while simultaneously extracting loyalty and suppressing alternatives. The mandatrophy would arise if we tried to call it pure Rope (the beneficiary perspective) or pure Snare (the powerless perspective). The analytical resolution is that it is legitimately Tangled Rope: the same apparatus that solves elite succession simultaneously solves non-elite exclusion. The rising extractiveness over the interval (0.35 → 0.58) suggests that over historical time, the coordination function may degrade and extraction may become dominant — a drift toward Snare. This would be captured by future measurement intervals and could trigger reclassification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "autocratic_rule__hereditary_monarchy",
+      "autocratic_rule__military_junta",
+      "autocratic_rule__personalist_dictatorship",
+      "nomenklatura_circulation_extraction",
+      "party_ideology_legitimacy_claim"
+    ],
+    "dual_formulation_note": "This constraint is linked to sibling readings of the same kernel (autocratic_rule). The three sibling stories (monarchy, junta, personalism) represent competing claims about autocratic organization. Party_autocracy is one claim; sibling readings are others. The network affects_constraints lists both the sibling readings (required for kernel family coherence) and downstream constraints that depend on this reading (nomenklatura circulation, ideology legitimacy)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autocratic_rule__hereditary_monarchy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "autocratic_rule__military_junta",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "autocratic_rule__personalist_dictatorship",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "succession_via_party_apparatus",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "party_monopoly_coordination_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "institutionalized_party_rule",
+    "drift_state": {
+      "moment": "contemporary_erosion",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "seventh_amendment__reexamination_clause_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "seventh_reexam",
+    "story_uid": "aec9c9d3-a5d4-4ca2-b93b-4218ee9f8997"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Seventh Amendment Reexamination Clause Reading",
+    "topic_domain": "legal/constitutional_doctrine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "verdict_finality",
+      "trial_juries"
+    ],
+    "victims": [
+      "reviewing_court_appellate_reach",
+      "litigants_with_fact_disputes"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Reviewing Court Constrained by Verdict Lock",
+      "comment": "PERSPECTIVE 1: REVIEWING COURT (SNARE) — Appellate judges cannot reexamine facts even when error appears clear. The verdict's factual findings are locked in place; appellate reach is suppressed by the Amendment's text. The court bears the cost of this constraint: limited remedial power when facts seem wrongly found. No exit from this suppression except through extraordinary writs or constitutional amendment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Trial Jury and Verdict Finality",
+      "comment": "PERSPECTIVE 2: TRIAL JURY / VERDICT FINALITY (ROPE) — The jury's verdict receives constitutional armor against appellate second-guessing. This is pure coordination: the constraint protects the jury function from being subordinated to appellate review. Juries benefit from verdict finality; the coordination function is genuine — appellate deference enables the jury system to function as designed. This is the constraint as beneficiary sees it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Losing Litigant with Factual Grievance",
+      "comment": "PERSPECTIVE 3: LOSING LITIGANT WITH FACTUAL GRIEVANCE (TANGLED ROPE) — The losing party is locked into the trial verdict on facts; they cannot pursue appellate fact-reexamination except through narrow common-law pathways (manifest error on the face of the record). The constraint serves the coordination function of protecting jury verdicts but simultaneously extracts from litigants by suppressing their appellate remedies. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Appellate Judiciary Institutionally Bound",
+      "comment": "PERSPECTIVE 4: APPELLATE JUDICIARY (TANGLED ROPE) — Appellate courts are bound by the Amendment's constraint but also benefit from it: verdict finality reduces appellate docket pressure and creates a stable, predictable appellate function (review law, not facts). The constraint serves coordination (stable appellate review) while extracting from appellate reach. Appellate judges experience mixed constraint and benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Historical Common-Law Reading)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / HISTORICAL COMMON-LAW (ROPE) — From the analytical civilizational view, this constraint is pure coordination: it replicates common-law rules as they stood in 1791, when juries decided facts and appellate review was absent or minimal. The constraint coordinates the modern system to a historical baseline. No extraction is expected because the beneficiary (jury system) and the coordinated mechanism are aligned."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "complexity_exception_latency",
+      "question": "Does the Seventh Amendment permit a complexity exception—cases too intricate for lay jurors—and if so, has this exception been recognized as valid constitutional law or remains it an argued-but-unblessed practice?",
+      "resolution_mechanism": "Historical analysis of complexity exception doctrine: (a) has Supreme Court endorsed it as constitutional; (b) what evidence exists of its quiet practice through summary judgment; (c) does it functionally override the reexamination clause for complex cases",
+      "impact": "If exception is recognized: extractiveness rises (suppression of jury fact-finding via complexity gate); the reexamination clause is functionally narrowed. If exception is foreclosed: reexamination clause stands as written with full suppression of appellate fact-reexamination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Recognition status and functional practice of complexity exception to jury right"
+    },
+    {
+      "id": "common_law_rules_scope_ambiguity",
+      "question": "What counts as 'common-law rules' under which facts may be reexamined? Does this phrase limit appellate review to 1791-era rules of fact reexamination, or does it permit evolution of common-law doctrines post-1791?",
+      "resolution_mechanism": "Doctrinal analysis: compare scope of fact-reexamination practice under Restatement (Second) of Judgments vs. what was permitted in 1791; identify cases where modern developments (abuse-of-discretion review, manifest error standards) are claimed as evolutionary common-law rules",
+      "impact": "If 'common-law rules' means fixed-as-of-1791: reexamination clause becomes more restrictive (higher suppression). If evolutionary interpretation permitted: reexamination clause becomes more flexible (lower suppression, higher extractiveness of appellate reach).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Temporal scope of 'common-law rules' permitting fact reexamination"
+    },
+    {
+      "id": "historical_test_interaction",
+      "question": "Does the historical test reading (measuring modern civil claims against 1791 suit-categories to determine jury eligibility) functionally constrain the reexamination clause reading, or do these operate independently?",
+      "resolution_mechanism": "Doctrinal mapping: identify cases where historical test gates jury eligibility and where reexamination clause gates appellate review; determine if a claim excluded from jury trial via historical test is then subject to appellate fact-review (escaping reexamination suppression)",
+      "impact": "If readings interact: reexamination clause applies only to jury-tried facts; historical test determines whether facts were jury-tried; combined effect is more restrictive than reexamination clause alone. If independent: reexamination clause applies to all jury verdicts regardless of historical test outcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Interaction between historical test for jury eligibility and reexamination clause suppression"
+    },
+    {
+      "id": "appellate_reach_degradation",
+      "question": "Has appellate capacity to police trial errors (through abuse-of-discretion review, manifest error, clear error standards) actually declined relative to pre-reexamination-clause enforcement practices, or do these doctrines merely shift the mechanism without reducing appellate reach?",
+      "resolution_mechanism": "Empirical analysis: reversal rates on factual grounds; range of appellate remedies available (new trial, remand, settlement pressure); comparison to hypothetical appellate capacity if reexamination clause did not suppress direct fact-reexamination",
+      "impact": "If reach has declined: suppression value (0.52) is accurate and extractiveness reflects real appellate limitation. If reach has not declined (shifted mechanisms achieve same oversight): suppression and extractiveness may be overstated; constraint may be more rope-like (pure coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether appellate remedial capacity has actually declined under reexamination suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "The Seventh Amendment's second sentence—'no fact tried by jury shall be otherwise re-examined in any Court of the United States, than according to the rules of the Common law'—instantiates a structural constraint on appellate authority over jury verdicts. This reading interprets the clause as a straightforward suppression mechanism: once a jury has decided facts, appellate courts cannot reexamine those facts except through the narrow pathways established by common-law doctrine as of 1791. The constraint protects jury verdicts from appellate second-guessing, stabilizing the jury system as a coordinate equal authority alongside courts. However, the reading is contested within the broader 'seventh amendment' kernel. The complexity-exception reading suggests that modern litigation may be too intricate for lay juries, creating pressure to narrow the jury right itself. The historical-test reading anchors jury eligibility to 1791 categories of suit, which independently gates whether the reexamination clause applies at all. This reading—the reexamination-clause reading—focuses on the suppression mechanism itself: what counts as 'reexamination' and what 'common-law rules' permit.",
+    "key_agents": [
+      "Trial Jury and Verdict Finality: Primary beneficiary (institutional/arbitrage) — gains constitutional armor against appellate second-guessing; enables jury function to persist",
+      "Appellate Reviewing Court: Secondary beneficiary and constrained actor (institutional/constrained) — receives appellate docket reduction and stable jury verdicts, but loses factual reach",
+      "Losing Litigant with Factual Grievance: Primary victim (moderate/constrained) — locked into jury verdict on facts; suppressed from appellate fact-reexamination",
+      "Appellate Reach as Institutional Capacity: Abstracted victim (analytical/analytical) — appellate courts' general capacity to police trial error through fact-reexamination is suppressed by the Amendment"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from losing litigants and reviewing courts by suppressing appellate fact-reexamination. However, the extraction is not severe because common-law doctrines (manifest error, clear error, abuse of discretion) provide alternative appellate remedies. The 'except by common law rules' language creates an outlet for appellate reach, preventing total suppression. The measurement trajectory shows extractiveness rising from 0.22 (early 19th century, when appellate review was sparse) to 0.38 (modern era, where appellate review mechanisms have proliferated). Suppression (0.52): Moderate-high. The Amendment directly suppresses appellate fact-reexamination. However, the suppression is not total: reviewing courts can use narrow common-law pathways. The measurement trajectory shows suppression rising from 0.45 to 0.52 as appellate capacity has grown and the constraint's suppressive force against that capacity has become more pronounced. Theater ratio (0.48): Low-moderate. This reading's performative content is relatively low because the reexamination clause text is explicit and the enforcement mechanism (verdicts lock facts) is straightforward. There is some theater in the 'common-law rules' exception—courts sometimes stretch what counts as 'common law' to permit appellate reach—but the core constraint is functionally enforced.",
+    "perspectival_gap": "The beneficiary (jury system, verdict finality) sees this constraint as pure coordination (Rope): it protects the jury from being subordinated to appellate review, enabling the jury to function. The reviewing court sees it as mixed coordination and extraction (Tangled Rope): the constraint stabilizes the jury verdict (coordination benefit) but suppresses appellate reach (extraction cost). The losing litigant sees it as pure extraction (Snare): they are locked into an unfavorable verdict with no appellate remedy for facts. The analytical observer sees it as historical coordination (Rope): the constraint replicates common-law rules as they stood in 1791, coordinating the modern system to a historical baseline. However, the analytical observer also risks a false summit (seeing the constraint as a natural law of appellate jurisdiction) when the structural data reveals it as a contingent constitutional choice about which authority—jury or appellate court—decides facts.",
+    "directionality_logic": "The constraint's directionality varies by the agent's structural relationship to verdict finality and appellate reach. The jury (beneficiary) has arbitrage exit—it can appeal to appellate protection to maintain its authority, and appellate deference creates a safe niche. The reviewing court (beneficiary-constrained) has constrained exit—it benefits from verdict finality reducing docket pressure but loses factual authority. The losing litigant (victim) is trapped—they cannot reexamine facts at appellate level and have no exit except through extraordinary writs. Each agent's d value (derived from beneficiary/victim + exit options) feeds into the sigmoid f(d) to produce the experienced extractiveness chi. The beneficiary's low d produces negative chi (coordination experienced as benefit); the victim's high d produces high chi (extraction experienced as suppression).",
+    "kernel_context": "This constraint instantiates ONE READING of the contested 'seventh_amendment' kernel. The kernel is the Seventh Amendment itself—the stabilized constitutional text. This reading focuses on the second sentence's reexamination clause: 'no fact tried by jury shall be otherwise re-examined in any Court of the United States, than according to the rules of the Common law.' The reading interprets this clause as a straightforward suppression mechanism: appellate courts cannot reexamine jury facts except via common-law pathways. The sibling readings contest different aspects of the same kernel. The 'complexity_exception_question' reading asks whether modern litigation can be too intricate for lay jurors, creating a hidden exception to the jury right itself. The 'historical_test_reading' anchors jury eligibility to 1791 suit categories, gates jury trial by historical analogy, and thus independently constrains the reexamination clause's scope. This reading assumes the jury right is intact and focuses on the suppression mechanism alone—what 'reexamination' means and what 'common-law rules' permit. The readings coexist: they are held by different judicial and doctrinal factions simultaneously. The reexamination-clause reading is more conservative (strict application of suppression); the complexity-exception reading is more flexible (exception for intricate cases); the historical-test reading is hybrid (gates jury eligibility via 1791 categories). No single reading forecloses another within a unified framework; all three remain live positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "seventh_amendment__historical_test_reading",
+      "seventh_amendment__complexity_exception_question"
+    ],
+    "dual_formulation_note": "The reexamination-clause reading is one structural constraint within the broader seventh-amendment kernel contest. Its sibling readings (historical test, complexity exception) operate on different structural variables: historical test gates jury eligibility; complexity exception creates exceptions to jury reach; reexamination clause suppresses appellate fact-reexamination. Each constraint has its own ε, beneficiary/victim structure, and classification. They are linked because they operate on the same doctrinal text (Seventh Amendment) and their combined effect determines when jury verdicts lock facts and when appellate review can reach facts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "seventh_amendment__complexity_exception_question",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "seventh_amendment__historical_test_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jury_verdict_finality_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "common_law_rules_bind_reexamination_pathways",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "jury_factfinding_supremacy_1791",
+    "drift_state": {
+      "moment": "contemporary_appellate_review_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

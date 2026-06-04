@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "ostracism_institution__safety_valve_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ostracism_institution__safety_valve_reading",
+    "measurement_id_prefix": "ostracism_sv",
+    "story_uid": "008cec52-cf2f-45e0-b057-6f7a6d164c15",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Ostracism as Safety Valve (Reading: Conflict De-Escalation Mechanism)",
+    "topic_domain": "legal/constitutional/athenian_democracy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "athenian_civic_polity",
+      "democratic_assembly"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Ostracized Individual (Temporary Exile Subject)",
+      "comment": "PERSPECTIVE 1: OSTRACIZED INDIVIDUAL (ROPE) — Exiled for ten years without confiscation or legal disgrace. The constraint coordinates the demos' fear of factional collapse with the exile subject's property rights and eventual repatriation. The exile is painful (constrained by forced geographic separation) but not maximal extraction — the property remains intact, return is scheduled, and disgrace is explicitly withheld. The individual experiences this as a coordination mechanism that extracts their presence but preserves their status and wealth. At biographical time horizon, the individual classifies this as rope, not snare, because the mechanism is transparent and has a known endpoint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Athenian Demos (Collective Assembly)",
+      "comment": "PERSPECTIVE 2: ATHENIAN DEMOS / COLLECTIVE ASSEMBLY (ROPE) — Coordinating the demos' collective fear of elite factional war with the need to remove one factional leader without creating a martyr or driving rivals toward violent escalation. The constraint is pure coordination: the assembly votes to remove a threat to civic peace without condemning the threat, returning the exiled party after a fixed term. The demos is trapped in the position (cannot exit the need for periodic de-escalation), but experiences the mechanism itself as functional coordination rather than extraction. Rope classification reflects the genuine coordination function: the problem being solved (factional deadlock) is solved by the mechanism (temporary removal with property preservation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Democratic Institutional Structure",
+      "comment": "PERSPECTIVE 3: DEMOCRATIC INSTITUTIONAL STRUCTURE (ROPE) — From the institutional perspective operating at generational time scale, ostracism coordinates three structural demands: (1) the assembly's need to manage elite factional conflict, (2) the rule of law requirement that exile not be permanent or disgraceful, and (3) the franchise requirement that the demos retain agency to reverse the exile decision (implicitly, by failing to renew the practice after ten years). The constraint is lightweight coordination machinery. Extractiveness is minimal by design — the institution explicitly preserves property rights and schedules return. At generational scale, the institution is mobile: Athens could abandon ostracism if the factional pressure diminished, and the constraint enables rather than prevents that transition."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Oligarchic Faction(s) Under Threat",
+      "comment": "PERSPECTIVE 4: OLIGARCHIC FACTION UNDER THREAT (SCAFFOLD) — A factional leadership confronting the assembly's vote to ostracize them experiences the constraint as temporary containment with a known endpoint (ten years). The organizing faction has agency (constrained but not trapped) — they can prepare for return during exile, maintain correspondence, build anticipation of their return during the ten-year interval. The constraint functions as a safety valve that prevents violent escalation to assassination or coup while keeping the factional option alive. From this perspective, ostracism is not permanent exile but temporary removal from the competitive arena with scheduled re-entry. Scaffold classification reflects the bounded duration and the active agency available during exile (organization, planning, return preparation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Comparative Constitutional Analysis)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / COMPARATIVE CONSTITUTIONAL ANALYSIS (ROPE) — From the analytical perspective, ostracism coordinates the permanent structural tension in democracy between elite factional conflict and popular sovereignty. The constraint enables the demos to manage elite threats without creating permanent legal categories (banned persons, classes of exile), without permanent confiscation (which would create revenge incentives), and without violence (which would create cycles of retaliation). The mechanism is pure coordination: it solves the problem it exists to solve (breaking factional deadlock before collapse into violence or oligarchy). Extractiveness is minimal by design. The constraint appears as rope from this perspective: a coordination mechanism that extracts no one and benefits the civic polity as a whole."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reading_instantiation_contest",
+      "question": "Is ostracism structurally a safety valve (de-escalation mechanism) or an arbitrary exile procedure (demo power undressed) or elite competition regulation (demos as referee of factional rivalries)?",
+      "resolution_mechanism": "Comparative historical analysis: (1) empirical frequency of ostracism use as factional de-escalation vs arbitrary political removal; (2) correlation between ostracism votes and factional escalation crises; (3) analysis of justifications offered in assembly speeches (safety-valve framing vs arbitrary power framing vs factional regulation framing); (4) examination of non-exiled alternatives available to the assembly and why ostracism was chosen instead.",
+      "impact": "If the safety-valve reading dominates: ostracism is rope (pure coordination). If the arbitrary-exile reading dominates: ostracism is snare (demos power undressed). If elite-regulation reading dominates: ostracism is tangled_rope (demos has genuine agency as referee but serves elite factional interests). The three readings cannot all be simultaneously true for the same voting decision — they represent incommensurable interpretations of the same procedural mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural function of ostracism: safety valve vs arbitrary exile vs elite regulation"
+    },
+    {
+      "id": "kernel_reading_specification",
+      "question": "Which reading of the ostracism kernel is this story instantiating, and how does it relate to the sibling readings?",
+      "resolution_mechanism": "This story instantiates the safety_valve_reading: ostracism as a conflict de-escalation mechanism designed to break elite factional deadlock before it breaks the city. The sibling readings (arbitrary_exile_reading and elite_competition_regulator_reading) represent alternative structural interpretations of the same procedural mechanism. The three readings coexist as competing claims about the same institution, held by different historians and constitutional theorists.",
+      "impact": "The safety_valve reading emphasizes: (1) minimal extractiveness by design (property preserved, return scheduled), (2) civic-peace beneficiary, (3) single-principal victim per crisis, (4) suppression of factional escalation rather than arbitrary domination. If this reading is correct, ostracism is rope. If the sibling readings are correct, ostracism is snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Selection among incommensurable readings of the ostracism kernel"
+    },
+    {
+      "id": "property_preservation_scope",
+      "question": "Does the explicit preservation of property rights and scheduled return fundamentally change the classification, or does extractiveness derive primarily from the exile itself regardless of property status?",
+      "resolution_mechanism": "Comparative analysis: (1) subjective reports from exiled individuals (via Plutarch, Aristotle, inscription evidence) about whether property preservation affected their experience of extraction; (2) political economy analysis of whether the ten-year exile period was economically manageable given preserved property and estate management by family; (3) examination of whether returnees re-entered politics with the same resource base as pre-exile.",
+      "impact": "If property preservation and scheduled return are material to the classification: extractiveness is low (rope classification supported). If exile itself is the primary extraction regardless of property preservation: extractiveness is higher (snare or tangled_rope classification). The safety_valve_reading depends structurally on property preservation being material.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of property preservation on experienced extractiveness of ostracism"
+    },
+    {
+      "id": "factional_escalation_hypothesis",
+      "question": "Is there empirical evidence that ostracism votes occurred at moments of factional escalation (supporting safety-valve hypothesis) or at arbitrary times independent of factional conflict intensity (supporting arbitrary-exile hypothesis)?",
+      "resolution_mechanism": "Timeline analysis: (1) construction of a chronology of factional tensions (from Thucydides, Aristotle, inscription evidence, architectural/military records); (2) mapping of ostracism votes onto this timeline; (3) statistical correlation between vote frequency and conflict intensity; (4) examination of whether factional leaderships explicitly mobilized ostracism as de-escalation mechanism (as opposed to opportunistic rival-removal).",
+      "impact": "If ostracism votes correlate strongly with escalation crises: safety_valve_reading is empirically supported. If votes are independent of factional intensity: arbitrary_exile_reading or elite_regulation_reading more plausible. The safety_valve reading's core claim depends on this correlation existing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Correlation between ostracism votes and factional escalation crises"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "ostracism_sv_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.18,
+      "id_override": "ostracism_sv_extractiveness_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "ostracism_sv_extractiveness_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "ostracism_sv_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "ostracism_sv_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42,
+      "id_override": "ostracism_sv_theater_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "ostracism_sv_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.35,
+      "id_override": "ostracism_sv_suppression_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "ostracism_sv_suppression_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ostracism in classical Athens (ca. 487–417 BCE) was a legal procedure enabling the assembly to exile a single individual for ten years without trial, without confiscation, without legal disgrace, and with scheduled return. This constraint story instantiates the safety_valve_reading: ostracism as a mechanism for breaking elite factional deadlock before factional conflict escalated to violence, oligarchy, or the overthrow of democracy itself. The reading interprets ostracism as a coordination mechanism that solves the structural problem of how a popular assembly can manage elite factions without becoming either tyrannical (permanent exile, confiscation, death sentences) or passive (allowing factions to escalate to civil conflict). The mechanism is minimal-extraction by design: it removes one factional leader for a bounded period, preserves their property and eventual repatriation, and explicitly avoids legal condemnation. The beneficiary is the athenian civic polity itself; the victim set is one principal per crisis, and the extraction is gentle — exile without disgrace or confiscation. The safety_valve_reading competes with two sibling readings: the arbitrary_exile_reading (ostracism as democracy's capacity to mobilize popular sentiment for arbitrary removal of any prominent figure) and the elite_competition_regulator_reading (ostracism as the demos serving as referee among elite rivalries not of the demos' own choosing). These three readings cannot all be true for the same voting decision; they represent incommensurable interpretations of ostracism's institutional function.",
+    "key_agents": [
+      "Athenian Civic Polity (institutional/mobile): Beneficiary of factional de-escalation. Experiences ostracism as coordination mechanism.",
+      "Factional Leadership Under Threat (moderate/constrained): Victim per crisis, but gentle victim. Exiled for ten years with property preserved and scheduled return.",
+      "Democratic Assembly (moderate/trapped): Voter and mechanism operator. Trapped by the structural need to manage factional conflict; experiences ostracism as functional coordination.",
+      "Oligarchic Factions (organized/constrained): Secondary beneficiaries when their rivals are ostracized; constrained by the threat of being ostracized themselves.",
+      "Analytical Observer (analytical/analytical): Comparative constitutional theorist assessing whether ostracism solves the problem it exists to solve (elite factional de-escalation)."
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The mechanism explicitly preserves property rights and schedules return after ten years, minimizing structural extraction from the exile subject. The extractiveness reflects the cost of geographic exile and political exclusion during the ten-year period, but not confiscation or permanent loss of status. The measurement shows stable extractiveness over the interval (0.10 → 0.18), reflecting stability in the mechanism's design. Suppression (0.35): Moderate. The assembly must suppress factional escalation by removing one leader, creating an implicit threat to any faction that becomes too dominant. But suppression is not maximal because the mechanism does not create permanent legal categories, does not confiscate property, and does not prevent return or re-entry into politics. Suppression reflects the constraint that factional leaders face — the threat of ostracism — rather than severe coercion. Theater ratio (0.42): Moderate. The ostracism vote involves performative elements (assembly speechmaking, persuasion rituals, ballot procedures), but the core mechanism is functional: it removes a factional threat and breaks deadlock. The mechanism is not primarily performative; the theater is secondary to the coordination function.",
+    "kernel_context": "This constraint is one reading (safety_valve_reading) of the contested ostracism kernel. The kernel is the Athenian ostracism procedure itself — a formalized mechanism enabling the assembly to vote for temporary exile without trial or confiscation. The kernel_id is ostracism_institution. The sibling readings are: (1) arbitrary_exile_reading — ostracism as arbitrary power undressed, the institution that banished Aristides for being called 'the Just' once too often; (2) elite_competition_regulator_reading — ostracism as regulating the elite tournament, with the demos serving as referee of rivalries not of its own choosing. This story instantiates safety_valve_reading: ostracism as a safety valve, ten years' exile without disgrace or confiscation, a way to break elite deadlock before it broke the city. The three readings coexist as competing interpretations of the same procedure, held by different historians and constitutional theorists. The safety_valve reading emphasizes minimal extractiveness by design, civic-peace beneficiary, and single-principal victim per crisis. The reading's core claim is that the mechanism solves the problem it exists to solve: breaking factional deadlock before escalation.",
+    "directionality_logic": "The safety_valve_reading interprets ostracism as a coordination mechanism where directionality is symmetric across perspectives. The athenian demos (moderate/trapped) and the ostracized individual (powerless/constrained) both experience the mechanism as coordination, not extraction. The beneficiary (civic peace) is abstract but real — the polity's structural stability. The victim is the exile subject, but the victimhood is bounded: ten years, property preserved, return scheduled, no legal disgrace. Directionality derives from the mechanism's explicit design to minimize extraction while achieving coordination. The reading's coherence depends on beneficiary/victim declarations and exit option differentiation working together: the assembly is trapped in the need for factional de-escalation; the exile subject is constrained by ten-year exile but not trapped by permanent loss; the civic polity has mobile options (abandoning ostracism if factional pressure diminishes). Each agent's d value reflects their structural position relative to this specific coordination mechanism.",
+    "perspectival_gap": "The safety_valve_reading produces high convergence across perspectives toward rope classification. The powerless exile subject, the trapped assembly, the mobile institutional structure, and the analytical observer all classify ostracism as rope (pure coordination). The organized faction under threat classifies it as scaffold (temporary removal with return preparation). This perspectival convergence on rope distinguishes the safety_valve_reading from its sibling readings: the arbitrary_exile_reading would produce snare from the exile subject's perspective (arbitrary power undressed); the elite_regulation_reading would produce tangled_rope (genuine assembly agency mixed with serving elite factional interests). The safety_valve_reading's perspectival gap is minimal — all perspectives agree on coordination function — whereas the sibling readings would produce larger gaps between beneficiary and victim perspectives.",
+    "mandatrophy_analysis": "Extractiveness (0.18) places ostracism below the mandatrophy threshold (> 0.46) where high-extraction constraints require explicit resolution. The safety_valve_reading resolves the mandatrophy implicitly: if ostracism is a coordination mechanism (rope), not an extraction mechanism (snare/tangled_rope), then there is no mandatrophy to resolve. The mechanism's low extractiveness follows from its design: property preservation, scheduled return, no legal disgrace, bounded duration. The reading's coherence depends on this low extractiveness being intentional design rather than accident or cover story. The empirical resolution mechanism addresses this: if ostracism votes correlate with factional escalation crises (supporting safety_valve hypothesis), the low extractiveness is explained by design intent. If votes are arbitrary (supporting arbitrary_exile_reading), the low extractiveness might be accidental or vestigial rather than intentional."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ostracism_institution__arbitrary_exile_reading",
+      "ostracism_institution__elite_competition_regulator_reading"
+    ],
+    "dual_formulation_note": "The ostracism kernel admits three structurally distinct readings with different ε values and classifications. This story (safety_valve_reading) presents ostracism as low-extraction rope (ε=0.18). The arbitrary_exile_reading would present ostracism as higher-extraction snare (ε≈0.45–0.55); the elite_competition_regulator_reading would present ostracism as tangled_rope (ε≈0.35–0.45). All three stories address the same historical procedure but instantiate different structural interpretations of its function. The three readings coexist as competing claims about the ostracism kernel; they are linked by network.affects_constraints to enable comparative analysis."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ostracism_institution__arbitrary_exile_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ostracism_institution__elite_competition_regulator_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ostracism_minimal_extraction_by_design",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "factional_escalation_prevention_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "athenian_democratic_stability",
+    "drift_state": {
+      "moment": "fourth_century_abandonment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "rights_catalog_facade__conditional_clause_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rights_catalog_facade__conditional_clause_reading",
+    "story_uid": "67a25a22-f198-459f-ac98-de0b185eb7d6"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.82,
+    "claimed_type": "snare",
+    "human_readable": "Rights Catalog Facade: Conditional Clause Reading",
+    "topic_domain": "legal/doctrinal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_authority"
+    ],
+    "victims": [
+      "citizens_deemed_non_conforming"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Conforming Citizen",
+      "comment": "PERSPECTIVE 1: THE NON-CONFORMING CITIZEN (SNARE) — Granted a right in text but denied it in practice whenever their exercise conflicts with 'the interests of the working people' as interpreted by state authority. No appeal mechanism internal to the right itself; exit via flight is material but identity-shattering. Maximum extraction: the right exists theatrically but not functionally."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Loyal Citizen (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: THE LOYAL CITIZEN / IDENTITY-LOCKED (SNARE) — Internalized the doctrine that the conditional phrasing is legitimate: 'my freedoms should conform to the working people's interests.' Their identity is constituted through obedience to the state's interpretation of these interests. Structurally mobile (could exit or resist) but identity-fused with the regime's framing. High extraction masked as duty."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The State Authority (Constitutional Interpreter)",
+      "comment": "PERSPECTIVE 3: THE STATE AUTHORITY / CONSTITUTIONAL INTERPRETER (ROPE) — Experiences the conditional clause as a coordination mechanism: it establishes norms (conformity to working people's interests) that coordinate mass behavior without requiring explicit prohibition. The beneficiary sees the constraint as enabling rather than extractive. The state has maximal exit optionality — it defines what constitutes 'conforming.' Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regime-Aligned Citizen",
+      "comment": "PERSPECTIVE 4: THE REGIME-ALIGNED CITIZEN (TANGLED ROPE) — Benefits from the rights when their views align with the state's interpretation of 'working people's interests.' Genuine coordination function when alignment holds (information about acceptable speech, assembly norms). Extraction when alignment breaks. Constrained exit: leaving means abandoning social position, but theoretically possible at career/social cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Constitutional Text (Formal Reading)",
+      "comment": "PERSPECTIVE 5: THE CONSTITUTIONAL TEXT / FORMAL READING (PITON) — As a legal artifact, the document persists; the conditional clause continues to be cited as evidence of legal constraint. In practice, the clause is almost entirely performative — cited for legitimacy, enforced inconsistently, reinterpreted constantly. The written constraint functions as cover for discretionary authority rather than as an operative legal limit. Theater ratio is high because the formal clause substitutes for actual limitation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Reading)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, any rights catalog must employ some limiting language to establish the scope of legitimate exercise. The phrase 'in conformity with...' is an irreducible feature of how rights are defined — it is inherent to the logical structure of bounded freedoms. However, this perspective risks naturalizing what is actually a contingent choice in how 'conformity' is determined and enforced. The engine will detect this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conformity_determination_authority",
+      "question": "Who determines what 'conformity with the interests of the working people' means, and is that determination subject to appeal or revision?",
+      "resolution_mechanism": "Historical analysis of explicit determinations made under this clause; documentation of mechanisms for challenging interpretations; comparison with stated legislative intent (if available)",
+      "impact": "If determination is centralized and unappealable: extraction is high and suppression is structural (snare confirmed). If determination is distributed or revisable: some exit optionality emerges (reclassify toward tangled_rope). If determination is visible and predictable: theater_ratio decreases (reclassify toward rope or scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Authority structure and appealability of conformity determinations"
+    },
+    {
+      "id": "conformity_prior_vs_posterior",
+      "question": "Is 'conformity with working people's interests' determined prospectively (before speech/assembly act, providing notice) or retrospectively (after the act, as a basis for punishment)?",
+      "resolution_mechanism": "Chronological analysis of enforcement actions: when were determinations made relative to the speech/assembly act? Were citizens given notice before the act?",
+      "impact": "If prospective: extraction is lower (more coordinating, less suppressing — rope territory). If retrospective: extraction is higher (suppression is hidden until enforcement — snare confirmed). If mixed: cyclical theater_ratio pattern in measurements (sometimes coordinating, sometimes extracting).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Prospective vs retrospective determination of conformity"
+    },
+    {
+      "id": "reading_foreclosure_claim",
+      "question": "Does this conditional-clause reading logically foreclose the external-showcase reading? Can the regime simultaneously maintain that the clause is genuinely limiting (conditional-clause reading) AND that the catalog is primarily an export propaganda document (external-showcase reading)?",
+      "resolution_mechanism": "Documentary analysis of regime statements and actions: internal security documents and policy memos vs international public relations messaging. If both narratives appear in the same regime, the readings coexist rather than foreclose.",
+      "impact": "If they foreclose: reading_relations should declare 'forecloses' toward external-showcase reading. If they coexist: reading_relations should declare 'coexists_with' (the regime holds both contradictory frames simultaneously, using them in different contexts).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether conditional-clause reading forecloses external-showcase reading"
+    },
+    {
+      "id": "social_rights_substance_independence",
+      "question": "Are the measurable social rights (employment, housing, education) genuinely independent from the conditional clause's suppression logic, or do they depend on conformity determinations?",
+      "resolution_mechanism": "Historical analysis of social rights delivery: were benefits withheld from non-conforming citizens? Did regime use conditional clause to deny housing, employment, or education to disfavored groups?",
+      "impact": "If independent: social-rights reading is a genuinely distinct reading with different ε (lower suppression, more genuine benefit). If dependent: the conditional clause extends its suppression into the social rights domain (ε increases, suppression rises). If partially dependent: reading influences rather than forecloses social-rights reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Independence of social rights from conditional-clause suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the conditional-clause reading of the rights catalog kernel: every freedom guaranteed in the text came pre-conditioned — 'in conformity with the interests of the working people' — with the limitation built into the grant's own grammar, not added afterward. The reading interprets this conditional as a genuine structural feature of the right itself, not as external constraint layered on top of an otherwise-unconditional freedom. Under this reading, the right does not exist as an independent sphere; it exists only insofar as the holder exercises it in conformity with an externally-determined standard. The beneficiary is the entity that determines what 'conformity' means. The victims are citizens whose exercise of the right is deemed non-conforming and therefore suppressible. This reading differs fundamentally from the external-showcase reading (the catalog was propaganda for export) and the social-rights reading (the social guarantees had measurable substance). The conditional-clause reading locates the constraint's extractiveness in the internal grammar of the right itself: the right is granted in a form that makes its exercise contingent on approval by the state authority empowered to interpret 'the interests of the working people.'",
+    "key_agents": [
+      "State Authority: Primary beneficiary (institutional/arbitrage) — owns the power to interpret 'conformity' and therefore owns the discretion to grant or deny the right in each instance",
+      "Citizens Deemed Non-Conforming: Primary victim (powerless/trapped) — granted a right in text but denied it in practice; no appeal mechanism internal to the right itself",
+      "Loyal Citizens (Identity-Locked): Secondary victim (powerless/identity_locked) — structurally mobile but identity-fused with the state's interpretation; see conformity as legitimate duty",
+      "Regime-Aligned Citizens: Moderate beneficiary/victim (moderate/constrained) — benefit when views align with state interpretation; face extraction when alignment breaks",
+      "Constitutional Text: Institutional artifact (institutional/arbitrage) — persists as formal constraint but functions performatively; cited for legitimacy without operative force",
+      "Analytical Observer: Universal perspective (analytical/analytical) — risks naturalizing the contingent choice to make conformity determination centralized and unappealable"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The state authority retains the power to determine what constitutes 'conformity' and can therefore suppress any exercise of the right deemed non-conforming. The extraction is substantial because the right appears to be granted in the text, but its exercise is controlled entirely by the external interpretation. Suppression (0.75): High. The suppression is internal to the right's definition — the right is defined as existing only in conformity with an external standard. Citizens have no mechanism to know in advance whether a proposed exercise will be deemed conforming, and enforcement is retrospective (determination made after the act). Theater ratio (0.82): High. The conditional clause creates an appearance of legal constraint while preserving unlimited discretion for the interpreter. The text of the right (the formal grant) functions theatrically: it provides legitimacy cover for discretionary authority. The actual limiting force comes from unstated norms and the interpreter's preferences, not from the written clause. Rising theater_ratio over the interval indicates increasing reliance on the theatrical function (more consistent invocation of the clause without meaningful limitation).",
+    "perspectival_gap": "The state authority sees the conditional clause as a coordination mechanism — it establishes norms for acceptable speech and assembly without requiring explicit prohibition for every case. The non-conforming citizen sees pure extraction: a right granted in text but withheld in practice, with no appeal. The identity-locked citizen internalizes the conformity standard and sees it as legitimate. The regime-aligned citizen experiences a mixed constraint: genuine coordination when their views align, extraction when they diverge. The constitutional text appears as a formal limit (piton perspective) — cited for legitimacy but not operatively constraining. The analytical observer risks seeing conditional rights as a natural feature of bounded freedoms (mountain perspective), missing the contingent choice to centralize the conformity determination. The perspectival spread reveals the gap between the formal right and its actual operation: the same grammatical structure produces snare for the powerless, rope for the beneficiary, and mountain for the analytical observer.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel 'rights_catalog_facade.' The kernel is the entire constitution's guarantee of freedoms — the formal text that declares speech, assembly, and other rights. THREE readings of this kernel exist: (1) CONDITIONAL-CLAUSE READING (this story): The limitation is internal to the right's definition via the conformity clause; the right exists only at the pleasure of the interpreter of 'the interests of the working people.' (2) EXTERNAL-SHOWCASE READING: The catalog was propaganda for international consumption — written to prove socialism out-promised liberal constitutions, quoted abroad while its conditional clauses made it unquotable at home. (3) SOCIAL-RIGHTS SUBSTANCE READING: The civil rights were conditional theater, but the social rights (employment, housing, education) had measurable substance — the catalog read selectively true. Each reading instantiates a different constraint with different ε, different suppression mechanisms, and different victim sets. They are three structurally distinct constraints that share a common kernel (the same text) but interpret that kernel via different readings of what the grammar means and what the regime intended.",
+    "directionality_logic": "The state authority as beneficiary with arbitrage exit derives d ≈ 0.10 (low): the state benefits from the conditional clause by retaining discretionary power to suppress non-conforming speech/assembly without having to forbid them explicitly. The authority can interpret the clause differently in each case and cannot be bound by prior determinations. This is maximal arbitrage: the state can exit any constraint the clause might seem to impose by simply declaring the citizen's exercise non-conforming. Citizens deemed non-conforming as victims with trapped exit derive d ≈ 0.95 (high): they cannot exit the jurisdiction without abandoning identity and property; they cannot exit the constraint without complying with an unknown and changing standard. They bear full extraction cost. Identity-locked citizens as victims with identity-locked exit derive d ≈ 0.89: they could structurally exit (leave, resist, seek clarification) but their identity is fused with loyalty to the regime and its interpretation of 'working people's interests.' The identity lock sustains the extraction through internal framing rather than external barrier."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "rights_catalog_facade__external_showcase_reading",
+      "rights_catalog_facade__social_rights_substance_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the rights_catalog_facade kernel. The three constraint stories (conditional-clause, external-showcase, social-rights) are sibling readings of the same contested text. They share a kernel (the constitution's rights guarantees) but interpret that kernel via different readings of what the grammar constrains and what the regime intended. Each reading has its own ε value, suppression mechanism, and beneficiary/victim structure. They coexist or influence each other — no single reading forecloses the others within the regime's actual practice (the regime uses all three framings in different contexts). Link via network.affects_constraints to enable contamination analysis across readings."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rights_catalog_facade__external_showcase_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rights_catalog_facade__social_rights_substance_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "conformity_clause_limits_right_internally",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_authority_interprets_interests",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "sovereign_state_authority_over_rights_interpretation",
+    "drift_state": {
+      "moment": "post_regime_collapse_or_reform",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

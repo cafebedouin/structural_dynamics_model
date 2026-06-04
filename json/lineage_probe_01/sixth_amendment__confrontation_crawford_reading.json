@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "sixth_amendment__confrontation_crawford_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sixth_amendment__confrontation_crawford_reading",
+    "measurement_id_prefix": "conf_crawford",
+    "story_uid": "3b7d2dc3-40f6-4fee-bdc2-71dc50f1a6dd"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sixth Amendment Confrontation Clause: Crawford Reading (Testimonial Statements & Cross-Examination)",
+    "topic_domain": "constitutional_law/criminal_procedure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cross_examining_accused"
+    ],
+    "victims": [
+      "prosecution_absent_witnesses",
+      "state_conviction_efficiency"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accused Without Confrontation",
+      "comment": "PERSPECTIVE 1: THE ACCUSED WITHOUT CONFRONTATION (ROPE) — When denied cross-examination of testimonial hearsay, the powerless defendant experiences pure coordination failure: the clause exists to guarantee a coordination mechanism (live cross-examination), and deprivation of it is deprivation of the mechanism itself. From the accused's structural position, the right is not extractive — it is the baseline coordination the clause provides. No extraction flows toward the accused; the constraint coordinates a procedural guarantee."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Prosecution Using Absent-Witness Hearsay",
+      "comment": "PERSPECTIVE 2: THE PROSECUTION USING ABSENT-WITNESS HEARSAY (SNARE) — From the prosecution's position, Crawford's restoration of confrontation acts as a suppression mechanism — a hard barrier to a proven conviction method (hearsay shortcuts, absent-witness statements). The prosecution is the primary target of the suppression. However, this perspective is constrained, not trapped: prosecutors can build cases through live testimony or properly-foundation hearsay. The effective suppression is high (0.62) because the constraint eliminates a significant investigative shortcut, but the prosecution retains alternatives at higher cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Court System Enforcing Crawford",
+      "comment": "PERSPECTIVE 3: THE COURT SYSTEM (TANGLED ROPE) — The institutional beneficiary of Crawford is also constrained by it. Courts benefit from having a clear, administrable rule (testimonial statements require confrontation) rather than fluid reliability judgments. This is genuine coordination: Crawford provides a workable standard. But courts also bear costs — excluding probative evidence, managing complex admissibility questions about what counts as 'testimonial.' The court system both benefits from the coordination function and bears enforcement costs. Beneficiary (clarity, administrability) and victim (excluded evidence, complexity) are the same institutional actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Defense Bar (Generational View)",
+      "comment": "PERSPECTIVE 4: THE DEFENSE BAR (TANGLED ROPE, GENERATIONAL) — Over generational timescales, the defense bar experiences Crawford as both coordination and subtle extraction. The rule coordinates: it provides a clear standard ('testimonial' statements require the witness). But the defense bar also extracts value from the rule's application — Crawford creates litigation opportunities, requires state investment in witness availability, and narrows prosecution options. From the arbitrage position, the defense bar can leverage Crawford's rules to extract procedural advantages while also genuinely coordinating a fair trial mechanism. Extractiveness flows toward the defense collective, but the coordination function is real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Text-Originalist Adjudication Framework",
+      "comment": "PERSPECTIVE 5: TEXT-ORIGINALIST FRAMEWORK (PITON, CIVILIZATIONAL) — At civilizational timescale, Crawford's restoration of confrontation to its textual moorings is a piton — a partially degraded institutional commitment to textual constraint. The originalist framing presents the confrontation right as 'restored to the text,' but the actual operative mechanism depends heavily on judge-made doctrine about what counts as 'testimonial' (still evolving, still contested). The theater is high (0.45): the invocation of textual authenticity masks ongoing interpretive work. The rule persists through institutional commitment to the text-as-authority, not because the textual command is univocal."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal frame, cross-examination as the 'only constitutional test of reliability' can appear as a bedrock principle of Anglo-American law — an immutable structural requirement. The right is framed as inseparable from adversarial trial itself: 'witnesses' by definition testify live; hearsay that bypasses confrontation is inherently unreliable. This perspective sees Crawford as restoring a natural law of evidence, not constructing a rule. However, the structural data (suppression of hearsay shortcuts, beneficiary is the accused, victim is prosecution efficiency) contradicts the mountain classification. The engine will identify this as a false summit — Crawford naturalizes a contingent institutional choice (live confrontation > hearsay shortcuts) as inherent to justice itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "testimonial_definition_stability",
+      "question": "Is the boundary between 'testimonial' and 'non-testimonial' statements stable enough to function as a constitutional rule, or does it collapse under repeated application to novel contexts (texts, 911 calls, statements to police)?",
+      "resolution_mechanism": "Longitudinal analysis of Crawford aftermath case law (Davis, Melendez-Diaz, Bullcoming, Williams, Giles); mapping of prosecutor adaptations and judge-made exceptions; identification of systematic drift in what counts as testimonial",
+      "impact": "If stable: Crawford's rule-of-law content is preserved; confrontation suppression remains principled. If unstable: the constraint degrades from tangled_rope toward piton (theater increases as exceptions proliferate); the confrontation suppression becomes ad-hoc rather than rule-governed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of the testimonial/non-testimonial boundary under applied doctrine"
+    },
+    {
+      "id": "witness_availability_as_prosecutorial_cost",
+      "question": "Does Crawford's requirement for live confrontation systematically increase prosecution cost in ways that disadvantage resource-limited prosecutors, or do affluent jurisdictions absorb the cost difference negligibly?",
+      "resolution_mechanism": "Comparative analysis of conviction rates and case processing times across high-resource and low-resource jurisdictions pre- and post-Crawford; measurement of witness-locating expenditures and case dismissal rates due to witness unavailability",
+      "impact": "If disparate impact: Crawford creates latent extraction (privileging well-resourced prosecutors); suppression flows unequally. If absorbed equally: suppression is evenly distributed; the tangled_rope classification holds across contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Crawford's witness requirement creates disparate prosecution burden"
+    },
+    {
+      "id": "constitutional_reading_contest",
+      "question": "Is Crawford a restoration of the clause's original textual meaning, or a reconstruction that reads contemporary evidentiary assumptions back into founding-era language?",
+      "resolution_mechanism": "Historical-semantic analysis: what 'confront' and 'witnesses' meant in 1791 vs. contemporary usage; comparison with founding-era confrontation practice in English courts; identification of what Crawford claimed as restoration vs. what historiography supports",
+      "impact": "If restoration: Crawford's legitimacy rests on fidelity to original constitutional text; the foundational axiom (textual_confrontation_requirement) holds its authority. If reconstruction: Crawford's rule is judge-made modernization using originalist framing; the piton classification deepens (theater increases as textual authenticity is undermined).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Crawford represents textual restoration or contemporary reconstruction"
+    },
+    {
+      "id": "reading_specificity_versus_gideon",
+      "question": "Does Crawford's focus on confrontation rights presuppose or compete with Gideon's counsel guarantee? Can a defendant effectively exercise confrontation rights without competent defense counsel?",
+      "resolution_mechanism": "Case analysis: outcomes in Crawford-controlled cases where defendants lack effective assistance; whether confrontation suppression of hearsay is meaningless without counsel to deploy it; whether the readings coexist or one subsumes the other",
+      "impact": "If Crawford presupposes Gideon: the readings influence each other structurally (they are operationally coupled). If they operate independently: coexistence relation holds. If Gideon subsumes Crawford: Crawford is a secondary benefit that only materializes given counsel — gideon_counsel_revolution forecloses confrontation_crawford_reading as autonomous.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Crawford presupposes or competes with Gideon's counsel guarantee"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "conf_crawford_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.4,
+      "id_override": "conf_crawford_theater_t8"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.45,
+      "id_override": "conf_crawford_theater_t16"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "conf_crawford_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.35,
+      "id_override": "conf_crawford_extract_t8"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38,
+      "id_override": "conf_crawford_extract_t16"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Crawford v. Washington (2004) restored the confrontation clause to its text: 'the Accused shall enjoy the right... to be confronted with the witnesses against him.' The reading asserts that testimonial statements — statements made with the primary purpose of accusing someone of a crime — require the witness to appear live for cross-examination; hearsay of this form is barred by the Constitution itself, not merely by the rules of evidence. This constraint exhibits the characteristic structure of a constitutional reading: it claims to restore textual authority while producing doctrinal effects that redistribute power between prosecution and defense. The constraint's extractiveness (0.38) reflects genuine suppression of a prosecution method (hearsay shortcuts) without eliminating prosecution entirely — prosecutors adapt by locating witnesses or establishing non-testimonial hearsay exceptions. The suppression (0.62) is high because the constraint eliminates proven conviction methods with no compensation; the accused's only benefit is the procedural right itself, not material advantage. The theater ratio (0.45) reflects that Crawford's legitimacy rests on textual-originalist framing ('restored to the text'), but the operative rule depends heavily on judge-made doctrine about what counts as 'testimonial' — the distinction is intuitive but not self-executing. Over 16 years post-Crawford, the theater has increased as exceptions and refinements accumulated (Davis, Melendez-Diaz, Bullcoming, Williams), each case requiring new adjudication of the testimonial boundary.",
+    "key_agents": [
+      "The Cross-Examining Accused: Primary beneficiary (powerless/trapped at biographical scale, but the clause guarantees the procedural right). Experiences Crawford as coordination — the guarantee of live confrontation rather than extraction.",
+      "The Prosecution: Primary victim (institutional/constrained). Bears the suppression cost — cannot use absent-witness testimonial hearsay; must locate witnesses or establish non-testimonial exceptions.",
+      "The Court System: Institutional actor (institutional/constrained, biographical timescale). Experiences tangled rope: benefits from the clear rule ('testimonial' statements require confrontation) but bears enforcement costs (managing complex admissibility questions, excluding probative evidence).",
+      "The Defense Bar: Institutional beneficiary (institutional/arbitrage, generational scale). Extracts value from Crawford through litigation leverage and procedural advantage, while genuinely coordinating fair trial mechanisms.",
+      "Text-Originalist Authority: Institutional framework (institutional/arbitrage, civilizational scale). Maintains the rule through commitment to textual authenticity; theater increases as interpretive work (defining 'testimonial') becomes visible.",
+      "The Analytical Observer: Civilizational perspective (analytical/analytical). Risks naturalizing Crawford as a bedrock principle ('witnesses by definition testify live') when it represents a contingent institutional choice about how to test reliability."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Crawford suppresses a proven prosecution method (absent-witness testimonial hearsay), which is real extraction from the prosecution's capacity. But extractiveness is not severe because prosecutors retain alternatives: locate the witness, establish that the statement is non-testimonial (business records, statements to family members, statements made for medical diagnosis), or invoke recognized exceptions (statements against penal interest, forfeiture by wrongdoing). The suppression is principled (applies to all testimonial hearsay) rather than arbitrary, which lowers the experienced extraction. Suppression (0.62): High. The constraint eliminates a shortcut without compensation to the prosecution. Hearsay is efficient — witnesses are expensive to locate and transport; absent statements are probative. Crawford's requirement for confrontation increases prosecution cost substantially. The suppression is architecturally high because the rule is categorical (testimonial statements are barred, full stop) rather than balancing prosecution efficiency against defense rights. Theater ratio (0.45): Moderate. Crawford's legitimacy depends on the claim of textual restoration ('the clause un-balanced back to its text'). But the operative rule depends on judge-made doctrine about what counts as 'testimonial.' The Supreme Court has never provided a univocal definition — Davis offered a 'primary purpose' test that has proven unstable in application (texts, 911 calls, statements to police all require case-by-case adjudication). The theater reflects this gap between textual authenticity (claimed) and interpretive work (required). Theater has increased over the measurement interval as exceptions and refinements accumulated.",
+    "perspectival_gap": "This constraint demonstrates the indexed classification principle: the same constitutional rule produces different types from different structural positions. The accused without confrontation sees coordination (Rope) — the clause guarantees a procedure, not an advantage. The prosecution using hearsay sees suppression (Snare) — confrontation is a hard barrier to a proven method. The court system sees mixed coordination and cost (Tangled Rope) — the rule is administrable but excludes evidence and requires ongoing interpretation. The defense bar sees extraction leverage (Tangled Rope, generational) — the rule creates procedural advantage alongside genuine fairness. The text-originalist framework sees a theatrical restoration (Piton) — the claim of textual authenticity masks interpretive work. The civilizational observer risks seeing immutable law (Mountain) — confrontation as inherent to adversarial trial itself. The perspectival gap reveals that Crawford naturalizes a contingent choice: live testimony > hearsay shortcuts is not a law of nature but a constitutional preference, and that preference distributes power toward the accused and defense bar while suppressing prosecution efficiency.",
+    "directionality_logic": "Directionality is derived from the structural position of each observer relative to the suppression mechanism. The accused benefits from the confrontation guarantee (beneficiary status → low d) but is nominally powerless in court (powerless power atom) — this produces a mixed signal: beneficiary with trapped exit yields d ≈ 0.40, moderate f(d). The prosecution bears the suppression cost (victim status) and is nominally constrained (can adapt through witness location or non-testimonial hearsay) → victim status + constrained exit yields d ≈ 0.65, f(d) ≈ 1.0. The court is both beneficiary (clear rule) and victim (enforcement cost), with constrained exit → d ≈ 0.50, f(d) ≈ 0.65. The defense bar is a beneficiary with arbitrage options → d ≈ 0.15, f(d) ≈ -0.05. These derivations explain why the prosecution sees Snare (high f(d)) while the accused sees Rope (f(d) near zero) — the same rule applies, but directionality differs based on structural position.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that Crawford is genuinely a tangled rope (both coordination and extraction), not a pure rope that naturalizes as coordination or a pure snare that naturalizes as suppression. The coordination function is real: Crawford provides a clear, administrable standard (testimonial statements require confrontation) that replaces fluid reliability judgments. Courts benefit from administrability. The extraction function is real: the rule suppresses a prosecution method (hearsay shortcuts) without compensation, and the defense bar extracts procedural leverage. Both functions persist across time. The theater ratio increase reflects not degradation of the rule but increasing visibility of the interpretive work required to apply it — as the testimonial boundary is tested in novel contexts (texts, 911 calls), judges must adjudicate what counts as testimonial, and each case reveals the gap between the textual claim (restored to the text) and the doctrinal reality (ongoing interpretation). The constraint does not collapse into piton; rather, the theater measures the gap between textual legitimacy (claimed) and institutional practice (interpreted).",
+    "kernel_context": "This constraint is ONE reading of the contested Sixth Amendment kernel. The reading instantiates confrontation_crawford_reading: Crawford restored confrontation's edge by requiring the witness and cross-examination as the only constitutional test of reliability. The sibling readings are gideon_counsel_revolution (counsel as gateway right to operationalize all others) and jury_cross_section_reading (jury as drawn from community whole). The three readings coexist across different institutional actors and constitutional traditions. Each reading claims to restore the clause's authentic meaning, but they emphasize different clauses (confrontation vs. counsel vs. jury composition) and distribute different power structures. Crawford emphasizes the accused's right to face witnesses; Gideon emphasizes the accused's right to counsel; jury_cross_section emphasizes the jury's legitimacy as drawn from the community. The readings influence each other (counsel facilitates confrontation; jury composition affects trial fairness) but do not foreclose each other — all three remain live positions in constitutional doctrine."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gideon_counsel_revolution",
+      "jury_cross_section_reading",
+      "hearsay_exception_scope"
+    ],
+    "dual_formulation_note": "Crawford's testimonial-statements rule is linked to sibling readings of the Sixth Amendment kernel (Gideon's counsel, jury cross-section) and downstream to constraints about hearsay exception scope. The coordinate constraints operate at different doctrinal scales: confrontation addresses live testimony, counsel addresses trial access, jury addresses trial composition, hearsay exceptions address evidentiary rules. Each constraint has its own extractiveness; they are linked by institutional coupling and shared beneficiary (the accused)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gideon_counsel_revolution",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "jury_cross_section_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "testimonial_statements_require_live_confrontation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "cross_examination_is_only_constitutional_reliability_test",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "text_restored_confrontation",
+    "drift_state": {
+      "moment": "post_crawford_case_law_accumulation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

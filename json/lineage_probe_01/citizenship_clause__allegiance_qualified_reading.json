@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "citizenship_clause__allegiance_qualified_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_citizenship_clause__allegiance_qualified_reading",
+    "measurement_id_prefix": "citz_alleg",
+    "story_uid": "9dd1a667-fabb-4794-8d41-d915a512e4e1"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Citizenship Clause — Allegiance-Qualified Reading",
+    "topic_domain": "constitutional/doctrinal/citizenship",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "membership_by_consent_doctrine",
+      "allegiance_based_polity"
+    ],
+    "victims": [
+      "birthright_claims_temporarily_present",
+      "children_foreign_allegiance"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Child Born to Foreign Allegiance",
+      "comment": "PERSPECTIVE 1: CHILD BORN TO FOREIGN ALLEGIANCE (SNARE) — Structurally mobile (could be recognized as citizen under territorial rule) but excluded by allegiance doctrine. No exit from the exclusion without parental allegiance shift or naturalization proceedings. Maximum extraction: citizenship conditional on a political tie the agent cannot unilaterally control. Bears the full cost of the allegiance requirement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Temporarily Present Resident",
+      "comment": "PERSPECTIVE 2: TEMPORARILY PRESENT RESIDENT (TANGLED ROPE) — Constrained by visa status and employment authorization, but also benefits from the allegiance doctrine if it protects skilled immigrant admission by conditioning citizenship on sustained political commitment. Extraction is real (citizenship delayed or denied) but coordinated with the state's interest in screening membership by allegiance rather than accident of location."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Allegiance-Based Polity",
+      "comment": "PERSPECTIVE 3: ALLEGIANCE-BASED POLITY (ROPE) — Sees the constraint as pure coordination: citizenship is a membership contract, and requiring allegiance is the mechanism for screening who enters the body politic. The doctrine benefits the polity by conditioning membership on political tie rather than geographic accident. No experienced extraction — the constraint is the solution to the coordination problem of defining membership."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Stateless Cohort (Generational View)",
+      "comment": "PERSPECTIVE 4: STATELESS COHORT / GENERATIONAL VIEW (SNARE) — Over time, allegiance doctrine creates structural statelessness for cohorts born to foreign diplomats, transient workers, or occupied populations. Trapped across generations without path to citizenship. Maximum experienced extraction scaled by temporal horizon: each generation that passes locks the next generation into statelessness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Immigration Rights Advocates",
+      "comment": "PERSPECTIVE 5: IMMIGRATION RIGHTS ADVOCATES (TANGLED ROPE) — Organized agents advocating for expansive birthright. Constrained by constitutional text and precedent but also benefit from the doctrinal contest itself — the existence of a live interpretive question creates opportunity for advocacy and norm-shifting. See the constraint as a hybrid coordination (defining membership) and extraction (excluding based on parental status)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Naturalization Pipeline",
+      "comment": "PERSPECTIVE 6: NATURALIZATION PIPELINE (SCAFFOLD) — Institutional actors (immigration courts, USCIS) see allegiance doctrine as temporary: denial of birthright citizenship is addressed through structured naturalization, which offers a time-limited path to membership. The scaffold has a built-in sunset: after 5-10 years of residence and allegiance demonstration, citizenship is available. Low theater from this perspective — the naturalization process is functionally addressing the exclusion."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Doctrine Machinery",
+      "comment": "PERSPECTIVE 7: THE DOCTRINE MACHINERY (PITON) — From a civilizational view, allegiance doctrine persists through legal momentum and textual authority rather than functional necessity. Modern citizenship is mostly territorial; allegiance is invoked as legitimating gloss but does minimal actual filtering work. Theater ratio high — the doctrine is maintained for its rhetorical authority over membership, not because it prevents actual problems. The machinery continues through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer — Natural Law of Political Order",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, some requirement of allegiance for membership is structurally inherent to political organization: a polity that accepts all territorially born persons regardless of political tie is an open-membership system that cannot sustain bounded citizenship. This perspective sees the allegiance requirement as an unchangeable feature of how political authority works. However, the structural data contradicts the mountain classification — the engine will flag this as a false summit, revealing that the 'inherent to political order' framing naturalizes a contestable doctrinal choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "allegiance_vs_territorial_kernel",
+      "question": "Is allegiance or territory the determinative constitutional principle for birthright citizenship?",
+      "resolution_mechanism": "Textual analysis of 'subject to the jurisdiction' clause; historical intent at 14th Amendment ratification; doctrinal genealogy from English common law through Wong Kim Ark",
+      "impact": "If allegiance is determinative: this reading's classification holds; beneficiaries control membership screening. If territory is determinative: the territorial reading controls; the allegiance requirement becomes contingent overlay on underlying birthright rule.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether allegiance or territory is the foundational principle of the citizenship clause"
+    },
+    {
+      "id": "subject_to_jurisdiction_scope",
+      "question": "What does 'subject to the jurisdiction' actually exclude? Diplomats and invading armies only, or a broader category including children of foreign nationals without permanent settlement?",
+      "resolution_mechanism": "Case-law genealogy from Dred Scott through Wong Kim Ark to contemporary immigration law; functional analysis of who exercises jurisdiction over which persons; statutory interpretation of 'jurisdiction' in other constitutional contexts",
+      "impact": "Narrow reading (diplomats/armies only): territorial reading wins, allegiance doctrine becomes subordinate gloss. Broad reading (includes foreign-allegiance category): this reading's structure holds, allegiance becomes determinative filter.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of exclusion from 'subject to the jurisdiction'"
+    },
+    {
+      "id": "wong_kim_ark_settlement_lock",
+      "question": "Does Wong Kim Ark's 1898 settlement foreclose reinterpreting the clause through the allegiance lens, or does it merely establish a strong presumption that can be revisited?",
+      "resolution_mechanism": "Doctrine-of-precedent analysis; examination of whether Wong Kim Ark opinion itself treated territorial rule as unquestionable or as a reasoned interpretation; assessment of whether subsequent doctrine has treated the precedent as binding on the allegiance question or merely as settling the specific issue (children of Chinese laborers)",
+      "impact": "If Wong Kim Ark forecloses: allegiance reading is doctrinally impossible; this reading is foreclosed by a sibling (wong_kim_ark_settlement_reading). If precedent is revisable: this reading coexists with the settlement reading as a live alternative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Wong Kim Ark forecloses or merely influences the allegiance reading"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "Is the allegiance requirement a coordination mechanism (polity screening for members willing to pledge allegiance) or extraction (conditioning citizenship on status the child cannot control)?",
+      "resolution_mechanism": "Empirical: do children born to foreign nationals actually have exit options (parents can shift allegiance, children can naturalize after age of majority, temporary residents become permanent)? Normative: is a requirement imposed on persons without consent to the contract a legitimate coordination condition?",
+      "impact": "If coordination dominates: constraint lowers toward Rope (beneficiary's perspective). If extraction dominates: constraint rises toward Snare (victim's perspective). Current ε=0.48 reflects genuine hybridity; omega resolution could shift terminal classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether allegiance requirement is coordination or extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The allegiance-qualified reading interprets the Fourteenth Amendment's citizenship clause as conditioning birthright citizenship on more than geographic presence — it requires allegiance to the United States. This reading suppresses pure territorialism and makes membership contingent on a political tie. Children born to foreign nationals owing primary allegiance elsewhere fall outside the clause's grant, regardless of birth location. This is ONE of three structurally distinct readings of the same constitutional kernel (the citizenship clause). The reading instantiates a membership-by-consent doctrine where citizenship is a contract requiring political allegiance, not an automatic property of birth within the territory. The constraint exhibits the full range of classification from different perspectives: victims (children excluded from birthright) experience snare dynamics; beneficiaries (the polity screening for allegiance) experience rope coordination; organized advocates experience tangled-rope hybridity; the naturalization pipeline offers temporary-support structure; the doctrine machinery itself appears as a degraded piton persisting through legal inertia; and the analytical observer risks naturalizing the allegiance requirement as an unchangeable feature of political order (false summit).",
+    "key_agents": [
+      "Children born to foreign allegiance: Primary victims (powerless/trapped) — excluded from birthright citizenship without parental allegiance shift",
+      "Membership-by-consent doctrine: Primary beneficiary (institutional/arbitrage) — allegiance requirement enables screening for committed members",
+      "Allegiance-based polity: Institutional beneficiary (institutional/arbitrage) — experiences allegiance doctrine as coordination mechanism, not extraction",
+      "Temporarily present residents: Secondary victims (moderate/constrained) — citizenship delayed or conditioned on allegiance demonstration",
+      "Stateless cohort: Generational victim (powerless/trapped) — long-term structural effect of allegiance doctrine creates statelessness across generations",
+      "Immigration rights advocates: Organized opponents (organized/constrained) — contest allegiance doctrine, advocate for territorial birthright expansion",
+      "Naturalization pipeline: Institutional mediator (institutional/arbitrage) — offers time-limited exit path through structured allegiance demonstration",
+      "Constitutional doctrine machinery: Institutional maintainer (institutional/arbitrage) — preserves allegiance framing through doctrinal authority despite weak functional necessity",
+      "Analytical observer: Civilizational view (analytical/analytical) — risks naturalizing political allegiance as unchangeable law"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The allegiance requirement extracts from children born to foreign nationals by denying automatic citizenship despite birth on territory. The extraction is real — citizenship is withheld based on parental status the child cannot control at birth. However, it is not severe (ε ≥ 0.46 snare threshold but not high-snare at ≥0.66) because naturalization pathways exist, and the requirement has functional logic (screening for allegiance). The measurement trajectory (0.35 → 0.42 → 0.48) reflects rising extraction as immigration enforcement has intensified and stateless populations have grown larger. Suppression (0.62): Moderate-high. Suppression is structural: children born to foreign nationals face barriers to exit (cannot unilaterally shift parental allegiance), cannot claim birthright without parental status change, and have limited access to immediate naturalization. The trajectory (0.45 → 0.58 → 0.62) reflects increasing enforcement pressure and rising barriers to naturalization. Theater ratio (0.58): Moderate. The allegiance doctrine maintains significant performative content — the requirement is invoked as a legitimating principle for membership screening, but actual functional screening happens through immigration enforcement and naturalization procedures, not through allegiance doctrine itself. Modern practice is mostly territorial; allegiance is a rhetorical gloss covering what is functionally a residency requirement.",
+    "directionality_logic": "Directionality values (d) are derived from structural relationships. Children born to foreign allegiance occupy the target position (victims of the exclusion rule) with trapped exit options — they cannot unilaterally change parental allegiance and face high barriers to alternative residence. This yields high d → high f(d) → high chi from their perspective, producing snare classification. The membership-by-consent doctrine occupies the beneficiary position (allegiance requirement enables its functioning) with arbitrage exit options (doctrinal positions can be revised, institutions can shift policy) — low d → low/negative f(d) → low chi from institutional perspective, producing rope. The analytical observer occupies a universal scope with analytical exit options, canonical d=0.72, producing f(d)≈1.15, chi≈0.55 at institutional scope — sufficient to classify as mountain if the constraint were genuinely unchangeable, but the structural data (identifiable beneficiaries, contestable doctrinal choice) falsifies the mountain classification, flagging this as a false summit.",
+    "perspectival_gap": "The allegiance-qualified reading produces a wide perspectival gap because the same doctrine is experienced as pure coordination (by the polity), as extraction with limited escape (by moderate residents), as total exclusion (by powerless children), as functional injustice (by organized advocates), as a temporary administrative problem (by the naturalization pipeline), and as doctrinal theater (by civilizational analysis). The gap reveals the constraint's hybrid nature: it has genuine coordination content (the polity's legitimate interest in screening members by allegiance) layered with extraction (conditioning citizenship on status the agent cannot control). The tangled-rope classification is the stable point — higher than rope because extraction is real and suppression is high, lower than snare because coordination function is genuine and escape routes exist.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy (false classification of coordination as extraction or vice versa) by explicitly declaring both the coordination function (membership screening) and the extraction mechanism (conditional citizenship). The tangled-rope classification honors both. The risk point is the false summit: if the allegiance requirement is framed as an unchangeable feature of political order (mountain), mandatrophy is triggered. The analytical perspective's mountain classification is explicitly marked as a false-summit candidate in the schema — beneficiaries are declared, triggering FSM evaluation by the engine.",
+    "kernel_context": "This constraint instantiates the allegiance-qualified reading of the citizenship clause kernel. The kernel is the Fourteenth Amendment's authorization of birthright citizenship to all persons born on U.S. territory 'subject to the jurisdiction thereof.' Three structural readings contest the interpretation: (1) allegiance_qualified_reading (THIS CONSTRAINT) — allegiance is determinative; territory is necessary but insufficient; children of foreign allegiance are excluded. (2) birthright_territorial_reading (SIBLING) — territory is determinative; 'subject to the jurisdiction' excludes only diplomats and invading armies; most children born here are citizens regardless of parental allegiance. (3) wong_kim_ark_settlement_reading (SIBLING) — the 1898 Wong Kim Ark case settled the matter: common-law territorial rule survived into the clause, and a century of reliance has built on that settlement, making the allegiance question closed. This reading forecloses pure territorialism and coexists with the settlement reading as competing interpretations of what Wong Kim Ark actually decided. The kernel contest is not resolvable by discovering a new fact — it is a doctrinal choice about which constitutional principle (allegiance or territory) is primary."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "citizenship_clause__birthright_territorial_reading",
+      "citizenship_clause__wong_kim_ark_settlement_reading",
+      "naturalization_allegiance_requirement",
+      "diplomatic_immunity_jurisdiction"
+    ],
+    "dual_formulation_note": "This story instantiates the allegiance-qualified reading of the citizenship clause. The birthright_territorial_reading and wong_kim_ark_settlement_reading are separate constraint stories representing sibling interpretations of the same kernel. All three share the same base constitutional text but decompose it into distinct claims with different ε values and different beneficiary/victim structures. The allegiance reading has ε=0.48 (tangled rope); the territorial reading has lower ε and different suppression (pure coordination); the settlement reading locks both into precedential form with high theater (doctrinal inertia). Network links show the kernel contest structure: all three stories affect each other through doctrinal competition."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "citizenship_clause__birthright_territorial_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "citizenship_clause__wong_kim_ark_settlement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "allegiance_determinative_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "jurisdiction_requires_political_tie",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "membership_by_consent_framework",
+    "drift_state": {
+      "moment": "contemporary_mass_immigration_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

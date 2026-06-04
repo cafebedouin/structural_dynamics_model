@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "australian_federation_1901__dismissal_1975_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_australian_federation_1901__dismissal_1975_reading",
+    "measurement_id_prefix": "dismissal_1975",
+    "story_uid": "bb87f83b-10a5-4f48-a9bb-e4988aff9ed4"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 1975 Dismissal: Senate Supply Block and Vice-Regal Override",
+    "topic_domain": "legal/constitutional/Westminster-hybrid",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coalition_opposition",
+      "vice_regal_discretion"
+    ],
+    "victims": [
+      "dismissed_government",
+      "confidence_convention",
+      "elected_house_sovereignty"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dismissed Government",
+      "comment": "PERSPECTIVE 1: DISMISSED GOVERNMENT (SNARE) — The Whitlam government faced a constitutional crisis manufactured through supply blockade; exit required accepting the confidence convention's abandonment or negotiating with a hostile Senate. No structural escape path existed once the Governor-General exercised reserve powers. Maximum extraction: the government was removed from office despite holding a majority in the lower house."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition Opposition",
+      "comment": "PERSPECTIVE 2: COALITION OPPOSITION (ROPE) — The blocking opposition benefited from a structural opportunity: the Senate's power to block supply created a coordination mechanism for forcing an election. From this position, the constraint is perceived as enabling legitimate constitutional action — forcing an election when supply fails is presented as democratic recovery, not extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Vice-Regal Discretion",
+      "comment": "PERSPECTIVE 3: VICE-REGAL DISCRETION (ROPE) — The Governor-General's reserve powers appear as a coordination mechanism: resolving deadlock when supply is blocked. The discretionary power is experienced as enabling rather than constraining. From the vice-regal perspective, dismissal restores constitutional balance by forcing an election."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Lower House (Elected Chamber)",
+      "comment": "PERSPECTIVE 4: LOWER HOUSE / ELECTED CHAMBER (TANGLED ROPE) — The lower house retains nominal sovereignty (members retained their seats; an election was called) but experienced suppression of the confidence convention that normally protects it from upper-house veto. The constraint exhibits both genuine coordination (federal deadlock resolution) and asymmetric extraction (the lower house's mandate was terminated without its consent)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The 1975 dismissal reveals the hybrid's buried contradiction: Westminster confidence doctrine presumes the elected lower house is sovereign over supply, but the federal upper house retained blocking power. This is a genuine coordination problem (how to resolve deadlock between chambers) combined with genuine extraction (bypassing the lower house's electoral mandate). The constraint's true classification is tangled rope: there is a coordination function, there are identifiable beneficiaries and victims, and enforcement requires suppressing the confidence convention."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reserve_powers_legitimacy_boundary",
+      "question": "Does the Governor-General's discretion to dismiss a prime minister upon supply blockade reflect a genuine reserve power for deadlock resolution, or is it an extractive override of the confidence convention?",
+      "resolution_mechanism": "Comparative analysis of Westminster systems: do other jurisdictions (Canada, UK, New Zealand) treat supply blockade as triggering dismissal or as requiring negotiation? Historical precedent: had the GG ever dismissed a government pre-1975 on supply grounds alone?",
+      "impact": "If reserve power is legitimate: classification shifts toward rope (coordination mechanism). If override is extractive: classification shifts toward snare (suppression of confidence convention). The 1975 reading instantiates the extractive reading; the washminster_hybrid_reading coexists with it by claiming the hybrid's design intentionally preserved reserve powers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether reserve powers are coordination or extraction mechanism"
+    },
+    {
+      "id": "confidence_convention_authority",
+      "question": "Is the Westminster confidence convention (that an elected government cannot be dismissed while it retains lower-house confidence) a constitutional norm or merely a practice subject to override by formal legal power?",
+      "resolution_mechanism": "Doctrinal analysis: British constitutional authorities pre-1975; examination of whether the Australian Constitution (text) codifies confidence doctrine or leaves it implicit in convention. The 1975 dismissal was defended on grounds that formal constitutional power (the GG's authority) overrides unwritten convention.",
+      "impact": "If convention is paramount: the GG's dismissal violated constitutional law (the law of confidence). If formal power overrides convention: the GG exercised legitimate constitutional authority. This reading holds that convention was suppressed; the washminster_hybrid_reading holds that formal authority intentionally preserved reserve power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Status of confidence convention versus formal constitutional power"
+    },
+    {
+      "id": "senate_supply_blockade_purpose",
+      "question": "Was the Senate's blocking of supply in 1975 a legitimate constitutional check on executive overreach, or an abuse of the upper house's power to force an unwilling election?",
+      "resolution_mechanism": "Historical record: examination of the government's conduct leading to the blockade; analysis of whether the Coalition's justification (supply-cut as enforcement of budgetary discipline) maps to any principle of Senate restraint in other Westminster systems. Did the lower house majority consent to the supply strategy?",
+      "impact": "If legitimate check: the constraint is a coordination mechanism (rope). If abuse: the constraint is extraction (snare or tangled rope). This reading treats the blockade as an extractive use of Senate power combined with vice-regal extraction. The referendum_rigidity_reading is orthogonal: it does not address the blockade's legitimacy but rather the Constitution's resistance to amendment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of Senate supply blockade as constitutional mechanism"
+    },
+    {
+      "id": "hybrid_design_intent",
+      "question": "Did the 1901 drafters intentionally design a hybrid system that preserved vice-regal reserve powers and upper-house supply control, or did they intend Westminster confidence doctrine to override federal deadlock provisions?",
+      "resolution_mechanism": "Constitutional history: examination of 1901 Convention Debates; analysis of whether the framers discussed the interaction between Senate supply control and the GG's dismissal power. The washminster_hybrid_reading claims intentional hybrid design; this reading claims the hybrid was a latent contradiction that 1975 exposed.",
+      "impact": "If intentional hybrid: the reservation of power is constitutional by design (supports washminster reading). If latent contradiction: the 1975 crisis reveals a flaw (supports this dismissal reading). The two readings coexist because neither forecloses the other — intent in 1901 cannot retroactively determine what the constitution's binding text actually prescribes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hybrid design was intentional or latent contradiction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "dismissal_suppression_pre_crisis"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65,
+      "id_override": "dismissal_suppression_crisis_onset"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 11,
+      "value": 0.72,
+      "id_override": "dismissal_suppression_peak"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "dismissal_extract_pre_crisis"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "dismissal_extract_crisis_onset"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.58,
+      "id_override": "dismissal_extract_peak"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "dismissal_theater_pre_crisis"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62,
+      "id_override": "dismissal_theater_crisis_onset"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.68,
+      "id_override": "dismissal_theater_peak"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 11
+  },
+  "commentary": {
+    "narrative_context": "The 1975 dismissal of the Whitlam government by Governor-General Sir John Kerr detonated the Australian federation's buried contradiction: the hybrid's design contains two incompatible sovereignty doctrines. Westminster confidence doctrine holds that an elected government with lower-house confidence cannot be dismissed. Federal deadlock doctrine holds that an upper house with equal-state representation can block supply and force an election. The 1975 crisis instantiated both simultaneously. The Coalition opposition blocked supply in the Senate (federal power), the Governor-General dismissed the government (reserve power), and the lower house's electoral mandate was terminated without its consent (extraction). This reading of the 1901 kernel frames the crisis as revealing not a legitimate constitutional mechanism but a structural flaw: the hybrid preserved vice-regal reserve power and upper-house supply control in direct tension with Westminster confidence. The constraint exhibits both coordination (federal deadlock resolution) and asymmetric extraction (bypassing lower-house sovereignty).",
+    "key_agents": [
+      "Whitlam Government (Labor): Primary victim — held lower-house majority and confidence but was dismissed through supply blockade and vice-regal discretion",
+      "Coalition Opposition (Liberal-Country Party): Primary beneficiary (institutional/arbitrage) — forced an election through supply blockade; benefited from vice-regal exercise of reserve powers",
+      "Governor-General (John Kerr): Institutional actor (institutional/arbitrage) — exercised reserve powers to dismiss the government; claimed constitutional authority to resolve deadlock",
+      "Senate (upper house): Institutional actor (institutional/arbitrage) — blocked supply; created the deadlock that triggered dismissal",
+      "Lower House (House of Representatives): Primary victim (powerful/mobile) — retained formal position but had its electoral mandate terminated without consent",
+      "Confidence Convention: Victim (analytical) — suppressed by the crisis; no longer protected lower-house sovereignty from upper-house and vice-regal override"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint exhibits significant extraction of office from the government. The lower house retained majority confidence, yet the government was removed through a mechanism (supply blockade + vice-regal dismissal) that bypassed the confidence doctrine. The extraction is not total (an election was called, not a coup staged), but it is substantial. Suppression (0.72): High suppression of the confidence convention itself. The convention that protects elected governments from removal by upper houses was actively suppressed — the blocking opposition and the Governor-General together subordinated Westminster doctrine to federal deadlock mechanics. Theater ratio (0.68): Moderate-to-high. The dismissal was defended as constitutional necessity (resolving a deadlock), but the real mechanism was political: the Opposition forced a crisis, the GG exercised discretion, and the government lost office. The constitutional language provided theater for what was fundamentally a power move. The theater increased over the crisis period as constitutional justifications accumulated. The measurements show suppression and extractiveness rising from pre-crisis baseline (suppression 0.42 → 0.72, extractiveness 0.35 → 0.58) as the crisis developed.",
+    "directionality_logic": "The constraint's directionality differs sharply by agent. The Coalition opposition (institutional/arbitrage) experiences low directionality (d ≈ 0.15): they are beneficiaries who could exit the constraint through negotiation or electoral competition. They faced low cost and extracted office. The dismissed government (powerful/mobile) experiences high directionality (d ≈ 0.85): despite formal power (elected majority), they faced structural barriers to continued office (supply blockade, vice-regal dismissal). The lower house (powerful/mobile) experiences moderate directionality (d ≈ 0.60): it retained seat-holding power but lost its mandate-protection via the suppressed confidence convention. The Governor-General (institutional/arbitrage) experiences low directionality (d ≈ 0.12): as the exerciser of reserve power, the constraint serves their formal authority. The confidence convention itself experiences maximum directionality (d = 1.0): as a victim-principle, it was suppressed entirely. The measured chi varies by perspective: beneficiaries experience negative chi (the constraint subsidizes them), victims experience high chi (extraction).",
+    "perspectival_gap": "The Coalition opposition (rope) and the dismissed government (snare) perceive the same structural event entirely differently. The opposition sees the Senate blockade as a legitimate constitutional check that forced an overdue election. The government sees the blockade as an abuse of upper-house power combined with vice-regal override of electoral mandate. The analytical observer sees the tangled rope: both mechanisms are present (coordination via deadlock resolution, extraction via mandate suppression). The washminster_hybrid_reading coexists with this reading by accepting the hybrid design as intentional — reserve powers and Senate supply control are features, not bugs. This reading treats them as a latent contradiction exposed by crisis. Neither reading forecloses the other; they differ on the interpretation of 1901's design intent.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by explicitly labeling the constraint as tangled rope — there is genuine coordination function (federal deadlock cannot be resolved by lower-house fiat alone) AND asymmetric extraction (the lower house's electoral mandate was terminated without its consent). The constraint is not a coordination mechanism masquerading as extraction, nor extraction masquerading as coordination. Both elements are structurally present. The supply blockade creates a coordination problem: neither chamber can govern if supply is blocked. The vice-regal dismissal resolves the deadlock but does so by extracting the lower house's mandate-protection. The theater (constitutional justification language) increased over the crisis but did not constitute the entire mechanism — the extraction and suppression are real, not performative.",
+    "kernel_context": "This constraint is one reading of the australian_federation_1901 kernel — the 1901 constitutional text and its foundational compromises. The 1975 dismissal reading instantiates the interpretation that the hybrid's design contains a latent contradiction: Westminster confidence doctrine (lower-house sovereignty) was never explicitly reconciled with federal deadlock mechanics (upper-house supply control and vice-regal reserve power). The sibling readings are: (1) referendum_rigidity_reading — the Constitution's amendment text (Section 128) made the kernel nearly unamendable in practice, giving the people a veto that has blocked 37 of 45 attempted amendments. That reading focuses on constitutional rigidity, not on the hybrid's confidence crisis. (2) washminster_hybrid_reading — the 1901 design was a deliberate fusion of Westminster and federal mechanics; reserve powers and supply control were intentional features for managing deadlock. That reading treats what this reading calls extraction as legitimate constitutional function. The readings coexist because both remain live political and doctrinal positions held by different parties. The 1975 dismissal was defended on washminster grounds (hybrid design preserved reserve power); it was attacked on confidence grounds (extractive suppression of elected mandate). Both interpretations persist in Australian constitutional discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "australian_federation_1901__referendum_rigidity_reading",
+      "australian_federation_1901__washminster_hybrid_reading"
+    ],
+    "dual_formulation_note": "The three readings of the australian_federation_1901 kernel are structurally distinct constraints with different ε values and beneficiary/victim structures. dismissal_1975_reading (ε=0.58) frames the 1975 crisis as extractive suppression of confidence convention; washminster_hybrid_reading (ε≈0.30–0.40, estimated as coordination mechanism) frames the hybrid design as intentional deadlock-resolution; referendum_rigidity_reading (ε≈0.25, estimated as constraint on amendment) focuses on the Constitution's structural rigidity. All three are readings of the same text kernel, but they identify different structural problems and beneficiaries. Links via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.6
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "australian_federation_1901__referendum_rigidity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "australian_federation_1901__washminster_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "confidence_convention_constrains_dismissal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "upper_house_supply_control_extractive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "westminster_lower_house_sovereignty",
+    "drift_state": {
+      "moment": "post_1975_dismissal",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

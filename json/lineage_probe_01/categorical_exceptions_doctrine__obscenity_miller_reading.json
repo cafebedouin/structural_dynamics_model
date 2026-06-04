@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "categorical_exceptions_doctrine__obscenity_miller_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_categorical_exceptions_doctrine__obscenity_miller_reading",
+    "measurement_id_prefix": "obscenity_miller",
+    "story_uid": "ad2f62eb-f591-4665-814a-ff2186203194",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Miller Obscenity Doctrine: Categorical Exception by Community Standards",
+    "topic_domain": "legal/constitutional/first_amendment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "community_standards_regulation",
+      "local_enforcement_authorities"
+    ],
+    "victims": [
+      "borderline_expression_creators",
+      "expression_distributors",
+      "marginalized_cultural_producers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Borderline Expression Creator",
+      "comment": "PERSPECTIVE 1: BORDERLINE EXPRESSION CREATOR (SNARE) — Creators of material near the Miller boundary (erotic art, adult comics, sexual satire, avant-garde literature) face legal jeopardy and cannot exit the regime. The standard is both rigid (three-part test) and indeterminate (community standards, prurience, serious value are jury facts not legal rules). Maximum extraction: prosecution costs, marketplace exclusion, self-censorship under uncertainty. No coordination function benefits this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Distributor or Platform Host",
+      "comment": "PERSPECTIVE 2: DISTRIBUTOR OR PLATFORM HOST (TANGLED ROPE) — Publishers, bookstores, online platforms, and video distributors experience mixed costs and benefits. They benefit from the categorical clarity that obscenity is outside protection (reduces total litigation surface). But they bear high compliance costs: geographic variation in community standards, jury unpredictability, and the need for content review infrastructure. Significant extraction but some coordination function (the category does reduce ambiguity at the margins). Exit is constrained by liability rules and business model dependence on platform access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Local Enforcement Authority",
+      "comment": "PERSPECTIVE 3: LOCAL ENFORCEMENT AUTHORITY (ROPE) — District attorneys, sheriffs, and obscenity prosecutors see the Miller rule as enabling coordination: it provides prosecutorial discretion (different communities have different standards) while maintaining a formal legal boundary. Benefits: legitimacy of local enforcement, constituency responsiveness, operational flexibility. Extraction is minimal for this agent — they are beneficiaries. The rule hands them prosecutorial leverage while protecting them from federal override."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Major Publisher or Studio",
+      "comment": "PERSPECTIVE 4: MAJOR PUBLISHER OR STUDIO (TANGLED_ROPE/MOBILE) — Large media corporations can largely avoid Miller prosecution through market segmentation: they distribute borderline content to specialized platforms (subscription services, adult channels), mainstream content to broadcast networks. They experience the rule as coordination (predictability) rather than extraction because they have capacity to operate in multiple jurisdictions. Some extraction occurs at the margins (self-censorship, geographic compliance costs), but mobility softens it. Coordination function is real: the rule enables market segmentation without creating a uniform suppression regime."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal civilizational view, some boundary between protected speech and unprotected obscenity is an inherent feature of any legal system. The view naturalizes the Miller standard as a rational equilibrium: communities must be able to suppress material that violates local sexual norms, yet protection for speech about sex remains. However, this mountain is a false summit. The Miller rule is a doctrinal choice (emerged 1973) among alternative framings (no category at all, broad balancing test, national standard). The analytical observer risks naturalizing contingent doctrine as natural law."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Appellate Court System",
+      "comment": "PERSPECTIVE 6: FEDERAL APPELLATE COURT SYSTEM (PITON) — Federal judges applying Miller experience the doctrine as largely performative. The three-part test provides ritual deference to jury verdicts while rarely overturning convictions. Theater_ratio is high (0.68): judges hold mandatory jury deference on the factual elements (prurience, offensiveness, community standards), making appellate review largely formalistic. The doctrine persists through institutional inertia — it is theoretically coherent but institutionally degraded. Judges see the rule as both necessary (to maintain federalism) and dysfunctional (jury geography determines First Amendment protection), but lack doctrine to revise it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "community_standards_geographic_arbitrariness",
+      "question": "Are 'community standards' a meaningful constraint on obscenity prosecution, or a doctrine that permits arbitrary variation in First Amendment protection based on jury location?",
+      "resolution_mechanism": "Empirical analysis: comparison of obscenity conviction rates and jury verdicts across jurisdictions for identical materials; documentation of prosecutor venue-shopping behavior; appellate reversal rates for jury verdicts on community standards findings",
+      "impact": "If meaningful constraint: Miller maintains federalism while preventing total suppression (tangled_rope classification stable). If arbitrary: the doctrine is extracted value for prosecutors using jury geography as a weapon (snare classification from distributor perspective strengthens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether community standards doctrine constrains or weaponizes prosecution"
+    },
+    {
+      "id": "serious_value_as_escape_hatch",
+      "question": "Does the 'serious literary, artistic, political, or scientific value' element provide genuine protection for borderline materials, or is it absorbed into the prurience and offensiveness gates such that few materials survive?",
+      "resolution_mechanism": "Doctrinal history: count materials found obscene despite value claims; analyze appellate reasoning on value element; map categories of expression (sexual satire, erotic art, avant-garde literature) and their historic treatment under the value prong",
+      "impact": "If genuine protection: the value element limits extraction and tangled_rope classification holds. If absorbed: the value element is performative theater, and extractiveness should be higher (0.52 → 0.65+), reclassifying the constraint more toward snare from distributor and creator perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional scope of the serious value defense"
+    },
+    {
+      "id": "miller_rule_doctrinal_contingency",
+      "question": "Is the Miller three-part test a necessary reading of the categorical exception, or one contingent choice among defensible alternatives (national standard, balancing test, no category)?",
+      "resolution_mechanism": "Jurisprudential analysis: document competing doctrinal proposals (Roth-Memoirs, balancing proposals, no-category proposals); assess whether Miller's three parts are compelled by constitutional text or chosen for policy reasons; map other democracies' obscenity doctrines",
+      "impact": "If necessary: Miller reading forecloses alternatives; the constraint is structurally inevitable given the categorical exception. If contingent: the reading coexists with alternatives; other readings remain live and the Miller reading is one institutional choice, not a natural law.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Miller three-part test is doctrinal necessity or institutional choice"
+    },
+    {
+      "id": "obscenity_category_survival_legitimacy",
+      "question": "What sustains the obscenity category's legitimacy despite the doctrine's internal incoherence (nobody loves the definition, yet the category persists)?",
+      "resolution_mechanism": "Institutional analysis: track judicial statements about dissatisfaction with Miller; examine proposals for revision and why they fail; analyze non-legal pressures (religious constituencies, federalism structure, path dependence) sustaining the category",
+      "impact": "If legitimacy rests on formal doctrine: the rule is teachable and stable, tangled_rope classification reflects functional reality. If legitimacy rests on non-legal pressure (constituency demand, institutional inertia): the piton perspective becomes more prominent, suggesting the constraint is degraded theater maintained by forces outside doctrine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sources of the obscenity category's institutional survival despite doctrinal dissatisfaction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Miller obscenity doctrine (Miller v. California, 413 U.S. 15 [1973]) is a doctrinal reading of the categorical exception to First Amendment protection — one of several competing readings of how free speech doctrine should handle sexual expression. Miller established a three-part test: material is obscene (and thus outside protection) if (1) the average person applying contemporary community standards would find it appeals predominantly to prurient interest, (2) it depicts sexual conduct in a patently offensive way, and (3) it lacks serious literary, artistic, political, or scientific value. This constraint represents one institutional choice for policing the boundary of protected speech. The reading instantiates a federal structure: prosecution discretion flows to local authorities with permission to apply their own community standards, while the Supreme Court maintains appellate review (and jury deference) over factual findings. The Miller reading coexists with two sibling readings within the categorical exception doctrine: the Brandenburg incitement reading (speech becomes unprotected only when directed to imminent lawless action and likely to incite it) and the Stevens no-new-categories reading (the list of categorical exceptions is closed; new harms do not create new unprotected categories). These three readings compete in constitutional law, but Miller survives institutionally despite widespread judicial dissatisfaction with its internal coherence — the three-part test nobody loves persists through a combination of precedent, federalism structure, and organized constituency pressure.",
+    "key_agents": [
+      "Borderline Expression Creators: Artists, authors, performers producing sexual content, erotica, avant-garde work near the Miller boundary (powerless/trapped) — face prosecution and marketplace exclusion with no exit path",
+      "Expression Distributors: Publishers, bookstores, online platforms, video producers (moderate/constrained) — experience mixed costs (compliance, geographic variation) and benefits (categorical clarity reducing ambiguity)",
+      "Local Enforcement Authorities: District attorneys, sheriffs, obscenity units (institutional/arbitrage) — primary beneficiaries gaining prosecutorial discretion and constituency responsiveness",
+      "Major Publishers and Studios: Large media corporations (powerful/mobile) — can avoid Miller risk through market segmentation and platform differentiation; experience rule as coordination rather than extraction",
+      "Federal Appellate Courts: Judges applying Miller in appellate review (institutional/constrained) — perform ritual deference to jury verdicts; experience the doctrine as performatively degraded but institutionally sticky",
+      "Supreme Court (Analytical Observer): The framing authority that chose Miller as one possible reading of the categorical exception — risks naturalizing institutional choice as constitutional necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Miller rule extracts value from borderline expression creators through prosecution risk, marketplace exclusion, and self-censorship under legal uncertainty. The three-part test creates a chilling effect: creators cannot predict how a jury in jurisdiction X will assess prurience, offensiveness, or value for their material. This extraction accrues to prosecutors (via conviction leverage) and to creators of mainstream content (who avoid the borderline zone and thus face reduced competition). The extractiveness is not maximal because: (1) the serious value element provides a real, if uncertain, defense; (2) major distributors can segment markets and avoid the worst zones; (3) appellate review creates some reversal probability. Suppression (0.68): High. The rule suppresses borderline expression through legal prohibition, prosecution threat, and jury unpredictability. Creators and small distributors cannot exit the rule's jurisdiction without losing market access. The suppression is structural (written law) and incentive-based (the jeopardy of prosecution). Theater ratio (0.61): Moderate-high. The appellate application of Miller is substantially performative. Judges apply mandatory jury deference to factual findings (prurience, offensiveness, community standards), which means appellate review rarely overturns jury verdicts. The ritual of three-part analysis occurs, but the real decision power resides in jury composition and prosecutor venue selection. The theater has increased over 50 years as judicial dissatisfaction has grown while the doctrine persists. Claimed type: Tangled Rope. The constraint exhibits both genuine coordination (categories reduce ambiguity for mainstream expression; federalism structure enables local responsiveness) and asymmetric extraction (the boundary zone is extracted from through uncertainty). The constraint requires active enforcement through prosecutorial and jury action. Beneficiaries exist (local authorities, mainstream creators). Victims exist (borderline creators, small distributors).",
+    "directionality_logic": "Directionality values for each agent are derived from their structural position relative to the constraint. Local enforcement authorities are beneficiaries with arbitrage options (they can choose which cases to prosecute, which jurisdictions to focus on) — derived d ≈ 0.15, f(d) negative or near-zero, resulting in rope classification and minimal experienced extraction. Borderline expression creators are victims with trapped exit options (cannot exit the law without abandoning their art form and location) — derived d ≈ 0.95, f(d) ≈ 1.42, resulting in snare classification and maximum experienced extraction. Distributors are mixed: partial beneficiary (clarity on mainstream content), partial victim (compliance burden) with constrained exit (can move to subscription platforms but not fully escape jurisdiction) — derived d ≈ 0.55, f(d) ≈ 0.75, resulting in tangled rope and moderate experienced extraction. Major publishers with mobile options (arbitrage) experience lower d because they can segment markets — derived d ≈ 0.35, f(d) ≈ 0.35, resulting in tangled rope or rope classification. The scope modifier σ(S) applies: regional scope (Miller standards vary by jurisdiction) gives σ ≈ 0.9, dampening chi slightly compared to national (σ=1.0).",
+    "perspectival_gap": "This constraint demonstrates a core perspectival gap between the beneficiary (local enforcement) and victims (borderline creators). The beneficiary sees coordination: a rule that enables prosecutorial discretion while providing formal legal structure. The victim sees extraction: a rule designed to eliminate competitors in the cultural marketplace through legal jeopardy. The federal appellate courts see theater: a doctrine that provides ritual legitimacy while actual power flows through jury composition and prosecutor discretion. The major distributors see a mobile resource: they can navigate the rule through market segmentation. The analytical observer risks seeing a natural law: the conviction that communities must maintain some power to suppress obscenity naturalizes what is actually an institutional choice (the Miller reading) among alternatives (Brandenburg, no-new-categories, or a balancing standard). The perspectival gap is maximal between the trapped borderline creator (snare) and the arbitrage-enabled prosecutor (rope).",
+    "mandatrophy_analysis": "The Miller constraint resolves mandatrophy by acknowledging that the three-part test is both functionally incoherent (nobody loves the definition) and institutionally stable (the category persists despite dissatisfaction). Mandatrophy asks: 'Is this coordination or extraction disguised as coordination?' Miller exhibits both. The coordination function is real: the categorical clarity does reduce ambiguity for mainstream expression and enables federalism. The extraction function is equally real: the boundary zone is harvested through legal uncertainty and jury geography. The constraint is not a false choice between types. Rather, it is a legitimate tangled rope that bundles coordination (reducing total ambiguity) with extraction (harvesting the borderline). The piton perspective (federal courts) shows why the doctrine survives despite internal dissatisfaction: it provides ritual legitimacy while distributing actual power to local actors (juries, prosecutors) in ways that federal judges cannot override without revising the whole structure. The mandatrophy is thus resolved by the honest acknowledgment that the constraint serves both functions and that neither function can be isolated without destroying the whole institutional arrangement.",
+    "kernel_context": "This constraint instantiates the OBSCENITY_MILLER_READING of the categorical_exceptions_doctrine kernel. The kernel is the foundational commitment: some categories of expression fall outside First Amendment protection. Three sibling readings compete within this kernel: (1) INCITEMENT_BRANDENBURG_READING: Brandenburg fixed the incitement boundary (speech loses protection only when directed to imminent lawless action and likely to produce it); abstract advocacy of violence remains protected. (2) NO_NEW_CATEGORIES_READING: Stevens closed the list (United States v. Stevens); violent video games and animal-cruelty depictions stay protected because the categorical exception is closed by history, not open to new entries by harm-balancing. (3) OBSCENITY_MILLER_READING (this constraint): Miller keeps obscenity outside via the three-part test; community standards determine the boundary. The three readings have different reference frames, different authority groundings, and different drift states. This reading specifically holds that community-standards-based localism is the legitimate authority for policing obscenity, that the three-part test operationalizes this authority, and that the category survives despite doctrinal dissatisfaction because of institutional dependence on jury factfinding and prosecutorial discretion."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "categorical_exceptions_doctrine__incitement_brandenburg_reading",
+      "categorical_exceptions_doctrine__no_new_categories_reading"
+    ],
+    "dual_formulation_note": "The Miller obscenity reading is part of the categorical_exceptions_doctrine constraint family. Each reading (Brandenburg incitement, Stevens no-new-categories, Miller obscenity) represents a different institutional choice for policing the boundary between protected and unprotected speech. They share the same kernel (categorical exception exists) but diverge on authority grounding, reference frame, and drift state. The family includes three separate constraint stories linked by affects_constraints. Each story has its own ε value reflecting different levels of extractiveness: Brandenburg incitement has lower extractiveness (the boundary is tight and judicially policed), Stevens no-new-categories has minimal extractiveness (the category is closed), and Miller obscenity has moderate-high extractiveness (community standards create geographic arbitrariness). The constraint family decomposes because each reading has a different structure of beneficiaries, victims, and enforcement mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "categorical_exceptions_doctrine__incitement_brandenburg_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_exceptions_doctrine__no_new_categories_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "community_standards_localism_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "prurience_offensiveness_value_test_operationalizes_boundary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "federalist_jury_deference_framework",
+    "drift_state": {
+      "moment": "contemporary_digital_distribution_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

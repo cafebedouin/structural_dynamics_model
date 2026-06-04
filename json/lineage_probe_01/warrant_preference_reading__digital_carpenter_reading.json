@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "warrant_preference_reading__digital_carpenter_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_warrant_preference_reading__digital_carpenter_reading",
+    "measurement_id_prefix": "warrant_carpenter",
+    "story_uid": "c5e7a2b0-ae0a-4d4d-87b3-a05f3e847db8",
+    "created_at": "2026-02-27T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Carpenter Reading: Warrant Requirement for Digital Location History",
+    "topic_domain": "constitutional_law/fourth_amendment/digital_privacy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "location_tracked_public",
+      "magistrate_gatekeeping_authority"
+    ],
+    "victims": [
+      "third_party_doctrine_maximalism",
+      "dragnet_surveillance_capacity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Location-Tracked Public",
+      "comment": "PERSPECTIVE 1: LOCATION-TRACKED PUBLIC (SNARE) — Cannot exit cellular networks or digital infrastructure. Bears full extraction via pervasive location surveillance. Before Carpenter, suppression was nearly total: third-party doctrine meant no warrant gate, no privacy claim, no remedy. Carpenter gated extraction but did not eliminate it — the magistrate requirement is enforcement, not elimination. Still snare-classified because the gate remains subject to exception, necessity, and administrative routine."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Digital Civil Liberties Organizations",
+      "comment": "PERSPECTIVE 2: DIGITAL CIVIL LIBERTIES ORGS (TANGLED ROPE) — Constrained by resource limits and litigation costs; benefit from coordination function of Carpenter doctrine (establishes magistrate gatekeeping standard) but bear costs of coordinating across fragmented jurisdictions and post-Carpenter erosion via good-faith exception and administrative necessity claims. Mixed experience: the doctrine provides a mechanism for challenging dragnet surveillance (coordination function) but the mechanism is partially disabled (asymmetric extraction via exceptions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Magistrate Gatekeeping Authority",
+      "comment": "PERSPECTIVE 3: MAGISTRATE GATEKEEPING AUTHORITY (ROPE) — Organized institutional actor (judiciary) with mobility via appellate and legislative processes. Carpenter doctrine coordinates judicial review of digital surveillance: law enforcement must seek warrants from magistrates, establishing predictable checkpoints. Low net extraction for magistrates — they gain institutional authority over surveillance questions. Pure coordination: gating structure enables predictable scope and duration limits on warrants, reducing arbitrary surveillance and protecting magistrate legitimacy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Capacity for Mass Surveillance",
+      "comment": "PERSPECTIVE 4: LAW ENFORCEMENT SURVEILLANCE CAPACITY (SNARE) — Powerful actor with arbitrage options (administrative necessity, exigent circumstance, good-faith exception exceptions to warrant requirement). Experiences Carpenter as an extraction constraint on their surveillance authority. Net victim of the constraint: must seek warrants (cost and delay) or route around the magistrate gate (administrative exception). Classified as snare because the extraction (warrant requirement) is genuine but enforcement depends on exception-handling and prosecutorial discretion in seeking warrants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Third-Party Doctrine Maximalist Institutions",
+      "comment": "PERSPECTIVE 5: THIRD-PARTY DOCTRINE MAXIMALISTS (TANGLED ROPE) — Institutional actors (courts, regulatory bodies, communications carriers) who benefit from third-party doctrine as a simplifying framework (no consent requirement, no warrant, carriers cooperate routinely without judicial process). Carpenter constrains this benefit but does not eliminate it — the doctrine survives for prospective data, narrowly defined. Tangled: the constraint creates mixed extraction (warrant requirement for historical bulk records) and coordination (established boundaries between third-party and first-party doctrine). Victim of the constraint in that their simplifying regime is partially dismantled."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Carpenter Doctrine Enforcement Coalition",
+      "comment": "PERSPECTIVE 6: CARPENTER ENFORCEMENT COALITION (SCAFFOLD) — Organized actors (EFF, civil rights organizations, privacy advocates, sympathetic judges) enforcing the Carpenter standard through litigation and policy advocacy. Scaffold classification derives from generational time horizon and constrained exit: the doctrine is actively enforced and expanding (warrant requirements spreading to other digital records — SMS metadata, location pings from emergency calls), but enforcement is incomplete and decaying via exceptions. Theater ≤ 0.35: warrant procedures are substantive, not performative; magistrates exercise real discretion. The constraint has a sunset risk: if law enforcement develops technical workarounds (administrative exception expansion, necessity claims) faster than doctrine expansion, the magistrate gate collapses."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Constitutional Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CONSTITUTIONAL NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the Fourth Amendment's warrant requirement represents an immutable constitutional principle: no government seizure of papers or effects without judicial oversight. Carpenter doctrine is read as simply applying this fixed principle to digital data. The constraint appears immutable because it derives from constitutional text and ratifying consensus. However, this perspective risks naturalizing what is actually a jurisdictional choice made by the Supreme Court in Carpenter — the good-faith exception reading demonstrates that the same constitutional text can ground different operative constraints. False summit candidate: the 'constitutional natural law' framing naturalizes a 2018 interpretive choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bulk_vs_targeted_warrant_requirement_boundary",
+      "question": "Does the Carpenter warrant requirement apply to prospective ongoing location tracking authorized by a single warrant, or only to retrospective bulk historical records?",
+      "resolution_mechanism": "Appellate litigation clarifying the temporal and quantitative scope of Carpenter warrants. Jurisdictional development of warrant standards for continuous monitoring vs episodic access.",
+      "impact": "If boundary narrows (prospective tracking exempt): extractiveness drops to 0.35, doctrine shifts toward rope. If boundary expands (warrant required for all location gating): extractiveness rises to 0.68, doctrine shifts toward tangled_rope with higher victim load.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between bulk historical records and prospective tracking in warrant requirement scope"
+    },
+    {
+      "id": "good_faith_exception_erosion_rate",
+      "question": "How quickly will law enforcement exploit the good-faith exception to obtain location records without Carpenter-compliant warrants, and will judicial review catch the drift?",
+      "resolution_mechanism": "Longitudinal empirical study of CFAA warrants granted vs Carpenter-style warrants granted post-2018. Tracking of appellate reversal rates for good-faith exception claims involving location data. Measurement of actual law enforcement compliance with Carpenter in field operations.",
+      "impact": "If erosion is rapid (>50% of location requests route via good-faith exception): doctrine collapses toward snare (extraction via exception). If erosion is slow (<10%): doctrine stabilizes as tangled_rope with enforcement credibility.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Rate at which good-faith exception undermines Carpenter warrant requirement in practice"
+    },
+    {
+      "id": "digital_aggregation_as_difference_in_kind_dispute",
+      "question": "Is digital aggregation of location records a 'difference in kind' from individual third-party disclosures (Carpenter's core reasoning), or a quantitative scaling of an existing principle?",
+      "resolution_mechanism": "Jurisprudential development: Supreme Court clarification of whether the 'difference in kind' concept extends to other digital aggregations (email metadata, financial records, communication patterns). Circuit split resolution on whether Carpenter reasoning is generalizable or sui generis to location data.",
+      "impact": "If 'difference in kind' is deemed sui generis: Carpenter does not expand beyond CSLI; other digital dragnet constraints are ruled mountain (natural consequence of third-party doctrine). If 'difference in kind' is generalizable: similar warrant gates spread to email metadata, call records, financial aggregation; multiple tangled_rope constraints emerge with expanded victim sets.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Carpenter's 'difference in kind' reasoning is generalizable to other digital aggregations"
+    },
+    {
+      "id": "reading_contest_kernel_indexing",
+      "question": "Which reading of the warrant-preference kernel does Carpenter instantiate: the digital_carpenter_reading (aggregation as difference in kind), the exclusionary_rule_reading (remedy through suppression), or the good_faith_exception_reading (deterrence-focused exceptions)?",
+      "resolution_mechanism": "The kernel contest is not empirically resolvable — different readings coexist as live jurisprudential positions held by different judges and institutions. However, the DIRECTION of jurisprudential development will reveal which reading's authority is ascending: if Supreme Court expands Carpenter (more data types covered, exceptions narrowed), digital_carpenter_reading ascends; if exceptions expand faster than doctrine, good_faith_exception_reading ascends; if exclusionary rule is narrowed or superseded by damage remedies, exclusionary_rule_reading declines.",
+      "impact": "The constraint's extractiveness value (0.58) is stable only if digital_carpenter_reading remains dominant. If good_faith_exception_reading ascends, extractiveness rises toward 0.70+ (snare). If exclusionary_rule_reading strengthens (broader suppression scope, narrower exceptions), extractiveness drops toward 0.40 (rope). The three readings are not alternative measurements of the same constraint — they are distinct constraints with different ε values.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the warrant-preference kernel is the operative constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 1.0,
+      "id_override": "warrant_carpenter_extractiveness_pre_carpenter"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "warrant_carpenter_extractiveness_post_carpenter_2018"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.63,
+      "id_override": "warrant_carpenter_extractiveness_exception_expansion"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.95,
+      "id_override": "warrant_carpenter_suppression_pre_carpenter"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "warrant_carpenter_suppression_post_carpenter_2018"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.52,
+      "id_override": "warrant_carpenter_suppression_exception_expansion"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "id_override": "warrant_carpenter_theater_pre_carpenter"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35,
+      "id_override": "warrant_carpenter_theater_post_carpenter_2018"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.38,
+      "id_override": "warrant_carpenter_theater_exception_expansion"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Carpenter v. United States (2018) represents a doctrinal break in Fourth Amendment jurisprudence: the Supreme Court held that law enforcement must obtain a warrant before compelling cellular service providers to disclose historical cell-site location information (CSLI) for a suspect, overriding the third-party doctrine that previously governed such requests. The Court reasoned that digital aggregation of location records constitutes a 'difference in kind' from individual third-party disclosures — the granular, continuous nature of location data creates a comprehensive picture of a person's movements and associations that was previously technologically infeasible for investigators to acquire. This constraint story instantiates the Carpenter reading of the warrant-preference kernel: the operative rule is that magistrate approval (warrant requirement) gates access to aggregated digital records, suppressing law enforcement's warrantless dragnet capacity but gating rather than eliminating law enforcement surveillance. The constraint is a Tangled Rope: it establishes genuine coordination between law enforcement and the magistracy (warranted surveillance is predictable and bounded), but also creates asymmetric extraction via exceptions (good-faith exception, administrative necessity, exigent circumstances) that route around the magistrate gate. The beneficiary is the location-tracked public and the magistrate gatekeeping authority; the victim is third-party doctrine maximalism (which loses its simplifying effect) and undifferentiated surveillance capacity.",
+    "key_agents": [
+      "Location-Tracked Public: Primary victim (powerless/trapped) — cannot exit cellular networks; survives pervasive location surveillance but now has magistrate protection against warrantless dragnet access. Pre-Carpenter: no warrant gate, full suppression (0.95), extractiveness 1.0. Post-Carpenter: warrant gate imposes costs on surveillance but exceptions persist (suppression 0.48, extractiveness 0.58).",
+      "Magistrate Gatekeeping Authority: Primary beneficiary (organized/mobile) — gains institutional authority over surveillance scope and duration. Coordinates warrant issuance with law enforcement, establishing predictable checkpoints. Rope classification reflects pure coordination benefit.",
+      "Third-Party Doctrine Maximalists: Victim of constraint (institutional/constrained) — courts, carriers, regulatory bodies that benefited from the simplicity of third-party doctrine (no consent, no warrant). Constraint forces a new doctrinal complexity and requires carriers to implement warrant-processing systems.",
+      "Law Enforcement Surveillance Capacity: Secondary victim (powerful/arbitrage) — bears extraction costs from warrant requirement; has exit options via exceptions (good-faith, necessity, emergency). Snare perspective reflects that exceptions are real but unreliable.",
+      "Digital Civil Liberties Organizations: Beneficiary and coordinator (organized/constrained) — benefit from magistrate gatekeeping mechanism and use it to challenge dragnet surveillance; constrained by litigation costs and jurisdictional fragmentation.",
+      "Carpenter Enforcement Coalition: Mixed actor (organized/constrained) — enforces Carpenter standard through litigation and policy, but faces erosion via good-faith exception expansion. Scaffold perspective reflects generational sunset risk.",
+      "Analytical Observer: Naturalizes constitutional principle (analytical/analytical) — risks reading Carpenter as application of immutable Fourth Amendment principle rather than contingent doctrinal choice. Mountain classification is false summit candidate."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate. Pre-Carpenter (t=0), law enforcement could access location history without warrant; extractiveness was 1.0 (total surveillance capacity, no magistrate gate). Post-Carpenter (t=6), warrant requirement suppresses dragnet access but exceptions (good-faith, necessity) enable routing around the gate. The extractiveness value reflects the asymmetry: magistrate approval is required, but approval is largely routine (warrants granted at ~95% rate post-Carpenter in practice), and exceptions expand (exigent circumstance, administrative necessity, emergency calls). By t=8, good-faith exception and administrative necessity exceptions have expanded, pushing extractiveness toward 0.63. The value of 0.58 represents a stable intermediate state where the warrant gate operates but is substantially disabled by exceptions and prosecutorial discretion. Suppression (0.48): Moderate. Pre-Carpenter, suppression was near-total (0.95) — third-party doctrine meant no meaningful barrier to access, and the public had no effective remedy against warrantless surveillance. Post-Carpenter, suppression drops because the warrant requirement is an enforceable barrier: if law enforcement obtains CSLI without a warrant (or with a warrant but outside Carpenter scope), the evidence can be suppressed (exclusionary rule). Suppression is not elimination (0.48 not 0.0) because exceptions exist and suppression doctrine itself has limits. Theater ratio (0.35): Low-moderate. Carpenter warrants are substantive, not performative — magistrates actually review law enforcement's justification for surveillance and can deny warrant requests that lack probable cause or statutory particularity. The theater is not zero because warrant procedures are routine and some magistrates grant warrants formulaically. Theater ratio is lower than many procedural mechanisms because the Fourth Amendment stakes are high and appellate review is available. The increase from 0.05 pre-Carpenter (third-party doctrine involved no magistrate participation, hence minimal theater) to 0.35 post-Carpenter reflects the addition of a warrant procedure.",
+    "directionality_logic": "Directionality is derived from the structural position of each agent relative to the constraint. The location-tracked public is trapped with no exit from cellular networks; law enforcement is powerful with arbitrage options (exceptions to warrant requirement). The magistrate is an organized institutional actor with mobility via appellate and legislative processes; their power derives from the coordinating function the constraint assigns them. Beneficiaries (location-tracked public, magistrate authority) derive low or negative d values from the engine's derivation chain: the public benefits from suppression of warrantless surveillance; magistrates benefit from institutional authority over surveillance scope. Law enforcement, as a victim of the warrant requirement, derives high d (powerful actor experiencing extraction costs from the gate). Third-party doctrine maximalists, as institutional victims, derive moderate d. The perspectival gap is large: law enforcement sees snare (extraction via warrant requirement, exceptions available but unpredictable), while magistrates see rope (pure coordination). The location-tracked public sees snare pre-Carpenter (no gate) and tangled rope post-Carpenter (mixed benefit from warranty requirement and cost from exceptions and routine grant rates).",
+    "perspectival_gap": "The Carpenter reading instantiates multiple incompatible perspectives on the same structural data. Law enforcement perspectives emphasize the extraction costs of the warrant requirement (snare, powerful/biographical). Magistrate perspectives emphasize the coordination benefit of gating surveillance authority (rope, organized/generational). Civil liberties perspectives emphasize the tangled extraction-coordination mix (tangled rope, moderate/biographical). The third-party doctrine maximalist perspectives emphasize the constraint as victim status — their simplifying regime is dismantled (tangled rope, institutional/constrained). The location-tracked public perspectives shift from snare pre-Carpenter (no gate, total suppression) to snare post-Carpenter (gate exists but exceptions and routine grants persist). The analytical/civilizational perspective risks naturalizing the Carpenter choice as immutable constitutional law, missing the fact that the good-faith exception reading would authorize a different operative constraint (warrant requirement with broad exceptions → snare for the public). The perspectival gap reveals that the kernel (warrant preference in digital surveillance) is contested: Carpenter resolves it one way (warrant requirement gates dragnet access), but the good-faith exception reading would resolve it differently (warrant requirement exists but exceptions often subsume the gate), and the exclusionary-rule reading would emphasize remedy (suppression) over gating.",
+    "kernel_context": "This constraint story instantiates the digital_carpenter_reading of the warrant_preference_reading kernel. The kernel is a contested commitment: should Fourth Amendment protections for cell-site location history (and other digital aggregations) be gated by a warrant requirement, despite the third-party doctrine that historically exempted third-party records from warrant protection? The Carpenter reading answers: YES, because digital aggregation is a difference in kind from individual disclosures — the granular, continuous nature of location data creates constitutional vulnerability that warrants magistrate oversight. The operative reading declares that aggregated digital records trigger a warrant gate, suppressing warrantless dragnet surveillance and imposing magistrate review costs on law enforcement. Sibling readings contest different aspects: the exclusionary_rule_reading emphasizes that the warrant rule's enforcement mechanism is suppression of evidence from unconstitutional searches; the good_faith_exception_reading emphasizes that exceptions (officers reasonably relying on a warrant) disable the warrant requirement when deterrence fails. The three readings coexist as live jurisprudential positions — no single reading has foreclosed the others, though the Carpenter reading is currently dominant in appellate doctrine. The warrant_preference_reading kernel has no unique correct answer; different frameworks (privacy-focused, deterrence-focused, remedial-focused) instantiate different readings with different extractiveness values.",
+    "mandatrophy_analysis": "KERNEL READING CONSTRAINT: The mandatrophy on this constraint is resolved by recognizing that it is ONE READING of a contested kernel, not an attempt to classify the Fourth Amendment warrant requirement simpliciter. The mandatrophy (classification ambiguity when extractiveness > 0.70) does not apply here because the Carpenter reading keeps extractiveness at 0.58, below the mandatrophy threshold. However, the good-faith_exception_reading would push extractiveness to 0.72+ (warrant gate substantially disabled by exceptions), triggering the mandatrophy gate for that reading. This illustrates the critical principle: the same constitutional text and historical facts support multiple readings with different extractiveness values and different classifications. The Carpenter reading is tangled_rope (warrant gate + exceptions); the good-faith reading is snare (warrant requirement largely nominal, exceptions dominant); the exclusionary_rule reading is rope (warrant rules + suppression remedy for violations). Each reading is internally consistent and empirically grounded. The perspectival gap is not failure of classification but success of the framework in capturing the genuine structural ambiguity in how the Fourth Amendment constrains digital surveillance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "third_party_doctrine_dragnet_access",
+      "good_faith_exception_warrant_exception",
+      "exclusionary_rule_remedy_scope"
+    ],
+    "dual_formulation_note": "The Carpenter reading (this constraint) assumes warrant requirement gates CSLI access. The good-faith exception reading assumes exceptions substantially disable the warrant gate. The exclusionary rule reading assumes suppression is the primary enforcement mechanism. Each reading instantiates a different constraint with different ε values (0.58 vs 0.72+ vs 0.42). They are linked via network.affects_constraints because case law and policy development upstream (magistrate gatekeeping, exception expansion, remedial scope) affects downstream reading dominance."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "exclusionary_rule_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "good_faith_exception_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "digital_aggregation_structural_difference",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "magistrate_gatekeeping_as_structural_suppression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "warrant_requirement_digital_aggregation",
+    "drift_state": {
+      "moment": "post_carpenter_exception_expansion",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "public_forum_doctrine__traditional_forum_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_public_forum_doctrine__traditional_forum_reading",
+    "story_uid": "6406320a-b7e9-45ee-b22f-f243fecf21bd"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.32,
+    "theater_ratio": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Public Forum Doctrine — Traditional Forum Reading",
+    "topic_domain": "constitutional_law/first_amendment/public_forums",
+    "beneficiaries": [
+      "street_level_speakers",
+      "protest_movements",
+      "assembly_practitioners"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Street-Level Speakers and Assembly Practitioners",
+      "comment": "PERSPECTIVE 1: STREET-LEVEL SPEAKERS (ROPE) — Powerless agents who benefit from the doctrine's coordinate guarantee: public streets and parks are reliably available for assembly, debate, and protest. Low suppression because the doctrine provides genuine protection against closure. The constraint coordinates access; minimal extraction. Exit is mobile — speakers can relocate between forums, but the doctrine anchors their primary options in commons guaranteed accessible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Municipal and Government Authorities",
+      "comment": "PERSPECTIVE 2: MUNICIPAL AUTHORITIES (TANGLED ROPE) — Institutional actors who experience the traditional forum doctrine as a genuine coordination constraint (they must maintain accessible commons for assembly) AND as an extraction mechanism (they lose exclusive control over space, timing, and messaging). The doctrine enforces symmetry: if government uses parks for its own speech (monuments, public ceremonies), it must permit equivalent access to dissenting speakers. Suppression is moderate because municipalities retain significant narrow-tailoring authority (time, place, manner restrictions), but the doctrine prevents complete closure. This perspective sees both coordination function and asymmetric constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Protest Movements and Civil Society Organizations",
+      "comment": "PERSPECTIVE 3: PROTEST MOVEMENTS (ROPE) — Organized agents whose historical victories (Civil Rights marches, labor demonstrations, women's suffrage organizing) depended on the traditional forum doctrine's guarantee of access. The constraint coordinates collective action: it promises that public streets and parks cannot be unilaterally closed to disfavored speech. These agents experience the doctrine as enabling coordination with minimal coercive overhead. Suppression is low because the doctrine's enforceability has strengthened over 60+ years of case law. Exit options are constrained by scale (movements need citywide/national visibility), but the doctrine removes the threat of sovereign closure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Courts Enforcing Viewpoint Neutrality",
+      "comment": "PERSPECTIVE 4: COURTS / ANALYTICAL ENFORCER (SCAFFOLD) — The doctrine's enforcement mechanism itself — courts striking down viewpoint-discriminatory denials of park permits and street permits. This perspective sees the constraint as a temporary coordination solution with a structural sunset: as the doctrine is eroded by competing frames (government speech exception, designated forum asymmetry), the enforcement mechanism loses force. Theater is moderate because court review is genuine (not purely performative) but bounded — municipalities can still impose content-neutral time/place/manner restrictions that achieve similar closure effects through technical compliance. The scaffold classification reflects that the doctrine's enforceability depends on continuous judicial re-commitment, not on self-executing legal architecture."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historic Doctrine as Institutional Ritual",
+      "comment": "PERSPECTIVE 5: THE DOCTRINE AS INSTITUTIONAL PERFORMANCE (PITON) — From a civilizational view, the traditional forum reading is increasingly theater. Municipalities maintain the rhetorical commitment to the doctrine (viewpoint neutrality, public commons, open streets) while engineering closure through narrow-tailoring requirements, permit fees, police presence, and new designated-forum/government-speech exceptions that carve out large domains from traditional forum protection. The piton perspective observes that the doctrine persists as a canonical reference point in First Amendment discourse, but its functional preservation capacity has degraded. The original function — preventing sovereign erasure of dissident voice — is maintained in form but increasingly eviscerated in practice as alternative doctrinal framings (government speech, designated forums) provide exemptions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Immemorial Common Law Tradition (Natural Law View)",
+      "comment": "PERSPECTIVE 6: NATURAL LAW VIEW — IMMEMORIAL COMMONS (MOUNTAIN) — This perspective grounds the traditional forum reading in deep common law history: public streets and parks have been held in trust for assembly and debate since before state sovereignty, representing an immutable property of democratic governance. The doctrine is seen as codifying a natural law of civic life — that commons cannot be privatized without destroying the conditions for collective speech. However, this mountain classification is a candidate false summit: the doctrine is actually a specific 20th-century judicial construction (Hague v. CIO, 1939), not an immemorial inheritance, and its protections have been systematically eroded by competing doctrinal readings. The 'immemorial' framing naturalizes a historically contingent arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "immemorial_vs_constructed_status",
+      "question": "Is the traditional forum doctrine rooted in genuinely immemorial common law practice, or is it a 20th-century doctrinal construction that retroactively claims ancient lineage?",
+      "resolution_mechanism": "Genealogical analysis: (1) Pre-1939 case law and practice patterns regarding street/park assembly in England and America; (2) comparison of historical permit denial rates and closure mechanisms before and after Hague v. CIO (1939); (3) scholarly historiography of common law assembly rights vs state police power",
+      "impact": "If immemorial: the mountain perspective is justified — the doctrine describes an inherent property of democratic commons. If constructed: the mountain is a false summit — the doctrine naturalizes a contingent institutional choice, making it harder to reform. This omega directly determines whether the engine's false_summit_mountain signature should fire.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the traditional forum doctrine reflects immemorial common law or 20th-century construction"
+    },
+    {
+      "id": "government_speech_exception_foreclosure",
+      "question": "Does the government speech exception (monuments, license plates, public programs) logically foreclose the traditional forum reading, or do both readings coexist in contemporary doctrine?",
+      "resolution_mechanism": "Doctrinal analysis: (1) Can a government speaker (monarch, city council) simultaneously hold space in trust for commons assembly AND claim exclusive speech authority over that space? (2) Supreme Court opinions examining whether government speech erodes traditional forum status (case study: Sons of Confederate Veterans v. Daughters of Union Veterans — Confederate monuments in public parks); (3) whether lower courts have maintained traditional forum protections despite government speech exception",
+      "impact": "If foreclosure: the traditional and government-speech readings cannot coexist in a single constitutional framework — the reading_relations should be forecloses. If coexistence: they inhabit different doctrinal spaces (government speech applies to government-created content; traditional forum applies to third-party speakers). This determines the relation type in cs_structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether government speech exception logically forecloses traditional forum reading"
+    },
+    {
+      "id": "designated_forum_creep_mechanism",
+      "question": "Does the designated forum reading (government opens a forum, then viewpoint discrimination becomes permissible once the forum is 'closed') structurally erode or coexist with the traditional forum reading?",
+      "resolution_mechanism": "Empirical analysis of permit denial patterns: (1) Do municipalities increasingly classify traditional public spaces (downtown plazas, city parks) as 'designated' rather than 'traditional' to enable viewpoint discrimination? (2) Measure the ratio of permits denied under designated-forum vs traditional-forum doctrine before/after designated forum doctrine emerged (approximately 1983 with Perry Education Association v. Perry Educators Association); (3) qualitative review of permit denial justifications to identify doctrinal frame-switching",
+      "impact": "If creep is systematic: the designated forum reading influences (creates structural pressure on) the traditional forum reading by progressively narrowing its domain. If courts maintain clear categorical boundaries: the readings coexist without significant interference. This determines whether relations should be influences or coexists_with.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether designated forum doctrine systematically erodes traditional forum protections"
+    },
+    {
+      "id": "enforceability_decay_trajectory",
+      "question": "Is the traditional forum doctrine's enforceability measurably declining, or is the piton perspective's claim of degraded function merely retrospective?",
+      "resolution_mechanism": "Longitudinal empirical analysis: (1) Track successful permit challenges (appellate court reversals of permit denials) per decade since 1939 to measure enforcement success rate; (2) measure permit denial justifications (objective vs pretextual time/place/manner restrictions); (3) analyze police enforcement intensity (arrests at unpermitted or marginally-compliant assemblies) as proxy for municipal willingness to test enforcement limits; (4) survey municipal legal opinions on permit denial scope — do attorneys treat traditional forum as a binding constraint or as a negotiable boundary?",
+      "impact": "If enforceability is declining: the piton classification is structurally justified — the doctrine persists in form but its functional capacity to prevent closure is degrading. If enforceability is stable: the piton is misclassifying a genuinely functional rope as merely performative. This directly tests the theater_ratio value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability trend for traditional forum doctrine protections"
+    },
+    {
+      "id": "kernel_authority_grounding_ambiguity",
+      "question": "Does the traditional forum doctrine ground its authority in lineage (common law continuity), expertise (judicial wisdom about democratic requirements), or extraction (institutional interests in controlling public space)?",
+      "resolution_mechanism": "Doctrinal genealogy: (1) Analyze Supreme Court opinions grounding the doctrine — what legitimacy claims do courts make (ancient tradition, natural law, constitutional text, functional democracy requirement)? (2) Compare the doctrine's treatment in originalist vs living-constitutionalist jurisprudence — does the authority claim depend on temporal location (immemorial vs modern)? (3) Examine state-level variation — do states with strong common law traditions enforce traditional forum doctrine differently than code-law or newer states?",
+      "impact": "If grounded in lineage: authority is vulnerable to the constructed-vs-immemorial omega. If grounded in expertise (functional democracy): authority is more robust but requires continuous judicial enforcement. If grounded in extraction (state interests): the doctrine's victim set expands. This determines the authority_grounding value in cs_structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Authority grounding for traditional forum doctrine — lineage, expertise, or extraction-based"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The traditional forum reading of public forum doctrine grounds First Amendment protection in the historical status of streets and parks as commons held in trust for assembly and debate. This reading affirms that government property used immemorially for public gathering cannot be closed to disfavored speakers — the doctrine protects access as a coordinate public good, not as a privilege government grants or withholds. The reading conflicts with two sibling doctrinal frames: the designated forum reading (government can open forums and then close them, or never open them at all — the critical choice is whether to open, not whom to favor) and the government speech reading (government, as a speaker itself, can claim exemption from viewpoint neutrality in certain contexts like monuments and public programs). The constraint exhibits rope classification at the street-level speaker and movement scales (coordination without extraction), but piton classification at the institutional scale (degraded functional capacity maintained through continued judicial reaffirmation). The measurement trajectory shows increasing theater ratio as courts simultaneously reaffirm the doctrine in canonical form while granting exceptions that narrow its domain.",
+    "key_agents": [
+      "Street-Level Speakers and Marchers: Primary beneficiary (powerless/mobile) — benefit from reliable access guarantee; no suppression of exit because doctrine prevents closure",
+      "Protest Movements: Secondary beneficiary (organized/constrained) — depend on doctrine's historical enforceability; scale-constrained but not blocked by doctrine",
+      "Municipal Authorities: Dual role (institutional/constrained) — coordinate through the doctrine (must maintain accessible commons) AND experience extraction (lose exclusive control); tangled rope perspective",
+      "Courts Enforcing Viewpoint Neutrality: Enforcement actor (analytical/analytical) — maintain the doctrine through case-by-case review; scaffold perspective because enforcement depends on continuous judicial commitment",
+      "Alternative Doctrinal Frames (government speech, designated forum): Competing authority (institutional/arbitrage) — erode the doctrine's domain through exception-creation; piton perspective observes this erosion",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks seeing the doctrine as immemorial natural law when it is actually a 20th-century construction"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-to-moderate. The traditional forum reading does not extract in the classical sense — it coordinates access to public commons. The beneficiaries (street speakers, movements) gain access rights; the apparent 'extraction' from municipal authorities is actually the doctrine's core constraint: municipalities must refrain from viewpoint-discriminatory closure. The extractiveness value reflects the cost to government of maintaining accessible commons rather than the extraction of resources from targets. This is coordination's burden on one party (government) rather than extraction from a victim group. The value is higher than pure rope (0.05–0.35) because the doctrine does constrain government choice, but it remains moderate because the constraint is enabling rather than coercive. Suppression (0.32): Moderate. Municipal authorities have significant tools to restrict assembly within viewpoint-neutrality requirements (time, place, manner restrictions, permit fees, police enforcement). The doctrine prevents complete closure but permits substantial friction. Street-level speakers experience low suppression because the doctrine reliably blocks the most severe restriction (categorical denial); municipalities experience higher suppression because they lose exclusive control. Theater ratio (0.45): Moderate. The doctrine's enforcement mechanism is genuine (courts do overturn viewpoint-discriminatory denials) but increasingly ritualized. Municipalities learn to justify denials in content-neutral language (safety, crowd management, space availability) that technically complies with the doctrine while achieving similar practical closure. The rising trajectory reflects increasing sophistication in how governments engineer compliance-facades that evade doctrine's protection.",
+    "perspectival_gap": "The perspectival gap between beneficiary (street speakers see reliable access — rope) and constrained institutional actor (municipalities experience mixed coordination and constraint — tangled rope) is the doctrine's structural signature. Street speakers experience the doctrine as coordination: it removes the threat of sovereign closure and enables planning. Municipalities experience both genuine coordination (they must maintain parks and sidewalks for assembly, which is a collective good) and constraint (they lose discretion to deny access based on viewpoint). The piton perspective observes that as the doctrine is eroded by government-speech and designated-forum exceptions, the coordination function persists in rhetoric while functional capacity degrades. The mountain perspective risks naturalizing the doctrine as immemorial law when it is actually a 20th-century construction.",
+    "directionality_logic": "Street-level speakers (powerless/mobile/local) derive d from beneficiary status + mobile exit options → low d → negative chi → experience the constraint as enabling rope. Protest movements (organized/constrained/national) derive d from beneficiary status + constrained exit (need city-scale visibility) → moderate d → small positive chi → experience rope with slightly higher perceived constraint cost. Municipal authorities (institutional/constrained/national) derive d from both institutional power AND constrained exit (cannot unilaterally redefine their obligations) + net victim status (they lose exclusive control) → d around 0.55–0.65 → higher chi → experience tangled rope. The piton perspective's high institutional power and arbitrage exit would normally produce low chi, but the piton classification derives from theater_ratio (0.45) rather than from directionality — the doctrine is degraded by exception-creep, not by extraction.",
+    "kernel_context": "This constraint instantiates the traditional forum reading of the public forum doctrine kernel — one of three structurally distinct readings. The kernel is the foundational legal commitment that government property exists in relationship to public assembly. The traditional forum reading answers: 'Streets and parks are held in trust; they cannot be closed to disfavored speech; immemorial commons entail strongest protection.' This differs from the designated forum reading ('Government can open forums or keep them closed; the choice is sovereign; neutrality applies only if opened') and the government speech reading ('Government is also a speaker; it can claim exemption from viewpoint neutrality in certain contexts'). These readings coexist in contemporary doctrine — courts apply all three simultaneously to different fact patterns — but they produce structurally incompatible analyses when applied to the same space. A city park is simultaneously a traditional forum (streets and parks held in trust), a designated forum (city opened it for assembly, can maintain content-neutral restrictions), and government speech space (city displays monuments, plaques, and official announcements). The doctrine does not resolve these conflicts; it assigns them to different doctrinal compartments.",
+    "mandatrophy_analysis": "This constraint does not require mandatrophy resolution because its base extractiveness (0.28) does not exceed 0.70. However, the perspectival structure reveals a latent mandatrophy: the traditional forum reading claims to coordinate public assembly (rope function) while simultaneously constraining government discretion (extraction mechanism). The constraint is genuinely both at once — it enables street speakers while restricting municipal authorities. The doctrine resolves this apparent mandatrophy by classifying the constraint as a coordination mechanism WITH asymmetric burdens rather than as pure extraction. The burden (maintaining accessible commons) falls on government; the benefit (reliable access) accrues to speakers. Both perspectives are structurally correct because the doctrine's function IS asymmetric distribution of a public good."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_forum_doctrine__designated_forum_reading",
+      "public_forum_doctrine__government_speech_reading"
+    ],
+    "dual_formulation_note": "The public forum doctrine kernel has three structurally distinct constraint readings. Each represents a different answer to what legal authority grounds access to public space: immemorial commons (traditional), government prerogative (designated), or government speech rights (government speech). The three readings are linked in network as coexisting siblings within one kernel. The traditional forum reading (this story) emphasizes immemorial commons and strongest protection; the designated forum reading emphasizes government choice; the government speech reading emphasizes government speaker status. Each reading produces different victim sets and beneficiary groups. All three appear simultaneously in contemporary Supreme Court doctrine applied to overlapping fact patterns."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_forum_doctrine__designated_forum_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_forum_doctrine__government_speech_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commons_held_in_trust",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "immemorial_assembly_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "immemorial_commons_tradition",
+    "drift_state": {
+      "moment": "contemporary_exception_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "header": {
+    "constraint_id": "british_constitution__revolution_settlement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_british_constitution__revolution_settlement",
+    "measurement_id_prefix": "britcons_rev",
+    "story_uid": "5703019a-8a6d-4641-b5d6-83325681b449",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The British Constitution Fixed by the Revolution Settlement (1688-1701)",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parliament",
+      "protestant_succession",
+      "merchant_capital"
+    ],
+    "victims": [
+      "stuart_absolutism",
+      "catholic_claimants",
+      "divine_right_theory",
+      "prerogative_taxation"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Catholic Claimants and Divine-Right Adherents",
+      "comment": "PERSPECTIVE 1: CATHOLIC CLAIMANTS & DIVINE-RIGHT THEORY (SNARE) — Structurally excluded from the political order and unable to exit the constraint. The settlement suppresses the alternative legitimacy claim (divine right, Catholic succession) with high enforcement. No coalition capacity; the trapped position is structural."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Established Church and Non-Conformist Sects",
+      "comment": "PERSPECTIVE 2: ESTABLISHED CHURCH & SECTS (TANGLED ROPE) — Coordinate religious governance under the settlement but remain subject to partial exclusion (non-conformists), partial extraction (church lands, tithes), and periodic enforcement actions. Mixed position: genuine coordination function (religious stability) alongside significant suppression and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parliament and the Protestant Succession",
+      "comment": "PERSPECTIVE 3: PARLIAMENT & PROTESTANT SUCCESSION (ROPE) — Primary beneficiary (institutional/arbitrage). Experiences the settlement as coordinate mechanism solving collective action problems (monarch cannot arbitrarily tax, dissolve parliament without consent, alter succession). Net benefit captured through subordinated Crown authority. Can exit by renegotiating terms (arbitrage)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Landed Gentry and Merchant Capital",
+      "comment": "PERSPECTIVE 4: LANDED GENTRY & MERCHANT CAPITAL (TANGLED ROPE) — Powerful actors (powerful/mobile) who benefit from reduced prerogative taxation and property security but remain subject to parliamentary exaction and tariff regulation. High mobility (can relocate capital, diversify holdings) but constrained by property obligations and parliamentary levies. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Prerogative Powers Remnant",
+      "comment": "PERSPECTIVE 5: PREROGATIVE POWERS REMNANT (PITON) — Formal prerogative authority persists in Crown exercised-by-advice-of-ministers, but the functional subordination to parliamentary consent is now the operative mechanism. Theater ratio high (0.58+): ceremonial Crown acts, formal prerogative doctrines, but actual power flow runs through Parliament and statute. Vestigial authority maintained through institutional inertia and constitutional convention."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational vantage, the subordination of absolute monarchy to parliamentary consent appears as an immutable structural outcome: any complex polity must eventually limit executive power through some representative body, or face instability. This perspective risks naturalizing what is actually a contingent settlement negotiated under specific historical conditions. The constraint carries identifiable beneficiaries (Parliament, Protestant succession, merchant capital) and suppression of alternatives, signaling a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "revolution_settlement_vs_magna_carta_primacy",
+      "question": "Is the 1688-1701 settlement the true foundational moment of British constitutional subordination of Crown to law, or is it a reaffirmation of principles already embedded in Magna Carta (1215) and the medieval charter tradition?",
+      "resolution_mechanism": "Historical comparison of enforcement mechanisms: did medieval charters produce durable constraints on prerogative, or did they require re-assertion via the Revolution? Analysis of continuity vs rupture in 1688 texts and contemporary claims.",
+      "impact": "If Magna Carta already fixed the subordination: this reading (revolution_settlement) becomes a piton or rope rather than tangled_rope — it recapitulates rather than establishes. If 1688 is genuinely novel: the tangled_rope classification holds, and the settlement is the true moment of extraction of rights from absolutism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 1688-1701 establishes or reaffirms parliamentary subordination of Crown"
+    },
+    {
+      "id": "prerogative_taxation_suppression_durability",
+      "question": "Was the suppression of prerogative taxation (extraction prevented from subjects) durable, or did later parliamentary exaction simply replace royal prerogative as the extraction mechanism?",
+      "resolution_mechanism": "Tax burden analysis across pre-settlement, settlement, and post-settlement periods; comparison of extraction rates on subject populations (merchant, landed, commoners) under royal prerogative vs parliamentary levy; longitudinal tracking of revenue sources and distribution.",
+      "impact": "If prerogative suppression was durable: the settlement genuinely reduced extraction on the commons and benefited the broader polity (rope or balanced tangled_rope). If parliamentary taxation matched or exceeded prerogative rates: the settlement redistributed extraction from Crown to Parliament, maintaining suppression and confirming snare/tangled_rope for common subjects.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether prerogative taxation suppression was durable or replaced by parliamentary extraction"
+    },
+    {
+      "id": "divine_right_foreclosure_logic",
+      "question": "Does the revolution settlement logically foreclose divine-right theory and Stuart restoration (making them incompatible with the settlement framework), or does it merely suppress them as live competing claims that coexist beneath the formal settlement?",
+      "resolution_mechanism": "Textual analysis of settlement instruments (Bill of Rights 1689, Act of Settlement 1701): do they rule out divine right as a logical possibility, or merely enact parliamentary subordination as the operative law without denying divine right's theoretical coherence? Historical tracking of divine-right advocacy and Stuart restoration attempts post-1701.",
+      "impact": "If foreclosed: the reading's core axiom (parliamentary_subordination_of_crown) logically rules out the sibling foundational_charters reading that frames constitution as negotiated extraction of liberty document-by-document. If merely suppressed: both readings coexist, with the settlement influencing but not eliminating the charter narrative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the settlement logically forecloses divine-right theory or merely suppresses it"
+    },
+    {
+      "id": "statute_vs_convention_binding_mechanism",
+      "question": "Is the settlement's binding mechanism primarily statutory (enforceable law via courts) or conventional (binding by mutual agreement and repeated practice without legal enforcement)?",
+      "resolution_mechanism": "Comparative analysis of settlement provisions: which are codified in statute (Bill of Rights, Act of Settlement) vs which rest on usage and expectation (ministerial responsibility, cabinet government, dissolution protocol)? Historical cases where each type was tested or broken.",
+      "impact": "If primarily statutory: this reading supports parliamentary_supremacy_statutes sibling (the real text is statute). If primarily conventional: this reading coexists with constitutional_conventions sibling — both claim the settlement but locate its binding force differently.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether settlement's binding mechanism is statutory or conventional"
+    },
+    {
+      "id": "false_summit_natural_law_risk",
+      "question": "Does the naturalizing of the settlement (mountain classification: 'any complex polity must limit executive power') obscure the contingent historical achievement and mask the ongoing extraction of alternatives (suppression of Catholic succession, divine-right theory)?",
+      "resolution_mechanism": "Counter-factual analysis: what would have to be true for divine-right monarchy or Catholic succession to remain live alternatives post-1701? What institutions, enforcement mechanisms, and narrative work maintain the settlement as 'natural law' rather than contingent suppression?",
+      "impact": "If natural law: the mountain classification holds, and the settlement is immutable structural necessity. If contingent: the false-summit signature fires, revealing that identified beneficiaries and suppression of alternatives mark this as tangled_rope, not mountain.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the settlement is natural constitutional necessity or contingent suppression naturalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85,
+      "id_override": "britcons_rev_suppression_1688"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.78,
+      "id_override": "britcons_rev_suppression_1701"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.72,
+      "id_override": "britcons_rev_suppression_mid_18c"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.68,
+      "id_override": "britcons_rev_suppression_late_18c"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "britcons_rev_extract_1688"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42,
+      "id_override": "britcons_rev_extract_1701"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.38,
+      "id_override": "britcons_rev_extract_mid_18c"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.35,
+      "id_override": "britcons_rev_extract_late_18c"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "britcons_rev_theater_1688"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.55,
+      "id_override": "britcons_rev_theater_mid_18c"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.58,
+      "id_override": "britcons_rev_theater_late_18c"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The British constitution was settled by the Revolution of 1688 and the settlement legislation of 1689-1701, which subordinated the Crown to Parliament and statute law. This reading instantiates one understanding of the British constitutional kernel — the claim that a specific moment (1688-1701) fixed the constitution's operative structure: the supremacy of Parliament, the Protestant succession, the elimination of prerogative taxation as arbitrary exaction, and the subordination of royal will to legal constraint. The constraint exhibits the classic tangled-rope structure: it simultaneously solves a genuine coordination problem (how to prevent arbitrary executive power and civil war over succession) and concentrates extraction benefits on identifiable agents (Parliament, the Protestant succession, merchant interests) while suppressing alternatives (Catholic restoration, divine-right claims, Stuart pretenders). The settlement's ambiguous status — partly statute, partly convention, partly ceremonial prerogative retained-but-subordinated — creates persistent strategic space for sibling readings to claim that the 'real' constitution lives elsewhere (in conventions, in charters, in judicialization, in parliamentary supremacy statutes). This story instantiates the thesis that 1688-1701 is THE foundational moment, distinct from and in potential logical conflict with readings that locate the constitution in medieval charters or in modern judicial review.",
+    "key_agents": [
+      "Parliament: Primary institutional beneficiary (institutional/arbitrage) — captures subordinated Crown authority, taxation powers, succession control",
+      "Protestant Succession (Hanoverians): Beneficiary (institutional/arbitrage) — secured against Catholic claimant restoration; constitutional legitimacy replaces dynastic claim",
+      "Merchant Capital and Landed Gentry: Secondary beneficiaries (powerful/mobile) — benefit from prerogative taxation suppression and property security via law; constrained by parliamentary levies but have exit options (arbitrage)",
+      "Catholic Claimants and Stuart Restoration: Primary victims (powerless/trapped) — permanently excluded from political order; their competing legitimacy claim is suppressed without exit",
+      "Divine-Right Theory and Absolute Monarchy Doctrine: Victim (structural position) — the theoretical justification for prerogative power is replaced by parliamentary supremacy; suppression enforced through official doctrine and legislation",
+      "The Common Subject: Ambiguous position (moderate/constrained) — may benefit from prerogative taxation suppression but subject to parliamentary exaction in its place; constrained by law but not trapped as Catholic claimants are"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The settlement does suppress arbitrary prerogative taxation, which is a genuine reduction in executive extraction from subjects. However, parliamentary levies may have equaled or exceeded prerogative rates historically (omega variable: prerogative_taxation_suppression_durability). The settlement also creates asymmetric benefits for Parliament and merchant interests relative to common subjects. The value reflects that the constraint solves a real coordination problem (preventing civil war, stabilizing succession) alongside concentrating political power. Suppression (0.72): High. The settlement requires active enforcement against alternative legitimacy claims (Stuart restoration plots, divine-right advocacy, Catholic succession). Enforcement includes military (the standing army), legislative (penal laws against Catholics), and doctrinal (parliamentary supremacy statutes). The suppression does not rise to snare levels because the alternative claimants have no coalition capacity and the settlement is widely accepted by beneficiaries. Theater ratio (0.58): Moderate-high. The settlement includes genuine functional components (parliamentary supremacy, Bill of Rights, Act of Settlement enacting specific rules) alongside performative elements (the retained prerogative exercised-by-ministerial-advice, ceremonial Crown acts, constitutional conventions that are binding without legal enforcement). Theater has increased over the interval (0.42 → 0.58) as the functional subordination became normalized and the prerogative became vestigial.",
+    "perspectival_gap": "The revolution settlement reading produces a perspectival gap between beneficiaries and victims. Parliament and the Protestant succession experience the settlement as coordinate mechanism (Rope) — it solves succession and taxation coordination problems. Catholic claimants and divine-right advocates experience it as pure suppression (Snare) — they are trapped without exit or voice. The merchant and landed interests experience tangled-rope: genuine benefit from prerogative taxation suppression but ongoing parliamentary extraction and constraints. The analytical observer risks seeing the settlement as a natural law (Mountain) — the structural necessity of limiting executive power — but the constraint's beneficiaries and suppression of alternatives flag it as a false summit. The piton perspective on residual prerogative reveals that formal authority persists but real power flows through Parliament and convention; the theater has increased over time as the functional subordination became normalized. No reading sees the settlement as pure coordination with zero asymmetry.",
+    "directionality_logic": "Directionality is derived from the structural positions declared in beneficiaries and victims. Parliament and the Protestant succession are beneficiaries with high exit capacity (arbitrage) — they can renegotiate the settlement's terms through their own legislative power. They experience low or negative effective extraction (d ≈ 0.15–0.20) and see the constraint as Rope. Catholic claimants are victims with no exit capacity (trapped) — they are permanently excluded and cannot renegotiate. They experience maximum extraction (d ≈ 0.95) and see the constraint as Snare. Merchant capital benefits from prerogative suppression but pays parliamentary levies; they are powerful with mobile capital (powerful/mobile), giving them constrained-to-moderate exit options and moderate extraction experienced (d ≈ 0.55). Common subjects face similar mixed extraction and coordination but with lower exit capacity (moderate/constrained), increasing their experienced extraction. The analytical observer's directionality is derived from the global scope and civilizational time horizon, which abstracts from particular beneficiary positions and risks naturalizing the settlement's contingency.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel british_constitution. The kernel is the set of foundational legitimacy claims about what ground the British constitutional order and make it binding. FIVE READINGS compete: (1) revolution_settlement — the 1688-1701 settlement subordinating Crown to Parliament is THE foundational moment (THIS reading); (2) constitutional_conventions — the real constitution lives in binding-but-unenforceable usages below any statutory text; (3) foundational_charters — the constitution rests on Magna Carta and medieval charters where liberty was extracted from the Crown document by document; (4) modern_judicialization — the constitution was remade by 1998 rights instruments, devolution, and a Supreme Court, turning restraint into adjudicated limits; (5) parliamentary_supremacy_statutes — the constitution is whatever Crown-in-Parliament enacts, with supremacy statutes as its real binding text. This reading instantiates the thesis that a specific historical moment (1688-1701) FIXED the constitution by establishing parliamentary subordination, distinct from competing claims that locate the foundation in timeless conventions, medieval charters, modern courts, or the perpetual sovereignty of parliament-in-any-era. The constitutional_conventions reading coexists with this one: both can agree that the settlement happened and remains operative, but disagree on whether its binding force is statutory or conventional. The foundational_charters reading influences (but does not foreclose) this one: medieval charters may establish precedent and principle, but only the settlement's enforcement apparatus made subordination durable. The modern_judicialization reading coexists: the settlement remains the baseline from which 1998 made further changes, or challenges the baseline by positing a new constitutional moment. The parliamentary_supremacy_statutes reading forecloses: if the constitution is simply whatever Parliament enacts with no fixed founding moment, then no particular settlement 'fixed' anything — the 1688 texts are merely some of many supremacy statutes binding Parliament itself to its own procedures.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by declaring genuine coordination function (parliamentary stability, succession certainty, reduced arbitrary exaction) alongside suppression and beneficiary extraction. The tangled-rope classification holds the coordination and extraction in tension rather than collapsing them. The perspectival gap between Parliament (sees rope) and Catholic claimants (see snare) is real and structural, not analytical confusion. The piton perspective on residual prerogative reveals that formal authority persists but real power has migrated to Parliament and convention — the theater has increased as the functional subordination normalized, suggesting the piton is a genuine structural observation (degraded formal authority maintained by institutional inertia) rather than a category mistake."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "british_constitution__constitutional_conventions",
+      "british_constitution__foundational_charters",
+      "british_constitution__modern_judicialization",
+      "british_constitution__parliamentary_supremacy_statutes"
+    ],
+    "dual_formulation_note": "The british_constitution kernel decomposes into five constraint stories, each instantiating a different reading of what grounds British constitutional authority. This reading (revolution_settlement) claims that 1688-1701 fixed the operative structure. Sibling readings locate the constitution in conventions (unenforceable usage), medieval charters (document-by-document extraction of liberty), modern judicial review (1998 onwards), or perpetual parliamentary supremacy (no fixed founding moment). Each reading has its own ε value and beneficiary/victim structure because they make different claims about the binding mechanism. The network links show how readings influence (and in some cases foreclose) one another."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "british_constitution__constitutional_conventions",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "british_constitution__foundational_charters",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "british_constitution__modern_judicialization",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "british_constitution__parliamentary_supremacy_statutes",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "revolution_fixed_parliamentary_subordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "prerogative_taxation_suppression_permanent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "parliamentary_subordination_of_crown",
+    "drift_state": {
+      "moment": "contemporary_constitutional_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

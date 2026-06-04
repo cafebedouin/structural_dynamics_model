@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "senate_authority__advisory_only_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_senate_authority__advisory_only_reading",
+    "story_uid": "a5775fc3-429f-4600-b8a3-bd4270d1fec8"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Senate Authority as Advisory Power (Roman Republic Reading)",
+    "topic_domain": "legal/constitutional/doctrinal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "whoever_calls_the_bluff",
+      "magistrates_with_veto"
+    ],
+    "victims": [
+      "auctoritas_institutional_credibility",
+      "senatorial_dignitas"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Tribuni Plebis Challenging the Pomerium",
+      "comment": "PERSPECTIVE 1: TRIBUNE TESTING THE BOUNDARY (SNARE) — A tribune exercising imperium outside the pomerium discovers the Senate's decrees carry no force when tested. The institutional extraction is severe: the tribune pays the full cost of the test (legal vulnerability, retaliation by magistrates), while the revelation—that auctoritas is advisory only—undermines the entire coordinating function. The beneficiary of this extraction is clarity, but the tribunal bears the extraction cost. Trapped at biographical scale: once the test is performed, the boundary is exposed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Gracchi Family Testing Senatorial Consensus",
+      "comment": "PERSPECTIVE 2: ORGANIZED RESISTANCE (TANGLED ROPE) — The Gracchi brothers call the Senate's bluff explicitly, claiming that tribuni plebis power supersedes senatorial advice. Organized groups can challenge the constraint with some agency, but face severe consequences (prosecution, violence). The constraint coordinates elite deliberation (genuine benefit to organized actors seeking legitimacy) while extracting submission: those who benefit from senatorial coordination must accept advisory status; those who challenge must absorb extraction. Mixed but leaning extractive from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Magistrate Exercising Veto",
+      "comment": "PERSPECTIVE 3: THE MAGISTRATE WITH VETO POWER (ROPE) — A consul who chooses to honor or ignore senatorial advice experiences this as pure coordination. The advice has weight only if the magistrate respects it; the magistrate has the legal authority to override. From this perspective, the Senate's constraint is a coordination mechanism for sharing information and building legitimacy for decisions. The magistrate benefits from the Senate's deliberation (better intelligence, broader consensus) without legal constraint. This is rope: the magistrate enters the advice-seeking mechanism voluntarily and extracts information value."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Senatorial Oligarchy Managing Succession",
+      "comment": "PERSPECTIVE 4: THE OLIGARCHIC ELITE PERSPECTIVE (SCAFFOLD) — The majority Senate faction sees their advisory system as a temporary stabilization mechanism: keep magistrates within consulted bounds during their one-year terms, building consensus through deliberation rather than explicit command. The sunset logic operates implicitly: as magistrates and tribuni increasingly challenge the advisory fiction, the Senate's coordinating power declines naturally. The oligarchy views this as a scaffolding structure managing succession and transition, extractiveness moderate because the elite themselves benefit from the deliberative process. Theater_ratio high because the performative aspect (advice-giving ritual) is doing significant work maintaining the fiction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Senatorial Institution's Self-Perception",
+      "comment": "PERSPECTIVE 5: THE SENATE'S OWN DEGRADED RITUAL (PITON) — By the late Republic, the Senate's own members recognize that their authority is largely performative: they issue decrees, magistrates largely ignore them unless consensus is already established elsewhere, tribuni veto liberally. The ritual persists—deliberation continues, advice is given—but everyone knows that the binding force disappeared. Theater_ratio very high (0.75+) because the institution's functional authority has eroded while ceremonial activity continues. Piton classification derives from the Senate's own consciousness that it is performing rather than commanding."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Legal Formalism View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LEGAL FORMALISM (PITON) — From a civilizational perspective examining the written constitutional law of the Republic, the Senate's authority is precisely what the advisory_only reading states: consultative and non-binding. The legal reality matches the reading cleanly. Theater is high because Roman constitutionalism as a system is largely performative—roles, rituals, and precedent doing the work of written law. But this perspective risks naturalization: reading the constraint as inherent to Roman law when it is actually a contingent institutional arrangement (i.e., risking false-mountain classification). The analytical view stabilizes as piton: the advisory-only reading is legally accurate, but the system's persistence depends on performative maintenance, not intrinsic legal force."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deference_vs_legal_obligation",
+      "question": "Is the Senate's binding force a matter of legal obligation (law) or social deference (convention)?",
+      "resolution_mechanism": "Historical test cases: instances where magistrates or tribuni openly defied senatorial decrees without legal consequence vs. instances of legal penalty for defiance. Examination of magistrates' private correspondence and contemporaries' commentary on whether defiance was seen as legal violation or social transgression.",
+      "impact": "If legal obligation: constraint is mountain (law binds regardless of deference). If convention: constraint is tangled_rope/snare (extraction contingent on belief and testable by defiance). This reading asserts convention; the oligarchic_capture reading asserts law; the deliberative_supremacy_reading avoids the binary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Senate authority rests on legal obligation or social convention"
+    },
+    {
+      "id": "gracchi_bluff_calling_event",
+      "question": "Did the Gracchi brothers' actions constitute a definitive exposure of the advisory-only constraint, or did they operate within a pre-existing understanding that senatorial advice was non-binding?",
+      "resolution_mechanism": "Textual analysis of contemporary sources (Livy, Appian, Plutarch) on whether the Gracchi framed their actions as defiance of law or as assertion of tribuni authority within an understood constitutional space. Examination of whether senatorial response to Gracchi actions invoked legal grounds or extra-legal retaliation.",
+      "impact": "If Gracchi exposed a hidden constraint: the advisory-only reading is revealing suppressed knowledge (extractiveness higher). If Gracchi operated within known bounds: the advisory-only reading is documenting an honest constitutional arrangement (extractiveness lower, more rope-like).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Gracchi exposed or operated within known advisory-only status"
+    },
+    {
+      "id": "beneficiary_identity_instability",
+      "question": "Who benefits from the advisory-only constraint when its binding force is contingent on deference?",
+      "resolution_mechanism": "Observation of instances where the constraint's enforcement flips: when does the magistrate benefit from honoring advice vs. when does the law-checker benefit from testing it? Tracking of senatorial decrees that were honored vs. defied and the actors gaining status in each case.",
+      "impact": "If beneficiary is stable (always the magistrate, always the advice-giver): constraint stabilizes as rope or scaffold. If beneficiary flips with each test (whoever calls the bluff gains credibility; whoever was bluffed loses authority): constraint is unstable tangled_rope with extractiveness contingent on the specific test event.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Instability of beneficiary identity when deference is the binding mechanism"
+    },
+    {
+      "id": "auctoritas_as_victim",
+      "question": "Can auctoritas (institutional moral authority) itself be the victim of this constraint, or is it only the agent bearing auctoritas who is victimized?",
+      "resolution_mechanism": "Examination of how senatorial auctoritas changed as a result of visible tests (Gracchi defiance, Sulla dictatorship, Pompey's extra-legal influence): did the institution's authority to advise degrade after public challenges, or did individual senators maintain prestige?",
+      "impact": "If auctoritas itself is victimized: the constraint has a structural victim (institutional credibility) distinct from individual agents. This refines the victims list and suggests the constraint's function is maintaining institutional fiction rather than transferring resources.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether auctoritas itself is victimized by the advisory-only constraint"
+    },
+    {
+      "id": "reading_identity_ambiguity",
+      "question": "Is this reading (advisory_only) a genuine constitutional position held within Roman jurisprudence, or is it a modern legal realist's extraction of what the law was underneath the oligarchic narrative?",
+      "resolution_mechanism": "Search for explicit statements by Roman jurists or magistrates claiming advisory-only status for the Senate. Comparison with how the oligarchic_capture_reading and deliberative_supremacy_reading appear in ancient sources.",
+      "impact": "If held explicitly by Romans: this is a contested kernel with three competing readings, all live. If invented by modern analysis: this reading is a deconstruction of a false summit (the 'Senate rules' mythology), and the omega itself is an instance of the oracle gap (Theorem 4).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the advisory-only reading is an ancient position or a modern deconstruction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "The Senate of the Roman Republic possessed no explicit legal power to bind magistrates or assembly votes. Its authority rested on auctoritas—the accumulated prestige, wisdom, and moral weight of an institution of ex-magistrates. Yet this advisory-only constraint coordinated the Republic's finances, foreign policy, and succession for centuries. The constraint's stability depended entirely on deference: magistrates honored senatorial advice not because law compelled it, but because ignoring the Senate carried social and political cost. The power 'evaporated whenever someone called the bluff'—when a tribune like the Gracchi brothers asserted that tribuni plebis authority superseded senatorial advice, or when a general like Pompey or Caesar wielded extralegal power without consulting the Senate, the institution's binding force disappeared instantly. This reading instantiates the advisory-only constitutional position: the Senate legally only advised; its decrees bound no one without magisterial action or assembly vote; and its extractiveness (its capacity to constrain magistrate behavior) was contingent on belief rather than law.",
+    "key_agents": [
+      "Senatorial Oligarchy: Primary beneficiary (institutional/arbitrage) — benefits from coordination mechanism during normal politics; loses credibility when tested",
+      "Magistrate with Imperium: Secondary beneficiary (institutional/arbitrage) — gains counsel and legitimacy from senatorial advice; retains legal authority to override",
+      "Tribuni Plebis: Primary challenger (organized/constrained) — organized group with independent authority; faces extraction cost when testing the boundary",
+      "Individual Senator: Variable position (moderate/constrained) — gains prestige from membership in advisory body; exposed to loss of auctoritas when Senate's bluff is called",
+      "The Gracchi Brothers: Historical testers (organized/identity_locked) — their political identity constituted through challenging oligarchic consensus; cannot exit without becoming something other than populares",
+      "Auctoritas (Institutional Authority): Structural victim (powerless/trapped) — abstract property of the institution that degrades when publicly challenged; has no agent to defend it"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint coordinates elite deliberation (low-extractiveness benefit), but extraction emerges when the advisory mechanism is enforced through social pressure rather than law. Magistrates and tribuni who honor senatorial advice when they could legally override it are extracting legitimacy and stability from the Senate; the Senate is extracting submission. The constraint's extractiveness is contingent on belief—it rises when deference is strong and falls when someone calls the bluff. The measurement trajectory (0.35→0.52) reflects the late Republic's increasing extractiveness as the Senate became more defensive about its advisory-only status, intensifying the performative dimension. Suppression (0.48): Moderate. The suppression is not legal (there is no law suppressing alternatives) but social and institutional. Alternatives to senatorial consultation exist (magistrates could unilaterally decide; tribuni could override), but suppression emerges through reputational damage, loss of legitimacy, and risk of violence. The declining suppression measurement (0.55→0.48) reflects the late Republic's breakdown: as the bluff is called more often, suppression mechanisms fail. Theater ratio (0.65): High. Senatorial advice-giving is substantially performative: the ritual of consultation, deliberation, and formal decree carries ceremonial weight far exceeding its binding power. The theater rises over the interval (0.40→0.65) as the Senate compensates for declining actual authority by intensifying ritual performance.",
+    "directionality_logic": "This reading produces a distinctive directionality structure because the constraint's binding force is contingent. The beneficiary (whoever benefits from having the Senate's advice honored) derives d from their institutional position and ability to defect. A magistrate with arbitrage exit (can ignore the Senate and face only social cost, not legal penalty) experiences low d—they benefit from the advice without legal constraint. An organized group like the Gracchi with constrained exit (challenging the Senate triggers violent response) experiences high d—they bear extraction cost to expose the constraint's non-binding nature. The tribuni plebis are interesting: they have legal exit (their authority is constitutional), so d is computed from organized power + legal escape route, yielding moderate d. The beneficiary 'whoever_calls_the_bluff' has zero d (full beneficiary) because exposing the advisory-only status is purely beneficial for the challenger—they gain prestige and authority. The victim 'auctoritas_institutional_credibility' has d approaching 1.0 (full target)—the institution bears the extraction cost of being tested.",
+    "perspectival_gap": "This reading produces radical perspectival gaps because different observers experience the constraint's extractiveness very differently. The magistrate (institutional/arbitrage) experiences rope—they coordinate with the Senate without legal obligation. The tribune challenging the constraint (organized/constrained) experiences snare—they bear full extraction cost to expose the non-binding nature. The Senate itself (institutional/arbitrage in normal times) experiences rope as long as deference holds, then piton as the ritual persists without binding force. The analytical observer risks piton or false-mountain: naturalizing the advisory-only status as an inherent feature of Roman law when it is actually a contingent institutional arrangement dependent on suppression mechanisms that can fail. The perspectival gap reveals the constraint's instability: it is tangled_rope in normal politics (coordination + asymmetric submission) but collapses to snare + piton when tested, because the victims (auctoritas and the challenger) have no mechanism to defend the constraint once deference breaks.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by explicitly embracing the hybrid structure: the Senate legally only advised (tangled_rope), coordinating elite deliberation while extracting deference and submission. The constraint is not pure coordination (it extracts), nor is it pure extraction (it coordinates). The mandate is the advisory-only constitutional position itself—the claim that the Senate's authority is consultative and non-binding. The trophy is the auctoritas that depends on the mandate being respected. Mandatrophy occurs when someone calls the bluff (Gracchi, Pompey, Caesar): the mandate is exposed as contingent on belief rather than law, and the trophy (institutional authority) degrades permanently. The resolution is institutional: either (a) the Senate accepts advisory-only status explicitly and reforms as a true deliberative body (scaffold perspective, sunset), or (b) the Senate reasserts binding authority through explicit legal reform or violence (oligarchic_capture_reading, transformation).",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'senate_authority'. The kernel is the persistent Roman institutional commitment to some form of senatorial role in governance, but three readings compete on what that role is: (1) ADVISORY_ONLY_READING (this file): The Senate legally only advised; its power depended on deference and evaporated when tested. (2) DELIBERATIVE_SUPREMACY_READING: The Senate was the Republic's mind; the one continuous deliberative body holding finance and foreign policy because someone had to hold them between elections. The Senate's advice had weight because deliberation itself was the Republic's governing mechanism. (3) OLIGARCHIC_CAPTURE_READING: The Senate was capture institutionalized; a self-perpetuating nobility of ex-magistrates whose 'advice' was command, and whose interest wore the Republic's name. The advisory facade concealed actual oligarchic control. These three readings are all live positions in modern Roman constitutional history. This reading (advisory_only) claims that the Senate's authority was genuinely limited by law; it did not command but advised. The other readings contest this on different grounds: deliberative_supremacy says advice was effectively binding because deliberation drove governance; oligarchic_capture says the advisory language was a false front for actual command. The readings coexist as different historical hypotheses, each grounded in interpretation of the same textual and institutional evidence."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "senate_authority__deliberative_supremacy_reading",
+      "senate_authority__oligarchic_capture_reading",
+      "tribuni_plebis_veto_authority",
+      "gracchi_reform_constraint"
+    ],
+    "dual_formulation_note": "This constraint is part of the senate_authority kernel family. All three readings (advisory_only, deliberative_supremacy, oligarchic_capture) should be instantiated as separate JSON files with different constraint_ids and linked via network.affects_constraints. The advisory_only_reading has the lowest extractiveness (0.52, tangled_rope) because it posits genuine legal limits on senatorial power. The oligarchic_capture_reading should have higher extractiveness (snare) because it posits hidden binding authority. The deliberative_supremacy_reading should emphasize coordination (rope) because it centers the Senate's positive deliberative function. All three share the same interval and base doctrinal context but instantiate different ε values."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "senate_authority__deliberative_supremacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "senate_authority__oligarchic_capture_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "senatorial_authority_consultative_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "deference_contingency_of_binding_force",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "senatorial_consultation_as_constitutional_courtesy",
+    "drift_state": {
+      "moment": "late_republic_gracchi_period",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

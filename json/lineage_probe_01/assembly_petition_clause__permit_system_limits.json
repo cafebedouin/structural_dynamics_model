@@ -1,0 +1,244 @@
+{
+  "header": {
+    "constraint_id": "assembly_petition_clause__permit_system_limits",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_assembly_petition_clause__permit_system_limits",
+    "measurement_id_prefix": "assembly_permit",
+    "story_uid": "3ad26518-807b-4476-b530-8a960283affd",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permit System Limits on Assembly: Content-Neutral Standards Constraint",
+    "topic_domain": "legal/constitutional/first_amendment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "unpopular_marchers",
+      "disfavored_speakers"
+    ],
+    "victims": [
+      "street_public_forum_access",
+      "marginalized_advocacy_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Disfavored Marcher",
+      "comment": "PERSPECTIVE 1: DISFAVORED MARCHER (SNARE) — Trapped in the permit system. Without permit, assembly is illegal and subject to arrest. With permit, the official gate is discretionary — licensing officer can deny based on content (hostile reaction), delay until the moment passes, or scale fees to suppress unpopular speech. No exit: the marcher cannot assemble without crossing the street into state control. Maximum extraction from this perspective — the constraint exists precisely to gatekeep disfavored speakers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Advocacy Organization",
+      "comment": "PERSPECTIVE 2: ADVOCACY ORGANIZATION (TANGLED ROPE) — Constrained by resource requirements for permits, legal compliance, timing uncertainty, and public-safety justification burden. But also benefits from the permit system through coordination: predictability of event logistics, liability clarity, police cooperation on safety planning. Asymmetric extraction — the organization must pay legal and administrative costs, but gains some legitimacy and coordination function. Not trapped, but constrained by regulatory overhead and discretionary denial risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Police Department / Permitting Authority",
+      "comment": "PERSPECTIVE 3: POLICE DEPARTMENT / PERMITTING AUTHORITY (ROPE) — Experiences the constraint as coordination: the permit system enables police to plan routes, allocate resources, and manage traffic flow. The definite-standards doctrine (content-neutral, no discretion, no hostile-reaction fees) actually reduces extraction burden — it removes the temptation to deny permits based on anticipated opposition and replaces it with rule-governed procedure. From this institutional view, the constraint is pure coordination with minimal coercion overhead. Net beneficiary of the coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Establishment Advocacy Group",
+      "comment": "PERSPECTIVE 4: ESTABLISHMENT ADVOCACY GROUP (TANGLED ROPE) — Popular speech, mainstream message. The permit system is primarily a coordination tool for them — they get permits routinely, fee scales pose no burden (fees are modest for mainstream events), and officials lack discretion to deny them. They experience genuine coordination benefit (predictable logistics, police cooperation). But they also benefit from the extraction mechanism applied to disfavored speakers — the same permit system that smooths their path creates barriers for competitors or opponents. Asymmetric extraction benefits them indirectly."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The False-Summit Analytic View",
+      "comment": "PERSPECTIVE 5: FALSE-SUMMIT ANALYTIC VIEW (MOUNTAIN) — A civilizational perspective might see the permit requirement itself as a natural law: crowds in shared public space require coordination; some official mechanism for scheduling and traffic management is inherent to dense urban life. This perspective risks naturalizing the permit system as inevitable infrastructure. However, the structural data — identifiable beneficiaries (police coordination, establishment speakers), identified victims (disfavored marchers, marginalized groups), discretionary gatekeeping mechanism — contradicts the mountain classification. This is a candidate false summit: the naturalizing framing hides a contingent institutional arrangement that advantages some speakers over others."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Formal Doctrine",
+      "comment": "PERSPECTIVE 6: FORMAL DOCTRINE (PITON) — The definite-standards requirement (content-neutral, no discretion, no hostile-reaction fees) is a formal doctrinal constraint enforced through judicial review. But the constraint's actual function has degraded: licensing officials continue to exercise de facto discretion through subjective 'traffic management' classifications, permit delay tactics, fee structures nominally content-neutral but scaled to event size (and larger events are often disfavored speech), and public-safety justifications that track content. The doctrine says 'no discretion,' but practice permits substantial official gatekeeping. Theater ratio is elevated (0.55) — formal compliance with content-neutral standards combined with practical circumvention of those standards."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discretion_disguised_as_safety",
+      "question": "Can content-neutral standards meaningfully constrain official discretion when public-safety and traffic-management justifications can rationalize any denial?",
+      "resolution_mechanism": "Empirical analysis: comparing permit denial rates across content (unpopular vs mainstream), measuring variance in ostensibly content-neutral factors (traffic, noise, public safety) as proxies for content, longitudinal tracking of officials' stated reasons vs outcome patterns",
+      "impact": "If safety rationalization reliably disguises content discrimination: the constraint is a facade and extractiveness is higher (0.70+). If safety factors genuinely operate independently of content: constraint has real limiting force and extractiveness is lower (0.40).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether content-neutral standards constrain discretion or become pretexts for content-based gatekeeping"
+    },
+    {
+      "id": "fee_scaling_proportionality",
+      "question": "Are permit fees nominally 'content-neutral' but actually scaled to suppress disfavored speech through administrative burden?",
+      "resolution_mechanism": "Fee schedule analysis: comparing permit fees for mainstream vs disfavored speech events of similar size; measuring actual cost pass-through to organizers; tracking whether fee waivers are granted and to whom; regression analysis of fee amount against predicted opposition/hostile reaction",
+      "impact": "If fees are genuinely proportional to administrative cost regardless of speech content: the constraint permits fees legitimately and extractiveness is lower. If fees correlate with anticipated hostile reaction or opposition intensity: the constraint allows fee-scaling extraction and extractiveness is higher (0.65+).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether permit fees remain truly content-neutral or become tools of suppression"
+    },
+    {
+      "id": "kernel_reading_distinctness",
+      "question": "Does the permit-system-limits reading genuinely foreclose or merely coexist with the expressive-association and petition-clause-independence readings?",
+      "resolution_mechanism": "Doctrinal analysis: Can a court simultaneously hold (1) permit systems require definite standards with no discretion, (2) associations have constitutional right to exclude/organize for expressive ends, and (3) petition is a distinct constitutional guarantee? Or does one reading's core premise logically rule out another's?",
+      "impact": "If readings are logically incompatible (one forecloses the other): the constraint family represents a live doctrinal fork where only one can prevail. If coexistent: they represent different aspects of assembly protection that can coexist in a single framework. If one influences the other: they have asymmetric structural pressure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the permit-limits reading forecloses or coexists with sibling assembly readings"
+    },
+    {
+      "id": "natural_law_vs_constructed",
+      "question": "Is the permit requirement an inherent feature of coordinating shared public space (natural law), or a contingent institutional arrangement that could be replaced with permit-free or lottery-based mechanisms?",
+      "resolution_mechanism": "Historical and comparative analysis: jurisdictions without advance permits (EU open public space norms), lottery-based timing systems, post-hoc police accountability without gatekeeping. If functioning alternatives exist: natural law classification is defeated.",
+      "impact": "If permit system is truly inevitable: mountain classification may be justified. If alternatives exist with lower suppression: the mountain is a false summit masking institutional extraction. Current classification candidate: false summit with beneficiaries declared.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether permit requirements are natural law or contingent institutional design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The permit system for public assembly sits at the intersection of two constitutional interests: the state's legitimate need to coordinate use of shared public space (traffic, safety, resource allocation), and the disfavored speaker's fundamental right to petition and assemble without state gatekeeping. This constraint instantiates ONE READING of the contested assembly-petition kernel: the reading that requires permit systems be governed by definite, content-neutral, administratively objective standards, with no official discretion to deny based on anticipated hostile reaction and no fee scaling based on opposition intensity. This reading directly addresses the extraction mechanism — official discretion to deny unpopular marches or price them prohibitively — and aims to suppress it through formal doctrine. The constraint exhibits Tangled Rope structure: genuine coordination function (police resource planning, traffic management, public safety) coexists with systematic extraction of assembly rights from disfavored speakers. The theater ratio (0.55) reflects that formal compliance with 'content-neutral standards' coexists with practical circumvention through safety-based denials, permit delays, and fee structures nominally content-neutral but effectively scaled to suppress. The suppression trajectory (0.62 → 0.68 over the interval) shows rising de facto gatekeeping despite formal doctrine requiring its elimination. Extractiveness (0.58) reflects the moderate but measurable suppression of assembly for unpopular speech through administrative mechanisms.",
+    "key_agents": [
+      "Unpopular Marchers / Disfavored Speakers (powerless/trapped): Primary victims of the constraint — face denial risk, delay, and fee-scaling based on content",
+      "Permitting Officials / Police Department (institutional/arbitrage): Primary beneficiaries of coordination function — gain predictable route management and resource allocation",
+      "Marginalized Advocacy Groups (moderate/constrained): Secondary victims — require permits, face resource burden, limited exit capacity",
+      "Establishment Advocacy Groups (powerful/mobile): Secondary beneficiaries — experience coordination function with minimal extraction barrier",
+      "Constitutional Doctrine of Content Neutrality (institutional/constrained): Formal enforcer of the definite-standards requirement; effectiveness degraded by circumvention",
+      "Analytical Observer at Civilizational Scale (analytical/analytical): Risks naturalizing the permit requirement as inevitable coordination infrastructure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts assembly rights from disfavored speakers through three mechanisms: (1) discretionary denial risk despite formal content-neutral standards (safety-based rationalization); (2) permit delays that allow timing to be weaponized; (3) fee scaling that, while nominally content-neutral, correlates with opposition intensity or event size proxy for unpopular speech. The constraint also provides genuine coordination benefit (police planning, traffic management), reducing pure extractiveness below 0.70. The measurement trajectory shows rising extractiveness (0.42 → 0.58) as de facto discretion persists despite formal doctrine. Suppression (0.68): High. Barriers to assembly without permit are severe — assembly becomes illegal, subject to arrest, disruption, dispersal. Permit denial is effectively final (judicial review is slow and post-event); delay is punitive (march moves occur on fixed dates). Fee scaling imposes resource burden that smaller advocacy groups cannot absorb. Theater ratio (0.55): Moderate-high. Formal doctrine requires 'content-neutral, no discretion, no hostile-reaction fees,' but practice demonstrates consistent circumvention through ostensibly content-neutral safety justifications. The gap between doctrine and practice is the theater — compliance performed while gatekeeping continues.",
+    "directionality_logic": "Powerless disfavored speakers (trapped exit) experience maximum extraction: d = 0.95, high f(d). Institutional police (arbitrage exit, beneficiary) experience near-zero or negative extraction: d = 0.05, negative f(d). Moderate advocacy organizations (constrained exit, victim-beneficiary mix) experience mid-range extraction: d = 0.55-0.65, moderate f(d). Powerful establishment groups (mobile exit, beneficiary) experience minimal extraction: d = 0.20, low f(d). The perspectival gap is large: the same constraint structure produces Snare experience (powerless), Tangled Rope experience (moderate and establishment), and Rope experience (police). The doctrinal/piton perspective highlights the degradation: formal content-neutral standards (intended to suppress discretion) have become a theater masking continued practical discretion.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across power and exit-option axes. The disfavored marcher sees pure extraction (Snare) — the permit system is the sole legal pathway to assembly, yet the path is gatekept and extractive. The police see pure coordination (Rope) — the permit system enables traffic management with minimal coercion overhead, especially under the content-neutral doctrine. The advocacy organization sees a mixed structure (Tangled Rope) — coordination benefits exist (predictable logistics, liability clarity) alongside extraction costs (permits denied, delayed, or priced punitively). The establishment speaker sees coordination with invisible extraction benefit (Tangled Rope) — they benefit from the same mechanism that suppresses competitors. The formal doctrine sees itself as piton (theater performing content-neutrality while practice circumvents it). The civilizational analytics risks a false summit (naturalizing the permit requirement). The perspectival gap reveals that the same rule structure — 'content-neutral, definite standards, no discretion' — has radically different force depending on the speaker's popularity and the official's incentive to gatekeep.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint's tangled-rope structure is genuine: it coordinAtes and extracts simultaneously. The doctrine (content-neutral standards, no discretion) is not a false constraint that should be ignored; it genuinely reduces extraction compared to frank discretionary denial (which would be Snare across all perspectives). But the doctrine's force has degraded — de facto discretion persists through safety rationalization, timing weaponization, and fee scaling. The classification is stable: Tangled Rope because coordination and extraction both operate. The trajectory toward higher extractiveness (0.42 → 0.58) reflects accumulating circumvention of the doctrinal limits, not collapse of the coordination function. The constraint remains in force (not piton yet) because the doctrine has judicial review backing and ongoing enforcement effort, but the trajectory suggests drift toward Snare if circumvention continues unchecked.",
+    "kernel_context": "This constraint is one reading of the contested assembly-petition kernel. The kernel is the stabilized commitment that assembly and petition are constitutional freedoms protected against state gatekeeping. Three readings instantiate this kernel differently: (1) EXPRESSIVE_ASSOCIATION_DOCTRINE: Assembly matured into the right to organize and exclude for expressive ends — focuses on the organizational/associational aspect, protecting groups' ability to curate their message and membership. (2) PERMIT_SYSTEM_LIMITS [this reading]: Assembly meets the permit office — focuses on the administrative gatekeeping mechanism and requires definite standards, no discretion, no hostile-reaction fees. (3) PETITION_CLAUSE_INDEPENDENCE: Petition is the forgotten clause — focuses on the right to demand answer from government as distinct from speech, asserting petition's separate constitutional force. Each reading emphasizes a different aspect of assembly protection and creates different structural pressure on the permit system. This reading (permit-system-limits) directly addresses the discretionary gatekeeping mechanism and aims to formalize it away. The sibling readings approach the kernel from different doctrinal directions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "assembly_petition_clause__expressive_association_doctrine",
+      "assembly_petition_clause__petition_clause_independence"
+    ],
+    "dual_formulation_note": "The assembly-petition kernel generates three distinct constraint stories with different extractiveness values and authority-grounding modes. This story (permit-system-limits) focuses on the administrative gatekeeping mechanism and its formalization. The expressive-association reading would focus on the organizational protection aspect (different epsilon, different authority grounding: lineage/expertise). The petition-clause-independence reading would focus on the petition right as separate from speech (different epsilon). All three are linked via network edges to show the kernel-reading structure."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "content_neutral_objective_standards",
+    "drift_state": {
+      "moment": "contemporary_circumvention_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "assembly_petition_clause__expressive_association_doctrine",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "assembly_petition_clause__petition_clause_independence",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "official_discretion_forbidden_assembly_permit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "hostile_reaction_fee_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "assembly_petition_clause"
+    ]
+  }
+}

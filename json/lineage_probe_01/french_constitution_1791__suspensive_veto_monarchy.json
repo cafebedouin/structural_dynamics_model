@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "french_constitution_1791__suspensive_veto_monarchy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_french_constitution_1791__suspensive_veto_monarchy",
+    "measurement_id_prefix": "fr1791_veto",
+    "story_uid": "59b305a3-5f4c-499e-8aea-475b351d7e98",
+    "created_at": "2026-02-26T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Suspensive Veto Monarchy (1791 Constitution)",
+    "topic_domain": "political/constitutional/revolutionary",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_assembly",
+      "legislative_supremacy"
+    ],
+    "victims": [
+      "royal_sovereignty_doctrine",
+      "absolute_monarchy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Royal Sovereignty Doctrine",
+      "comment": "PERSPECTIVE 1: ROYAL SOVEREIGNTY DOCTRINE (SNARE) — The absolute monarchy's doctrinal foundation is structurally captured by the 1791 Constitution's reformulation. Kingship is transformed from sovereign source of law to magistrate executing legislation. No exit from this reframing without constitutional revision. The doctrine experiences maximum extraction: monarchy is nominally retained but its constitutional substance is delegitimized. Trapped at the biographical horizon — a reign cannot outlast the constitutional framework."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Crown (Louis XVI as Person)",
+      "comment": "PERSPECTIVE 2: THE CROWN (TANGLED ROPE) — Louis XVI retains genuine executive power: appointment of ministers, military command, diplomatic authority, and the suspensive veto itself (a 2-legislature delay mechanism for legislation the king opposes). But this power is constrained and conditional — the veto can be overridden, the legislature controls the purse, and royal prerogative is subordinated to constitutional limits. Mixed experience: real coordination function (the veto provides constitutional braking) alongside asymmetric extraction (monarchy is demoted from sovereignty to subordination). Exit is constrained — abdication or flight risks civil war; compliance to the constitutional frame is mandatory."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The National Assembly / Legislative Supremacy",
+      "comment": "PERSPECTIVE 3: THE NATIONAL ASSEMBLY (ROPE) — Experiences the suspensive veto as pure coordination: the king's 2-legislature delay provides a constitutional mechanism for executive review without preventing legislative will. The assembly benefits from primary authority (laws originate in the assembly, the budget is controlled by the assembly, the constitution itself was written by the assembly, not imposed by the king). The veto is a constraint but not extractive from the assembly's standpoint — it is a legitimate executive check. Net beneficiary position: arbitrage exit available (the assembly can revise the constitution, override the veto, or restructure executive power). The assembly sees this as successful constraint — monarchy has been subordinated to the rule of law."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Constitutional Reformers' Vision",
+      "comment": "PERSPECTIVE 4: THE CONSTITUTIONAL REFORMERS' VISION (SCAFFOLD) — From the perspective of the 1791 framers (Mounier, Malouet, and the monarchist constitutionalists), the suspensive veto is a temporary institutional bridge: a way to retain the crown's legitimacy and executive power while subordinating it to the people's representatives. The intent is that this framework will mature over generations into either a stable mixed constitution or a full legislative supremacy. The sunset logic is embedded in the constitutional text itself: the veto is not permanent royal prerogative but a delegated power that can be revised. Extraction is low because the framers see this as transitional — monarchy itself is being reformed, not extracted. The scaffold has explicit sunset pathways: either the crown adapts and becomes a modern constitutional monarch (British analogy), or the legislative majority abolishes/limits the veto further."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ceremonial Crown",
+      "comment": "PERSPECTIVE 5: THE CEREMONIAL CROWN (PITON) — The suspensive veto, while structurally real, is often experienced as performance rather than function. Over the first two years (1791–1792), the king rarely uses the veto strategically; when he does, the assembly overrides or abandons the contested legislation anyway. The mechanism persists through institutional momentum rather than functional necessity. The monarchy's role becomes ceremonial and symbolic (the embodiment of the nation, the fountain of honor, the ceremonial executive) while the real power flows through the legislature. Theater ratio is elevated because much of the king's executive authority is ornamental — the legitimacy depends on retaining the crown's dignity and symbolic role, not on maximizing its practical veto power. The constraint endures through the performative maintenance of kingship."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Absolutist View",
+      "comment": "PERSPECTIVE 6: NATURAL LAW ABSOLUTISM (MOUNTAIN) — From the traditional natural law royalist perspective (held by monarchist critics of the 1791 Constitution), the crown's authority is not delegable and cannot be constitutionally demoted: absolute monarchy is the natural form of sovereignty, and any attempt to bind the king to law fundamentally misconceives the nature of kingship itself. From this view, the 1791 Constitution's suspensive veto monarchy is internally contradictory — it is a logical impossibility, not a workable compromise. The constraint appears as a mountain because the absolutist reading treats kingship as an immutable principle: you cannot have limited monarchy because the concept dissolves into either absolute monarchy or republic. However, this classification is a false summit: it naturalizes a contested doctrine as a law of nature. The structural data reveals that the 1791 Constitution is a contingent political artifact, not a law of nature or logic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_override_rate_threshold",
+      "question": "At what frequency of veto override does the suspensive veto mechanism cease to function as genuine executive constraint and become performative delay?",
+      "resolution_mechanism": "Historical measurement: count of royal vetoes, count of overrides, timeline of override decisions; comparison to European mixed constitutions (Belgium, Netherlands post-1830) where veto override rates are measured",
+      "impact": "If override rate > 80%: veto is de facto performative; constraint reclassifies toward piton. If override rate < 20%: veto represents genuine legislative constraint; constraint remains tangled_rope. Threshold ambiguity affects whether the extractiveness (0.38) is accurate or understated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Veto override frequency threshold for functional vs performative constraint"
+    },
+    {
+      "id": "royal_doctrine_resilience",
+      "question": "Can the crown maintain doctrinal legitimacy as a monarch if its constitutional substance is reduced to delaying power? Does monarchy require absolute or indivisible sovereignty to sustain its authority, or can it function as a subordinate executive?",
+      "resolution_mechanism": "Comparison to later constitutional monarchies (Britain, Belgium, Spain): analysis of whether monarchical legitimacy survived or required adaptation; examination of royalist political theory before and after 1791 to assess doctrine rupture",
+      "impact": "If doctrine cannot adapt: the 1791 Constitution is inherently unstable (which historical outcome confirmed). If doctrine can adapt: the suspensive veto monarchy represents a stable evolutionary path. This determines whether the snare classification of royal sovereignty doctrine is permanent or transitional.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether absolute sovereignty is necessary for monarchical legitimacy or contingent"
+    },
+    {
+      "id": "beneficiary_identity_ambiguity",
+      "question": "Who truly benefits from the suspensive veto monarchy: the National Assembly (legislative supremacy), the Crown (retained executive power), or the emerging bourgeoisie (property-rights protection through constitutional limitation of crown)?",
+      "resolution_mechanism": "Analysis of legislative voting patterns, decree usage, and coalition formation 1791–1792; examination of whose interests were actually advanced (who gained property, access, office, or power); comparison to counterfactual scenarios (pure republic, continued absolute monarchy)",
+      "impact": "If assembly benefits: current beneficiary declaration is correct. If crown benefits: veto should be reclassified as retention of real power, not demotion. If bourgeoisie benefits: beneficiary should be redeclared as property-rights class, not institutional actors. Affects directionality derivation and chi calculation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True beneficiary of the suspensive veto mechanism"
+    },
+    {
+      "id": "constitutional_reading_contest",
+      "question": "Is the 1791 Constitution one coherent framework or four incompatible commitments (absolute rights, limited monarchy, property qualification, royal executive power) layered atop each other without resolution?",
+      "resolution_mechanism": "Formal analysis of constitutional text for logical consistency; examination of whether the four sibling readings (active_passive_citizenship, declaration_of_rights, suspensive_veto, failure_and_succession) can coexist in one legal order or whether they form contradictions that forced the constitution's collapse",
+      "impact": "If coherent: constraint classification is accurate as written. If contradictory: the constraint should be decomposed into separate stories per sibling reading, each with its own kernel context and ε value. The current story assumes coherence but the historical evidence (one-year lifespan, internal collapse) suggests the constitution was unstable at its kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the 1791 Constitution is logically coherent or internally contradictory"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "fr1791_veto_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38,
+      "id_override": "fr1791_veto_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.45,
+      "id_override": "fr1791_veto_extract_t12"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "fr1791_veto_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55,
+      "id_override": "fr1791_veto_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68,
+      "id_override": "fr1791_veto_theater_t12"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "fr1791_veto_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "fr1791_veto_suppress_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62,
+      "id_override": "fr1791_veto_suppress_t12"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The 1791 Constitution's suspensive veto monarchy represents one unstable reading of how to transition from absolute to constitutional kingship. The Constitution of 1791 reformulated the French crown from sovereign source of all law to a hereditary magistrate with a two-legislature suspensive veto — the king could delay legislation but not prevent it permanently. This constraint embodies the constitutional commitment to retain monarchy while subordinating it to legislative supremacy and the people's representatives. The framework is one kernel (the 1791 Constitution itself) read through multiple incompatible lenses. The suspensive veto reading instantiates a specific structural claim: that monarchy can be preserved by demoting kingship from sovereignty to executive function, and that the veto — a delaying power without permanent blocking capacity — represents both a genuine concession to monarchy and a successful constraint on absolute power. However, the historical trajectory reveals instability: the constraint endured only months before the flight to Varennes (June 1791) and the August 1792 insurrection destroyed it entirely. The measurements show rising theater ratio (performative maintenance of the crown's dignity) and rising suppression requirement (the mechanism required increasing institutional effort to enforce as the fiction of limited monarchy became harder to sustain). This reading is one of four competing interpretations of the 1791 kernel; the others address the citizenship split (active/passive), the prefixed declaration of rights (universal vs qualified), and the constitution's failure (discarded draft). Each reading has its own constraint story with its own ε, perspectives, and beneficiary/victim declarations.",
+    "key_agents": [
+      "National Assembly: Primary beneficiary (organized/arbitrage) — retains legislative supremacy, controls the purse, exercises constituent power, can override the veto",
+      "Royal Sovereignty Doctrine: Primary victim (powerless/trapped) — the traditional absolute monarchy framework is constitutionally delegitimized; kingship is reformulated as subordinate executive function",
+      "Crown (Louis XVI as person): Mixed agent (powerful/constrained) — retains real executive power (appointment, command, foreign policy, veto mechanism) but experiences it as structurally constrained by constitutional limits and legislative override capacity",
+      "Legislative Supremacy (institutional principle): Primary beneficiary (organized/arbitrage) — the principle that law originates in the people's representatives and cannot be bound by hereditary monarchy becomes constitutionalized",
+      "Constitutional Reformers (Mounier, Malouet, monarchist constitutionalists): Framers (analytical/analytical) — see the suspensive veto as transitional bridge, believing monarchy will adapt to constitutional subordination or be gradually reformed",
+      "Absolute Monarchy Doctrine (natural law royalists): Secondary victim (institutional/trapped) — the claim that kingship is indivisible and immutable is contradicted by the 1791 framework; royalists see the constitution as logically impossible, not workable compromise"
+    ],
+    "logic_rationale": "Extractiveness (0.38, rising to 0.45 by t12): Moderate. The suspensive veto mechanism creates asymmetric power because only the crown possesses it — the legislature cannot impose a reciprocal delay on the king. The extractiveness flows from the crown's retained (though limited) executive authority and the veto's delaying capacity. However, extractiveness is not high (0.45 is well below snare threshold of 0.46) because the veto is genuinely overridable and the legislature retains supreme authority over the budget, legislation, and constitutional revision. The rising trajectory reflects increasing strain: as political conflict intensifies (war declarations, treason investigations, religious conflicts), the veto becomes more frequently used and more politically contentious, driving extractiveness upward. By August 1792, the crowd's perception of the veto mechanism as a tool of royal resistance (rather than constitutional balance) shifted it toward pure snare mechanics, but this story captures the 1791 constitutional reading, not the August 1792 insurrection. Suppression (0.48, rising to 0.62): Moderate. The veto mechanism requires active institutional suppression of alternative frameworks (direct democracy, full republic without monarchy, pure legislative dictatorship). The crown must suppress the counterfactual narrative that absolute monarchy is legitimate; the assembly must suppress the narrative that monarchy is irreducible. Both suppress the narrative that the constitution is internally contradictory. Rising suppression reflects increasing cognitive dissonance as war, the flight, and political crises expose the framework's fragility. Theater ratio (0.55, rising to 0.68): Moderate-high. Much of the veto's function is performative: it embodies the symbolic dignity of the crown without commanding real blocking power in most situations. The ceremony of royal assent, the public use of the veto, and the maintenance of royal ritual around the constitutional structure carry significant theater. The rising trajectory reflects the increasing gap between the formal power the crown retains and its actual political capacity to exercise that power — by late 1791, the veto had become largely ceremonial (used for political signaling rather than legislative blockage).",
+    "perspectival_gap": "The suspensive veto monarchy classification varies radically across perspectives. The legislative assembly sees rope (pure coordination) because the veto functions as a constitutional check. The crown sees tangled_rope (mixed coordination and extraction) because real power is retained but strategically constrained. Royal sovereignty doctrine sees snare (pure extraction) because the doctrine itself is being deconstitutionalized. The constitutional reformers see scaffold (temporary bridge) because they believe the framework will mature into stable limited monarchy. The ceremonial crown sees piton (performative ritual) because much of the veto's exercise becomes ornamental as real politics move into the streets (war, the flight, the insurrection). The natural law absolutist sees mountain (logical impossibility) because kingship cannot be coherently divided. The perspectival gap reflects structural reality: the crown's constitutional position is unstable, the legislature's supremacy is conditional, and the entire frame rests on suppressed contradictions that the first year of operation begins to expose. No single perspective is 'wrong' — they are all accurate descriptions of different structural dimensions of an inherently contradictory institution.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural relationship to the veto constraint: whether they benefit (d low), bear costs (d high), or both (d mid-range). Legislative assembly as beneficiary + organized/arbitrage exit → low d (0.18), producing negative effective extraction χ (the assembly experiences the constraint as beneficial coordination). Crown as powerful agent + constrained exit → mid-range d (0.55), producing positive but moderate χ (the crown retains real power but cannot easily exit the constitutional frame without triggering civil conflict). Royal sovereignty doctrine as powerless victim + trapped exit → high d (0.92), producing high χ (the doctrine is structurally extracted from by the constitutional reframing). The constitutional reformers' scaffold perspective uses organized/constrained/analytical time horizon, producing d ≈ 0.35 and moderate χ (they see the constraint as transitional coordination, not extraction). The natural law absolutist uses the analytical context's canonical d ≈ 0.73, producing high χ, but reclassifies to mountain through the emerges_naturally gate (the absolutist claims kingship is a law of nature, not a contingent political artifact). The engine's false summit detector will flag this as naturalization of a contingent doctrine.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION VIA KERNEL READING: This constraint resolves mandatrophy by explicit kernel context. The 1791 Constitution is the kernel; the suspensive veto monarchy is one of four incompatible readings. Each reading has its own ε and classification. Mandatrophy is not 'which classification is correct?' but 'what structural claim does this particular reading of the kernel instantiate?' The suspensive veto reading claims that monarchy can be preserved through constitutional demotion — retained as magistrate, subordinated to law, constrained by the legislature. This is internally coherent as a single reading. Its collapse (August 1792) reflects not logical inconsistency within the reading itself but the reading's failure to accommodate the other three readings simultaneously. The 1791 Constitution could not sustain absolute rights (declaration), limited monarchy (veto), qualified citizenship (active/passive), AND temporary reform (failure/succession) in a single institutional frame. Each reading pulled toward its own logic. The veto reading's mandatrophy is resolved by recognizing it as one kernel reading among siblings; its extractiveness (0.38) and classification (tangled_rope) are accurate for THIS reading, not the whole constitution.",
+    "kernel_context": "Kernel: french_constitution_1791. Reading instantiated: suspensive_veto_monarchy. Sibling readings: (1) active_passive_citizenship — the 1791 Constitution split the citizen into voting (active, tax-qualified) and non-voting (passive, rights-bearing) categories, universalizing rights while means-testing the franchise. (2) declaration_of_rights_1789 — the Constitution opens with and is prefixed by the Declaration of the Rights of Man and of the Citizen (August 1789), grounding its legitimacy in universal human rights. (3) failure_and_succession — the 1791 Constitution lasted under a year (June 1791–August 1792); war, the flight to Varennes, the radical insurrection, and the perceived danger of royalist restoration destroyed it. The suspensive veto reading focuses on the crown's reframing from sovereign source of law to hereditary executive magistrate with a 2-legislature delaying veto. The reading claims this represents a workable compromise between monarchy and popular sovereignty. The structural delta from absolute to suspensive veto reduces extraction from the crown's perspective (real power is retained but subordinated) while increasing extraction from the doctrine of absolute monarchy (sovereignty is divided, kingship is reformulated). This reading coexists_with the other three readings — all four are instantiated in the single Constitution — but the tension between them (universal rights vs qualified citizenship, temporary reform vs permanent constitution, executive veto vs legislative supremacy) created the internal contradictions that caused the Constitution's failure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "french_constitution_1791__active_passive_citizenship",
+      "french_constitution_1791__declaration_of_rights_1789",
+      "french_constitution_1791__failure_and_succession"
+    ],
+    "dual_formulation_note": "The 1791 Constitution kernel decomposes into four structurally distinct constraint readings. The suspensive_veto_monarchy reading instantiates the claim that monarchy can be preserved through constitutional subordination. The sibling readings instantiate incompatible claims about citizenship qualification, universal rights, and institutional permanence. Each reading has its own constraint story with its own ε, perspectives, beneficiaries, and victims. The network edges indicate that the veto reading influences the citizenship reading (if monarchy is demoted, who exercises supreme power? answer: the active citizens), is influenced by the rights reading (universal rights delegitimize absolute monarchy), and coexists with the failure reading (the constitution did not mature as the framers intended; instead, it collapsed under the weight of its internal contradictions). All four stories must be read together to understand the 1791 kernel."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "french_constitution_1791__active_passive_citizenship",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "french_constitution_1791__declaration_of_rights_1789",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "french_constitution_1791__failure_and_succession",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "monarchy_reformable_through_constitutionalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "veto_power_is_genuine_executive_constraint",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "constitutional_subordination_of_kingship",
+    "drift_state": {
+      "moment": "august_1792_insurrection",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

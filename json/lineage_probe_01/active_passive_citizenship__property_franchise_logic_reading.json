@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "active_passive_citizenship__property_franchise_logic_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_active_passive_citizenship__property_franchise_logic_reading",
+    "measurement_id_prefix": "apfc",
+    "story_uid": "811a6c1f-571a-4f00-a445-6a57a91743e3",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Active-Citizen Franchise: Property Threshold as Stake Doctrine",
+    "topic_domain": "legal/political_philosophy/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "propertied_deliberation_theory",
+      "property_owning_men"
+    ],
+    "victims": [
+      "wage_dependent_citizens",
+      "disenfranchised_poor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage-Dependent Citizen",
+      "comment": "PERSPECTIVE 1: WAGE-DEPENDENT CITIZEN (SNARE) — Trapped by the three-day labor tax threshold. Cannot exit the constraint; the stake doctrine priced participation at an economic barrier designed to exclude. No alternatives to the franchise; no exit from the suppression. Maximum extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Property-Owning Deliberative Class",
+      "comment": "PERSPECTIVE 2: PROPERTY-OWNING DELIBERATIVE CLASS (ROPE) — Benefits from the stake doctrine as coordination of 'independent judgment.' The reading itself legitimizes this perspective: propertied deliberation theory presents the constraint as solving the problem of ensuring that voters have enough at stake to deliberate seriously. This perspective experiences the constraint as pure coordination — the mechanism that secures deliberative quality."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Revolutionary Political Movement",
+      "comment": "PERSPECTIVE 3: REVOLUTIONARY POLITICAL MOVEMENT (SNARE) — Organized agents (Jacobins, sans-culottes, radical democrats) face suppression through legal exclusion, but also carry the memory of 1789's Declaration — 'all men are created equal.' This organized movement sees the property franchise as betrayal and extraction. The constraint suppresses alternative political organization and exits. High suppression, high extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the constraint appears as a natural law of political science: only those with sufficient economic independence can deliberate freely; dependence on wages corrupts judgment. This perspective risks naturalizing the property threshold as an immutable requirement of democratic deliberation. However, the structural data contradicts the mountain classification — the engine will compute this as a false summit, revealing that the 'independence = property' equation is a theoretical construct, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "independence_property_equivalence",
+      "question": "Does economic independence actually require property ownership? Or does wage stability enable independent judgment equally well?",
+      "resolution_mechanism": "Historical analysis of voting behavior by property status and wage stability; comparative analysis of deliberative quality in democratic systems with different franchise rules; contemporary evidence from universal suffrage democracies",
+      "impact": "If property is necessary: snare classification confirmed — stake doctrine unavoidably excludes dependent voters. If wage stability suffices: snare classification confirmed but the underlying theory is false — the constraint extracts by enforcing a false doctrine, not by enforcing a necessary condition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether property ownership is necessary for independent judgment"
+    },
+    {
+      "id": "deliberative_quality_correlation",
+      "question": "Is deliberative quality actually higher in property-restricted franchises than in universal-suffrage systems?",
+      "resolution_mechanism": "Comparative historical analysis of legislative deliberation quality (debate transcripts, amendment specificity, evidence-responsiveness) across restricted vs. universal franchise periods; qualitative assessment of policy outcomes",
+      "impact": "If higher: stake doctrine has empirical warrant; the theory is not false, though still extractive. If equal or lower: stake doctrine is revealed as extractive theory masquerading as necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether property-restricted franchises produce higher-quality deliberation"
+    },
+    {
+      "id": "tax_threshold_arbitrariness",
+      "question": "Is the three-day labor threshold a discovered necessity or an arbitrary enforcement boundary that could have been set differently?",
+      "resolution_mechanism": "Historical investigation of the legislative debates that set the threshold; analysis of alternative thresholds proposed and rejected; comparison to property franchises in other constitutional contexts",
+      "impact": "If arbitrary: snare classification confirmed; the threshold is pure suppression mechanism, not derived from any inherent requirement. If necessary: still extractive, but the extraction is structural to deliberative democracy rather than purely political.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the tax threshold is necessary or arbitrary"
+    },
+    {
+      "id": "kernel_contest_reading_disambiguation",
+      "question": "Is this reading the stake doctrine as a genuine theory of deliberative independence, or the stake doctrine as a naked suppression mechanism masquerading as theory?",
+      "resolution_mechanism": "The frame itself contains the ambiguity. Rule 1 requires generating this reading cleanly (the stake doctrine as theory). Rule 2 routes the ambiguity to omega variables. The question is whether the actors holding this reading believed the theory or deployed it as cover for extraction.",
+      "impact": "If believed (doctrinal commitment): the reading is a genuine commitment-system axiom, overrideable only by empirical refutation of the independence hypothesis. If deployed as cover (extractive use): the reading is a snare that uses doctrinal language to suppress alternatives. The classification (snare) holds either way; the omega disambiguates the mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether stake doctrine is sincerely held theory or extractive cover story"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "apfc_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58,
+      "id_override": "apfc_extractiveness_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62,
+      "id_override": "apfc_extractiveness_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "apfc_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.72,
+      "id_override": "apfc_suppression_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.75,
+      "id_override": "apfc_suppression_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The French Revolution's active-citizen franchise embodied a doctrine: only the economically independent can vote independently. The property threshold — measured as a tax equivalent to three days' labor — was presented not as suppression but as the objective boundary between citizens capable of free deliberation and those whose economic dependence corrupted their judgment. This constraint is one reading of a contested kernel: the same revolutionary moment that declared 'all men are created equal' also split citizens into two categories, one with full rights and one with passive rights only. The property franchise logic reading instantiates the doctrine as stated — economic independence as the prerequisite for deliberative independence — and exhibits it as a snare: a constraint that suppresses alternative voices through doctrine, not only through force, making the suppression appear rational and inevitable rather than extractive.",
+    "key_agents": [
+      "Property-Owning Deliberative Class: Primary beneficiary (institutional/arbitrage) — benefits from exclusive voting power; the doctrine legitimizes their monopoly on deliberation",
+      "Wage-Dependent Citizens: Primary victim (powerless/trapped) — cannot meet the three-day labor tax threshold; completely excluded from the franchise",
+      "Revolutionary Political Movement: Secondary organized victim (organized/constrained) — remembers the Declaration's universalist claim; mobilizes against the property restriction through political organizing",
+      "Doctrinal Authority Structure: Institutional actor enforcing the stake doctrine — legislative bodies, jurists, constitutional interpreters maintaining the reading",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the stake doctrine as an immutable requirement of democratic theory"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts through legal doctrine: it prices participation at three days' labor, a barrier designed to exclude wage-dependent citizens. The extraction is real (participation is denied) and structural (the barrier compounds over time as suppression mechanisms harden). The measurement trajectory shows increasing extractiveness from 0.45 to 0.62 as the doctrine solidifies and enforcement mechanisms mature. Suppression (0.72): High. The constraint suppresses alternatives through multiple mechanisms: (1) legal doctrine that naturalizes the property threshold as rational necessity, (2) lack of viable exit (wage-dependent citizens cannot become property owners rapidly enough to vote before the next election cycle), (3) legal prohibition of the franchise itself (not just expensive, but forbidden), and (4) no alternative participation mechanisms. Theater ratio (0.45): Moderate. The constraint's mechanism is primarily functional suppression (legal exclusion) rather than performative ritual. The doctrine provides a rational cover story ('deliberative independence requires property independence'), but the mechanism is direct exclusion, not theater. This distinguishes it from a constraint that maintains an extractive ritual for show.",
+    "perspectival_gap": "The property-owning deliberative class experiences the stake doctrine as pure coordination (Rope) — the mechanism that ensures deliberative quality by restricting the franchise to those with sufficient stake in outcomes. The wage-dependent citizen experiences it as pure extraction (Snare) — a legal mechanism that prices participation at an impossible threshold. The revolutionary political movement sees it as betrayal and extraction (Snare) — they held the memory of 1789's universalist Declaration and perceive the property threshold as suppression. The analytical observer at the civilizational level risks seeing it as a natural law (Mountain) — 'only the independent can deliberate freely' appears as an immutable principle of political science — but the structural data reveals it as a false summit: the 'independence = property' equation is a contingent doctrinal choice, not a discovered law. The perspectival gap exposes the reading's core mechanism: using doctrinal language ('deliberative independence') to legitimize extraction ('exclude the poor').",
+    "directionality_logic": "The directionality computation runs from beneficiary/victim status through exit options. The property-owning class benefits (low d) and faces high exit options (arbitrage — they can always withdraw to their estates). The wage-dependent class is victimized (high d) and faces trapped exit (legal prohibition). The doctrine itself is the beneficiary ('propertied deliberation theory') — the reading instantiates the doctrine as a structural agent. The suppression increases over time as enforcement mechanisms harden and the doctrine becomes increasingly reified as 'natural law.' The analytical observer at the civilizational level computes d as observer-position (d ≈ 0.72, moderate victim position because the analysis sees the arbitrary exclusion).",
+    "kernel_context": "This constraint instantiates the PROPERTY FRANCHISE LOGIC READING of the contested kernel active_passive_citizenship. The kernel is the 1791-1792 Constitutional split of citizens into 'active' (those who pay the tax threshold) and 'passive' (those who do not). Three competing readings exist: (1) the EXCLUSION_OF_THE_POOR_READING sees the split as betrayal of the Declaration's universalism — the Revolution measured its own limits by creating two classes. (2) THIS READING (property_franchise_logic_reading) sees the split as rational doctrine — economic independence enables deliberative independence, and the tax threshold measures the stake required for free judgment. (3) The WOMEN_EXCLUDED_READING observes that both categories excluded women entirely — the property franchise applied only to men, and de Gouges's 1791 Rights of Woman was the explicit challenge to this combined gender + class suppression. The three readings coexist as competing framings of the same constitutional moment. No single reading forecloses the others; rather, they represent different positions in an ongoing dispute about what the Revolution's foundational commitment was and what it betrayed."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "exclusion_of_the_poor__active_passive_citizenship",
+      "women_excluded__active_passive_citizenship"
+    ],
+    "dual_formulation_note": "The active_passive_citizenship kernel decomposes into three constraint stories, each with different ε values reflecting their structural-analytical distinctness. The property_franchise_logic_reading (this file) has ε=0.58 (snare). The exclusion_of_the_poor_reading has ε=0.72 (higher extraction, emphases the betrayal of universalism). The women_excluded_reading has ε=0.65 (the combined class+gender suppression). All three are linked via network.affects_constraints because they contest the same constitutional kernel and produce different victim sets and beneficiary configurations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "exclusion_of_the_poor__active_passive_citizenship",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "women_excluded__active_passive_citizenship",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_independence_enables_deliberative_independence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "property_threshold_measures_stake_requirement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "propertied_deliberation_framework",
+    "drift_state": {
+      "moment": "universal_suffrage_era",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  }
+}

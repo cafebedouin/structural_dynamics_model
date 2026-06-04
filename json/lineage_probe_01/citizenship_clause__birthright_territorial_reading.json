@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "citizenship_clause__birthright_territorial_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_citizenship_clause__birthright_territorial_reading",
+    "story_uid": "f28a9434-0d19-47c6-b049-e2ef3de646fe"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Birthright Citizenship: Territorial Reading of the Citizenship Clause",
+    "topic_domain": "legal/constitutional/immigration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "children_of_all_residents",
+      "undocumented_immigrant_families"
+    ],
+    "victims": [
+      "consent_based_membership_theory",
+      "hereditary_status_gatekeeping"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Undocumented Child Born on Territory",
+      "comment": "PERSPECTIVE 1: UNDOCUMENTED CHILD (ROPE) — Experiences the constraint as pure coordination: territorial birth automatically grants citizenship status, eliminating the need for parental consent-negotiation or status-dependent gatekeeping. No extraction — the constraint solves the child's membership problem directly. The child cannot exit the territory during gestation or immediately after birth; the territorial rule's coordination function is to resolve that impossibility by granting membership regardless of parental legal status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Undocumented Parent Seeking Family Stability",
+      "comment": "PERSPECTIVE 2: UNDOCUMENTED PARENT (TANGLED ROPE) — Faces constrained exit (deportation risk, legal vulnerability). The constraint provides coordination benefit (child citizenship stabilizes family membership) but also enforces extraction: the parent remains deportable while the child is not, creating asymmetric legal status within the family unit. The parent cannot fully exit the constraint without abandoning the child's citizenship anchor. Genuine coordination (family cohesion) coupled with asymmetric extraction (parental vulnerability)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Principle of Inherited Outsider Status",
+      "comment": "PERSPECTIVE 3: INHERITED OUTSIDER STATUS (SNARE) — The territorial reading's core victim is the principle that membership can be hereditary — that children can inherit their parents' legal outsider status across generations. This principle has no agent to advocate for it but exists as a structural alternative. The territorial rule suppresses it entirely: no child born here inherits outsider status, period. Maximum suppression of the alternative framework."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Nation-State as Membership-Granting Authority",
+      "comment": "PERSPECTIVE 4: NATION-STATE AUTHORITY (TANGLED ROPE) — The state benefits from territorial birthright (automatic mass naturalization, reduced administrative burden of parentage-investigation, predictable citizen recruitment). But the constraint also enforces extraction: the state loses discretionary gatekeeping power — it cannot condition citizenship on parental loyalty, wealth, or cultural assimilation. The rule coordinates membership recognition with administrative simplicity while extracting the state's power to make membership conditional."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative Readings (Allegiance and Settlement)",
+      "comment": "PERSPECTIVE 5: SIBLING READINGS / ALLEGIANCE FRAMEWORK (SNARE) — The allegiance-qualified reading and wong_kim_ark_settlement_reading both represent frameworks where membership can be conditioned. From the territorial reading's perspective, these alternatives are trapped subjects: they lack the exit option of purely territorial determination. Their frameworks face complete suppression in this reading's jurisprudence (Wong Kim Ark is read as confirming territorialism, not qualifying it). They experience the territorial rule as a snare that has foreclosed their core premise."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Framing)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW FRAMING (MOUNTAIN) — From a civilizational/universal perspective, territorial birth is presented as self-evident: 'the rule entire,' simple application of geography. This perspective risks mountain classification — naturalizing the territorial reading as inherent to citizenship itself rather than as one specific normative choice among competing readings. However, the kernel contest reveals this as a false summit: the alternative readings (allegiance, settlement-based) are live jurisprudential positions that contradict the 'inherent and obvious' framing. The engine's false summit detector identifies naturalization of a contested doctrine."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "territorial_rule_vs_consent_boundary",
+      "question": "Does 'subject to the jurisdiction' exclude children whose parents have never consented to membership, or does it exclude only those with active allegiance elsewhere (diplomats, invaders)?",
+      "resolution_mechanism": "Historical legislative intent analysis, case law evolution post-Wong Kim Ark, international comparative law examining which states accept territorial birthright and which condition it on parental status",
+      "impact": "If 'subject to jurisdiction' means geographic jurisdiction alone: territorial reading holds, extractiveness ≈ 0.35 (coordination with gatekeeping loss). If it means allegiance or consent: allegiance_qualified_reading holds, extractiveness ≈ 0.60 (extraction of membership status by condition-setting).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of 'subject to the jurisdiction' clause: geography vs. allegiance/consent"
+    },
+    {
+      "id": "wong_kim_ark_settlement_stability",
+      "question": "Did Wong Kim Ark (1898) settle the territorial reading as binding precedent, or did it merely record one moment in ongoing doctrinal contest?",
+      "resolution_mechanism": "Post-1898 jurisprudence: frequency of courts reaffirming territorial birthright without qualification; presence of ongoing allegiance-based challenges; legislative attempts to narrow birthright eligibility; degree of reliance invested in Wong's settlement",
+      "impact": "If settled: wong_kim_ark_settlement_reading holds independently, and the territorial reading is justified by accumulated reliance rather than by its own doctrinal logic. If unsettled: the contest remains live, and the territorial reading stands or falls on its own normative grounds, not on precedent inertia.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Wong Kim Ark closed the doctrinal dispute or merely captured one moment"
+    },
+    {
+      "id": "undocumented_child_membership_extraction",
+      "question": "Is the territorial rule extracting undocumented parents' vulnerability (family separation risk) in exchange for child citizenship, or is it pure coordination with no extraction?",
+      "resolution_mechanism": "Empirical analysis of enforcement patterns: are undocumented parents with citizen children deported at different rates than those without citizen children? Do citizen children serve as migration anchors or do they provide no deportation protection? Are family separation policies applied uniformly or do they track parental status despite child citizenship?",
+      "impact": "If extraction: the tangled_rope classification (genuine coordination benefit coupled with vulnerability exploitation) holds; suppressiveness ≈ 0.62. If pure coordination: the constraint is closer to rope; extractiveness ≈ 0.15; suppressiveness reflects only the legal barriers to undocumented status, not the rule itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether territorial birthright extracts from undocumented parents despite coordinating for children"
+    },
+    {
+      "id": "kernel_reading_foreclosure_status",
+      "question": "Does the territorial reading logically foreclose the allegiance-qualified reading, or do they represent genuinely coexisting but incompatible jurisprudential positions?",
+      "resolution_mechanism": "Philosophical analysis of each reading's foundational premise. If the territorial reading's axiom 'birth on territory grants membership' strictly contradicts the allegiance reading's axiom 'membership requires allegiance or consent,' then foreclosure holds (no single authority framework can hold both). If both readings can coexist as different parties' doctrinal commitments, then coexistence holds.",
+      "impact": "If foreclosure: this reading has eliminated the alternative as logically impossible within constitutional framework. If coexistence: both remain live options in ongoing jurisprudential contest, and the engine computes winner via institutional power rather than logical derivation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical status of the relationship between territorial and allegiance readings"
+    },
+    {
+      "id": "theater_ratio_interpretation",
+      "question": "Is the territorial reading's low theater ratio (0.48) evidence that doctrinal clarity matches actual practice, or evidence that performative simplicity ('born here = citizen') masks complex gatekeeping enforcement?",
+      "resolution_mechanism": "Analysis of gap between rule-as-stated and rule-as-enforced: Do citizenship determinations based on territorial birth encounter significant investigative or documentary barriers? Are there de facto conditions (proof of birth location, parental relationship to establish jurisdiction) that complicate the simple rule? Are there enforcement exceptions in practice?",
+      "impact": "If clarity matches practice: theater_ratio ≈ 0.48 (low performative overhead) is accurate. If complexity is masked: actual theater_ratio is higher (≈ 0.65–0.75); the rule is more piton-like (performative simplicity masking complex enforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gap between rule-as-stated and rule-as-enforced in birthright citizenship determinations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The 14th Amendment's Citizenship Clause ('All persons born or naturalized in the United States, and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside') is a contested kernel with at least three distinct doctrinal readings. This constraint instantiates the TERRITORIAL READING: birth on the territory is the constitutive fact of membership; 'subject to the jurisdiction' excludes only diplomats and invading armies, and everyone else born here is born a citizen. This reading suppresses the alternative that children can inherit their parents' outsider status (hereditary non-membership), coordinates automatic membership recognition regardless of parental legal status (benefiting children of undocumented immigrants), and extracts from the nation-state's discretionary gatekeeping power (the state cannot condition citizenship on parental loyalty or consent). The constraint exhibits genuine coordination (automatic mass membership determination) coupled with asymmetric power loss (the state loses gatekeeping discretion) — classic tangled rope structure. The suppression_requirement has increased over time as undocumented immigration numbers have grown, raising the stakes of the territorial rule's foreclosure of hereditary outsider status. The theater_ratio is moderate (0.48): the rule-as-stated is clear and simple ('birth on territory = citizenship'), but enforcement complexity around establishing jurisdiction and birth location introduces some performative overhead.",
+    "key_agents": [
+      "Children of undocumented immigrants: Primary beneficiaries (powerless/trapped) — receive automatic citizenship status that their parents cannot provide; coordination benefit is maximal because no alternative mechanism exists for these children",
+      "Undocumented immigrant parents: Secondary beneficiaries but also victims (moderate/constrained) — benefit from child citizenship anchor but face vulnerability-extraction through family separation risk and legal status asymmetry",
+      "The nation-state authority: Powerful institutional actor (institutional/constrained) — benefits from administrative simplicity and automatic population incorporation, loses discretionary gatekeeping power and cannot condition membership on assimilation or allegiance",
+      "Alternative hereditary membership frameworks: Suppressed subject (powerful/mobile) — the principle that membership can be inherited or that outsider status can persist across generations is completely foreclosed by the territorial reading",
+      "Allegiance-qualified reading proponents: Competing doctrinal position (institutional/constrained) — their framework requires allegiance or consent and loses foreclosure battle when territorial rule is applied",
+      "Wong Kim Ark settlement proponents: Competing doctrinal position (institutional/constrained) — their framework emphasizes accumulated reliance on 1898 precedent rather than territorial reading's own logical grounds",
+      "Analytical observer: Civilizational perspective (analytical/analytical) — risks treating contested doctrinal choice as self-evident natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The territorial reading provides genuine coordination benefit (automatic citizenship for all children born here, eliminating gatekeeping burden), but it also extracts discretionary power from the state and from consent-based membership theory. The state loses the ability to condition membership on assimilation, loyalty, or parental consent — significant loss of authority. However, the extraction is not severe (not snare-level) because the alternative (hereditary outsider status, parental-condition gatekeeping) would itself impose significant costs on the state and on the children excluded. The extractiveness is weighted by the fact that automatic territorial membership solves a genuine coordination problem (how do you determine citizenship for infants who cannot consent and whose parents may have complex legal status). The measurement trajectory (0.25 → 0.35) reflects increasing extractiveness as undocumented immigration numbers have grown, raising the stakes of the gatekeeping power loss and the state's pressure to narrow the rule via alternative interpretations. Suppression (0.62): Moderate-high. The territorial reading achieves this suppression through complete foreclosure: the alternative principle (hereditary outsider status, allegiance-conditioned membership) is not merely disfavored but logically ruled out under this reading. Suppression also includes legal barriers to challenging the rule (constitutional amendment difficulty, stare decisis weight of Wong Kim Ark precedent). Undocumented parents face suppression of their own exit options (deportation risk despite child citizenship). The measurement trajectory (0.45 → 0.62) reflects increasing suppression as immigration enforcement has intensified and as the rule's potential scope (how many children it grants citizenship to) has become more visible and more contested. Theater ratio (0.48): Moderate-low. The rule-as-stated is explicit and clear ('born in the United States and subject to the jurisdiction thereof'). However, enforcement of jurisdiction determination and proof of birth location introduces some performative complexity; the rule is not as simple as bare territoriality but requires establishing U.S. jurisdiction and documented birth.",
+    "perspectival_gap": "This constraint exhibits the full indexical range from a single base properties set. The undocumented child sees pure coordination (rope) — no extraction because the rule solves their membership by geography alone. The undocumented parent sees tangled rope — genuine coordination benefit (child membership anchor) with extracted vulnerability (family separation risk, legal status asymmetry). The principle of hereditary outsider status sees snare — complete suppression by foreclosure. The nation-state sees tangled rope — administrative benefit and automatic population incorporation extracted alongside loss of gatekeeping discretion. The sibling readings see snare — their frameworks are foreclosed and suppressed by the territorial reading's dominance. The analytical observer risks mountain classification — treating the territorial rule as self-evident ('the rule entire') rather than as a specific normative choice. The kernel contest reveals that all three readings (territorial, allegiance-qualified, settlement-based) remain live doctrinal positions despite the territorial reading's institutional dominance in contemporary U.S. law.",
+    "directionality_logic": "Directionality for each perspective is computed from the agent's power level, exit options, and structural relationship to the rule. Children of undocumented immigrants are powerless/trapped with no exit option during fetal development and early infancy; they derive maximum benefit from the rule (d ≈ 0.05, nearly full beneficiary, negative or zero extracted value). Undocumented parents are moderate/constrained (high exit cost due to deportation risk); they derive mixed benefit (child citizenship) and mixed harm (family separation risk); d ≈ 0.50–0.60 (partial victim, partial beneficiary). The nation-state is institutional/constrained (high cost to abandon the rule due to precedent and population expectations); it derives benefit (administrative simplicity) and harm (lost gatekeeping); d ≈ 0.45–0.55 (rough balance). The sibling readings are powerful/mobile institutional actors, but relative to the territorial reading's institutional dominance, they are trapped (their framework is foreclosed); d ≈ 0.80–0.90 (nearly full victims).",
+    "kernel_context": "This constraint instantiates the BIRTHRIGHT TERRITORIAL READING of the citizenship_clause kernel. The kernel is the 14th Amendment's phrase 'subject to the jurisdiction thereof' — a fixed text that three distinct doctrinal readings interpret differently. This reading holds that 'subject to the jurisdiction' means geographic jurisdiction, and thus excludes only diplomats and invading armies; all other children born on the territory are citizens by territorial fact alone. The sibling readings are: (1) allegiance_qualified_reading — 'subject to the jurisdiction' means allegiance or subordination; children of those owing allegiance elsewhere (including undocumented immigrants) fall outside the grant; membership is consent-based or allegiance-based, not territorial. (2) wong_kim_ark_settlement_reading — Wong Kim Ark (1898) settled the territorial interpretation as binding constitutional precedent, and a century of reliance has built on that settlement; the reading emphasizes accumulated weight of institutional practice rather than the doctrinal logic of the territorial rule itself. The territorial reading forecloses the allegiance-qualified reading (its core premise directly contradicts the territorial reading's premise) and influences the settlement reading (it explains why Wong Kim Ark should be read as a settlement rather than as an open question). The engine computes these relationships through the reading_relations array in cs_structure.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through kernel decomposition: the citizenship clause is not a single constraint but a kernel with three readings, each instantiating a different constraint with different ε, beneficiary/victim sets, and classification types. The territorial reading (ε ≈ 0.35, tangled rope) coordinates automatic membership while extracting gatekeeping discretion. The allegiance-qualified reading would have different ε (≈ 0.55–0.65, snare for undocumented children) and different victims (children of foreign-loyal parents). The settlement reading would focus on institutional reliance and precedent weight rather than doctrinal logic. The mandatrophy is resolved by recognizing that the apparent contradiction (is the clause naturalized law or contested doctrine?) stems from conflating multiple structurally distinct readings. No single type is 'correct' — the presheaf of readings over the kernel IS the answer."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "citizenship_clause__allegiance_qualified_reading",
+      "citizenship_clause__wong_kim_ark_settlement_reading",
+      "undocumented_immigration_family_separation"
+    ],
+    "dual_formulation_note": "The citizenship clause kernel has three structurally distinct readings with different extractiveness values and victim sets. The territorial reading (this file) has ε ≈ 0.35 and forecloses hereditary membership and allegiance-conditioning. The allegiance reading has ε ≈ 0.60 and suppresses territorial birth as a sufficient condition. The settlement reading has ε ≈ 0.25–0.35 and emphasizes reliance rather than logical foundations. All three are live doctrinal positions; the territorial reading's institutional dominance does not eliminate the alternatives as logical or normative possibilities."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "citizenship_clause__allegiance_qualified_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "citizenship_clause__wong_kim_ark_settlement_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "territorial_birth_sufficient_for_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "hereditary_outsider_status_foreclosed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "territorial_membership_by_birth",
+    "drift_state": {
+      "moment": "contemporary_undocumented_immigration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

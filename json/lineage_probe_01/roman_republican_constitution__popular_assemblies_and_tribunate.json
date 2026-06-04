@@ -1,0 +1,283 @@
+{
+  "header": {
+    "constraint_id": "roman_republican_constitution__popular_assemblies_and_tribunate",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_roman_republican_constitution__popular_assemblies_and_tribunate",
+    "measurement_id_prefix": "romrep_pop",
+    "story_uid": "9b3bd935-a88b-4cf9-a9ee-a51d6aa58060"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Roman Republic: Popular Assemblies and Tribunate",
+    "topic_domain": "political/historical/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "plebeian_assembly",
+      "tribunes_of_plebs"
+    ],
+    "victims": [
+      "patrician_magistracies"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Plebeian Tenant-Farmer",
+      "comment": "PERSPECTIVE 1: PLEBEIAN TENANT-FARMER (SNARE) — Bound to aristocratic patrons by debt bondage and clientage. Assembly participation is theoretically available but structurally constrained by economic dependency on patrician landlords. Exit is material impossibility. The plebeian experiences maximum suppression despite formal rights — cannot exercise assembly vote without incurring patron's displeasure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Urban Plebeian Craftsman",
+      "comment": "PERSPECTIVE 2: URBAN PLEBEIAN CRAFTSMAN (TANGLED ROPE) — Constrained but mobile within the city. Benefits from assembly and tribunate protections against arbitrary magisterial seizure of goods or forced military levies. Bears costs of mandatory assembly attendance and corvée labor obligations. Mixed experience: genuine coordination mechanism (assembly law-passing) paired with extraction (state requisitions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tribunal of Plebs (Tribune Authority)",
+      "comment": "PERSPECTIVE 3: TRIBUNAL OF PLEBS (ROPE) — Primary institutional beneficiary. The tribunate extracts legitimacy and power from plebeian support while providing genuine coordination: the intercession veto mediates between plebeian grievances and magisterial authority. The tribunes experience the constraint as enabling their own role. They enjoy mobility and can leverage their position for political capital. Net beneficiary with genuine coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reforming Coalition (Licinio-Sextian Moment)",
+      "comment": "PERSPECTIVE 4: REFORMING COALITION (SCAFFOLD) — Organized plebeian movement (c. 367 BCE) targeting specific structural barriers: patrician monopoly on consulship, unjust debt laws, expansion of assembly domains. The coalition perceives the constraint as temporary — solvable through legal reform (opening magistracies, recalibrating assembly votes). Theater is moderate because the coalition's demands are concrete and measurable. Sunset logic applies: as specific reforms pass, the motivation for continued organized pressure declines (unless new barriers emerge)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Patrician Magistrate",
+      "comment": "PERSPECTIVE 5: PATRICIAN MAGISTRATE (TANGLED ROPE) — Benefits from collegial sharing of the imperium (each magister can veto peers, limiting any one person's power). Constrained by annual office term limits and by the tribunes' veto power. Experiences genuine coordination function (colleague check-and-balance) paired with extraction-feeling constraint (veto strip on personal authority). The plebeian assembly's ratification requirement checks magisterial power but also legitimates it — coordination mechanism with asymmetric burden-sharing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mythic Popular Sovereignty (Analytical Retrospect)",
+      "comment": "PERSPECTIVE 6: MYTHIC POPULAR SOVEREIGNTY (PITON) — The idealized narrative of 'the people rule' persists in Roman historical memory long after the actual mechanism becomes degraded. By the Late Republic (1st century BCE), assemblies are manipulated through violence and bribery, tribunes are instruments of elite factions rather than plebeian shields, and the formal popular apparatus is theatrical. The institutional reality has drifted far from the founding claim, yet the myth of popular sovereignty is maintained through ritual invocation. Theater ratio is high because the assembly meets but is not functionally decisive — performances of 'the people' deciding precede outcomes determined by elite negotiation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Cyclical Corruption)",
+      "comment": "PERSPECTIVE 7: NATURAL LAW VIEW (CYCLICAL CORRUPTION) — From a civilizational lens, some theorists (Roman and modern) see the degradation of the Republic as inevitable — a natural law of polities. The observation: all republics tend toward oligarchy; checks on power erode under elite pressure; formal constraints become theatrical. The constraint appears as an immutable structural tendency of human political organization. However, this perspective naturalizes what is actually a contingent historical choice by elite actors to subvert the constraint. The engine's false summit detector identifies this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "plebeian_assembly_real_decisiveness",
+      "question": "Did the plebeian assembly make substantively independent legislative decisions, or did it ratify outcomes negotiated by elite factions (Senate and magistrates)?",
+      "resolution_mechanism": "Comparative analysis of recorded votes: correlation between assembly outcomes and prior magisterial/senatorial preferences; reconstruction of evidence from law texts and historical narratives showing whether assemblies changed the form of proposed laws or merely approved them",
+      "impact": "If truly independent: constraint is genuine Tangled Rope (mixed coordination and extraction). If consistently ratifying elite preferences: constraint is Piton or Snare (theater masking extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether assemblies made independent legislative decisions or ratified elite-negotiated outcomes"
+    },
+    {
+      "id": "tribunate_independence_from_plebeian_base",
+      "question": "Were tribunes representatives who needed to maintain plebeian support, or did they become elite factional instruments manipulating plebeian voters?",
+      "resolution_mechanism": "Historical analysis of tribune behavior: voting records, alliance patterns across generations; evidence of bribing or coercing tribune electoral support; correlation between tribune actions and explicit plebeian petitions vs elite factional interest",
+      "impact": "If tribunes were accountable to plebs: constraint is genuine Tangled Rope with real beneficiary protection. If tribunes became elite tools: constraint shifts toward Piton or Snare (formal protections corrupted into theater).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tribunes remained accountable to plebeian base or became elite factional instruments"
+    },
+    {
+      "id": "extraction_flow_direction_debt_bondage",
+      "question": "Was debt-bondage (nexum) of plebeians a consequence of patrician extraction through the constraint, or was it a pre-constitutional economic condition the assembly and tribunate addressed?",
+      "resolution_mechanism": "Chronological reconstruction of when debt-bondage became severe vs when assembly/tribunate protections were established; analysis of whether plebeian debt increased or decreased following tribunate reforms (Lex Poetelia on debt slavery, debt relief measures); identification of whether patrician creditors used debt as a mechanism of political control",
+      "impact": "If debt-bondage was extraction consequence: victim set expands, suppression increases, constraint becomes more snare-like. If pre-constitutional and addressed: constraint is genuine protective mechanism (more rope-like).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether debt-bondage was a consequence of patrician extraction or a pre-constitutional condition the assembly addressed"
+    },
+    {
+      "id": "contested_kernel_committer_frame",
+      "question": "Which reading of the Roman Republican constitution captures the true structural mechanism: popular assemblies, magistracies and collegiality, senate authority, the twelve tables, or crisis machinery?",
+      "resolution_mechanism": "This is a committer-axis ambiguity, not resolvable empirically. Different historical interpretations emphasize different constitutional elements as primary. Modern historians privilege different readings (Brunt emphasizes popular sovereignty; Scullard emphasizes senatorial authority; Lintott emphasizes magistracies). No single reading is 'correct' — each captures a real structural element. Resolution mechanism is interpretive framework choice, not empirical discovery.",
+      "impact": "Selection of reading determines which constraint story is authored. This story instantiates the 'popular assemblies and tribunate' reading. Sibling readings instantiate different constraint stories with different ε values and different beneficiary/victim sets.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which constitutional element is primary: assemblies, magistracies, senate, tables, or crisis machinery?"
+    },
+    {
+      "id": "tribunate_veto_effectiveness_scope",
+      "question": "Was the tribunes' veto power (intercession) effective across all categories of action, or were there domains (military command, religious authority, emergency measures) where the veto could be circumvented or nullified?",
+      "resolution_mechanism": "Textual and historical evidence: whether tribunes could veto military levies, emergency dictatorships, religious decisions; documented instances of magistrates acting despite tribunician veto or refusal to act; scope of tribunician jurisdiction in law vs practice",
+      "impact": "If veto is comprehensive: tribunes have real power, constraint is protective Tangled Rope. If veto scope is limited: tribunes have symbolic power in restricted domains, constraint becomes Piton (performative in excluded domains).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tribunician veto was effective across all action domains or limited to specific jurisdictions"
+    },
+    {
+      "id": "assembly_voting_structure_patron_influence",
+      "question": "Did the assembly's voting structure (voting by tribe, voting by centuriate rank, voting by individual) systematically advantage or disadvantage plebeian majorities relative to patrician preferences?",
+      "resolution_mechanism": "Quantitative reconstruction of voting distribution: by tribe (geographic), by centuriate rank (property-based), by individual count; modeling how different voting rules would have changed outcomes on contested laws; historical evidence of deliberate voting structure changes responding to assembly outcomes",
+      "impact": "If structure favored patrician minorities: assembly is theater/extraction mechanism (Snare/Piton despite formal democracy). If structure allowed true majorities: assembly is functional coordination (Rope/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether assembly voting structure systematically advantaged patrician minorities or enabled plebeian majorities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "rom_extract_early_republic"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.38,
+      "id_override": "rom_extract_middle_republic"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.52,
+      "id_override": "rom_extract_late_republic"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "rom_suppress_early_republic"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.42,
+      "id_override": "rom_suppress_middle_republic"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.65,
+      "id_override": "rom_suppress_late_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "rom_theater_early_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.55,
+      "id_override": "rom_theater_middle_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.78,
+      "id_override": "rom_theater_late_republic"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of the contested Roman Republican constitution: the 'popular assemblies and tribunate' interpretation. The reading claims that the Republic's distinctive structural feature was the empowerment of plebeian assemblies (comitia) as law-passing bodies and the creation of the sacrosanct tribunate as an intercession veto protecting plebeians from magisterial overreach. This reading emphasizes sovereignty as vested in popular assemblies and protection as vested in the tribunes' power to say 'no' on behalf of the plebs. The constraint's extractiveness (0.38) reflects a middle-ground assessment: genuine coordination mechanisms (assembly law-passing, tribunician veto) exist alongside asymmetric extraction (plebeians bear mandatory military service and corvée labor; patrician creditors extract through debt-bondage). The suppression (0.42) captures the structural barriers to plebeian participation: economic dependency on patrician patrons, illiteracy, geographic distance, time opportunity-costs. The theater ratio (0.55) reflects that while the assembly and tribunate are functional institutions in the Early and Middle Republic, they degrade over time into performances of popular sovereignty that mask elite-negotiated outcomes. The measurement trajectory shows extractiveness rising from 0.28 to 0.52 and theater rising from 0.30 to 0.78 as the Republic ages — the constraint's suppression of magisterial overreach weakens as elite factions learn to manipulate the formal mechanism.",
+    "key_agents": [
+      "Plebeian Assembly (comitia): Primary claimed beneficiary (institutional/arbitrage) — vested with law-passing authority and magistrate election power; receives legitimacy from popular participation",
+      "Tribunes of the Plebs: Secondary beneficiary (institutional/arbitrage) — vested with intercession veto power; derive authority and career advancement from plebeian support",
+      "Plebeian Tenant-Farmers: Primary victim (powerless/trapped) — formal assembly rights obscured by economic dependency on patrician landlords; cannot exit patronage bonds",
+      "Urban Plebeian Craftsmen: Secondary victim (moderate/constrained) — bear mandatory military service and state requisitions; constrained but mobile within the city",
+      "Patrician Magistrates: Restrained beneficiary (powerful/constrained) — benefit from magisterial office but constrained by colleague veto and popular ratification requirements",
+      "Patrician Creditors: Unacknowledged beneficiary (powerful/arbitrage) — extract through debt-bondage (nexum) mechanism, partially insulated from assembly/tribunate constraints",
+      "Senate: Competing institutional actor (institutional/arbitrage) — authority is advisory (auctoritas) rather than legal, but exercises substantial influence over magistrates and finance"
+    ],
+    "logic_rationale": "EXTRACTIVENESS (0.38): The base extractiveness reflects that genuine coordination mechanisms coexist with real extraction. The assembly passing laws is a coordination function: it establishes rules that bind all parties, including the elite. But the assembly's outcomes are constrained by patrician demographic advantage (rural voters must travel), property qualifications on some voting, and elite domination of rhetoric and persuasion. The extraction is not maximal because plebeians do have agency — they can elect tribunes who veto, they can vote on laws, they can organize faction pressure. But their agency is structurally constrained by economic dependency (debt-bondage), illiteracy, and time poverty. Extractiveness rises over the interval from 0.28 to 0.52 because elite factions increasingly learn to manipulate assembly procedures (violence, bribery, geographic manipulation of voting), while at the same time the plebeian base becomes more immobilized by imperial wars and land loss. The rising trajectory is the measurement signature of a constraint whose protective function erodes as elite actors learn countermeasures. SUPPRESSION (0.42): Barriers to plebeian participation are substantial but not total. Debt-bondage is a real barrier but not universal — urban plebeians can sometimes escape it. Geographic distance limits assembly attendance but does not prevent it. Illiteracy limits independent legal knowledge but tribunes and advocates provide interpretation. Suppression rises from 0.35 to 0.65 as elite violence increases and land loss forces more plebeians into permanent economic dependency. THEATER RATIO (0.55): Moderate in the Early Republic (0.30), reflecting genuine functional use of assemblies and tribunate. Rises to 0.55 in the Middle Republic and 0.78 in the Late Republic as elite factions learn to stage-manage assemblies and tribunes become factional tools rather than plebeian protectors. The theater signature indicates that the constraint's protective function is being hollowed out by institutional decay, not by its own logic.",
+    "perspectival_gap": "This constraint generates a wide perspectival gap across power and exit positions. The plebeian tenant-farmer sees a Snare (trapped, powerless, maximum extraction) because their participation is formal but their agency is nullified by debt-bondage. The urban plebeian craftsman sees a Tangled Rope (constrained but mobile, mixed coordination and extraction) because they genuinely benefit from assembly law-passing and tribunician veto but bear mandatory service costs. The tribune sees a Rope (benefits from the constraint, exercises power through it) because their authority is anchored in plebeian support and the constraint enables their role. The reforming coalition sees a Scaffold (organized agents with agency and a sunset path) — the constraint is temporary, solvable through specific structural reforms like opening magistracies to plebeians. The patrician magistrate sees a Tangled Rope (constrained by colleague veto and assembly ratification, but benefiting from collegial power-sharing and legitimacy conferral). The mythic narrative of popular sovereignty becomes Piton as theater rises and actual decision-making power shifts to elite negotiation. The civilizational analytical observer risks seeing natural law (republics always tend toward oligarchy) but the measurements show that the degradation is not inevitable — it results from deliberate elite subversion of the constraint.",
+    "directionality_logic": "The directionality derivation for each perspective follows from the agent's power level, exit options, and beneficiary/victim relationship to THIS specific constraint. The plebeian tenant-farmer is a victim (bears extraction costs) with trapped exit (cannot leave patronage bonds), deriving d ≈ 0.95, f(d) ≈ 1.42 (powerless experienced extractiveness). The tribunal of plebs is a beneficiary (derives authority and power) with arbitrage exit (can leverage position), deriving d ≈ 0.05, f(d) ≈ -0.12 (institutional beneficiary experienced extractiveness). The reforming coalition is organized, has constrained but real exit options, and benefits from the assembly/tribunate mechanism while suffering from structural barriers — deriving d ≈ 0.50-0.60, consistent with organized agent experiencing moderate extraction. Each perspective's chi value (effective extractiveness) is then scaled by the scope modifier σ(S): local scope (σ=0.8) dampens chi for peasant-level extraction; national scope (σ=1.0) sets the baseline for republic-level institutional constraint. The perspectival gap is diagnostic: if all perspectives produced the same chi, the differentiated exit options would not matter. The gap is real because agent power and exit structurally differ across the contexts.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint does not exhibit mandatrophy because it is not a Snare masquerading as a Rope. The constraint is correctly classified as Tangled Rope at the analytical level: it genuinely includes both coordination function (assemblies passing laws, tribunes mediating) and asymmetric extraction (plebeians bear military and tax burdens disproportionately). The mandatrophy test asks: if we removed the supposed 'coordination' would the extraction disappear or persist? Answer: the extraction (magisterial power, patrician economic advantage, debt-bondage) persists in alternative forms (direct aristocratic rule, private armed retainers, slavery expansion). The coordination function (assemblies and tribunate) does real work — it constrains magisterial unilateralism and provides plebeian grievance channels. Both are structurally present. The perspectival gap across types (Snare for the trapped victim, Rope for the tribune, Piton for the degraded myth, Tangled Rope for the analytical observer) is not paradox — it is the signature of a hybrid constraint seen from different positions.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested kernel: 'the Roman Republican constitution.' The reading is called 'popular_assemblies_and_tribunate.' The sibling readings — each a separate constraint story with its own ε and perspectives — are: (1) 'crisis_machinery' reading (the Republic's constitutional genius was emergency mechanisms like dictatorship and the senatus consultum ultimum that saved and eventually destroyed the state); (2) 'legal_codification_twelve_tables' reading (the constitution began with law wrested from priestly monopoly and posted publicly); (3) 'magistracies_and_collegiality' reading (the constitution is its magistracies, annual and collegial, parceling the king's power into pieces); (4) 'senate_authority' reading (the constitution is the Senate's auctoritas, permanent advisory authority steering the state). Each reading captures a real structural element. This reading emphasizes the sovereignty of popular assemblies and the protective veto of the tribunes. The committer-axis question is: which element is CAUSALLY PRIMARY in explaining the Republic's distinctive character and eventual degradation? Answering requires interpretive choice, not empirical discovery. Different scholarly interpretations (Roman historians, modern scholars) choose differently. This story pursues the 'popular sovereignty' reading and its structural logic."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_republican_constitution__crisis_machinery",
+      "roman_republican_constitution__legal_codification_twelve_tables",
+      "roman_republican_constitution__magistracies_and_collegiality",
+      "roman_republican_constitution__senate_authority"
+    ],
+    "dual_formulation_note": "The Roman Republican constitution is a contested kernel with five sibling readings, each instantiating a different constraint. This story models the 'popular assemblies and tribunate' reading (ε=0.38, Tangled Rope). Sibling readings have different ε values and different beneficiary/victim structures. The crisis_machinery reading (ε varies by moment, includes emergency dictatorship) influences this reading by establishing the constitutional framework in which assemblies and tribunate operate. The magistracies_and_collegiality reading (ε=0.30-0.45, Rope-dominant) captures an alternative primary element (magistrates as constraint-bearers rather than assemblies as constraint-bearers). The senate_authority reading (ε=0.35-0.50, Rope-Tangled Rope) emphasizes advisory authority rather than formal law-passing. All five readings coexist as live historical interpretations. Their relationships are coexists_with (different scholars emphasize different readings) and influences (each reading's emphasis shapes what constitutional element is foregrounded for students and policymakers)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "roman_republican_constitution__crisis_machinery",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__legal_codification_twelve_tables",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__magistracies_and_collegiality",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__senate_authority",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "popular_assembly_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "tribunician_veto_as_shield",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "early_republic_plebeian_victory",
+    "drift_state": {
+      "moment": "late_republic_factional_manipulation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

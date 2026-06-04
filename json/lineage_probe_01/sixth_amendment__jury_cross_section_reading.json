@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "sixth_amendment__jury_cross_section_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jury_xsect",
+    "story_uid": "d2e175f9-83ca-44cf-8c6c-e9bb9540922a"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sixth Amendment Jury Cross-Section Legitimacy (Sixth Amendment Reading)",
+    "topic_domain": "constitutional_law/sixth_amendment/jury_right",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defendants_from_excluded_communities",
+      "community_representation"
+    ],
+    "victims": [
+      "excluded_demographic_groups",
+      "verdict_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Systematically Excluded Demographic Group",
+      "comment": "PERSPECTIVE 1: EXCLUDED DEMOGRAPHIC (SNARE) — The excluded group (historically African Americans, women, Latinos in many jurisdictions) faces complete suppression from jury service. Their exclusion is structural, documented in voir dire patterns, and operates with minimal apparent enforcement cost to the system. The constraint extracts legitimacy from their absence while denying them voice. No exit option from the demographic category itself. Experienced as pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Defendant from Excluded Community",
+      "comment": "PERSPECTIVE 2: DEFENDANT FROM EXCLUDED COMMUNITY (TANGLED ROPE) — The defendant from an excluded group benefits from the jury-right itself (the constraint as coordination mechanism: right to trial by jury) but suffers extraction because the actual jury drawn does not represent the community whole. The coordination function (jury trials prevent arbitrary conviction) persists, but it is asymmetrically applied — the defendant gets a jury, but not the cross-sectional one promised. Constrained exit: cannot refuse jury trial without strategic cost, but the trial system itself is constrained option."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Prosecutor's Office",
+      "comment": "PERSPECTIVE 3: PROSECUTOR'S OFFICE (ROPE) — Prosecutors benefit from jury pools that are demonstrably biased toward conviction when juries exclude communities aligned with defendants. The constraint (cross-section mandate) provides coordination benefit through perceived legitimacy of the trial process, reducing appeal rates and maintaining public confidence in convictions. The prosecutor experiences this as a coordination mechanism: legitimate juries mean stable convictions. Arbitrage exit: can seek removal of problematic jurors within the system; prosecution is not threatened by cross-section principle itself, only by its enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Trial Court Judge",
+      "comment": "PERSPECTIVE 4: TRIAL COURT JUDGE (TANGLED ROPE) — The judge coordinates the trial process (coordination function) but operates under conflicting incentives. Enforcing cross-section requirements (striking prosecutor's racially motivated voir dire challenges) creates appellate risk and political exposure in some jurisdictions, while failing to enforce it delegitimizes verdicts. The judge benefits from orderly trials and stable convictions (institutional coordination), but bears the cost of enforcement activism. Constrained: cannot exit the duty to conduct trials, but can adjust enforcement intensity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Jury Selection Ritual (Voir Dire Theater)",
+      "comment": "PERSPECTIVE 5: VOIR DIRE SELECTION RITUAL (PITON) — The jury selection process performs cross-section legitimacy without delivering it. Voir dire questions ask jurors about bias, judges instruct on impartiality, attorneys make diversity arguments — the theater of neutrality. But structural patterns show demographic homogeneity persists: challenge patterns are documented, proxy criteria for race are deployed, venires are already skewed before selection begins. The ritual maintains the legitimacy claim while the functional mechanism atrophies. Theater ratio (0.48) reflects that some genuine bias-checking happens alongside performative conformity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalized Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) — From a civilizational horizon, the jury-cross-section constraint could appear as an immutable structural feature of democratic justice: any legitimate verdict requires representation of the community, and representation is inherently difficult to achieve at scale. This perspective risks naturalizing what is actually a contingent institutional arrangement — the suppression of particular groups and the theater surrounding selection. The constraint's ε and suppression values will trigger false-summit detection, revealing that the naturalization conceals structural extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voir_dire_proxy_criteria_detectability",
+      "question": "Can race-based voir dire exclusion be definitively distinguished from facially neutral proxy criteria (e.g., zip code, employment, educational background) in trial practice?",
+      "resolution_mechanism": "Statistical analysis of challenge patterns within and across racial groups; comparison of articulated vs. proven reasons for juror removal; analysis of whether proxy criteria correlate with demographic exclusion in specific court jurisdictions",
+      "impact": "If proxies are undetectable from the bench: enforcement of cross-section becomes nearly impossible (extractiveness rises, suppression mechanism hardens). If proxies are detectable through statistical review: enforcement becomes tractable (extractiveness can be reduced).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Detectability of race-based exclusion via facially neutral proxy criteria"
+    },
+    {
+      "id": "implicit_bias_vs_intentional_exclusion",
+      "question": "Does the cross-section right require proof of intentional discrimination (Batson rule), or does structural underrepresentation alone trigger the constraint's protective function?",
+      "resolution_mechanism": "Doctrinal review of Batson application and its critiques; empirical measurement of whether intent-based enforcement (current doctrine) reduces demographic homogeneity compared to outcome-based enforcement (hypothetical alternative)",
+      "impact": "If intent-required: suppression remains high (intent is hard to prove), extractiveness persists (biased juries remain legitimate if bias is inadvertent). If outcome-based: suppression mechanism shifts (prosecutors must affirmatively maintain diversity), extractiveness drops (legitimacy requirement is objective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intent requirement vs. outcome-based enforcement in cross-section doctrine"
+    },
+    {
+      "id": "reading_kernel_contestation",
+      "question": "Is the jury cross-section principle a distinct foundational commitment (drawing from community whole = legitimacy), or is it derivative of a broader sixth-amendment guarantee of fair procedure (subsumable under confrontation or counsel rights)?",
+      "resolution_mechanism": "Historical analysis of jury trial doctrine; examination of whether cross-section protections cohere with or against confrontation (Crawford) and counsel (Gideon) doctrines; review of whether cross-section cases cite confrontation/counsel as grounding or treat them as independent bases",
+      "impact": "If independent: this reading forecloses versions of confrontation/counsel that treat procedure as text-bound rather than representation-grounded. If derivative: this reading coexists with confrontation/counsel but is subordinate to them, and cross-section enforcement becomes conditional on those other rights maturing first.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether cross-section principle is foundational or derivative within sixth-amendment doctrine"
+    },
+    {
+      "id": "empirical_basis_jury_legitimacy",
+      "question": "Does actual community representation (cross-sectional juries) causally produce higher legitimacy verdicts compared to demographically skewed juries, or is the legitimacy claim purely aspirational?",
+      "resolution_mechanism": "Comparative analysis of appeal rates, public confidence surveys, and acquittal patterns for cross-sectional vs. non-cross-sectional juries in comparable case types; study of whether excluded groups perceive verdict legitimacy differently when juries are demographically representative",
+      "impact": "If representation causally improves legitimacy: the coordination function is real (tangled rope classification holds, extraction reduction is measurable). If legitimacy is aspirational but not realized: the constraint is mostly performative (piton classification gains strength, theater is the primary function).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal relationship between jury cross-section and verdict legitimacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The jury cross-section reading of the Sixth Amendment establishes that jury legitimacy rests on whom the jury could contain — that verdicts derive their constitutional authority from being rendered by representatives of the community whole, not by any particular composition achieved in a specific trial. This reading instantiates a constraint centered on representation and demographic inclusion: the suppression of systematic exclusion of racial and gender groups from jury service. The constraint operates as a tangled rope — it coordinates legitimate jury trials (the core function) while the exclusion of demographic groups extracts legitimacy from their absence and concentrates verdict power among the included. The tension is between the coordination mechanism (jury trial as democratic check on state power) and the extraction mechanism (engineered jury pools that bias verdicts by construction). The measurement trajectory shows extractiveness declining over the 50-year interval as enforcement of cross-section principles strengthened (Batson v. Kentucky 1986, subsequent case law); suppression has slowly declined as voir dire challenge patterns became subject to statistical review; and theater has slightly increased as the performative aspect of selection (diversity statements, impartiality instructions) has grown even as structural exclusion persists.",
+    "key_agents": [
+      "Systematically Excluded Demographic Group (powerless/trapped): faces structural suppression from jury service; extraction of legitimacy through their absence",
+      "Defendant from Excluded Community (moderate/constrained): benefits from jury-right as coordination mechanism but suffers extraction because actual jury is not cross-sectional",
+      "Prosecutor's Office (institutional/arbitrage): benefits from jury pool bias while experiencing cross-section mandate as legitimacy coordination",
+      "Trial Court Judge (institutional/constrained): coordinates trials under conflicting incentives between enforcement and political exposure",
+      "Jury Selection Ritual (institutional/arbitrage): performs legitimacy through voir dire theater while demographic homogeneity persists structurally",
+      "Analytical Observer (analytical/analytical): risks naturalizing contingent institutional exclusion as inherent structural feature"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts legitimacy from excluded groups by rendering their absence invisible within the trial process — verdicts appear to come from 'the community' while systematically excluding parts of it. However, this extraction is not maximal (not 0.66+) because the constraint also genuinely provides jury trials (coordination benefit) and has enforcement mechanisms (Batson challenges, statistical review of venires) that reduce but do not eliminate bias. The declining trajectory reflects increasing enforcement. Suppression (0.62): Moderate-high. Systematic exclusion mechanisms operate structurally: biased venire sources, prosecutor challenges with proxy criteria, implicit bias in judicial questioning. However, suppression is not total (not 0.85+) because the right to jury trial exists, some demographic diversity appears in actual juries, and enforcement tools exist (though underutilized). Theater ratio (0.48): Moderate. Voir dire contains both genuine bias-checking (jurors asked about prejudice, judges instruct on impartiality) and performative elements (diversity statements, 'fair process' ritual). The constraint operates with mixed genuine and theatrical function — not predominantly performative (piton would require 0.70+) but containing significant theater.",
+    "directionality_logic": "Directionality is determined by structural position relative to the constraint. Excluded demographic groups are victims with trapped exit (no way to change demographic category; cannot voluntarily exclude themselves from juries without strategic cost). The prosecutor is a beneficiary with arbitrage exit (can work within jury system, seeking jurors; can also pursue non-jury dispositions). The defendant from an excluded community is both victim and beneficiary — benefits from jury-right itself but victimized by non-cross-sectional juries; exit is constrained (cannot refuse jury trial without strategic defeat). The judge is an institutional actor constrained by conflicting incentives (enforcement creates risk, non-enforcement delegitimizes). The trial court judge's d value reflects the constraint's internal contradiction: judges nominally represent the law (beneficiary perspective) but structurally sit between prosecutors (who seek biased juries) and defendants (who seek fair juries). The analytical observer's mountain perspective risks naturalizing the suppression mechanism, triggering false-summit detection because beneficiaries (defendants, community representation) are declared.",
+    "perspectival_gap": "The core perspectival gap lies between the beneficiary and victim positions. Prosecutors and the trial system itself experience jury trials as coordination (legitimate verdicts stabilize convictions, reduce appeals). Excluded demographic groups experience the same system as pure extraction (their exclusion renders verdicts illegitimate while appearing neutral). The tangled rope middle ground belongs to defendants from excluded communities and judges: they experience genuine coordination (trials provide venue for defense, checks on state power) alongside real extraction (jury pools designed to convict them). The piton perspective captures the performative layer: jury selection rituals perform fairness (the constraint is 'working') while structural exclusion persists. The mountain perspective risks treating demographic exclusion as a natural feature of jury assembly (representation is inherently difficult), concealing what is actually a contingent institutional practice (challenge rules, venire sources, implicit bias patterns) that could be reformed.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through doctrinal differentiation. The jury cross-section reading does NOT claim that all jury procedures are equally legitimate, nor that intent-based exclusion is the same as outcome-based exclusion. Instead, it grounds legitimacy in representation potential — whom the jury could contain — which is distinct from whom it actually contains in any particular trial. This distinction allows the constraint to be simultaneously tangled rope (coordination function genuine, extraction real and measurable) and to guide enforcement: cross-section is not a guarantee of outcome but a requirement that the pool be representative before selection begins. The constraint prevents the false equivalence between 'jury trial by neutral procedures' (which might mask bias) and 'jury trial by community representatives' (which requires demographic inclusion). The mandatrophy is resolved by the reading's core axiom: legitimacy rests on representation potential, not outcome manipulation.",
+    "kernel_context": "This constraint instantiates ONE reading of the sixth_amendment kernel: jury_cross_section_reading. The Sixth Amendment contains multiple structurally distinct guarantees grounded in different legitimacy claims. This reading emphasizes the jury right's grounding in community representation. The sibling readings (confrontation_crawford_reading, gideon_counsel_revolution) ground legitimacy elsewhere: confrontation in direct witness examination, counsel in adequate defense representation. All three are live within contemporary sixth-amendment doctrine. The jury_cross_section_reading coexists with the other readings but has distinct enforcement implications: cross-section focuses on jury composition before trial begins, while confrontation focuses on witness reliability during trial, and counsel focuses on defense representation quality. The readings do not foreclose each other — a defendant can simultaneously have confrontation rights, effective counsel, and a cross-sectional jury. However, the readings do influence each other: if cross-section enforcement is weak (excluded juries), confrontation and counsel become structurally less effective (confronting a biased jury, representing to a biased jury). The constraint's false-summit risk arises from the potential naturalization of jury homogeneity as an inherent feature of democratic procedure rather than a contingent institutional practice."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sixth_amendment__confrontation_crawford_reading",
+      "sixth_amendment__gideon_counsel_revolution"
+    ],
+    "dual_formulation_note": "The sixth_amendment kernel contains three structurally distinct constraint readings. The jury_cross_section_reading focuses on representation and demographic inclusion in jury composition. The sibling readings focus on confrontation (witness reliability) and counsel (defense representation). Each reading has its own ε value, suppression mechanism, and beneficiary/victim structure. They are linked in network.affects_constraints to model doctrinal interdependence: weak cross-section enforcement reduces the effectiveness of confrontation and counsel protections."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sixth_amendment__confrontation_crawford_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sixth_amendment__gideon_counsel_revolution",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jury_legitimacy_rests_on_representation_potential",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "systematic_demographic_exclusion_delegitimizes_verdicts",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "community_representation_jury_ideal",
+    "drift_state": {
+      "moment": "contemporary_batson_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "accountability_machinery__euthynai_audit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "euthynai",
+    "story_uid": "0b2ce142-5335-412a-a959-0afdd1c7cecb"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.65,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Euthynai: Universal Audit of Officials at Office Exit",
+    "topic_domain": "legal/doctrinal/athenian_democracy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "demos_principal",
+      "athenian_citizenry"
+    ],
+    "victims": [
+      "peculating_officials",
+      "abusive_magistrates"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Honest Official",
+      "comment": "An official with clean accounts and no accusations experiences euthynai as pure coordination: a formalized exit ritual that establishes legitimacy and protects the official from later challenge. Low extraction, high transparency. The constraint solves the collective action problem of verifying official conduct without requiring constant monitoring during office."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Accused Without Resources",
+      "comment": "An official facing accusation from wealthy rivals, with no resources to defend themselves in court, experiences euthynai as pure extraction. They cannot exit office without facing charges they cannot afford to contest. Suppression is absolute — exit is blocked; the only way out is to pay their accusers or lose their property."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Demos as Principal",
+      "comment": "The demos benefits from universal audit as a coordination mechanism: every magistrate's conduct is publicly examined, creating ongoing accountability without the demos needing to monitor each official continuously. The demos has structured exit from magisterial abuse — the euthynai process. Extractiveness is minimal; the constraint solves a genuine collective action problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Wealthy Rival with Political Enemies",
+      "comment": "A wealthy official facing prosecution from organized political factions (not as victim of genuine malfeasance, but as target of factional competition) experiences euthynai as mixed coordination and extraction. The formal audit structure is designed to prevent factional immunity, but factions use it as a weapon — they coordinate their accusations, dominate the courts, and extract political advantage. The official cannot exit without facing the organized faction's combined power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Reform Coalition (Mid-Fifth Century)",
+      "comment": "Reformers who implemented euthynai saw it as a temporary solution with an implicit sunset: universal audit was necessary *until* democratic norms became internalized and officials developed intrinsic accountability. The constraint was framed as a bridge to a future state where formal audits could relax. Over generations, the audit became institutionalized rather than dissolved — transforming from scaffold to rope."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Athenian Assembly in Late Decline",
+      "comment": "By the fourth century, euthynai had become largely performative: the formal ritual persisted through institutional inertia even as real accountability mechanisms had shifted (wealthy magistrates could afford better legal defense, juries could be influenced by rhetorical skill). The audit remained on the books as a symbol of democratic scrutiny, but its power to actually constrain abuse had degraded. Theater ratio reflects persistent ritual with declining functional force."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a universal/civilizational view, euthynai instantiates an allegedly immutable principle: any official given discretionary power *must* be audited upon exit, or power becomes unaccountable. This perspective treats the euthynai mechanism as a natural law of governance — a structural necessity, not a constructed institutional choice. However, the beneficiary declarations and extractiveness metrics contradict this naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "factional_capture_threshold",
+      "question": "At what point does the audit mechanism shift from preventing corruption to enabling factional prosecution?",
+      "resolution_mechanism": "Historical analysis of euthynai prosecutions: ratio of convictions for actual malfeasance vs. convictions driven by factional alignment of jurors; comparison of penalty severity across political groups",
+      "impact": "If capture threshold is crossed early (Fourth Century BCE): euthynai becomes primarily an extraction weapon for organized factions rather than accountability mechanism. Classification shifts toward Tangled Rope or Snare for politically targeted officials.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold at which euthynai transitions from accountability to factional weapon"
+    },
+    {
+      "id": "wealth_defense_asymmetry",
+      "question": "Does wealth provide asymmetric defense capacity in euthynai prosecution, undermining the mechanism's anti-corruption function?",
+      "resolution_mechanism": "Comparative analysis of outcomes: prosecution/conviction rates by wealth class; ability to hire logographers (speech-writers) and hire jurors' advocates; property restoration rates by wealth",
+      "impact": "If substantial asymmetry confirmed: euthynai functions as class-differentiator rather than universal accountability. Honest poor officials face snare; honest rich officials face rope. Extractiveness increases for powerless magistrates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Wealth gradient in euthynai prosecution outcomes"
+    },
+    {
+      "id": "accusation_filtering_mechanism",
+      "question": "What prevents frivolous accusations from flooding the euthynai process and making it a harassment tool?",
+      "resolution_mechanism": "Documentary evidence of filters: were accusers bonded or required to post security? What were penalties for failed prosecutions? How many accusations were brought vs. proceeded to trial?",
+      "impact": "If filtering is weak: euthynai enables mass accusation harassment, increasing suppression for all officials. If filtering is strong: euthynai maintains coordinating function. Difference between rope and snare depends on this mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Robustness of accusation filters in euthynai process"
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Is the euthynai a reading of a contested kernel about accountability machinery, or is it a distinct constraint from the graphe paranomon and ostracism readings?",
+      "resolution_mechanism": "Structural analysis: Do all three mechanisms (euthynai, graphe paranomon, ostracism) ground their legitimacy in the same foundational commitment about how accountability operates in a democracy? Or do they instantiate fundamentally different accountability theories? If the former, they are readings of a single kernel; if the latter, they are independent constraints.",
+      "impact": "If single kernel: the three readings coexist and may foreclose or influence each other. If independent constraints: they are sister mechanisms with separate extractiveness profiles and network dependencies. Classification architecture changes accordingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether euthynai is a reading of accountability_machinery kernel or independent constraint"
+    },
+    {
+      "id": "internalized_democratic_norms",
+      "question": "Did the euthynai mechanism ever successfully create intrinsic democratic accountability (officials self-policing), or did it remain dependent on external coercion throughout its existence?",
+      "resolution_mechanism": "Historical counterfactual: comparison of official conduct quality in early (high formalism, high demos enforcement) vs. late period (lower formalism, lower demos enforcement); analysis of rhetoric about official duties in speeches across centuries",
+      "impact": "If intrinsic norms developed: the scaffold reading is vindicated — euthynai functioned as a bridge toward internalized accountability. If external coercion remained necessary: euthynai is a rope mechanism that never achieved its scaffold goal. Affects periodization and theater_ratio trajectory.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Degree to which euthynai created intrinsic vs. extrinsic accountability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The euthynai (auditing magistrates) mechanism represents one reading of how Athenian democracy structured accountability: every official leaving office faced mandatory audit, with any citizen able to bring accusation. No official could exit without reckoning — the constraint suppressed the option of leaving office without facing public examination and potential prosecution. This reading instantiates accountability as a *coordination problem solved by transparency*: the demos benefits from knowing every magistrate's conduct has been publicly examined, without the demos needing to monitor each official continuously. The beneficiary is the demos (collective accountability achieved); the victims are officials facing prosecution, particularly those targeted by organized factions or lacking resources to defend themselves. The constraint exhibits genuine coordination function (Rope from institutional/analytical perspectives) alongside extracted value from politically-motivated prosecutions (Snare for trapped officials, Tangled Rope for organized factional targets). The extractiveness value (0.18) reflects that the primary function is accountability coordination, not extraction — though extractive overlay exists. The suppression value (0.65) reflects high barriers to exit without facing consequences, a feature of the mechanism's anti-corruption design rather than a sign of pure coercion.",
+    "key_agents": [
+      "Demos (Athenian Citizenry): Primary beneficiary (institutional/arbitrage) — benefits from guaranteed accountability of all magistrates without needing continuous monitoring; designed exit mechanism for magistrial abuses",
+      "Honest Officials: Secondary beneficiary (powerful/constrained) — experience euthynai as formalized exit ritual that establishes legitimacy and protects from later challenge when accounts are clean",
+      "Peculating Officials: Primary victim (powerless/trapped) — clawed-back extractiveness in office; unable to exit without facing prosecution; no exit option",
+      "Wealthy Rivals Facing Factional Prosecution: Secondary victim (organized/constrained) — experience euthynai as weaponized by organized factions; formal audit structure enables factional prosecution rather than preventing it",
+      "Reform Coalition: Temporary institutional actor (organized/constrained) — implemented euthynai as scaffold; expected sunset as democratic norms internalized (sunset never occurred)",
+      "Assembly of Jurors: Institutional enforcer (institutional/arbitrage) — applies euthynai verdicts; can be influenced by factional rhetoric and wealth of defendants",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) — risks naturalizing euthynai as immutable law of governance rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The euthynai mechanism is primarily a coordination solution to the genuine problem of magistrial accountability — how does a democracy ensure officials don't abuse power without monitoring each one constantly? The mechanism distributes monitoring to the entire demos (any citizen can accuse) and creates a formal exit ritual (audit before leaving office). The primary beneficiary is the collective demos; extractiveness from individuals is secondary. The value rises slightly over the interval (0.08 → 0.18) as factional factions increasingly use the audit mechanism as a political weapon. Suppression (0.65): High. The constraint suppresses exit-without-reckoning absolutely — every official must face audit, and the demos (through citizen accusers) has standing to bring charges. This suppression is *by design*, not incidental; it is the mechanism's core anti-corruption feature. Officials cannot avoid the constraint without leaving the system entirely. Theater ratio (0.35): Low-moderate. The euthynai process involves genuine examination of accounts and evidence of conduct; it is not primarily performative. The ratio rises slightly as rhetorical skill and jury influence become more important relative to documentary evidence (0.25 → 0.35), but remains below 0.50 throughout the interval shown.",
+    "perspectival_gap": "The constraint exhibits dramatically different classifications across perspectives. For the demos and honest officials, euthynai is pure coordination (Rope) — it solves a genuine collective action problem (how to ensure official accountability) without extracting from those it governs. For peculating or abusive officials, it is pure extraction (Snare) — they cannot exit office without facing consequences, suppression is absolute. For wealthy officials facing factional prosecution, it is mixed coordination and extraction (Tangled Rope) — the formal mechanism is designed to prevent factional immunity, but organized factions capture the process and use it as a weapon. For late-period observers, the mechanism becomes partially degraded (Piton) — the ritual persists but its force has eroded. For the early reformers, it was always intended as temporary (Scaffold) — a bridge to internalized democratic norms. The analytical observer risks seeing immutable law (Mountain) but the structural data contradicts this naturalization: beneficiaries exist (the demos), victims are identifiable (peculating officials), and extractiveness is measurable (0.18, rising). This is a reading of a contested kernel about accountability, not an eternal law.",
+    "directionality_logic": "Directionality derives from the agent's structural position relative to the extraction flow. Honest officials benefit from euthynai (low d); peculating officials bear costs (high d); the demos is the primary beneficiary (low d). For wealthy officials facing organized factional prosecution, the derivation requires care: they have resources (high power) and some exit options (constrained, not trapped), but they are structurally victimized by coordinated factions using the formal audit as cover for political warfare. Their d sits intermediate between pure beneficiary and pure target. The demos experiences the constraint as coordination (low extraction experienced), because their collective exit option is activated (if magistrates abuse power, the demos can prosecute at audit). Peculating officials experience high extraction because their exit is blocked (cannot leave without facing charges) and their defense costs are borne entirely by them. The early reformers experience it as low extraction (scaffold) because they see the mechanism as temporary and designed to transition to internalized norms. The late-period assembly experiences it as institutional arbitrage (low d) — the formal ritual persists and the assembly administers it, but the assembly's power to actually constrain abuse has eroded.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing the coordination problem (how to ensure magistrial accountability at scale without continuous monitoring) from the extraction problem (how factional factions use the audit mechanism as a political weapon). Early period euthynai is primarily coordination (Rope), with extractive overlay only for genuinely corrupt officials. Late period euthynai remains Rope for honest officials and the demos, but becomes Tangled Rope for politically-targeted officials as factions learn to weaponize the mechanism. The piton classification (late period, degraded) reflects that the theater of formal audit has increased (juries influenced by rhetoric rather than documentary evidence) while its function (actually preventing abuse) has declined. The constraint does not slide from one type to another — different perspectives see different types simultaneously. The mandatrophy is resolved by recognizing that all six types are present in the perspectival presheaf: Rope (coordination-dominant), Snare (extraction-dominant for trapped), Tangled Rope (mixed for organized factions), Piton (degraded ritual), Scaffold (early reform vision), Mountain (naturalization to be rejected).",
+    "kernel_context": "This constraint is one reading of the accountability_machinery kernel — the contested fundamental commitment about how accountability operates in a democracy. The euthynai reading instantiates accountability-through-transparency-at-exit: every official must submit accounts and face public examination, with any citizen able to accuse. This reading coexists with the graphe paranomon reading (accountability-through-proposer-liability: persuade the demos to vote for something later judged unlawful, and you personally pay) and the ostracism reading (accountability-through-direct-exile: any citizen can be exiled by majority vote without charge or defense). All three readings agree on the core kernel claim: democracies must structure accountability, and officials/citizens cannot exit power without reckoning. They differ on the *mechanism* of reckoning: audit (euthynai), proposer liability (graphe paranomon), or direct exile vote (ostracism). The three readings do not foreclose each other — Athens deployed all three simultaneously, addressing different accountability problems. Euthynai checks official corruption in office; graphe paranomon checks assembly deception; ostracism removes citizens who become too prominent. They coexist as a integrated accountability ecology."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "accountability_machinery__graphe_paranomon",
+      "accountability_machinery__ostracism_institution"
+    ],
+    "dual_formulation_note": "The euthynai is structurally downstream from the demos' foundational commitment to accountability (kernel: accountability_machinery). It is a sibling reading to graphe paranomon (proposer liability) and ostracism (direct exile), all three grounding their legitimacy in the same kernel. Graphe paranomon addresses deception in assembly decisions; ostracism addresses prominence-risk; euthynai addresses corruption-in-office. The three readings influence each other: euthynai provides the formal audit structure; graphe paranomon provides the self-binding mechanism; ostracism provides the blunt remove option. None forecloses the others."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "accountability_machinery__graphe_paranomon",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "accountability_machinery__ostracism_institution",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "exit_reckoning_mandatory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "citizen_accusation_standing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "universal_audit_athenian_democracy",
+    "drift_state": {
+      "moment": "late_fourth_century_bce",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "rational_basis_tier__pure_deference_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rational_basis_tier__pure_deference_reading",
+    "story_uid": "811c07cc-a8e6-46cc-bcaa-717f4aa2430e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.08,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rational Basis Tier: Pure Deference Reading (Lee Optical Standard)",
+    "topic_domain": "constitutional_law/equal_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legislative_line_drawing_authority"
+    ],
+    "victims": [
+      "economic_liberty_challengers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Economic Liberty Challenger",
+      "comment": "PERSPECTIVE 1: ECONOMIC LIBERTY CHALLENGER (SNARE) — An individual or business challenging a state regulation that affects their economic liberty is trapped: they have no exit from the jurisdiction's authority, no viable political remedy, and rational basis review offers no meaningful substantive check. The tier's logic permits any post-hoc rationalization, so the challenger faces maximum suppression (regulatory barriers cannot be overcome) with zero hope of judicial reversal. This agent perceives pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Economic Liberty Interest Group",
+      "comment": "PERSPECTIVE 2: ECONOMIC LIBERTY INTEREST GROUP (TANGLED ROPE) — Organized challengers (Cato Institute, libertarian advocacy groups) experience both coordination and extraction. The rational basis tier does coordinate states' regulatory freedom (genuine coordination function: legislatures need some judicial deference to function), but the tier's absoluteness extracts from economic-liberty interests through systematic defeat. Organizations have constrained exit: they can lobby for statutory change or petition for constitutional amendment, but these are high-cost, low-probability remedies. Moderate extraction, genuine coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Legislature"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lower Court Judiciary",
+      "comment": "PERSPECTIVE 4: LOWER COURT JUDICIARY (TANGLED ROPE) — State trial and appellate judges are bound by rational basis tier but also experience genuine coordination: the tier provides clear guidance on what economic-liberty claims will succeed (none), which reduces docket congestion and allows judges to focus on liberty interests with teeth (strict scrutiny, intermediate scrutiny). However, judges experience extraction from the tier's absoluteness when it prevents them from addressing arbitrary or malicious regulations. The constraint enforces their deference even when they believe the legislature acted irrationally. Constrained exit (bound by precedent) and mixed benefit/cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Appellate Judiciary (Long View)",
+      "comment": "PERSPECTIVE 5: FEDERAL APPELLATE JUDICIARY (PITON) — From a civilizational horizon, rational basis review is partially performative: federal courts routinely invoke rational basis while simultaneously noting it is 'rational basis with bite' or apply hidden tiers of scrutiny via rational basis disguise (See Cleburne, Romer language within rational basis framework). The tier's stated rule (any conceivable purpose suffices) conflicts with actual judicial practice, creating a theatrical facade of deference that masks selective application. Theater ratio reflects that the stated standard and applied standard diverge significantly."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal analytical perspective, some deference to legislative line-drawing is inherent to the separation of powers: courts cannot second-guess every economic regulation without collapsing legislative autonomy. This perspective sees rational basis as a natural boundary condition of the constitutional system itself — an immutable structural feature. However, this reading is a false summit: the beneficiary (legislative freedom) and victim (economic-liberty challengers) declare the tier as a constructed institutional arrangement, not a natural law. The engine's FSM detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "post_hoc_rationalization_scope",
+      "question": "How many legitimate governmental purposes suffice to satisfy rational basis, and does the court's willingness to hypothesize purposes after-the-fact swallow the constraint entirely?",
+      "resolution_mechanism": "Empirical analysis of rational basis cases: ratio of hypothesized purposes to purposes articulated by the legislature; tracking of whether any regulation has ever failed rational basis review on the ground that NO conceivable purpose exists",
+      "impact": "If no regulation has failed solely on absence of any conceivable purpose: rational basis is functionally a non-justiciable standard (ε approaches 1.0, pure extraction). If regulations occasionally fail: some substantive review remains (ε ≈ 0.55, genuine tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether post-hoc purpose-hypothesizing renders rational basis review non-reviewable"
+    },
+    {
+      "id": "animus_bite_genuine_or_illusory",
+      "question": "Is rational basis-with-bite (Moreno, Cleburne, Romer) a real subcategory within rational basis, or a reconception that these cases actually applied intermediate scrutiny in rational basis dress?",
+      "resolution_mechanism": "Doctrinal analysis of post-Romer rational basis cases: do courts cite the 'bite' language to invalidate regulations, or do they reserve invalidation for discriminatory intent findings? Comparison of invalidation rates in explicit rational basis-with-bite cases vs pure rational basis cases.",
+      "impact": "If bite is real: rational basis includes a substantive check on animus (pure_deference_reading is foreclosed by animus_with_bite_reading). If bite is dress-up of intermediate scrutiny: pure deference reading and bite reading coexist as incompatible interpretations of the same precedents.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether rational basis-with-bite constitutes a genuine tier modification or rhetorical dressing of intermediate scrutiny"
+    },
+    {
+      "id": "class_of_one_availability_post_olech",
+      "question": "Does Olech's 'class of one' equal-protection claim materially increase the vulnerability of arbitrary economic regulation to judicial review, or is it a dead letter?",
+      "resolution_mechanism": "Empirical: tracking of successful class-of-one claims in state and federal courts since Olech; analysis of whether class-of-one doctrine has expanded rational basis review's bite or remains an isolated doctrinal feature",
+      "impact": "If class-of-one is live: pure_deference_reading is directly challenged and must coexist with class_of_one_reading. If dead letter: pure deference remains the practical standard for economic regulations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Olech class-of-one doctrine expands judicial review or remains doctrinal artifact"
+    },
+    {
+      "id": "reading_contest_kernel_itself",
+      "question": "Which reading of the rational basis tier represents the actual binding doctrine of the Supreme Court: pure deference (Lee Optical), animus-with-bite (Moreno/Cleburne/Romer), or class-of-one (Olech)?",
+      "resolution_mechanism": "Jurisprudential analysis: Which reading best predicts actual Supreme Court behavior in novel cases? Do subsequent decisions cite and extend one reading's logic while marginalizing others? Has the Court itself declared which reading controls?",
+      "impact": "This is the kernel contest itself — it is not resolvable by empirical investigation of the world (all three readings are live doctrine held by different factions). Resolution depends on which reading the Court commits to in future cases. This omega documents that this constraint is one reading of a genuinely contested kernel.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Which of the three readings of rational basis tier is the Court's actual controlling doctrine"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The rational basis tier of equal protection review is doctrine that has been contested by Supreme Court jurisprudence for decades. This story instantiates ONE reading of that contested kernel: the pure deference reading, in which any conceivable legitimate governmental purpose satisfies the tier, purposes may be hypothesized after the fact, and almost no regulation falls. Under this reading, rational basis provides nearly complete deference to legislatures on economic regulation — the tier coordinates legislative freedom at the cost of extracting economic-liberty claims from meaningful judicial review. This reading draws its canonical form from Lee Optical (1955) and remains the officially stated standard, despite competing readings (animus-with-bite from Moreno/Cleburne/Romer; class-of-one from Olech) that claim to apply rational basis but in practice apply heightened review. The pure deference reading instantiates what the doctrine says; the sibling readings describe what courts sometimes do. This constraint's extractiveness (0.68) reflects that under this reading, economic-liberty challengers face nearly insurmountable review barriers — the tier exists to uphold legislation, not to second-guess it.",
+    "key_agents": [
+      "State Legislature: Primary beneficiary (institutional/arbitrage) — captures the core benefit of rational basis tier: freedom to regulate economics without substantive judicial scrutiny of means-ends fit",
+      "Economic Liberty Challenger: Primary victim (powerless/trapped) — faces maximal suppression and zero meaningful remedy through rational basis review; cannot exit jurisdiction's authority",
+      "Economic Liberty Interest Groups: Organized victim (organized/constrained) — advocate for heightened scrutiny; constrained by high-cost political/constitutional amendment remedies",
+      "Lower Court Judiciary: Mixed position (institutional/constrained) — bound by tier, experiences coordination (clear guidance, reduced docket congestion) but extraction from prevention of addressing arbitrary regulations",
+      "Federal Appellate Judiciary (Long View): Piton observer (institutional/arbitrage) — notes divergence between stated standard and applied standard; uses rational basis-with-bite and other disguises",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing a contingent institutional arrangement (separation of powers deference) as immutable constitutional law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High-moderate. Under the pure deference reading, rational basis review extracts economic-liberty claims from substantive judicial protection. The tier's post-hoc purpose rationalization and breadth of conceivable purposes mean nearly all regulations pass. However, extractiveness is not maximal (0.85+) because the tier does provide some logical form of review — courts do articulate purposes and engage in some rational-relation checking, even if pro forma. The extraction is real but not absolute. Suppression (0.08): Minimal. This reading is canonical doctrine; there are no hidden alternatives being suppressed. The tier exists openly and its logic is clearly stated. What is suppressed is NOT the tier's existence but rather alternatives to economic regulation (exit options for challengers are genuinely constrained by the tier, but the tier itself is not hidden). Theater ratio (0.45): Moderate-low. Under the pure deference reading, the review process is mostly functional (courts do apply the stated test) but includes performative elements (post-hoc purpose hypothesization, pretense that 'rational basis with bite' is the same tier). The theater is not high because the stated and applied standards mostly align; courts genuinely defer. Theater ratio rises over the interval as federal courts increasingly use rational basis as a concealment for selective application (particularly post-Romer, where rational basis language masks what appears to be heightened-scrutiny reasoning).",
+    "directionality_logic": "Directionality d for each perspective derives from the agent's structural position relative to this constraint. Legislatures (institutional beneficiaries with arbitrage options) experience low d — the constraint subsidizes them, reducing their extraction exposure. Economic-liberty challengers (powerless victims with trapped exit) experience high d — they bear the constraint's full cost with no exit pathway. Organized challengers (organized victims with constrained exit) experience moderate d — they have some agency (lobbying, litigation) but high cost. Lower courts (institutional actors bound by constraint) experience moderate d — they experience both coordination benefit (clear rules) and extraction cost (prevented from addressing unfair cases). The analytical observer (measuring from civilizational scope) approaches d ≈ 0.72 (the canonical analytical position, treating the constraint as neither beneficiary nor victim but as a structural feature requiring assessment).",
+    "perspectival_gap": "The pure deference reading produces a stark perspectival gap. The state legislature sees coordination (Rope) — rational basis tier solves the problem of judicial interference in legislation. The economic-liberty challenger sees extraction (Snare) — the tier is a barrier to meaningful review. The organized interest group sees mixed coordination and extraction (Tangled Rope) — the tier does enable some clear rules but systematically defeats their claims. The lower judiciary sees both coordination (reduced docket, clear guidance) and extraction (prevented from addressing arbitrary regulations) — also Tangled Rope. The federal judiciary, observing from civilizational horizon, notes that the tier's stated and applied standards have diverged, creating a piton (performative aspect increasing over time). The analytical observer risks seeing the tier as a natural law (Mountain) — separation of powers requires some legislative deference — but the structural data (identifiable beneficiary, identifiable victim class, contingent institutional form) reveals this as a false summit.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that the pure deference reading is one stable reading of a contested kernel. The reading is internally coherent: if rational basis truly permits any conceivable purpose hypothesized after-the-fact, then the tier is nearly absolute deference. The mandatrophy is not 'which reading is correct?' but 'which reading controls?' This is a question the Supreme Court itself contests. The pure deference reading is the officially stated standard (Lee Optical language remains canonical), but competing readings (animus-with-bite, class-of-one) claim to apply rational basis while producing different outcomes. The constraint demonstrates that mandatrophy resolution requires recognizing that the Court's doctrine contains genuinely incompatible readings, not that one reading is true and others false. The extractiveness measurement (0.68) and the theater trajectory (rising over time as courts increasingly disguise heightened review as rational basis) document the practical operation of this reading in context.",
+    "kernel_context": "This constraint is one reading of the rational basis tier kernel. The kernel is the Supreme Court's equal protection doctrine governing state economic regulation. The kernel itself is 'rational basis review of economic classifications,' but it is contested. This story instantiates the pure deference reading: the interpretation under which rational basis is nearly complete deference, any conceivable purpose suffices, purposes may be hypothesized post-hoc, and almost nothing fails (canonical form: Lee Optical). The sibling readings are: (1) animus-with-bite reading: rational basis sometimes bites when bare desire to harm is the only explanation (Moreno, Cleburne, Romer); (2) class-of-one reading: Olech opened equal protection to arbitrary singling-out of a single person as a claim, even at rational basis tier. These readings are held by different factions within doctrine; they coexist rather than being sequentially adopted. The pure deference reading remains the officially stated standard, but courts' actual practice increasingly incorporates bite-logic and class-of-one logic, creating a gap between stated and applied doctrine."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rational_basis_tier__animus_with_bite_reading",
+      "rational_basis_tier__class_of_one_reading"
+    ],
+    "dual_formulation_note": "The rational basis tier is a single contested kernel with multiple readings. Each reading is a separate constraint story with its own ε value and structural properties. The pure deference reading has ε=0.68 (high extraction of economic-liberty claims); the animus-with-bite reading would have lower ε (some cases do fail); the class-of-one reading would have lower ε (class-of-one claims can succeed even at rational basis). They are not alternative measurements of the same constraint — they are genuinely incompatible readings of the same doctrinal kernel, held simultaneously by different courts and different factions within jurisprudence. Decomposition into separate stories enables the framework to model this doctrinal contest as a structural feature: competing readings, competing ε values, competing beneficiary/victim sets."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rational_basis_tier__animus_with_bite_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rational_basis_tier__class_of_one_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "any_conceivable_purpose_suffices",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "post_hoc_rationalization_permitted",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "lee_optical_deference_standard",
+    "drift_state": {
+      "moment": "contemporary_with_romer_and_olech",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

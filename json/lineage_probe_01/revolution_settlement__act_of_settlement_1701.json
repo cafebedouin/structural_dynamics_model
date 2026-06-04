@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "revolution_settlement__act_of_settlement_1701",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_revolution_settlement__act_of_settlement_1701",
+    "story_uid": "55ab4340-41e5-4e99-a797-7966371d05cc"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Act of Settlement 1701: Statutory Succession and Judicial Independence",
+    "topic_domain": "political/constitutional_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parliamentary_supremacy",
+      "judicial_independence",
+      "hanoverian_succession"
+    ],
+    "victims": [
+      "stuart_line_excluded",
+      "hereditary_absolutism"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Stuart Succession",
+      "comment": "PERSPECTIVE 1: EXCLUDED STUART LINE (SNARE) — The Act permanently forecloses the Stuart line from the throne through statutory mechanism that cannot be dissolved without constitutional revolution. Full victim status: extraction is total (the Crown itself), suppression is absolute (legal prohibition with no exit), and no coordination benefit accrues. The constraint's entire function — securing Protestant succession — depends on suppressing this agent's claim."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parliamentary Supremacy in Succession",
+      "comment": "PERSPECTIVE 2: PARLIAMENTARY SUPREMACY (ROPE) — Parliament sees the constraint as pure coordination: the statute establishes Parliament's power to determine the succession line, transforming hereditary right into parliamentary choice. Low base extraction (ε ≈ 0.28) because Parliament is the beneficiary and designer. The arbitrage exit option reflects Parliament's ability to amend the statute (at high constitutional cost, but structurally possible). Net beneficiary — coordination function delivers parliamentary power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Judiciary Under Good Behaviour Tenure",
+      "comment": "PERSPECTIVE 3: JUDICIARY (TANGLED ROPE) — Judges gain security from removal at pleasure (beneficiary status: good behaviour tenure is coordination that enables judicial independence). But the constraint also extracts: judges are now bound to the statutory line and Parliamentary sovereignty; they cannot interpret common law rights against the succession statute (victim status). Mixed extraction and coordination — beneficiary from independence, victim from supremacy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Hanoverian Crown (Performative Compliance)",
+      "comment": "PERSPECTIVE 4: HANOVERIAN CROWN (PITON) — The Crown accepts the statute as the condition of legitimacy (good behaviour tenure, parliamentary override of succession). Theater is moderate (0.35) because the constraint's enforcement mechanisms are genuine (Parliament retains sanction power) even though the Crown's practical compliance is often ceremonial. The Crown's institutional inertia — accepting statutory constraint despite residual prerogative claims — generates the piton signature: functional constraint degraded by institutional memory of prior power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Protestant Established Church",
+      "comment": "PERSPECTIVE 5: PROTESTANT ESTABLISHED CHURCH (TANGLED ROPE) — The constraint coordinates religious and political stability (beneficiary: the succession is explicitly secured as Protestant). But the church also bears extraction: the statute subordinates religious doctrine to parliamentary succession politics (victim: doctrinal autonomy constrained by what serves the Hanoverian line). Moderate agent (organized but subject to parliamentary statute); constrained exit (changing the succession requires constitutional amendment)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Reading)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational/universal view, the constraint might appear as a natural outcome of constitutional logic: once Parliament asserted sovereignty, succession by statute became inevitable — any claim to hereditary right independent of parliamentary approval is logically incompatible with parliamentary supremacy. This perspective risks classifying the Act as a mountain (immutable logical consequence), but the structural data reveals this as false: the constraint is a contingent political settlement, benefiting specific agents (Parliament, judiciary, Hanoverian line) and extracting from others (Stuart line, hereditary absolutism). The engine's false summit detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "statutory_vs_common_law_supremacy",
+      "question": "Is the Act of Settlement a statute subordinate to common law rights, or a constitutional statute that establishes the supreme law of the realm?",
+      "resolution_mechanism": "Legal history analysis: how courts treated challenges to the succession clause; whether judges asserted common law rights to override the statute; whether parliamentary amendment became the only recognized path to constitutional change",
+      "impact": "If statutory subordinate: the constraint remains contestable and subject to common law interpretation (lower extractiveness from the bench). If constitutional supreme: the constraint is effectively immutable without revolutionary disruption (higher extractiveness and suppression).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the Act is statutory or constitutional law in supremacy"
+    },
+    {
+      "id": "good_behaviour_tenure_enforcement",
+      "question": "Did good behaviour tenure provide judges with genuine security from removal at displeasure, or was it theatrically applied while Crown pressure and political alignment remained effective removal mechanisms?",
+      "resolution_mechanism": "Historical analysis of judicial removals post-1701; correlation between judicial independence from Crown and party politics; examination of whether judges who offended the reigning Crown retained office",
+      "impact": "If enforced: judicial independence is genuine coordination benefit (beneficiary status for judges is real). If theatrical: judges remain victims of indirect removal pressure through political alignment (extraction persists despite the statute).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether good behaviour tenure provided genuine judicial security"
+    },
+    {
+      "id": "reading_vs_sibling_supremacy",
+      "question": "Which settlement document is the kernel: the Act of Settlement 1701 (statutory succession), the Bill of Rights 1689 (parliamentary privilege and removal of Crown suspending/dispensing powers), or the Toleration Act 1689 (religious settlement)?",
+      "resolution_mechanism": "Constitutional history: which document courts treat as supreme; which provisions override others in cases of conflict; which reading controls the interpretation of remaining settlement provisions",
+      "impact": "If Act of Settlement supreme: this reading (statutory succession) is the master frame and the Bill of Rights is subordinate (influences relation). If Bill of Rights supreme: this reading is subordinate to parliamentary privilege (forecloses relation with different implications). If none supreme: coexists_with relation is correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Constitutional supremacy among the three settlement documents"
+    },
+    {
+      "id": "hereditary_right_vs_parliamentary_choice",
+      "question": "Does the statute suppress hereditary right as a principle, or merely direct hereditary right through a new line (Hanover instead of Stuart)?",
+      "resolution_mechanism": "Philosophical analysis: whether the Act asserts Parliament's power to choose any succession (rejecting hereditary principle) or asserts Parliament's power to select which hereditary line succeeds (preserving hereditary principle but subordinating it to parliamentary confirmation)",
+      "impact": "If suppresses principle: hereditary absolutism is the victim (extraction is from a political philosophy). If directs hereditary right: the principle survives but is now parliamentary-determined (extraction is specifically from the Stuart line, not from hereditary right per se).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the Act rejects hereditary right as a principle or redirects it"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1701,
+    "end": 1721
+  },
+  "commentary": {
+    "narrative_context": "The Act of Settlement 1701 completed the Glorious Revolution settlement by converting the Crown from a hereditary office secured by divine right into a parliamentary office whose occupant must satisfy statutory conditions: Protestant faith, parliamentary approval of the line of succession, and judicial tenure during good behaviour. The constraint exhibits hybrid character: it coordinates genuine institutional benefits (parliamentary supremacy, judicial independence, religious settlement) while simultaneously extracting from specific victim groups (the excluded Stuart line, the principle of hereditary absolutism). The constraint is one reading of the contested Revolution settlement kernel — competing against the Bill of Rights 1689 (which emphasizes parliamentary privilege and removal of Crown suspending/dispensing powers) and the Toleration Act 1689 (which emphasizes religious accommodation through exclusion). This reading instantiates the specifically successional and monarchical transformation: the Crown became a parliamentary office, the succession became a parliamentary choice, and judges became officers of Parliament rather than servants of the Crown.",
+    "key_agents": [
+      "Parliamentary Supremacy: Primary beneficiary (institutional/arbitrage) — gains constitutional power to determine succession and remove Crown prerogatives through statute",
+      "Judiciary: Secondary beneficiary (institutional/constrained) — gains security of tenure during good behaviour; also victim to parliamentary supremacy (constrained by statute)",
+      "Hanoverian Succession: Primary beneficiary (institutional/arbitrage) — gains legitimacy through parliamentary approval; institutional identity fused with statutory framework",
+      "Stuart Line: Primary victim (powerless/trapped) — permanently excluded from succession by statute with no exit mechanism short of constitutional revolution",
+      "Hereditary Absolutism: Philosophical victim (institutional/trapped) — the principle of hereditary right independent of parliamentary approval is suppressed by the statute",
+      "Protestant Established Church: Secondary beneficiary (institutional/constrained) — gains religious settlement (Protestant succession guaranteed); victim to parliamentary subordination of doctrine to politics"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The Act suppresses one specific claim (Stuart hereditary right) rather than extracting broadly from multiple groups. Judges benefit from good behaviour tenure (low extraction from them). Parliament gains supremacy (negative extraction for Parliament). The primary extraction is directed at the Stuart line specifically and at the broader principle of hereditary absolutism. Measuring extractiveness as 'total impact on the field' yields moderate value because most institutional actors (except the Stuart line) experience coordination benefit. Suppression (0.42): Moderate. The statute legally prohibits Stuart succession and the exercise of Crown prerogatives that Parliament claims (suspending laws, dispensing with statutes). But suppression is not total: the Crown retains significant practical power, and the prohibition is statutory rather than backed by overwhelming force (compared to later totalitarian suppression). Theater ratio (0.35): Moderate-low. The constraint's enforcement mechanisms are genuine (Parliament retains sanction power, courts enforce tenure), but the Crown's practical compliance is often ceremonial and negotiated rather than coerced. The ratio rises modestly over the twenty-year interval (to 0.38) as the initial coercive enforcement softens into institutional habit.",
+    "directionality_logic": "Directionality values (d) flow from structural relationships: the Stuart line as victims with trapped exit experience maximum d (≈0.95), producing high f(d) and high experienced extraction. Parliament as beneficiaries with arbitrage exit experience low d (≈0.10), producing negative f(d) and low/negative experienced extraction. Judges as mixed beneficiaries/victims with constrained exit experience moderate d (≈0.55), producing moderate f(d) and moderate experienced extraction. The analytical observer at civilizational scope experiences d ≈0.72 (observer position), producing f(d) ≈1.15, but risks naturalizing contingent institutional arrangements as logical necessity — false summit signature.",
+    "perspectival_gap": "The gap between the Stuart line's perspective (snare: total extraction, no exit, no coordination benefit) and Parliament's perspective (rope: pure coordination, beneficiary status, arbitrage exit) is maximal. The judiciary occupies the hybrid position (tangled rope) — beneficiary from independence, victim from supremacy. The analytical observer risks collapsing this gap by seeing the constraint as a logically inevitable consequence of parliamentary supremacy (mountain), but the structural data reveals contingency: Parliament's power to exclude the Stuart line depends on the settlement being accepted as legitimate, which depends on the coercive and negotiating power that preceded the statute. The constraint is not a natural law — it is a political settlement enforced by a specific configuration of power.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested Revolution settlement kernel (kernel_id: revolution_settlement). The reading is act_of_settlement_1701: the constraint focuses on statutory succession, judicial security, and the Crown made a parliamentary office. Sibling readings include: bill_of_rights_1689 (emphasis on parliamentary privilege, removal of Crown suspending/dispensing powers, the Crown's terms of tenure rewritten) and toleration_settlement_1689 (emphasis on religious truce, dissenting worship legalized, establishment maintained with calibrated exclusion). This reading differs from the Bill of Rights by centering on successional law rather than parliamentary privilege; it differs from the Toleration Act by centering on monarchical settlement rather than religious settlement. The three readings coexist as live positions held by different interpreters of the settlement — some emphasize the Bill of Rights as the master document (parliamentary privilege paramount), some emphasize the Act of Settlement (succession law paramount), some emphasize religious settlement. The omegas document the reading-contest and the structural delta.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the hybrid character (tangled rope) is not ambiguous — it is structurally overdetermined. The Act coordinates genuine institutional benefits (parliamentary supremacy, judicial independence) while extracting from specific victims (the Stuart line, hereditary absolutism). No reduction to pure coordination or pure extraction is possible: both functions operate simultaneously. The temptation to classify it as mountain (logical necessity) is refuted by recognizing that the constraint is a contingent settlement enforced by specific agents — not an immutable law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "revolution_settlement__bill_of_rights_1689",
+      "revolution_settlement__toleration_settlement_1689"
+    ],
+    "dual_formulation_note": "The Act of Settlement 1701 is one reading of the contested Revolution settlement kernel. The Bill of Rights 1689 and Toleration Act 1689 are sibling readings of the same kernel. These three constraints are linked by network.affects_constraints to indicate kernel family membership. Each story has its own ε value reflecting the structural specificity of that reading: the Act of Settlement centers on succession law (ε=0.28); the Bill of Rights centers on parliamentary privilege (ε may differ); the Toleration Act centers on religious settlement (ε may differ). The three readings are not reducible to a single constraint — each instantiates a distinct slice of the settlement's normative architecture."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "revolution_settlement__bill_of_rights_1689",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "revolution_settlement__toleration_settlement_1689",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "parliamentary_supremacy_in_succession",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_independence_from_crown_pleasure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "parliamentary_constitutional_supremacy",
+    "drift_state": {
+      "moment": "contemporary_constitutional_practice",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

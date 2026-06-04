@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "direct_democracy__plebiscitary_capture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plebi",
+    "story_uid": "9108c047-84aa-4c9b-bf61-ed5b8ddd899e"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.74,
+    "claimed_type": "snare",
+    "human_readable": "Plebiscitary Capture of Direct Democracy",
+    "topic_domain": "political/comparative_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "question_framer",
+      "executive_authority"
+    ],
+    "victims": [
+      "suppressed_alternatives",
+      "deliberative_process",
+      "minority_positions"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Citizen Voter",
+      "comment": "PERSPECTIVE 1: THE CITIZEN VOTER (SNARE) — Presented with a binary choice framed by the executive; no mechanism to exit the vote or alter the question. The formal participation masks suppression of the deliberative agenda. Maximum extraction: consent is manufactured from a constrained choice set that the voter did not construct. The voter experiences this as empowerment (they chose!) while bearing the cost of decision deprivation (they chose from what they were offered)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Opposition Coalition",
+      "comment": "PERSPECTIVE 2: THE OPPOSITION COALITION (SNARE) — Constrained by the binary frame: they can campaign against the executive's proposal, but they cannot reframe the question or add alternatives to the ballot. If they lose the plebiscite, the decision is locked in with the force of 'the people have spoken.' If they win, they have only vetoed, not governed. High extraction: the constraint converts their political capacity into a yes-or-no litmus test that measures opposition to a specific executive question, not capacity to propose alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Authority",
+      "comment": "PERSPECTIVE 3: THE EXECUTIVE AUTHORITY (ROPE) — Frames the question, chooses timing, controls information flow, and converts the outcome into mandate. The executive experiences the plebiscite as coordination (the people have been consulted!), not extraction. The mechanism guarantees legitimacy for the executive's preferred outcome and locks in the decision with popular sanction. Low experienced extraction because the executive is the beneficiary of the design itself — they have full agency within the constraint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Suppressed Deliberative Agenda",
+      "comment": "PERSPECTIVE 4: THE SUPPRESSED DELIBERATIVE AGENDA (SNARE) — The set of policy alternatives that the executive chose not to ask about, the questions reframed into binary form, the nuance flattened into yes-or-no. These alternatives are powerless and trapped — they have no mechanism to surface, no way to be placed on the ballot, no venue for deliberation. They bear extraction: the executive's choice to ask 'Should we build the dam?' rather than 'How should we manage water resources?' has allocated decision power entirely to the executive's framing. The suppressed alternatives cannot even be named as victims because they were never recognized as possible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Popular Sovereignty Principle",
+      "comment": "PERSPECTIVE 5: THE POPULAR SOVEREIGNTY PRINCIPLE (TANGLED ROPE) — From the legitimating ideal that democracy means the people decide, the plebiscite provides genuine coordination: a mechanism for aggregating public will on a specific question. But the coordination comes embedded in asymmetric extraction: the executive controls the question, the timing, and the binary frame. The plebiscite both realizes popular sovereignty and subordinates it to executive agenda-setting. Real coordination function (the people do decide on what they are asked) coexists with extractive agenda control. Moderately high extracted value: the people bear the cost of having their sovereign power converted into a veto-or-ratify function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the binary nature of democratic decisions might appear to be an inherent feature of collective choice: voting mechanisms always reduce continuous preferences to discrete outcomes, and this seems natural and necessary. The observer might classify the plebiscite's structure as arising inevitably from the logic of majority rule itself. However, the structural data (beneficiaries framing the question, victims consisting of suppressed alternatives, high suppression of deliberation) contradicts the mountain classification — the engine will detect this as a false summit, revealing that what appears as natural constraint is actually a contingent institutional design that concentrates decision power in the executive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "question_frame_manipulation_threshold",
+      "question": "At what point does executive question-framing cross from legitimate choice of policy emphasis to suppression of genuine alternatives?",
+      "resolution_mechanism": "Comparative analysis of plebiscite questions across democracies and autocracies; measurement of reframing rates by opposition; correlation between question frame and outcome predictability",
+      "impact": "If threshold is high (broad framing discretion is normal): plebiscitary capture is a moderate constraint. If threshold is low (any non-neutral framing counts as suppressive): plebiscitary capture is a severe snare. This determines whether the executive's question-setting is legitimate agenda-control or illegitimate agenda-monopoly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold distinguishing legitimate question emphasis from suppressive agenda control"
+    },
+    {
+      "id": "deliberative_sufficiency_of_plebiscite",
+      "question": "Can a plebiscite campaign period provide genuine deliberation about the question framed, or does the binary constraint inherently foreclose substantive deliberation?",
+      "resolution_mechanism": "Content analysis of campaign discourse: proportion of time spent on the executive's question vs. alternative framings, depth of issue exploration, representation of minority perspectives in campaign coverage",
+      "impact": "If deliberation is sufficient: the plebiscite is a tangled rope with robust coordination function. If deliberation is suppressed: the plebiscite is a snare masquerading as participation. This determines whether the constraint provides meaningful citizen input despite the binary frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether plebiscite campaigns enable genuine deliberation or suppress it"
+    },
+    {
+      "id": "referendum_vs_plebiscite_structural_difference",
+      "question": "What structural features distinguish a plebiscite (executive question, executive timing, binary choice) from a referendum (question initiated by popular petition or legislature, structured alternatives, deliberative agenda-setting)?",
+      "resolution_mechanism": "Institutional analysis of decision-making authority: Who controls the question? Who controls timing? Are alternatives or abstention options available? What deliberative processes precede the vote?",
+      "impact": "If the distinction is real and substantial: plebiscitary capture is a specific institutional failure, not inherent to direct democracy. This omega routes toward the swiss_referendum_system and town_meeting_tradition readings — alternative mechanisms that supply agenda control to collective bodies rather than executives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differences between plebiscites and referenda as decision mechanisms"
+    },
+    {
+      "id": "consent_manufacturing_vs_consent_aggregation",
+      "question": "Is the plebiscite aggregating pre-existing preferences, or manufacturing consent through the framing, timing, and information control?",
+      "resolution_mechanism": "Pre-plebiscite polling vs. post-vote analysis; measurement of opinion shift during campaign; analysis of information asymmetries between executive and opposition; temporal analysis of question announcement and timing (does timing correlate with political opportunity for the executive?)",
+      "impact": "If manufacturing: extraction is high, snare classification is robust. If aggregating: extraction is moderate, tangled_rope classification is warranted. This determines whether the plebiscite is an extractive mechanism or a legitimate decision procedure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether plebiscites manufacture or aggregate consent"
+    },
+    {
+      "id": "kernel_reading_contest_natural_law_vs_contingent",
+      "question": "Is the plebiscite a natural consequence of trying to aggregate preferences in a large democracy, or a contingent institutional design that concentrates executive power?",
+      "resolution_mechanism": "Comparative institutional analysis: What decision mechanisms do other direct democracies use (Swiss referenda, town meetings, liquid democracy)? What outcomes result from different agenda-setting structures? Historical analysis: Was the plebiscite introduced as a deliberate power-consolidation tool or as a natural evolution of democratic practice?",
+      "impact": "If natural: the mountain perspective is correct, and plebiscitary capture is an inherent feature of democracy at scale. If contingent: the false summit detector fires, and the swiss_referendum_system and town_meeting_tradition readings represent structurally different (less extractive) ways of organizing direct democracy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel contest: Is plebiscitary capture inevitable or a contingent institutional design?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.74
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The plebiscite represents direct democracy captured by executive agenda control. Unlike referenda (questions initiated by popular petition or legislature) or town meetings (where the agenda emerges from assembled deliberation), the plebiscite is the ruler's mechanism: the executive frames the question, chooses the timing, controls the information environment, and converts a yes-or-no outcome into popular mandate. Citizens experience this as empowerment — they are being consulted! — while bearing the cost of decision deprivation: the alternatives not asked, the nuance collapsed into binary, the agenda set before the people even gathered. The constraint exhibits the signature of a snare: high suppression (the executive controls what can be asked), high extractiveness (consent is manufactured from a constrained choice set), high theater (participation appears democratic while substantive decision power remains concentrated). The suppressed alternatives — the policy questions the executive chose not to pose — are the most powerless agents in the system: they have no mechanism to surface, no representation in deliberation, no voice in the binary choice. This reading is one interpretation of the contested kernel 'direct democracy': the plebiscitary reading emphasizes the concentration of agenda power within democratic forms; sibling readings (Swiss referenda, town meetings) represent structurally different mechanisms that distribute agenda-setting authority to collective bodies rather than executives.",
+    "key_agents": [
+      "Executive Authority: Primary beneficiary (institutional/arbitrage) — frames the question, chooses timing, controls information flow, converts yes-or-no into mandate. Experiences the plebiscite as coordination and legitimation, not extraction.",
+      "Citizen Voters: Primary victim (powerless/trapped) — offered binary choice they did not construct; their formal participation masks suppression of the deliberative agenda. Bear the cost of decision deprivation.",
+      "Opposition Coalition: Secondary victim (moderate/constrained) — constrained by the binary frame; can campaign against but cannot reframe or add alternatives; their political capacity is converted into a yes-or-no litmus test.",
+      "Suppressed Alternatives: Tertiary victim (powerless/trapped) — the policy questions the executive chose not to ask; the nuance flattened into yes-or-no; have no mechanism to surface or be deliberated. Cannot even be named as victims because they were never recognized as possible.",
+      "Popular Sovereignty Principle: Organized actor (organized/constrained) — provides the legitimating ideal for the plebiscite; experienced as both coordination (people do decide on what they're asked) and extraction (their sovereign power is converted into veto-or-ratify function).",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the plebiscite as inherent to democracy at scale, missing the contingent institutional design that concentrates executive power."
+    ],
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'direct_democracy'. The reading I am instantiating is 'plebiscitary_capture': Direct democracy's shadow is the plebiscite — the ruler's question, the ruler's timing, a yes-or-no that converts acclamation into mandate. Participation as the autocrat's notary. The kernel contest includes two sibling readings: swiss_referendum_system (Direct democracy's working model is Swiss: initiative and referendum woven into routine governance, the people as a standing fourth branch) and town_meeting_tradition (Direct democracy's communal form is the town meeting: the assembled neighbors as the legislature, self-government at the scale where everyone can be heard). The plebiscitary reading emphasizes how direct democracy can be captured by executive agenda control; the sibling readings represent structurally different mechanisms that distribute agenda-setting authority to collective bodies. The core contested claim is: Does direct democracy inherently concentrate power in whoever controls the question, or can institutional design (referenda initiated by petition, town meetings with emerging agendas) distribute that power to the democratic assembly itself?",
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The executive captures agenda-setting authority and manufactures consent through framing and timing. However, the extraction is not absolute because the citizen voter does have formal agency — they can vote yes or no, and the outcome is genuinely affected by their choice. The extractiveness reflects that the executive's control of the question is the dominant structural feature, converting decision-making power into a veto-or-ratify function. The measurement trajectory (0.45 → 0.58) models increasing executive sophistication in plebiscitary design and information control. Suppression (0.68): High. The executive controls what can be asked (alternatives cannot be posed), controls timing (the plebiscite is announced when politically advantageous), and controls information framing (the executive's campaign apparatus dominates the deliberative environment). Suppression is not total (citizens can campaign, opposition can organize) but is structurally asymmetric: the executive starts with agenda control. The measurement trajectory (0.55 → 0.68) models increasing professionalization of plebiscitary suppression mechanics. Theater ratio (0.74): High. The plebiscite is substantially performative: the appearance of consultation and popular decision-making masks the prior concentration of agenda power. Citizens experience voting as empowering while the substantive decision (what questions deserve deliberation?) has already been made by the executive. The measurement trajectory (0.68 → 0.74) models the theater increasing as executives learn to stage-manage the plebiscitary process.",
+    "directionality_logic": "Directionality (d) is derived from structural position relative to the constraint. The executive authority benefits from the constraint (they control the question and convert yes-or-no into mandate) and has arbitrage options (they can reframe future questions), resulting in low d → negative effective extraction from their perspective. Citizens and opposition are trapped or constrained (they cannot exit the binary choice and have no mechanism to alter the question), resulting in high d → high effective extraction from their perspectives. The suppressed alternatives are powerless and trapped with no mechanism to surface, resulting in maximum d. The popular sovereignty principle experiences asymmetric extraction (genuine coordination function shadowed by executive agenda control), resulting in moderate-to-high d. The analytical observer risks d=0.5 (symmetric) by seeing the plebiscite as natural and necessary, which the false summit detector flags as misclassifying a contingent institutional design.",
+    "perspectival_gap": "The plebiscitary reading exhibits a sharp perspectival gap between the beneficiary and victims. The executive sees a coordination mechanism: the people have been consulted, the outcome has popular sanction, the decision is legitimate. Citizens see empowerment followed by constraint: they chose! They also chose from what they were offered, and what was offered was the executive's question. Opposition sees effective suppression: they can campaign against a specific proposal but cannot propose alternatives or reframe the decision. The suppressed alternatives experience the maximum perspectival gap: they were never recognized as possible choices, so they have no voice in the binary vote. The analytical observer at civilizational scale risks seeing the plebiscite as natural — voting mechanisms always reduce preferences to discrete outcomes — when the structural data reveals a contingent institutional design: the question could be set by petition, the timing could be decoupled from executive political cycles, deliberation could precede the binary vote (as in town meetings or Swiss referenda). The gap between what the plebiscite claims to do (let the people decide) and what it actually does (let the executive decide what the people decide about) is the core extraction mechanism.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by distinguishing plebiscitary capture (snare: executive agenda control + binary suppression) from direct democracy itself (which could be rope, tangled_rope, or even mountain depending on mechanism and structural embedding). The snare classification applies to plebiscites specifically — mechanisms where the executive controls question framing, timing, and binary choice. The tangled_rope perspective from organized opposition and the popular sovereignty principle recognizes genuine coordination (the people do aggregate preferences on the question asked) embedded in asymmetric extraction (the executive set the question). The mountain perspective (natural law view) risks false summarization by treating the plebiscite's structure as inherent to democracy at scale. The swiss_referendum_system and town_meeting_tradition readings represent structurally different mechanisms (popular initiative, distributed agenda-setting) that organize direct democracy without plebiscitary capture. The mandatrophy is resolved by showing that direct democracy has multiple institutional manifestations with different extraction profiles — the choice of mechanism is the prior structural question that determines whether direct democracy becomes an executive tool or a populist check on executive power."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "direct_democracy__swiss_referendum_system",
+      "direct_democracy__town_meeting_tradition",
+      "executive_power_concentration",
+      "agenda_setting_monopoly"
+    ],
+    "dual_formulation_note": "The plebiscitary capture reading is one pole of the direct democracy kernel contest. The swiss_referendum_system and town_meeting_tradition readings represent structurally different mechanisms for organizing direct democracy without concentrating agenda power in the executive. All three constraints share the kernel ('direct democracy') but have different ε values reflecting different institutional structures: plebiscitary capture (ε≈0.58, snare) models executive agenda control; Swiss referenda (ε≈0.25, rope) model distributed agenda-setting; town meetings (ε≈0.15, rope) model emergent deliberative agendas. The network links these siblings and upstream constraints (executive power concentration, agenda monopoly) that create the conditions for plebiscitary capture."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "direct_democracy__swiss_referendum_system",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "direct_democracy__town_meeting_tradition",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "executive_controls_democratic_question",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "binary_choice_masks_agenda_suppression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "popular_sovereignty_through_collective_decision",
+    "drift_state": {
+      "moment": "contemporary_executive_plebiscitary_strategy",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

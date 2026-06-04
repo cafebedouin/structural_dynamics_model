@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "popular_assemblies_and_tribunate__comitia_centuriata_timocracy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_comitia_centuriata_timocracy",
+    "story_uid": "0701216b-449e-4413-984d-069bf1aec8a8"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Centuriate Assembly: Popular Sovereignty Organized by Wealth Class",
+    "topic_domain": "legal/doctrinal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "propertied_centuries",
+      "patrician_magistrates"
+    ],
+    "victims": [
+      "proletarii_unpropertied",
+      "plebeian_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Proletarii (Unpropertied Citizens)",
+      "comment": "PERSPECTIVE 1: PROLETARII (SNARE) — Vote last or not at all. Electoral weight indexed to census property; below the threshold, no formal weight in the assembly. Trapped within citizenship formalism that grants vote but denies substance. Maximum extraction: the assembly's existence legitimates 'the people's' rule while the people's actual power is suppressed by the census weighting. No exit from this structural position without acquiring property, which requires wealth the system itself concentrates upward."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Plebeian Commons (Lower Classes with Property)",
+      "comment": "PERSPECTIVE 2: PLEBEIAN COMMONS (SNARE) — Those with property but below the wealth threshold for early voting centuries. Vote constrained by the weighted system; their votes are counted but typically after the propertied classes have already decided. High suppression of voice; constrained exit (could in principle accumulate property, but barriers are steep). Significant extraction: political power is nominally universal but practically concentrated."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Propertied Centuries (Patrician Elite)",
+      "comment": "PERSPECTIVE 3: PROPERTIED CENTURIES (ROPE) — Coordinated through formal electoral structure. Vote first; decision usually rendered by the time lower classes vote. Experience the assembly as pure coordination: the mechanism solves the problem of aggregating elite preference and channeling it into binding law. Minimal suppression experienced by beneficiaries (their alternatives are not suppressed — they always have institutional access). Net beneficiary — the constraint subsidizes their political power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Magistrate Class (Consuls, Praetors, Censors)",
+      "comment": "PERSPECTIVE 4: MAGISTRATE CLASS (ROPE) — Agenda-setters and presiders. The centuriate assembly is the institutional mechanism through which their will is ratified. They experience it as coordination of elite preference into law. Low extraction cost; high institutional benefit. The assembly formalizes their executive power through 'the people's' sovereignty — coordination mechanism that legitimates their authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Tribunate and Plebeian Organization",
+      "comment": "PERSPECTIVE 5: TRIBUNATE AND PLEBEIAN ORGANIZATION (TANGLED ROPE) — From a longer timescale, the constraint exhibits genuine coordination function (the assembly does aggregate votes and produce binding law) alongside asymmetric extraction (the propertied centuries' dominance). The tribunate and plebeian assembly (comitia tributa) represent an organized response: alternative coordination pathways (plebiscites, tribunician veto) that bypass the centuriate assembly's weighted structure. This perspective sees both the coordination problem (need for binding decision procedure) and the extraction (wealth-based suppression). The constraint's active enforcement (census administration, voting procedures, magistrate presiding) is necessary to maintain both functions simultaneously."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the centuriate assembly might appear as a natural law of political development: any large polity needs an aggregation mechanism; property-weighted voting reflects the 'natural' distribution of stakes and capacity to participate; the form of one-person-one-vote is impossible for large populations. This perspective sees the constraint as emerging naturally from structural requirements. However, the structural data contradicts the mountain classification: the propertied centuries explicitly vote first; the census is actively administered and enforced; suppression of the unpropertied is a designed feature, not an inescapable consequence. The engine will identify this as a false summit — naturalizing what is actually a constructed extraction mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "census_threshold_contingency",
+      "question": "Is the census property threshold a natural structural necessity or a contingent policy choice by the propertied classes?",
+      "resolution_mechanism": "Comparative analysis: did other Hellenistic and Roman polities use different thresholds or purely property-weighted systems? What would happen to the assembly's function if the threshold were lowered by half? By ninety percent?",
+      "impact": "If contingent: the centuriate assembly is a designed extraction mechanism (Snare classification upheld). If necessary: portions of the constraint approach mountain-like status (structural unavoidability). Likely: threshold is partly contingent, partly embedded in functional requirements — constraint is Tangled Rope at the institutional level, Snare from victim perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether census thresholds reflect structural necessity or elite design choice"
+    },
+    {
+      "id": "voting_decision_precedence",
+      "question": "How often do the propertied centuries' votes actually predetermine the final outcome? Does decision typically come before lower classes vote, or do their votes occasionally matter?",
+      "resolution_mechanism": "Historical record analysis: frequency of outcomes where majority of propertied centuries voted one way and full assembly voted differently. Examine election records, senatorial decrees, legal sources on specific votes.",
+      "impact": "If propertied centuries decide first >95% of the time: Snare classification is conservative; constraint approaches pure_extraction. If they decide first 60-70%: constraint is genuine Tangled Rope (coordination happens, extraction is high but not absolute). If <50%: beneficiary analysis was wrong; constraint might be Rope or different type entirely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical frequency of propertied-century decision precedence"
+    },
+    {
+      "id": "contio_versus_centuriate_authority",
+      "question": "Does the contio (persuasion assembly before any formal vote) represent genuine alternative deliberative power, or is it purely preparatory theater for the centuriate assembly's predetermined outcome?",
+      "resolution_mechanism": "Textual analysis of sources on contio dynamics; comparison of outcomes when magistrates faced strong contio opposition versus weak. Did magistrate proposals change based on contio response?",
+      "impact": "If contio is genuine alternative: the centuriate assembly's snare classification may underestimate the system's deliberative capacity (adds Rope component). If contio is theater: confirms Snare (formal deliberation masks predetermined outcome). The sibling reading contio_persuasion_arena disputes whether centuriate voting or contio persuasion is the real locus of power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contio represents genuine alternative deliberative power or theater"
+    },
+    {
+      "id": "plebeian_assembly_competition",
+      "question": "After the Hortensian law, did the plebeian assembly (comitia tributa) become a genuinely competing decision mechanism, or did the centuriate assembly retain effective supremacy?",
+      "resolution_mechanism": "Longitudinal analysis of major legislation: which assembly passed binding laws on what topics? When magistrates had choice, which did they use? Did substantive outcomes shift when plebeian assembly passed plebiscites?",
+      "impact": "If plebeian assembly became competing: the centuriate assembly's extraction power was partially curtailed by the institutional development sibling reading plebiscite_force_of_law) describes. Snare classification remains but with temporal boundary (pre-Hortensian versus post-Hortensian extractiveness). If centuriate retained supremacy: Snare classification is robust across the late-Republican period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether plebeian assembly became genuinely competing or centuriate supremacy persisted"
+    },
+    {
+      "id": "property_mobility_and_census_dynamics",
+      "question": "How mobile was property ownership in the Roman population? Could unpropertied citizens realistically move into propertied centuries through wealth acquisition, making exit 'mobile' rather than 'trapped'?",
+      "resolution_mechanism": "Economic historians' estimates of property mobility rates; case studies of clients or freedmen who moved from unpropertied to propertied status; analysis of census updates and their frequency.",
+      "impact": "If mobility is significant (>15% intergenerational movement to propertied status): some victims experience 'constrained' or 'mobile' exit rather than 'trapped' — shifts some perspectives from Snare to Tangled Rope. If mobility is low (<5%): 'trapped' classification is correct; Snare remains robust from victim perspective. Likely: mobility exists but is highly constrained by patronage, land availability, and wealth concentration — makes exit 'constrained' or 'identity_locked' (trapped within client relationships that prevent independent wealth accumulation) rather than purely 'trapped' or truly 'mobile'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Property mobility and exit capacity for unpropertied citizens"
+    },
+    {
+      "id": "kernel_contest_boundary",
+      "question": "Which of the four sibling readings (contio_persuasion_arena, plebiscite_force_of_law, tribunician_sacrosanctity) represent genuinely competing kernels versus alternative pathways that coexist with centuriate timocracy?",
+      "resolution_mechanism": "Doctrinal analysis: did Roman legal tradition treat these as competing authority sources or as complementary mechanisms? Which sources privilege which reading? Did late-Republican practice treat contio, plebiscite, or tribunician veto as overriding centuriate assembly authority?",
+      "impact": "Determines reading_relations: if truly competing kernels, relations should include 'forecloses' for readings that directly contradict (e.g., if tribunician sacrosanctity reading claims tribune's veto supersedes assembly, it might foreclose centuriate timocracy's claim to final decision authority). If coexisting mechanisms, relations are 'coexists_with' or 'influences'. Likely: all four coexist as distinct institutional pathways with different authority bases and constituencies; the 'real' constitution was the presheaf over all four readings, not any single one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Status of kernel readings as competing versus coexisting mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "extractiveness_early_republic_midfifth_century"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.55,
+      "id_override": "extractiveness_middle_republic_fourth_century"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.58,
+      "id_override": "extractiveness_late_republic_second_century"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "suppression_early_republic"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.7,
+      "id_override": "suppression_middle_republic"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 240,
+      "value": 0.72,
+      "id_override": "suppression_late_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "theater_early_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.62,
+      "id_override": "theater_middle_republic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.65,
+      "id_override": "theater_late_republic"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 240
+  },
+  "commentary": {
+    "narrative_context": "The centuriate assembly (comitia centuriata) of the Roman Republic embodied a structural tension: it was formally the assembly of the people (populus Romanus), yet its voting procedure systematized wealth-based suppression of the unpropertied. Citizens were organized into 193 centuries (centuriae) nominally representing military units but actually organized by census property classes. The propertied classes (the assidui, those with property above the minimum threshold) were concentrated in far fewer centuries but voted first and usually decided everything before the lower property classes could vote. The proletarii (those without census property, and therefore without formal voting weight in the centuriate assembly) constituted a large portion of the population but were essentially excluded. This constraint exhibits the diagnostic signature of a snare: the assembly's form grants the illusion of popular sovereignty while its structure ensures that property-weighted voting dominates outcomes. The performance of democratic procedure legitimates the extraction of political power by the propertied classes. The extractiveness value (0.58) reflects that the constraint is not absolute — the mechanism did permit aggregation of preferences and produced binding law, rather than naked force — but extraction is substantial because the unpropertied lack genuine alternative pathways to political power within the centuriate assembly's structure. The suppression value (0.72) reflects active enforcement: the census was administered by magistrates, voting procedures were controlled, and the weight assigned to each property class was formally specified. This is a designed constraint, not an emergent one.",
+    "key_agents": [
+      "Proletarii (Unpropertied Citizens): Primary victims (powerless/trapped) — excluded from meaningful electoral weight; must watch the propertied decide",
+      "Plebeian Commons (Lower-Propertied Classes): Secondary victims (moderate/constrained) — have formal voting rights but vote after the propertied classes and rarely change outcomes",
+      "Propertied Centuries (Patrician and Equestrian Elite): Primary beneficiaries (institutional/arbitrage) — vote first, exercise effective decision power, experience the assembly as coordination of their own preference",
+      "Magistrate Class (Consuls, Praetors, Censors): Co-beneficiaries (institutional/arbitrage) — presiders and agenda-setters; the assembly formalizes their authority",
+      "Tribunate and Plebeian Organization: Organized opposition (organized/constrained) — develops alternative pathways (plebiscites, veto, contio) to bypass centuriate supremacy",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the centuriate assembly as a structural necessity rather than an elite-designed extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The centuriate assembly extracts political power from the unpropertied (the proletarii get no effective vote) and from the lower-propertied classes (they vote but after decisions are made). However, extractiveness is not maximal because the assembly does produce binding law through an aggregation mechanism, and it does coordinate elite preference — there is a genuine coordination function layered with extraction. The value of 0.58 reflects that the constraint is substantially extractive while admitting a coordination component. Over the interval (0-240 years), extractiveness drifts upward (0.48 → 0.58) as wealth concentration increases in the late Republic, and the property threshold becomes more effective at suppressing lower classes. Suppression (0.72): High. Active enforcement mechanisms include: the census (administered by magistrates to assign property classes), the voting procedures (defining which centuries vote when), and implicit legal barriers (the unpropertied cannot participate in the centuriate assembly's main decision procedure). Suppression is not total (the unpropertied are not physically prevented from voting in the assembly; they are formally permitted to vote, just after decisions are made) but is substantial (the alternatives to centuriate voting — tribal assembly, contio, tribunician action — are separate pathways, not substitutes within the centuriate structure). Over the interval, suppression rises slightly (0.65 → 0.72) as wealth inequality increases and the property threshold becomes a more effective barrier. Theater Ratio (0.65): Moderate-high. The assembly's procedure contains genuine deliberation and voting, so it is not pure theater. However, the outcome is typically predetermined once the propertied centuries vote (since their centuries outnumber the lower centuries and vote first). The performative element is the assembly's legitimating narrative: it appears to embody 'the people's' will while actually enabling the propertied classes' dominance. Theater increases over the interval (0.55 → 0.65) as late-Republican wealth inequality makes the centuriate assembly's claim to popular representation increasingly strained, requiring more elaborate narrative defense.",
+    "directionality_logic": "Each perspective's directionality value d (the agent's structural position relative to extraction) is derived from the agent's power level, exit options, and beneficiary/victim status. Proletarii (powerless/trapped/victims) experience maximum d (~0.95) — they are extracted from with no exit. Plebeian commons (moderate/constrained/victims) experience high d (~0.75) — they are victims but have some structural mobility (could in principle acquire property). Propertied centuries (institutional/arbitrage/beneficiaries) experience low d (~0.15) — they benefit from the constraint with multiple alternative pathways (exit via political retirement or institutional arbitrage). Magistrates (institutional/arbitrage/co-beneficiaries) experience negative d (~0.05) — they are subsidized by the assembly's structure. The tangled_rope perspective from organized plebeian actors (organized/constrained/mixed) experiences moderate d (~0.65) — they are partially victimized but also have agency and alternative pathways (plebiscite, tribunician action). The analytical perspective (analytical/analytical/observer) experiences observer d (~0.72). These directionality values feed the sigmoid f(d) function to produce effective extractiveness chi for each perspective. Beneficiaries with arbitrage options see rope (low chi); trapped agents see snare (high chi); organized opposition sees tangled_rope (moderate chi with both coordination and extraction).",
+    "perspectival_gap": "The centuriate assembly generates a strong perspectival gap. From the propertied centuries' perspective, it is pure coordination (Rope): the mechanism solves the problem of aggregating elite preference and channeling it into law. They experience the assembly as fair aggregation of citizens' votes, weighted by property because property represents stakes in the res publica. From the proletarii's perspective, it is pure extraction (Snare): the assembly legitimates the propertied classes' dominance through the form of popular voting while denying the unpropertied any real voice. The same structural fact — voting organized by property classes with the propertied voting first — appears as 'rational weighting of stakes' to the beneficiaries and 'suppression of the many' to the victims. The analytical observer from a civilizational timescale risks seeing this as a natural law (Mountain) — large polities need aggregation mechanisms, property-weighted voting reflects realistic distribution of capacity and interest — but the structural data reveals it as a false summit: the census is actively maintained, the voting order is specified in law, the threshold is chosen by magistrates. This is not natural; it is enforced. The tribunal's challenge (the sibling reading on tribunician_sacrosanctity) and the plebeian assembly's emergence (the sibling reading on plebiscite_force_of_law) represent organized responses: alternative authority structures that claim to represent the people more genuinely than the propertied centuries do.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'popular_assemblies_and_tribunate': the question of how the Roman Republic organized the people's formal sovereignty alongside other authority structures (magistracy, senate, tribunate). The reading instantiated here is comitia_centuriata_timocracy — the claim that the centuriate assembly exercised effective decision power through wealth-weighted voting, giving the propertied classes dominance while maintaining the form of popular rule. Sibling readings represent alternative claims about where real power lay: (1) contio_persuasion_arena claims that the contio (persuasion assembly) was the actual locus of public deliberation and elite contestation, and that centuriate voting merely ratified what had already been decided through contio debate. (2) plebiscite_force_of_law claims that the Hortensian law (267 BCE) made plebiscites binding on all citizens, creating an alternative assembly (comitia tributa) where property-weighted voting did not apply, and that this divided authority between centuriate and plebeian assemblies. (3) tribunician_sacrosanctity claims that the tribunate, resting on plebeian oath (the lex sacrata), created a veto power that overrode the assembly's formal decisions, and that the real constitution was the tension between assembly authority and tribunician power. These readings coexist as distinct institutional pathways in late-Republican practice, but they make competing claims about which was the 'real' locus of decision authority. This constraint (comitia_centuriata_timocracy) makes the claim that the centuriate assembly was the primary formal mechanism through which the res publica made binding decisions — a claim the other readings challenge or qualify."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "contio_persuasion_arena",
+      "plebiscite_force_of_law",
+      "tribunician_sacrosanctity"
+    ],
+    "dual_formulation_note": "The centuriate assembly is one of four readings of the kernel 'popular_assemblies_and_tribunate'. This reading emphasizes the assembly's wealth-weighted voting structure and the dominance of the propertied centuries. The sibling reading contio_persuasion_arena disputes whether the assembly's vote was ever truly determinative or was merely ratification of contio debates. The sibling reading plebiscite_force_of_law claims that plebeian plebiscites created a competing assembly after 287 BCE, dividing authority. The sibling reading tribunician_sacrosanctity claims the tribunate's veto was the ultimate constraint on assembly authority. All four coexist as distinct institutional pathways; the 'real' constitution was likely the presheaf over all four, not any single one. This story isolates the centuriate assembly's extractiveness and suppression from the other pathways."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "contio_persuasion_arena",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "plebiscite_force_of_law",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "tribunician_sacrosanctity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "centuriate_assembly_final_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "property_weighted_voting_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "proletarii_exclusion_procedural_necessity",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "republican_assembly_sovereignty",
+    "drift_state": {
+      "moment": "late_republic_second_century",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

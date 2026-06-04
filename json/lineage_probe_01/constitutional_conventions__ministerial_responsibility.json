@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "constitutional_conventions__ministerial_responsibility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_conventions__ministerial_responsibility",
+    "measurement_id_prefix": "minresp",
+    "story_uid": "5cd70fb2-025c-4a91-ba87-32ca4fc53ab6"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ministerial Responsibility Convention",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parliamentary_commons",
+      "executive_leadership"
+    ],
+    "victims": [
+      "individual_ministers",
+      "administrative_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Scapegoated Minister",
+      "comment": "PERSPECTIVE 1: SCAPEGOATED MINISTER (SNARE) — A minister bearing institutional failure with no genuine control over the anonymous bureaucracy below. Exit is resignation under pressure, but the underlying systemic failures persist. High suppression (career destruction, public humiliation) with minimal coordination benefit — the minister absorbs blame for structural problems they did not create and cannot unilaterally fix. This agent experiences pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Service Hierarchy",
+      "comment": "PERSPECTIVE 2: CIVIL SERVICE HIERARCHY (TANGLED ROPE) — Benefits from the convention by remaining unaccountable: bureaucrats design and implement policy, but ministers bear public responsibility. The civil service gains a coordination benefit (ministerial delegation provides legitimacy cover) alongside an extraction benefit (shielded anonymity). Constrained exit because civil servants depend on the minister-as-buffer arrangement; if it collapsed, direct parliamentary scrutiny of bureaucracy would follow. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Parliamentary Commons",
+      "comment": "PERSPECTIVE 3: PARLIAMENTARY COMMONS (TANGLED ROPE) — Gains the ability to hold government accountable through a visible, resignable agent (the minister) rather than faceless bureaucracy. This is a genuine coordination benefit: the convention makes the executive answerable. However, the extraction cost is real: ministers often resign for failures they did not author or could not prevent, while the actual architects of failure remain sheltered. The Commons has mobile exit (can reform the convention, demand direct bureaucratic accountability) but chooses the easier path of extracting ministerial resignations. Mixed coordination and extraction from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prime Minister and Executive",
+      "comment": "PERSPECTIVE 4: PRIME MINISTER AND EXECUTIVE (ROPE) — Net beneficiary. The convention allows the Prime Minister to manage both Parliament (by providing resignations to satisfy scrutiny) and the bureaucracy (by maintaining civil service loyalty through the fiction that ministers, not officials, control policy). The executive experiences this as pure coordination: a mechanism for distributing accountability that protects the Prime Minister's authority while appearing to hold subordinates responsible. Arbitrage exit: the executive can reshape the convention (see Churchill's 1951 revival, or Thatcher's hardline) or enforce it strictly as needed."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal Doctrine of ministerial Responsibility",
+      "comment": "PERSPECTIVE 5: FORMAL DOCTRINE (PITON) — The stated doctrine of individual ministerial responsibility is largely theater. Actual resignations are rare and often voluntary rather than coerced; most ministers survive serious failures and are shuffled rather than ousted. The convention persists through ritual invocation ('ministers must resign for their departments') even though enforcement is sporadic and often inconsistent. High theater ratio reflects that the formal doctrine is invoked to legitimize decisions made on other grounds (political calculation, media pressure, party management). The doctrine's functional content has degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Accountability-as-Natural-Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From the civilizational/universal perspective, some form of individual accountability in governance is inherent to political legitimacy itself. You cannot have an answerable executive without a person to whom Parliament directs its scrutiny and from whom resignations flow. This view naturalizes ministerial responsibility as an inescapable feature of any accountable governance system. However, the structural data contradicts this: the beneficiary/victim split, the enforceability constraints, and the theater ratio reveal that the convention is a contingent institutional arrangement, not a natural law of politics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resignation_causation_ambiguity",
+      "question": "Does a minister's resignation reflect genuine accountability for departmental failure, or is it a political theater move by the Prime Minister to satisfy Parliament while protecting the civil service?",
+      "resolution_mechanism": "Temporal analysis: track whether resignations follow performance failures (accountability model) or political events like budget crises or media scandals unrelated to ministerial competence (theater model). Correlate resignation timing with failure severity and minister culpability.",
+      "impact": "If resignations track actual failure: the convention has real coordination content (Rope from Commons perspective). If resignations are political theater: the convention is extraction mechanism (Snare from minister perspective). Current evidence suggests mixed: some resignations are genuine accountability (Crichel Down precedent), most are political theater (ministers survive massive failures).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resignations reflect genuine accountability or political theater"
+    },
+    {
+      "id": "civil_service_anonymity_mechanism",
+      "question": "Is the anonymity of the civil service a feature of ministerial responsibility (enabling coordination by shielding permanent service from political turmoil) or a bug (enabling unaccountable bureaucratic extraction)?",
+      "resolution_mechanism": "Comparative constitutional analysis: compare UK outcomes where civil service remains anonymous with systems where bureaucrats face direct parliamentary scrutiny (Germany, Sweden) or public accountability (US). Measure policy quality, responsiveness, and corruption rates.",
+      "impact": "If anonymity enables better coordination: ministerial responsibility is Rope (protects civil service, enables continuity). If anonymity enables extraction: it is Snare (protects bureaucratic failure). If both: it is Tangled Rope (genuine coordination benefit + extraction mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civil service anonymity serves coordination or enables extraction"
+    },
+    {
+      "id": "collective_vs_individual_reading_foreclosure",
+      "question": "Does the doctrine of individual ministerial responsibility logically foreclose the doctrine of collective responsibility, or can both be held simultaneously?",
+      "resolution_mechanism": "Doctrinal analysis: Examine whether a minister can simultaneously be individually accountable for their department AND collectively responsible for Cabinet decisions they opposed. Current practice: both doctrines are invoked. Identify whether they are compatible or whether invoking one rules out the other in principled analysis.",
+      "impact": "If they foreclose each other: ministerial_responsibility and collective_responsibility are incompatible readings of the same kernel, and the constitution cannot hold both. If they coexist: they represent different aspects of the same accountability structure. Current doctrine treats them as coexisting but inconsistent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether individual and collective ministerial responsibility are logically compatible"
+    },
+    {
+      "id": "convention_enforceability_degradation",
+      "question": "Has the convention's enforcement mechanism degraded over time, with ministers surviving failures that would have triggered resignation in earlier periods?",
+      "resolution_mechanism": "Historical analysis: compare resignation triggers and rates across decades. Correlate with media environment (24-hour news cycle, social media amplification), parliamentary capacity (number of select committees, scrutiny depth), and political polarization.",
+      "impact": "If enforcement has degraded: the convention is transitioning from Rope (coordination) toward Piton (inertial theater). This would suggest the ministerial responsibility reading is losing coherence and competitors (collective responsibility, direct bureaucratic accountability) may gain ground.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the convention's enforcement has degraded over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Ministerial responsibility is the constitutional convention that ministers answer to Parliament for their departments and resign for serious failure. It is one reading of the contested kernel of constitutional accountability structures in parliamentary systems. The convention establishes that the bureaucracy is not directly answerable to Parliament; instead, it is answerable through a minister who is both a politician and the formal head of a department. This creates a structural ambiguity: the minister may be a figure-head bearing responsibility for decisions made by permanent officials, or a genuine leader whose authority flows downward. The convention benefits the executive (by providing a visible accountability mechanism that can be invoked or suppressed as political advantage dictates) and the civil service (by remaining anonymous). It extracts cost from individual ministers who may resign for failures they did not author and cannot prevent. The convention also benefits Parliament (by providing a person to scrutinize and hold to account) but at the cost of accepting ministerial fig-leafing of bureaucratic failures. The theater ratio (0.65) reflects that formal doctrine (ministers resign for serious failure) is invoked unevenly — resignations are rarer than the doctrine suggests, and when they occur, they often track political events rather than failure severity.",
+    "key_agents": [
+      "Individual Ministers: Primary victims (powerful/constrained) — bear public responsibility and resignation risk for departmental failures often authored by permanent officials",
+      "Civil Service Hierarchy: Primary beneficiary (powerful/constrained) — remain anonymous, shielded from direct parliamentary accountability, while maintaining influence over policy",
+      "Parliamentary Commons: Secondary beneficiary (organized/mobile) — gain a mechanism to hold executive accountable, though the mechanism often obscures rather than clarifies bureaucratic failure",
+      "Prime Minister/Executive: Primary beneficiary (institutional/arbitrage) — control both ministerial resignations (to satisfy Parliament) and civil service loyalty (by maintaining the fiction that ministers direct policy)",
+      "Formal Doctrine of Ministerial Responsibility: Institutional theater (institutional/arbitrage) — persists as invocation despite sporadic enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing a contingent institutional arrangement as an inescapable feature of accountability"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The convention enables extraction of ministerial resignations (cost borne by individuals) to satisfy Parliament's accountability demand, while shielding the civil service from direct scrutiny. The extraction is substantial but not maximal because the convention also provides genuine coordination benefit: Parliament gains a mechanism to hold someone visibly accountable. Without ministerial responsibility, Parliament would face pure opacity (an unaccountable civil service). With it, Parliament gains accountability through a person. The cost is that the person may be a scapegoat. Suppression (0.58): Moderate-high. Ministers face high cost for refusing to resign when pressure is applied (career destruction, party expulsion, media condemnation). The suppression operates through political and institutional mechanisms, not legal ones — a minister cannot be compelled to resign, but the social cost is severe. Exit options for ministers are constrained: resignation is painful but exit, while remaining in government without resigning is political death. Theater ratio (0.65): Moderate-high. The doctrine states that ministers resign for serious failure, but enforcement is inconsistent. Many ministers survive major failures (Profumo was rare; most post-2000 scandals result in reshuffles, not resignations). The ritual is invoked (the Prime Minister 'accepts' a resignation with performative regret) even when the resignation was politically calculated rather than accountability-driven. Over the 40-year interval, theater ratio has risen as media coverage has become more performative and political calculation more transparent.",
+    "perspectival_gap": "This constraint demonstrates a deep perspectival split. The scapegoated minister (powerless/trapped) sees pure extraction — they bear blame for structural failures. The civil service (powerful/constrained) sees coordination benefit plus extraction: they gain anonymity while officials authorize policy. The Commons (organized/mobile) sees genuine coordination benefit: they have a person to scrutinize. The Prime Minister (institutional/arbitrage) sees pure coordination: the convention lets them manage both Parliament and bureaucracy. The formal doctrine (institutional/arbitrage) is theater: the stated rule (resign for serious failure) is invoked unevenly. The analytical observer risks seeing a natural law (accountability requires an answerable person) when the data reveals a contingent arrangement (this particular way of organizing accountability is one option among others).",
+    "directionality_logic": "Directionality values vary by structural position. The scapegoated minister (powerless/trapped/victim) experiences maximum d ≈ 0.95 (full target of extraction). The civil service (powerful/constrained/beneficiary) derives d from the tension between anonymity benefit and constrained exit, roughly d ≈ 0.30 (net beneficiary but with costs). The Commons (organized/mobile/mixed) derives d from scrutiny benefit but acceptance of ministerial fig-leafing, roughly d ≈ 0.55 (symmetric or slight victim). The Prime Minister (institutional/arbitrage/beneficiary) derives d ≈ 0.05 (net beneficiary with arbitrage flexibility). The analytical observer derives d ≈ 0.72 (observational position). These variations explain why the same constraint classifies as Snare from the minister's view, Rope from the PM's, Tangled Rope from the Commons', and Mountain from the analytical view that risks naturalizing the arrangement.",
+    "kernel_context": "Ministerial Responsibility is ONE READING of the contested kernel of constitutional accountability. This constraint instantiates the reading that individual ministers answer to Parliament for their departments and resign for serious failure. Sibling readings include: (1) Collective Responsibility — the Cabinet speaks with one voice, forcing ministers to defend decisions they opposed or leave; (2) Royal Assent Convention — the monarch assents to every bill, a legal veto unused since 1708, alive only as the rule that it must never be used; (3) Salisbury Convention — the Lords do not block manifesto bills, conceding mandate legislation at second reading. The ministerial responsibility reading focuses on making the bureaucracy answerable through a resignable person. It competes with collective responsibility (which absorbs individual accountability into cabinet unity) and with alternatives like direct bureaucratic accountability or stripped-down prime ministerial authority.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that ministerial responsibility is a genuine Tangled Rope constraint with real coordination benefit (Parliament can scrutinize an answerable agent) alongside real extraction (ministers bear costs for bureaucratic failures they did not author). The constraint is NOT pure extraction (Snare) because the coordination mechanism is functionally real — without it, Parliament would face complete opacity. It is NOT pure coordination (Rope) because the extraction of ministerial resignations is substantial and asymmetric. The rise in theater ratio (0.45 to 0.65 over 40 years) suggests the coordination function is degrading relative to the extractive function — more resignations are political theater, fewer are accountability-driven. This tracks the rising power of media cycles and political calculation relative to genuine parliamentary scrutiny. The Tangled Rope classification holds at the current endpoint (ε = 0.52) but the trajectory suggests drift toward Piton (high theater, degraded function) or Snare (rising extraction, declining coordination). The mandatrophy is not whether to reclassify now, but to recognize that the reading's internal stability is weakening."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_conventions__collective_responsibility",
+      "constitutional_conventions__royal_assent_convention",
+      "constitutional_conventions__salisbury_convention"
+    ],
+    "dual_formulation_note": "Ministerial responsibility is one reading of a contested constitutional kernel. The four constraint stories (ministerial_responsibility, collective_responsibility, royal_assent_convention, salisbury_convention) represent different interpretations of how accountability flows through the constitution. All four are instantiations of the same underlying kernel: the stabilized commitment that the UK constitution is an uncodified set of enforced conventions. Ministerial responsibility focuses on individual minister accountability; collective responsibility focuses on cabinet unity; royal assent focuses on the crown's formal (but unused) veto; Salisbury focuses on the Lords' self-denying ordinance. Each story has its own ε value and perspectival structure, but they are linked by the shared kernel and mutual influence through constitutional interpretation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.3
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_conventions__collective_responsibility",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_conventions__royal_assent_convention",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_conventions__salisbury_convention",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_minister_answerable_to_parliament",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "bureaucratic_failure_requires_political_resignation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "individual_accountability_framework",
+    "drift_state": {
+      "moment": "contemporary_media_politics_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

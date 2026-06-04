@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "swiss_referendum_system__minority_rights_tension",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_swiss_referendum_system__minority_rights_tension",
+    "measurement_id_prefix": "swref_mrt",
+    "story_uid": "35b59a13-3776-49da-88ed-2446aedea781"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Swiss Referendum System: Minority Rights Tension (Minaret Ban Reading)",
+    "topic_domain": "political/comparative_constitutionalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "majoritarian_initiating_coalition"
+    ],
+    "victims": [
+      "targeted_religious_minority",
+      "constitutional_rights_framework"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Targeted Religious Minority",
+      "comment": "PERSPECTIVE 1: TARGETED RELIGIOUS MINORITY (SNARE) — The Muslim minority in Switzerland faces constitutional amendment by popular vote with no institutional shelter. Direct democracy exposes rights to majoritarian revision; exit is geographic (relocation) or submission. No counter-majoritarian institution protects constitutional minorities. The extraction mechanism is the ballot itself: majority can directly vote away minority rights protection."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constitutional Rights Framework (Structural)",
+      "comment": "PERSPECTIVE 2: CONSTITUTIONAL RIGHTS FRAMEWORK (SNARE) — As an abstract collective good, the constraint that rights are protected from majoritarian amendment is itself a victim. The minaret ban amendment (2009) demonstrates that direct democracy can extract from the rights framework by popular vote. Once a constitutional principle is exposed to ballot revision, its protection mechanism has been fundamentally compromised for future minorities. The structural victim here is not a population but a constitutional principle."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Majoritarian Initiating Coalition",
+      "comment": "PERSPECTIVE 3: MAJORITARIAN INITIATING COALITION (TANGLED ROPE) — Benefits from direct democracy as a coordination mechanism for mobilizing political will (100,000 signatures organized around a shared objective). Experiences genuine coordination: the initiative mechanism enables expression of latent public preferences that representative institutions might suppress. But also benefits from extraction: the same mechanism can suppress minority dissent within the constitutional order. The coalition faces minimal suppression and gains political power; extraction runs toward them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Parliament / Representative Institutions",
+      "comment": "PERSPECTIVE 4: PARLIAMENT / REPRESENTATIVE INSTITUTIONS (ROPE) — Institutional actors with structural alternatives. They experience direct democracy as a coordination mechanism that enforces consensus: the threat of referendum forces inclusion of minority preferences to avoid ballot defeat (magic formula logic). This perspective sees the initiative as coordination insurance rather than extraction. When they act as institutional beneficiaries, they experience rope classification; when minoritized by majoritarian initiative, they shift toward snare."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Constitutional Court / Supranational Rights Review",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL COURT / SUPRANATIONAL REVIEW (PITON) — Swiss courts and European human rights bodies have limited authority to overturn constitutional amendments. Their review function is substantially performative: they can declare the minaret ban in tension with international law but cannot block its domestic implementation. The institutional framework maintains a vestigial rights-review theater while direct democracy has structural supremacy. This is inertial — the review institutions persist but their protection mechanism has been degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, this reading risks naturalizing direct democracy as an immutable expression of popular sovereignty: 'the people must have the ultimate power to decide their constitutional order.' This perspective treats the collision between majority power and minority rights as an inherent, unchangeable feature of democratic self-determination. However, structural data contradicts this — the minaret ban represents a *choice* to expose rights to ballot revision, not a law of nature. The false summit detector will flag this classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "counter_majoritarian_shelter_design",
+      "question": "Is the absence of counter-majoritarian constitutional shelter a deliberate Swiss design choice or an unintended structural vulnerability?",
+      "resolution_mechanism": "Historical analysis of Swiss constitutional debates; comparison with other direct-democracy systems (California, Austria, Denmark) and their minority protections; examination of pre-2009 discourse on whether rights were understood to be ballotable",
+      "impact": "If deliberate design: this reading reflects an authentic choice to prioritize majority sovereignty over minority protection — classification as snare is structural. If unintended: the snare reflects a design flaw correctable by institutional amendment — classification shifts toward tangled_rope with sunset potential.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether absence of counter-majoritarian shelter is deliberate or accidental"
+    },
+    {
+      "id": "majority_support_stability",
+      "question": "Does the majoritarian coalition benefit stably from direct democracy, or does the same mechanism expose them to counter-majoritarian initiative by future majorities?",
+      "resolution_mechanism": "Time-series analysis of initiative success rates by political direction; simulation of worst-case scenarios where minority voters become swing voters or shift electoral geography; comparison of beneficiary stability across multiple referendum cycles",
+      "impact": "If stable majority benefit: snare classification is robust — the mechanism systematically favors current coalition. If unstable: the benefit is temporary and the mechanism creates recursive vulnerability — reclassifies toward tangled_rope with cyclical extraction patterns.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of majoritarian coalition benefit across time"
+    },
+    {
+      "id": "direct_democracy_kernel_contestation",
+      "question": "Which reading of the direct-democracy kernel — majority sovereignty, consensus forcing, or agenda power — is constitutively privileged in Swiss legitimacy claims?",
+      "resolution_mechanism": "Textual analysis of Swiss constitutional documents, referendums campaigns, and judicial reasoning; interviews with constitutional scholars and referendum campaigners; examination of which kernel reading appears in justifications for referendum outcomes vs. pre-ballot rhetoric",
+      "impact": "If majority-sovereignty reading is privileged: snare classification is authenticated by the system's own legitimacy narrative. If consensus-forcing reading is privileged: the minority-rights-tension reading is a misapplication of the kernel — reclassify toward rope. If agenda-power reading is privileged: the snare reflects who controls the agenda, not inherent system structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which kernel reading is constitutively privileged in Swiss legitimacy claims"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_cultural",
+      "question": "Is suppression of minority dissent a structural feature (the ballot's direct force) or a cultural feature (Swiss norms of consensus and inclusion)?",
+      "resolution_mechanism": "Comparative analysis: do minority groups in California face equivalent ballot suppression despite weaker consensus norms? Do minorities in Austria face different suppression trajectories than in Switzerland despite similar direct-democracy structures? Ethnographic study of how minorities experience suppression pre-ballot vs. post-ballot.",
+      "impact": "If structural: snare classification is robust across governance contexts. If cultural: the minaret ban represents Swiss consensus-culture failure, not direct-democracy necessity — potentially reclassifies toward tangled_rope with stronger cultural-amendment pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or culturally contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "mrt_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "mrt_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "mrt_extract_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "mrt_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68,
+      "id_override": "mrt_suppress_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72,
+      "id_override": "mrt_suppress_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "mrt_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "id_override": "mrt_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "mrt_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Swiss referendum system's collision with minority rights emerges most acutely in the minaret ban (2009), where direct democracy — positioned as the purest expression of popular sovereignty — voted to restrict constitutional protections for a religious minority. This constraint story instantiates one reading of the contested Swiss referendum kernel: the reading that prioritizes majority power to revise constitutional commitments via initiative. In this reading, direct democracy exposes rights protections themselves to majoritarian amendment, creating a snare mechanism where constitutional minorities have no institutional shelter from ballot-based extraction. The beneficiary is the majoritarian coalition that uses direct democracy to entrench its preferences at the constitutional level; the victims are the targeted minority and the abstract constitutional principle that rights should protect against majoritarian amendment. This reading coexists with two sibling readings: one that emphasizes how the referendum threat forces consensus (magic formula effect), and one that emphasizes how the initiative mechanism empowers popular agenda-setting. This constraint story focuses exclusively on the collision between majority power and minority protection.",
+    "key_agents": [
+      "Majoritarian initiating coalition: Institutional/arbitrage — captures constitutional amendment power through initiative mechanism; benefits from direct-democracy access",
+      "Targeted religious minority (Muslims in Switzerland): Powerless/trapped — faces constitutional amendment by popular vote with no counter-majoritarian shelter; bears full extraction cost",
+      "Constitutional rights framework: Abstract collective victim — the principle that rights protect against majoritarian amendment is itself exposed to ballot revision",
+      "Parliament/representative institutions: Institutional/constrained — experience referendum as coordination threat that forces consensus; have alternative authority channels",
+      "Constitutional Court/supranational review bodies: Institutional/arbitrage — maintain vestigial review function but lack power to overturn constitutional amendments; substantially performative",
+      "Analytical observer: Analytical/analytical — risks naturalizing majority sovereignty as immutable law rather than design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximal. The minaret ban demonstrates that direct democracy enables constitutional extraction from minorities — the majority can directly revise rights protections through initiative. However, this is not the highest extractiveness possible because: (1) the mechanism is transparent and formal, not covert; (2) the victim has structural alternatives (relocation, identity suppression, litigation); (3) beneficiary power is contingent on maintaining referendum supermajority, which constrains unlimited extraction. The value reflects real extraction with some structural friction. Suppression (0.72): High. Multiple suppression layers converge: structural (no counter-majoritarian constitutional institution), procedural (100,000 signatures is a low threshold for constitutional amendment), cultural (Swiss consensus norms can be mobilized against minority dissent), legal (minority rights claims face higher evidentiary burden at the ballot than in court). The measurement trajectory shows rising suppression — as direct democracy matures as a mechanism, minority dissent becomes increasingly pre-emptively suppressed in anticipation of unfavorable referendums. Theater ratio (0.35): Relatively low. The minaret ban shows minimal theater — the vote was direct, the outcome implemented mechanically, the will of the majority was translated into constitutional amendment without intermediary interpretation. This is not performative; it is extraction with transparency.",
+    "directionality_logic": "The minaret ban demonstrates that structural position determines experienced extractiveness. The majority coalition experiences low effective extraction (they control the mechanism and benefit from it); the targeted minority experiences maximum extraction (no exit options, no institutional shelter, no alternative authority). The institutional parliament experiences the referendum as a constraint on their autonomy but also as a coordination mechanism — they benefit from the consensus-forcing effect in non-balloted moments. Directionality (d) varies sharply across perspectives: beneficiary coalition d ≈ 0.20 (low), targeted minority d ≈ 0.92 (very high), parliament d ≈ 0.55 (symmetric). The beneficiary's experience of rope (coordination benefit) versus the victim's experience of snare (extraction) flows from these different d values applied to the same structural constraint.",
+    "perspectival_gap": "The Swiss referendum system illustrates the perspectival distance between majority and minority positions on the same institutional mechanism. To the majoritarian coalition, direct democracy is rope: a coordination mechanism that enables latent preferences to become policy. To the targeted minority, it is snare: a ballot-based extraction mechanism with no institutional appeal. To parliament, it is tangled rope with elements of rope: coordination insurance against being captured by excluded factions, but also a threat to representative autonomy. To the constitutional court, it is piton: the formal right to review exists but lacks power to overturn constitutional amendments. To the analytical observer at civilizational timescale, it risks appearing as mountain: popular sovereignty as an immutable law of democratic systems. The false summit detector will identify this as naturalization. The perspectival gap reveals that the same mechanism is genuinely experienced as coordination by beneficiaries and extraction by victims — not a difference in observation but a difference in structural position.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that direct democracy can function as both coordination mechanism (rope) and extraction mechanism (snare) depending on whether the observer is included in or excluded from the majority. The minaret ban reading privileges the extraction reading: it shows that when direct democracy is used to revise constitutional rights protections, the mechanism becomes a snare for those minoritized at the ballot. However, the sibling consensus-forcing reading (not this story) emphasizes how the referendum threat forces inclusion and consensus, converting potential snare into rope. The mandatrophy is not 'which is correct' but 'which constitutional commitment takes priority: majority sovereignty or minority protection?' This story instantiates one normative reading (majority sovereignty) that generates snare classification. The sibling reading would instantiate another normative reading (constitutional consensus) that generates rope classification. Both are live in Swiss constitutional discourse.",
+    "kernel_context": "This constraint is the 'minority_rights_tension' reading of the contested Swiss referendum system kernel. The kernel is the stabilized commitment to direct democracy as a mechanism for amending the Swiss constitution through popular initiative. This story instantiates the reading that prioritizes majority power to revise constitutional protections via ballot. Sibling readings include: (1) 'consensus_forcing_effect' — emphasizing how referendum threat forces consensus and inclusion in parliament; (2) 'popular_initiative_engine' — emphasizing agenda power held by publics rather than parliaments. All three readings derive from the same institutional kernel (direct democracy) but emphasize different structural consequences. This reading coexists with the sibling readings; none forecloses the others within a single framework. Rather, different parties (majority coalitions, minority groups, institutional actors) live in different readings simultaneously, creating ongoing constitutional contest."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "swiss_referendum_system__consensus_forcing_effect",
+      "swiss_referendum_system__popular_initiative_engine"
+    ],
+    "dual_formulation_note": "The Swiss referendum system kernel decomposes into three structurally distinct constraints reflecting different readings of the same institutional mechanism. This story (minority_rights_tension, ε=0.58, snare) emphasizes extraction from minorities; the sibling constraint (consensus_forcing_effect, ε~0.30, rope) emphasizes coordination forcing; the third sibling (popular_initiative_engine, ε~0.40, tangled_rope) emphasizes agenda power asymmetry. All three are real structural features of the system; which one dominates depends on the historical moment and the reference majority. The network links reflect that constitutional changes in one reading propagate structural pressure to the siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "swiss_referendum_system__consensus_forcing_effect",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "swiss_referendum_system__popular_initiative_engine",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "majority_sovereignty_over_constitutional_amendment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "rights_as_revisable_constitutional_commitments",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "popular_sovereignty_unshackled",
+    "drift_state": {
+      "moment": "post_minaret_ban_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

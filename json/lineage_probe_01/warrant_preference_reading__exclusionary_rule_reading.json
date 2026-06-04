@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "warrant_preference_reading__exclusionary_rule_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_warrant_exclusionary_rule",
+    "measurement_id_prefix": "warr_excl",
+    "story_uid": "b4640b3c-8ebc-4ef3-a5b3-0f3bfdf93934",
+    "created_at": "2026-02-27T14:32:15Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Exclusionary Rule as Constitutional Enforcement Mechanism",
+    "topic_domain": "constitutional_law/fourth_amendment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defendants_in_suppression_motions",
+      "law_enforcement_agencies_deterred_by_suppression_cost"
+    ],
+    "victims": [
+      "probative_evidence_users",
+      "prosecution_case_strength"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Defendant Awaiting Suppression Motion",
+      "comment": "PERSPECTIVE 1: DEFENDANT IN SUPPRESSION MOTION (SNARE) — Trapped within the criminal process; the exclusionary rule is their only remedy for unconstitutional search. No alternative exit mechanism exists. Maximum experienced extraction of the violation itself — the unconstitutional seizure has occurred, the evidence has been obtained, and the defendant must prove the violation AND demonstrate standing AND file a suppression motion to activate any remedy. Theater ratio reflects the suppression hearing's courtroom ritual, but the underlying extraction (privacy violation, bodily intrusion, home invasion, etc.) is non-performative and irreversible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Agencies",
+      "comment": "PERSPECTIVE 2: LAW ENFORCEMENT AGENCIES (TANGLED ROPE) — Constrained by suppression doctrine: violations cost them probative evidence and case dismissals. But the doctrine also coordinates law enforcement practice — the threat of suppression (and public embarrassment, institutional scrutiny) provides the incentive to develop constitutional alternatives and train officers on warrant requirements. The constraint operates as both extraction (suppression penalties) and coordination (deterrence incentive to institutionalize constitutional compliance). Not pure snare because the extraction mechanism (loss of evidence) is also the coordination mechanism (creates incentive for constitutional protocol adoption)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Probative Evidence (Epistemic Commons)",
+      "comment": "PERSPECTIVE 3: PROBATIVE EVIDENCE / PROSECUTION'S INVESTIGATIVE FRUITS (SNARE) — The evidence obtained through unconstitutional search has no exit option; suppression removes it from the factfinding process entirely. The constraint's core mechanism is extracting probative value from the trial by rendering constitutionally tainted evidence inadmissible. This is the literal trap: once seized unlawfully, the evidence cannot be un-seized. Suppression is the only remedy, but it operates by suppressing the evidence itself, not by restoring the epistemic status quo ante."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Appellate Courts Enforcing the Fourth Amendment Doctrine",
+      "comment": "PERSPECTIVE 4: APPELLATE COURTS / DOCTRINE ENFORCEMENT (ROPE) — Courts experience the exclusionary rule as a coordination mechanism for stabilizing constitutional doctrine. Suppression decisions establish precedent, train lower courts, and signal to law enforcement which search practices trigger exclusion. Courts have arbitrage options: they can adjust suppression doctrine through exceptions (good faith, inevitable discovery), can narrowly construe standing requirements, or can expand warrant categories. Courts see the constraint as coordination of constitutional practice, not as extraction from them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Exclusionary Rule Reform Advocates / Alternative Remedy Proponents",
+      "comment": "PERSPECTIVE 5: EXCLUSIONARY RULE REFORM ADVOCATES (SCAFFOLD) — Organized actors (criminal procedure reformers, federal rulemakers, some law enforcement leadership) see the exclusionary rule as a temporary mechanism with a sunset path: civil remedies (Bivens actions, state tort law, administrative discipline), deterrence alternatives (federal exclusion standards, state constitutional protections with different remedy structures), and restorative approaches (compensation funds, systematic monitoring). The scaffold perspective sees exclusion as effective at its moment of enactment (1961 via Mapp v. Ohio) but now facing alternatives that might achieve deterrence without trial suppression. Theater ratio is low because the underlying mechanism (suppression deterrent) is genuinely functional, but the sunset logic is aspirational — alternative remedies have proven structurally weak."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Suppression Hearing Ritual (Institutional Inertia)",
+      "comment": "PERSPECTIVE 6: SUPPRESSION HEARING AS INSTITUTIONAL INERTIA (PITON) — The suppression motion has become a formalized courtroom ritual (suppression hearing, Franks hearing on officer credibility, evidentiary challenges) that persists largely through institutional momentum. The actual barrier-to-use (filing deadline, procedural complexity, requirement to establish standing and prove causation) means many defendants never invoke it. The hearing is performative — it involves elaborate testimony about search procedures, warrant affidavits, and police practices, but the outcome is often predetermined by doctrine (good faith exception, qualified immunity doctrines borrowed into suppression contexts). Theater ratio high; functional verification capacity low."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Doctrinal Structure)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / DOCTRINAL STRUCTURE (TANGLED ROPE) — From a civilizational/doctrinal perspective, the exclusionary rule coordinates two distinct constitutional functions: it deters unconstitutional search (coordination mechanism) and it removes poisoned evidence from trials (extraction mechanism). The rule's extractiveness is the price of constitutional enforcement — suppressing valid probative evidence to create incentives for compliance. The constraint is tangled because both functions are necessary and genuine, and they cannot be separated. Pure coordination (deterrence without suppression) would lack teeth; pure extraction (suppression without coordination purpose) would be arbitrary. The analytical observer sees the constraint as necessarily hybrid."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrence_efficacy_empirical_gap",
+      "question": "Does suppression actually deter unconstitutional police conduct, or do officers and prosecutors discount the threat because defendants rarely know about or invoke suppression motions, and many violations never reach trial?",
+      "resolution_mechanism": "Controlled comparison of suppression rates across jurisdictions with different enforcement regimes; officer surveys on how suppression doctrine shapes search decisions; correlation analysis of Fourth Amendment violation rates post-Mapp (1961) and post-Leon (1984)",
+      "impact": "If suppression effectively deters: Tangled Rope classification confirmed across all perspectives. If deterrence is weak: classification shifts toward Snare (pure extraction from probative evidence) and Piton (ritual without function) from most perspectives. If deterrence is jurisdiction-dependent: constraint family decomposition required (different ε values for high-enforcement vs low-enforcement jurisdictions).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical evidence of suppression deterrence on police conduct"
+    },
+    {
+      "id": "reading_contest_digital_aggregation",
+      "question": "Does Carpenter v. United States (cell-site location history warranting despite third-party rule) foreclose the exclusionary rule reading's foundation, or do they coexist as different doctrinal mechanisms enforcing the same Fourth Amendment core?",
+      "resolution_mechanism": "Doctrinal analysis: Carpenter's 'aggregation as difference in kind' premise versus exclusionary rule's 'remedy through suppression' premise. Do both readings require warrant access to digital data, or does Carpenter's premise (digital aggregation triggers heightened protection) presuppose that exclusion is the enforcement mechanism?",
+      "impact": "If Carpenter forecloses exclusion (aggregation itself prevents unconstitutional search): reading_relations shift to forecloses. If Carpenter presupposes exclusion as enforcement backstop (aggregation triggers warrant requirement; exclusion enforces it): relation remains coexists_with. Affects sibling-reading network topology.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Carpenter reading's aggregation premise forecloses or presupposes exclusionary rule"
+    },
+    {
+      "id": "axiom_overriding_good_faith_exception",
+      "question": "Has the good-faith exception (United States v. Leon, 1984) substantially overridden the exclusionary rule reading's foundational axiom (suppression is the necessary and sufficient remedy for Fourth Amendment violation)?",
+      "resolution_mechanism": "Doctrinal history: pre-Leon exclusionary rule doctrine vs post-Leon suppression rates; empirical measure of how frequently good-faith exception prevents suppression even when warrant is deficient or absent; judicial acknowledgment within the good-faith-exception reading that suppression is no longer the inevitable remedy.",
+      "impact": "If axiom substantially overridden: drift_state direction = axiom_overriding, magnitude = substantial. If good faith exception is a narrow carve-out: direction = minor practice_drift. Affects cs_structure.axioms[].status for the foundational suppression axiom.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether good-faith exception has overridden suppression as necessary remedy"
+    },
+    {
+      "id": "standing_doctrine_contingency",
+      "question": "Does the exclusionary rule reading's efficacy depend on favorable standing doctrine (Rakas, Karo precedent on possessory interest), such that restrictive standing rules foreclose the reading's constitutional enforcement function?",
+      "resolution_mechanism": "Standing doctrine history: Olmstead (no privacy in contraband) → Katz (reasonable expectation of privacy) → Rakas (standing for whom?). Identify whether standing doctrine is structurally internal to the exclusionary rule mechanism or a separate gate. Measure: percentage of alleged Fourth Amendment violations that fail suppression because defendant lacks standing (no possessory interest, no reasonable expectation of privacy in location searched).",
+      "impact": "If standing gate forecloses suppression for majority of claims: exclusionary rule reading becomes partially inert (Piton characteristics), and classification shifts toward Snare (extraction from probative evidence) at some perspectives. If standing doctrine is aligned with exclusionary rule's protection scope: no drift.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether standing doctrine requirements foreclose exclusionary rule's application scope"
+    },
+    {
+      "id": "institutional_reading_conflict",
+      "question": "The exclusionary rule reading constitutes itself through the authority of appellate courts enforcing suppression doctrine. Does this create a built-in conflict: the authority structure (courts) depends on the remedy (suppression) for legitimacy, but the remedy's effectiveness depends on the authority structure's enforcement vigor?",
+      "resolution_mechanism": "Track evolution of good-faith exception doctrine (Leon 1984, Heather v. Mack 2010, post-cellphone-location cases): Do courts progressively narrow suppression scope as the remedy's deterrent value becomes contested? Does institutional self-interest in not excluding evidence (closing cases, supporting conviction rates) override the authority structure's commitment to Fourth Amendment enforcement?",
+      "impact": "If institutional conflict drives narrowing: drift_state direction = authority_erosion + axiom_overriding (the founding axiom of suppression as necessary remedy is eroded by the authority structure's own interest in not using it). Reading's reference frame is under sustained structural pressure, creating foreclosure dynamics with good-faith-exception reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Institutional conflict between courts enforcing suppression and courts' interest in not suppressing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "warr_excl_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "warr_excl_extract_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "warr_excl_extract_t20"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68,
+      "id_override": "warr_excl_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7,
+      "id_override": "warr_excl_suppress_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72,
+      "id_override": "warr_excl_suppress_t20"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "warr_excl_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "warr_excl_theater_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55,
+      "id_override": "warr_excl_theater_t20"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the exclusionary rule reading of the warrant preference kernel. The exclusionary rule is the Fourth Amendment's only self-executing remedy: when police conduct an unconstitutional search, courts suppress the evidence obtained, rendering it inadmissible at trial. This reading holds that suppression is not merely a remedial option but THE mechanism through which the Fourth Amendment becomes enforceable against state actors. The reading emerged from Weeks v. United States (1914) and was nationalized by Mapp v. Ohio (1961). It is contested by two sibling readings: the digital carpenter reading (Carpenter v. United States, 2018 — aggregation of digital data constitutes a difference in kind triggering higher Fourth Amendment protection despite third-party doctrine) and the good-faith exception reading (United States v. Leon, 1984 — officers acting in good faith reliance on a warrant do not trigger suppression because suppression punishes only when it would deter). The exclusionary rule reading constitutes itself through the structural claim that suppression costs (loss of probative evidence, case dismissals) create the deterrent incentive for police to obtain warrants, and that this deterrent is both necessary and sufficient for Fourth Amendment enforcement.",
+    "key_agents": [
+      "Defendants in suppression motions (powerless/trapped): Primary beneficiary of exclusionary rule — the rule is their only remedy. No alternative mechanism exists to undo the search or compensate the violation.",
+      "Law enforcement agencies (organized/constrained): Both victim and beneficiary. Victim: suppression costs them probative evidence and convictions. Beneficiary: suppression doctrine incentivizes institutional adoption of constitutional protocols, training, and warrant procedures.",
+      "Probative evidence from unconstitutional search (powerless/trapped): Primary victim — suppressed entirely from trial; no exit option.",
+      "Appellate courts (institutional/arbitrage): Authority structure enforcing the reading. Has arbitrage options: narrow suppression doctrine via exceptions, expand standing requirements, adjust remedy scope.",
+      "Prosecution / case strength (powerless/trapped): Victim — reduced conviction rates due to evidence suppression; no exit except through changing police conduct (which is the intended effect).",
+      "Exclusionary rule reform advocates (organized/constrained): Scaffold perspective — see suppression as temporary mechanism with sunset path toward alternative remedies (civil damages, administrative discipline, federal exclusion standards).",
+      "Analytical observer (analytical/analytical): Doctrinal perspective — sees the constraint as necessarily tangled coordination-and-extraction mechanism."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts probative evidence from trials (literal suppression), removes it from jury consideration, and creates case dismissals when suppression is granted. However, the extraction is not maximal because (1) many alleged Fourth Amendment violations never reach suppression hearing due to standing doctrine, guilty plea rates, and procedural barriers; (2) the extraction mechanism is intended to create a coordination incentive (deterrence), not pure rent-seeking; (3) good-faith exception and other doctrinal carve-outs limit the extraction scope. The rising trajectory (0.42 → 0.58 over 20 years) reflects doctrinal narrowing of suppression scope through good-faith exceptions, standing doctrine tightening, and institutional pressure on courts to limit suppression (post-Leon expansion of good-faith defense, Herring v. United States inevitable discovery doctrine). Suppression (0.72): High. Suppression doctrine operates through strong barriers: defendants must file suppression motions (procedural requirement), prove standing (reasonable expectation of privacy in place searched or object seized), prove violation (demonstrate search was unconstitutional), demonstrate causation (taint of evidence flows from the violation). The suppression mechanisms are both legal (procedural gates) and structural (institutional inertia, prosecutorial resistance to suppression, appellate court narrowing of the doctrine). Theater ratio (0.55): Moderate. Suppression hearings involve extensive courtroom ritual (Franks hearings on officer credibility, testimony on warrant affidavits, questioning about search procedures) with genuine functional content (courts must actually verify whether search was unconstitutional and whether officer relied on valid warrant). Theater has increased over time as good-faith exception doctrine relieves courts of close scrutiny — if officer relied on facially valid warrant, courts often skip detailed Fourth Amendment analysis (Leon test for objective reasonableness of reliance on warrant).",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural relationship to suppression doctrine. Defendants: d ≈ 0.95 (victim of the violation; maximum d because the constraint extracts evidence from prosecution but suppression is the defendant's only remedy — the victim's benefit is the extracted evidence, but the defendant does not control this extraction). Law enforcement: d ≈ 0.50 (symmetric — suppression costs them evidence, but deterrence incentive benefits their institutional practice; medium d because the extraction-coordination hybrid operates on this agent). Probative evidence: d ≈ 1.0 (full victim — extracted entirely from trial; no agency). Courts: d ≈ 0.15 (beneficiary of institutional authority; low d because courts enforce the doctrine and have arbitrage options). Prosecution: d ≈ 0.85 (victim of evidence suppression; high d). Analytical observer: d ≈ 0.72 (canonical analytical d, derived from neutral observation position). The ascending extractiveness trajectory reflects that the good-faith exception (Leon 1984) and subsequent doctrinal narrowing have gradually reduced defendants' ability to invoke suppression (moving d downward for defendants, reducing experienced extraction benefit), while prosecution and police experience less suppression cost (moving d upward for enforcement actors, reducing deterrent pressure).",
+    "perspectival_gap": "This constraint exhibits a sharp perspectival gap between victim and authority perspectives. Defendants and probative evidence classify as Snare (pure extraction, no escape) because suppression is their only remedy and it operates by destroying the evidence entirely. Law enforcement classifies as Tangled Rope because suppression doctrine both extracts (evidence loss) and coordinates (deters unconstitutional conduct through institutional incentive). Appellate courts classify as Rope because suppression doctrine is a coordination mechanism from their perspective — they use it to establish precedent and guide law enforcement practice. The piton perspective recognizes that suppression hearings have become ritualized with high theater and declining functional verification (good-faith exception allows courts to skip detailed Fourth Amendment analysis). The scaffold perspective sees suppression as a temporary mechanism with a sunset path toward alternative remedies. The analytical observer sees Tangled Rope — the constraint is structurally both extraction and coordination, and they cannot be separated without destroying the doctrinal function. This perspectival gap reveals the central tension in the exclusionary rule: it appears as pure extraction from the victim's position (evidence suppressed; case dismissed) and as pure coordination from the authority's position (deterrent incentive for police); neither appearance captures the hybrid structural function.",
+    "mandatrophy_analysis": "The exclusionary rule reading resolves mandatrophy by explicitly declaring that suppression is both extraction and coordination — they are not in tension but in unity. Suppressing evidence (extraction) IS the mechanism that creates deterrence (coordination). The reading cannot avoid one mechanism without destroying the other. A pure-extraction reading would classify as Snare; a pure-coordination reading would classify as Rope. But neither is accurate because the constraint's entire function depends on the unity of the two mechanisms. The good-faith exception reading contests this by claiming suppression is pure extraction (loss of evidence) without coordination (officers relying on a warrant face no deterrent); this distinction is what allows Leon to carve out good-faith reliance. The exclusionary rule reading counters that good faith exception weakens both mechanisms: it reduces the deterrent (officers know they can rely on any facially valid warrant) and it extracts without coordinating (evidence is still suppressed, but police behavior is not changed). The mandate is resolved in the tangled_rope classification precisely because mandatrophy asks: does this constraint coordinate behavior (yes, deterrence through suppression cost) while extracting from some parties (yes, evidence extraction from prosecution and defendants)? The exclusionary rule reading says yes to both, unified.",
+    "kernel_context": "This story instantiates the EXCLUSIONARY RULE READING of the warrant_preference_reading kernel. The kernel is the contested constitutional commitment underlying Fourth Amendment enforcement: whether the warrant requirement is enforced through exclusion of evidence (this reading), through heightened digital aggregation scrutiny (digital carpenter reading), or through good-faith exceptions (good faith exception reading). The exclusionary rule reading's core premise is that suppression is the necessary and self-executing remedy — the ONLY mechanism that makes the Fourth Amendment enforceable against state actors because Bivens damages are structurally weak, administrative discipline is rare, and civil remedies are nearly impossible. The sibling readings reject this: the digital carpenter reading claims aggregation itself triggers heightened protection (warrant needed before aggregation, not after); the good-faith exception reading claims suppression is excessive because officers relying on a warrant cause no deterrent loss (suppression only makes sense when it would deter). The exclusionary rule reading is held by a coalition: courts from Weeks (1914) through Mapp (1961) through modern suppression jurisprudence; criminal defense advocates; state constitutional interpreters (many states have more protective suppression doctrine than federal law); Fourth Amendment scholars emphasizing structural enforcement. The reading is under sustained pressure from the good-faith exception reading (which has progressively narrowed suppression scope since Leon 1984) and from pragmatic prosecutors and law enforcement arguing suppression is too costly. The sibling readings coexist in current doctrine: Leon (good faith exception) and Carpenter (aggregation scrutiny) are both established law. The exclusionary rule reading denies that good faith exception is compatible with its foundational axiom (suppression is necessary), treating Leon as a partial foreclosure. Carpenter is treated as compatible — aggregation requires a warrant, and suppression is the remedy if warrant is denied. The scaffolding perspective (alternative remedies) also coexists, as some jurisdictions have experimented with exclusion standards, civil remedy funds, and administrative oversight alternatives. But no jurisdiction has successfully substituted away from suppression doctrine — it remains the baseline enforcement mechanism even in jurisdictions with supplementary remedies."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_carpenter_reading",
+      "good_faith_exception_reading",
+      "standing_doctrine_rakas_gap",
+      "fourth_amendment_deterrence_empirics"
+    ],
+    "dual_formulation_note": "The warrant preference kernel contains three distinct constraint stories (readings): (1) exclusionary_rule_reading (this file) — suppression as self-executing remedy, ε=0.58, Tangled Rope; (2) digital_carpenter_reading — aggregation as difference in kind, ε=0.35, Rope/Tangled Rope boundary, enforcement through warrant requirement rather than suppression; (3) good_faith_exception_reading — officers relying on facially valid warrant cause no deterrent loss, ε=0.48, Tangled Rope with lower suppression cost. These readings have different ε values because they measure different aspects of Fourth Amendment enforcement: exclusionary rule measures suppression mechanism cost-benefit; Carpenter measures digital aggregation protection scope; good faith exception measures deterrent efficacy given officer reliance norms. Network edges link them as coexisting/contesting siblings within the same kernel. Standing doctrine and fourth amendment deterrence empirics are upstream constraints affecting all three readings' classification stability."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_carpenter_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "good_faith_exception_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "suppression_necessary_for_fourth_amendment_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "evidence_suppression_creates_deterrent_for_unconstitutional_search",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "mapp_v_ohio_suppression_doctrine",
+    "drift_state": {
+      "moment": "contemporary_post_leon_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "suspensive_veto_monarchy__constitutional_monarchy_design_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_suspensive_veto_monarchy__constitutional_monarchy_design_reading",
+    "measurement_id_prefix": "sveto",
+    "story_uid": "3cef46a5-726d-43c8-91ba-584226155457"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Suspensive Veto in Constitutional Monarchy (Design Reading)",
+    "topic_domain": "constitutional_law/separation_of_powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bicameral_deliberation",
+      "executive_authority"
+    ],
+    "victims": [
+      "absolute_monarchy",
+      "assembly_omnipotence"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rash Legislator (Assembly Majority)",
+      "comment": "PERSPECTIVE 1: RASH LEGISLATOR (SNARE) — The assembly majority facing a suspensive veto has only one exit: accept delay or withdraw the bill. Cannot override (by design); cannot proceed; trapped in reconsideration cycle. The veto's asymmetry extracts time and political capital from the majority, forcing them to litigate every measure twice. No genuine coordination benefit to the trapped majority — only constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Assembly (Institutional Actor)",
+      "comment": "PERSPECTIVE 2: THE ASSEMBLY (TANGLED ROPE) — Constrained by the veto's delay but also benefits from being forced to reconsider rash legislation. The constraint coordinates deliberation (genuine coordination function) but also extracts time and requires supermajority discipline (active enforcement). The assembly has agency — it can pass measures on second reading — but at a cost. Mixed coordination and extraction at institutional scale."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive (Monarchical Authority)",
+      "comment": "PERSPECTIVE 3: THE EXECUTIVE (ROPE) — The monarch with suspensive veto experiences pure coordination: the veto is a mechanism for forcing reconsideration, not a tool of extraction. The monarch cannot extract rent (cannot deny permanently, cannot rule unilaterally). The veto's value lies in the deliberation it produces — the monarch benefits from better legislation emerging from reconsideration. Net beneficiary but without exploitative extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Constitutional Designer (Montesquieu Operationalized)",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL DESIGNER (SCAFFOLD) — The designer sees the veto as temporary structural support: a mechanism to prevent both absolutism and assembly omnipotence until constitutional norms mature and procedural discipline replaces veto enforcement. Low effective extraction (theater ≤ 0.70) because the design has a built-in sunset — as deliberative norms strengthen, the veto's suppressive force diminishes. Sunset implicit in the mechanism: as assembly discipline increases, veto invocations decline naturally."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Aristocracy (Veto Beneficiary)",
+      "comment": "PERSPECTIVE 5: THE ARISTOCRACY (TANGLED ROPE) — Powerful actors (nobility, church) who oppose democratic legislation benefit from the veto's delay mechanism — they gain time to organize opposition and extract concessions. But they also experience extraction: if the assembly passes measures a second time, the veto failed to protect their interests. Mixed beneficiary-victim status depending on legislative outcome. Coordination function (forcing time for interest aggregation) coupled with asymmetric extraction favoring status quo defenders."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Immutability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, the suspensive veto embodies an immutable truth about separated powers: preventing both absolutism AND assembly tyranny simultaneously requires a symmetric suppression mechanism. No side can overcome the other absolutely; deadlock is a structural feature, not a bug. This perspective sees the design as a natural law of balanced government. However, the structural data (identifiable beneficiaries and victims, active enforcement, extractiveness > 0) contradicts the mountain classification — the engine will reclassify as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deliberation_quality_threshold",
+      "question": "Does forced reconsideration actually improve legislative quality, or does it merely slow passage without improving substance?",
+      "resolution_mechanism": "Comparative analysis of measures withdrawn on first veto vs. passed on second reading; examination of amendments introduced in reconsideration; tracking of legislative stability and reversal rates",
+      "impact": "If reconsideration improves quality: genuine coordination function confirmed, classification remains tangled_rope/rope. If quality unchanged: veto is pure delay mechanism, shifts toward snare/piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether forced reconsideration improves legislative quality or merely delays passage"
+    },
+    {
+      "id": "assembly_supermajority_availability",
+      "question": "Under what conditions can the assembly actually achieve supermajority on second reading? Is the threshold realistic or designed to be insurmountable?",
+      "resolution_mechanism": "Historical data on second-reading passage rates; analysis of veto override success; comparison to absolutist veto systems where override is impossible",
+      "impact": "If supermajority achievable: assembly retains genuine agency, coordinate design intent validated. If insurmountable: veto becomes absolute in practice despite formally suspensive design, classification shifts to snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Achievability of assembly supermajority override on second reading"
+    },
+    {
+      "id": "absolutism_vs_democracy_false_dichotomy",
+      "question": "Does the design truly suppress both absolutism AND assembly omnipotence, or does it ultimately privilege one side over the other?",
+      "resolution_mechanism": "Historical analysis of legislative outcomes under suspensive veto: which side (executive, assembly, status quo) wins contested measures on average? Comparison to systems with different veto architectures.",
+      "impact": "If truly symmetric: the design's claim to balance is validated. If asymmetric: identifies which side the mechanism actually privileges and reframes the 'victim set' classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suspensive veto truly suppresses both absolutism and assembly omnipotence or privileges one side"
+    },
+    {
+      "id": "constitutional_reading_ambiguity",
+      "question": "Which constitutional reading is this constraint instantiating: the design reading (veto as deliberation mechanism) or the paralysis reading (veto as obstruction mechanism) or the broken-trust reading (Varennes invalidates design)?",
+      "resolution_mechanism": "Historical periodization: pre-Varennes period (design operative), Varennes moment (trust collapse), post-Varennes period (design void). Compare extractiveness and suppression metrics across periods.",
+      "impact": "If design reading holds pre-Varennes: extractiveness drops post-Varennes as trust collapses. If paralysis reading accurate from outset: extractiveness should be high and stable throughout. Determines which sibling reading captures the actual constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the suspensive veto's constitutional role is accurate: design, paralysis, or broken-trust"
+    },
+    {
+      "id": "montesquieu_intent_vs_jacobin_reception",
+      "question": "Does the veto's extractiveness derive from Montesquieu's design intent (balance through symmetric suppression) or from Jacobin reception of the veto as obstruction?",
+      "resolution_mechanism": "Textual analysis of Montesquieu's mechanism vs. Revolutionary assembly's experience; comparative analysis of design rhetoric vs. lived institutional behavior.",
+      "impact": "If design intent operative: extractiveness reflects the coordination cost of deliberation (~0.35 claimed). If Jacobin reception dominant: extractiveness should be higher, reflecting experienced obstruction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether extractiveness derives from design intent or institutional reception"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The suspensive veto in the French constitutional monarchy (1791–1792) instantiated a serious design: an executive with the power to delay legislation but not to deny it permanently, forcing both the assembly and the monarch to reconsider contested measures without permitting either side to exercise absolutism. Montesquieu's separation-of-powers doctrine operationalized in this mechanism required the assembly to pass a bill a second time after the executive returned it, converting a veto from an absolute block into a supermajority gate. This constraint exhibits the classic tangled-rope structure: genuine coordination function (forcing deliberation on consequential measures) coupled with asymmetric extraction (time and political capital extracted from legislative majorities). The design's beneficiary is bicameral-style deliberation in time — measures cannot pass on whim, and both executive and assembly must justify their positions across readings. The victim set is winner-take-all sovereignty: both absolute monarchy and unchecked assembly omnipotence are suppressed, making the veto unpopular with radical democratizers (who saw assembly supremacy as legitimate) and reactionaries (who wanted executive absolutism). The extractiveness score (0.35) reflects that the veto imposes real coordination costs (supermajority discipline, reconsideration infrastructure) but does not constitute pure extraction — the assembly retains genuine agency through the second-reading override mechanism, and deliberation benefits both sides in legitimate cases.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel suspensive_veto_monarchy, instantiating the constitutional_monarchy_design_reading. The kernel is the formal mechanism: an executive with power to delay but not deny legislative action. THREE READINGS of this kernel produce THREE structurally distinct constraints: (1) DESIGN READING (this file): The veto is a serious coordination mechanism enforcing bicameral deliberation and suppressing both absolutism and assembly omnipotence — genuine mixed mechanism. (2) PARALYSIS READING: The veto plus war equaled paralysis — the veto became an obstruction mechanism when deployed on émigrés and religious legislation during the constitutional crisis, paralysing the state's ability to respond to emergency. (3) VARENNES READING: Varennes emptied the design — the king's flight toward foreign armies in June 1791 collapsed the constitution's legitimacy assumptions, making the veto unilaterally exercised by a head of state the people no longer trusted. Each reading operates on the SAME formal kernel but identifies DIFFERENT extractive mechanisms and DIFFERENT victim/beneficiary structures. This file instantiates the design reading only. The paralysis and Varennes readings are separate constraints with different extractiveness values (higher), different suppression mechanics (obstruction rather than coordination), and different temporal dynamics.",
+    "key_agents": [
+      "The Assembly (institutional/constrained): Experiences the veto as both coordination mechanism (forced reconsideration improves legislation) and extraction (time, political capital, supermajority discipline required). Primary victim/beneficiary status depends on legislative outcome.",
+      "The Executive/Monarch (institutional/arbitrage): Benefits from veto as coordination tool without extracting rent — cannot rule unilaterally, cannot deny permanently. Net beneficiary but without expropriation.",
+      "The Rash Legislator (powerless/trapped): A faction of the assembly majority attempting to pass legislation without deliberation faces the veto as a snare — trapped in reconsideration with no exit except withdrawal or supermajority organization.",
+      "The Aristocracy and Church (powerful/mobile): Status quo defenders benefit from the veto's delay mechanism, gaining time to organize opposition. But also experience extraction if supermajority passage overrides their objections — mixed tangled_rope status.",
+      "Constitutional Designer / Montesquieu Operationalized (powerful/mobile): Sees the veto as temporary structural support — a scaffold preventing both absolutism and assembly tyranny until procedural norms mature.",
+      "The Analytical Observer (analytical/analytical): Risks seeing the design as a natural law of balanced government rather than a contingent institutional arrangement that depends on trust, perceived legitimacy, and stable constitutional consensus."
+    ],
+    "logic_rationale": "EXTRACTIVENESS (0.35): Moderate, reflecting genuine mixed coordination-extraction structure. The veto imposes real costs on legislative majorities — time for reconsideration, supermajority discipline, political capital expenditure — but these costs are partly legitimate coordination overheads (ensuring deliberation on consequential measures) rather than pure expropriation. The value sits at the lower end of the tangled-rope range because the assembly retains genuine agency through the second-reading override mechanism. If the supermajority threshold were insurmountable or if the veto were frequently deployed to prevent measures the assembly endorsed on second reading, extractiveness would be higher. SUPPRESSION (0.48): Moderate-high. Suppression operates symmetrically on both absolutism (executive cannot rule unilaterally) and assembly omnipotence (assembly cannot impose measures without deliberation). But suppression is not total — the assembly can override on second reading, and the executive can be overridden. Suppression reflects the mechanism's design to prevent both sides from achieving total power. THEATER RATIO (0.55): Moderate. The veto ceremony has performative elements (formal return of legislation, formal second reading) but also genuine functional content (reconsideration occurs, amendments are sometimes introduced, positions are defended). The theater ratio is not high because deliberation is not purely theatrical — some measures are actually changed through reconsideration. The ratio increases slightly over time (0.42 → 0.55) as the veto becomes ritualized and the probability of override success decreases, turning the ceremony into more theater and less consequential reconsideration.",
+    "perspectival_gap": "This constraint produces a perspectival gap between design intent and institutional reception. The constitutional designer (powerful/mobile) sees the veto as temporary scaffolding producing bicameral deliberation — a coordination mechanism with an implicit sunset as norms mature. The executive sees pure coordination (rope). The assembly sees mixed coordination and extraction (tangled_rope). A rash legislative faction sees a snare. Status quo defenders see a strategic delay mechanism (tangled_rope, with opposite directionality from the assembly). The analytical observer risks naturalizing the design as an immutable law of balanced government (mountain, false summit). The perspectival gap widens when trust collapses — if the monarch uses the veto to obstruct emergency measures or if the assembly treats the veto as illegitimate, the shared understanding that drives the design breaks down. The Varennes flight (June 1791) occurs within the measurement interval and should appear as a discontinuity in the extractiveness trajectory — post-Varennes, the veto becomes an exercise of authority by an agent the people no longer trust, shifting all perspectives toward higher extractiveness and lower suppression effectiveness.",
+    "directionality_logic": "Each perspective's directionality value is determined by structural position. The assembly (institutional/constrained beneficiary) has moderate d reflecting constrained exit and mixed benefits. The executive (institutional/arbitrage beneficiary) has low d reflecting arbitrage exit and net beneficiary status. The rash legislator (powerless/trapped victim) has high d reflecting trapped exit and victim status. The analytical observer (analytical/analytical) has canonical d ≈ 0.73 reflecting the analytical position's asymmetry. The directionality derivation captures that the veto extracts more from legislative majorities (who must organize supermajorities) than from the executive (who simply invokes the mechanism). The suppression metric is NOT scaled by directionality — it is a raw structural property of the mechanism itself (symmetrically suppressing both absolutism and omnipotence). The effective extractiveness χ is scaled by f(d), so agents with higher d (higher structural extraction target status) experience higher χ even though base extractiveness ε is constant.",
+    "mandatrophy_analysis": "READING-SPECIFIC MANDATROPHY: This constraint resolves the mandatrophy at the reading level. The design reading posits that the suspensive veto IS a coordination mechanism (tangled_rope: genuine coordination function + asymmetric extraction). The paralysis reading would posit that the veto became pure extraction during the crisis (snare classification). The Varennes reading would posit that trust collapse emptied the design (piton or snare classification). The mandatrophy is not 'which type is the veto really?' but 'which reading's structural analysis is operative at which historical moment?' Pre-Varennes, the design reading captures the actual constraint: extractiveness ~0.35, suppression ~0.48, genuine coordination function present. Post-Varennes, the design reading's assumptions (legitimate executive authority, good-faith deliberation) collapse. The constraint's identity itself shifts — the formal mechanism remains, but the extractive mechanism changes. This is not a single constraint viewed from different angles; it is a kernel with multiple readings, each of which identifies a different constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "suspensive_veto_monarchy__paralysis_mechanism_reading",
+      "suspensive_veto_monarchy__varennes_broken_trust_reading"
+    ],
+    "dual_formulation_note": "The suspensive veto kernel has three structurally distinct constraint readings. This file instantiates the design reading (veto as coordination mechanism, ε=0.35). The paralysis reading (veto as obstruction during crisis, higher ε) and Varennes reading (trust collapse empties the mechanism, different suppression and victim-set analysis) are separate constraint stories linked via network.affects_constraints. Each reading has its own extracted metrics, its own perspectives, and its own temporal dynamics. The three readings are NOT perspectives on a single constraint — they are different constraints instantiated by different readings of the same kernel."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "suspensive_veto_monarchy__paralysis_mechanism_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "suspensive_veto_monarchy__varennes_broken_trust_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "executive_deliberation_incentive_alignment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "assembly_supermajority_override_availability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "balanced_separation_of_powers",
+    "drift_state": {
+      "moment": "varennes_flight_june_1791",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

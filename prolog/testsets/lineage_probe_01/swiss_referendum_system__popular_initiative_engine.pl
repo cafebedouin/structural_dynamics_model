@@ -1,0 +1,305 @@
+% ============================================================================
+% CONSTRAINT STORY: swiss_referendum_system__popular_initiative_engine
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_swiss_referendum_system__popular_initiative_engine, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: swiss_referendum_system__popular_initiative_engine
+ *   human_readable: Swiss Popular Initiative: Agenda Power Transfer from Parliament to Organized Publics
+ *   domain: political/comparative
+ *
+ * SUMMARY:
+ *   The Swiss popular initiative mechanism transfers constitutional agenda
+ *   power from parliamentary gatekeepers to organized publics: 100,000 valid
+ *   signatures can force a constitutional amendment to a national referendum.
+ *   This reading instantiates the popular initiative as a structural engine
+ *   for agenda decentralization — the mechanism's primary function is
+ *   enabling end-runs around parliamentary monopoly on constitutional change.
+ *   The constraint is a tangled rope: genuine coordination function (enables
+ *   movements across the political spectrum to participate in constitutional
+ *   governance) coexists with asymmetric extraction (signature threshold
+ *   benefits organized movements and harms dispersed publics; resource-rich
+ *   campaigns have lower friction; gatekeeping shifts from parliament to
+ *   signature infrastructure). The extractiveness trajectory shows
+ *   accumulation over 80 years: as signature collection professionalized and
+ *   political movements learned to exploit the mechanism, the friction cost
+ *   decreased for sophisticated actors but remained high for ad-hoc
+ *   movements, concentrating extraction advantage. Theater ratio (0.18) is
+ *   low because the mechanism is genuinely functional — signatures either
+ *   accumulate or do not, referendum outcomes are unambiguous — but some
+ *   performative element appears as movements stage signature collection as
+ *   public ritual (Unterschriftensammlung events in Switzerland) that signal
+ *   movement viability independent of constitutional outcome.
+ *
+ * KEY AGENTS:
+ *   - Organized Political Movements: Primary beneficiary (organized/constrained) — can use initiative to bypass parliament; benefit from agenda power shift; face signature collection costs that smaller movements cannot absorb
+ *   - Unorganized Publics: Primary victim (powerless/trapped) — excluded from constitutional agenda-setting unless they organize; cannot exit this constraint without forming organizations
+ *   - Parliamentary Gatekeeping Institutions: Secondary beneficiary paradoxically (institutional/arbitrage) — the initiative threat forces them to coordinate with constituencies, improving responsiveness; they can exit by accepting or negotiating initiatives
+ *   - Resource-Advantaged Campaigns: Secondary beneficiary (powerful/constrained) — lower signature collection friction through professional infrastructure and funded canvassing; extraction advantage concentrates with them
+ *   - Constitutional Courts & Election Authorities: Institutional enforcer (institutional/arbitrage) — verify signature validity, administer referenda; maintain the mechanism's functional integrity
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks seeing agenda decentralization as natural democracy when it is actually a contingent institutional design
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(swiss_referendum_system__popular_initiative_engine, 0.38).
+domain_priors:suppression_score(swiss_referendum_system__popular_initiative_engine, 0.32).
+domain_priors:theater_ratio(swiss_referendum_system__popular_initiative_engine, 0.18).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(swiss_referendum_system__popular_initiative_engine, extractiveness, 0.38).
+narrative_ontology:constraint_metric(swiss_referendum_system__popular_initiative_engine, suppression_requirement, 0.32).
+narrative_ontology:constraint_metric(swiss_referendum_system__popular_initiative_engine, theater_ratio, 0.18).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(swiss_referendum_system__popular_initiative_engine, tangled_rope).
+narrative_ontology:human_readable(swiss_referendum_system__popular_initiative_engine, "Swiss Popular Initiative: Agenda Power Transfer from Parliament to Organized Publics").
+narrative_ontology:topic_domain(swiss_referendum_system__popular_initiative_engine, "political/comparative").
+
+domain_priors:requires_active_enforcement(swiss_referendum_system__popular_initiative_engine).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(swiss_referendum_system__popular_initiative_engine, '26d641a6-38d1-4dbc-9e85-30820069fc90').
+narrative_ontology:cs_kernel_codification('26d641a6-38d1-4dbc-9e85-30820069fc90', formalized).
+narrative_ontology:cs_authority_grounding('26d641a6-38d1-4dbc-9e85-30820069fc90', lineage).
+narrative_ontology:cs_interpretation_layer_present('26d641a6-38d1-4dbc-9e85-30820069fc90').
+narrative_ontology:cs_reading_relation('26d641a6-38d1-4dbc-9e85-30820069fc90', swiss_referendum_system__consensus_forcing_effect, coexists_with).
+narrative_ontology:cs_reading_relation('26d641a6-38d1-4dbc-9e85-30820069fc90', swiss_referendum_system__minority_rights_tension, coexists_with).
+narrative_ontology:cs_axiom('26d641a6-38d1-4dbc-9e85-30820069fc90', foundational, agenda_power_decentralization).
+narrative_ontology:cs_axiom_status(agenda_power_decentralization, holdable).
+narrative_ontology:cs_axiom_grounding('26d641a6-38d1-4dbc-9e85-30820069fc90', agenda_power_decentralization, instrumental).
+narrative_ontology:cs_reference_frame('26d641a6-38d1-4dbc-9e85-30820069fc90', parliamentary_constitutional_monopoly).
+narrative_ontology:cs_drift_state('26d641a6-38d1-4dbc-9e85-30820069fc90', contemporary_professionalized_initiative_infrastructure, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('26d641a6-38d1-4dbc-9e85-30820069fc90', '').
+narrative_ontology:cs_kernel_id(swiss_referendum_system__popular_initiative_engine, swiss_referendum_system).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(swiss_referendum_system__popular_initiative_engine, organized_political_movements).
+narrative_ontology:constraint_beneficiary(swiss_referendum_system__popular_initiative_engine, marginal_constituencies).
+narrative_ontology:constraint_victim(swiss_referendum_system__popular_initiative_engine, parliamentary_gatekeeping_institutions).
+narrative_ontology:constraint_victim(swiss_referendum_system__popular_initiative_engine, unorganized_publics).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: UNORGANIZED PUBLICS (SNARE) — Cannot exercise the initiative mechanism without organizational infrastructure; excluded from agenda-setting while organized movements gate the ability to trigger constitutional amendment. High suppression: signature collection requires sustained organizing, funding, and coordination that dispersed individuals cannot provide. No exit from this constraint — either organize or forfeit agenda power.
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: ORGANIZED MOVEMENTS (TANGLED ROPE) — Benefit from genuine coordination function: the initiative mechanism enables disparate groups (left, right, religious, secular, regional) to participate in constitutional agenda. But high barriers to entry: 100,000 signatures is a real cost barrier that excludes small or nascent movements. Extraction occurs through signature burden, but coordination function is genuine — the mechanism works only because it is genuinely accessible to movements across the spectrum. Constrained exit: a movement can exit by ceasing to organize, but the cost is loss of agenda power.
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: PARLIAMENT & CONSTITUTIONAL COMMISSIONS (ROPE) — Experience the initiative as a coordination mechanism that prevents their agenda monopoly from calcifying. The referendum threat and initiative mechanism force parliamentary bodies to coordinate with constituencies they might otherwise ignore. Arbitrage exit: parliaments can exit by accepting initiatives or ignoring them — the mechanism creates incentive to negotiate. Net effect from this perspective is coordination, not extraction — the initiative improves parliament's responsiveness by making unilateral agenda-setting costly.
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: TEMPORARY CONSTITUTIONAL REFORM COALITIONS (SCAFFOLD) — Organized around specific constitutional amendments with defined sunset: when the amendment succeeds or fails, the coalition dissolves. Low effective extraction because these movements have agency and clear exit conditions. Theater ratio is low (0.18) — the initiative mechanism is directly functional, not performative; success is binary and unambiguous (amendment passes or it does not).
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: RESOURCE-ADVANTAGED INITIATIVES (TANGLED ROPE) — Wealthy movements or well-funded initiatives face lower signature collection costs (they can pay professionals, use media, leverage networks). Genuine coordination benefit coexists with extraction of access advantage: the 100,000 signature threshold is lower in friction for the well-resourced. Constrained exit: campaigns can choose not to mobilize, but the opportunity cost is high.
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, direct democratic mechanisms are an immutable feature of political legitimacy: any legitimate authority over a polity must periodically subject itself to the polity's scrutiny. This perspective sees the popular initiative as a structural necessity, not a contingent institutional choice. However, this classification is a false summit: the engine will detect that the initiative system benefits identifiable movements and harms others, revealing that what appears natural is actually a contingent design.
+constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(swiss_referendum_system__popular_initiative_engine_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(swiss_referendum_system__popular_initiative_engine, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
+
+:- end_tests(swiss_referendum_system__popular_initiative_engine_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.38): Moderate, rising over interval. The mechanism opens constitutional agenda to non-parliamentary actors (low initial extractiveness ~0.18), which is its genuine coordinating function. But as professional signature collection and political infrastructure evolved, the friction cost for sophisticated actors decreased while remaining high for dispersed publics — creating extraction asymmetry. By contemporary period (t=80), the mechanism benefits organized movements with existing infrastructure and funding, extracting comparative advantage from smaller actors. The rise reflects organizational professionalization, not decay of the mechanism itself. Suppression (0.32): Moderate. The 100,000 signature threshold creates a real barrier to participation — unorganized publics cannot easily mobilize to this scale. But suppression is not total: the threshold is achievable for moderately organized movements (demonstrated by successful initiatives across the political spectrum). Media attention and public salience can lower effective barriers. Theater ratio (0.18): Low. The initiative is directly functional — signatures accumulate via clear rules, referenda produce unambiguous outcomes, constitutional amendments take effect. The mechanism is not primarily performative. Minimal theater reflects that the constraint's power derives from its actual function (enabling agenda change) not from symbolic activity. Rising slightly over time (0.12→0.18) reflects growing professionalization of signature campaigns, which adds some theatrical staging (public collection events, media spectacle) without reducing functional capacity.
+ *
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates sharp perspectival divergence. Unorganized publics see a snare — they are excluded from agenda power and cannot exit without organizing. Organized movements see a tangled rope — they benefit from agenda access but face real coordination costs. Parliament sees a rope — the mechanism forces beneficial coordination, improving their responsiveness and legitimacy. Well-resourced campaigns see a rope — the mechanism works well for them with minimal friction. Constitutional reformers see a scaffold — their time-bounded movements use the mechanism for specific amendments with clear sunset (amendment passes or fails). The analytical observer risks seeing a mountain (direct democracy as immutable feature of legitimacy) but the structural data reveals a false summit: the mechanism benefits identifiable actors and extracts from others, indicating a contingent institutional design, not natural law.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) varies substantially across agents due to their structural relationships to the agenda-power decentralization. Unorganized publics have high d (0.95): they are targets of extraction (signature burden) with no arbitrage exit — trapped by the requirement to organize. Organized movements have moderate d (0.40): they benefit from agenda access but face real signature costs — constrained not trapped. Resource-advantaged campaigns have low d (0.15): they experience the mechanism as primarily beneficial (low-friction agenda access) with minimal extraction — the signature threshold is lower-cost for them than parliamentary lobbying. Parliament experiences low d (0.10): the mechanism forces coordination benefit on them (more responsive to constituencies) rather than extracting from them — they can arbitrage by negotiating with initiatives rather than meeting them at the referendum stage. The engine derives d from beneficiary/victim declarations and exit options. No overrides needed — the structural derivation captures the perspectival differences accurately.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Extractiveness (0.38) sits in the tangled_rope range (0.30–0.90). The mandate-tropism here is: 'Is the popular initiative primarily a coordination mechanism (improving agenda responsiveness to diverse constituencies) or primarily an extraction mechanism (shifting agenda power to organized movements, away from parliament and dispersed publics)?' The tangled_rope classification resolves the mandate-tropism by showing both functions are real: the mechanism genuinely enables coordination (parliaments become more responsive, diverse movements can participate in constitutional governance) while genuinely extracting (organized movements gain advantage, unorganized publics are excluded, parliamentary gatekeeping is partially displaced but organizational gatekeeping emerges). The perspectives show this dual structure clearly: parliament and organized movements both see rope-like benefits (coordination), while unorganized publics see snare-like extraction (exclusion). The mandate is resolved by accepting that both readings are structurally correct — the mechanism instantiates hybrid coordination-extraction architecture.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    signature_collection_cost_threshold,
+    'What signature collection cost (resource requirement, time, organizing burden) distinguishes legitimate barrier from extractive gating?',
+    'Comparative analysis: signature costs in Swiss initiatives vs. cost barriers in other jurisdictions'' ballot-access mechanisms; longitudinal study of which movements successfully collect signatures and which fail',
+    'If threshold is low: mechanism favors grass-roots organizing (coordination advantage to dispersed movements). If threshold is high: mechanism favors existing organizations (extraction advantage concentrates with established institutions).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(signature_collection_cost_threshold, empirical, 'Signature collection cost as barrier to agenda power').
+
+omega_variable(
+    organized_vs_unorganized_participation_gap,
+    'Does the initiative mechanism increase unorganized publics'' ability to shape constitutional agenda, or does it require organizational infrastructure that re-monopolizes agenda power?',
+    'Historical analysis of successful initiatives: how many originated from genuinely dispersed publics vs. already-organized parties/movements; tracking of signature collection methods and who provided them',
+    'If genuinely accessible: mechanism is primarily rope (coordination). If captured by organizations: mechanism is primarily tangled_rope or snare (extraction).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(organized_vs_unorganized_participation_gap, empirical, 'Whether initiative mechanism bypasses or recreates organizational gating').
+
+omega_variable(
+    constitutional_outcome_reversibility,
+    'Can initiatives that amend the constitution be reversed or superseded by later initiatives, or do they create irreversible constraint shifts?',
+    'Historical catalog of constitutional amendments via initiative that were subsequently challenged or reversed; analysis of whether later initiatives can undo previous ones',
+    'If reversible: mechanism is theatrical — the stability is illusory, outcomes can shift. If irreversible: mechanism creates path dependency where early initiatives lock later ones into particular trajectories (e.g., minaret ban forecloses certain religious-liberty readings).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(constitutional_outcome_reversibility, empirical, 'Whether initiative amendments are reversible or create locked-in constraints').
+
+omega_variable(
+    kernel_reading_contest,
+    'What is the structural relationship between this reading (popular initiative as agenda-power engine) and the sibling readings (consensus-forcing effect and minority-rights tension)?',
+    'Formal mapping of how the core premise of this reading (agenda power decentralization) affects the legitimacy conditions and operational structure of the sibling readings. This is a committer-frame omega: it documents irreducible uncertainty about which reading''s axioms are primary and which are derivative consequences.',
+    'If this reading''s axiom (agenda_power_decentralization) is foundational: the other readings are consequences that follow from it — consensus is forced because unexcluded groups can block, minorities risk voting themselves into restrictions because they have real agenda power. If the sibling readings'' axioms are more fundamental: decentralization is secondary to their primary concerns about consensus or rights.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Structural relationship between this reading and sibling kernel readings').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(swiss_referendum_system__popular_initiative_engine, 0, 80).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(swref_tr_t0, swiss_referendum_system__popular_initiative_engine, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(swref_tr_t40, swiss_referendum_system__popular_initiative_engine, theater_ratio, 40, 0.15).
+narrative_ontology:measurement(swref_tr_t80, swiss_referendum_system__popular_initiative_engine, theater_ratio, 80, 0.18).
+
+% Extraction over time
+narrative_ontology:measurement(swref_be_t0, swiss_referendum_system__popular_initiative_engine, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(swref_be_t40, swiss_referendum_system__popular_initiative_engine, base_extractiveness, 40, 0.28).
+narrative_ontology:measurement(swref_be_t80, swiss_referendum_system__popular_initiative_engine, base_extractiveness, 80, 0.38).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(swiss_referendum_system__popular_initiative_engine, enforcement_mechanism).
+narrative_ontology:affects_constraint(swiss_referendum_system__popular_initiative_engine, swiss_referendum_system__consensus_forcing_effect).
+narrative_ontology:affects_constraint(swiss_referendum_system__popular_initiative_engine, swiss_referendum_system__minority_rights_tension).
+
+% DUAL FORMULATION NOTE:
+% The swiss_referendum_system kernel contains three distinct structural readings, each with different primary functions and extractiveness values. The popular_initiative_engine reading focuses on agenda power distribution (extractiveness 0.38, tangled_rope); the consensus_forcing_effect reading focuses on forced inclusion of diverse constituencies in parliamentary negotiation (different ε, likely rope); the minority_rights_tension reading focuses on majority power to amend constitutional protections (different ε, likely snare from minority perspective). All three are simultaneous features of the same institutional mechanism — they differ in which structural function they emphasize as primary.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

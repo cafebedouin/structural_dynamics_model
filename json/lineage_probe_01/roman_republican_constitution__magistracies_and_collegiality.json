@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "roman_republican_constitution__magistracies_and_collegiality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rom_mag",
+    "story_uid": "61a1520e-ac37-4adc-bce1-aed1b8839a1a"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Roman Republican Constitution: Magistracies and Collegiality",
+    "topic_domain": "political/historical/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "office_holding_patrician_class",
+      "rotating_magistrate_cohorts"
+    ],
+    "victims": [
+      "would_be_permanent_holders",
+      "plebeian_access_to_magistracy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Excluded Plebeian",
+      "comment": "PERSPECTIVE 1: EXCLUDED PLEBEIAN (SNARE) — Locked out of magistracies by birth status despite formal collegial equality. The veto suppresses alternatives (plebeian candidates, direct power access). Trapped without exit. Experiences maximum extraction: office-holding remains patrician privilege despite the constitution's claim of shared authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Serving Magistrate",
+      "comment": "PERSPECTIVE 2: SERVING MAGISTRATE (TANGLED ROPE) — Rotates through annual office with real power during tenure, but colleague's veto constrains unilateral action and term limit strips power at year's end. Mixed: benefits from access and prestige; constrained by structural checks. Genuine coordination function (distributed power prevents reassembly of kingly authority); asymmetric extraction (temporary privilege, then return to peer status)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Patrician Class Collective",
+      "comment": "PERSPECTIVE 3: PATRICIAN CLASS COLLECTIVE (ROPE) — Class-level beneficiary. All magistrates drawn from patriciate; collegiality ensures that peers rotate through high office. No one can monopolize power; all major families gain access. Benefits from the system's coordination function (prevents civil war over power concentration). Extraction is distributed within the class — a Rope classification from institutional perspective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Anti-Monarchy Constraint",
+      "comment": "PERSPECTIVE 4: ANTI-MONARCHY CONSTRAINT (MOUNTAIN) — From a civilizational view, annual terms and colleague veto are presented as immutable structural necessities: the Republic cannot tolerate kingly power; any magistrate with extended tenure or unchecked authority threatens the collective. This perspective naturalizes the institutional arrangements as inherent to republican stability. However, the engine detects this as a false summit: the structural data shows contingent institutional benefits (class privilege) and declared victims (excluded plebeians), contradicting the mountain metric gates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Plebeian Tribune Coalition",
+      "comment": "PERSPECTIVE 5: PLEBEIAN TRIBUNE COALITION (TANGLED ROPE) — Organized counter-force (tribunes, assemblies) that gains veto power over magistrates by the later Republic. Constrained by patrician institutional dominance but increasingly mobile through democratic pressure. Sees the magistracy constraint as extraction that their own veto machinery can partially counter. Mixed classification: coordinating with patrician office-holders on some issues while extracting concessions (tribunes' sacrosanctity, access to assemblies) through sustained organization."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Senate's Silent Authority",
+      "comment": "PERSPECTIVE 6: SENATE'S SILENT AUTHORITY (PITON) — The Senate steers finance, war, and religion through auctoritas rather than legal command. The magistracy system appears functional and checked, but the Senate's permanent membership (senators for life, reconstituted from magistrates) functions as a hidden reassembly of power — the veto of colleagues is overridden by senatorial consensus. Theater ratio high: the annual magistracies appear to parcelize power, but Senate authority concentrates it. Piton classification reflects the degraded function: the check (colleague veto) persists, but the Senate's auctoritas has rendered it largely theatrical by the late Republic."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — Identifies both genuine coordination (distributed power prevents kingly reassembly) and asymmetric extraction (class privilege, plebeian exclusion, time-boxed authority creates status asymmetry). The constraint serves the function of preventing monarchy while preserving patrician collective dominance. Neither pure coordination nor pure extraction — the analytical view confirms the tangled_rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collegial_veto_effectiveness",
+      "question": "Does colleague veto actually prevent power concentration, or do informal coalitions and senatorial consensus reconstruct unified authority despite the formal check?",
+      "resolution_mechanism": "Historical analysis of magistrate overrides, senatorial intervention, and the late-Republic concentration of power (Pompeii, Caesar, Augustus). Comparison of early Republic (veto effective) vs late Republic (veto theatrical).",
+      "impact": "If veto effective: colleague-veto reading sustains tangled_rope classification. If veto overcome by coalition and Senate: constraint becomes piton (theatrical check). Drift from effective to theatrical is measurable in measurement data.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether colleague veto prevents or merely delays power concentration"
+    },
+    {
+      "id": "reading_monopoly_prevention_vs_class_extraction",
+      "question": "Is this reading's core claim — that magistracies prevent monarchy — compatible with the structural data showing patrician class benefits and plebeian exclusion? Or does class extraction contradict the anti-monarchy narrative?",
+      "resolution_mechanism": "Theoretical framework choice: (a) Monopoly prevention is the primary function; class extraction is a side effect acceptable to the system's logic. (b) Class extraction is the primary function; anti-monarchy rhetoric is the legitimating cover. (c) Both are equally primary — tangled_rope correctly captures both.",
+      "impact": "Framework (a): reading emphasizes anti-monarchy, downplays class extraction. Framework (b): reading becomes snare-adjacent. Framework (c): tangled_rope is confirmed as the correct classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Tension between anti-monarchy prevention and patrician class extraction as primary functions"
+    },
+    {
+      "id": "sibling_reading_empirical_status",
+      "question": "Which of the five sibling readings has the strongest historical support? Can all five readings coexist, or do some foreclose others?",
+      "resolution_mechanism": "Historiographic analysis of each reading's grounding in primary sources (Polybius, Livy, Cicero). Assess whether each reading describes a real structural component or a rhetorical cover for one of the others.",
+      "impact": "If all coexist: all five are reading_relations=coexists_with. If crisis_machinery empirically forecloses the anti-monarchy reading: shift to reading_relations=forecloses. If Senate_authority empirically explains magistracy collegiality: reading_relations become influences rather than coexists_with.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether all five kernel readings coexist or some foreclose others"
+    },
+    {
+      "id": "annual_term_extraction_window",
+      "question": "What is the optimal annual term length for preventing reassembly without creating excessive extractive pressure through rapid power cycling?",
+      "resolution_mechanism": "Institutional analysis of magistrate behavior across term lengths; measurement of policy instability, corruption incentives, and power-seeking behavior as term length varies.",
+      "impact": "Shorter terms reduce extraction opportunity but may increase instability and short-termism. Longer terms enable better governance but increase reassembly risk. This omega grounds the measurement trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal annual term length for anti-reassembly function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "The Roman Republic's constitution is often read as a system of magistracies: annually elected, collegially held offices that parcel the king's power into pieces no one could reassemble. This reading emphasizes the structural innovation of distributed executive power — no magistrate holds office for more than one year, and most senior offices require two holders who can veto each other's decisions. The mechanism is designed to prevent any individual from reconstituting monarchical authority. However, this reading is one of five competing interpretations of the Republic's constitutional foundation, each grounded in different primary evidence and different aspects of republican practice. The magistracies reading coexists with (and is partially explained by) the Senate's silent authority (permanent senators redirect magistrates' decisions), the popular assemblies reading (tribunes and assemblies constrain magistrates from below), the legal codification reading (the Twelve Tables set written limits on magisterial power), and the crisis machinery reading (dictatorship temporarily overrides the constraint to meet emergencies). This story instantiates only the magistracies_and_collegiality reading.",
+    "key_agents": [
+      "Patrician Class Collective: Primary beneficiary (institutional/arbitrage) — exclusive access to magistracies; rotation through office preserves class dominance across generations",
+      "Would-Be Permanent Holders: Primary victim (powerful/mobile) — individuals who seek extended authority are suppressed by colleague veto and annual term limits",
+      "Plebeian Excluded Class: Secondary victim (powerless/trapped) — structurally locked out of magistracies by birth; no exit despite formal claims of republican equality",
+      "Serving Magistrate: Mixed agent (powerful/constrained) — enjoys annual power but faces colleague veto and term-limit loss; benefits from prestige and access",
+      "Plebeian Tribune Coalition: Organized counter-agent (organized/constrained) — increasingly mobile through democratic pressure; gains veto power over magistrates by later Republic",
+      "Senate Permanent Body: Silent beneficiary (institutional/arbitrage) — directs magistrates through auctoritas; hidden reassembly of power despite magistracy distribution",
+      "Analytical Observer: Sees both coordination (anti-monarchy function) and extraction (class privilege, plebeian exclusion)"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint delivers genuine anti-monarchy coordination — no magistrate can hold extended office or act without colleague approval. This is a real coordination benefit, not pure extraction. However, the extraction is real too: the patrician class monopolizes magistracies, and individual members experience time-boxed power as extraction when their authority vanishes at year's end. The extractiveness increases over the interval (0.22 → 0.52) as the Senate's hidden reassembly accumulates power, making the magistracy distribution increasingly theatrical. Suppression (0.45): Moderate-high. Annual terms and colleague veto suppress would-be permanent holders and plebeian candidates. But suppression is not maximal — plebeians gain tribunes' veto, and magistrates retain considerable annual power. Suppression increases over the interval as senatorial dominance requires more active enforcement to maintain the appearance of magistracy-based distribution. Theater ratio (0.35 → 0.62): The magistracy system functions with low theater initially — the checks are real and the annual cycle distributes power genuinely. But as the Senate's auctoritas outgrows magistrate legal authority, the magistracies become increasingly theatrical — they appear to govern while the Senate actually directs. The measurement trajectory reflects the piton transition: early effective coordination, late degraded ritual.",
+    "perspectival_gap": "The magistracies reading produces radically different classifications from different perspectives. From the powerless plebeian perspective, it is a snare — locked out by birth. From the serving magistrate's perspective, it is tangled_rope — mixing authority with constraint. From the patrician class collective's perspective, it is rope — genuine coordination that preserves class dominance. From the Senate's perspective (piton), it is increasingly theatrical. The civilizational analytical view risks seeing it as a mountain (immutable anti-monarchy structure) but the structural data reveals false summit: the beneficiary class and excluded victims contradict natural law. The plebeian coalition's organized resistance (tribunes, assemblies) transforms the constraint from snare (for individuals) to tangled_rope (for the coalition) by gaining organized exit options. This perspectival variation shows that the constraint is not a single type but a presheaf of types over the index space.",
+    "directionality_logic": "Each perspective's directionality value is derived from its power level, exit options, and structural relationship to the extraction flow. Powerless plebeians locked out by birth status have maximum d (trapped to maximum extraction). Serving magistrates with annual power and colleague veto have moderate d (constrained exit moderates chi). The patrician class collective has low d (arbitrage options, distributed benefits within the class). The Senate's hidden authority has near-zero d (benefits from appearing constrained while actually directing). The plebeian coalition shifts from high d (organized but initially locked out) to lower d (constrained but gaining exit options through tribunes). The analytical observer at universal scope sees the full structure with d around 0.70 — measuring from outside all factions.",
+    "mandatrophy_analysis": "The magistracies reading resolves mandatrophy by showing that the constraint is genuinely a tangled_rope: it coordinates power distribution (preventing monarchy) while extracting class privilege (patrician monopoly, plebeian exclusion). The reading is not snare-misclassified-as-rope, nor rope-hiding-snare. It is authentically both. The perspectival variation (snare from below, rope from class level, piton from Senate perspective, mountain from naturalizing view) confirms the mixed classification. The analytics sees this as tangled_rope because both the coordination and extraction mechanisms are real and active. The mandatrophy dissolves: the constraint is correctly identified as a hybrid, and the perspectival variation is a feature, not a bug.",
+    "kernel_context": "This constraint is the magistracies_and_collegiality reading of the contested kernel roman_republican_constitution. The kernel is the question: What is the constitutional foundation of the Roman Republic? Five competing readings offer structurally different answers: (1) magistracies_and_collegiality (this story) — distributed executive power through annual, collegial offices; (2) crisis_machinery — the Republic includes its own suspension (dictatorship) for emergencies; (3) legal_codification_twelve_tables — written law posted in the Forum, not priestly memory; (4) popular_assemblies_and_tribunate — the people, not the magistrates or Senate, hold sovereign authority; (5) senate_authority — the permanent Senate's auctoritas steers the state. Each reading is a live position held by different historians and different Roman actors. They coexist in the historical record because the Republic's actual constitution was contested even by the Romans themselves. This reading emphasizes the separation-of-powers mechanism (annual terms, colleague veto) that later liberal democracies inherited from republican theory. It is not the only reading, nor the foundational one, but it is structurally distinct and empirically grounded."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_republican_constitution__crisis_machinery",
+      "roman_republican_constitution__senate_authority",
+      "roman_republican_constitution__popular_assemblies_and_tribunate"
+    ],
+    "dual_formulation_note": "The magistracies_and_collegiality reading is one component of a contested kernel (roman_republican_constitution). All five readings share the same historical period and primary sources but emphasize different structural elements: magistracies emphasize executive separation-of-powers; crisis_machinery emphasizes suspension mechanisms; legal_codification emphasizes written law; popular_assemblies emphasize democratic sovereignty; senate_authority emphasizes permanent bureaucratic direction. Each reading has its own constraint story with its own extractiveness value. They are linked through network.affects_constraints to show family relationships, not to collapse them into a single constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "roman_republican_constitution__crisis_machinery",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__legal_codification_twelve_tables",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__popular_assemblies_and_tribunate",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "roman_republican_constitution__senate_authority",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "executive_power_must_be_distributed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "monarchy_reassembly_prevented_by_term_limits",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "distributed_executive_power_prevents_monarchy",
+    "drift_state": {
+      "moment": "late_republic_triumvirate_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

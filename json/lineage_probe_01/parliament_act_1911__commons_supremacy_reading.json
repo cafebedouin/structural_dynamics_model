@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "parliament_act_1911__commons_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_parliament_act_1911__commons_supremacy_reading",
+    "story_uid": "e34fab35-2a0f-4770-a85d-223f1f0ab5e4"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Democratic Supremacy via Commons Primacy (1911 Act Reading)",
+    "topic_domain": "constitutional_law/parliamentary_procedure",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "franchise_holding_public",
+      "elected_commons"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Franchise-Holding Public",
+      "comment": "PERSPECTIVE 1: FRANCHISE-HOLDING PUBLIC (ROPE) — Generational timescale. The 1911 Act solves a genuine coordination problem: how to ensure the elected chamber's will prevails over an unelected veto. This reading frames the suppression of hereditary veto as restoring democratic primacy, not extracting from the public. Low experienced extractiveness because the constraint aligns incentives — elected representation serves the franchised. Mobile exit options (generational) because if the commons fails to represent, the public can organize opposition and alter the constraint via further legislation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Elected Commons",
+      "comment": "PERSPECTIVE 2: ELECTED COMMONS (ROPE) — Biographical timescale. The constraint formalizes the Commons' legislative supremacy: it coordinates between chambers by eliminating the Lords' absolute veto while preserving a delaying function. The Commons experiences this as securing their authority without paying extraction costs — the constraint embeds coordination (two-chamber review) without forcing the Commons to transfer power elsewhere. Constrained exit (biographical) because individual MPs serve fixed terms; institutional exit (replacing the Act) requires legislative supermajority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The House of Lords (Hereditary Interests)",
+      "comment": "PERSPECTIVE 3: HEREDITARY PEERS (TANGLED ROPE) — Biographical timescale. The 1911 Act functions as both coordination (the Lords retain a delaying function, preserving bicameral review) and extraction (the absolute veto — the Lords' structural power — is suppressed). Peers with arbitrage options (patronage networks, wealth, social authority independent of the Act) experience this as moderate extraction: the legislative supremacy reading removes the veto-suppression mechanism (extractive) but leaves prestige and deliberative function intact (coordination). Powerful agents have agency in the transition; extractiveness is constrained by the delaying power preservation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Civilizational Observer (Democracy as Natural Necessity)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / NATURAL NECESSITY VIEW (MOUNTAIN) — From a civilizational perspective, this reading risks presenting democratic primacy as an immutable principle (the will of the people cannot permanently be overruled by an unelected body; this follows from democratic legitimacy itself). This perspective sees the constraint as capturing a structural necessity of representative government. However, the empirical data contradicts the mountain gate: the constraint is formally enacted (emerges_naturally: false), suppression is minimal (0.08), and extractiveness is low (0.18) because the constraint genuinely coordinates rather than coerces. The false summit detector identifies this perspective as naturalizing a contingent institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_mechanism_ambiguity",
+      "question": "Did the 1911 Act pass via genuine constitutional consent or via coercive extraction (the threat of creating 500 new peers)?",
+      "resolution_mechanism": "Historical analysis of the Cabinet's deliberations and Parliament's voting patterns. Distinguish between bargained compromise and coerced acceptance: did the House of Lords negotiate and accept delaying power as a fair trade, or did they capitulate under the threat of institutional flooding?",
+      "impact": "If coercive: the reading shifts from rope (voluntary coordination) toward snare (enforced suppression of veto) or tangled_rope (mixed coordination-extraction). Extractiveness rises from 0.18 toward 0.40+. If consensual: rope classification holds. This is the forecloses axis — the coerced_consent_reading and commons_supremacy_reading cannot coexist in a single constitutional framework without redefining 'consent.'",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the 1911 Act passed via consent or coercion"
+    },
+    {
+      "id": "veto_suppression_principle_scope",
+      "question": "Does the supremacy principle apply only to the 1911 Parliament Acts procedure or to the entire constitutional relationship between chambers?",
+      "resolution_mechanism": "Legal interpretation: examine whether courts treat delaying power (the substantive outcome) as coordinate with the procedure that produced it. If courts examine Acts passed under the procedure with same scrutiny as ordinary legislation, the principle is procedural subordination. If courts treat them as binding precedent equal to pre-1911 Acts, the principle is modified primacy.",
+      "impact": "If procedural only: the delegated_continuation_reading is correct — Commons supremacy is limited to the specific Parliament Acts mechanism. Extractiveness lower (0.12) because the principle is narrow. If constitutional: extractiveness higher (0.25+) because the principle broadly suppresses hereditary veto. This influences the delegated_continuation_reading structurally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scope of democratic supremacy principle: procedural vs constitutional"
+    },
+    {
+      "id": "delaying_power_functional_role",
+      "question": "Does the preserved delaying power of the House of Lords constitute genuine bicameral coordination or merely symbolic residual authority?",
+      "resolution_mechanism": "Empirical tracking of Lords amendments and rejections post-1911: do such actions materially slow legislation, produce substantive revisions, or function as deliberative review? Compare to pre-1911 veto exercise rates.",
+      "impact": "If genuine coordination function: rope classification holds; extractiveness remains low (0.18) because both chambers contribute meaningfully. If symbolic only (theater): classification shifts toward piton (degraded institution maintained by inertia); theater_ratio rises; extractiveness may rise if the delaying function is performative cover for class-based obstruction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Lords delaying power performs genuine coordination or is ceremonial"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 1911 Parliament Act institutionalized the doctrine of democratic supremacy: the will of the elected Commons prevails, and the hereditary House of Lords may only delay legislation for two years (later one month by the 1949 Act). This constraint is one reading of a contested kernel — the Parliament Act 1911 — whose meaning is still disputed in constitutional law. The commons_supremacy_reading interprets the Act as a genuine constitutional settlement that suppresses the principle of hereditary veto and establishes elected representation as primary. This reading sees low extractiveness (0.18) because it frames the constraint as coordinating between chambers via a shared commitment to democratic legitimacy: the Commons exercises supremacy, the Lords exercise deliberation, and both serve the franchised public. Extractiveness is measured from the standpoint of the franchise-holding public, not from the interests of hereditary peers whose institutional veto-power was suppressed. The constraint's low theater (0.25) reflects that the mechanism is straightforward — a procedural rule preventing indefinite delay — rather than performative cover for hidden extraction. The dispute with sibling readings turns on whether this settlement was consensual (rope) or coercive (snare/tangled_rope), and on whether the suppressed veto-power was an extractive mechanism (common law of the franchise) or a legitimate alternative legislative voice (federalism within a bicameral system). This story instantiates the commons_supremacy reading only.",
+    "key_agents": [
+      "Franchise-holding Public: Primary beneficiary (moderate/mobile) — the constraint is oriented toward ensuring their elected representatives are not overruled by an unelected hereditary chamber; benefits from democratic primacy coordination",
+      "House of Commons: Primary beneficiary & implementing institution (institutional/constrained) — gains legislative supremacy; coordinates legislative process via delaying power preservation",
+      "House of Lords (Hereditary Peers): Partial victim, partial continuing institution (powerful/arbitrage) — veto-power suppressed (extractive from their perspective); delaying power preserved (coordination component); retains social prestige and deliberative function",
+      "Constitutional Authority (the 'common law' or 'principles of democratic legitimacy'): Background authority grounding the constraint; this reading treats democratic primacy as grounded in electoral legitimacy, not as a concession wrung by force"
+    ],
+    "kernel_context": "This constraint is ONE READING of the contested kernel: Parliament Act 1911. The reading instantiated here is commons_supremacy_reading: the Act constitutionalized democratic supremacy as a principled doctrine — the elected chamber's will prevails and the unelected chamber may only delay. Sibling readings: (1) coerced_consent_reading — the Act passed only under threat of creating 500 new peers; it is a coerced constitutional amendment, not a settlement. (2) delegated_continuation_reading — Acts passed under the Parliament Acts procedure are delegated legislation subordinate to the 1911 Act itself; courts may examine their conformity with the procedural constraints. This commons_supremacy_reading treats the Act as establishing a new constitutional principle, not as coercion or as creating a subordinate legislative class. The structural delta from the coerced_consent_reading: if passage was consensual, the constraint is rope (coordination); if coercive, it is snare or tangled_rope (extraction). The delta from delegated_continuation_reading: if Commons supremacy is a principle, extractiveness is measured from the public's standpoint (low, because the Commons represents the public); if Acts are delegated, extractiveness includes the additional requirement that they conform to the Parliament Act procedure itself, which could be seen as extractive overhead. This story focuses on the principled reading: the Act established democratic supremacy as a constitutional doctrine.",
+    "logic_rationale": "Extractiveness (0.18): Low. This reading frames the suppression of hereditary veto-power not as extraction from the hereditary interest but as restoration of democratic primacy to the public via their elected representatives. The metric is measured from the standpoint of the franchise-holding public (the beneficiary) and the Commons (the institutional implementer), not from the hereditary peers whose veto is suppressed. The low value reflects that the constraint coordinates rather than coerces: the Commons gains authority, the public gains representation, and the Lords gain a defined (though reduced) role. Extractiveness is not zero because the hereditary interest does bear a cost (loss of absolute veto), but that cost is classified as legitimate correction rather than extraction from the constraint's perspective. Suppression (0.08): Minimal. The constraint suppresses only the hereditary veto-principle, not the Lords themselves. The Lords retain legislative function (delaying power), social status, and deliberative authority. The suppression is doctrinal: the principle that an unelected body can permanently override an elected one is declared illegitimate. But suppression of alternatives is low because the alternative (hereditary veto) is still available to the Lords if they choose to use delaying power strategically — they simply cannot do so indefinitely. Theater (0.25): Low. The mechanism is transparent and procedural: the Commons can pass legislation twice in two years (later one month) and the Lords cannot prevent it. No performative cover is needed; the rule itself is the constraint. Low theater reflects straightforward institutional design rather than elaborate justification structures. Claimed type (rope): This reading's base properties support rope classification — low extractiveness, low suppression, coordination function genuine (Commons and Lords both participate in legislative process, just with different veto powers).",
+    "perspectival_gap": "The perspectival gaps in this constraint reveal the entire contested meaning of the 1911 Act. The franchise-holding public sees coordination (Rope) — the constraint ensures their elected representatives are not overruled. The Commons sees coordination (Rope) — they gain authority within a structured process. The hereditary peers see extraction (Tangled Rope with significant extractive component) — their veto-power is suppressed, though delaying power is preserved. The analytical observer at civilizational scale risks naturalizing this as democratic necessity (Mountain) — the constraint follows from the principle that the people's representatives cannot be permanently overruled — but the false summit detector identifies this as contingent institutional choice. The coerced_consent_reading would see this as snare (coercive amendment under threat), and the delegated_continuation_reading would see procedural subordination (additional extractive overhead). The gaps between these perspectives reveal where the constitutional settlement is contested.",
+    "directionality_logic": "The constraint's directionality is determined by each agent's structural position. The franchise-holding public and Commons are beneficiaries (d low, f(d) near zero or negative) because the constraint establishes their authority. The hereditary peers are partial victims (d moderate, 0.40-0.55 range) because veto-power is suppressed but delaying power is preserved and social authority remains intact. The analytical observer at civilizational scope is positioned as an arbiter, but this reading's commitment to democratic primacy as a doctrine means the observer's 'neutral' position is already shaped by the reading's axiom (elected representation is constitutionally primary). This reading does not include directionality overrides because the derivation chain (beneficiary/victim + exit options) produces accurate d values: beneficiaries with mobile exit experience low extraction, partial victims with powerful position experience moderate extraction, analytical observers experience the constraint as necessity rather than choice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "parliament_act_1911__coerced_consent_reading",
+      "parliament_act_1911__delegated_continuation_reading"
+    ],
+    "dual_formulation_note": "The Parliament Act 1911 is a contested kernel instantiated in three constraint stories: (1) commons_supremacy_reading (this story) frames the Act as establishing democratic supremacy as constitutional principle; extractiveness low because the constraint coordinates public representation. (2) coerced_consent_reading frames the Act as extracted via threat of institutional flooding; extractiveness moderate-high because passage was coercive. (3) delegated_continuation_reading frames Acts passed under the procedure as delegated legislation subordinate to the 1911 Act itself; extractiveness includes procedural overhead. All three stories share the same base institutional fact (the Parliament Act exists) but differ in interpretation of its constitutional meaning, passage mechanism, and scope of application. They are linked via network.affects_constraints because each reading influences the others: if coercion is established, the legitimacy of the 'supremacy' claim is weakened; if delegation is established, the 'supremacy' is narrower in scope."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "democratic_representation_primacy",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "parliament_act_1911__coerced_consent_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "parliament_act_1911__delegated_continuation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "elected_representation_constitutionally_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "bicameral_coordination_via_delaying_power",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  }
+}

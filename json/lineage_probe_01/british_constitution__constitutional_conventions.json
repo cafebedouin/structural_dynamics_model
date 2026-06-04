@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "british_constitution__constitutional_conventions",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_british_constitution__constitutional_conventions",
+    "measurement_id_prefix": "bcc",
+    "story_uid": "3946cdb4-2a2e-4038-83e1-280b2046d3ec"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "British Constitutional Conventions: Binding-but-Unenforceable Usage",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_insiders",
+      "constitutional_elites"
+    ],
+    "victims": [
+      "actors_mistaking_legal_power_for_permitted_power",
+      "constitutional_outsiders",
+      "novel_governance_actors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constitutional Outsider",
+      "comment": "PERSPECTIVE 1: CONSTITUTIONAL OUTSIDER (SNARE) — An actor with statutory legal power but no fluency in the binding conventions discovers their authority is nullified by invisible usage. A backbench MP with formal legislative power finds themselves bound by convention against defying the Cabinet. A newly empowered regional actor (post-devolution) discovers the convention of Westminster supremacy constrains their agency. No escape: breach triggers constitutional crisis and political destruction. The outsider bears the full cost of the convention's suppression while receiving none of its coordination benefits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constitutional Insider Learning the Game",
+      "comment": "PERSPECTIVE 2: CONSTITUTIONAL INSIDER LEARNING THE GAME (TANGLED ROPE) — A minister, career civil servant, or senior party figure learns the conventions through apprenticeship. The conventions do coordinate genuine governance needs: the convention against partisan Cabinet appointments coordinates executive stability; the convention of ministerial accountability coordinates Parliamentary oversight without formal procedure; the Sewel convention coordinates devolved governance. But learning the conventions requires years of access and mentorship, and violating them (even inadvertently) triggers scandal and removal. Moderate experienced extraction — genuine coordination functions exist, but entry costs and exit costs are both high."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Institution (Cabinet/Crown Office)",
+      "comment": "PERSPECTIVE 3: EXECUTIVE INSTITUTION / CABINET-IN-BEING (ROPE) — From the perspective of the continuously governing executive, the conventions are pure coordination. The convention of collective Cabinet responsibility coordinates policy coherence across multiple departments; the convention of individual ministerial accountability coordinates delegation from the PM; the convention that the Crown acts on PM advice coordinates the formal apparatus with political reality. The executive experiences these as the baseline rules that enable governance. No extraction is perceived — the institution is the beneficiary whose power is coordinated and stabilized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Parliamentary Coalition",
+      "comment": "PERSPECTIVE 4: PARLIAMENTARY COALITION (TANGLED ROPE) — Parliament as an institution sees conventions as both coordinate and extractive. The conventions of executive accountability enable Parliamentary oversight without formal procedures; the conventions of ministerial responsibility coordinate delegation. But the conventions also constrain Parliament's formal legal sovereignty — the convention against dissolving Parliament without PM consent, the convention that legislative time is controlled by the executive, the convention that the PM sets the parliamentary agenda. Parliament has agency (can threaten convention breach, can organize to demand convention respect) but faces high costs to exercising it. Generational time horizon: conventions feel durable but organized Parliamentary pressure does reshape them (see Fixed-term Parliaments Act 2011, later repealed; see pressure on PM resignation conventions)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Formal Legal System",
+      "comment": "PERSPECTIVE 5: FORMAL LEGAL SYSTEM / JUDICIARY (PITON) — The courts have largely abstained from adjudicating conventions (doctrine of nonjusticiability). The legal system's role is to enforce the statutes that create the formal skeleton; conventions are treated as external to law. This abstention is increasingly performative: recent cases (R v Barclay; R v Prorogation) have shown willingness to test convention boundaries, yet the courts maintain the fiction that they are not adjudicating conventions themselves — they are reading the statutes' implications. The legal system persists in the convention of non-justiciability through institutional inertia and legitimacy anxiety (if courts adjudicate conventions, who will prevent judicial overreach?). Theater ratio: high. The abstention ritual is maintained despite visible strain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, unwritten constitutional conventions are an irreducible feature of all stable governing systems: no written constitution can specify every legitimate action and prohibition. The gap between formal authority and permitted authority must be filled by usage, or the system cannot function. This perspective sees the British convention system as demonstrating a universal structural law: all constitutions live in their conventions. However, the structural data reveals this as a false summit — the British convention system is not universal, it is a contingent institutional arrangement that benefits insiders fluent in the usages."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "convention_breach_consequence_threshold",
+      "question": "What distinguishes a convention breach that triggers a constitutional crisis from a convention breach that is absorbed as mere scandal?",
+      "resolution_mechanism": "Historical case analysis: correlate convention breaches with parliamentary confidence votes, PM resignations, electoral consequences, and constitutional reform. Identify the threshold for 'crisis' vs. 'scandal.'",
+      "impact": "If threshold is low (breach → crisis): conventions are more suppressive than measured, extractiveness should rise to 0.50+. If threshold is high (only catastrophic breaches → crisis): conventions are more flexible than measured, extractiveness should fall to 0.25.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold between convention breach scandal and constitutional crisis"
+    },
+    {
+      "id": "convention_learning_as_extraction",
+      "question": "Is the multi-year apprenticeship required to learn conventions a necessary coordination cost or an extractive barrier that benefits insiders?",
+      "resolution_mechanism": "Comparative analysis: track career outcomes for actors who enter governance with and without prior access to convention-fluent mentors. Measure time-to-influence and scandal risk. Compare with other legislative systems' onboarding costs.",
+      "impact": "If learning is pure coordination cost: extractiveness should fall, suppression remains high. If learning is extractive barrier: extractiveness should rise, beneficiary group shrinks to true insiders.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether convention learning represents coordination cost or extractive barrier"
+    },
+    {
+      "id": "written_vs_unwritten_equivalence",
+      "question": "Would formalizing the major conventions into written statute preserve their coordinate functions or destroy them?",
+      "resolution_mechanism": "Counterfactual analysis: examine cases where conventions were formalized (Fixed-term Parliaments Act 2011, attempts at devolution clarity) and track whether coordination improved or degraded. Test whether flexibility is a feature or a bug.",
+      "impact": "If formalization preserves function: conventions are not intrinsically unwritten, extractiveness becomes contingent (could fall with formalization). If formalization degrades function: unwritten form is essential to the coordinate mechanism, extraction index is locked by the constraint's structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether formalizing conventions would preserve or degrade their functions"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which sibling reading of the british_constitution kernel is closest to being foreclosed by the conventions reading?",
+      "resolution_mechanism": "Examine whether this reading of conventions logically rules out sibling readings: Does conventions-primacy foreclose foundational_charters (if conventions govern now, are medieval charters still binding)? Does it coexist with modern_judicialization (can conventions and judicialized rights coexist)? Does it influence parliamentary_supremacy (can statute override convention, or do conventions override statute)?",
+      "impact": "If conventions foreclose foundational_charters or parliamentary_supremacy: kernel contest has asymmetric logical structure (some readings rule out others). If all readings coexist: kernel is genuinely underdetermined. If conventions influence but don't foreclose: kernel is layered (multiple readings stack).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationships between conventions reading and sibling kernel readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The British constitution lives in its conventions: binding-but-unenforceable usages that do the daily work no statute describes. This constraint instantiates one specific reading of the contested british_constitution kernel — the reading that privileges conventions as the living mechanism of constitutional governance, in contrast to sibling readings that ground authority in foundational charters, modern judicialization, parliamentary supremacy statutes, or the revolution settlement. This reading holds that the British constitution is not a written document, not a set of cases, not a codified statute, but a corpus of shared understandings about what is permitted and what is forbidden. These understandings have no legal force — breach of a convention is not illegal — yet they constrain all constitutional actors with near-absolute power. A PM with formal legal authority to dissolve Parliament at will is bound by the convention (increasingly formalized but still conventionally rooted) that they must call elections periodically. A minister with legal power to make policy is bound by the convention of collective Cabinet responsibility, which nullifies individual dissent. Parliament with formal legal sovereignty is bound by the convention that it does not override devolved powers. The mechanism of enforcement is not law but expectation: breach triggers scandal, loss of office, or constitutional crisis. This makes the constraint a tangled_rope at the center (genuine coordination functions) but a snare at the periphery (actors who lack fluency in the conventions are trapped by invisible rules). The interval [0, 40] represents roughly the 1980s to 2020s, during which the theater_ratio of conventions has risen (more explicit articulation of conventions, more judicial tiptoeing toward adjudication, more constitutional commentary) while suppression_requirement has also risen (the cost of convention breach has increased as constitutional consciousness has grown and media has amplified scandal). The extractiveness has accumulated as newer governance actors (devolved governments, independence movements, populist disruptors) have discovered that formal legal power is constrained by conventions they were not fluent in.",
+    "key_agents": [
+      "Executive Insiders (Cabinet, Crown Office): Primary beneficiary (institutional/arbitrage) — fluent in conventions, navigate them as coordination, experience low extraction",
+      "Constitutional Elites (senior civil service, experienced ministers, constitutional scholars): Secondary beneficiary (institutional/constrained) — gatekeepers of convention knowledge, reproduce insider advantage through mentorship",
+      "Actors Mistaking Legal Power for Permitted Power (new MPs, regional actors, populist challengers): Primary victim (powerless/trapped) — hold formal authority but discover it is nullified by conventions they do not understand",
+      "Constitutional Outsiders (previously excluded groups, novel governance models, non-traditional politicians): Secondary victim (moderate/constrained) — face high costs to learning and respecting conventions they did not write",
+      "Parliamentary Institution (House of Commons, House of Lords): Mixed actor (organized/constrained) — has agency to reshape conventions through organized pressure but faces coordination costs to doing so",
+      "Formal Legal System (Judiciary, statute-based law): Piton actor (institutional/constrained) — maintains performative abstention from convention adjudication through institutional inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as universal laws of governance"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The conventions coordinate genuine governance needs (Cabinet coherence, ministerial accountability, parliamentary procedure), so extractiveness is not the 0.72 of a pure snare. But the conventions also extract a significant premium from outsiders and novel governance actors who are punished for breaking conventions they did not understand. The extractiveness accumulates during the interval (0.28 → 0.38) as the theater of conventions has increased and the cost of breach (scandal, removal, constitutional crisis) has become more visible and more severe. Suppression (0.62): High. Conventions are enforced not by law but by expectation and scandal — a subtler but often more effective mechanism than formal legal prohibition. Breach does not result in imprisonment or fine, but in loss of career, public shame, forced resignation, or constitutional crisis. This produces high suppression despite zero formal legal consequences. The suppression has increased over the interval (0.55 → 0.62) as constitutional consciousness has grown and media amplification of convention breaches has intensified (see Boris Johnson's prorogation scandal; see the intensifying scrutiny of prime ministerial honors conventions). Theater Ratio (0.68): High. The formal legal system treats conventions as non-justiciable, yet courts increasingly adjudicate convention implications without admitting they are doing so (R v Barclay on parliamentary privilege; R v Prorogation on the implied limits on PM power). The convention of non-justiciability is increasingly performative — maintained through institutional anxiety about judicial overreach rather than through genuine uncertainty about whether courts are already adjudicating conventions. The theater ratio has risen over the interval (0.52 → 0.68) as the performance has become more strained and more visible.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The executive insider sees pure coordination (Rope) — the conventions enable stable, efficient governance. The constitutional outsider sees pure extraction and entrapment (Snare) — the conventions are invisible rules that trap them despite formal legal power. The analytical observer at civilizational scale risks seeing an immutable natural law (Mountain) — 'all constitutions live in conventions' — but the structural data reveals this as a false summit: the British convention system is a specific, extractive institutional arrangement that benefits people already inside the system. The perspectival gap is diagnostic: it shows that the same structural phenomenon (binding-but-unenforceable usage) appears as pure coordination to the beneficiary, pure snare to the victim, and risk-laden natural law to the distant observer. The gap also reveals the mechanism: the extractiveness flows through the learning and apprenticeship barrier. Insiders who spent years learning the conventions experience them as coordination. Outsiders who discover the conventions too late experience them as snares.",
+    "directionality_logic": "The conventions reading produces high directionality differentiation. Executive insiders (beneficiaries with arbitrage exit options) derive d ≈ 0.05-0.15, producing f(d) ≈ -0.10 to 0.00 — they experience negative or near-zero effective extractiveness despite the constraint's moderate base extractiveness. Constitutional outsiders (victims with trapped or constrained exit) derive d ≈ 0.85-0.95, producing f(d) ≈ 1.10 to 1.40 — they experience high effective extractiveness. The scope modifier σ(S) is 1.0 (national scope), so χ = ε × f(d) × 1.0 = 0.38 × f(d). For the insider, χ ≈ -0.04 to 0.00 (no extraction experienced). For the outsider, χ ≈ 0.42 to 0.53 (high extraction experienced). This gap is the core diagnostic feature of the constraint. The beneficiary-victim relationship is not symmetric: the insiders' arbitrage option (they can move laterally between government and private sector, carrying their convention knowledge) is structurally unavailable to outsiders (they cannot earn convention fluency without years of access, which is gatekept). The overrides array is empty: the derivation chain from beneficiary/victim + exit options produces the correct d values without manual override.",
+    "kernel_context": "This constraint instantiates ONE READING of the contested british_constitution kernel. This reading asserts that the British constitution is constituted through its conventions — the binding-but-unenforceable usages that fill the gap between formal law and permitted action. Other readings of the same kernel assert different foundational claims: the foundational_charters reading grounds authority in medieval and early-modern documents (Magna Carta, English Bill of Rights, Act of Settlement); the modern_judicialization reading asserts that the constitution was transformed by the Human Rights Act 1998 and the establishment of the Supreme Court in 2009; the parliamentary_supremacy_statutes reading grounds authority in the supremacy of Crown-in-Parliament to enact binding law; the revolution_settlement reading fixes the constitution in 1688-1701. These readings coexist in British constitutional discourse, but they are not equivalent. Each reading has different implications for what counts as a legitimate exercise of power. Under the conventions reading, a PM with formal legal power to dissolve Parliament is constrained by the convention of electoral regularity. Under the parliamentary_supremacy reading, Parliament can enact a statute overriding that convention (as it did with the Fixed-term Parliaments Act 2011). Under the revolution_settlement reading, the 1688-1701 settlement is the unchangeable baseline. The readings do not foreclose each other — they coexist as different parties' commitments — but they influence each other: changes in one reading shift the terrain for the others."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "british_constitution__foundational_charters",
+      "british_constitution__modern_judicialization",
+      "british_constitution__parliamentary_supremacy_statutes",
+      "british_constitution__revolution_settlement"
+    ],
+    "dual_formulation_note": "The british_constitution kernel decomposes into five structurally distinct readings, each with its own constraint story and ε value. The conventions reading (this story, ε=0.38, tangled_rope) is downstream of and influences all sibling readings. The foundational_charters reading (ε unknown, likely mountain or rope) grounds authority in documents; conventions provide the interpretive layer that makes charters actionable. The modern_judicialization reading (ε unknown) asserts that courts now adjudicate constitutional limits; conventions become subject to judicial review or displacement. The parliamentary_supremacy reading (ε unknown) asserts that statute overrides convention; conventions become subordinate to parliamentary enactment. The revolution_settlement reading (ε unknown) fixes the constitution at 1688-1701; conventions are interpreted as continuous with that settlement, not innovations. Each reading has different beneficiary and victim groups, different suppression mechanisms, and different terminal classifications. The network edges link them as members of a constraint family, not as logical implications."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "british_constitution__foundational_charters",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "british_constitution__modern_judicialization",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "british_constitution__parliamentary_supremacy_statutes",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "british_constitution__revolution_settlement",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unwritten_usage_constitutes_legitimate_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "convention_enforcement_by_expectation_not_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "continuous_transmission_of_political_practice",
+    "drift_state": {
+      "moment": "contemporary_judicialization_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

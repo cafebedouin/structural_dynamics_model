@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__feudal_bargain_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mc1215fb",
+    "story_uid": "b9e2ffe3-88e3-4ccf-9c15-dd3211cd3744"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta 1215: Feudal Bargain Reading",
+    "topic_domain": "legal/doctrinal/feudal_political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rebel_baronage"
+    ],
+    "victims": [
+      "royal_fiscal_officers",
+      "crown_revenue_apparatus"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Royal Fiscal Officer",
+      "comment": "PERSPECTIVE 1: ROYAL FISCAL OFFICER (SNARE) — Trapped between the king's fiscal demands and baronial resistance. The feudal incidents (reliefs, wardships, scutage) that comprise their enforcement domain have been unilaterally constrained by a peace treaty they did not negotiate. No exit from the enforcement apparatus; maximum experienced extraction as the target of baronial grievances."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Shire Knight",
+      "comment": "PERSPECTIVE 2: SHIRE KNIGHT (TANGLED ROPE) — Mid-level feudal actor constrained by both royal demands and baronial pressure. The charter benefits them modestly (capped reliefs, wardship restrictions) while still extracting feudal service obligations. Experiences mixed coordination (the charter settles which obligations are owed) and extraction (those obligations persist). Constrained by social status and landholding dependency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Rebel Baronage Coalition",
+      "comment": "PERSPECTIVE 3: REBEL BARONAGE COALITION (ROPE) — Primary beneficiary. The charter is a pure coordination mechanism from their perspective: it translates military victory into codified feudal obligations, enabling them to organize subsequent enforcement and exit the state of war with retained spoils. Arbitrage position: they can enforce the charter via threat of renewed conflict. The charter coordinates their grievances into a stable agreement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Crown (Reissuing Perspective)",
+      "comment": "PERSPECTIVE 4: CROWN REISSUING PERSPECTIVE (TANGLED ROPE) — The crown reissues the charter repeatedly (1217, 1225, 1297) despite its initial annulment. From this institutional perspective, the charter becomes a coordination mechanism: it codifies feudal obligations in a way that prevents civil war and enables revenue collection via reliable channels rather than arbitrary exaction. The crown experiences both benefit (stable revenue, legitimacy from observing law) and extraction (capped incidents reduce total take)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Feudal Ceremony",
+      "comment": "PERSPECTIVE 5: FEUDAL CEREMONY (PITON) — Viewed from the civilizational distance, Magna Carta's feudal clauses are increasingly performative: as crown revenue sources shift from feudal incidents to direct taxation (13th-14th centuries), the charter's careful specification of reliefs, wardships, and scutage becomes theater — the constraints persist through repetition and institutional inertia long after their functional role has atrophied. By the 15th century, the feudal incidents are largely ceremonial."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FEUDAL INEVITABILITY VIEW (MOUNTAIN) — From maximum distance, Magna Carta might appear as an immutable natural law of feudal political economy: a defeated sovereign must concede to victorious magnates; this is the structural logic of feudalism. However, the structural data contradicts mountain classification: identifiable beneficiaries (baronage), victims (fiscal officers), and time-bounded enforcement (annulled within months, requiring repeated reissue) reveal that what appears 'inevitable to feudalism' is actually a contingent bargain between power holders. The engine's false summit detection will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "charter_functional_duration",
+      "question": "Is Magna Carta's function purely extractive constraint on royal fiscal officers, or does it establish a coordination mechanism that persists beyond the initial 1215 settlement?",
+      "resolution_mechanism": "Historical analysis of enforcement gaps and reissue patterns: if each reissue requires military threat renewal (extractive model), vs if reissues become routine confirmations (coordination model emerging from extraction)",
+      "impact": "If purely extractive: classify as snare from crown perspective. If coordination emerges: tangled_rope classification validated. If coordination persists across centuries: the reading foreclosed by common_law_foundation_reading's claim that the charter seeded permanent constitutional constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether charter establishes persistent coordination or dies with 1215 settlement"
+    },
+    {
+      "id": "feudal_incidents_material_magnitude",
+      "question": "How materially significant were reliefs, wardships, and scutage to royal fiscal capacity in 1215? Did their constraint meaningfully reduce crown extraction, or was the constraint primarily symbolic of baronial victory?",
+      "resolution_mechanism": "Comparative quantification: crown revenue from feudal incidents pre-1215 vs post-charter enforcement periods; correlation with non-feudal revenue sources and their growth trajectory",
+      "impact": "If high material impact: extraction flows powerfully to beneficiaries, classifying as snare from fiscal officer perspective. If low material impact: charter is performative constraint (piton), defeating tangled_rope classification. If impact decays over time: measurement trajectory shows extractiveness declining as revenue sources diversify.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Material magnitude of feudal incidents in crown revenue"
+    },
+    {
+      "id": "reading_kernel_identity_contest",
+      "question": "Is this the same kernel (Magna Carta's legitimacy foundation) as the common_law_foundation_reading, or do the readings refer to incommensurable kernels that happen to share a document label?",
+      "resolution_mechanism": "Authority genealogy: trace which reissues and confirmations cite which clauses, and which interpretive traditions (feudal lawyers vs common-law judges) treat the charter as authorizing what commitment structure. If feudal tradition treats 1215 as feudal bargain and common-law tradition treats it as constitutional seed, the readings are siloed — they coexist by occupying different interpretive lineages, not because both readings describe the same kernel.",
+      "impact": "If same kernel: the readings coexist via different framing of identical commitment structure. If different kernels: the contest is one of label-collision rather than true doctrinal conflict — the common_law reading is reading a different charter (the reissued, reinterpreted 13th-14th century artifact) than the feudal bargain reading (the 1215 peace treaty proper).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading and common_law_foundation_reading contest the same kernel or inhabit different interpretive lineages"
+    },
+    {
+      "id": "baronial_extraction_reciprocal",
+      "question": "Does the charter's constraint on royal fiscal officers constitute extraction FROM the king BY the baronage, or does it represent a legitimate boundary-setting on feudal incidents that the king had previously exceeded?",
+      "resolution_mechanism": "Historical analysis of pre-1215 royal exaction practices: were reliefs, wardships, and scutage applied arbitrarily or in violation of feudal custom? If arbitrary exaction: charter is restoration of customary limits, not new extraction. If customary practice: charter imposes new constraint, constituting extraction toward beneficiaries.",
+      "impact": "If restoration: beneficiary classification weakens; charter becomes coordination mechanism restoring mutual obligation, not extraction mechanism. Classifies as rope, not tangled_rope. If new constraint: extraction classification holds; tangled_rope maintained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether charter constrains arbitrary exaction or imposes new obligations on crown"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Magna Carta (1215) was a feudal peace treaty negotiated between King John and a coalition of rebel barons following military defeat at the Battle of Runnymede. The charter codified specific grievances about feudal incidents — reliefs (payments due upon inheritance of fiefs), wardships (crown exploitation of underage heirs' lands during minority), and scutage (military service substitution fees). From the feudal bargain reading, Magna Carta is structurally a tangled_rope: it coordinates feudal obligations (legitimate coordination function) while constraining the crown's fiscal extraction from these incidents (asymmetric benefit to baronage). The charter was annulled by Pope Innocent III within months, reissued under pressure repeatedly (1217, 1225, 1297), and functioned as a feudal peace treaty enforced by periodic baronial threat rather than as a permanent constitutional foundation. This reading contests the common_law_foundation reading, which claims the charter seeded constitutional due process and legality doctrine; it also contests the symbolic_myth reading, which claims the charter's authority is invocational rather than structural. The feudal bargain reading grounds Magna Carta's legitimacy in the concrete power balance between defeated king and armed magnates, with extractiveness capped to feudal incidents affecting the baronage class specifically.",
+    "key_agents": [
+      "Rebel Baronage Coalition: Primary beneficiary (organized/arbitrage) — achieves reduced reliefs, wardship restrictions, scutage caps; enforces via threat of renewed conflict",
+      "Royal Fiscal Officers: Primary victim (powerless/trapped) — enforcement agents for feudal incidents now unilaterally constrained by treaty they did not negotiate",
+      "Crown Revenue Apparatus: Secondary victim (institutional/constrained) — experiences total revenue reduction during active enforcement periods; gradually adapts via alternative revenue sources",
+      "Shire Knights and Mid-Rank Feudal Holders: Secondary actors (moderate/constrained) — modest beneficiaries from capped incidents; constrained by persistent feudal service obligations",
+      "Pope Innocent III: Institutional actor with annulment authority (institutional/arbitrage) — exercises authority to void the charter within months, returning maximum extraction capacity to crown",
+      "Crown (Reissuing Perspective): Institutional perspective (institutional/constrained) — later reissues as crown recognizes charter enforceability and coordination value despite initial extraction costs"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The charter constrains feudal incidents (reliefs, wardships, scutage) that benefitted the crown and harmed baronage. The extractiveness value reflects that the constraint applies narrowly to one class of feudal obligations affecting a specific beneficiary group (the rebel barons), not to royal fiscal power broadly. Non-feudal revenues (direct taxes, customs, demesnes) remain unconstrained. The measurements show high extractiveness at t=0 (pre-charter arbitrary exaction), collapse at t=3 (active baronial enforcement of constraints), and recovery at t=9 as crown develops alternative revenue and baronial enforcement weakens. Suppression (0.42): Moderate. Suppression is confined to baronial grievances about feudal incidents — the charter does not suppress alternatives broadly, but rather narrows the king's options in handling reliefs, wardships, and scutage. The pope's annulment power represents major suppression (t=0 extraction surge on annulment), which then decays as reissues establish enforcement expectation. Theater ratio (0.35): Low-moderate. The feudal bargain reading emphasizes substantive constraint on specific fiscal mechanisms rather than performance. Unlike the symbolic_myth reading (which would score high theater), the feudal bargain reading sees the charter as material coordination of concrete obligations, with theater increasing over time (t=0 to t=9) as the charter's functional role shifts from enforcement to ceremonial reconfirmation.",
+    "directionality_logic": "Baronage beneficiaries with arbitrage power (ability to enforce via threat) experience low directed extraction — they capture the benefit. Fiscal officers trapped in enforcement apparatus experience high directed extraction — they are the targets of baronial constraint. The crown's institutional perspective is constrained but not trapped: the crown can adapt by shifting revenue sources or consolidating power, but faces material constraint in handling feudal incidents. The analytical observer risks seeing feudal structure as inevitable natural law ('this is how feudal kings and barons relate') but the structural data reveals contingent bargaining power: absent military defeat at Runnymede, no charter emerges. The false summit detection flags this naturalization.",
+    "perspectival_gap": "The feudal bargain reading produces a substantial perspectival gap between beneficiaries and victims. Rebel barons see coordination that secured their grievances (Rope perspective, or rope-phase of tangled_rope when recognizing persistent extraction elsewhere). Fiscal officers see pure extraction (Snare perspective). The crown sees mixed benefit/harm (Tangled Rope — the charter coordinates feudal obligations reliably, enabling revenue collection through predictable channels, while simultaneously capping the take). The piton perspective emerges at civilizational distance: by the 13th-14th centuries, as crown revenue sources diversify away from feudal incidents, the careful specification of reliefs and wardships becomes increasingly ceremonial — the charter persists through inertia and symbolic authority rather than functional constraint. The analytical observer at universal scope risks collapsing this variance into 'inevitable feudal structure,' which the false summit detector identifies as naturalization of contingent bargaining.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'magna_carta_1215'. The reading I am instantiating is 'feudal_bargain_reading': Magna Carta as a peace treaty between defeated king and armed barons about specific feudal fiscal mechanisms (reliefs, wardships, scutage), with legitimacy grounded in the immediate power balance and enforced by periodic baronial threat. The sibling readings are: (1) 'common_law_foundation_reading' — Magna Carta founded the common-law constitution by seeding due process and legality doctrine through repeated reconfirmations; (2) 'symbolic_myth_reading' — Magna Carta's power is mythic, mostly repealed and misread by each generation, its authority the invocation itself. The feudal bargain reading emphasizes material constraint on concrete fiscal mechanisms affecting a specific beneficiary class; the common_law reading emphasizes doctrinal seeding of abstract constitutional principles applying universally; the symbolic reading emphasizes invocation and narrative authority independent of functional constraint. These readings coexist historically: feudal lawyers and royal officers treated 1215 as feudal bargain; common-law judges and later constitutional theorists treated repeated reissues as seeding due process; all generations invoked it mythically. No single reading is false — they instantiate different commitment frameworks addressing the same document."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_1215__common_law_foundation_reading",
+      "magna_carta_1215__symbolic_myth_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes Magna Carta into three structurally distinct readings of the same kernel, each with different epsilon values, beneficiary/victim structures, and classification types. The feudal_bargain_reading (ε=0.38, tangled_rope) emphasizes material constraint on feudal fiscal mechanisms. The common_law_foundation_reading emphasizes doctrinal seeding of due process across generations (higher extractiveness, different victim set). The symbolic_myth_reading emphasizes invocation and narrative authority (different epsilon structure reflecting the constraint as performative from inception). All three readings refer to the same historical document; they differ in which commitment structure the document is read as grounding, and therefore differ in what extractiveness and suppression mean in each framework."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "feudal_incident_bargain",
+    "reading_relations": [
+      {
+        "sibling_id": "magna_carta_1215__common_law_foundation_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "magna_carta_1215__symbolic_myth_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feudal_incidents_materially_constrainable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "charter_enforced_by_periodic_threat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "autocratic_rule__hereditary_monarchy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hm",
+    "story_uid": "d89f3c4a-a415-40fb-89f0-9a14d84731f5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hereditary Monarchy as Autocratic Rule",
+    "topic_domain": "political/comparative",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dynastic_lineage",
+      "court_aristocracy"
+    ],
+    "victims": [
+      "non_dynastic_talent",
+      "excluded_factions",
+      "peasant_base"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Dynastic Subject",
+      "comment": "PERSPECTIVE 1: NON-DYNASTIC SUBJECT (SNARE) — The peasant or non-noble talent is trapped within the kingdom's borders and subject to the hereditary ruler's extraction. No alternative authority exists; no exit path leads to retained livelihood. The constraint extracts labor, taxes, and deference through permanent structural assignment by birth."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Excluded Faction or Rival Noble",
+      "comment": "PERSPECTIVE 2: EXCLUDED FACTION (SNARE) — Military, merchant, or noble families excluded from succession experience the constraint as pure extraction. They bear the costs of the regime's military campaigns and revenue demands without access to the rule-making apparatus. Exit is constrained by property ties, family networks, and the border-patrol state. The hereditary succession rule actively suppresses their pathway to power, and the suppression is permanent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Court Aristocracy",
+      "comment": "PERSPECTIVE 3: COURT ARISTOCRACY (TANGLED ROPE) — The nobility and military attached to the ruling dynasty experience genuine coordination benefits (stable rank hierarchy, predictable revenue from tax farming, security against lower-class revolt) alongside significant extraction (crown takes the surplus, heir can replace you). The constraint coordinates the elite's internal competition through a fixed rule (birth succession) while the crown extracts from both the coordination function and the extraction from below. Active enforcement of the birth rule is essential — without it, every reign becomes a succession war."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dynastic Lineage",
+      "comment": "PERSPECTIVE 4: DYNASTIC LINEAGE (ROPE) — The ruling dynasty experiences the hereditary rule as pure coordination: it eliminates the succession war within every reign except those where the rule breaks. The dynasty's extraction of surplus from the realm is enabled by the rule, but the rule itself solves a genuine coordination problem (preventing the elite from tearing itself apart). The dynasty has arbitrage power — it can flee or negotiate terms with rivals if the regime destabilizes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Memory of Succession Law",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL MEMORY (PITON) — The formalized succession law (primogeniture, agnatic rules, clear heir designation) persists through ceremony and ritual even when the underlying enforcement capacity decays. The rule's theater — coronation, oath-taking, legitimacy narratives — maintains the fiction of smooth succession even as factions plot. As enforcement mechanisms weaken (late regimes, weakened armies), the rule becomes increasingly performative; the theater sustains what force once did. High theater, degraded function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, the succession problem is inherent to autocratic rule: any rule system must solve the problem of peaceful power transition or collapse into succession war. Hereditary monarchy is one solution to an irreducible structural problem. This perspective risks naturalizing what is actually a contingent institutional arrangement — the reading will likely trigger false summit detection because identifiable beneficiaries (the dynasty) clearly benefit from treating the rule as inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "succession_stability_mechanism",
+      "question": "Does the hereditary rule actually prevent succession wars, or does it merely displace them to non-reigning years and create devastating wars when the line fails?",
+      "resolution_mechanism": "Historical frequency analysis: succession wars in hereditary monarchies vs. military juntas vs. party autocracies; correlation between line stability and regime duration",
+      "impact": "If hereditary rule is genuinely stabilizing: classification is Rope for the dynasty. If succession wars are equally frequent but concentrated in line-break years: the rule transfers rather than prevents conflict, and classification shifts toward Snare (suppression of normal succession conflict creates catastrophic wars when rules break).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hereditary rule prevents succession wars or displaces them"
+    },
+    {
+      "id": "non_dynastic_talent_alternative_outlets",
+      "question": "What proportion of excluded talent can escape the kingdom entirely vs. finding career outlets within the hierarchy despite exclusion from the throne?",
+      "resolution_mechanism": "Historical demographic analysis of emigration patterns, military promotion structures in hereditary monarchies, merchant access to trade monopolies, and institutional career paths for non-dynastic figures",
+      "impact": "If escape is common (>20% of ambitious non-dynastic figures leave): exit is more mobile than trapped, and the snare classification is overestimated. If escape is rare (<5%): the trapped classification is confirmed, and suppression should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of exit paths for non-dynastic ambitious actors"
+    },
+    {
+      "id": "comparison_to_sibling_readings",
+      "question": "What structural mechanisms distinguish hereditary monarchy from military junta, party autocracy, and personalist dictatorship?",
+      "resolution_mechanism": "This is a kernel reading. The sibling readings are distinct constraints with different beneficiary sets, suppression mechanisms, and failure modes. Hereditary monarchy suppresses succession via birth rule; military junta suppresses it via officer consensus; party autocracy via organizational discipline; personalist dictatorship via leader cult and institution-destruction. Each reading is internally consistent and generates a different constraint story.",
+      "impact": "This omega documents that the kernel is a contested political reality, not an error in classification. Different readings coexist in political discourse because different autocratic regimes instantiate different solutions to the succession problem.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between hereditary monarchy and sibling readings of the autocratic rule kernel"
+    },
+    {
+      "id": "legitimacy_narrative_collapse",
+      "question": "When the hereditary line fails (extinction, weak heir, disputed succession), does the regime collapse, or does it transition to an alternative form (military junta, strongman, new dynasty)?",
+      "resolution_mechanism": "Historical case studies of line failure: Ottoman succession crises, succession wars in European monarchies, Chinese dynastic cycles, African post-colonial states. Track whether failure is catastrophic or transitional.",
+      "impact": "If collapse is common: hereditary monarchy is fragile and extractiveness is higher than measured (suppression works only as long as the line holds). If transition to alternative forms is common: the kernel reading structure is confirmed — different autocratic forms address the same succession problem in different ways.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regime stability under hereditary succession rule failure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Hereditary monarchy as a form of autocracy solves the succession problem by removing the throne from contestation through a rule of birth. Instead of every death of a ruler triggering a succession war (the fate of less institutionalized autocracies), hereditary succession establishes a fixed pathway: the eldest son, or the designated heir of the ruling line, automatically succeeds. This constraint is ONE READING of a contested kernel — the problem of how autocratic rule perpetuates itself. Alternative readings include military junta (officers as collective), party autocracy (organizational discipline), and personalist dictatorship (leader cult and institution destruction). The hereditary monarchy reading suppresses succession contests through the permanent force of birth rule, benefiting the dynasty and its court through stable revenue and predictable hierarchies while extracting from non-dynastic populations through taxation and compulsory service. The constraint exhibits tangled rope structure: genuine coordination of elite competition is embedded within asymmetric extraction from the subject population. The theater ratio increases over the dynasty's lifespan as the rule becomes ceremonial — coronation rituals, legitimacy narratives, and formal succession law increasingly sustain what force initially established.",
+    "key_agents": [
+      "Dynastic Lineage: Primary beneficiary (institutional/arbitrage) — captured succession rule removes the threat of internal contestation; extracts surplus through permanent tax and service claims",
+      "Court Aristocracy: Secondary beneficiary (institutional/constrained) — benefits from stable rank hierarchy and tax-farming revenue; constrained by crown's extractive capacity and the successor's power to replace them",
+      "Non-Dynastic Talent: Primary victim (moderate/constrained) — barred from the throne by birth rule; some can rise within the hierarchy, but the path to supreme power is closed permanently",
+      "Excluded Factions: Primary victim (moderate/constrained) — rival military, merchant, or noble families that challenge the dynasty; face armed suppression and exclusion from rule",
+      "Peasant Base: Structural victim (powerless/trapped) — subject to the dynasty's extraction through taxation, conscription, and compulsory labor; no exit from the kingdom and no alternative authority",
+      "Institutional Memory: Keeper of theater (institutional/constrained) — religious authorities, legal scholars, ceremonial officials who maintain the legitimacy narratives; constrained to preserve the rule even as its enforcement capacity decays"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The dynasty captures surplus through tax-farming permanence and extractive revenue collection. However, extraction is not maximal because the coordination function (elite stability) is genuine — the dynasty does solve a real problem (preventing succession wars within the realm), and this function generates some actual efficiency gain rather than pure transfer. The extractiveness trajectory shows slight accumulation over 50 years as the rule becomes more formalized and extractive mechanisms (taxation systems, feudal obligations) become more systematic. Suppression (0.72): High. The birth rule is maintained through active enforcement: military control of rival claimants, ideological indoctrination (the sacredness of the bloodline), legal punishment of succession challenges, and geographic isolation of threats. Suppression is structural — the regime must continuously work to prevent succession contestation because the underlying incentive (ambitious elites want power) never disappears. Theater ratio (0.65): Moderate-high and rising. Early in the dynasty's rule, succession is backed by real force (the founder's military defeated rivals; the heir is defended by loyal armies). As the dynasty matures and the succession rule becomes institutionalized, theater increases — coronation ceremonies, oath-taking, legitimacy narratives about blood and destiny increasingly sustain what force once did. At 50 years, the theater-to-force ratio is rising, indicating potential vulnerability as enforcement capacity might be weakening relative to ceremonial maintenance.",
+    "directionality_logic": "Directionality for each perspective is derived from the agent's structural position relative to the constraint. The dynasty and court are beneficiaries with institutional power and arbitrage/constrained exit — they derive low or negative d values, experiencing the constraint as beneficial coordination. Non-dynastic actors are victims with constrained or trapped exit — they derive high d values, experiencing maximal extraction. The peasant base is trapped with powerless status — maximum d value, maximum experienced extraction. The analytical observer at the universal/civilizational level risks neutral d (0.50), which would classify the constraint as mountain if the underlying metrics supported it. However, the base metrics show clear beneficiary/victim structure (suppression=0.72, extractiveness=0.58), preventing the mountain classification. The false summit detection will note that treating succession-by-birth as an immutable law naturalizes a contingent institutional arrangement — the dynasty benefits from treating it as inevitable, and the suppression mechanisms prove the rule requires active enforcement rather than natural emergence.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. The dynasty experiences pure coordination (Rope) — the rule solves a genuine problem at low cost to them. The court aristocracy experiences tangled rope — they benefit from stable hierarchy but are constrained by the crown's extraction capacity. Excluded factions and non-dynastic talent experience snare — the birth rule permanently bars them from power and forces submission. The peasant base experiences snare with maximum extraction — permanently trapped, no exit, no voice. The institutional memory of succession law experiences piton — the rule is increasingly performed through ceremony as force decays. The analytical observer risks mountain (natural law) but structural evidence points to false summit (naturalized extraction). The perspectival gap is maximal: from the dynasty's view this is a low-extraction coordination mechanism; from the subject's view it is maximal extraction justified by hereditary accident.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy at the reading level. The kernel contest (hereditary monarchy vs. military junta vs. party autocracy vs. personalist dictatorship) represents competing solutions to the same political problem: how does autocratic rule perpetuate itself? Each reading offers a different answer, with different beneficiary structures and suppression mechanisms. Hereditary monarchy routes succession through the bloodline; military junta through officer consensus; party autocracy through organizational discipline; personalist dictatorship through leader cult and rival-institution destruction. The mandatrophy is resolved by recognizing that all four are live readings of the same kernel — they coexist in political discourse because different regimes instantiate different solutions. This constraint (the hereditary monarchy reading) has ε=0.58 and tangled_rope structure. Its sibling readings will have different ε values and structures reflecting their different mechanisms. The false summit risk emerges when the analytical observer tries to treat succession-by-birth as a law of nature rather than a contested institutional arrangement.",
+    "kernel_context": "This constraint is the HEREDITARY_MONARCHY reading of the contested kernel AUTOCRATIC_RULE. The kernel is a political reality: how do autocratic regimes perpetuate themselves across succession transitions? Four live readings compete: (1) HEREDITARY_MONARCHY — this constraint — suppresses succession via birth rule, benefiting the dynasty; (2) MILITARY_JUNTA — sibling reading — suppresses succession via officer consensus, benefiting a military committee; (3) PARTY_AUTOCRACY — sibling reading — suppresses succession via organizational discipline, benefiting the party apparatus; (4) PERSONALIST_DICTATORSHIP — sibling reading — suppresses succession via leader cult and destruction of rival institutions, benefiting the strongman. Each reading instantiates a different constraint with different ε values and beneficiary/victim structures. All four coexist in the historical and contemporary world because different regimes adopt different solutions to the same problem. The readings do NOT foreclose each other — they coexist. A regime may shift from one reading to another (dynasty weakens, military takes over; junta establishes a single party; personalist leader destroys both party and military structures). The contest over which reading 'really' solves the succession problem is itself a political question, not a factual one."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "autocratic_rule__military_junta",
+      "autocratic_rule__party_autocracy",
+      "autocratic_rule__personalist_dictatorship",
+      "succession_war_frequency",
+      "elite_extraction_hierarchy"
+    ],
+    "dual_formulation_note": "Hereditary monarchy is one reading of the autocratic_rule kernel. The sibling readings (military junta, party autocracy, personalist dictatorship) are separate constraint stories with different ε values and structural mechanics. All four readings share the same upstream kernel (succession problem) but diverge on the mechanism. Network links show constraint family structure: they affect each other through regime transitions (a failing dynasty may be replaced by a military takeover; a junta may establish a party structure). The dual formulation is not reading-symmetry but rather constraint-family hierarchy: the kernel (succession problem) upstream of all four readings."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autocratic_rule__military_junta",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "autocratic_rule__party_autocracy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "autocratic_rule__personalist_dictatorship",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "birth_determines_succession_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "bloodline_legitimacy_trumps_merit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "stable_dynasty_succession",
+    "drift_state": {
+      "moment": "contemporary_state_system",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

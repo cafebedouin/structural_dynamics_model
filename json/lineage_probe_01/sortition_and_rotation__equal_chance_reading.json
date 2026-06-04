@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "sortition_and_rotation__equal_chance_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sortition_eq",
+    "story_uid": "7b671e62-3bfb-41ed-b451-1c51708c7dac"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Sortition as Equal-Access Coordination (Equal Chance Reading)",
+    "topic_domain": "political_theory/democratic_institutions",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "statistically_ordinary_citizen"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Ordinary Citizen",
+      "comment": "PERSPECTIVE 1: THE ORDINARY CITIZEN (ROPE) — Sortition grants literal equal access to rule regardless of wealth, rhetorical skill, family connection, or prior political experience. No selection gradient suppresses this agent's candidacy. Exit is mobile — the citizen can decline office if selected, but the baseline access is genuinely equal. Perceived as pure coordination: the mechanism that ensures rotation and equal access. Low extraction, minimal theater."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Democratic Assembly (Sortition Operator)",
+      "comment": "PERSPECTIVE 2: THE DEMOCRATIC ASSEMBLY (ROPE) — Sortition operator (the institutional body managing the lottery) experiences the constraint as pure coordination: solving the legitimacy problem of how to select representatives without enabling wealth or charisma to accumulate power. The assembly's authority is grounded in the equal-access principle. Exit is arbitrage — the assembly can switch mechanisms, but within the equal-chance reading, sortition is the instrumentally endorsed mechanism for operationalizing the equality value. No extraction perceived; the mechanism directly instantiates the assembly's core commitment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Equality Operationalization)",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE) — From a civilizational/global frame, sortition instantiates formal equality via mechanism: every citizen has the same non-zero probability of office. Theater is minimal — the lottery is the function, not a cover for hidden selection. Extraction is low because the mechanism distributes access flatly. The analytical perspective recognizes that effective sortition requires suppression of all selection gradients (wealth bias, rhetorical advantage, professional credential) — this suppression is structural, not coercive. The equal-chance reading takes this suppression as the core value: the mechanism works by eliminating bases of distinction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Skilled or Wealthy Agent (Within the System)",
+      "comment": "PERSPECTIVE 4: THE SKILLED OR WEALTHY AGENT (TANGLED ROPE) — Agents with rhetorical skill, wealth, or professional expertise experience sortition as mixed coordination and extraction. Coordination: the lottery ensures legitimacy and rotation, preventing any one faction from monopolizing office. Extraction: the mechanism suppresses the agent's advantage — their skill or wealth cannot be converted to political power. Exit is constrained — the agent remains a citizen and can be selected, but their conversion pathways (persuasion, funding, credential) are closed within office. Moderate extraction because the agent still benefits from the democratic system and can exercise influence through other channels. Requires active enforcement: the suppression of selection gradients must be maintained against incentives to game the system."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equal_access_versus_competence_tradeoff",
+      "question": "Does literalizing equal access — identical non-zero probability for every citizen — necessarily suppress all competence-based or expertise-based selection? Or can sortition be combined with minimal competence thresholds without violating the equal-chance reading?",
+      "resolution_mechanism": "Historical examination of sortition systems (Athenian, Venetian, modern jury selection): what competence gates existed? Did competence gates preserve the equal-access principle or establish a hidden selection gradient? Analysis of Condorcet jury theorem: does the diversity of ordinary judgment preserve functionality without credential-based selection?",
+      "impact": "If competence gates are incompatible with equal-chance reading: extractiveness remains 0.15 (pure coordination). If competence gates can coexist with formal equal access (e.g., literacy requirement, basic civic knowledge): a sibling reading (strategic_exception_reading) gains coherence, and the equal_chance_reading's claim to operationalize equality requires qualification (extractiveness rises to 0.25-0.35).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Tradeoff between equal access and competence-based selection"
+    },
+    {
+      "id": "suppression_mechanism_vs_natural_equality",
+      "question": "Is the suppression of selection gradients (0.08) a feature of sortition that operationalizes pre-existing equality, or a mechanism that *creates* artificial equality by suppressing natural variation in competence and skill?",
+      "resolution_mechanism": "Normative clarification: does the equal-chance reading endorse suppression as enforcement of a value (equality), or as elimination of a corruption (the conversion of power into influence)? Does the reading distinguish between suppressing illegitimate bases of distinction (wealth, rhetoric, family) and legitimate ones (knowledge, experience)? Empirical test: post-sortition performance data — do ordinary citizens perform worse at governing, or do credential-holders just assume they do? Does citizen-perceived competence differ from institutional-outcome measures?",
+      "impact": "If suppression is enforcement of a value: the reading is coherent; extractiveness from the skilled agent's perspective is accurate (0.25-0.35 in perspective 4). If suppression is artificial elimination of legitimate skill: the equal-chance reading collapses into the strategic_exception_reading (competence exceptions restore the framework), and a new omega emerges (is the equal-chance reading even defensible?). If performance is neutral or better with ordinary citizens: the reading is strengthened; skilled agents accept their disadvantage.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression enforces equality or artificially eliminates skill"
+    },
+    {
+      "id": "rotation_durability_without_professionalism",
+      "question": "Does the equal-chance reading require that office-holders be non-professional (part-time, term-limited, amateur)? Or can sortition select professional administrators while preserving equal-access principle?",
+      "resolution_mechanism": "Historical analysis: did Athenian sortition require amateur governance? Modern examples: jury systems select ordinary citizens but operate within professional legal structures. Can sortition coexist with permanent professional bureaucracy, or does professionalization necessarily enable selection gradients and political class formation?",
+      "impact": "If professional roles are incompatible with equal-chance reading: extractiveness remains 0.15 (pure coordination of amateur rotation). If professionalization can coexist: the anti_professional_reading becomes a distinct reading rather than a logical consequence of equal-chance, and the strategic_exception_reading's claim (competence exceptions for certain offices) becomes more plausible. The sibling reading relationships shift: coexistence becomes more coherent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Compatibility of sortition with professional governance structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The equal-chance reading of sortition grounds the legitimacy of democratic office-holding in a single principle: every citizen has literally identical non-zero probability of selection, regardless of wealth, rhetorical skill, family connection, professional credential, or prior political experience. This reading operationalizes formal equality via mechanism — the lottery suppresses all selection gradients at a structural level. Unlike the anti_professional_reading (which emphasizes the prevention of political class formation) or the strategic_exception_reading (which carves out competence-based exceptions for certain offices), the equal-chance reading takes the flat distribution of access as both the mechanism and the value. The constraint instantiates this reading as a rope (pure coordination) from most perspectives because sortition solves a legitimate coordination problem: how to select representatives in a way that prevents accumulated power from stratifying into an elite. The ordinary citizen's access is genuinely equal; the democratic assembly operationalizes this value; the analytical observer sees low extraction because the mechanism distributes office-holding access flat. Only from the perspective of the skilled or wealthy agent does the constraint appear as tangled rope — coordination that prevents the agent's advantage from converting to political power.",
+    "key_agents": [
+      "Statistically Ordinary Citizen: Primary beneficiary (powerless/mobile) — sortition grants equal baseline access to office regardless of advantage or disadvantage",
+      "Skilled/Wealthy Agent: Mixed beneficiary and victim (moderate/constrained) — benefits from democratic legitimacy and rotation but cannot convert advantage into political power",
+      "Democratic Assembly (Sortition Operator): Institutional actor (institutional/arbitrage) — operationalizes the equal-chance principle; experiences sortition as coordination mechanism for preventing power stratification",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — evaluates whether the equal-chance reading coherently operationalizes equality or conceals hidden selection gradients or competence-based exceptions"
+    ],
+    "logic_rationale": "Extractiveness (0.15): Low. The equal-chance reading minimizes extraction because it distributes access flatly — no agent captures disproportionate office-holding opportunity. The measurement trajectory (0.10 → 0.15 → 0.18) reflects a slight drift as systems accumulate exceptions or competence gates, but the core principle maintains low extractiveness. From the ordinary citizen's perspective, extractiveness approaches zero (the mechanism grants equal access). From the skilled agent's perspective, extractiveness is moderate (suppression of advantage), but the overall constraint's extractiveness averages to 0.15 because the suppression serves the coordination function of preventing power stratification. Suppression (0.08): Very low. The suppression of selection gradients is structural, not coercive — it is enforced by the mechanical design of sortition, not by active policing of deviance. No agent is prevented from *attempting* to influence an election or to accumulate political capital outside office; the suppression affects only the pathway from wealth/skill to office. The suppression is clean and mechanical rather than requiring enforcement machinery. Theater ratio (0.25): Low. Sortition is substantially functional — the lottery is the selection mechanism, not a cover for hidden selection. Theater rises slightly over time (0.20 → 0.30) as systems develop administrative and procedural complexity around the lottery, but the core function remains transparent. The equal-chance reading explicitly rejects the claim that sortition is theater (that would belong to the piton reading, which does not apply here).",
+    "perspectival_gap": "The perspectival gap is between the ordinary citizen (who sees pure coordination and equal access) and the skilled agent (who sees coordination that suppresses their advantage). Both perspectives classify as rope or tangled rope, but with different directionalities and different experienced extractiveness. The ordinary citizen experiences sortition as a mechanism that grants access they would not have through election or wealth. The skilled agent experiences sortition as a mechanism that suppresses a pathway (conversion of advantage to power) that would be open in alternative systems. The analytical observer recognizes both experiences as legitimate readings of the same structural phenomenon — the equal-chance reading operationalizes formal equality by suppressing selection gradients, which is both a benefit (access for the ordinary) and a constraint (advantage suppression for the skilled). This perspectival gap is not a defect in the reading; it is the core feature.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's structural relationship to the constraint. The ordinary citizen has d ≈ 0.2 (beneficiary with mobile exit: can decline office but gains equal access). The skilled agent has d ≈ 0.6 (mixed: benefits from democratic legitimacy but loses advantage conversion pathways). The assembly has d ≈ 0.1 (beneficiary with arbitrage: operates the mechanism and endorses it). The analytical observer has d ≈ 0.72 (sees full structure). These directionalities reflect that sortition distributes extractiveness unevenly across agents — the beneficiary (ordinary citizen) experiences low or negative χ; the constrained agent (skilled) experiences moderate χ; the analytical observer sees the full structure.",
+    "mandatrophy_analysis": "The equal-chance reading resolves the mandatrophy by taking a single principle (literal equal access) as the core value and deriving all downstream consequences from it. The mechanism (sortition) is transparent — it operationalizes the value without theater or hidden extraction. The suppression of selection gradients is not coercive but structural. The constraint classifies as rope from the perspectives of the ordinary citizen and the assembly (pure coordination) and as tangled rope from the skilled agent's perspective (mixed coordination and suppression of advantage). The analytical observer sees rope at the civilizational scale because the constraint solves a fundamental political problem: how to prevent accumulated power from stratifying into an elite. The mandatrophy is avoided by distinguishing this reading from the anti_professional_reading (which emphasizes prevention of political class formation as the core value, leading to different conclusions about professionalization and competence) and from the strategic_exception_reading (which carves out competence exceptions, leading to tangled_rope or snare classifications for the skilled agent).",
+    "kernel_context": "This constraint is the EQUAL_CHANCE_READING of the sortition_and_rotation kernel. The kernel is a contested commitment in political theory: sortition (selection by lot) as a mechanism for democratic office allocation. Three readings are live: (1) ANTI_PROFESSIONAL_READING: sortition's point is preventing political class formation where office is chance, brief, and audited. (2) EQUAL_CHANCE_READING (this constraint): sortition operationalizes equality by giving every citizen literally identical access to rule, independent of wealth, persuasion, or credential. (3) STRATEGIC_EXCEPTION_READING: sortition knew its limit; Athens selected generals and treasurers by election because incompetence kills, quietly preferring aristocratic selection where stakes are high. Each reading instantiates a different constraint with different beneficiaries, different extraction profiles, and different sibling relationships. The equal-chance reading explicitly rejects the strategic_exception_reading's claim that competence exceptions are defensible within the framework; it coexists with the anti_professional_reading but emphasizes formal equality over political class prevention. The ambiguity is whether competence-based selection gradients can coexist with the equal-chance principle, or whether they necessarily violate it."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sortition_and_rotation__anti_professional_reading",
+      "sortition_and_rotation__strategic_exception_reading"
+    ],
+    "dual_formulation_note": "The sortition_and_rotation kernel contains three structurally distinct readings: anti_professional (emphasizes political class prevention), equal_chance (emphasizes formal equality), and strategic_exception (emphasizes competence gradients in high-stakes offices). Each reading is a separate constraint with different ε values and different beneficiary/victim structures. The equal_chance_reading has ε ≈ 0.15 (pure coordination); the anti_professional_reading has ε ≈ 0.08 (coordination with stronger emphasis on preventing accumulation); the strategic_exception_reading has ε ≈ 0.45-0.55 (tangled rope or snare, depending on whether competence exceptions dominate). All three readings are linked via network.affects_constraints and documented in their respective omega variables."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sortition_and_rotation__anti_professional_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sortition_and_rotation__strategic_exception_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "literal_equal_access_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "selection_gradient_suppression_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "athenian_democratic_lot",
+    "drift_state": {
+      "moment": "contemporary_sortition_revival",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

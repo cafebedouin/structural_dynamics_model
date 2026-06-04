@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "warrant_preference_reading__good_faith_exception_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_warrant_preference_reading__good_faith_exception_reading",
+    "measurement_id_prefix": "wprgf",
+    "story_uid": "6825f7ce-a8d0-43d1-b0bf-5f2ffeb1810d",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Good Faith Exception to Warrant Exclusion Rule (Leon Doctrine)",
+    "topic_domain": "legal/constitutional_doctrine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "prosecutorial_agencies"
+    ],
+    "victims": [
+      "fourth_amendment_categorical_enforcement",
+      "defendants_with_honest_error_searches"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Defendant Facing Honest-Error Search",
+      "comment": "PERSPECTIVE 1: DEFENDANT IN HONEST-ERROR CASE (SNARE) — Cannot exit the suppression loss; bears full weight of the good faith exception without remedy. Officer reasonably relied on invalid warrant; defendant has no exclusionary protection. Trapped in biographical horizon: the loss is immediate and permanent. Zero effective exit options or protest capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Fourth Amendment Enforcement Doctrine",
+      "comment": "PERSPECTIVE 2: FOURTH AMENDMENT CATEGORICAL RULE (ROPE) — The constitutional rule still exists and still coordinates on the warrant requirement itself. What is lost is the exclusionary remedy, not the warrant obligation. Organized over generational horizon through doctrinal tradition. Constrained exit because courts cannot simply repudiate Leon; they navigate it through reading. The constraint coordinates warrant-seeking behavior even as it extracts exemption from exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement and Prosecution",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT / PROSECUTION (TANGLED ROPE) — Genuine coordination benefit from the warrant requirement itself: getting a warrant is still mandatory and still functions as a gatekeeping mechanism. But the good faith exception extracts the exclusionary penalty when the warrant is defective. Net beneficiary: incentivized to seek warrants (coordination) but shielded from suppression when reasonable reliance fails (extraction). Biographical horizon: the exemption operates immediately upon search; long-term institutional preference for warrants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational view, the constraint exhibits both genuine coordination and asymmetric extraction. The warrant requirement coordinates police behavior toward Fourth Amendment-conscious searching. But the good faith exception permits extraction of evidence when the warrant defect is honest. The doctrine coordinates on process while exempting outcome. Extractiveness moderate-high (0.62) because the exemption class is large (reasonable reliance by officers is common) and the remedy removal is total (no suppression, evidence admitted, conviction proceeds)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reasonable_reliance_threshold",
+      "question": "What degree of warrant defect is 'too obvious' for reasonable reliance? Where does the threshold lie between clear illegality and defensible mistake?",
+      "resolution_mechanism": "Case law analysis across circuits; mapping fact patterns where courts grant vs. deny good faith exception; empirical study of officer training and warrant interpretation practices",
+      "impact": "If threshold is high (only egregious defects disqualify reliance): more evidence admitted, more extraction. If threshold is low (technical defects disqualify reliance): more suppressions, less extraction. Current doctrine is in substantial flux.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for what warrant defect precludes good faith reliance"
+    },
+    {
+      "id": "deterrence_theory_validity",
+      "question": "Does suppression actually deter Fourth Amendment violations by police departments, or is the deterrence mechanism empirically weak for institutional actors and only punishes defendants?",
+      "resolution_mechanism": "Empirical study of police behavior before/after suppression rulings; comparison of violation rates in high-suppression vs. low-suppression jurisdictions; analysis of departmental training response to suppression outcomes",
+      "impact": "If suppression deters: Leon's premise is false, and the good faith exception removes deterrence without justification — reclassifies toward Snare. If suppression does not deter police: Leon's premise is true, and the exception removes a dead remedy — reclassifies toward Rope (coordination without meaningful extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusionary rule suppression actually deters police violations"
+    },
+    {
+      "id": "honest_error_categorization_ambiguity",
+      "question": "Does 'honest error' describe actual officer mistake or systematic institutional gap-exploitation masked as innocence?",
+      "resolution_mechanism": "Departmental practice analysis: are warrant requests routinely filed in forms that create predictable defects? Do officers know the defects are likely? Are errors 'honest' or 'structurally anticipated but deniable'?",
+      "impact": "If honest: good faith exception correctly targets cases where suppression serves no deterrence purpose — reclassifies toward Rope. If systematically anticipated: good faith exception licenses predictable illegality under the cover of honest mistake — reclassifies toward Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether good faith errors are genuinely honest or systematically anticipated"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a reading of the warrant-preference kernel (which emphasis on good faith shields police from the exclusionary rule's intended remedy), or is it a kernel in its own right (the deterrence-based exception as an independent doctrinal commitment)?",
+      "resolution_mechanism": "Historical doctrine analysis: did Leon self-consciously modify the warrant preference kernel, or did it introduce a new doctrinal axis? Did subsequent doctrine treat Leon as a reading of the Fourth Amendment's warrant requirement, or as a standalone exception that competes with it?",
+      "impact": "If a reading: this constraint is one position in the warrant-preference kernel contest; reclassification depends on which sibling reading prevails. If a kernel itself: the good faith exception must be evaluated as an independent commitment system with its own reference frame and authority grounding.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether good faith exception is a reading or an independent kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "United States v. Leon (1984) introduced the 'good faith exception' to the exclusionary rule: when law enforcement officers reasonably rely on a warrant that later proves defective, evidence is admissible despite Fourth Amendment violation. The doctrine rests on a specific deterrence theory: suppression punishes only the sovereign (the prosecution loses evidence) but does not deter officers who acted in good faith. Therefore, suppression serves no remedial purpose in the good faith case and should not be applied. This constraint embodies one reading of the warrant preference kernel — the reading that prioritizes deterrence function over categorical Fourth Amendment enforcement. The constraint exhibits tangled_rope structure: it coordinates police behavior toward warrant-seeking (genuine coordination function) while simultaneously extracting exemption from suppression when the warrant defect is honest (asymmetric extraction). The key structural feature is the inversion of deterrence: where the exclusionary rule's deterrent effect is presumed absent, suppression becomes 'rule without remedy,' and the evidence is retained.",
+    "key_agents": [
+      "Law Enforcement Officers: Primary beneficiary (institutional/arbitrage) — obtain warrant, search is defective but in good faith, evidence admitted without suppression. No institutional penalty.",
+      "Prosecutorial Agencies: Primary beneficiary (institutional/arbitrage) — evidence secured despite warrant defect; conviction proceeds without suppression barrier.",
+      "Defendants in Honest-Error Cases: Primary victim (powerless/trapped) — lose Fourth Amendment remedy despite constitutional violation. No exit, no protection, evidence used to convict.",
+      "Fourth Amendment Categorical Enforcement: Secondary victim (organized/constrained) — the categorical warrant requirement survives, but the exclusionary remedy is suppressed in the good faith class, reducing the rule's bite.",
+      "Courts Applying Leon: Institutional actor (institutional/constrained) — navigate doctrinal requirement to apply good faith exception while nominally preserving Fourth Amendment protections; constrained by precedent to grant exception when reasonable reliance applies."
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high. The good faith exception removes suppression — the primary remedy for Fourth Amendment violations — in a large and growing class of cases (honest officer error). The extraction is not maximal because the warrant requirement itself remains binding; officers must still seek warrants. The extraction operates on the remedy, not on the rule. The trajectory shows rising extractiveness (0.38 → 0.62 over 30 years) as courts have broadened the good faith exception to cover increasingly attenuated warrant defects and increasingly broad categories of 'reasonable reliance.' Suppression (0.68): High. The constraint suppresses the exclusionary remedy through the doctrinal barrier of 'good faith.' Once good faith is found, suppression becomes unavailable — a categorical suppression of the remedy itself. Theater ratio (0.58): Moderate-high. The good faith exception creates performative warrant-seeking: officers obtain warrants partly to satisfy the legal requirement, partly because Leon makes the warrant a talisman (good faith reliance on it shields evidence even if defective). The warrant itself becomes partially theatrical — its defect does not trigger the intended remedy. The ratio has risen over time as judicial practice has normalized the exception and officers have learned to anticipate it.",
+    "directionality_logic": "Law enforcement and prosecution derive low d values (0.15–0.25 range) from beneficiary status and arbitrage exit options — they can choose to pursue warrants or not, and they benefit from the exception. This yields f(d) ≈ 0.0 to 0.15, dampening their experienced extraction. Defendants facing honest-error searches derive high d values (0.95) from victim status and trapped exit — they cannot exit or contest, and they bear the full cost. This yields f(d) ≈ 1.42, amplifying their experienced extraction to near-maximal. The Fourth Amendment rule itself derives moderate d (~0.50) from the hybrid structure: it coordinates warrant-seeking (beneficiary function) but loses remedy (victim function). The analytical observer derives canonical d ~0.72 from analytical power position, applying the universal scope modifier σ(global) = 1.2, which amplifies effective extraction to 0.62 × 1.15 × 1.2 ≈ 0.86 — highly extractive viewed from civilizational/universal perspective.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Law enforcement sees a balanced incentive system (Rope): warrants must be sought, but honest compliance is rewarded by evidence retention — Rope classification because the coordination benefit dominates. Defendants see pure extraction (Snare): no remedy exists despite violation, and they have no agency. Fourth Amendment doctrine sees mixed coordination and extraction (Tangled Rope): the rule coordinates warrant-seeking but extracts the exclusionary remedy when error is 'honest.' The analytical observer, seeing the full structure, also classifies as Tangled Rope: genuine coordination function (warrant requirement) combined with asymmetric extraction (remedy suppression for honest officers). The divergence reveals that the classification depends critically on whether one privileges the coordination function (warrant-seeking behavior) or the remedy extraction (suppression of relief).",
+    "mandatrophy_analysis": "The good faith exception resolves mandatrophy by reframing the exclusionary rule's purpose: instead of categorical constitutional protection, the rule is recharacterized as a tool of deterrence. Once deterrence is the metric, good faith errors (where suppression deters no one) fall outside the rule's justified scope. The mandatrophy dissolves if one accepts the premise that exclusion is remedial (for deterrence), not constitutional (for categorical protection). However, the constraint remains tangled because deterrence theory is empirically contested (omega variable 2): if suppression does deter institutional actors, then the good faith exception removes a functional remedy under false premises. The reading's authority rests on an empirical claim (suppression does not deter good-faith actors) that is not settled. Tangled Rope is the correct classification because the reading maintains genuine coordination (warrant requirement) while extracting remedy (good faith exception) under contested justification.",
+    "kernel_context": "This constraint instantiates the 'good_faith_exception_reading' of the 'warrant_preference_reading' kernel. The kernel is the Fourth Amendment's warrant preference — the constitutional commitment to requiring warrants before searches. The reading contest asks: does requiring a warrant commit us to excluding evidence when the warrant is defective (exclusionary_rule_reading), or does it commit us to excluding evidence only when exclusion serves deterrence and police acted in good faith (good_faith_exception_reading), or does digital aggregation change the structural requirement itself (digital_carpenter_reading)? This reading adopts the deterrence-functional interpretation: the warrant requirement coordinates police toward warrant-seeking, and the exclusionary remedy serves only to deter future violations. When deterrence is absent (good faith reliance), the remedy is unjustified, and evidence is admissible. The sibling readings are exclusionary_rule_reading (which maintains categorical exclusion regardless of deterrence function) and digital_carpenter_reading (which restructures the warrant requirement itself for digital searches). This reading coexists with the exclusionary_rule_reading in the sense that different courts and jurisdictions hold both; it forecloses the reading's pure categorical form within its own jurisprudential framework (deterrence-based exclusion is structurally incompatible with categorical exclusion at the remedy stage)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "warrant_preference_reading__exclusionary_rule_reading",
+      "warrant_preference_reading__digital_carpenter_reading"
+    ],
+    "dual_formulation_note": "The good faith exception is one reading of the warrant-preference kernel; it shares the kernel with exclusionary_rule_reading and digital_carpenter_reading. Each reading instantiates different extractiveness and different structural relationships to beneficiaries/victims. The constraint family models the doctrinal contest over what the warrant requirement commits us to enforce."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "warrant_preference_reading__exclusionary_rule_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "warrant_preference_reading__digital_carpenter_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "suppression_justified_only_by_deterrence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "good_faith_reliance_breaks_deterrence_chain",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "constitutional_deterrence_framework",
+    "drift_state": {
+      "moment": "contemporary_post_leon_jurisprudence",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

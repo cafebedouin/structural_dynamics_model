@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "german_basic_law__basic_rights_catalog",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_german_basic_law__basic_rights_catalog",
+    "measurement_id_prefix": "gbl_rights",
+    "story_uid": "04998219-05fe-42df-843e-1f534a0635ee",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "German Basic Law: Rights Catalog (Articles 1–19)",
+    "topic_domain": "political/legal/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_rights_holders",
+      "german_residents_and_citizens"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Individual Rights-Holder (Citizen or Resident)",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL RIGHTS-HOLDER (ROPE) — Articles 1–19 directly bind all public power and protect against state action. The rights catalog provides genuine coordination: it frames all administrative action as justiciable and proportional. No exit from the Basic Law's jurisdiction, but the constraint itself solves the coordination problem of unreviewable state power. The theatrical element is minimal — rights are regularly enforced through constitutional courts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Vulnerable Population (Under-Protected Groups)",
+      "comment": "PERSPECTIVE 2: VULNERABLE POPULATION (ROPE) — Over generational time, the rights catalog has expanded protections through constitutional court interpretation (dignity jurisprudence, social welfare implications, labor rights). The constraint solves a collective action problem: without the binding catalog, vulnerable groups would face unreviewable extraction by legislative majorities. The mechanism is coordination, not extraction — the constraint enables mobilization of legal claims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Administration (Executive and Legislative)",
+      "comment": "PERSPECTIVE 3: STATE ADMINISTRATION (TANGLED ROPE) — Articles 1–19 directly bind state organs and limit emergency powers. The administration experiences the rights catalog as both coordination and constraint. Beneficiary aspect: the catalog provides legitimate authority — administrative action grounded in constitutional rights justification gains public acceptance and reduces contestation. Victim aspect: the proportionality requirement imposes compliance costs and disallows purely extractive action. Active enforcement through constitutional court review is required to maintain the binding."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Constitutional Court (Bundesverfassungsgericht)",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL COURT (ROPE) — The court coordinates the entire system: interprets Article 1–19 protections, enforces them against state action, and develops jurisprudence expanding their reach. The court's power is substantial but exercised transparently and justifiably. The constraint is genuinely coordinative from this perspective — the court enables rights-holders and constrains arbitrary state power. No extraction; high legitimacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Federal Legislature (Bundestag)",
+      "comment": "PERSPECTIVE 5: FEDERAL LEGISLATURE (TANGLED ROPE) — The legislature cannot repeal Articles 1–19 due to Article 79(3); it can only reinterpret or legislate within the rights framework. Beneficiary aspect: the rights catalog provides legitimate authority for legislation — laws grounded in constitutional rights justification command broader support. Victim aspect: the eternity clause (Article 79(3)) forecloses amendment of the essential content of any right; emergency powers are limited; legislative majorities cannot extract rights without proportionality review. Active enforcement through constitutional court review constrains the legislature's options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Comparative Constitutional Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From civilizational scope, the Basic Law's rights catalog solves a core constitutional problem: how to protect individual liberty against majoritarian extraction and state power. The mechanism is pure coordination — it defines the terms under which state power is legitimate (proportional, justified by rights, subject to judicial review). The structure replicates across democracies; extractiveness is minimal because the constraint's function IS to prevent extraction. The theater ratio is low because rights enforcement is justiciable and transparent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "article_79_3_amendment_scope",
+      "question": "Does the 'essence' clause in Article 79(3) bar ONLY amendment of Articles 1–19, or does it protect the entire constitutional structure including federalism and democratic process?",
+      "resolution_mechanism": "Textual analysis of Article 79(3): 'The substance of Articles 1–20' vs interpretive extension to the entire constitutional order. Bundesverfassungsgericht jurisprudence on the limits of amendment.",
+      "impact": "Narrow reading: Basic Law can be substantially reformed by supermajority (Amendment history reading gains force). Broad reading: the constitutional core is untouchable, and the dignity-and-eternity reading gains force. Different constraint boundaries for each reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of the Article 79(3) unamendable core"
+    },
+    {
+      "id": "horizontal_effect_of_rights",
+      "question": "Do Articles 1–19 bind private actors (horizontal effect), or only state organs (vertical effect)?",
+      "resolution_mechanism": "Constitutional court jurisprudence on Drittwirkung (third-party effect); case law distinguishing immediate horizontal effect (rare) from indirect horizontal effect through statutory interpretation and public law doctrine.",
+      "impact": "Vertical effect only: rights-holders have no protection against private extraction (employer, landlord, platform). Horizontal effect: beneficiary set includes protection from private power; extractiveness and suppression metrics shift upward; scope expands beyond state administration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fundamental rights bind private actors"
+    },
+    {
+      "id": "proportionality_as_extraction_filter",
+      "question": "Is proportionality review a genuine limit on extraction, or a post-hoc justification mechanism that state power uses to rationalize extractive action?",
+      "resolution_mechanism": "Empirical analysis of constitutional court invalidation rates for state action on rights grounds; comparison of proportionality outcomes across demographic groups (privileged vs vulnerable). Historical record of emergency measures deemed 'proportionate'.",
+      "impact": "If proportionality is genuine limit: extractiveness remains ~0.28 (rope category). If proportionality is rationalization: extractiveness rises to 0.45–0.55 (tangled rope). Classification shifts based on whether the judicial constraint is effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality review effectively constrains state extraction"
+    },
+    {
+      "id": "reading_vs_sibling_foreclosure",
+      "question": "This reading (basic_rights_catalog) emphasizes the horizontal binding of state organs by Articles 1–19. Does this reading FORECLOSE the dignity_and_eternity reading (which emphasizes Article 1's inviolability and unamendability), or do both readings coexist in a single constitutional framework?",
+      "resolution_mechanism": "Constitutional theory: Can both readings be held simultaneously within German constitutional law? Does emphasizing the rights catalog preclude emphasizing dignity as the inviolable foundation? Or are they complementary axioms of the same order?",
+      "impact": "If foreclosed: basic_rights_catalog and dignity_and_eternity are mutually exclusive constraints (different files, different ε values). If coexist: both readings are live positions within German constitutionalism, and the kernel exhibits internal pluralism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading forecloses the dignity_and_eternity reading"
+    },
+    {
+      "id": "militant_democracy_rights_forfeiture",
+      "question": "Does Article 21(2) (party ban) or Article 18 (rights forfeiture) constitute an exception to the 'untouchable essence' of Articles 1–19, or does the basic_rights_catalog reading interpret these as consistent with constitutional rights because they protect the constitutional order itself?",
+      "resolution_mechanism": "Constitutional court jurisprudence on Article 21(2) and 18: Is rights forfeiture a rights violation, or is protecting the constitution a grounds for limiting rights? Can democracy defend itself through anti-democratic means while remaining rights-bound?",
+      "impact": "If exception: the rights catalog has articulated limits, and the militant_democracy reading creates a structural pressure that constrains basic_rights_catalog scope. If consistent: the basic_rights_catalog reading absorbs militant democracy as a secondary principle, and no sibling constraint pressure emerges.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether militant democracy's rights forfeiture fits within the rights catalog"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "gbl_rights_extract_1949"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.22,
+      "id_override": "gbl_rights_extract_1984"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.28,
+      "id_override": "gbl_rights_extract_2024"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "gbl_rights_theater_1949"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.3,
+      "id_override": "gbl_rights_theater_1984"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.35,
+      "id_override": "gbl_rights_theater_2024"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "commentary": {
+    "narrative_context": "The Basic Law's Articles 1–19 establish a constitutional binding on all state organs, placing fundamental rights at the constitutional apex and shielding their essential content from amendment via Article 79(3). This reading instantiates the basic_rights_catalog understanding of German constitutionalism: the constitution is NOT primarily a record of managed amendment (amendment_history reading), NOT primarily Article 1's inviolable dignity alone (dignity_and_eternity reading), NOT primarily federalism (federal_construction reading), and NOT primarily anti-democratic defense mechanisms (militant_democracy reading). Rather, it is a comprehensive, binding catalog of rights that directly constrains all state action and provides justiciable limits on state power. The constraint exhibits low extractiveness (0.28) because the rights catalog's function is to prevent extraction by making all state power proportional and rights-justified. The constraint's beneficiary set is universal — every rights-holder, citizen and resident alike. The victim set is administrative power that lacks justification grounded in rights. The theater ratio is low (0.35) because rights are enforced through constitutional courts with transparent, rule-based review.",
+    "key_agents": [
+      "All Rights-Holders (Citizens and Residents): Primary beneficiary (powerless/constrained) — Articles 1–19 provide direct protection against state action with no exit from the guarantee",
+      "State Administration (Executive and Legislative): Secondary actor (moderate/constrained) — Bound by the rights catalog; must justify action through proportionality; benefits from legitimate authority grounded in rights justification",
+      "Constitutional Court (Bundesverfassungsgericht): Organized enforcer (organized/mobile) — Interprets and enforces Articles 1–19; coordinates the entire system; develops jurisprudence expanding rights reach",
+      "Federal Legislature: Institutional actor (institutional/mobile) — Cannot repeal Articles 1–19 due to eternity clause; legislates within rights framework; both benefits (legitimate authority) and constrained (proportionality review)",
+      "Vulnerable Populations (Under-Protected Groups): Primary beneficiary over generational time (powerless/constrained) — Rights catalog expands protections through constitutional court interpretation; solves collective action problem",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — Views rights catalog as coordination mechanism solving democratic constitutionalism's core problem"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The rights catalog's structural function is to constrain extraction by requiring state action to be justified by rights and subject to proportionality review. The metric captures that some extraction persists: (1) enforcement costs are borne by rights-holders seeking judicial remedy; (2) administrative action may be formally proportionate but substantively disadvantageous (e.g., regulations that comply with rights but burden specific groups); (3) the catalog itself can be used to justify action that technically respects rights but serves extractive purposes (e.g., security exceptions). However, the categorical binding of all state organs and the directly justiciable enforcement mechanism keep extractiveness low. Rising trajectory over 75 years (0.15 → 0.22 → 0.28) reflects increasing complexity of rights jurisprudence and expansion of rights scope through constitutional court interpretation — as the rights catalog's reach extends, compliance costs and interpretive friction increase. Suppression (0.15): Low. The rights catalog explicitly suppresses state power that lacks proportional justification. However, suppression is not total because: (1) state action can always be justified through proportionality testing; (2) emergency powers exist (Article 20(4) exception); (3) rights forfeiture is possible under Article 18. Theater ratio (0.35): Low-moderate. Rights enforcement is justiciable and rule-based, with transparent court proceedings and published jurisprudence. However, some theatrical elements persist: (1) proportionality balancing has indeterminate inputs and outputs; (2) constitutional courts use rhetoric and narrative framing in decisions; (3) emergency declarations can claim proportionality ex post. Rising trajectory (0.25 → 0.30 → 0.35) reflects increasing complexity of rights jurisprudence and the multiplication of balancing tests.",
+    "directionality_logic": "Each perspective experiences the rights catalog from a different structural position. The powerless rights-holder (constrained exit) experiences d ≈ 0.30 (beneficiary with high exit costs) — the rights catalog solves their collective action problem but provides no exit. The state administration (moderate, constrained) experiences d ≈ 0.55 (mixed beneficiary and victim) — benefits from legitimate authority but constrained by proportionality. The constitutional court (organized, mobile) experiences d ≈ 0.20 (powerful beneficiary with exit mobility) — coordinates the system and enforces its own readings. The legislature (institutional, mobile) experiences d ≈ 0.40 (powerful actor with eternity-clause constraints) — legislates within framework but cannot escape proportionality review. The analytical observer (analytical, analytical) experiences d ≈ 0.72 (neutral analytical position) — sees coordination function clearly. The directionality structure reveals that the beneficiary set (all rights-holders) is larger and more powerless than typical institutional constraints, while the victim set (extractive state power) is abstract and lacks direct agency. This asymmetry drives the rope classification — the constraint solves a coordination problem (how to bind state power proportionally) rather than extracting from a concentrated victim group.",
+    "perspectival_gap": "The most significant perspectival gap appears between the individual rights-holder (rope, immediate/biographical) and the state administration (tangled_rope, biographical). From the individual's view, the rights catalog is pure coordination — it provides binding protection against extraction. From the state's view, the rights catalog imposes both coordination benefits (legitimate authority) and extraction costs (proportionality constraints). The gap reveals the constraint's hybrid function: it IS coordination (solving the problem of unreviewable state power) AND it IS constraint (limiting state extraction possibilities). At the civilizational/analytical level, the constraint appears as nearly pure rope because its function is transparent and its mechanism is coordinative. Over biographical time, the same constraint appears more extractive (tangled_rope) because administrative and legislative actors experience ongoing compliance burden and proportionality review. The federal legislature's perspective (tangled_rope, institutional) reveals the eternity clause's binding force — the legislature benefits from the rights catalog's legitimacy but cannot exit or amend it, creating a permanent constraint on sovereign power.",
+    "kernel_context": "This constraint instantiates ONE READING of the contested kernel 'german_basic_law'. The reading I am authoring is basic_rights_catalog: The Basic Law leads with rights. Articles 1–19 bind all state organs directly, with essential content untouchable via Article 79(3). This reading emphasizes the catalog structure, direct binding, and proportionality as the operative constraint mechanism. Sibling readings of the same kernel include: (1) amendment_history: The Basic Law as a record of managed revision (rearmament, emergency, reunification, asylum, debt brake); (2) dignity_and_eternity: Article 1's inviolable dignity and Article 79(3) as the constitutional floor; (3) federal_construction: Federalism as the core structure, Länder and Bundesrat as constitutive; (4) militant_democracy: Article 21(2) and 18 as anti-democratic defense mechanisms. Each reading interprets the same kernel (the Basic Law text) differently, emphasizing different structural features and operative constraints. The epsilon values differ: basic_rights_catalog ≈ 0.28 (rope, low extraction); dignity_and_eternity ≈ 0.05 (mountain, natural law of constitutional foundation); militant_democracy ≈ 0.42 (tangled_rope, coordination of rights protection WITH rights forfeiture); amendment_history ≈ 0.35 (scaffold/rope, managed revision with sunset aspects); federal_construction ≈ 0.30 (rope, coordination of multi-level governance). Each reading is a separate constraint file with its own metrics and perspectives.",
+    "mandatrophy_analysis": "The basic_rights_catalog reading resolves the mandatrophy by anchoring to the proportionality mechanism: the rights catalog's structural function is to make ALL state power justiciable and proportional. This prevents the mandatrophy of confusing 'rights-protecting coordination' with 'extractive constraint on rights'. The constraint is NOT a mountain (natural law of justice) — it is contingent institutional arrangement that could be amended or abandoned. It IS a rope (genuine coordination solving the problem of unreviewable power) because its mechanism is transparent, justiciable, and serves all participants' interests in legitimate state action. However, the tangled_rope perspectives from the state administration and legislature reveal that the constraint DOES impose costs (proportionality compliance, limited amendment power). These costs are not extraction in the predatory sense — they are coordination costs of living in a legitimate constitutional order. The mandatrophy resolves when we recognize that a constraint can be simultaneously coordinative (solving a collective action problem) and limitative (imposing costs on state power). The Basic Law's rights catalog is both. The theater ratio (0.35) is low enough to confirm that the constraint is not primarily performative — rights enforcement is real and consequential. The extractiveness (0.28) is low enough to confirm that the constraint's function is coordination, not extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "german_basic_law__dignity_and_eternity",
+      "german_basic_law__amendment_history",
+      "german_basic_law__federal_construction",
+      "german_basic_law__militant_democracy"
+    ],
+    "dual_formulation_note": "The basic_rights_catalog reading is one of five distinct interpretations of the German Basic Law kernel. Each reading emphasizes different structural features (rights catalog vs dignity foundation vs federalism vs democratic defense) and produces different epsilon values. All five readings are live positions within German constitutional discourse; no single reading foreclosed by another (they coexist). However, the basic_rights_catalog reading INFLUENCES the dignity_and_eternity and militant_democracy readings by establishing the proportionality framework within which those readings operate. The amendment_history and federal_construction readings operate at different structural levels and do not directly interact with this reading's classification."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "german_basic_law__amendment_history",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "german_basic_law__dignity_and_eternity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "german_basic_law__federal_construction",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "german_basic_law__militant_democracy",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_state_power_proportionality_bound",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "article_79_3_eternity_clause_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "proportional_constitutional_state",
+    "drift_state": {
+      "moment": "contemporary_post_2008_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

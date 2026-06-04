@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "constitutional_conventions__collective_responsibility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_conventions__collective_responsibility",
+    "measurement_id_prefix": "coll_resp",
+    "story_uid": "f1003613-c11c-46d2-90bd-67976002fc39"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cabinet Collective Responsibility: Ministers' Public Dissent Suppressed by Career Extraction",
+    "topic_domain": "political/legal/constitutional_conventions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prime_minister",
+      "executive_coherence",
+      "party_discipline"
+    ],
+    "victims": [
+      "dissenting_ministers",
+      "parliamentary_transparency",
+      "democratic_deliberation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dissenting Minister",
+      "comment": "PERSPECTIVE 1: DISSENTING MINISTER (SNARE) — Faces a genuine binary: defend a decision they privately opposed or resign. Career cost of resignation is severe (loss of ministerial salary, access, visibility, future advancement). Suppression is structural — the minister cannot speak their honest position without exiting the cabinet. Public dissent equals automatic dismissal. The constraint extracts honest representation from the minister and delivers it to executive coherence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prime Minister / Executive",
+      "comment": "PERSPECTIVE 2: PRIME MINISTER / EXECUTIVE CORE (ROPE) — Benefits from unified cabinet presentation; experiences the constraint as pure coordination. The PM can govern effectively only if the cabinet appears unified. From the PM's perspective, the constraint solves a genuine collective action problem: without collective responsibility, every cabinet decision would leak dissent, paralyzing executive action. The PM has arbitrage options (dissolve cabinet, reshuffle, appeal to party loyalty) and net benefit from the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Backbench MP (Same-Party)",
+      "comment": "PERSPECTIVE 3: SAME-PARTY BACKBENCH MP (TANGLED ROPE) — Constrained by party discipline: cannot openly join dissenting minister without party penalty. But also benefits from party coherence (party discipline that silences ministers also prevents opposition fragmentation, protecting the backbencher's own seat). Exit cost is party expulsion or marginalization (constrained, not trapped — backbencher can survive outside the party structure). Mixed extraction: forced conformity on dissenting positions, but genuine coordination benefit from party unity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Parliamentary Opposition",
+      "comment": "PERSPECTIVE 4: OPPOSITION PARTIES (TANGLED ROPE) — Constrained by the same collective responsibility norm applying to their own future cabinets. Cannot easily weaponize ministerial dissent because doing so establishes precedent that will bind them when in government. Also benefits from cabinet stability in that orderly government handoff is easier than managing a fractured cabinet. Extraction: cannot hold government fully accountable for individual dissenting views (must challenge the unified position). Coordination: shared interest in cabinet stability across partisan transitions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parliament (Assembly Function)",
+      "comment": "PERSPECTIVE 5: PARLIAMENT AS ASSEMBLY (PITON) — The constraint is largely performative from Parliament's institutional perspective. Collective responsibility prevents Parliament from interrogating dissenting cabinet views, but Parliament retains formal impeachment power (rarely used, historically deprecated). The constraint persists through constitutional custom and media enforcement rather than through Parliament's active gatekeeping. Theater ratio is high: Parliament's theoretical power to force individual ministerial accountability has atrophied while the performative unity presentation remains. The ritual of Prime Minister's Questions assumes unified cabinet; ministerial testimony assumes defense of collective positions. Piton classification: the performance (unified cabinet narrative) persists despite the functional accountability mechanism having degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, cabinet coherence might appear as an immutable feature of executive governance: any executive must present a unified face or collapse under internal contradiction. This perspective naturalizes the constraint as inherent to the very concept of cabinet government. The engine's false summit detector will flag this — the constraint has clear beneficiaries (PM, executive) and victims (dissenting ministers, transparency), indicating it is constructed rather than natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resigned_minister_visibility",
+      "question": "Do ministers who resign on principle gain sufficient platform to articulate their dissent, or does the constraint's suppression persist even post-exit through media narrative control?",
+      "resolution_mechanism": "Historical case analysis: compare media coverage and parliamentary visibility of resigned ministers' dissenting positions vs. in-cabinet defenders of the same positions. Measure whether exit actually enables public expression of the suppressed view.",
+      "impact": "If visibility is substantial post-exit: exit is a genuine high-cost option (constrained, not trapped) and chi is lower. If visibility is suppressed: exit does not enable suppressed dissent and the constraint is closer to trapped (d higher, chi higher, classification closer to Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resigned ministers retain platform for dissent after exit"
+    },
+    {
+      "id": "dissent_as_loyalty_signal",
+      "question": "Is ministerial dissent-suppression enforced primarily through explicit PM authority or through internalized party loyalty norms where ministers self-suppress to signal commitment?",
+      "resolution_mechanism": "Qualitative analysis of ministerial memoirs and interviews; comparison of suppression in high-loyalty vs low-loyalty cabinets; observation of whether explicit PM warnings precede most resignations or whether ministers resign preemptively.",
+      "impact": "If explicit enforcement: suppression is structural (remains at 0.68). If internalized: suppression may be identity-locked (ministers see unified position as expressing their true beliefs after internalization) and the exit_options should be identity_locked rather than constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of dissent suppression: explicit enforcement vs. internalized loyalty"
+    },
+    {
+      "id": "collective_responsibility_as_natural_law",
+      "question": "Is collective responsibility inherent to the very concept of cabinet government, or is it a contingent institutional choice adopted to solve a particular governance problem?",
+      "resolution_mechanism": "Comparative institutional analysis: do cabinet systems in other democracies (Germany, Spain, Australia) enforce equivalent suppression? Historical analysis: did earlier British cabinets operate under different norms? Counterfactual: could cabinet government function without public dissent suppression?",
+      "impact": "If inherent: mountain classification (perspective 6) is correct. If contingent: mountain is a false summit, engine reclassifies to tangled_rope or snare, FSM signature fires. The kernel contest itself implies contingency — reading this as contingent institutional choice rather than natural law.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether collective responsibility is inherent law or contingent institutional choice"
+    },
+    {
+      "id": "private_dissent_legitimacy",
+      "question": "Is the right to private dissent a genuine concession (ministers may oppose privately but must defend publicly) or a performative fiction (private dissent is monitored and penalized if it enables resignations)?",
+      "resolution_mechanism": "Documentary evidence: memoirs, leaks, interviews about whether private dissent is actually tolerated or whether dissenting ministers are marked for removal. Observation of pattern: do ministers who privately dissent tend to resign, be reshuffled, or be retained?",
+      "impact": "If private dissent is genuinely tolerated: extractiveness is lower (0.50-0.55 range) and some genuine coordination function exists (Tangled Rope). If private dissent is fiction: extractiveness is higher (0.60-0.68) and the constraint is closer to pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether private dissent is tolerated or monitored/penalized"
+    },
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is ONE READING of the constitutional_conventions kernel. Other readings interpret the same underlying commitment (cabinet authority, ministerial responsibility) differently. Is collective responsibility THE necessary reading of cabinet government or ONE possible instantiation?",
+      "resolution_mechanism": "Examine the sibling readings (ministerial_responsibility, royal_assent_convention, salisbury_convention). Each reading of the constitutional kernel grounds legitimacy in different claims about accountability and executive power. Collective responsibility emphasizes PM coherence; ministerial responsibility emphasizes individual accountability. The contest between readings is not resolvable empirically but rather reveals alternative committer positions.",
+      "impact": "This omega documents the kernel-level contest. If collective responsibility reading is challenged by ministerial responsibility reading, the constraint's classification depends on which reading's authority is accepted. The engine uses cs_structure to model this: reading_relations declare how this reading stands relative to siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading: collective responsibility vs. ministerial responsibility as competing readings of cabinet governance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The convention of collective cabinet responsibility requires ministers to defend in public any decision they opposed in private — or resign. This constraint manufactures executive coherence by suppressing public ministerial dissent. The Prime Minister (PM) benefits from a unified cabinet front that prevents daily media fragmentation. Dissenting ministers bear the cost: they must either suppress honest positions or exit (resignation). The constraint exhibits genuine coordination function (cabinet government is genuinely harder without collective responsibility) coupled with asymmetric extraction (ministers lose voice, PM gains control). This is neither pure coordination (Rope) nor pure extraction (Snare) but a hybrid (Tangled Rope): the same mechanism that coordinates cabinet action also extracts ministerial honesty. The constraint's theater ratio (0.55) reflects that unified cabinet presentation is partly functional coordination and partly performative narrative — the PM physically depends on cabinet unity for government continuity, but much of what appears as unity is performed dissent-suppression rather than genuine agreement. The measurement trajectory shows suppression requirement increasing over the past 40 years as media fragmentation makes cabinet discipline harder to maintain and thus requires stronger enforcement.",
+    "key_agents": [
+      "Dissenting Minister: Moderate power / constrained exit — faces binary choice between public silence and resignation; bears extraction of honest representation",
+      "Prime Minister / Executive Core: Institutional power / arbitrage exit — benefits from unified presentation; coordinates government; experiences constraint as pure Rope",
+      "Same-Party Backbench MP: Powerful within party / constrained exit — constrained by party discipline; benefits from party coherence; mixed Tangled Rope experience",
+      "Opposition Parties: Powerful when out of power / constrained when in power — cannot exploit ministerial dissent because norm will bind them in future; generational interest in cabinet stability",
+      "Parliament (Assembly): Institutional / arbitrage — formal power to interrogate individual ministers degraded; collective responsibility reduces accountability capacity (Piton)",
+      "Analytical Observer: Analytical / civilizational — risks naturalizing contingent institutional choice as inherent feature of cabinet government (false summit candidate)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts public dissent suppression from dissenting ministers and delivers unified narrative to the PM. The extraction is genuine and material (career cost of dissent is substantial), but the mechanism is not pure coercion — resignation is available and some ministers do resign. The value sits between pure Snare (ε ≥ 0.66) and pure Rope (ε ≤ 0.45) because the constraint serves both genuine coordination (cabinet government requires unity) and extraction (PM political power increases with visible unity). Suppression (0.68): High. The career cost of dissent is severe — resignation from cabinet typically ends political advancement. Alternative platforms for dissenting ministers are weak (backbench visibility is lower; media coverage of resigned ministers' positions is limited). Some dissent leaks (memoirs, media, interviews) but the primary suppression mechanism (public silence or resignation) is structurally enforced. Theater ratio (0.55): Moderate. Unified cabinet presentation serves genuine functional purposes (preventing daily media fragmentation, signaling coherence to foreign actors, maintaining party unity for legislative votes) but also contains significant performative elements (ministers defending positions they privately opposed, prime minister projecting harmony that may mask deep disagreement). The ratio has increased slightly over the interval as media fragmentation makes suppression harder to maintain but more necessary to avoid appearing chaotic.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival gap: Prime Minister sees Rope (pure coordination), Dissenting Minister sees Snare (pure extraction with high suppression), Opposition sees Tangled Rope (mixed coordination and extraction with future-norm effects), Parliament sees Piton (degraded accountability function), Backbench sees Tangled Rope (mixed constraint and benefit), and Analytical view risks false-summit Mountain (naturalizing contingent choice). The gap reveals that the same structural mechanism is experienced as functional coordination by beneficiaries and as extractive suppression by targets. The gap is not resolvable by better information — it is structural. The beneficiary genuinely experiences coordination (cabinet government cannot function without unity); the target genuinely experiences extraction (dissent suppression has real career costs). Both perspectives are accurate descriptions of the constraint's function from their structural positions.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position: beneficiary vs. victim status, and exit cost. Prime Minister is beneficiary with high exit optionality (arbitrage) → d ≈ 0.05 → f(d) ≈ -0.12 (negative effective extraction, experiences constraint as subsidy). Dissenting Minister is victim with high exit cost (constrained → trapped if we model the career cost as near-insurmountable) → d ≈ 0.85-0.95 → f(d) ≈ 1.15-1.42 (high effective extraction). Opposition parties occupy ambiguous position (beneficiary when in government, victim when out; future orientation makes them partly beneficiary) → d ≈ 0.50-0.55. Parliament loses its interrogation function but retains formal supremacy (constrained institutional position) → d ≈ 0.60. The perspectival gap in d values produces the perspectival gap in classifications.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that Tangled Rope is the canonical analytical classification (combining genuine coordination function with asymmetric extraction), while Snare, Rope, and Piton are legitimate perspectival readings from different structural positions. The mandatrophy resolves into: 'Which agent are you measuring from, and what is their structural relationship to the constraint?' The analytical observer (perspective 6) is asked whether the constraint is natural law or constructed — the presence of clear beneficiaries (PM, executive coherence) and victims (dissenting ministers, transparency) answers: constructed. FSM signature fires if beneficiaries are declared on a mountain; here beneficiaries are declared on tangled_rope (correct type), so no FSM gate is triggered.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: constitutional_conventions. The kernel contains four distinct readings: (1) COLLECTIVE_RESPONSIBILITY (this file) — cabinet speaks with one voice; ministers defend decisions they opposed in private or leave; (2) MINISTERIAL_RESPONSIBILITY — ministers answer to Parliament individually for their departments and resign for serious failure; (3) ROYAL_ASSENT_CONVENTION — the monarch assents to every bill duly passed; a legal veto unused since 1708, alive only as the rule that it must never be used; (4) SALISBURY_CONVENTION — the Lords do not block manifesto bills; the unelected chamber concedes mandate legislation at second reading, its self-denying terms of survival. Each reading instantiates a different constraint with different ε values, beneficiary/victim sets, and classifications. Collective responsibility reading emphasizes PM coherence and suppression of ministerial dissent. Ministerial responsibility reading emphasizes individual accountability through Parliament. The two readings coexist in UK constitutional practice but create structural tension: strong collective responsibility makes individual ministerial accountability harder (reading 1 forecloses strong individual accountability from reading 2). The kernel contest is unresolved — different actors and periods weight the readings differently. See cs_structure.reading_relations and cs_structure.axioms for the formal structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_conventions__ministerial_responsibility",
+      "constitutional_conventions__royal_assent_convention",
+      "constitutional_conventions__salisbury_convention"
+    ],
+    "dual_formulation_note": "Collective responsibility is ONE reading of the constitutional_conventions kernel. Each reading produces a distinct constraint with its own ε, beneficiary/victim structure, and classification. Ministerial responsibility reading has lower extractiveness (focuses on individual accountability rather than PM coherence). Royal assent has different suppression mechanisms (legal veto vs. social norm). Salisbury convention operates on different institutional actors (Lords vs. Cabinet). All four readings are linked through the shared kernel and affect each other's authority and institutional weight."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_conventions__ministerial_responsibility",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "constitutional_conventions__royal_assent_convention",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_conventions__salisbury_convention",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prime_minister_coherence_requires_public_unity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "dissent_suppression_justifiable_by_executive_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unified_cabinet_authority",
+    "drift_state": {
+      "moment": "contemporary_fragmentary_media",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

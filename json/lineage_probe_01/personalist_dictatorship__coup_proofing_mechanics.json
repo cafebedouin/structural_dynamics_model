@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "personalist_dictatorship__coup_proofing_mechanics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coup_proof",
+    "story_uid": "4141945d-afa6-4aed-ba4e-e057a829e4c4"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Personalist Coup-Proofing: Military Weakening for Palace Security",
+    "topic_domain": "political/comparative_authoritarianism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "palace_security_apparatus",
+      "personalist_ruler"
+    ],
+    "victims": [
+      "military_national_defense_capacity",
+      "officer_corps_coordination",
+      "state_institutional_integrity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Officer Corps",
+      "comment": "PERSPECTIVE 1: OFFICER CORPS (SNARE) — Career military officers are trapped in a structure designed to prevent coordinated action. Command rotation prevents organizational memory; parallel forces compete for resources; intelligence sharing is fragmented. Officers cannot organize a coup (the constraint's function) but also cannot coordinate effective national defense. Extraction: their professional capacity is systematically suppressed to ensure the ruler's safety. No exit — officers cannot leave the system without desertion or exile. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The National Defense Mission",
+      "comment": "PERSPECTIVE 2: NATIONAL DEFENSE (SNARE) — The state's capacity to defend against external threats is a victim, not an agent, but from the structural position of 'external threat response,' the constraint appears as pure extraction. Military effectiveness is deliberately suppressed — coordination across services is prevented, training budgets are diverted to palace security, officers rotate before developing doctrine. The defense function bears the full cost of coup-proofing without benefit. Trapped in the institutional structure; no exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Military Command",
+      "comment": "PERSPECTIVE 3: REGIONAL MILITARY COMMAND (TANGLED ROPE) — A regional commander benefits from direct palace access and resource allocation (coordination function: managing local security and ruler visibility in the region). But the rotation regime prevents building independent power base, and command disputes are mediated by palace security apparatus (extraction function: preventing coercive capacity). Mixed experience — some coordination benefit, significant extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Palace Security Apparatus",
+      "comment": "PERSPECTIVE 4: PALACE SECURITY APPARATUS (ROPE) — The constraint is optimized for this actor. Security forces are well-resourced, unified under palace command, rotate at palace discretion, and face no coordination challenges to their primary mission (ruler protection). Secondary benefit: intelligence monopoly and veto over other security forces. Beneficiary experiencing coordination (rope classification) not extraction. Net flow of extraction toward this actor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Personalist Ruler",
+      "comment": "PERSPECTIVE 5: PERSONALIST RULER (ROPE) — The constraint solves the ruler's core coordination problem: keeping the military unable to coordinate against the palace. Coup-proofing architecture is a pure coordination mechanism from the ruler's structural position — fragmenting military units, rotating commanders, maintaining parallel loyalties. The ruler experiences this as functional architecture, not extraction. Low chi from ruler's position (net beneficiary)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Drift)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a generational/global perspective, coup-proofing is a tangled hybrid: genuine coordination problem (ruler safety from military) combined with severe extraction (national defense suppressed). The structure does solve the stated coordination problem, but at enormous cost — military weakness against external enemies, institutional fragmentation, long-term state capacity decay. The architecture is functional for palace security, extractive for state defense. Over generations, the extraction accumulates as state institutions atrophy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coup_proofing_necessity_claim",
+      "question": "Is coup-proofing a necessary response to a real threat of military coups, or does it CREATE the coup threat by weakening civilian institutions?",
+      "resolution_mechanism": "Comparative analysis of regimes with coup-proofing vs. regimes without military-palace separation: Which face more coup attempts? Is frequency higher in coup-proofed systems or in systems with strong institutionalized civil-military relations?",
+      "impact": "If necessary response: the constraint solves a real coordination problem (Rope classification supported). If self-creating threat: the extraction mechanism IS what justifies itself (a snare using security rhetoric).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coup-proofing is preventive response or self-justifying extraction"
+    },
+    {
+      "id": "external_threat_magnitude_counterfactual",
+      "question": "How much national defense capacity is actually traded away to palace security, and how much does the regime face credible external threats?",
+      "resolution_mechanism": "Military capability assessment (modernization rates, readiness audits, doctrine development) compared to external threat profiles; analysis of military budgets allocated to coup-proofing overhead vs. national defense",
+      "impact": "If trade is high and external threats are real: significant extraction from defense to security (snare perspective validated). If external threats are minimal: extraction appears as pure palace rent-seeking (snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scale of defense-capability trade-off for palace security"
+    },
+    {
+      "id": "reading_identity_ambiguity",
+      "question": "Is coup-proofing a READING of the personalist dictatorship kernel, or is it the kernel's CENTRAL MECHANISM rather than one interpretation of it?",
+      "resolution_mechanism": "Structural analysis: does coup-proofing appear in ALL personalist regimes (making it constitutive), or only in some (making it a strategic choice)? Do other readings (charisma_routinization, cult_information_pathology) treat coup-proofing as given infrastructure or as optional feature?",
+      "impact": "If constitutive: coup-proofing is not a reading but THE constraint, and sibling readings are distinct problems within a coup-proofed regime. If contingent: it is one strategic interpretation among alternatives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether coup-proofing is constitutive to personalism or one contingent strategy"
+    },
+    {
+      "id": "civilian_institutional_vulnerability",
+      "question": "Does coup-proofing architecture suppress military coordination at the cost of strengthening palace security into a secondary power center that can itself threaten the regime?",
+      "resolution_mechanism": "Historical pattern analysis: in coup-proofed regimes, how many transitions are driven by palace security apparatus (praetorian guard coups, palace palace-coup sequences) vs. military coups? Is the new threat source the same military now split, or is it the palace security apparatus claiming the throne?",
+      "impact": "If palace security becomes the new coup source: the constraint trades military coup threat for palace security threat (Snare classification: extraction without solving the underlying problem, just moving it). If military remains the primary threat: coup-proofing succeeds (Rope/Tangled Rope validated).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coup-proofing prevents coups or redirects coup source to palace security"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Personalist autocracies survive by systematically weakening the military's capacity to coordinate against the palace. The coup-proofing architecture — parallel security forces (praetorian guard, secret police), rotation of senior commanders, fragmented intelligence networks, competing service hierarchies — solves the ruler's core security problem: preventing the military from using its coercive capacity to overthrow the regime. However, this solution extracts a severe cost: the state's defense against external enemies is deliberately suppressed. Officers cannot coordinate across services; institutional memory is destroyed by rotation; doctrinal development is prevented; resources are diverted to palace security. The state becomes internally fortified but externally weakened — the palace is coup-proof but the nation is defense-fragile. This constraint is ONE READING of the personalist dictatorship kernel: the structural mechanics of how personalist rule maintains itself through military fragmentation. Other readings address different mechanisms: the charisma_routinization problem (Weber's succession crisis), the cult_information_pathology (mandatory praise destroying intelligence). This reading focuses specifically on the coup-proofing trade-off: palace security bought with military effectiveness.",
+    "key_agents": [
+      "Personalist Ruler: Primary beneficiary (institutional/arbitrage) — coup-proofing solves the core threat (military coordination). Direct beneficiary of suppressed military capacity.",
+      "Palace Security Apparatus: Primary beneficiary (institutional/arbitrage) — well-resourced, unified, maintains intelligence monopoly, receives diverted military budgets.",
+      "Officer Corps: Primary victim (powerless/trapped) — systematically prevented from coordination; command rotation destroys institutional memory; career advancement depends on palace loyalty, not military capability.",
+      "Military National Defense Capacity: Victim (structural position) — external defense capability is deliberately suppressed; doctrine development prevented; interservice coordination fragmented.",
+      "State Institutional Integrity: Victim (structural position) — military institutions are hollowed out; professionalism displaced by loyalty; institutions become hollow shells performing coup-proofing theater.",
+      "Analytical Observer: Civilizational perspective — sees the long-term trajectory: palace security accumulates; external threats accumulate; regime becomes internally safe but externally vulnerable; eventually faces state capacity collapse or external conquest."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint trades military national defense capacity for palace coup-proofing. This is a genuine extraction — the loss of defensive capacity is real and persistent. However, extractiveness is not at the snare floor (0.66+) because the constraint does solve a real coordination problem (preventing military coups), and some officers benefit from direct palace access (rotated commanders get senior positions, resources flow to palace-adjacent units). The extraction is significant but not maximum. Suppression (0.72): High. The coup-proofing architecture is fundamentally repressive: military units cannot coordinate, officers cannot organize, intelligence networks are fragmented, command rotation prevents institution-building. Officers have constrained exit (defection, exile, or compliance are the options). This is structural suppression embedded in the regime's architecture. Theater ratio (0.45): Moderate. Coup-proofing has genuine functional content — the architecture does prevent coordinated military action against the palace. The constraint is not primarily performative; the fragmentation is real. However, some component is theater: loyalty rituals, displayed disunity, security briefings that emphasize threats to justify continued fragmentation. The low theater ratio reflects that coup-proofing is functionally effective, not merely symbolic.",
+    "perspectival_gap": "The perspectival gap is dramatic. The personalist ruler sees a functional coordination mechanism (Rope) — coup-proofing solves the core problem elegantly. The palace security apparatus sees the same mechanism as enabling coordination for their mission (Rope). The officer corps sees the same structure as pure suppression (Snare) — fragmentation prevents their core mission (national defense) and traps them in a rotation regime. The national defense function sees pure extraction (Snare) — the state's external defense capacity is deliberately sacrificed. The analytical observer sees a tangled hybrid (Tangled Rope) at the generational level: genuine coordination solution for the ruler, severe extraction for the state. The gap reveals that 'functional' is relative to the observer's structural position: the constraint functions perfectly for palace security, extracts maximally from national defense.",
+    "directionality_logic": "Directionality derives from structural position within the coup-proofing architecture. The personalist ruler is the beneficiary with arbitrage exit (can exit the regime by abdication, though politically difficult) — derives low d, low chi. Palace security apparatus is the beneficiary with institutional stability (arbitrage-like position) — also low d, low chi. The officer corps is trapped (no exit without desertion/exile) and victimized by the suppression mechanism — derives high d, high chi. National defense capacity and state institutional integrity are structural positions (not agents) that experience maximum extraction with no exit — high d, high chi. The analytical observer at the civilizational horizon derives d from the system's long-term pressure (extraction accumulating, external threats building) — moderate-high d, high chi.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that Tangled Rope classification is correct: coup-proofing contains BOTH genuine coordination function (preventing military coups) AND asymmetric extraction (national defense suppressed). The constraint would be incorrectly classified as pure Rope if measured only from the ruler/palace perspective, or as pure Snare if measured only from the external defense perspective. The Tangled Rope captures both dynamics: yes, coups are prevented (coordination solved); yes, national defense capacity is traded away (extraction imposed). The mandatrophy resolution requires declaring both beneficiaries (ruler, palace security) and victims (officer corps, national defense). The extraction mechanism (military fragmentation) is genuine, not rhetorical. The coordination problem being solved (preventing military overthrow) is also genuine. Both are structural features of the regime, not competing interpretations.",
+    "kernel_context": "This constraint instantiates the 'coup_proofing_mechanics' reading of the 'personalist_dictatorship' kernel. The kernel is the persisting commitment to personalist rule — authority lodged in one biography, survival of the regime dependent on the ruler remaining in power. Three structurally distinct mechanisms sustain this commitment across sibling readings: (1) coup-proofing (THIS reading) — the military is fragmented and suppressed to prevent overthrow; (2) charisma_routinization (sibling reading) — the ruler's biographical authority cannot be transferred, and every succession faces Weber's problem; (3) cult_information_pathology (sibling reading) — mandatory praise destroys the ruler's information, and the regime governs a fictional country. Each reading instantiates a different constraint with different beneficiary/victim structures and different extractiveness values. This reading focuses on the mechanics of military suppression and the trade-off between palace security and national defense. The sibling readings address different structural problems (succession, information flow) within the same kernel (personalist rule)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "personalist_dictatorship__charisma_routinization_problem",
+      "personalist_dictatorship__cult_information_pathology"
+    ],
+    "dual_formulation_note": "Coup-proofing is one of three structurally distinct mechanisms sustaining personalist rule. The other two readings address succession (charisma_routinization) and information pathology (cult_information). All three readings share the kernel (personalist rule survives through the personalist's biography) but have different extractiveness values and different constraint structures. This reading (coup_proofing_mechanics) has ε=0.58 and focuses on military suppression. The charisma_routinization reading would have higher ε (succession cannot be transferred) and focus on institutional non-succession. The cult_information_pathology reading would have higher ε (information monopoly creates governance by fiction) and focus on epistemic collapse. Each is a distinct constraint within the personalist dictatorship family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "personalist_dictatorship__charisma_routinization_problem",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "personalist_dictatorship__cult_information_pathology",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "military_coordination_prevents_coups",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "national_defense_subordinate_to_regime_survival",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "military_subordination_to_palace",
+    "drift_state": {
+      "moment": "contemporary_weakened_state",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}
