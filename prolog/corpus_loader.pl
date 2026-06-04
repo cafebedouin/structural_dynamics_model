@@ -17,13 +17,38 @@
 
 :- module(corpus_loader, [
     load_all_testsets/0,
-    ensure_corpus_loaded/0
+    ensure_corpus_loaded/0,
+    corpus_constraint/1,
+    resolve_corpus_dir/2
 ]).
 
 :- use_module(config).
 :- use_module(config_validation).
 
 :- dynamic corpus_loaded/0.
+
+%% corpus_constraint(?Id)
+%  Registry of constraint ids loaded by THIS loader, asserted one per
+%  successfully consulted testset file (id = file base name; 1:1 witnessed
+%  2026-06-04, OQ-70 Probe 0). This is the authoritative corpus-membership
+%  fact: exporters and probes should enumerate corpus_constraint/1 rather
+%  than "anything with a constraint_metric or a constraint_classification" —
+%  the latter picks up engine-resident demo constraints from
+%  constraint_instances.pl (catholic_church_1200), the historical source of
+%  the per_constraint=1107 vs n_constraints=1106 denominator drift.
+:- dynamic corpus_constraint/1.
+
+%% loader_directory(-Dir)
+%  Source anchor captured at load time: the directory THIS file was loaded
+%  from (= prolog/). Makes corpus_path resolution independent of the
+%  process working directory — running swipl from the repo root previously
+%  globbed 0 files silently. Overlay note: a RELATIVE corpus_path overlay
+%  (e.g. testsets_3000) now always resolves against prolog/, which is
+%  identical to prior behavior under the cd-prolog convention.
+:- dynamic loader_directory/1.
+:- prolog_load_context(directory, D),
+   retractall(loader_directory(_)),
+   assertz(loader_directory(D)).
 
 %% ensure_corpus_loaded
 %  Loads all testsets if not already loaded. Preferred entry point.
@@ -37,9 +62,21 @@ load_all_testsets :-
     (   corpus_loaded
     ->  true
     ;   config:param(corpus_path, Dir),
-        atom_concat(Dir, '/*.pl', Pattern),
+        resolve_corpus_dir(Dir, AbsDir),
+        atom_concat(AbsDir, '/*.pl', Pattern),
         expand_file_name(Pattern, Files),
         length(Files, N),
+        % Fail-closed on absence (build_discipline Pattern 5): a 0-file glob
+        % previously proceeded silently and every downstream gate "passed" on
+        % an empty corpus. Escape hatch for deliberately-empty runs:
+        % assert config:param(allow_empty_corpus, true) before loading.
+        (   N =:= 0,
+            \+ catch(config:param(allow_empty_corpus, true), _, fail)
+        ->  throw(error(corpus_empty(Pattern),
+                        corpus_loader_glob_matched_zero_files))
+        ;   true
+        ),
+        retractall(corpus_constraint(_)),
         format(user_error, '[corpus] Loading ~w testset files...~n', [N]),
         load_testset_list(Files, 0, Loaded),
         format(user_error, '[corpus] Loaded ~w testsets successfully.~n', [Loaded]),
@@ -61,8 +98,31 @@ load_testset_list([F|Fs], Acc, N) :-
                 fail
             )
         )
-    ->  Acc1 is Acc + 1
+    ->  Acc1 is Acc + 1,
+        register_corpus_constraint(F)
     ;   format(user_error, '[corpus] SKIPPED: ~w~n', [F]),
         Acc1 = Acc
     ),
     load_testset_list(Fs, Acc1, N).
+
+%% resolve_corpus_dir(+Dir, -AbsDir)
+%  Anchors a relative corpus_path against the loader's own source directory
+%  (prolog/), making corpus loading cwd-independent. Absolute paths pass
+%  through unchanged (testsets_3000 retrospective overlays may use either).
+resolve_corpus_dir(Dir, AbsDir) :-
+    (   is_absolute_file_name(Dir)
+    ->  AbsDir = Dir
+    ;   loader_directory(LD),
+        atomic_list_concat([LD, '/', Dir], AbsDir)
+    ).
+
+%% register_corpus_constraint(+File)
+%  Asserts the corpus-membership fact for a successfully loaded testset.
+%  Id = file base name (1:1 with files, witnessed 2026-06-04).
+register_corpus_constraint(File) :-
+    file_base_name(File, Base),
+    file_name_extension(Id, pl, Base),
+    (   corpus_constraint(Id)
+    ->  true
+    ;   assertz(corpus_constraint(Id))
+    ).

@@ -38,6 +38,10 @@
 
 :- dynamic cached_grid_sig/2.
 
+% Central cache-invalidation surface (cache_registry.pl).
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- retractall(cached_grid_sig(_, _)).
+
 %% all_corpus_constraints(-Constraints)
 %  Discovers all constraint atoms with extractiveness data.
 all_corpus_constraints(Constraints) :-

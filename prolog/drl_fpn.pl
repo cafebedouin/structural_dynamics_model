@@ -79,6 +79,15 @@ fpn_cleanup(Context) :-
     retractall(fpn_iteration_info(Context, _, _, _)),
     retractall(fpn_intrinsic(_, _)).
 
+% Central cache-invalidation surface (cache_registry.pl): all contexts.
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :-
+    retractall(fpn_ep(_, _, _)),
+    retractall(fpn_type_cache(_, _, _)),
+    retractall(fpn_neighbors_cache(_, _, _)),
+    retractall(fpn_iteration_info(_, _, _, _)),
+    retractall(fpn_intrinsic(_, _)).
+
 /* ----------------------------------------------------------------
    8b-B. PRECOMPUTE — Cache iteration-invariant quantities
    ---------------------------------------------------------------- */

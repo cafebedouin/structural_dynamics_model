@@ -133,6 +133,12 @@ arakelov_threshold(Thresh) :-
         nb_setval(arakelov_threshold_cache, Thresh)
     ).
 
+% Central cache-invalidation surface (cache_registry.pl). nb_delete, not a
+% sentinel nb_setval: arakelov_threshold/1 treats ANY stored value as the
+% threshold, so only key removal forces recompute.
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- catch(nb_delete(arakelov_threshold_cache), _, true).
+
 compute_arakelov_threshold(Thresh) :-
     findall(H, (
         logical_fingerprint:known_constraint(C),

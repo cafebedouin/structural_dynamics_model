@@ -99,6 +99,10 @@ cohomology_cleanup :-
     retractall(cached_obstruction(_, _, _)),
     retractall(cohomology_run_info(_, _, _, _, _)).
 
+% Central cache-invalidation surface (cache_registry.pl).
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- cohomology_cleanup.
+
 /* ================================================================
    CANONICAL CONTEXT ORDER
 

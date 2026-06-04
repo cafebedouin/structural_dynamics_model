@@ -38,6 +38,11 @@ clear_classification_cache :-
     retractall(cached_classification(_, _, _)),
     retractall(cached_coupling(_, _)).
 
+% Registered with the central invalidation surface (cache_registry.pl) so
+% overlay probes can clear every memo without knowing this module's caches.
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- clear_classification_cache.
+
 /* ================================================================
    BOLTZMANN COMPLIANCE ENGINE v5.0
 

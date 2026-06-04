@@ -65,6 +65,10 @@
    ================================================================ */
 
 :- dynamic trajectory_cached/3.     % trajectory_cached(Constraint, Context, Trajectory)
+
+% Central cache-invalidation surface (cache_registry.pl).
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- retractall(trajectory_cached(_, _, _)).
 :- dynamic pair_dist/3.             % pair_dist(C1, C2, Distance) — C1 @< C2
 :- dynamic cluster_member/2.        % cluster_member(ClusterID, Constraint)
 :- dynamic cluster_merge/4.         % cluster_merge(Step, ClusterA, ClusterB, MergeDist)
