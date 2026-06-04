@@ -20,6 +20,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — OQ-65 detector-bait census COMPLETE: bait=2 (no new), omega-routed=75, 6/10 firings expectation-authored
+
+The per-file census OQ-65 demanded (greps known to undercount) ran end-to-end in one session.
+Tool: `python/audits/oq65_bait_census.py` — 5 read channels (A beneficiary×FSM sentences 492
+files/810 items, B purpose-verb 6/8+1 routed seam hit, C-ben balanced-paren omega capture
+381/611, D dual-anchor ±200-char windows 79/160, F all beneficiary sentences in absence files
+148/891) + 2 mechanical (C-fsm 349/503 flag-only, E 158 FSM-line files), partition
+800+158+148=1106 with file-level cross-check 741+158=899. 10-assertion self-test green
+(4 real positive controls, B-isolating synthetic, omega-truncation assertion, E
+beneficiary-free assertion, partition, value-atom zero + seam probe each with positive
+control, decoy marker-strip + C-ben pin). ~2,500 items read by the classifying model in 26
+chunks; verdicts `audits/2026-06-04_oq65_bait_census/oq65_census_verdicts.jsonl` (845 = 842 files + 3 decoys);
+final artifact `audits/2026-06-04_oq65_bait_census/oq65_bait_census.json` (verdict_source per file, sum exact).
+
+**Results:** explicit_bait 2/1106 (maxwell + total_war structural_contraction ONLY — zero new
+bait; OQ-63's suffix-probe scope qualifier CLOSED); omega_routed 75 (6.8%, ~37× the 2
+previously known); adjudication_expectation_prose 13; expectation-authored union 87 (7.9%);
+nonagent_referent_candidate 29 (OQ-64 feed); template_rule2_citation 3 (template mandates the
+omega routing, verbatim citations). Firing crossing (fresh pipeline 13:46Z c463b17, firing
+set 10, zero delta): **6/10 expectation-authored** (1 bait + 5 omega_routed) — up from 4/12
+pre-registry-fix. OQ-65 → mitigated; OQ-63 filtering-ruling precondition MET. Adoption ruling
+(promote flags to committer-axis signature?) escalated to operator in OQ-65.
+
+**Method corrections discovered en route (witnessed):**
+- The recon channel table was measured with a TRUNCATING omega regex (`omega_variable\([^)]*\)`
+  stops at first inner `)`); balanced capture found 345 omega terms whose beneficiary mention
+  the old regex cut off (C-ben 162→381 files). Pre-fix table superseded-unreproducible (same
+  disposition as the 445 figure, which also did not reproduce: 461 at n=1106).
+- Channel D must anchor on BOTH token families: beneficiar-anchored-only was
+  boundary-asymmetric vs the E assertion (2 witnessed violations at ~200-char edges).
+- Blind decoy outcome: no-marker-bait and false-positive controls PASS; the omega-routed decoy
+  VOID by construction flaw (derived from env_instability's FIRST omega — the
+  substantive-shaped one) — **the reader classified the decoy text correctly while blind and
+  flagged the construction flaw in its evidence note**; key corrected with documentation
+  (`audits/2026-06-04_oq65_bait_census/decoy_key.json`).
+- Classification rules converged during the read (recorded in verdicts + session plan):
+  omega_routed requires FSM/detector/signature/engine NAMED + fires/triggers-class verb tied
+  to the omega's resolution; passive "false summit detected/confirmed/reclassifies" without a
+  named engine = substantive; predictions-of-correct-firing on authored data = substantive;
+  prose-vehicle FSM-as-evaluator misconception = flag adjudication_expectation_prose.
+  Witnessed contrast pairs: sid 173 vs 592, 545 vs 535, 495-corrected vs 610.
+
+---
+
 ## 2026-06-04 — Audit corpus consolidated into `audits/<YYYY-MM-DD>_<slug>/` (location mandate)
 
 Audits were scattered (Pattern 2 at directory scale): writeups in `docs/`, one each in

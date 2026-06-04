@@ -2963,10 +2963,16 @@ control fired (class-A institutional d moved); candidate-only filtering on 3 par
 substrate agreed. Raw side cross-checked against pipeline JSON to 6 decimals (maxwell,
 church_turing).
 
-**SCOPE QUALIFIER (load-bearing):** this is the blast radius across the SUFFIX-PROBE-REACHABLE
-population (6 all-candidate hosts + 17 partial, from 24 suffix values minus 2 witnessed agent
-false-positives). The probe is KNOWN to undercount (it missed maxwell's bait phrasing in OQ-65's
-scan); "only 6 affected" is a fact about the probe's reach until OQ-65's per-file census runs.
+**SCOPE QUALIFIER (closed 2026-06-04 by the OQ-65 census):** the blast radius above was
+measured across the SUFFIX-PROBE-REACHABLE population (6 all-candidate hosts + 17 partial,
+from 24 suffix values minus 2 witnessed agent false-positives), and the probe was known to
+undercount. **The OQ-65 per-file census has now run (n=1106, every extracted item read):
+read-based bait-authored value population = {entropic_universe_hypothesis,
+hypothetical_survivors_counterfactual} — exactly the 2 already known, ZERO new bait hosts.**
+The undercount worry is closed; "only 6 affected" now stands on a read, not a probe. The
+census also flags 29 nonagent_referent_candidate hosts (`audits/2026-06-04_oq65_bait_census/oq65_bait_census.json`,
+flag field) as the candidate pool for future registry/OQ-64 vindication-split work — those
+are referent-kind questions, not bait.
 
 *What the evidence says about resolution:* the mis-derivation is real but currently χ-immaterial
 (low-ε hosts, institutional-only class-B effect, zero band crossings). Filtering :420 through
@@ -2974,8 +2980,12 @@ agent_beneficiary would be semantically correct for proposition values but moves
 today and would WRONGLY move d for agent values if tagging ever lags (total_war control row). The
 risk grows with corpus growth (a high-ε proposition-only host would put Δχ ≈ ε-scaled deltas near
 band edges). The per-item escalation queue is EMPTY (preparedness ruled AGENT 2026-06-04, see
-verdict row; the proposition rows are all ruled/held from the agency-gate pass). Remaining before
-a filtering ruling: the OQ-65 census only.
+verdict row; the proposition rows are all ruled/held from the agency-gate pass). ~~Remaining
+before a filtering ruling: the OQ-65 census only.~~ **The census ran 2026-06-04 (see scope
+qualifier above): zero new bait, population read-complete. The filtering-ruling precondition
+is MET — the :420 filtering question is now ripe for an operator ruling on the evidence
+already in this entry (filtering is semantically correct for proposition values, χ-immaterial
+today, wrong-on-lag risk per total_war control row).**
 
 ---
 
@@ -3030,7 +3040,9 @@ authorial purpose NEVER flips an agency tag.
 
 **Ω-type:** Ω_E (corpus measurement), with a committer-axis Ω_C edge.
 
-**Status:** open
+**Status:** mitigated — per-file census complete 2026-06-04 (results block below); ε-caveat
+quantified. Remaining for resolved: the operator's ADOPTION ruling (see "What resolution
+changes").
 **Origin:** [EDGE] directive + scan, FSM agency-gate session 2026-06-03.
 
 **Specific question:** How much of FSM's corpus-wide firing measures authored convention rather
@@ -3040,7 +3052,47 @@ the authored omega* — explicit-bait (beneficiary authored to exercise the dete
 omega-routed (author routes the open question through an omega and expects adjudication) are
 distinguishable committer-axis postures, i.e. a discriminator, not only contamination.
 
-**Evidence so far (witnessed 2026-06-03):**
+**CENSUS RESULTS (2026-06-04 — per-file read of every extracted item, n=1106):**
+Method: `python/audits/oq65_bait_census.py` — 5 read channels (A beneficiary×FSM sentences,
+B purpose-verb sentences, C-ben balanced-captured beneficiary-mentioning omegas, D ±200-char
+dual-anchor windows, F all beneficiary sentences in no-FSM-mention files) + 2 mechanical
+(C-fsm, E); 10-assertion self-test with 4 real positive controls; ~2,500 items read by a
+classifying model over 26 chunks; verdicts `audits/2026-06-04_oq65_bait_census/oq65_census_verdicts.jsonl`; final
+artifact `audits/2026-06-04_oq65_bait_census/oq65_bait_census.json` (per-file category/flags/evidence/verdict_source;
+sum exact over 1106); archived package with writeup:
+`audits/2026-06-04_oq65_bait_census/`. Blind decoys: no-marker-bait and false-positive controls PASS; the
+omega-routed decoy VOID by construction flaw, which the reader itself caught while blind
+(documented in `audits/2026-06-04_oq65_bait_census/decoy_key.json`). Classification rule: `omega_routed` requires
+FSM/detector/signature/engine NAMED with fires/triggers-class verb tied to the omega's
+resolution; predictions-of-correct-firing on authored data = substantive.
+- **explicit_bait: 2/1106** — maxwell + total_war structural_contraction ONLY; the census
+  found ZERO new bait. Read-based bait-value population =
+  {entropic_universe_hypothesis, hypothetical_survivors_counterfactual}, both already
+  ruled/registered → the OQ-63 suffix-probe-undercount qualifier is CLOSED.
+- **omega_routed: 75/1106 (6.8%)** — ~37× the 2 previously known; FSM-behavior-tied-to-omega
+  authoring is a corpus-wide template-supported posture (3 files cite "Rule 2: route committer
+  structure to omegas" / "required by FSM schema gate" verbatim — flag template_rule2_citation).
+- adjudication_expectation_prose (FSM-as-evaluator misconception, prose vehicle): 13 (10 not
+  also bait/omega-routed). **Expectation-authored union: 87/1106 = 7.9%.**
+- Categories: fsm_aware_substantive 558, fsm_aware_no_beneficiary_link 264, no_fsm_commentary
+  207. Other flags: bait_adjacent_phrasing 5; fsm_aware_nonauthoring 1 (tsunami
+  catastrophe_validation explains deliberate NON-authoring); nonagent_referent_candidate 29
+  (list fed to OQ-64).
+- **Firing crossing** (fresh pipeline 2026-06-04T13:46Z commit c463b17; dirty = docs + the
+  new audit script only; firing set 10, zero delta): **6/10 expectation-authored** — 1 bait
+  (total_war) + 5 omega_routed (animal_moral property, environmental_instability,
+  nuclear_impossibility, press_reformation tech_inevitability, technology_reformation
+  tech_determinism). Rest: article_27 + humane_treatment substantive-aware,
+  reformation_composite tech_mediation no-beneficiary-link, statutory_debt nullity no FSM
+  text. Replaces 4/12: post-registry-fix the expectation-authored share of firings ROSE to 60%.
+- **Discriminator readout (observation):** bait and omega-routed are textually
+  distinguishable postures — bait = NL-physics host + non-agent value + authored-to-exercise
+  purpose statement; omega-routed = named-engine-behavior tied to empirical omega resolution,
+  template-supported, domain-spanning. Both are distinct from the corpus-dominant
+  prediction-of-correct-firing (descriptive). The press_reformation gate-two host (OQ-66) is
+  omega_routed — consistent with its authored-open hold.
+
+**Evidence so far (witnessed 2026-06-03; first two items SUPERSEDED by the census above):**
 - Per-item read of the 12 FSM-firing constraints: explicit bait 2 (maxwell, total_war);
   omega-routed adjudication-expectation 2 (environmental_instability, nuclear_impossibility);
   FSM-aware substantive 6; no FSM commentary 2 (article_27, statutory_debt_ceiling).
@@ -3068,9 +3120,16 @@ distinguishable committer-axis postures, i.e. a discriminator, not only contamin
   outside-support/taxonomy hole, not classifier error.
 
 **What resolution changes:** §4.4 ("false positives corrupt corpus-level statistics") and the §6
-ε-caveat get a measured input; the committer axis gains a checkable signature (asserted structure
+ε-caveat get a measured input [DONE 2026-06-04: 6/10 firings, 7.9% of corpus
+expectation-authored]; the committer axis gains a checkable signature (asserted structure
 in tension with authored doubt — the press_reformation "suspicious uniformity" pattern that did
-the gate-two discriminating work in this session's registry ruling).
+the gate-two discriminating work in this session's registry ruling). **Remaining for
+`resolved`: the operator's ADOPTION ruling** — whether the explicit_bait / omega_routed /
+adjudication_expectation_prose flags are promoted to a formal committer-axis signature
+(engine- or report-level) or stay census-level annotation. Inputs: per-file flags + evidence
+quotes in `audits/2026-06-04_oq65_bait_census/oq65_bait_census.json`; any future FSM/shadow disagreement census must
+bucket the wiring-determined rows (evidence bullet above) separately from these
+expectation-authored buckets.
 
 ---
 
