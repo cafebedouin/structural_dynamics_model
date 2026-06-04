@@ -79,7 +79,10 @@ or the rope gate — OQ-01 and OQ-02 are directly relevant to those files.
 non-obvious wiring, operator-precedence bugs, fact-adapter patterns, and query gotchas
 discovered during implementation sessions. Scope is narrow: things that caused real bugs
 or confusion, not general architecture. Read the relevant file before modifying
-`config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema.
+`config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema. Read
+`swipl_load_path_and_probe_gotchas.md` before diagnosing module-resolution behavior
+(REPL ≠ pipeline for wrong-qualifier calls), writing test-local predicate swaps or
+retract/re-assert probes, or interpreting a pipeline_output.json diff.
 `build_discipline.md` documents five recurring cross-subsystem defect patterns
 (produced-but-not-consumed; silent fork; bound-probe bypasses clause-order; fabricated default;
 absence satisfies the gate) with diagnostics — consult before adding a step that writes output,
