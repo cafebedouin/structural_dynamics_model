@@ -452,6 +452,15 @@ coordination_type_to_offset_param(global_infrastructure,   complexity_offset_glo
 %% epistemic_access_check(+Constraint, -Sufficient)
 %  Returns true if enough indexed classifications exist for a
 %  reliable Boltzmann compliance test, false otherwise.
+%
+%  WARNING — call with an UNBOUND second argument and test the result.
+%  Calling epistemic_access_check(C, false) with `false` bound ALWAYS
+%  succeeds: clause 1's head can't unify with false, so its guard+cut
+%  never run and the catch-all matches every constraint (bound-probe
+%  bypasses clause-order). This made structural_purity/2 unconditionally
+%  `inconclusive` for the whole corpus until 2026-06-03; see
+%  docs/audits/purity_audit_20260603.md §2. Bound-`true` calls are safe
+%  (clause-1 failure falls through to no solution, not a wrong one).
 epistemic_access_check(C, true) :-
     config:param(boltzmann_min_classifications, MinN),
     findall(Ctx,

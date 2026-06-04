@@ -20,6 +20,57 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-03 — Purity audit: structural_purity/2 was dead (bound-probe bug, now fixed); correction key for purity readings
+
+**Audit:** `docs/audits/purity_audit_20260603.md` (raw evidence `outputs/purity_audit_20260603/`,
+12 files; pinned N=1106, manifest `669eab5`). Five purity surfaces audited: scalar
+`purity_score/2`, bands `purity_zone/2`, categorical `structural_purity/2`, FPN
+`effective_purity/4`, and a fifth surface found mid-audit (`fpn_zone/2`, a *second* band
+vocabulary).
+
+**Fix applied — `signature_detection.pl:975` bound-probe bug.** `structural_purity/2` called
+`epistemic_access_check(C, false)` with `false` bound; the catch-all clause made it succeed for
+every constraint, so `structural_purity` returned `inconclusive` unconditionally — the four purity
+tests were unreachable dead code corpus-wide (witnessed 1106/1106 pre-fix). Fixed to call with an
+unbound var + `Access == false`. **Post-fix witnesses (all pasted in audit §2 / postfix.tsv):**
+live distribution = 1068/1106 (96.6%) `contaminated(...)`, 27 pure_coordination, 9
+pure_natural_law, 2 inconclusive (exactly the 2 no-access sentinels); 0 mismatches vs the audit's
+projected distribution; **0/1106 scalar purity scores moved** (#1 shares tests but not inputs with
+#3). Downstream consumer impact: `genuine_findings_query.pl:107` STRUCTURAL_PURITY changes from
+constant `inconclusive` to real values — expect ~96.6% contaminated there now. Warning comment
+added at the `epistemic_access_check/2` definition (boltzmann_compliance.pl) — do not call it with
+a bound second argument; bound-`true` (purity_scoring.pl:42) is safe.
+
+**Text fixes applied:** `purity_scoring.pl:22-27` header comment corrected to canonical zones
+(was stale ">0.8 sound / <0.3 contaminated"; canonical = logic_extensions.md §2.3 = `purity_zone`).
+`logic_extensions.md` implementation snippets corrected (both reproduced the bound-`false` call
+shape).
+
+**Key findings (not fixed, tracked):**
+- **OQ-60** — latent absence-reward: zero-evidence constraint scores pristine 1.0 (SI=1.25 via
+  `variant([])`, out-of-range hidden by clamp; `cross_index_coupling` returns 0.0 coupling → F=1.0
+  on "not enough data"; F=0.5 default branch unreachable, so historical "default_fired 0/N" counts
+  are vacuous). 0 current victims; log-only by ruling — fixing moves the no-data fixed point.
+- **OQ-61** — the header sentence ("cascading … N/M contaminated") is one signal twice: cascade
+  severity derives from effective purity, trigger is an absolute count of 3 (witnessed 633 severe →
+  saturated 211×); the contaminated band is 98.1% tangled_rope+snare (rope 92.3% pristine+sound,
+  mountain 95.1% pristine — converse control), i.e. corpus-wide purity mostly restates type
+  composition; purity_summary silently drops M no-access from the denominator. Three operator
+  rulings pending.
+- **OQ-62** — band vocabulary fork: `fpn_zone` (abductive evidence) and `purity_zone` (reports)
+  band the same scalar with different names/boundaries; "contaminated" = [0.3,0.5) on one and
+  [0.4,0.6) on the other; post-fix `structural_purity` adds a third cut (96.6% at excess ≤ 0.05).
+  Both banders map −1.0 → worst zone if fed directly (latent; all current gating callers filter
+  first). Do not auto-unify — which range wins is a design ruling.
+- **Healthy (witnessed):** band table matches spec; all gating purity consumers sentinel-safe;
+  FPN invariants hold (no-uplift 0/1106 with checker control, isolated ⇒ EP=IP 8/8); subscore
+  formulas 0/1106 mismatches; max multi-edge contamination 0.478 exceeds the 0.30 *per-edge* cap by
+  design (edges sum) — not a violation.
+- The remembered "530/770 contaminated" ≈ 68.8%; today 753/1104 = 68.2% — the fraction is a stable
+  structural property of scoring-on-this-composition, not story drift. `corpus_size` 1107 vs loaded
+  1106 explained as corpus churn between pipeline run and audit load (`catholic_church_1200`
+  present at pipeline time, absent now).
+
 ## 2026-06-03 — never-generated kernels generated (300/304); corpus 803→1103
 
 The never-generated set (SCOPE-declared contested kernels with **zero** declared readings

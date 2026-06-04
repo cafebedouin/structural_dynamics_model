@@ -2716,6 +2716,114 @@ if those readings are regenerated, NOT a disposition question. Quarantine: `prol
 
 ---
 
-*Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark
+## OQ-60 — Latent absence-reward in the purity scalar: zero-evidence constraint scores pristine 1.0
+
+**Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
+
+**Status:** open (log-only by ruling — do NOT fix in auto; see "What resolution changes")
+**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §3, K5).
+**Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
+(`scope_invariance_test` — `variant([])` case; `compute_cross_index_coupling` — `GridSize < 2 ->
+CouplingScore = 0.0`), `purity_scoring.pl:41-50` (final clamp).
+
+**Specific question:** A constraint holding *nothing but* the 3 classification facts needed to pass
+`epistemic_access_check` scores `purity_score = 1.0 → pristine` (witnessed,
+`outputs/purity_audit_20260603/census_control.tsv`). Three stacked mechanisms: (1)
+`scope_invariance_test` returns `variant([])` when `classify_at_context` fails at every test scope,
+and the SI formula `1-(N-1)·0.25` yields **1.25** — out of range, then concealed by the final
+`min(1.0,…)` clamp; (2) `cross_index_coupling` is total — "not enough data points" returns coupling
+0.0 → F = 1.0 (perfect factorization for absence), which also makes the documented F = 0.5 neutral
+default **unreachable** (the historical "default_fired 0/194" at ISSUES.md:1631 and this audit's
+fresh 0/1106 are vacuous truths, not data-completeness facts); (3) CC/EX default clean on missing
+data. Should absence fail-closed (sentinel/no-data subscore) rather than scoring as perfection?
+
+**Evidence so far:** Corpus census 0/1106 `variant_0`, 0/1106 SI>1.0 — **latent, no current
+victim**: every live constraint classifies at the test grid. Positive control: a nonexistent ID
+gets `has_coupling=1, F=1.0`. Related authored-zero-vs-absent instances: OQ-43/OQ-44
+(Pattern 5); `boltzmann_floor_for` clause 3 silently uses `boltzmann_floor_default=0.05` when
+`coordination_type` is absent (spec logic_extensions.md:746 says sentinel) — how many corpus
+constraints hit the default floor is uncensused.
+
+**What resolution changes:** Fixing changes the no-data fixed point for constraints that are not
+currently misbehaving — the latent-path-fix risk — so the fix is held for a deliberate pass, not
+auto. Resolution would: treat `variant([])` as no-data (0.5 neutral or propagate insufficiency),
+clamp SI to [0,1] at the subscore so out-of-range can't hide under the final clamp, and make
+`cross_index_coupling` fail or return a sentinel below GridSize 2. Until then, the correction key
+applies: a surprising-*clean* reading on a sparse-data story is suspect-by-construction.
+
+---
+
+---
+
+## OQ-61 — Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count
+
+**Ω-type:** Ω_C (conceptual/design — three operator rulings, none resolvable from code).
+
+**Status:** open — awaiting operator ruling on three linked questions
+**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §6, K1/K2/K7).
+**Files:** `json_report.pl:1244,1267-1273` (producers), `network_dynamics.pl:197-255`
+(`network_stability_assessment`, `ep_base_severity`), `config.pl:483`
+(`network_cascade_count_threshold=3`), `enhanced_report.py:262` (header render).
+
+**Specific question:** The header line ("Network stability: cascading … purity N/M contaminated")
+is one signal wearing two costumes, and both halves need rulings. (1) **Cascade saturation:**
+severity derives from effective purity (`EP<0.70→warning`), and the cascade trigger is an
+*absolute* count of 3 — witnessed 633 severe vs threshold 3 (211×) on N=1106. Should the threshold
+be proportional/band-aware, or the flag dropped from the header? (2) **What the purity line should
+mean:** the contaminated band is 98.1% tangled_rope+snare (witnessed cross-tab: TR 73.4%
+contaminated, snare 87.4%, vs rope 7.7%, mountain 0.0%; converse control rope 92.3%
+pristine+sound, mountain 95.1% pristine) — corpus-wide purity mostly restates type composition.
+Should the header report purity conditioned on type (the spec §2.1 "coordination health" use
+case), keep the raw bands, or both? (3) **Denominator:** purity_summary silently drops no-access
+constraints (sums 1104 of 1106; M=2 today) — should it emit `no_access: M` alongside the bands?
+
+**Evidence so far:** Runtime witnesses in the audit doc §6; raw data
+`outputs/purity_audit_20260603/` (census.tsv joined to pipeline per_constraint for the type
+cross-tab). Contaminated fraction stable across corpus growth (~68.8% at N≈770, 68.2% at N=1104) —
+consistent with structural property of scoring-on-this-composition, not story drift.
+
+**What resolution changes:** (1) makes the cascade flag informative again (or removes a dead
+indicator); (2) decides whether the header's purity line is a type-distribution echo or a
+within-type health metric; (3) makes the unmeasured population visible. All three change report
+text/aggregation only — no classification path is touched.
+
+---
+
+---
+
+## OQ-62 — Purity band vocabulary fork: fpn_zone vs purity_zone, and sentinel→worst-zone in both banders
+
+**Ω-type:** Ω_C (conceptual — which vocabulary wins is a design ruling; the guard is mechanical).
+
+**Status:** open — do NOT auto-unify (choice of which range wins is the units-fork resurfacing as
+an implementation decision)
+**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §4, K4/K6).
+**Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
+at .80/.60/.40/.20), `logical_fingerprint.pl:605-611` (`purity_zone`:
+pristine/sound/borderline/contaminated/degraded at .9/.7/.5/.3 — matches canonical spec
+logic_extensions.md §2.3).
+
+**Specific question:** Two band vocabularies over the same scalar share the word "contaminated"
+for different ranges — [0.3,0.5) via `purity_zone` (reports, purity_summary) vs [0.4,0.6) via
+`fpn_zone` (abductive evidence lines). Unify, rename one, or document the fork? Separately: both
+banders map the −1.0 sentinel to their worst zone when fed directly (witnessed:
+`fpn_zone(-1.0)=critical`, `purity_zone(-1.0)=degraded`) — latent only because every current
+gating caller filters −1.0 first. Should both get an explicit `< 0.0 → unknown` guard clause
+(mechanical, fail-closed) independent of the vocabulary ruling?
+
+**Evidence so far:** Audit doc §4. The categorical needle's cut also differs from both:
+post-bound-probe-fix `structural_purity` says 96.6% contaminated (excess ≤ 0.05 pass bar) vs the
+scalar bands' 68% — three different "contaminated" cuts now live on three surfaces. Whether the
+≤0.05 categorical bar is intended is part of this ruling.
+
+**What resolution changes:** One word stops meaning three things. The guard clauses convert a
+latent unknown→worst mechanism to fail-closed and can land independently of (and before) the
+vocabulary ruling if desired.
+
+---
+
+---
+
+*Last updated: 2026-06-03. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

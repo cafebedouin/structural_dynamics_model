@@ -748,16 +748,18 @@ Where:
 
 **Implementation:**
 ```prolog
-% purity_scoring.pl
-purity_score(C, -1.0) :-
-    epistemic_access_check(C, false), !.
-
+% purity_scoring.pl (actual clause shape: positive access check + cut,
+% sentinel as fallback clause; result clamped to [0,1])
 purity_score(C, Score) :-
+    epistemic_access_check(C, true),
+    !,
     factorization_subscore(C, F),
     scope_invariance_subscore(C, S),
     coupling_cleanliness_subscore(C, K),
     excess_extraction_subscore(C, E),
-    Score is (0.30 * F) + (0.25 * S) + (0.25 * K) + (0.20 * E).
+    RawScore is (0.30 * F) + (0.25 * S) + (0.25 * K) + (0.20 * E),
+    Score is min(1.0, max(0.0, RawScore)).
+purity_score(_, -1.0).   % insufficient epistemic data
 ```
 
 **Parameters:**
@@ -802,8 +804,12 @@ Purity provides the quantitative answer. At 0.35, maybe. At 0.25, no.
 **Implementation:**
 ```prolog
 % signature_detection.pl
+% NOTE: epistemic_access_check/2 must be called with an UNBOUND second argument —
+% calling it with `false` bound always succeeds via its catch-all clause
+% (bound-probe bypasses clause-order; see docs/audits/purity_audit_20260603.md §2).
 structural_purity(C, inconclusive) :-
-    epistemic_access_check(C, false), !.
+    epistemic_access_check(C, Access),
+    Access == false, !.
 
 structural_purity(C, PurityClass) :-
     purity_test_factorization(C, T1),

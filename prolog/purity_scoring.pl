@@ -19,12 +19,13 @@
                      + 0.25 × coupling_cleanliness
                      + 0.20 × (1 - excess_extraction)
 
-   Interpretation:
-     1.0  = perfectly pure (all tests pass, no contamination)
-     >0.8 = structurally sound (minor contamination tolerable)
-     0.5  = borderline (significant contamination, drift risk)
-     <0.3 = contaminated (multiple structural failures)
-     -1.0 = inconclusive (insufficient epistemic data)
+   Interpretation (canonical zones — logic_extensions.md §2.3 / purity_zone/2):
+     >=0.9 = pristine     (exemplary coordination)
+     >=0.7 = sound        (healthy coordination)
+     >=0.5 = borderline   (acceptable but watch)
+     >=0.3 = contaminated (degrading coordination)
+     <0.3  = degraded     (extraction-dominant; reform blocked)
+     -1.0  = inconclusive (insufficient epistemic data)
 
    Use cases:
      - Rank coordination mechanisms by structural soundness

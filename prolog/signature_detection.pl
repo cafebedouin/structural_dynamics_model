@@ -972,7 +972,14 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
 %  Computes the structural purity classification.
 
 structural_purity(C, inconclusive) :-
-    epistemic_access_check(C, false), !.
+    % Bound-probe fix (2026-06-03 purity audit): calling epistemic_access_check(C, false)
+    % with `false` bound always succeeded via the catch-all clause (clause 1's head can't
+    % unify with false, so its guard+cut never ran), making this clause fire for EVERY
+    % constraint and the four purity tests below unreachable. Call with an unbound
+    % variable so clause order dispatches, then test the result.
+    % Witness: docs/audits/purity_audit_20260603.md §2.
+    epistemic_access_check(C, Access),
+    Access == false, !.
 
 structural_purity(C, PurityClass) :-
     % Run all four tests
