@@ -480,3 +480,17 @@ Recon establishes what data exists and what questions are answerable. Proposal s
 exactly what will be run and what would constitute each verdict. Execution runs scripts
 and saves raw output. Writeup analyzes from evidence only — never from documentation
 restated as findings. See `docs/project_orientation.md` §8.1 for detail.
+
+## Cross-Sibling Disambiguation (standard practice)
+
+When a per-item call about an authored field is ambiguous in one file (agent vs vindicated
+proposition, epistemic vs structural omega, gain-flow vs framing), check the siblings BEFORE
+escalating as undecidable: same-kernel readings and same-topic sibling kernels (`cs_kernel_id`
+groups, `cs_reading_relation` edges, name-prefix families) often foreground the same structure
+differently, and the comparison disambiguates. Footing rule: the cross-sibling read **generates**
+the hypothesis; only an **in-file witness** (the file's own gain/directionality text) makes it
+**ruled** — across distinct kernels the transfer is analogical, so analogy alone = mark the call
+INFERRED. Value-name morphology is orthogonal to referent kind in both directions (ISSUES.md
+OQ-64) — classify by referent text, never by the value string; suffix heuristics have lied twice.
+Method + witnessed instance: `docs/technical/build_discipline.md` → "Cross-sibling comparison
+disambiguates authored-field calls"; theory: `docs/the_perturbation_principle.md` §5.1.

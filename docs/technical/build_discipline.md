@@ -582,6 +582,41 @@ bespoke and do not let it assert an invariant it never tried to break.
 
 ---
 
+## Cross-sibling comparison disambiguates authored-field calls (the corpus as its own control)
+
+When a per-item call about an authored field is ambiguous in one file — is this beneficiary value
+an agent or a vindicated proposition? is this omega epistemic or structural? — the corpus usually
+already contains the disambiguating perturbation: a sibling reading of the same kernel, or a
+sibling kernel of the same topic, that foregrounds the same structure differently. Reading the
+siblings side by side is the perturbation move run over **authored text** instead of engine
+output: hold the structure, vary the authorial framing, and the variation exposes which features
+belong to the referent's kind and which to the file's framing. **Standard practice:** before
+escalating an ambiguous authored-field call as undecidable, check the siblings (`cs_kernel_id`
+groups, `cs_reading_relation` edges, name-prefix families). The comparison is cheap and often
+decisive as a hypothesis-generator.
+
+The footing rule that keeps it honest, load-bearing: **cross-sibling comparison GENERATES the
+hypothesis; only an in-file witness RULES it.** Distinct kernels (separate `cs_kernel_id`s) make
+the transfer analogical — not a rigorous single-kernel perturbation — so where the in-file
+witness is absent and only the analogy carries, mark the call INFERRED, not ruled. (Same-kernel
+sibling readings are closer to a true perturbation but are still distinct constraints with their
+own ε — sibling readings are distinct probes, never coverage.)
+
+Witnessed instance (2026-06-04, OQ-63/OQ-64): `institutional_continuity_narrative`
+(preparedness_commitment__husk_reading) read proposition-shaped in isolation. The sibling kernel
+(preparedness_transmission__husk_reading :102) front-loads "Central Government Administration …
+captures political credit" — the same institution-capturing-legitimacy structure, foregrounded —
+which generated the AGENT hypothesis; the commitment file's own directionality logic (:225, "the
+institution itself experiences the constraint as moderately beneficial") then confirmed it:
+ruled, not inferred. Both directions of the name/referent orthogonality are now witnessed
+(ISSUES.md OQ-64): a proposition referent in the agent-shaped beneficiary field
+(maxwell_demon's `entropic_universe_hypothesis`) and an agent referent under a
+proposition-shaped name (this case). Consequence: **the value string can never carry the call —
+the authored gain/directionality text does.** Suffix heuristics lied twice before this was
+accepted; do not reintroduce them.
+
+---
+
 ## Separate fallible judgment from action at the tool boundary
 
 The meta-lesson behind several patterns above (Pattern 4 fabricated default, Pattern 5

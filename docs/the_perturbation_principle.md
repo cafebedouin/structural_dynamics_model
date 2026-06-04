@@ -162,6 +162,26 @@ seat (the calibration). The reflexive axis declares it. The `ε`-stability rule
 (`design_discipline.md` §7) is the same discipline for the one authored primitive: a cross-axis
 anchor must not flip under small `ε` perturbation, or it is an artifact of authoring, not structure.
 
+### 5.1 The authored-text variant: sibling comparison as disambiguator
+
+The same move runs below the engine, on the corpus's authored text, with no operator at all. When
+a per-item call about an authored field is ambiguous in one file (an agent vs a vindicated
+proposition; an epistemic vs a structural omega), the corpus usually already contains the
+perturbation: a sibling reading of the same kernel, or a sibling kernel of the same topic, that
+foregrounds the same structure under a different framing. Comparing them holds the structure and
+varies the authorship — what moves is the file's framing, what persists is the referent's kind.
+This is the observer axis applied to the *generator* rather than the engine: the two files are two
+seats on one structure, and the disparity between them is depth, exactly as in §2.
+
+The honesty condition is the same as everywhere else in this document, specialized: across
+**distinct** kernels the transfer is analogical, not a rigorous single-kernel perturbation — so
+the sibling comparison *generates* a hypothesis, and only an in-file witness (the file's own
+gain/directionality text) *rules* it. Analogy alone leaves the call marked inferred. Method,
+footing rule, and the witnessed instance (the `institutional_continuity_narrative` ruling,
+2026-06-04, where the sibling generated the hypothesis and the file's own §directionality logic
+confirmed it): `docs/technical/build_discipline.md` → "Cross-sibling comparison disambiguates
+authored-field calls."
+
 ---
 
 ## 6. The discipline the principle forces (and why it is the build-discipline spine)
