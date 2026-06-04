@@ -20,6 +20,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — OQ-63 diagnostic run: directionality's beneficiary read measured (read-only; no engine change)
+
+Measured the d→χ blast radius of `beneficiary_victim_directionality` (constraint_indexing.pl:417)
+reading raw vs agency-filtered beneficiaries. Full per-item evidence in ISSUES.md OQ-63 (updated
+same date). Headline, scope-qualified: across the suffix-probe-reachable population (6
+all-candidate hosts, 17 partial), the mis-derivation on proposition-kind values is REAL (d
+regime-switches to canonical for victim-less hosts; institutional-only −0.05 otherwise) but
+χ-immaterial today — all |Δχ| ≤ 0.022, ZERO band crossings, ≥0.18 from any edge. Probe-reach
+caveat is load-bearing: the suffix probe is known to undercount (OQ-65).
+
+Method notes for reuse (learned from agency-gate pass, applied here):
+- Per-host restore verification (×11 PASS) — restore checked after EACH re-assert, never once
+  globally; sequential retract/re-assert otherwise silently corrupts later hosts.
+- Suffix lied a second time: `classical_computation_framework` is AGENT by authored gain-talk
+  (church_turing :90); the testset's own :236 even predicts the heuristic's d≈0.15. Per-item
+  read, never suffix.
+- `directionality_override/3` pins d before either read — enumeration of overrides must cover
+  control hosts too (constitutional_text_authority :360 caught by anomaly, not by plan).
+- Measurement script: /tmp/oq63_measure.pl pattern (findall facts FIRST, retract, snap, re-assert,
+  re-snap, compare) — kept in conversation, not repo; trivially re-derivable from OQ-63.
+
+Escalation CLOSED same date, ruled AGENT (witnessed in-file): commitment :225 directionality
+logic names the institution as experiencer of benefit; :219's "narrative captures the legitimacy
+value" is the mechanism-label. No registry write (AGENT = unlisted default). Sibling
+`bureaucratic_continuity` (transmission :151/:103) closes identically. OQ-63 row updated to
+"consumer working correctly"; mirror-direction overloading (agent referent under
+proposition-shaped name) filed into OQ-64 — value-string morphology is orthogonal to
+referent-kind in BOTH directions; disambiguate by authored directionality/gain text, never name.
+Ruling-footing rule (durable): cross-sibling perturbation across DISTINCT kernels generates a tag
+hypothesis; only an in-file witness makes it RULED — analogy alone = tag marked INFERRED.
+Side observation filed in OQ-63: church_turing analytical χ = 0.6576 is 0.0024 below
+snare_chi_floor (0.66) — knife-edge independent of this question.
+
+---
+
 ## 2026-06-03 — FSM agency gate: agent_beneficiary/2 two-site narrowing (maxwell un-stripped; one-row manifest diff, derived then confirmed)
 
 **What changed (code):**

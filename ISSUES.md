@@ -2859,9 +2859,66 @@ been mis-derived for that class (today: maxwell_demon_impossibility — masked b
 signature override decides its type upstream; the class grows with the corpus). This is the
 highest-stakes instance of the beneficiary-field overloading, NOT a 12-mountain question.
 
-**Diagnostic when picked up:** enumerate {C : has constraint_beneficiary, no agent_beneficiary, no
-constraint_victim}; for each, compare d/χ at the 4 canonical contexts under raw vs agent-filtered
-HasBeneficiaries; any type flip or χ shift is the measured blast radius.
+**Diagnostic RUN (2026-06-04, read-only; full tables in KNOWN_STATE entry of same date):**
+
+*Mechanics measured:* `power_role_heuristic` ignores the beneficiary flag at every power level
+EXCEPT institutional (true→0.15 / false→0.10); so the effect decomposes into **class A** (no
+victims: filtering empties HasBeneficiaries → structural derivation fails → regime-switch to
+canonical d at ALL contexts) and **class B** (victims present: institutional-only Δd −0.05).
+Hand-derived deltas from config.pl:140-145 matched the engine measurement exactly (class-A
+d structural→canonical: powerless 0.95→1.00, moderate 0.65→0.6459, institutional 0.12→0.00,
+analytical 0.72→0.725; class-B institutional 0.12→0.07).
+
+*Per-item verdict (χ-delta × referent-kind — the kind is the witness, not the count):*
+- maxwell_demon (PROPOSITION, ruled): d structurally derived from a vindication value at all 4
+  contexts — **real mis-derivation, materially small** (|Δχ| ≤ 0.0062; ε=0.08).
+- press_reformation__technological_inevitability (PROPOSITION, gate-2-held): identical numbers —
+  real mis-derivation, small.
+- statutory_debt_ceiling__constitutional_nullity (PROPOSITION, scoped-out): d mis-derived but
+  authored ε=0.0 (testset :114) ⇒ χ ≡ 0 at every d — **no χ effect at all**.
+- total_war_winnability_p45 (AGENT by ruling — control row): filtering WOULD have moved a
+  genuinely-agent value's d/χ (Δχ to −0.0093) — demonstrates what the tagging gate protects.
+- church_turing__physical_claim (AGENT — suffix lied a SECOND time: ":90 Primary beneficiary —
+  gains epistemological monopoly, resource concentration, … funding" is explicit gain-talk; the
+  testset's own narrative :236 predicts "institutional … pure beneficiary status (d ≈ 0.15)",
+  matching the heuristic's beneficiary-aware value): **consumer working correctly**.
+- preparedness_commitment__husk (AGENT — RULED 2026-06-04, witnessed in-file): :219's "the
+  beneficiary (institutional continuity narrative) captures the legitimacy value" is the
+  mechanism-label; :225's directionality logic names the experiencer of benefit ("The institution
+  itself experiences the constraint as moderately beneficial (legitimacy, resource
+  justification)"), corroborated by :100 and Perspective 5 (:178) — a self-aware institution
+  protecting its own legitimacy and resources. **Consumer working correctly** (same verdict as
+  church_turing). Ruling footing: cross-sibling perturbation (vs preparedness_transmission, a
+  DISTINCT kernel) generated the AGENT hypothesis; the in-file witness confirmed it — where an
+  in-file witness is absent and only the cross-kernel analogy carries, a tag is INFERRED, not
+  ruled. Sibling closes identically: `bureaucratic_continuity`
+  (preparedness_transmission__husk_reading :151; in-file :103 "preserves its organizational
+  identity, budget lines, and staff roles") = AGENT, no-write, inert.
+
+*Band crossings:* ZERO across the population — all Δχ ≤ 0.022 and ≥ 0.18 from the nearest edge
+(rope_chi_ceiling 0.35 / tangled 0.35–0.90 / snare_chi_floor 0.66). Side observation, independent
+of filtering: church_turing's analytical χ = 0.6576 sits 0.0024 below snare_chi_floor — a
+knife-edge unrelated to this OQ.
+
+*Controls:* per-host restore PASS ×11 (checked after EACH re-assert, not once globally); dispatch
+control fired (class-A institutional d moved); candidate-only filtering on 3 partial hosts
+(agent co-beneficiary retained) moved nothing; analytic table treated as falsifiable prediction —
+substrate agreed. Raw side cross-checked against pipeline JSON to 6 decimals (maxwell,
+church_turing).
+
+**SCOPE QUALIFIER (load-bearing):** this is the blast radius across the SUFFIX-PROBE-REACHABLE
+population (6 all-candidate hosts + 17 partial, from 24 suffix values minus 2 witnessed agent
+false-positives). The probe is KNOWN to undercount (it missed maxwell's bait phrasing in OQ-65's
+scan); "only 6 affected" is a fact about the probe's reach until OQ-65's per-file census runs.
+
+*What the evidence says about resolution:* the mis-derivation is real but currently χ-immaterial
+(low-ε hosts, institutional-only class-B effect, zero band crossings). Filtering :420 through
+agent_beneficiary would be semantically correct for proposition values but moves NOTHING type-level
+today and would WRONGLY move d for agent values if tagging ever lags (total_war control row). The
+risk grows with corpus growth (a high-ε proposition-only host would put Δχ ≈ ε-scaled deltas near
+band edges). The per-item escalation queue is EMPTY (preparedness ruled AGENT 2026-06-04, see
+verdict row; the proposition rows are all ruled/held from the agency-gate pass). Remaining before
+a filtering ruling: the OQ-65 census only.
 
 ---
 
@@ -2891,6 +2948,19 @@ beneficiary slot?
 - environmental_instability `:193/:196` + omega `false_summit_beneficiary_ambiguity`: author
   expects FSM to adjudicate beneficiary-vs-less-victimized empirically; FSM is presence-only.
 All share one misconception: **FSM-as-extraction-evaluator** (it is a presence trigger).
+
+**The MIRROR direction (2026-06-04 ruling): proposition-shaped name, agent referent.**
+`institutional_continuity_narrative` (preparedness_commitment__husk_reading :142) and
+`bureaucratic_continuity` (preparedness_transmission__husk_reading :151) carry vindication-shaped
+NAMES but agent-kind REFERENTS: the files' own directionality logic names the institution as the
+experiencer of benefit (commitment :225 "the institution itself … (legitimacy, resource
+justification)"; transmission :103 "preserves its organizational identity, budget lines, and
+staff roles"). The maxwell/total_war cases are proposition referents in the agent-shaped field;
+these are agent referents under proposition-shaped names — together they prove **the value
+string's morphology is orthogonal to the referent's kind in BOTH directions** (which is why the
+suffix heuristic had to be abandoned twice). The disambiguator is the authored directionality/
+gain logic, never the name. When the `constraint_vindicates/2` split lands, the migration
+tooling must classify by referent text, not value naming.
 
 **What resolution changes:** the registry (non_agent_beneficiary/1) becomes a migration shim:
 proposition-kind values move to `constraint_vindicates/2` facts at generation time; the agency
