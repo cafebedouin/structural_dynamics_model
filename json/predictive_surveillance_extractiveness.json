@@ -1,0 +1,244 @@
+{
+  "header": {
+    "constraint_id": "predictive_surveillance_extractiveness",
+    "version": "1.0",
+    "generated_date": "2024-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pred_surv",
+    "story_uid": "a7f3c8e1-9d42-4b5a-8f6d-2e1a4c7b9d3f",
+    "created_at": "2024-01-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Predictive Surveillance Extractiveness",
+    "topic_domain": "technology_governance/surveillance_studies/export_control_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "surveillance_technology_vendors",
+      "regime_stability_coalition"
+    ],
+    "victims": [
+      "algorithmically_flagged_citizens",
+      "predicted_dissidents",
+      "false_positive_population",
+      "chilling_effect_population"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Algorithmically Flagged Citizen",
+      "comment": "PERSPECTIVE 1: ALGORITHMICALLY FLAGGED CITIZEN (SNARE) — Trapped by predictive classification with no mechanism to contest or exit. Intervention occurs before any action is taken, based on opaque algorithmic inference. No due process, no observable behavior threshold, no appeal. Maximum extraction: pre-emptive suppression of potential dissent extracts freedom of thought and association before any expression occurs."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The False Positive Population",
+      "comment": "PERSPECTIVE 2: FALSE POSITIVE POPULATION (SNARE) — Citizens flagged by algorithmic error who bear surveillance costs despite no actual dissent intention. Constrained rather than trapped because some can demonstrate compliance through behavioral modification, but the cost of exit (proving algorithmic error to an opaque system) is prohibitive. High extraction: bears full surveillance burden with zero coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Chilling Effect Population",
+      "comment": "PERSPECTIVE 3: CHILLING EFFECT POPULATION (TANGLED ROPE) — Citizens who modify behavior to avoid algorithmic flagging. Experience both extraction (self-censorship, foregone association) and coordination (predictable boundaries for permissible behavior). Constrained exit: can avoid flagging through compliance but at significant cost to autonomy. Mixed extraction-coordination: the system does communicate regime preferences, but the communication mechanism is coercive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 4: STATE SECURITY APPARATUS (ROPE) — Primary beneficiary. Experiences the constraint as pure coordination: predictive surveillance solves the information problem of identifying threats before they materialize. Arbitrage exit: can adjust algorithmic parameters, exempt personnel, or abandon the system if it becomes politically costly. Net beneficiary with full control over the constraint's operation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Surveillance Technology Vendors",
+      "comment": "PERSPECTIVE 5: SURVEILLANCE TECHNOLOGY VENDORS (ROPE) — Secondary beneficiary. Captures revenue from system deployment and maintenance. Experiences the constraint as coordination: solving the technical problem of predictive classification at scale. Arbitrage exit: can pivot to other markets or clients if one regime becomes reputationally costly. Low effective extraction because benefits exceed costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Export Control Coalition",
+      "comment": "PERSPECTIVE 6: EXPORT CONTROL COALITION (TANGLED ROPE) — International actors (Wassenaar Arrangement, EU dual-use regulations, US export controls) attempting to restrict surveillance technology proliferation. Organized but constrained: can impose some barriers but face enforcement challenges, corporate circumvention, and state resistance. Experience both coordination (shared norms against surveillance proliferation) and extraction (compliance costs, diplomatic friction, limited effectiveness). Mixed perspective: the control regime has genuine coordination function but also reveals the limits of international governance against determined state actors."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) — From a civilizational perspective, predictive surveillance represents a structural shift in the nature of state power: the move from punishing observed behavior to suppressing predicted behavior eliminates the behavioral threshold that historically constrained state coercion. The analytical classification is snare because the constraint's primary function is extraction (suppression of dissent) with minimal coordination benefit (regime stability is a private good for the ruling coalition, not a public coordination function). The high suppression and extractiveness values, combined with the expansion of the victim set to include those who have taken no action, place this firmly in snare territory across all time horizons."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_accuracy_threshold",
+      "question": "At what false positive rate does predictive surveillance become operationally counterproductive for the state security apparatus itself?",
+      "resolution_mechanism": "Empirical analysis of deployed systems: ratio of interventions to actual threats materialized; resource burden of processing false positives; political cost of visible errors",
+      "impact": "If false positive rate exceeds ~30%, the system may shift from snare (functional extraction) to piton (performative theater maintained for regime legitimacy despite operational failure). If false positive rate is below ~10%, the snare classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "False positive rate threshold for operational effectiveness"
+    },
+    {
+      "id": "behavioral_threshold_elimination",
+      "question": "Does predictive surveillance eliminate the behavioral threshold for state intervention, or does it merely lower the threshold to include preparatory acts and associations?",
+      "resolution_mechanism": "Legal and operational analysis: do interventions occur based purely on algorithmic prediction with no observable behavior, or do systems require some minimal behavioral predicate (association, communication, location)?",
+      "impact": "If threshold is eliminated entirely: snare classification is robust — the constraint extracts freedom of thought itself. If threshold is merely lowered: classification may shift toward tangled_rope for some victim populations who can avoid flagging through behavioral modification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether predictive systems eliminate or merely lower behavioral thresholds"
+    },
+    {
+      "id": "coordination_function_legitimacy",
+      "question": "Is regime stability a genuine public coordination good, or a private good for the ruling coalition that the security apparatus presents as coordination?",
+      "resolution_mechanism": "Political theory analysis: does the regime provide public goods (security, infrastructure, dispute resolution) that justify stability as coordination, or does it primarily extract rents and suppress alternatives?",
+      "impact": "If regime stability is a genuine public good: classification shifts toward tangled_rope (mixed coordination-extraction). If regime stability is a private good: snare classification is robust — the constraint extracts dissent to preserve elite benefits, not to solve a collective action problem.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether regime stability constitutes public coordination or private extraction"
+    },
+    {
+      "id": "export_control_effectiveness",
+      "question": "Do export controls on surveillance technology meaningfully constrain proliferation, or do they primarily create compliance theater while determined state actors acquire capabilities through alternative channels?",
+      "resolution_mechanism": "Empirical tracking: correlation between export control regimes and actual deployment of predictive surveillance systems; identification of circumvention pathways (domestic development, non-signatory suppliers, dual-use technology repurposing)",
+      "impact": "If export controls are effective: the organized perspective (export control coalition) shifts toward scaffold (temporary coordination with sunset as norms mature). If export controls are theater: the organized perspective remains tangled_rope or shifts toward piton (performative compliance with minimal functional constraint).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of export control regimes in constraining surveillance proliferation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "pred_surv_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.61,
+      "id_override": "pred_surv_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.7,
+      "id_override": "pred_surv_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78,
+      "id_override": "pred_surv_extract_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "pred_surv_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.68,
+      "id_override": "pred_surv_suppress_t3"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.76,
+      "id_override": "pred_surv_suppress_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82,
+      "id_override": "pred_surv_suppress_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "pred_surv_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38,
+      "id_override": "pred_surv_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "pred_surv_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "id_override": "pred_surv_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Predictive surveillance systems represent a structural transformation in state coercion: the shift from reactive monitoring (detecting dissent after expression) to pre-emptive profiling (predicting dissent before action). This constraint expands the victim set from those who have taken observable action to those algorithmically predicted to act, eliminating the behavioral threshold that historically constrained state intervention. The primary observable is the ratio of interventions based on observed behavior versus predicted behavior, and the expansion of the surveillance target population beyond active dissidents to include predicted dissidents, false positives, and the chilling effect population. The constraint exhibits rising extractiveness and suppression over the measurement interval (2015-2025) as predictive systems mature from pilot deployments to operational scale. Theater ratio remains moderate (0.45) because the systems have genuine operational function for the state security apparatus, unlike purely performative surveillance rituals. The constraint's mandatrophy is resolved through perspectival analysis: the state security apparatus experiences coordination (solving the information problem of threat identification), while the algorithmically flagged population experiences pure extraction (suppression of potential dissent with no coordination benefit). The analytical perspective classifies as snare because the constraint's primary function is extraction (regime stability as a private good for the ruling coalition) rather than coordination (public security as a collective benefit).",
+    "key_agents": [
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) — captures information advantage and pre-emptive control over dissent; experiences constraint as coordination",
+      "Surveillance Technology Vendors: Secondary beneficiary (institutional/arbitrage) — captures revenue from system deployment and maintenance; global arbitrage exit options",
+      "Algorithmically Flagged Citizens: Primary victim (powerless/trapped) — intervention occurs before any action; no mechanism to contest or exit predictive classification",
+      "False Positive Population: Secondary victim (moderate/constrained) — bears surveillance costs despite no actual dissent intention; can demonstrate compliance but at prohibitive cost",
+      "Chilling Effect Population: Tertiary victim (moderate/constrained) — modifies behavior to avoid algorithmic flagging; experiences mixed extraction-coordination",
+      "Export Control Coalition: Organized actors (organized/constrained) — attempts to restrict surveillance technology proliferation; faces enforcement challenges and state resistance",
+      "Analytical Observer: Civilizational view (analytical/analytical) — identifies structural shift in nature of state power from punishing observed behavior to suppressing predicted behavior"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The constraint extracts freedom of thought, association, and expression from the victim population before any observable behavior occurs. The extraction is severe because the behavioral threshold for state intervention has been eliminated or drastically lowered — citizens bear costs (surveillance, intervention, self-censorship) based on algorithmic prediction rather than action. The value reflects that predictive surveillance extracts not just from those who act, but from the much larger population predicted to act, including false positives. Suppression (0.82): Very high. The constraint suppresses alternatives through multiple mechanisms: (1) algorithmic flagging creates pre-emptive intervention before dissent can organize, (2) opacity of algorithmic classification prevents citizens from understanding or contesting their flagged status, (3) chilling effect suppresses expression across the broader population who modify behavior to avoid flagging, (4) lack of due process or behavioral threshold eliminates traditional legal constraints on state coercion. The suppression value is near-maximal because the constraint operates on predicted rather than observed behavior, eliminating the exit option of 'not acting.' Theater ratio (0.45): Moderate. The systems have genuine operational function for the state security apparatus (identifying and suppressing potential dissent before it materializes), unlike purely performative surveillance rituals. However, theater is non-trivial because: (1) false positive rates create interventions against non-threats, (2) some deployments are maintained for regime legitimacy signaling rather than operational effectiveness, (3) export control compliance creates performative documentation burdens. The theater ratio has risen over the interval as systems mature and false positive costs accumulate, but remains below the piton threshold (0.70) because core function persists.",
+    "directionality_logic": "The state security apparatus and surveillance technology vendors are primary and secondary beneficiaries with arbitrage exit options, yielding low directionality values (d ≈ 0.05-0.15) and negative or near-zero effective extraction. They experience the constraint as coordination: solving the information problem of threat identification (state) or the technical problem of predictive classification at scale (vendors). The algorithmically flagged citizens are primary victims with trapped exit options, yielding very high directionality (d ≈ 0.95) and maximum effective extraction. They cannot exit the predictive classification system and bear full suppression costs with zero coordination benefit. The false positive population and chilling effect population are secondary and tertiary victims with constrained exit options, yielding high directionality (d ≈ 0.75-0.85) and substantial effective extraction. They can modify behavior to reduce flagging probability but at significant cost to autonomy. The export control coalition is organized with constrained exit, yielding moderate directionality (d ≈ 0.55) and moderate effective extraction — they experience both coordination (shared norms against proliferation) and extraction (compliance costs, limited effectiveness). The analytical observer uses the canonical analytical directionality (d ≈ 0.72), producing high effective extraction that reflects the constraint's structural asymmetry: the system extracts from a large victim population to benefit a small ruling coalition.",
+    "perspectival_gap": "The constraint demonstrates a stark perspectival gap between beneficiaries and victims. The state security apparatus experiences pure coordination (rope): predictive surveillance solves the information problem of identifying threats before they materialize, with full control over system parameters and exemptions. The surveillance technology vendors experience similar coordination (rope): capturing revenue from a technical solution to a client's operational problem, with global arbitrage exit if one market becomes reputationally costly. In contrast, the algorithmically flagged citizens experience pure extraction (snare): pre-emptive suppression based on opaque algorithmic inference, with no behavioral threshold, no due process, and no exit mechanism. The false positive population experiences similar extraction (snare): bearing surveillance costs despite no actual dissent intention, with prohibitive costs to demonstrate algorithmic error. The chilling effect population experiences mixed extraction-coordination (tangled rope): the system does communicate regime preferences (coordination function), but the communication mechanism is coercive and extracts self-censorship costs. The export control coalition experiences mixed coordination-extraction (tangled rope): shared norms against proliferation provide genuine coordination, but enforcement challenges and state resistance create extraction through compliance costs and limited effectiveness. The analytical observer's snare classification reflects the constraint's structural asymmetry: the primary function is extraction (suppression of dissent to preserve regime stability as a private good for the ruling coalition) rather than coordination (public security as a collective benefit). The perspectival gap is not a disagreement about facts but a structural consequence of different positions relative to the extraction flow.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves the mandatrophy by demonstrating that the snare classification is robust from the analytical perspective despite the state security apparatus experiencing coordination. The key insight is that regime stability is a private good for the ruling coalition, not a public coordination function. The state security apparatus experiences coordination because predictive surveillance solves their information problem (identifying threats before they materialize), but this 'coordination' serves the private interest of regime preservation rather than a collective action problem. The constraint extracts freedom of thought, association, and expression from a large victim population (algorithmically flagged citizens, false positives, chilling effect population) to benefit a small ruling coalition (state security apparatus, surveillance vendors, regime stability coalition). The extraction is severe (ε = 0.78) and the suppression is very high (σ = 0.82) because the behavioral threshold for state intervention has been eliminated — citizens bear costs based on algorithmic prediction rather than action. The analytical perspective's snare classification captures this structural asymmetry: the constraint's primary function is extraction, not coordination, even though the beneficiaries experience it as coordination. The perspectival gap between rope (beneficiary view) and snare (victim and analytical views) is not a classification error but a structural feature of how extraction mechanisms present themselves to those who benefit from them. The mandatrophy is resolved by recognizing that 'coordination for whom?' is the critical question: coordination that serves a private good (regime stability) while extracting from a public (freedom of thought and association) is extraction, not coordination, regardless of how the beneficiaries experience it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_credit_systems",
+      "biometric_identification_mandates",
+      "encrypted_communication_restrictions",
+      "algorithmic_content_moderation"
+    ],
+    "dual_formulation_note": "Predictive surveillance is structurally distinct from reactive surveillance (monitoring observed behavior) and from social credit systems (scoring observed behavior for resource allocation). The ε-invariance principle applies: reactive surveillance has lower extractiveness (ε ≈ 0.45-0.55) because it operates on a behavioral threshold, while predictive surveillance has higher extractiveness (ε ≈ 0.70-0.85) because it eliminates the threshold. Social credit systems have different victim sets (those with low scores based on observed behavior) and different extraction mechanisms (resource denial rather than pre-emptive suppression). These are separate constraints linked by network effects: predictive surveillance systems often feed social credit scoring, and both rely on biometric identification infrastructure."
+  },
+  "directionality_overrides": []
+}
