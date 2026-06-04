@@ -119,14 +119,21 @@ def build_manifest(run_at: str) -> dict:
     }
 
 
-def inject_manifest(json_path: Path, manifest: dict) -> None:
-    """Read *json_path*, prepend manifest as first key, write back."""
-    with open(json_path, "r", encoding="utf-8") as f:
+def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
+    """Read *src_path* (the Prolog export's raw artifact), prepend manifest as
+    first key, write *dst_path* (the canonical manifest-bearing artifact).
+
+    Single-writer convention: the swipl export writes pipeline_output.raw.json
+    only; THIS function is the sole writer of pipeline_output.json. A direct
+    swipl re-export therefore cannot clobber the canonical artifact's
+    provenance (swipl_load_path_and_probe_gotchas.md §5).
+    """
+    with open(src_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     # manifest goes first; existing keys follow unchanged
     out = {"manifest": manifest}
     out.update(data)
-    with open(json_path, "w", encoding="utf-8") as f:
+    with open(dst_path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
 
@@ -825,19 +832,21 @@ def run_pipeline(
     # Phase 3: POST-PROLOG (sequential)
     collect(_phase_post_prolog(progress))
 
-    # Abort if pipeline_output.json was not produced
-    if not (OUTPUTS_DIR / "pipeline_output.json").exists():
-        msg = "pipeline_output.json not produced — aborting downstream phases"
+    # Abort if the raw export was not produced (json_report writes the raw
+    # file; the canonical pipeline_output.json is written by _manifest_step)
+    if not (OUTPUTS_DIR / "pipeline_output.raw.json").exists():
+        msg = "pipeline_output.raw.json not produced — aborting downstream phases"
         if progress:
             progress("pipeline", f"[FATAL] {msg}")
         pipeline_result.errors.append(msg)
         pipeline_result.total_duration_s = time.time() - t0
         return pipeline_result
 
-    # Inject manifest into pipeline_output.json; verify orbits are stamped
+    # Write canonical pipeline_output.json = raw export + manifest; verify orbits
     def _manifest_step():
         manifest = build_manifest(run_at)
-        inject_manifest(OUTPUTS_DIR / "pipeline_output.json", manifest)
+        inject_manifest(OUTPUTS_DIR / "pipeline_output.raw.json",
+                        OUTPUTS_DIR / "pipeline_output.json", manifest)
         # Sidecar provenance for orbit_data.json. orbit_data.json is a pure
         # id->orbit dict consumed by iterating readers (game_theory_*, sheaf_audit,
         # extract_corpus_data, normalize_orbit_ids, meta_reporter,

@@ -52,8 +52,15 @@ run_json_report :-
     format(user_error, '[json] Starting JSON report generation...~n', []),
     corpus_loader:load_all_testsets,
 
-    % Discover all constraints
-    findall(C, logical_fingerprint:known_constraint(C), CRaw),
+    % Enumerate the corpus from the authoritative membership registry
+    % (corpus_loader:corpus_constraint/1, asserted per loaded testset file).
+    % Previously this used logical_fingerprint:known_constraint/1, which
+    % unions constraint_metric/claim/classification facts and therefore
+    % picked up engine-resident DEMO constraints (catholic_church_1200 via
+    % its constraint_classification clauses in constraint_instances.pl) —
+    % the source of the per_constraint=1107 vs manifest n_constraints=1106
+    % denominator drift (OQ-70 Probe 0).
+    findall(C, corpus_loader:corpus_constraint(C), CRaw),
     sort(CRaw, Constraints),
     length(Constraints, CorpusSize),
     format(user_error, '[json] Found ~w constraints.~n', [CorpusSize]),
@@ -82,13 +89,17 @@ run_json_report :-
     % Load abductive data from abductive_data.json (produced by abductive_report)
     load_abductive_data,
 
-    % Write JSON
+    % Write JSON — to the RAW filename. run_pipeline.py is the single writer
+    % of the canonical pipeline_output.json (it reads the raw file, prepends
+    % the provenance manifest, and writes the canonical artifact). A direct
+    % re-run of this export therefore cannot clobber a manifest-bearing
+    % pipeline_output.json (swipl_load_path_and_probe_gotchas.md §5).
     setup_call_cleanup(
-        open('../outputs/pipeline_output.json', write, S),
+        open('../outputs/pipeline_output.raw.json', write, S),
         write_pipeline_json(S, Constraints, CorpusSize, MaxEntCtx),
         close(S)
     ),
-    format(user_error, '[json] Wrote pipeline_output.json (~w constraints)~n', [CorpusSize]).
+    format(user_error, '[json] Wrote pipeline_output.raw.json (~w constraints); manifest injection + canonical rename happen in run_pipeline.py~n', [CorpusSize]).
 
 /* ================================================================
    ABDUCTIVE DATA LOADER
