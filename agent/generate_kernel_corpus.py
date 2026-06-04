@@ -799,7 +799,14 @@ def validate_reading_relation_integrity(gen_seeds, json_dir, testsets_dir):
     print(f"  {len(quarantine):3d} UNRESOLVED edge(s) -> quarantine "
           f"(reviewed disposition, OQ-58; no auto-write)")
     if quarantine:
-        qf = testsets_dir.parent / "cs_reading_relation_quarantine.json"
+        # Run-scoped quarantine for run-tagged input: testsets_dir.parent of a
+        # run-tagged dir IS the flat corpus, so the old unconditional `.parent`
+        # silently clobbered any flat-corpus quarantine (KNOWN_STATE 2026-06-04,
+        # OQ-71 pilot). Flat input keeps the original path.
+        if testsets_dir.resolve() == TESTSETS_DIR.resolve():
+            qf = testsets_dir.parent / "cs_reading_relation_quarantine.json"
+        else:
+            qf = testsets_dir / "cs_reading_relation_quarantine.json"
         qf.write_text(json.dumps(quarantine, indent=2, ensure_ascii=False) + "\n",
                       encoding="utf-8")
         print(f"  quarantine written: {qf}")
