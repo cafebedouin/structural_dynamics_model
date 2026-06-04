@@ -167,6 +167,7 @@ _TANGLED_BANDS = {"rope_leaning", "genuinely_tangled", "snare_leaning"}
 _STRATEGIC_STABILITY_VALUES = {"vulnerable", "latent_vulnerable", "resistant", "not_applicable"}
 _MIXED_EQ_QUALITY_VALUES = {"dominant_strategy", "no_equilibrium", "loose"}
 _COVER_STORY_TYPES = {"no_cover", "nash_forced", "type_relabeled", "fcr_no_structural_effect"}
+_SHEAF_STATUS_VALUES = {"genuine_sheaf", "fragile_presheaf", "manifest_presheaf"}
 
 PIPELINE_FIELDS = [
     # (field_name, expected_type, nullable)
@@ -192,6 +193,7 @@ PIPELINE_FIELDS = [
     ("maxent_indexed",              dict,         True),   # null when indexed run unavailable
     ("maxent_divergence",           dict,         True),   # null when either mode missing
     ("h1_band",                     int,          False),
+    ("sheaf_status",                str,          True),   # null if sheaf_analysis:sheaf_status/2 fails
     ("drift_events",                list,         False),
     # --- Nullable: incomplete entries (1-2 constraints) ---
     ("human_readable",              str,          True),
@@ -327,6 +329,11 @@ def _check_structure(entry, cid):
             total = sum(v for v in mp.values() if isinstance(v, (int, float)))
             if abs(total - 1.0) > 0.01:
                 errors.append(f"[{cid}] {fname} sum={total:.6f}, expected ~1.0")
+
+    # sheaf_status must be a known regime (genuine_sheaf / fragile_presheaf / manifest_presheaf)
+    ss = entry.get("sheaf_status")
+    if ss is not None and isinstance(ss, str) and ss not in _SHEAF_STATUS_VALUES:
+        errors.append(f"[{cid}] sheaf_status '{ss}' not in {sorted(_SHEAF_STATUS_VALUES)}")
 
     # coupling must have {category, score, boltzmann}
     coupling = entry.get("coupling")
