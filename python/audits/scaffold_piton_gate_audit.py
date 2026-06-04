@@ -15,7 +15,7 @@ Seven analysis steps:
   7. Recommendations — data-driven prescriptions
 
 Reads:  outputs/enriched_pipeline.json
-Writes: docs/scaffold_piton_gate_audit.md
+Writes: outputs/scaffold_piton_gate_audit.md (archived copy: audits/2026-02-23_scaffold_piton_gate/)
         outputs/scaffold_piton_gate_audit_data.json
 
 Usage:  python3 python/scaffold_piton_gate_audit.py
@@ -40,7 +40,7 @@ from shared.schemas import validate_enriched_pipeline
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = ROOT_DIR / "docs"
-REPORT_PATH = DOCS_DIR / "scaffold_piton_gate_audit.md"
+REPORT_PATH = OUTPUT_DIR / "scaffold_piton_gate_audit.md"  # workspace; archived copy: audits/2026-02-23_scaffold_piton_gate/
 DATA_PATH = OUTPUT_DIR / "scaffold_piton_gate_audit_data.json"
 
 # ---------------------------------------------------------------------------

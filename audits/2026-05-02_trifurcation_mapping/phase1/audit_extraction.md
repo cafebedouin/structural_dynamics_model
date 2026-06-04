@@ -1,6 +1,6 @@
 # Phase 1: Audit Extraction
 
-Source: `/home/scott/bin/structural_dynamics_model/docs/trifurcation_mapping_audit.md`
+Source: `/home/scott/bin/structural_dynamics_model/audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md`
 
 ---
 
@@ -34,7 +34,7 @@ The audit classifies by "subsystem" not always by individual file. The table bel
 
 ## Audit's Type A Coverage Claims
 
-All quotes are from `/home/scott/bin/structural_dynamics_model/docs/trifurcation_mapping_audit.md`.
+All quotes are from `/home/scott/bin/structural_dynamics_model/audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md`.
 
 **Primary Type A "thin" finding:**
 

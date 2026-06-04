@@ -1,0 +1,5113 @@
+{
+  "generated": "2026-05-29T21:23:03.579126",
+  "corpus_total": 192,
+  "excluded_zero_contexts": 2,
+  "excluded_one_context": 26,
+  "working_set_size": 164,
+  "deduplication": {
+    "total_conflicts": 5,
+    "constraints_with_conflicts": 5,
+    "conflict_details": [
+      {
+        "id": "adaptation_priority",
+        "conflicts": [
+          [
+            "U_3_imm",
+            "rope",
+            "piton"
+          ]
+        ]
+      },
+      {
+        "id": "literary_continuity_reading",
+        "conflicts": [
+          [
+            "organized",
+            "tangled_rope",
+            "scaffold"
+          ]
+        ]
+      },
+      {
+        "id": "liturgical_continuity_reading",
+        "conflicts": [
+          [
+            "U_3_civ",
+            "rope",
+            "piton"
+          ]
+        ]
+      },
+      {
+        "id": "performance_only",
+        "conflicts": [
+          [
+            "U_3_civ",
+            "rope",
+            "piton"
+          ]
+        ]
+      },
+      {
+        "id": "proportionality_reading",
+        "conflicts": [
+          [
+            "org_nat",
+            "scaffold",
+            "tangled_rope"
+          ]
+        ]
+      }
+    ]
+  },
+  "binary_preservation": {
+    "n_canonical_sheaf": 139,
+    "n_ten_slice_sheaf": 3,
+    "n_preserved": 26,
+    "n_sheaf_to_presheaf": 137,
+    "n_presheaf_to_sheaf": 1,
+    "crossing_rate": 0.841463,
+    "preservation_rate": 0.158537
+  },
+  "stratified_by_n_contexts": {
+    "2": {
+      "n": 38,
+      "canonical_sheaf": 32,
+      "ten_slice_sheaf": 2,
+      "sheaf_to_presheaf": 30,
+      "presheaf_to_sheaf": 0,
+      "crossing_rate": 0.7895
+    },
+    "3": {
+      "n": 44,
+      "canonical_sheaf": 32,
+      "ten_slice_sheaf": 1,
+      "sheaf_to_presheaf": 32,
+      "presheaf_to_sheaf": 1,
+      "crossing_rate": 0.75
+    },
+    "4": {
+      "n": 44,
+      "canonical_sheaf": 38,
+      "ten_slice_sheaf": 0,
+      "sheaf_to_presheaf": 38,
+      "presheaf_to_sheaf": 0,
+      "crossing_rate": 0.8636
+    },
+    "5": {
+      "n": 27,
+      "canonical_sheaf": 26,
+      "ten_slice_sheaf": 0,
+      "sheaf_to_presheaf": 26,
+      "presheaf_to_sheaf": 0,
+      "crossing_rate": 0.963
+    },
+    "6": {
+      "n": 10,
+      "canonical_sheaf": 10,
+      "ten_slice_sheaf": 0,
+      "sheaf_to_presheaf": 10,
+      "presheaf_to_sheaf": 0,
+      "crossing_rate": 1.0
+    },
+    "7": {
+      "n": 1,
+      "canonical_sheaf": 1,
+      "ten_slice_sheaf": 0,
+      "sheaf_to_presheaf": 1,
+      "presheaf_to_sheaf": 0,
+      "crossing_rate": 1.0
+    }
+  },
+  "crossing_characterization": {
+    "sheaf_to_presheaf": {
+      "count": 137,
+      "driving_slices": {
+        "U_4": 125,
+        "U_3_civ": 46,
+        "U_3_nat": 42,
+        "U_3_imm": 40,
+        "U_2": 34,
+        "organized": 27,
+        "org_nat": 22,
+        "U_4_glob": 7,
+        "U_1_nat": 6,
+        "U_1": 2
+      },
+      "signature_distribution": {
+        "false_natural_law": 135,
+        "false_ci_rope": 1,
+        "constructed_low_extraction": 1
+      },
+      "claimed_type_distribution": {
+        "tangled_rope": 115,
+        "snare": 18,
+        "rope": 3,
+        "scaffold": 1
+      },
+      "canonical_arakelov_mean": 0.2801857883211679,
+      "u3civ_driven_count": 46,
+      "organized_driven_count": 49
+    },
+    "presheaf_to_sheaf": {
+      "count": 1,
+      "signature_distribution": {
+        "false_ci_rope": 1
+      },
+      "claimed_type_distribution": {
+        "snare": 1
+      }
+    }
+  },
+  "nash_analysis": {
+    "canonical_nash1_total": 13,
+    "canonical_nash1_in_working_set": 10,
+    "canonical_nash1_ten_stable_ge2": 5,
+    "canonical_nash1_ten_still_1": 4,
+    "canonical_nash1_ten_sheaf": 1,
+    "stability_rate": 0.5
+  },
+  "arakelov_note": "ten_slice_arakelov is null for all constraints. Arakelov height computation requires MaxEnt distributions (maxent_distribution_raw/3) at each observer context. MaxEnt is populated at pipeline-time via site_contexts/1; the 10-slice contexts are not in the current pipeline run. Re-running requires adding site_contexts_ten_slice/1 to constraint_indexing.pl and a full pipeline re-run. Deferred to a subsequent pass.",
+  "per_constraint": [
+    {
+      "id": "abolition_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 5,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.62094,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_4": "mountain",
+        "U_4_glob": "snare"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "abolitionist_rights",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.283763,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "absolutist_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.655012,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "adaptation_priority",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.656765,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "antisubordination_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.517916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "autonomy_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.180532,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "balancing_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.483837,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "became_thinkable_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.014744,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "beneficiary_maintained_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.448563,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "beneficiary_maintenance_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.387835,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "biology_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.534962,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "birth_threshold_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.012728,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "organized": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "bodily_autonomy_primary",
+      "canonical_h1": 3,
+      "ten_slice_h1": 0,
+      "canonical_nash": 1,
+      "ten_slice_nash": null,
+      "canonical_arakelov": 0.207208,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "snare",
+        "U_4": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": true,
+      "crossing_type": "presheaf_to_sheaf",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "bridge_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.018986,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "catastrophe_as_necessary",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.101823,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "catastrophic_tail_dominant",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.459183,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_civ": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "catastrophic_tail_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 2,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.454894,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "categorical_abolition",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.020704,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "rope",
+        "U_2": "snare",
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "civic_eugenic_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.249866,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "civic_right_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.011916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "codification_asymmetry",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.342318,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "collective_militia_reading",
+      "canonical_h1": 5,
+      "ten_slice_h1": 1,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.85535,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "collective_right_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.017281,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "colorblind_reading",
+      "canonical_h1": 6,
+      "ten_slice_h1": 2,
+      "canonical_nash": 3,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.427947,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_2": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "commemorative_husk_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.379292,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "communal_autonomy_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.039075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "competence_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.111072,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "composite_reading",
+      "canonical_h1": 5,
+      "ten_slice_h1": 1,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.426395,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_4_glob": "piton"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "conception_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.50869,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "constitutional_hybrid_reading",
+      "canonical_h1": 3,
+      "ten_slice_h1": 1,
+      "canonical_nash": 1,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.10278,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "constitutional_supremacy_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.019303,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "consumer_adoption_friction",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.025205,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "continuity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.031263,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_ci_rope",
+      "claimed_type": "rope"
+    },
+    {
+      "id": "continuous_refresh_hybrid",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "contraction_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.01144,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "convertibility_constraint_removal",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.459183,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "coordination_lock_in",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.023784,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "correctness_camouflage",
+      "canonical_h1": 3,
+      "ten_slice_h1": 1,
+      "canonical_nash": 1,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.345331,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "credibility_paradox_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.517916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "cyclopean_point_as_manufactured_center",
+      "canonical_h1": 3,
+      "ten_slice_h1": 2,
+      "canonical_nash": 1,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.719104,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "decentralization_sovereignty_commitment",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "degrowth_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.510837,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "deterrence_instrument",
+      "canonical_h1": 0,
+      "ten_slice_h1": 5,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.511451,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "snare",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "deterrence_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.26685,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "diversity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.079474,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_1_nat": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "domain_partition_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.021631,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "drop_confessional_instantiation",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "dual_priority_reading",
+      "canonical_h1": 5,
+      "ten_slice_h1": 2,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.588623,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "organized": "scaffold",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "ecumenical_boundary_shift",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.330615,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "endogenous_climb_reading",
+      "canonical_h1": 3,
+      "ten_slice_h1": 3,
+      "canonical_nash": 1,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.112981,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "endogenous_reinterpretation_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.271401,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "rope"
+    },
+    {
+      "id": "engineered_infrastructure_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.025205,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "episcopal_collegiality_tension",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.012713,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "existential_matrix_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.168656,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "existential_risk_reading",
+      "canonical_h1": 6,
+      "ten_slice_h1": 3,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.860478,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "exogenous_override_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.454894,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "expected_value_dominant",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.448563,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "first_held_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 14,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.068592,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "frame_absorption_dynamics",
+      "canonical_h1": 6,
+      "ten_slice_h1": 5,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.553072,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "frame_mismatch_friction",
+      "canonical_h1": 3,
+      "ten_slice_h1": 1,
+      "canonical_nash": 1,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.072934,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "freedom_of_movement_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.448563,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "freedom_primary",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.032755,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_nat": "tangled_rope",
+        "U_4": "mountain",
+        "organized": "piton"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "gender_identity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.033143,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "gender_justice_fragmentation",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.47632,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "hanafi_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "hanbali_reading",
+      "canonical_h1": 6,
+      "ten_slice_h1": 3,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.858702,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "harm_limited_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.364333,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "harm_reduction_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "harm_threshold_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "husk_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.434558,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "hybrid_scaffolding_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.015123,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "inflation_credibility_constraint",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.348793,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "infrastructure_regulatory_lag",
+      "canonical_h1": 3,
+      "ten_slice_h1": 6,
+      "canonical_nash": 1,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.04081,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "institutional_adoption_lag",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.010107,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "institutional_pluralism_equilibrium",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.020128,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "institutional_pragmatism_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4_glob"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "institutional_reallocation_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "integration_primary",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.311521,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "integration_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.454894,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "legalization_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.481608,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "literacy_extraction_tradeoff",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.509542,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "literary_continuity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.013113,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "liturgical_continuity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 0,
+      "canonical_nash": null,
+      "ten_slice_nash": null,
+      "canonical_arakelov": 0.040621,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "rope",
+        "U_4_glob": "rope"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": true,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "rope"
+    },
+    {
+      "id": "liturgical_preservation_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.024433,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "liturgical_vernacularization",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "living_constitutionalist_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.040304,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "lock_in_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "organized": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1",
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "mitigation_priority_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.47632,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "mixed_constitutional_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.011916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "modernization_defection_gradient",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.028954,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "org_nat": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "monarchical_reading",
+      "canonical_h1": 5,
+      "ten_slice_h1": 2,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 1.000908,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_2": "snare",
+        "U_3_nat": "rope",
+        "U_4_glob": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "monetary_aggregate_collapse",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.012713,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "monetary_discretion_expansion",
+      "canonical_h1": 0,
+      "ten_slice_h1": 14,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_1": "snare",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "monopoly_transfer_mechanism",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.26685,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "muslim_uncodified_reading",
+      "canonical_h1": 3,
+      "ten_slice_h1": 5,
+      "canonical_nash": 1,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.758825,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4_glob",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "org_nat": "scaffold",
+        "U_4_glob": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "native_generation",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.500635,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4_glob",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4_glob",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "native_generation_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.26685,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "naturalization_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.000623,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_4_glob": "mountain",
+        "U_2": "tangled_rope"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4_glob"
+      ],
+      "signature": "constructed_low_extraction",
+      "claimed_type": "rope"
+    },
+    {
+      "id": "near_miss_as_bridge",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.013266,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "near_term_harms_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_4",
+        "org_nat",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "snare",
+        "organized": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "org_nat",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "option_value_preserving",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.018986,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "org_nat": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "originalist_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.517916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "overdetermined_composite_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_4": "mountain",
+        "organized": "scaffold"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "parallel_adjudication_structure",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.024564,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4_glob"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "parmenidean_ontological_barrier",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.013977,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "partition_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "performance_only",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.328702,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "rope",
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "phonetic_script_mismatch",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.517916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_civ": "rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "polycentric_petrification",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "positional_notation_dependency",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.015692,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain",
+        "organized": "tangled_rope",
+        "U_3_civ": "piton"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "power_asymmetry_in_legibility",
+      "canonical_h1": 5,
+      "ten_slice_h1": 3,
+      "canonical_nash": 2,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.366068,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_2": "tangled_rope",
+        "U_4": "snare"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "pragmatic_incoherence_reading",
+      "canonical_h1": 5,
+      "ten_slice_h1": 1,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.844008,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "precautionary_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.311521,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "prohibition_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 9,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.511451,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "snare",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "proportionality_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.034861,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "public_health_primary",
+      "canonical_h1": 6,
+      "ten_slice_h1": 5,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.787027,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_4_glob",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "punctuated_swap_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4_glob",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "organized": "tangled_rope",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4_glob",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "pure_property",
+      "canonical_h1": 0,
+      "ten_slice_h1": 14,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.671922,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_imm",
+        "U_4",
+        "org_nat",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_2": "tangled_rope",
+        "org_nat": "scaffold",
+        "organized": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "qualified_sovereignty",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "rational_dropout_reading",
+      "canonical_h1": 3,
+      "ten_slice_h1": 10,
+      "canonical_nash": 1,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.02207,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "organized": "scaffold",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "reachability_contraction_vs_probability_drop",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.330615,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "real_catastrophe_only",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.294486,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "reconstruction_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.024564,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "regulatory_recognition_reading",
+      "canonical_h1": 6,
+      "ten_slice_h1": 3,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.806105,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_imm",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_imm": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "remedial_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 2,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.349401,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "snare",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "republican_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.034744,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "responsibility_misassignment",
+      "canonical_h1": 0,
+      "ten_slice_h1": 0,
+      "canonical_nash": null,
+      "ten_slice_nash": null,
+      "canonical_arakelov": 0.024103,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "rope",
+        "U_4": "rope"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": true,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "rope"
+    },
+    {
+      "id": "retributive_desert",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "U_2": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "retributive_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.655012,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "revolutionary_legitimacy_scaffold",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.353516,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "org_nat": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "scaffold"
+    },
+    {
+      "id": "rupture_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.516499,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "sanctity_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 5,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.517916,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sartorial_commitment_override",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.483837,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "security_occupation_tradeoff",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.511451,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "self_determination_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sex_biology_reading",
+      "canonical_h1": 6,
+      "ten_slice_h1": 6,
+      "canonical_nash": 3,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.554666,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_nat": "rope",
+        "U_2": "scaffold",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "simulation_as_proxy",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.022352,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "simulation_as_sufficient",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sound_money_scarcity_constraint",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.013244,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "organized": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sound_money_stability_paradox",
+      "canonical_h1": 6,
+      "ten_slice_h1": 5,
+      "canonical_nash": 3,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.507769,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sovereignty_primary",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.481929,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "sovereignty_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "spatial_access_conflict",
+      "canonical_h1": 0,
+      "ten_slice_h1": 14,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.571004,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "organized": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "speculative_narrative_volatility",
+      "canonical_h1": 0,
+      "ten_slice_h1": 15,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 6,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "speculative_price_volatility_trap",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "spontaneous_order_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.010111,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "standing_army_structural_threat",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "state_modernization_extraction",
+      "canonical_h1": 5,
+      "ten_slice_h1": 2,
+      "canonical_nash": 2,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.820792,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_imm",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "structural_contraction_reading",
+      "canonical_h1": 3,
+      "ten_slice_h1": 3,
+      "canonical_nash": 1,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.229988,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_imm",
+        "U_4_glob",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "snare",
+        "U_3_imm": "rope",
+        "U_4_glob": "tangled_rope"
+      },
+      "canonical_sheaf": false,
+      "ten_slice_sheaf": false,
+      "crossing_type": "preserved",
+      "driving_slices": [],
+      "signature": "false_ci_rope",
+      "claimed_type": "snare"
+    },
+    {
+      "id": "study_as_archiving",
+      "canonical_h1": 0,
+      "ten_slice_h1": 1,
+      "canonical_nash": null,
+      "ten_slice_nash": 1,
+      "canonical_arakelov": 0.352313,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 2,
+      "ten_slice_context_labels": [
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "organized": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "subsidy_capture_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 19,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.373604,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 7,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_imm": "rope",
+        "org_nat": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_imm",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "substitution_archive",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.022352,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "organized": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "supply_cap_scarcity",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.318989,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "organized": "scaffold",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4",
+        "organized"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "survival_competence_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.085075,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_3_civ",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_3_civ": "rope",
+        "org_nat": "scaffold",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "swap_henrician_substitution",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.533953,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_2",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_2": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "temporal_boundary_constraint",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.013084,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "temporal_kernel_drift",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.546391,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_3_nat": "rope",
+        "org_nat": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "textualist_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.024564,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "org_nat": "tangled_rope",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4",
+        "org_nat"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "transmission_as_conceptual_import",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.022352,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "universality_paradox_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.011926,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_4_glob"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4_glob": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_4_glob"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "viability_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.545364,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "vulnerability_protection_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 3,
+      "canonical_nash": null,
+      "ten_slice_nash": 2,
+      "canonical_arakelov": 0.08363,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 3,
+      "ten_slice_context_labels": [
+        "U_1_nat",
+        "U_2",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1_nat": "snare",
+        "U_2": "tangled_rope",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "welfare_reading",
+      "canonical_h1": 0,
+      "ten_slice_h1": 10,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.025205,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 5,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_2": "tangled_rope",
+        "U_3_imm": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_2",
+        "U_3_civ",
+        "U_3_imm",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    },
+    {
+      "id": "welfare_regulated_use",
+      "canonical_h1": 0,
+      "ten_slice_h1": 6,
+      "canonical_nash": null,
+      "ten_slice_nash": 3,
+      "canonical_arakelov": 0.342318,
+      "ten_slice_arakelov": null,
+      "n_ten_slice_contexts": 4,
+      "ten_slice_context_labels": [
+        "U_1",
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "ten_slice_types": {
+        "U_1": "snare",
+        "U_3_nat": "rope",
+        "U_3_civ": "piton",
+        "U_4": "mountain"
+      },
+      "canonical_sheaf": true,
+      "ten_slice_sheaf": false,
+      "crossing_type": "sheaf_to_presheaf",
+      "driving_slices": [
+        "U_3_civ",
+        "U_3_nat",
+        "U_4"
+      ],
+      "signature": "false_natural_law",
+      "claimed_type": "tangled_rope"
+    }
+  ]
+}

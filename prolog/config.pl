@@ -422,7 +422,7 @@ param(boltzmann_floor_drift_threshold, 0.05).            % DOCS-ONLY: not refere
 % --- FCR Detection Thresholds ---
 % Excess extraction above this floor triggers the excess_above_floor FCR failure test.
 % Diagnostic threshold (feeds evidence collection, not a certificate gate).
-% Extracted from hardcoded literal per blocking_gate_audit_20260414.md V2 fix.
+% Extracted from hardcoded literal per audits/2026-04-14_blocking_gate/blocking_gate_audit_20260414.md V2 fix.
 param(fcr_excess_floor, 0.05).
 
 /* ================================================================

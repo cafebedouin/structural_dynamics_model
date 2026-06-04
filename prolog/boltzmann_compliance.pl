@@ -459,7 +459,7 @@ coordination_type_to_offset_param(global_infrastructure,   complexity_offset_glo
 %  never run and the catch-all matches every constraint (bound-probe
 %  bypasses clause-order). This made structural_purity/2 unconditionally
 %  `inconclusive` for the whole corpus until 2026-06-03; see
-%  docs/audits/purity_audit_20260603.md §2. Bound-`true` calls are safe
+%  audits/2026-06-03_purity/purity_audit_20260603.md §2. Bound-`true` calls are safe
 %  (clause-1 failure falls through to no solution, not a wrong one).
 epistemic_access_check(C, true) :-
     config:param(boltzmann_min_classifications, MinN),

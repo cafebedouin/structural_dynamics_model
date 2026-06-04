@@ -9,7 +9,7 @@ Performs a 5-step structural audit of the false_ci_rope signature population:
   5. Candidate subcategory identification
 
 Reads:  outputs/enriched_pipeline.json
-Writes: docs/false_ci_rope_audit.md
+Writes: outputs/false_ci_rope_audit.md (archived copy: audits/2026-02-23_false_ci_rope/)
         outputs/false_ci_rope_audit_data.json
 
 Usage:  python3 python/false_ci_rope_audit.py
@@ -34,7 +34,7 @@ from shared.schemas import validate_enriched_pipeline
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = ROOT_DIR / "docs"
-REPORT_PATH = DOCS_DIR / "false_ci_rope_audit.md"
+REPORT_PATH = OUTPUT_DIR / "false_ci_rope_audit.md"  # workspace; archived copy: audits/2026-02-23_false_ci_rope/
 DATA_PATH = OUTPUT_DIR / "false_ci_rope_audit_data.json"
 
 # The 4 available Tier 1 binary gates.

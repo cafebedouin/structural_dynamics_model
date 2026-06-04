@@ -167,7 +167,7 @@ the diagnosis.
 
 ## What changed this session (verify live)
 
-**The wiring-gap census ran to completion.** `outputs/wiring_gap_census.md`: 27 gaps across
+**The wiring-gap census ran to completion.** `audits/2026-05-31_wiring_gap_census/wiring_gap_census.md`: 27 gaps across
 prompt↔schema↔engine, classified by type (G1 demand-no-consumer, G2 consume-never-authored,
 G3 compute-no-consumer, G4 rule-no-enforcer, G5 scalar-vs-temporal, G6 fabricated-default),
 with a forced reconciliation count (unaccounted = 0), a cross-axis-live subset, and a raw-
@@ -416,7 +416,7 @@ generator and the other the engine.
 
 ## Pointers
 
-`outputs/wiring_gap_census.md` (27 gaps, G1–G6, reconciliation=0) ·
+`audits/2026-05-31_wiring_gap_census/wiring_gap_census.md` (27 gaps, G1–G6, reconciliation=0) ·
 `outputs/wiring_gap_adjudication_prep.md` (8 decisions, blank ruling sheet) ·
 `outputs/tripwire_row26_results.json` (G6 family, all NEUTRAL/LIVE-COSMETIC) ·
 `ISSUES.md` OQ-35–44 (census-routed) + OQ-45 (404 NL content audit, opened) + OQ-46

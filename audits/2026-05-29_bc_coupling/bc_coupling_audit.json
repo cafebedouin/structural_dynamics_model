@@ -1,0 +1,432 @@
+{
+  "pass1": {
+    "per_slice": {
+      "U_4": {
+        "key": [
+          "analytical",
+          "civilizational",
+          "analytical",
+          "universal"
+        ],
+        "n_extractive": 18,
+        "n_extractive_edges": 1,
+        "degenerate": true,
+        "extractive_homophily": 0.037037037037037035,
+        "n_components": 17,
+        "lcc_size": 2,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_3_imm": {
+        "key": [
+          "institutional",
+          "immediate",
+          "arbitrage",
+          "global"
+        ],
+        "n_extractive": 53,
+        "n_extractive_edges": 11,
+        "degenerate": false,
+        "extractive_homophily": 0.9811507936507936,
+        "n_components": 45,
+        "lcc_size": 3,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_3_civ": {
+        "key": [
+          "institutional",
+          "civilizational",
+          "arbitrage",
+          "global"
+        ],
+        "n_extractive": 9,
+        "n_extractive_edges": 1,
+        "degenerate": true,
+        "extractive_homophily": 0.04,
+        "n_components": 8,
+        "lcc_size": 2,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_1": {
+        "key": [
+          "powerless",
+          "biographical",
+          "trapped",
+          "global"
+        ],
+        "n_extractive": 41,
+        "n_extractive_edges": 15,
+        "degenerate": true,
+        "extractive_homophily": 0.9983471074380166,
+        "n_components": 29,
+        "lcc_size": 3,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_2": {
+        "key": [
+          "moderate",
+          "biographical",
+          "constrained",
+          "national"
+        ],
+        "n_extractive": 72,
+        "n_extractive_edges": 24,
+        "degenerate": false,
+        "extractive_homophily": 0.9971098265895953,
+        "n_components": 53,
+        "lcc_size": 3,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "organized": {
+        "key": [
+          "organized",
+          "generational",
+          "constrained",
+          "global"
+        ],
+        "n_extractive": 17,
+        "n_extractive_edges": 1,
+        "degenerate": true,
+        "extractive_homophily": 0.1711229946524064,
+        "n_components": 16,
+        "lcc_size": 2,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_1_nat": {
+        "key": [
+          "powerless",
+          "biographical",
+          "trapped",
+          "national"
+        ],
+        "n_extractive": 60,
+        "n_extractive_edges": 26,
+        "degenerate": false,
+        "extractive_homophily": 1.0,
+        "n_components": 40,
+        "lcc_size": 4,
+        "avg_path_length": 1.3333333333333333,
+        "path_length_method": "exact"
+      },
+      "U_4_glob": {
+        "key": [
+          "analytical",
+          "civilizational",
+          "analytical",
+          "global"
+        ],
+        "n_extractive": 13,
+        "n_extractive_edges": 2,
+        "degenerate": true,
+        "extractive_homophily": 0.5405405405405406,
+        "n_components": 11,
+        "lcc_size": 2,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "org_nat": {
+        "key": [
+          "organized",
+          "generational",
+          "constrained",
+          "national"
+        ],
+        "n_extractive": 15,
+        "n_extractive_edges": 1,
+        "degenerate": true,
+        "extractive_homophily": 0.4015151515151515,
+        "n_components": 14,
+        "lcc_size": 2,
+        "avg_path_length": 1.0,
+        "path_length_method": "exact"
+      },
+      "U_3_nat": {
+        "key": [
+          "institutional",
+          "immediate",
+          "arbitrage",
+          "national"
+        ],
+        "n_extractive": 58,
+        "n_extractive_edges": 18,
+        "degenerate": false,
+        "extractive_homophily": 0.994413407821229,
+        "n_components": 42,
+        "lcc_size": 4,
+        "avg_path_length": 1.3333333333333333,
+        "path_length_method": "exact"
+      }
+    },
+    "variation": {
+      "homophily_range": 0.018849206349206393,
+      "n_components_cv": 0.12701057925542406,
+      "avg_path_length_range": 0.33333333333333326
+    },
+    "verdicts": {
+      "homophily": "tight",
+      "n_components": "tight",
+      "avg_path_length": "tight"
+    },
+    "degenerate_slices": [
+      "U_4",
+      "U_3_civ",
+      "U_1",
+      "organized",
+      "U_4_glob",
+      "org_nat"
+    ],
+    "coupling_exists": false
+  },
+  "pass2": {
+    "forward_correlation": 0.5296408977028497,
+    "forward_pvalue": 0.2798259481884628,
+    "reverse_correlation": 0.090090316348503,
+    "reverse_pvalue": 0.5561721161115676,
+    "sensitivity": {
+      "hamming": {
+        "forward_corr": 0.5296408977028497,
+        "forward_pval": 0.2798259481884628
+      },
+      "weighted": {
+        "forward_corr": 0.5296408977028497,
+        "forward_pval": 0.2798259481884628
+      },
+      "learned": {
+        "forward_corr": 0.13522468075656266,
+        "forward_pval": 0.7983993188035018
+      }
+    },
+    "confound_diagnostic": {
+      "structural_vs_classification_similarity_corr": 0.12069906597040012,
+      "note": "High value means structural-profile similarity and classification agreement move together, partially inflating the reverse direction."
+    },
+    "asymmetry_verdict": "forward_dominant"
+  },
+  "pass3": {
+    "mountain": {
+      "per_slice": {
+        "U_4": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 4,
+          "n_components": 4,
+          "lcc_size": 1,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_3_imm": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_3_civ": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_1": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_2": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "organized": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_1_nat": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_4_glob": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "org_nat": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        },
+        "U_3_nat": {
+          "n_extractive": 0,
+          "extractive_homophily": null,
+          "n_active": 0,
+          "n_components": 0,
+          "lcc_size": 0,
+          "avg_path_length": null,
+          "path_length_method": "none"
+        }
+      },
+      "never_extractive": true,
+      "coverage_dominant": true,
+      "coverage_concentration": 1.0,
+      "n_adequate_slices": 0,
+      "cv_n_components": null,
+      "cv_avg_path_length": null,
+      "cv_combined": null
+    },
+    "extractive": {
+      "per_slice": {
+        "U_4": {
+          "n_active": 18,
+          "n_components": 17,
+          "lcc_size": 2,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 18
+        },
+        "U_3_imm": {
+          "n_active": 53,
+          "n_components": 45,
+          "lcc_size": 3,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 53
+        },
+        "U_3_civ": {
+          "n_active": 9,
+          "n_components": 8,
+          "lcc_size": 2,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 9
+        },
+        "U_1": {
+          "n_active": 41,
+          "n_components": 29,
+          "lcc_size": 3,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 41
+        },
+        "U_2": {
+          "n_active": 71,
+          "n_components": 52,
+          "lcc_size": 3,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 71
+        },
+        "organized": {
+          "n_active": 17,
+          "n_components": 16,
+          "lcc_size": 2,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 17
+        },
+        "U_1_nat": {
+          "n_active": 59,
+          "n_components": 39,
+          "lcc_size": 4,
+          "avg_path_length": 1.3333333333333333,
+          "path_length_method": "exact",
+          "n_extractive": 59
+        },
+        "U_4_glob": {
+          "n_active": 13,
+          "n_components": 11,
+          "lcc_size": 2,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 13
+        },
+        "org_nat": {
+          "n_active": 15,
+          "n_components": 14,
+          "lcc_size": 2,
+          "avg_path_length": 1.0,
+          "path_length_method": "exact",
+          "n_extractive": 15
+        },
+        "U_3_nat": {
+          "n_active": 57,
+          "n_components": 41,
+          "lcc_size": 4,
+          "avg_path_length": 1.3333333333333333,
+          "path_length_method": "exact",
+          "n_extractive": 57
+        }
+      },
+      "cv_n_components": 0.5876733426901153,
+      "cv_avg_path_length": 0.13176156917368245,
+      "cv_combined": 0.35971745593189886
+    },
+    "metric1_verdict": "indeterminate_design_consistent",
+    "ratio": null,
+    "verdict": "coverage_artifact_indeterminate",
+    "primary_evidence_metrics": [
+      "n_components",
+      "avg_path_length"
+    ],
+    "note": "Metric 1 (homophily) for mountains is ambiguous: consistent with decoupling hypothesis AND Axiom 3 apparatus design \u2014 cannot distinguish readings from this metric alone. Metrics 2 & 3 are the cleaner test."
+  },
+  "pass4": {
+    "combined": "coupling_hypothesis_fails",
+    "paper2_framing": "Structural properties approximately observer-invariant. Coupling reading not supported. Paper 2 spine requires different empirical grounding.",
+    "inputs": {
+      "c1": false,
+      "asymmetry": "forward_dominant",
+      "decoupling": "coverage_artifact_indeterminate"
+    }
+  },
+  "verdicts": {
+    "coupling_exists": false,
+    "asymmetry": "forward_dominant",
+    "decoupled_mountains": "coverage_artifact_indeterminate",
+    "combined": "coupling_hypothesis_fails"
+  },
+  "methodological_notes": {
+    "homophily_metric": "edge_centric_EE_over_EE_plus_EN",
+    "ptes_distance_default": "unweighted_hamming",
+    "reverse_direction": "structural_profile_neighbor_extractive_fraction",
+    "degenerate_threshold": "n_extractive_lt_50",
+    "mountain_subset_size": 425,
+    "extractive_subset_size": 2884,
+    "slice_family": "idea_site_10_working_slices"
+  }
+}

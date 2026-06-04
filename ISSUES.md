@@ -346,7 +346,7 @@ grep finds zero live references in `prolog/ python/ agent/` (archives excluded) 
 `config_schema.pl`. Are they safe to remove?
 
 **Evidence so far:** Audit confirmed both are unreferenced in executable `.pl` code
-(`audit_data/config_params_unused.txt`). They are non-numeric atoms, invisible to the
+(`audits/2026-02-28_codebase_audit_data/config_params_unused.txt`). They are non-numeric atoms, invisible to the
 ±25% sensitivity sweep by construction. 38 other unused params are in `config_schema.pl`
 (documentation-only); these two are not even there. Audit verdict: "Confirmed removable."
 Removal requires coordinating `config.pl` and `config_schema.pl`; no Python scripts
@@ -1316,7 +1316,7 @@ Tripwire run: `BaseEps=0.5` → `999.9` and `Supp=0` → `999.9` in `classify_at
 produced **0 changes** across 191 classified constraints. Same mechanism as D2 — the 32
 affected testsets are contradiction stubs, excluded by `all_corpus_constraints/1`.
 
-Audit writeup: `outputs/audit_authoring_closure_fabricated_defaults.md`
+Audit writeup: `audits/2026-05-30_authoring_closure_fabricated_defaults/audit_authoring_closure_fabricated_defaults.md`
 
 ### Resolution options (design decision — no verdict asserted here)
 
@@ -1476,7 +1476,7 @@ See `docs/technical/build_discipline.md` § Estimator-classifier independence.
 
 ## Wiring-Gap Census stubs (OQ-35 – OQ-42) — opened 2026-05-31
 
-Source: `outputs/wiring_gap_census.md` (read-only census; git HEAD `220739b8`, live corpus
+Source: `audits/2026-05-31_wiring_gap_census/wiring_gap_census.md` (read-only census; git HEAD `220739b8`, live corpus
 226 / archive 3380). The census **characterizes** every prompt↔schema↔engine disagreement and
 **routes** each for adjudication — it resolves none. Stubs below are grouped by adjudication
 decision; the row references map all 27 census rows so nothing is unrouted.
@@ -2759,7 +2759,7 @@ committed corpus (803 testsets @`90bb5a6b`, 189 multi-reading kernels, 615 withi
 **53.7% key_fragile / 39.5% robustly_binocular / 6.8% robustly_undersampled** (distribution stable if
 the 256 in-flight uncommitted testsets are included: 40.9/52.0/7.2). Finding: the alignment seat
 governs the binocular/undersampled verdict for a *majority* of reading-pairs — the cyclopean seat
-operates corpus-wide, not just on westphalian. Results: `outputs/reading_diff_census.md` + `.tsv`.
+operates corpus-wide, not just on westphalian. Results: `audits/2026-06-03_reading_diff_census/reading_diff_census.md` + `.tsv`.
 **#4 axiom-level diff DONE (2026-06-03):** `prolog/axiom_diff.pl` lifts the partition to the cs_axiom
 layer (value compared = grounding; status is name-global so can't vary). **Sharpened-seat finding:**
 **0 of 935 within-kernel reading-pairs share even one axiom NAME** — every reading authors bespoke
@@ -2790,14 +2790,14 @@ if those readings are regenerated, NOT a disposition question. Quarantine: `prol
 **Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
 
 **Status:** open — (log-only by ruling — do NOT fix in auto; see "What resolution changes")
-**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §3, K5).
+**Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §3, K5).
 **Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
 (`scope_invariance_test` — `variant([])` case; `compute_cross_index_coupling` — `GridSize < 2 ->
 CouplingScore = 0.0`), `purity_scoring.pl:41-50` (final clamp).
 
 **Specific question:** A constraint holding *nothing but* the 3 classification facts needed to pass
 `epistemic_access_check` scores `purity_score = 1.0 → pristine` (witnessed,
-`outputs/purity_audit_20260603/census_control.tsv`). Three stacked mechanisms: (1)
+`audits/2026-06-03_purity/census_control.tsv`). Three stacked mechanisms: (1)
 `scope_invariance_test` returns `variant([])` when `classify_at_context` fails at every test scope,
 and the SI formula `1-(N-1)·0.25` yields **1.25** — out of range, then concealed by the final
 `min(1.0,…)` clamp; (2) `cross_index_coupling` is total — "not enough data points" returns coupling
@@ -2827,7 +2827,7 @@ applies: a surprising-*clean* reading on a sparse-data story is suspect-by-const
 **Ω-type:** Ω_C (conceptual/design — three operator rulings, none resolvable from code).
 
 **Status:** open — awaiting operator ruling on three linked questions
-**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §6, K1/K2/K7).
+**Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §6, K1/K2/K7).
 **Files:** `json_report.pl:1244,1267-1273` (producers), `network_dynamics.pl:197-255`
 (`network_stability_assessment`, `ep_base_severity`), `config.pl:483`
 (`network_cascade_count_threshold=3`), `enhanced_report.py:262` (header render).
@@ -2845,7 +2845,7 @@ case), keep the raw bands, or both? (3) **Denominator:** purity_summary silently
 constraints (sums 1104 of 1106; M=2 today) — should it emit `no_access: M` alongside the bands?
 
 **Evidence so far:** Runtime witnesses in the audit doc §6; raw data
-`outputs/purity_audit_20260603/` (census.tsv joined to pipeline per_constraint for the type
+`audits/2026-06-03_purity/` (census.tsv joined to pipeline per_constraint for the type
 cross-tab). Contaminated fraction stable across corpus growth (~68.8% at N≈770, 68.2% at N=1104) —
 consistent with structural property of scoring-on-this-composition, not story drift.
 
@@ -2862,7 +2862,7 @@ text/aggregation only — no classification path is touched.
 
 **Status:** open — do NOT auto-unify (choice of which range wins is the units-fork resurfacing as
 an implementation decision)
-**Origin:** Purity audit 2026-06-03 (`docs/audits/purity_audit_20260603.md` §4, K4/K6).
+**Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §4, K4/K6).
 **Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
 at .80/.60/.40/.20), `logical_fingerprint.pl:605-611` (`purity_zone`:
 pristine/sound/borderline/contaminated/degraded at .9/.7/.5/.3 — matches canonical spec
@@ -3222,9 +3222,9 @@ canonical χ).
 **Status:** open — mechanism witnessed end-to-end; remediation lever is a design ruling (see below)
 **Origin:** 2026-06-04 session: "is the ~95% disguise-signature dominance substantive or a
 generator artifact?" (older-evaluation question re-examined on the live corpus). Probes 0–5;
-raw artifacts: `outputs/fnl_probe0_file_constraint_map.json`,
-`outputs/fnl_probe0_reconciliation.json`, `outputs/fnl_probe1_attribution.{pl,jsonl}`,
-`outputs/fnl_probe2_counterfactual.{pl,jsonl}`, `outputs/fnl_probe3_coupling_by_band.json`.
+raw artifacts: `audits/2026-06-04_fnl_bait_confound/fnl_probe0_file_constraint_map.json`,
+`audits/2026-06-04_fnl_bait_confound/fnl_probe0_reconciliation.json`, `audits/2026-06-04_fnl_bait_confound/fnl_probe1_attribution.{pl,jsonl}`,
+`audits/2026-06-04_fnl_bait_confound/fnl_probe2_counterfactual.{pl,jsonl}`, `audits/2026-06-04_fnl_bait_confound/fnl_probe3_coupling_by_band.json`.
 
 **Specific question:** FNL (827/1106 readings) is supposed to detect constraints that *claim
 naturality* and fail Boltzmann independence. All 827 firings ride `claimed_natural/2` source 2

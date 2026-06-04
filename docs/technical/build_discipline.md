@@ -176,6 +176,16 @@ touches that file**, where the editor is already in context and the fix is free.
 *is* the filing; there is no tracking row to reconcile later. The stale-comment instance above is
 filed exactly this way: fix on the next edit of `generate_constraint_pl.py`, not as a standing item.
 
+**Standing canonical location — audits.** The audit corpus was itself a Pattern-2 instance at
+directory scale: writeups in `docs/`, one in `docs/audits/`, one in `docs/technical/`, findings in
+gitignored `outputs/`, self-contained packages at root (`audit/`, `audit_data/`, `audit_proposal/`,
+`phase1/`), plus two true forks (the scaffold-piton writeup in `docs/` vs `python/docs/`; the
+repo-reorg proposal in `audit_proposal/` vs `audit/agy/`). Consolidated 2026-06-04. **Mandate:
+every audit lives in `audits/<YYYY-MM-DD>_<slug>/` — one subdirectory per audit, writeup +
+evidence artifacts together.** `outputs/` stays the scripts' regenerable workspace; `audits/` is
+the versioned archive; scripts stay in `python/audits/`. A writeup left in `docs/` or findings
+left only in `outputs/` re-open this pattern. Conventions: `audits/README.md`.
+
 ---
 
 ## Pattern 3 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)

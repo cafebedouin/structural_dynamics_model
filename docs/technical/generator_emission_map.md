@@ -87,7 +87,7 @@ mis-listed AC/resistance as "emitted but never read."
 
 ## See also
 
-- `outputs/wiring_gap_census.md` + ISSUES.md **OQ-35–OQ-44** — the prompt↔schema↔engine
+- `audits/2026-05-31_wiring_gap_census/wiring_gap_census.md` + ISSUES.md **OQ-35–OQ-44** — the prompt↔schema↔engine
   disagreement census this map was extracted from.
 - `docs/technical/build_discipline.md` Patterns 4 (fabricated default) & 5 (absence satisfies the
   gate) — what goes wrong *downstream* of a field read but never populated.

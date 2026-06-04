@@ -984,7 +984,7 @@ structural_purity(C, inconclusive) :-
     % unify with false, so its guard+cut never ran), making this clause fire for EVERY
     % constraint and the four purity tests below unreachable. Call with an unbound
     % variable so clause order dispatches, then test the result.
-    % Witness: docs/audits/purity_audit_20260603.md §2.
+    % Witness: audits/2026-06-03_purity/purity_audit_20260603.md §2.
     epistemic_access_check(C, Access),
     Access == false, !.
 
@@ -1113,7 +1113,7 @@ false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
     ),
 
     % Collect zero-excess exemption status as diagnostic evidence (not a gate).
-    % Floor overrides must not suppress FCR certification. See blocking_gate_audit_20260414.md.
+    % Floor overrides must not suppress FCR certification. See audits/2026-04-14_blocking_gate/blocking_gate_audit_20260414.md.
     % The exemption condition is preserved as a flag for the MaxEnt classifier.
     (   zero_excess_coupling_only(ExcessExtraction, FailedTests)
     ->  ZeroExcessFlag = zero_excess_exemption_present

@@ -3,7 +3,7 @@
 **Status:** Complete. Phase 2 (patterns) and Phase 3 (concepts) produced in parallel.  
 **Date:** 2026-05-14  
 **Scope anchor:** `docs/recon_2_scope_v2.md`, execution prompt Recon-2 Engine Drift Audit  
-**Prior audit:** `docs/logic_divergence_audit.md` (recon-1, Feb + Mar 2026)
+**Prior audit:** `audits/2026-03-07_logic_divergence/logic_divergence_audit.md` (recon-1, Feb + Mar 2026)
 
 ---
 

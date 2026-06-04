@@ -502,6 +502,14 @@ exactly what will be run and what would constitute each verdict. Execution runs 
 and saves raw output. Writeup analyzes from evidence only — never from documentation
 restated as findings. See `docs/project_orientation.md` §8.1 for detail.
 
+**Audit location mandate (2026-06-04): every audit lives in `audits/<YYYY-MM-DD>_<slug>/`
+— one subdirectory per audit, holding the writeup AND its evidence artifacts together.**
+Do not put audit writeups in `docs/` and do not leave findings only in `outputs/`
+(gitignored = unversioned, gone on a fresh clone). `outputs/` remains the scripts' live
+workspace — audit scripts stay in `python/audits/` and keep writing there; when the audit
+completes, its writeup + evidence move into the dated `audits/` subdirectory. Date = the
+audit's execution date. Conventions and the consolidation map: `audits/README.md`.
+
 ## Cross-Sibling Disambiguation (standard practice)
 
 When a per-item call about an authored field is ambiguous in one file (agent vs vindicated

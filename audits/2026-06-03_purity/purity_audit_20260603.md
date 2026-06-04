@@ -8,7 +8,7 @@ that surprising readings can be partitioned into instrument artifact vs. genuine
 `distinct_constraint_ids=1106`; ID snapshot `/tmp/purity_audit/corpus_ids.txt`). Pipeline manifest:
 `pipeline_run_at=2026-06-03T16:10:13Z`, `code_commit_short=669eab5`, `code_dirty=True`,
 `n_constraints=1106`. All censuses/cross-tabs below ran over this exact ID list. Raw artifacts:
-`outputs/purity_audit_20260603/` (census.tsv, fixed_structural.tsv, fpn_scan.tsv, controls, probe
+`audits/2026-06-03_purity/` (census.tsv, fixed_structural.tsv, fpn_scan.tsv, controls, probe
 scripts, pinned ID list — 12 files).
 
 **Verdict vocabulary:** CORRECT / DEFECT(sign, target) / DESIGN-AMBIGUOUS(ruling needed) /

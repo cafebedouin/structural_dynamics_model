@@ -827,8 +827,8 @@ The methodological implication: any future structural (non-perspectival) classif
 
 | Document | Path |
 | :--- | :--- |
-| false_ci_rope audit | `docs/false_ci_rope_audit.md` |
-| Scaffold/piton gate audit | `docs/scaffold_piton_gate_audit.md` |
+| false_ci_rope audit | `audits/2026-02-23_false_ci_rope/false_ci_rope_audit.md` |
+| Scaffold/piton gate audit | `audits/2026-02-23_scaffold_piton_gate/scaffold_piton_gate_audit.md` |
 | Coordination vitality diagnostic | `docs/coordination_vitality_diagnostic.md` |
 | This document | `docs/piton_scaffold_diagnostic_arc.md` |
 

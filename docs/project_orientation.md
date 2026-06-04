@@ -268,25 +268,25 @@ The project's papers form a coherent trajectory. Listed in intellectual-developm
 
 **Summary:** Evidence document for two audit passes on a 10-slice working family. First finding (BC coupling): observer specification and structural variation are coupled, forward-asymmetric (Spearman ρ = 0.350 forward, p = 0.037; ρ = −0.121 reverse, n.s.), and geometry-driven (replacing ordinal PTES distance with empirical classification disagreement collapses ρ to 0.010). Second finding (position-geometry metric sensitivity): axis dominance is metric-specific. T leads under extractive fraction (Metric A only); E leads under type entropy, total variation, cover-story flip rate (Metrics B, D, E); S leads under mountain-fraction negative control (Metric C). Cross-metric agreement is weak (ρ range 0.09–0.43, one negative). Three §7 reconciliation pointers, partially closed by subsequent audits.
 
-**Audit data:** `outputs/bc_coupling_audit.{md,json}`, `outputs/position_geometry_metric_sensitivity.{md,json}`.
+**Audit data:** `audits/2026-05-29_bc_coupling/bc_coupling_audit.{md,json}`, `outputs/position_geometry_metric_sensitivity.{md,json}`.
 
 **Status:** Evidence document; not superseded. §4.4 of the paper summarizes the metric audit refinements as in-place updates.
 
 ---
 
-### 5.9 Metric Audit (`outputs/metric_audit_writeup.md`)
+### 5.9 Metric Audit (`audits/2026-05-08_metric_two_hub/metric_audit_writeup.md`)
 
 **Full title:** *When T Isn't the Boundary: Implementation Structure and Position-Space Geometry in the Deferential Realism Apparatus*
 
 **Summary:** Three audits operationalize the two-hub functional decomposition. Audit 1: E-weighted Hamming produces no measurable advantage over unweighted Hamming (all differences < 0.05). Audit 2: Hub 2 dominates Hub 1 under 4/5 structural metrics (hub2 partial ρ exceeds hub1 by ≥ 0.10 under Metrics A, B, D, E); hubs are statistically independent predictors (ρ = −0.088). Audit 3: T-dominance under Metric A concentrates in Hub-2-internal pairs (T partial ρ = 0.577 internal, 0.147 spanning) — it is a within-rope-group T effect (T partial ρ = 0.762 in E-fixed n=36 cell), not a Hub-2-boundary effect. Code-paper discrepancy in v6.11 Axiom 2: d should be d(P, E) (not d(P)) and σ should be σ(S) (not σ(S(P))); correction applied across 8 locations in v6.11.
 
-**Source:** `outputs/metric_audit_writeup.md`, `outputs/metric_audit_results.{md,json}`, `outputs/audit3_te_robustness.{md,json}`, `python/metric_audit.py`.
+**Source:** `audits/2026-05-08_metric_two_hub/metric_audit_writeup.md`, `audits/2026-05-08_metric_two_hub/metric_audit_results.{md,json}`, `audits/2026-05-17_audit3_profile_accumulation/audit3_te_robustness.{md,json}`, `python/metric_audit.py`.
 
 **Status:** Complete. Findings incorporated into `coupling_structure_evidence.md` §4.4 and into `when_apparatus_sharpens_taxonomy.md`.
 
 ---
 
-### 5.10 Sheaf Audit (`outputs/sheaf_audit_writeup.md`)
+### 5.10 Sheaf Audit (`audits/2026-05-08_sheaf/sheaf_audit_writeup.md`)
 
 **Full title:** *When the Site Changes the Boundary: Scope Modifier Mechanics and the Limits of Site-Stability*
 
@@ -294,7 +294,7 @@ The project's papers form a coherent trajectory. Listed in intellectual-developm
 
 The claim is not falsified: the canonical-to-product result stands. The qualification: site-stability holds *only on sites respecting the scope design constraint* (σ ≥ σ(global) at the analytical observer position). The product site's `site_contexts_product/1` already excluded universal scope for this reason; the exclusion was undocumented until the sheaf audit.
 
-**Source:** `outputs/sheaf_audit_writeup.md`, `outputs/sheaf_audit_results.{md,json}`, `python/sheaf_audit.py`.
+**Source:** `audits/2026-05-08_sheaf/sheaf_audit_writeup.md`, `audits/2026-05-08_sheaf/sheaf_audit_results.{md,json}`, `python/sheaf_audit.py`.
 
 **Status:** Complete. Findings incorporated into `when_apparatus_sharpens_taxonomy.md` §5.
 
@@ -344,7 +344,7 @@ The following findings are established by the audit chain. Each is anchored to i
 
 **Claim:** Hub 2 (T, E → discrete mountain/rope immutability) captures more between-slice structural variance than Hub 1 (P, S → χ via sigmoid) under 4/5 structural-distance metrics. Hub-level predictors are statistically independent (ρ = −0.088).
 
-**Source:** `outputs/metric_audit_writeup.md` Audit 2. Hub2 partial ρ exceeds Hub1 by ≥ 0.10 under Metrics A, B, D, E. The exception is Metric C (mountain-fraction negative control, where Hub 1 leads slightly).
+**Source:** `audits/2026-05-08_metric_two_hub/metric_audit_writeup.md` Audit 2. Hub2 partial ρ exceeds Hub1 by ≥ 0.10 under Metrics A, B, D, E. The exception is Metric C (mountain-fraction negative control, where Hub 1 leads slightly).
 
 **Code anchors:**
 - Hub 1: `prolog/constraint_indexing.pl:513` (`extractiveness_for_agent/3`), calling `derive_directionality/3` at line 400
@@ -354,7 +354,7 @@ The following findings are established by the audit chain. Each is anchored to i
 
 **Claim:** T-axis dominance under extractive fraction (Metric A) concentrates in pairs where Hub 2 returns the same output (both rope). T partial ρ = 0.577 in internal pairs (n=112 of 253), 0.147 in spanning pairs. Under E-fixed restriction: T partial ρ = 0.762 (n=36).
 
-**Source:** `outputs/metric_audit_writeup.md` Audit 3; `outputs/audit3_te_robustness.{md,json}`.
+**Source:** `audits/2026-05-08_metric_two_hub/metric_audit_writeup.md` Audit 3; `audits/2026-05-17_audit3_profile_accumulation/audit3_te_robustness.{md,json}`.
 
 **Implication:** The prior "T-dominance" label is metric-specific to extractive fraction and does not generalize. The mechanism is variation in Hub 1's χ output across time-horizon values within the rope-immutability regime — T modulates extraction magnitude within rope, not the mountain/rope boundary itself.
 
@@ -362,7 +362,7 @@ The following findings are established by the audit chain. Each is anchored to i
 
 **Claim:** v6.11's Axiom 2 formula χ = ε × f(d(P)) × σ(S(P)) contained two notation errors. In the structural derivation path, d depends on both P and E (via `power_role_heuristic` plus `exit_modulation`), making the correct notation d(P, E). σ is a function of S read directly from context, independent of P; the correct notation is σ(S), not σ(S(P)).
 
-**Source:** `outputs/metric_audit_writeup.md`; surfaced from audit of `prolog/constraint_indexing.pl:381–406`.
+**Source:** `audits/2026-05-08_metric_two_hub/metric_audit_writeup.md`; surfaced from audit of `prolog/constraint_indexing.pl:381–406`.
 
 **Resolution:** Corrected in v6.11 across 8 locations. The canonical fallback path (no structural data) does have d = d(P) only; the notation drift affected the general formula.
 
@@ -370,7 +370,7 @@ The following findings are established by the audit chain. Each is anchored to i
 
 **Claim:** On the 10-slice Tier-1 working family, PTES distance between observer slices predicts structural distance (forward Spearman ρ = 0.350, p = 0.037). Structural-profile similarity does not predict classification agreement (reverse ρ = −0.121, n.s.). Replacing ordinal PTES distance with empirical classification disagreement collapses the forward correlation to ρ = 0.010 — the coupling is position-space geometry, not classification labels.
 
-**Source:** `coupling_structure_evidence.md` §3; `outputs/bc_coupling_audit.{md,json}`; `python/bc_coupling_audit.py`.
+**Source:** `coupling_structure_evidence.md` §3; `audits/2026-05-29_bc_coupling/bc_coupling_audit.{md,json}`; `python/bc_coupling_audit.py`.
 
 ### 6.7 Axis Dominance Is Metric-Specific
 
@@ -384,7 +384,7 @@ The following findings are established by the audit chain. Each is anchored to i
 
 **Qualification:** The canonical-to-product binary stability result is not falsified. The site-stability claim holds when σ ≥ σ(global) at the analytical observer position. Sites including universal scope at the analytical position produce systematic crossings.
 
-**Source:** `outputs/sheaf_audit_writeup.md`; `outputs/sheaf_audit_results.{md,json}`; `python/sheaf_audit.py`.
+**Source:** `audits/2026-05-08_sheaf/sheaf_audit_writeup.md`; `audits/2026-05-08_sheaf/sheaf_audit_results.{md,json}`; `python/sheaf_audit.py`.
 
 ### 6.9 Construct Distinction: Within-Block Hierarchy vs. Between-Slice Hub Decomposition
 
@@ -431,7 +431,7 @@ The following items are open as of 2026-05-09. "Open" means not resolved by any 
 
 The 10-slice working family's canonical U₃ = (institutional, generational, arbitrage, national) is absent; the family has U_3_imm (immediate) and U_3_civ (civilizational) as nearest analogs. Running the BC coupling and metric-sensitivity audits on a slice family containing the canonical 4 points as a subset would let audit results compose cleanly with the framework's canonical-site numbers.
 
-**Source:** `coupling_structure_evidence.md` §7 first pointer; `outputs/sheaf_audit_writeup.md` remaining open items.
+**Source:** `coupling_structure_evidence.md` §7 first pointer; `audits/2026-05-08_sheaf/sheaf_audit_writeup.md` remaining open items.
 
 ### 8.2 Third §7 Reconciliation Pointer: Within-Block Analysis on 10-Slice Family
 
@@ -443,13 +443,13 @@ v6.11's P > E ≈ S > T hierarchy comes from within-block analysis on the 156-co
 
 The sheaf audit's Arakelov sub-question (Q3) is deferred. Computing fragile/genuine sub-partition for 10-slice contexts requires MaxEnt distributions at those contexts. `arakelov_height.pl` uses `maxent_distribution_raw/3`, populated at pipeline-time for `site_contexts/1` contexts only. Adding `site_contexts_ten_slice/1` and re-running the pipeline would unlock this; estimated ~30-minute infrastructure task per the sheaf audit writeup.
 
-**Source:** `outputs/sheaf_audit_writeup.md` §8.
+**Source:** `audits/2026-05-08_sheaf/sheaf_audit_writeup.md` §8.
 
 ### 8.4 Fragile-Presheaf χ-Distribution Check on 1,569 Tangled-Rope Crossings
 
 The 1,569 `tangled_rope` constraints that cross from sheaf to presheaf under the 10-slice family's U_4 universal-scope context are candidates for inspection: do they show a distinctive χ-distribution at the analytical position that distinguishes them from the 2,245-constraint `tangled_rope` population at large? This check was proposed in the context of the sheaf audit but has not been run.
 
-**Source:** Derived from `outputs/sheaf_audit_writeup.md` §6 type-breakdown finding.
+**Source:** Derived from `audits/2026-05-08_sheaf/sheaf_audit_writeup.md` §6 type-breakdown finding.
 
 ### 8.5 Two Unimplemented Engine Extensions
 
@@ -471,7 +471,7 @@ Neither adds new findings; both harden the apparatus against rediscovering what 
 
 ### 9.1 Audit-Pass Structure
 
-Completed audit passes follow: **recon** (establish what data exists, what questions are answerable) → **proposal** (state exactly what will be run and what would constitute each verdict) → **execution** (run scripts, save raw output) → **writeup** (analyze from evidence, not documentation). The recon and proposal stages are preserved in `outputs/` (e.g., `outputs/metric_audit_recon.md`, `outputs/metric_audit_proposal.md`, `outputs/sheaf_audit_recon.md`).
+Completed audit passes follow: **recon** (establish what data exists, what questions are answerable) → **proposal** (state exactly what will be run and what would constitute each verdict) → **execution** (run scripts, save raw output) → **writeup** (analyze from evidence, not documentation). The recon and proposal stages are preserved in `outputs/` (e.g., `audits/2026-05-08_metric_two_hub/metric_audit_recon.md`, `audits/2026-05-08_metric_two_hub/metric_audit_proposal.md`, `audits/2026-05-08_sheaf/sheaf_audit_recon.md`).
 
 Epistemic discipline: every finding cites tool output or code inspection. Docs claims verified independently; unverifiable claims marked. Findings that merely confirm documentation are low-value; contradictions and extensions get detailed treatment.
 
@@ -496,7 +496,7 @@ The following files in `docs/` were not listed in the task brief and may be rele
 **Active documents:**
 - `docs/two_hub_architecture.md` — Implementation-level explanation of the hub decomposition; includes the classical oracle test (8/790 constraints with H¹ > 0 show high MaxEnt divergence; 100% correlation between probabilistic divergence and cohomological obstruction). Canonical reference for the Hub 1 / Hub 2 architectural description.
 - `docs/logic.md` — Formal classification rules and thresholds. UTF-8 encoding was repaired in Feb 2026 (prior versions had mojibake from double-encoded characters). This is the formal spec document; `config.pl` should match it.
-- `docs/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
+- `audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
 - `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v5.md` and `when_consensus_isnt_coherence.md`.
 - `docs/observers_not_humans_v2.md` through `v4.md` — Superseded by v5.
 
@@ -505,7 +505,7 @@ The following files in `docs/` were not listed in the task brief and may be rele
 - Many `deferential_realism_paper_v*.md` files — Prior framework versions; v6.11 supersedes all.
 
 **Audit infrastructure docs** in `docs/`:
-- `blocking_gate_audit_20260414.md`, `false_ci_rope_audit.md`, `scaffold_piton_gate_audit.md`, `logic_divergence_audit.md`, `report_generator_audit.md` — Specific sub-system audits; generally superseded by the findings incorporated into the paper sequence.
+- `audits/2026-04-14_blocking_gate/`, `audits/2026-02-23_false_ci_rope/`, `audits/2026-02-23_scaffold_piton_gate/`, `audits/2026-03-07_logic_divergence/`, `audits/2026-02-23_report_generator/` — Specific sub-system audits; generally superseded by the findings incorporated into the paper sequence.
 
 ---
 

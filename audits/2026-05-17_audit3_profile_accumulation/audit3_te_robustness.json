@@ -1,0 +1,60 @@
+{
+  "n_internal": 81,
+  "n_e_diff_0": 29,
+  "n_e_diff_1": 52,
+  "n_t_varies_in_e_diff_0": 14,
+  "sanity_n_internal_dist_a": 81,
+  "metric_A": {
+    "e_diff_0": {
+      "n": 29,
+      "t_partial_rho": 0.8553119728803632,
+      "t_partial_p": 3.4216782481452203e-09,
+      "t_zero_rho": 0.8662387893744172,
+      "t_zero_p": 1.2684076826266241e-09
+    },
+    "e_diff_1": {
+      "n": 52,
+      "t_partial_rho": 0.2819801993111007,
+      "t_partial_p": 0.04284062542917638,
+      "t_zero_rho": 0.28788532426495844,
+      "t_zero_p": 0.038495136693943846
+    },
+    "verdict": "robust"
+  },
+  "metric_B": {
+    "e_diff_0": {
+      "n": 29,
+      "t_partial_rho": 0.4404769504338945,
+      "t_partial_p": 0.016783206152174247,
+      "t_zero_rho": 0.4288887713980077,
+      "t_zero_p": 0.02025891908957805
+    },
+    "e_diff_1": {
+      "n": 52,
+      "t_partial_rho": 0.6156192750007246,
+      "t_partial_p": 1.1904422744249186e-06,
+      "t_zero_rho": 0.6271519688143684,
+      "t_zero_p": 6.528848195538678e-07
+    },
+    "verdict": "robust"
+  },
+  "metric_D": {
+    "e_diff_0": {
+      "n": 29,
+      "t_partial_rho": 0.86512492780758,
+      "t_partial_p": 1.40892760886627e-09,
+      "t_zero_rho": 0.8660254037844386,
+      "t_zero_p": 1.2942902808436244e-09
+    },
+    "e_diff_1": {
+      "n": 52,
+      "t_partial_rho": 0.46140793016754994,
+      "t_partial_p": 0.0005756489317364035,
+      "t_zero_rho": 0.4292667447827224,
+      "t_zero_p": 0.0014956273897254126
+    },
+    "verdict": "robust"
+  },
+  "interpretation": "T partial \u03c1 under Metric A in the E_diff=0 cell is 0.855 (n=29), remaining large after isolating pairs where exit options are held constant. This rules out hypothesis (b): the 0.577 was not inflated by T-E joint variation in Tier-1 rope-rope pairs. T-axis variation within the rope immutability group produces extractive-fraction differences independently of E. The original \u00a75.3 mechanistic claim stands.",
+  "overall_verdict_metric_a": "robust"
+}

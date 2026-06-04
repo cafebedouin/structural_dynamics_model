@@ -20,12 +20,65 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-04 — Audit corpus consolidated into `audits/<YYYY-MM-DD>_<slug>/` (location mandate)
+
+Audits were scattered (Pattern 2 at directory scale): writeups in `docs/`, one each in
+`docs/audits/` and `docs/technical/`, findings unversioned in gitignored `outputs/`,
+self-contained packages at root. All consolidated into a new root `audits/` directory — one
+dated subdirectory per audit, writeup + evidence together. **Mandate recorded in CLAUDE.md
+(Audit Methodology), `docs/technical/build_discipline.md` (Pattern 2), and
+`audits/README.md`.** Files dated after the last clean commit were NOT moved (parallel
+session protection), except this session's own fnl_* set.
+
+**Move map (22 subdirectories):**
+- `docs/` writeups → `audits/`: blocking_gate (2026-04-14), false_ci_rope (02-23),
+  logic_divergence (03-07), report_generator (02-23), scaffold_piton_gate (02-23),
+  trifurcation_mapping (05-02, + `phase1/` working set as its `phase1/` subdir),
+  `docs/technical/schema_drift_audit.md` (05-30), `docs/audits/purity_audit_20260603.md`
+  (06-03, + `outputs/purity_audit_20260603/` evidence). `docs/audits/` removed.
+- Root packages → `audits/`: `audit/` → 2026-02-25_spectral_laplacian (its stale
+  `__pycache__` deleted); `audit_data/` → 2026-02-28_codebase_audit_data;
+  `audit_proposal/` → 2026-05-15_repo_reorg_proposal/proposal.
+- `outputs/` audit families (were gitignored/unversioned, now tracked): ccdp (04-14),
+  cluster_space (05-07), metric_two_hub (05-08), sheaf (05-08), audit3_profile_accumulation
+  (05-17), bc_coupling (05-29), position_geometry (05-29),
+  authoring_closure_fabricated_defaults (05-30), wiring_gap_census (05-31),
+  reading_diff_census (06-03), fnl_bait_confound (06-04). The two censuses were a flagged
+  gray zone (OQ-feeding censuses vs standalone audits); ruled in by the user 2026-06-04.
+  Producer `prolog/reading_diff_census.pl` keeps its `outputs/` workspace write path.
+
+**Fork notes (Pattern 2 instances surfaced by the consolidation):**
+- `docs/scaffold_piton_gate_audit.md` (Feb 23, 21 scaffolds/95 pitons, pre-rebuild) vs
+  `python/docs/scaffold_piton_gate_audit.md` (May 29, 1/1, post-rebuild) — two RUNS of the
+  same generator at different corpus states, not an edit fork. Both kept in
+  `audits/2026-02-23_scaffold_piton_gate/` (the rerun as `*_20260529_rerun.md`, with
+  `*_data_20260529.json`).
+- `audit_proposal/` vs `audit/agy/` — two generations of the May-15 repo-reorg proposal;
+  both kept under `audits/2026-05-15_repo_reorg_proposal/` (`proposal/`, `agy_variant/`).
+  Which is later/canonical was NOT adjudicated — they are point-in-time documents.
+
+**Conventions established:** `outputs/` = live workspace (audit scripts in `python/audits/`
+keep reading/writing there; re-runs regenerate); `audits/` = dated archive. Point-in-time
+documents (the proposal set, archived writeup footers) were NOT retro-edited; only live
+pointers were rewritten (ISSUES.md, this file, `docs/project_orientation.md`,
+`docs/logic_extensions.md`, `docs/piton_scaffold_diagnostic_arc.md`,
+`prolog/{signature_detection,boltzmann_compliance,config}.pl` comments,
+`prolog/recon_2/recon_2_inventory.md`). **Two scripts wrote reports into `docs/` —
+`python/audits/{false_ci_rope,scaffold_piton_gate}_audit.py` REPORT_PATH redirected to
+`outputs/`** (workspace convention; archived copies noted in their headers). Consumers of
+`outputs/bc_coupling_audit.json` (metric_audit, audit3_te_robustness, position_geometry,
+position_geometry_metric_sensitivity) still read the workspace path — on a fresh clone or
+after cleaning outputs/, run `python/audits/bc_coupling_audit.py` first (unchanged
+behavior: the file was always gitignored).
+
+---
+
 ## 2026-06-04 — FNL prevalence is template-bait-confounded (OQ-70): mechanism witnessed end-to-end, counterfactual run
 
 Question (from an older evaluation): is the ~95% disguise-signature dominance (FNL 827 + FCR
 219 of 1106) substantive or a generator artifact? **Answer for FNL: artifact, witnessed at
 every link.** Full evidence + artifact paths in ISSUES.md OQ-70; probe outputs under
-`outputs/fnl_probe*`.
+`audits/2026-06-04_fnl_bait_confound/fnl_probe*`.
 
 - **Denominator ruling:** corpus = 1106 (testset constraints, 1:1 with files).
   `pipeline_output.json` per_constraint has 1107 entries — the extra is
@@ -302,7 +355,7 @@ deferral surface + tripwire pointer).
 
 ## 2026-06-03 — Purity audit: structural_purity/2 was dead (bound-probe bug, now fixed); correction key for purity readings
 
-**Audit:** `docs/audits/purity_audit_20260603.md` (raw evidence `outputs/purity_audit_20260603/`,
+**Audit:** `audits/2026-06-03_purity/purity_audit_20260603.md` (raw evidence `audits/2026-06-03_purity/`,
 12 files; pinned N=1106, manifest `669eab5`). Five purity surfaces audited: scalar
 `purity_score/2`, bands `purity_zone/2`, categorical `structural_purity/2`, FPN
 `effective_purity/4`, and a fifth surface found mid-audit (`fpn_zone/2`, a *second* band
@@ -445,7 +498,7 @@ mis-characterizes it vs `absolute_sovereignty`'s authored cells — a content ju
 testsets (189 multi-reading kernels, 615 within-kernel pairs): **53.7% key_fragile / 39.5%
 robustly_binocular / 6.8% robustly_undersampled** — the alignment seat governs the verdict for a
 majority of pairs (cyclopean seat is corpus-wide). Distribution stable if the in-flight 256 uncommitted
-testsets are included (40.9/52.0/7.2). Results: `outputs/reading_diff_census.{md,tsv}`. Census ran on a
+testsets are included (40.9/52.0/7.2). Results: `audits/2026-06-03_reading_diff_census/reading_diff_census.{md,tsv}`. Census ran on a
 working tree mixing committed + an active ~1h generation run; the .md/.tsv report the committed-only
 615 (citable); re-run after the generation lands. NOTE this session also consolidated branches: FF
 `main`→`repair-affects-constraint-typos` then merged `docs-corpus-size-hypothesis` (ISSUES.md conflict
@@ -1279,7 +1332,7 @@ Original prep notes (the framings that guided B):
   (5) requires_active_enforcement IS on main classification path (drl_core.pl:371/277/286) —
   A\P gap CLOSED. Scripts: python/sweeps/tripwire_fabricated_defaults.py.
   Results: outputs/tripwire_fabricated_defaults_results.json.
-  Audit: outputs/audit_authoring_closure_fabricated_defaults.md. OQ-33 updated.
+  Audit: audits/2026-05-30_authoring_closure_fabricated_defaults/audit_authoring_closure_fabricated_defaults.md. OQ-33 updated.
 
 - **2026-05-31: NL circularity audit — cosmetic relabel, not manufacturing** —
   T.1 (testsets_3000, 3380 constraints): the 404 natural_law-signature constraints

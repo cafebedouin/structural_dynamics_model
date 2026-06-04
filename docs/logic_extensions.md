@@ -806,7 +806,7 @@ Purity provides the quantitative answer. At 0.35, maybe. At 0.25, no.
 % signature_detection.pl
 % NOTE: epistemic_access_check/2 must be called with an UNBOUND second argument —
 % calling it with `false` bound always succeeds via its catch-all clause
-% (bound-probe bypasses clause-order; see docs/audits/purity_audit_20260603.md §2).
+% (bound-probe bypasses clause-order; see audits/2026-06-03_purity/purity_audit_20260603.md §2).
 structural_purity(C, inconclusive) :-
     epistemic_access_check(C, Access),
     Access == false, !.

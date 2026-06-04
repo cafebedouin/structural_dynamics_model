@@ -66,7 +66,7 @@ stability_verdict(RA, RB, Verdict).   % robustly_binocular | key_fragile | robus
 ```
 
 Corpus reading: 615 within-kernel pairs sort 39.5 % robustly_binocular / 53.7 % key_fragile / 6.8 %
-robustly_undersampled (`reading_diff_census.pl`, `outputs/reading_diff_census.md`) — i.e. for a
+robustly_undersampled (`reading_diff_census.pl`, `audits/2026-06-03_reading_diff_census/reading_diff_census.md`) — i.e. for a
 majority of reading-pairs, *whether the two observers disagree at all* is set by the alignment seat.
 That is cyclopean-point at corpus scale: the seat is doing the depth computation.
 
