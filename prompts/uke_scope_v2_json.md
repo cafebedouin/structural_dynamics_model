@@ -191,7 +191,17 @@ contested kernel counts as ONE axis toward the axis budget**, not one axis per r
 readings are *not* each counted against the budget. Additional axis slots remain available for
 ordinary, independent (non-kernel) axes of the topic, if any genuinely exist; for a topic that
 is *only* a kernel, the kernel's readings are the whole generation_sequence. Name each reading by its interpretive
-commitment (`conception_reading`, `originalist_reading`). Each reading becomes one entry in
+commitment (`conception_reading`, `originalist_reading`).
+
+**Lens diversity:** when the kernel is genuinely contested across cultural, jurisprudential, or
+disciplinary traditions, draw the reading set from MORE THAN ONE tradition — do not default to
+a single tradition's internal dialectic (e.g., the originalist/positivist/realist kit) when
+other live traditions (civil-law, religious-law, customary, non-Western, practitioner vs.
+scholarly) hold structurally distinct readings of the same kernel. A reading from a second
+tradition counts only if it passes the same individually-holdable test; do not add exotic
+readings as decoration.
+
+Each reading becomes one entry in
 `generation_sequence`, and that entry **must be an object** carrying `claim_id`, `kernel_id`,
 and `reading_id` — not a plain string:
 
