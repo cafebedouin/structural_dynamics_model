@@ -3063,18 +3063,18 @@ re-check (7-7-7 uniform watch)~~ **RESOLVED 2026-06-05 by the SCOPE count-distri
 noise ±1, arms agreeing (lens instruction not pinning counts), T7's 11 axes shown pairwise-distinct
 (one borderline composite). The original 7-7-7 was mid-richness coincidence + run noise (bridge
 topic gig-economy: 7 originally → 5 in the re-run). Stage-2 is NOT gated on a SCOPE-framing fix;
-report the axis-count distribution at scale as a readout, not a gate. **However, the probe's
-side-observation graduated into a real gate condition: OQ-76 (kernel/flat routing is near
-coin-flip on a measured boundary band of statutory/regulatory contests; flat-misses destroy the
-axiom axis) — before the rebuild, either ship OQ-76's interim hedge (bias gate toward kernel on
-band topics) or design the routing stratum into the correlation readout.** OQ-70's bait confound
+report the axis-count distribution at scale as a readout, not a gate. **The OQ-76 routing condition is now addressed by construction (2026-06-05): generate-both is
+landed — every kernel topic gets a forced-flat control with a mechanical alignment key
+(`flat_control_of/2`), so a recognizer miss can no longer cost the axiom axis. Remaining for
+this rebuild's analysis design: report the construction-pair diff as its own stratum in the
+correlation readout (OQ-76 Remaining).** OQ-70's bait confound
 is still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
 
 ## OQ-76 — Kernel/flat gate is stochastic on a real boundary band: routing noise lands in Stage-2's cross-axis correlation
 
 **Ω-type:** Ω_E (the band is measured; the cause is K2-testable), with an Ω_P edge (which fix, and whether the interim hedge ships before Stage-2, are operator rulings).
 
-**Status:** open — band measured and instrument-validated 2026-06-05; cause-diagnosis (K2) licensed but not run; no fix built
+**Status:** mitigated — generate-both (operator-promoted to PRIMARY fix, 2026-06-05) is BUILT and witnessed end-to-end; remaining: Stage-2 readout stratum (analysis-side) + optional K2 cause probe
 **Origin:** 2026-06-05 SCOPE count-distribution probe side-observation, promoted by operator review:
 T5 (gig economy) decomposed as a kernel in one arm and flat in the other — same topic, same temp.
 Diffing the manifests showed the SAME contested substrate (the legal-classification contest) routed
@@ -3101,17 +3101,29 @@ perturb topic phrasing (commitment-foregrounded / system-description / mechanism
 if P(kernel) tracks phrasing, normalize Stage-2 seed phrasing or move routing out of free
 decomposition.
 
-**Dispositions (recorded, not built):**
-- **Interim hedge (one line, operator rules at Stage-2 go):** bias the gate toward kernel on
-  boundary-band topics — fail toward the recoverable side (kernel-miss recoverable, flat-miss not;
-  the de-leak asymmetry applied to routing).
-- **Candidate real fix:** generate BOTH representations for band topics — kernel-vs-flat is itself
-  an apparatus perturbation (`the_perturbation_principle.md` §7.1; pre-kernel corpora effectively
-  carried the flat construction), so the construction-pair diff is signal. Separate work item
-  (forced-flat decomposition mode is new code); do not build on spec.
-- **Stage-2 (OQ-75) sequencing:** treat kernel-routing as an explicit stratum or ship the hedge
-  first; without one of the two, the cross-axis correlation partly measures this coin-flip on
-  band-class topics.
+**Resolution (2026-06-05, operator-ruled then built — `audits/2026-06-05_flat_control_generate_both/`):**
+generate-both promoted from fallback to PRIMARY (ruling rationale: both cheap mitigations —
+P(kernel) stratification and the kernel-bias hedge — route through the same broken bit, a
+salience-driven detector; generate-both makes the recognizer REDUNDANT instead of trusted, and
+K1's localization says the expensive unreliable thing is exactly the binary decision while
+everything downstream is stable). Implemented asymmetrically: flat control on EVERY kernel
+(`<kernel_id>_flat_control` seed auto-emitted in `flatten_manifests`; substrate-only prompt —
+the reading set is never shown; mechanical alignment key
+`narrative_ontology:flat_control_of/2` emitted by `generate_constraint_pl.py` outside the
+cs_structure gate; never `cs_kernel_id` — flat controls are NOT readings, so kernel statistics
+and the OQ-58 sweep are untouched). Do NOT generalize to kernel-on-every-flat. Witnessed
+end-to-end on run-tag `flatctl_probe`: first construction-pair diff = construction-robust at
+the computed layer (tangled_rope ×4 seats, both constructions), divergent at the authored layer
+(snare ε=0.65 vs tangled_rope ε=0.48) — the two-layer §7.1 datum the instrument exists to take.
+
+**Remaining (keeps this OQ from closing):**
+- **Stage-2 readout stratum (analysis-side):** report construction-pair diffs (computed-type
+  agreement per seat; authored divergence) as their own stratum in the cross-axis correlation
+  (OQ-75). The interim kernel-bias hedge is SUPERSEDED — the gate no longer determines whether
+  the axiom axis exists.
+- **Optional K2 cause probe** (phrasing sensitivity): still licensed, now diagnostic-only
+  (informs whether the recognizer's salience bias also distorts WHICH topics get kernels at
+  all — a corpus-composition question, not an axis-loss question).
 
 ---
 

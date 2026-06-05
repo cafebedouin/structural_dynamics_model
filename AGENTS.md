@@ -480,7 +480,7 @@ This chains six steps automatically:
 |---|---|---|
 | 1 Research | Web search grounding via Haiku | (memory, no file) |
 | 2 Decompose | UKE_SCOPE protocol selects every §3-distinct axis (no fixed count; `--axes N` is an optional ceiling, default none — changed 2026-06-05) | (manifest in memory) |
-| 3 Generate | Sonnet generates one constraint story per axis. NOTE: resolves only flat `manifest["axes"]`; kernel-reading entries are skipped — kernel topics go through `agent/generate_kernel_corpus.py` | `json/`, `prolog/testsets/` |
+| 3 Generate | Sonnet generates one constraint story per axis. NOTE: resolves only flat `manifest["axes"]`; kernel-reading entries are skipped — kernel topics go through `agent/generate_kernel_corpus.py`, which since 2026-06-05 ALSO auto-generates a forced-flat control per kernel (`<kernel_id>_flat_control`, alignment key `narrative_ontology:flat_control_of/2`; OQ-76 — do not remove, and do not generalize to kernel-on-every-flat) | `json/`, `prolog/testsets/` |
 | 4 Corpus update | Runs `python/run_pipeline.py` to re-classify full corpus | `outputs/pipeline_output.json` |
 | 5 Reports | `python/enhanced_report.py` writes per-constraint reports | `outputs/constraint_reports/<id>_report.md` |
 | 6 Essay | Sonnet synthesizes draft essay from constraint reports | `outputs/essays/`, `agent/analysis/essays/` |

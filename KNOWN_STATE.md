@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — Generate-both landed: forced-flat control on every kernel, mechanical alignment key flat_control_of/2 (OQ-76 mitigated)
+**Files:** agent/generate_kernel_corpus.py, python/generate_constraint_pl.py, prolog/testsets/flatctl_probe/, ISSUES.md
+**Tier:** landed
+
+Operator ruling: generate-both promoted to PRIMARY fix for the stochastic kernel/flat gate —
+the recognizer becomes REDUNDANT (every kernel gets a flat construction unconditionally) rather
+than trusted; stratification and the kernel-bias hedge both routed through the broken detector.
+Implementation: `flatten_manifests` auto-emits `<kernel_id>_flat_control` seed per kernel
+(substrate = `kernel_description`; the reading set is NEVER shown to the flat author);
+compiler emits `narrative_ontology:flat_control_of/2` from ephemeral `_flat_control_of`,
+OUTSIDE the cs_structure gate; flat controls carry no `cs_kernel_id`/`cs_reading_relation`
+(not pseudo-readings — kernel stats and OQ-58 sweep untouched); stamp_kernel_linkage extended
+(separate counter, mismatch guard, no-cs exception). ASYMMETRIC BY DESIGN: flat-on-every-kernel
+only; never kernel-on-every-flat. Witnesses: compiler emission + negative control; seed/prompt
+independence on a real K1 manifest (no reading ids leak); E2E run-tag `flatctl_probe` — first
+construction-pair diff via the key: computed dr_type construction-ROBUST (tangled_rope ×4 seats
+both constructions), authored layer divergent (snare ε=0.65 vs tangled_rope ε=0.48).
+Stage-2 residue: the readout stratum (OQ-76 Remaining). Interim kernel-bias hedge superseded.
+Writeup + probe + seed: `audits/2026-06-05_flat_control_generate_both/`.
+
 ## 2026-06-05 — K1 kernel-gate replication: real topic-classed boundary band; under-firing misses against explicit §1.3-K criteria (OQ-76 filed; Stage-2 condition)
 **Files:** python/audits/kernel_gate_replication_probe.py, prompts/uke_scope_v2_json.md, ISSUES.md
 **Tier:** landed

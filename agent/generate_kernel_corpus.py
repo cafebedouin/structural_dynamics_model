@@ -315,6 +315,36 @@ def flatten_manifests(manifests):
                     "expected_structural_delta": delta,
                     "summary": commitment + (f"\n{delta}" if delta else ""),
                 })
+
+        # --- Forced-flat control on every kernel (OQ-76, generate-both primary fix) ---
+        # The kernel/flat gate is stochastic on a measured boundary band and every miss
+        # destroys the axiom axis irrecoverably (audits/2026-06-05_kernel_gate_replication/).
+        # Rather than trusting the gate, every kernel topic ALSO gets a flat construction
+        # of the SAME substrate: kernel-vs-flat is an apparatus perturbation and the
+        # construction-pair diff is signal (the_perturbation_principle.md §7.1). The flat
+        # author sees ONLY the substrate (kernel_description) — never the reading set —
+        # so the two constructions stay independent. Asymmetric by design: flat-on-every-
+        # kernel only; do NOT generalize to kernel-on-every-flat (most flat topics have no
+        # kernel, and a flat-miss is the unrecoverable direction, not a kernel-miss).
+        # Alignment key: narrative_ontology:flat_control_of/2 stamped by the compiler from
+        # the ephemeral _flat_control_of (see process_batch_results / stamp_kernel_linkage).
+        if is_kernel and kernel_id:
+            fc_cid = f"{kernel_id}_flat_control"
+            if fc_cid not in seen:
+                seen.add(fc_cid)
+                substrate = (csr.get("kernel_description") or "").strip() or kernel_id
+                gen_seeds.append({
+                    "constraint_id": fc_cid,
+                    "human_readable": substrate,
+                    "topic_domain": domain,
+                    "family_id": family,
+                    "kernel_id": None,           # NOT a reading
+                    "reading_id": None,
+                    "flat_control_of": kernel_id,
+                    "sibling_reading_ids": [],
+                    "expected_structural_delta": "",
+                    "summary": substrate,
+                })
     return gen_seeds, recovery_count
 
 
@@ -385,6 +415,20 @@ def build_cached_messages(gen_seed):
             "across the sibling set. Assign status: holdable (live claim), overridden",
             "(superseded within this reading's tradition), or foreclosed (ruled out by",
             "this reading's own commitments).",
+        ]
+    if gen_seed.get("flat_control_of"):
+        lines += [
+            "",
+            "=== FLAT CONSTRUCTION (construction perturbation control) ===",
+            "Author the commitment stated above as ONE single constraint story — the FLAT",
+            "construction of this substrate.",
+            "  - Do NOT decompose it into readings.",
+            "  - Do NOT author cs_structure.reading_relations or cs_structure.axioms.",
+            "  - You are not being shown any reading set; author from the substrate alone.",
+            "Where the commitment is contested, let the contestation land where flat",
+            "authoring naturally puts it: perspectival disagreement across (P,T,E,S) seats,",
+            "and omegas naming the open questions. Author the claim and metrics you believe",
+            "are descriptively true of the substrate as a single constraint.",
         ]
     if gen_seed.get("summary"):
         lines += ["", f"SOURCE MATERIAL:\n{gen_seed['summary']}"]
@@ -615,11 +659,16 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         manifest_kernel_id = gen_seed.get("kernel_id")
         if manifest_kernel_id:
             story["_kernel_id"] = manifest_kernel_id
+        # Flat-control alignment key (OQ-76) — injected from the manifest, like _kernel_id
+        manifest_fco = gen_seed.get("flat_control_of")
+        if manifest_fco:
+            story["_flat_control_of"] = manifest_fco
 
         pl_content = generate_pl(story)
 
-        # Strip the ephemeral _kernel_id before writing the JSON (it's not a schema field)
+        # Strip the ephemeral keys before writing the JSON (not schema fields)
         story.pop("_kernel_id", None)
+        story.pop("_flat_control_of", None)
 
         # lint via temp in flat testsets/ so dirname(dirname) resolves to prolog/
         tmp_path = TESTSETS_DIR / f".tmp_kernel_{cid}.pl"
@@ -681,15 +730,16 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
       is_contested_kernel == False -> write NO cs_kernel_id; ensure cs_story_uid only
     """
     seed_map = {
-        s["constraint_id"]: (s.get("kernel_id"), bool(s.get("kernel_id")))
+        s["constraint_id"]: (s.get("kernel_id"), bool(s.get("kernel_id")),
+                             s.get("flat_control_of"))
         for s in gen_seeds
     }
 
-    n_stamped = n_standalone = n_skipped = n_uuid_minted = 0
+    n_stamped = n_standalone = n_skipped = n_uuid_minted = n_flat_stamped = 0
     producer_gaps = []
     no_cs_structure = []  # has .pl + .json but json lacks cs_structure — cannot stamp via generate_pl
 
-    for cid, (kernel_id, is_contested) in seed_map.items():
+    for cid, (kernel_id, is_contested, fco) in seed_map.items():
         pl_path = testsets_dir / f"{cid}.pl"
         if not pl_path.exists():
             producer_gaps.append(cid)
@@ -698,6 +748,7 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
         pl_text = pl_path.read_text(encoding="utf-8")
         existing_uid = _extract_cs_fact(pl_text, "cs_story_uid", cid)
         existing_kid = _extract_cs_fact(pl_text, "cs_kernel_id", cid)
+        existing_fco = _extract_cs_fact(pl_text, "flat_control_of", cid) if fco else None
 
         # Collision guard: manifest says one kernel, file says another
         if is_contested and existing_kid and existing_kid != kernel_id:
@@ -707,11 +758,20 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
                 f"  manifest has: {kernel_id}\n"
                 f"This is a real collision — do not auto-overwrite. Resolve manually."
             )
+        # Same guard for the construction-pair alignment key (OQ-76)
+        if fco and existing_fco and existing_fco != fco:
+            sys.exit(
+                f"FLAT_CONTROL_OF MISMATCH in {pl_path}:\n"
+                f"  file has:     {existing_fco}\n"
+                f"  manifest has: {fco}\n"
+                f"This is a real collision — do not auto-overwrite. Resolve manually."
+            )
 
         # Already complete?
         uid_ok = existing_uid is not None
         kernel_ok = (not is_contested) or (existing_kid is not None)
-        if uid_ok and kernel_ok:
+        fco_ok = (not fco) or (existing_fco is not None)
+        if uid_ok and kernel_ok and fco_ok:
             n_skipped += 1
             continue
 
@@ -725,10 +785,13 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
 
         # generate_pl gates the entire CS block on cs_structure being present.
         # If the story JSON lacks cs_structure (model failed or pre-CS story),
-        # stamping via generate_pl is impossible — report and skip.
+        # stamping via generate_pl is impossible — report and skip. EXCEPTION:
+        # flat_control_of emission is independent of the CS block, so a flat
+        # control missing only its alignment key is stamped regardless.
         if not story.get("cs_structure"):
-            no_cs_structure.append(cid)
-            continue
+            if not (fco and not fco_ok):
+                no_cs_structure.append(cid)
+                continue
 
         # Mint story_uid into JSON if absent
         if not story.get("header", {}).get("story_uid"):
@@ -739,22 +802,28 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
             )
             n_uuid_minted += 1
 
-        # Build generation copy with ephemeral _kernel_id
+        # Build generation copy with ephemeral keys
         story_for_gen = dict(story)
         story_for_gen.pop("_kernel_id", None)
+        story_for_gen.pop("_flat_control_of", None)
         if is_contested:
             story_for_gen["_kernel_id"] = kernel_id
+        if fco:
+            story_for_gen["_flat_control_of"] = fco
 
         new_pl = generate_pl(story_for_gen)
         pl_path.write_text(new_pl, encoding="utf-8")
 
-        if is_contested:
+        if fco:
+            n_flat_stamped += 1
+        elif is_contested:
             n_stamped += 1
         else:
             n_standalone += 1
 
     print(f"\nKernel linkage stamp ({testsets_dir.name}):")
     print(f"  {n_stamped:3d} stamped with kernel_id")
+    print(f"  {n_flat_stamped:3d} flat controls stamped with flat_control_of")
     print(f"  {n_standalone:3d} standalone (contested=false, uid ensured)")
     print(f"  {n_skipped:3d} already-correct (skipped)")
     print(f"  {n_uuid_minted:3d} UUID minted")
@@ -1313,7 +1382,8 @@ def main():
 
     if args.dry_run:
         for s in gen_seeds:
-            print(f"  {s['constraint_id']:45s} kernel={s['kernel_id']} reading={s['reading_id']}")
+            extra = f" FLAT_CONTROL_OF={s['flat_control_of']}" if s.get("flat_control_of") else ""
+            print(f"  {s['constraint_id']:45s} kernel={s['kernel_id']} reading={s['reading_id']}{extra}")
         print(f"\nDRY RUN — {len(gen_seeds)} seeds would be batched")
         return
 

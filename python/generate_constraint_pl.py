@@ -202,6 +202,11 @@ def _build_multifile_declarations(data):
             decls.append("narrative_ontology:cs_drift_state/3")
         decls.append("narrative_ontology:cs_created_at/2")
 
+    # Flat-control linkage (OQ-76): construction-pair alignment key. Independent of
+    # cs_structure — a flat control is NOT a reading of the kernel it controls for.
+    if data.get("_flat_control_of"):
+        decls.append("narrative_ontology:flat_control_of/2")
+
     # human_readable and topic_domain
     decls.append("narrative_ontology:human_readable/2")
     decls.append("narrative_ontology:topic_domain/2")
@@ -523,6 +528,16 @@ def generate_pl(data):
         kernel_id = data.get("_kernel_id")
         if kernel_id:
             emit(f"narrative_ontology:cs_kernel_id({cid}, {kernel_id}).")
+        emit()
+
+    # Flat-control linkage — construction-pair alignment key (OQ-76). Injected from the
+    # manifest (ephemeral _flat_control_of), never model-authored. Deliberately OUTSIDE
+    # the cs_structure gate: a flat control is NOT a reading and need not carry CS facts;
+    # the alignment key must exist regardless.
+    fco = data.get("_flat_control_of")
+    if fco:
+        emit("% --- Construction-pair linkage (forced-flat control of a kernel) ---")
+        emit(f"narrative_ontology:flat_control_of({cid}, {fco}).")
         emit()
 
     # Beneficiaries and victims
