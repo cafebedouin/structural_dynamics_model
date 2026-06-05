@@ -460,12 +460,36 @@ class DRAuditOrchestrator:
             notes = fracture.get("notes", "")
             self._progress("decompose", f"Fracture warning: {notes}")
 
+        self._persist_manifest(manifest)
         self._progress("decompose", f"SCOPE complete — {len(manifest['generation_sequence'])} axes selected")
         return StepResult(
             step="decompose", status="success", data=manifest,
             tokens_in=tin, tokens_out=tout,
             duration_s=time.time() - t0,
         )
+
+    def _persist_manifest(self, manifest: dict) -> None:
+        """Persist the SCOPE manifest to disk (added 2026-06-05).
+
+        Previously flat (un-run-tagged) runs DISCARDED the manifest — the axis
+        traces (structural deltas, observables, deferred axes, fracture scans,
+        per-axis hypotheses) existed only in memory, which made the
+        SCOPE-hypothesis → authored-claim → computed-type three-layer trace
+        unrecoverable after the run (witnessed: the 2026-06-05 first three rebuild
+        runs). Run-tagged runs write to outputs/kernel_manifests/<run_tag>/;
+        flat runs to outputs/kernel_manifests/flat/.
+        """
+        try:
+            mdir = self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")
+            mdir.mkdir(parents=True, exist_ok=True)
+            fam = manifest.get("family_id") or "manifest"
+            ts = time.strftime("%Y%m%d_%H%M%S")
+            path = mdir / f"{fam}_{ts}.manifest.json"
+            path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False),
+                            encoding="utf-8")
+            self._progress("decompose", f"Manifest persisted: {path}")
+        except Exception as e:  # persistence must never kill the run
+            self._progress("decompose", f"Manifest persist FAILED (non-fatal): {e}")
 
     # ------------------------------------------------------------------
     # Step 3: Generate constraint stories

@@ -116,3 +116,38 @@ OQ-72 (mechanical axiom alignment key), OQ-73 (cross-frame probe; sequencing: af
 baseline), OQ-74 (coordination_type kernel-vs-reading ruling; 55% = 158/286 re-witnessed),
 OQ-75 (Stage-2 rebuild: diff distribution + cross-axis invariance correlation; staked prediction
 weak/positive-but-far-from-1; gated on operator go).
+
+---
+
+## Postscript (2026-06-05, later session): the banked witness + first-contact axis traces
+
+**BANKED WITNESS — `manpower_exhaustion_trap`** (Perfect Storm run, first three post-reset
+topic runs; artifacts: `evidence/manpower_exhaustion_trap.{json,pl}`). Authored, unbidden, on
+real material: **claimed `mountain` with ε=0.85, suppression=0.92, 3 beneficiaries, 3 victims**
+— "demographic inevitability" authored over honestly-declared extraction. This exact object was
+UNAUTHORABLE before this audit's schema change (mountain required ε≤0.25). Engine verdict
+(probe paste): computed `tangled_rope` at all 4 standard contexts;
+`dr_claim_mismatch = type_1_false_summit-severe`. Note the catch-route: FSM (the signature) did
+NOT fire — FSM gates on mountain-plausible metrics. Manpower was caught by the cheaper route:
+honest metrics + raw classification + general claim-mismatch. The same run's other two mountain
+claims (`compute_constraint_as_brake` ε=0.18, `technology_asymmetry_ukraine_russia` ε=0.15,
+both with beneficiaries) took the FSM route. **Two distinct false-summit catch-routes, both
+witnessed at first contact — the claim/metric-independence directive produced exactly the
+honest-metrics-deceptive-claim object the corpus exists to measure.**
+
+**Axis traces (pulled per operator instruction before Stage 2).** Flat runs discarded the SCOPE
+manifest (`_manifests_dir = None`) — full traces (deltas, observables, deferred axes, fracture
+scans) for the three runs are unrecoverable; fixed same day (`_persist_manifest`, flat runs →
+`outputs/kernel_manifests/flat/`). The per-story `uke_scope` residue survives for 9/20 stories
+(the generator copies the block inconsistently — minor producer gap, noted not chased) and gives
+the three-layer trace SCOPE-hypothesis → authored-claim → computed-type:
+- 7/9 authored exactly the SCOPE hypothesis; 2/9 drifted rope→tangled (author adding extraction
+  to SCOPE's coordination read).
+- `technology_asymmetry_ukraine_russia`: SCOPE hypothesized `mountain` → authored `mountain` →
+  engine rope ×4 + FSM. **The cover story entered at decomposition and was caught two layers
+  later** — the trace localizes which joint each divergence enters at.
+- `manpower_exhaustion_trap`'s hypothesis is in the discarded manifest (unrecoverable); whether
+  its mountain claim was SCOPE-seeded or author-introduced is unknowable for this run.
+  Stage-2 runs persist manifests, so this question stays answerable from here on.
+- `downstream_of` residue reconstructs each run's DAG (incl. two cross-run edges: ISW stories
+  citing Perfect Storm constraints via `affects_constraint` linking).
