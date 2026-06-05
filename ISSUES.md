@@ -467,7 +467,7 @@ the `stack.pl` discipline established during Phase A of the UUID work).
 
 ## OQ-17 — `testsets_3000/` quarantined from loader: abandoned or unwired?
 
-**Status:** open
+**Status:** disposed — superseded by the 2026-06-05 archive consolidation
 **Origin:** Temporal excavation, May 2026.  
 **Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob);
 `prolog/cs_drift_mismatch.pl:113` and `prolog/cs_corpus_analysis.pl:194`
@@ -502,6 +502,8 @@ distribution, every "X% of corpus" claim recomputes). One of those decisions
 should be on the record; "sitting there ignored" is the unmarked state.
 
 ---
+
+**Disposition (2026-06-05):** `testsets_3000/` moved to `prolog/archives/datasets/original_v6/` in the corpus-reset reorganization (commit `29889e50`); the loader-quarantine question is moot — all archived corpora load only via explicit `corpus_path` overlay.
 
 ## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
 
@@ -1237,7 +1239,7 @@ defect class.
 
 ## OQ-34 — Estimator-classifier independence audit: does the prompt expose MI-decision-rule thresholds to authors?
 
-**Status:** open
+**Status:** resolved — generalized and executed as the 2026-06-05 generation-pipeline de-leak
 
 **Question:** The NL circularity audit (2026-05-31) established a design principle:
 thresholds that are *definitional bounds* on the substrate (what the author is
@@ -1356,6 +1358,8 @@ Source: `audits/2026-05-31_wiring_gap_census/wiring_gap_census.md` (read-only ce
 **routes** each for adjudication — it resolves none. Stubs below are grouped by adjudication
 decision; the row references map all 27 census rows so nothing is unrouted.
 **Adjudication (cruft-vs-wire) is a separate session.**
+
+**Resolution (2026-06-05):** the question's premise was confirmed and fixed at scale: the prompt (and, binding, the SCHEMA shipped inside the prompt) exposed MI-decision-rule thresholds; all stripped (`audits/2026-06-05_generation_pipeline_deleak/` — assembled-payload witness: band-near-type 19→0, threshold-comparisons 28→0, NL-value grep 0 hits post). Definitional-vs-decision-rule line now enforced by AGENTS.md Rule 3b (assembled-payload check before adding any numeric threshold to author-facing surfaces).
 
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
@@ -1671,9 +1675,11 @@ scalar-fallback clause in `classify_at_time` and let the temporal path stand alo
 load-bearing for those 91 — do not delete early). Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
 bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
 
+**Post-reset check (2026-06-05):** the live corpus' first 20 stories author a temporal `suppression_requirement` series **20/20** — the generation-template requirement lands universally under the de-leaked prompt. Once the live corpus accumulates with this holding, the row-23 stopgap (`classify_at_time` scalar bridge) is retirable + fail-closed `unknown` added (output-changing engine edit; needs its own witnessed pass).
+
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 
-**Status:** open — Gating constraint on the regeneration arc. The behavior-preserving prompt/schema
+**Status:** resolved — superseded by the 2026-06-05 de-leak + corpus reset; the confirmed example-file leak path is removed The behavior-preserving prompt/schema
 changes (D5 row-14 strip, D7 schema-gate strip) only take effect on **regenerated** stories. Sequencing:
 - **De-stamp A/B is the FIRST regeneration batch** (the D7 schema-gate strip + row-14 removal, run as
   an A/B against current stories) and it **gates batch two** — do not bulk-regenerate until the A/B
@@ -1704,6 +1710,8 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
   re-injects the stripped gate. This is the upstream leak this OQ anticipated; it is the example file.
 
 ---
+
+**Resolution (2026-06-05):** the seam audit this OQ demanded ran as the de-leak's assembled-payload witnesses (prompt, schema-in-prompt, example all grepped at the build_prompt boundary). The confirmed leak — `json/antifragility.json` (accessibility_collapse 0.9 / resistance 0.08) injected by c-orchestrator — turned out to be a DANGLING LOAD by 2026-06-05 (`protocols["example"]`/`["gen_prompt"]` loaded, never consumed; generation uses story_generator_base.build_prompt with the clean verification_bottleneck example). Dangling entries deleted with a do-not-rewire comment. The de-stamp A/B regeneration arc itself is mooted by the corpus reset: the live corpus is born under the de-leaked pipeline.
 
 ## OQ-48 — Classification thresholds never recalibrated against the live (post-rebuild) corpus
 
@@ -2941,6 +2949,8 @@ mandatory perspectives — future generation only); (3) adopt the OQ-65 framing 
 reporting). Cross-links: OQ-65 (same phenomenon, FSM, n=12), OQ-43/OQ-44 (gate-quality
 family), OQ-48 (threshold recalibration would change Probe 3's bands), OQ-49 (override
 prevalence at 3000-scale).
+
+**Post-de-leak persistence check (2026-06-05, live-corpus first 20):** the bait convention SURVIVES at reduced rate — 5/20 stories author a mountain perspective, and all 5 put it at the (analytical, *) bait tuple (pre-de-leak: 908/1106 ≈ 82%). The assembled payload still ships the one-shot example containing the ANALYTICAL OBSERVER mountain perspective. The remediation ruling (claimed_natural source-2 semantics, and/or example de-baiting) is now a PRE-CORPUS-BUILD item: every story generated before it inherits the confound.
 
 ## OQ-71 — Depth-lineage probe: does kernel-nesting depth re-open structural-class discovery, or saturate like breadth?
 

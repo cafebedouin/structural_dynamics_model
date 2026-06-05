@@ -175,14 +175,17 @@ class DRAuditOrchestrator:
         # Schema dict for path-aware strip (loaded once)
         self._schema = load_schema()
 
-        # Load protocol files (cached via lru_cache in story_generator_base)
+        # Load protocol files (cached via lru_cache in story_generator_base).
+        # NOTE (2026-06-05, OQ-47 closure): the former "gen_prompt" and "example"
+        # entries were loaded here but never consumed — generation goes through
+        # story_generator_base.build_prompt, whose example is
+        # agent/verification_bottleneck.json (leak-clean). The dangling "example"
+        # entry pointed at json/antifragility.json, which hardcodes the OLD NL-gate
+        # exemplar values (accessibility_collapse 0.9 / resistance 0.08) — OQ-47's
+        # confirmed leak. Removed so the leak path cannot be silently re-wired;
+        # do not re-add an example here without the assembled-payload band grep.
         self.protocols = {
             "uke_scope":  _load_context_file(str(REPO_ROOT / "prompts" / "uke_scope_v2_json.md")),
-            "gen_prompt": _load_context_file(os.environ.get(
-                "DR_GEN_PROMPT",
-                str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")
-            )),
-            "example":    _load_context_file(str(REPO_ROOT / "json" / "antifragility.json")),
             "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_summary.md")),
         }
 
