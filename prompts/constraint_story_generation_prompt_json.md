@@ -20,12 +20,16 @@ The output should be a **single JSON file** validated against `constraint_story_
 
 ### The Six Categories
 
-* **Mountain**: Unchangeable/Fixed. Base extraction ε ≤ 0.25, suppression ≤ 0.05. Appears as natural law or irreducible physical/logical limit. Zero degrees of freedom for all indices.
-* **Rope**: Pure Coordination. Effective extraction χ ≤ 0.35, base extraction ε ≤ 0.45. Solves collective action problems with minimal coercive overhead.
-* **Tangled Rope**: Hybrid Coordination/Extraction. 0.40 ≤ χ ≤ 0.90, base extraction ε ≥ 0.30, suppression ≥ 0.40. Must possess BOTH a genuine coordination function AND asymmetric extraction.
-* **Snare**: Pure Extraction. Effective extraction χ ≥ 0.66, base extraction ε ≥ 0.46, suppression ≥ 0.60. High coercion, minimal coordination benefit; existence relies on suppressing alternatives.
-* **Scaffold**: Temporary Support. χ ≤ 0.30, theater ≤ 0.70. Coordination with a sunset clause (enforced via `has_sunset_clause`).
-* **Piton**: Degraded/Inertial. χ ≤ 0.25, ε > 0.10, theater ≥ 0.70. A former Rope or Snare where the primary function has atrophied, but the constraint remains due to institutional inertia or theatrical maintenance.
+* **Mountain**: Unchangeable/Fixed. Would persist regardless of who defends it or whether anyone enforces it; no party collects from its operation. Appears as natural law or irreducible physical/logical limit. Zero degrees of freedom for all indices.
+* **Rope**: Pure Coordination. Solves a genuine collective-action problem with minimal coercive overhead; participants are net beneficiaries; alternatives are not suppressed.
+* **Tangled Rope**: Hybrid Coordination/Extraction. Must possess BOTH a genuine coordination function AND asymmetric extraction — someone is coordinated and someone pays through the same structure; requires active enforcement to hold.
+* **Snare**: Pure Extraction. The coordination story is cover; persistence depends on coercion and on suppressing exits and alternatives; there are identifiable victims.
+* **Scaffold**: Temporary Support. Coordination meant to be transitional — it carries a sunset (declared via `has_sunset_clause`) and its justification is the transition, not the steady state.
+* **Piton**: Degraded/Inertial. A former Rope or Snare where the primary function has atrophied, but the constraint remains due to institutional inertia or theatrical maintenance — what is left is mostly performance.
+
+(The engine computes each perspective's type from the structural data you author; you do not
+tune metrics to land in a category. State the type you believe is structurally true and the
+metrics you believe are descriptively true, independently.)
 
 ### The Indexical Tuple (P, T, E, S)
 
@@ -73,9 +77,11 @@ This creates a diagnostic signal. When the engine classifies a constraint as mou
 
 The tuple is closed at arity 4. These four axes, combined with ε and the χ formula, fully determine classification. No additional contextual axis can change the classification outcome when ε and (P,T,E,S) are fixed. Observable-dependent constraints are handled by network decomposition (separate stories with different ε values), not by adding axes. See "Constraint Identity and the ε-Invariance Principle" below.
 
-### The Chi Formula: χ = ε × f(d) × σ(S)
+### How the Engine Computes Effective Extraction
 
-Effective extraction (χ) is computed from base extraction (ε), the sigmoid directionality function f(d), and scope modifier σ(S).
+Effective extraction (χ) is computed BY THE ENGINE from base extraction (ε), the agent's
+directionality toward the constraint, and the constraint's scope. You never compute χ — the
+engine owns the arithmetic. What you author is the structural data the computation reads.
 
 **Directionality (d)** is a continuous value in [0.0, 1.0] encoding the agent's structural relationship to THIS SPECIFIC constraint:
 
@@ -83,47 +89,28 @@ Effective extraction (χ) is computed from base extraction (ε), the sigmoid dir
 * d = 0.5 → symmetric (costs ≈ benefits)
 * d = 1.0 → full target (constraint extracts from this agent)
 
-The sigmoid function maps d to an effective power modifier:
+**The engine derives d automatically** from your beneficiary/victim declarations and exit
+options. You do not need to compute anything — declare WHO benefits and WHO bears costs, and
+the math follows. Qualitatively: effective extraction is amplified for targets and damped (or
+inverted into subsidy) for beneficiaries; trapped or identity-locked targets sit nearer the
+full-target end than mobile ones; agents with arbitrage-grade exit sit nearest the
+beneficiary end.
 
-```
-f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-```
-
-**The engine derives d automatically** from your beneficiary/victim declarations and exit options. You do not need to compute d or f(d) — declare WHO benefits and WHO bears costs, and the math follows.
-
-| Agent Relationship | Exit Options | Derived d | f(d) ≈ | Legacy π equiv |
-|---|---|---|---|---|
-| Beneficiary + arbitrage | arbitrage | 0.05 | -0.12 | institutional (-0.20) |
-| Beneficiary + mobile | mobile | 0.15 | -0.01 | — |
-| Both + mobile | mobile | 0.50 | 0.65 | powerful (0.60) |
-| Victim + mobile (organized) | mobile | 0.55 | 0.75 | organized (0.40) |
-| Victim + mobile | mobile | 0.85 | 1.15 | moderate (1.00) |
-| Victim + trapped | trapped | 0.95 | 1.42 | powerless (1.50) |
-| Victim + identity_locked | identity_locked | 0.89 | 1.28 | — (new) |
-| Beneficiary + identity_locked | identity_locked | 0.20 | 0.02 | — (new) |
-| Observer | analytical | 0.72 | 1.15 | analytical (1.15) |
-
-Canonical fallback values (used when no beneficiary/victim data exists):
-
-| Power Atom | Canonical d | f(d) approx | Legacy pi |
-|---|---|---|---|
-| institutional | 0.00 | -0.12 | -0.20 |
-| organized | 0.40 | 0.40 | 0.40 |
-| powerful | 0.48 | 0.60 | 0.60 |
-| moderate | 0.65 | 1.00 | 1.00 |
-| analytical | 0.73 | 1.15 | 1.15 |
-| powerless | 1.00 | 1.42 | 1.50 |
-
-Note: `identity_locked` does not have its own canonical d — it is always derived from beneficiary/victim declarations + exit_modulation. If no structural data exists, it falls back to the power atom's canonical d. This is by design: identity_locked is meaningful only when the agent's structural relationship to the constraint is declared.
+`identity_locked` has no canonical fallback of its own — it is always derived from
+beneficiary/victim declarations + exit modulation, and reverts to the power atom's fallback
+when no structural data exists. This is by design: identity_locked is meaningful only when
+the agent's structural relationship to the constraint is declared.
 
 The derivation chain priority:
 1. **Explicit override** (a `directionality_overrides` entry) — per story, if declared
 2. **Structural derivation** — from beneficiary/victim data + power level + exit options
-3. **Canonical fallback** — power atom to canonical d (reproduces legacy π values)
+3. **Canonical fallback** — a per-power-atom default the engine supplies
 
 Stories can include a directionality override entry in the `directionality_overrides` array to override for specific agents when the structural derivation doesn't capture the true relationship.
 
-* **Scope modifiers σ(S)**: How much scope affects verification difficulty. Larger scope = harder to verify = more extraction hidden behind complexity. `local=0.8`, `regional=0.9`, `national=1.0`, `continental=1.1`, `global=1.2`, `universal=1.0`.
+* **Scope**: larger spatial scope makes verification harder, so the engine scales effective
+  extraction modestly upward with scope (and treats `universal` as a special case). You only
+  author the scope atom; the engine owns the modifier values.
 
 Suppression is a raw structural property — it is NOT scaled by power or scope. Only extractiveness is scaled.
 
@@ -135,7 +122,7 @@ Suppression is a raw structural property — it is NOT scaled by power or scope.
 
 **The ε-invariance test for authors:**
 
-1. You're writing a story and realize that measuring the constraint one way gives ε ≈ 0.08 but measuring it another way gives ε ≈ 0.42.
+1. You're writing a story and realize that measuring the constraint one way gives a clearly low ε but measuring it another way gives a clearly high one.
 2. Stop. You don't have one constraint. You have two.
 3. Write two JSON files. Give each its own `claimed_type`, its own metrics, its own perspectives.
 4. Link them: add the sibling's `constraint_id` to `network.affects_constraints`.
@@ -145,11 +132,11 @@ Suppression is a raw structural property — it is NOT scaled by power or scope.
 
 Physicists refer to "the BGS conjecture" as a single claim: quantum systems with chaotic classical limits exhibit universal statistical properties. But this label conflates two structurally distinct claims:
 
-**Spectral universality** (`constraint_bgs_spectral_universality`): Eigenvalue level spacings follow Random Matrix Theory predictions. Verified for 40+ years across every tested system. ε = 0.08. Mountain from all perspectives.
+**Spectral universality** (`constraint_bgs_spectral_universality`): Eigenvalue level spacings follow Random Matrix Theory predictions. Verified for 40+ years across every tested system, uncontested — extraction is negligible. Mountain from all perspectives.
 
-**Eigenvector thermalization** (`constraint_bgs_eigenvector_thermalization`): Individual eigenstates look thermal (ETH compliance). Contested — counterexamples exist (Magan & Wu ensembles, quantum kicked-top, Rydberg scars). ε = 0.42. Tangled Rope at the analytical level.
+**Eigenvector thermalization** (`constraint_bgs_eigenvector_thermalization`): Individual eigenstates look thermal (ETH compliance). Contested — counterexamples exist (Magan & Wu ensembles, quantum kicked-top, Rydberg scars) and live research careers ride on the claim. Substantially extractive. Tangled Rope at the analytical level.
 
-These are not the same constraint viewed from two angles. Their ε values differ by a factor of five. They have different failure modes, different research communities, and different empirical status. The framework models them as two stories linked by `network.affects_constraints`, not as one story with a measurement parameter.
+These are not the same constraint viewed from two angles. Their ε values differ by a wide margin. They have different failure modes, different research communities, and different empirical status. The framework models them as two stories linked by `network.affects_constraints`, not as one story with a measurement parameter.
 
 The confusion was in the language (the label "BGS"), not in the mathematics. The framework's job is to disambiguate colloquial labels into structurally precise claims.
 
@@ -172,34 +159,32 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 | `base_properties` | Metric scores, claimed type, beneficiaries/victims, flags | Yes |
 | `perspectives` | Indexed classifications from multiple (P,T,E,S) tuples | Yes (min 2) |
 | `interval` | Time range for integration hooks and measurements | Yes |
-| `omegas` | Irreducible uncertainties (omega variables) | Yes if ε > 0.46 |
-| `measurements` | Temporal drift data (theater_ratio, extractiveness over time) | Yes if ε > 0.46 (min 6 entries) |
+| `omegas` | Irreducible uncertainties (omega variables) | Strongly encouraged — any story with a contestable naturalness, beneficiary structure, or persistence question should carry at least one |
+| `measurements` | Temporal drift data (theater_ratio, extractiveness over time) | Strongly encouraged — aim for 6+ points whenever the constraint has observable drift or enforcement history |
 | `commentary` | Narrative context, key agents, reasoning, mandatrophy analysis | Recommended |
 | `boltzmann` | Coordination type and floor override | Optional |
 | `network` | Structural influence edges, dual formulation notes | Optional |
 | `directionality_overrides` | Per-agent directionality corrections | Optional |
 | `uke_scope` | UKE_SCOPE manifest provenance (informational) | Optional |
 
-**Conditional rules enforced by the schema:**
+**Structural rules enforced by the schema** (these require DATA, not metric values):
 
-* **Mountain**: requires `emerges_naturally: true`, `accessibility_collapse` ≥ 0.85, `resistance` ≤ 0.15, `extractiveness` ≤ 0.25, `suppression` ≤ 0.05
-* **Tangled Rope**: requires `requires_active_enforcement: true`, at least one beneficiary, at least one victim
-* **Snare**: requires at least one victim
+* **Mountain**: must declare `emerges_naturally: true` — a mountain claim asserts naturality. A mountain with declared beneficiaries must also carry at least one omega documenting the natural-law vs. constructed ambiguity.
+* **Tangled Rope**: must name who is coordinated and who pays — `requires_active_enforcement: true`, at least one beneficiary, at least one victim
+* **Snare**: must name at least one victim
 * **Scaffold** (with enforcement): requires `has_sunset_clause: true`
-* **Piton**: requires `theater_ratio` ≥ 0.70
-* **Extractiveness > 0.46**: requires `measurements` (min 6 entries) and `omegas`
-* **Extractiveness > 0.70**: requires `mandatrophy_resolved: true`
+* **Piton**: no extra structural requirement — but a piton is *defined* by atrophied function maintained as performance; if nothing about the constraint is theatrical, it is probably not a piton
 
-**TYPE↔METRIC CONSISTENCY IS A HARD GATE — verify before you emit.** `claimed_type` and the
-`base_properties` metrics are validated *together*: a story whose metrics violate the bounds
-for its claimed type is **REJECTED** (not downgraded). Do not pick a `claimed_type` and then
-author metrics that contradict it — set the type to the category your metrics actually support.
-Before output, find your `claimed_type` in the list above and confirm every metric satisfies it.
-The two most frequent rejections:
-* **Piton** with `theater_ratio` < 0.70 — a piton is *defined* by being mostly performative; if
-  the activity is not ≥70% theater, it is not a piton (it is likely a rope, snare, or scaffold).
-* **Mountain** with `suppression` > 0.05 or `extractiveness` > 0.25 — any real coercion or
-  extraction disqualifies a mountain; if alternatives are suppressed, it is a snare or tangled_rope.
+**THE CLAIM AND THE METRICS ARE INDEPENDENT AUTHORED FACTS — do not reconcile them to each
+other.** State the `claimed_type` you believe is structurally true of the constraint, from the
+authoring perspective's seat. Author the metrics (`extractiveness`, `suppression`,
+`theater_ratio`, …) you believe descriptively true of the constraint's actual operation. The
+engine computes each perspective's type from the metrics and structural data; where the
+computed type diverges from your claim, that divergence is *the measurement the corpus
+exists to take* — a claimed mountain that computes as extractive is exactly how a false
+summit is detected. A story whose claim and metrics "disagree" is not an error and will not
+be rejected; a story whose claim has been tuned to match a predicted engine output is
+worthless as data.
 
 ---
 
@@ -258,17 +243,23 @@ Define the objective metrics of the constraint. These are the structural inputs 
 | Theater ratio | `base_properties.theater_ratio` | Ratio of performative to functional activity (piton detection) |
 | Claimed type | `base_properties.claimed_type` | Must match the analytical perspective's classification |
 
-**NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by f(d) and scope σ(S) — per the formula χ = ε × f(d) × σ(S).**
+**NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by directionality and scope, in the engine's computation.**
 
 **NL Profile metrics** (required for mountain constraints):
 
 | Metric | JSON Field | Requirement |
 |---|---|---|
-| Accessibility collapse | `base_properties.accessibility_collapse` | ≥ 0.85 for mountains |
-| Resistance | `base_properties.resistance` | ≤ 0.15 for mountains |
+| Accessibility collapse | `base_properties.accessibility_collapse` | MUST be authored for mountains — how completely alternatives collapse once the constraint is understood |
+| Resistance | `base_properties.resistance` | MUST be authored for mountains — how much active resistance the constraint meets |
 | Emerges naturally | `base_properties.emerges_naturally` | `true` for mountains |
 
-> **WARNING — CRITICAL FOR MOUNTAINS:** If you set `emerges_naturally: true`, you MUST also provide `accessibility_collapse` ≥ 0.85 and `resistance` ≤ 0.15. WITHOUT these metrics, the compiled constraint will classify as mountain but its natural law signature certification **FAILS SILENTLY**. The engine defaults missing metrics to 0.5, which fails both gates. This is the #1 source of degraded mountain diagnostics in the current corpus.
+> **WARNING — CRITICAL FOR MOUNTAINS:** If you set `emerges_naturally: true`, you MUST also
+> author `accessibility_collapse` and `resistance` with honest values. WITHOUT these metrics
+> the compiled constraint's natural law certification degrades silently (the engine cannot
+> certify what was never authored). Author what is descriptively true: a genuine natural law
+> collapses alternatives nearly completely and meets almost no real resistance; a constraint
+> that needs defending does not. Do not tune the values toward any target — the engine decides
+> certification.
 
 **Structural relationship declarations** — these are the primary input to the directionality derivation chain. Every non-mountain constraint should declare at least one:
 
@@ -282,7 +273,7 @@ Define the objective metrics of the constraint. These are the structural inputs 
 
 #### False Summit Detection (FSM)
 
-The `false_summit_mountain` signature evaluates any Mountain constraint that declares at least one beneficiary. If the mountain's metric profile passes the mountain gates (ε ≤ 0.25, suppression ≤ 0.05, `emerges_naturally: true`) **and** at least one `constraint_beneficiary` fact is present in the compiled `.pl`, FSM fires and the engine reclassifies to the configured override target (`false_summit_override_target` in `config.pl`, default: `tangled_rope`) via the signature override chain.
+The `false_summit_mountain` signature evaluates any Mountain constraint that declares at least one beneficiary. If the constraint's metric profile is consistent with a mountain (low extraction, negligible suppression, `emerges_naturally: true`) **and** at least one `constraint_beneficiary` fact is present in the compiled `.pl`, FSM fires and the engine reclassifies to the configured override target (`false_summit_override_target` in `config.pl`, default: `tangled_rope`) via the signature override chain.
 
 **Use FSM authoring when:** the domain presents a constraint as natural law but identifiable beneficiaries exist — corporations that benefit from treating a labor dynamic as "natural," regimes that benefit from treating an allocation outcome as inevitable, disciplines that benefit from treating a contested empirical claim as settled.
 
@@ -297,7 +288,7 @@ The `false_summit_mountain` signature evaluates any Mountain constraint that dec
 | Flag | JSON Field | When to declare |
 |---|---|---|
 | Sunset clause | `base_properties.has_sunset_clause` | Required for Scaffold |
-| Mandatrophy resolved | `base_properties.mandatrophy_resolved` | Required when ε > 0.70 |
+| Mandatrophy resolved | `base_properties.mandatrophy_resolved` | Declare whenever the constraint's mandate has outlived its function (do not key it to any metric value) |
 
 ### Indexed Classifications (Perspectives)
 
@@ -346,15 +337,16 @@ Interpersonal constraints — relationships, family structures, mentorship dynam
 Worked example — an abusive marriage:
 ```
 Marriage constraint family (3 stories):
-  marriage_financial_coordination (ε=0.55, Tangled Rope)
+  marriage_financial_coordination (Tangled Rope)
     — One partner controls finances; genuine coordination of shared expenses
       exists alongside asymmetric extraction
-    └→ marriage_emotional_dynamics (ε=0.72, Snare)
+    └→ marriage_emotional_dynamics (Snare)
         — Emotional manipulation cycle with minimal coordination function;
-          intermittent reinforcement sustains the lock
-    └→ marriage_childcare_coordination (ε=0.30, Tangled Rope)
+          intermittent reinforcement sustains the lock; the most extractive
+          story in the family
+    └→ marriage_childcare_coordination (Tangled Rope)
         — Genuine coordination of childcare with embedded extraction
-          (one partner bears disproportionate labor)
+          (one partner bears disproportionate labor); the least extractive
 
 Each story gets its own perspectives, its own beneficiary/victim declarations,
 and its own measurements. The identity_locked exit option appears in the
@@ -398,8 +390,8 @@ Do NOT use `identity_locked` when:
 
 Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
 
-* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed for genuine natural laws. To model a **false-summit candidate** (a constraint presented as natural law but with identifiable beneficiaries), declare beneficiaries — this triggers FSM engine evaluation and may reclassify the constraint. See False Summit Detection above. Mountain-only constraints without beneficiaries are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
-* **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Base extraction ≤ 0.05, suppression low. Include at least 2 perspectives, but all may be Rope. Beneficiary recommended; victim usually absent.
+* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Extraction and suppression negligible — nobody collects from arithmetic and nobody enforces it. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed for genuine natural laws. To model a **false-summit candidate** (a constraint presented as natural law but with identifiable beneficiaries), declare beneficiaries — this triggers FSM engine evaluation and may reclassify the constraint. See False Summit Detection above. Mountain-only constraints without beneficiaries are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
+* **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Extraction negligible, suppression low. Include at least 2 perspectives, but all may be Rope. Beneficiary recommended; victim usually absent.
 
 ### Generative Commentary
 
@@ -423,7 +415,7 @@ Explain your reasoning for specific scores. Explicitly address:
 
 ### Omega Variables
 
-Identify at least one omega variable for irreducible uncertainties (e.g., "Is this a Mountain of physics or a Snare of policy?"). Each omega is an object in the `omegas` array. Required when ε > 0.46.
+Identify at least one omega variable for irreducible uncertainties (e.g., "Is this a Mountain of physics or a Snare of policy?"). Each omega is an object in the `omegas` array. Strongly encouraged for every story — any contestable naturalness, beneficiary structure, or persistence question deserves an omega.
 
 | Field | JSON Path | Purpose |
 |---|---|---|
@@ -454,9 +446,9 @@ Provide measurement entries that model how the constraint changed over its inter
 
 * **Metric substitution** — `theater_ratio` rising above 0.5 indicates proxy goals replacing real function (Goodhart drift)
 * **Extraction accumulation** — `base_extractiveness` increasing over time indicates rent-seeking layered onto coordination
-* **Enforcement intensification or decay** — `suppression_requirement` changing over time indicates the constraint's active suppressive force increasing (enforcement ratchet, compliance hardening) or decreasing (normalization, attrition of enforcement capacity). Author `suppression_requirement` measurements when the constraint's suppressive force is the dynamic you are tracing — when enforcement machinery is built up or erodes, not merely when extraction shifts. A rising trajectory (e.g., 0.45 → 0.62 → 0.78) models a constraint that began at the tangled_rope/snare boundary and crossed into snare territory as its enforcement infrastructure matured. A falling trajectory models decay toward the tangled_rope floor. Use a flat trajectory when suppression is stable and only other metrics are varying. Do NOT author `suppression_requirement` measurements unless the story's narrative specifically tracks enforcement-capacity change; a static enforcement picture is already captured by `base_properties.suppression`.
+* **Enforcement intensification or decay** — `suppression_requirement` changing over time indicates the constraint's active suppressive force increasing (enforcement ratchet, compliance hardening) or decreasing (normalization, attrition of enforcement capacity). Author `suppression_requirement` measurements when the constraint's suppressive force is the dynamic you are tracing — when enforcement machinery is built up or erodes, not merely when extraction shifts. A rising trajectory models a constraint whose enforcement infrastructure matured and hardened over the interval. A falling trajectory models enforcement decay. Use a flat trajectory when suppression is stable and only other metrics are varying. Do NOT author `suppression_requirement` measurements unless the story's narrative specifically tracks enforcement-capacity change; a static enforcement picture is already captured by `base_properties.suppression`.
 
-**Required for high-extraction constraints** (extractiveness > 0.46). Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric — 6 measurements minimum.
+**Strongly encouraged whenever the constraint has observable drift or enforcement history** — and the more extractive the constraint, the more its temporal record matters. Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric — aim for 6+ measurements.
 
 | Field | JSON Path | Purpose |
 |---|---|---|
@@ -529,9 +521,10 @@ When a natural-language concept decomposes into multiple constraint stories (per
 
 ```
 BGS constraint family (3 stories):
-  ehrenfest_barrier (ε=0.05, Mountain) — phase-space resolution floor
-    └→ bgs_spectral_universality (ε=0.08, Mountain) — eigenvalue statistics
-        └→ bgs_eigenvector_thermalization (ε=0.42, Tangled Rope) — ETH compliance
+  ehrenfest_barrier (Mountain) — phase-space resolution floor; negligible extraction
+    └→ bgs_spectral_universality (Mountain) — eigenvalue statistics; negligible extraction
+        └→ bgs_eigenvector_thermalization (Tangled Rope) — ETH compliance; substantially
+           extractive (contested, careers ride on it)
 
 Each story's network.affects_constraints array links to its dependents:
   ehrenfest_barrier → ["bgs_spectral_universality", "bgs_eigenvector_thermalization"]
@@ -795,19 +788,19 @@ Before outputting your JSON, verify:
 
 * [ ] **Beneficiary/Victim Declared**: Every non-mountain constraint has `base_properties.beneficiaries[]` with at least one entry. Snare and tangled_rope also require `base_properties.victims[]`. Group names are domain-specific, not generic placeholders (`low_income_borrowers` not `affected_parties`). Mountains may declare beneficiaries to trigger FSM evaluation — see FSM check below.
 * [ ] **FSM Intent Check**: If a mountain declares beneficiaries, is this intentional FSM authoring? Verify the story has at least one omega variable documenting the natural-law vs. constructed ambiguity (required by schema). If beneficiaries were declared by mistake on a genuine natural law, remove them.
-* [ ] **Threshold Accuracy**: Mountains ε ≤ 0.25, suppression ≤ 0.05. Snares ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66.
-* [ ] **Mountain NL Profile**: If claiming mountain, includes `base_properties.accessibility_collapse` ≥ 0.85, `base_properties.resistance` ≤ 0.15, and `base_properties.emerges_naturally: true`. Without all three, the NL certification chain fails and the mountain metric gate does not fire.
+* [ ] **Claim/Metric Independence**: Did you author `claimed_type` from what you believe is structurally true and the metrics from what you believe is descriptively true — WITHOUT tuning either to match the other or to match a predicted engine output?
+* [ ] **Mountain NL Profile**: If claiming mountain, includes `base_properties.accessibility_collapse`, `base_properties.resistance`, and `base_properties.emerges_naturally: true` — all three authored with honest values. Without all three present, the NL certification chain fails silently.
 * [ ] **Index Completeness**: Do your perspectives use the expanded 2026 values (e.g., `arbitrage`, `civilizational`)?
-* [ ] **Suppression Check**: Suppression is a raw structural property (unscaled). Extractiveness is scaled by f(d) and σ(S) per χ = ε × f(d) × σ(S). Does the commentary reflect this?
+* [ ] **Suppression Check**: Suppression is a raw structural property (unscaled). Extractiveness is scaled by directionality and scope in the engine's computation. Does the commentary reflect this?
 * [ ] **Coalition Check**: If the constraint is a snare with multiple victims, does the analysis consider the possibility of coalition power for `powerless` agents?
 * [ ] **Tangled Rope Check**: If Tangled Rope is used, does the JSON include `base_properties.beneficiaries[]` (coordination), `base_properties.victims[]` (asymmetric extraction), AND `base_properties.requires_active_enforcement: true`? All three are required by the canonical classifier.
 * [ ] **Scaffold Check**: If Scaffold is used, does the JSON include `base_properties.has_sunset_clause: true` AND `base_properties.beneficiaries[]` (coordination function)?
-* [ ] **Piton Check**: If Piton is used, does `base_properties.theater_ratio` ≥ 0.70?
-* [ ] **Scope Awareness**: Spatial scope now affects χ via σ(S). Local (σ=0.8) dampens extraction; global (σ=1.2) amplifies it. Do your perspectives use appropriate scopes?
+* [ ] **Piton Check**: If Piton is used, is the constraint genuinely mostly performance — an atrophied function maintained theatrically — and does the authored `theater_ratio` honestly reflect that?
+* [ ] **Scope Awareness**: Spatial scope affects effective extraction (larger scope = harder verification = more amplification). Do your perspectives use appropriate scopes?
 * [ ] **Perspective Minimum**: At least one `powerless` and one `institutional` perspective included — UNLESS the constraint is a uniform-type (mountain-only or rope-only), in which case any 2+ perspectives suffice.
 * [ ] **Inter-Institutional Check**: If the constraint operates between institutional actors with different structural relationships, are separate perspective objects declared for each? Do they have different `exit_options`?
 * [ ] **Same-Level Actor Check**: If the constraint involves extraction between actors at the same nominal power level, are `exit_options` differentiated for each actor? Do the perspectives produce a perspectival gap (not all the same type)?
-* [ ] **Temporal Data**: If `base_properties.extractiveness` > 0.46, include `measurements[]` entries at 3+ time points for `theater_ratio` and `base_extractiveness` (6 entries minimum).
+* [ ] **Temporal Data**: Whenever the constraint has observable drift or enforcement history (and especially when it is substantially extractive), include `measurements[]` entries at 3+ time points for `theater_ratio` and `base_extractiveness` (aim for 6+).
 * [ ] **Constraint Claim**: Does the JSON declare `base_properties.claimed_type`? This is required for Boltzmann compliance analysis and false natural law detection.
 * [ ] **Coordination Type**: If the constraint has a coordination function, is `boltzmann.coordination_type` declared with one of the six valid types?
 * [ ] **Network Relationships**: If the constraint is part of a known constraint cluster, are `network.affects_constraints[]` entries declared?
@@ -819,7 +812,7 @@ Before outputting your JSON, verify:
 * [ ] **Analytical identity_locked**: If a perspective uses `(analytical, identity_locked)`, does the commentary explicitly note that this instantiates the oracle gap (Theorem 4) — the analyst's identity frame prevents seeing structure that cross-position analysis reveals?
 * [ ] **New Coordination Types**: If using `attachment_coordination` or `identity_coordination`, is the coordination function genuine? Does the constraint actually coordinate emotional bonds / group membership, or is it using relational/identity framing as a cover story for extraction?
 * [ ] **Cyclical Measurements**: If the constraint shows cyclical dynamics (oscillating extractiveness over time), are there enough measurement points to show at least one full cycle (8–10 minimum)? Is the cyclical pattern documented in commentary?
-* [ ] **Suppression Ambiguity**: For interpersonal constraints with suppression ≥ 0.40, is there an omega variable addressing whether the suppression is structural or internalized?
+* [ ] **Suppression Ambiguity**: For interpersonal constraints with substantial suppression, is there an omega variable addressing whether the suppression is structural or internalized?
 
 ---
 
@@ -827,18 +820,18 @@ Before outputting your JSON, verify:
 
 The corpus needs balanced representation across all six types. When choosing scenarios for batch generation, prioritize the **underrepresented types**:
 
-| Type | Best Source Domains | Key Metric Signature | Structural Data |
-|------|-------------------|---------------------|----------------|
-| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | ε ≥ 0.30, suppression ≥ 0.40, 0.40 ≤ χ ≤ 0.90 | beneficiaries + victims + enforcement |
-| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | χ ≤ 0.30, theater ≤ 0.70 | beneficiaries + sunset clause |
-| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | victims required |
-| **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Varies by institutional perspective | Multiple institutional perspectives + overrides |
-| **Same-level lateral** (NEW, needed) | Peer manipulation, communal narcissism, workplace gatekeeping, interstate regulatory arbitrage, norm-setting | Varies by actor perspective | Differentiated exit_options + beneficiary/victim per actor |
-| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed for genuine natural laws. False-summit candidates: declare beneficiaries + add omegas (triggers FSM). |
-| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiaries; victims usually absent |
-| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victims possible; beneficiaries unlikely |
-| **Interpersonal dynamics** (NEW, needed) | Abusive relationships, mentorship dynamics, family structures, therapeutic boundaries, cult dynamics, community bonds | Varies by decomposed story; expect constraint families of 2–4 linked stories | identity_locked exit, attachment_coordination or identity_coordination type, cyclical measurements, suppression ambiguity omegas |
-| **Cognitive capture** (NEW, needed) | Regulatory capture with identity fusion, ideological lock-in, institutional identity crisis, post-colonial institutional inheritance, organizational culture traps | identity_locked at institutional power; perspectival gap between identity_locked and arbitrage institutional actors | identity_locked exit differentiating captured from non-captured institutional actors |
+| Type | Best Source Domains | Structural Data |
+|------|-------------------|----------------|
+| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | beneficiaries + victims + enforcement |
+| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | beneficiaries + sunset clause |
+| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | victims required |
+| **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Multiple institutional perspectives + overrides |
+| **Same-level lateral** (NEW, needed) | Peer manipulation, communal narcissism, workplace gatekeeping, interstate regulatory arbitrage, norm-setting | Differentiated exit_options + beneficiary/victim per actor |
+| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | emerges_naturally; no beneficiary/victim needed for genuine natural laws. False-summit candidates: declare beneficiaries + add omegas (triggers FSM). |
+| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | beneficiaries; victims usually absent |
+| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | victims possible; beneficiaries unlikely |
+| **Interpersonal dynamics** (NEW, needed) | Abusive relationships, mentorship dynamics, family structures, therapeutic boundaries, cult dynamics, community bonds | identity_locked exit, attachment_coordination or identity_coordination type, cyclical measurements, suppression ambiguity omegas; expect constraint families of 2–4 linked stories |
+| **Cognitive capture** (NEW, needed) | Regulatory capture with identity fusion, ideological lock-in, institutional identity crisis, post-colonial institutional inheritance, organizational culture traps | identity_locked exit differentiating captured from non-captured institutional actors |
 
 **Scenarios that produce the richest perspectival gaps** come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, platform economics, and **inter-institutional dynamics** (regulatory capture, trade agreements, sanctions regimes). These domains naturally generate multiple institutional perspectives with different directionalities.
 

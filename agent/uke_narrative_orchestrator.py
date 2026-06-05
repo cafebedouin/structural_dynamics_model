@@ -1127,8 +1127,7 @@ class UKEOrchestrator:
                 f"CONSTRAINT: {claim_id}\n"
                 f"Structural delta: {axis.get('structural_delta', 'Unknown')}\n"
                 f"Primary observable: {axis.get('primary_observable', 'Unknown')}\n"
-                f"Hypothesis type: {axis.get('hypothesis', 'Unknown')}\n"
-                f"Epsilon bin: {axis.get('epsilon_bin', 'Unknown')}"
+                f"Hypothesis type: {axis.get('hypothesis', 'Unknown')}"
             )
             if axis.get("beneficiary"):
                 source_desc += f"\nBeneficiary: {axis['beneficiary']}"

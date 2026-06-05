@@ -333,8 +333,7 @@ class DRAuditOrchestrator:
                 f"CONSTRAINT: {claim_id}\n"
                 f"Structural delta: {axis['structural_delta']}\n"
                 f"Primary observable: {axis['primary_observable']}\n"
-                f"Hypothesis type: {axis['hypothesis']}\n"
-                f"Epsilon bin: {axis['epsilon_bin']}"
+                f"Hypothesis type: {axis['hypothesis']}"
             )
             if axis.get("beneficiary"):
                 source_desc += f"\nBeneficiary: {axis['beneficiary']}"
