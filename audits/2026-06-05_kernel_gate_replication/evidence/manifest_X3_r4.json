@@ -1,0 +1,302 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform editorial discretion, state regulatory authority, and user speech rights. The topic encompasses constitutional constraints on government compulsion of private speech, economic incentives driving moderation practices, and the collision between platform power and democratic discourse norms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with editorial discretion and market power)",
+   "State regulatory authorities (legislative and executive bodies imposing moderation mandates)",
+   "Platform users (speakers and audiences with varying rights claims)",
+   "Advertisers (revenue source influencing moderation incentives)",
+   "First Amendment doctrine (constitutional constraint on government speech compulsion)",
+   "Section 230 immunity framework (liability shield conditioning platform behavior)"
+  ],
+  "key_tensions": [
+   "Platform editorial autonomy vs state-mandated moderation requirements",
+   "User speech rights vs platform property rights and terms of service",
+   "Advertiser brand safety demands vs user content diversity",
+   "Democratic discourse norms vs platform profit maximization"
+  ],
+  "key_mechanisms": [
+   "Section 230 immunity (liability shield incentivizing voluntary moderation)",
+   "Advertiser boycott threats (economic pressure mechanism)",
+   "Regulatory mandates with penalty enforcement (state compulsion mechanism)"
+  ],
+  "key_absences": [
+   "International jurisdiction conflicts (EU DSA vs US First Amendment)",
+   "Algorithmic amplification as distinct from hosting decisions",
+   "Platform market concentration enabling regulatory capture"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "First Amendment prohibition on government abridgment of speech, applied to question of whether state-mandated content moderation constitutes compelled speech",
+  "authority_description": "Federal judiciary interpreting constitutional text and precedent (state action doctrine, compelled speech doctrine)",
+  "drift_status": "functioning",
+  "candidate_pattern": "uncertain",
+  "is_contested_kernel": true,
+  "kernel_id": "state_action_boundary",
+  "readings": [
+   {
+    "reading_id": "formalist_reading",
+    "commitment": "First Amendment constrains only direct government action; private platform moderation is categorically outside constitutional scope regardless of state pressure",
+    "authority_grounding": "textualist / state action doctrine formalism",
+    "sibling_readings": [
+     "entanglement_reading",
+     "public_function_reading"
+    ],
+    "expected_structural_delta": "Platforms retain full editorial discretion; state mandates trigger strict scrutiny; regulatory obligations classified as unconstitutional compulsion"
+   },
+   {
+    "reading_id": "entanglement_reading",
+    "commitment": "First Amendment applies when government significantly encourages or coerces private action, creating joint state-private censorship",
+    "authority_grounding": "Blum v Yaretsky / Lugar entanglement doctrine",
+    "sibling_readings": [
+     "formalist_reading",
+     "public_function_reading"
+    ],
+    "expected_structural_delta": "Regulatory pressure (e.g., Section 230 conditioning, White House jawboning) may trigger constitutional constraint; moderation mandates evaluated for coercion threshold"
+   },
+   {
+    "reading_id": "public_function_reading",
+    "commitment": "Platforms performing essential public forum function are subject to First Amendment constraints as quasi-governmental actors",
+    "authority_grounding": "Marsh v Alabama / company town doctrine extended to digital public squares",
+    "sibling_readings": [
+     "formalist_reading",
+     "entanglement_reading"
+    ],
+    "expected_structural_delta": "Dominant platforms treated as state actors for speech purposes; user speech rights enforceable against platform moderation; regulatory mandates permissible as enforcing existing constitutional obligations"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "formalist_reading",
+    "reading_b": "public_function_reading",
+    "basis": "Formalist reading holds private property rights categorically exclude state action; public function reading holds that performing governmental role subjects private actor to constitutional constraint. No framework can hold both that platforms are purely private (immune from First Amendment) and quasi-governmental (bound by First Amendment) simultaneously."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "advertiser_brand_safety_extraction",
+   "human_readable": "Advertiser Brand Safety Extraction (Revenue Model Driving Over-Moderation)",
+   "structural_delta": "Economic dependence on advertiser revenue creates structural incentive to over-moderate content that threatens brand adjacency, independent of legal obligation or user preference",
+   "primary_observable": "Correlation between advertiser boycott campaigns and content policy changes; revenue concentration among top advertisers; moderation rate variance between ad-supported vs subscription platforms",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "advertisers_demanding_brand_safety",
+   "victim": "users_producing_controversial_but_legal_content",
+   "downstream_of": [],
+   "feeds_into": [
+    "section_230_liability_shield",
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Structurally distinct economic constraint; upstream to both liability and regulatory axes; tangled_rope with clear beneficiary/victim structure"
+  },
+  {
+   "claim_id": "section_230_liability_shield",
+   "human_readable": "Section 230 Liability Shield (Immunity Conditioning Moderation Incentives)",
+   "structural_delta": "Federal immunity from publisher liability for user content, conditioned on good-faith moderation, creates structural incentive to moderate proactively to preserve shield",
+   "primary_observable": "Platform moderation policy changes following Section 230 reform proposals; litigation patterns invoking immunity defense; moderation volume correlation with liability threat perception",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "advertiser_brand_safety_extraction"
+   ],
+   "feeds_into": [
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable from advertiser axis (legal immunity vs revenue); rope coordinating platform behavior; feeds into regulatory synthesis"
+  },
+  {
+   "claim_id": "regulatory_mandate_compulsion",
+   "human_readable": "Regulatory Mandate Compulsion (State-Imposed Moderation Requirements)",
+   "structural_delta": "Government-imposed content moderation obligations (e.g., illegal content takedown mandates, transparency reporting requirements) that override platform editorial discretion",
+   "primary_observable": "Statutory moderation mandates with penalty enforcement (EU DSA, state social media laws); compliance cost burden; constitutional challenge litigation outcomes",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "state_regulatory_authorities",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "advertiser_brand_safety_extraction",
+    "section_230_liability_shield"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node; snare with state as beneficiary extracting compliance; distinct from economic and liability axes"
+  },
+  {
+   "claim_id": "formalist_reading",
+   "human_readable": "Formalist State Action Reading (Private Platforms Categorically Outside First Amendment)",
+   "structural_delta": "Constitutional interpretation holding that First Amendment constrains only direct government action; private platform moderation decisions are categorically outside constitutional scope regardless of state pressure or market dominance",
+   "primary_observable": "Judicial opinions applying state action doctrine to platform cases; strict scrutiny application to moderation mandates; compelled speech doctrine invocations",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with distinct structural delta; mountain providing constitutional constraint base; affects regulatory mandate enforceability"
+  },
+  {
+   "claim_id": "entanglement_reading",
+   "human_readable": "Entanglement State Action Reading (Government Coercion Triggers Constitutional Constraint)",
+   "structural_delta": "Constitutional interpretation holding that First Amendment applies when government significantly encourages or coerces private moderation action, creating joint state-private censorship subject to constitutional scrutiny",
+   "primary_observable": "Judicial application of Blum/Lugar entanglement tests to platform-government coordination; jawboning case outcomes; Section 230 conditioning as coercion analysis",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with different observable and victim structure from formalist reading; rope coordinating state-platform boundary; sibling to formalist_reading"
+  },
+  {
+   "claim_id": "public_function_reading",
+   "human_readable": "Public Function State Action Reading (Dominant Platforms as Quasi-Governmental Actors)",
+   "structural_delta": "Constitutional interpretation holding that platforms performing essential public forum function are subject to First Amendment constraints as quasi-governmental actors, making user speech rights enforceable against platform moderation",
+   "primary_observable": "Judicial extension of Marsh v Alabama company town doctrine to digital platforms; market concentration thresholds for state actor classification; user standing in moderation challenges",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "users_claiming_speech_rights_against_platforms",
+   "victim": "platform_editorial_discretion",
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with highest epsilon; tangled_rope with clear beneficiary/victim reversal from formalist reading; sibling to formalist_reading and entanglement_reading"
+  },
+  {
+   "claim_id": "market_concentration_lock_in",
+   "human_readable": "Market Concentration Lock-In (Network Effects Preventing Platform Switching)",
+   "structural_delta": "Network effects and switching costs create structural barriers to user exit, reducing competitive discipline on moderation practices and enabling platforms to impose terms users would reject in competitive market",
+   "primary_observable": "Market share concentration (Herfindahl index); user switching rates; cross-platform migration costs; multi-homing prevalence",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "advertiser_brand_safety_extraction",
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Mountain providing economic constraint base; distinct from advertiser revenue axis (market structure vs revenue model); feeds into both economic and regulatory axes"
+  },
+  {
+   "claim_id": "algorithmic_amplification_curation",
+   "human_readable": "Algorithmic Amplification Curation (Recommendation Systems as Editorial Choice)",
+   "structural_delta": "Algorithmic content recommendation and amplification decisions constitute editorial curation distinct from binary hosting/removal decisions, with different constitutional and regulatory implications",
+   "primary_observable": "Algorithmic ranking transparency; amplification vs hosting legal treatment; recommendation system design choices; user control over algorithmic feeds",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "market_concentration_lock_in"
+   ],
+   "feeds_into": [
+    "regulatory_mandate_compulsion"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: distinct observable but lower centrality; amplification vs hosting distinction captured in regulatory_mandate_compulsion's scope; would require separate generation to fully develop"
+  }
+ ],
+ "generation_sequence": [
+  "market_concentration_lock_in",
+  "advertiser_brand_safety_extraction",
+  "section_230_liability_shield",
+  {
+   "claim_id": "formalist_reading",
+   "kernel_id": "state_action_boundary",
+   "reading_id": "formalist_reading"
+  },
+  {
+   "claim_id": "entanglement_reading",
+   "kernel_id": "state_action_boundary",
+   "reading_id": "entanglement_reading"
+  },
+  {
+   "claim_id": "public_function_reading",
+   "kernel_id": "state_action_boundary",
+   "reading_id": "public_function_reading"
+  },
+  "regulatory_mandate_compulsion"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_amplification_curation",
+   "structural_delta": "Algorithmic recommendation as editorial curation distinct from hosting decisions",
+   "hypothesis": "rope",
+   "deferral_reason": "Lower centrality; amplification vs hosting distinction partially captured in regulatory_mandate_compulsion scope; would require dedicated generation to fully develop as independent axis"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_international_jurisdiction",
+   "description": "How do conflicting jurisdictional mandates (EU DSA vs US First Amendment) resolve when platforms operate globally? Does regulatory arbitrage convert Mountains into Snares via jurisdiction shopping?",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_amplification_hosting_boundary",
+   "description": "Is algorithmic amplification constitutionally distinct from hosting? If amplification is editorial curation (protected speech), does that reclassify regulatory mandates on recommendation systems as compelled speech?",
+   "source": "Deferred axis algorithmic_amplification_curation + Dark Matter Probe 1 (Operational Medium)"
+  },
+  {
+   "id": "omega_market_concentration_threshold",
+   "description": "At what market share does network lock-in convert from Mountain (physics of network effects) to Snare (regulatory failure to enforce competition)? Does antitrust enforcement change the constraint type?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + market_concentration_lock_in classification"
+  },
+  {
+   "id": "omega_state_action_doctrine_stability",
+   "description": "Is the formalist/entanglement/public function split stable across judicial appointments, or does it represent transitional doctrinal uncertainty? If doctrine shifts, does regulatory_mandate_compulsion reclassify from Snare to Rope?",
+   "source": "Commitment system recognition + F03 (Hasty Generalization) concern about constitutional doctrine as Mountain"
+  },
+  {
+   "id": "omega_advertiser_coordination",
+   "description": "When do advertiser boycott campaigns constitute coordinated action subject to antitrust scrutiny? If coordination is illegal, does advertiser_brand_safety_extraction reclassify from Tangled Rope to Snare?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + advertiser_brand_safety_extraction beneficiary structure"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: Constitutional doctrine readings (formalist/entanglement/public function) classified as Mountain/Rope/Tangled Rope respectively, but judicial doctrine is interpretive rather than physical. If Supreme Court composition shifts, these readings may reclassify. Generated omega_state_action_doctrine_stability to bound this uncertainty. Additionally, market_concentration_lock_in classified as Mountain but may be Snare if regulatory failure rather than network physics is primary cause; generated omega_market_concentration_threshold."
+ }
+}

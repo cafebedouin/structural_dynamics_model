@@ -1,0 +1,297 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Education Policy / Constitutional Law / Social Stratification",
+ "family_id": "affirmative_action_admissions_2026",
+ "topic_summary": "Analysis of affirmative action in university admissions, examining race-conscious admissions policies as mechanisms for addressing historical exclusion and present-day inequality. The domain centers on the collision between remedial justice claims, equal protection doctrine, and competing conceptions of merit and institutional mission.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Universities (selective institutions with admissions authority)",
+   "Applicant pools (stratified by race, class, preparation quality)",
+   "Supreme Court (constitutional adjudicator; SFFA v. Harvard 2023)",
+   "Historical exclusion regimes (Jim Crow, redlining, school segregation)",
+   "Diversity rationale (educational benefit claim)",
+   "Merit frameworks (contested definitions of qualification)"
+  ],
+  "key_tensions": [
+   "Remedial justice vs. colorblind equal protection (backward-looking repair vs. forward-looking neutrality)",
+   "Individual rights vs. group-level inequality (applicant harm vs. structural disadvantage)",
+   "Institutional autonomy vs. constitutional constraint (university mission vs. 14th Amendment limits)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "Equal Protection Clause of the 14th Amendment as constraint on state action regarding racial classification",
+  "authority_description": "Supreme Court interpretive supremacy grounded in Marbury v. Madison and stare decisis",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift_absorption",
+  "is_contested_kernel": true,
+  "kernel_id": "equal_protection_racial_classification",
+  "readings": [
+   {
+    "reading_id": "strict_scrutiny_colorblind",
+    "commitment": "Equal protection forbids racial classification except under compelling interest with narrow tailoring; colorblindness as constitutional mandate",
+    "authority_grounding": "Originalist/textualist interpretation; Roberts Court majority in SFFA",
+    "sibling_readings": [
+     "remedial_justice_reading",
+     "antisubordination_reading"
+    ],
+    "expected_structural_delta": "Race-conscious admissions categorically impermissible; applicants harmed by consideration of race enter victim set; high suppression of institutional discretion"
+   },
+   {
+    "reading_id": "remedial_justice_reading",
+    "commitment": "Equal protection permits race-conscious remedies for documented historical exclusion and present effects",
+    "authority_grounding": "Purposivist interpretation; Brennan/Marshall dissents; some lower courts pre-SFFA",
+    "sibling_readings": [
+     "strict_scrutiny_colorblind",
+     "antisubordination_reading"
+    ],
+    "expected_structural_delta": "Universities may use race as plus factor when tied to remedying specific exclusion; beneficiaries are historically excluded groups; victims are applicants denied admission who would have been admitted under race-neutral criteria"
+   },
+   {
+    "reading_id": "antisubordination_reading",
+    "commitment": "Equal protection forbids maintenance of caste systems; permits race-conscious action to dismantle subordination",
+    "authority_grounding": "Critical race theory / structural interpretation; academic commentary; not adopted by Court",
+    "sibling_readings": [
+     "strict_scrutiny_colorblind",
+     "remedial_justice_reading"
+    ],
+    "expected_structural_delta": "Focus shifts from individual applicant harm to group-level hierarchy maintenance; universities may act to prevent re-entrenchment of racial stratification; no individual victim set if action prevents subordination"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "strict_scrutiny_colorblind",
+    "reading_b": "antisubordination_reading",
+    "basis": "Colorblind reading treats any racial classification as presumptively harmful requiring justification; antisubordination reading treats racial classification as permissible tool against hierarchy. No framework holds both: either race-consciousness is suspect or it is remedial."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "strict_scrutiny_colorblind",
+   "human_readable": "Strict Scrutiny Colorblind Reading (Equal Protection as Race-Neutrality Mandate)",
+   "structural_delta": "Constitutional interpretation forbidding racial classification in admissions except under compelling interest with narrow tailoring",
+   "primary_observable": "Supreme Court doctrine; SFFA v. Harvard holding; frequency of race-conscious policy invalidation",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "applicants_claiming_reverse_discrimination",
+   "victim": "universities_seeking_diversity",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Kernel reading with distinct constitutional constraint structure; current controlling law"
+  },
+  {
+   "claim_id": "remedial_justice_reading",
+   "human_readable": "Remedial Justice Reading (Equal Protection Permits Historical Repair)",
+   "structural_delta": "Constitutional interpretation permitting race-conscious remedies for documented exclusion and present effects",
+   "primary_observable": "Dissenting opinions; pre-SFFA circuit splits; state constitutional provisions",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "historically_excluded_groups",
+   "victim": "applicants_denied_under_raceconscious_criteria",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Kernel reading with structurally different victim/beneficiary set and extractiveness profile"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "human_readable": "Antisubordination Reading (Equal Protection as Anti-Caste Principle)",
+   "structural_delta": "Constitutional interpretation focusing on group hierarchy rather than individual classification harm",
+   "primary_observable": "Academic legal theory; international human rights frameworks; not adopted in U.S. doctrine",
+   "epsilon_bin": "mod",
+   "hypothesis": "scaffold",
+   "beneficiary": "subordinated_groups",
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with distinct structural logic (no individual victim set); live in comparative constitutional law"
+  },
+  {
+   "claim_id": "preparation_inequality_mountain",
+   "human_readable": "Preparation Inequality (Structural Educational Stratification)",
+   "structural_delta": "Unequal distribution of college-preparatory resources by race and class prior to admissions",
+   "primary_observable": "SAT score gaps by school district funding; AP course availability; college counseling access",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "merit_construction_tangled_rope",
+    "class_race_entanglement"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Upstream mountain feeding multiple downstream axes; structurally independent of kernel readings"
+  },
+  {
+   "claim_id": "merit_construction_tangled_rope",
+   "human_readable": "Merit Construction (Contested Definitions of Qualification)",
+   "structural_delta": "Competing frameworks for defining admissions merit (test scores vs. holistic vs. potential vs. contribution)",
+   "primary_observable": "Admissions criteria weighting; holistic review policies; test-optional adoption rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "institutions_defining_mission",
+   "victim": "applicants_under_disfavored_frameworks",
+   "downstream_of": [
+    "preparation_inequality_mountain"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "High centrality; synthesizes preparation inequality with institutional discretion; independent of kernel"
+  },
+  {
+   "claim_id": "class_race_entanglement",
+   "human_readable": "Class-Race Entanglement (Overlapping but Non-Identical Stratification)",
+   "structural_delta": "Racial and economic disadvantage correlate but do not perfectly overlap; class-based proxies imperfectly substitute for race-conscious policy",
+   "primary_observable": "Income distribution within racial groups; class-based affirmative action outcomes by race",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "preparation_inequality_mountain"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Structurally distinct from merit construction; different observable (income vs. qualification); independent coordination problem"
+  },
+  {
+   "claim_id": "legacy_preference_extraction",
+   "human_readable": "Legacy Preference Extraction (Intergenerational Advantage Mechanism)",
+   "structural_delta": "Admissions advantage for children of alumni, disproportionately benefiting white applicants due to historical exclusion",
+   "primary_observable": "Legacy admit rates vs. non-legacy; racial composition of legacy pools",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "alumni_networks",
+   "victim": "first_generation_applicants",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Structurally independent mechanism; different beneficiary/victim structure; passes pairwise test with all other axes"
+  },
+  {
+   "claim_id": "diversity_rationale_scaffold",
+   "human_readable": "Diversity Rationale (Educational Benefit Claim)",
+   "structural_delta": "Claim that racial diversity produces educational benefits (cross-racial understanding, viewpoint variety) justifying race-conscious admissions",
+   "primary_observable": "Grutter v. Bollinger holding (pre-SFFA); amicus briefs from corporations/military; educational research",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: SFFA invalidated this rationale; now primarily historical/comparative interest; captured in kernel readings"
+  },
+  {
+   "claim_id": "mismatch_hypothesis",
+   "human_readable": "Mismatch Hypothesis (Overmatch Harm Claim)",
+   "structural_delta": "Claim that race-conscious admissions place beneficiaries in institutions where they underperform, causing harm",
+   "primary_observable": "Graduation rates by admissions pathway; STEM persistence by credential level",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: empirically contested; low centrality; captured as omega rather than independent axis"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "strict_scrutiny_colorblind",
+   "kernel_id": "equal_protection_racial_classification",
+   "reading_id": "strict_scrutiny_colorblind"
+  },
+  {
+   "claim_id": "remedial_justice_reading",
+   "kernel_id": "equal_protection_racial_classification",
+   "reading_id": "remedial_justice_reading"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "kernel_id": "equal_protection_racial_classification",
+   "reading_id": "antisubordination_reading"
+  },
+  "preparation_inequality_mountain",
+  "merit_construction_tangled_rope",
+  "class_race_entanglement",
+  "legacy_preference_extraction"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "diversity_rationale_scaffold",
+   "structural_delta": "Educational benefit claim justifying race-conscious admissions",
+   "hypothesis": "scaffold",
+   "deferral_reason": "SFFA invalidated this rationale as insufficient compelling interest; now historical rather than live constraint; kernel readings capture the constitutional structure"
+  },
+  {
+   "claim_id": "mismatch_hypothesis",
+   "structural_delta": "Claim that race-conscious admissions harm beneficiaries via overmatch",
+   "hypothesis": "piton",
+   "deferral_reason": "Empirically contested; zero centrality; better treated as omega (bounded uncertainty) than independent axis"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_mismatch_validity",
+   "description": "Is the mismatch hypothesis a Piton (atrophied harm claim) or a Mountain (genuine educational constraint)? Empirical literature is contested; graduation rate data do not clearly support large mismatch effects.",
+   "source": "Deferred axis mismatch_hypothesis + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_state_action_boundary",
+   "description": "Does the Equal Protection kernel apply to private universities receiving federal funding? If not, the constraint topology differs radically for private vs. public institutions.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_international_comparison",
+   "description": "How do other constitutional systems (Canada, South Africa, India) handle affirmative action? Antisubordination reading is live doctrine elsewhere; U.S. exceptionalism may be Piton rather than Mountain.",
+   "source": "Dark Matter Probe 1 (Operational Medium) + antisubordination_reading scaffold status"
+  },
+  {
+   "id": "omega_socioeconomic_substitution",
+   "description": "Can class-based affirmative action achieve similar racial diversity outcomes? Class_race_entanglement axis shows imperfect overlap, but magnitude of substitution effect is empirically uncertain.",
+   "source": "Class_race_entanglement axis + F03 concern"
+  },
+  {
+   "id": "omega_legacy_persistence",
+   "description": "Will legacy preferences survive legal challenge post-SFFA? If legacy_preference_extraction is invalidated, the constraint topology shifts (one fewer snare).",
+   "source": "Legacy_preference_extraction axis + current litigation uncertainty"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: preparation_inequality_mountain classified as mountain (physical/structural constraint) but may be Piton of policy choice if K-12 funding equalization is politically feasible. Generated omega_socioeconomic_substitution to bound this uncertainty. Also: class_race_entanglement observable (income distribution) is well-documented, but the magnitude of substitution effect (class-based AA achieving racial diversity) is empirically contested\u2014omega documents this."
+ }
+}

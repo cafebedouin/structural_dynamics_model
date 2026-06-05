@@ -1,0 +1,144 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependence",
+ "family_id": "road_side_convention_2026",
+ "topic_summary": "Analysis of the convention of driving on the right-hand side of the road as a coordination mechanism. The topic examines how an arbitrary choice becomes locked in through network effects, infrastructure investment, and cross-border coordination pressures, creating a self-reinforcing system where deviation imposes asymmetric costs.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "National transportation authorities (rule-setters and enforcers)",
+   "Vehicle manufacturers (design standardization agents)",
+   "Border-crossing infrastructure (physical coordination points)",
+   "Driver population (norm-internalized agents)",
+   "Historical colonial powers (initial rule propagators)"
+  ],
+  "key_tensions": [
+   "Arbitrary initial choice vs path-dependent lock-in (convention becomes constraint)",
+   "National sovereignty vs cross-border coordination efficiency (isolated choice vs network pressure)"
+  ],
+  "key_mechanisms": [
+   "Network effects: Each additional adopter increases switching cost for non-adopters",
+   "Infrastructure lock-in: Road design, signage, vehicle manufacturing tooled to one standard",
+   "Norm internalization: Drivers habituate to one side; cognitive switching cost becomes safety risk"
+  ],
+  "key_absences": [
+   "Safety performance differential between left-side and right-side driving systems",
+   "Economic cost of maintaining minority convention in globalized vehicle market"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_selection",
+   "human_readable": "Coordination Equilibrium Selection (Arbitrary Convention Stabilization)",
+   "structural_delta": "The mechanism by which an arbitrary choice between equivalent options becomes a stable, self-enforcing equilibrium through coordination benefits",
+   "primary_observable": "Adoption rate within jurisdiction; cost differential for non-conforming vs conforming behavior",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "infrastructure_lock_in",
+    "cross_border_friction"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational coordination mechanism; distinct observable (adoption rate and conformity cost); feeds two downstream axes"
+  },
+  {
+   "claim_id": "infrastructure_lock_in",
+   "human_readable": "Infrastructure Lock-In (Physical Capital Path Dependence)",
+   "structural_delta": "The accumulated physical capital (road design, signage, vehicle manufacturing) that makes switching sides prohibitively expensive after initial adoption",
+   "primary_observable": "Capital stock invested in side-specific infrastructure; estimated switching cost as percentage of GDP",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": "late_adopter_nations",
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "cross_border_friction"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (capital stock and switching cost); different epsilon from coordination_equilibrium; documents transition from rope to piton"
+  },
+  {
+   "claim_id": "cross_border_friction",
+   "human_readable": "Cross-Border Friction (Network Boundary Coordination Cost)",
+   "structural_delta": "The asymmetric cost imposed on minority-convention jurisdictions when interfacing with majority-convention neighbors through trade, tourism, and vehicle standards",
+   "primary_observable": "Border crossing infrastructure complexity; vehicle import/export cost differential; accident rates at convention boundaries",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "majority_convention_bloc",
+   "victim": "minority_convention_jurisdictions",
+   "downstream_of": [
+    "coordination_equilibrium_selection",
+    "infrastructure_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; synthesis node with distinct beneficiary/victim structure; different observable (border interface costs) from upstream axes"
+  },
+  {
+   "claim_id": "cognitive_habituation_safety",
+   "human_readable": "Cognitive Habituation Safety (Driver Internalization Risk)",
+   "structural_delta": "The safety risk created when drivers habituated to one convention must operate in the opposite convention, creating cognitive load and accident risk",
+   "primary_observable": "Accident rates for foreign drivers; cognitive switching task performance in driving simulators",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "cross_border_friction"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Independent observable (cognitive performance and accident rates); mountain hypothesis (human neurological constraint); feeds cross_border_friction"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_selection",
+  "infrastructure_lock_in",
+  "cross_border_friction",
+  "cognitive_habituation_safety"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_safety_differential",
+   "description": "Is there a measurable safety performance difference between left-side and right-side driving systems? If yes, the convention is not purely arbitrary and one equilibrium may be objectively superior. Absence in source material suggests no strong evidence exists, but this bounds the mountain/rope classification.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + \u00a71.1 absences"
+  },
+  {
+   "id": "omega_colonial_propagation",
+   "description": "Historical colonial powers propagated conventions to colonies, but the mechanism of initial adoption (coercion vs voluntary coordination) affects whether early adoption was rope or snare. Source material does not specify; this affects beneficiary identification in historical context.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + \u00a71.1 entities"
+  },
+  {
+   "id": "omega_vehicle_market_extraction",
+   "description": "Does the global vehicle manufacturing market impose higher costs on minority-convention jurisdictions through reduced model availability and higher import costs? If yes, this is a snare mechanism not captured in cross_border_friction. Absence suggests this may be a significant deferred axis.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + \u00a71.1 absences"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Four distinct axes identified through multi-lens scan (coordination theory, infrastructure economics, network effects, cognitive psychology). All axes passed pairwise independence testing with distinct observables and epsilon values. Dark matter probes surfaced three omegas but no additional axes meeting independence criteria."
+ }
+}

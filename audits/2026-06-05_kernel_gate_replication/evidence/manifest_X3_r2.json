@@ -1,0 +1,219 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform autonomy, state regulatory authority, and user speech rights. The topic encompasses constitutional constraints on government compulsion, platform liability frameworks, and the economic incentives shaping moderation practices.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with editorial discretion claims)",
+   "State regulatory authorities (legislative and executive bodies imposing moderation mandates)",
+   "Platform users (speakers and audiences with contested speech rights)",
+   "Section 230 (U.S. liability shield for platform moderation decisions)",
+   "First Amendment doctrine (constitutional constraint on state compulsion of private speech)",
+   "EU Digital Services Act (regulatory framework imposing transparency and removal obligations)"
+  ],
+  "key_tensions": [
+   "Platform editorial autonomy vs state-mandated content removal (private discretion vs regulatory compliance)",
+   "Liability shield preservation vs accountability for harms (Section 230 immunity vs tort/criminal exposure)",
+   "User speech rights vs platform property rights (access claims vs exclusion authority)"
+  ],
+  "key_mechanisms": [
+   "Liability regime (Section 230 / DSA safe harbor conditions shape moderation incentives)",
+   "Constitutional review (First Amendment scrutiny of state mandates)",
+   "Algorithmic amplification (recommendation systems as distinct from hosting decisions)",
+   "Transparency reporting requirements (regulatory visibility into moderation practices)"
+  ],
+  "key_absences": [
+   "Cross-border enforcement jurisdiction (how obligations apply to platforms operating globally)",
+   "Algorithmic amplification vs hosting distinction (whether recommendation is protected editorial discretion)",
+   "Collective action mechanisms for users (whether users can organize to contest platform decisions)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "state_action_boundary",
+   "human_readable": "State Action Boundary (Constitutional Limits on Compelled Moderation)",
+   "structural_delta": "Whether government can constitutionally compel private platforms to remove or host content",
+   "primary_observable": "First Amendment doctrine on compelled speech; judicial review outcomes of moderation mandates",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "liability_regime_architecture",
+    "platform_editorial_discretion"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream constitutional constraint; distinct observable (judicial doctrine); feeds two downstream axes"
+  },
+  {
+   "claim_id": "liability_regime_architecture",
+   "human_readable": "Liability Regime Architecture (Safe Harbor Conditions and Incentive Structure)",
+   "structural_delta": "How liability shields condition platform moderation behavior through safe harbor requirements",
+   "primary_observable": "Section 230 / DSA safe harbor criteria; platform compliance costs; litigation exposure rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "state_action_boundary"
+   ],
+   "feeds_into": [
+    "moderation_incentive_gradient"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (liability exposure metrics); different structural delta from state_action_boundary; coordination mechanism"
+  },
+  {
+   "claim_id": "platform_editorial_discretion",
+   "human_readable": "Platform Editorial Discretion (Private Exclusion Authority vs Common Carrier Obligation)",
+   "structural_delta": "Whether platforms hold editorial discretion analogous to newspapers or must carry all legal speech",
+   "primary_observable": "Judicial classification of platforms (publisher vs distributor vs common carrier); must-carry mandate outcomes",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_corporations",
+   "victim": "excluded_speakers",
+   "downstream_of": [
+    "state_action_boundary"
+   ],
+   "feeds_into": [
+    "moderation_incentive_gradient"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct beneficiary/victim structure; different observable from liability_regime_architecture; entangled with property rights and speech rights"
+  },
+  {
+   "claim_id": "moderation_incentive_gradient",
+   "human_readable": "Moderation Incentive Gradient (Economic Drivers of Over-Removal vs Under-Removal)",
+   "structural_delta": "How liability exposure, advertiser pressure, and regulatory penalties shape moderation volume and direction",
+   "primary_observable": "Moderation error rates (false positives vs false negatives); advertiser boycott frequency; regulatory fine amounts",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "risk_averse_platforms",
+   "victim": "edge_case_speakers",
+   "downstream_of": [
+    "liability_regime_architecture",
+    "platform_editorial_discretion"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node; distinct observable (error rate asymmetry); captures economic extraction dynamic"
+  },
+  {
+   "claim_id": "algorithmic_amplification_distinction",
+   "human_readable": "Algorithmic Amplification Distinction (Hosting vs Recommendation as Separate Editorial Acts)",
+   "structural_delta": "Whether algorithmic recommendation is protected editorial discretion or subject to separate regulatory treatment",
+   "primary_observable": "Judicial/regulatory treatment of recommendation algorithms; transparency mandate scope (hosting vs amplification)",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_incentive_gradient"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (algorithmic vs hosting treatment); identified as key absence; independent of state_action_boundary"
+  },
+  {
+   "claim_id": "cross_border_enforcement_jurisdiction",
+   "human_readable": "Cross-Border Enforcement Jurisdiction (Territorial Scope of Moderation Obligations)",
+   "structural_delta": "How platforms reconcile conflicting national moderation mandates when operating globally",
+   "primary_observable": "Geo-blocking frequency; compliance with conflicting removal orders; jurisdictional conflict case outcomes",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: zero centrality; speculative scaffold; identified as absence but lacks structural connection to selected axes"
+  },
+  {
+   "claim_id": "user_collective_action_mechanisms",
+   "human_readable": "User Collective Action Mechanisms (Organized User Contestation of Platform Decisions)",
+   "structural_delta": "Whether users can organize to challenge platform moderation decisions through collective bargaining or coordination",
+   "primary_observable": "Existence of user unions, class action outcomes, platform response to organized user pressure",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: zero centrality; identified as absence but currently atrophied; omega material for future institutional development"
+  }
+ ],
+ "generation_sequence": [
+  "state_action_boundary",
+  "liability_regime_architecture",
+  "platform_editorial_discretion",
+  "moderation_incentive_gradient",
+  "algorithmic_amplification_distinction"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "cross_border_enforcement_jurisdiction",
+   "structural_delta": "How platforms reconcile conflicting national moderation mandates globally",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Zero centrality; speculative scaffold; no structural edges to selected axes"
+  },
+  {
+   "claim_id": "user_collective_action_mechanisms",
+   "structural_delta": "Whether users can organize to challenge platform moderation decisions",
+   "hypothesis": "piton",
+   "deferral_reason": "Zero centrality; currently atrophied institutional capacity; omega variable for future development"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_amplification_editorial_status",
+   "description": "Is algorithmic amplification constitutionally protected editorial discretion or a distinct regulatory target? If the latter, does liability_regime_architecture bifurcate into hosting-shield vs amplification-liability?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + algorithmic_amplification_distinction axis"
+  },
+  {
+   "id": "omega_cross_border_compliance_collapse",
+   "description": "Do conflicting national mandates force platforms toward lowest-common-denominator global moderation (over-removal) or geo-fragmentation? Deferred axis cross_border_enforcement_jurisdiction may become central if regulatory divergence accelerates.",
+   "source": "Deferred axis cross_border_enforcement_jurisdiction + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_user_organizing_threshold",
+   "description": "At what scale does user collective action shift from piton (atrophied) to rope (coordination mechanism)? Platform terms-of-service prohibitions on organizing may be a snare preventing this transition.",
+   "source": "Deferred axis user_collective_action_mechanisms + Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_state_action_proxy_doctrine",
+   "description": "Does state_action_boundary erode if platforms act as de facto state proxies under regulatory pressure? If government cannot directly compel removal but platforms comply to avoid liability, is the constitutional constraint bypassed?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + state_action_boundary mountain validity"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Multi-lens scan applied constitutional law, platform economics, and technology governance lenses. Dark matter probes surfaced three absences (cross-border jurisdiction, algorithmic amplification, user collective action); two became axes, one deferred. Pairwise independence testing confirmed all five selected axes have distinct observables and non-redundant epsilon values."
+ }
+}

@@ -1,0 +1,258 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Education Policy / Constitutional Law / Social Stratification",
+ "family_id": "affirmative_action_admissions_2026",
+ "topic_summary": "Analysis of affirmative action in university admissions, examining race-conscious admissions policies as mechanisms for addressing historical exclusion and contemporary inequality. The topic encompasses constitutional frameworks (Equal Protection Clause interpretation), competing conceptions of merit and fairness, and structural questions about what universities are for and who they serve.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Universities (selective admissions institutions with gatekeeping authority)",
+   "Applicants (individuals seeking admission, stratified by race/class/geography)",
+   "Supreme Court (constitutional adjudicator, recent SFFA v. Harvard ruling)",
+   "Admissions committees (operational decision-makers applying policy)",
+   "Historical exclusion regimes (Jim Crow, quotas, redlining as structural precursors)",
+   "Merit measurement systems (SAT/ACT, GPA, holistic review as evaluation frameworks)"
+  ],
+  "key_tensions": [
+   "Individual rights vs. collective remediation (colorblind equality vs. race-conscious correction)",
+   "Formal equality vs. substantive equality (same rules for all vs. different starting positions)",
+   "University autonomy vs. constitutional constraint (institutional mission vs. Equal Protection Clause)"
+  ],
+  "key_mechanisms": [
+   "Race-conscious admissions (explicit consideration of race as plus factor in holistic review)",
+   "Legacy preferences (admissions advantage for children of alumni, disproportionately white)",
+   "Standardized testing (SAT/ACT as purportedly neutral measurement, but correlated with parental income)"
+  ],
+  "key_absences": [
+   "Class-based affirmative action as structural alternative (income/wealth-based preferences largely absent from policy debate)",
+   "University resource allocation (how selective admissions institutions spend endowment wealth; whether exclusivity itself is the extractive mechanism)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "The Equal Protection Clause of the Fourteenth Amendment as the shared constitutional commitment all parties invoke",
+  "authority_description": "Supreme Court interpretive supremacy grounded in Marbury v. Madison and stare decisis",
+  "drift_status": "functioning",
+  "candidate_pattern": "interpretive_oscillation",
+  "is_contested_kernel": true,
+  "kernel_id": "equal_protection_clause",
+  "readings": [
+   {
+    "reading_id": "colorblind_reading",
+    "commitment": "Equal Protection requires race-neutral state action; any racial classification is presumptively unconstitutional",
+    "authority_grounding": "Originalist/textualist interpretation emphasizing Fourteenth Amendment as anti-classification",
+    "sibling_readings": [
+     "antisubordination_reading",
+     "diversity_reading"
+    ],
+    "expected_structural_delta": "Race-conscious admissions enter victim set (reverse discrimination); universities constrained to race-neutral proxies"
+   },
+   {
+    "reading_id": "antisubordination_reading",
+    "commitment": "Equal Protection prohibits perpetuation of caste systems; remedial race-consciousness is constitutionally permissible",
+    "authority_grounding": "Purposivist interpretation emphasizing Fourteenth Amendment as anti-subordination of historically excluded groups",
+    "sibling_readings": [
+     "colorblind_reading",
+     "diversity_reading"
+    ],
+    "expected_structural_delta": "Historical exclusion regimes enter constraint field; universities permitted race-conscious remediation"
+   },
+   {
+    "reading_id": "diversity_reading",
+    "commitment": "Equal Protection permits race-consciousness when narrowly tailored to compelling interest in educational diversity",
+    "authority_grounding": "Precedent-based interpretation from Bakke/Grutter emphasizing First Amendment academic freedom",
+    "sibling_readings": [
+     "colorblind_reading",
+     "antisubordination_reading"
+    ],
+    "expected_structural_delta": "University mission autonomy becomes constraint modifier; diversity as institutional interest rather than remedial justice"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "colorblind_reading",
+    "reading_b": "antisubordination_reading",
+    "basis": "Colorblind reading treats any racial classification as harm; antisubordination reading treats failure to remediate historical subordination as harm. No single framework can hold both that race-consciousness is categorically impermissible and that it is constitutionally required for remediation."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "colorblind_reading",
+   "human_readable": "Colorblind Constitutional Reading",
+   "structural_delta": "Equal Protection interpreted as prohibiting any racial classification by state actors",
+   "primary_observable": "Supreme Court doctrine on strict scrutiny for racial classifications; SFFA v. Harvard outcome",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "applicants_from_overrepresented_groups",
+   "victim": "applicants_from_underrepresented_groups",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Kernel reading with distinct structural delta; generates different victim set than siblings"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "human_readable": "Antisubordination Constitutional Reading",
+   "structural_delta": "Equal Protection interpreted as prohibiting perpetuation of historical caste systems",
+   "primary_observable": "Dissenting opinions in SFFA; state constitutional provisions explicitly permitting affirmative action",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "applicants_from_historically_excluded_groups",
+   "victim": "status_quo_gatekeeping_structures",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Kernel reading with axiom contradiction to colorblind_reading; different beneficiary structure"
+  },
+  {
+   "claim_id": "diversity_reading",
+   "human_readable": "Diversity-Interest Constitutional Reading",
+   "structural_delta": "Equal Protection permits race-consciousness when narrowly tailored to compelling diversity interest",
+   "primary_observable": "Grutter v. Bollinger precedent (now overruled); institutional diversity statements",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": "universities_claiming_mission_autonomy",
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading representing middle-ground coordination; distinct authority grounding (academic freedom vs. remediation)"
+  },
+  {
+   "claim_id": "merit_measurement_construction",
+   "human_readable": "Merit Measurement as Social Construction",
+   "structural_delta": "What counts as merit is not discovered but constructed; measurement systems embed prior distributional choices",
+   "primary_observable": "Correlation between SAT scores and parental income; holistic review criteria variation across institutions",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "legacy_preference_extraction",
+    "standardized_testing_proxy"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Upstream mountain providing constraint base for multiple downstream axes; different observable than constitutional readings"
+  },
+  {
+   "claim_id": "legacy_preference_extraction",
+   "human_readable": "Legacy Preferences as Structural Extraction",
+   "structural_delta": "Admissions advantage for children of alumni functions as wealth transfer mechanism favoring already-advantaged groups",
+   "primary_observable": "Legacy admit rates vs. non-legacy; demographic composition of legacy admits; endowment donation patterns",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "wealthy_alumni_families",
+   "victim": "first_generation_applicants",
+   "downstream_of": [
+    "merit_measurement_construction"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct extractive mechanism; different beneficiary/victim structure than race-conscious admissions; passes independence test against constitutional axes"
+  },
+  {
+   "claim_id": "standardized_testing_proxy",
+   "human_readable": "Standardized Testing as Class Proxy",
+   "structural_delta": "SAT/ACT scores function as income proxies while claiming meritocratic neutrality",
+   "primary_observable": "Income-score correlation coefficients; test prep industry revenue; test-optional policy adoption rates",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "test_prep_industry",
+   "victim": "low_income_applicants",
+   "downstream_of": [
+    "merit_measurement_construction"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Different observable than legacy preferences (testing vs. alumni status); distinct mechanism; passes independence test"
+  },
+  {
+   "claim_id": "exclusivity_as_positional_good",
+   "human_readable": "University Exclusivity as Positional Good",
+   "structural_delta": "Selective admissions create value through scarcity; expanding access would reduce credential value",
+   "primary_observable": "Acceptance rate trends; credential wage premium; university endowment spending vs. enrollment expansion",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "legacy_preference_extraction"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Structural constraint on entire admissions system; different observable than merit measurement; passes independence test"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "colorblind_reading",
+   "kernel_id": "equal_protection_clause",
+   "reading_id": "colorblind_reading"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "kernel_id": "equal_protection_clause",
+   "reading_id": "antisubordination_reading"
+  },
+  {
+   "claim_id": "diversity_reading",
+   "kernel_id": "equal_protection_clause",
+   "reading_id": "diversity_reading"
+  },
+  "merit_measurement_construction",
+  "legacy_preference_extraction",
+  "standardized_testing_proxy",
+  "exclusivity_as_positional_good"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_class_based_alternative",
+   "description": "Would class-based affirmative action (income/wealth preferences) achieve similar distributional outcomes without triggering strict scrutiny? Absence from policy debate suggests either technical infeasibility or political foreclosure.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_endowment_allocation",
+   "description": "Do universities with multi-billion dollar endowments maintain artificial scarcity (low acceptance rates) to preserve positional good value? If so, the entire admissions debate may be downstream of a prior extractive choice about enrollment caps.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + exclusivity_as_positional_good mountain"
+  },
+  {
+   "id": "omega_international_comparison",
+   "description": "How do other constitutional democracies handle affirmative action in higher education? U.S. exceptionalism in this domain may indicate path dependency rather than universal principle.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 U.S. constitutional law as unexamined frame"
+  },
+  {
+   "id": "omega_kernel_stability",
+   "description": "Is the Equal Protection Clause genuinely a stable kernel, or is interpretive oscillation (Plessy \u2192 Brown \u2192 Bakke \u2192 Grutter \u2192 SFFA) evidence of drift_status misclassification? May be 'absent' rather than 'functioning'.",
+   "source": "Commitment system recognition + interpretive_oscillation pattern"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Seven axes selected: three kernel readings of Equal Protection Clause, two mountains (merit measurement construction, exclusivity as positional good), two downstream extractive mechanisms (legacy preferences, standardized testing). All axes pass pairwise independence test with distinct observables and epsilon structures."
+ }
+}

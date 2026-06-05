@@ -1,0 +1,219 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "social_media_moderation_obligations",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platforms as private property exercising editorial discretion versus platforms as essential public infrastructure subject to common carrier or state action obligations. The topic encompasses First Amendment constraints, Section 230 immunity, state-level moderation laws, and the collision between platform business models and democratic speech norms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Social media platforms (Meta, X/Twitter, YouTube \u2014 private corporations with editorial control)",
+   "U.S. Federal Government (First Amendment enforcer; Section 230 grantor)",
+   "State governments (Texas, Florida \u2014 attempting moderation regulation)",
+   "Platform users (content creators and consumers)",
+   "Advertisers (revenue source driving moderation incentives)",
+   "Content moderators (human and algorithmic enforcement agents)"
+  ],
+  "key_tensions": [
+   "Platform editorial discretion vs state-imposed neutrality mandates (private property vs common carrier framing)",
+   "Section 230 immunity vs publisher liability (legal shield enabling moderation vs accountability gap)",
+   "Democratic speech norms vs advertiser-driven content policy (public forum expectations vs private business model)"
+  ],
+  "key_mechanisms": [
+   "Section 230(c)(2) 'Good Samaritan' provision (federal immunity for moderation decisions)",
+   "Algorithmic content ranking and suppression (automated enforcement at scale)",
+   "Advertiser boycott pressure (economic mechanism shaping moderation policy)"
+  ],
+  "key_absences": [
+   "International jurisdiction collision (EU Digital Services Act vs U.S. First Amendment framework)",
+   "Platform market concentration effects (whether oligopoly status changes obligation analysis)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "private_property_vs_public_forum",
+   "human_readable": "Private Property vs Public Forum (Constitutional Status of Platforms)",
+   "structural_delta": "Whether platforms are private editorial entities protected by First Amendment or quasi-public forums subject to neutrality obligations",
+   "primary_observable": "Supreme Court precedent on state action doctrine applied to platforms; constitutional status in Moody v NetChoice and similar cases",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_corporations",
+   "victim": "users_claiming_viewpoint_discrimination",
+   "downstream_of": [],
+   "feeds_into": [
+    "section_230_immunity_scope",
+    "state_moderation_law_validity"
+   ],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Highest centrality; foundational constitutional framing that structures all downstream obligations"
+  },
+  {
+   "claim_id": "section_230_immunity_scope",
+   "human_readable": "Section 230 Immunity Scope (Federal Legal Shield)",
+   "structural_delta": "Extent to which federal law immunizes platforms from liability for user content and moderation decisions",
+   "primary_observable": "Circuit court interpretations of Section 230(c)(1) and (c)(2); legislative proposals to narrow immunity",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "private_property_vs_public_forum"
+   ],
+   "feeds_into": [
+    "moderation_liability_exposure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (statutory interpretation vs constitutional status); coordination mechanism structuring platform behavior"
+  },
+  {
+   "claim_id": "state_moderation_law_validity",
+   "human_readable": "State Moderation Law Validity (Federalism Collision)",
+   "structural_delta": "Whether state laws mandating content neutrality or disclosure survive First Amendment and preemption challenges",
+   "primary_observable": "Judicial outcomes in NetChoice v Paxton (Texas) and NetChoice v Moody (Florida); circuit splits on compelled speech doctrine",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "state_governments",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "private_property_vs_public_forum"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different structural delta from Section 230 (state vs federal authority); independent epsilon measuring state regulatory power"
+  },
+  {
+   "claim_id": "advertiser_driven_moderation",
+   "human_readable": "Advertiser-Driven Moderation (Economic Constraint on Speech Policy)",
+   "structural_delta": "Platform moderation policy shaped by advertiser brand safety demands rather than legal obligation or democratic norms",
+   "primary_observable": "Correlation between advertiser boycotts and policy changes; brand safety certification requirements",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "advertisers",
+   "victim": "controversial_but_legal_speech",
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_liability_exposure"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Independent observable (economic pressure vs legal mandate); distinct beneficiary structure; captures non-legal extraction mechanism"
+  },
+  {
+   "claim_id": "moderation_liability_exposure",
+   "human_readable": "Moderation Liability Exposure (Over-Removal vs Under-Removal Risk)",
+   "structural_delta": "Platform liability risk from both excessive moderation (viewpoint discrimination claims) and insufficient moderation (harm facilitation claims)",
+   "primary_observable": "Litigation rates for wrongful removal vs failure-to-remove; insurance costs; settlement patterns",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": null,
+   "victim": "platforms_caught_in_double_bind",
+   "downstream_of": [
+    "section_230_immunity_scope",
+    "advertiser_driven_moderation"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Downstream synthesis node; captures the operational double-bind created by upstream legal and economic constraints"
+  },
+  {
+   "claim_id": "algorithmic_amplification_obligation",
+   "human_readable": "Algorithmic Amplification Obligation (Ranking as Editorial vs Neutral Conduit)",
+   "structural_delta": "Whether algorithmic content ranking constitutes protected editorial judgment or creates obligation to disclose/justify amplification decisions",
+   "primary_observable": "Regulatory proposals requiring algorithmic transparency; judicial treatment of ranking as speech vs conduct",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "private_property_vs_public_forum"
+   ],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: scaffold hypothesis with low epsilon; captured indirectly via private_property_vs_public_forum constitutional framing"
+  },
+  {
+   "claim_id": "market_concentration_obligation_shift",
+   "human_readable": "Market Concentration Obligation Shift (Oligopoly Status as Obligation Trigger)",
+   "structural_delta": "Whether platform market dominance triggers heightened moderation obligations analogous to essential facilities doctrine",
+   "primary_observable": "Antitrust case outcomes; legislative proposals conditioning Section 230 on market share thresholds",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "private_property_vs_public_forum"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: piton of policy choice rather than structural constraint; feeds into axis 1 but lacks independent epsilon"
+  }
+ ],
+ "generation_sequence": [
+  "private_property_vs_public_forum",
+  "section_230_immunity_scope",
+  "state_moderation_law_validity",
+  "advertiser_driven_moderation",
+  "moderation_liability_exposure"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_amplification_obligation",
+   "structural_delta": "Whether algorithmic ranking constitutes protected editorial judgment or creates disclosure obligation",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Scaffold with low epsilon; captured indirectly via constitutional status axis"
+  },
+  {
+   "claim_id": "market_concentration_obligation_shift",
+   "structural_delta": "Whether platform market dominance triggers heightened moderation obligations",
+   "hypothesis": "piton",
+   "deferral_reason": "Piton of policy choice lacking independent epsilon; feeds into axis 1 but not structurally distinct"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_international_jurisdiction",
+   "description": "Does EU Digital Services Act mandatory moderation create de facto global standard that overrides U.S. First Amendment framework? If so, the constitutional status axis becomes subordinate to extraterritorial regulation.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_section_230_repeal",
+   "description": "If Section 230 is repealed or substantially narrowed, does the liability exposure axis collapse into a single high-epsilon snare, or does it bifurcate into publisher liability (high epsilon) vs distributor liability (low epsilon)?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_state_action_doctrine_evolution",
+   "description": "Is the private property vs public forum axis stable, or does Supreme Court state action doctrine evolution (e.g., Halleck, Manhattan Community Access) reclassify platforms as state actors subject to First Amendment neutrality obligations?",
+   "source": "F03 (Hasty Generalization)"
+  },
+  {
+   "id": "omega_advertiser_coordination",
+   "description": "Is advertiser-driven moderation a distributed snare (many independent actors) or a coordinated cartel (GARM, brand safety consortia)? If coordinated, epsilon increases and antitrust implications emerge.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: private_property_vs_public_forum classified as tangled_rope but Supreme Court state action doctrine is evolving (Manhattan Community Access, Halleck precedents). Constitutional status may be less stable than classification suggests. Generated omega_state_action_doctrine_evolution to bound this uncertainty."
+ }
+}

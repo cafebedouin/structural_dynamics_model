@@ -1,0 +1,262 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Technology Lock-In",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles travel on, focusing on right-hand driving as the globally dominant standard. Examines the coordination mechanisms, path dependencies, and switching costs that stabilize this convention despite its arbitrary origins.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   {
+    "id": "rht_convention",
+    "name": "Right-Hand Traffic Convention",
+    "type": "institutional_norm",
+    "role": "Dominant global standard for road traffic direction"
+   },
+   {
+    "id": "lht_convention",
+    "name": "Left-Hand Traffic Convention",
+    "type": "institutional_norm",
+    "role": "Minority global standard retained in former British territories and Japan"
+   },
+   {
+    "id": "vehicle_manufacturers",
+    "name": "Automotive Industry",
+    "type": "organization",
+    "role": "Producers of handedness-specific vehicle designs"
+   },
+   {
+    "id": "national_governments",
+    "name": "National Transportation Authorities",
+    "type": "institution",
+    "role": "Enforcers of traffic conventions within territorial boundaries"
+   },
+   {
+    "id": "border_crossers",
+    "name": "Cross-Border Travelers",
+    "type": "person",
+    "role": "Actors who must navigate handedness transitions"
+   }
+  ],
+  "key_claims": [
+   {
+    "id": "claim_arbitrary_origin",
+    "content": "The choice between right and left-hand traffic has no inherent physical or safety advantage",
+    "source_location": "implicit in topic framing",
+    "status": "stated_as_fact"
+   },
+   {
+    "id": "claim_network_effect",
+    "content": "Value of a handedness convention increases with number of adopters",
+    "source_location": "implicit in coordination problem structure",
+    "status": "implied"
+   },
+   {
+    "id": "claim_switching_cost",
+    "content": "Changing handedness requires coordinated replacement of infrastructure, vehicles, and driver habits",
+    "source_location": "historical examples (Sweden 1967, Samoa 2009)",
+    "status": "argued"
+   },
+   {
+    "id": "claim_global_convergence",
+    "content": "Right-hand traffic has become the dominant global standard through colonial diffusion and economic pressure",
+    "source_location": "observable distribution of conventions",
+    "status": "stated_as_fact"
+   }
+  ],
+  "key_tensions": [
+   {
+    "id": "tension_coordination_sovereignty",
+    "poles": [
+     "global_standardization_pressure",
+     "national_sovereignty"
+    ],
+    "nature": "Pressure for global uniformity conflicts with national autonomy to set traffic rules"
+   },
+   {
+    "id": "tension_efficiency_lockin",
+    "poles": [
+     "optimal_global_standard",
+     "installed_base_inertia"
+    ],
+    "nature": "Theoretical efficiency gains from universal standard blocked by switching costs"
+   }
+  ],
+  "key_mechanisms": [
+   {
+    "id": "mech_network_externality",
+    "description": "Each additional adopter of a handedness standard increases value for all existing adopters through reduced cognitive load at borders and standardized vehicle production",
+    "agents": [
+     "vehicle_manufacturers",
+     "border_crossers"
+    ],
+    "targets": [
+     "all_road_users"
+    ]
+   },
+   {
+    "id": "mech_enforcement",
+    "description": "State monopoly on legitimate violence enforces handedness convention through traffic law",
+    "agents": [
+     "national_governments"
+    ],
+    "targets": [
+     "all_road_users"
+    ]
+   },
+   {
+    "id": "mech_infrastructure_embedding",
+    "description": "Physical road design (signs, lane markings, intersection geometry) embeds handedness assumption",
+    "agents": [
+     "transportation_authorities"
+    ],
+    "targets": [
+     "road_infrastructure"
+    ]
+   }
+  ],
+  "key_absences": [
+   {
+    "id": "absence_pedestrian_handedness",
+    "description": "No analysis of whether pedestrian flow conventions (sidewalk passing norms) align with vehicular handedness"
+   },
+   {
+    "id": "absence_driver_physiology",
+    "description": "No examination of whether right-hand dominance in human population interacts with steering wheel placement"
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium",
+   "human_readable": "Coordination Equilibrium (Network Effect Lock-In)",
+   "structural_delta": "The value of adopting a handedness convention scales with the number of prior adopters, creating self-reinforcing equilibria",
+   "primary_observable": "Adoption rate over time; switching cost magnitude relative to coordination benefit",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "manufacturing_standardization",
+    "border_friction"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream coordination mechanism; structurally distinct from physical infrastructure and manufacturing constraints"
+  },
+  {
+   "claim_id": "infrastructure_embedding",
+   "human_readable": "Infrastructure Embedding (Physical Lock-In)",
+   "structural_delta": "Road geometry, signage, and intersection design physically encode handedness assumptions, creating material switching costs",
+   "primary_observable": "Capital stock replacement cost; infrastructure redesign requirements for handedness switch",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable (physical capital vs coordination benefit); independent epsilon source"
+  },
+  {
+   "claim_id": "manufacturing_standardization",
+   "human_readable": "Manufacturing Standardization (Production Economy Lock-In)",
+   "structural_delta": "Vehicle production optimizes for dominant handedness standard, creating economies of scale that penalize minority conventions",
+   "primary_observable": "Price differential between RHT and LHT vehicles; production volume ratios",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "dominant_standard_adopters",
+   "victim": "minority_standard_adopters",
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Downstream synthesis of coordination effect; distinct extractive mechanism via production economics"
+  },
+  {
+   "claim_id": "switching_cost_barrier",
+   "human_readable": "Switching Cost Barrier (Transition Impossibility)",
+   "structural_delta": "Coordinated replacement of infrastructure, vehicle fleet, and driver habits creates prohibitive one-time cost",
+   "primary_observable": "Historical switching attempts (Sweden 1967, Samoa 2009); cost-benefit analyses of proposed switches",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "incumbent_standard",
+   "victim": "potential_switchers",
+   "downstream_of": [
+    "infrastructure_embedding",
+    "manufacturing_standardization"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node capturing cumulative lock-in effect"
+  },
+  {
+   "claim_id": "border_friction",
+   "human_readable": "Border Friction (Handedness Transition Hazard)",
+   "structural_delta": "Cognitive load and accident risk at borders between different handedness regimes",
+   "primary_observable": "Accident rates at handedness-transition borders; driver error frequency in rental vehicles",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Independent observable (safety hazard vs coordination benefit); distinct epsilon from other axes"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium",
+  "infrastructure_embedding",
+  "manufacturing_standardization",
+  "switching_cost_barrier",
+  "border_friction"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_pedestrian_alignment",
+   "description": "Does pedestrian flow convention (sidewalk passing norms) align with vehicular handedness? If misaligned, is there a safety cost? Absence noted in extraction but not structurally central to vehicular coordination.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_physiological_asymmetry",
+   "description": "Does right-hand dominance in ~90% of human population interact with steering wheel placement to create safety or efficiency differentials? If so, the 'arbitrary origin' claim weakens and coordination_equilibrium may have a weak physical substrate.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_colonial_diffusion",
+   "description": "Was right-hand traffic dominance achieved through colonial imposition (extractive) or voluntary adoption (coordination)? Historical mechanism unclear; affects classification of coordination_equilibrium as rope vs tangled_rope.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five axes survived independence testing with distinct observables and epsilon sources. Coordination_equilibrium and infrastructure_embedding are upstream; manufacturing_standardization and switching_cost_barrier are downstream synthesis nodes; border_friction is independent safety dimension."
+ }
+}

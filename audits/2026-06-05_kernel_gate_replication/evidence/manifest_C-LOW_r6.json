@@ -1,0 +1,169 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Coordination Economics / Institutional Path Dependence",
+ "family_id": "road_side_convention_2026",
+ "topic_summary": "Analysis of the convention of driving on the right-hand side of the road as a coordination mechanism. The topic examines why approximately 65% of the world's population drives on the right, the historical origins of this convention, and the structural forces that maintain it despite the existence of a viable alternative (left-hand driving).",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic convention (coordination norm adopted by ~165 countries)",
+   "Left-hand traffic convention (coordination norm adopted by ~75 countries, including UK, Japan, India)",
+   "National transportation authorities (enforcement and standardization bodies)",
+   "Vehicle manufacturers (design constraints based on market conventions)",
+   "Border regions (zones where conventions collide physically)"
+  ],
+  "key_tensions": [
+   "Network effects vs switching costs (benefits of global standardization vs cost of transition)",
+   "Historical path dependence vs rational optimization (inherited convention vs theoretically optimal choice)"
+  ],
+  "key_mechanisms": [
+   "Legal enforcement (traffic laws mandate side; violations penalized)",
+   "Infrastructure lock-in (road design, signage, vehicle manufacturing tooled to convention)",
+   "Coordination cascade (once critical mass adopts, switching becomes prohibitively costly)"
+  ],
+  "key_absences": [
+   "Safety differential data (is one side empirically safer than the other?)",
+   "Transition case studies (Sweden 1967 Dagen H as natural experiment)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_structure",
+   "human_readable": "Coordination Equilibrium Structure (Multiple Stable States)",
+   "structural_delta": "Two equally functional equilibria exist; neither is inherently superior absent network effects",
+   "primary_observable": "Traffic flow efficiency metrics; accident rates controlling for other factors; no systematic advantage to either side in isolation",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_effect_lock_in",
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational mountain establishing the coordination game structure; feeds into both downstream axes"
+  },
+  {
+   "claim_id": "network_effect_lock_in",
+   "human_readable": "Network Effect Lock-In (Value Increases with Adoption)",
+   "structural_delta": "Each additional adopter increases the value of the convention for all existing adopters",
+   "primary_observable": "Cross-border traffic volume; vehicle import/export patterns; manufacturing economies of scale for right-hand-drive vs left-hand-drive vehicles",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_structure"
+   ],
+   "feeds_into": [
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (network value) from coordination structure; independent mechanism that amplifies lock-in"
+  },
+  {
+   "claim_id": "switching_cost_barrier",
+   "human_readable": "Switching Cost Barrier (Transition Prohibitively Expensive)",
+   "structural_delta": "Cost of changing convention includes infrastructure redesign, vehicle fleet replacement, retraining, and transition-period accident risk",
+   "primary_observable": "Sweden 1967 transition cost estimates; infrastructure replacement costs; accident rate spikes during transition periods",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "incumbent_convention_stakeholders",
+   "victim": "potential_standardization_beneficiaries",
+   "downstream_of": [
+    "coordination_equilibrium_structure",
+    "network_effect_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; synthesis node where coordination structure and network effects create extractive barrier to optimization"
+  },
+  {
+   "claim_id": "historical_path_contingency",
+   "human_readable": "Historical Path Contingency (Arbitrary Initial Conditions)",
+   "structural_delta": "Current distribution reflects historical accidents (Napoleon's military campaigns, colonial inheritance) rather than functional optimization",
+   "primary_observable": "Geographic clustering of conventions correlating with historical political boundaries; former French colonies vs British colonies",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct from coordination structure (explains distribution, not mechanism); piton documenting contingency rather than necessity"
+  },
+  {
+   "claim_id": "safety_differential_uncertainty",
+   "human_readable": "Safety Differential Uncertainty (Contested Empirical Claims)",
+   "structural_delta": "Conflicting claims about whether right-hand or left-hand driving is safer, confounded by driver handedness and infrastructure quality",
+   "primary_observable": "Accident rate studies controlling for GDP, road quality, and enforcement; right-eye dominance vs right-hand dominance interaction effects",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_structure"
+   ],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: empirical uncertainty rather than structural constraint; if safety differential were established, would upgrade coordination_equilibrium_structure from mountain to rope"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_structure",
+  "network_effect_lock_in",
+  "switching_cost_barrier",
+  "historical_path_contingency"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "safety_differential_uncertainty",
+   "structural_delta": "Contested empirical claims about relative safety of right vs left",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Empirical uncertainty rather than structural constraint; outcome would reclassify coordination_equilibrium_structure if resolved"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_mountain_validity",
+   "description": "Is coordination_equilibrium_structure truly a mountain (no inherent advantage to either side) or does unresolved safety research reveal one side as objectively superior? If safety differential exists, the mountain becomes a rope of suboptimal coordination.",
+   "source": "F03 (Hasty Generalization) + deferred axis safety_differential_uncertainty"
+  },
+  {
+   "id": "omega_future_automation",
+   "description": "Does autonomous vehicle technology eliminate the coordination problem by allowing vehicles to adapt to local convention dynamically? If so, switching_cost_barrier collapses and network_effect_lock_in weakens.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - technological disruption not addressed in extraction"
+  },
+  {
+   "id": "omega_regional_optimization",
+   "description": "Are there regional contexts (island nations, isolated road networks) where switching costs are low enough that optimization becomes feasible? Samoa 2009 switch suggests boundary conditions on switching_cost_barrier.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - small-scale transitions may reveal beneficiaries of standardization"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: coordination_equilibrium_structure classified as mountain (no inherent advantage to either side) but safety research remains contested and confounded. If empirical work establishes a safety differential, the mountain reclassifies as a rope of suboptimal coordination. Generated omega_mountain_validity to bound this uncertainty."
+ }
+}

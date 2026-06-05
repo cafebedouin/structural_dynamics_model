@@ -1,0 +1,191 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Theory",
+ "family_id": "gig_platform_classification_2026",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and liability structures, while platforms claim algorithmic coordination justifies contractor status despite control mechanisms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Platform companies (Uber, Lyft, DoorDash, Instacart \u2014 intermediaries claiming technology-provider status)",
+   "Gig workers (drivers, couriers, taskers \u2014 labor force with contested legal status)",
+   "State labor regulators (California AB5, UK Supreme Court, EU Directive \u2014 classification authorities)",
+   "Traditional employment law framework (FLSA, NLRA \u2014 20th century statutory structure)",
+   "Algorithmic management systems (rating algorithms, dispatch systems, dynamic pricing \u2014 control mechanisms)",
+   "Consumer demand patterns (on-demand expectations, price sensitivity \u2014 market pressure)"
+  ],
+  "key_tensions": [
+   "Platform control vs worker autonomy (platforms set prices, routes, acceptance rates vs contractor independence claim)",
+   "Flexibility vs security (worker schedule freedom vs lack of wage floor, benefits, protections)",
+   "Innovation velocity vs regulatory lag (platform business models evolve faster than classification doctrine)"
+  ],
+  "key_mechanisms": [
+   "Algorithmic dispatch and rating systems (platforms control work allocation via opaque algorithms)",
+   "Deactivation without cause (platforms terminate access unilaterally, no grievance process)",
+   "Dynamic pricing and commission structures (platforms set compensation unilaterally)",
+   "Mandatory arbitration clauses (platforms foreclose collective legal action)"
+  ],
+  "key_absences": [
+   "Intermediate classification categories (most jurisdictions binary employee/contractor, no third status)",
+   "Algorithmic transparency requirements (workers cannot audit dispatch or rating logic)",
+   "Sectoral bargaining frameworks (no mechanism for collective negotiation short of full employment status)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_vs_autonomy_substrate",
+   "human_readable": "Control vs Autonomy Substrate (Algorithmic Management Intensity)",
+   "structural_delta": "Degree of platform control over work execution via algorithmic systems vs worker discretion over methods, schedule, pricing",
+   "primary_observable": "Algorithmic control metrics: price-setting authority, route assignment, acceptance rate penalties, unilateral deactivation frequency",
+   "epsilon_bin": "mod",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "classification_as_liability_arbitrage",
+    "flexibility_security_tradeoff"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain providing physical constraint base; distinct observable (control mechanisms) independent of legal classification"
+  },
+  {
+   "claim_id": "regulatory_lag_velocity",
+   "human_readable": "Regulatory Lag Velocity (Doctrine-Innovation Mismatch)",
+   "structural_delta": "Speed differential between platform business model innovation and legal doctrine adaptation",
+   "primary_observable": "Time from platform launch to classification litigation resolution; statutory revision cycles vs platform feature deployment cycles",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "classification_as_liability_arbitrage"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (temporal mismatch) independent of control substrate; coordination problem rather than physical constraint"
+  },
+  {
+   "claim_id": "classification_as_liability_arbitrage",
+   "human_readable": "Classification as Liability Arbitrage (Contractor Status as Cost Externalization)",
+   "structural_delta": "Platforms use contractor classification to externalize employment costs (payroll tax, benefits, liability, organizing rights) while retaining control",
+   "primary_observable": "Cost differential between employee vs contractor model per worker-hour; litigation expenditure to defend classification",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_shareholders",
+   "victim": "workers_and_public_safety_net",
+   "downstream_of": [
+    "control_vs_autonomy_substrate",
+    "regulatory_lag_velocity"
+   ],
+   "feeds_into": [],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node with clear beneficiary/victim structure; entanglement of control and legal classification"
+  },
+  {
+   "claim_id": "flexibility_security_tradeoff",
+   "human_readable": "Flexibility-Security Tradeoff (Schedule Autonomy vs Wage Floor)",
+   "structural_delta": "Worker preference distribution across flexibility (schedule control, multi-apping) vs security (minimum wage, benefits, dismissal protection)",
+   "primary_observable": "Worker survey data on preference for flexibility vs security; actual multi-apping rates; income volatility measures",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "control_vs_autonomy_substrate"
+   ],
+   "feeds_into": [
+    "intermediate_status_absence"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct observable (worker preference distribution) independent of platform control mechanisms; coordination problem with genuine tradeoff structure"
+  },
+  {
+   "claim_id": "intermediate_status_absence",
+   "human_readable": "Intermediate Status Absence (Binary Classification Trap)",
+   "structural_delta": "Legal systems lack intermediate classification allowing flexibility with minimum protections",
+   "primary_observable": "Jurisdictional presence/absence of third-status frameworks (e.g., dependent contractor, worker status); legislative proposals for intermediate categories",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "platforms_via_binary_forcing",
+   "victim": "workers_seeking_hybrid_model",
+   "downstream_of": [
+    "flexibility_security_tradeoff"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (presence/absence of legal category); captures structural absence identified in extraction; snare hypothesis due to binary forcing function"
+  },
+  {
+   "claim_id": "algorithmic_opacity_extraction",
+   "human_readable": "Algorithmic Opacity Extraction (Dispatch Logic as Trade Secret)",
+   "structural_delta": "Platforms claim dispatch and rating algorithms as proprietary, preventing worker audit of bias or manipulation",
+   "primary_observable": "Legal protections for algorithmic transparency; worker access to dispatch logic; documented cases of algorithmic wage theft or bias",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "platforms_via_information_asymmetry",
+   "victim": "workers_unable_to_contest_deactivation",
+   "downstream_of": [
+    "control_vs_autonomy_substrate"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Distinct observable (transparency/opacity of algorithmic systems); captures structural absence; independent of classification question but downstream of control substrate"
+  }
+ ],
+ "generation_sequence": [
+  "control_vs_autonomy_substrate",
+  "regulatory_lag_velocity",
+  "flexibility_security_tradeoff",
+  "classification_as_liability_arbitrage",
+  "intermediate_status_absence",
+  "algorithmic_opacity_extraction"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_sectoral_bargaining",
+   "description": "Could sectoral bargaining frameworks (allowing collective negotiation without full employment status) resolve the flexibility-security tradeoff? Absence of this mechanism in most jurisdictions may be structural rather than contingent.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + extraction key_absences"
+  },
+  {
+   "id": "omega_platform_cooperative_alternative",
+   "description": "Are platform cooperatives (worker-owned alternatives like Stocksy, Drivers Cooperative) a viable structural alternative, or do network effects and capital requirements make them Pitons rather than Scaffolds?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) \u2014 alternative ownership structure absent from analysis"
+  },
+  {
+   "id": "omega_consumer_price_sensitivity",
+   "description": "How much of platform business model viability depends on consumer unwillingness to pay employment-cost-inclusive prices? If high, consumer demand patterns may be an unexamined Mountain.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 consumer expectations treated as background"
+  },
+  {
+   "id": "omega_cross_jurisdictional_arbitrage",
+   "description": "Do platforms engage in regulatory arbitrage by threatening to exit jurisdictions with employee classification (e.g., California Prop 22 campaign)? If so, this is a Snare mechanism not captured in current axis set.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) \u2014 platform exit threats as extraction mechanism"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Six axes survived independence testing with distinct observables and epsilon values. Control substrate (mountain) provides upstream constraint; regulatory lag and flexibility tradeoff are independent coordination problems; classification arbitrage synthesizes control + lag; intermediate status absence and algorithmic opacity are downstream snares with distinct mechanisms."
+ }
+}

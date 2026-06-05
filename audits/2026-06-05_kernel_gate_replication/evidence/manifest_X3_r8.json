@@ -1,0 +1,249 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform editorial discretion, state speech regulation, user rights claims, and the economic incentives shaping moderation systems. The topic encompasses constitutional questions about private platform power, regulatory frameworks treating platforms as common carriers or publishers, and the collision between free expression norms and platform business models.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with editorial control and economic incentives)",
+   "State regulators (legislative and executive bodies imposing moderation requirements)",
+   "Platform users (content creators and consumers claiming speech or access rights)",
+   "Advertisers (revenue source creating economic pressure for brand-safe content)",
+   "Civil society organizations (advocacy groups pressuring platforms on harmful content)",
+   "Judiciary (constitutional arbiters of state action doctrine and First Amendment boundaries)"
+  ],
+  "key_tensions": [
+   "Platform editorial discretion vs state-mandated moderation requirements",
+   "User speech claims vs platform property rights and terms of service",
+   "Advertiser brand safety demands vs user expression diversity",
+   "Publisher liability model vs common carrier neutrality model"
+  ],
+  "key_mechanisms": [
+   "Algorithmic content ranking (amplification/suppression mechanism controlled by platform)",
+   "Terms of service enforcement (contractual mechanism for content removal)",
+   "Section 230 immunity (legal shield against liability for user content)"
+  ],
+  "key_absences": [
+   "Interoperability requirements (ability to exit platform while maintaining social graph)",
+   "Algorithmic transparency mandates (public visibility into ranking/moderation systems)",
+   "User data portability rights (ability to transfer content/connections between platforms)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "network_effects_lock_in",
+   "human_readable": "Network Effects Lock-In (Structural Market Power)",
+   "structural_delta": "User switching costs created by social graph concentration on dominant platforms",
+   "primary_observable": "Market concentration ratios; user multi-homing rates; cost of building equivalent social graph on alternative platform",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_as_public_forum",
+    "advertiser_veto_power"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain providing physical constraint base for market power arguments"
+  },
+  {
+   "claim_id": "state_action_boundary",
+   "human_readable": "State Action Boundary (Constitutional Constraint Scope)",
+   "structural_delta": "Whether platform moderation constitutes state action triggering First Amendment constraints",
+   "primary_observable": "Judicial doctrine on state action test; degree of government entanglement in moderation decisions",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_as_public_forum",
+    "regulatory_classification_contest"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Independent constitutional axis with distinct observable from network effects"
+  },
+  {
+   "claim_id": "platform_as_public_forum",
+   "human_readable": "Platform as Public Forum (Quasi-Governmental Infrastructure Claim)",
+   "structural_delta": "Platforms treated as essential public infrastructure subject to common carrier obligations",
+   "primary_observable": "Legislative proposals for must-carry rules; judicial application of public forum doctrine to platforms",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "users_claiming_access_rights",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "network_effects_lock_in",
+    "state_action_boundary"
+   ],
+   "feeds_into": [
+    "regulatory_classification_contest"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality synthesis node; downstream of two independent upstream axes"
+  },
+  {
+   "claim_id": "advertiser_veto_power",
+   "human_readable": "Advertiser Veto Power (Economic Pressure for Content Suppression)",
+   "structural_delta": "Revenue dependence on advertisers creates economic incentive to suppress controversial content",
+   "primary_observable": "Advertiser boycott frequency; brand safety policy stringency; revenue loss from demonetization",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "advertisers",
+   "victim": "controversial_content_creators",
+   "downstream_of": [
+    "network_effects_lock_in"
+   ],
+   "feeds_into": [
+    "moderation_as_liability_shield"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct economic mechanism with different beneficiary structure from constitutional axes"
+  },
+  {
+   "claim_id": "regulatory_classification_contest",
+   "human_readable": "Regulatory Classification Contest (Publisher vs Distributor vs Common Carrier)",
+   "structural_delta": "Legal classification determines liability exposure and editorial discretion scope",
+   "primary_observable": "Section 230 reform proposals; common carrier designation bills; publisher liability case law",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platforms_seeking_immunity",
+   "victim": "content_victims_seeking_platform_liability",
+   "downstream_of": [
+    "state_action_boundary",
+    "platform_as_public_forum"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Downstream synthesis of constitutional and infrastructure claims; distinct from economic axis"
+  },
+  {
+   "claim_id": "moderation_as_liability_shield",
+   "human_readable": "Moderation as Liability Shield (Proactive Removal to Avoid Legal Risk)",
+   "structural_delta": "Platforms over-moderate to avoid liability for user content under various legal regimes",
+   "primary_observable": "False positive removal rates; legal threat volume; jurisdictional compliance costs",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "platforms_avoiding_liability",
+   "victim": "users_facing_over_removal",
+   "downstream_of": [
+    "advertiser_veto_power"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Distinct mechanism from regulatory classification; captures over-moderation dynamic"
+  },
+  {
+   "claim_id": "algorithmic_amplification_asymmetry",
+   "human_readable": "Algorithmic Amplification Asymmetry (Ranking as Editorial Power)",
+   "structural_delta": "Platform ranking algorithms constitute editorial decisions with First Amendment protection",
+   "primary_observable": "Algorithmic transparency disclosures; amplification factor measurements; editorial control case law",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_as_public_forum"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: captured indirectly via platform_as_public_forum's editorial autonomy dimension"
+  },
+  {
+   "claim_id": "interoperability_absence",
+   "human_readable": "Interoperability Absence (Exit Cost Amplification)",
+   "structural_delta": "Lack of mandated interoperability increases switching costs and platform power",
+   "primary_observable": "Interoperability mandate proposals; API access restrictions; data portability compliance",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_effects_lock_in"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: structural mechanism already captured by network_effects_lock_in mountain"
+  }
+ ],
+ "generation_sequence": [
+  "network_effects_lock_in",
+  "state_action_boundary",
+  "advertiser_veto_power",
+  "platform_as_public_forum",
+  "regulatory_classification_contest",
+  "moderation_as_liability_shield"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_amplification_asymmetry",
+   "structural_delta": "Platform ranking algorithms as editorial decisions with First Amendment protection",
+   "hypothesis": "piton",
+   "deferral_reason": "Editorial control dimension captured indirectly via platform_as_public_forum tangled_rope"
+  },
+  {
+   "claim_id": "interoperability_absence",
+   "structural_delta": "Lack of mandated interoperability increases switching costs and platform power",
+   "hypothesis": "piton",
+   "deferral_reason": "Structural mechanism already captured by network_effects_lock_in mountain"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_global_jurisdiction_collision",
+   "description": "How do platforms resolve conflicting moderation obligations across jurisdictions (EU DSA vs US First Amendment vs authoritarian takedown demands)? Compliance with one regime may violate another.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_section_230_reform_trajectory",
+   "description": "Is Section 230 immunity a Rope (coordination enabling platform growth) or Piton (atrophied liability that would exist in other industries)? Reform trajectory determines regulatory_classification_contest outcome.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_network_effects_permanence",
+   "description": "Is network_effects_lock_in a true Mountain (physics of social graph concentration) or Piton of first-mover advantage that interoperability mandates could dissolve? Classification affects downstream public forum claims.",
+   "source": "F03 (Hasty Generalization)"
+  },
+  {
+   "id": "omega_state_action_doctrine_evolution",
+   "description": "Does increasing government pressure on platforms to moderate (jawboning, hearing threats, regulatory hints) convert private moderation into state action? Doctrine is contested and evolving.",
+   "source": "state_action_boundary axis uncertainty"
+  },
+  {
+   "id": "omega_advertiser_power_vs_user_revolt",
+   "description": "Can user exodus to alternative platforms counterbalance advertiser veto power, or does network_effects_lock_in make exit prohibitively costly? Determines whether advertiser_veto_power is stable snare or contested rope.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + axis interaction uncertainty"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: network_effects_lock_in classified as mountain but interoperability mandates or protocol-based alternatives (ActivityPub, AT Protocol) may reclassify it as piton of policy choice rather than physics. Generated omega_network_effects_permanence to bound this uncertainty."
+ }
+}

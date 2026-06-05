@@ -1,0 +1,284 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Constitutional Law / Bioethics / Political Philosophy",
+ "family_id": "personhood_boundary_abortion",
+ "topic_summary": "Analysis of the personhood boundary in abortion law: the contested determination of when moral and legal status begins, which defines who enters the victim set and whose rights are protected. This boundary is not a single constraint but a contested kernel\u2014different readings of the same shared commitment (that personhood warrants protection) instantiate structurally different constraints with different victim sets, beneficiary structures, and enforcement mechanisms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 2,
+  "key_entities": [
+   "Fetus/embryo (entity whose status is contested)",
+   "Pregnant person (rights-holder in all frameworks; victim in some)",
+   "State (enforcement authority; interpretive authority over personhood boundary)",
+   "Medical profession (gatekeepers; implementers of boundary determinations)",
+   "Religious/moral traditions (competing interpretive authorities)",
+   "Courts (adjudicators of boundary disputes; constitutional interpreters)"
+  ],
+  "key_tensions": [
+   "Fetal moral status vs maternal autonomy (zero-sum when personhood boundary places fetus in victim set)",
+   "State authority to define personhood vs individual/community interpretive autonomy",
+   "Fixed constitutional text vs evolving medical/social understanding of viability and consciousness"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "viability_threshold",
+   "human_readable": "Viability Threshold (Capacity for Independent Biological Function)",
+   "structural_delta": "Personhood begins when fetus can survive outside womb with medical support",
+   "primary_observable": "Gestational age at which 50% survival rate achieved with NICU care; shifts with medical technology",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "state_enforcement_mechanism",
+    "medical_gatekeeping"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Distinct observable (medical technology-dependent threshold) with independent \u03b5; feeds enforcement and gatekeeping axes"
+  },
+  {
+   "claim_id": "conception_boundary",
+   "human_readable": "Conception Boundary (Genetic Uniqueness as Personhood)",
+   "structural_delta": "Personhood begins at fertilization when unique genetic code forms",
+   "primary_observable": "Moment of conception; presence of unique diploid genome",
+   "epsilon_bin": "high",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "state_enforcement_mechanism",
+    "religious_authority_structure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable than viability (genetic vs functional); mountain claim grounded in biological event rather than social construction"
+  },
+  {
+   "claim_id": "birth_boundary",
+   "human_readable": "Birth Boundary (Social Recognition as Personhood Trigger)",
+   "structural_delta": "Personhood begins at birth when entity enters social world and can be recognized as rights-bearer",
+   "primary_observable": "Moment of birth; legal registration; social visibility",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "state_enforcement_mechanism"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Third distinct observable (social event vs biological capacity vs genetic formation); independent \u03b5 measuring social recognition rather than biological state"
+  },
+  {
+   "claim_id": "state_enforcement_mechanism",
+   "human_readable": "State Enforcement Mechanism (Criminal Prohibition vs Regulatory Framework)",
+   "structural_delta": "Whether abortion is criminalized (fetus in victim set) or regulated (pregnant person sole rights-holder)",
+   "primary_observable": "Criminal penalties for abortion; gestational limits; required procedures",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "state_enforcement_apparatus",
+   "victim": "pregnant_person_or_fetus_depending_on_boundary",
+   "downstream_of": [
+    "viability_threshold",
+    "conception_boundary",
+    "birth_boundary"
+   ],
+   "feeds_into": [],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node where boundary choice determines victim set and enforcement structure"
+  },
+  {
+   "claim_id": "medical_gatekeeping",
+   "human_readable": "Medical Gatekeeping (Professional Authority Over Access)",
+   "structural_delta": "Physicians as required intermediaries who determine medical necessity and gestational age",
+   "primary_observable": "Mandatory physician involvement; required certifications; hospital committee approvals",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "medical_profession",
+   "victim": "pregnant_person_seeking_access",
+   "downstream_of": [
+    "viability_threshold"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct from state enforcement (professional vs criminal authority); different victim structure; independent \u03b5 measuring professional control rather than legal prohibition"
+  },
+  {
+   "claim_id": "religious_authority_structure",
+   "human_readable": "Religious Authority Structure (Sectarian Interpretation as Public Law)",
+   "structural_delta": "Religious doctrine about ensoulment/personhood encoded into secular law",
+   "primary_observable": "Correlation between religious demographics and abortion restrictions; explicit religious justifications in legislation",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "dominant_religious_tradition",
+   "victim": "religious_minorities_and_secular_citizens",
+   "downstream_of": [
+    "conception_boundary"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Different beneficiary and victim structure than state enforcement; captures sectarian authority dimension absent from other axes"
+  },
+  {
+   "claim_id": "fetal_pain_threshold",
+   "human_readable": "Fetal Pain Threshold (Neurological Development as Moral Boundary)",
+   "structural_delta": "Personhood begins when neurological structures capable of pain perception develop",
+   "primary_observable": "Gestational age at which nociceptive pathways and cortical processing emerge (20-24 weeks contested)",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "state_enforcement_mechanism"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: overlaps with viability_threshold observable (both gestational age markers); pain capacity is subset of viability considerations; fails \u00a73.1 pairwise test with viability_threshold"
+  },
+  {
+   "claim_id": "quickening_boundary",
+   "human_readable": "Quickening Boundary (Maternal Perception of Fetal Movement)",
+   "structural_delta": "Personhood begins when pregnant person first feels fetal movement (historical common law standard)",
+   "primary_observable": "Gestational age at quickening (16-20 weeks); maternal report",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: historical artifact; no contemporary legal framework uses this boundary; zero centrality; omega material on boundary evolution"
+  }
+ ],
+ "generation_sequence": [
+  "viability_threshold",
+  "conception_boundary",
+  "birth_boundary",
+  "state_enforcement_mechanism",
+  "medical_gatekeeping",
+  "religious_authority_structure"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "fetal_pain_threshold",
+   "structural_delta": "Neurological capacity for pain as personhood marker",
+   "hypothesis": "piton",
+   "deferral_reason": "Failed \u00a73.1 pairwise independence test with viability_threshold: both use gestational age as observable; pain capacity is subset of viability considerations"
+  },
+  {
+   "claim_id": "quickening_boundary",
+   "structural_delta": "Maternal perception of movement as personhood trigger",
+   "hypothesis": "piton",
+   "deferral_reason": "Historical artifact with zero contemporary legal centrality; no modern framework uses this boundary; omega material on boundary evolution"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_boundary_migration",
+   "description": "Viability threshold has migrated from ~28 weeks (1973) to ~22-24 weeks (2024) due to NICU technology. Does medical progress continuously erode the viability framework, eventually collapsing it into conception boundary? Is viability a Rope or a Piton of technological contingency?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + viability_threshold observable instability"
+  },
+  {
+   "id": "omega_indigenous_sovereignty",
+   "description": "Analysis assumes state monopoly on personhood definition. Indigenous legal traditions may define personhood boundaries differently (e.g., naming ceremonies, community recognition). Does tribal sovereignty create parallel personhood frameworks, or does state law override?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + religious_authority_structure beneficiary scan"
+  },
+  {
+   "id": "omega_fetal_rights_expansion",
+   "description": "If conception boundary prevails, does fetal personhood extend beyond abortion to criminalize miscarriage, contraception, IVF embryo disposal? The boundary choice may be a Snare with suppressed downstream extraction.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + conception_boundary downstream implications"
+  },
+  {
+   "id": "omega_international_law_collision",
+   "description": "Does international human rights law (ICCPR, CEDAW) constrain state authority to define personhood boundaries? If so, religious_authority_structure may be a Snare extracting from international treaty obligations.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + state_enforcement_mechanism scope"
+  },
+  {
+   "id": "omega_male_authority_structure",
+   "description": "All enforcement axes (state, medical, religious) are historically male-dominated institutions defining boundaries for female bodies. Is there a suppressed axis of gendered authority that cuts across the boundary question itself?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + extraction absence of gender power analysis"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: conception_boundary classified as mountain (biological fact) but may be piton of interpretive choice. Different traditions define 'conception' differently (fertilization vs implantation vs ensoulment). Generated omega_boundary_migration and omega_fetal_rights_expansion to bound this uncertainty. No F34: domain is constitutional law and bioethics, within model competence. No F14: axes drawn from legal, medical, religious, and philosophical lenses. No F15: dark matter probes surfaced gender authority and indigenous sovereignty gaps."
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "The shared commitment that personhood warrants legal protection, with contested interpretations of when personhood begins",
+  "authority_description": "State legislatures and courts claim interpretive authority, grounded in constitutional text (Fourteenth Amendment due process/equal protection) and common law tradition; religious authorities claim parallel interpretive legitimacy grounded in theological doctrine",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift_absorption",
+  "is_contested_kernel": true,
+  "kernel_id": "personhood_boundary",
+  "readings": [
+   {
+    "reading_id": "conception_reading",
+    "commitment": "Personhood begins at conception when unique genetic code forms; fetus enters victim set immediately",
+    "authority_grounding": "Natural law / religious doctrine (Catholic, Evangelical Protestant traditions); originalist constitutional interpretation",
+    "sibling_readings": [
+     "viability_reading",
+     "birth_reading"
+    ],
+    "expected_structural_delta": "Fetus in victim set from fertilization; abortion is homicide; high suppression of alternative readings via criminal prohibition; medical profession subordinated to state enforcement"
+   },
+   {
+    "reading_id": "viability_reading",
+    "commitment": "Personhood begins at viability when fetus can survive independently; state interest in potential life becomes compelling at viability",
+    "authority_grounding": "Roe v. Wade framework (1973-2022); medical-technological standard; balancing test between maternal autonomy and state interest",
+    "sibling_readings": [
+     "conception_reading",
+     "birth_reading"
+    ],
+    "expected_structural_delta": "Fetus enters victim set at viability threshold (~22-24 weeks); pre-viability abortion protected; post-viability restrictions permitted; medical profession as gatekeepers of threshold determination"
+   },
+   {
+    "reading_id": "birth_reading",
+    "commitment": "Personhood begins at birth when entity enters social world; pregnant person is sole rights-holder until birth",
+    "authority_grounding": "Autonomy-maximalist / bodily integrity framework; some feminist legal theory; positivist interpretation (personhood requires social recognition)",
+    "sibling_readings": [
+     "conception_reading",
+     "viability_reading"
+    ],
+    "expected_structural_delta": "Fetus not in victim set; no state interest in fetal life pre-birth; abortion unrestricted; pregnant person has absolute decisional authority"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "birth_reading",
+    "basis": "Conception reading holds that genetic uniqueness confers moral status independent of social recognition; birth reading holds that personhood requires social existence and recognition. No single coherent framework can hold both: accepting that personhood begins at conception requires rejecting that social recognition is necessary for personhood, and vice versa."
+   },
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "viability_reading",
+    "basis": "Conception reading holds that personhood is an intrinsic property present from fertilization; viability reading holds that personhood is contingent on functional capacity for independent life. No single framework can hold both: accepting intrinsic personhood at conception requires rejecting that personhood depends on biological capacity, and accepting capacity-dependence requires rejecting intrinsic personhood at conception."
+   }
+  ]
+ }
+}

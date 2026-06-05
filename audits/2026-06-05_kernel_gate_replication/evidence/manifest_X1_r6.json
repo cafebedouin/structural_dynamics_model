@@ -1,0 +1,273 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Theory",
+ "family_id": "gig_platform_labor_classification",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and liability structures, while platforms claim algorithmic coordination justifies contractor status despite behavioral control mechanisms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Platform companies (Uber, Lyft, DoorDash, Instacart - intermediaries claiming technology provider status)",
+   "Gig workers (drivers, couriers, taskers - labor force with contested legal status)",
+   "Labor regulatory agencies (NLRB, DOL, state agencies - classification adjudicators)",
+   "Traditional employers (comparison class for employment tests)",
+   "Venture capital (funding source incentivizing regulatory arbitrage)",
+   "Consumer base (beneficiaries of subsidized service pricing)"
+  ],
+  "key_tensions": [
+   "Flexibility rhetoric vs behavioral control reality (platforms claim workers value autonomy while implementing algorithmic management)",
+   "Technology provider framing vs labor market intermediary function (platforms claim to connect independent businesses vs operating integrated service)",
+   "Regulatory arbitrage vs worker protection (contractor classification enables cost externalization vs employment status provides safety net)"
+  ],
+  "key_mechanisms": [
+   "Algorithmic dispatch and pricing (platforms control work allocation and compensation without formal employment)",
+   "Deactivation without cause (termination power without employment law constraints)",
+   "Terms of service unilateral modification (contract terms changed without negotiation)",
+   "Proposition 22 / AB5 legislative campaigns (direct democracy used to override classification)"
+  ],
+  "key_absences": [
+   "Intermediate classification categories (most jurisdictions binary employee/contractor despite spectrum of control)",
+   "Platform liability for worker injury (workers bear occupational risk despite limited autonomy)",
+   "Collective bargaining mechanisms for contractors (no legal framework for non-employee organizing)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_vs_autonomy_gap",
+   "human_readable": "Control vs. Autonomy Gap (Behavioral Control Despite Contractor Label)",
+   "structural_delta": "Degree of platform behavioral control over work execution despite independent contractor classification",
+   "primary_observable": "Algorithmic management intensity metrics: acceptance rate requirements, route dictation, customer interaction scripts, unilateral deactivation rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [],
+   "feeds_into": [
+    "classification_arbitrage",
+    "liability_externalization"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Core structural contradiction between claimed and actual autonomy; feeds multiple downstream axes"
+  },
+  {
+   "claim_id": "binary_classification_constraint",
+   "human_readable": "Binary Classification Constraint (Employee/Contractor Dichotomy)",
+   "structural_delta": "Legal systems force binary classification despite spectrum of economic dependency and control",
+   "primary_observable": "Presence/absence of intermediate legal categories in jurisdiction; common law test rigidity",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "classification_arbitrage",
+    "regulatory_fragmentation"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Foundational legal constraint creating misfit with platform labor reality; distinct observable from control mechanisms"
+  },
+  {
+   "claim_id": "classification_arbitrage",
+   "human_readable": "Classification Arbitrage (Strategic Misclassification for Cost Externalization)",
+   "structural_delta": "Platforms structure operations to meet contractor tests while retaining control, externalizing employment costs",
+   "primary_observable": "Cost differential between employee vs contractor model (payroll tax, benefits, liability insurance); platform lobbying expenditure on classification battles",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [
+    "control_vs_autonomy_gap",
+    "binary_classification_constraint"
+   ],
+   "feeds_into": [
+    "liability_externalization"
+   ],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; synthesis node integrating upstream constraints into extractive mechanism"
+  },
+  {
+   "claim_id": "liability_externalization",
+   "human_readable": "Liability Externalization (Occupational Risk Transfer to Workers)",
+   "structural_delta": "Workers bear vehicle costs, injury risk, income volatility without employment protections",
+   "primary_observable": "Worker injury rates, bankruptcy rates, vehicle maintenance cost burden, income variance metrics",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [
+    "control_vs_autonomy_gap",
+    "classification_arbitrage"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (risk distribution) from classification mechanism; downstream consequence node"
+  },
+  {
+   "claim_id": "regulatory_fragmentation",
+   "human_readable": "Regulatory Fragmentation (Jurisdictional Classification Variance)",
+   "structural_delta": "Classification outcomes vary by jurisdiction (California AB5 vs Prop 22, UK Supreme Court, EU Directive) creating compliance arbitrage opportunities",
+   "primary_observable": "Number of conflicting classification regimes platforms operate under; forum shopping behavior",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "binary_classification_constraint"
+   ],
+   "feeds_into": [
+    "legislative_capture"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct coordination problem; different observable (jurisdictional variance) from classification tests themselves"
+  },
+  {
+   "claim_id": "legislative_capture",
+   "human_readable": "Legislative Capture (Direct Democracy Weaponization)",
+   "structural_delta": "Platforms use ballot initiatives and lobbying to override judicial/administrative classification, creating carve-out legislation",
+   "primary_observable": "Campaign spending on classification ballot measures (Prop 22: $200M+); success rate of platform-backed legislation",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "democratic_process",
+   "downstream_of": [
+    "regulatory_fragmentation"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Distinct mechanism (legislative vs judicial classification); different victim structure (democratic legitimacy vs worker welfare)"
+  },
+  {
+   "claim_id": "algorithmic_wage_determination",
+   "human_readable": "Algorithmic Wage Determination (Unilateral Price-Setting Power)",
+   "structural_delta": "Platforms set compensation unilaterally via opaque algorithms, eliminating negotiation despite contractor framing",
+   "primary_observable": "Presence/absence of rate negotiation; algorithm transparency; frequency of unilateral rate changes",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [
+    "control_vs_autonomy_gap"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: wage-setting is component of broader control_vs_autonomy_gap; not structurally independent enough to warrant separate axis"
+  },
+  {
+   "claim_id": "collective_action_suppression",
+   "human_readable": "Collective Action Suppression (Antitrust Barrier to Contractor Organizing)",
+   "structural_delta": "Independent contractors legally prohibited from collective bargaining under antitrust law, creating organizing vacuum",
+   "primary_observable": "Legal barriers to contractor unions; antitrust enforcement against worker coordination",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "binary_classification_constraint"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: consequence of binary_classification_constraint rather than independent structural axis; captured in mountain's downstream effects"
+  },
+  {
+   "claim_id": "consumer_subsidy_extraction",
+   "human_readable": "Consumer Subsidy Extraction (Below-Cost Pricing via Worker Cost Externalization)",
+   "structural_delta": "Platforms offer below-market rates to consumers by externalizing true labor costs to workers and investors",
+   "primary_observable": "Platform unit economics (revenue per ride vs full-cost accounting); VC subsidy burn rate",
+   "epsilon_bin": "mod",
+   "hypothesis": "piton",
+   "beneficiary": "consumer_base",
+   "victim": "gig_workers",
+   "downstream_of": [
+    "classification_arbitrage"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: pricing structure is consequence of classification_arbitrage rather than independent axis; consumer benefit captured in snare's victim analysis"
+  }
+ ],
+ "generation_sequence": [
+  "control_vs_autonomy_gap",
+  "binary_classification_constraint",
+  "classification_arbitrage",
+  "liability_externalization",
+  "regulatory_fragmentation",
+  "legislative_capture"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_wage_determination",
+   "structural_delta": "Unilateral algorithmic price-setting eliminating negotiation",
+   "hypothesis": "tangled_rope",
+   "deferral_reason": "Component of control_vs_autonomy_gap rather than structurally independent; wage-setting is one manifestation of broader behavioral control"
+  },
+  {
+   "claim_id": "collective_action_suppression",
+   "structural_delta": "Antitrust law prohibits contractor collective bargaining",
+   "hypothesis": "mountain",
+   "deferral_reason": "Downstream consequence of binary_classification_constraint; organizing barrier flows from classification rather than constituting independent axis"
+  },
+  {
+   "claim_id": "consumer_subsidy_extraction",
+   "structural_delta": "Below-cost pricing via worker cost externalization",
+   "hypothesis": "piton",
+   "deferral_reason": "Pricing structure is consequence of classification_arbitrage; consumer benefit captured in snare analysis rather than requiring separate axis"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_intermediate_category_viability",
+   "description": "Could a legally recognized intermediate category (dependent contractor, liminal worker) resolve the binary constraint without creating new arbitrage opportunities? Or would platforms game any multi-tier system?",
+   "source": "Absence Inventory (\u00a71.1) + binary_classification_constraint mountain analysis"
+  },
+  {
+   "id": "omega_algorithmic_transparency_sufficiency",
+   "description": "Would mandatory algorithm transparency (dispatch logic, pricing formulas, deactivation criteria) materially shift power without reclassification? Or is opacity a symptom rather than cause of control asymmetry?",
+   "source": "Dark Matter Probe 2 (deferred algorithmic_wage_determination axis)"
+  },
+  {
+   "id": "omega_prop22_precedent_spread",
+   "description": "Does Proposition 22's success create replicable template for other industries to carve out classification exemptions via direct democracy? Potential for legislative_capture pattern to metastasize beyond gig platforms.",
+   "source": "legislative_capture axis + Dark Matter Probe 3 (beneficiary scan)"
+  },
+  {
+   "id": "omega_international_convergence",
+   "description": "Are UK Supreme Court (Uber BV v Aslam) and EU Platform Work Directive creating convergent pressure toward employee classification, or will regulatory_fragmentation persist as platforms forum-shop?",
+   "source": "regulatory_fragmentation axis + jurisdictional variance observable"
+  },
+  {
+   "id": "omega_vc_subsidy_exhaustion",
+   "description": "When venture capital subsidy ends and platforms must achieve profitability, does classification arbitrage become unsustainable (forcing reclassification or exit), or do network effects lock in extractive model?",
+   "source": "Deferred consumer_subsidy_extraction axis + Dark Matter Probe 1 (operational medium)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Six axes selected after independence testing. Three axes deferred as components or consequences of selected axes rather than independent structural dimensions. Multi-lens scan covered legal (employment law, antitrust), economic (cost externalization, pricing), and political (regulatory capture) perspectives. Dark matter probes surfaced intermediate category absence and VC subsidy dynamics."
+ }
+}

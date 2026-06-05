@@ -1,0 +1,228 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "social_media_moderation_obligations",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform autonomy, state regulatory authority, user speech rights, and advertiser economic pressure. The topic centers on whether and how platforms can be compelled to moderate content, who defines harmful content, and what constitutional and economic constraints shape moderation practices.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with editorial discretion claims)",
+   "State regulatory authorities (legislative bodies imposing moderation mandates)",
+   "Platform users (speech claimants with varying rights frameworks)",
+   "Advertisers (revenue source exerting economic pressure on content adjacency)",
+   "Section 230 (U.S. liability shield enabling discretionary moderation)",
+   "EU Digital Services Act (regulatory framework imposing transparency and removal obligations)"
+  ],
+  "key_tensions": [
+   "Platform editorial autonomy vs state-mandated moderation requirements",
+   "User speech rights vs platform terms-of-service enforcement",
+   "Advertiser brand-safety demands vs user content diversity",
+   "Liability shield preservation vs accountability for harmful content"
+  ],
+  "key_mechanisms": [
+   "Section 230(c)(2) good-faith moderation immunity",
+   "Advertiser boycott campaigns targeting content adjacency",
+   "Regulatory transparency reporting requirements (DSA Article 15)"
+  ],
+  "key_absences": [
+   "Cross-border enforcement jurisdiction for moderation mandates",
+   "Economic viability of human-scale moderation at platform scale",
+   "Distinction between moderation obligation (must remove) vs moderation permission (may remove)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "constitutional_speech_boundary",
+   "human_readable": "Constitutional Speech Boundary (State Action Doctrine vs Private Censorship)",
+   "structural_delta": "Whether platform moderation constitutes state action subject to First Amendment constraints or private editorial discretion protected by First Amendment",
+   "primary_observable": "Judicial rulings on state action doctrine application to platforms; constitutional challenges to moderation mandates",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_mandate_authority",
+    "advertiser_veto_power"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational constitutional constraint; upstream to both regulatory and economic axes; distinct observable from liability shield structure"
+  },
+  {
+   "claim_id": "liability_shield_architecture",
+   "human_readable": "Liability Shield Architecture (Section 230 Immunity Structure)",
+   "structural_delta": "Legal immunity from liability for user-generated content and for good-faith moderation decisions",
+   "primary_observable": "Section 230 case law; legislative reform proposals; platform reliance on immunity in litigation",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_mandate_authority",
+    "moderation_scale_trap"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct structural mechanism from constitutional boundary; different observable (statutory immunity vs constitutional doctrine); independent \u03b5"
+  },
+  {
+   "claim_id": "regulatory_mandate_authority",
+   "human_readable": "Regulatory Mandate Authority (State Power to Compel Moderation)",
+   "structural_delta": "State authority to impose content removal obligations, transparency requirements, and due process mandates on platforms",
+   "primary_observable": "Enacted legislation (DSA, state social media laws); judicial review outcomes; compliance enforcement actions",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "regulatory_agencies",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "constitutional_speech_boundary",
+    "liability_shield_architecture"
+   ],
+   "feeds_into": [
+    "moderation_scale_trap"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; downstream synthesis of constitutional and liability constraints; distinct beneficiary structure"
+  },
+  {
+   "claim_id": "advertiser_veto_power",
+   "human_readable": "Advertiser Veto Power (Brand Safety as Economic Moderation Driver)",
+   "structural_delta": "Advertiser revenue dependence creates economic pressure to remove content adjacent to brand-unsafe material, independent of legal obligation",
+   "primary_observable": "Advertiser boycott campaigns; brand safety tool adoption rates; revenue impact of content adjacency controversies",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "advertisers",
+   "victim": "controversial_but_legal_speech",
+   "downstream_of": [
+    "constitutional_speech_boundary"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct economic mechanism; different observable and victim set from regulatory mandate; independent \u03b5 despite downstream position"
+  },
+  {
+   "claim_id": "moderation_scale_trap",
+   "human_readable": "Moderation Scale Trap (Economic Infeasibility of Human Review at Platform Scale)",
+   "structural_delta": "Volume of user-generated content exceeds economically viable human moderation capacity, forcing algorithmic triage with systematic error rates",
+   "primary_observable": "Content volume vs moderator headcount ratios; error rates in automated moderation; cost-per-decision economics",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": "moderation_accuracy",
+   "downstream_of": [
+    "liability_shield_architecture",
+    "regulatory_mandate_authority"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct operational constraint; different observable from legal/economic axes; captures structural infeasibility independent of legal framework"
+  },
+  {
+   "claim_id": "cross_border_enforcement_gap",
+   "human_readable": "Cross-Border Enforcement Gap (Jurisdictional Limits on Moderation Mandates)",
+   "structural_delta": "Territorial limits of state regulatory authority vs global platform operations create enforcement gaps and regulatory arbitrage opportunities",
+   "primary_observable": "Geo-blocking implementation rates; regulatory arbitrage via jurisdiction shopping; extraterritorial enforcement attempts",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: zero centrality; speculative enforcement mechanism; captured indirectly via regulatory_mandate_authority's territorial limits"
+  },
+  {
+   "claim_id": "user_due_process_rights",
+   "human_readable": "User Due Process Rights (Procedural Fairness in Content Removal)",
+   "structural_delta": "User entitlement to notice, explanation, and appeal for content removal decisions",
+   "primary_observable": "Platform appeals process implementation; DSA Article 17 compliance; user satisfaction with procedural fairness",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "regulatory_mandate_authority"
+   ],
+   "feeds_into": [
+    "moderation_scale_trap"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: overlaps with regulatory_mandate_authority's transparency requirements; same observable domain (DSA compliance); not structurally independent"
+  }
+ ],
+ "generation_sequence": [
+  "constitutional_speech_boundary",
+  "liability_shield_architecture",
+  "regulatory_mandate_authority",
+  "advertiser_veto_power",
+  "moderation_scale_trap"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "cross_border_enforcement_gap",
+   "structural_delta": "Territorial limits of state authority vs global platform operations",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Zero centrality; speculative enforcement mechanism; territorial limits captured via regulatory_mandate_authority"
+  },
+  {
+   "claim_id": "user_due_process_rights",
+   "structural_delta": "User entitlement to procedural fairness in content removal",
+   "hypothesis": "rope",
+   "deferral_reason": "Failed \u00a73 independence test: overlaps with regulatory_mandate_authority's transparency/accountability requirements; same observable (DSA compliance)"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_state_action_threshold",
+   "description": "At what threshold of state coercion does platform moderation become state action subject to First Amendment constraints? Unclear boundary between suggestion and compulsion.",
+   "source": "constitutional_speech_boundary mountain classification uncertainty"
+  },
+  {
+   "id": "omega_section_230_reform",
+   "description": "Is Section 230 immunity a stable rope or a piton of legislative forbearance? Reform proposals may reclassify liability shield as contested rather than structural.",
+   "source": "liability_shield_architecture classification + Dark Matter Probe 3"
+  },
+  {
+   "id": "omega_algorithmic_moderation_liability",
+   "description": "Does algorithmic moderation at scale create new liability exposure not contemplated by Section 230's 'good faith' standard? Systematic error vs individual mistake distinction unclear.",
+   "source": "moderation_scale_trap + liability_shield_architecture interaction"
+  },
+  {
+   "id": "omega_advertiser_coordination",
+   "description": "When does advertiser collective action become antitrust violation vs legitimate brand safety coordination? Boundary between market discipline and cartel behavior unclear.",
+   "source": "advertiser_veto_power + Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_must_vs_may_moderation",
+   "description": "Distinction between moderation obligation (must remove) and moderation permission (may remove) is structurally critical but absent from current legal frameworks. Section 230 protects discretionary removal; regulatory mandates impose required removal. Interaction effects unexplored.",
+   "source": "Absence Inventory (\u00a71.1) + regulatory_mandate_authority/liability_shield_architecture interaction"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: constitutional_speech_boundary classified as mountain but state action doctrine application to platforms remains contested in lower courts. Generated omega_state_action_threshold to bound this uncertainty. Classification as mountain reflects current Supreme Court precedent (Manhattan Community Access v. Halleck) but doctrine may evolve."
+ }
+}

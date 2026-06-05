@@ -1,0 +1,164 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependency",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles drive on, examining the coordination mechanisms, historical path dependencies, and structural constraints that maintain right-hand versus left-hand driving systems across different jurisdictions.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "National/regional governments (rule-setting authority)",
+   "Vehicle manufacturers (design standardization agents)",
+   "Border-crossing populations (coordination cost bearers)",
+   "Infrastructure systems (roads, signage, traffic control)",
+   "Historical precedent (colonial inheritance, Napoleon's campaigns)"
+  ],
+  "key_tensions": [
+   "Network coordination benefits vs switching costs",
+   "National sovereignty vs regional harmonization pressure"
+  ],
+  "key_mechanisms": [
+   "Legal enforcement (traffic laws mandate side choice)",
+   "Vehicle design lock-in (steering wheel position, control placement)",
+   "Infrastructure investment path dependency (road geometry, intersection design)"
+  ],
+  "absences": [
+   "Safety outcome data comparing left vs right systems",
+   "Economic analysis of switching costs vs coordination benefits"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium",
+   "human_readable": "Coordination Equilibrium (Network Effect Lock-In)",
+   "structural_delta": "Once a side is chosen, network effects create self-reinforcing coordination that makes unilateral switching prohibitively costly",
+   "primary_observable": "Switching cost estimates (infrastructure, vehicle fleet, retraining); adoption rate stability over time",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "colonial_inheritance_path",
+    "border_friction_asymmetry"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational coordination constraint; upstream to all other axes; mountain providing physical/economic base"
+  },
+  {
+   "claim_id": "colonial_inheritance_path",
+   "human_readable": "Colonial Inheritance Path (Historical Imposition)",
+   "structural_delta": "Current side choice reflects colonial power's historical imposition rather than independent optimization",
+   "primary_observable": "Correlation between former colonial status and side choice; timing of adoption relative to independence",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": "former_colonial_powers",
+   "victim": "post_colonial_states",
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (historical correlation vs network economics); different beneficiary structure; piton hypothesis captures atrophied sovereignty"
+  },
+  {
+   "claim_id": "border_friction_asymmetry",
+   "human_readable": "Border Friction Asymmetry (Mismatched Neighbor Costs)",
+   "structural_delta": "Jurisdictions with neighbors using opposite side bear coordination costs (accidents, delays, vehicle modifications) that isolated jurisdictions avoid",
+   "primary_observable": "Border-crossing accident rates; vehicle modification requirements; traffic delay metrics at side-mismatched borders",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": "border_crossing_populations",
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different observable (border-specific costs vs general network effects); distinct victim set; rope captures coordination failure between systems"
+  },
+  {
+   "claim_id": "vehicle_design_standardization",
+   "human_readable": "Vehicle Design Standardization (Manufacturing Lock-In)",
+   "structural_delta": "Global vehicle manufacturing optimizes for dominant right-hand market, imposing cost premiums on left-hand jurisdictions",
+   "primary_observable": "Price differentials for right-hand-drive vehicles; model availability in left-hand markets; manufacturing plant specialization",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "right_hand_majority_manufacturers",
+   "victim": "left_hand_minority_markets",
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Different observable (manufacturing economics vs coordination costs); distinct beneficiary/victim structure; tangled_rope captures market power extraction"
+  },
+  {
+   "claim_id": "safety_outcome_neutrality",
+   "human_readable": "Safety Outcome Neutrality (No Intrinsic Advantage)",
+   "structural_delta": "No measurable safety difference between left and right systems when controlling for infrastructure quality and enforcement",
+   "primary_observable": "Accident rate comparisons controlling for GDP, road quality, enforcement; within-country switching studies (Sweden 1967)",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: absence of data (extraction_summary notes missing safety comparisons); would require empirical grounding not present in topic; omega variable"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium",
+  "colonial_inheritance_path",
+  "border_friction_asymmetry",
+  "vehicle_design_standardization"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "safety_outcome_neutrality",
+   "structural_delta": "No measurable safety difference between systems",
+   "hypothesis": "mountain",
+   "deferral_reason": "Insufficient empirical data in source material; extraction_summary notes absence of safety outcome comparisons; requires domain-specific research to validate mountain classification"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_safety_data_gap",
+   "description": "Is safety_outcome_neutrality a true Mountain (no intrinsic advantage) or does one side have measurable safety benefits? Extraction found no data; classification remains uncertain.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + deferred axis safety_outcome_neutrality"
+  },
+  {
+   "id": "omega_switching_feasibility",
+   "description": "Are modern switching costs (digital signage, GPS updates, modular vehicle design) low enough to reclassify coordination_equilibrium from Mountain to Piton? Technology may have changed the constraint type.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + F03 concern"
+  },
+  {
+   "id": "omega_regional_harmonization",
+   "description": "Does regional integration (EU, ASEAN, African Union) create sufficient pressure to overcome coordination_equilibrium? If so, border_friction_asymmetry may drive future switching waves.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 model analyzed as static system; dynamic regional pressure not examined"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: coordination_equilibrium classified as mountain based on historical switching costs, but modern technology (digital infrastructure, modular manufacturing) may have reduced switching costs enough to reclassify as piton. Generated omega_switching_feasibility to bound this uncertainty. No tunnel vision: axes drawn from coordination theory, historical sociology, manufacturing economics, and border studies. No premature closure: dark matter probes surfaced safety data gap and regional harmonization pressure."
+ }
+}

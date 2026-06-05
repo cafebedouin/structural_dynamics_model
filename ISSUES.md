@@ -3063,8 +3063,55 @@ re-check (7-7-7 uniform watch)~~ **RESOLVED 2026-06-05 by the SCOPE count-distri
 noise ±1, arms agreeing (lens instruction not pinning counts), T7's 11 axes shown pairwise-distinct
 (one borderline composite). The original 7-7-7 was mid-richness coincidence + run noise (bridge
 topic gig-economy: 7 originally → 5 in the re-run). Stage-2 is NOT gated on a SCOPE-framing fix;
-report the axis-count distribution at scale as a readout, not a gate. OQ-70's bait confound is
-still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
+report the axis-count distribution at scale as a readout, not a gate. **However, the probe's
+side-observation graduated into a real gate condition: OQ-76 (kernel/flat routing is near
+coin-flip on a measured boundary band of statutory/regulatory contests; flat-misses destroy the
+axiom axis) — before the rebuild, either ship OQ-76's interim hedge (bias gate toward kernel on
+band topics) or design the routing stratum into the correlation readout.** OQ-70's bait confound
+is still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
+
+## OQ-76 — Kernel/flat gate is stochastic on a real boundary band: routing noise lands in Stage-2's cross-axis correlation
+
+**Ω-type:** Ω_E (the band is measured; the cause is K2-testable), with an Ω_P edge (which fix, and whether the interim hedge ships before Stage-2, are operator rulings).
+
+**Status:** open — band measured and instrument-validated 2026-06-05; cause-diagnosis (K2) licensed but not run; no fix built
+**Origin:** 2026-06-05 SCOPE count-distribution probe side-observation, promoted by operator review:
+T5 (gig economy) decomposed as a kernel in one arm and flat in the other — same topic, same temp.
+Diffing the manifests showed the SAME contested substrate (the legal-classification contest) routed
+onto the axiom axis (kernel: employee/contractor/hybrid readings) vs the observer axis (flat axis
+`classification_test_collision`). This is not count noise: a flat take destroys the axiom axis
+irrecoverably (no readings, no groundings to diff), while a kernel take still carries observer
+perspectives — the miss direction is the unrecoverable one.
+
+**Evidence (`audits/2026-06-05_kernel_gate_replication/`, 40/40 calls, pre-registered invalidation
+conditions):** P(kernel) per topic at k=8 — drive-on-right 0/8 and personhood 8/8 (controls at
+required extremes ⇒ instrument valid, gate NOT noisy-everywhere); affirmative action 8/8;
+gig classification **5/8**; platform content moderation **3/8**. The band is real and topic-classed:
+famous moral kernels stable, statutory/regulatory contests near coin-flip. Hand-adjudication
+against §1.3-K: BOTH band topics pass all three criteria (X1: different victim sets per reading;
+X3: `state_action_boundary` with formalist/entanglement/public_function readings) — the flat takes
+are under-firing MISSES against explicit criteria, not definitional ambiguity. Noise is localized
+to the binary gate: conditional on firing, reading counts are perfectly stable (4/3/3 per topic
+across all runs).
+
+**Specific question:** what makes the gate under-fire on §1.3-K-passing topics — salience-driven
+recognition (fires on culturally famous contests, misses statutory/technical ones) vs phrasing
+sensitivity vs something else? **K2 (licensed, not run):** hold a band topic's content fixed,
+perturb topic phrasing (commitment-foregrounded / system-description / mechanism-only), k=5 each;
+if P(kernel) tracks phrasing, normalize Stage-2 seed phrasing or move routing out of free
+decomposition.
+
+**Dispositions (recorded, not built):**
+- **Interim hedge (one line, operator rules at Stage-2 go):** bias the gate toward kernel on
+  boundary-band topics — fail toward the recoverable side (kernel-miss recoverable, flat-miss not;
+  the de-leak asymmetry applied to routing).
+- **Candidate real fix:** generate BOTH representations for band topics — kernel-vs-flat is itself
+  an apparatus perturbation (`the_perturbation_principle.md` §7.1; pre-kernel corpora effectively
+  carried the flat construction), so the construction-pair diff is signal. Separate work item
+  (forced-flat decomposition mode is new code); do not build on spec.
+- **Stage-2 (OQ-75) sequencing:** treat kernel-routing as an explicit stratum or ship the hedge
+  first; without one of the two, the cross-axis correlation partly measures this coin-flip on
+  band-class topics.
 
 ---
 

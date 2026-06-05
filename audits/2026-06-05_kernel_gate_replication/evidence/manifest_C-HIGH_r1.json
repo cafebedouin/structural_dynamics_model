@@ -1,0 +1,293 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Legal Philosophy / Bioethics / Constitutional Law",
+ "family_id": "personhood_boundary_abortion",
+ "topic_summary": "Analysis of the personhood boundary in abortion law, examining how different legal and philosophical traditions determine when moral and legal status begins, and how this determination structures rights, obligations, and permissible state action. The boundary question is not merely about policy preferences but about foundational commitments regarding what entities hold rights and what grounds those rights.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 2,
+  "absence_count": 2,
+  "key_entities": [
+   "Fetus/embryo (entity whose status is contested)",
+   "Pregnant person (rights-holder in all frameworks, scope contested)",
+   "State (authority claiming power to regulate)",
+   "Medical profession (gatekeepers of procedure access)",
+   "Religious institutions (interpretive authorities for natural law traditions)",
+   "Courts (adjudicators of constitutional boundaries)"
+  ],
+  "key_tensions": [
+   "Fetal moral status vs maternal autonomy (zero-sum in rights frameworks)",
+   "State interest in potential life vs individual liberty (constitutional doctrine)",
+   "Biological development continuum vs legal bright-line rules (administrative necessity vs philosophical coherence)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "The personhood boundary: the point at which an entity acquires moral and legal status sufficient to ground rights claims",
+  "authority_description": "Contested across traditions: natural law (theological/metaphysical grounding), legal positivism (legislative/judicial determination), autonomy frameworks (capacity-based grounding), harm-based consequentialism (sentience/suffering thresholds)",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_capture",
+  "is_contested_kernel": true,
+  "kernel_id": "personhood_boundary",
+  "readings": [
+   {
+    "reading_id": "conception_reading",
+    "commitment": "Moral and legal personhood begins at conception; the zygote possesses full moral status from fertilization",
+    "authority_grounding": "Natural law tradition (Catholic doctrine, some Protestant evangelical frameworks); metaphysical claim about ensoulment or inherent human dignity",
+    "sibling_readings": [
+     "viability_reading",
+     "birth_reading",
+     "sentience_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Fetus enters victim set at conception; abortion becomes homicide-equivalent; state obligation to prohibit; no maternal autonomy exception except life-threat; high suppression of alternative readings through criminal law"
+   },
+   {
+    "reading_id": "viability_reading",
+    "commitment": "Personhood begins at viability (capacity to survive outside the womb with medical support); pre-viability fetus has potential but not actual personhood",
+    "authority_grounding": "U.S. constitutional doctrine (Roe/Casey framework, pre-Dobbs); pragmatic compromise between state interest and autonomy; medical-technological threshold",
+    "sibling_readings": [
+     "conception_reading",
+     "birth_reading",
+     "sentience_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Pre-viability: maternal autonomy dominant, state interest minimal; post-viability: state may prohibit except for health; boundary shifts with medical technology (currently ~24 weeks); moderate suppression of alternatives through trimester framework"
+   },
+   {
+    "reading_id": "birth_reading",
+    "commitment": "Personhood begins at birth; the fetus is potential person with derivative moral consideration through maternal relationship, but not independent rights-holder",
+    "authority_grounding": "Legal positivism (common law born-alive rule); autonomy-maximalist frameworks; some secular humanist traditions",
+    "sibling_readings": [
+     "conception_reading",
+     "viability_reading",
+     "sentience_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Fetus not in victim set; pregnant person sole rights-holder throughout pregnancy; state interest in potential life subordinate to autonomy; abortion permissible until birth (though late-term access may be restricted on medical grounds); minimal suppression of alternatives"
+   },
+   {
+    "reading_id": "sentience_reading",
+    "commitment": "Personhood begins with capacity for sentience/suffering (neural development sufficient for pain experience); moral status grounded in harm-avoidance",
+    "authority_grounding": "Utilitarian/consequentialist ethics (Singer, Tooley); neurobiological threshold (~20-24 weeks for cortical activity); harm-based moral frameworks",
+    "sibling_readings": [
+     "conception_reading",
+     "viability_reading",
+     "birth_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Pre-sentience: no victim, abortion morally neutral; post-sentience: fetal interests enter moral calculus but may be outweighed by maternal interests; boundary determined by neuroscience rather than law or theology; moderate suppression through scientific authority claims"
+   },
+   {
+    "reading_id": "gradualist_reading",
+    "commitment": "Personhood develops gradually across gestation; moral status increases incrementally with biological development; no single bright-line threshold",
+    "authority_grounding": "Developmental biology; some feminist ethics (relational ontology); pragmatic legal frameworks balancing multiple considerations",
+    "sibling_readings": [
+     "conception_reading",
+     "viability_reading",
+     "birth_reading",
+     "sentience_reading"
+    ],
+    "expected_structural_delta": "Early abortion: minimal moral weight, strong maternal autonomy; late abortion: significant fetal interests, state may regulate; sliding scale of permissibility; low suppression (accommodates multiple considerations) but high administrative complexity"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "birth_reading",
+    "basis": "Conception reading requires accepting that a single-cell zygote possesses the same moral status as a born infant (full personhood from fertilization); birth reading requires accepting that moral status is absent until birth. No coherent framework can hold both: accepting the zygote as a full person requires rejecting the claim that personhood begins at birth, and vice versa."
+   },
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "sentience_reading",
+    "basis": "Conception reading grounds personhood in metaphysical essence or genetic humanity independent of neural capacity; sentience reading grounds personhood in capacity for subjective experience. No coherent framework can hold both: accepting that personhood requires sentience requires rejecting that a pre-sentient zygote is a person, and accepting the zygote as a person requires rejecting sentience as the grounding criterion."
+   },
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "gradualist_reading",
+    "basis": "Conception reading requires binary personhood (present or absent from conception); gradualist reading requires incremental moral status. No coherent framework can hold both: accepting that personhood is binary and complete at conception requires rejecting that it develops gradually, and accepting gradualism requires rejecting the binary conception claim."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "conception_reading",
+   "human_readable": "Conception Reading (Natural Law / Metaphysical Personhood)",
+   "structural_delta": "Personhood grounded in metaphysical essence or genetic humanity from fertilization; fetus as full rights-holder from conception",
+   "primary_observable": "Legal frameworks criminalizing abortion from conception; theological doctrine statements; enforcement mechanisms (criminal penalties for abortion providers/seekers)",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "religious_institutions_claiming_interpretive_authority",
+   "victim": "pregnant_persons_denied_autonomy",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Kernel reading with distinct structural delta; high epsilon; generates complete constraint story as one reading of contested kernel"
+  },
+  {
+   "claim_id": "viability_reading",
+   "human_readable": "Viability Reading (Constitutional Compromise / Medical-Technological Threshold)",
+   "structural_delta": "Personhood begins at capacity for extra-uterine survival; pre-viability maternal autonomy dominant, post-viability state interest permissible",
+   "primary_observable": "Trimester frameworks in constitutional doctrine; gestational limits in abortion statutes (typically 20-24 weeks); medical viability determinations",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Kernel reading with distinct structural delta; different authority grounding and epsilon from conception_reading; coordination mechanism rather than extraction"
+  },
+  {
+   "claim_id": "birth_reading",
+   "human_readable": "Birth Reading (Legal Positivism / Autonomy Maximalism)",
+   "structural_delta": "Personhood begins at birth; fetus as potential person with no independent rights; maternal autonomy unrestricted throughout pregnancy",
+   "primary_observable": "Born-alive rules in common law; abortion-permissive statutes with no gestational limits; legal personhood definitions requiring birth",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with distinct structural delta; minimal state extraction; different victim set from conception_reading"
+  },
+  {
+   "claim_id": "sentience_reading",
+   "human_readable": "Sentience Reading (Utilitarian / Neurobiological Threshold)",
+   "structural_delta": "Personhood begins with capacity for sentience/suffering; moral status grounded in harm-avoidance rather than metaphysics or law",
+   "primary_observable": "Gestational limits tied to neural development milestones (~20-24 weeks); utilitarian ethical frameworks in bioethics literature; pain-capable fetus statutes",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Kernel reading with distinct structural delta; scientific rather than legal or theological authority; different observable from other readings"
+  },
+  {
+   "claim_id": "gradualist_reading",
+   "human_readable": "Gradualist Reading (Developmental Biology / Relational Ethics)",
+   "structural_delta": "Personhood develops incrementally across gestation; moral status increases with biological development; no single threshold",
+   "primary_observable": "Sliding-scale regulatory frameworks; trimester-based permissibility structures; feminist relational ontology literature",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Kernel reading with distinct structural delta; accommodates multiple considerations; different from binary threshold readings"
+  },
+  {
+   "claim_id": "enforcement_asymmetry",
+   "human_readable": "Enforcement Asymmetry (Criminalization vs Access Barriers)",
+   "structural_delta": "Abortion restrictions enforced through criminal penalties on providers, civil liability, and administrative barriers rather than prosecution of pregnant persons",
+   "primary_observable": "Provider prosecution rates vs patient prosecution rates; felony statutes targeting physicians; TRAP laws (Targeted Regulation of Abortion Providers); clinic closure rates",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "anti_abortion_movement_achieving_de_facto_prohibition",
+   "victim": "low_income_persons_unable_to_travel",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Independent axis; distinct observable (enforcement mechanism rather than personhood threshold); high epsilon; different beneficiary structure from kernel readings"
+  },
+  {
+   "claim_id": "federalism_arbitrage",
+   "human_readable": "Federalism Arbitrage (Interstate Variation as Extraction Mechanism)",
+   "structural_delta": "Post-Dobbs state-level variation creates geographic lottery where abortion access depends on residence and travel capacity",
+   "primary_observable": "State-by-state abortion law variation; interstate travel for abortion services; prosecution attempts for out-of-state abortions; abortion fund expenditures on travel",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "restrictive_states_exporting_enforcement_costs",
+   "victim": "low_income_persons_in_restrictive_states",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Independent axis; distinct observable (geographic variation rather than personhood threshold); high epsilon; structural arbitrage mechanism"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "conception_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "conception_reading"
+  },
+  {
+   "claim_id": "viability_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "viability_reading"
+  },
+  {
+   "claim_id": "birth_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "birth_reading"
+  },
+  {
+   "claim_id": "sentience_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "sentience_reading"
+  },
+  {
+   "claim_id": "gradualist_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "gradualist_reading"
+  },
+  "enforcement_asymmetry",
+  "federalism_arbitrage"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_kernel_coherence",
+   "description": "Are the five readings genuinely distinct constraint-generating interpretations, or do some collapse into each other under scrutiny? Viability and sentience readings may converge if viability is operationalized through neural development milestones.",
+   "source": "\u00a71.3-K kernel decomposition coherence check"
+  },
+  {
+   "id": "omega_international_variation",
+   "description": "How do non-Western legal traditions (Islamic law, Confucian frameworks, Indigenous legal orders) read the personhood boundary? Current analysis limited to Western philosophical and legal traditions.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + \u00a71.3-K lens diversity requirement"
+  },
+  {
+   "id": "omega_medical_gatekeeping",
+   "description": "Does physician discretion in late-term abortion decisions constitute a separate axis (professional authority as constraint) or is it captured by the enforcement_asymmetry axis? Unclear whether medical gatekeeping has independent epsilon.",
+   "source": "\u00a73 pairwise independence testing uncertainty"
+  },
+  {
+   "id": "omega_disability_selective_abortion",
+   "description": "Does selective abortion for fetal disability diagnoses generate a distinct axis (disability rights vs reproductive autonomy), or is it a special case of the kernel readings? Disability rights frameworks may contest all five readings on different grounds.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_ivf_embryo_status",
+   "description": "How do IVF embryo destruction practices interact with conception_reading? If conception grounds full personhood, IVF clinics routinely destroy persons. The legal treatment of IVF embryos vs abortion suggests conception_reading is selectively enforced.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - selective application suggests tangled_rope rather than mountain"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five kernel readings drawn from distinct interpretive traditions (natural law, constitutional doctrine, legal positivism, utilitarianism, developmental biology). Two independent axes (enforcement_asymmetry, federalism_arbitrage) have different observables and epsilon sources. Lens diversity requirement met within Western traditions but omega_international_variation flags non-Western absence."
+ }
+}

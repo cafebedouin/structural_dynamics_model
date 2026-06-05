@@ -1,0 +1,328 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Legal Philosophy / Bioethics / Constitutional Law",
+ "family_id": "personhood_boundary_abortion",
+ "topic_summary": "Analysis of the personhood boundary in abortion law: the contested determination of when moral and legal status begins, which defines who counts as a rights-bearer and victim in abortion regulation. This boundary is not a single constraint but a contested kernel that different jurisprudential, religious, and philosophical traditions read differently, producing structurally incompatible constraint regimes.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 2,
+  "absence_count": 2,
+  "key_entities": [
+   "Fetus/embryo (entity whose status is contested)",
+   "Pregnant person (rights-bearer in all frameworks, scope contested)",
+   "State (authority claiming power to adjudicate personhood boundary)",
+   "Religious traditions (Catholic, Protestant, Jewish, Islamic - varied personhood doctrines)",
+   "Medical profession (viability determination, gestational age assessment)",
+   "Constitutional courts (Roe, Dobbs, international human rights tribunals)"
+  ],
+  "key_tensions": [
+   "Fetal moral status vs maternal autonomy (zero-sum in rights allocation)",
+   "Fixed textual interpretation vs evolving medical/social context (originalism vs living constitutionalism)",
+   "Religious authority vs secular legal authority (whose kernel grounds legitimacy)"
+  ],
+  "key_mechanisms": [
+   "Trimester framework (Roe): viability as state interest threshold, operationalizes gradual personhood acquisition",
+   "Gestational limits: statutory boundaries (6-week, 15-week, 24-week bans) operationalize discrete personhood readings"
+  ],
+  "key_absences": [
+   "Non-Western legal traditions (Islamic fiqh ensoulment doctrines, Confucian relational personhood)",
+   "Disability rights framework (prenatal diagnosis and selective termination as personhood boundary enforcement)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "The personhood boundary: the threshold at which an entity acquires moral and legal status sufficient to constrain others' liberty",
+  "authority_description": "Contested across religious (scriptural interpretation), philosophical (metaphysical criteria), medical (viability/sentience), and legal (constitutional text/precedent) domains. Each tradition claims interpretive authority via different grounding.",
+  "drift_status": "partial",
+  "candidate_pattern": "Interpretive Capture (Pattern 3): multiple authority structures claim exclusive interpretive legitimacy over the same kernel, each absorbing drift through their own hermeneutic layer without acknowledging rival readings as legitimate",
+  "is_contested_kernel": true,
+  "kernel_id": "personhood_boundary",
+  "readings": [
+   {
+    "reading_id": "conception_reading",
+    "commitment": "Moral and legal personhood begins at conception (fertilization)",
+    "authority_grounding": "Natural law philosophy, Catholic magisterium, scriptural interpretation (Psalm 139, Jeremiah 1:5)",
+    "sibling_readings": [
+     "ensoulment_reading",
+     "viability_reading",
+     "birth_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Fetus enters victim set at conception; abortion becomes homicide-equivalent; no gestational distinctions; high suppression of maternal autonomy claims; contraception that prevents implantation potentially prohibited"
+   },
+   {
+    "reading_id": "ensoulment_reading",
+    "commitment": "Moral personhood begins at ensoulment (40-120 days post-conception in Islamic and historical Christian traditions)",
+    "authority_grounding": "Islamic fiqh (hadith-based), Thomistic philosophy, historical Christian doctrine pre-1869",
+    "sibling_readings": [
+     "conception_reading",
+     "viability_reading",
+     "birth_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Early-term abortion permissible; fetus enters victim set at ensoulment threshold; creates temporal window for maternal autonomy; authority structure requires scholarly interpretation of religious texts"
+   },
+   {
+    "reading_id": "viability_reading",
+    "commitment": "Legal personhood begins at viability (capacity for independent survival outside womb)",
+    "authority_grounding": "Roe v. Wade framework, medical-technological determination, state interest balancing",
+    "sibling_readings": [
+     "conception_reading",
+     "ensoulment_reading",
+     "birth_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Pre-viability abortion protected; post-viability state may prohibit except for health; boundary shifts with medical technology (24 weeks in 1973, potentially earlier now); fetus enters victim set at viability; state becomes arbiter via medical expertise"
+   },
+   {
+    "reading_id": "birth_reading",
+    "commitment": "Legal personhood begins at birth (complete expulsion from mother's body)",
+    "authority_grounding": "Common law tradition, bodily autonomy philosophy, some secular legal systems",
+    "sibling_readings": [
+     "conception_reading",
+     "ensoulment_reading",
+     "viability_reading",
+     "gradualist_reading"
+    ],
+    "expected_structural_delta": "Fetus never enters victim set; pregnant person sole rights-bearer throughout gestation; no state interest in fetal life pre-birth; abortion unrestricted by personhood logic (other regulations possible)"
+   },
+   {
+    "reading_id": "gradualist_reading",
+    "commitment": "Moral status increases gradually across gestation; no discrete threshold",
+    "authority_grounding": "Philosophical consequentialism, feminist care ethics, some bioethics frameworks",
+    "sibling_readings": [
+     "conception_reading",
+     "ensoulment_reading",
+     "viability_reading",
+     "birth_reading"
+    ],
+    "expected_structural_delta": "Proportional balancing throughout pregnancy; early abortion easier to justify than late; no binary victim/non-victim classification; state interest increases with gestational age; difficult to operationalize in binary legal frameworks"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "birth_reading",
+    "basis": "Conception reading requires accepting fetal moral status as equivalent to born persons from fertilization; birth reading requires accepting that location (inside/outside womb) determines moral status. No coherent framework can hold both: either the fetus is a person with rights that constrain maternal liberty, or it is not and maternal autonomy is absolute."
+   },
+   {
+    "reading_a": "conception_reading",
+    "reading_b": "gradualist_reading",
+    "basis": "Conception reading requires binary personhood (entity either is or is not a person); gradualist reading requires rejecting binary personhood in favor of scalar moral status. These are metaphysically incompatible: personhood cannot be both binary and scalar simultaneously."
+   },
+   {
+    "reading_a": "viability_reading",
+    "reading_b": "conception_reading",
+    "basis": "Viability reading grounds personhood in technological capacity for independent survival (contingent, changes with medical advancement); conception reading grounds personhood in intrinsic biological status (necessary, unchanging). No framework can hold both: personhood is either intrinsic to the entity or contingent on external technological capacity."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "conception_reading",
+   "human_readable": "Conception Reading (Personhood at Fertilization)",
+   "structural_delta": "Fetus acquires full moral and legal status at conception, entering victim set immediately",
+   "primary_observable": "Legal regimes prohibiting abortion from conception; criminal penalties for abortion equivalent to homicide; contraception restrictions targeting post-fertilization mechanisms",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "religious_authority_structures",
+   "victim": "pregnant_persons_seeking_abortion",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Kernel reading with distinct constraint structure; highest extractiveness; generates complete prohibition regime"
+  },
+  {
+   "claim_id": "ensoulment_reading",
+   "human_readable": "Ensoulment Reading (Personhood at 40-120 Days)",
+   "structural_delta": "Fetus acquires moral status at ensoulment threshold, creating temporal window for early abortion",
+   "primary_observable": "Islamic fiqh rulings permitting early abortion; historical Christian doctrine allowing abortion pre-quickening; gestational limits at 40-120 days in religious legal systems",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Kernel reading with distinct temporal structure; coordination mechanism within religious authority; structurally independent from conception and viability readings"
+  },
+  {
+   "claim_id": "viability_reading",
+   "human_readable": "Viability Reading (Personhood at Independent Survival Capacity)",
+   "structural_delta": "Fetus acquires legal status when technologically capable of surviving outside womb",
+   "primary_observable": "Roe v. Wade trimester framework; state abortion bans with viability exceptions; medical determination of gestational age and survival probability",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "medical_profession",
+   "victim": "pregnant_persons_post_viability",
+   "downstream_of": [],
+   "feeds_into": [
+    "medical_technology_drift"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with technology-contingent structure; feeds into drift axis; medical authority as beneficiary"
+  },
+  {
+   "claim_id": "birth_reading",
+   "human_readable": "Birth Reading (Personhood at Complete Expulsion)",
+   "structural_delta": "Fetus never enters victim set; pregnant person retains sole rights-bearer status throughout gestation",
+   "primary_observable": "Legal regimes with no gestational limits; abortion access throughout pregnancy; common law born-alive rule",
+   "epsilon_bin": "high",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Kernel reading with maximal maternal autonomy; structurally opposite to conception reading; distinct observable (no gestational restrictions)"
+  },
+  {
+   "claim_id": "gradualist_reading",
+   "human_readable": "Gradualist Reading (Scalar Moral Status Across Gestation)",
+   "structural_delta": "Moral status increases continuously; no discrete threshold; proportional balancing required",
+   "primary_observable": "Bioethics frameworks using proportionality analysis; trimester-based regulatory schemes with increasing restrictions; philosophical literature rejecting binary personhood",
+   "epsilon_bin": "low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Kernel reading with distinct metaphysical structure (scalar vs binary); difficult to operationalize but philosophically live position"
+  },
+  {
+   "claim_id": "medical_technology_drift",
+   "human_readable": "Medical Technology Drift (Viability Threshold Instability)",
+   "structural_delta": "Viability threshold shifts earlier with neonatal technology advancement, expanding state prohibition power",
+   "primary_observable": "Historical viability threshold movement (28 weeks in 1973 to 22-24 weeks currently); NICU survival rate improvements; legal challenges based on updated viability data",
+   "epsilon_bin": "mod",
+   "hypothesis": "piton",
+   "beneficiary": "anti_abortion_advocacy",
+   "victim": "pregnant_persons_in_second_trimester",
+   "downstream_of": [
+    "viability_reading"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Distinct structural mechanism; downstream of viability reading; captures technology-driven constraint expansion; independent observable (NICU survival rates)"
+  },
+  {
+   "claim_id": "federalism_allocation",
+   "human_readable": "Federalism Allocation (State vs Federal Authority Over Personhood)",
+   "structural_delta": "Post-Dobbs allocation of personhood determination to state legislatures rather than federal constitutional protection",
+   "primary_observable": "State-level abortion bans post-Dobbs; interstate travel for abortion; state constitutional amendments; federal legislation attempts (Women's Health Protection Act)",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "state_legislatures",
+   "victim": "pregnant_persons_in_restrictive_states",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Distinct structural axis (authority allocation, not personhood threshold); independent observable (state vs federal law); high extractiveness post-Dobbs"
+  },
+  {
+   "claim_id": "disability_selective_termination",
+   "human_readable": "Disability-Selective Termination (Prenatal Diagnosis as Personhood Enforcement)",
+   "structural_delta": "Prenatal genetic testing enables selective termination based on disability, operationalizing contested personhood criteria",
+   "primary_observable": "Down syndrome abortion rates post-diagnosis (67-85% in US); sex-selective abortion bans; disability rights advocacy against prenatal testing",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "genetic_testing_industry",
+   "victim": "disability_community",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: distinct structural mechanism but lower centrality; captured partially through conception/birth readings' victim set definitions; omega material for disability rights intersection"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "conception_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "conception_reading"
+  },
+  {
+   "claim_id": "ensoulment_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "ensoulment_reading"
+  },
+  {
+   "claim_id": "viability_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "viability_reading"
+  },
+  {
+   "claim_id": "birth_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "birth_reading"
+  },
+  {
+   "claim_id": "gradualist_reading",
+   "kernel_id": "personhood_boundary",
+   "reading_id": "gradualist_reading"
+  },
+  "medical_technology_drift",
+  "federalism_allocation"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "disability_selective_termination",
+   "structural_delta": "Prenatal testing enables disability-selective abortion, operationalizing personhood criteria",
+   "hypothesis": "snare",
+   "deferral_reason": "Lower centrality; intersection of personhood boundary with disability rights; victim set partially captured by kernel readings; omega material for disability justice framework"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_non_western_traditions",
+   "description": "Are Islamic fiqh ensoulment doctrines, Confucian relational personhood, or Hindu reincarnation frameworks structurally distinct readings of the personhood kernel, or do they collapse into the five-reading set? Absence of non-Western legal traditions in extraction may miss distinct authority structures.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence_count"
+  },
+  {
+   "id": "omega_disability_rights_collision",
+   "description": "Does prenatal diagnosis + selective termination constitute a sixth reading of the personhood boundary (personhood contingent on genetic normalcy), or is it a downstream snare of existing readings? Deferred axis may warrant independent generation if disability rights framework is structurally distinct.",
+   "source": "Deferred axis disability_selective_termination + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_quickening_historical_drift",
+   "description": "Historical quickening doctrine (personhood at first fetal movement, ~16-20 weeks) was dominant in common law pre-1800s. Is this a distinct reading collapsed into ensoulment, or a separate temporal threshold? May affect historical constraint graph topology.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + ensoulment_reading authority_grounding"
+  },
+  {
+   "id": "omega_sentience_reading",
+   "description": "Sentience/consciousness-based personhood (fetal pain capacity, ~20-24 weeks) appears in bioethics literature but not extracted as distinct reading. Does it collapse into viability or gradualist readings, or is it a sixth reading with distinct neural-development observable?",
+   "source": "Dark Matter Probe 1 (Operational Medium) + gradualist_reading expected_structural_delta"
+  },
+  {
+   "id": "omega_kernel_stability",
+   "description": "Is the personhood boundary a stable kernel across legal traditions, or do different traditions contest different kernels (e.g., bodily autonomy vs fetal life as the primary kernel)? Current analysis assumes single contested kernel; alternative is multiple non-overlapping kernels.",
+   "source": "F01 (Premise Drift) check + commitment_system_recognition kernel_description"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five kernel readings pass pairwise independence test (distinct observables, distinct authority structures, distinct victim sets). Two non-kernel axes (medical_technology_drift, federalism_allocation) pass independence test against kernel readings and each other. Disability-selective termination deferred due to lower centrality and partial capture by kernel readings. Omegas generated for non-Western traditions absence, historical quickening doctrine, sentience reading, and kernel stability question."
+ }
+}

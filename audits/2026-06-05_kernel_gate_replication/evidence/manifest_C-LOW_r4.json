@@ -1,0 +1,149 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Technology Standards",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles drive on, focusing on right-hand driving as the dominant global standard. Examines the coordination mechanisms, path dependencies, and structural constraints that stabilize this convention despite its arbitrary origins.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic convention (global majority standard, ~165 countries)",
+   "Left-hand traffic convention (minority standard, ~75 countries including UK, Japan, India)",
+   "Vehicle manufacturing industry (produces region-specific steering configurations)",
+   "Border crossing infrastructure (manages handedness transitions)",
+   "International standards bodies (Vienna Convention on Road Traffic 1968)"
+  ],
+  "key_tensions": [
+   "Network coordination benefit vs switching cost asymmetry (larger network has lower per-capita switching cost but higher aggregate cost)",
+   "Manufacturing standardization pressure vs installed base lock-in (global supply chain efficiency vs regional infrastructure investment)"
+  ],
+  "key_mechanisms": [
+   "Network effects: value of convention increases with adoption (coordination benefit scales with network size)",
+   "Switching cost enforcement: infrastructure (road signs, intersections, highway ramps) and vehicle fleet create exit barriers",
+   "Border management: physical infrastructure (lane crossovers, neutral zones) absorbs handedness transitions"
+  ],
+  "key_absences": [
+   "Historical origin analysis: why the split emerged (Napoleon's military standardization vs British Empire maritime tradition not examined in structural terms)",
+   "Safety differential data: whether right-hand vs left-hand driving has measurable accident rate differences controlling for other factors"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_lock_in",
+   "human_readable": "Coordination Equilibrium Lock-In",
+   "structural_delta": "Self-reinforcing coordination equilibrium where deviation from local standard imposes immediate safety and infrastructure compatibility costs",
+   "primary_observable": "Switching cost magnitude (infrastructure replacement cost, vehicle fleet turnover cost, retraining cost) relative to coordination benefit; accident rate spike during hypothetical transition period",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_size_asymmetry",
+    "manufacturing_standardization_pressure"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain providing physical coordination constraint base; feeds both network and manufacturing axes"
+  },
+  {
+   "claim_id": "network_size_asymmetry",
+   "human_readable": "Network Size Asymmetry (Majority Standard Advantage)",
+   "structural_delta": "Right-hand driving network is 2.2x larger than left-hand network, creating asymmetric switching incentives and standardization pressure",
+   "primary_observable": "Country count ratio (165 vs 75); population ratio; cross-border traffic volume at handedness boundaries; frequency of standardization proposals from minority-standard countries",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_lock_in"
+   ],
+   "feeds_into": [
+    "manufacturing_standardization_pressure"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (network size ratio) from coordination lock-in; intermediate node linking coordination base to manufacturing extraction"
+  },
+  {
+   "claim_id": "manufacturing_standardization_pressure",
+   "human_readable": "Manufacturing Standardization Pressure (Supply Chain Extraction)",
+   "structural_delta": "Global automotive supply chains extract efficiency gains by pressuring minority-standard markets to accept right-hand vehicles or pay premium for left-hand production runs",
+   "primary_observable": "Price differential for left-hand drive vehicles in right-hand markets and vice versa; model availability asymmetry; manufacturer statements on production line economics",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "global_automotive_manufacturers",
+   "victim": "left_hand_traffic_countries",
+   "downstream_of": [
+    "coordination_equilibrium_lock_in",
+    "network_size_asymmetry"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; downstream synthesis node with clear beneficiary/victim structure; captures extraction dynamic"
+  },
+  {
+   "claim_id": "border_infrastructure_absorption",
+   "human_readable": "Border Infrastructure Absorption (Transition Zone Management)",
+   "structural_delta": "Physical infrastructure at handedness boundaries (lane crossovers, bridges, neutral zones) absorbs the coordination discontinuity, preventing it from propagating as systemic instability",
+   "primary_observable": "Design specifications and accident rates at specific border crossings (Thailand-Laos Friendship Bridge, Hong Kong-Mainland China crossings); infrastructure maintenance costs",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct structural delta (spatial discontinuity management) and observable (border crossing design) from other axes; piton preventing coordination failure propagation"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_lock_in",
+  "network_size_asymmetry",
+  "manufacturing_standardization_pressure",
+  "border_infrastructure_absorption"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_historical_contingency",
+   "description": "Is the right-hand majority a true Mountain (emerged from universal human factors like right-hand weapon dominance) or a Piton of historical contingency (Napoleon's military standardization happened to spread further than British maritime tradition)? If Piton, the current distribution is frozen accident rather than structural necessity.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + F03 (Hasty Generalization)"
+  },
+  {
+   "id": "omega_safety_differential",
+   "description": "Does handedness itself affect safety outcomes (e.g., right-hand driving safer for right-eye-dominant populations, or vice versa)? If measurable differential exists, the coordination equilibrium may be suppressing a safety-optimizing axis. Absence of this data in structural analysis is notable.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_autonomous_vehicle_dissolution",
+   "description": "Do autonomous vehicles dissolve the coordination constraint by handling handedness transitions in software? If yes, the Mountain becomes a Scaffold (temporary coordination mechanism pending technological transition). Manufacturing extraction may intensify during transition as manufacturers control the software layer.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 model analyzed within human-driver paradigm"
+  },
+  {
+   "id": "omega_switching_cost_distribution",
+   "description": "Who bears switching costs in a hypothetical transition? If costs fall disproportionately on lower-income populations (older vehicle fleet, less access to retraining), the Rope of network size asymmetry may conceal a Snare where coordination pressure extracts from the economically vulnerable.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: coordination_equilibrium_lock_in classified as Mountain but may be Piton of historical contingency if right-hand majority emerged from Napoleon's military standardization rather than universal human factors. Generated omega_historical_contingency to bound this uncertainty. No other fractures detected; four distinct axes survived independence testing with no merges required."
+ }
+}

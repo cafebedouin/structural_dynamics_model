@@ -1,0 +1,277 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Regulation",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform editorial discretion, state regulatory authority, and user speech rights. The topic encompasses constitutional constraints on government compulsion of private moderation, the economic and liability structures that shape platform behavior, and the contested boundary between public forum doctrine and private property rights in digital spaces.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social Media Platforms (private corporations with editorial discretion claims)",
+   "State Legislatures (regulatory authorities attempting to impose moderation mandates)",
+   "Federal Courts (constitutional adjudicators of First Amendment boundaries)",
+   "Platform Users (speakers claiming access rights or protection from removal)",
+   "Advertisers (economic actors whose preferences shape moderation incentives)",
+   "Section 230 (statutory liability shield conditioning platform immunity)"
+  ],
+  "key_tensions": [
+   "Platform editorial discretion vs state-mandated neutrality (private speech rights vs regulatory authority)",
+   "User access claims vs platform property rights (public forum analogy vs private infrastructure)",
+   "Liability shield preservation vs content accountability (Section 230 immunity vs tort/criminal exposure)",
+   "Advertiser brand safety demands vs user speech breadth (economic pressure vs expressive diversity)"
+  ],
+  "key_mechanisms": [
+   "Section 230(c)(2) good faith removal immunity (statutory shield for voluntary moderation)",
+   "State content moderation laws (Texas HB20, Florida SB7072 type mandates)",
+   "Advertiser boycott coordination (economic enforcement of moderation standards)"
+  ],
+  "key_absences": [
+   "International jurisdiction conflicts (EU DSA, UK Online Safety Act extraterritorial reach)",
+   "Algorithmic amplification vs removal distinction (curation obligations separate from takedown mandates)",
+   "Platform market structure effects (monopoly/oligopoly power as precondition for effective regulation)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "state_action_boundary",
+   "human_readable": "State Action Boundary (Constitutional Limits on Compelled Moderation)",
+   "structural_delta": "Whether government can constitutionally compel private platforms to host, remove, or label content without triggering First Amendment scrutiny",
+   "primary_observable": "Judicial application of state action doctrine and compelled speech tests to platform moderation mandates; Supreme Court precedent on private editorial rights (Miami Herald, Hurley, Rumsfeld)",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_mandate_enforceability",
+    "liability_shield_conditionality"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational constitutional constraint; upstream to multiple regulatory mechanisms"
+  },
+  {
+   "claim_id": "public_forum_analogy",
+   "human_readable": "Public Forum Analogy (Digital Town Square vs Private Property)",
+   "structural_delta": "Whether social media platforms are sufficiently public-serving to trigger common carrier or public accommodation obligations despite private ownership",
+   "primary_observable": "Judicial acceptance/rejection of public forum doctrine extension to digital platforms; state supreme court rulings on state constitutional speech protections (Pruneyard analogy)",
+   "epsilon_bin": "mod",
+   "hypothesis": "contested_kernel",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_mandate_enforceability",
+    "user_access_entitlement"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Contested kernel with multiple live readings; structurally independent from state_action_boundary (different doctrinal basis)"
+  },
+  {
+   "claim_id": "liability_shield_conditionality",
+   "human_readable": "Liability Shield Conditionality (Section 230 as Contingent Immunity)",
+   "structural_delta": "Whether Section 230 immunity is unconditional or can be conditioned on platform adoption of specific moderation practices",
+   "primary_observable": "Legislative proposals to condition Section 230 on content moderation standards; judicial interpretation of Section 230(c)(2) good faith requirement",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "regulatory_state",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "state_action_boundary"
+   ],
+   "feeds_into": [
+    "moderation_mandate_enforceability"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; synthesis node linking constitutional limits to enforcement mechanisms"
+  },
+  {
+   "claim_id": "moderation_mandate_enforceability",
+   "human_readable": "Moderation Mandate Enforceability (State Laws Requiring Specific Moderation)",
+   "structural_delta": "Whether state laws mandating content hosting, removal, or transparency survive constitutional and preemption challenges",
+   "primary_observable": "Judicial outcomes in NetChoice v Paxton (Texas HB20) and NetChoice v Moody (Florida SB7072); enforcement of state moderation mandates",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "state_legislatures",
+   "victim": "platform_editorial_discretion",
+   "downstream_of": [
+    "state_action_boundary",
+    "public_forum_analogy",
+    "liability_shield_conditionality"
+   ],
+   "feeds_into": [],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Downstream synthesis node; highest centrality; integrates three upstream constraints"
+  },
+  {
+   "claim_id": "advertiser_veto_power",
+   "human_readable": "Advertiser Veto Power (Economic Enforcement of Moderation Standards)",
+   "structural_delta": "Advertiser boycott threats as de facto moderation mandate independent of state regulation",
+   "primary_observable": "Advertiser exodus events (Twitter/X post-acquisition, YouTube adpocalypse); brand safety certification requirements",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": "advertisers",
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_moderation_incentives"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Structurally independent from state regulatory axes; different enforcement mechanism (economic vs legal)"
+  },
+  {
+   "claim_id": "platform_moderation_incentives",
+   "human_readable": "Platform Moderation Incentives (Equilibrium Between Legal, Economic, and Reputational Pressures)",
+   "structural_delta": "The actual moderation behavior platforms adopt given the combined pressure of legal mandates, advertiser demands, and user expectations",
+   "primary_observable": "Platform transparency reports; content removal rates; appeals processes; moderation policy changes",
+   "epsilon_bin": "v_low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_management",
+   "victim": "marginalized_speakers",
+   "downstream_of": [
+    "moderation_mandate_enforceability",
+    "advertiser_veto_power",
+    "liability_shield_conditionality"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Downstream synthesis node integrating legal and economic constraints into observable platform behavior"
+  },
+  {
+   "claim_id": "user_access_entitlement",
+   "human_readable": "User Access Entitlement (Individual Right to Platform Access)",
+   "structural_delta": "Whether users possess a legally enforceable right to access social media platforms or protection from arbitrary removal",
+   "primary_observable": "Judicial recognition of user standing to challenge deplatforming; state laws creating private rights of action for content removal",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "public_forum_analogy"
+   ],
+   "feeds_into": [
+    "moderation_mandate_enforceability"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Structurally distinct from platform-level mandates; focuses on individual enforcement mechanism"
+  }
+ ],
+ "commitment_system_recognition": {
+  "kernel_description": "The First Amendment's constraint on government regulation of private speech, particularly whether platforms are speakers with editorial rights or conduits subject to common carrier obligations",
+  "authority_description": "Federal judiciary interpreting constitutional text and precedent (Miami Herald, Hurley, Pruneyard, Rumsfeld); state courts applying state constitutional speech protections",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift",
+  "is_contested_kernel": true,
+  "kernel_id": "public_forum_analogy",
+  "readings": [
+   {
+    "reading_id": "private_editor_reading",
+    "commitment": "Platforms are private speakers exercising editorial judgment; government cannot compel hosting or removal without triggering strict scrutiny",
+    "authority_grounding": "Miami Herald v Tornillo (newspaper editorial autonomy); Hurley v Irish-American GLIB (parade organizer speech rights); Rumsfeld v FAIR (compelled speech doctrine)",
+    "sibling_readings": [
+     "common_carrier_reading",
+     "hybrid_infrastructure_reading"
+    ],
+    "expected_structural_delta": "State moderation mandates presumptively unconstitutional; platforms retain broad discretion; user access claims fail"
+   },
+   {
+    "reading_id": "common_carrier_reading",
+    "commitment": "Platforms are public accommodations or common carriers due to market dominance and public function; government can impose neutrality obligations",
+    "authority_grounding": "Public utility doctrine; Marsh v Alabama (company town as public forum); state constitutional speech protections (Pruneyard Shopping Center v Robins)",
+    "sibling_readings": [
+     "private_editor_reading",
+     "hybrid_infrastructure_reading"
+    ],
+    "expected_structural_delta": "State moderation mandates survive scrutiny if narrowly tailored; platforms lose editorial discretion; users gain access entitlements"
+   },
+   {
+    "reading_id": "hybrid_infrastructure_reading",
+    "commitment": "Platforms are hybrid entities: speakers for their own content/curation but infrastructure providers for user-generated content; different rules apply to each layer",
+    "authority_grounding": "Section 230 statutory distinction between platform and publisher; Turner Broadcasting (cable must-carry as content-neutral infrastructure regulation)",
+    "sibling_readings": [
+     "private_editor_reading",
+     "common_carrier_reading"
+    ],
+    "expected_structural_delta": "Algorithmic amplification protected as editorial; hosting mandates permissible if content-neutral; transparency requirements survive scrutiny"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "private_editor_reading",
+    "reading_b": "common_carrier_reading",
+    "basis": "Private editor reading holds that editorial discretion is constitutionally protected speech; common carrier reading holds that market dominance triggers neutrality obligations that override editorial rights. No single framework can simultaneously protect editorial discretion as core speech and permit government to compel neutrality."
+   }
+  ]
+ },
+ "generation_sequence": [
+  "state_action_boundary",
+  {
+   "claim_id": "private_editor_reading",
+   "kernel_id": "public_forum_analogy",
+   "reading_id": "private_editor_reading"
+  },
+  {
+   "claim_id": "common_carrier_reading",
+   "kernel_id": "public_forum_analogy",
+   "reading_id": "common_carrier_reading"
+  },
+  {
+   "claim_id": "hybrid_infrastructure_reading",
+   "kernel_id": "public_forum_analogy",
+   "reading_id": "hybrid_infrastructure_reading"
+  },
+  "liability_shield_conditionality",
+  "moderation_mandate_enforceability",
+  "advertiser_veto_power",
+  "platform_moderation_incentives",
+  "user_access_entitlement"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_international_jurisdiction",
+   "description": "How do extraterritorial obligations (EU DSA, UK Online Safety Act) interact with U.S. constitutional constraints? Platforms may face conflicting mandates where EU requires removal and U.S. prohibits compelled removal.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_amplification_vs_hosting",
+   "description": "Is algorithmic amplification constitutionally distinct from hosting? Hybrid reading suggests yes, but doctrine is unsettled. If amplification is protected editorial curation, transparency mandates may fail strict scrutiny.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + hybrid_infrastructure_reading structural delta"
+  },
+  {
+   "id": "omega_market_structure_precondition",
+   "description": "Does common carrier doctrine require proof of monopoly/oligopoly power? If platforms face genuine competition, neutrality mandates may fail rational basis review. Market structure is upstream to enforceability but not analyzed as separate axis.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + common_carrier_reading authority grounding"
+  },
+  {
+   "id": "omega_section_230_repeal",
+   "description": "If Section 230 is repealed, does liability_shield_conditionality collapse into direct tort liability? The tangled_rope may become a mountain of common law defamation/negligence constraints.",
+   "source": "liability_shield_conditionality hypothesis classification + legislative proposals"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Seven distinct axes survived independence testing. Public forum analogy identified as contested kernel with three live readings (private editor, common carrier, hybrid infrastructure). Axiom contradiction declared between private_editor_reading and common_carrier_reading. Three omegas generated for international jurisdiction, amplification/hosting distinction, and market structure preconditions."
+ }
+}

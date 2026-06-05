@@ -1,0 +1,249 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tension between platform editorial discretion, state speech regulation, user expression rights, and the economic incentives that shape moderation practices. The topic encompasses constitutional constraints on government compulsion, platform liability frameworks, and the collision between private ordering and public forum expectations.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with editorial control)",
+   "State actors (legislatures, regulatory agencies imposing moderation mandates)",
+   "Users (content creators and consumers with expression interests)",
+   "Advertisers (revenue source influencing moderation incentives)",
+   "Section 230 (liability shield framework)",
+   "First Amendment doctrine (constitutional constraint on state action)"
+  ],
+  "key_tensions": [
+   "Platform editorial discretion vs state-mandated moderation requirements",
+   "Private property rights in digital infrastructure vs public forum expectations",
+   "Liability shield preservation vs accountability for harmful content",
+   "Advertiser brand safety demands vs user expression breadth"
+  ],
+  "key_mechanisms": [
+   "Section 230(c)(2) good faith moderation immunity",
+   "Advertiser boycott threats as moderation pressure",
+   "State action doctrine limiting government speech compulsion"
+  ],
+  "key_absences": [
+   "International jurisdiction conflicts (EU DSA vs US First Amendment)",
+   "Algorithmic amplification as distinct from hosting decisions",
+   "Worker conditions of commercial content moderators"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "state_action_constitutional_limit",
+   "human_readable": "State Action Constitutional Limit (First Amendment Constraint on Compelled Moderation)",
+   "structural_delta": "Constitutional prohibition on government compelling private editorial decisions",
+   "primary_observable": "First Amendment state action doctrine; compelled speech precedent (Barnette, Hurley, Miami Herald)",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_as_editorial_discretion",
+    "liability_shield_conditionality"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Mountain providing constitutional constraint base; upstream to multiple axes"
+  },
+  {
+   "claim_id": "section_230_liability_architecture",
+   "human_readable": "Section 230 Liability Architecture (Immunity Framework for Platform Decisions)",
+   "structural_delta": "Statutory immunity from publisher liability for user content and good faith moderation",
+   "primary_observable": "47 USC 230(c)(1) and (c)(2) text; case law interpreting immunity scope",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "liability_shield_conditionality",
+    "advertiser_pressure_extraction"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Mountain providing statutory constraint base; different observable from state_action_constitutional_limit"
+  },
+  {
+   "claim_id": "moderation_as_editorial_discretion",
+   "human_readable": "Moderation as Editorial Discretion (Platform Speech Rights)",
+   "structural_delta": "Platform content curation framed as protected editorial judgment under First Amendment",
+   "primary_observable": "NetChoice v Paxton/Moody holdings; platform editorial control claims",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "state_action_constitutional_limit"
+   ],
+   "feeds_into": [
+    "public_forum_expectation_collision"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Rope coordination mechanism; distinct observable from constitutional limit (applies to private platform claims, not state action)"
+  },
+  {
+   "claim_id": "liability_shield_conditionality",
+   "human_readable": "Liability Shield Conditionality (Section 230 Reform as Moderation Lever)",
+   "structural_delta": "Threatened or actual conditioning of Section 230 immunity on specific moderation practices",
+   "primary_observable": "Legislative proposals to condition 230 immunity; regulatory guidance linking immunity to content policies",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "state_regulatory_authority",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "state_action_constitutional_limit",
+    "section_230_liability_architecture"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Tangled_rope synthesis node; highest centrality; entangles constitutional and statutory constraints"
+  },
+  {
+   "claim_id": "advertiser_pressure_extraction",
+   "human_readable": "Advertiser Pressure Extraction (Brand Safety as Moderation Driver)",
+   "structural_delta": "Advertiser boycott threats and brand safety demands shaping moderation beyond legal requirements",
+   "primary_observable": "Advertiser boycott campaigns (e.g., Stop Hate for Profit); brand safety certification requirements",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "advertiser_brand_reputation",
+   "victim": "user_expression_breadth",
+   "downstream_of": [
+    "section_230_liability_architecture"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Snare with distinct economic mechanism; different observable and victim structure from liability_shield_conditionality"
+  },
+  {
+   "claim_id": "public_forum_expectation_collision",
+   "human_readable": "Public Forum Expectation Collision (Private Infrastructure, Public Function)",
+   "structural_delta": "Tension between platforms as private property and user expectation of public forum access rights",
+   "primary_observable": "Public forum doctrine case law (Marsh v Alabama, Pruneyard); platform terms of service enforcement patterns",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_property_control",
+   "victim": "user_access_expectations",
+   "downstream_of": [
+    "moderation_as_editorial_discretion"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Tangled_rope with distinct property rights observable; independent from liability and advertiser axes"
+  },
+  {
+   "claim_id": "algorithmic_amplification_curation",
+   "human_readable": "Algorithmic Amplification Curation (Recommendation Systems as Editorial Layer)",
+   "structural_delta": "Algorithmic content ranking and recommendation as distinct moderation layer beyond hosting decisions",
+   "primary_observable": "Recommendation algorithm design choices; amplification vs hosting distinction in case law",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "moderation_as_editorial_discretion"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: captured indirectly via moderation_as_editorial_discretion; amplification is subset of editorial discretion"
+  },
+  {
+   "claim_id": "cross_border_jurisdiction_collision",
+   "human_readable": "Cross-Border Jurisdiction Collision (EU DSA vs US First Amendment)",
+   "structural_delta": "Conflicting legal obligations across jurisdictions with different speech/moderation frameworks",
+   "primary_observable": "EU Digital Services Act requirements vs US constitutional constraints; extraterritorial enforcement attempts",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": null,
+   "victim": "platform_compliance_coherence",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: distinct axis but lower centrality; international dimension warrants separate analysis beyond US-focused scope"
+  }
+ ],
+ "generation_sequence": [
+  "state_action_constitutional_limit",
+  "section_230_liability_architecture",
+  "moderation_as_editorial_discretion",
+  "liability_shield_conditionality",
+  "advertiser_pressure_extraction",
+  "public_forum_expectation_collision"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_amplification_curation",
+   "structural_delta": "Algorithmic ranking as distinct moderation layer",
+   "hypothesis": "rope",
+   "deferral_reason": "Captured indirectly via moderation_as_editorial_discretion; amplification is subset of editorial discretion rather than independent axis"
+  },
+  {
+   "claim_id": "cross_border_jurisdiction_collision",
+   "structural_delta": "Conflicting legal obligations across jurisdictions",
+   "hypothesis": "tangled_rope",
+   "deferral_reason": "Lower centrality; international dimension warrants separate analysis beyond US-focused constitutional/statutory scope"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_state_actor_threshold",
+   "description": "At what point does government pressure on platforms (jawboning, regulatory threats) cross into state action triggering First Amendment scrutiny? The line between persuasion and coercion remains contested.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + state_action_constitutional_limit mountain validity"
+  },
+  {
+   "id": "omega_230_reform_constitutional_limit",
+   "description": "Can Congress condition Section 230 immunity on specific moderation practices without violating the unconstitutional conditions doctrine? The boundary between incentive and compulsion is unclear.",
+   "source": "liability_shield_conditionality tangled_rope + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_public_forum_doctrine_extension",
+   "description": "Does the public forum doctrine extend to privately-owned digital infrastructure that has become essential for public discourse? Marsh v Alabama analogy remains unresolved in digital context.",
+   "source": "public_forum_expectation_collision tangled_rope + Dark Matter Probe 1 (Operational Medium)"
+  },
+  {
+   "id": "omega_advertiser_coordination_antitrust",
+   "description": "When does coordinated advertiser pressure on platforms constitute anticompetitive conduct? The line between legitimate boycott and market manipulation is contested.",
+   "source": "advertiser_pressure_extraction snare + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_moderator_labor_conditions",
+   "description": "Are commercial content moderators' working conditions (PTSD, low pay, high turnover) a hidden extraction cost? The human infrastructure of moderation is structurally absent from legal frameworks.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + extraction_summary absence_count"
+  },
+  {
+   "id": "omega_international_jurisdiction",
+   "description": "How do platforms resolve conflicting moderation obligations across jurisdictions (EU DSA vs US First Amendment)? Deferred axis cross_border_jurisdiction_collision warrants future analysis.",
+   "source": "Deferred axis cross_border_jurisdiction_collision"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Six axes selected after independence testing. Two axes deferred: algorithmic_amplification_curation (captured by moderation_as_editorial_discretion) and cross_border_jurisdiction_collision (lower centrality, international scope beyond US focus). Dark matter probes surfaced five omega uncertainties including moderator labor conditions and state actor threshold questions."
+ }
+}

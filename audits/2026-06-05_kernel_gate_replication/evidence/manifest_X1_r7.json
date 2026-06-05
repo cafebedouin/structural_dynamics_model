@@ -1,0 +1,206 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Theory",
+ "family_id": "gig_platform_classification_2026",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and liability structures, while platforms claim algorithmic coordination justifies contractor status despite control mechanisms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Platform companies (Uber, Lyft, DoorDash, Instacart - intermediaries claiming technology-provider status)",
+   "Gig workers (drivers, delivery workers, taskers - performing labor through platform interfaces)",
+   "Labor regulatory agencies (NLRB, DOL, state agencies - classification adjudicators)",
+   "Traditional employment law framework (FLSA, NLRA - statutory regimes designed for industrial-era employment)",
+   "Algorithmic management systems (rating systems, dispatch algorithms, dynamic pricing - control mechanisms)",
+   "Venture capital investors (platform funders whose returns depend on contractor classification)"
+  ],
+  "key_tensions": [
+   "Platform control vs worker autonomy (platforms exercise extensive behavioral control while claiming workers are independent)",
+   "Statutory employee definition vs platform business model (20th century legal categories vs 21st century coordination technology)",
+   "Worker protection vs platform viability (mandatory benefits/wages vs claimed unit economics requiring contractor status)"
+  ],
+  "key_claims": [
+   "Platforms claim they provide technology infrastructure, not employment, and workers are independent businesses using that infrastructure",
+   "Workers claim platforms exercise sufficient control (algorithmic dispatch, rating systems, unilateral deactivation) to constitute employment relationships",
+   "Platforms claim reclassification as employees would destroy business model viability and eliminate flexible work opportunities",
+   "Labor advocates claim contractor classification is regulatory arbitrage to avoid minimum wage, overtime, benefits, and collective bargaining obligations",
+   "Courts and agencies have reached inconsistent classifications across jurisdictions using identical statutory tests"
+  ],
+  "key_mechanisms": [
+   "Algorithmic dispatch and rating systems (platforms control work allocation and worker reputation without direct supervision)",
+   "Unilateral terms-of-service modification (platforms change compensation formulas, acceptance rate requirements, and deactivation criteria without negotiation)",
+   "Regulatory forum shopping (platforms pursue favorable classification through ballot initiatives, federal preemption, and jurisdiction selection)",
+   "Misclassification cost externalization (when workers are contractors, social safety net costs shift from platforms to public programs and workers)"
+  ],
+  "key_absences": [
+   "Third classification category (most jurisdictions offer only binary employee/contractor choice; intermediate categories like UK 'worker' status or portable benefits proposals are absent from U.S. federal law)",
+   "Algorithmic transparency requirements (platforms treat dispatch and pricing algorithms as trade secrets; workers and regulators lack visibility into control mechanisms)",
+   "Collective bargaining framework for contractors (antitrust law prohibits independent contractors from collective bargaining; no alternative framework exists for platform workers)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_opacity_asymmetry",
+   "human_readable": "Control Opacity Asymmetry (Algorithmic Management as Unobservable Supervision)",
+   "structural_delta": "Platforms exercise behavioral control through algorithmic systems that are legally invisible under traditional supervision tests designed for human managers",
+   "primary_observable": "Correlation between algorithmic parameters (acceptance rate thresholds, rating penalties, dispatch prioritization) and worker behavior; legal doctrine's recognition of algorithmic control as supervision",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [],
+   "feeds_into": [
+    "binary_classification_trap",
+    "cost_externalization_mechanism"
+   ],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Highest centrality; core structural innovation distinguishing platform labor from traditional employment; feeds into both classification and cost externalization axes"
+  },
+  {
+   "claim_id": "statutory_category_obsolescence",
+   "human_readable": "Statutory Category Obsolescence (Industrial-Era Framework vs Platform Coordination)",
+   "structural_delta": "Employment law categories (employee/contractor binary) were designed for industrial production relationships and lack structural fit for algorithmic coordination of distributed service work",
+   "primary_observable": "Frequency of split/inconsistent classification decisions across jurisdictions applying identical statutory tests; legislative proposals for third categories",
+   "epsilon_bin": "mod",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "binary_classification_trap"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Mountain providing structural constraint base; different observable (statutory fit vs algorithmic control); independent of control_opacity_asymmetry"
+  },
+  {
+   "claim_id": "binary_classification_trap",
+   "human_readable": "Binary Classification Trap (Forced Choice Between Mismatched Categories)",
+   "structural_delta": "Legal systems force platform relationships into employee or contractor categories, both of which structurally mismatch the actual coordination mechanism, creating unavoidable classification error",
+   "primary_observable": "Jurisdictional variance in classification outcomes; policy proposals for intermediate categories (UK worker status, portable benefits); litigation costs and settlement patterns",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": null,
+   "victim": "gig_workers",
+   "downstream_of": [
+    "statutory_category_obsolescence",
+    "control_opacity_asymmetry"
+   ],
+   "feeds_into": [
+    "regulatory_arbitrage_incentive"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Downstream synthesis of mountain and tangled_rope; snare structure captures forced-choice dynamic"
+  },
+  {
+   "claim_id": "cost_externalization_mechanism",
+   "human_readable": "Cost Externalization Mechanism (Social Safety Net Subsidy of Platform Business Model)",
+   "structural_delta": "Contractor classification shifts minimum wage floor, health insurance, unemployment insurance, workers compensation, and retirement costs from platforms to workers and public programs",
+   "primary_observable": "Gig worker utilization of public assistance programs (Medicaid, SNAP, EITC); platform unit economics under employee vs contractor classification; public subsidy calculations",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "public_treasury",
+   "downstream_of": [
+    "control_opacity_asymmetry"
+   ],
+   "feeds_into": [
+    "regulatory_arbitrage_incentive"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Different victim structure (public_treasury vs gig_workers); independent observable (fiscal externality vs classification doctrine); downstream of control axis"
+  },
+  {
+   "claim_id": "regulatory_arbitrage_incentive",
+   "human_readable": "Regulatory Arbitrage Incentive (Forum Shopping and Preemption Strategy)",
+   "structural_delta": "Classification uncertainty creates incentive for platforms to pursue favorable classification through ballot initiatives (CA Prop 22), federal preemption, and jurisdiction selection rather than accept adjudication",
+   "primary_observable": "Platform spending on ballot initiatives and lobbying; federal preemption litigation; state-by-state classification variance; settlement vs litigation rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_companies",
+   "victim": "democratic_accountability",
+   "downstream_of": [
+    "binary_classification_trap",
+    "cost_externalization_mechanism"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Downstream synthesis capturing strategic response to classification uncertainty; different observable (political spending vs legal doctrine)"
+  },
+  {
+   "claim_id": "collective_bargaining_prohibition",
+   "human_readable": "Collective Bargaining Prohibition (Antitrust Bar on Contractor Coordination)",
+   "structural_delta": "If workers are contractors, antitrust law prohibits collective bargaining as price-fixing; if employees, platforms can refuse to bargain unless workers unionize under NLRA framework designed for worksite-based organizing",
+   "primary_observable": "Antitrust enforcement against contractor organizing attempts; NLRA election petition rates for gig workers; legislative proposals for sectoral bargaining or antitrust exemptions",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [
+    "binary_classification_trap"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Independent structural consequence of binary classification; different observable (collective action law vs employment classification); distinct victim mechanism"
+  }
+ ],
+ "generation_sequence": [
+  "control_opacity_asymmetry",
+  "statutory_category_obsolescence",
+  "binary_classification_trap",
+  "cost_externalization_mechanism",
+  "regulatory_arbitrage_incentive",
+  "collective_bargaining_prohibition"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_third_category_viability",
+   "description": "Would a third classification category (UK-style 'worker' status or portable benefits framework) resolve the structural mismatch, or would platforms game the new boundary? Depends on whether category design addresses algorithmic control opacity or merely adds a label.",
+   "source": "Absence Inventory (key_absences[0])"
+  },
+  {
+   "id": "omega_algorithmic_transparency",
+   "description": "If dispatch and rating algorithms were legally required to be transparent and auditable, would control_opacity_asymmetry collapse into traditional supervision doctrine, or would platforms redesign algorithms to maintain opacity? Trade secret protection vs worker protection.",
+   "source": "Absence Inventory (key_absences[1])"
+  },
+  {
+   "id": "omega_platform_viability_claim",
+   "description": "Platforms claim employee classification would destroy business model viability. Is this a genuine unit economics constraint (mountain) or a threat to extract regulatory concessions (tangled_rope)? Depends on whether venture capital subsidies are structural or transitional.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - venture capital investors as unexamined beneficiary"
+  },
+  {
+   "id": "omega_flexibility_tradeoff",
+   "description": "Platforms claim workers value flexibility that employee status would eliminate. Is flexibility a genuine worker preference (rope) or a framing that obscures income volatility and lack of bargaining power (snare)? Surveys show mixed preferences; structural question is whether flexibility requires contractor status or is compatible with employment protections.",
+   "source": "Dark Matter Probe 1 (Operational Medium) - flexibility framing as unexamined axis"
+  },
+  {
+   "id": "omega_international_convergence",
+   "description": "UK, EU, and other jurisdictions have created intermediate categories or reclassified platform workers as employees. Does U.S. exceptionalism reflect genuine legal-cultural difference (mountain) or regulatory capture (tangled_rope)? Cross-national comparison needed.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - international frameworks as background"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Six axes survived pairwise independence testing with distinct observables and structural deltas. Control_opacity_asymmetry and statutory_category_obsolescence are independent upstream constraints (different observables: algorithmic control mechanisms vs statutory category fit). Binary_classification_trap synthesizes both. Cost_externalization_mechanism has independent observable (fiscal externality) and different victim (public_treasury vs gig_workers). Regulatory_arbitrage_incentive captures strategic response with distinct observable (political spending). Collective_bargaining_prohibition addresses independent legal consequence (antitrust/labor law intersection) with distinct mechanism. All six proceed to generation."
+ }
+}

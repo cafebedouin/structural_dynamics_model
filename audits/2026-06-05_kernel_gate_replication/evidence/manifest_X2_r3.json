@@ -1,0 +1,288 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Education Policy / Constitutional Law / Social Stratification",
+ "family_id": "affirmative_action_admissions_2026",
+ "topic_summary": "Analysis of affirmative action in university admissions, examining race-conscious admissions policies as mechanisms for addressing historical exclusion and present-day inequality. The topic centers on the collision between remedial justice frameworks, meritocratic selection norms, and constitutional equal protection doctrine following recent Supreme Court decisions.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Universities (selective institutions with admissions authority)",
+   "Applicant pools (stratified by race, class, preparation quality)",
+   "Supreme Court (constitutional adjudicator; recent SFFA decisions)",
+   "Historical exclusion systems (Jim Crow, redlining, school segregation)",
+   "Meritocracy norm (claimed neutral selection by achievement)",
+   "Diversity rationale (educational benefit claim for heterogeneous student bodies)"
+  ],
+  "key_tensions": [
+   "Remedial justice vs formal equality (race-conscious correction vs colorblind principle)",
+   "Individual merit vs group-level disadvantage (personal achievement vs structural barrier)",
+   "Educational mission autonomy vs constitutional constraint (institutional discretion vs equal protection)"
+  ],
+  "key_mechanisms": [
+   "Race-conscious admissions (explicit consideration of applicant race in holistic review)",
+   "Legacy preferences (admission advantage for children of alumni)",
+   "Standardized testing (SAT/ACT as purported merit proxy with documented racial score gaps)"
+  ],
+  "key_absences": [
+   "Class-based affirmative action as structural alternative (income/wealth-based preferences largely absent from debate)",
+   "K-12 funding inequality as upstream cause (school finance litigation separate from admissions debate)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "Equal Protection Clause of the 14th Amendment \u2014 the constitutional commitment that state actors shall not deny equal protection of the laws",
+  "authority_description": "Supreme Court interpretive supremacy grounded in Marbury v. Madison judicial review doctrine",
+  "drift_status": "functioning",
+  "candidate_pattern": "interpretive_oscillation",
+  "is_contested_kernel": true,
+  "kernel_id": "equal_protection_boundary",
+  "readings": [
+   {
+    "reading_id": "antisubordination_reading",
+    "commitment": "Equal protection forbids perpetuation of caste-like subordination of historically excluded groups",
+    "authority_grounding": "Reconstruction history; substantive equality tradition",
+    "sibling_readings": [
+     "anticlassification_reading",
+     "diversity_reading"
+    ],
+    "expected_structural_delta": "Race-conscious remedies permissible when addressing group subordination; beneficiary = historically excluded groups; moderate \u03b5 (policy discretion within antisubordination frame)"
+   },
+   {
+    "reading_id": "anticlassification_reading",
+    "commitment": "Equal protection forbids state use of racial classifications regardless of purpose",
+    "authority_grounding": "Formal equality; colorblindness doctrine post-Brown",
+    "sibling_readings": [
+     "antisubordination_reading",
+     "diversity_reading"
+    ],
+    "expected_structural_delta": "Race-conscious policies categorically impermissible; beneficiary = formal equality norm; victim = applicants disadvantaged by race-conscious selection; high \u03b5 (strict scrutiny with narrow survival)"
+   },
+   {
+    "reading_id": "diversity_reading",
+    "commitment": "Equal protection permits race consideration when serving compelling educational interest in diverse learning environment",
+    "authority_grounding": "Academic freedom; First Amendment expressive association",
+    "sibling_readings": [
+     "antisubordination_reading",
+     "anticlassification_reading"
+    ],
+    "expected_structural_delta": "Race-conscious admissions permissible under narrow tailoring; beneficiary = institutional autonomy; moderate \u03b5 (survives strict scrutiny if properly designed)"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "antisubordination_reading",
+    "reading_b": "anticlassification_reading",
+    "basis": "Antisubordination requires state recognition of group-based harm and race-conscious remedy; anticlassification forbids state recognition of race as relevant category. No single framework can hold both: accepting that race-consciousness is categorically forbidden requires rejecting that remedying group subordination justifies race-conscious state action."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "equal_protection_boundary",
+   "human_readable": "Equal Protection Boundary (Constitutional Constraint on Race-Conscious Policy)",
+   "structural_delta": "The constitutional limit on when and how state actors may use racial classifications",
+   "primary_observable": "Supreme Court doctrine (strict scrutiny framework, compelling interest test, narrow tailoring requirement); case outcomes (Bakke, Grutter, Fisher, SFFA)",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel",
+   "beneficiary": "varies_by_reading",
+   "victim": "varies_by_reading",
+   "downstream_of": [],
+   "feeds_into": [
+    "admissions_selection_mechanism",
+    "diversity_as_interest"
+   ],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Contested kernel with three live readings; highest centrality; upstream to all policy implementation axes"
+  },
+  {
+   "claim_id": "historical_exclusion_legacy",
+   "human_readable": "Historical Exclusion Legacy (Structural Inheritance of Past Subordination)",
+   "structural_delta": "Persistent educational disadvantage traceable to Jim Crow, redlining, school segregation, and wealth extraction",
+   "primary_observable": "Racial wealth gap data; school segregation indices; intergenerational mobility studies; SAT score gaps by race controlling for income",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "admissions_selection_mechanism",
+    "meritocracy_as_neutral_sorting"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Mountain providing physical constraint base; distinct observable from equal_protection_boundary; feeds multiple downstream axes"
+  },
+  {
+   "claim_id": "meritocracy_as_neutral_sorting",
+   "human_readable": "Meritocracy as Neutral Sorting (Achievement Measurement as Unbiased Selection)",
+   "structural_delta": "The claim that standardized tests and GPA measure individual merit independent of structural advantage",
+   "primary_observable": "Test score predictive validity studies; correlation between family income and SAT scores; test prep industry revenue; legacy admit rates vs general pool",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "high_resource_applicants",
+   "victim": "structurally_disadvantaged_applicants",
+   "downstream_of": [
+    "historical_exclusion_legacy"
+   ],
+   "feeds_into": [
+    "admissions_selection_mechanism"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Tangled_rope with distinct beneficiary structure; downstream of mountain; feeds synthesis node"
+  },
+  {
+   "claim_id": "admissions_selection_mechanism",
+   "human_readable": "Admissions Selection Mechanism (Holistic Review as Discretionary Allocation)",
+   "structural_delta": "The institutional process by which universities allocate scarce admission slots among competing applicants",
+   "primary_observable": "Admit rates by race; holistic review rubrics; weight assigned to test scores vs essays vs race; legacy preference rates",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "institutional_autonomy",
+   "victim": "rejected_applicants",
+   "downstream_of": [
+    "equal_protection_boundary",
+    "historical_exclusion_legacy",
+    "meritocracy_as_neutral_sorting"
+   ],
+   "feeds_into": [],
+   "centrality_score": 9,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest centrality; downstream synthesis node with three inbound edges; tangled_rope where constitutional, structural, and meritocratic constraints collide"
+  },
+  {
+   "claim_id": "diversity_as_interest",
+   "human_readable": "Diversity as Compelling Interest (Educational Benefit of Heterogeneous Student Body)",
+   "structural_delta": "The claim that racial diversity produces pedagogical value justifying race-conscious admissions",
+   "primary_observable": "Amicus briefs from corporations/military; educational outcome studies; cross-racial interaction frequency; post-graduation civic engagement",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "equal_protection_boundary"
+   ],
+   "feeds_into": [
+    "admissions_selection_mechanism"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (educational outcomes vs constitutional doctrine vs structural inequality); rope coordinating institutional justification; feeds synthesis node"
+  },
+  {
+   "claim_id": "class_based_alternative",
+   "human_readable": "Class-Based Alternative (Socioeconomic Affirmative Action as Substitute)",
+   "structural_delta": "Income/wealth-based preferences as race-neutral mechanism for addressing disadvantage",
+   "primary_observable": "Simulated admit pool racial composition under class-based vs race-conscious policies; Pell Grant recipient rates; first-generation college student rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "historical_exclusion_legacy"
+   ],
+   "feeds_into": [
+    "admissions_selection_mechanism"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: scaffold with lower centrality; captured indirectly via historical_exclusion_legacy mountain and admissions_selection_mechanism tangled_rope; omega material for policy alternatives"
+  },
+  {
+   "claim_id": "legacy_preference_extraction",
+   "human_readable": "Legacy Preference Extraction (Alumni-Child Advantage as Wealth Consolidation)",
+   "structural_delta": "Admission advantage for children of alumni as mechanism preserving intergenerational privilege",
+   "primary_observable": "Legacy admit rates vs general pool; racial composition of legacy admits; donor revenue correlation with legacy preference strength",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "wealthy_alumni_families",
+   "victim": "non_legacy_applicants",
+   "downstream_of": [
+    "meritocracy_as_neutral_sorting"
+   ],
+   "feeds_into": [
+    "admissions_selection_mechanism"
+   ],
+   "centrality_score": 3,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: snare with moderate centrality; structurally parallel to race-conscious admissions debate but distinct mechanism; omega material for comparative extraction analysis"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "antisubordination_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "antisubordination_reading"
+  },
+  {
+   "claim_id": "anticlassification_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "anticlassification_reading"
+  },
+  {
+   "claim_id": "diversity_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "diversity_reading"
+  },
+  "historical_exclusion_legacy",
+  "meritocracy_as_neutral_sorting",
+  "admissions_selection_mechanism",
+  "diversity_as_interest"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "class_based_alternative",
+   "structural_delta": "Income/wealth-based preferences as race-neutral substitute",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Lower centrality; policy alternative captured indirectly via historical_exclusion_legacy and admissions_selection_mechanism; omega material for counterfactual analysis"
+  },
+  {
+   "claim_id": "legacy_preference_extraction",
+   "structural_delta": "Alumni-child advantage as wealth consolidation mechanism",
+   "hypothesis": "snare",
+   "deferral_reason": "Structurally parallel extraction mechanism but distinct from race-conscious debate; omega material for comparative analysis of admissions preferences"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_class_race_intersection",
+   "description": "Does class-based affirmative action achieve racial diversity goals? Simulation studies show incomplete substitution due to within-class racial wealth gaps. If class-based policy is race-neutral in form but produces racial stratification in effect, does it survive anticlassification reading or fail antisubordination reading?",
+   "source": "Deferred axis class_based_alternative + Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_legacy_meritocracy_contradiction",
+   "description": "Legacy preferences survive legal challenge while race-conscious admissions face strict scrutiny. Both deviate from pure meritocracy. Is the differential treatment a Mountain (constitutional text distinguishes race from family status) or a Snare (wealth preservation masked as institutional tradition)?",
+   "source": "Deferred axis legacy_preference_extraction + Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_diversity_measurement",
+   "description": "Educational benefit of diversity remains contested. Outcome studies show mixed results; causal identification is difficult. Is diversity_as_interest a Rope (coordination around shared educational goal) or a Scaffold (post-hoc rationalization for race-conscious policy after remedial justification failed strict scrutiny)?",
+   "source": "Dark Matter Probe 1 (Operational Medium) + axis diversity_as_interest"
+  },
+  {
+   "id": "omega_k12_upstream",
+   "description": "School finance inequality and residential segregation are upstream causes of applicant pool stratification. Affirmative action operates at admissions gate but does not address K-12 resource gaps. Is this a case of treating symptoms while ignoring structural cause, or is university admissions the only lever institutions control?",
+   "source": "Absence Inventory (K-12 funding inequality) + Dark Matter Probe 2"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Multi-lens scan (constitutional law, social stratification, institutional policy, educational outcomes) produced diverse axis set. Dark matter probes surfaced class-based alternative and legacy preferences as deferred axes. Commitment system recognition identified contested kernel with three live readings grounded in distinct constitutional traditions."
+ }
+}

@@ -1,0 +1,338 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Theory",
+ "family_id": "gig_platform_labor_classification",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and liability structures, while platforms claim algorithmic coordination justifies contractor status despite control mechanisms.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Platform companies (Uber, Lyft, DoorDash, Instacart - claim contractor model is core business)",
+   "Gig workers (drivers, delivery workers, taskers - seek employee protections)",
+   "Regulatory bodies (NLRB, state labor departments, courts - adjudicate classification)",
+   "Traditional employers (taxi companies, delivery services - compete under different rules)",
+   "Labor unions (organizing attempts, collective bargaining claims)",
+   "Consumers (benefit from low prices enabled by contractor model)"
+  ],
+  "key_tensions": [
+   "Platform control vs worker autonomy (algorithmic management vs independent contractor framing)",
+   "Flexibility vs security (worker scheduling freedom vs employment protections)",
+   "Innovation vs labor standards (platform business model viability vs worker welfare)"
+  ],
+  "key_mechanisms": [
+   "Algorithmic dispatch and rating systems (platforms control work allocation without formal employment)",
+   "Deactivation without cause (termination mechanism that bypasses employment law)",
+   "Dynamic pricing and commission structures (platforms set compensation unilaterally)",
+   "Terms of service as contract (platforms use adhesion contracts to define relationship)"
+  ],
+  "key_absences": [
+   "Intermediate classification categories (most jurisdictions binary employee/contractor)",
+   "Sectoral bargaining frameworks (U.S. lacks European-style collective negotiation for contractors)",
+   "Platform liability for consumer harm (classification affects who bears accident/injury costs)"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "The employment relationship definition in labor law - what constitutes an employer-employee relationship versus an independent contractor arrangement",
+  "authority_description": "Courts and regulatory agencies interpret statutory tests (common law control test, ABC test, economic realities test) to classify relationships",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift",
+  "is_contested_kernel": true,
+  "kernel_id": "employment_relationship_boundary",
+  "readings": [
+   {
+    "reading_id": "control_test_reading",
+    "commitment": "Employment exists where the hiring party exercises behavioral control over the manner and means of work performance",
+    "authority_grounding": "Common law agency principles / Restatement of Employment Law",
+    "sibling_readings": [
+     "economic_realities_reading",
+     "abc_test_reading",
+     "sui_generis_reading"
+    ],
+    "expected_structural_delta": "Platforms argue algorithmic suggestions are not control; workers argue deactivation threat and rating systems constitute control. High \u03b5 on control interpretation."
+   },
+   {
+    "reading_id": "economic_realities_reading",
+    "commitment": "Employment exists where the worker is economically dependent on the hiring party as a matter of economic reality",
+    "authority_grounding": "FLSA interpretation / Department of Labor guidance",
+    "sibling_readings": [
+     "control_test_reading",
+     "abc_test_reading",
+     "sui_generis_reading"
+    ],
+    "expected_structural_delta": "Focuses on whether worker has independent business or is integrated into platform's business. Platforms argue workers have flexibility and multiple apps; workers argue platform sets all terms."
+   },
+   {
+    "reading_id": "abc_test_reading",
+    "commitment": "Worker is employee unless: (A) free from control, (B) work outside usual business, (C) independently established trade",
+    "authority_grounding": "California AB5 / Massachusetts statute / presumption-reversal framework",
+    "sibling_readings": [
+     "control_test_reading",
+     "economic_realities_reading",
+     "sui_generis_reading"
+    ],
+    "expected_structural_delta": "Prong B (outside usual business) is dispositive - driving is Uber's core business. Platforms lobby for carve-outs. High suppression of contractor classification."
+   },
+   {
+    "reading_id": "sui_generis_reading",
+    "commitment": "Platform work is a novel category requiring new legal framework beyond employee/contractor binary",
+    "authority_grounding": "Academic proposals / UK 'worker' status / European platform work directive discussions",
+    "sibling_readings": [
+     "control_test_reading",
+     "economic_realities_reading",
+     "abc_test_reading"
+    ],
+    "expected_structural_delta": "Creates intermediate category with portable benefits and limited protections. Platforms support if it blocks full employment classification. Reduces \u03b5 by creating third option."
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "abc_test_reading",
+    "reading_b": "control_test_reading",
+    "basis": "ABC test presumes employment and requires employer to prove all three prongs for contractor status; control test has no presumption and weighs factors neutrally. No single framework can hold both the presumption-reversal structure and the neutral-weighing structure simultaneously."
+   },
+   {
+    "reading_a": "sui_generis_reading",
+    "reading_b": "abc_test_reading",
+    "basis": "Sui generis reading holds that the employee/contractor binary is categorically inadequate for platform work; ABC test reading holds that the existing binary is adequate and platforms must fit within it. No framework can simultaneously hold that the binary is adequate and inadequate."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_test_reading",
+   "human_readable": "Control Test Reading (Behavioral Control as Employment Marker)",
+   "structural_delta": "Employment defined by hiring party's control over manner and means of work performance",
+   "primary_observable": "Court rulings on whether algorithmic dispatch, rating systems, and deactivation constitute control",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel_reading",
+   "beneficiary": "platforms (when interpreted narrowly)",
+   "victim": "workers (when control is defined to exclude algorithmic mechanisms)",
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_liability_structure",
+    "collective_bargaining_access"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "First reading of contested kernel - establishes traditional common law framework"
+  },
+  {
+   "claim_id": "economic_realities_reading",
+   "human_readable": "Economic Realities Reading (Economic Dependence as Employment Marker)",
+   "structural_delta": "Employment defined by worker's economic dependence on hiring party",
+   "primary_observable": "Regulatory guidance on whether multi-apping and flexibility negate dependence",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel_reading",
+   "beneficiary": "workers (when dependence is defined broadly)",
+   "victim": "platforms (when integration into business model is dispositive)",
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_liability_structure",
+    "collective_bargaining_access"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Second reading of contested kernel - alternative federal framework"
+  },
+  {
+   "claim_id": "abc_test_reading",
+   "human_readable": "ABC Test Reading (Presumption-Reversal Framework)",
+   "structural_delta": "Employment presumed unless employer proves worker is free from control, performs work outside usual business, and has independent trade",
+   "primary_observable": "State legislation adopting ABC test and subsequent carve-out lobbying",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel_reading",
+   "beneficiary": "workers (presumption favors employee status)",
+   "victim": "platforms (prong B is nearly impossible to satisfy)",
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_liability_structure",
+    "collective_bargaining_access"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Third reading of contested kernel - most worker-protective framework"
+  },
+  {
+   "claim_id": "sui_generis_reading",
+   "human_readable": "Sui Generis Reading (Third Category Framework)",
+   "structural_delta": "Platform work requires novel legal category beyond employee/contractor binary",
+   "primary_observable": "Legislative proposals for intermediate status with portable benefits",
+   "epsilon_bin": "mod",
+   "hypothesis": "contested_kernel_reading",
+   "beneficiary": "platforms (if it blocks full employment classification)",
+   "victim": "workers (if protections are weaker than employment) or traditional_employers (if platforms get special carve-out)",
+   "downstream_of": [],
+   "feeds_into": [
+    "platform_liability_structure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Fourth reading of contested kernel - structural alternative to binary"
+  },
+  {
+   "claim_id": "algorithmic_control_opacity",
+   "human_readable": "Algorithmic Control Opacity (Black Box Management)",
+   "structural_delta": "Platforms exercise control through opaque algorithmic systems that workers cannot observe or contest",
+   "primary_observable": "Deactivation rates without explanation; dispatch algorithm transparency; rating system appeals",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platforms",
+   "victim": "workers",
+   "downstream_of": [
+    "control_test_reading"
+   ],
+   "feeds_into": [
+    "platform_liability_structure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct from kernel readings - addresses mechanism of control rather than definition of employment"
+  },
+  {
+   "claim_id": "platform_liability_structure",
+   "human_readable": "Platform Liability Structure (Externalization of Risk)",
+   "structural_delta": "Classification determines whether platforms or workers bear costs of accidents, injuries, and consumer harm",
+   "primary_observable": "Insurance requirements; workers' compensation coverage; tort liability allocation",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platforms (contractor status externalizes costs)",
+   "victim": "workers and consumers (who bear uninsured risks)",
+   "downstream_of": [
+    "control_test_reading",
+    "economic_realities_reading",
+    "abc_test_reading",
+    "sui_generis_reading",
+    "algorithmic_control_opacity"
+   ],
+   "feeds_into": [],
+   "centrality_score": 9,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Highest centrality - downstream synthesis node where all classification readings converge"
+  },
+  {
+   "claim_id": "collective_bargaining_access",
+   "human_readable": "Collective Bargaining Access (Antitrust vs Labor Law)",
+   "structural_delta": "Contractor classification makes collective action an antitrust violation (price-fixing by competitors) rather than protected labor organizing",
+   "primary_observable": "NLRA coverage determinations; antitrust enforcement against contractor organizing",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platforms",
+   "victim": "workers",
+   "downstream_of": [
+    "control_test_reading",
+    "economic_realities_reading",
+    "abc_test_reading"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Distinct downstream consequence - different observable and victim structure than liability axis"
+  },
+  {
+   "claim_id": "flexibility_rhetoric_capture",
+   "human_readable": "Flexibility Rhetoric Capture (Autonomy Framing as Legitimation)",
+   "structural_delta": "Platforms frame contractor status as worker preference for flexibility, obscuring that flexibility and protections are not mutually exclusive",
+   "primary_observable": "Platform-funded surveys on worker preferences; legislative testimony emphasizing flexibility",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": "platforms",
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "control_test_reading",
+    "economic_realities_reading"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 8,
+   "selection_reason": "Distinct coordination mechanism - shapes interpretation of kernel readings through framing"
+  },
+  {
+   "claim_id": "regulatory_arbitrage_incentive",
+   "human_readable": "Regulatory Arbitrage Incentive (Classification as Competitive Advantage)",
+   "structural_delta": "Contractor classification provides 20-30% cost advantage over traditional employers, creating pressure to reclassify existing employment relationships",
+   "primary_observable": "Labor cost differentials between platform and traditional firms; industry reclassification trends",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platforms and investors",
+   "victim": "traditional_employers and workers in traditional employment",
+   "downstream_of": [
+    "platform_liability_structure"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 9,
+   "selection_reason": "Distinct market structure consequence - different observable than liability or bargaining axes"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "control_test_reading",
+   "kernel_id": "employment_relationship_boundary",
+   "reading_id": "control_test_reading"
+  },
+  {
+   "claim_id": "economic_realities_reading",
+   "kernel_id": "employment_relationship_boundary",
+   "reading_id": "economic_realities_reading"
+  },
+  {
+   "claim_id": "abc_test_reading",
+   "kernel_id": "employment_relationship_boundary",
+   "reading_id": "abc_test_reading"
+  },
+  {
+   "claim_id": "sui_generis_reading",
+   "kernel_id": "employment_relationship_boundary",
+   "reading_id": "sui_generis_reading"
+  },
+  "algorithmic_control_opacity",
+  "platform_liability_structure",
+  "collective_bargaining_access",
+  "flexibility_rhetoric_capture",
+  "regulatory_arbitrage_incentive"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_sectoral_bargaining",
+   "description": "Absence of sectoral bargaining frameworks in U.S. means classification is binary gate to collective action. European models allow contractor organizing without employment status. This absence may be structural mountain (constitutional/political economy) or piton (policy choice).",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_international_jurisdiction",
+   "description": "Cross-border platform work (remote tasks, international delivery) creates jurisdiction shopping opportunities. Classification may be mountain in one jurisdiction, rope in another. Regulatory arbitrage across borders not analyzed.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_automation_trajectory",
+   "description": "If autonomous vehicles/drones replace gig workers within 5-10 years, classification debate may be temporary. But if automation is slower than predicted, classification locks in for decades. Temporal scope uncertain.",
+   "source": "Dark Matter Probe 1 (Operational Medium)"
+  },
+  {
+   "id": "omega_consumer_price_passthrough",
+   "description": "If employee classification increases costs 20-30%, do platforms raise prices (reducing demand/employment) or accept lower margins? Elasticity determines whether workers benefit from reclassification. Economic modeling beyond scope.",
+   "source": "F34 (Epistemic Trespass) - economic modeling"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": true,
+  "f01_premise_drift": false,
+  "notes": "F34 detected: Consumer price elasticity and labor market equilibrium effects require econometric modeling beyond protocol scope. Generated omega_consumer_price_passthrough to bound this uncertainty. All other axes within labor law / regulatory theory / platform governance competence."
+ }
+}

@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — K1 kernel-gate replication: real topic-classed boundary band; under-firing misses against explicit §1.3-K criteria (OQ-76 filed; Stage-2 condition)
+**Files:** python/audits/kernel_gate_replication_probe.py, prompts/uke_scope_v2_json.md, ISSUES.md
+**Tier:** landed
+
+Promoted from the count probe's side-observation by operator review: the kernel/flat gate routes
+the SAME contested substrate (T5 manifests diffed — identical contestation as kernel readings vs
+flat axis) onto the axiom vs observer axis, and a flat-miss destroys the axiom axis irrecoverably.
+K3 hand-adjudication first (free): gig classification AND content moderation both pass all three
+§1.3-K criteria → flat takes are gate MISSES, not definitional ambiguity. K1 (k=8 × 5 topics,
+40/40 calls, pre-registered INVALIDATION conditions — personhood control <7/8 would have removed
+the thin-band diagnosis from the menu): controls 0/8 and 8/8 (instrument valid); affirmative
+action 8/8; gig 5/8; content moderation 3/8. Band is real and topic-classed (famous moral kernels
+stable; statutory/regulatory contests near coin-flip); noise localized to the binary gate
+(conditional reading counts perfectly stable: 4/3/3). Dispositions recorded in OQ-76, not built:
+interim hedge = bias gate toward kernel on band topics (fail toward the recoverable side);
+candidate fix = generate both representations (construction-pair diff is §7.1 signal); K2
+phrasing-sensitivity probe licensed as cause-diagnosis. Stage-2 (OQ-75) now carries the routing
+condition. Writeup + 40 manifests + driver: `audits/2026-06-05_kernel_gate_replication/`.
+
 ## 2026-06-05 — SCOPE count-distribution probe: 7-7-7 was coincidence + run noise, NOT an implicit target (OQ-75 watch resolved)
 **Files:** python/audits/scope_count_distribution_probe.py, prompts/uke_scope_v2_json.md, agent/c-orchestrator.py, ISSUES.md
 **Tier:** landed

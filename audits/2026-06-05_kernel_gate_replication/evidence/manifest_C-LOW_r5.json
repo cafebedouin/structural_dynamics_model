@@ -1,0 +1,164 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependence",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles drive on, focusing on right-hand driving as the dominant global standard. Examines the coordination mechanism, historical path dependence, network effects, and the structural barriers to switching conventions once established.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic convention (dominant global standard, ~165 countries)",
+   "Left-hand traffic convention (minority standard, ~75 countries including UK, Japan, India)",
+   "Vehicle manufacturing industry (designs vehicles for specific handedness markets)",
+   "Road infrastructure systems (signage, intersections, highway design)",
+   "International border crossings (coordination points between different conventions)"
+  ],
+  "key_tensions": [
+   "Network coordination benefit vs switching cost asymmetry (larger network has lower per-capita switching cost but higher aggregate cost)",
+   "Manufacturing standardization pressure vs historical path dependence (economic efficiency vs institutional inertia)"
+  ],
+  "key_mechanisms": [
+   "Network effect enforcement: Each additional adopter increases coordination value for all participants; non-conforming vehicles face accident risk and legal penalties",
+   "Manufacturing lock-in: Vehicle design (driver position, control layout) physically embeds the convention; cross-convention vehicles require costly redesign",
+   "Infrastructure co-evolution: Road geometry, signage placement, intersection design all optimize for the local convention, creating physical switching barriers"
+  ],
+  "key_absences": [
+   "Safety differential data: No clear evidence that one convention is inherently safer than the other when controlling for infrastructure quality and driver training",
+   "Switching case studies: Very few modern examples of countries successfully switching conventions (Sweden 1967 is the primary reference); limited data on transition costs and failure modes"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_selection",
+   "human_readable": "Coordination Equilibrium Selection (Which-Side Convention)",
+   "structural_delta": "The binary choice between left-hand and right-hand traffic as a pure coordination problem with two stable equilibria",
+   "primary_observable": "National traffic law specification; percentage of global road network operating under each convention",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_lock_in_asymmetry",
+    "manufacturing_standardization_pressure"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational coordination mechanism; distinct observable (legal specification) with no upstream dependencies"
+  },
+  {
+   "claim_id": "network_lock_in_asymmetry",
+   "human_readable": "Network Lock-In Asymmetry (Switching Cost Distribution)",
+   "structural_delta": "The structural asymmetry where the larger network has lower per-capita switching costs but higher aggregate costs, creating a coordination trap",
+   "primary_observable": "Ratio of aggregate switching cost to per-capita switching cost across network sizes; historical switching attempts and their outcomes",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "dominant_convention_participants",
+   "victim": "minority_convention_participants",
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct extractiveness structure (asymmetric switching burden); different observable than axis 1 (cost distribution vs legal specification)"
+  },
+  {
+   "claim_id": "manufacturing_standardization_pressure",
+   "human_readable": "Manufacturing Standardization Pressure (Production Economy Bias)",
+   "structural_delta": "Economic pressure from vehicle manufacturers to reduce the number of distinct design variants, favoring the larger market convention",
+   "primary_observable": "Vehicle model availability by market; production cost differential for convention-specific variants; manufacturer lobbying activity",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "vehicle_manufacturers",
+   "victim": "minority_convention_markets",
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "network_lock_in_asymmetry"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct beneficiary structure (manufacturers vs network participants); different observable (production economics vs switching costs); feeds into lock-in dynamics"
+  },
+  {
+   "claim_id": "infrastructure_co_evolution",
+   "human_readable": "Infrastructure Co-Evolution (Physical Embedding)",
+   "structural_delta": "The physical embedding of the convention into road geometry, signage placement, and intersection design, creating material switching barriers beyond the coordination problem",
+   "primary_observable": "Infrastructure redesign cost estimates; physical road features optimized for specific handedness (merge lane geometry, sight lines, signage placement)",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "network_lock_in_asymmetry"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (physical infrastructure vs coordination mechanism); represents material constraint layer beyond social coordination"
+  },
+  {
+   "claim_id": "border_crossing_friction",
+   "human_readable": "Border Crossing Friction (Convention Interface Zones)",
+   "structural_delta": "The localized coordination cost at borders between different-convention jurisdictions, requiring driver switching behavior and specialized infrastructure",
+   "primary_observable": "Accident rates at convention-switching borders; infrastructure investment at border crossings (lane-switching zones, warning systems)",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (border-specific accident/infrastructure data); structurally independent from switching cost asymmetry (localized vs systemic)"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_selection",
+  "network_lock_in_asymmetry",
+  "manufacturing_standardization_pressure",
+  "infrastructure_co_evolution",
+  "border_crossing_friction"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_safety_differential",
+   "description": "Is there an inherent safety advantage to one convention over the other? Training data contains claims about right-eye dominance favoring right-hand traffic, but no controlled studies isolating convention from infrastructure quality and driver training. If a safety differential exists, the coordination_equilibrium_selection rope may actually be a mountain (physics of human perception) or a snare (one convention systematically disadvantages a population subset).",
+   "source": "Dark Matter Probe 1 (Operational Medium) + Absence Inventory"
+  },
+  {
+   "id": "omega_colonial_imposition",
+   "description": "Was the initial convention selection in many countries the result of colonial imposition rather than endogenous coordination? If so, the beneficiary structure of network_lock_in_asymmetry may extend historically to colonial powers, and the 'victim' set may include post-colonial states locked into a convention they did not choose. This would reclassify part of the lock-in as a snare with historical extraction, not merely a coordination trap.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_autonomous_vehicle_disruption",
+   "description": "Do autonomous vehicles eliminate the coordination constraint by allowing vehicles to operate in either convention without driver retraining? If so, the infrastructure_co_evolution piton remains but the network_lock_in_asymmetry tangled_rope may dissolve, potentially enabling convention convergence. Alternatively, AV systems may encode the convention in software, creating a new lock-in layer.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + technological disruption scenario"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five axes identified through multi-lens scan (coordination theory, network economics, manufacturing economics, infrastructure systems, border management). All axes passed pairwise independence testing with distinct observables and epsilon structures. Dark matter probes surfaced three omegas but no additional axes meeting the distinctness threshold."
+ }
+}

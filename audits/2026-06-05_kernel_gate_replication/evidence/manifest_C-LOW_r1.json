@@ -1,0 +1,242 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Technology Lock-In",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles travel on, focusing on right-hand driving as the dominant global standard. Examines the coordination mechanisms, path dependencies, and structural constraints that stabilize this convention despite its arbitrary origins.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   {
+    "id": "rht_countries",
+    "name": "Right-hand traffic countries",
+    "type": "state",
+    "role": "jurisdictions enforcing right-side driving convention"
+   },
+   {
+    "id": "lht_countries",
+    "name": "Left-hand traffic countries",
+    "type": "state",
+    "role": "jurisdictions enforcing left-side driving convention (UK, Japan, Australia, etc.)"
+   },
+   {
+    "id": "vehicle_manufacturers",
+    "name": "Automotive manufacturers",
+    "type": "organization",
+    "role": "producers of vehicles with steering wheel placement determined by market convention"
+   },
+   {
+    "id": "border_crossers",
+    "name": "Cross-border travelers",
+    "type": "person",
+    "role": "drivers navigating convention transitions at jurisdictional boundaries"
+   },
+   {
+    "id": "infrastructure_systems",
+    "name": "Road infrastructure",
+    "type": "resource",
+    "role": "physical capital (signage, lane markings, intersections) designed for specific handedness"
+   }
+  ],
+  "claims": [
+   {
+    "id": "claim_arbitrary_origin",
+    "content": "The choice between right and left is structurally arbitrary\u2014no inherent safety or efficiency advantage exists for either side in isolation",
+    "source_location": "implicit in topic framing",
+    "status": "stated_as_fact"
+   },
+   {
+    "id": "claim_coordination_value",
+    "content": "Universal adoption within a jurisdiction creates coordination value that exceeds any individual preference",
+    "source_location": "implicit in convention analysis",
+    "status": "argued"
+   },
+   {
+    "id": "claim_switching_cost",
+    "content": "Transitioning from one convention to the other requires synchronized infrastructure replacement and behavioral retraining at massive scale",
+    "source_location": "historical examples (Sweden 1967)",
+    "status": "stated_as_fact"
+   },
+   {
+    "id": "claim_network_externality",
+    "content": "The value of conforming to the dominant convention increases with the number of adopters, creating winner-take-all dynamics",
+    "source_location": "implicit in global distribution pattern",
+    "status": "argued"
+   }
+  ],
+  "tensions": [
+   {
+    "id": "tension_border_discontinuity",
+    "poles": [
+     "rht_countries",
+     "lht_countries"
+    ],
+    "nature": "Jurisdictional boundaries create coordination failures where conventions collide, requiring costly adaptation infrastructure"
+   },
+   {
+    "id": "tension_manufacturing_standardization",
+    "poles": [
+     "vehicle_manufacturers",
+     "lht_countries"
+    ],
+    "nature": "Minority convention markets face higher vehicle costs due to economies of scale favoring majority convention"
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "mech_enforcement",
+    "description": "Legal penalties for driving on the wrong side enforce convention compliance",
+    "agents": [
+     "state traffic authorities"
+    ],
+    "targets": [
+     "all drivers within jurisdiction"
+    ]
+   },
+   {
+    "id": "mech_infrastructure_lock",
+    "description": "Physical road design (lane markings, signage, intersection geometry) materially constrains which side is navigable",
+    "agents": [
+     "infrastructure_systems"
+    ],
+    "targets": [
+     "all road users"
+    ]
+   },
+   {
+    "id": "mech_socialization",
+    "description": "Driver training and habituation create cognitive lock-in to local convention",
+    "agents": [
+     "driver education systems"
+    ],
+    "targets": [
+     "new drivers"
+    ]
+   }
+  ],
+  "absences": [
+   {
+    "id": "absence_pedestrian_handedness",
+    "description": "Pedestrian traffic conventions (sidewalk passing norms) are not addressed, though they may correlate with or diverge from vehicular handedness"
+   },
+   {
+    "id": "absence_historical_causation",
+    "description": "The historical origins of the right/left split (Napoleon's military standardization, British colonial legacy) are not examined, though they explain current distribution"
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium",
+   "human_readable": "Coordination Equilibrium (Convention as Self-Enforcing Standard)",
+   "structural_delta": "The convention is self-enforcing once adopted\u2014universal compliance creates mutual benefit that makes deviation costly for any individual actor",
+   "primary_observable": "Compliance rate within jurisdiction; accident rate at convention boundaries",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "infrastructure_lock_in",
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream coordination mechanism; structurally distinct from physical and economic lock-in axes"
+  },
+  {
+   "claim_id": "infrastructure_lock_in",
+   "human_readable": "Infrastructure Lock-In (Physical Capital Constraint)",
+   "structural_delta": "Road infrastructure (signage, lane geometry, intersection design) is physically built for one convention and cannot accommodate the other without reconstruction",
+   "primary_observable": "Capital cost of infrastructure replacement; physical compatibility of road design with opposite-side driving",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [
+    "switching_cost_barrier"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Physical constraint distinct from coordination mechanism; upstream to switching cost synthesis"
+  },
+  {
+   "claim_id": "switching_cost_barrier",
+   "human_readable": "Switching Cost Barrier (Transition Infeasibility)",
+   "structural_delta": "The cost of synchronized transition (infrastructure replacement, vehicle fleet turnover, retraining, accident risk during transition) exceeds any benefit from alignment with neighboring jurisdictions",
+   "primary_observable": "Estimated transition cost vs GDP; historical transition examples (Sweden 1967 cost data)",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "incumbent_convention_stakeholders",
+   "victim": "border_region_populations",
+   "downstream_of": [
+    "coordination_equilibrium",
+    "infrastructure_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Downstream synthesis node; captures entanglement of coordination and physical constraints creating path dependency"
+  },
+  {
+   "claim_id": "network_externality_dominance",
+   "human_readable": "Network Externality Dominance (Majority Convention Advantage)",
+   "structural_delta": "Minority convention jurisdictions face higher costs (vehicle manufacturing, tourism friction, trade barriers) due to economies of scale favoring the majority convention",
+   "primary_observable": "Vehicle price differential between RHT and LHT markets; manufacturing volume by convention",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "rht_majority_economies",
+   "victim": "lht_minority_jurisdictions",
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct economic extraction mechanism; independent observable from switching cost barrier"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium",
+  "infrastructure_lock_in",
+  "switching_cost_barrier",
+  "network_externality_dominance"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_pedestrian_correlation",
+   "description": "Do pedestrian passing conventions correlate with vehicular handedness? If divergent, does this create cognitive interference or represent independent coordination equilibria?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_pedestrian_handedness"
+  },
+  {
+   "id": "omega_historical_contingency",
+   "description": "Are current distributions purely path-dependent (Napoleon, British Empire) or do geographic/cultural factors predict convention adoption? If contingent, the Rope of coordination may be weaker than modeled.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_historical_causation"
+  },
+  {
+   "id": "omega_autonomous_vehicle_disruption",
+   "description": "Could autonomous vehicles eliminate the coordination constraint by handling convention-switching automatically at borders? If so, infrastructure_lock_in may be a Piton rather than Mountain.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 analysis assumes human drivers"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Four axes survived independence testing with distinct observables and epsilon sources. Coordination mechanism (rope), physical constraint (mountain), path dependency synthesis (tangled_rope), and economic extraction (snare) form coherent constraint topology."
+ }
+}

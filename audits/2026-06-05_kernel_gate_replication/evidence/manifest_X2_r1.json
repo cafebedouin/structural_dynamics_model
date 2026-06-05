@@ -1,0 +1,237 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Education Policy / Constitutional Law / Social Stratification",
+ "family_id": "affirmative_action_admissions_2026",
+ "topic_summary": "Analysis of affirmative action in university admissions, examining race-conscious admissions policies as mechanisms for addressing historical exclusion and present-day inequality. The topic centers on the collision between remedial justice frameworks, meritocratic selection norms, and constitutional equal protection doctrine following recent Supreme Court decisions.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Universities (selective institutions with admissions authority)",
+   "Applicant populations (stratified by race, class, legacy status)",
+   "Supreme Court (constitutional adjudicator; recent SFFA decisions)",
+   "Historical exclusion systems (Jim Crow, redlining, school segregation)",
+   "Meritocracy norm (claimed neutral selection standard)",
+   "Diversity rationale (educational benefit claim)"
+  ],
+  "key_tensions": [
+   "Remedial justice vs formal equality (race-conscious correction vs colorblind doctrine)",
+   "Individual merit vs group representation (selection by achievement vs demographic targets)",
+   "Educational mission vs stratification reproduction (diversity goals vs legacy/wealth advantages)"
+  ],
+  "key_mechanisms": [
+   "Race-conscious admissions (explicit consideration of racial identity in holistic review)",
+   "Legacy preferences (admissions advantage for children of alumni)",
+   "Standardized testing (SAT/ACT as purportedly neutral sorting mechanism)"
+  ],
+  "key_absences": [
+   "Class-based affirmative action as structural alternative",
+   "Wealth transfer mechanisms underlying legacy admissions and test prep access"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "Equal Protection Clause of the 14th Amendment as constitutional constraint on state action regarding racial classification",
+  "authority_description": "Supreme Court interpretive supremacy over constitutional meaning; judicial review doctrine",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_capture",
+  "is_contested_kernel": true,
+  "kernel_id": "equal_protection_boundary",
+  "readings": [
+   {
+    "reading_id": "remedial_reading",
+    "commitment": "Equal protection permits race-conscious remedies for documented historical exclusion",
+    "authority_grounding": "Substantive equality tradition; Bakke diversity rationale; remedial justice framework",
+    "sibling_readings": [
+     "colorblind_reading",
+     "antisubordination_reading"
+    ],
+    "expected_structural_delta": "Universities as beneficiaries (mission autonomy); excluded groups enter beneficiary set; formal equality norm becomes victim of remedial override"
+   },
+   {
+    "reading_id": "colorblind_reading",
+    "commitment": "Equal protection forbids any racial classification by state actors absent compelling interest",
+    "authority_grounding": "Formal equality tradition; originalist interpretation; SFFA v. Harvard/UNC holdings",
+    "sibling_readings": [
+     "remedial_reading",
+     "antisubordination_reading"
+    ],
+    "expected_structural_delta": "Rejected applicants (particularly Asian-American) enter victim set; universities lose mission autonomy; meritocracy norm becomes beneficiary"
+   },
+   {
+    "reading_id": "antisubordination_reading",
+    "commitment": "Equal protection forbids systems that perpetuate caste-like subordination of historically excluded groups",
+    "authority_grounding": "Critical race theory; structural inequality tradition; group-harm focus",
+    "sibling_readings": [
+     "remedial_reading",
+     "colorblind_reading"
+    ],
+    "expected_structural_delta": "Legacy preferences and wealth-gated access enter victim set; subordinated groups become primary beneficiaries; formal neutrality claims become snares"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "remedial_reading",
+    "reading_b": "colorblind_reading",
+    "basis": "Remedial reading holds that equal protection permits race-consciousness to correct historical exclusion; colorblind reading holds that equal protection forbids race-consciousness except in narrowest circumstances. No single framework can hold both that the Constitution permits and forbids the same classification simultaneously."
+   },
+   {
+    "reading_a": "colorblind_reading",
+    "reading_b": "antisubordination_reading",
+    "basis": "Colorblind reading treats formal neutrality as constitutional mandate; antisubordination reading treats formal neutrality as constitutional violation when it perpetuates subordination. No framework can hold both that neutrality satisfies and violates equal protection simultaneously."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "remedial_reading",
+   "human_readable": "Remedial Reading (Race-Conscious Correction)",
+   "structural_delta": "Constitutional interpretation permitting race-conscious admissions as remedy for documented historical exclusion",
+   "primary_observable": "Judicial doctrine permitting consideration of race; university policy implementation of holistic review with race factor",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "universities_mission_autonomy",
+   "victim": "formal_equality_norm",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Kernel reading with distinct constitutional grounding and beneficiary structure"
+  },
+  {
+   "claim_id": "colorblind_reading",
+   "human_readable": "Colorblind Reading (Formal Equality Mandate)",
+   "structural_delta": "Constitutional interpretation forbidding racial classification by state actors absent compelling interest",
+   "primary_observable": "SFFA holdings; strict scrutiny doctrine application; admissions policy constraints post-2023",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "meritocracy_norm",
+   "victim": "excluded_groups_remedial_access",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Kernel reading with distinct authority grounding and victim structure"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "human_readable": "Antisubordination Reading (Structural Inequality Focus)",
+   "structural_delta": "Constitutional interpretation forbidding systems perpetuating caste-like subordination regardless of formal neutrality",
+   "primary_observable": "Critical scholarship on structural inequality; group-harm metrics; legacy preference critique",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "subordinated_groups",
+   "victim": "formal_neutrality_claims",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Kernel reading with distinct structural focus and victim set (includes legacy preferences)"
+  },
+  {
+   "claim_id": "meritocracy_measurement_instability",
+   "human_readable": "Meritocracy Measurement Instability (Test Score as Proxy)",
+   "structural_delta": "Standardized test scores as purportedly neutral merit measure despite documented correlation with parental wealth and test prep access",
+   "primary_observable": "SAT/ACT score correlation with household income; test prep industry revenue; score variance by race/class",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "high_ses_applicants",
+   "victim": "low_ses_high_ability_applicants",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Independent observable (test score validity); distinct beneficiary structure; surfaces hidden extraction in meritocracy claims"
+  },
+  {
+   "claim_id": "legacy_preference_extraction",
+   "human_readable": "Legacy Preference Extraction (Intergenerational Wealth Transfer)",
+   "structural_delta": "Admissions advantage for children of alumni functioning as mechanism to reproduce class stratification across generations",
+   "primary_observable": "Legacy admit rates vs general admit rates; alumni donation correlation with legacy preference strength; demographic composition of legacy admits",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "alumni_donor_class",
+   "victim": "first_generation_applicants",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Independent observable (legacy admit advantage); distinct from test score axis; surfaces wealth transfer mechanism absent from affirmative action debate"
+  },
+  {
+   "claim_id": "diversity_rationale_instability",
+   "human_readable": "Diversity Rationale Instability (Educational Benefit vs Remedial Justice)",
+   "structural_delta": "Shift from remedial justice justification to educational benefit justification for race-conscious admissions following Bakke",
+   "primary_observable": "Judicial doctrine evolution from Bakke to Grutter to SFFA; university mission statements; empirical studies on diversity outcomes",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Independent observable (justification framework shift); rope coordination problem; distinct from kernel readings"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "remedial_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "remedial_reading"
+  },
+  {
+   "claim_id": "colorblind_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "colorblind_reading"
+  },
+  {
+   "claim_id": "antisubordination_reading",
+   "kernel_id": "equal_protection_boundary",
+   "reading_id": "antisubordination_reading"
+  },
+  "meritocracy_measurement_instability",
+  "legacy_preference_extraction",
+  "diversity_rationale_instability"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_class_based_alternative",
+   "description": "Would class-based affirmative action (income/wealth targeting) achieve similar demographic outcomes without triggering strict scrutiny? Absence in extraction suggests structural blind spot.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_international_student_extraction",
+   "description": "Do international students (often full-pay) function as revenue extraction mechanism that subsidizes domestic financial aid? If so, meritocracy claims may obscure fiscal dependency.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_kernel_reading_completeness",
+   "description": "Are there additional live readings of the Equal Protection kernel beyond the three identified (e.g., libertarian non-interference reading, communitarian group-rights reading)? Reading set may be incomplete.",
+   "source": "\u00a71.3-K kernel decomposition"
+  },
+  {
+   "id": "omega_legacy_preference_legal_status",
+   "description": "Why do legacy preferences not trigger equal protection scrutiny despite functioning as wealth-based classification? Legal doctrine gap or interpretive capture?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + legacy_preference_extraction axis"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Kernel decomposition into three readings provides structural coverage of constitutional interpretation space. Non-kernel axes (meritocracy measurement, legacy preference, diversity rationale) pass independence test with distinct observables and beneficiary structures. Absence inventory surfaced class-based alternative and international student revenue as omega variables rather than axes (insufficient structural distinctness from existing axes)."
+ }
+}

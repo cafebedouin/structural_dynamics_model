@@ -1,0 +1,182 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Social Coordination / Path Dependence",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles drive on, examining the coordination mechanism that stabilizes right-hand driving in most jurisdictions and left-hand driving in others. The topic encompasses the physical infrastructure lock-in, network effects of standardization, and the historical path dependence that created the current global distribution.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic jurisdictions (majority of world by land area and population)",
+   "Left-hand traffic jurisdictions (UK, Japan, Australia, India, former British colonies)",
+   "Vehicle manufacturers (design steering wheel placement and control orientation)",
+   "Border crossing infrastructure (transition zones between different-handedness jurisdictions)",
+   "Historical precedent actors (Napoleon's military standardization, British Empire colonial policy)"
+  ],
+  "key_tensions": [
+   "Coordination benefit of global standardization vs cost of transition for established systems",
+   "Network externality (value increases with adoption) vs infrastructure sunk costs"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_selection",
+   "human_readable": "Coordination Equilibrium Selection (Which Side Becomes Standard)",
+   "structural_delta": "The mechanism by which one of two equivalent coordination equilibria (left vs right) becomes locally stable",
+   "primary_observable": "Geographic distribution of handedness adoption; historical timing of standardization decisions",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "infrastructure_lock_in",
+    "cross_border_friction"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream coordination mechanism; structurally distinct from physical infrastructure and distinct observable from network effects"
+  },
+  {
+   "claim_id": "infrastructure_lock_in",
+   "human_readable": "Infrastructure Lock-In (Physical Capital Sunk Costs)",
+   "structural_delta": "The accumulated physical infrastructure (road design, signage, vehicle fleet) that makes switching prohibitively expensive",
+   "primary_observable": "Capital stock value of handedness-specific infrastructure; estimated transition costs for jurisdiction switching",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "cross_border_friction"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable (physical capital vs coordination mechanism); mountain hypothesis distinct from rope; passes independence test"
+  },
+  {
+   "claim_id": "network_externality_gradient",
+   "human_readable": "Network Externality Gradient (Value Scales with Adoption)",
+   "structural_delta": "The increasing coordination value as more jurisdictions adopt the same handedness standard",
+   "primary_observable": "Trade volume and cross-border traffic flow between same-handedness vs different-handedness jurisdiction pairs",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different observable from coordination_equilibrium_selection (adoption value vs selection mechanism) and infrastructure_lock_in (network effects vs sunk costs); passes independence test"
+  },
+  {
+   "claim_id": "cross_border_friction",
+   "human_readable": "Cross-Border Friction (Transition Zone Costs)",
+   "structural_delta": "The operational costs and safety risks at borders between different-handedness jurisdictions",
+   "primary_observable": "Accident rates at handedness-transition borders; infrastructure costs of transition zones",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "border_infrastructure_contractors",
+   "victim": "cross_border_travelers",
+   "downstream_of": [
+    "coordination_equilibrium_selection",
+    "infrastructure_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Downstream synthesis node; different observable (border transition costs vs either coordination or infrastructure); tangled_rope with identifiable beneficiary/victim structure"
+  },
+  {
+   "claim_id": "cognitive_handedness_bias",
+   "human_readable": "Cognitive Handedness Bias (Right-Hand Dominance in Population)",
+   "structural_delta": "The hypothesis that right-hand traffic aligns with right-hand dominance in human population",
+   "primary_observable": "Population handedness distribution; ergonomic studies of control placement preference",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: speculative biological determinism; no strong evidence that handedness distribution drove convention selection; zero centrality; omega material"
+  },
+  {
+   "claim_id": "military_standardization_legacy",
+   "human_readable": "Military Standardization Legacy (Napoleonic and Colonial Imposition)",
+   "structural_delta": "The historical mechanism by which military conquest imposed handedness standards",
+   "primary_observable": "Correlation between Napoleonic conquest territories and right-hand traffic; British colonial territories and left-hand traffic",
+   "epsilon_bin": "v_low",
+   "hypothesis": "scaffold",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coordination_equilibrium_selection"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: historical mechanism already captured in coordination_equilibrium_selection's path dependence; scaffold provides context but not independent structural delta"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_selection",
+  "infrastructure_lock_in",
+  "network_externality_gradient",
+  "cross_border_friction"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "cognitive_handedness_bias",
+   "structural_delta": "Hypothesis that right-hand traffic aligns with population handedness distribution",
+   "hypothesis": "piton",
+   "deferral_reason": "Speculative biological determinism with weak empirical support; zero graph centrality; no evidence handedness distribution drove convention selection"
+  },
+  {
+   "claim_id": "military_standardization_legacy",
+   "structural_delta": "Historical military conquest as handedness imposition mechanism",
+   "hypothesis": "scaffold",
+   "deferral_reason": "Historical context already captured in coordination_equilibrium_selection path dependence; scaffold provides narrative but not independent structural constraint"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_sweden_1967_transition",
+   "description": "Sweden's 1967 Dagen H transition from left to right demonstrates infrastructure_lock_in is surmountable but at extraordinary cost. Does this reclassify the mountain as a piton of political will rather than physical necessity?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - successful transition case not addressed in initial framing"
+  },
+  {
+   "id": "omega_autonomous_vehicle_disruption",
+   "description": "Do autonomous vehicles eliminate the coordination constraint by handling both standards programmatically? If so, infrastructure_lock_in may dissolve, reclassifying the mountain as a rope of legacy fleet composition.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - technology disruption that threatens current beneficiaries of standardization"
+  },
+  {
+   "id": "omega_cognitive_bias_validity",
+   "description": "Is cognitive_handedness_bias a genuine biological constraint or post-hoc rationalization? Deferred axis may warrant generation if ergonomic evidence strengthens.",
+   "source": "Deferred axis cognitive_handedness_bias"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Four distinct axes pass independence testing with different observables and structural deltas. Coordination mechanism (rope), physical infrastructure (mountain), network effects (rope), and border friction (tangled_rope) form coherent constraint topology."
+ }
+}

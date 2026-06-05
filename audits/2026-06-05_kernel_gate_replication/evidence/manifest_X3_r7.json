@@ -1,0 +1,274 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Technology Governance / Constitutional Law / Platform Economics",
+ "family_id": "platform_moderation_obligations_2026",
+ "topic_summary": "Analysis of content moderation obligations imposed on private social media platforms, examining the structural tensions between platform autonomy, state regulatory authority, user speech rights, and advertiser/investor economic interests. The topic encompasses constitutional questions about private vs. state action, the economic substrate of platform business models, and the collision between territorial sovereignty and transnational platform operations.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 3,
+  "key_entities": [
+   "Social media platforms (private corporations with quasi-public communication infrastructure)",
+   "State regulatory authorities (territorial sovereigns imposing content rules)",
+   "Platform users (speech claimants with varying rights frameworks)",
+   "Advertisers (revenue source conditioning platform incentives)",
+   "Section 230 / intermediary liability shields (legal infrastructure enabling platform discretion)",
+   "Content moderators (human and algorithmic enforcement labor)"
+  ],
+  "key_tensions": [
+   "Platform editorial autonomy vs. state-imposed content obligations (private property vs. regulatory authority)",
+   "User speech rights vs. platform terms of service (individual expression vs. private ordering)",
+   "Territorial regulatory jurisdiction vs. transnational platform operations (state sovereignty vs. borderless infrastructure)",
+   "Advertiser brand safety demands vs. user speech breadth (economic pressure vs. expressive diversity)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "private_state_action_boundary",
+   "human_readable": "Private vs. State Action Boundary (Constitutional Applicability)",
+   "structural_delta": "Whether platforms are private actors (First Amendment shields their editorial discretion) or state actors / common carriers (constitutional obligations apply to their moderation)",
+   "primary_observable": "Judicial classification in constitutional challenges; presence/absence of state action doctrine application",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_authority_scope",
+    "advertiser_economic_pressure"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream kernel determining whether constitutional constraints apply; feeds into regulatory scope and economic pressure axes"
+  },
+  {
+   "claim_id": "regulatory_authority_scope",
+   "human_readable": "Regulatory Authority Scope (State Power to Impose Obligations)",
+   "structural_delta": "Extent of state authority to mandate content moderation practices, removal timelines, or transparency requirements on platforms",
+   "primary_observable": "Statutory mandates (e.g., DSA, NetzDG, state social media laws); judicial review outcomes on constitutional grounds",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "state_regulatory_agencies",
+   "victim": "platform_editorial_autonomy",
+   "downstream_of": [
+    "private_state_action_boundary"
+   ],
+   "feeds_into": [
+    "territorial_enforcement_collision"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Downstream of constitutional classification; distinct observable (statutory authority vs. constitutional status); feeds into territorial collision"
+  },
+  {
+   "claim_id": "intermediary_liability_shield",
+   "human_readable": "Intermediary Liability Shield (Section 230 / Safe Harbor Framework)",
+   "structural_delta": "Legal immunity from liability for user-generated content, conditioning platform incentive to moderate vs. leave content unmoderated",
+   "primary_observable": "Presence/scope of Section 230 or equivalent safe harbor provisions; judicial interpretation of 'good faith' moderation",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_authority_scope"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Independent observable (liability shield vs. regulatory mandate); affects regulatory authority scope but structurally distinct"
+  },
+  {
+   "claim_id": "advertiser_economic_pressure",
+   "human_readable": "Advertiser Economic Pressure (Brand Safety as Moderation Driver)",
+   "structural_delta": "Advertiser demand for 'brand-safe' content environments driving platform moderation beyond legal requirements",
+   "primary_observable": "Advertiser boycotts / spending shifts in response to content adjacency; platform policy changes following advertiser pressure",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "advertisers",
+   "victim": "user_speech_breadth",
+   "downstream_of": [
+    "private_state_action_boundary"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (economic pressure vs. legal mandate); independent from regulatory authority; captures private ordering mechanism"
+  },
+  {
+   "claim_id": "territorial_enforcement_collision",
+   "human_readable": "Territorial Enforcement Collision (Jurisdictional Conflict)",
+   "structural_delta": "Collision between territorial state regulatory authority and transnational platform operations, producing conflicting obligations",
+   "primary_observable": "Jurisdictional conflicts in case law; platform geo-blocking or differential policy enforcement by region",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "states_with_strictest_rules",
+   "victim": "transnational_user_base",
+   "downstream_of": [
+    "regulatory_authority_scope"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Downstream synthesis of regulatory authority in transnational context; distinct observable (jurisdictional conflict); captures structural collision"
+  },
+  {
+   "claim_id": "algorithmic_enforcement_opacity",
+   "human_readable": "Algorithmic Enforcement Opacity (Black Box Moderation)",
+   "structural_delta": "Opacity of algorithmic content moderation systems preventing external verification of compliance or bias",
+   "primary_observable": "Transparency report granularity; external audit access; explainability of automated decisions",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "regulatory_authority_scope"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: captured indirectly via regulatory_authority_scope (transparency mandates); lower centrality; implementation detail rather than structural axis"
+  },
+  {
+   "claim_id": "labor_conditions_moderators",
+   "human_readable": "Labor Conditions of Content Moderators (Human Cost)",
+   "structural_delta": "Working conditions, psychological harm, and labor rights of human content moderators",
+   "primary_observable": "Moderator turnover rates; PTSD incidence; labor organizing activity; contractor vs. employee classification",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": "content_moderation_workforce",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: zero centrality; distinct domain (labor rights vs. platform obligations); important but orthogonal to moderation obligation structure"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "private_state_action_boundary",
+   "kernel_id": "private_state_action_boundary",
+   "reading_id": "private_actor_reading"
+  },
+  {
+   "claim_id": "private_state_action_boundary",
+   "kernel_id": "private_state_action_boundary",
+   "reading_id": "state_actor_reading"
+  },
+  {
+   "claim_id": "private_state_action_boundary",
+   "kernel_id": "private_state_action_boundary",
+   "reading_id": "common_carrier_reading"
+  },
+  "regulatory_authority_scope",
+  "intermediary_liability_shield",
+  "advertiser_economic_pressure",
+  "territorial_enforcement_collision"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "algorithmic_enforcement_opacity",
+   "structural_delta": "Opacity of algorithmic moderation preventing external verification",
+   "hypothesis": "piton",
+   "deferral_reason": "Captured indirectly via regulatory_authority_scope transparency mandates; implementation detail rather than structural axis"
+  },
+  {
+   "claim_id": "labor_conditions_moderators",
+   "structural_delta": "Working conditions and psychological harm of human moderators",
+   "hypothesis": "piton",
+   "deferral_reason": "Zero centrality; orthogonal domain (labor rights vs. platform obligations); important but structurally independent topic"
+  }
+ ],
+ "commitment_system_recognition": {
+  "kernel_description": "The constitutional boundary between private action (where First Amendment protects platform editorial discretion) and state action (where constitutional obligations apply to platform moderation decisions)",
+  "authority_description": "Judicial interpretation of state action doctrine, common carrier precedent, and First Amendment scope; grounded in constitutional text and Supreme Court precedent",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift",
+  "is_contested_kernel": true,
+  "kernel_id": "private_state_action_boundary",
+  "readings": [
+   {
+    "reading_id": "private_actor_reading",
+    "commitment": "Platforms are private actors; First Amendment protects their editorial discretion from state interference",
+    "authority_grounding": "Originalist / property-rights / corporate speech doctrine (Citizens United, Miami Herald)",
+    "sibling_readings": [
+     "state_actor_reading",
+     "common_carrier_reading"
+    ],
+    "expected_structural_delta": "Platform moderation decisions are private editorial choices; state cannot compel content hosting; users have no constitutional speech rights against platforms"
+   },
+   {
+    "reading_id": "state_actor_reading",
+    "commitment": "Platforms perform state-like functions in public discourse; constitutional obligations apply",
+    "authority_grounding": "Public function doctrine / Marsh v. Alabama extension to digital public squares",
+    "sibling_readings": [
+     "private_actor_reading",
+     "common_carrier_reading"
+    ],
+    "expected_structural_delta": "Platform moderation decisions subject to First Amendment constraints; users gain constitutional speech protections; state can regulate to enforce constitutional norms"
+   },
+   {
+    "reading_id": "common_carrier_reading",
+    "commitment": "Platforms are common carriers with non-discrimination obligations but not full state action",
+    "authority_grounding": "Common carrier precedent (telegraph, telephone) applied to digital infrastructure",
+    "sibling_readings": [
+     "private_actor_reading",
+     "state_actor_reading"
+    ],
+    "expected_structural_delta": "Platforms must carry content neutrally but retain some editorial discretion; state can impose non-discrimination rules without triggering full constitutional obligations"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "private_actor_reading",
+    "reading_b": "state_actor_reading",
+    "basis": "Private actor reading holds that platforms possess First Amendment editorial rights that shield them from state interference; state actor reading holds that platforms are bound by First Amendment obligations to users. No single framework can simultaneously grant platforms First Amendment protection from the state and impose First Amendment obligations on platforms toward users."
+   }
+  ]
+ },
+ "omegas": [
+  {
+   "id": "omega_section_230_reform",
+   "description": "If Section 230 is repealed or substantially reformed, does intermediary_liability_shield collapse from rope to piton (atrophied coordination) or does it transform regulatory_authority_scope into a snare (liability-driven over-moderation)?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + intermediary_liability_shield axis"
+  },
+  {
+   "id": "omega_ai_moderation_displacement",
+   "description": "As algorithmic moderation displaces human labor, does labor_conditions_moderators become structurally irrelevant, or does it transform into a new axis about algorithmic accountability and training data labor?",
+   "source": "Deferred axis labor_conditions_moderators + Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_global_south_jurisdiction",
+   "description": "Does territorial_enforcement_collision assume a Western/Global North regulatory framework? Are there structurally distinct enforcement mechanisms in Global South jurisdictions (e.g., internet shutdowns, direct state control) that would warrant a separate axis?",
+   "source": "Dark Matter Probe 1 (Operational Medium) + territorial_enforcement_collision"
+  },
+  {
+   "id": "omega_user_speech_rights_framework",
+   "description": "The analysis treats user speech rights as derivative of the private/state action boundary. Is there an independent axis about user speech rights frameworks (e.g., positive vs. negative rights, dignity-based vs. liberty-based) that would survive independence testing?",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_kernel_stability",
+   "description": "Is private_state_action_boundary a stable kernel or is it undergoing rapid drift due to platform scale and infrastructure consolidation? If the latter, the three readings may collapse or new readings may emerge.",
+   "source": "Commitment system recognition + drift_status: partial"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Multi-lens scan applied constitutional law, platform economics, and technology governance lenses. Dark matter probes surfaced labor conditions (deferred as orthogonal) and Global South jurisdictional differences (omega). Kernel recognition applied to private_state_action_boundary after identifying three genuinely distinct readings with mutually exclusive axioms."
+ }
+}
