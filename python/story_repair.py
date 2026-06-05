@@ -115,9 +115,22 @@ def repair_story(story, schema=None):
 
     meas = story.get("measurements")
     if isinstance(meas, list):
+        # Metric-name transliteration (2026-06-05): models pattern-match the
+        # base_properties field names ("suppression", "extractiveness") where the
+        # measurement enum wants the canonical series names. This renames the
+        # SERIES, never touches authored values — same class as id transliteration.
+        # Unknown metric names are deliberately NOT mapped (fail-closed: repair must
+        # not invent a metric).
+        metric_aliases = {
+            "suppression": "suppression_requirement",
+            "extractiveness": "base_extractiveness",
+            "theater": "theater_ratio",
+        }
         for m in meas:
             if not isinstance(m, dict):
                 continue
+            if m.get("metric") in metric_aliases:
+                m["metric"] = metric_aliases[m["metric"]]
             for k in list(m.keys()):
                 if k not in MEASUREMENT_ALLOWED:
                     del m[k]
