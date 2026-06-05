@@ -212,11 +212,14 @@ The dated session changelog now lives in **`KNOWN_STATE.md`** (split out 2026-05
 this auto-loaded file's per-session token cost). `KNOWN_STATE.md` is read on demand, not
 auto-loaded.
 
-**Read `KNOWN_STATE.md` before touching** any of: `signature_detection.pl`,
-`product_site_export.pl`, `enhanced_report.py`, `python/sweeps/perturb.py`,
-`python/demotion_pass.py`, `config_validation.pl`, `drl_composition.pl`, or the
-`corpus_loader` glob / `corpus_path` overlay — recent changes and mitigations to those files
-are recorded there.
+**Before touching a file, query KNOWN_STATE.md instead of reading all of it:**
+`python3 python/known_state_status.py --file <path>` lists the entries whose `Files:` line
+names it (entries carry machine-readable `Files:`/`Tier:` headers; checker `--check`, grammar
+in KNOWN_STATE.md's header). High-traffic files where this matters most:
+`signature_detection.pl`, `product_site_export.pl`, `enhanced_report.py`,
+`python/sweeps/perturb.py`, `python/demotion_pass.py`, `config_validation.pl`,
+`drl_composition.pl`, `json_report.pl`, `generate_kernel_corpus.py`, and the
+`corpus_loader` glob / `corpus_path` overlay.
 
 Standing warnings that were embedded in the changelog have been promoted into the
 always-loaded sections of *this* file, so they remain in every session's context:
@@ -510,6 +513,26 @@ that did not happen — the produced-but-not-consumed defect at the
 seam between sessions. State the next step and its sequencing
 constraint (why this one, what it's gated behind), because the
 bare next-step is the one a cold reader most easily gets wrong.
+
+## Memory Consolidation Review
+
+The auto-memory directory (`~/.claude/projects/-home-scott-bin-structural-dynamics-model/memory/`)
+accretes one file per session finding. Periodically consolidate: merge same-principle clusters
+into one principle file with illustrative instances; delete memories whose content has since
+been promoted into repo docs (build_discipline.md, this file); trim MEMORY.md back to
+one-line-per-memory index entries; prune resolved/stale items.
+
+The same monthly pass covers the two tracking surfaces (one pass, three surfaces):
+- **KNOWN_STATE.md roll-off** — entries older than ~30 days get the promotion test once more,
+  then compress in place per the roll-off rule in KNOWN_STATE.md's header (keep header +
+  `Files:`/`Tier:` + short verdict + pointers; `tripwire` entries only if promoted/superseded).
+  Verify with `python3 python/known_state_status.py --check`.
+- **ISSUES.md compress-on-close check** — compression normally happens at close time (footer
+  rule); the monthly pass sweeps for closed entries that escaped it.
+
+**Last review: 2026-06-04. Interval: monthly.** If today's date is on or after **2026-07-04**,
+prompt the user to run a memory consolidation pass before starting the requested work, then
+update both dates here after the pass.
 
 ## Audit Methodology
 
