@@ -363,7 +363,7 @@
         "mandatrophy_resolved": {
           "type": "boolean",
           "default": false,
-          "description": "Whether mandatrophy has been resolved (required when extractiveness > 0.70)"
+          "description": "Whether mandatrophy has been resolved. Author it whenever the constraint's mandate has outlived its function; do not key it to any metric value."
         }
       },
       "additionalProperties": false
@@ -377,12 +377,14 @@
     },
     "omegas": {
       "type": "array",
+      "description": "Unresolved questions the story leaves open. Strongly encouraged for every story: any constraint whose naturalness, beneficiary structure, or persistence is contestable should carry at least one omega naming the open question.",
       "items": {
         "$ref": "#/$defs/Omega"
       }
     },
     "measurements": {
       "type": "array",
+      "description": "Time-series observations of the constraint's operation. Strongly encouraged for every story whose constraint has observable drift or enforcement history: aim for 6+ measurements spanning the interval so temporal analysis has data.",
       "items": {
         "$ref": "#/$defs/Measurement"
       }
@@ -645,17 +647,12 @@
         }
       },
       "then": {
+        "$comment": "De-leak 2026-06-05: the former extractiveness/suppression maxima were removed so the authored claim and the authored metrics stay independent (the engine computes the type; divergence is the signal). Only the structural requirement remains.",
         "properties": {
           "base_properties": {
             "properties": {
               "emerges_naturally": {
                 "const": true
-              },
-              "extractiveness": {
-                "maximum": 0.25
-              },
-              "suppression": {
-                "maximum": 0.05
               }
             },
             "required": [
@@ -795,94 +792,6 @@
             },
             "required": [
               "has_sunset_clause"
-            ]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "base_properties": {
-            "properties": {
-              "claimed_type": {
-                "const": "piton"
-              }
-            },
-            "required": [
-              "claimed_type"
-            ]
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "base_properties": {
-            "properties": {
-              "theater_ratio": {
-                "minimum": 0.7
-              }
-            }
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "base_properties": {
-            "properties": {
-              "extractiveness": {
-                "exclusiveMinimum": 0.46
-              }
-            },
-            "required": [
-              "extractiveness"
-            ]
-          }
-        }
-      },
-      "then": {
-        "required": [
-          "header",
-          "base_properties",
-          "perspectives",
-          "interval",
-          "measurements",
-          "omegas"
-        ],
-        "properties": {
-          "measurements": {
-            "minItems": 6
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "base_properties": {
-            "properties": {
-              "extractiveness": {
-                "exclusiveMinimum": 0.7
-              }
-            },
-            "required": [
-              "extractiveness"
-            ]
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "base_properties": {
-            "properties": {
-              "mandatrophy_resolved": {
-                "const": true
-              }
-            },
-            "required": [
-              "mandatrophy_resolved"
             ]
           }
         }
