@@ -885,14 +885,23 @@ false_natural_law(C, fnl_evidence(Claim, BoltzmannResult, CouplingScore,
 %  Checks if a constraint claims natural/immutable status.
 %  ClaimType records the form of the claim for evidence trail.
 %
-%  Three sources of naturality claims:
+%  Two sources of naturality claims:
 %  1. Explicit mountain constraint_claim in testset data
-%  2. Indexed classification as mountain from any perspective
-%  3. Profile matches natural_law_signature pattern
+%  2. Profile matches natural_law_signature pattern
+%
+%  RULED OUT (operator ruling 2026-06-05, OQ-70): the former middle source —
+%  `constraint_indexing:constraint_classification(C, mountain, _)`, i.e. ANY single
+%  authored perspective classifying as mountain — read indexical PERCEPTION as a
+%  story-level CLAIM. An authored perspective is a seat's view ("this seat perceives
+%  immutability"), which the two-axis design wants authored; a naturality CLAIM is
+%  the story-level constraint_claim. Reading one as the other made FNL prevalence
+%  measure authoring convention, not detection (827/1106 pre-reset, all via that
+%  source; bait-fungible with FCR's sibling clause — counterfactual witnessed
+%  2026-06-04). CLASS RULE: no signature may read a single authored perspective as
+%  a story-level claim. Claim-vs-computed divergence is the story-level diff
+%  machinery's job (dr_claim_mismatch over constraint_claim), which covers it.
 claimed_natural(C, explicit_mountain_claim) :-
     narrative_ontology:constraint_claim(C, mountain), !.
-claimed_natural(C, indexed_mountain_classification) :-
-    constraint_indexing:constraint_classification(C, mountain, _), !.
 claimed_natural(C, natural_law_signature_match) :-
     get_constraint_profile(C, Profile),
     natural_law_signature(Profile).
@@ -1149,8 +1158,15 @@ coupling_based_failure(nonsensical_coupling(_)).
 %  misidentified as "coordination-washed."
 appears_as_rope(C, explicit_rope_claim) :-
     narrative_ontology:constraint_claim(C, rope), !.
-appears_as_rope(C, indexed_rope_classification) :-
-    constraint_indexing:constraint_classification(C, rope, _), !.
+% RULED OUT (operator ruling 2026-06-05, OQ-70 class rule — same defect as
+% claimed_natural's removed source): `constraint_classification(C, rope, _)` read ANY
+% single authored rope perspective as a story-level "appears as coordination" claim.
+% A snare's beneficiary seat CORRECTLY perceives rope — that is the perspectival gap
+% working, not a disguise. Witnessed on the live-20: FCR fired on snare-claimed
+% stories at eps~0.7 (far above the rope ceiling), only this clause could have fired;
+% pre-reset the bait was fungible between FNL and this clause (2026-06-04
+% counterfactual). No signature may read a single authored perspective as a
+% story-level claim.
 appears_as_rope(C, low_extraction_profile) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(C, ExtMetricName, Eps),
