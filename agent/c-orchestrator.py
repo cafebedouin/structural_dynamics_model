@@ -134,8 +134,13 @@ class DRAuditOrchestrator:
     # Default max_tokens per role (Claude requires an explicit cap)
     MAX_TOKENS = {
         "researcher": 4096,
-        "architect":  8192,
-        "essayist":   12288,
+        # Stories now carry 12-23 measurements and run 18-24KB JSON (~6-7k tokens);
+        # 8192 was the orchestrator-era cap and truncation = parse-fail in batch mode.
+        "architect":  16384,
+        # Essay synthesis input scales with the (uncapped) axis count; 12288 was the
+        # 3-axis-era ceiling. 64000 is the Sonnet 4.5 model max — the cap only bills
+        # what is generated. _call_with_retry streams above the non-streaming limit.
+        "essayist":   64000,
     }
 
     def __init__(
@@ -260,11 +265,20 @@ class DRAuditOrchestrator:
 
     @staticmethod
     def _call_with_retry(client, max_retries: int = 3, **kwargs):
-        """Retry with exponential backoff on transient errors."""
+        """Retry with exponential backoff on transient errors.
+
+        Large-cap calls stream: the SDK refuses non-streaming requests whose
+        max_tokens implies >10 minutes (the essayist's 64k cap trips this).
+        get_final_message() returns the same Message object create() would,
+        so usage accounting and the pause_turn loop are unaffected.
+        """
         import anthropic
 
         for attempt in range(max_retries):
             try:
+                if kwargs.get("max_tokens", 0) >= 16384:
+                    with client.messages.stream(**kwargs) as s:
+                        return s.get_final_message()
                 return client.messages.create(**kwargs)
             except (
                 anthropic.RateLimitError,
