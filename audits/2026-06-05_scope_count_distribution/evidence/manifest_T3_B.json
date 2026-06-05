@@ -1,0 +1,201 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Public Policy / Chronobiology / Political Economy",
+ "family_id": "daylight_saving_time_2026",
+ "topic_summary": "Analysis of daylight saving time (DST) as a biannual clock adjustment practice. The topic encompasses biological disruption from circadian misalignment, economic coordination benefits and costs, energy consumption claims, and the political economy of reform resistance despite widespread public opposition.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "DST practice (biannual clock shift)",
+   "Circadian biology (human sleep-wake regulation)",
+   "Retail/leisure industries (evening daylight beneficiaries)",
+   "Energy sector (historical justification for DST)",
+   "Transportation/scheduling systems (coordination infrastructure)",
+   "Public opinion (majority opposition to clock changes)"
+  ],
+  "key_tensions": [
+   "Biological health costs vs economic coordination benefits",
+   "Public preference for abolition vs institutional inertia",
+   "Standard time vs permanent DST as abolition endpoint"
+  ],
+  "key_mechanisms": [
+   "Spring transition acute sleep deprivation (1-hour loss)",
+   "Chronic circadian misalignment under permanent DST (late sunrise)",
+   "Coordination lock-in via interstate commerce and broadcast schedules",
+   "Legislative capture by evening-daylight beneficiary industries"
+  ],
+  "key_absences": [
+   "Quantified health costs (cardiovascular events, accidents, productivity loss)",
+   "Distributional analysis (who bears biological costs vs who captures economic benefits)",
+   "International comparison (countries that abolished DST and outcomes)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "circadian_misalignment_cost",
+   "human_readable": "Circadian Misalignment Cost (Biological Disruption)",
+   "structural_delta": "Measurable health and performance degradation from clock-biology desynchronization",
+   "primary_observable": "Sleep duration change, cardiovascular event rates, traffic accident rates in transition weeks; chronic late sleep phase under permanent DST",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coordination_vs_health_tradeoff",
+    "permanent_dst_vs_standard_time"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain providing biological constraint base; distinct observable (circadian phase) independent of other axes"
+  },
+  {
+   "claim_id": "coordination_infrastructure_lock_in",
+   "human_readable": "Coordination Infrastructure Lock-In (Scheduling System Dependence)",
+   "structural_delta": "Economic and operational costs of maintaining synchronized time zones across transportation, broadcast, and commerce systems",
+   "primary_observable": "Interstate commerce scheduling complexity, broadcast synchronization requirements, transportation timetable coordination costs",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coordination_vs_health_tradeoff",
+    "abolition_political_economy"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (coordination costs) independent of biological axis; upstream to synthesis nodes"
+  },
+  {
+   "claim_id": "coordination_vs_health_tradeoff",
+   "human_readable": "Coordination vs Health Tradeoff (DST as Imposed Compromise)",
+   "structural_delta": "DST practice as mechanism trading population health costs for coordination benefits and evening-daylight economic activity",
+   "primary_observable": "Retail/leisure revenue during extended evening daylight vs population health burden metrics",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "retail_leisure_industries",
+   "victim": "general_population_health",
+   "downstream_of": [
+    "circadian_misalignment_cost",
+    "coordination_infrastructure_lock_in"
+   ],
+   "feeds_into": [
+    "abolition_political_economy"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; downstream synthesis of biological and coordination axes; distinct beneficiary/victim structure"
+  },
+  {
+   "claim_id": "abolition_political_economy",
+   "human_readable": "Abolition Political Economy (Reform Resistance Despite Public Opposition)",
+   "structural_delta": "Legislative inertia and industry lobbying blocking DST abolition despite majority public support for ending clock changes",
+   "primary_observable": "Public opinion polling on DST abolition vs legislative action rates; industry lobbying expenditure",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "evening_daylight_beneficiaries",
+   "victim": "reform_advocates",
+   "downstream_of": [
+    "coordination_infrastructure_lock_in",
+    "coordination_vs_health_tradeoff"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct political economy observable; captures reform blockage mechanism independent of underlying health/coordination tradeoff"
+  },
+  {
+   "claim_id": "permanent_dst_vs_standard_time",
+   "human_readable": "Permanent DST vs Standard Time (Abolition Endpoint Dispute)",
+   "structural_delta": "Contested choice between permanent DST (late sunrise, chronic misalignment) vs permanent standard time (early sunset, coordination disruption)",
+   "primary_observable": "Winter sunrise times under each regime; public preference polling; chronobiologist consensus",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "evening_activity_preference",
+   "victim": "morning_circadian_alignment",
+   "downstream_of": [
+    "circadian_misalignment_cost"
+   ],
+   "feeds_into": [
+    "abolition_political_economy"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (abolition endpoint choice) independent of whether to abolish; captures intra-reform dispute"
+  },
+  {
+   "claim_id": "energy_consumption_myth",
+   "human_readable": "Energy Consumption Myth (Obsolete Justification Persistence)",
+   "structural_delta": "Historical energy-saving rationale for DST no longer empirically supported but still cited in policy discourse",
+   "primary_observable": "Modern energy consumption studies vs policy justification rhetoric",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "abolition_political_economy"
+   ],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: captured as rhetorical component of abolition_political_economy snare; no independent structural delta beyond discourse analysis"
+  }
+ ],
+ "generation_sequence": [
+  "circadian_misalignment_cost",
+  "coordination_infrastructure_lock_in",
+  "coordination_vs_health_tradeoff",
+  "abolition_political_economy",
+  "permanent_dst_vs_standard_time"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "energy_consumption_myth",
+   "structural_delta": "Obsolete energy-saving rationale persisting in policy discourse",
+   "hypothesis": "piton",
+   "deferral_reason": "Rhetorical component of abolition_political_economy; no independent structural delta beyond discourse analysis"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_distributional_burden",
+   "description": "Who bears the biological costs of DST vs who captures the economic benefits? Absence of distributional analysis obscures potential class/geographic extraction pattern.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + Absence Inventory"
+  },
+  {
+   "id": "omega_international_comparison",
+   "description": "Countries that abolished DST (Russia 2014, Turkey 2016) provide natural experiments. Outcomes unknown to model; could validate or invalidate coordination_infrastructure_lock_in severity.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_quantified_health_costs",
+   "description": "Precise health burden quantification (DALYs, economic cost) absent from extraction. Mountain classification of circadian_misalignment_cost depends on magnitude; if costs are low, may reclassify to rope.",
+   "source": "F03 (Hasty Generalization) + Absence Inventory"
+  },
+  {
+   "id": "omega_standard_time_coordination_cost",
+   "description": "If permanent standard time is adopted, what is the actual coordination disruption cost? Rope classification of coordination_infrastructure_lock_in assumes non-trivial cost; empirical validation needed.",
+   "source": "Dark Matter Probe 1 (Operational Medium)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: circadian_misalignment_cost classified as mountain based on general chronobiology principles, but precise health burden quantification absent from extraction. If costs are marginal, may reclassify to rope. Generated omega_quantified_health_costs to bound this uncertainty."
+ }
+}

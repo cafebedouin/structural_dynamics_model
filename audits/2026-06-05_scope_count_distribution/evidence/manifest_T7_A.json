@@ -1,0 +1,295 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Political Economy / Healthcare Policy / Public Finance",
+ "family_id": "us_healthcare_financing_2026",
+ "topic_summary": "Analysis of United States healthcare system financing mechanisms, examining the structural architecture of payment flows, risk pooling, cost allocation, and the relationship between public programs (Medicare, Medicaid), private insurance markets, employer-based coverage, and direct patient expenditure. The system is characterized by fragmented financing streams, mixed public-private provision, and contested boundaries of coverage obligation.",
+ "extraction_summary": {
+  "entity_count": 8,
+  "claim_count": 6,
+  "tension_count": 4,
+  "mechanism_count": 5,
+  "absence_count": 3,
+  "key_entities": [
+   "Medicare (federal single-payer program for elderly/disabled)",
+   "Medicaid (federal-state means-tested program)",
+   "Private insurance carriers (risk pooling entities)",
+   "Employers (primary insurance purchasers for working-age population)",
+   "Patients/consumers (direct payers, premium contributors, cost-bearers)",
+   "Healthcare providers (hospitals, physicians, pharmaceutical companies)",
+   "Federal government (Medicare administrator, ACA subsidy provider, tax policy setter)",
+   "State governments (Medicaid co-administrators, insurance regulators)"
+  ],
+  "key_tensions": [
+   "Universal coverage mandate vs individual/employer choice (ACA individual mandate repeal vs coverage expansion)",
+   "Cost containment vs provider revenue maximization (price controls vs market pricing)",
+   "Public program expansion vs private market preservation (Medicare-for-All proposals vs status quo)",
+   "Federal standardization vs state variation (Medicaid expansion decisions, insurance regulation)"
+  ],
+  "key_mechanisms": [
+   "Employer-sponsored insurance tax exclusion (federal subsidy channeled through employment)",
+   "Medicare Part A/B/D financing (payroll tax, general revenue, premiums)",
+   "Medicaid federal matching (FMAP formula incentivizing state participation)",
+   "ACA marketplace subsidies (income-based premium tax credits)",
+   "Fee-for-service vs value-based payment models (provider reimbursement structures)"
+  ],
+  "key_absences": [
+   "Global budgeting or expenditure caps (present in most OECD systems, absent in U.S.)",
+   "Unified risk pool (fragmentation across Medicare, Medicaid, employer plans, individual market)",
+   "Pharmaceutical price negotiation authority (historically prohibited for Medicare Part D until IRA 2022)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "employment_insurance_coupling",
+   "human_readable": "Employment-Insurance Coupling (Tax-Subsidized Employer Provision)",
+   "structural_delta": "Health insurance access structurally tied to employment status via tax exclusion for employer-provided coverage",
+   "primary_observable": "Percentage of non-elderly population covered through employer-sponsored insurance; tax expenditure value of employer premium exclusion",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "large_employers_with_negotiating_power",
+   "victim": "unemployed_self_employed_small_firm_workers",
+   "downstream_of": [],
+   "feeds_into": [
+    "coverage_fragmentation",
+    "labor_market_lock_in"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Highest upstream centrality; structurally distinct mechanism creating downstream fragmentation and labor distortions"
+  },
+  {
+   "claim_id": "age_eligibility_cliff",
+   "human_readable": "Age Eligibility Cliff (Medicare 65+ Boundary)",
+   "structural_delta": "Sharp discontinuity in coverage access and financing at age 65 via Medicare eligibility",
+   "primary_observable": "Uninsured rate age 64 vs 65; out-of-pocket expenditure change at Medicare eligibility",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coverage_fragmentation"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Structurally independent from employment coupling; different observable (age vs employment); distinct coordination mechanism"
+  },
+  {
+   "claim_id": "means_tested_medicaid_threshold",
+   "human_readable": "Means-Tested Medicaid Threshold (Income Eligibility Cliff)",
+   "structural_delta": "Coverage access contingent on income falling below state-specific thresholds; cliff effects at eligibility boundaries",
+   "primary_observable": "Medicaid eligibility income thresholds by state; coverage gap population in non-expansion states",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": null,
+   "victim": "working_poor_above_threshold",
+   "downstream_of": [],
+   "feeds_into": [
+    "coverage_fragmentation",
+    "state_variation_extraction"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Independent observable from employment and age; distinct victim structure; feeds fragmentation and state variation"
+  },
+  {
+   "claim_id": "coverage_fragmentation",
+   "human_readable": "Coverage Fragmentation (Multi-Payer Risk Pool Segmentation)",
+   "structural_delta": "Risk pooling segmented across Medicare, Medicaid, employer plans, individual market, uninsured; no unified pool",
+   "primary_observable": "Number of distinct insurance risk pools; administrative cost share of total healthcare expenditure",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "insurance_industry_administrative_apparatus",
+   "victim": "high_risk_individuals_small_group_markets",
+   "downstream_of": [
+    "employment_insurance_coupling",
+    "age_eligibility_cliff",
+    "means_tested_medicaid_threshold"
+   ],
+   "feeds_into": [
+    "adverse_selection_spiral",
+    "cost_shifting_mechanism"
+   ],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Highest overall centrality; downstream synthesis of three upstream axes; feeds two major downstream mechanisms"
+  },
+  {
+   "claim_id": "fee_for_service_incentive",
+   "human_readable": "Fee-for-Service Incentive Structure (Volume-Based Reimbursement)",
+   "structural_delta": "Provider payment tied to service volume rather than health outcomes; incentivizes overutilization",
+   "primary_observable": "Percentage of Medicare/private payments under FFS vs value-based models; utilization rates for discretionary procedures",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "high_volume_procedure_specialists",
+   "victim": "payers_patients_bearing_unnecessary_costs",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_inflation_mechanism"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Structurally independent from coverage axes; different observable (payment model vs coverage access); distinct cost-generation mechanism"
+  },
+  {
+   "claim_id": "pharmaceutical_price_opacity",
+   "human_readable": "Pharmaceutical Price Opacity (Negotiation Prohibition & PBM Intermediation)",
+   "structural_delta": "Drug prices set via opaque PBM rebate negotiations; Medicare Part D historically prohibited from price negotiation",
+   "primary_observable": "U.S. vs OECD drug price ratios; PBM rebate share of list price; Medicare Part D negotiation authority scope post-IRA",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "pharmaceutical_manufacturers_pbm_intermediaries",
+   "victim": "patients_with_high_drug_costs_public_programs",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_inflation_mechanism"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Independent observable from FFS (drug pricing vs service reimbursement); distinct beneficiary structure; both feed cost inflation"
+  },
+  {
+   "claim_id": "cost_inflation_mechanism",
+   "human_readable": "Cost Inflation Mechanism (Structural Expenditure Growth)",
+   "structural_delta": "Healthcare expenditure growing faster than GDP due to combined effects of FFS incentives, drug pricing, administrative overhead",
+   "primary_observable": "Healthcare expenditure as percentage of GDP over time; per-capita spending growth vs GDP growth",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "healthcare_industry_aggregate",
+   "victim": "public_budgets_wage_earners_via_premium_growth",
+   "downstream_of": [
+    "fee_for_service_incentive",
+    "pharmaceutical_price_opacity",
+    "coverage_fragmentation"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Downstream synthesis of three independent cost-generation mechanisms; terminal node with high epsilon"
+  },
+  {
+   "claim_id": "adverse_selection_spiral",
+   "human_readable": "Adverse Selection Spiral (Risk Pool Destabilization)",
+   "structural_delta": "Healthier individuals exit insurance pools when premiums rise, concentrating risk and further raising premiums",
+   "primary_observable": "Individual market enrollment trends; premium increases in non-group markets; risk pool health status metrics",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": null,
+   "victim": "remaining_pool_members_facing_premium_increases",
+   "downstream_of": [
+    "coverage_fragmentation"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 8,
+   "selection_reason": "Distinct mechanism downstream of fragmentation; different observable from cost_shifting (enrollment dynamics vs payment flows)"
+  },
+  {
+   "claim_id": "cost_shifting_mechanism",
+   "human_readable": "Cost Shifting Mechanism (Uncompensated Care Redistribution)",
+   "structural_delta": "Providers shift costs of uncompensated care (uninsured patients, Medicaid underpayment) to privately insured patients",
+   "primary_observable": "Hospital uncompensated care burden; private insurance payment-to-cost ratios vs Medicare/Medicaid",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": null,
+   "victim": "privately_insured_patients_employers",
+   "downstream_of": [
+    "coverage_fragmentation"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 9,
+   "selection_reason": "Independent from adverse_selection (different observable: payment redistribution vs enrollment dynamics); both downstream of fragmentation"
+  },
+  {
+   "claim_id": "state_variation_extraction",
+   "human_readable": "State Variation Extraction (Medicaid Expansion Opt-Out)",
+   "structural_delta": "State-level decisions on Medicaid expansion create coverage gaps; federal matching formula incentivizes participation but allows opt-out",
+   "primary_observable": "Coverage gap population size in non-expansion states; state Medicaid expansion status map",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "state_political_actors_opposing_expansion",
+   "victim": "low_income_adults_in_non_expansion_states",
+   "downstream_of": [
+    "means_tested_medicaid_threshold"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 10,
+   "selection_reason": "Downstream of Medicaid threshold; distinct political-economy mechanism; different observable from other axes"
+  },
+  {
+   "claim_id": "labor_market_lock_in",
+   "human_readable": "Labor Market Lock-In (Job Lock via Insurance Dependence)",
+   "structural_delta": "Workers remain in suboptimal employment to maintain health insurance access; reduces labor mobility",
+   "primary_observable": "Job mobility rates for insured vs uninsured workers; survey data on insurance as barrier to job change",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "employers_with_market_power",
+   "victim": "workers_in_suboptimal_employment",
+   "downstream_of": [
+    "employment_insurance_coupling"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 11,
+   "selection_reason": "Downstream of employment coupling; distinct labor market mechanism; different observable from coverage/cost axes"
+  }
+ ],
+ "generation_sequence": [
+  "employment_insurance_coupling",
+  "age_eligibility_cliff",
+  "means_tested_medicaid_threshold",
+  "coverage_fragmentation",
+  "fee_for_service_incentive",
+  "pharmaceutical_price_opacity",
+  "cost_inflation_mechanism",
+  "adverse_selection_spiral",
+  "cost_shifting_mechanism",
+  "state_variation_extraction",
+  "labor_market_lock_in"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_global_budget_absence",
+   "description": "Why does the U.S. lack expenditure caps present in other OECD systems? Is this a Mountain (political economy structure) or a Piton (policy choice that could be reversed)? The absence itself may be the highest-epsilon constraint.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_single_payer_transition",
+   "description": "Would transition to unified risk pool (Medicare-for-All) eliminate fragmentation-derived snares, or would new snares emerge in the transition mechanism itself? The counterfactual constraint topology is uncertain.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_aca_stability",
+   "description": "Is the ACA marketplace a stable equilibrium or a transitional scaffold? Individual mandate repeal removed a key stabilization mechanism; long-term viability uncertain.",
+   "source": "\u00a72.2 Preliminary Classification (scaffold hypothesis for ACA structure)"
+  },
+  {
+   "id": "omega_value_based_transition",
+   "description": "Can value-based payment models actually displace FFS at scale, or do they become a compliance layer on top of volume incentives? Transition pathway unclear.",
+   "source": "\u00a72.2 Preliminary Classification (fee_for_service_incentive feeds_into cost_inflation)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Multi-lens scan covered financing mechanisms (employment coupling, age/income thresholds), market structure (fragmentation, risk pooling), payment models (FFS, drug pricing), and political economy (state variation). Dark matter probes surfaced global budget absence and single-payer counterfactual as omega variables. All 11 axes passed pairwise independence testing with distinct observables and epsilon sources."
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Economics / Political Economy / Public Policy",
+ "family_id": "minimum_wage_law",
+ "topic_summary": "Analysis of minimum wage legislation as a policy intervention in labor markets. The topic encompasses the statutory floor on hourly compensation, its effects on employment, income distribution, and firm behavior, and the political economy of wage floor determination.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 4,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Low-wage workers (direct beneficiaries or victims depending on employment effects)",
+   "Employers (firms subject to wage floor constraint)",
+   "State/legislative authority (sets and enforces wage floor)",
+   "Consumers (bear price increases if firms pass through costs)",
+   "Unemployed/marginally employed (potential victims if disemployment occurs)",
+   "Monopsony employers (firms with wage-setting power in thin labor markets)"
+  ],
+  "key_tensions": [
+   "Worker income security vs employer cost flexibility",
+   "Statutory wage floor vs market-clearing wage",
+   "Redistribution via wage mandate vs redistribution via tax-transfer"
+  ],
+  "key_mechanisms": [
+   "Price floor enforcement: state sets w_min > w_market, penalizes non-compliance",
+   "Disemployment channel: if labor demand elastic, employment falls as wage rises",
+   "Monopsony correction: if employer has wage-setting power, wage floor can increase both wages and employment"
+  ],
+  "key_absences": [
+   "Enforcement capacity and compliance rates (statutory vs effective wage floor)",
+   "Interaction with other labor market institutions (unions, EITC, unemployment insurance)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "competitive_disemployment",
+   "human_readable": "Competitive Disemployment (Elastic Labor Demand)",
+   "structural_delta": "In competitive labor markets with elastic demand, binding wage floor reduces employment",
+   "primary_observable": "Employment elasticity with respect to minimum wage changes; teen/low-skill employment rates",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "distributional_incidence",
+    "political_economy_ratchet"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational market structure constraint; distinct observable (employment elasticity); feeds two downstream axes"
+  },
+  {
+   "claim_id": "monopsony_correction",
+   "human_readable": "Monopsony Correction (Wage-Setting Power)",
+   "structural_delta": "In monopsonistic labor markets, wage floor can simultaneously raise wages and employment",
+   "primary_observable": "Labor market concentration (HHI); wage-employment response to minimum wage in thin markets",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "distributional_incidence"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Structurally independent market structure (different observable: concentration vs elasticity); alternative causal pathway"
+  },
+  {
+   "claim_id": "distributional_incidence",
+   "human_readable": "Distributional Incidence (Who Bears the Cost)",
+   "structural_delta": "Wage floor redistributes surplus among workers, employers, consumers, and unemployed",
+   "primary_observable": "Price pass-through rates; profit margin changes; income distribution pre/post policy",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "employed_low_wage_workers",
+   "victim": "marginally_employed_workers_if_disemployment_occurs",
+   "downstream_of": [
+    "competitive_disemployment",
+    "monopsony_correction"
+   ],
+   "feeds_into": [
+    "political_economy_ratchet"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; synthesis node integrating market structure effects into distributional outcomes"
+  },
+  {
+   "claim_id": "political_economy_ratchet",
+   "human_readable": "Political Economy Ratchet (Wage Floor as Commitment Device)",
+   "structural_delta": "Minimum wage as political commitment technology: easy to raise, hard to lower, decoupled from productivity",
+   "primary_observable": "Legislative history of wage floor adjustments; inflation-indexing adoption rates; political coalition stability",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "organized_labor_and_progressive_coalitions",
+   "victim": "employers_in_low_margin_sectors",
+   "downstream_of": [
+    "competitive_disemployment",
+    "distributional_incidence"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (legislative dynamics vs market outcomes); captures policy persistence mechanism"
+  },
+  {
+   "claim_id": "enforcement_gap",
+   "human_readable": "Enforcement Gap (Statutory vs Effective Floor)",
+   "structural_delta": "Difference between legislated wage floor and actual compliance in informal/weakly-monitored sectors",
+   "primary_observable": "Wage violation rates; informal sector size; inspection frequency and penalty severity",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "non_compliant_employers",
+   "victim": "workers_in_informal_sectors",
+   "downstream_of": [],
+   "feeds_into": [
+    "distributional_incidence"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (compliance vs statutory rate); high epsilon; captures implementation failure"
+  }
+ ],
+ "generation_sequence": [
+  "competitive_disemployment",
+  "monopsony_correction",
+  "distributional_incidence",
+  "political_economy_ratchet",
+  "enforcement_gap"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_eitc_interaction",
+   "description": "Does minimum wage crowd out or complement EITC (Earned Income Tax Credit)? If substitutes, the Mountain of labor demand becomes a Snare (state extracts via wage mandate rather than tax-transfer).",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_automation_threshold",
+   "description": "At what wage level does automation become cost-effective? If minimum wage crosses this threshold, the Rope of political commitment becomes a Piton (accelerates capital substitution, atrophies low-skill employment).",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_regional_variation",
+   "description": "Federal vs state/local wage floors create jurisdictional arbitrage. Is this a Rope (allows local calibration) or a Snare (race to the bottom in enforcement)?",
+   "source": "Dark Matter Probe 1 (Operational Medium)"
+  },
+  {
+   "id": "omega_mountain_validity_competitive",
+   "description": "Is competitive_disemployment a true Mountain (labor demand elasticity is a physical constraint) or a Rope (elasticity varies with institutional context, e.g., union density, firing costs)?",
+   "source": "F03 (Hasty Generalization)"
+  },
+  {
+   "id": "omega_mountain_validity_monopsony",
+   "description": "Is monopsony_correction a true Mountain (market concentration is structural) or a Piton (concentration reflects policy choices, e.g., non-compete enforcement, occupational licensing)?",
+   "source": "F03 (Hasty Generalization)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: Both competitive_disemployment and monopsony_correction classified as mountains, but their structural permanence depends on institutional context (union density, non-compete enforcement, occupational licensing). Generated omega_mountain_validity_competitive and omega_mountain_validity_monopsony to bound this uncertainty. All five axes passed \u00a73 pairwise independence testing with distinct observables and non-redundant epsilon values."
+ }
+}

@@ -1,0 +1,238 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Classification",
+ "family_id": "gig_platform_labor_classification",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. This classification determines access to minimum wage, benefits, collective bargaining rights, and platform liability for working conditions. The tension centers on whether platform control mechanisms (algorithmic management, rating systems, pricing) constitute employment relationships or market coordination.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Platform companies (Uber, Lyft, DoorDash, Instacart - technology intermediaries claiming non-employer status)",
+   "Gig workers (drivers, couriers, taskers - performing labor through platform interfaces)",
+   "Labor regulatory agencies (NLRB, state labor departments - classification adjudicators)",
+   "Traditional employment law framework (FLSA, state wage laws - binary employee/contractor distinction)",
+   "Algorithmic management systems (dispatch, pricing, rating algorithms - control mechanisms)",
+   "Proposition 22 / AB5 legislative frameworks (California ballot measure creating third category)"
+  ],
+  "key_tensions": [
+   "Platform control vs worker autonomy (platforms set prices, routes, acceptance rates vs workers choose when/whether to work)",
+   "Binary classification vs hybrid reality (legal framework requires employee OR contractor vs platforms exhibit characteristics of both)",
+   "Flexibility vs security (worker schedule autonomy vs lack of wage floor, benefits, protections)"
+  ],
+  "key_claims": [
+   "Platforms claim workers are independent contractors because they control their own schedules and use their own equipment",
+   "Labor advocates claim algorithmic control (pricing, dispatch, deactivation) constitutes employer direction and control",
+   "Economic research shows gig workers earn below minimum wage after expenses in many markets",
+   "Platforms argue employee classification would eliminate flexibility and reduce worker earnings",
+   "Courts and agencies have reached contradictory conclusions on classification using identical legal tests"
+  ],
+  "key_mechanisms": [
+   "Algorithmic dispatch and pricing (platform sets rates, assigns jobs, penalizes rejection)",
+   "Rating and deactivation systems (customer ratings trigger account suspension without appeal)",
+   "Surge pricing and incentive structures (dynamic pricing captures consumer surplus, bonuses shape labor supply)",
+   "Regulatory arbitrage via ballot initiatives (Prop 22 spent $200M to override AB5 employee classification)"
+  ],
+  "key_absences": [
+   "Collective bargaining framework for non-employee workers (no mechanism for gig workers to negotiate terms collectively)",
+   "Portable benefits infrastructure (benefits tied to employment relationship, not available to contractors)",
+   "Algorithmic transparency and contestability (workers cannot see or challenge dispatch/deactivation logic)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_vs_autonomy_classification",
+   "human_readable": "Control vs Autonomy Classification (Legal Test Application)",
+   "structural_delta": "Whether platform control mechanisms (algorithmic dispatch, pricing, rating-based deactivation) constitute employer direction and control under common law tests, or whether schedule flexibility and equipment ownership establish independent contractor status",
+   "primary_observable": "Court and agency rulings on classification; application of ABC test, economic realities test, common law control test to identical platform practices",
+   "epsilon_bin": "high",
+   "hypothesis": "contested_kernel",
+   "beneficiary": "platform_companies",
+   "victim": "workers_seeking_employment_protections",
+   "downstream_of": [],
+   "feeds_into": [
+    "flexibility_security_tradeoff",
+    "regulatory_arbitrage_mechanism"
+   ],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Contested kernel with multiple coherent readings of employment relationship; highest centrality as upstream to all other axes"
+  },
+  {
+   "claim_id": "algorithmic_control_opacity",
+   "human_readable": "Algorithmic Control Opacity (Information Asymmetry)",
+   "structural_delta": "Workers cannot observe, understand, or contest the algorithmic systems that determine their work allocation, earnings, and account status, creating structural information asymmetry distinct from traditional employment supervision",
+   "primary_observable": "Availability of algorithm documentation to workers; existence of appeal mechanisms for deactivation; transparency of pricing and dispatch logic",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "platform_companies",
+   "victim": "gig_workers",
+   "downstream_of": [],
+   "feeds_into": [
+    "control_vs_autonomy_classification"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Structurally distinct from classification question; different observable (transparency vs legal status); feeds into control analysis"
+  },
+  {
+   "claim_id": "flexibility_security_tradeoff",
+   "human_readable": "Flexibility-Security Tradeoff (Binary Framework Constraint)",
+   "structural_delta": "Legal binary (employee OR contractor) forces tradeoff between schedule autonomy and wage/benefit protections, when hybrid arrangements could theoretically provide both",
+   "primary_observable": "Worker surveys on preference for flexibility vs protections; existence of hybrid classification frameworks in other jurisdictions",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "control_vs_autonomy_classification"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different structural delta (legal framework constraint vs classification dispute); downstream synthesis of classification consequences"
+  },
+  {
+   "claim_id": "regulatory_arbitrage_mechanism",
+   "human_readable": "Regulatory Arbitrage Mechanism (Legislative Capture)",
+   "structural_delta": "Platforms use ballot initiatives and lobbying to override adverse classification rulings, creating parallel legal frameworks (Prop 22) that exempt them from general labor law",
+   "primary_observable": "Campaign spending on labor classification ballot measures; existence of platform-specific exemptions in state law",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_companies",
+   "victim": "democratic_labor_regulation",
+   "downstream_of": [
+    "control_vs_autonomy_classification"
+   ],
+   "feeds_into": [],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct mechanism (political rather than legal/economic); downstream response to classification pressure; tangled_rope extractiveness"
+  },
+  {
+   "claim_id": "below_minimum_wage_earnings",
+   "human_readable": "Below-Minimum-Wage Earnings (Economic Measurement)",
+   "structural_delta": "After accounting for vehicle expenses, insurance, unpaid wait time, and lack of benefits, effective hourly earnings fall below statutory minimum wage in many markets",
+   "primary_observable": "Economic studies measuring hourly earnings net of expenses; comparison to local minimum wage",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "control_vs_autonomy_classification",
+    "flexibility_security_tradeoff"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Different observable (economic measurement vs legal classification); mountain providing factual constraint base; feeds into classification and tradeoff analysis"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "employee_reading",
+   "kernel_id": "control_vs_autonomy_classification",
+   "reading_id": "employee_reading"
+  },
+  {
+   "claim_id": "contractor_reading",
+   "kernel_id": "control_vs_autonomy_classification",
+   "reading_id": "contractor_reading"
+  },
+  {
+   "claim_id": "hybrid_reading",
+   "kernel_id": "control_vs_autonomy_classification",
+   "reading_id": "hybrid_reading"
+  },
+  "algorithmic_control_opacity",
+  "flexibility_security_tradeoff",
+  "regulatory_arbitrage_mechanism",
+  "below_minimum_wage_earnings"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_collective_bargaining_absence",
+   "description": "No legal framework exists for gig workers to bargain collectively regardless of classification. If contractors, antitrust law prohibits collective action. If employees, platforms claim no single employer exists. This absence may be the structurally prior constraint.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - key_absences[0]"
+  },
+  {
+   "id": "omega_portable_benefits_infrastructure",
+   "description": "Benefits infrastructure assumes employment relationship. Contractor classification eliminates access, but no portable benefits system exists as alternative. This may be a Piton (atrophied institutional capacity) rather than a Mountain.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - key_absences[1]"
+  },
+  {
+   "id": "omega_international_comparison",
+   "description": "UK Supreme Court ruled Uber drivers are workers (intermediate category). EU Platform Work Directive creates presumption of employment. These jurisdictions use different legal frameworks - are they resolving the same constraint or different ones?",
+   "source": "Dark Matter Probe 1 (Operational Medium) - legal framework as unexamined axis"
+  },
+  {
+   "id": "omega_algorithmic_management_generalization",
+   "description": "Algorithmic control mechanisms are spreading to traditional employment (warehouse management, retail scheduling). Is this a gig-specific issue or a broader shift in employment relations that classification debate obscures?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - framing as gig-specific may obscure broader pattern"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five distinct axes survived independence testing with different observables and structural deltas. Dark matter probes surfaced four omegas for bounded uncertainty. Contested kernel structure identified for control_vs_autonomy_classification with three coherent readings."
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "Employment relationship definition - the shared legal commitment that certain working arrangements trigger statutory protections (minimum wage, benefits, collective bargaining rights) based on the nature of the relationship between worker and entity directing labor",
+  "authority_description": "Courts and labor agencies interpret employment statutes using common law tests (control, economic realities, ABC test) - interpretive legitimacy grounded in statutory construction and precedent",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift_pattern",
+  "is_contested_kernel": true,
+  "kernel_id": "control_vs_autonomy_classification",
+  "readings": [
+   {
+    "reading_id": "employee_reading",
+    "commitment": "Algorithmic control over pricing, dispatch, and deactivation constitutes employer direction and control; schedule flexibility is insufficient to establish independent contractor status when platform determines essential terms of work",
+    "authority_grounding": "Economic realities test emphasizing control over work process and economic dependence",
+    "sibling_readings": [
+     "contractor_reading",
+     "hybrid_reading"
+    ],
+    "expected_structural_delta": "Workers enter employee victim set for wage/hour violations; platforms become liable for working conditions; flexibility may be constrained by scheduling requirements"
+   },
+   {
+    "reading_id": "contractor_reading",
+    "commitment": "Schedule autonomy and equipment ownership establish independent contractor status; algorithmic systems are market coordination mechanisms, not employer supervision; workers are independent businesses using platform as customer acquisition tool",
+    "authority_grounding": "Common law control test emphasizing worker autonomy over when/whether to work",
+    "sibling_readings": [
+     "employee_reading",
+     "hybrid_reading"
+    ],
+    "expected_structural_delta": "Workers excluded from employment protections; platforms avoid liability for wages, benefits, working conditions; workers bear all business risk and expenses"
+   },
+   {
+    "reading_id": "hybrid_reading",
+    "commitment": "Platform workers are neither traditional employees nor independent contractors but a distinct category requiring tailored protections (Prop 22 model: earnings floor tied to engaged time, healthcare stipend, but no collective bargaining or full employment rights)",
+    "authority_grounding": "Legislative creation of third category via ballot initiative or statute",
+    "sibling_readings": [
+     "employee_reading",
+     "contractor_reading"
+    ],
+    "expected_structural_delta": "Partial protections (earnings floor, limited benefits) without full employment rights; platforms retain pricing control; collective bargaining remains prohibited; regulatory arbitrage becomes institutionalized"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "employee_reading",
+    "reading_b": "contractor_reading",
+    "basis": "Employee reading's axiom (algorithmic control = employer direction) and contractor reading's axiom (schedule autonomy = independent business) cannot both be true for the same relationship - one must be the dispositive factor"
+   }
+  ]
+ }
+}

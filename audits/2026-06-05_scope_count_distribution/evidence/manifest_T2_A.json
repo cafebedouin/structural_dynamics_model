@@ -1,0 +1,138 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Thermodynamics / Physics / Engineering",
+ "family_id": "second_law_heat_engine_efficiency",
+ "topic_summary": "Analysis of the second law of thermodynamics as a fundamental physical constraint on heat engine efficiency. The second law establishes that no heat engine operating between two thermal reservoirs can be more efficient than a reversible Carnot engine, and that all real engines must be less efficient due to irreversibilities. This constraint is independent of engineering design, materials, or technological advancement.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Second Law of Thermodynamics (fundamental physical principle governing entropy and energy conversion)",
+   "Carnot Cycle (idealized reversible heat engine establishing maximum theoretical efficiency)",
+   "Real Heat Engines (actual implementations: steam turbines, internal combustion, etc.)",
+   "Thermal Reservoirs (hot and cold temperature boundaries)",
+   "Entropy (state function measuring energy dispersal and irreversibility)"
+  ],
+  "key_tensions": [
+   "Theoretical maximum (Carnot efficiency) vs practical achievable efficiency (real engines)",
+   "Reversible idealization (zero entropy generation) vs irreversible reality (friction, heat loss, finite-time operation)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "carnot_efficiency_ceiling",
+   "human_readable": "Carnot Efficiency Ceiling (Temperature-Ratio Limit)",
+   "structural_delta": "Maximum theoretical efficiency determined solely by temperature ratio (1 - T_cold/T_hot), independent of working substance or mechanism",
+   "primary_observable": "Efficiency = (T_hot - T_cold) / T_hot for any reversible engine; measured via temperature differential",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "irreversibility_gap",
+    "finite_time_tradeoff"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Pure physical constraint; upstream to all engineering considerations; different observable (temperature ratio) from irreversibility measures"
+  },
+  {
+   "claim_id": "irreversibility_gap",
+   "human_readable": "Irreversibility Gap (Entropy Generation Penalty)",
+   "structural_delta": "Efficiency loss from irreversible processes (friction, turbulence, heat conduction across finite temperature differences) that generate entropy",
+   "primary_observable": "Entropy generation rate; exergy destruction; measured via (Carnot efficiency - actual efficiency)",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "carnot_efficiency_ceiling"
+   ],
+   "feeds_into": [
+    "engineering_optimization_space"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable (entropy generation) from temperature ratio; structurally distinct physical mechanism; passes independence test"
+  },
+  {
+   "claim_id": "finite_time_tradeoff",
+   "human_readable": "Finite-Time Tradeoff (Power vs Efficiency)",
+   "structural_delta": "Operating at maximum theoretical efficiency requires infinite time (zero power output); finite power requires operating below Carnot efficiency",
+   "primary_observable": "Power output vs efficiency curve; Curzon-Ahlborn efficiency for maximum power; measured via time-per-cycle and work output",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "carnot_efficiency_ceiling"
+   ],
+   "feeds_into": [
+    "engineering_optimization_space"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different observable (time/power) from both temperature ratio and entropy generation; structurally independent constraint; passes pairwise test"
+  },
+  {
+   "claim_id": "engineering_optimization_space",
+   "human_readable": "Engineering Optimization Space (Design Choice Within Physical Bounds)",
+   "structural_delta": "Engineering decisions (materials, geometry, operating conditions) determine position within the space bounded by Carnot ceiling, irreversibility losses, and finite-time constraints",
+   "primary_observable": "Actual engine efficiency metrics; design parameter choices; cost-benefit analysis of efficiency improvements",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "carnot_efficiency_ceiling",
+    "irreversibility_gap",
+    "finite_time_tradeoff"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Downstream synthesis node; different observable (design choices) from physical constraints; coordination problem distinct from physical limits"
+  }
+ ],
+ "generation_sequence": [
+  "carnot_efficiency_ceiling",
+  "irreversibility_gap",
+  "finite_time_tradeoff",
+  "engineering_optimization_space"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_quantum_heat_engines",
+   "description": "Do quantum heat engines operating on quantum coherence or entanglement violate or circumvent classical second law constraints? Current research suggests they remain bounded by generalized second law formulations, but this is an active research frontier.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - quantum regime not addressed in classical thermodynamics framing"
+  },
+  {
+   "id": "omega_information_thermodynamics",
+   "description": "Can information-theoretic engines (Maxwell's demon with feedback control, Szilard engine) extract work beyond classical limits? Landauer's principle suggests information erasure costs restore second law, but boundary cases remain contested.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - information as thermodynamic resource not cataloged"
+  },
+  {
+   "id": "omega_cosmological_context",
+   "description": "Does the second law's status as 'mountain' depend on cosmological boundary conditions (low-entropy Big Bang)? If universe had different initial conditions, would heat engine constraints differ? This probes whether the constraint is truly fundamental or contingent on our universe's history.",
+   "source": "Dark Matter Probe 1 (Operational Medium) - analysis assumes standard cosmological context without examination"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. All four axes represent distinct physical constraints with different observables: temperature ratio (carnot_efficiency_ceiling), entropy generation (irreversibility_gap), time/power tradeoff (finite_time_tradeoff), and design choice space (engineering_optimization_space). Each passes pairwise independence testing. Three omegas document frontier physics questions beyond classical thermodynamics scope."
+ }
+}

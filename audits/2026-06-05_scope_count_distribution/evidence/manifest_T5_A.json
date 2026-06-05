@@ -1,0 +1,177 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Law / Platform Economics / Regulatory Theory",
+ "family_id": "gig_platform_labor_classification",
+ "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and liability structures, while platforms claim algorithmic coordination justifies contractor status despite control mechanisms that resemble employment relationships.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Gig platforms (Uber, Lyft, DoorDash, Instacart, TaskRabbit - coordination intermediaries claiming non-employer status)",
+   "Platform workers (drivers, couriers, taskers - performing labor under platform terms)",
+   "Labor regulators (NLRB, state labor departments, courts - adjudicating classification)",
+   "Traditional employers (comparison class for employment relationship tests)",
+   "Venture capital (platform funders whose returns depend on contractor classification)",
+   "Consumer base (beneficiaries of low-cost services enabled by contractor model)"
+  ],
+  "key_tensions": [
+   "Platform control mechanisms vs contractor autonomy claim (algorithmic dispatch, rating systems, unilateral deactivation vs claimed flexibility)",
+   "Regulatory classification frameworks vs platform business model viability (ABC test, economic realities test vs unit economics)",
+   "Worker economic security vs consumer price accessibility (benefits/protections vs service cost structure)"
+  ],
+  "mechanisms": [
+   "Algorithmic dispatch and pricing (platform determines work allocation and compensation without negotiation)",
+   "Rating and deactivation systems (unilateral performance evaluation and termination without due process)",
+   "Terms of service modification (platform changes compensation, rules, and access unilaterally)",
+   "Regulatory arbitrage (platform structures operations to avoid triggering employment classification)"
+  ],
+  "absences": [
+   "Collective bargaining mechanisms (no framework for workers to negotiate terms collectively without employment status)",
+   "Portable benefits infrastructure (no system for benefits to follow workers across platforms)",
+   "Algorithmic transparency requirements (no mandate for platforms to disclose dispatch, pricing, or deactivation logic)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "control_autonomy_gap",
+   "human_readable": "Control-Autonomy Gap (Algorithmic Control vs Contractor Framing)",
+   "structural_delta": "Platforms exercise operational control (dispatch, pricing, performance evaluation, termination) while claiming workers retain contractor autonomy",
+   "primary_observable": "Degree of unilateral platform control over work terms vs worker discretion; measured by: algorithmic dispatch opacity, unilateral pricing changes, rating-based deactivation without appeal, terms-of-service modification frequency",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "platform_capital_structure",
+   "victim": "worker_bargaining_power",
+   "downstream_of": [],
+   "feeds_into": [
+    "classification_test_collision",
+    "regulatory_arbitrage_structure"
+   ],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Highest centrality; core structural contradiction between operational reality and legal framing; feeds multiple downstream axes"
+  },
+  {
+   "claim_id": "classification_test_collision",
+   "human_readable": "Classification Test Collision (Competing Legal Frameworks)",
+   "structural_delta": "Multiple incompatible legal tests for employment status (common law control test, ABC test, economic realities test, IRS 20-factor test) produce different classifications for identical work arrangements",
+   "primary_observable": "Jurisdiction-specific classification outcomes for same platform-worker relationship; measured by: state-by-state legal rulings, Prop 22-style carveouts, federal vs state test divergence",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "regulatory_arbitrage_capacity",
+   "victim": "classification_predictability",
+   "downstream_of": [
+    "control_autonomy_gap"
+   ],
+   "feeds_into": [
+    "regulatory_arbitrage_structure"
+   ],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (legal test structure vs operational control); downstream synthesis of control_autonomy_gap into regulatory domain; feeds regulatory_arbitrage_structure"
+  },
+  {
+   "claim_id": "regulatory_arbitrage_structure",
+   "human_readable": "Regulatory Arbitrage Structure (Classification as Business Model Dependency)",
+   "structural_delta": "Platform business models structurally depend on contractor classification to achieve unit economics; employment classification would require fundamental restructuring or exit",
+   "primary_observable": "Platform financial viability under employment vs contractor classification; measured by: unit economics with benefits/minimum wage, investor return requirements, Prop 22 spending levels, platform exit threats",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "platform_investors",
+   "victim": "worker_economic_security",
+   "downstream_of": [
+    "control_autonomy_gap",
+    "classification_test_collision"
+   ],
+   "feeds_into": [],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; downstream synthesis node integrating control gap and test collision; snare hypothesis captures extraction structure"
+  },
+  {
+   "claim_id": "collective_action_foreclosure",
+   "human_readable": "Collective Action Foreclosure (Atomization as Control Mechanism)",
+   "structural_delta": "Contractor classification forecloses collective bargaining rights while platform structure atomizes workers, preventing coordination without employment status",
+   "primary_observable": "Worker capacity for collective negotiation vs platform capacity for unilateral terms modification; measured by: NLRA Section 2(3) exclusion, antitrust barriers to contractor organizing, platform response to coordination attempts",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "platform_unilateral_control",
+   "victim": "worker_collective_power",
+   "downstream_of": [
+    "control_autonomy_gap"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (collective action capacity vs individual classification); independent structural mechanism from regulatory_arbitrage_structure; passes \u00a73 pairwise test"
+  },
+  {
+   "claim_id": "algorithmic_opacity_asymmetry",
+   "human_readable": "Algorithmic Opacity Asymmetry (Information Control as Power)",
+   "structural_delta": "Platforms possess complete information about dispatch logic, pricing algorithms, and performance evaluation while workers operate under opacity, creating structural information asymmetry",
+   "primary_observable": "Platform vs worker information access about work allocation and compensation determination; measured by: algorithm disclosure requirements, worker access to dispatch logic, pricing transparency, deactivation explanation requirements",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": "platform_optimization_capacity",
+   "victim": "worker_strategic_capacity",
+   "downstream_of": [],
+   "feeds_into": [
+    "control_autonomy_gap"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (information asymmetry vs control mechanisms); upstream enabler of control_autonomy_gap; passes \u00a73 independence test as separate structural dimension"
+  }
+ ],
+ "generation_sequence": [
+  "control_autonomy_gap",
+  "classification_test_collision",
+  "regulatory_arbitrage_structure",
+  "collective_action_foreclosure",
+  "algorithmic_opacity_asymmetry"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_portable_benefits_infrastructure",
+   "description": "Could a portable benefits system (benefits follow workers across platforms) resolve classification tension without employment status? Or does it create a new extraction layer (administrative overhead, benefit provider capture)?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - portable benefits infrastructure absent from current regulatory frameworks"
+  },
+  {
+   "id": "omega_sectoral_bargaining",
+   "description": "Would sectoral bargaining (industry-wide negotiation without employment classification) address collective_action_foreclosure? Or does it require state capacity that regulatory_arbitrage_structure would capture?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - collective bargaining absence benefits platform unilateral control"
+  },
+  {
+   "id": "omega_algorithmic_transparency_mandate",
+   "description": "If algorithmic_opacity_asymmetry were eliminated via transparency mandates, does control_autonomy_gap collapse (revealing employment relationship) or persist (control mechanisms remain regardless of visibility)?",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - algorithmic transparency requirements absent; relationship to control_autonomy_gap uncertain"
+  },
+  {
+   "id": "omega_international_classification_divergence",
+   "description": "UK Supreme Court ruled Uber drivers are workers (intermediate status); EU Platform Work Directive presumes employment. Does international divergence create regulatory arbitrage opportunities or convergence pressure?",
+   "source": "Dark Matter Probe 1 (Operational Medium) - analysis conducted within U.S. legal framework; international frameworks may reveal different structural possibilities"
+  },
+  {
+   "id": "omega_consumer_price_elasticity",
+   "description": "If employment classification increases service costs 20-30%, does demand collapse (revealing services were subsidized by worker undercompensation) or persist (revealing consumer willingness to pay)?",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - consumer base benefits from contractor model pricing; elasticity determines whether benefit is structural or contingent"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Five axes selected represent distinct structural dimensions: operational control mechanisms (control_autonomy_gap), legal framework structure (classification_test_collision), business model dependency (regulatory_arbitrage_structure), collective action capacity (collective_action_foreclosure), and information asymmetry (algorithmic_opacity_asymmetry). Each passes \u00a73 pairwise independence test with different primary observables and epsilon sources. Dark matter probes surfaced five omegas documenting bounded uncertainties in portable benefits, sectoral bargaining, algorithmic transparency, international frameworks, and consumer price elasticity."
+ }
+}

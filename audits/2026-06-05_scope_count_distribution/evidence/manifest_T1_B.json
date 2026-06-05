@@ -1,0 +1,167 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependence",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles travel on, focusing on right-hand driving as the dominant global standard. The topic examines coordination mechanisms, network effects, switching costs, and the persistence of alternative conventions despite efficiency pressures.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic convention (dominant global standard, ~165 countries)",
+   "Left-hand traffic convention (minority standard, ~75 countries, includes UK, Japan, India, Australia)",
+   "Vehicle manufacturing industry (designs for specific handedness markets)",
+   "Border crossing infrastructure (handedness transition points)",
+   "Historical colonial powers (Britain, France as convention exporters)"
+  ],
+  "key_tensions": [
+   "Network coordination benefit vs switching cost barrier (unified standard would reduce border friction but transition cost prohibitive)",
+   "Manufacturing efficiency vs market segmentation (single design standard vs dual production lines)"
+  ],
+  "mechanisms": [
+   {
+    "id": "network_lock_in",
+    "description": "Once a territory adopts a handedness convention, all infrastructure, vehicles, driver training, and signage reinforce that choice, making unilateral switching catastrophically expensive",
+    "agents": "territorial governments, infrastructure planners",
+    "targets": "all road users within territory"
+   },
+   {
+    "id": "colonial_diffusion",
+    "description": "Imperial powers exported their domestic handedness convention to colonies, creating regional clusters of same-handedness that persist post-independence",
+    "agents": "colonial administrations",
+    "targets": "colonized territories"
+   },
+   {
+    "id": "border_handedness_transition",
+    "description": "At borders between different-handedness territories, infrastructure forces lane-switching through bridges, tunnels, or traffic circles",
+    "agents": "border infrastructure designers",
+    "targets": "cross-border travelers"
+   }
+  ],
+  "absences": [
+   {
+    "id": "absence_pedestrian_handedness",
+    "description": "Analysis focuses on vehicular traffic; pedestrian walking conventions (which also vary by culture) are not addressed despite potential interaction effects"
+   },
+   {
+    "id": "absence_autonomous_vehicle_flexibility",
+    "description": "Future autonomous vehicles could theoretically switch handedness dynamically at borders, but this technological possibility is not present in current discourse"
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_lock_in",
+   "human_readable": "Coordination Equilibrium Lock-In",
+   "structural_delta": "Once a territory reaches threshold adoption of one handedness convention, unilateral deviation becomes individually costly regardless of global efficiency",
+   "primary_observable": "Switching cost as percentage of annual transportation infrastructure budget; number of countries that have successfully switched handedness (Sweden 1967, only modern example)",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "manufacturing_market_segmentation",
+    "border_friction_asymmetry"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain providing physical coordination constraint base; highest inbound/outbound edge count"
+  },
+  {
+   "claim_id": "manufacturing_market_segmentation",
+   "human_readable": "Manufacturing Market Segmentation",
+   "structural_delta": "Vehicle manufacturers must maintain parallel production lines for left-hand-drive and right-hand-drive markets, increasing per-unit costs",
+   "primary_observable": "Price differential between LHD and RHD versions of same vehicle model; manufacturer statements on production line duplication costs",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (manufacturing cost structure) independent of coordination lock-in observable; different epsilon source"
+  },
+  {
+   "claim_id": "border_friction_asymmetry",
+   "human_readable": "Border Friction Asymmetry",
+   "structural_delta": "Borders between different-handedness territories impose switching infrastructure costs and accident risk elevation not present at same-handedness borders",
+   "primary_observable": "Accident rate elevation at handedness-transition borders vs same-handedness borders; infrastructure cost per kilometer at transition points",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct observable (border infrastructure and safety metrics) independent of manufacturing costs; different epsilon source"
+  },
+  {
+   "claim_id": "colonial_path_dependence",
+   "human_readable": "Colonial Path Dependence",
+   "structural_delta": "Current handedness distribution reflects historical colonial power projection rather than independent optimization by post-colonial states",
+   "primary_observable": "Correlation between former colonial ruler and current handedness convention; persistence of convention post-independence",
+   "epsilon_bin": "v_low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coordination_equilibrium_lock_in"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct historical mechanism; different observable (colonial lineage correlation) from coordination lock-in; explains initial condition distribution"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_lock_in",
+  "manufacturing_market_segmentation",
+  "border_friction_asymmetry",
+  "colonial_path_dependence"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_pedestrian_interaction",
+   "description": "Does pedestrian walking handedness (which varies culturally) interact with vehicular handedness in ways that affect safety or coordination costs? Absence noted but not analyzed.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - absence_pedestrian_handedness"
+  },
+  {
+   "id": "omega_autonomous_flexibility",
+   "description": "Could autonomous vehicles dynamically switch handedness at borders, converting the coordination lock-in from Mountain to Rope? Technology not yet deployed at scale.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - absence_autonomous_vehicle_flexibility"
+  },
+  {
+   "id": "omega_safety_differential",
+   "description": "Is there an inherent safety difference between right-hand and left-hand traffic (e.g., related to dominant eye or hand)? Literature is contested; if real, would reclassify coordination_equilibrium_lock_in as Snare rather than Mountain.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) - potential hidden victim set if one convention is objectively less safe"
+  },
+  {
+   "id": "omega_military_standardization",
+   "description": "Did military vehicle standardization (especially post-WWII U.S. military vehicle exports) reinforce right-hand dominance beyond colonial patterns? Mechanism present but not quantified.",
+   "source": "Multi-lens scan (Military Logistics lens) - mechanism identified but data insufficient for axis"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: coordination_equilibrium_lock_in classified as Mountain (physical coordination constraint) but omega_safety_differential suggests possible Snare reclassification if one handedness convention has inherent safety advantage. Generated omega to bound this uncertainty. All four axes passed pairwise independence testing with distinct observables and epsilon sources."
+ }
+}

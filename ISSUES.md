@@ -3055,11 +3055,16 @@ distribution — which `false_*` / `dr_claim_mismatch` signatures fire, how ofte
 invariance (observer/axiom/time — `the_perturbation_principle.md` §7.1). **Staked prediction:
 weak/positive-but-far-from-1; strong cross-axis correlation would falsify the form-unity reading.**
 Cite the run manifest. **Sequencing notes:** lens-diversity (`d179423d`) is a separate change
-variable — attribute reading-set shifts to it, not the de-leak. Axis-count distribution needs a
-re-check: the no-cap SCOPE witness returned a uniform 7-7-7 with 0 deferred on 3 topics (novelty
-real — distinct deltas/observables — but the uniformity suggests a new implicit target; watch it at
-scale). OQ-70's bait confound is still live — FNL prevalence in a rebuilt corpus is not a detection
-result until OQ-70 is ruled.
+variable — attribute reading-set shifts to it, not the de-leak. ~~Axis-count distribution needs a
+re-check (7-7-7 uniform watch)~~ **RESOLVED 2026-06-05 by the SCOPE count-distribution probe**
+(`audits/2026-06-05_scope_count_distribution/`): an 8-topic richness-spanning battery × 2 arms
+(current prompt vs pre-`d179423d`) shows selected-axis counts 3→11 tracking richness, upper tiers
+(T4–T7) spreading among themselves (A: 5/6/6/11), deferrals firing (six non-zero cells), replicate
+noise ±1, arms agreeing (lens instruction not pinning counts), T7's 11 axes shown pairwise-distinct
+(one borderline composite). The original 7-7-7 was mid-richness coincidence + run noise (bridge
+topic gig-economy: 7 originally → 5 in the re-run). Stage-2 is NOT gated on a SCOPE-framing fix;
+report the axis-count distribution at scale as a readout, not a gate. OQ-70's bait confound is
+still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
 
 ---
 

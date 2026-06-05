@@ -1,0 +1,336 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Health Economics / Political Economy / Public Policy",
+ "family_id": "us_healthcare_financing_2026",
+ "topic_summary": "Analysis of United States healthcare system financing mechanisms, examining the structural characteristics that distinguish it from other high-income nations: employer-sponsored insurance dominance, fragmented public programs (Medicare, Medicaid, ACA marketplaces), fee-for-service payment incentives, pharmaceutical pricing opacity, and the absence of universal coverage despite highest per-capita spending globally.",
+ "extraction_summary": {
+  "entity_count": 8,
+  "claim_count": 6,
+  "tension_count": 4,
+  "mechanism_count": 5,
+  "absence_count": 3,
+  "key_entities": [
+   "Employer-Sponsored Insurance (ESI) system (tax-subsidized private coverage tied to employment)",
+   "Medicare (federal insurance for 65+, disabled; fee-for-service dominant)",
+   "Medicaid (federal-state means-tested coverage; state variation in eligibility)",
+   "Pharmaceutical Benefit Managers (PBMs) (intermediaries controlling drug formularies and rebates)",
+   "Hospital systems (consolidating providers with market power in pricing)",
+   "Insurance carriers (private firms managing risk pools and provider networks)",
+   "Uninsured population (27-30 million, varies by state Medicaid expansion)",
+   "Federal tax code (excludes ESI premiums from taxable income, $300B+ annual subsidy)"
+  ],
+  "key_tensions": [
+   "Universal access vs employment-based eligibility (ESI system excludes unemployed, gig workers, part-time)",
+   "Cost containment vs provider revenue maximization (fee-for-service incentivizes volume over value)",
+   "Federal standardization vs state variation (Medicaid expansion optional; 10 states non-expansion as of 2024)",
+   "Transparent pricing vs opacity (hospital chargemaster rates, PBM rebate structures hidden from patients)"
+  ],
+  "key_mechanisms": [
+   "Tax exclusion for ESI premiums (employer contributions untaxed, incentivizes coverage through employment)",
+   "Fee-for-service reimbursement (providers paid per procedure/visit, not outcome)",
+   "PBM rebate system (manufacturers pay rebates to PBMs for formulary placement; rebates not passed to patients)",
+   "Certificate of Need laws (state regulations limiting hospital/facility expansion, reducing competition)",
+   "Medicare Advantage capitation (private insurers receive per-member payment to manage Medicare beneficiaries)"
+  ],
+  "key_absences": [
+   "Global budgeting mechanism (no system-wide spending cap as in Canada, UK)",
+   "Monopsony purchasing power (fragmented payers cannot negotiate prices as single-payer systems do)",
+   "Universal catastrophic coverage floor (gaps remain for uninsured and underinsured despite ACA)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "employment_insurance_coupling",
+   "human_readable": "Employment-Insurance Coupling (ESI Structural Lock-In)",
+   "structural_delta": "Health coverage eligibility tied to employment status rather than citizenship or residency",
+   "primary_observable": "Percentage of non-elderly population covered via employer-sponsored insurance; coverage loss rate during unemployment spells",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": "large_employers_with_negotiating_power",
+   "victim": "gig_workers_part_time_unemployed",
+   "downstream_of": [],
+   "feeds_into": [
+    "coverage_fragmentation",
+    "job_lock_labor_mobility"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream structural dependency; distinct observable (employment-coverage correlation); feeds multiple downstream axes"
+  },
+  {
+   "claim_id": "fee_for_service_incentive",
+   "human_readable": "Fee-for-Service Incentive Structure (Volume Over Value)",
+   "structural_delta": "Provider reimbursement based on quantity of services delivered rather than health outcomes achieved",
+   "primary_observable": "Percentage of payments tied to fee-for-service vs value-based contracts; procedure volume growth rates",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "specialist_physicians_procedure_heavy_facilities",
+   "victim": "patients_requiring_preventive_primary_care",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_growth_trajectory",
+    "overtreatment_cascade"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Independent observable from axis 1; distinct epsilon mechanism (payment incentive vs eligibility structure); high centrality"
+  },
+  {
+   "claim_id": "pharmaceutical_opacity",
+   "human_readable": "Pharmaceutical Pricing Opacity (PBM Rebate Intermediation)",
+   "structural_delta": "Drug pricing obscured by multi-layer rebate system where negotiated discounts do not reach end patients",
+   "primary_observable": "List price vs net price differential; patient out-of-pocket as percentage of list vs net price",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "pbm_intermediaries_manufacturers",
+   "victim": "patients_paying_list_price_at_point_of_sale",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_growth_trajectory"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct observable (price transparency vs payment structure); independent epsilon from axes 1-2; snare classification warrants generation"
+  },
+  {
+   "claim_id": "coverage_fragmentation",
+   "human_readable": "Coverage Fragmentation (Multi-Payer Administrative Complexity)",
+   "structural_delta": "Thousands of distinct payer entities with non-standardized billing, eligibility, and formulary rules",
+   "primary_observable": "Administrative cost as percentage of total health spending; number of distinct payer contracts per provider",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "administrative_services_vendors",
+   "victim": "providers_navigating_billing_patients_navigating_coverage",
+   "downstream_of": [
+    "employment_insurance_coupling"
+   ],
+   "feeds_into": [
+    "cost_growth_trajectory"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Distinct observable (administrative burden vs payment incentive vs pricing opacity); downstream synthesis of axis 1"
+  },
+  {
+   "claim_id": "monopsony_absence",
+   "human_readable": "Monopsony Purchasing Power Absence (Fragmented Negotiation)",
+   "structural_delta": "No single dominant payer with leverage to set prices; providers negotiate separately with hundreds of payers",
+   "primary_observable": "Price variation for identical procedures across payers; negotiated rate dispersion",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_growth_trajectory",
+    "pharmaceutical_opacity"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Mountain providing structural constraint base; distinct from other axes (market structure vs payment method vs eligibility); feeds cost synthesis"
+  },
+  {
+   "claim_id": "cost_growth_trajectory",
+   "human_readable": "Cost Growth Trajectory (Expenditure Escalation Without Outcome Gains)",
+   "structural_delta": "Per-capita spending growth persistently exceeds GDP growth and peer nations without corresponding health outcome improvements",
+   "primary_observable": "Health spending as percentage of GDP over time; life expectancy and infant mortality vs peer OECD nations",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "incumbent_industry_stakeholders",
+   "victim": "patients_employers_taxpayers_bearing_costs",
+   "downstream_of": [
+    "fee_for_service_incentive",
+    "pharmaceutical_opacity",
+    "coverage_fragmentation",
+    "monopsony_absence"
+   ],
+   "feeds_into": [],
+   "centrality_score": 8,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Highest centrality; downstream synthesis node integrating 4 upstream axes; distinct observable (aggregate spending trajectory)"
+  },
+  {
+   "claim_id": "medicaid_state_variation",
+   "human_readable": "Medicaid State Variation (Federal-State Eligibility Fragmentation)",
+   "structural_delta": "Eligibility thresholds and benefits vary by state due to optional expansion and waiver flexibility",
+   "primary_observable": "Uninsured rate by state; Medicaid income eligibility as percentage of federal poverty level by state",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "coverage_fragmentation"
+   ],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 7,
+   "selection_reason": "Distinct observable (state policy variation vs employment coupling); independent epsilon; feeds coverage_fragmentation"
+  },
+  {
+   "claim_id": "job_lock_labor_mobility",
+   "human_readable": "Job Lock and Labor Mobility Constraint (ESI-Induced Switching Costs)",
+   "structural_delta": "Workers remain in suboptimal employment to maintain health coverage, reducing labor market fluidity",
+   "primary_observable": "Job switching rates for ESI-covered vs non-covered workers; entrepreneurship rates by coverage source",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "large_incumbent_employers",
+   "victim": "workers_with_chronic_conditions_potential_entrepreneurs",
+   "downstream_of": [
+    "employment_insurance_coupling"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 8,
+   "selection_reason": "Distinct observable (labor mobility vs coverage access); independent epsilon from parent axis; snare classification"
+  },
+  {
+   "claim_id": "overtreatment_cascade",
+   "human_readable": "Overtreatment Cascade (Defensive Medicine and Procedure Volume)",
+   "structural_delta": "Fee-for-service incentives combined with malpractice liability drive medically unnecessary procedures",
+   "primary_observable": "Regional variation in procedure rates for discretionary interventions; malpractice claim rates vs procedure volume",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "procedure_oriented_specialists",
+   "victim": "patients_exposed_to_iatrogenic_risk",
+   "downstream_of": [
+    "fee_for_service_incentive"
+   ],
+   "feeds_into": [
+    "cost_growth_trajectory"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 9,
+   "selection_reason": "Distinct observable (procedure appropriateness vs payment structure); downstream of axis 2; feeds cost synthesis"
+  },
+  {
+   "claim_id": "certificate_of_need_barriers",
+   "human_readable": "Certificate of Need Barriers (State-Imposed Supply Constraints)",
+   "structural_delta": "State regulations requiring approval for new facilities or equipment, limiting competition and maintaining incumbent market power",
+   "primary_observable": "Price levels in CON vs non-CON states; facility entry rates by state regulatory regime",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": "incumbent_hospital_systems",
+   "victim": "potential_entrant_providers_price_sensitive_patients",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_growth_trajectory"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: overlaps with monopsony_absence (both address market structure and pricing power); lower centrality; state-level variation less structurally fundamental than system-wide fragmentation"
+  },
+  {
+   "claim_id": "tax_subsidy_distortion",
+   "human_readable": "Tax Subsidy Distortion (ESI Premium Exclusion)",
+   "structural_delta": "Federal tax code excludes employer health insurance contributions from taxable income, creating $300B+ annual implicit subsidy favoring ESI over individual market",
+   "primary_observable": "Tax expenditure magnitude; ESI enrollment vs individual market enrollment; premium price differential",
+   "epsilon_bin": "mod",
+   "hypothesis": "piton",
+   "beneficiary": "high_income_workers_in_esi_plans",
+   "victim": "individual_market_purchasers_uninsured",
+   "downstream_of": [],
+   "feeds_into": [
+    "employment_insurance_coupling"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: mechanistically upstream of employment_insurance_coupling but same observable domain (ESI prevalence); generating parent axis captures this structural relationship; lower independent yield"
+  },
+  {
+   "claim_id": "medicare_advantage_capitation",
+   "human_readable": "Medicare Advantage Capitation (Private Plan Risk Selection)",
+   "structural_delta": "Private insurers receive fixed per-member payments to manage Medicare beneficiaries, creating incentives for favorable risk selection and service denial",
+   "primary_observable": "MA enrollment growth; risk-adjusted payment accuracy; service utilization rates MA vs traditional Medicare",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "ma_insurers",
+   "victim": "high_cost_beneficiaries_traditional_medicare_funding",
+   "downstream_of": [],
+   "feeds_into": [
+    "cost_growth_trajectory"
+   ],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: subset of broader fee_for_service_incentive axis (payment structure); Medicare-specific rather than system-wide; lower centrality than selected payment axis"
+  }
+ ],
+ "generation_sequence": [
+  "employment_insurance_coupling",
+  "fee_for_service_incentive",
+  "pharmaceutical_opacity",
+  "coverage_fragmentation",
+  "monopsony_absence",
+  "cost_growth_trajectory",
+  "medicaid_state_variation",
+  "job_lock_labor_mobility",
+  "overtreatment_cascade"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "certificate_of_need_barriers",
+   "structural_delta": "State regulations limiting facility entry and competition",
+   "hypothesis": "snare",
+   "deferral_reason": "Overlaps with monopsony_absence (both address market structure and pricing power); state-level variation less structurally fundamental than system-wide fragmentation"
+  },
+  {
+   "claim_id": "tax_subsidy_distortion",
+   "structural_delta": "Federal tax exclusion for ESI premiums creating implicit subsidy",
+   "hypothesis": "piton",
+   "deferral_reason": "Mechanistically upstream of employment_insurance_coupling but same observable domain; parent axis captures structural relationship with higher independent yield"
+  },
+  {
+   "claim_id": "medicare_advantage_capitation",
+   "structural_delta": "Private Medicare plans with capitated payment and risk selection incentives",
+   "hypothesis": "tangled_rope",
+   "deferral_reason": "Subset of fee_for_service_incentive payment structure axis; Medicare-specific rather than system-wide; lower centrality"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_aca_stability",
+   "description": "Is the ACA marketplace a stabilizing Rope (coordination mechanism) or a Scaffold (temporary structure awaiting replacement)? Political contestation and enrollment volatility suggest uncertain classification.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) \u2014 ACA not surfaced as primary axis despite being major 2010s reform"
+  },
+  {
+   "id": "omega_value_based_transition",
+   "description": "Are value-based payment models (ACOs, bundled payments) genuine structural alternatives to fee-for-service or Pitons that atrophy under industry resistance? Current penetration <20% of spending suggests uncertain trajectory.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) \u2014 incumbent providers benefit from FFS persistence"
+  },
+  {
+   "id": "omega_mountain_validity_monopsony",
+   "description": "Is monopsony_absence a true Mountain (structural impossibility of single-payer in US political economy) or a Piton of policy choice? Classification depends on whether political constraints are treated as immutable.",
+   "source": "F03 (Hasty Generalization) \u2014 mountain classification for market structure may conflate political and physical constraints"
+  },
+  {
+   "id": "omega_nonprofit_hospital_extraction",
+   "description": "Do nonprofit hospital systems function as Ropes (community benefit providers) or Snares (tax-advantaged rent extractors)? Consolidation and pricing behavior suggest reclassification warranted but not surfaced as primary axis.",
+   "source": "Dark Matter Probe 1 (Operational Medium) \u2014 analysis operates within assumption of nonprofit legitimacy"
+  },
+  {
+   "id": "omega_surprise_billing",
+   "description": "Is surprise billing (out-of-network charges at in-network facilities) a distinct Snare axis or subsumed under coverage_fragmentation? 2020 No Surprises Act may have resolved or merely displaced extraction mechanism.",
+   "source": "Absence Inventory \u2014 mechanism present in source material but not elevated to axis status"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: monopsony_absence classified as mountain but this treats political constraints (impossibility of single-payer in current US system) as equivalent to physical constraints. Global energy transition analogy applies \u2014 what appears structurally immutable may be policy-contingent. Generated omega_mountain_validity_monopsony to bound this uncertainty. No other fractures detected; multi-lens scan applied health economics, political economy, and institutional analysis perspectives; dark matter probes surfaced nonprofit hospital status and ACA classification as omega variables."
+ }
+}

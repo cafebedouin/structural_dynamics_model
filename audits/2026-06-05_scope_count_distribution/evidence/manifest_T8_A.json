@@ -1,0 +1,174 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependence",
+ "family_id": "road_side_convention_2026",
+ "topic_summary": "Analysis of the convention of driving on the right-hand side of the road as a coordination mechanism. The topic examines how an arbitrary choice becomes locked in through network effects, infrastructure investment, and cross-border standardization pressures, creating a self-reinforcing system where deviation carries prohibitive switching costs.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "National road authorities (rule-setting bodies with territorial jurisdiction)",
+   "Vehicle manufacturers (design standards tied to market conventions)",
+   "Cross-border travelers (coordination beneficiaries/victims of misalignment)",
+   "Infrastructure systems (road signage, intersections, highway design)",
+   "Historical precedent (Napoleon's military standardization, British Empire counter-tradition)"
+  ],
+  "key_tensions": [
+   "Arbitrary choice vs locked-in standard (initial neutrality vs irreversibility)",
+   "National sovereignty vs regional coordination pressure (Sweden 1967 switch vs UK resistance)"
+  ],
+  "key_mechanisms": [
+   "Network effects (value increases with adoption density)",
+   "Infrastructure lock-in (physical capital investment reinforces convention)",
+   "Cross-border coordination pressure (trade/travel costs create standardization incentive)"
+  ],
+  "key_absences": [
+   "Safety differential analysis (is right-side driving measurably safer for right-handed populations?)",
+   "Switching cost quantification (what would UK conversion to right-side driving actually cost?)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium_selection",
+   "human_readable": "Coordination Equilibrium Selection (Arbitrary Choice Stabilization)",
+   "structural_delta": "Mechanism by which an initially arbitrary choice between equivalent options becomes a stable equilibrium through adoption density",
+   "primary_observable": "Adoption rate over time; switching cost as function of network size",
+   "epsilon_bin": "v_low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "infrastructure_lock_in",
+    "cross_border_standardization_pressure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream coordination mechanism; structurally distinct from physical infrastructure and geopolitical dimensions"
+  },
+  {
+   "claim_id": "infrastructure_lock_in",
+   "human_readable": "Infrastructure Lock-In (Physical Capital Path Dependence)",
+   "structural_delta": "Sunk cost in physical infrastructure (road design, signage, intersection geometry) that makes convention reversal prohibitively expensive",
+   "primary_observable": "Infrastructure replacement cost estimates; depreciation schedules for road capital stock",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": "late_adopters_of_minority_convention",
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "cross_border_standardization_pressure"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (physical capital vs adoption rate); different epsilon source (depreciation vs network effects)"
+  },
+  {
+   "claim_id": "cross_border_standardization_pressure",
+   "human_readable": "Cross-Border Standardization Pressure (Regional Coordination Incentive)",
+   "structural_delta": "Economic and safety costs imposed on border-crossing travelers when adjacent jurisdictions use different conventions, creating pressure for regional harmonization",
+   "primary_observable": "Trade volume and accident rates at convention-mismatched borders; frequency of regional standardization proposals",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "dominant_convention_bloc",
+   "victim": "minority_convention_holdouts",
+   "downstream_of": [
+    "coordination_equilibrium_selection",
+    "infrastructure_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 6,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Highest centrality; downstream synthesis node with distinct beneficiary/victim structure; captures geopolitical extraction dimension"
+  },
+  {
+   "claim_id": "vehicle_design_standardization",
+   "human_readable": "Vehicle Design Standardization (Manufacturing Economies of Scale)",
+   "structural_delta": "Manufacturer incentive to produce single steering-wheel configuration for largest market, creating supply-side pressure for convention uniformity",
+   "primary_observable": "Production cost differential for right-hand-drive vs left-hand-drive vehicles; market share of dual-configuration manufacturers",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium_selection"
+   ],
+   "feeds_into": [
+    "cross_border_standardization_pressure"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Independent observable from infrastructure_lock_in (manufacturing cost vs sunk capital); parallel upstream-to-downstream pathway"
+  },
+  {
+   "claim_id": "handedness_safety_hypothesis",
+   "human_readable": "Handedness-Safety Hypothesis (Biomechanical Advantage Claim)",
+   "structural_delta": "Contested claim that right-side driving provides safety advantage for right-handed populations due to dominant-hand steering control",
+   "primary_observable": "Accident rate comparison controlling for handedness distribution; reaction time studies for dominant vs non-dominant hand steering",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: zero graph centrality; empirical evidence weak; if validated would be mountain but currently speculative scaffold"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium_selection",
+  "infrastructure_lock_in",
+  "vehicle_design_standardization",
+  "cross_border_standardization_pressure"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "handedness_safety_hypothesis",
+   "structural_delta": "Biomechanical advantage claim for right-side driving in right-handed populations",
+   "hypothesis": "mountain",
+   "deferral_reason": "Zero graph centrality; weak empirical support; if validated would be upstream mountain but currently speculative"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_safety_differential",
+   "description": "Is there a measurable safety difference between right-side and left-side driving conventions? If handedness_safety_hypothesis is validated, the Rope of coordination_equilibrium_selection becomes a Mountain of biomechanical constraint.",
+   "source": "Absence Inventory + deferred axis handedness_safety_hypothesis"
+  },
+  {
+   "id": "omega_switching_cost_threshold",
+   "description": "At what infrastructure depreciation point does switching cost fall below coordination benefit? Sweden (1967) and Samoa (2009) switched; UK has not. Is there a quantifiable threshold or is this pure political economy?",
+   "source": "Absence Inventory + infrastructure_lock_in piton classification"
+  },
+  {
+   "id": "omega_initial_arbitrariness",
+   "description": "Was the initial choice truly arbitrary or did military/trade factors (Napoleon's right-side standardization, British Empire left-side) encode power projection? If non-arbitrary, coordination_equilibrium_selection may be downstream of imperial_standardization_imposition.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) + historical precedent entity"
+  },
+  {
+   "id": "omega_autonomous_vehicle_disruption",
+   "description": "Do autonomous vehicles eliminate the coordination constraint by handling convention-switching at borders algorithmically? If so, infrastructure_lock_in and cross_border_standardization_pressure may collapse to zero epsilon in 20-year horizon.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) \u2014 technological disruption not addressed in extraction"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Four distinct axes with independent observables and non-overlapping epsilon sources. Handedness_safety_hypothesis deferred due to weak empirical support, not structural redundancy. Omega_initial_arbitrariness flags potential upstream axis (imperial standardization) not captured in current decomposition."
+ }
+}

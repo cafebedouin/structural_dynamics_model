@@ -1,0 +1,228 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Labor Economics / Political Economy / Public Policy",
+ "family_id": "minimum_wage_law",
+ "topic_summary": "Analysis of minimum wage legislation as a policy intervention in labor markets. The topic encompasses the statutory floor on hourly compensation, its effects on employment, income distribution, and firm behavior, and the political economy of wage floor determination.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 4,
+  "absence_count": 3,
+  "key_entities": [
+   "Minimum wage statute (legal wage floor)",
+   "Low-wage workers (direct beneficiaries/victims depending on employment effects)",
+   "Employers (firms subject to wage floor constraint)",
+   "Labor market (competitive vs monopsonistic structure)",
+   "State/federal legislators (authority setting wage floor)",
+   "Enforcement apparatus (compliance monitoring and penalty system)"
+  ],
+  "key_tensions": [
+   "Worker income protection vs employment quantity (wage floor may reduce hiring)",
+   "Competitive market assumption vs monopsony power (structural market type determines effect direction)",
+   "Statutory uniformity vs local cost-of-living variation (single floor across heterogeneous economies)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "labor_market_structure",
+   "human_readable": "Labor Market Structure (Competitive vs Monopsony Power)",
+   "structural_delta": "Degree of employer wage-setting power in low-skill labor markets",
+   "primary_observable": "Herfindahl index of local employer concentration; wage-employment elasticity in response to minimum wage changes",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "employment_quantity_effect",
+    "income_distribution_effect"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Upstream mountain determining whether wage floor acts as binding constraint or correction of monopsony power; structurally distinct from all other axes"
+  },
+  {
+   "claim_id": "employment_quantity_effect",
+   "human_readable": "Employment Quantity Effect (Disemployment vs Neutral/Positive)",
+   "structural_delta": "Change in employment quantity resulting from wage floor imposition",
+   "primary_observable": "Employment levels in affected sectors pre/post minimum wage increase; difference-in-differences estimates across jurisdictions",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "employers_in_competitive_markets",
+   "victim": "marginal_workers",
+   "downstream_of": [
+    "labor_market_structure"
+   ],
+   "feeds_into": [
+    "income_distribution_effect"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Downstream of market structure; distinct observable (employment count) from income distribution; highest centrality"
+  },
+  {
+   "claim_id": "income_distribution_effect",
+   "human_readable": "Income Distribution Effect (Redistribution Mechanism)",
+   "structural_delta": "Net change in income distribution among low-wage workers and between workers and capital",
+   "primary_observable": "Gini coefficient change in bottom income quintile; total wage bill for affected workers; profit margins in affected sectors",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "labor_market_structure",
+    "employment_quantity_effect"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct observable (income distribution) from employment quantity; downstream synthesis of market structure and employment effects"
+  },
+  {
+   "claim_id": "compliance_enforcement_gap",
+   "human_readable": "Compliance Enforcement Gap (Statutory vs Effective Floor)",
+   "structural_delta": "Gap between statutory wage floor and actual enforcement in informal/vulnerable sectors",
+   "primary_observable": "Audit frequency; violation detection rate; wage theft complaint volume; undocumented worker wage data",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "employers_evading_compliance",
+   "victim": "workers_in_informal_sectors",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Structurally independent axis with distinct observable (enforcement gap vs market structure or employment); high epsilon snare"
+  },
+  {
+   "claim_id": "geographic_cost_heterogeneity",
+   "human_readable": "Geographic Cost Heterogeneity (Uniform Floor vs Local Purchasing Power)",
+   "structural_delta": "Mismatch between uniform statutory floor and spatially heterogeneous cost of living",
+   "primary_observable": "Regional price index variation; ratio of minimum wage to local median rent; real purchasing power of minimum wage across metros",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct observable (geographic purchasing power variation) independent of market structure, employment, or enforcement axes"
+  },
+  {
+   "claim_id": "political_determination_mechanism",
+   "human_readable": "Political Determination Mechanism (Wage Floor Setting Process)",
+   "structural_delta": "Process by which statutory floor is set and adjusted over time",
+   "primary_observable": "Legislative voting patterns; lobbying expenditure by business vs labor; indexation to inflation vs discretionary adjustment",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "organized_labor_and_low_wage_advocacy",
+   "victim": "unorganized_workers_during_adjustment_lag",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 0,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Distinct observable (political process) independent of economic effects; captures authority structure for wage floor determination"
+  },
+  {
+   "claim_id": "substitution_margin_response",
+   "human_readable": "Substitution Margin Response (Capital/Automation vs Labor)",
+   "structural_delta": "Firm substitution of capital or automation for minimum wage labor",
+   "primary_observable": "Self-checkout adoption rate; automation investment in affected sectors; capital-labor ratio changes post-wage increase",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "employment_quantity_effect"
+   ],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: mechanism is downstream of employment_quantity_effect and shares overlapping observable (employment reduction via substitution vs direct disemployment); lower structural distinctiveness"
+  },
+  {
+   "claim_id": "hours_reduction_margin",
+   "human_readable": "Hours Reduction Margin (Wage vs Hours Adjustment)",
+   "structural_delta": "Employer adjustment via reducing worker hours rather than headcount",
+   "primary_observable": "Average weekly hours for minimum wage workers; part-time vs full-time employment ratio changes",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "employment_quantity_effect"
+   ],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: adjustment mechanism downstream of employment_quantity_effect; overlaps with employment observable (hours are employment quantity measured differently); lower structural distinctiveness"
+  }
+ ],
+ "generation_sequence": [
+  "labor_market_structure",
+  "employment_quantity_effect",
+  "income_distribution_effect",
+  "compliance_enforcement_gap",
+  "geographic_cost_heterogeneity",
+  "political_determination_mechanism"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "substitution_margin_response",
+   "structural_delta": "Firm substitution of capital/automation for minimum wage labor",
+   "hypothesis": "piton",
+   "deferral_reason": "Downstream mechanism of employment_quantity_effect with overlapping observable (employment reduction via substitution vs direct disemployment); captured indirectly via employment axis"
+  },
+  {
+   "claim_id": "hours_reduction_margin",
+   "structural_delta": "Employer adjustment via reducing worker hours rather than headcount",
+   "hypothesis": "piton",
+   "deferral_reason": "Adjustment mechanism downstream of employment_quantity_effect; hours are employment quantity measured at different margin; lower structural distinctiveness than selected axes"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_monopsony_prevalence",
+   "description": "Is labor_market_structure a true Mountain (structural employer concentration) or a Rope of policy choice (antitrust enforcement determines concentration)? Monopsony prevalence may be endogenous to competition policy.",
+   "source": "Dark Matter Probe 1 (Operational Medium) + F03 (Hasty Generalization)"
+  },
+  {
+   "id": "omega_informal_sector_size",
+   "description": "Compliance_enforcement_gap epsilon depends on informal sector size, which varies dramatically across jurisdictions. High-epsilon classification assumes substantial informal employment; may be low-epsilon in economies with strong formalization.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_indexation_counterfactual",
+   "description": "Political_determination_mechanism classified as tangled_rope, but if wage floor were indexed to inflation/median wage, would become Rope (coordination). Current classification assumes discretionary adjustment process.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_general_equilibrium",
+   "description": "All axes analyze partial equilibrium effects. General equilibrium effects (price changes, demand shifts, fiscal impacts) are absent from decomposition. May warrant separate axis in expanded analysis.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_teen_subminimum",
+   "description": "Youth/training subminimum wage provisions create separate constraint regime for specific demographic. Not decomposed as separate axis but may interact with employment_quantity_effect differently than adult minimum wage.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: labor_market_structure classified as mountain but employer concentration may be endogenous to antitrust policy rather than structural feature. Generated omega_monopsony_prevalence to bound this uncertainty. No other fractures detected; six lenses applied (neoclassical labor economics, institutional economics, political economy, enforcement/compliance, geographic economics, public choice theory)."
+ }
+}

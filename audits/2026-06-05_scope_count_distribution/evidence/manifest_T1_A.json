@@ -1,0 +1,223 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Technology Lock-In",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention determining which side of the road vehicles travel on, focusing on right-hand driving as the globally dominant standard. Examines the coordination mechanisms, path dependencies, and structural constraints that maintain this convention despite its arbitrary origins.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   {
+    "id": "rht_countries",
+    "name": "Right-hand traffic countries",
+    "type": "state",
+    "role": "Jurisdictions enforcing right-side driving convention"
+   },
+   {
+    "id": "lht_countries",
+    "name": "Left-hand traffic countries",
+    "type": "state",
+    "role": "Jurisdictions enforcing left-side driving convention (UK, Japan, Australia, etc.)"
+   },
+   {
+    "id": "vehicle_manufacturers",
+    "name": "Automotive manufacturers",
+    "type": "organization",
+    "role": "Producers of vehicles with fixed steering-wheel placement"
+   },
+   {
+    "id": "border_crossings",
+    "name": "Border crossing infrastructure",
+    "type": "resource",
+    "role": "Physical transition points between different handedness regimes"
+   },
+   {
+    "id": "road_users",
+    "name": "Drivers and pedestrians",
+    "type": "person",
+    "role": "Agents whose coordination the convention enables"
+   }
+  ],
+  "key_claims": [
+   {
+    "id": "claim_arbitrary_origin",
+    "content": "The choice of right vs left has no inherent physical or safety advantage",
+    "source_location": "implicit in topic framing",
+    "status": "stated_as_fact"
+   },
+   {
+    "id": "claim_coordination_value",
+    "content": "Universal adoption within a jurisdiction prevents head-on collisions",
+    "source_location": "implicit in convention function",
+    "status": "stated_as_fact"
+   },
+   {
+    "id": "claim_switching_cost",
+    "content": "Changing handedness requires simultaneous infrastructure and vehicle fleet replacement",
+    "source_location": "historical examples (Sweden 1967)",
+    "status": "argued"
+   },
+   {
+    "id": "claim_global_dominance",
+    "content": "Approximately 65-70% of world population drives on the right",
+    "source_location": "demographic distribution",
+    "status": "stated_as_fact"
+   }
+  ],
+  "key_tensions": [
+   {
+    "id": "tension_border_incompatibility",
+    "poles": [
+     "rht_countries",
+     "lht_countries"
+    ],
+    "nature": "Adjacent jurisdictions with different conventions create coordination friction at borders"
+   },
+   {
+    "id": "tension_manufacturing_standardization",
+    "poles": [
+     "vehicle_manufacturers",
+     "lht_countries"
+    ],
+    "nature": "Minority markets face higher vehicle costs due to specialized production runs"
+   }
+  ],
+  "key_mechanisms": [
+   {
+    "id": "mech_enforcement",
+    "description": "State traffic law enforcement punishing wrong-side driving",
+    "agents": [
+     "state traffic authorities"
+    ],
+    "targets": [
+     "road_users"
+    ]
+   },
+   {
+    "id": "mech_network_effect",
+    "description": "Each additional adopter increases coordination value for all participants",
+    "agents": [
+     "road_users"
+    ],
+    "targets": [
+     "road_users"
+    ]
+   },
+   {
+    "id": "mech_infrastructure_lock",
+    "description": "Road signage, lane markings, intersection design physically encode handedness",
+    "agents": [
+     "state infrastructure authorities"
+    ],
+    "targets": [
+     "road_users"
+    ]
+   }
+  ],
+  "key_absences": [
+   {
+    "id": "absence_pedestrian_handedness",
+    "description": "No analysis of whether pedestrian flow conventions (sidewalk passing) correlate with or diverge from vehicular handedness"
+   },
+   {
+    "id": "absence_cognitive_asymmetry",
+    "description": "No consideration of whether human visual/motor asymmetries (handedness, visual field dominance) create any measurable safety differential between conventions"
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "coordination_equilibrium",
+   "human_readable": "Coordination Equilibrium (Pure Convention)",
+   "structural_delta": "The convention solves a pure coordination problem where any universal standard has equal value but deviation is costly",
+   "primary_observable": "Accident rates at borders between different-handedness jurisdictions vs within-jurisdiction rates; switching costs measured in Sweden 1967 transition",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_lock_in",
+    "manufacturing_extraction"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational mountain providing the coordination substrate; feeds into both downstream axes"
+  },
+  {
+   "claim_id": "network_lock_in",
+   "human_readable": "Network Lock-In (Path Dependency via Infrastructure)",
+   "structural_delta": "Physical infrastructure (road design, signage, intersections) and vehicle fleet composition create switching costs that grow with network size",
+   "primary_observable": "Cost estimates for jurisdiction-wide handedness switches; infrastructure replacement timelines; vehicle fleet turnover rates",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "coordination_equilibrium"
+   ],
+   "feeds_into": [
+    "manufacturing_extraction"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (switching costs vs coordination value); rope mechanism layered on mountain substrate"
+  },
+  {
+   "claim_id": "manufacturing_extraction",
+   "human_readable": "Manufacturing Extraction (Minority Market Premium)",
+   "structural_delta": "Left-hand traffic countries face higher vehicle costs due to specialized production runs and reduced economies of scale",
+   "primary_observable": "Price differential for LHT-spec vehicles vs RHT-spec vehicles; production volume ratios; manufacturer profit margins by market",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "vehicle_manufacturers",
+   "victim": "lht_countries",
+   "downstream_of": [
+    "coordination_equilibrium",
+    "network_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct beneficiary structure; extractive mechanism downstream of both coordination and lock-in"
+  }
+ ],
+ "generation_sequence": [
+  "coordination_equilibrium",
+  "network_lock_in",
+  "manufacturing_extraction"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_cognitive_asymmetry",
+   "description": "Does human handedness or visual field dominance create any measurable safety differential between RHT and LHT? If so, the Mountain of coordination_equilibrium may conceal a weak Piton of biological optimization.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_cognitive_asymmetry"
+  },
+  {
+   "id": "omega_pedestrian_divergence",
+   "description": "Do pedestrian flow conventions (sidewalk passing, stairwell traffic) follow vehicular handedness or diverge? Divergence would suggest the coordination equilibrium is domain-specific rather than universal.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_pedestrian_handedness"
+  },
+  {
+   "id": "omega_colonial_imposition",
+   "description": "Was LHT adoption in former British colonies a Rope (coordination) or a Snare (imposed extraction)? Post-independence retention suggests Rope, but transition costs may have locked in colonial choice.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Three axes pass pairwise independence: coordination_equilibrium (different observable: coordination value vs switching costs), network_lock_in (different observable: infrastructure replacement costs vs coordination value), manufacturing_extraction (different observable: price differentials; distinct beneficiary structure). Dark matter probes surfaced cognitive asymmetry and pedestrian flow as bounded uncertainties rather than distinct axes."
+ }
+}

@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — SCOPE count-distribution probe: 7-7-7 was coincidence + run noise, NOT an implicit target (OQ-75 watch resolved)
+**Files:** python/audits/scope_count_distribution_probe.py, prompts/uke_scope_v2_json.md, agent/c-orchestrator.py, ISSUES.md
+**Tier:** landed
+
+Two-arm (current vs pre-`d179423d` SCOPE prompt — the lens instruction IS in the decomposition
+system prompt, `c-orchestrator.py:177,421`, so one arm couldn't name a FAIL's lever), 8-topic
+richness-spanning battery, 16/16 calls, pre-registered signatures including the upper-tier
+masked-target sub-criterion (T4–T7 must spread among THEMSELVES; a binary floor rescuing global
+range = FAIL). Result: selected counts 3→11 tracking richness; upper tiers spread (A: 5/6/6/11,
+B: 5/7/6/9); deferrals fire (six non-zero cells — §4 triage visibly works, including deferring
+an axis that overlapped another); replicate noise ±1; arms agree; T7's 11 axes shown
+pairwise-distinct (1 borderline composite). Bridge replicate: gig-economy 7 (original) → 5
+(re-run) — the original uniformity was mid-richness coincidence + temp-0.2 run noise. Stage-2
+(OQ-75) is NOT gated on a SCOPE-framing fix; axis-count distribution at scale is a readout, not
+a gate. Side observation (recorded, not gating): kernel-recognition is itself noisy — T5
+decomposed as a kernel in one arm only. Writeup + 16 raw manifests + driver:
+`audits/2026-06-05_scope_count_distribution/`.
+
 ## 2026-06-05 — Generation-pipeline de-leak: schema/prompt/feedback boundaries no longer hand the author the engine's bands (audit brief F1–F9)
 **Files:** schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, python/linter.py, python/regenerate_stories.py, python/generate_constraint_pl.py, agent/c-orchestrator.py, agent/orchestrator.py, agent/uke_narrative_orchestrator.py, agent/story_generator_base.py, agent/generate_kernel_corpus.py, docs/logic_extensions.md, docs/technical/generation_path_resolution.md
 **Tier:** landed

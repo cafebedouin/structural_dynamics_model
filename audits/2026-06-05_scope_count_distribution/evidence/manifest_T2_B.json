@@ -1,0 +1,107 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Thermodynamics / Physics / Engineering",
+ "family_id": "thermodynamic_efficiency_limit",
+ "topic_summary": "Analysis of the second law of thermodynamics as a fundamental constraint on heat engine efficiency. The topic examines how entropy increase imposes an absolute upper bound on the conversion of thermal energy to mechanical work, independent of engineering design or material properties.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 1,
+  "mechanism_count": 2,
+  "absence_count": 2,
+  "key_entities": [
+   "Second Law of Thermodynamics (physical law governing entropy and energy conversion)",
+   "Carnot Efficiency (theoretical maximum efficiency for heat engines)",
+   "Heat Engine (device converting thermal energy to mechanical work)",
+   "Entropy (measure of energy unavailability and disorder)",
+   "Reservoir Temperatures (hot and cold thermal reservoirs defining operational bounds)"
+  ],
+  "key_tensions": [
+   "Theoretical maximum efficiency vs practical achievable efficiency (Carnot limit vs real engines)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "carnot_efficiency_ceiling",
+   "human_readable": "Carnot Efficiency Ceiling (Thermodynamic Maximum)",
+   "structural_delta": "Absolute upper bound on efficiency determined by reservoir temperature ratio, \u03b7_max = 1 - (T_cold/T_hot)",
+   "primary_observable": "Ratio of cold to hot reservoir absolute temperatures; no engine can exceed this efficiency",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "irreversibility_gap",
+    "temperature_differential_constraint"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Primary physical law constraint; upstream to all other axes; mountain with zero extractiveness"
+  },
+  {
+   "claim_id": "irreversibility_gap",
+   "human_readable": "Irreversibility Gap (Real Process Losses)",
+   "structural_delta": "Difference between Carnot efficiency and actual efficiency due to friction, heat leakage, and non-quasi-static processes",
+   "primary_observable": "Entropy generation rate in real processes; measured efficiency vs Carnot efficiency for same temperature differential",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "carnot_efficiency_ceiling"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (entropy generation vs temperature ratio); independent physical mechanism; mountain with engineering implications"
+  },
+  {
+   "claim_id": "temperature_differential_constraint",
+   "human_readable": "Temperature Differential Constraint (Reservoir Availability)",
+   "structural_delta": "Physical or economic limits on achievable temperature differentials between hot and cold reservoirs",
+   "primary_observable": "Available hot source temperature (combustion, solar, nuclear) and cold sink temperature (ambient, cooling system)",
+   "epsilon_bin": "low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "carnot_efficiency_ceiling"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different observable from irreversibility_gap; addresses input constraints rather than process losses; independent axis"
+  }
+ ],
+ "generation_sequence": [
+  "carnot_efficiency_ceiling",
+  "irreversibility_gap",
+  "temperature_differential_constraint"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_quantum_regime",
+   "description": "Does the second law hold at quantum scales where thermal fluctuations become significant? Quantum heat engines may exhibit different efficiency bounds.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - quantum thermodynamics not addressed"
+  },
+  {
+   "id": "omega_information_thermodynamics",
+   "description": "Can information processing (Maxwell's demon, Landauer's principle) circumvent or reframe the efficiency limit? Information erasure costs may alter the constraint structure.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) - information-theoretic perspective absent"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "All axes classified as mountains with v_low to low epsilon. Domain is fundamental physics with well-established observables. No fractures detected. Quantum and information-theoretic regimes noted as omegas but beyond scope of classical thermodynamics analysis."
+ }
+}

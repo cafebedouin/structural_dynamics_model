@@ -1,0 +1,191 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Transportation Systems / Institutional Coordination / Path Dependence",
+ "family_id": "road_handedness_convention",
+ "topic_summary": "Analysis of the convention governing which side of the road vehicles travel on, focusing on right-hand driving as the dominant global standard. The topic examines how an arbitrary coordination choice becomes locked in through network effects, infrastructure investment, and cross-border standardization pressures.",
+ "extraction_summary": {
+  "entity_count": 5,
+  "claim_count": 4,
+  "tension_count": 2,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Right-hand traffic convention (global majority standard, ~165 countries)",
+   "Left-hand traffic convention (minority standard, ~75 countries including UK, Japan, India)",
+   "Vehicle manufacturing industry (designs for dominant market)",
+   "Border crossing infrastructure (requires handedness transition zones)",
+   "International standards bodies (Vienna Convention on Road Traffic)"
+  ],
+  "key_tensions": [
+   "Network coordination benefit vs switching cost asymmetry (majority standard gains compounding advantage)",
+   "National sovereignty over traffic rules vs cross-border travel efficiency"
+  ],
+  "mechanisms": [
+   {
+    "id": "network_lock_in",
+    "description": "Each additional adopter increases switching cost for remaining holdouts through vehicle design standardization and driver training incompatibility",
+    "agents": "adopting nations, vehicle manufacturers",
+    "targets": "non-adopting nations, individual drivers"
+   },
+   {
+    "id": "infrastructure_sunk_cost",
+    "description": "Road signage, intersection design, highway on-ramps all encode handedness; switching requires rebuilding physical infrastructure",
+    "agents": "transportation departments",
+    "targets": "national budgets, existing road users"
+   },
+   {
+    "id": "manufacturing_standardization",
+    "description": "Vehicle production optimizes for majority market; minority-handedness vehicles cost more due to smaller production runs",
+    "agents": "automotive industry",
+    "targets": "left-hand traffic countries, consumers in those markets"
+   }
+  ],
+  "absences": [
+   {
+    "id": "absence_safety_differential",
+    "description": "No discussion of whether right-hand vs left-hand traffic has measurable safety differences (relevant if one convention has lower accident rates)"
+   },
+   {
+    "id": "absence_historical_origin",
+    "description": "The initial choice mechanism (why some countries chose right vs left) is not addressed, though it may reveal whether the convention was ever contested or simply inherited"
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "arbitrary_coordination_equilibrium",
+   "human_readable": "Arbitrary Coordination Equilibrium (Pure Convention)",
+   "structural_delta": "The choice between right and left has no inherent functional superiority; value exists only in coordination",
+   "primary_observable": "Absence of safety or efficiency differential between right-hand and left-hand traffic systems when controlling for infrastructure quality",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "network_effect_lock_in",
+    "switching_cost_asymmetry"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Foundational mountain establishing that handedness is pure coordination problem; upstream to all other axes"
+  },
+  {
+   "claim_id": "network_effect_lock_in",
+   "human_readable": "Network Effect Lock-In (Compounding Coordination Advantage)",
+   "structural_delta": "Each additional adopter of the majority standard increases the cost for non-adopters to maintain minority standard",
+   "primary_observable": "Vehicle manufacturing cost differential between right-hand-drive and left-hand-drive markets; cross-border travel friction at handedness transition points",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "arbitrary_coordination_equilibrium"
+   ],
+   "feeds_into": [
+    "switching_cost_asymmetry"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Distinct observable (network size effects) from mountain; pure coordination mechanism without beneficiary extraction"
+  },
+  {
+   "claim_id": "switching_cost_asymmetry",
+   "human_readable": "Switching Cost Asymmetry (Irreversible Infrastructure Investment)",
+   "structural_delta": "Sunk infrastructure costs create irreversible path dependence; switching requires rebuilding entire transportation system",
+   "primary_observable": "Estimated cost to switch handedness (road reconstruction, signage replacement, vehicle fleet turnover); historical examples of countries that switched (Sweden 1967, Samoa 2009)",
+   "epsilon_bin": "mod",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": "minority_handedness_countries",
+   "downstream_of": [
+    "arbitrary_coordination_equilibrium",
+    "network_effect_lock_in"
+   ],
+   "feeds_into": [
+    "standardization_pressure"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Distinct from network effects (sunk cost vs coordination benefit); introduces victim structure (countries locked into minority standard)"
+  },
+  {
+   "claim_id": "standardization_pressure",
+   "human_readable": "Standardization Pressure (Coercive Harmonization)",
+   "structural_delta": "Majority standard holders exert pressure on minority to switch through trade agreements, vehicle import restrictions, and regional integration requirements",
+   "primary_observable": "EU accession requirements for traffic standardization; ASEAN harmonization discussions; vehicle import tariff structures favoring majority-handedness vehicles",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "majority_standard_countries",
+   "victim": "minority_standard_countries",
+   "downstream_of": [
+    "switching_cost_asymmetry"
+   ],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Introduces beneficiary extraction (majority standard holders gain from forcing minority to bear switching costs); distinct from piton (active coercion vs passive lock-in)"
+  },
+  {
+   "claim_id": "manufacturing_oligopoly_leverage",
+   "human_readable": "Manufacturing Oligopoly Leverage (Industry Standardization as Market Control)",
+   "structural_delta": "Vehicle manufacturers use majority-standard optimization to extract rents from minority-handedness markets through higher prices and limited model availability",
+   "primary_observable": "Price differential for right-hand-drive vs left-hand-drive versions of same vehicle model; model availability gaps in minority markets",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "automotive_manufacturers",
+   "victim": "consumers_in_minority_markets",
+   "downstream_of": [
+    "network_effect_lock_in"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Distinct beneficiary structure (private industry extraction vs state-level coordination); different observable (price discrimination vs switching costs)"
+  }
+ ],
+ "generation_sequence": [
+  "arbitrary_coordination_equilibrium",
+  "network_effect_lock_in",
+  "switching_cost_asymmetry",
+  "standardization_pressure",
+  "manufacturing_oligopoly_leverage"
+ ],
+ "deferred_axes": [],
+ "omegas": [
+  {
+   "id": "omega_safety_differential",
+   "description": "Does right-hand vs left-hand traffic have measurable safety differences? If right-hand driving correlates with lower accident rates due to majority of population being right-eye dominant, the Mountain classification may be incorrect\u2014it would be a Rope of human physiology rather than pure convention.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_safety_differential"
+  },
+  {
+   "id": "omega_historical_contingency",
+   "description": "Was the initial right/left split contested or inherited? If Napoleon's conquests imposed right-hand traffic on continental Europe while Britain retained left-hand as resistance, the convention may encode historical power dynamics rather than arbitrary coordination.",
+   "source": "Dark Matter Probe 2 (Absence Inventory) + absence_historical_origin"
+  },
+  {
+   "id": "omega_switching_feasibility",
+   "description": "Are switching costs truly prohibitive or merely politically inconvenient? Sweden (1967) and Samoa (2009) successfully switched; if switching is feasible for small/medium countries, the Piton classification may overstate irreversibility.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan) examining who benefits from framing switching as impossible"
+  },
+  {
+   "id": "omega_autonomous_vehicle_disruption",
+   "description": "Do autonomous vehicles eliminate handedness lock-in? If AVs can dynamically adapt to either standard, the entire constraint topology may dissolve within 20 years.",
+   "source": "Dark Matter Probe 1 (Operational Medium) examining technological substrate assumptions"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": true,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "F03 detected: arbitrary_coordination_equilibrium classified as mountain but assumes no safety differential between right-hand and left-hand traffic. If right-eye dominance in majority of population creates measurable safety advantage for right-hand traffic, the convention is not arbitrary\u2014it would be a Rope of human physiology. Generated omega_safety_differential to bound this uncertainty."
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Public Policy / Chronobiology / Political Economy",
+ "family_id": "daylight_saving_time_2026",
+ "topic_summary": "Analysis of daylight saving time (DST) as a policy intervention that shifts clock time biannually. The practice originated in wartime energy conservation efforts and persists despite contested evidence of benefits, generating ongoing debates about health impacts, economic effects, and coordination costs.",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 3,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "DST policy (biannual clock shift mechanism)",
+   "Circadian biology (human physiological timing system)",
+   "Energy sector (original policy beneficiary)",
+   "Retail/leisure industries (evening daylight beneficiaries)",
+   "Agricultural sector (coordination cost bearer)",
+   "State/provincial governments (implementation authorities with varying adoption)"
+  ],
+  "key_tensions": [
+   "Circadian alignment vs social coordination (biological time vs clock time)",
+   "Energy conservation claims vs empirical evidence (policy justification vs measured outcomes)",
+   "Uniform time policy vs geographic/latitude variation (one-size-fits-all vs regional optimization)"
+  ],
+  "key_mechanisms": [
+   "Biannual clock transition (enforcement: legal mandate; targets: all time-dependent systems)",
+   "Circadian disruption pathway (agents: light-dark cycle shift; targets: sleep-wake physiology)",
+   "Coordination cost imposition (agents: policy mandate; targets: scheduling systems, agriculture, healthcare)"
+  ],
+  "key_absences": [
+   "Latitude-dependent impact analysis (DST effects vary dramatically by distance from equator, but policy treats all regions uniformly)",
+   "Exit cost analysis (why policy persists despite weak evidence for benefits and strong evidence of costs)"
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "circadian_misalignment",
+   "human_readable": "Circadian Misalignment (Biological Clock vs Social Clock Conflict)",
+   "structural_delta": "Forced desynchronization between endogenous circadian rhythm and socially imposed clock time",
+   "primary_observable": "Sleep onset latency, wake time distribution, melatonin timing relative to clock time during DST vs standard time",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "health_cost_externality",
+    "productivity_friction"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "Mountain providing physiological constraint base; highest inbound edge count; structurally independent from other axes"
+  },
+  {
+   "claim_id": "energy_conservation_myth",
+   "human_readable": "Energy Conservation Myth (Claimed Justification vs Measured Outcome)",
+   "structural_delta": "Persistent policy justification (energy savings) contradicted by empirical measurement showing negligible or negative effects",
+   "primary_observable": "Aggregate electricity consumption before/after DST transitions; controlled studies of energy use",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "policy_inertia_coalition",
+   "victim": "evidence_based_policy",
+   "downstream_of": [],
+   "feeds_into": [
+    "policy_persistence_puzzle"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Different observable (energy consumption vs circadian timing); distinct beneficiary structure; feeds policy persistence"
+  },
+  {
+   "claim_id": "coordination_cost_distribution",
+   "human_readable": "Coordination Cost Distribution (Asymmetric Burden Across Sectors)",
+   "structural_delta": "Biannual transition imposes heterogeneous costs: high for agriculture/healthcare/transport, low for office work",
+   "primary_observable": "Sector-specific transition costs (livestock feeding schedules, medication timing, flight scheduling complexity)",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "retail_leisure_sectors",
+   "victim": "agriculture_healthcare_transport",
+   "downstream_of": [],
+   "feeds_into": [
+    "policy_persistence_puzzle"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Different observable (sector-specific costs vs energy or health); distinct victim set; independent from circadian axis"
+  },
+  {
+   "claim_id": "health_cost_externality",
+   "human_readable": "Health Cost Externality (Cardiovascular and Accident Risk Spikes)",
+   "structural_delta": "Measurable increases in heart attacks, strokes, and traffic accidents in days following spring transition",
+   "primary_observable": "Hospital admission rates, traffic accident rates in 3-day window post-transition vs baseline",
+   "epsilon_bin": "low",
+   "hypothesis": "snare",
+   "beneficiary": null,
+   "victim": "general_population",
+   "downstream_of": [
+    "circadian_misalignment"
+   ],
+   "feeds_into": [
+    "policy_persistence_puzzle"
+   ],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 4,
+   "selection_reason": "Downstream of circadian mountain but different observable (health outcomes vs sleep timing); distinct epsilon; feeds policy puzzle"
+  },
+  {
+   "claim_id": "latitude_gradient_neglect",
+   "human_readable": "Latitude Gradient Neglect (Uniform Policy Despite Geographic Variation)",
+   "structural_delta": "Single policy applied uniformly despite dramatic variation in daylight duration by latitude (minimal effect near equator, extreme at high latitudes)",
+   "primary_observable": "Daylight duration change from DST by latitude; policy adoption uniformity vs latitude-specific impact",
+   "epsilon_bin": "mod",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "centralized_policy_authority",
+   "victim": "high_latitude_populations",
+   "downstream_of": [],
+   "feeds_into": [
+    "policy_persistence_puzzle"
+   ],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 5,
+   "selection_reason": "Different observable (geographic variation vs time/health/cost); distinct structural delta; independent from other axes"
+  },
+  {
+   "claim_id": "policy_persistence_puzzle",
+   "human_readable": "Policy Persistence Puzzle (Survival Despite Negative Evidence)",
+   "structural_delta": "DST persists across jurisdictions despite weak evidence for benefits and strong evidence of costs",
+   "primary_observable": "Policy repeal attempts vs successful repeals; legislative inertia metrics; interest group lobbying patterns",
+   "epsilon_bin": "high",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "retail_leisure_lobby",
+   "victim": "evidence_based_reform",
+   "downstream_of": [
+    "energy_conservation_myth",
+    "coordination_cost_distribution",
+    "health_cost_externality",
+    "latitude_gradient_neglect"
+   ],
+   "feeds_into": [],
+   "centrality_score": 7,
+   "selected": true,
+   "generation_order": 6,
+   "selection_reason": "Highest centrality (4 inbound edges); downstream synthesis node; distinct observable (policy dynamics vs physical/health effects)"
+  },
+  {
+   "claim_id": "productivity_friction",
+   "human_readable": "Productivity Friction (Workplace Performance Degradation)",
+   "structural_delta": "Measurable decreases in workplace productivity and cognitive performance following transitions",
+   "primary_observable": "Workplace accident rates, task completion times, error rates in week following transition",
+   "epsilon_bin": "low",
+   "hypothesis": "rope",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "circadian_misalignment"
+   ],
+   "feeds_into": [
+    "policy_persistence_puzzle"
+   ],
+   "centrality_score": 3,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: shares observable space with health_cost_externality (both downstream of circadian mountain measuring acute transition effects); lower structural distinctiveness"
+  }
+ ],
+ "generation_sequence": [
+  "circadian_misalignment",
+  "energy_conservation_myth",
+  "coordination_cost_distribution",
+  "health_cost_externality",
+  "latitude_gradient_neglect",
+  "policy_persistence_puzzle"
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "productivity_friction",
+   "structural_delta": "Workplace performance degradation following transitions",
+   "hypothesis": "rope",
+   "deferral_reason": "Shares observable space with health_cost_externality (both measure acute transition effects downstream of circadian mountain); captured indirectly via health axis"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_standard_time_preference",
+   "description": "If DST is abolished, should regions adopt permanent standard time or permanent DST? Circadian biology favors standard time (aligns with solar noon), but public preference surveys often favor permanent DST (evening light preference). This is a values conflict, not resolvable by constraint analysis alone.",
+   "source": "Dark Matter Probe 2 (Absence Inventory)"
+  },
+  {
+   "id": "omega_international_coordination",
+   "description": "How do international time zone coordination costs interact with DST policy? Cross-border commerce and communication may create network effects that sustain DST even when local costs exceed local benefits.",
+   "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+  },
+  {
+   "id": "omega_retail_lobby_quantification",
+   "description": "What is the actual economic benefit to retail/leisure sectors from extended evening daylight? Policy persistence puzzle identifies them as beneficiaries, but magnitude of benefit vs coordination costs is empirically contested.",
+   "source": "Axis policy_persistence_puzzle beneficiary identification"
+  },
+  {
+   "id": "omega_transition_vs_permanent_dst",
+   "description": "Are the measured health/productivity costs primarily from the biannual transition itself, or from the misalignment between DST and solar time? Permanent DST would eliminate transition costs but worsen winter morning circadian misalignment.",
+   "source": "Axes circadian_misalignment and health_cost_externality interaction"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": false,
+  "notes": "No fractures detected. Multi-lens scan covered chronobiology (circadian axis), economics (energy myth, coordination costs), public health (health externality), geography (latitude gradient), and political economy (policy persistence). Dark matter probes surfaced latitude gradient neglect and policy persistence puzzle. Six distinct axes survived pairwise independence testing with different observables and epsilon structures."
+ }
+}
