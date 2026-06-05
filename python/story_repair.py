@@ -135,8 +135,11 @@ def repair_story(story, schema=None):
         for k in list(bp.keys()):
             if k not in BASE_PROPS_ALLOWED:
                 del bp[k]
-        if "mandatrophy_resolved" not in bp:
-            bp["mandatrophy_resolved"] = bp.get("extractiveness", 0) < 0.46
+        # REMOVED 2026-06-05 (de-leak): the old rule fabricated mandatrophy_resolved from
+        # an extractiveness threshold (a band-keyed default writing an AUTHORED field the
+        # author never authored — fabricated-default pattern, and the eps>0.70 schema
+        # conditional it served was deleted with the bands). Repair never touches authored
+        # claims/metrics; authored-vs-computed divergence is signal, read downstream.
         for f in BASE_PROPS_UNIT_RANGE:
             if isinstance(bp.get(f), (int, float)):
                 bp[f] = _clamp(bp[f], 0.0, 1.0)

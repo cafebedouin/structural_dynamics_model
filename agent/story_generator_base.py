@@ -140,17 +140,19 @@ def strip_json_fences(text):
 # ---------------------------------------------------------------------------
 # Prompt builder
 # ---------------------------------------------------------------------------
-def build_prompt(source_description, context_text=""):
-    """Assemble the full generation prompt with schema and example context.
+def build_prompt_parts(source_description, context_text=""):
+    """Split prompt assembly: (static_prefix, dynamic_tail).
 
-    *source_description* is e.g. ``"URL: https://..."`` or ``"TOPIC: AI safety"``.
-    *context_text* is optional extra context (original content, error feedback).
+    The static prefix (generation prompt + schema + example + example note) is
+    identical across all stories in a run and therefore cacheable
+    (``cache_control: ephemeral`` in batch requests). The dynamic tail carries the
+    per-story task. ``build_prompt`` is the canonical single source of truth —
+    it concatenates exactly these two parts; batch callers use the split form.
     """
     prompt_text = _load_context_file(PROMPT_PATH)
     schema_text = _load_context_file(SCHEMA_PATH)
     example_text = _load_context_file(EXAMPLE_PATH)
 
-    example_text = _load_context_file(EXAMPLE_PATH)
     example_note = (
         "\n\nNOTE: The example above shows ONE structural position pattern "
         "(Archetype A — extraction visible from below). Your constraint's "
@@ -158,7 +160,7 @@ def build_prompt(source_description, context_text=""):
         "section in the generation prompt for other archetypes. Do NOT copy "
         "the example's power/exit/directionality assignments.\n"
    	)
-    parts = [
+    static_prefix = "".join([
         "=== GENERATION PROMPT ===\n",
         prompt_text,
         "\n\n=== JSON SCHEMA ===\n",
@@ -166,14 +168,26 @@ def build_prompt(source_description, context_text=""):
         "\n\n=== EXAMPLE JSON ===\n",
         example_text,
         example_note,
+    ])
+    dynamic_parts = [
         "\n\n=== YOUR TASK ===\n",
         f"Generate a complete constraint story JSON for: {source_description}\n",
         "Follow the schema exactly. Output ONLY valid JSON — no markdown fences, no commentary.\n",
     ]
     if context_text:
-        parts.append("\n")
-        parts.append(context_text)
-    return "".join(parts)
+        dynamic_parts.append("\n")
+        dynamic_parts.append(context_text)
+    return static_prefix, "".join(dynamic_parts)
+
+
+def build_prompt(source_description, context_text=""):
+    """Assemble the full generation prompt with schema and example context.
+
+    *source_description* is e.g. ``"URL: https://..."`` or ``"TOPIC: AI safety"``.
+    *context_text* is optional extra context (original content, error feedback).
+    """
+    static_prefix, dynamic_tail = build_prompt_parts(source_description, context_text)
+    return static_prefix + dynamic_tail
 
 
 # ---------------------------------------------------------------------------

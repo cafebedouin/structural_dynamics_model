@@ -132,6 +132,29 @@ def run_prolog_report(constraint_id):
 
 # --- Helpers ---
 
+def _authored_vs_computed(claimed, live_perspectives):
+    """Render the authored-claim vs engine-computed divergence readout (de-leak 2026-06-05:
+    the divergence IS the research signal — it is highlighted here, never 'corrected' in the
+    authored story). Returns a list of report lines (possibly empty)."""
+    if not claimed or claimed in ("N/A", "none", "null") or not live_perspectives:
+        return []
+    seats = [p for p in ("powerless", "moderate", "institutional", "analytical")
+             if p in live_perspectives]
+    if not seats:
+        return []
+    agree = [p for p in seats if live_perspectives[p] == claimed]
+    if len(agree) == len(seats):
+        return [f"    Authored vs Computed: AGREE at all {len(seats)} seats"]
+    diverging = ", ".join(f"{live_perspectives[p]}@{p}" for p in seats
+                          if live_perspectives[p] != claimed)
+    return [
+        f"    Authored vs Computed: DIVERGES at {len(seats) - len(agree)}/{len(seats)} seats "
+        f"— claimed {claimed}; computed {diverging}",
+        "      (divergence is signal, not defect: the engine recomputes the type; the "
+        "authored claim is never corrected)",
+    ]
+
+
 def _compact_types(perspectives):
     """Summarize perspectives as 'type1 (ctx1), type2 (ctx2)' — one ctx per unique type."""
     type_to_ctx = {}
@@ -558,6 +581,7 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
             live_str = _compact_types(live_perspectives)
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
+        lines.extend(_authored_vs_computed(claimed, live_perspectives))
 
         lines.append(f"    Signature:        {signature}")
 
@@ -602,6 +626,7 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
             live_str = _compact_types(live_perspectives)
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
+        lines.extend(_authored_vs_computed(live_claimed, live_perspectives))
         lines.append("    Signature:        [from Prolog output above]")
         lines.append("    Purity:           [not yet in batch]")
         lines.append("    Coupling:         [not yet in batch]")

@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — c-orchestrator batch generation (dependency waves); repair de-fanged; report highlights authored-vs-computed divergence
+**Files:** agent/c-orchestrator.py, agent/story_generator_base.py, python/story_repair.py, python/enhanced_report.py
+**Tier:** landed
+
+With the axis cap removed, 6–8 sequential Sonnet calls became the per-topic long pole.
+`_step_generate` now dispatches to a BATCH path by default (`--serial-generate` /
+`DR_SERIAL_GENERATE=1` keeps the legacy loop with its LLM retry-with-feedback): each §5.1
+dependency WAVE is one Anthropic batch (50% cheaper; static prefix cache-controlled; `poll_batch`
+reused from generate_kernel_corpus — no pattern fork); upstream claimed_type context flows
+between waves; failed upstreams unblock dependents (no deadlock). `build_prompt` refactored into
+`build_prompt_parts` (static/dynamic split) with a byte-parity witness (old vs new identical,
+both arg shapes). Offline simulation witness (fake client): correct wave partitioning
+(a/c/e → b → d), upstream context injected, cache_control present, 5/5 saved, tokens summed.
+**Operator ruling folded in: generated stories are NOT linted at generation time and the
+authored side is never "fixed" — divergence is read downstream.** Two enforcement changes:
+(1) `story_repair.py` no longer fabricates `mandatrophy_resolved` from an extractiveness
+threshold (band-keyed fabricated default writing an authored field; its schema conditional died
+with the de-leak) — witnessed: repair leaves claim/metrics untouched, high-ε story without the
+field validates; (2) `enhanced_report.py` CONSTRAINT IDENTITY now renders an explicit
+"Authored vs Computed: DIVERGES at n/m seats — …(divergence is signal, not defect)" line in
+both branches (witnessed both directions). The batch path contains zero lint calls (grep = 0).
+
 ## 2026-06-05 — Generate-both landed: forced-flat control on every kernel, mechanical alignment key flat_control_of/2 (OQ-76 mitigated)
 **Files:** agent/generate_kernel_corpus.py, python/generate_constraint_pl.py, prolog/testsets/flatctl_probe/, ISSUES.md
 **Tier:** landed

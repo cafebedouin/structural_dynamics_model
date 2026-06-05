@@ -40,6 +40,7 @@ from agent.story_generator_base import (
     TESTSETS_DIR,
     _load_context_file,
     build_prompt,
+    build_prompt_parts,
     _SYSTEM_INSTRUCTION,
 )
 
@@ -140,6 +141,7 @@ class DRAuditOrchestrator:
     def __init__(
         self,
         axes: int | None = None,
+        serial_generate: bool = False,
         run_tag: str | None = None,
         skip_corpus_update: bool = False,
         skip_search: bool = False,
@@ -149,6 +151,7 @@ class DRAuditOrchestrator:
         progress_callback: Callable[[str, str], None] | None = None,
     ):
         self.axes = axes
+        self.serial_generate = serial_generate
         self._run_tag = run_tag
         self.skip_corpus_update = skip_corpus_update
         self.skip_search = skip_search
@@ -469,7 +472,211 @@ class DRAuditOrchestrator:
     # ------------------------------------------------------------------
 
     def _step_generate(self, manifest: dict) -> StepResult:
-        self._progress("generate", "Generating constraint stories...")
+        """Dispatch: batch mode by default (2026-06-05; the uncapped axis budget makes
+        6-8 sequential Sonnet calls the long pole). --serial-generate or
+        DR_SERIAL_GENERATE=1 keeps the legacy per-item loop, which retains the
+        LLM retry-with-feedback path."""
+        if self.serial_generate or os.environ.get("DR_SERIAL_GENERATE") == "1":
+            return self._step_generate_serial(manifest)
+        return self._step_generate_batch(manifest)
+
+    @staticmethod
+    def _axis_source_desc(manifest: dict, claim_id: str, axis: dict) -> str:
+        """Per-axis source description — shared by serial and batch paths."""
+        source_desc = (
+            f"TOPIC: {manifest.get('domain', 'Unknown')}\n"
+            f"CONSTRAINT: {claim_id}\n"
+            f"Structural delta: {axis['structural_delta']}\n"
+            f"Primary observable: {axis['primary_observable']}\n"
+            f"Hypothesis type: {axis['hypothesis']}"
+        )
+        if axis.get("beneficiary"):
+            source_desc += f"\nBeneficiary: {axis['beneficiary']}"
+        if axis.get("victim"):
+            source_desc += f"\nVictim: {axis['victim']}"
+        cs_recog = manifest.get("commitment_system_recognition")
+        if cs_recog:
+            source_desc += f"\nCommitment System Recognition: {json.dumps(cs_recog)}"
+        return source_desc
+
+    @staticmethod
+    def _upstream_context(axis: dict, generated_by_id: dict, claim_id: str) -> str:
+        """§5.1 upstream context from already-generated stories (shared by both paths)."""
+        upstream_context = ""
+        for upstream_id in axis.get("downstream_of", []):
+            upstream_story = generated_by_id.get(upstream_id)
+            if upstream_story:
+                upstream_context += (
+                    f"\nUPSTREAM CONSTRAINT: {upstream_id}\n"
+                    f"  claimed_type: {upstream_story['base_properties'].get('claimed_type', 'unknown')}\n"
+                    f"  affects_constraint: {upstream_id} → {claim_id}\n"
+                )
+        return upstream_context
+
+    def _step_generate_batch(self, manifest: dict) -> StepResult:
+        """Batched generation (2026-06-05): each dependency WAVE is one Anthropic
+        batch — parallel server-side, 50% cheaper, static prefix cache-controlled
+        (pattern shared with generate_kernel_corpus; poll_batch reused from there).
+
+        Waves preserve §5.1 upstream context: an axis whose downstream_of names
+        another axis in this run generates in a later wave, with the upstream's
+        claimed_type injected. A pure dependency chain degenerates to sequential
+        waves, which is the correct behavior.
+
+        The per-item LLM retry-with-feedback loop of the serial path is replaced by
+        deterministic repair (strip_extra_properties + repair_story — schema-shape
+        only, never reconciling authored claims to metrics). Failures fall out for a
+        later regenerate pass. NO LINTING here: authored-vs-computed divergence is
+        the research signal and is read downstream (enhanced_report), never "fixed"
+        at generation time.
+        """
+        self._progress("generate", "Generating constraint stories (batch mode)...")
+        t0 = time.time()
+        from agent.generate_kernel_corpus import poll_batch
+        from story_repair import repair_story
+
+        sequence = manifest["generation_sequence"]
+        axes_by_id = {a["claim_id"]: a for a in manifest["axes"]}
+
+        # Resolve sequence entries → (claim_id, axis, entry), preserving order
+        items = []
+        seen = set()
+        for entry in sequence:
+            if isinstance(entry, dict):
+                claim_id = entry.get("claim_id") or entry.get("constraint_id")
+            else:
+                claim_id = entry
+            if not claim_id or claim_id in seen:
+                continue
+            seen.add(claim_id)
+            axis = axes_by_id.get(claim_id)
+            if not axis:
+                self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
+                continue
+            items.append((claim_id, axis, entry))
+
+        run_ids = {cid for cid, _, _ in items}
+        generated_stories: list[dict] = []
+        generated_by_id: dict[str, dict] = {}
+        failed_ids: set[str] = set()
+        total_tin = total_tout = 0
+        client = _get_client()
+
+        remaining = list(items)
+        wave_no = 0
+        while remaining:
+            wave_no += 1
+            # An item is wave-ready when every in-run upstream has been generated
+            # or has terminally failed (failed upstream ⇒ generate without its context
+            # rather than deadlocking).
+            wave = [it for it in remaining
+                    if not any(u in run_ids and u not in generated_by_id and u not in failed_ids
+                               for u in (it[1].get("downstream_of") or []))]
+            if not wave:
+                self._progress("generate",
+                               f"Wave {wave_no}: dependency cycle among "
+                               f"{[c for c, _, _ in remaining]} — generating without upstream context")
+                wave = remaining
+            remaining = [it for it in remaining if it not in wave]
+
+            requests, idmap, entry_map = [], {}, {}
+            for idx, (cid, axis, entry) in enumerate(wave):
+                source_desc = self._axis_source_desc(manifest, cid, axis)
+                context_text = self._upstream_context(axis, generated_by_id, cid)
+                static_prefix, dynamic_tail = build_prompt_parts(source_desc, context_text)
+                custom_id = f"w{wave_no}i{idx}"   # batch custom_id is capped at 64 chars
+                idmap[custom_id] = cid
+                entry_map[cid] = entry
+                requests.append({
+                    "custom_id": custom_id,
+                    "params": {
+                        "model": self.MODELS["architect"],
+                        "max_tokens": self.MAX_TOKENS["architect"],
+                        "temperature": float(os.environ.get("DR_TEMPERATURE", "0.2")),
+                        "system": _SYSTEM_INSTRUCTION,
+                        "messages": [{
+                            "role": "user",
+                            "content": [
+                                {"type": "text", "text": static_prefix,
+                                 "cache_control": {"type": "ephemeral"}},
+                                {"type": "text", "text": dynamic_tail},
+                            ],
+                        }],
+                    },
+                })
+
+            self._progress("generate",
+                           f"Wave {wave_no}: submitting batch of {len(requests)} "
+                           f"({', '.join(idmap.values())})")
+            try:
+                batch = client.messages.batches.create(requests=requests)
+                poll_batch(client, batch.id, 15)
+            except Exception as e:
+                self._progress("generate", f"Wave {wave_no} batch failed: {e}")
+                failed_ids.update(idmap.values())
+                continue
+
+            for result in client.messages.batches.results(batch.id):
+                cid = idmap.get(result.custom_id, result.custom_id)
+                entry = entry_map.get(cid, cid)
+                if result.result.type != "succeeded":
+                    self._progress("generate", f"FAIL {cid}: {result.result.type}")
+                    failed_ids.add(cid)
+                    continue
+                msg = result.result.message
+                usage = getattr(msg, "usage", None)
+                if usage:
+                    total_tin += getattr(usage, "input_tokens", 0) or 0
+                    total_tout += getattr(usage, "output_tokens", 0) or 0
+                raw = "".join(b.text for b in msg.content if b.type == "text")
+                story_dict, errors = process_response(raw)
+
+                if story_dict is not None and errors:
+                    # Deterministic repair only — schema shape, never claim/metric
+                    # reconciliation (the divergence is signal, not defect).
+                    repaired, props_removed = strip_extra_properties(story_dict, self._schema)
+                    repaired = repair_story(repaired, self._schema)
+                    retry_errors = validate_json(repaired)
+                    if not retry_errors:
+                        story_dict, errors = repaired, []
+                        if props_removed:
+                            self._progress("generate", f"Repaired {cid}: stripped {props_removed}")
+
+                if story_dict is None or errors:
+                    self._progress("generate",
+                                   f"FAIL {cid}: invalid after repair "
+                                   f"({(errors or ['parse error'])[0][:90]})")
+                    failed_ids.add(cid)
+                    continue
+
+                kernel_id = entry.get("kernel_id") if isinstance(entry, dict) else None
+                if kernel_id:
+                    story_dict["_kernel_id"] = kernel_id
+
+                json_path, _pl_path = save_story_tagged(
+                    story_dict, self._json_dir, self._testsets_dir, overwrite=True
+                )
+                if json_path:
+                    generated_stories.append(story_dict)
+                    generated_by_id[story_dict["header"]["constraint_id"]] = story_dict
+                    self._progress("generate", f"Saved {cid}")
+                else:
+                    failed_ids.add(cid)
+
+        if failed_ids:
+            self._progress("generate",
+                           f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — "
+                           f"re-run or use regenerate pass; not silently dropped")
+        self._progress("generate",
+                       f"Generated {len(generated_stories)}/{len(items)} stories in {wave_no} wave(s)")
+        return StepResult(
+            step="generate", status="success", data=generated_stories,
+            tokens_in=total_tin, tokens_out=total_tout,
+            duration_s=time.time() - t0,
+        )
+
+    def _step_generate_serial(self, manifest: dict) -> StepResult:
+        self._progress("generate", "Generating constraint stories (serial mode)...")
         t0 = time.time()
 
         sequence = manifest["generation_sequence"]
@@ -799,6 +1006,9 @@ def main():
     parser = argparse.ArgumentParser(description="DR Audit Pipeline")
     parser.add_argument("topic", nargs="?", help="Topic text (or use --input-file / stdin)")
     parser.add_argument("--input-file", "-f", help="Read topic from file")
+    parser.add_argument("--serial-generate", action="store_true",
+                        help="Use the legacy one-at-a-time generation loop (keeps the "
+                             "per-item LLM retry-with-feedback path) instead of the batch API")
     parser.add_argument("--axes", type=int, default=None,
                         help="Optional budget ceiling on axes (default: none — the SCOPE §3 "
                              "pairwise independence test decides how many axes proceed)")
@@ -835,6 +1045,7 @@ def main():
 
     orch = DRAuditOrchestrator(
         axes=args.axes,
+        serial_generate=args.serial_generate,
         run_tag=args.run_tag,
         skip_corpus_update=args.skip_corpus_update,
         skip_search=args.skip_search,
