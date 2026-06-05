@@ -235,7 +235,7 @@ anywhere else. If `logic.md` specifies a threshold, it must match `config.pl` �
 **Rule 3b — Thresholds never reach the authoring LLM (de-leak, 2026-06-05).**
 The engine's classification bands must NOT appear in any author-facing surface:
 the generator prompt (`prompts/constraint_story_generation_prompt_json.md`), the
-JSON schema (`python/constraint_story_schema.json` — its text ships verbatim in
+JSON schema (`schemas/constraint_story_schema.json` — its text ships verbatim in
 the generation prompt via `story_generator_base.build_prompt`), or LLM retry/
 feedback text (`regenerate_stories.py` filters `THRESHOLD_COUPLED_LINT` codes;
 `c-orchestrator._sanitize_feedback_error` scrubs bound values). The authored

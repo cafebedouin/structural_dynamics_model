@@ -25,7 +25,7 @@ PROMPT_PATH = Path(os.environ.get(
 ))
 SCHEMA_PATH = Path(os.environ.get(
     "DR_SCHEMA",
-    str(REPO_ROOT / "python" / "constraint_story_schema.json")
+    str(REPO_ROOT / "schemas" / "constraint_story_schema.json")
 ))
 EXAMPLE_PATH = REPO_ROOT / "agent" / "verification_bottleneck.json"
 JSON_DIR = REPO_ROOT / "json"

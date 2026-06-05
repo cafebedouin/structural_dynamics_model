@@ -285,7 +285,7 @@ def lint_file(filepath):
 
     # 15. COORDINATION_TYPE CONSISTENCY (v5.0; extended to 6 values 2026-06-05)
     # If coordination_type/2 is declared, validate the atom is one of the 6 valid types.
-    # Canonical source: python/constraint_story_schema.json $defs.CoordinationType.enum —
+    # Canonical source: schemas/constraint_story_schema.json $defs.CoordinationType.enum —
     # keep this set in sync with it (hardcoded to avoid a new file dependency in the linter).
     valid_coord_types = {
         'information_standard', 'attachment_coordination', 'resource_allocation',

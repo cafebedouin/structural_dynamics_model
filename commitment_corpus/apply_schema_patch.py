@@ -10,10 +10,9 @@ already exists with a different spec.
 Usage:
     python3 apply_schema_patch.py path/to/constraint_story_schema.json [--dry-run]
 
-This must be run against BOTH schema copies the pipeline uses:
-    python/constraint_story_schema.json
-    agent/data/constraint_story_schema.json
-(They are identical per the recon; patch both.)
+Run against the canonical schema (relocated 2026-06-05; the former
+agent/data/ copy was a stale orphan and has been deleted):
+    schemas/constraint_story_schema.json
 """
 import argparse
 import json

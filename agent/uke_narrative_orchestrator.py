@@ -604,7 +604,7 @@ class UKEOrchestrator:
         protocol_files = {
             "uke_scope":  _REPO_ROOT / "prompts" / "uke_scope_v2_json.md",
             "gen_prompt": _REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md",
-            "schema":     _REPO_ROOT / "python" / "constraint_story_schema.json",
+            "schema":     _REPO_ROOT / "schemas" / "constraint_story_schema.json",
             "example":    _REPO_ROOT / "json" / "antifragility.json",
         }
 

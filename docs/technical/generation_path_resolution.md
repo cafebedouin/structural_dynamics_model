@@ -15,14 +15,14 @@ env var can silently redirect it. This is the seam OQ-47 (de-stamp regen) depend
 | Constant | Resolves to | Env override |
 |---|---|---|
 | `PROMPT_PATH` | `prompts/constraint_story_generation_prompt_json.md` | `DR_GEN_PROMPT` |
-| `SCHEMA_PATH` | `python/constraint_story_schema.json` (the **canonical** schema) | `DR_SCHEMA` |
+| `SCHEMA_PATH` | `schemas/constraint_story_schema.json` (the **canonical** schema; relocated from `python/` 2026-06-05) | `DR_SCHEMA` |
 | `EXAMPLE_PATH` | `agent/verification_bottleneck.json` | — |
 
 `SCHEMA_PATH` is loaded twice: as **prompt text** (injected so the model sees the schema) and as the
 **validation** dict (`story_generator_base:load_schema`). `generate_constraint_pl._load_schema` also
-resolves `DR_SCHEMA` else the same canonical file. **All schema reads → `python/constraint_story_schema.json`.**
-`agent/data/constraint_story_schema.json` is an **orphan** — referenced only by
-`commitment_corpus/apply_schema_patch.py`, loaded by neither generator. Do not edit it expecting effect.
+resolves `DR_SCHEMA` else the same canonical file. **All schema reads → `schemas/constraint_story_schema.json`**
+(relocated from `python/` 2026-06-05). The former `agent/data/constraint_story_schema.json` orphan
+(stale: 158-line diff, loaded by nothing) was deleted in the same change.
 
 ## The two generators
 

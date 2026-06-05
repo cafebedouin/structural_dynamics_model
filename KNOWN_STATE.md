@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-06-05 — Generation-pipeline de-leak: schema/prompt/feedback boundaries no longer hand the author the engine's bands (audit brief F1–F9)
-**Files:** python/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, python/linter.py, python/regenerate_stories.py, agent/c-orchestrator.py, agent/orchestrator.py, agent/uke_narrative_orchestrator.py, agent/generate_kernel_corpus.py, docs/logic_extensions.md
+**Files:** schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, python/linter.py, python/regenerate_stories.py, python/generate_constraint_pl.py, agent/c-orchestrator.py, agent/orchestrator.py, agent/uke_narrative_orchestrator.py, agent/story_generator_base.py, agent/generate_kernel_corpus.py, docs/logic_extensions.md, docs/technical/generation_path_resolution.md
 **Tier:** landed
 
 The authored-claim-vs-computed-type diff is the research signal (`the_perturbation_principle.md`);
@@ -93,8 +93,18 @@ not classification bands); qualitative f(d)/χ direction-of-effect mentions; sch
 messages outside c-orchestrator are unsanitized (harmless post-de-leak: the schema no longer
 carries band values to echo). Known limitation (pre-existing): c-orchestrator `_step_generate`
 resolves only `manifest["axes"]` — kernel-reading entries skip (witnessed twice); kernel topics go
-through `generate_kernel_corpus.py`. `agent/data/constraint_story_schema.json` is a stale orphan
-(158-line diff vs canonical, no loader reads it) — deletion proposed, not yet ruled.
+through `generate_kernel_corpus.py`.
+
+**Schema relocated (operator-ruled, same day): canonical schema now lives at
+`schemas/constraint_story_schema.json`** (moved out of `python/`; the stale
+`agent/data/constraint_story_schema.json` orphan — 158-line diff, loaded by nothing — deleted).
+All loaders updated and witnessed (generate_constraint_pl `_load_schema` relative default,
+regenerate_stories `SCHEMA_PATH`, story_generator_base, orchestrator, uke_narrative_orchestrator;
+validate_constraint_story delegates to generate_constraint_pl); `DR_SCHEMA` env override
+unchanged; assembled-payload band grep re-run post-move: still 0. Live docs updated
+(`docs/technical/generation_path_resolution.md`, AGENTS.md Rule 3b, commitment_corpus/ROLLOUT.md,
+apply_schema_patch docstring); archived papers/handoffs keep the old path (point-in-time
+convention, audits/README).
 
 ## 2026-06-04 — OQ-71 depth-lineage probe: SCALE RUN COMPLETE — H1/H3 falsified beyond noise (boundedness is within-regime only)
 **Files:** prolog/testsets/lineage_probe_01/, docs/design/a_hypothesis_about_corpus_size.md, ISSUES.md

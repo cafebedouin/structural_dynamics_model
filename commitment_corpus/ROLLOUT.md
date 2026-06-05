@@ -32,8 +32,8 @@ against a toy corpus, THEN decide what to formalize.
      recognition object spec).
    - Splice `GENERATION_addition.md` into `prompts/constraint_story_generation_prompt_json.md`
      after the Directionality Overrides section.
-   - `python3 python/apply_schema_patch.py python/constraint_story_schema.json`
-   - `python3 python/apply_schema_patch.py agent/data/constraint_story_schema.json`
+   - `python3 commitment_corpus/apply_schema_patch.py schemas/constraint_story_schema.json`
+     (single canonical schema since 2026-06-05; the agent/data/ orphan copy is deleted)
    - `cp python/generate_kernel_corpus.py agent/`
 
 4. **Regression gate (the critical step a branch can't give you).**

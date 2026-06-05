@@ -100,7 +100,7 @@ class DRAuditOrchestrator:
         self.protocols = {
             "uke_scope":  _load_context_file(str(REPO_ROOT / "prompts" / "uke_scope_v2_json.md")),
             "gen_prompt": _load_context_file(str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")),
-            "schema":     _load_context_file(str(REPO_ROOT / "python" / "constraint_story_schema.json")),
+            "schema":     _load_context_file(str(REPO_ROOT / "schemas" / "constraint_story_schema.json")),
             "example":    _load_context_file(str(REPO_ROOT / "json" / "antifragility.json")),
             "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_write_v2.1.md")),
         }

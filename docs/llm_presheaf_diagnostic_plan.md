@@ -163,7 +163,7 @@ The same constraint description is provided to all 4 perspective runs. Only the 
 
 ### 2.2 Validation
 
-**Existing validation**: The linter (`python/linter.py`) and JSON schema (`python/constraint_story_schema.json`) validate each generated story independently. No modification needed.
+**Existing validation**: The linter (`python/linter.py`) and JSON schema (`schemas/constraint_story_schema.json`) validate each generated story independently. No modification needed.
 
 **New measurement — Linter failure rate per perspective**: If the U1 (powerless/trapped) preamble causes Gemini to produce syntactically broken Prolog or out-of-range metrics at a higher rate than U4 (analytical), that is data about how role-adoption affects generation reliability. This is a cheap measurement: count linter failures per perspective x framing, report as a table.
 
@@ -212,7 +212,7 @@ For each constraint C with complete or near-complete data:
 | `agent/orchestrator.py` | Pipeline pattern to follow for experiment orchestrator |
 | `python/generate_constraint_pl.py` | JSON-to-Prolog compiler (`validate_json`, `generate_pl`) |
 | `python/linter.py` | Schema validation (`lint_file`) |
-| `python/constraint_story_schema.json` | JSON schema for story validation |
+| `schemas/constraint_story_schema.json` | JSON schema for story validation |
 | `python/run_pipeline.py` | Pipeline orchestration pattern |
 | `python/enhanced_report.py` | Diagnostic verdicts |
 | `prolog/drl_core.pl` | `dr_type/3` classification, `classify_from_metrics/6`, standard contexts |
@@ -434,7 +434,7 @@ Per the Grothendieck cohomology module's own rigor standards:
 | `agent/orchestrator.py` | ~300 | Pattern for experiment orchestrator |
 | `python/generate_constraint_pl.py` | ~400 | JSON → Prolog compilation |
 | `python/linter.py` | ~500 | Schema + structural validation |
-| `python/constraint_story_schema.json` | ~200 | JSON schema for story format |
+| `schemas/constraint_story_schema.json` | ~200 | JSON schema for story format |
 | `python/run_pipeline.py` | ~200 | Pipeline orchestration pattern |
 | `python/enhanced_report.py` | ~300 | Diagnostic verdict generation |
 | `prolog/drl_core.pl` | ~658 | `dr_type/3`, `classify_from_metrics/6`, `standard_context/1` |

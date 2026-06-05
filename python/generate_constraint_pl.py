@@ -20,7 +20,8 @@ import sys
 def _load_schema():
     """Load the JSON schema; DR_SCHEMA env var overrides the default path."""
     env_path = os.environ.get("DR_SCHEMA")
-    schema_path = env_path if env_path else os.path.join(os.path.dirname(__file__), "constraint_story_schema.json")
+    schema_path = env_path if env_path else os.path.join(
+        os.path.dirname(__file__), "..", "schemas", "constraint_story_schema.json")
     with open(schema_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
