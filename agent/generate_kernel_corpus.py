@@ -223,6 +223,15 @@ def research_seed(seed, max_uses=5):
 def flatten_manifests(manifests):
     """Walk every manifest's generation_sequence; emit one gen-seed per axis/reading.
 
+    DEPENDENCY NOTE (2026-06-05): this path deliberately does NOT wave-sequence like
+    c-orchestrator._step_generate_batch. Kernel readings are SIBLINGS (parallel by
+    design; linkage is declared upfront via sibling_reading_ids — stateless
+    generation) and flat controls are independent, so one batch is the correct
+    shape. KNOWN GAP: `downstream_of` edges on ORDINARY axes inside kernel
+    manifests are dropped silently — those stories get no upstream claimed_type
+    context. Port the orchestrator's wave logic if kernel manifests start
+    emitting such edges.
+
     Returns (gen_seeds, positional_recovery_count).
     positional_recovery_count: number of kernel-tagged seeds where the SCOPE model
     emitted a kernel_id but omitted reading_id from the generation_sequence entry.
@@ -452,7 +461,7 @@ def build_batch_requests(gen_seeds):
             "custom_id": s["constraint_id"],
             "params": {
                 "model": GEN_MODEL,
-                "max_tokens": 8192,
+                "max_tokens": 16384,  # raised 2026-06-05 with the orchestrator: stories now ~6-7k tokens; batch truncation = parse-fail
                 "system": system,
                 "messages": build_cached_messages(s),
             },
@@ -473,7 +482,7 @@ def build_indexed_batch_requests(gen_seeds):
             "custom_id": cidk,
             "params": {
                 "model": GEN_MODEL,
-                "max_tokens": 8192,
+                "max_tokens": 16384,  # raised 2026-06-05 with the orchestrator: stories now ~6-7k tokens; batch truncation = parse-fail
                 "system": system,
                 "messages": build_cached_messages(s),
             },
