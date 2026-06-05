@@ -283,11 +283,13 @@ def lint_file(filepath):
                         f"Must be one of: {sorted(valid_claim_types)}."
                     )
 
-    # 15. COORDINATION_TYPE CONSISTENCY (v5.0)
-    # If coordination_type/2 is declared, validate the atom is one of the 4 valid types.
+    # 15. COORDINATION_TYPE CONSISTENCY (v5.0; extended to 6 values 2026-06-05)
+    # If coordination_type/2 is declared, validate the atom is one of the 6 valid types.
+    # Canonical source: python/constraint_story_schema.json $defs.CoordinationType.enum —
+    # keep this set in sync with it (hardcoded to avoid a new file dependency in the linter).
     valid_coord_types = {
-        'information_standard', 'resource_allocation',
-        'enforcement_mechanism', 'global_infrastructure'
+        'information_standard', 'attachment_coordination', 'resource_allocation',
+        'identity_coordination', 'enforcement_mechanism', 'global_infrastructure'
     }
     coord_type_matches = re.findall(
         r"coordination_type\(\s*'?\w+'?\s*,\s*(\w+)\s*\)", content)

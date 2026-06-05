@@ -199,11 +199,32 @@ Not all coupling is extractive. A global power grid **must** couple more dimensi
 effective_threshold = base_threshold + complexity_offset(coordination_type)
 ```
 
-Offsets (from logic_thresholds.md):
-- Information standard: +0.00
-- Resource allocation: +0.05
-- Enforcement mechanism: +0.08
-- Global infrastructure: +0.15
+**Canonical `coordination_type/2` values (the authoritative six; schema
+`$defs.CoordinationType.enum` and `linter.py` rule 15 must match this list):**
+
+| Value | Definition | complexity_offset | boltzmann_floor |
+|---|---|---|---|
+| `information_standard` | Naming conventions, encoding standards, measurement units, protocols — minimal complexity, minimal inherent cost | +0.00 | 0.02 |
+| `attachment_coordination` | Emotional bonds, caregiving norms, kinship obligations, alliance commitments — structurally simple (dyadic/small-group) but needing continuous maintenance | +0.04 | 0.08 |
+| `resource_allocation` | Markets, distribution mechanisms, multi-party resource sharing — moderate complexity, significant inherent transaction costs | +0.05 | 0.15 |
+| `identity_coordination` | Group membership, licensing, national identity, reputation systems — boundary maintenance and membership claims against evolving criteria | +0.04 | 0.08 |
+| `enforcement_mechanism` | Legal systems, regulatory frameworks, governance structures — requires dedicated enforcement infrastructure | +0.08 | 0.10 |
+| `global_infrastructure` | Planetary-scale coordination: power grids, internet protocols, global supply chains — maximum complexity, maximum inherent cost | +0.15 | 0.20 |
+
+(The generator prompt's coordination-type selection table is derived from this one; one
+constraint declares exactly ONE coordination_type — decompose multi-function constraints.)
+
+Values live in `config.pl:362-383` (`complexity_offset_*`, `boltzmann_floor_*`); floors are
+provisional pending calibration, overridable per-testset via `boltzmann_floor_override/2`.
+
+**Classification-activity asymmetry (witnessed, OQ-30):** the two levers are NOT
+equivalent. The **offset is signature-layer-ACTIVE** — it adds into
+`complexity_adjusted_threshold` and can flip `boltzmann_compliant` and hence the final
+`dr_type` (48 witnessed flips). The **floor is classification-INACTIVE** — it only shifts
+the `excess_extraction` metric and leaves `dr_type` unchanged (witnessed: `abolition_reading`
+holds `tangled_rope` across floor 0.0→0.99). When coordination_type is absent, the engine
+silently falls back to `complexity_offset_default = 0.00` / `boltzmann_floor_default = 0.05`
+(fabricated-default pattern; open as OQ-41).
 
 **Edge Case: Epistemic Access**
 
