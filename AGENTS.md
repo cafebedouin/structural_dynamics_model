@@ -77,9 +77,10 @@ structural_dynamics_model/
 │   ├── constraint_indexing.pl    # χ = ε × f(d) × σ(S) computation
 │   ├── structural_signatures.pl  # NL / Coordination / Constructed detection
 │   ├── validation_suite.pl       # Test runner
-│   ├── testsets/                 # Active constraint stories (≈229 .pl files)
-│   ├── testsets_sotu/            # SOTU-derived constraints (189 .pl files)
-│   ├── testsets_3000/            # Full 3,380-constraint corpus (read-only for tests)
+│   ├── testsets/                 # LIVE corpus — post-de-leak rebuild (reset 2026-06-05;
+│   │                             # cite the pipeline manifest for size, never a memorized count)
+│   ├── archives/datasets/        # ALL previous corpora: kernel_v1/ (1,106 pre-reset),
+│   │                             # original_v6/ (3,380 chimera-era), sotu/ (189), older sets
 │   └── tests/                    # Engine unit tests (plunit); run from prolog/ with stack loaded
 ├── python/
 │   ├── run_pipeline.py               # LOAD-BEARING pipeline orchestrator
@@ -492,7 +493,7 @@ python3 -m agent.generate_json_haiku
 ```
 
 Reads `prolog/beta_seeds.json`, generates via Haiku with prompt caching. This is
-how the corpus grew from ~1,000 to 3,337 constraints in the pre-rebuild `testsets_3000/`
+how the chimera-era corpus grew to 3,337 constraints (archived: `prolog/archives/datasets/original_v6/`)
 archive; live `testsets/` is now 223 after the chimera-collision rebuild (see CLAUDE.md
 Critical Distinctions / OQ-25). Cite the pipeline manifest, not a fixed count.
 
@@ -504,8 +505,8 @@ Every pipeline output JSON carries a `manifest` top-level key:
 {
   "manifest": {
     "pipeline_run_at": "<ISO timestamp>",
-    "n_constraints": "<live count, e.g. 223 — read from the manifest, do not memorize>",
-    "n_sotu_constraints": 189,
+    "n_constraints": "<live count — read from the manifest, do not memorize>",
+    "n_sotu_constraints": "<0 since the 2026-06-05 reset; sotu archived at prolog/archives/datasets/sotu/>",
     "code_commit": "<full SHA>",
     "code_commit_short": "<short SHA>",
     "code_dirty": false,

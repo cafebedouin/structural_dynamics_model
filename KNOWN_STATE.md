@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — CORPUS RESET: live testsets/ rebuilt from scratch under the de-leaked pipeline; all previous corpora consolidated to prolog/archives/datasets/
+**Files:** prolog/testsets/, prolog/archives/datasets/, CLAUDE.md, AGENTS.md
+**Tier:** tripwire
+
+Operator reorganization (by hand; git-recorded as 13,532 renames in commit `29889e50`):
+live pre-reset corpus (1,106 stories + stage1_probe/flatctl_probe/lineage_probe_01 run-tags)
+→ `prolog/archives/datasets/kernel_v1/`; testsets_3000 (3,380 chimera-era) → `original_v6/`;
+testsets_sotu (189) → `sotu/`; gaptests/recon_2/ab_test → dated `audits/` dirs;
+commitment_corpus + fix → root `archives/`. New `prolog/testsets/` seeded with the first three
+post-de-leak topic runs (20 stories). **Tripwires:** (1) ALL pre-2026-06-05 empirical findings
+(OQ-70 FNL stats, OQ-71 lineage, 55% coordination disagreement, sweep baselines, KNOWN_STATE
+witnesses) were measured on `kernel_v1` or its ancestors — re-witness on the live corpus before
+citing against it; retrospective audits overlay `corpus_path` to the archive dir. (2) run_pipeline
+reports n_sotu=0 (graceful); sotu analyses must overlay the archive path. (3) The first-pass
+new-vs-old comparison (this session): 3/20 new stories claim mountain and ALL fire
+type_1_false_summit (incl. claimed-mountain ε=0.85 `manpower_exhaustion_trap`, unauthorable
+pre-de-leak); old 0.58 ε-anchor gone, new 0.68 idiom (11/20, not band-linked — Stage-2 watch);
+claimed-type diversity 5 types/run vs old tangled-dominance; seat-agreement 26/80 new vs 7/12 old
+(old comparison biased: old pipeline steered claims into modal types).
+
 ## 2026-06-05 — c-orchestrator batch generation (dependency waves); repair de-fanged; report highlights authored-vs-computed divergence
 **Files:** agent/c-orchestrator.py, agent/story_generator_base.py, python/story_repair.py, python/enhanced_report.py
 **Tier:** landed

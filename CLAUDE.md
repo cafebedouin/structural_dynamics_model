@@ -58,8 +58,10 @@ what matters most for this task.
 ## Project Context
 
 Prolog+Python research infrastructure implementing Deferential Realism (DR).
-99 Prolog modules, 223 main-corpus constraints (`prolog/testsets/`), 189 SOTU
-constraints (`prolog/testsets_sotu/`), 100+ Python analysis scripts.
+99 Prolog modules, 100+ Python analysis scripts. The live corpus (`prolog/testsets/`)
+was RESET 2026-06-05 and is being rebuilt from scratch under the de-leaked generation
+pipeline (KNOWN_STATE 2026-06-05) — cite the pipeline manifest for its size, never a
+memorized count. All previous corpora live under `prolog/archives/datasets/`.
 
 Key constraint: Correctness and reproducibility matter most. Model provenance
 (which LLM built which testsets) is a feature, not a problem.
@@ -116,7 +118,7 @@ python3 agent/c-orchestrator.py "some topic"
 
 This chains six steps automatically:
 1. **Research** — web search grounding via Haiku
-2. **Decompose** — UKE_SCOPE protocol selects axes (default 3) and produces a manifest
+2. **Decompose** — UKE_SCOPE protocol selects every §3-distinct axis (no fixed count; `--axes N` is an optional ceiling) and produces a manifest
 3. **Generate** — Sonnet generates one constraint story per axis; saves JSON to `json/`
    and Prolog testset to `prolog/testsets/`
 4. **Corpus update** — runs `python/run_pipeline.py` to re-classify the full corpus
@@ -131,8 +133,9 @@ committed to the repo beyond what the pipeline writes automatically.
 
 **Corpus growth:** To expand the corpus without a full topic run, use
 `python3 -m agent.generate_json_haiku` (reads `prolog/beta_seeds.json`, generates via
-Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to 3,337 in the
-pre-rebuild `testsets_3000/` archive; live `testsets/` is now 223 (see Critical Distinctions).
+Haiku batch API with prompt caching). This is how the chimera-era corpus grew to 3,337
+(now archived at `prolog/archives/datasets/original_v6/`); the live corpus is the
+post-2026-06-05 rebuild (see Critical Distinctions).
 
 ## Running the System
 
@@ -189,7 +192,8 @@ Testsets are loaded on demand, not at stack load time.
 (default `testsets`). A RELATIVE `Dir` is anchored against `corpus_loader.pl`'s own source
 directory (`prolog/`) via `resolve_corpus_dir/2` — **loading is cwd-independent**; absolute
 paths pass through. A glob matching **0 files throws `corpus_empty`** (fail-closed; escape:
-`config:param(allow_empty_corpus, true)`). To load testsets_3000, overlay `corpus_path`
+`config:param(allow_empty_corpus, true)`). To load an archived corpus (e.g.
+`archives/datasets/original_v6` or `archives/datasets/kernel_v1`), overlay `corpus_path`
 before calling `load_all_testsets` (relative overlays resolve against `prolog/`, same as the
 old behavior under the cd-prolog convention).
 
@@ -363,13 +367,15 @@ it" is not "it is not there" until the finder is shown to find. Full table and i
 
 ## Critical Distinctions
 
-**Corpus size is 223 (live `testsets/`), not 3,337.** The 3,337 figure predates a deliberate
-rebuild: exploratory committer-axis runs reused constraint IDs across runs (the "chimera," OQ-25 /
-v7 §5.11). Cleanup reduced `testsets/` to a single coherent run (kernel_run_03: 109 CS readings +
-~114 observer-axis). §5.11 trifurcation figures are verified single-run coherent. **Do not cite
-3,337, and do not cite a memorized count — the corpus is actively growing; cite the pipeline
-manifest** (`n_constraints`). The `testsets_3000/` directory (3,380 constraints) is the archived
-pre-rebuild corpus, used only for retrospective audits that explicitly overlay `corpus_path`.
+**The live corpus is the post-de-leak REBUILD (reset 2026-06-05) — never cite a memorized
+count; cite the pipeline manifest** (`n_constraints`). All previous corpora are archived under
+`prolog/archives/datasets/` and are used only for retrospective audits that explicitly overlay
+`corpus_path`: `kernel_v1/` is the 1,106-story pre-reset corpus (the de-leak-era working corpus,
+including the `stage1_probe`/`flatctl_probe`/`lineage_probe_01` run-tags; all pre-2026-06-05
+empirical findings — OQ-70 FNL stats, OQ-71 lineage, the 55% coordination disagreement — were
+measured on it or its ancestors); `original_v6/` is the 3,380-story chimera-era corpus (ID reuse
+across runs, OQ-25 / v7 §5.11 — do not cite 3,337 as a live count); `sotu/` holds the 189 SOTU
+constraints (run_pipeline reports n_sotu=0 now; sotu analyses must overlay the archive path).
 
 **FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope
 dominance) as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2,
