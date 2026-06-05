@@ -49,6 +49,39 @@ perturbation" is not a metaphor for the framework's commitments but their operat
 
 ---
 
+## 1.1 The perturbable object, and what the exercise is for
+
+*(Operator-authored, 2026-06-05. Seated, like everything here: this is the purpose claim, and a
+purpose claim is the most seated sentence a framework can utter.)*
+
+You need something to perturb, and it is the **authored constraint story**. Not the engine's
+output, not the classification, not the corpus statistics — the story an author wrote from a seat.
+All of the engine's diagnostic machinery exists to show that the story has *facets*: each
+perturbation (observer, axiom, time, apparatus, construction) turns the same authored object and
+reveals both **the seat the author chose** — visible precisely because other seats were available
+and the diff against them is computable — and **the other seats that could have been taken** (the
+seat series: `seat-theorem-v1.md`, `the-few-seats-worth-choosing-v2.md`,
+`choosing-the-seat-well-v0_2.md`).
+
+The point of the exercise is to try to hold all these aspects in mind at once: to understand the
+seats of others, and our own seat, **without collapsing the view** — neither into one seat
+(mistaking a perspective for the constraint) nor into a view *sub specie aeternitatis* (mistaking
+the aggregate for a seat-free fact). Every view is a view. The God's-eye view is also a view — and,
+if you like to be metaphysical about it, that is presumably why a God worth the name would not hold
+the view from nowhere but **the view from everywhere**: the ātman reading, the universe seen from
+every position at once. The engine's per-seat tables are a finite, computable gesture at that — not
+a replacement for any seat, and not an escape from seatedness, but the discipline of taking more
+seats than one's own and keeping them simultaneously legible.
+
+This is why the diff is the output and the reconciled label is not (§1, §6): a reconciled label is
+a collapse — it picks a seat, or pretends to have none. And it is why the 2026-06-05 ruling session
+fell one way three times: wherever two layers disagreed about what an authored thing *means*
+(perception read as claim; any-beneficiary read as agent; an unfed evidence layer read as data),
+the authoritative definition is the authored layer's — the computed layer must never consume what
+the author did not assert. Collapsing that distinction is the same error as collapsing the seats.
+
+---
+
 ## 2. The three axes are the trifurcation, read as perturbations
 
 `debugging_philosophy.md` sorts apparent contradictions into three engineering kinds, and

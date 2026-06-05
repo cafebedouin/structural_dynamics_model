@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — Pre-build ruling session executed: OQ-70/64/63 ruled and landed, intent_* declared GAP-08, perturbation-principle §1.1 added
+**Files:** prolog/signature_detection.pl, prolog/constraint_indexing.pl, prolog/narrative_ontology.pl, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prompts/constraint_story_generation_prompt_json.md, docs/design/design_gaps.md, docs/the_perturbation_principle.md
+**Tier:** landed
+
+Operator ruled the three pre-build items in one session, all on one principle (now written into
+`the_perturbation_principle.md` §1.1): wherever two layers disagree about what an authored thing
+means, the authored layer's definition is authoritative — the computed layer must never consume
+what the author did not assert.
+- **OQ-70-A as the CLASS** (`72ec2cdd`): claimed_natural source 2 + appears_as_rope's sibling
+  removed — no signature may read a single authored perspective as a story-level claim. Live-20
+  witness: FCR 16→5, FNL 3→1; positive control manpower_exhaustion_trap still fires FNL via
+  source 1. Signature prevalence is a claims statistic from rebuild story 1.
+- **OQ-64-A** (`e5fbc2e8`): `vindicated_propositions` schema array → `constraint_vindicates/2`
+  (feeds NO metric/gate); beneficiaries are actors only; six witnesses incl. negative control.
+- **OQ-63-A** (`28f2dfc8`): d-derivation consumes `agent_beneficiary`. ZERO-DIFF cutover
+  (80/80 constraint×seat rows identical) + guard positive control (registry non-agent refused).
+- **Item 2** (`f618c1f1`): intent_* = design_gaps GAP-08 (declared absence). Verification found
+  the residual points PASS-OPEN: `has_viable_alternatives` defaults false on the empty table and
+  NL certification REQUIRES false — OQ-43 fifth instance, fail-close deliberately not made
+  (would un-certify all NL until intent is fed or the gate re-sourced; needs its own ruling).
+- §1.1 added to `the_perturbation_principle.md` (operator-authored): the perturbable object is
+  the authored story; the purpose is holding the seats without collapsing into one view or a
+  view sub specie aeternitatis; every view is a view, even the God's-eye one.
+
 ## 2026-06-05 — CORPUS RESET: live testsets/ rebuilt from scratch under the de-leaked pipeline; all previous corpora consolidated to prolog/archives/datasets/
 **Files:** prolog/testsets/, prolog/archives/datasets/, CLAUDE.md, AGENTS.md
 **Tier:** tripwire
