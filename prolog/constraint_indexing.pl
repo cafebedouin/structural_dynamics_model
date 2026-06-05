@@ -416,8 +416,17 @@ derive_directionality(Constraint, Context, D) :-
 %  Only fires if the constraint has beneficiary or victim declarations.
 beneficiary_victim_directionality(Constraint, Context, D) :-
     Context = context(agent_power(Power), _, exit_options(Exit), _),
-    % Check if constraint has structural data
-    (   narrative_ontology:constraint_beneficiary(Constraint, _)
+    % Check if constraint has structural data.
+    % OQ-63 ruled (operator, 2026-06-05): d-derivation consumes the AGENCY-FILTERED
+    % view (agent_beneficiary = constraint_beneficiary minus the non_agent registry;
+    % post-OQ-64 vindicated propositions never enter constraint_beneficiary at all).
+    % A vindicated proposition or detector-bait entry must not feed d -> chi as if
+    % it were an actor collecting from the constraint — that corruption is SILENT
+    % (plausible d, plausible chi, plausible type, nothing fires). This aligns the
+    % metric path with the signature path (FSM + NL gate), which already consume
+    % agent_beneficiary. Cutover witnessed zero-diff on the live corpus (all-agent
+    % beneficiaries); the guard exists for the first non-agent entry that arrives.
+    (   narrative_ontology:agent_beneficiary(Constraint, _)
     ->  HasBeneficiaries = true
     ;   HasBeneficiaries = false
     ),
