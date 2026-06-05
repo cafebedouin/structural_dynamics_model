@@ -314,6 +314,7 @@ class DRAuditOrchestrator:
                 missing = [f for f in required if f not in frozen]
                 if missing:
                     raise ValueError(f"Frozen manifest missing fields: {missing}")
+                self._last_manifest_path = str(self.manifest_file)
                 self._progress("decompose", f"Loaded frozen manifest from {self.manifest_file} "
                                f"({len(frozen['generation_sequence'])} axes)")
                 step = StepResult(step="decompose", status="success", data=frozen)
@@ -504,6 +505,7 @@ class DRAuditOrchestrator:
             path = mdir / f"{fam}_{ts}.manifest.json"
             path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False),
                             encoding="utf-8")
+            self._last_manifest_path = str(path)
             self._progress("decompose", f"Manifest persisted: {path}")
         except Exception as e:  # persistence must never kill the run
             self._progress("decompose", f"Manifest persist FAILED (non-fatal): {e}")
@@ -594,12 +596,19 @@ class DRAuditOrchestrator:
             if not axis:
                 self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
                 continue
+            # Retry-the-gaps semantics: a frozen-manifest run (--manifest-file) is the
+            # retry path for batch failures — skip axes whose story already landed so
+            # only the gaps are regenerated.
+            if self.manifest_file and (self._json_dir / f"{claim_id}.json").exists():
+                self._progress("generate", f"Skipping {claim_id} (already saved; frozen-manifest retry mode)")
+                continue
             items.append((claim_id, axis, entry))
 
         run_ids = {cid for cid, _, _ in items}
         generated_stories: list[dict] = []
         generated_by_id: dict[str, dict] = {}
         failed_ids: set[str] = set()
+        fail_reasons: dict[str, str] = {}
         total_tin = total_tout = 0
         client = _get_client()
 
@@ -655,6 +664,8 @@ class DRAuditOrchestrator:
             except Exception as e:
                 self._progress("generate", f"Wave {wave_no} batch failed: {e}")
                 failed_ids.update(idmap.values())
+                for _cid in idmap.values():
+                    fail_reasons[_cid] = f"wave batch error: {e}"[:300]
                 continue
 
             for result in client.messages.batches.results(batch.id):
@@ -663,6 +674,7 @@ class DRAuditOrchestrator:
                 if result.result.type != "succeeded":
                     self._progress("generate", f"FAIL {cid}: {result.result.type}")
                     failed_ids.add(cid)
+                    fail_reasons[cid] = f"batch result: {result.result.type}"
                     continue
                 msg = result.result.message
                 usage = getattr(msg, "usage", None)
@@ -688,6 +700,7 @@ class DRAuditOrchestrator:
                                    f"FAIL {cid}: invalid after repair "
                                    f"({(errors or ['parse error'])[0][:90]})")
                     failed_ids.add(cid)
+                    fail_reasons[cid] = (errors or ["parse error"])[0][:300]
                     continue
 
                 kernel_id = entry.get("kernel_id") if isinstance(entry, dict) else None
@@ -705,9 +718,29 @@ class DRAuditOrchestrator:
                     failed_ids.add(cid)
 
         if failed_ids:
-            self._progress("generate",
-                           f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — "
-                           f"re-run or use regenerate pass; not silently dropped")
+            # Persist the failure ledger — a printed failure is a lost failure.
+            # Retry: python3 agent/c-orchestrator.py --manifest-file <manifest> <topic-ignored>
+            # (frozen-manifest mode skips already-saved stories, regenerating only the gaps).
+            try:
+                ledger = REPO_ROOT / "outputs" / "generation_failures.jsonl"
+                ledger.parent.mkdir(parents=True, exist_ok=True)
+                with ledger.open("a", encoding="utf-8") as fh:
+                    fh.write(json.dumps({
+                        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                        "family_id": manifest.get("family_id", ""),
+                        "manifest": getattr(self, "_last_manifest_path", None),
+                        "run_tag": self._run_tag,
+                        "failed": sorted(failed_ids),
+                        "reasons": fail_reasons,
+                    }) + "\n")
+                self._progress("generate",
+                               f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — ledgered to "
+                               f"{ledger}; retry with --manifest-file "
+                               f"{getattr(self, '_last_manifest_path', '<manifest>')}")
+            except Exception as e:
+                self._progress("generate",
+                               f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — "
+                               f"LEDGER WRITE FAILED ({e}); ids above are the only record")
         self._progress("generate",
                        f"Generated {len(generated_stories)}/{len(items)} stories in {wave_no} wave(s)")
         return StepResult(
