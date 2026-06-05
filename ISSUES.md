@@ -1385,7 +1385,7 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 **Ω-type:** Ω_C (design choice — populate the subsystem or delete it; part of the satisfy-on-absence policy, OQ-44).
 
-**Status:** open — Census row 7. `intent_power_change`, `intent_beneficiary_class`,
+**Status:** disposed — operator ruled declare-absence (2026-06-05, triage Item 2 option A): the intent_* layer is a registered design gap (`design_gaps.md` GAP-08), not a feature; populate-vs-delete deferred until a research question consumes intent data (do not grow the authoring surface mid-baseline). Verification found the residual consumer `has_viable_alternatives` defaults PASS-OPEN for NL certification — logged as OQ-43's fifth instance; the gate change is an output-changing call deliberately not made. Originally Census row 7. `intent_power_change`, `intent_beneficiary_class`,
 `intent_viable_alternative`, `intent_alternative_rejected`, `intent_suppression_level`,
 `intent_resistance_level`, `intent_norm_strength` — **all 0 facts in BOTH corpora**. Read by
 `intent_engine` (loaded `stack.pl:43`, empty import) + `signature_detection`; `intent_engine` is
@@ -1604,6 +1604,8 @@ content re-audit of the 404** (do any actually have asymmetric winners hidden be
 claim?), **not engine maintenance** — populating `intent_power_change` faithfully for genuine
 natural laws yields zero beneficiaries and zero flips; it only bites a mis-authored false-natural-law.
 **Connects to OQ-41 (G6), OQ-36/OQ-37 (empty `intent_*`).**
+
+**Fifth instance (verified 2026-06-05, triage Item 2):** `signature_detection:has_viable_alternatives/2` defaults `false` on the empty `intent_viable_alternative/3` table, and `natural_law_signature` requires `HasAlternatives == false` — the absence SUPPORTS NL certification (pass-open). The sibling BeneficiaryCount gate was re-sourced (D3 fail-close); this one was not. Fail-closing it would un-certify every NL constraint until the intent layer is fed or the gate re-sourced — an output-changing design call not yet made. See `design_gaps.md` GAP-08.
 
 ## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
 
@@ -2473,7 +2475,7 @@ vocabulary ruling if desired.
 **Ω-type:** Ω_C (design ruling: which beneficiary view should d-derivation consume), with an
 Ω_E diagnostic attached.
 
-**Status:** open — ranked FIRST among the OQ-63..66 agency-gate family. NOT co-equal with the
+**Status:** resolved — operator ruled 63-A (2026-06-05), sequenced after 64-A: `beneficiary_victim_directionality` consumes `agent_beneficiary` (commit `28f2dfc8`). Witnesses: ZERO-DIFF cutover on the live corpus (80/80 constraint×seat rows of d + dr_type identical) + positive control (probe whose only beneficiary is the registry non-agent entropic_universe_hypothesis → structural derivation refuses, falls to canonical d). Rationale: non-agent entries feeding d→χ are SILENT corruption; the metric path must not read what the signature path refuses. Previously ranked FIRST among the OQ-63..66 agency-gate family. NOT co-equal with the
 inert drl_core:287 site (OQ-66): :287 is witnessed behaviorally inert today;
 this one feeds χ for every constraint with beneficiary/victim facts.
 **Origin:** FSM agency-gate session 2026-06-03 (KNOWN_STATE entry of same date). The two-site
@@ -2574,7 +2576,7 @@ today, wrong-on-lag risk per total_war control row).**
 
 **Ω-type:** Ω_C (schema design).
 
-**Status:** open
+**Status:** resolved — operator ruled 64-A (2026-06-05): schema split. `vindicated_propositions` array added to base_properties; compiler emits `narrative_ontology:constraint_vindicates/2` (feeds NO metric or gate); prompt rule: propositions are never beneficiaries (commit `e5fbc2e8`, witnesses in message: schema+pattern guard+compiler+engine+negative control). The non-agent hand registry stays as legacy defense for archived corpora. Live-20 referent scan: born clean (20/20 agent-shaped).
 **Origin:** FSM agency-gate session 2026-06-03, Steps 1–2 calibration reads.
 **Files:** `narrative_ontology.pl` (agent_beneficiary/2 + non_agent_beneficiary/1 registry — the
 split's forerunner; see its comment block), generation templates (`agent/generate_*`).
@@ -2875,7 +2877,7 @@ canonical χ).
 
 **Ω-type:** Ω_E (corpus measurement), with an Ω_C committer-axis edge (same family as OQ-65).
 
-**Status:** open — mechanism witnessed end-to-end; remediation lever is a design ruling (see below)
+**Status:** resolved — operator ruled option A as the CLASS (2026-06-05): no signature may read a single authored perspective as a story-level claim. claimed_natural source 2 AND appears_as_rope's sibling clause removed (commit `72ec2cdd`). Witness on the live 20: FCR 16→5 (remaining are low-ε profile-driven), FNL 3→1; POSITIVE CONTROL manpower_exhaustion_trap (explicit claim-mountain, non-compliant) still fires FNL via source 1 — wrong path removed, detector intact. Signature prevalence is citable as a claims statistic from the rebuild's story 1.
 **Origin:** 2026-06-04 session: "is the ~95% disguise-signature dominance substantive or a
 generator artifact?" (older-evaluation question re-examined on the live corpus). Probes 0–5;
 raw artifacts: `audits/2026-06-04_fnl_bait_confound/fnl_probe0_file_constraint_map.json`,

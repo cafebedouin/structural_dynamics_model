@@ -364,3 +364,30 @@ resolver keying ruled 2026-06-03 (items 3-4 above). **Remaining to close:** the 
 **Drift framing held deliberately:** the post-saturation corpus is a *bounded state
 set*; whether change over it has memory (Markov vs higher-order) is an **open measurement** pending
 `fingerprint_drift` velocity/acceleration -- not yet asserted.
+
+## GAP-08 — The `intent_*` evidence layer is designed but never fed (and one consumer passes open on its absence)
+
+**Declared:** 2026-06-05 (operator ruling, pre-rebuild ISSUES triage Item 2 — option A:
+declare the absence; defer populate-vs-delete until a research question consumes intent data).
+
+**The absence:** seven authored predicates — `intent_viable_alternative/3`,
+`intent_alternative_rejected/3`, `intent_beneficiary_class/2`, `intent_power_change/3`,
+`intent_suppression_level/4`, `intent_resistance_level/4`, `intent_norm_strength/3` — have
+**zero facts in every corpus ever generated** (witnessed 2026-06-05: 0 in the live rebuild,
+0 in kernel_v1, 0 in original_v6). The schema has no authoring surface for them; the
+generation prompt never mentions them. `intent_engine.pl` consumes them only via the report
+layer. Do not treat any `intent_*`-derived output as data: it is a report over an empty table.
+
+**The live residual (OQ-43 class, FIFTH instance — verified 2026-06-05):**
+`signature_detection:has_viable_alternatives/2` defaults `false` when no
+`intent_viable_alternative/3` fact joins, and `natural_law_signature` REQUIRES
+`HasAlternatives == false` — so the empty table SUPPORTS natural-law certification
+(pass-open, absence satisfies the gate). The sibling gate (`BeneficiaryCount == 0`) was
+re-sourced to authored `agent_beneficiary` (D3/OQ-43 fail-close); this one was NOT.
+Changing it fail-closed would un-certify every NL constraint until intent is authored or the
+gate is re-sourced — an output-changing design call deliberately NOT made in the 2026-06-05
+triage. Logged on OQ-43.
+
+**What revival requires:** a research question that consumes intent evidence; then schema
+block + prompt guidance + compiler emission as its own work item (do NOT add authoring
+surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
