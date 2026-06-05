@@ -54,7 +54,9 @@ live pre-reset corpus (1,106 stories + stage1_probe/flatctl_probe/lineage_probe_
 → `prolog/archives/datasets/kernel_v1/`; testsets_3000 (3,380 chimera-era) → `original_v6/`;
 testsets_sotu (189) → `sotu/`; gaptests/recon_2/ab_test → dated `audits/` dirs;
 commitment_corpus + fix → root `archives/`. New `prolog/testsets/` seeded with the first three
-post-de-leak topic runs (20 stories). **Tripwires:** (1) ALL pre-2026-06-05 empirical findings
+post-de-leak topic runs (20 stories). **Follow-up (same day, commit `1a0acfb8`): `json/` reset to
+match — 4,410 pre-reset story specs + 21 pre-reset subdirs archived to
+`prolog/archives/datasets/kernel_v1_json/`; `json/` now holds exactly the live stories.** **Tripwires:** (1) ALL pre-2026-06-05 empirical findings
 (OQ-70 FNL stats, OQ-71 lineage, 55% coordination disagreement, sweep baselines, KNOWN_STATE
 witnesses) were measured on `kernel_v1` or its ancestors — re-witness on the live corpus before
 citing against it; retrospective audits overlay `corpus_path` to the archive dir. (2) run_pipeline
