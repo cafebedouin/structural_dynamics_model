@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "grey_market_evasion",
+    "version": "1.0",
+    "generated_date": "2025-01-09",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "grey_mkt",
+    "story_uid": "5b60b1d0-1967-462f-a255-3a5d8d0608f5",
+    "created_at": "2026-06-05T17:12:46.074728+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Grey Market Chip Smuggling Through Third-Country Intermediaries",
+    "topic_domain": "technology_governance/export_control/semiconductor_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "smuggling_intermediaries",
+      "sanctioned_end_users",
+      "transshipment_hubs"
+    ],
+    "victims": [
+      "export_control_regime",
+      "compliant_exporters",
+      "strategic_technology_containment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Export Control Regime as Epistemic Commons",
+      "comment": "PERSPECTIVE 1: EXPORT CONTROL REGIME (SNARE) — The regime's effectiveness as a collective good is trapped by the structural arbitrage opportunities grey markets create. Cannot exit the verification crisis; bears full cost of evasion without ability to organize alternative enforcement. Maximum experienced extraction — the regime's credibility erodes while smuggling networks face minimal consequences."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliant Exporter",
+      "comment": "PERSPECTIVE 2: COMPLIANT EXPORTER (SNARE) — Faces competitive disadvantage against grey market operators who bypass compliance costs. Constrained by regulatory obligations and reputational risk, cannot exit without abandoning the market entirely. Experiences substantial extraction through lost market share and compliance burden while competitors evade."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Transshipment Hub Jurisdiction",
+      "comment": "PERSPECTIVE 3: TRANSSHIPMENT HUB (ROPE) — Malaysia, Singapore, and similar intermediaries experience the grey market as coordination: facilitating trade flows generates economic activity, employment, and logistics infrastructure development. Net beneficiary with arbitrage-grade exit — can adjust enforcement intensity based on geopolitical pressure without structural penalty."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Smuggling Network",
+      "comment": "PERSPECTIVE 4: SMUGGLING INTERMEDIARY (ROPE) — Experiences the constraint as pure coordination: matching supply (chips subject to export control) with demand (sanctioned end users) through jurisdictional arbitrage. Powerful through network effects and information asymmetry; arbitrage-grade exit through shell company proliferation and route switching."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sanctioned End User",
+      "comment": "PERSPECTIVE 5: SANCTIONED END USER (TANGLED ROPE) — Benefits from access to controlled technology but bears substantial costs: price premiums (2-3x list price), supply uncertainty, quality risk (counterfeit/defective chips), and operational security burden. Constrained by sanctions but not trapped — can pursue indigenous development or alternative suppliers. Mixed coordination (grey market solves access problem) and extraction (monopoly pricing, unreliable supply)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Commerce Department Enforcement Coalition",
+      "comment": "PERSPECTIVE 6: ENFORCEMENT COALITION (TANGLED ROPE) — Organized agents (BIS, OFAC, allied export control authorities) see genuine coordination function (information sharing, entity list updates, multilateral enforcement) but also experience extraction through resource constraints, jurisdictional limits, and political pressure. Constrained by sovereignty boundaries and enforcement capacity; cannot exit without abandoning strategic technology containment mission."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Entity List Addition Process",
+      "comment": "PERSPECTIVE 7: ENTITY LIST PROCESS (PITON) — The formal mechanism for designating bad actors has degraded into theater: shell companies proliferate faster than designations can be issued, and listed entities reconstitute under new names within weeks. The process persists through institutional inertia and political signaling value despite minimal functional deterrence. High theater ratio — the ritual of designation continues while smuggling networks adapt around it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, grey market evasion reveals both coordination function (grey markets solve real information and logistics problems in fragmented regulatory environments) and extraction (smuggling networks capture monopoly rents while externalizing strategic risk onto the international system). The constraint is not a natural law — it is a constructed institutional arrangement where enforcement capacity has not kept pace with network complexity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "smuggling_volume_measurement",
+      "question": "What fraction of controlled chips reaching sanctioned end users transit through grey market channels vs. other evasion methods (front companies, false end-user certificates, indigenous production)?",
+      "resolution_mechanism": "Forensic supply chain analysis; customs data triangulation; chip serial number tracking in seized shipments; comparison of declared exports to third countries vs. their domestic consumption capacity",
+      "impact": "If grey market share < 30%: extraction is overstated — other evasion methods dominate. If > 70%: grey market is the primary evasion vector and extractiveness may be understated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Grey market share of total evasion volume"
+    },
+    {
+      "id": "transshipment_hub_complicity",
+      "question": "Are transshipment hubs passive facilitators (inadequate enforcement capacity) or active participants (deliberate non-enforcement for economic benefit)?",
+      "resolution_mechanism": "Comparison of enforcement action rates across jurisdictions with similar trade volumes; correlation between hub jurisdiction economic incentives and enforcement intensity; leaked government communications or policy documents",
+      "impact": "If passive: coordination story is stronger (hubs face genuine capacity constraints). If active: extraction story is stronger (hubs are beneficiaries, not neutral intermediaries).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transshipment hubs are complicit or capacity-constrained"
+    },
+    {
+      "id": "enforcement_effectiveness_threshold",
+      "question": "At what enforcement intensity does grey market evasion become economically unviable for smuggling networks?",
+      "resolution_mechanism": "Historical analysis of enforcement surges (e.g., post-Huawei entity listing) and corresponding smuggling volume changes; cost-benefit modeling of smuggling operations under different interdiction rates",
+      "impact": "If threshold is achievable with current resources: the constraint is a coordination problem (Tangled Rope from more perspectives). If threshold exceeds feasible enforcement capacity: the constraint is structural extraction (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforcement intensity required to suppress grey market activity"
+    },
+    {
+      "id": "alternative_sourcing_substitutability",
+      "question": "Can sanctioned end users substitute indigenous chips or non-controlled foreign chips for smuggled advanced chips without significant performance degradation?",
+      "resolution_mechanism": "Technical analysis of chip performance requirements for sanctioned applications (AI training, supercomputing, advanced weapons systems); assessment of indigenous chip capabilities (SMIC 7nm, Huawei Kirin); time-series tracking of sanctioned entities' technology advancement rates",
+      "impact": "If substitutable: grey market extraction is temporary (Scaffold logic — sunset when indigenous production matures). If non-substitutable: grey market extraction is structural (Snare logic — sanctioned entities remain dependent).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sanctioned end users can substitute alternative chip sources"
+    },
+    {
+      "id": "multilateral_enforcement_coordination",
+      "question": "Would coordinated enforcement by allied export control regimes (US, EU, Japan, South Korea, Taiwan) close grey market channels, or would smuggling networks route through non-allied jurisdictions?",
+      "resolution_mechanism": "Game-theoretic modeling of smuggling network adaptation; historical case studies of multilateral sanctions regimes (Iran nuclear, North Korea); assessment of non-allied transshipment capacity (UAE, Turkey, Russia)",
+      "impact": "If coordination closes channels: the constraint is a coordination problem with a solution path (Scaffold from enforcement coalition perspective). If networks adapt: the constraint is structural (Snare from regime perspective — enforcement is Sisyphean).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether multilateral coordination can suppress grey market evasion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "grey_mkt_theater_2018"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.45,
+      "id_override": "grey_mkt_theater_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.54,
+      "id_override": "grey_mkt_theater_2022"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61,
+      "id_override": "grey_mkt_theater_2024"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "grey_mkt_extract_2018"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58,
+      "id_override": "grey_mkt_extract_2020"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.64,
+      "id_override": "grey_mkt_extract_2022"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "grey_mkt_extract_2024"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "grey_mkt_suppress_2018"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.35,
+      "id_override": "grey_mkt_suppress_2020"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.39,
+      "id_override": "grey_mkt_suppress_2022"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "grey_mkt_suppress_2024"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Grey market chip smuggling through third-country intermediaries creates a structural arbitrage opportunity that undermines export control effectiveness. The constraint operates through jurisdictional fragmentation: chips subject to US export controls are legally exported to intermediary jurisdictions (Malaysia, Singapore, UAE, Hong Kong) with legitimate end-use certificates, then re-exported to sanctioned entities (Chinese AI labs, military research institutes, Russian defense contractors) through shell company networks. The smuggling volume is substantial but difficult to measure precisely — Commerce Department estimates suggest 20-40% of advanced chips reaching sanctioned Chinese entities transit through grey market channels, with similar patterns for other sanctioned destinations. Enforcement actions (entity list additions, export license denials, criminal prosecutions) have increased significantly since 2018 but have not suppressed the underlying activity — smuggling networks adapt faster than enforcement mechanisms can respond. The constraint exhibits rising extractiveness (0.52 → 0.68 over 2018-2024) as smuggling networks capture increasing monopoly rents, rising theater ratio (0.38 → 0.61) as entity list designations become performative rather than functional, and rising suppression requirement (0.28 → 0.42) as enforcement intensity increases without corresponding effectiveness gains. The structural delta from the upstream export_control_reversibility constraint is that grey markets create a persistent evasion channel that prevents export controls from achieving their strategic containment objectives, even when the controls are technically reversible.",
+    "key_agents": [
+      "Smuggling Intermediaries: Primary beneficiary (powerful/arbitrage) — capture monopoly rents (2-3x markups) through jurisdictional arbitrage and network effects; powerful through information asymmetry and shell company proliferation",
+      "Transshipment Hub Jurisdictions: Secondary beneficiary (institutional/arbitrage) — Malaysia, Singapore, UAE gain economic activity and logistics infrastructure; arbitrage-grade exit through adjustable enforcement intensity",
+      "Sanctioned End Users: Mixed beneficiary/victim (institutional/constrained) — gain access to controlled technology but bear price premiums, supply uncertainty, and quality risk; constrained by sanctions but not trapped",
+      "Export Control Regime: Primary victim (powerless/trapped) — epistemic commons that cannot organize or exit; bears full cost of evasion through credibility erosion and strategic containment failure",
+      "Compliant Exporters: Secondary victim (moderate/constrained) — face competitive disadvantage and compliance burden; constrained by regulatory obligations and reputational risk",
+      "Enforcement Coalition: Mixed coordinator/victim (organized/constrained) — BIS, OFAC, allied authorities coordinate information sharing but experience extraction through resource constraints and jurisdictional limits",
+      "Entity List Process: Degraded mechanism (institutional/constrained) — formal designation process has atrophied into theater; shell companies proliferate faster than designations can be issued"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Smuggling intermediaries capture substantial monopoly rents (2-3x list price markups documented in Commerce Dept investigations) while externalizing strategic risk onto the export control regime. The regime's effectiveness as a collective good erodes — compliant exporters lose market share, sanctioned entities gain access to controlled technology, and strategic containment objectives fail. The extraction is not total (0.68 rather than 0.85+) because some enforcement actions succeed (criminal prosecutions, asset seizures) and some grey market transactions fail (counterfeit chips, interdicted shipments). Suppression (0.42): Moderate. Significant barriers to grey market participation include legal risk (criminal penalties, entity list designation), operational complexity (shell company management, logistics coordination), and information asymmetry (finding reliable smuggling networks). But suppression is not high — the barriers are surmountable for organized networks, and the economic incentives (2-3x markups) justify the risk. Suppression has increased over the interval (0.28 → 0.42) as enforcement intensity has risen, but not enough to suppress the activity. Theater ratio (0.61): Moderate-high. The entity list addition process is substantially performative: Commerce Dept adds dozens of shell companies quarterly, but listed entities reconstitute under new names within weeks. The designation ritual persists for political signaling value despite minimal functional deterrence. Enforcement actions generate headlines but do not meaningfully reduce smuggling volume. The theater has increased over the interval (0.38 → 0.61) as the gap between enforcement activity and effectiveness has widened.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. Smuggling intermediaries are primary beneficiaries with arbitrage-grade exit (can switch routes, shell companies, and jurisdictions at will) — low d, negative effective extraction (they experience the constraint as subsidy). Transshipment hubs are secondary beneficiaries with arbitrage-grade exit (can adjust enforcement intensity based on geopolitical pressure) — low d, low or negative effective extraction. Sanctioned end users are mixed beneficiaries/victims with constrained exit (can pursue indigenous development or alternative suppliers but face substantial switching costs) — moderate d, moderate effective extraction. The export control regime is the primary victim with trapped exit (cannot exit the verification crisis or organize alternative enforcement) — high d, maximum effective extraction. Compliant exporters are secondary victims with constrained exit (cannot exit without abandoning the market) — moderate-high d, substantial effective extraction. The enforcement coalition is a mixed coordinator/victim with constrained exit (cannot exit the strategic containment mission but faces resource and jurisdictional limits) — moderate d, moderate effective extraction. The entity list process is a degraded mechanism with constrained exit (institutional inertia prevents abandoning the designation ritual) — moderate d, but classification derives from theater gate rather than high extraction.",
+    "perspectival_gap": "This constraint demonstrates extraction visible from below (Archetype A). The export control regime and compliant exporters see pure extraction (Snare) — they bear costs without corresponding benefits and cannot exit. Smuggling intermediaries and transshipment hubs see coordination (Rope) — they are solving real logistics and information problems and capturing legitimate returns. Sanctioned end users see mixed coordination and extraction (Tangled Rope) — grey markets solve their access problem but extract monopoly rents. The enforcement coalition sees mixed coordination and extraction (Tangled Rope) — multilateral information sharing is genuine coordination, but resource constraints and jurisdictional limits create extraction. The entity list process sees its own degraded ritual (Piton) — the designation mechanism persists through inertia despite minimal functional deterrence. The analytical observer sees the constraint as constructed rather than natural — grey market evasion is not an immutable feature of export control regimes but a consequence of enforcement capacity lagging network complexity. The perspectival gap is wide: beneficiaries experience negative or low extraction while victims experience high extraction, and the gap is not resolvable through better information — it reflects genuine structural asymmetry in who benefits and who pays.",
+    "mandatrophy_analysis": "The constraint's mandate (strategic technology containment through export controls) has not outlived its function — the strategic competition that motivates export controls remains active. However, the grey market evasion mechanism has created a persistent gap between the mandate and the constraint's actual operation: export controls are formally in place but functionally evaded at scale. This is not mandatrophy (the mandate is still live) but rather mandate-mechanism divergence: the enforcement mechanism has not kept pace with the evasion mechanism. The rising theater ratio (0.38 → 0.61) reflects this divergence — entity list designations and enforcement actions persist as political signals even as their functional deterrence erodes. The constraint is a snare from the regime's perspective because the evasion mechanism is structural (jurisdictional arbitrage, network effects, information asymmetry) rather than incidental, and the enforcement coalition lacks the resources and jurisdictional reach to suppress it. The omega variables identify the key empirical uncertainties: smuggling volume measurement (how much evasion is grey market vs. other methods?), transshipment hub complicity (passive or active?), enforcement effectiveness threshold (achievable or infeasible?), alternative sourcing substitutability (temporary or structural dependence?), and multilateral coordination potential (can allied regimes close the channels or will networks adapt?)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Grey market evasion is downstream of export_control_reversibility. The upstream constraint establishes that export controls are technically reversible (can be lifted or tightened based on policy decisions), but the grey market evasion mechanism creates a persistent gap between formal control and actual technology flow. The two constraints have different extractiveness values: export_control_reversibility reflects the policy flexibility and compliance burden of the formal regime; grey_market_evasion reflects the monopoly rents and strategic risk externalization of the evasion mechanism. They are linked but structurally distinct."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "export_control_reversibility"
+    ]
+  }
+}

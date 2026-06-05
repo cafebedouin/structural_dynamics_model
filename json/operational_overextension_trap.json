@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "operational_overextension_trap",
+    "version": "1.0",
+    "generated_date": "2025-01-01",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "overext",
+    "story_uid": "f84c331e-51e5-4526-9515-a016ebf26574",
+    "created_at": "2026-06-05T16:50:48.488171+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Operational Overextension Trap in Russian Military Operations",
+    "topic_domain": "military_operations/information_warfare/institutional_dysfunction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_command_structure",
+      "political_leadership"
+    ],
+    "victims": [
+      "russian_tactical_units",
+      "frontline_commanders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Russian Tactical Units",
+      "comment": "PERSPECTIVE 1: RUSSIAN TACTICAL UNITS (SNARE) — Trapped in impossible operational geometry. Cannot refuse orders to advance toward Shevchenkove despite lacking control of prerequisite objectives. Bear full cost of dispersion: inadequate reserves, inability to respond to Ukrainian counterattacks, mounting casualties. No exit option — desertion is punished, rotation is denied, and the command structure does not accept tactical reality as grounds for mission refusal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Frontline Commanders",
+      "comment": "PERSPECTIVE 2: FRONTLINE COMMANDERS (SNARE) — Constrained by career consequences of reporting failure. Can see the operational impossibility but cannot refuse orders or revise objectives without being relieved. Face biographical consequences: relief for 'defeatism,' blocked promotion, or worse. The constraint extracts compliance through career threat while providing no coordination benefit — commanders know the orders are unexecutable but must attempt them anyway."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Senior Command Structure",
+      "comment": "PERSPECTIVE 3: SENIOR COMMAND STRUCTURE (ROPE) — Benefits from the overextension dynamic. Ambitious objectives satisfy political leadership's demand for progress. Failures are blamed on tactical execution, not operational planning. The command structure experiences this as coordination: they are transmitting political intent into military action. Extraction flows toward them (career advancement, political favor) rather than away."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Political Leadership",
+      "comment": "PERSPECTIVE 4: POLITICAL LEADERSHIP (ROPE) — Primary beneficiary. Receives reports of ambitious operations and forward movement. Insulated from tactical reality by the beautiful reports feedback loop. Experiences the constraint as coordination: the military is executing the political vision. Can exit or revise strategy at will but chooses not to because the reporting structure shields them from consequences."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Milblogger Community",
+      "comment": "PERSPECTIVE 5: MILBLOGGER COMMUNITY (TANGLED ROPE) — Mixed position. Benefits from access to tactical information and audience growth through crisis reporting. Also constrained by censorship risk and pressure to maintain morale narratives. Experiences both coordination (information sharing within constraints) and extraction (cannot report full scope of dysfunction without consequences). Warnings about 'difficult situations' are calibrated to avoid crossing red lines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine operational coordination problem (how to sequence objectives given finite forces) and the extractive overlay (command structure benefits from impossible objectives because failures are blamed downward). The constraint has a coordination kernel — military operations require objective sequencing — but the implementation extracts from tactical units to benefit senior command. Tangled rope classification reflects this hybrid structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "prerequisite_definition_ambiguity",
+      "question": "What constitutes 'control' of a prerequisite objective sufficient to enable the next operation? Is Kupyansk a prerequisite for Shevchenkove, or can forces bypass it?",
+      "resolution_mechanism": "Doctrinal analysis of Russian operational planning; historical case studies of successful vs failed bypass operations; assessment of Ukrainian interdiction capacity from Kupyansk salient",
+      "impact": "If bypass is doctrinally sound: overextension is tactical failure, not structural trap. If prerequisite control is required: overextension is command-imposed impossibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prerequisite control is operationally necessary or command preference"
+    },
+    {
+      "id": "reporting_accuracy_threshold",
+      "question": "At what point does the beautiful reports feedback loop break? How severe must tactical failure become before it penetrates upward to revise operational objectives?",
+      "resolution_mechanism": "Historical analysis of Russian command decision-making under stress; identification of past cases where tactical reality forced operational revision; assessment of current political constraints on acknowledging failure",
+      "impact": "If threshold is low: overextension is self-correcting coordination problem. If threshold is high or nonexistent: overextension is stable extraction mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Severity threshold for tactical reality to force operational revision"
+    },
+    {
+      "id": "force_generation_sustainability",
+      "question": "Can Russian force generation sustain the current operational tempo and dispersion indefinitely, or is there a collapse point?",
+      "resolution_mechanism": "Mobilization capacity analysis; equipment production and refurbishment rates; casualty and desertion trends; comparison to historical sustainment limits",
+      "impact": "If sustainable: overextension is chronic stable state. If unsustainable: overextension has a natural sunset (collapse or forced operational pause).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether force generation can sustain current operational overextension"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "overext_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38,
+      "id_override": "overext_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45,
+      "id_override": "overext_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "overext_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.61,
+      "id_override": "overext_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "overext_extract_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7,
+      "id_override": "overext_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.76,
+      "id_override": "overext_suppress_t3"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.82,
+      "id_override": "overext_suppress_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The operational overextension trap emerges from the interaction between ambitious operational objectives set by senior command and the tactical reality faced by frontline units. Russian forces are assigned objectives (Shevchenkove) that require first achieving unmet prerequisites (Kupyansk), creating systematic force dispersion. Units lack adequate reserves to respond to Ukrainian counterattacks because forces are committed to multiple simultaneous axes of advance. The constraint is downstream of the beautiful reports feedback loop: senior command receives filtered reports that understate tactical difficulty, enabling them to set impossible objectives without immediate consequences. Milblogger warnings about 'difficult situations' provide oblique evidence of the trap but cannot directly challenge operational planning. The constraint extracts from tactical units (casualties, exhaustion, mission failure) to benefit senior command (appearance of progress, political favor) and political leadership (narrative of offensive success).",
+    "key_agents": [
+      "Russian Tactical Units: Primary victim (powerless/trapped) — bear full cost of dispersion and impossible missions; no exit option",
+      "Frontline Commanders: Secondary victim (moderate/constrained) — see the impossibility but cannot refuse orders without career consequences",
+      "Senior Command Structure: Primary beneficiary (institutional/arbitrage) — benefits from ambitious objectives; failures blamed downward",
+      "Political Leadership: Primary beneficiary (institutional/arbitrage) — receives progress reports; insulated from tactical reality",
+      "Milblogger Community: Mixed position (moderate/constrained) — benefits from information access; constrained by censorship risk",
+      "Analytical Observer: External view (analytical/analytical) — sees coordination kernel overlaid with extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts heavily from tactical units through impossible mission assignments, force dispersion, and inability to respond to threats. Senior command and political leadership benefit through career advancement and narrative control. The extraction is not total (0.9+) because some tactical units do achieve local objectives, and the system occasionally revises plans when failures become undeniable. Theater ratio (0.45): Moderate. Operational planning has genuine functional content — objectives are chosen for strategic reasons, not purely for show. But a substantial portion is performative: objectives are set to satisfy political demands for progress rather than tactical feasibility. The theater component has increased over the interval as the gap between reported and actual progress has widened. Suppression (0.82): Very high. Tactical units cannot refuse orders. Frontline commanders cannot revise objectives without relief. Desertion is punished. Rotation is denied. The reporting structure suppresses accurate tactical assessment from reaching decision-makers. Suppression has increased over the interval as enforcement mechanisms have hardened in response to mounting failures.",
+    "perspectival_gap": "The constraint demonstrates a stark beneficiary-victim gap. Tactical units and frontline commanders experience pure extraction (Snare) — trapped in impossible operational geometry with no exit and mounting costs. Senior command and political leadership experience coordination (Rope) — they are transmitting intent and receiving reports of execution. The analytical observer sees the hybrid structure (Tangled Rope) — a genuine operational coordination problem (how to sequence objectives) overlaid with an extraction mechanism (impossible objectives benefit senior command by blaming failures downward). The milblogger community occupies a mixed position (Tangled Rope) — benefiting from information access while constrained by censorship. The perspectival gap is not a disagreement about facts but a structural difference in who bears costs and who captures benefits.",
+    "directionality_logic": "Directionality is determined by structural position relative to the extraction flow. Tactical units are full targets (d → 1.0): they bear the costs of dispersion, inadequate reserves, and mission failure. Frontline commanders are high-d targets (d → 0.8): constrained by career consequences but with slightly more agency than tactical units. Senior command and political leadership are beneficiaries (d → 0.1-0.2): extraction flows toward them through career advancement and narrative control. The milblogger community has intermediate directionality (d → 0.4-0.5): mixed costs and benefits. The analytical observer's directionality is neutral (d → 0.5) by definition. The engine computes effective extraction (chi) from these directionality values, power levels, and exit options. Trapped agents with high d experience maximum chi; beneficiaries with arbitrage exit experience low or negative chi.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that the snare classification is perspectival, not absolute. From the tactical units' position, this is pure extraction — impossible missions with no exit. From senior command's position, this is coordination — transmitting political intent into military action. The analytical observer sees both: a coordination problem (objective sequencing) overlaid with extraction (failures blamed downward). The mandate (achieve operational objectives) has not outlived its function from senior command's perspective — it continues to serve their career interests. But from the tactical units' perspective, the mandate is mandatrophic — it demands the impossible and punishes failure. The constraint is not 'really' a snare or 'really' a rope; it is both, depending on where you sit in the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The operational overextension trap is downstream of the beautiful reports feedback loop. The feedback loop creates the information asymmetry that enables impossible objective-setting; the overextension trap is the tactical manifestation of that asymmetry. Both constraints are required to model the full system: the feedback loop explains why senior command sets impossible objectives; the overextension trap explains how tactical units experience those objectives."
+  },
+  "directionality_overrides": []
+}

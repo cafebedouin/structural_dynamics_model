@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "military_defeat_cascade",
+    "version": "1.0",
+    "generated_date": "2026-06-08",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mdc",
+    "story_uid": "a7f3c8e1-4d5b-4c9a-8f2e-1b6d9a3c7e5f",
+    "created_at": "2026-06-08T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.85,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Military Defeat Cascade in Russo-Ukrainian War",
+    "topic_domain": "political_economy/regime_stability/military_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "kremlin_inner_circle",
+      "defense_industrial_complex",
+      "nationalist_ideological_bloc"
+    ],
+    "victims": [
+      "russian_conscripts",
+      "occupied_population",
+      "russian_civil_society",
+      "ukrainian_civilians"
+    ],
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Russian Conscript",
+      "comment": "PERSPECTIVE 1: RUSSIAN CONSCRIPT (SNARE) — Trapped by mobilization law with no legal exit; faces immediate death or injury for territorial gains the state cannot hold. Casualty-to-advance ratio (206/sq mile vs 61 summer 2025) means extraction has tripled. Maximum experienced extraction — no agency, no exit, bears full cost of the widening capability gap."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Russian Defense Industrial Manager",
+      "comment": "PERSPECTIVE 2: DEFENSE INDUSTRIAL MANAGER (TANGLED ROPE) — Constrained by sanctions and supply chain disruption but benefits from wartime production contracts and regime patronage. Coordinates genuine military-industrial output (ammunition, vehicles) while extracting rents through cost-plus contracts and import substitution theater. Mixed coordination-extraction: the war economy both enables and exploits this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Kremlin Inner Circle",
+      "comment": "PERSPECTIVE 3: KREMLIN INNER CIRCLE (ROPE) — Primary beneficiary with arbitrage-level exit (offshore assets, dual citizenship, exit visas). Experiences the constraint as coordination: the war narrative consolidates domestic control, suppresses opposition, and justifies resource extraction. Net beneficiary — the widening military gap is a problem for conscripts, not for the decision-making elite who can exit if the regime collapses."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Occupied Population (Donbas)",
+      "comment": "PERSPECTIVE 4: OCCUPIED POPULATION (SNARE) — Identity-locked by enforced passportization and severed Ukrainian ties; cannot exit occupied territory without regime permission. Bears cost of military occupation (conscription, resource extraction, suppression of Ukrainian identity) with no coordination benefit. The widening gap means longer occupation with no resolution — extraction persists indefinitely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Nationalist Ideological Bloc",
+      "comment": "PERSPECTIVE 5: NATIONALIST IDEOLOGICAL BLOC (TANGLED ROPE) — Organized agents (state media, patriotic organizations, Z-movement) coordinate genuine ideological commitment to territorial maximalism while extracting state funding and career advancement. Constrained by the widening capability gap (cannot deliver promised victory) but benefits from wartime mobilization of nationalist sentiment. Mixed: the ideology is both sincere coordination and extractive performance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Russian General Staff",
+      "comment": "PERSPECTIVE 6: RUSSIAN GENERAL STAFF (PITON) — Institutional actor maintaining performative operational planning (maps showing Ukrainian collapse, victory timelines) despite observable incapacity. The planning function has atrophied into theater: casualty-to-advance ratio tripled, Ukrainian operations exceed Russian (May 2026), yet staff briefs show imminent breakthrough. Piton classification derives from theater gate — the military planning apparatus persists through institutional inertia, not functional capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Realist IR View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / REALIST IR VIEW (MOUNTAIN) — From a civilizational/universal perspective, great power competition over buffer zones is an immutable feature of international relations: Russia's security concerns about NATO expansion are structural, and the war is an inevitable response to encirclement. This perspective naturalizes the conflict as a law of geopolitics. However, the structural data contradicts the mountain classification — the widening gap between aims and capacity, the rising casualty ratio, and the regime's inability to exit reveal this as a contingent policy choice, not a geopolitical necessity. The engine's false summit detector will identify this as naturalization of a constructed constraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Western Sanctions Coalition",
+      "comment": "PERSPECTIVE 8: WESTERN SANCTIONS COALITION (SCAFFOLD) — Organized agents (EU, US, allied states) see the constraint as temporary: sanctions and military aid are transitional mechanisms to impose costs until Russia accepts a negotiated settlement. Low effective extraction because the coalition has agency, mobile exit (can lift sanctions), and sees a sunset (war termination). The scaffold logic assumes the widening capability gap will force Russian concessions within a generational timeframe."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regime_collapse_threshold",
+      "question": "At what casualty-to-advance ratio or territorial loss rate does the constraint shift from regime-stabilizing (consolidates domestic control) to regime-threatening (triggers elite defection or mass unrest)?",
+      "resolution_mechanism": "Historical analysis of authoritarian regime survival under military defeat; identification of tipping points in prior cases (USSR Afghanistan, Tsarist WWI, Argentine Falklands)",
+      "impact": "If threshold already crossed: constraint is in terminal phase, regime collapse imminent. If threshold distant: constraint persists as tangled rope for years. If threshold nonexistent: regime can sustain indefinite extraction (pure snare from all non-elite perspectives).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Casualty threshold for regime-threatening vs regime-stabilizing dynamics"
+    },
+    {
+      "id": "maximalist_aims_sincerity",
+      "question": "Are the Kremlin's stated maximalist aims (full Ukrainian capitulation, regime change, territorial recognition) genuine strategic objectives or negotiating theater to anchor expectations for a more limited settlement?",
+      "resolution_mechanism": "Declassified internal planning documents; post-conflict memoirs; revealed preference analysis (resource allocation to occupation infrastructure vs mobile offensive capability)",
+      "impact": "If genuine: widening gap is catastrophic failure, regime cannot exit without existential loss. If theater: widening gap is manageable — regime can declare victory at any territorial line and exit. Determines whether the constraint has a sunset or persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether maximalist aims are strategic objectives or negotiating theater"
+    },
+    {
+      "id": "ukrainian_operations_sustainability",
+      "question": "Can Ukraine sustain monthly operations exceeding Russia's (May 2026 data point) or is this a temporary capability spike dependent on Western aid flows?",
+      "resolution_mechanism": "Longitudinal tracking of Ukrainian vs Russian operations count; correlation with Western aid delivery timelines; assessment of Ukrainian domestic production capacity vs import dependency",
+      "impact": "If sustainable: the capability gap widens further, increasing extraction on Russian conscripts and occupied populations. If temporary: the gap stabilizes or narrows, reducing extraction and potentially enabling Russian territorial consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of Ukrainian operational tempo advantage"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the analytical observer's mountain classification (great power competition as immutable geopolitics) a genuine natural law or a false summit that naturalizes contingent policy choices?",
+      "resolution_mechanism": "Cross-position analysis: if the constraint's extractiveness and suppression are high from non-elite perspectives, and identifiable beneficiaries exist (Kremlin inner circle, defense industrial complex), the mountain is a false summit. The engine's FSM detector will evaluate this automatically.",
+      "impact": "If genuine mountain: the war is an inevitable structural feature of the international system, and no policy intervention can resolve it. If false summit: the constraint is a constructed policy choice that benefits specific agents, and alternative policies (negotiated settlement, regime change, sanctions relief) could dissolve it.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether realist IR framing naturalizes a contingent constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "mdc_extract_2022_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "mdc_extract_2022_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "id_override": "mdc_extract_2023_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.62,
+      "id_override": "mdc_extract_2023_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65,
+      "id_override": "mdc_extract_2024_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.67,
+      "id_override": "mdc_extract_2024_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.68,
+      "id_override": "mdc_extract_2025_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 42,
+      "value": 0.68,
+      "id_override": "mdc_extract_2025_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.68,
+      "id_override": "mdc_extract_2026_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "mdc_theater_2022_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "mdc_theater_2022_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.62,
+      "id_override": "mdc_theater_2023_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.71,
+      "id_override": "mdc_theater_2023_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.78,
+      "id_override": "mdc_theater_2024_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.82,
+      "id_override": "mdc_theater_2024_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.84,
+      "id_override": "mdc_theater_2025_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 42,
+      "value": 0.85,
+      "id_override": "mdc_theater_2025_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.85,
+      "id_override": "mdc_theater_2026_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "id_override": "mdc_suppress_2022_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.72,
+      "id_override": "mdc_suppress_2023_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.78,
+      "id_override": "mdc_suppress_2024_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.81,
+      "id_override": "mdc_suppress_2025_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.82,
+      "id_override": "mdc_suppress_2026_02"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 48
+  },
+  "commentary": {
+    "narrative_context": "The military defeat cascade in the Russo-Ukrainian War describes the widening structural gap between the Kremlin's maximalist war aims (full Ukrainian capitulation, territorial recognition, regime change) and its observable military incapacity (unable to occupy Donbas after four years, losing territory, casualty-to-advance ratio tripled from 61 to 206 casualties per square mile). This constraint exhibits multiple DR types from different structural positions: the Kremlin inner circle experiences it as coordination (consolidates domestic control), conscripts experience it as pure extraction (trapped, bearing tripled casualty costs), the defense industrial complex experiences it as mixed coordination-extraction (genuine production plus rent extraction), and the analytical observer risks naturalizing it as immutable geopolitics (false summit). The constraint's theater_ratio (0.85) reflects that military planning has become substantially performative: General Staff briefs show imminent breakthrough despite observable incapacity (Ukrainian operations exceeded Russian in May 2026). The rising suppression_requirement (0.65 → 0.82) tracks enforcement intensification: mobilization law tightened, exit restrictions increased, domestic opposition suppressed as the capability gap widened. The constraint is downstream of manpower_exhaustion_trap (mountain) — the demographic and economic limits on Russian mobilization capacity are immutable, but the decision to continue the war despite those limits is a constructed policy choice.",
+    "key_agents": [
+      "Russian Conscripts: Primary victim (powerless/trapped) — bear tripled casualty costs with no exit; extraction maximized by widening capability gap",
+      "Kremlin Inner Circle: Primary beneficiary (institutional/arbitrage) — consolidates domestic control, extracts resources, retains exit options (offshore assets, dual citizenship)",
+      "Defense Industrial Complex: Secondary beneficiary (moderate/constrained) — coordinates genuine military production while extracting rents through cost-plus contracts and import substitution theater",
+      "Occupied Population (Donbas): Secondary victim (powerless/identity_locked) — identity-locked by passportization, bears indefinite occupation costs with no coordination benefit",
+      "Nationalist Ideological Bloc: Mixed actor (organized/constrained) — coordinates genuine ideological commitment while extracting state funding and career advancement; constrained by inability to deliver promised victory",
+      "Russian General Staff: Institutional actor (institutional/constrained) — maintains performative operational planning despite observable incapacity (piton perspective)",
+      "Western Sanctions Coalition: Organized external actor (organized/mobile) — sees constraint as temporary (scaffold logic); assumes widening gap will force Russian concessions",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent policy choice as immutable geopolitics (false summit candidate)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The widening gap between maximalist aims and military capacity means conscripts bear tripled casualty costs (206 vs 61 casualties/sq mile) for territorial gains the state cannot hold. The Kremlin inner circle captures regime-stabilization benefits (domestic control, resource extraction, suppression of opposition) while retaining exit options. The defense industrial complex extracts rents through wartime contracts. Extraction has risen monotonically from 0.45 (Feb 2022 invasion) to 0.68 (June 2026) as the capability gap widened. Suppression (0.82): Very high. Mobilization law eliminates legal exit for conscripts; domestic opposition suppressed; occupied populations cannot leave without regime permission; exit restrictions tightened as the war continued. Suppression rose from 0.65 (initial invasion, partial mobilization) to 0.82 (full mobilization, exit restrictions, domestic crackdown) as the regime compensated for military incapacity with enforcement intensification. Theater ratio (0.85): Very high. Military planning is substantially performative: General Staff briefs show imminent Ukrainian collapse despite observable data (Ukrainian operations exceed Russian, casualty ratio tripled, territorial gains negligible). State media maintains victory narrative despite widening capability gap. Theater rose from 0.35 (early war, genuine operational planning) to 0.85 (mid-2025 onward, planning divorced from capacity) as the gap between aims and reality became undeniable.",
+    "perspectival_gap": "This constraint demonstrates the full range of DR classification from different structural positions. The Kremlin inner circle sees coordination (Rope) — the war consolidates domestic control and justifies resource extraction; they are net beneficiaries with exit options. Russian conscripts see pure extraction (Snare) — trapped by mobilization law, bearing tripled casualty costs with no agency or exit. The defense industrial complex sees mixed coordination-extraction (Tangled Rope) — genuine military production plus rent extraction through cost-plus contracts. The occupied population sees pure extraction (Snare) — identity-locked by passportization, bearing indefinite occupation costs. The nationalist ideological bloc sees mixed coordination-extraction (Tangled Rope) — genuine ideological commitment plus state funding and career advancement. The General Staff sees degraded planning (Piton) — operational briefs are performative, divorced from capacity. The Western sanctions coalition sees a temporary problem (Scaffold) — assumes the widening gap will force Russian concessions within a generational timeframe. The analytical observer risks seeing immutable geopolitics (Mountain) — great power competition over buffer zones as a natural law — but the structural data (high extraction, high suppression, identifiable beneficiaries) reveals this as a false summit: the constraint is a constructed policy choice, not a geopolitical necessity.",
+    "directionality_logic": "Each perspective's directionality value (d) derives from the agent's structural position. Kremlin inner circle: institutional power + arbitrage exit + primary beneficiary → d ≈ 0.1 (low, near full beneficiary). Defense industrial complex: moderate power + constrained exit + mixed beneficiary/victim → d ≈ 0.35 (moderate, mixed extraction). Nationalist ideological bloc: organized power + constrained exit + mixed beneficiary/victim → d ≈ 0.40 (moderate, mixed extraction). General Staff: institutional power + constrained exit + neither clear beneficiary nor victim → d ≈ 0.50 (symmetric, piton derives from theater gate not high chi). Western sanctions coalition: organized power + mobile exit + external actor (not directly targeted) → d ≈ 0.25 (low, scaffold logic). Russian conscripts: powerless + trapped exit + primary victim → d ≈ 0.95 (very high, near full target). Occupied population: powerless + identity_locked exit + primary victim → d ≈ 0.90 (very high, near full target). Analytical observer: analytical power + analytical exit → d ≈ 0.50 (symmetric, mountain is perspectival naturalization). The directionality spread (0.1 to 0.95) reflects the extreme asymmetry: elite beneficiaries with exit options experience the constraint as coordination or low extraction, while powerless victims with no exit bear maximum extraction.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR FOR INTER-INSTITUTIONAL AND SAME-LEVEL DYNAMICS: This constraint resolves the mandatrophy by showing that the same structural phenomenon (widening gap between war aims and military capacity) produces different constraint types from different structural positions. The mandatrophy is not 'which type is correct?' but 'which perspective are you measuring from?' The Kremlin inner circle's rope is their genuine experience (net beneficiary, exit options). The conscript's snare is their structural reality (trapped, maximum extraction). The defense industrial complex's tangled rope is their mixed experience (genuine coordination plus rent extraction). The General Staff's piton is their institutional reality (performative planning, atrophied function). The Western coalition's scaffold is their strategic logic (temporary mechanism with sunset). The analytical observer's mountain is a false summit (naturalization of contingent policy choice). No single type is 'the' answer — the presheaf over the observation site IS the answer. The constraint also demonstrates how inter-institutional dynamics (Kremlin vs General Staff, defense industry vs state) and same-level lateral dynamics (elite beneficiaries vs powerless victims at the same nominal national scope) produce perspectival gaps through differentiated exit options and beneficiary/victim status, not through adding axes to the tuple."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of manpower_exhaustion_trap (mountain) — the demographic and economic limits on Russian mobilization capacity are immutable structural features. The military defeat cascade is the constructed policy choice to continue the war despite those limits. The upstream mountain (manpower exhaustion) sets the boundary conditions; the downstream constraint (defeat cascade) is the regime's response to those conditions. Decomposition: manpower_exhaustion_trap has negligible extraction (it is a genuine resource limit, not a policy choice); military_defeat_cascade has high extraction (the decision to continue extracting from conscripts despite the resource limit)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "manpower_exhaustion_trap"
+    ]
+  }
+}

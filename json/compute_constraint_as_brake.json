@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "compute_constraint_as_brake",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpu_brake",
+    "story_uid": "9ca915bd-56cc-4102-96db-0caea4eac0ac",
+    "created_at": "2026-06-05T17:06:23.914425+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "GPU Export Controls as Capability Brake on Surveillance Systems",
+    "topic_domain": "technology_governance/surveillance_studies/export_control",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.12,
+    "beneficiaries": [
+      "us_semiconductor_industry",
+      "strategic_competitors_domestic_chip_programs"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Geedge Technical Operations Team",
+      "comment": "PERSPECTIVE 1: GEEDGE TECHNICAL OPERATIONS (MOUNTAIN) — Experiences GPU scarcity as an immutable physical limit. Cannot process additional data streams or reduce prediction latency without hardware that is structurally unavailable. The constraint appears as a law of nature: 'we cannot compute what we cannot compute.' No exit options and no perception of the policy layer above the scarcity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Geedge Strategic Planning",
+      "comment": "PERSPECTIVE 2: GEEDGE STRATEGIC PLANNING (MOUNTAIN) — Sees the hardware ceiling as a fixed constraint on system roadmap. Can model workarounds (algorithmic efficiency, edge computing, lower-resolution data) but these are adaptations to an unchangeable limit, not exits. The biographical horizon reveals no path to lifting the constraint — it is treated as a permanent feature of the operational environment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "U.S. Department of Commerce / BIS",
+      "comment": "PERSPECTIVE 3: U.S. BUREAU OF INDUSTRY AND SECURITY (ROPE) — Experiences export controls as a coordination mechanism solving the collective action problem of strategic technology diffusion. The constraint coordinates allied semiconductor policy, manages dual-use technology risks, and preserves U.S. technological advantage. Net beneficiary through strategic leverage and minimal extraction from the perspective of the regulator."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "U.S. Semiconductor Manufacturers",
+      "comment": "PERSPECTIVE 4: U.S. SEMICONDUCTOR INDUSTRY (ROPE) — Benefits from export controls through protected market position and strategic coordination with government. The constraint creates a moat around advanced node production and maintains pricing power. Arbitrage exit options through domestic sales, allied-nation exports, and influence over control definitions. Experiences the constraint as beneficial coordination rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Strategic Competitor Domestic Chip Programs",
+      "comment": "PERSPECTIVE 5: STRATEGIC COMPETITOR CHIP PROGRAMS (TANGLED ROPE) — Experiences both coordination (accelerated domestic semiconductor R&D, supply chain independence) and extraction (technology gap, capability ceiling, resource diversion to catch-up programs). The constraint coordinates internal industrial policy but extracts through foregone capabilities and duplicated R&D costs. Constrained exit — can build domestic capacity but cannot access cutting-edge nodes in the biographical timeframe."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Technology Policy Analyst",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, the constraint appears as a natural consequence of semiconductor physics and manufacturing complexity. Advanced node production requires extreme capital intensity, tacit knowledge, and supply chain depth that cannot be rapidly replicated. The policy layer (export controls) is seen as formalizing an already-existing technological moat rather than creating artificial scarcity. However, this perspective risks naturalizing what is partly a constructed institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_policy_scarcity",
+      "question": "Is GPU scarcity a natural consequence of semiconductor manufacturing complexity, or is it substantially amplified by export control policy?",
+      "resolution_mechanism": "Counterfactual analysis: model GPU availability to Geedge under alternative policy regimes (no controls, allied-only controls, technology-specific rather than geography-specific controls). Compare predicted vs actual capability gaps.",
+      "impact": "If scarcity is primarily natural (manufacturing bottlenecks, capital requirements): mountain classification holds from all perspectives. If scarcity is substantially policy-amplified: reclassify analytical perspective as false summit; beneficiary structure (U.S. semiconductor industry, strategic advantage) becomes visible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether GPU scarcity is natural or policy-amplified"
+    },
+    {
+      "id": "domestic_capability_timeline",
+      "question": "Can strategic competitors develop domestic advanced node capacity within a biographical timeframe (10-15 years), or is the technology gap civilizational (30+ years)?",
+      "resolution_mechanism": "Historical analysis of semiconductor catch-up programs (Taiwan 1980s-2000s, South Korea 1990s-2010s); assessment of current domestic programs' progress against TSMC/Samsung roadmaps; identification of bottlenecks (EUV lithography, materials science, tacit knowledge transfer).",
+      "impact": "If biographical: tangled_rope perspective confirmed — extraction is temporary and coordination benefits dominate in the long run. If civilizational: reclassify competitor perspective toward snare — the capability gap is structural and the constraint extracts permanently.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for domestic advanced node capability development"
+    },
+    {
+      "id": "algorithmic_substitution_ceiling",
+      "question": "To what extent can algorithmic efficiency gains substitute for hardware scarcity in surveillance system capability?",
+      "resolution_mechanism": "Empirical measurement of capability scaling: compare system performance (data streams, prediction accuracy, latency) across different hardware generations and algorithmic approaches. Identify hard floors where no algorithmic optimization can compensate for compute limits.",
+      "impact": "If substitution is substantial: the constraint is less binding than it appears from Geedge's immediate perspective — the mountain is partly a failure to optimize. If substitution ceiling is low: the hardware constraint is genuinely binding and the mountain classification is structurally accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of algorithmic substitution for hardware limits"
+    },
+    {
+      "id": "beneficiary_structure_visibility",
+      "question": "Does the analytical perspective's mountain classification naturalize a constraint that has identifiable beneficiaries (U.S. semiconductor industry, strategic advantage)?",
+      "resolution_mechanism": "Cross-position analysis: compare the analytical mountain classification against the beneficiary declarations and the institutional perspectives' rope classifications. If beneficiaries exist and experience the constraint as coordination rather than natural law, the analytical mountain is a false summit.",
+      "impact": "If false summit: the constraint is not a law of nature but a policy choice that benefits specific actors. The mountain classification from the analytical perspective is naturalization of a constructed arrangement. If genuine mountain: beneficiaries are incidental and the constraint would persist regardless of policy.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether analytical mountain naturalizes beneficiary structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "id_override": "gpu_brake_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.12,
+      "id_override": "gpu_brake_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.15,
+      "id_override": "gpu_brake_extract_t4"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.18,
+      "id_override": "gpu_brake_extract_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "gpu_brake_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.12,
+      "id_override": "gpu_brake_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.14,
+      "id_override": "gpu_brake_theater_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15,
+      "id_override": "gpu_brake_theater_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "gpu_brake_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.2,
+      "id_override": "gpu_brake_suppress_t2"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.23,
+      "id_override": "gpu_brake_suppress_t4"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.25,
+      "id_override": "gpu_brake_suppress_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "U.S. export controls on advanced semiconductors create a hardware availability constraint for Geedge's AI surveillance systems. The constraint operates through chip-count limits and generation restrictions: Geedge cannot access cutting-edge GPUs (H100, A100 successors) in quantities sufficient for scaling data ingestion and real-time prediction. From Geedge's operational perspective, this appears as an immutable physical limit — a capability ceiling determined by available compute. From the U.S. policy perspective, the constraint is a coordination mechanism managing dual-use technology diffusion and preserving strategic advantage. The constraint exhibits a classic false-summit structure: what appears as a law of nature (you cannot compute without hardware) from the trapped perspective is revealed as a policy choice with identifiable beneficiaries (U.S. semiconductor industry, strategic competitors' accelerated domestic programs) from the analytical cross-position view. The measurements show modest extraction accumulation (0.08 → 0.18) as export controls tighten and Geedge's capability gap widens relative to unconstrained actors. Theater ratio remains low (0.15) because the constraint operates through direct hardware denial rather than performative compliance rituals. Suppression rises modestly (0.15 → 0.25) as enforcement mechanisms mature and workarounds (smuggling, shell companies, algorithmic substitution) are systematically closed.",
+    "key_agents": [
+      "Geedge Technical Operations: Primary target (powerless/trapped) — experiences GPU scarcity as immutable physical limit; no visibility into policy layer",
+      "Geedge Strategic Planning: Secondary target (moderate/constrained) — sees hardware ceiling as fixed constraint on roadmap; can model workarounds but not exits",
+      "U.S. Bureau of Industry and Security: Primary beneficiary (institutional/mobile) — coordinates allied semiconductor policy and manages dual-use technology risks",
+      "U.S. Semiconductor Industry: Primary beneficiary (institutional/arbitrage) — benefits from protected market position and strategic coordination with government",
+      "Strategic Competitor Domestic Chip Programs: Mixed position (institutional/constrained) — benefits from accelerated domestic R&D but bears extraction through capability gap and resource diversion",
+      "Technology Policy Analyst: Analytical observer (analytical/analytical) — risks naturalizing policy choice as physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low-moderate. The constraint extracts from Geedge through foregone surveillance capability (data streams not processed, predictions not made, system scaling blocked). However, extraction is modest because: (1) algorithmic efficiency gains provide partial substitution for hardware limits; (2) the capability gap affects system ceiling rather than eliminating function entirely; (3) Geedge retains access to previous-generation hardware sufficient for baseline operations. The rising trajectory (0.08 → 0.18) reflects tightening export controls and widening capability gap as cutting-edge nodes advance beyond Geedge's access. Suppression (0.25): Low-moderate. Barriers to exit include: (1) no alternative GPU suppliers outside U.S. export control jurisdiction for advanced nodes; (2) smuggling and shell-company workarounds face enforcement risk; (3) domestic chip programs cannot replicate cutting-edge nodes in biographical timeframe. However, suppression is not severe because partial workarounds exist (algorithmic optimization, edge computing, lower-resolution data) and the constraint does not eliminate surveillance capability entirely. Theater ratio (0.15): Very low. The constraint operates through direct hardware denial with minimal performative content. Compliance is binary (chip access granted or denied) rather than ritualistic. The modest theater reflects licensing application processes and end-use verification procedures, but these are functional rather than performative.",
+    "perspectival_gap": "The constraint demonstrates a classic false-summit structure. Geedge's operational team experiences GPU scarcity as a mountain — an immutable physical limit on what can be computed. This perspective is structurally accurate from their position: they cannot access hardware that does not exist in their supply chain, and the scarcity appears as a law of nature. Geedge's strategic planning sees the same mountain at a biographical horizon — no path to lifting the constraint within career timescales. The U.S. regulatory and industry perspectives see rope — a coordination mechanism that solves collective action problems (allied technology policy, dual-use risk management) and benefits specific actors (semiconductor industry market position, strategic advantage). The strategic competitor perspective sees tangled rope — genuine coordination benefits (accelerated domestic R&D, supply chain independence) mixed with extraction (capability gap, resource diversion). The analytical observer risks seeing a mountain at civilizational scope — semiconductor manufacturing complexity as a natural limit — but this naturalizes what is partly a policy choice. The beneficiary declarations (U.S. semiconductor industry, strategic competitors' domestic programs) trigger the false-summit detector: a mountain with identifiable beneficiaries is a candidate for reclassification. The cross-position analysis reveals that the 'natural' hardware scarcity is substantially policy-amplified, and the analytical mountain is naturalization of a constructed institutional arrangement.",
+    "directionality_logic": "Directionality is derived from structural position and beneficiary/victim declarations. Geedge operational and strategic teams are implicit victims (capability ceiling, foregone surveillance function) with trapped/constrained exit options — high d values produce high effective extraction. U.S. regulatory and industry actors are declared beneficiaries (strategic coordination, market position) with mobile/arbitrage exit options — low d values produce low or negative effective extraction (subsidy). Strategic competitor domestic chip programs occupy a mixed position: declared as beneficiaries (accelerated R&D, supply chain independence) but with constrained exit options and substantial capability gap costs — moderate d produces moderate effective extraction. The analytical observer has analytical exit options and no direct stake — d near 0.5 produces symmetric effective extraction. The directionality derivation captures the structural asymmetry: what appears as a natural limit from below is revealed as a policy choice benefiting specific actors when viewed from above.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that the mountain classification is perspectival and context-dependent. From Geedge's trapped position at immediate/biographical horizons, the constraint genuinely appears as an immutable limit — they cannot compute what they cannot compute, and no amount of effort changes the hardware availability. This is not a misperception; it is their structural reality. From the institutional and analytical positions at generational/civilizational horizons, the constraint is revealed as a policy choice with beneficiaries and coordination functions. The false-summit structure does not invalidate the mountain classification from the powerless perspective; it reveals that the same constraint can be both a natural law (from one position) and a constructed arrangement (from another). The mandatrophy is resolved by recognizing that 'Is this a mountain?' is an indexical question with no single answer — the presheaf over observation sites IS the answer. The omega variables document the irreducible uncertainties: Is the scarcity natural or policy-amplified? Can domestic programs close the gap in biographical time? To what extent can algorithmic efficiency substitute for hardware? These questions cannot be resolved from any single perspective, and their irresolution is the structural feature the framework exists to measure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is structurally upstream of any specific surveillance system implementation. The GPU availability ceiling affects all compute-intensive AI applications within the export control jurisdiction, not just Geedge. Downstream constraints (specific surveillance capabilities, data processing limits, prediction latency floors) inherit their extractiveness from this hardware brake but have their own distinct structural features."
+  },
+  "directionality_overrides": []
+}

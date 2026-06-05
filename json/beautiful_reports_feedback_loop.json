@@ -2,30 +2,30 @@
   "header": {
     "constraint_id": "beautiful_reports_feedback_loop",
     "version": "1.0",
-    "generated_date": "2025-01-03",
+    "generated_date": "2025-01-10",
     "status": "ACTIVE",
-    "measurement_id_prefix": "beautiful_reports"
+    "measurement_id_prefix": "brf",
+    "story_uid": "a7f3c8e1-9d4a-4b2e-8f5c-6d9e2a1b4c7f",
+    "created_at": "2025-01-10T00:00:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.78,
-    "theater_ratio": 0.82,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
     "claimed_type": "tangled_rope",
     "human_readable": "Beautiful Reports Feedback Loop in Russian Military Operations",
-    "topic_domain": "military_operations/information_warfare/organizational_pathology",
+    "topic_domain": "military_operations/information_warfare/institutional_dysfunction",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "mid_level_commanders",
-      "political_leadership"
+      "field_commanders_avoiding_accountability",
+      "mid_level_staff_officers",
+      "political_leadership_maintaining_narrative"
     ],
     "victims": [
-      "russian_ground_forces",
-      "operational_planning_staff",
-      "russian_strategic_position"
-    ],
-    "mandatrophy_resolved": false
+      "russian_operational_effectiveness",
+      "frontline_units_receiving_false_intelligence",
+      "strategic_planning_apparatus"
+    ]
   },
   "perspectives": [
     {
@@ -34,53 +34,44 @@
       "time_horizon": "immediate",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Frontline Soldier",
-      "comment": "PERSPECTIVE 1: FRONTLINE SOLDIER (SNARE) \u2014 Trapped in tactical positions based on fictional operational picture. Cannot contradict superior reports without career destruction or criminal prosecution. Bears maximum extraction: ordered to hold positions the command believes secure but are actually exposed, or to advance into positions command believes weakly defended but are actually fortified. No exit, no voice, maximum cost."
+      "label": "The Frontline Battalion Commander",
+      "comment": "PERSPECTIVE 1: FRONTLINE BATTALION COMMANDER (SNARE) — Receives operational orders based on fictional territorial control. Cannot exit the reporting chain, cannot correct the record without career destruction. Bears maximum extraction: ordered to advance through 'secured' areas that are actually contested, with logistics planned for non-existent supply routes. The coordination story (unified command picture) is pure cover for extraction."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Operational Planning Staff",
-      "comment": "PERSPECTIVE 2: OPERATIONAL PLANNING STAFF (SNARE) \u2014 Constrained by institutional position: knows reports are distorted but cannot act on ground truth without contradicting the reporting chain. Career-locked into producing plans based on beautiful reports. Some agency (can request clarification, can hedge) but fundamentally trapped by the information they are required to use. High extraction: professional competence systematically undermined."
+      "label": "The Brigade-Level Staff Officer",
+      "comment": "PERSPECTIVE 2: BRIGADE-LEVEL STAFF OFFICER (TANGLED ROPE) — Must aggregate subordinate reports into briefings for higher command. Faces career penalty for reporting failure but also needs accurate information to plan operations. Benefits from the system when their own unit's failures are concealed; victimized when adjacent units' false reports create planning disasters. Mixed coordination (needs some truth for tactical planning) and extraction (career survival requires beautification)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Field Commander Avoiding Accountability",
+      "comment": "PERSPECTIVE 3: FIELD COMMANDER AVOIDING ACCOUNTABILITY (ROPE) — Primary beneficiary. Falsified progress reports shield from immediate consequences of operational failure. Experiences the constraint as coordination: the reporting system allows management of political pressure from above. Can exit through lateral transfer, medical leave, or rotation. Net beneficiary during the falsification window before strategic collapse becomes undeniable."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Milblogger Network",
-      "comment": "PERSPECTIVE 3: MILBLOGGER NETWORK (TANGLED ROPE) \u2014 Organized informal information channel that both coordinates ground truth dissemination AND extracts from institutional credibility. Benefits: provides alternative verification pathway, builds audience, influences tactical decisions through public pressure. Costs: operates under threat of prosecution, limited institutional access, audience capture dynamics. Mixed coordination-extraction: the network solves a real information problem but also creates its own distortions (pessimism bias, audience-driven framing)."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Mid-Level Commander",
-      "comment": "PERSPECTIVE 4: MID-LEVEL COMMANDER (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination: reporting success protects career, maintains unit morale, secures resource allocation. Can arbitrage between official and informal channels (knows ground truth, reports beautiful version). Low effective extraction because the commander controls the information flow and benefits from the distortion. The coordination function is real from this perspective: the reporting system coordinates career advancement and resource distribution, even as it destroys operational effectiveness."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Political Leadership",
-      "comment": "PERSPECTIVE 5: POLITICAL LEADERSHIP (ROPE) \u2014 Benefits from beautiful reports: maintains domestic narrative of success, justifies continued operations, avoids accountability for strategic failures. Can arbitrage between official reports and intelligence channels when necessary for high-stakes decisions. Experiences the constraint as coordination: the reporting system coordinates political messaging and regime stability. The operational cost is externalized to the military."
+      "label": "The General Staff Planning Directorate",
+      "comment": "PERSPECTIVE 4: GENERAL STAFF PLANNING DIRECTORATE (TANGLED ROPE) — Needs accurate battlefield picture to plan operations but also benefits from political cover when strategic objectives are not met. Constrained by institutional culture that punishes bearers of bad news. Genuine coordination function (operational planning requires truth) coexists with extraction (career advancement requires optimism). High exit costs: challenging the reporting culture means institutional exile."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "constrained",
+      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Formal Reporting System",
-      "comment": "PERSPECTIVE 6: FORMAL REPORTING SYSTEM (PITON) \u2014 The institutional apparatus sees its own degradation. The reporting chain persists through inertia and enforcement, not because it produces accurate operational intelligence. Theater ratio is extreme: reports are performative demonstrations of loyalty rather than functional information transmission. The system knows it is broken but cannot reform without admitting systemic failure."
+      "label": "The Military District Headquarters Verification System",
+      "comment": "PERSPECTIVE 5: MILITARY DISTRICT VERIFICATION SYSTEM (PITON) — The formal verification apparatus (staff visits, independent confirmation, cross-checking) has atrophied into theater. Site visits are announced in advance, verification officers are career-tracked through the same incentive structure, and contradictory evidence is systematically ignored. The verification ritual persists because the institutional form must be maintained, not because it functions. Degraded coordination maintained as performance."
     },
     {
       "classification_type": "tangled_rope",
@@ -88,128 +79,164 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The External Analyst",
-      "comment": "PERSPECTIVE 7: EXTERNAL ANALYST (TANGLED ROPE) \u2014 Sees both the coordination function (the reporting system does coordinate political-military alignment, resource allocation, and regime stability) and the extraction mechanism (systematic destruction of operational effectiveness, frontline soldier survival, and strategic position). The constraint is not purely extractive because the coordination function is real \u2014 the system successfully coordinates what it is designed to coordinate (regime stability) even as it fails at what it claims to coordinate (military effectiveness). Tangled rope classification reflects this genuine hybridity."
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From outside the system, the constraint exhibits both genuine coordination function (unified command requires shared operational picture) and substantial extraction (systematic falsification degrades operational effectiveness). The theater ratio is extreme but the coordination function is not zero: even a heavily falsified reporting system provides some information aggregation. The constraint is not pure snare because the reporting infrastructure does solve a real coordination problem, just with massive extractive overhead layered on top."
     }
   ],
   "omegas": [
     {
-      "id": "distortion_magnitude_threshold",
-      "question": "At what magnitude of distortion does the reporting system transition from coordination-with-bias to pure extraction?",
-      "resolution_mechanism": "Quantitative analysis of report delta vs operational outcome correlation. If small distortions (10-20% territorial overstatement) correlate with better resource allocation and morale without operational failure, the coordination function dominates. If large distortions (50%+ territorial overstatement) correlate with operational collapse, extraction dominates.",
-      "impact": "Determines whether the constraint is fundamentally tangled_rope (mixed function) or snare (pure extraction with coordination theater). Current evidence suggests crossing threshold during 2022-2023 period as distortion magnitude increased.",
+      "id": "command_awareness_ambiguity",
+      "question": "Does senior command genuinely believe the falsified reports, or do they knowingly accept beautiful lies to maintain political narrative?",
+      "resolution_mechanism": "Analysis of internal communications, decision-making patterns when ground truth becomes undeniable, resource allocation decisions that reveal actual vs claimed territorial control beliefs",
+      "impact": "If command believes: the constraint is primarily coordination failure with information cascade dynamics. If command knows: the constraint is primarily extraction with political theater as the mechanism. Changes the locus of agency and the intervention points.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Threshold where coordination function is destroyed by distortion magnitude"
+      "description": "Whether senior command believes falsified reports or knowingly accepts them"
     },
     {
-      "id": "milblogger_correction_effectiveness",
-      "question": "Do milblogger corrections actually influence tactical decisions, or do they only influence public narrative?",
-      "resolution_mechanism": "Correlation analysis between milblogger reporting of specific tactical problems and subsequent command responses. If corrections lead to tactical adjustments (redeployment, reinforcement, withdrawal), the milblogger network provides functional coordination. If corrections are ignored operationally but acknowledged publicly, the network is purely theatrical.",
-      "impact": "If effective: milblogger perspective is scaffold (building alternative verification pathway with sunset logic). If ineffective: milblogger perspective is piton (performative criticism without operational impact).",
+      "id": "correction_mechanism_existence",
+      "question": "Are there parallel informal channels (milbloggers, secure back-channels, GRU independent assessment) that provide accurate information to decision-makers, making the formal reporting system purely theatrical?",
+      "resolution_mechanism": "Evidence of operational decisions based on accurate rather than official territorial assessments; correlation between milblogger reports and subsequent command decisions; existence of classified parallel reporting structures",
+      "impact": "If parallel channels exist and are used: formal system is pure theater (piton from more perspectives), extraction is lower because decision-makers have access to truth. If no parallel channels: extraction is higher because false information propagates to actual operational planning.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether parallel informal channels provide accurate information to decision-makers"
+    },
+    {
+      "id": "cultural_vs_structural_binding",
+      "question": "Is the constraint maintained by structural incentives (career penalties for negative reports) or by cultural identity fusion (Soviet-era institutional culture where optimism is loyalty)?",
+      "resolution_mechanism": "Comparison with other militaries facing similar structural incentives but different cultural backgrounds; analysis of whether individual actors who exit the system continue to exhibit the same reporting bias; historical analysis of when the pattern emerged relative to incentive structure changes",
+      "impact": "If structural: the constraint is changeable through incentive redesign. If cultural/identity: the constraint is identity_locked at institutional level, requiring generational change or external shock to break.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether milblogger network provides functional operational feedback"
-    },
-    {
-      "id": "commander_knowledge_vs_reporting_gap",
-      "question": "Do mid-level commanders actually know ground truth when they file beautiful reports, or are they themselves deceived by subordinate reporting?",
-      "resolution_mechanism": "Analysis of commander behavior in tactical decisions vs official reporting. If commanders make tactically sound decisions (appropriate force allocation, realistic objective setting) while filing optimistic reports, they know ground truth. If tactical decisions match the beautiful reports (overconfident advances, under-resourced positions), they are deceived.",
-      "impact": "If commanders know: they are beneficiaries (rope perspective correct). If commanders are deceived: they are victims (snare perspective correct), and the extraction mechanism operates at multiple levels of the hierarchy.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether mid-level commanders are beneficiaries or victims of the distortion"
-    },
-    {
-      "id": "regime_stability_tradeoff_rationality",
-      "question": "Is the political leadership's acceptance of beautiful reports a rational regime-stability tradeoff, or is it organizational pathology (inability to process negative information)?",
-      "resolution_mechanism": "Analysis of leadership response to high-stakes decisions where ground truth is available through intelligence channels. If leadership uses accurate intelligence for critical decisions while accepting beautiful reports for routine operations, the tradeoff is rational. If leadership consistently acts on beautiful reports even when accurate intelligence contradicts them, it is pathology.",
-      "impact": "If rational tradeoff: political leadership perspective is rope (genuine coordination of regime stability at cost of operational effectiveness). If pathology: political leadership perspective is identity_locked (leadership cannot process information that contradicts regime narrative, even when strategically necessary).",
-      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether political acceptance of distortion is strategic or pathological"
+      "description": "Whether the constraint is maintained by structural incentives or cultural identity fusion"
+    },
+    {
+      "id": "falsification_threshold_calibration",
+      "question": "What magnitude of delta between claimed and actual territorial control constitutes systematic falsification vs normal fog-of-war uncertainty?",
+      "resolution_mechanism": "Historical comparison with other conflicts; analysis of correction rates when ground truth becomes undeniable; measurement of whether deltas are random (fog of war) or systematically biased upward (falsification)",
+      "impact": "If threshold is low (e.g., >10% delta = falsification): many legitimate reporting uncertainties are misclassified as extraction. If threshold is high (e.g., >40% delta required): substantial falsification persists undetected. Affects extractiveness calibration.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing systematic falsification from fog-of-war uncertainty"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.55,
-      "id_override": "beautiful_reports_theater_t0"
+      "value": 0.45,
+      "id_override": "brf_theater_2022_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "brf_theater_2022_05"
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.68,
-      "id_override": "beautiful_reports_theater_t6"
+      "value": 0.67,
+      "id_override": "brf_theater_2022_08"
     },
     {
       "metric": "theater_ratio",
       "time_point": 12,
       "value": 0.75,
-      "id_override": "beautiful_reports_theater_t12"
+      "id_override": "brf_theater_2023_02"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 18,
-      "value": 0.82,
-      "id_override": "beautiful_reports_theater_t18"
+      "time_point": 24,
+      "value": 0.81,
+      "id_override": "brf_theater_2024_02"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48,
-      "id_override": "beautiful_reports_extract_t0"
+      "value": 0.38,
+      "id_override": "brf_extract_2022_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47,
+      "id_override": "brf_extract_2022_05"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
-      "value": 0.56,
-      "id_override": "beautiful_reports_extract_t6"
+      "value": 0.54,
+      "id_override": "brf_extract_2022_08"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 12,
-      "value": 0.63,
-      "id_override": "beautiful_reports_extract_t12"
+      "value": 0.62,
+      "id_override": "brf_extract_2023_02"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 18,
+      "time_point": 24,
       "value": 0.68,
-      "id_override": "beautiful_reports_extract_t18"
+      "id_override": "brf_extract_2024_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "brf_suppress_2022_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.63,
+      "id_override": "brf_suppress_2022_08"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68,
+      "id_override": "brf_suppress_2023_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.72,
+      "id_override": "brf_suppress_2024_02"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 18
+    "end": 24
   },
   "commentary": {
-    "narrative_context": "The beautiful reports feedback loop emerged as a dominant constraint on Russian military operations during the 2022-2023 period, though its structural roots trace to Soviet-era organizational culture. The constraint operates through systematic upward distortion of battlefield reports: frontline units overstate territorial control and understate casualties to satisfy superior expectations; mid-level commanders aggregate and amplify these distortions to protect careers and secure resources; political leadership receives and acts upon an operational picture that diverges systematically from ground truth. The delta between official Russian MoD territorial claims and independent assessments (ISW, milblogger networks, satellite imagery analysis) provides a quantitative measure of the distortion magnitude. The constraint exhibits classic tangled rope structure: it genuinely coordinates regime stability, political messaging, and career advancement (coordination function) while simultaneously destroying operational effectiveness, frontline survival, and strategic position (extraction function). The theater ratio (0.82) reflects that formal reporting has become almost entirely performative \u2014 reports are demonstrations of loyalty rather than transmission of tactical intelligence. The milblogger network represents an emergent alternative verification pathway, but operates under suppression and with its own distortions.",
+    "narrative_context": "The beautiful reports feedback loop emerged as a dominant constraint on Russian military effectiveness during the 2022-2024 Ukraine conflict. Systematic upward falsification of battlefield progress created a cascading information failure: operational orders were issued for objectives in areas not yet secured, logistics were planned for supply routes through contested territory, and strategic assessments were based on fictional territorial control. The constraint exhibits the classic tangled rope structure: a genuine coordination function (unified command requires aggregated battlefield reporting) with massive extractive overhead (career incentives systematically bias reports upward, degrading the information's operational value). The theater ratio (0.81 by month 24) reflects that formal verification mechanisms have atrophied into performance: staff visits are announced in advance, verification officers face the same career incentives as line commanders, and contradictory evidence from milbloggers and open-source intelligence is systematically ignored. The constraint's extractiveness increased over the interval as the delta between claimed and actual territorial control widened, and as operational failures based on false information accumulated. Suppression increased as the institutional penalties for accurate negative reporting intensified and as the political stakes of admitting failure rose.",
     "key_agents": [
-      "Frontline Soldiers: Primary victims (powerless/trapped) \u2014 bear tactical consequences of fictional operational picture; cannot contradict reports without prosecution",
-      "Operational Planning Staff: Secondary victims (moderate/constrained) \u2014 career-locked into planning based on beautiful reports; professional competence systematically undermined",
-      "Mid-Level Commanders: Primary beneficiaries (institutional/arbitrage) \u2014 control information flow; benefit from distortion through career protection and resource allocation",
-      "Political Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from beautiful reports for domestic narrative and regime stability; can access ground truth through intelligence channels when necessary",
-      "Milblogger Network: Organized alternative channel (organized/constrained) \u2014 provides ground truth dissemination but operates under threat; mixed coordination-extraction through audience dynamics",
-      "Formal Reporting System: Institutional apparatus (institutional/constrained) \u2014 sees its own degradation; persists through enforcement rather than function"
+      "Field Commanders Avoiding Accountability: Primary beneficiary (institutional/arbitrage) — falsified reports shield from immediate consequences; can exit through rotation or transfer",
+      "Frontline Units: Primary victim (powerless/trapped) — receive orders based on fictional intelligence; cannot exit reporting chain or correct record without career destruction",
+      "Brigade-Level Staff Officers: Mixed position (moderate/constrained) — benefit when own failures are concealed, victimized when adjacent units' false reports create planning disasters",
+      "General Staff Planning Directorate: Institutional victim (institutional/constrained) — needs accurate information for operational planning but constrained by culture that punishes negative reports",
+      "Military District Verification System: Degraded institutional actor (institutional/arbitrage) — formal verification apparatus has atrophied into theater; maintains ritual without function",
+      "Russian Operational Effectiveness: Abstract victim (powerless/trapped) — collective capability degraded by systematic information failure; no agency to self-correct"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts operational effectiveness, frontline survival probability, and strategic position. The extraction is not total (0.68 rather than 0.85+) because the coordination function is real \u2014 the system successfully coordinates what it is designed to coordinate (regime stability, resource allocation, career advancement) even as it fails at operational intelligence. The value reflects genuine hybridity rather than pure extraction with coordination theater. Suppression (0.78): High. Contradicting superior reports triggers career destruction or criminal prosecution under military discipline codes. Milblogger network operates under Article 207.3 (discrediting armed forces) threat. Alternative verification pathways exist but are suppressed. Suppression is not total (0.78 rather than 0.90+) because milbloggers do operate and some tactical corrections do occur. Theater ratio (0.82): Very high. Formal reporting is almost entirely performative. Reports demonstrate loyalty and political alignment rather than transmit tactical intelligence. The theater has increased over the interval as the gap between official claims and ground truth has widened, making the performative nature more obvious.",
-    "directionality_logic": "Frontline soldiers are full victims with trapped exit options \u2014 maximum directionality (d \u2248 0.95), maximum experienced extraction. They bear the tactical consequences of fictional operational pictures with no ability to exit or correct the information flow. Operational planning staff are victims with constrained exit options \u2014 high directionality (d \u2248 0.85), high experienced extraction. They are career-locked into using distorted information but have some agency (can request clarification, can hedge in planning). Mid-level commanders are beneficiaries with arbitrage exit options \u2014 low directionality (d \u2248 0.15), low or negative experienced extraction. They control the information flow and benefit from the distortion through career protection and resource allocation. Political leadership are beneficiaries with arbitrage exit options \u2014 very low directionality (d \u2248 0.05), negative experienced extraction. They benefit from beautiful reports for regime stability while retaining access to ground truth through intelligence channels. The milblogger network occupies an intermediate position \u2014 organized agents with constrained exit who both benefit (audience, influence) and bear costs (prosecution threat, limited access). The analytical observer sees the full structure: genuine coordination function (regime stability, resource allocation) coexisting with severe extraction (operational effectiveness destruction).",
-    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Frontline soldiers experience pure extraction (snare) \u2014 they are trapped in tactical positions based on fictional intelligence with no exit and maximum cost. Mid-level commanders experience coordination (rope) \u2014 the reporting system coordinates their career advancement and resource allocation; the operational cost is externalized. Political leadership experiences coordination (rope) \u2014 the system coordinates regime stability and political messaging; the military cost is externalized. The milblogger network experiences mixed coordination-extraction (tangled rope) \u2014 they solve a real information problem but operate under suppression and with their own distortions. The formal reporting system sees its own degradation (piton) \u2014 the apparatus persists through enforcement rather than function. The analytical observer sees tangled rope \u2014 genuine coordination of regime stability coexisting with severe extraction of operational effectiveness. The gap between the frontline snare perspective and the command rope perspective is the constraint's core pathology: what appears as coordination from above is experienced as extraction from below, and the information flow prevents this gap from closing.",
-    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the coordination function is real but serves different objectives than the claimed function. The reporting system genuinely coordinates regime stability, political messaging, career advancement, and resource allocation (coordination function). It simultaneously destroys operational effectiveness, frontline survival, and strategic position (extraction function). This is not coordination theater masking pure extraction \u2014 the coordination function is structurally real. The system successfully coordinates what it is designed to coordinate, even as it fails catastrophically at what it claims to coordinate. The tangled rope classification captures this hybridity: the constraint is neither pure coordination (rope) nor pure extraction (snare) but a genuine mixture where both functions coexist. The perspectival gap (snare from below, rope from above) reflects the structural reality that the coordination and extraction functions operate on different agents. The mandatrophy is resolved by recognizing that 'coordination' and 'extraction' are not exclusive categories when the coordinated objective (regime stability) differs from the claimed objective (military effectiveness)."
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts substantial operational effectiveness from the Russian military system. Frontline units are ordered into operations based on false premises, logistics fail because supply routes through 'secured' areas are actually contested, and strategic planning is based on fictional territorial control. The extraction is not total (0.68 rather than 0.85+) because some accurate information does flow through informal channels and because the reporting system, despite heavy falsification, still aggregates some genuine tactical intelligence. The value increased from 0.38 to 0.68 over 24 months as the delta between claimed and actual control widened and as operational failures based on false information accumulated. Suppression (0.72): High. Career penalties for negative reporting are severe and systematic. Officers who report accurate but unfavorable assessments face relief, demotion, or worse. The institutional culture treats optimism as loyalty and pessimism as defeatism. Exit options for mid-level officers are constrained: challenging the reporting culture means institutional exile. Suppression increased from 0.55 to 0.72 as political stakes rose and as the gap between narrative and reality became harder to ignore, requiring more active enforcement to maintain the fiction. Theater ratio (0.81): Very high. Formal verification mechanisms are largely performative. Staff visits to verify territorial control are announced in advance, allowing preparation of Potemkin demonstrations. Verification officers are career-tracked through the same incentive structure as line commanders, creating systematic bias. Contradictory evidence from milbloggers and open-source intelligence is ignored or dismissed as enemy propaganda. The verification ritual persists because the institutional form must be maintained, not because it functions. Theater increased from 0.45 to 0.81 as the verification apparatus degraded from partially functional to almost purely performative.",
+    "directionality_logic": "Field commanders avoiding accountability are primary beneficiaries: falsified reports provide immediate career protection and political cover. Their directionality is low (near 0.2-0.3) because extraction flows toward them during the falsification window. They have arbitrage exit options (rotation, transfer, medical leave) and institutional power. Frontline battalion commanders are primary victims: they receive operational orders based on fictional intelligence and bear the consequences when reality contradicts the official picture. Their directionality is very high (near 0.9) because they are powerless, trapped in the reporting chain, and bear maximum extraction. Brigade-level staff officers occupy a mixed position: they benefit when their own unit's failures are concealed but are victimized when adjacent units' false reports create planning disasters for their operations. Their directionality is moderate (near 0.5-0.6) reflecting the mixed coordination-extraction experience. The General Staff planning directorate is an institutional victim with constrained exit: they need accurate information to plan operations but are trapped in a culture that punishes negative reports. Their directionality is moderate-high (near 0.6-0.7) because they bear substantial extraction (degraded planning capability) but also have some institutional power to demand information. The verification system's directionality is low (near 0.3) because it benefits from the theater: maintaining the ritual without function is less work than genuine verification, and the system faces no penalty for failure to detect falsification.",
+    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Field commanders avoiding accountability see coordination (Rope): the reporting system allows them to manage political pressure and shield from immediate consequences. They are net beneficiaries. Frontline battalion commanders see pure extraction (Snare): they receive orders based on fictional intelligence, cannot exit the reporting chain, and bear maximum consequences when reality contradicts the official picture. Brigade-level staff officers see mixed coordination and extraction (Tangled Rope): they need some accurate information for tactical planning but also benefit from the system's tolerance for beautification. The General Staff planning directorate sees tangled rope from a different angle: genuine coordination function (operational planning requires aggregated intelligence) coexists with massive extraction (systematic falsification degrades the information's value). The verification system sees its own degraded ritual (Piton): formal verification has atrophied into performance maintained through institutional inertia. The analytical observer sees tangled rope: a genuine coordination problem (unified command requires shared operational picture) with extreme extractive overhead (systematic falsification, career penalties for truth-telling, verification theater). The gap between the field commander's rope and the frontline unit's snare is the core extraction mechanism: one agent's career protection is another agent's operational disaster.",
+    "mandatrophy_analysis": "The beautiful reports feedback loop resolves the mandatrophy by demonstrating that tangled rope is the structurally accurate classification when measured from positions that can see both the coordination function and the extraction mechanism. The constraint genuinely solves a coordination problem: unified military command requires aggregated battlefield reporting, and the formal reporting system does provide this aggregation. But the coordination function is severely degraded by extractive overhead: career incentives systematically bias reports upward, verification mechanisms have atrophied into theater, and the information's operational value is substantially reduced. The constraint is not pure snare because the coordination function is real: even heavily falsified reports provide some tactical intelligence aggregation, and the system does enable some operational planning. The constraint is not rope because the extraction is substantial and asymmetric: field commanders benefit from falsification while frontline units and operational effectiveness bear the costs. The tangled rope classification captures both structural features: genuine coordination with massive extractive overhead. The perspectival divergence (rope from beneficiary, snare from victim, tangled rope from analytical) is exactly what the indexical framework predicts for this structure."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [],
-    "dual_formulation_note": "The beautiful reports feedback loop is a single constraint with high extractiveness (0.68) reflecting the systematic destruction of operational effectiveness. It could be decomposed into separate stories for different organizational levels (tactical reporting distortion, operational planning based on fiction, strategic decision-making under misinformation) but the current formulation treats the full feedback loop as the constraint. The epsilon value reflects the aggregate extraction across all levels."
+    "dual_formulation_note": "This constraint is structurally similar to corporate earnings management, academic publication bias, and Soviet-era production quota falsification. All exhibit the same pattern: a genuine coordination function (information aggregation) degraded by systematic bias introduced through career incentives. The beautiful reports loop is the military instantiation of a general principal-agent problem with asymmetric information and career-based incentives."
   },
-  "directionality_overrides": [],
-  "cs_structure": {
-    "kernel_codification": "formalized",
-    "authority_grounding": "extraction",
-    "interpretation_layer_present": false
-  }
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
 }

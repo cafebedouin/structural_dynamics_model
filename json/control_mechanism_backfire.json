@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "control_mechanism_backfire",
+    "version": "1.0",
+    "generated_date": "2025-06-08",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cmb",
+    "story_uid": "f8a3c7e1-4d5b-4a2f-9c1e-8b6d3f2a1e0c",
+    "created_at": "2025-06-08T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Control Mechanism Backfire: Internet Shutdowns and Communication Restrictions in Russia 2022-2026",
+    "topic_domain": "political_economy/regime_stability/military_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "security_apparatus"
+    ],
+    "victims": [
+      "small_business_sector",
+      "military_volunteer_networks",
+      "provincial_loyal_demographics",
+      "pensioner_demographics"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Small Business Owners",
+      "comment": "PERSPECTIVE 1: SMALL BUSINESS OWNERS (SNARE) — Trapped by geographic and economic constraints. Cannot relocate businesses or customer bases. Telegram advertising was the only affordable marketing channel; VPN restrictions destroyed e-commerce logistics coordination. No coordination function visible — pure extraction destroying livelihoods to maintain regime information control. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Military Volunteer Supply Networks",
+      "comment": "PERSPECTIVE 2: MILITARY VOLUNTEER NETWORKS (SNARE) — Trapped by patriotic identity and geographic dispersion. Telegram was the primary coordination tool for crowdfunding, logistics, and family communication with deployed soldiers. Restrictions destroyed the supply networks the regime claimed to support. Immediate time horizon because disruption is acute and ongoing. Pure extraction with no coordination substitute."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "Provincial Loyal Demographics",
+      "comment": "PERSPECTIVE 3: PROVINCIAL LOYAL DEMOGRAPHICS (SNARE) — Identity-locked rather than materially trapped. These voters constructed their identity through regime loyalty and patriotic narratives. The communication restrictions destroyed their economic stability (small business closures, pension payment disruptions via blocked banking apps) while the regime's justification (national security) remained legible within their identity frame. But the material extraction is severe enough that support is eroding (United Russia 34.1% → 27.7%) even without identity frame collapse. Identity lock is weakening under material pressure."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pensioner Demographics",
+      "comment": "PERSPECTIVE 4: PENSIONER DEMOGRAPHICS (SNARE) — Constrained rather than trapped: some have family abroad or savings, but exit costs are prohibitive for most. Communication restrictions disrupted pension payments (mobile banking apps), family contact (Telegram with emigrated children), and access to state services (online portals). Previously loyal demographic now filing protest applications at unprecedented rates. Moderate power because pensioners have some organizational capacity (Soviet-era networks) but limited resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Security Apparatus",
+      "comment": "PERSPECTIVE 5: SECURITY APPARATUS (ROPE) — Primary beneficiary. Experiences the constraint as coordination: controlling information flow to prevent opposition organizing. Immediate time horizon because threat assessment is short-term. Arbitrage exit because security services can use unrestricted communication channels. The coordination story (national security) is the lived reality from this position, even as the mechanism destroys regime support base."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Governors",
+      "comment": "PERSPECTIVE 6: REGIONAL GOVERNORS (TANGLED ROPE) — Constrained by regime loyalty requirements but also bearing costs. Governors need functional local economies and stable populations to meet performance metrics. Communication restrictions destroyed tax revenue (small business closures), increased protest activity (pensioners, provincial voters), and disrupted military volunteer coordination that governors were tasked with supporting. Mixed experience: benefit from regime stability (coordination) but bear local economic and political costs (extraction)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) — From a generational perspective, the constraint is pure extraction masquerading as security coordination. The coordination story (preventing opposition organizing) is cover for regime survival at the expense of economic functionality and regime legitimacy. The backfire is structural: the mechanism destroyed the regime's own support base (small business, military volunteers, loyal demographics) faster than it suppressed opposition. Observable evidence: United Russia support collapse, protest application surge from previously loyal groups, military supply network disruption during active conflict."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_threshold",
+      "question": "At what point does a control mechanism's damage to regime support base exceed its coordination value for information control?",
+      "resolution_mechanism": "Longitudinal analysis of regime stability metrics (party support, protest rates, economic indicators) vs opposition organizing capacity. Threshold crossed when support erosion rate exceeds opposition suppression rate.",
+      "impact": "If threshold not yet crossed: constraint is tangled_rope (mixed coordination and extraction). If threshold crossed: constraint is snare (extraction dominates, coordination story is cover). Observable evidence suggests threshold crossed by Q2 2026 (United Russia support -6.4 points, protest applications from loyal demographics).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold where control mechanism damage exceeds coordination value"
+    },
+    {
+      "id": "identity_lock_durability",
+      "question": "How much material extraction can identity-locked loyal demographics sustain before identity frame collapses?",
+      "resolution_mechanism": "Survey data on regime support vs economic hardship among provincial voters and pensioners. Tracking point where material costs override identity commitments. Historical comparison to other authoritarian regimes' support base erosion patterns.",
+      "impact": "If identity lock is durable: provincial and pensioner demographics remain constrained but loyal (tangled_rope from their perspective). If identity lock is breaking: these demographics shift to trapped victims (snare) or organize (moderate power upgrade). Observable evidence: protest applications from pensioners suggest identity lock weakening but not yet broken.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of identity lock under material extraction pressure"
+    },
+    {
+      "id": "alternative_coordination_channels",
+      "question": "Do security apparatus and regime-loyal actors have functional alternative coordination channels, or are they also damaged by the restrictions?",
+      "resolution_mechanism": "Analysis of regime internal communication effectiveness, military logistics coordination, and security service operational capacity post-restrictions. If alternatives exist and function, beneficiary classification holds. If alternatives are also degraded, even beneficiaries experience extraction.",
+      "impact": "If alternatives function: security apparatus remains net beneficiary (rope). If alternatives degraded: security apparatus also bears costs (tangled_rope), and the constraint is even more purely extractive than measured. Evidence: military volunteer network disruption suggests alternatives are not fully functional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regime actors have functional alternative coordination channels"
+    },
+    {
+      "id": "backfire_reversibility",
+      "question": "Is the damage to small business sector, military networks, and loyal demographics reversible if restrictions are lifted, or has permanent structural damage occurred?",
+      "resolution_mechanism": "Economic recovery analysis if restrictions are lifted. Tracking business restart rates, network reconstitution, and voter realignment. Historical comparison to other states that lifted similar restrictions.",
+      "impact": "If reversible: constraint is temporary extraction (scaffold logic applies if lifted). If irreversible: constraint has permanently destroyed regime support infrastructure, and the snare classification understates long-term damage. Observable evidence: small business closure rate and emigration patterns suggest substantial irreversible damage.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Reversibility of structural damage to regime support base"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "cmb_extract_2022_q1"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "cmb_extract_2023_q3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "id_override": "cmb_extract_2025_q1"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.68,
+      "id_override": "cmb_extract_2026_q1"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "cmb_suppress_2022_q1"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "cmb_suppress_2023_q3"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.76,
+      "id_override": "cmb_suppress_2025_q1"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.82,
+      "id_override": "cmb_suppress_2026_q1"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "cmb_theater_2022_q1"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38,
+      "id_override": "cmb_theater_2023_q3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.42,
+      "id_override": "cmb_theater_2025_q1"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.45,
+      "id_override": "cmb_theater_2026_q1"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Between 2022 and 2026, the Russian state implemented escalating internet shutdowns, Telegram restrictions, and VPN bans justified as national security measures to control information flow and prevent opposition organizing during the Ukraine conflict. The constraint exhibits a structural backfire pattern: the control mechanisms destroyed critical regime support infrastructure faster than they suppressed opposition. Small businesses dependent on Telegram advertising lost their only affordable marketing channel. Military volunteer networks coordinating soldier supply and family communication were disrupted during active conflict. Previously loyal demographics — provincial voters and pensioners — experienced economic hardship (business closures, banking app disruptions, pension payment delays) severe enough to override identity commitments, producing a 6.4-point collapse in United Russia Party support (34.1% December 2025 → 27.7% April 2026) and unprecedented protest application rates from these groups. The security apparatus experiences the constraint as coordination (information control for regime stability), but the analytical perspective reveals pure extraction: the regime is consuming its own support base to maintain short-term control, with no functional coordination substitute for the destroyed communication channels.",
+    "key_agents": [
+      "Small Business Sector: Primary victim (powerless/trapped) — lost Telegram advertising (only affordable marketing), e-commerce logistics coordination via VPN restrictions; cannot relocate",
+      "Military Volunteer Networks: Primary victim (powerless/trapped) — Telegram was primary tool for crowdfunding, logistics, family communication; disruption during active conflict",
+      "Provincial Loyal Demographics: Primary victim (powerless/identity_locked) — identity constructed through regime loyalty; material extraction (business closures, economic disruption) eroding identity lock; United Russia support collapsing",
+      "Pensioner Demographics: Primary victim (moderate/constrained) — pension payment disruptions, family contact loss (emigrated children), state service access blocked; filing protest applications at unprecedented rates",
+      "Security Apparatus: Primary beneficiary (institutional/arbitrage) — experiences constraint as coordination (information control); has unrestricted communication channels; immediate time horizon",
+      "Regional Governors: Secondary victim (institutional/constrained) — benefit from regime stability but bear local costs (tax revenue loss, protest surge, military volunteer disruption); mixed experience",
+      "Analytical Observer: Generational perspective (analytical/analytical) — sees pure extraction masquerading as security coordination; backfire is structural and observable"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint destroys economic functionality (small business closures, supply network disruption, banking service loss) and regime legitimacy (loyal demographic defection) with minimal coordination substitute. The security apparatus benefits from short-term information control, but the regime as a whole bears net costs through support base erosion. The value increased from 0.35 (2022 Q1) to 0.68 (2026 Q1) as the backfire pattern became observable: initial restrictions had plausible security justification, but escalation destroyed more regime infrastructure than opposition capacity. Suppression (0.82): Very high. The constraint operates through technical infrastructure control (internet shutdowns, app bans, VPN restrictions) with no legal exit and severe penalties for circumvention. Suppression increased from 0.55 to 0.82 as enforcement intensified and alternative channels were systematically closed. The high suppression is what makes the backfire so damaging: victims cannot exit or adapt, so extraction accumulates. Theater ratio (0.45): Moderate. The national security justification has some functional content (the restrictions do impede opposition organizing), but the justification increasingly diverges from observed outcomes (regime support collapse, military network disruption). Theater increased from 0.30 to 0.45 as the gap between security narrative and structural damage widened. Not as high as pure performative constraints because the security apparatus genuinely uses the control mechanisms, even as they backfire.",
+    "directionality_logic": "The security apparatus is the primary beneficiary: they experience the constraint as solving a coordination problem (controlling information to prevent opposition organizing) and have arbitrage exit (unrestricted communication channels for state actors). Their directionality is low (near 0.0), producing low or negative effective extraction — they are net beneficiaries. Small business owners, military volunteer networks, provincial voters, and pensioners are victims: they bear the costs (economic destruction, communication loss, service disruption) with no benefits and no exit options. Their directionality is high (near 1.0 for trapped, slightly lower for identity_locked and constrained), producing high effective extraction. Regional governors have mixed directionality: they benefit from regime stability (coordination function) but bear local costs (economic and political damage). Their directionality is moderate (around 0.4-0.5), producing moderate effective extraction — the tangled_rope classification. The analytical observer sees the full structure: the coordination story is real from the security apparatus position but is cover for extraction from all other positions. The backfire is the diagnostic signal: a genuine coordination mechanism would not destroy its own support base.",
+    "perspectival_gap": "The security apparatus sees rope (coordination for national security). Regional governors see tangled_rope (mixed coordination and extraction — regime stability vs local costs). All victim groups see snare (pure extraction destroying livelihoods, networks, and economic stability with no coordination substitute). The analytical observer sees snare at the generational level (the coordination story is cover; the mechanism is consuming regime support base). The gap is structural: the beneficiary's immediate time horizon and arbitrage exit make the coordination function visible and the extraction invisible. The victims' biographical time horizon and trapped/constrained exit make the extraction maximal and the coordination function absent. The identity_locked provincial voters are the diagnostic case: their identity frame makes the security justification legible, but the material extraction is severe enough that support is collapsing anyway (United Russia 34.1% → 27.7%). This is the identity lock weakening under extraction pressure — the frame has not broken, but behavior is changing.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the coordination vs extraction classification is observer-dependent and that backfire is a structural property, not a policy error. From the security apparatus position, the constraint is coordination (information control for regime stability) — this is their genuine experience, not a lie. From the victim positions, the constraint is extraction (economic destruction, network disruption, legitimacy erosion) — this is their genuine experience, not a misunderstanding. The analytical observer sees that both are true simultaneously: the mechanism coordinates for the beneficiary while extracting from everyone else, and the extraction is severe enough that it is destroying the regime's own support base. The backfire is not a bug; it is the structural consequence of high suppression + high extraction + no exit. The regime cannot reverse course without admitting the security justification was pretextual, but continuing the mechanism accelerates support base erosion. This is the snare closing on the regime itself."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a single structural phenomenon (communication restrictions) with one stable extractiveness value. The backfire is not a separate constraint but an observable consequence of the extraction mechanism operating on the regime's own support base. No decomposition needed."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

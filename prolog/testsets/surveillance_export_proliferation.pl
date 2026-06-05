@@ -1,0 +1,320 @@
+% ============================================================================
+% CONSTRAINT STORY: surveillance_export_proliferation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2025-01-10
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_surveillance_export_proliferation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: surveillance_export_proliferation
+ *   human_readable: Commercial Export of Mass Surveillance Infrastructure
+ *   domain: technology_governance/surveillance_studies/export_control
+ *
+ * SUMMARY:
+ *   Commercial export of mass surveillance infrastructure (Tiangou, Cyber
+ *   Narrator, telecom monitoring systems) creates distributed repression
+ *   capability in client states. The constraint exhibits genuine coordination
+ *   (states have legitimate security needs; technology transfer enables
+ *   development; firms have legitimate business models) AND substantial
+ *   asymmetric extraction (the same infrastructure enables mass political
+ *   repression; victims are concentrated in client states with weak rule of
+ *   law; beneficiaries are concentrated in exporting firms and client state
+ *   security apparatus). Observable evidence includes export contracts
+ *   (Ethiopia, Kazakhstan, Myanmar, Pakistan purchasing Chinese and Israeli
+ *   surveillance systems), deployment evidence (VPN blocking, telecom
+ *   monitoring, social media surveillance), and documented human rights
+ *   impacts (journalist arrests, dissident tracking, ethnic minority
+ *   targeting). The constraint's extractiveness has increased over the
+ *   2010-2025 interval as surveillance capabilities matured and client state
+ *   deployments expanded, then plateaued slightly as export control norms
+ *   began to harden. Suppression requirement has similarly increased as
+ *   client states built enforcement capacity, then plateaued as some states
+ *   reached saturation. Theater ratio has increased as export control regimes
+ *   expanded (Wassenaar Arrangement updates, EU Dual-Use Regulation) but
+ *   compliance mechanisms remain weak — much of the regulatory apparatus is
+ *   performative rather than functional.
+ *
+ * KEY AGENTS:
+ *   - Client State Dissidents: Primary victims (powerless/trapped) — direct targets of surveillance infrastructure; no exit options
+ *   - Client State Ethnic Minorities: Primary victims (powerless/identity_locked) — targeted via ethnic markers; exit requires abandoning identity
+ *   - Client State Journalists: Secondary victims (moderate/constrained) — mixed experience: system enables official reporting but compromises source protection
+ *   - Exporting Surveillance Firms: Primary beneficiaries (institutional/arbitrage) — monetize surveillance R&D through export contracts; can shift to alternative markets
+ *   - Client State Security Apparatus: Primary beneficiaries (institutional/arbitrage) — gain surveillance capability; can source from multiple vendors
+ *   - Exporting State Geopolitical Strategy: Mixed position (institutional/constrained) — benefits from influence projection but faces reputational costs and sanctions risks
+ *   - Export Control Reform Coalition: Organized agents (organized/mobile) — building multilateral norms and corporate accountability mechanisms with sunset logic
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees genuine coordination AND asymmetric extraction (tangled rope)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(surveillance_export_proliferation, 0.68).
+domain_priors:suppression_score(surveillance_export_proliferation, 0.82).
+domain_priors:theater_ratio(surveillance_export_proliferation, 0.45).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(surveillance_export_proliferation, extractiveness, 0.68).
+narrative_ontology:constraint_metric(surveillance_export_proliferation, suppression_requirement, 0.82).
+narrative_ontology:constraint_metric(surveillance_export_proliferation, theater_ratio, 0.45).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(surveillance_export_proliferation, tangled_rope).
+narrative_ontology:human_readable(surveillance_export_proliferation, "Commercial Export of Mass Surveillance Infrastructure").
+narrative_ontology:topic_domain(surveillance_export_proliferation, "technology_governance/surveillance_studies/export_control").
+
+domain_priors:requires_active_enforcement(surveillance_export_proliferation).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(surveillance_export_proliferation, exporting_surveillance_firms).
+narrative_ontology:constraint_beneficiary(surveillance_export_proliferation, client_state_security_apparatus).
+narrative_ontology:constraint_beneficiary(surveillance_export_proliferation, exporting_state_geopolitical_influence).
+narrative_ontology:constraint_victim(surveillance_export_proliferation, client_state_civil_society).
+narrative_ontology:constraint_victim(surveillance_export_proliferation, client_state_dissidents).
+narrative_ontology:constraint_victim(surveillance_export_proliferation, client_state_journalists).
+narrative_ontology:constraint_victim(surveillance_export_proliferation, client_state_ethnic_minorities).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: CLIENT STATE DISSIDENT (SNARE) — Trapped within national borders with no exit option; surveillance infrastructure directly targets political organizing, encrypted communications, and cross-border coordination. Maximum extraction: the constraint exists to suppress this agent. VPN blocking and telecom monitoring eliminate technical exit; geographic and economic barriers eliminate physical exit.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: CLIENT STATE ETHNIC MINORITY (SNARE) — Identity-locked rather than merely trapped: exit would require abandoning family networks, linguistic community, and cultural identity. Surveillance targets ethnic markers (language use in communications, geographic clustering, religious practice patterns). The binding is both structural (economic barriers, travel restrictions) and cognitive (identity constituted through community membership that surveillance apparatus monitors).
+constraint_indexing:constraint_classification(surveillance_export_proliferation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(identity_locked),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: CLIENT STATE JOURNALIST (TANGLED ROPE) — Constrained by professional identity and economic dependency but not fully trapped. Benefits from the coordination function: surveillance infrastructure includes official communication channels, press credential systems, and information distribution networks that enable legitimate reporting. Simultaneously victimized: source protection is compromised, investigative work is monitored, and self-censorship is induced. Mixed experience: the system both enables and extracts.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: EXPORTING SURVEILLANCE FIRM (ROPE) — Primary beneficiary with arbitrage-grade exit: can shift to other client states, rebrand, or pivot to adjacent markets. Experiences the constraint as pure coordination: export contracts solve the legitimate business problem of monetizing surveillance technology R&D. Regulatory compliance (export licenses, end-user certificates) is experienced as coordination overhead, not extraction. Net beneficiary: extraction flows toward this agent.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CLIENT STATE SECURITY APPARATUS (ROPE) — Institutional beneficiary with arbitrage options: can source from multiple vendors (China, Israel, European firms) and can threaten to switch suppliers to negotiate better terms. Experiences the constraint as coordination: surveillance infrastructure solves the legitimate security problem of monitoring threats (terrorism, organized crime, foreign espionage). That the same infrastructure is used for political repression is not experienced as extraction by this agent — it is experienced as expanded capability.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: EXPORTING STATE GEOPOLITICAL STRATEGY (TANGLED ROPE) — Constrained by international norms and competing powers but benefits from influence projection. Coordination function: surveillance exports create client dependencies, technology lock-in, and intelligence-sharing relationships that advance strategic interests. Extraction: the same dependencies create reputational costs, sanctions risks, and blowback when client states use the technology for visible atrocities. Mixed experience: the constraint both enables geopolitical goals and constrains diplomatic flexibility.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: EXPORT CONTROL REFORM COALITION (SCAFFOLD) — Organized civil society actors (Human Rights Watch, Access Now, Wassenaar Arrangement reformers) see the constraint as a temporary coordination failure with a sunset: multilateral export control regimes are being updated to include surveillance technology, and corporate accountability mechanisms (investor pressure, reputational costs) are maturing. The coalition has mobile exit options (can shift advocacy targets, build alternative coalitions) and sees the current extraction as transitional. Estimated sunset: 10-15 years for norms to harden sufficiently that surveillance exports face comparable restrictions to weapons exports.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the constraint exhibits genuine coordination (states have legitimate security needs; firms have legitimate business models; technology transfer enables development) AND asymmetric extraction (the same infrastructure enables mass political repression; victims are concentrated in client states with weak rule of law; beneficiaries are concentrated in exporting states and client state security apparatus). The coordination story is not mere cover — the security function is real — but the extraction is also real and substantial. Tangled Rope is the structurally accurate classification.
+constraint_indexing:constraint_classification(surveillance_export_proliferation, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(surveillance_export_proliferation_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(surveillance_export_proliferation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(surveillance_export_proliferation, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(surveillance_export_proliferation, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(surveillance_export_proliferation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.68): Substantial. The surveillance infrastructure enables mass political repression in client states, with extraction concentrated on dissidents, journalists, and ethnic minorities. The coordination function is real (legitimate security needs exist) but the extraction is also real and substantial. The value reflects that roughly two-thirds of the constraint's operation is extractive (political repression) versus one-third coordination (legitimate security). This is not a precise measurement but a structural assessment based on deployment patterns and human rights documentation. Suppression (0.82): High. Client state dissidents and ethnic minorities face VPN blocking, telecom monitoring, travel restrictions, and arrest risk. Exit options are severely constrained by geographic, economic, and identity barriers. The suppression is structural (technical infrastructure, legal frameworks, enforcement capacity) rather than merely policy-layer. Theater ratio (0.45): Moderate. Export control regimes (Wassenaar, EU Dual-Use) have expanded but compliance mechanisms remain weak. End-user certificates are often pro forma; shell companies and third-country routing circumvent controls; technical disaggregation (exporting components rather than complete systems) evades classification. Roughly half of the regulatory apparatus is performative rather than functional. The theater ratio has increased over the interval as regulatory frameworks expanded faster than enforcement capacity.
+ *
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates how the same structural phenomenon appears differently from different positions. Exporting firms and client state security apparatus see pure coordination (rope) — they are solving legitimate problems (monetizing R&D, enhancing security capability). The export control reform coalition sees a temporary problem with a sunset (scaffold) — multilateral norms are maturing and corporate accountability is increasing. Client state dissidents see pure extraction (snare) — the infrastructure exists to suppress them and they have no exit. Client state ethnic minorities see snare with identity-lock — exit would require abandoning community. Client state journalists see mixed coordination and extraction (tangled rope) — the system both enables and constrains their work. Exporting state geopolitical strategy sees tangled rope — influence projection benefits are real but reputational costs are also real. The analytical observer sees tangled rope as the structurally accurate classification: the coordination function is genuine (not mere cover) but the extraction is substantial and asymmetric. The perspectival gap reveals that 'surveillance export' is not a single phenomenon but a presheaf over observation sites — the type depends on where you measure from.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Client state dissidents and ethnic minorities are full victims with trapped or identity-locked exit options — they experience maximum effective extraction. The engine derives high directionality (d approaching 1.0) from victim status plus trapped/identity_locked exit, producing high experienced extractiveness. Client state journalists are mixed: declared as victims (source protection compromised, self-censorship induced) but also benefit from official communication channels and press credential systems. The engine derives moderate directionality from victim status modulated by constrained exit and partial beneficiary status. Exporting surveillance firms and client state security apparatus are full beneficiaries with arbitrage exit options — they experience low or negative effective extraction (the constraint subsidizes them). The engine derives low directionality (d approaching 0.0) from beneficiary status plus arbitrage exit. Exporting state geopolitical strategy is mixed: benefits from influence projection (declared beneficiary) but faces reputational costs and sanctions risks (partial victim status). The engine derives moderate directionality from mixed beneficiary/victim status plus constrained exit. Export control reform coalition is organized with mobile exit — they experience low extraction because they have agency and can shift advocacy targets. The analytical observer sees the full structure: genuine coordination AND asymmetric extraction, producing tangled rope classification.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint resolves mandatrophy by showing that both coordination and extraction are structurally real. The exporting firms' rope perspective is not false consciousness — they genuinely are solving a business problem and their clients genuinely have security needs. The client state dissidents' snare perspective is not paranoia — they genuinely are being targeted and suppressed. The analytical tangled rope classification captures that BOTH are true: the same infrastructure serves legitimate security functions AND enables mass political repression. The mandate (enhance security capability) has not outlived its function — security threats are real. But the mandate has been exceeded: the infrastructure's capabilities far surpass what is required for legitimate security and enable systematic political repression. This is the tangled rope signature: a genuine coordination function that has been colonized by an extraction mechanism, where both persist simultaneously and neither can be cleanly separated from the other.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    legitimate_security_threshold,
+    'What technical capabilities distinguish legitimate security infrastructure from mass political surveillance?',
+    'Technical analysis of deployed systems: bulk collection vs targeted monitoring; encryption-breaking vs lawful intercept; real-time blocking vs post-hoc investigation. Correlation with client state human rights records and deployment patterns.',
+    'If no clear technical threshold exists: the coordination function is inseparable from the extraction mechanism, and all surveillance exports are inherently tangled rope or snare. If clear threshold exists: export controls could target specific capabilities, and some exports could be genuine rope (pure coordination).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(legitimate_security_threshold, empirical, 'Technical threshold for legitimate vs mass surveillance capability').
+
+omega_variable(
+    export_control_regime_effectiveness,
+    'Do multilateral export control regimes (Wassenaar Arrangement, EU Dual-Use Regulation) actually constrain surveillance proliferation or merely create compliance theater?',
+    'Longitudinal tracking of surveillance exports before and after control regime updates; identification of circumvention patterns (shell companies, third-country routing, technology disaggregation); comparison of controlled vs uncontrolled technology proliferation rates.',
+    'If effective: scaffold perspective confirmed — the sunset is real and export controls are a transitional mechanism toward norm consolidation. If ineffective: the controls are piton (performative compliance ritual) and the extraction mechanism is unconstrained.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(export_control_regime_effectiveness, empirical, 'Whether export control regimes constrain proliferation or create theater').
+
+omega_variable(
+    client_state_agency,
+    'Do client states have genuine agency in surveillance technology adoption, or is adoption coerced through economic dependency and geopolitical pressure?',
+    'Analysis of procurement patterns: competitive bidding vs sole-source contracts; correlation with loan conditionality, trade agreements, and diplomatic pressure; identification of cases where client states rejected or limited surveillance deployments.',
+    'If genuine agency: client state security apparatus is a beneficiary (rope perspective valid) and the constraint is coordination-with-extraction. If coerced: client state security apparatus is also a victim (captured institution) and the constraint is purer extraction (snare from more perspectives).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(client_state_agency, empirical, 'Whether client state adoption is voluntary or coerced').
+
+omega_variable(
+    technology_dual_use_separability,
+    'Can surveillance technology be designed to enable legitimate security functions while preventing mass political repression, or is dual-use inseparable?',
+    'Technical analysis of architectural constraints: end-to-end encryption with lawful intercept vs bulk decryption; targeted monitoring with judicial oversight vs dragnet collection; technical enforcement of legal constraints vs policy-layer controls that can be bypassed.',
+    'If separable: the coordination function can be preserved while eliminating extraction (rope is achievable through better design). If inseparable: the technology itself is inherently tangled rope or snare regardless of stated intent, and the only non-extractive option is non-proliferation.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(technology_dual_use_separability, conceptual, 'Whether dual-use surveillance technology can be architecturally constrained').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(surveillance_export_proliferation, 0, 15).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(surv_exp_theater_2010, surveillance_export_proliferation, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(surv_exp_theater_2013, surveillance_export_proliferation, theater_ratio, 3, 0.35).
+narrative_ontology:measurement(surv_exp_theater_2016, surveillance_export_proliferation, theater_ratio, 6, 0.4).
+narrative_ontology:measurement(surv_exp_theater_2019, surveillance_export_proliferation, theater_ratio, 9, 0.45).
+narrative_ontology:measurement(surv_exp_theater_2022, surveillance_export_proliferation, theater_ratio, 12, 0.48).
+narrative_ontology:measurement(surv_exp_theater_2025, surveillance_export_proliferation, theater_ratio, 15, 0.45).
+
+% Extraction over time
+narrative_ontology:measurement(surv_exp_extract_2010, surveillance_export_proliferation, base_extractiveness, 0, 0.52).
+narrative_ontology:measurement(surv_exp_extract_2013, surveillance_export_proliferation, base_extractiveness, 3, 0.58).
+narrative_ontology:measurement(surv_exp_extract_2016, surveillance_export_proliferation, base_extractiveness, 6, 0.64).
+narrative_ontology:measurement(surv_exp_extract_2019, surveillance_export_proliferation, base_extractiveness, 9, 0.68).
+narrative_ontology:measurement(surv_exp_extract_2022, surveillance_export_proliferation, base_extractiveness, 12, 0.7).
+narrative_ontology:measurement(surv_exp_extract_2025, surveillance_export_proliferation, base_extractiveness, 15, 0.68).
+
+% Suppression requirement over time
+narrative_ontology:measurement(surv_exp_suppress_2010, surveillance_export_proliferation, suppression_requirement, 0, 0.65).
+narrative_ontology:measurement(surv_exp_suppress_2013, surveillance_export_proliferation, suppression_requirement, 3, 0.72).
+narrative_ontology:measurement(surv_exp_suppress_2016, surveillance_export_proliferation, suppression_requirement, 6, 0.78).
+narrative_ontology:measurement(surv_exp_suppress_2019, surveillance_export_proliferation, suppression_requirement, 9, 0.82).
+narrative_ontology:measurement(surv_exp_suppress_2022, surveillance_export_proliferation, suppression_requirement, 12, 0.85).
+narrative_ontology:measurement(surv_exp_suppress_2025, surveillance_export_proliferation, suppression_requirement, 15, 0.82).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(surveillance_export_proliferation, enforcement_mechanism).
+narrative_ontology:affects_constraint(surveillance_export_proliferation, digital_authoritarianism_norm_diffusion).
+narrative_ontology:affects_constraint(surveillance_export_proliferation, encryption_backdoor_mandates).
+narrative_ontology:affects_constraint(surveillance_export_proliferation, platform_content_moderation_sovereignty).
+
+% DUAL FORMULATION NOTE:
+% Surveillance export proliferation is upstream of multiple digital authoritarianism constraints. The infrastructure export creates the technical capability that enables downstream constraints (encryption backdoors, content moderation mandates, norm diffusion). Each downstream constraint has its own extractiveness reflecting its specific mechanism, but all depend on the surveillance infrastructure capability that this constraint describes.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(surveillance_export_proliferation, moderate, 0.65).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "elite_legitimacy_fracture",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elite_frac",
+    "story_uid": "0b0f2e20-bd82-4b16-8ca8-0aa783dbdf25",
+    "created_at": "2026-06-05T16:55:07.720465+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Elite Legitimacy Fracture in Putin's Russia",
+    "topic_domain": "political_economy/regime_stability/military_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defecting_elites",
+      "nationalist_opposition",
+      "post_putin_coalition_candidates"
+    ],
+    "victims": [
+      "putin_regime",
+      "loyalist_elites",
+      "regime_stability_apparatus"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Putin Regime Core",
+      "comment": "PERSPECTIVE 1: PUTIN REGIME CORE (SNARE) — Trapped by the legitimacy fracture with no exit. The regime cannot acknowledge elite defection without validating criticism, cannot suppress all defectors without revealing weakness, and cannot reverse military failures that drive the fracture. Maximum extraction: the constraint strips away the boyar-scapegoat mechanism that previously insulated Putin from direct blame."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Loyalist Elite",
+      "comment": "PERSPECTIVE 2: LOYALIST ELITE (TANGLED ROPE) — Constrained by career dependency on regime survival but also coordinating through the fracture: defection signals create common knowledge of regime vulnerability, enabling coalition formation. Mixed experience: the constraint both threatens their positions (if they remain loyal to a failing regime) and offers coordination benefits (defection becomes safer as more elites defect). Substantial extraction but not maximal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Defecting Elite Coalition",
+      "comment": "PERSPECTIVE 3: DEFECTING ELITE COALITION (ROPE) — Organized agents (Remeslo, Girkin, Gubarev, nationalist bloggers) experience the fracture as coordination: each defection signal reduces the cost of subsequent defections, creating a cascade. Mobile exit options (exile, political repositioning, nationalist alternative coalitions). Net beneficiaries: the constraint enables them to exit a failing regime and position for post-Putin scenarios. Low effective extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Security Apparatus",
+      "comment": "PERSPECTIVE 4: SECURITY APPARATUS (SCAFFOLD) — Institutional actors managing the transition see the fracture as temporary: the current legitimacy crisis will resolve either through regime change (sunset via collapse) or through successful suppression and reconsolidation (sunset via restoration). The constraint is transitional by definition — elite legitimacy fractures do not persist indefinitely; they resolve into new equilibria. Constrained exit (cannot abandon institutional role) but sees a definite endpoint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Oligarch Class",
+      "comment": "PERSPECTIVE 5: OLIGARCH CLASS (TANGLED ROPE) — Powerful agents with arbitrage-level exit (offshore assets, foreign residency options, business diversification) but still embedded in the Russian political economy. Experience mixed coordination and extraction: the fracture enables repositioning and coalition-building (coordination function) while threatening asset seizures and arrests (extraction function, as demonstrated by Tsalikov case). The constraint both coordinates their exit strategies and extracts through enforcement risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational/global perspective, the fracture exhibits both genuine coordination (elite defection signals create common knowledge, enabling collective action against a failing regime) and substantial extraction (the regime's suppression apparatus targets defectors, arrests senior officials, and imposes career/personal costs). The constraint is not pure extraction (snare) because the coordination function is real and measurable; it is not pure coordination (rope) because suppression and career destruction are substantial. Tangled rope is the structurally accurate classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fracture_reversibility",
+      "question": "Is the elite legitimacy fracture reversible through military victory or successful suppression, or has it crossed an irreversible threshold?",
+      "resolution_mechanism": "Historical analysis of authoritarian regime legitimacy crises; identification of cases where elite defection cascades were reversed vs. cases where they led to regime change. Key indicators: whether arrested elites are rehabilitated or purged; whether defection statements are retracted or amplified; whether coup speculation subsides or intensifies.",
+      "impact": "If reversible: scaffold classification gains support (temporary crisis with sunset via restoration). If irreversible: snare classification gains support from regime perspective (trapped in terminal decline).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elite legitimacy fracture can be reversed or is terminal"
+    },
+    {
+      "id": "defection_coordination_threshold",
+      "question": "What proportion of elite defections is required to trigger a coordination cascade vs. isolated dissent that can be suppressed?",
+      "resolution_mechanism": "Network analysis of elite defection timing and clustering; identification of critical mass thresholds in historical authoritarian collapses; measurement of defection rate acceleration.",
+      "impact": "If threshold not yet reached: current defections are noise, regime remains stable. If threshold exceeded: coordination cascade is underway, regime faces existential threat. Determines whether the constraint is primarily extractive (regime can suppress) or primarily coordinative (defectors can organize).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for elite defection cascade"
+    },
+    {
+      "id": "post_putin_coalition_coherence",
+      "question": "Do defecting elites share a coherent alternative vision (nationalist, technocratic, or other), or are they united only in opposition to Putin?",
+      "resolution_mechanism": "Content analysis of defection statements; identification of shared policy positions vs. pure anti-Putin sentiment; assessment of whether defectors are coordinating on a successor regime or merely exiting a failing one.",
+      "impact": "If coherent coalition exists: rope classification gains support from defector perspective (genuine coordination toward alternative). If incoherent: defections are individual exit strategies, not collective action (less coordination function, more extraction from regime).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether defecting elites form a coherent alternative coalition"
+    },
+    {
+      "id": "suppression_capacity_exhaustion",
+      "question": "Has the regime's suppression capacity been exhausted by the scale of elite defection, or does it retain the ability to arrest and silence dissent?",
+      "resolution_mechanism": "Tracking arrest rates of senior officials over time; monitoring whether defection statements are retracted under pressure; assessing whether nationalist bloggers face consequences or continue operating; measuring regime response time to defection signals.",
+      "impact": "If suppression capacity intact: regime can contain the fracture (higher suppression metric, snare from regime perspective). If exhausted: defection becomes safer, cascade accelerates (lower suppression metric, rope from defector perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regime retains capacity to suppress elite defection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "elite_frac_extract_2022_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "elite_frac_extract_2022_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "id_override": "elite_frac_extract_2023_02"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.65,
+      "id_override": "elite_frac_extract_2023_08"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68,
+      "id_override": "elite_frac_extract_2024_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "elite_frac_suppress_2022_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.55,
+      "id_override": "elite_frac_suppress_2022_08"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.63,
+      "id_override": "elite_frac_suppress_2023_02"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.7,
+      "id_override": "elite_frac_suppress_2023_08"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.72,
+      "id_override": "elite_frac_suppress_2024_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "elite_frac_theater_2022_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "elite_frac_theater_2022_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.5,
+      "id_override": "elite_frac_theater_2023_02"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.55,
+      "id_override": "elite_frac_theater_2023_08"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58,
+      "id_override": "elite_frac_theater_2024_02"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The elite legitimacy fracture in Putin's Russia represents a structural shift from the traditional 'bad boyars' scapegoating mechanism to direct criticism of Putin himself among formerly loyal elites. This transition is driven by cascading military defeats in Ukraine, economic collapse under sanctions, and the regime's inability to deliver on nationalist promises. The constraint exhibits tangled rope characteristics: it coordinates elite defection (each public criticism reduces the cost of subsequent defections, creating common knowledge of regime vulnerability) while extracting heavily from both the regime (which loses legitimacy and control) and from defectors (who face arrest, asset seizure, and career destruction). The fracture is observable through multiple channels: lawyers like Remeslo calling for Putin's trial, military bloggers like Girkin acknowledging defeat, nationalist figures like Gubarev questioning war objectives, high-profile arrests like the Tsalikov $81.2M case, and open speculation about palace coups in nationalist Telegram channels. The theater_ratio (0.58) reflects that much of the regime's response is performative: arrests are selective rather than comprehensive, defection statements are sometimes tolerated, and the regime oscillates between suppression and accommodation, revealing uncertainty about its own capacity to contain the fracture.",
+    "key_agents": [
+      "Putin Regime Core: Primary victim (powerless/trapped) — cannot exit the legitimacy crisis; loses the boyar-scapegoat mechanism that previously insulated Putin from blame",
+      "Defecting Elite Coalition: Primary beneficiary (organized/mobile) — Remeslo, Girkin, Gubarev, nationalist bloggers coordinate through defection signals; position for post-Putin scenarios",
+      "Loyalist Elites: Secondary victim (moderate/constrained) — face career risk whether they remain loyal to a failing regime or defect; experience mixed coordination and extraction",
+      "Oligarch Class: Mixed position (powerful/arbitrage) — can exit via offshore assets but still embedded in Russian political economy; face asset seizure risk (Tsalikov precedent) while gaining repositioning opportunities",
+      "Security Apparatus: Institutional manager (institutional/constrained) — sees the fracture as transitional; will resolve through either regime change or reconsolidation",
+      "Analytical Observer: Global perspective (analytical/analytical) — sees genuine coordination function (defection cascade) and substantial extraction (suppression, arrests, career destruction)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts heavily from the regime (legitimacy collapse, loss of elite loyalty, exposure of Putin to direct criticism) and from defectors (arrest risk, asset seizure, career destruction, exile). The extraction is not maximal (0.9+) because some defectors successfully exit and reposition, and the regime retains partial suppression capacity. The value has risen from 0.35 at invasion start to 0.68 currently, tracking the accumulation of military defeats and the acceleration of elite defection. Suppression (0.72): High. The regime maintains substantial suppression capacity through selective arrests (Tsalikov case), implicit threats to oligarchs, and control over nationalist channels. However, suppression is not total (0.9+) because defection statements continue, nationalist bloggers operate openly, and coup speculation circulates. The rising trajectory (0.45 to 0.72) reflects the regime's increasing reliance on coercion as legitimacy erodes. Theater ratio (0.58): Moderate-high. Much of the regime's response is performative: arrests are selective and symbolic rather than comprehensive; some defection statements are tolerated while others are suppressed; the regime oscillates between accommodation and crackdown, revealing strategic uncertainty. The theater has increased over the interval (0.35 to 0.58) as the regime's actual capacity to suppress elite defection has diverged from its performative displays of control.",
+    "perspectival_gap": "The constraint produces a clear perspectival gap between the regime core (snare — trapped in terminal legitimacy decline with no exit), loyalist elites (tangled rope — mixed coordination and extraction as they navigate regime collapse), and defecting elites (rope — coordination mechanism enabling collective exit and coalition formation). The oligarch class experiences tangled rope from a different structural position: arbitrage-level exit options but still embedded enough to face extraction through asset seizure. The security apparatus sees scaffold (transitional crisis with definite sunset), while the analytical observer sees tangled rope (genuine coordination function coexisting with substantial extraction). The gap reveals that the same structural phenomenon — elite defection from a failing authoritarian regime — appears as pure extraction to those trapped within it, as coordination to those organizing the exit, and as a mixed hybrid to those caught between loyalty and defection.",
+    "directionality_logic": "The regime core is a full victim (d → 1.0): trapped with no exit, bearing maximum extraction as legitimacy collapses. Loyalist elites are partial victims (d → 0.6-0.7): constrained by career dependency but gaining some coordination benefits as defection becomes normalized. Defecting elites are beneficiaries (d → 0.2-0.3): organized with mobile exit, experiencing the constraint as coordination that enables collective action. Oligarchs are mixed (d → 0.4-0.5): powerful with arbitrage exit but still facing extraction through asset seizure risk; the constraint both coordinates their repositioning and extracts through enforcement. The security apparatus is near-neutral (d → 0.45-0.55): institutional role requires managing the transition regardless of outcome; experiences neither strong extraction nor strong benefit. These directionality values are derived from the agents' structural positions (power level, exit options, beneficiary/victim status) and determine their experienced extractiveness through the engine's chi computation.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that tangled rope is the structurally accurate classification from the analytical perspective: the elite legitimacy fracture exhibits both genuine coordination (defection signals create common knowledge, reduce individual defection costs, enable coalition formation) and substantial extraction (regime suppression, arrests, asset seizures, career destruction). The coordination function is not merely cover for extraction — it is a real structural feature enabling collective action against a failing regime. The extraction is not incidental overhead — it is a substantial cost imposed on both defectors and the regime itself. The perspectival gap (snare from regime core, rope from defecting elites, tangled rope from loyalists and analytical observer) reflects different structural positions relative to the same constraint, not different constraints. The mandate (elite loyalty to Putin) has outlived its function (regime cannot deliver on nationalist promises or military victory), but the constraint persists through suppression and career dependency, creating the mixed coordination-extraction profile characteristic of tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of military_defeat_cascade, deathonomics_collapse, control_mechanism_backfire, and public_confidence_erosion. Each upstream constraint contributes to the elite legitimacy fracture: military defeats remove the regime's performance legitimacy, economic collapse removes material incentives for loyalty, control mechanism backfire demonstrates regime weakness, and public confidence erosion removes the regime's mass base. The elite legitimacy fracture is a distinct structural constraint with its own extractiveness value (0.68) reflecting the career and personal costs of defection, separate from the upstream constraints' extractiveness values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}
