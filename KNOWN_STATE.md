@@ -46,6 +46,8 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-06-04 — OQ-71 depth-lineage probe: SCALE RUN COMPLETE — H1/H3 falsified beyond noise (boundedness is within-regime only)
+**Files:** prolog/testsets/lineage_probe_01/, docs/design/a_hypothesis_about_corpus_size.md, ISSUES.md
+**Tier:** correction-key
 
 Full record + numbers in ISSUES.md OQ-71 (status `partial`); finding written into
 `docs/design/a_hypothesis_about_corpus_size.md` §10. Headline: the 438-story depth-lineage arm
@@ -59,6 +61,8 @@ note: `prolog/testsets/lineage_probe_01/` now holds 438 glob-isolated stories; f
 verified unchanged at 1,106. One story lacks `cs_structure` (unstampable; named in OQ-71).
 
 ## 2026-06-04 — OQ-71 depth-lineage probe: machinery pilot (generator run-tag routing, fingerprint probe validated by exact reproduction)
+**Files:** agent/generate_kernel_corpus.py, python/lineage_fingerprint_probe.py, audits/2026-06-04_oq71_depth_lineage/
+**Tier:** tripwire
 
 Pilot record; superseded operationally by the scale run above. Canonical artifacts in
 `audits/2026-06-04_oq71_depth_lineage/` (NOT `outputs/` — outputs/ is gitignored, and the
