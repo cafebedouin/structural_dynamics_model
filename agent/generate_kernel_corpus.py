@@ -151,7 +151,7 @@ def _call_with_retry(client, max_retries=3, **kwargs):
 # Step A: SCOPE each kernel seed (serial, Sonnet, kernel-aware)
 # ---------------------------------------------------------------------------
 
-def _scope_user_prompt(seed, research_context="", axes=3):
+def _scope_user_prompt(seed, research_context="", axes=None):
     """The per-kernel SCOPE user prompt — shared by serial scope_seed and the batch path
     so the two cannot drift."""
     topic = f"{seed['human_readable']}\n\n{seed.get('summary', '')}"
@@ -169,15 +169,24 @@ def _scope_user_prompt(seed, research_context="", axes=3):
         f"If it is NOT a real kernel (the readings would collapse), set is_contested_kernel=false "
         f"and decompose normally into plain string claim_ids, noting the collapse in an omega.\n\n"
         f"AXIS BUDGET: a contested kernel counts as exactly ONE axis. Emit ALL of its readings "
-        f"(2-4) to generation_sequence — do NOT cap the readings at {axes}, and do NOT count each "
-        f"reading as a separate axis. You may select up to {max(axes - 1, 0)} ADDITIONAL ordinary "
-        f"(non-kernel) axes only if the topic has genuinely independent structure beyond the "
-        f"kernel; for a topic that is only a kernel, the readings are the entire sequence.\n\n"
+        f"(as many as the kernel actually sustains — do not pad or trim to a target count) to "
+        f"generation_sequence; do NOT cap the readings, and do NOT count each "
+        f"reading as a separate axis. "
+        + (
+            f"You may select up to {max(axes - 1, 0)} ADDITIONAL ordinary "
+            f"(non-kernel) axes only if the topic has genuinely independent structure beyond the "
+            f"kernel; "
+            if axes is not None else
+            "You may select ADDITIONAL ordinary (non-kernel) axes only if the topic has "
+            "genuinely independent structure beyond the kernel — every additional axis must "
+            "survive the §3 pairwise independence test; "
+        )
+        + "for a topic that is only a kernel, the readings are the entire sequence.\n\n"
         f"OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
     )
 
 
-def scope_seed(seed, scope_prompt, research_context="", axes=3):
+def scope_seed(seed, scope_prompt, research_context="", axes=None):
     """Run kernel-aware SCOPE on one seed. Returns (manifest_dict | None, error)."""
     prompt = _scope_user_prompt(seed, research_context, axes)
     try:
@@ -271,8 +280,8 @@ def flatten_manifests(manifests):
 
         # --- Seed from the DECLARED reading set, not just generation_sequence ---
         # SCOPE declares every reading in csr.readings (with full sibling_readings),
-        # but the pipeline caps generation_sequence at axes=3 (an orchestrator-era
-        # limit) and may queue only a subset. Honoring the queue silently drops
+        # but the pipeline MAY cap generation_sequence (the orchestrator-era axes=3
+        # default; now an optional --axes ceiling) and queue only a subset. Honoring the queue silently drops
         # declared readings: their siblings' edges then dangle and the kernel ships
         # incomplete (witnessed: marriage_authority declared 5, queued 3 — the 2
         # dropped were federalist_millet_reading and judicial_harmonization_reading).
@@ -1191,7 +1200,9 @@ def main():
                     help="legacy serial-SCOPE + generate, run-tagged (requires --run-tag)")
     ap.add_argument("--run-tag", default=None, help="output namespace for --scope mode")
     ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--axes", type=int, default=3)
+    ap.add_argument("--axes", type=int, default=None,
+                    help="Optional budget ceiling on additional non-kernel axes "
+                         "(default: none — SCOPE §3 distinctness decides)")
     ap.add_argument("--skip-search", action="store_true",
                     help="skip web-search grounding (for historical library cases)")
     ap.add_argument("--overwrite", action="store_true")
@@ -1223,11 +1234,22 @@ def main():
         print(f"[regression] SCOPE on ordinary topic: {args.regression_check}")
         # Use the plain c-orchestrator user prompt — no kernel-awareness — to test
         # whether the patched SCOPE system prompt leaks kernel structure on its own.
+        # Keep mirrored with c-orchestrator._step_decompose's axes_instruction.
+        if args.axes is None:
+            axes_instruction = (
+                "Select every axis that survives the §3 pairwise independence test. "
+                "Do not pad to a fixed count and do not truncate distinct axes to fit one."
+            )
+        else:
+            axes_instruction = (
+                f"Select every axis that survives the §3 pairwise independence test, "
+                f"up to a budget ceiling of {args.axes} axes. Do not pad to reach the ceiling."
+            )
         plain_prompt = (
             f"Analyze the following topic using the UKE_SCOPE protocol.\n\n"
             f"TOPIC: {args.regression_check}\n\n"
             f"RESEARCH CONTEXT:\n\n"
-            f"Select exactly {args.axes} axes for generation.\n\n"
+            f"{axes_instruction}\n\n"
             f"Remember: OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
         )
         try:

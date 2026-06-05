@@ -139,7 +139,7 @@ class DRAuditOrchestrator:
 
     def __init__(
         self,
-        axes: int = 3,
+        axes: int | None = None,
         run_tag: str | None = None,
         skip_corpus_update: bool = False,
         skip_search: bool = False,
@@ -395,11 +395,21 @@ class DRAuditOrchestrator:
         self._progress("decompose", "Running UKE_SCOPE decomposition...")
         t0 = time.time()
 
+        if self.axes is None:
+            axes_instruction = (
+                "Select every axis that survives the §3 pairwise independence test. "
+                "Do not pad to a fixed count and do not truncate distinct axes to fit one."
+            )
+        else:
+            axes_instruction = (
+                f"Select every axis that survives the §3 pairwise independence test, "
+                f"up to a budget ceiling of {self.axes} axes. Do not pad to reach the ceiling."
+            )
         prompt = (
             f"Analyze the following topic using the UKE_SCOPE protocol.\n\n"
             f"TOPIC: {topic}\n\n"
             f"RESEARCH CONTEXT:\n{research_context}\n\n"
-            f"Select exactly {self.axes} axes for generation.\n\n"
+            f"{axes_instruction}\n\n"
             f"Remember: OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
         )
 
@@ -789,7 +799,9 @@ def main():
     parser = argparse.ArgumentParser(description="DR Audit Pipeline")
     parser.add_argument("topic", nargs="?", help="Topic text (or use --input-file / stdin)")
     parser.add_argument("--input-file", "-f", help="Read topic from file")
-    parser.add_argument("--axes", type=int, default=3, help="Number of axes to select (default: 3)")
+    parser.add_argument("--axes", type=int, default=None,
+                        help="Optional budget ceiling on axes (default: none — the SCOPE §3 "
+                             "pairwise independence test decides how many axes proceed)")
     parser.add_argument("--run-tag", default=None,
                         help="Output namespace (e.g. run_01). If set, saves to json/<run-tag>/ "
                              "and prolog/testsets/<run-tag>/. Corpus update and reports are skipped.")

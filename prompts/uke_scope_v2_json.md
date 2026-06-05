@@ -14,13 +14,13 @@ OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON.
 
 ### Purpose
 
-Receive raw input (research, scenario description, article, conversation), extract the structural substrate, decompose it into generation-ready constraint axes, select the three most structurally central axes, and produce a single JSON manifest for the generation pipeline.
+Receive raw input (research, scenario description, article, conversation), extract the structural substrate, decompose it into generation-ready constraint axes, select every axis that survives pairwise independence testing (§3), and produce a single JSON manifest for the generation pipeline.
 
 ### Core Invariants
 
 **AVAILABILITY IS NOT COVERAGE.** The dimension most prominent in training data is not the dimension the domain requires. Probe actively for what the model would not spontaneously generate.
 
-**THREE IS THE STRUCTURAL BUDGET.** The full decomposition may identify 4–10 axes. Exactly three proceed to generation. The remainder are documented as deferred axes and surfaced in the final essay's omega section. Three captures the upstream/downstream topology; more burns token budget without adding structural novelty.
+**DISTINCTNESS IS THE STRUCTURAL BUDGET.** The full decomposition may identify 4–10 candidate axes. Every axis that passes the §3 pairwise independence test proceeds to generation; the rest are documented as deferred axes and surfaced in the final essay's omega section. There is no fixed count — under-splitting and over-splitting are both errors that §3 catches. (The caller may impose an explicit budget ceiling; absent one, do not pad to a target and do not truncate distinct axes.)
 
 **EXTRACTION BEFORE DECOMPOSITION.** The model must catalog what the input actually contains before interpreting what it means structurally. Observation precedes classification.
 
@@ -182,12 +182,15 @@ decomposition.
 
 #### When the topic IS a kernel
 
-Decompose into **readings, not flat axes.** Identify 2–4 readings. **A contested kernel counts
-as ONE axis toward the three-axis budget**, not one axis per reading: emit **every** reading to
-`generation_sequence` as the expansion of that single kernel-axis — the readings are *not* each
-counted against the budget. The other two axis slots remain available for ordinary, independent
-(non-kernel) axes of the topic, if any genuinely exist; for a topic that is *only* a kernel, the
-kernel's readings are the whole generation_sequence. Name each reading by its interpretive
+Decompose into **readings, not flat axes.** Emit exactly the readings the kernel actually
+sustains — as many distinct, individually-holdable readings as exist; do not pad to a target
+count and do not trim to a familiar pair-plus-bridge. (Worked examples elsewhere in this
+protocol show particular reading counts; those counts are illustrative, not targets.) **A
+contested kernel counts as ONE axis toward the axis budget**, not one axis per reading: emit
+**every** reading to `generation_sequence` as the expansion of that single kernel-axis — the
+readings are *not* each counted against the budget. Additional axis slots remain available for
+ordinary, independent (non-kernel) axes of the topic, if any genuinely exist; for a topic that
+is *only* a kernel, the kernel's readings are the whole generation_sequence. Name each reading by its interpretive
 commitment (`conception_reading`, `originalist_reading`). Each reading becomes one entry in
 `generation_sequence`, and that entry **must be an object** carrying `claim_id`, `kernel_id`,
 and `reading_id` — not a plain string:
@@ -317,9 +320,9 @@ When two axes appear to overlap:
 
 ---
 
-## §4. SELECTION & TRIAGE (The Three-Axis Budget)
+## §4. SELECTION & TRIAGE (Ranking and Ordering)
 
-**Purpose:** Select exactly three axes for generation. This is the step that v1.0 lacked.
+**Purpose:** Rank the §3-surviving axes and compute their generation order. This is the step that v1.0 lacked. Selection is decided by §3 distinctness (plus any caller-imposed budget ceiling), not by a fixed count.
 
 ### §4.1 Centrality Scoring
 
@@ -339,18 +342,17 @@ Where `type_weight`:
 
 Edges count `downstream_of` and `feeds_into` connections within the candidate set.
 
-**Selection algorithm:**
+**Selection rule:**
 
-1. Rank all candidates by centrality score.
-2. Select the highest-scoring axis (typically a downstream tangled_rope or snare).
-3. Select its most structurally distinct upstream dependency (highest ε difference from the first selection).
-4. Select the next highest-scoring axis that is not already selected and is not a near-duplicate of the first two (different primary observable, different beneficiary/victim pair).
+1. Rank all §3-surviving candidates by centrality score (the ranking drives generation order, §4.3).
+2. ALL §3 survivors are selected — do not truncate distinct axes and do not pad with near-duplicates.
+3. If the caller imposed a budget ceiling, keep the top-ranked axes up to the ceiling, preferring to retain the highest-scoring axis, its most structurally distinct upstream dependency, and then descending centrality.
 
-**If fewer than 3 candidates survive independence testing:** Generate what you have. Document the gap.
+**However many candidates survive independence testing:** generate exactly those. Document any gap.
 
 ### §4.2 Deferred Axes
 
-All candidate axes not selected become deferred axes. They are:
+Candidate axes dropped by §3 (or by an explicit caller ceiling) become deferred axes. They are:
 
 - Listed in the manifest with `selected: false`
 - Available to the essayist as omega-level context
@@ -487,14 +489,14 @@ The protocol itself does not block. Checkpoint logic lives in the orchestrator, 
 
 ### §1–§4 Analysis (abbreviated)
 
-Extraction identifies 4 entities, 3 claims, 2 tensions, 2 mechanisms, 2 absences. Multi-lens scan + dark matter probes produce 6 candidate axes. After independence testing and centrality scoring:
+Extraction identifies 4 entities, 3 claims, 2 tensions, 2 mechanisms, 2 absences. Multi-lens scan + dark matter probes produce 6 candidate axes. After independence testing and centrality scoring (this run carried a caller-imposed budget ceiling of 3, so the lower-ranked survivors were deferred — absent a ceiling, every §3 survivor below would be selected):
 
 - sovereignty_as_arbitrage (centrality 6) — selected
 - fossil_fuel_lock_in (centrality 3) — selected
 - fiscal_equalization_friction (centrality 2) — selected
-- boom_bust_path_dependency (centrality 2) — deferred
-- climate_policy_extraction (centrality 3) — deferred
-- u_s_alignment_projection (centrality 0) — deferred
+- boom_bust_path_dependency (centrality 2) — deferred (ceiling)
+- climate_policy_extraction (centrality 3) — deferred (ceiling)
+- u_s_alignment_projection (centrality 0) — deferred (ceiling)
 
 ### §5 JSON Manifest Output
 
