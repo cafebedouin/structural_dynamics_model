@@ -232,6 +232,20 @@ in `prolog/config.pl` as `param/2` facts. Do not hardcode threshold values
 anywhere else. If `logic.md` specifies a threshold, it must match `config.pl` —
 `logic.md` is the spec; `config.pl` is the implementation.
 
+**Rule 3b — Thresholds never reach the authoring LLM (de-leak, 2026-06-05).**
+The engine's classification bands must NOT appear in any author-facing surface:
+the generator prompt (`prompts/constraint_story_generation_prompt_json.md`), the
+JSON schema (`python/constraint_story_schema.json` — its text ships verbatim in
+the generation prompt via `story_generator_base.build_prompt`), or LLM retry/
+feedback text (`regenerate_stories.py` filters `THRESHOLD_COUPLED_LINT` codes;
+`c-orchestrator._sanitize_feedback_error` scrubs bound values). The authored
+claim vs. computed type diff is the research signal; disclosing a band lets the
+author back-compute the claim and collapses it (KNOWN_STATE.md 2026-06-05).
+Before adding ANY numeric threshold, metric band, or "required when ε > X" rule
+to those surfaces, run the assembled-payload check: dump
+`story_generator_base.build_prompt(...)` and grep it for band values near type
+names — it must stay clean.
+
 **Rule 4 — Priority cascade.** Classification priority (highest to lowest):
 `mountain > piton(dead-coordination) > snare > scaffold > rope > tangled_rope > piton(fallback) > naturalized > unknown`
 
@@ -465,8 +479,8 @@ This chains six steps automatically:
 | Step | What it does | Writes to |
 |---|---|---|
 | 1 Research | Web search grounding via Haiku | (memory, no file) |
-| 2 Decompose | UKE_SCOPE protocol selects axes (default 3), produces manifest | (manifest in memory) |
-| 3 Generate | Sonnet generates one constraint story per axis | `json/`, `prolog/testsets/` |
+| 2 Decompose | UKE_SCOPE protocol selects every §3-distinct axis (no fixed count; `--axes N` is an optional ceiling, default none — changed 2026-06-05) | (manifest in memory) |
+| 3 Generate | Sonnet generates one constraint story per axis. NOTE: resolves only flat `manifest["axes"]`; kernel-reading entries are skipped — kernel topics go through `agent/generate_kernel_corpus.py` | `json/`, `prolog/testsets/` |
 | 4 Corpus update | Runs `python/run_pipeline.py` to re-classify full corpus | `outputs/pipeline_output.json` |
 | 5 Reports | `python/enhanced_report.py` writes per-constraint reports | `outputs/constraint_reports/<id>_report.md` |
 | 6 Essay | Sonnet synthesizes draft essay from constraint reports | `outputs/essays/`, `agent/analysis/essays/` |

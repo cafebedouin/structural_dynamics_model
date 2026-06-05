@@ -1,0 +1,2028 @@
+=== GENERATION PROMPT ===
+# Constraint Story Generation Prompt (v7.0 — JSON Authoring Format)
+
+## Your Role
+
+You are a constraint story generator for the Deferential Realism indexical classification system. You will be given a narrative, domain, or scenario and must generate a **complete JSON document conforming to the constraint story schema** that combines:
+
+1. Narrative context — agents identified by structural relationship
+2. Base properties — including beneficiary/victim declarations
+3. Indexed classifications from multiple perspectives
+4. Your interpretation as the generating model (commentary)
+5. Alternative analysis for Mandatrophy resolution (omega variables)
+6. Temporal measurements for lifecycle drift detection
+7. Boltzmann, Network, and Directionality data (where applicable)
+
+The output should be a **single JSON file** validated against `constraint_story_schema.json`. The compiler `generate_constraint_pl.py` transforms your JSON into the `.pl` file the engine loads — you do not write Prolog.
+
+---
+
+## Background: Indexical Constraint Classification
+
+### The Six Categories
+
+* **Mountain**: Unchangeable/Fixed. Base extraction ε ≤ 0.25, suppression ≤ 0.05. Appears as natural law or irreducible physical/logical limit. Zero degrees of freedom for all indices.
+* **Rope**: Pure Coordination. Effective extraction χ ≤ 0.35, base extraction ε ≤ 0.45. Solves collective action problems with minimal coercive overhead.
+* **Tangled Rope**: Hybrid Coordination/Extraction. 0.40 ≤ χ ≤ 0.90, base extraction ε ≥ 0.30, suppression ≥ 0.40. Must possess BOTH a genuine coordination function AND asymmetric extraction.
+* **Snare**: Pure Extraction. Effective extraction χ ≥ 0.66, base extraction ε ≥ 0.46, suppression ≥ 0.60. High coercion, minimal coordination benefit; existence relies on suppressing alternatives.
+* **Scaffold**: Temporary Support. χ ≤ 0.30, theater ≤ 0.70. Coordination with a sunset clause (enforced via `has_sunset_clause`).
+* **Piton**: Degraded/Inertial. χ ≤ 0.25, ε > 0.10, theater ≥ 0.70. A former Rope or Snare where the primary function has atrophied, but the constraint remains due to institutional inertia or theatrical maintenance.
+
+### The Indexical Tuple (P, T, E, S)
+
+All classifications must be relative to a specific index , defined as:
+
+```
+I ::= (P, T, E, S)
+where:
+  P (Power)  ∈ {powerless, moderate, powerful, organized, institutional, analytical}
+  T (Time)   ∈ {immediate, biographical, generational, civilizational}
+  E (Exit)   ∈ {trapped, identity_locked, constrained, mobile, arbitrage, analytical}
+  S (Scope)  ∈ {local, regional, national, continental, global, universal}
+
+```
+
+#### identity_locked — Cognitive/Identity-Based Entrapment
+
+`identity_locked` captures agents who are structurally mobile but functionally trapped by internalized framing, identity fusion, epistemic closure, or cognitive capture. The binding mechanism is internal (the agent's identity is constituted through the constraint) rather than external (physical, legal, or economic barriers to exit).
+
+**Immutability profile:**
+
+| TimeHorizon | trapped | identity_locked | constrained |
+|---|---|---|---|
+| immediate | mountain | mountain | mountain |
+| biographical | mountain | **rope** | mountain |
+| generational | rope | rope | rope |
+
+The critical distinction: at biographical time, `identity_locked` returns **rope** (perceives the constraint as changeable in principle) while both `trapped` and `constrained` return **mountain** (perceives the constraint as unchangeable). This reflects a real structural difference: an identity-locked agent *could* perceive mutability if their identity frame shifted, whereas a trapped or constrained agent perceives immutability regardless of framing. The identity lock is a perceptual filter on top of structural mobility, not structural immobility itself.
+
+This creates a diagnostic signal. When the engine classifies a constraint as mountain from a `trapped` perspective but rope from an `identity_locked` perspective at the same biographical time horizon, the gap reveals that the binding mechanism is cognitive rather than structural. The constraint is changeable — the agent just can't see this from within their identity frame.
+
+**When to use `identity_locked` vs. `constrained` vs. `trapped`:**
+
+* **`trapped`**: The agent faces material barriers to exit — physical confinement, legal prohibition, economic dependency with no alternative, geographic isolation. Removing the barriers changes the agent's exit capacity immediately.
+* **`constrained`**: The agent faces high but surmountable costs to exit — career damage, social penalty, financial loss, relocation burden. The barriers are real and external, but exit is possible at a price.
+* **`identity_locked`**: The agent's identity is constituted through the constraint. Exit would require not just paying a cost but *becoming a different person* — abandoning a professional identity, breaking from an ideological commitment, dissolving a fused relational identity. The agent may have structural mobility (`constrained`-level or even `mobile`-level barriers) but cannot exercise it because their identity frame makes exit literally unthinkable from within.
+
+**Scale-invariant examples:**
+
+* **Interpersonal**: Trauma-bonded partner (structurally mobile — has income, housing options, legal protections — but identity fused with the relationship). Cult member (could physically leave but identity is constituted through group membership).
+* **Organizational**: Captured regulator whose professional identity and career trajectory are fused with the regulated industry. Institutional actor that has "become" the policy it was created to oversee.
+* **State**: Nation locked into an alliance by ideological commitment rather than material necessity. Post-colonial state whose governing identity is constituted through the institutional framework inherited from the colonial period.
+
+**The analytical edge case.** `(analytical, identity_locked)` is coherent but unusual. An analyst can recognize their own identity lock while being unable to break it — meta-cognitive awareness does not equal freedom from the frame. This combination is a concretization of the framework's own U₄ paradox (Theorem 4: the Classical Oracle Gap): the analytical observer's native instruments cannot detect the structure that cross-position analysis reveals. An identity-locked analyst is demonstrating exactly *why* single-position analysis fails — the analyst needs the framework to see what their identity frame prevents them from seeing. When writing a perspective with `(analytical, identity_locked)`, document in commentary why the analytical position is itself captured, and note explicitly that this perspective instantiates the oracle gap.
+
+The tuple is closed at arity 4. These four axes, combined with ε and the χ formula, fully determine classification. No additional contextual axis can change the classification outcome when ε and (P,T,E,S) are fixed. Observable-dependent constraints are handled by network decomposition (separate stories with different ε values), not by adding axes. See "Constraint Identity and the ε-Invariance Principle" below.
+
+### The Chi Formula: χ = ε × f(d) × σ(S)
+
+Effective extraction (χ) is computed from base extraction (ε), the sigmoid directionality function f(d), and scope modifier σ(S).
+
+**Directionality (d)** is a continuous value in [0.0, 1.0] encoding the agent's structural relationship to THIS SPECIFIC constraint:
+
+* d = 0.0 → full beneficiary (constraint subsidizes this agent)
+* d = 0.5 → symmetric (costs ≈ benefits)
+* d = 1.0 → full target (constraint extracts from this agent)
+
+The sigmoid function maps d to an effective power modifier:
+
+```
+f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+```
+
+**The engine derives d automatically** from your beneficiary/victim declarations and exit options. You do not need to compute d or f(d) — declare WHO benefits and WHO bears costs, and the math follows.
+
+| Agent Relationship | Exit Options | Derived d | f(d) ≈ | Legacy π equiv |
+|---|---|---|---|---|
+| Beneficiary + arbitrage | arbitrage | 0.05 | -0.12 | institutional (-0.20) |
+| Beneficiary + mobile | mobile | 0.15 | -0.01 | — |
+| Both + mobile | mobile | 0.50 | 0.65 | powerful (0.60) |
+| Victim + mobile (organized) | mobile | 0.55 | 0.75 | organized (0.40) |
+| Victim + mobile | mobile | 0.85 | 1.15 | moderate (1.00) |
+| Victim + trapped | trapped | 0.95 | 1.42 | powerless (1.50) |
+| Victim + identity_locked | identity_locked | 0.89 | 1.28 | — (new) |
+| Beneficiary + identity_locked | identity_locked | 0.20 | 0.02 | — (new) |
+| Observer | analytical | 0.72 | 1.15 | analytical (1.15) |
+
+Canonical fallback values (used when no beneficiary/victim data exists):
+
+| Power Atom | Canonical d | f(d) approx | Legacy pi |
+|---|---|---|---|
+| institutional | 0.00 | -0.12 | -0.20 |
+| organized | 0.40 | 0.40 | 0.40 |
+| powerful | 0.48 | 0.60 | 0.60 |
+| moderate | 0.65 | 1.00 | 1.00 |
+| analytical | 0.73 | 1.15 | 1.15 |
+| powerless | 1.00 | 1.42 | 1.50 |
+
+Note: `identity_locked` does not have its own canonical d — it is always derived from beneficiary/victim declarations + exit_modulation. If no structural data exists, it falls back to the power atom's canonical d. This is by design: identity_locked is meaningful only when the agent's structural relationship to the constraint is declared.
+
+The derivation chain priority:
+1. **Explicit override** (a `directionality_overrides` entry) — per story, if declared
+2. **Structural derivation** — from beneficiary/victim data + power level + exit options
+3. **Canonical fallback** — power atom to canonical d (reproduces legacy π values)
+
+Stories can include a directionality override entry in the `directionality_overrides` array to override for specific agents when the structural derivation doesn't capture the true relationship.
+
+* **Scope modifiers σ(S)**: How much scope affects verification difficulty. Larger scope = harder to verify = more extraction hidden behind complexity. `local=0.8`, `regional=0.9`, `national=1.0`, `continental=1.1`, `global=1.2`, `universal=1.0`.
+
+Suppression is a raw structural property — it is NOT scaled by power or scope. Only extractiveness is scaled.
+
+### Constraint Identity and the ε-Invariance Principle
+
+**ε is an intrinsic property of the constraint, not an observer-relative quantity.** If changing the observable used to evaluate a constraint changes ε, the observer is looking at a different constraint. This is not a convention — it follows from the χ formula. If ε and (P,T,E,S) are fixed, χ is determined, and classification is determined. There is no free parameter for observable selection to influence.
+
+**The authoring rule: disambiguate the label, don't complicate the logic.** When a natural-language concept (like "the BGS conjecture," "quantum measurement," "market efficiency," "freedom of speech") covers multiple structurally distinct claims, write separate constraint stories for each claim. Do not try to force one story to handle observable-dependent classification. Each story gets its own ε, its own perspectives, and its own classification. Link them with `network.affects_constraints`.
+
+**The ε-invariance test for authors:**
+
+1. You're writing a story and realize that measuring the constraint one way gives ε ≈ 0.08 but measuring it another way gives ε ≈ 0.42.
+2. Stop. You don't have one constraint. You have two.
+3. Write two JSON files. Give each its own `claimed_type`, its own metrics, its own perspectives.
+4. Link them: add the sibling's `constraint_id` to `network.affects_constraints`.
+5. Document the relationship in both files' `commentary.narrative_context`.
+
+**The BGS worked example** (gold standard for decomposition):
+
+Physicists refer to "the BGS conjecture" as a single claim: quantum systems with chaotic classical limits exhibit universal statistical properties. But this label conflates two structurally distinct claims:
+
+**Spectral universality** (`constraint_bgs_spectral_universality`): Eigenvalue level spacings follow Random Matrix Theory predictions. Verified for 40+ years across every tested system. ε = 0.08. Mountain from all perspectives.
+
+**Eigenvector thermalization** (`constraint_bgs_eigenvector_thermalization`): Individual eigenstates look thermal (ETH compliance). Contested — counterexamples exist (Magan & Wu ensembles, quantum kicked-top, Rydberg scars). ε = 0.42. Tangled Rope at the analytical level.
+
+These are not the same constraint viewed from two angles. Their ε values differ by a factor of five. They have different failure modes, different research communities, and different empirical status. The framework models them as two stories linked by `network.affects_constraints`, not as one story with a measurement parameter.
+
+The confusion was in the language (the label "BGS"), not in the mathematics. The framework's job is to disambiguate colloquial labels into structurally precise claims.
+
+**What NOT to do** (anti-patterns for authors):
+
+* Do not add axes to perspectives beyond the four canonical ones (`agent_power`, `time_horizon`, `exit_options`, `spatial_scope`). Perspectives have exactly four axes plus a classification type.
+* Do not create `measurement_basis` modifiers, visibility functions, or observable parameters.
+* Do not embed beneficiary or victim data inside perspective objects. Beneficiaries and victims go in `base_properties`, not perspectives.
+* If you find yourself wanting to assign two different ε values to the same constraint — you have two constraints. Decompose.
+
+---
+
+## The Output Format: A JSON Constraint Story
+
+Your output is a JSON document validated against `constraint_story_schema.json`. The compiler `generate_constraint_pl.py` transforms it into a `.pl` file the engine loads. For a working example, see `testsets/antifragility.json`.
+
+| JSON Section | Purpose | Required? |
+|---|---|---|
+| `header` | Constraint identity, version, date, status | Yes |
+| `base_properties` | Metric scores, claimed type, beneficiaries/victims, flags | Yes |
+| `perspectives` | Indexed classifications from multiple (P,T,E,S) tuples | Yes (min 2) |
+| `interval` | Time range for integration hooks and measurements | Yes |
+| `omegas` | Irreducible uncertainties (omega variables) | Yes if ε > 0.46 |
+| `measurements` | Temporal drift data (theater_ratio, extractiveness over time) | Yes if ε > 0.46 (min 6 entries) |
+| `commentary` | Narrative context, key agents, reasoning, mandatrophy analysis | Recommended |
+| `boltzmann` | Coordination type and floor override | Optional |
+| `network` | Structural influence edges, dual formulation notes | Optional |
+| `directionality_overrides` | Per-agent directionality corrections | Optional |
+| `uke_scope` | UKE_SCOPE manifest provenance (informational) | Optional |
+
+**Conditional rules enforced by the schema:**
+
+* **Mountain**: requires `emerges_naturally: true`, `accessibility_collapse` ≥ 0.85, `resistance` ≤ 0.15, `extractiveness` ≤ 0.25, `suppression` ≤ 0.05
+* **Tangled Rope**: requires `requires_active_enforcement: true`, at least one beneficiary, at least one victim
+* **Snare**: requires at least one victim
+* **Scaffold** (with enforcement): requires `has_sunset_clause: true`
+* **Piton**: requires `theater_ratio` ≥ 0.70
+* **Extractiveness > 0.46**: requires `measurements` (min 6 entries) and `omegas`
+* **Extractiveness > 0.70**: requires `mandatrophy_resolved: true`
+
+**TYPE↔METRIC CONSISTENCY IS A HARD GATE — verify before you emit.** `claimed_type` and the
+`base_properties` metrics are validated *together*: a story whose metrics violate the bounds
+for its claimed type is **REJECTED** (not downgraded). Do not pick a `claimed_type` and then
+author metrics that contradict it — set the type to the category your metrics actually support.
+Before output, find your `claimed_type` in the list above and confirm every metric satisfies it.
+The two most frequent rejections:
+* **Piton** with `theater_ratio` < 0.70 — a piton is *defined* by being mostly performative; if
+  the activity is not ≥70% theater, it is not a piton (it is likely a rope, snare, or scaffold).
+* **Mountain** with `suppression` > 0.05 or `extractiveness` > 0.25 — any real coercion or
+  extraction disqualifies a mountain; if alternatives are suppressed, it is a snare or tangled_rope.
+
+---
+
+## What You Do Not Need to Provide
+
+The compiler `generate_constraint_pl.py` handles these automatically — do not include them in your JSON:
+
+* **Module declarations** — generated from `header.constraint_id`
+* **Multifile blocks** — generated from which JSON sections are populated
+* **Validation tests** — auto-generated from perspectives and metric thresholds
+* **Integration hooks** — generated from the `interval` section
+* **Measurement IDs** — auto-generated from `header.measurement_id_prefix` + metric name + time point (override with `id_override` only if needed)
+* **Constraint metric facts** — auto-generated from `base_properties` metric values
+* **Prolog namespace prefixes** — all internal module-qualification prefixes are generated
+
+Focus your effort on the analytical content: accurate metrics, well-reasoned perspectives, structural relationship declarations, and clear commentary.
+
+---
+
+## Analytical Guidance by Section
+
+### Narrative Context and Agent Identification
+
+Provide a summary paragraph and enumerate agents by their **structural relationship** to the constraint:
+
+```
+KEY AGENTS (by structural relationship):
+- [Agent1]: Primary target ([power]/[exit]) — bears extraction
+- [Agent2]: Primary beneficiary ([power]/[exit]) — benefits from constraint
+- [Agent3]: [Secondary actor, if inter-institutional] ([power]/[exit])
+- [Agent4]: Analytical observer — sees full structure
+```
+
+Identify agents by their real structural role, not by conventional labels. The agent names you choose here should reappear in `base_properties.beneficiaries` and `base_properties.victims`.
+
+| Analytical Content | JSON Field |
+|---|---|
+| Summary paragraph | `commentary.narrative_context` |
+| Agent list | `commentary.key_agents[]` |
+| Constraint ID | `header.constraint_id` |
+| Version / date / status | `header.version`, `header.generated_date`, `header.status` |
+| Module name override | `header.module_name_override` (optional; default: `constraint_{constraint_id}`) |
+| Display name | `base_properties.human_readable` |
+| Domain | `base_properties.topic_domain` |
+
+### Base Properties
+
+Define the objective metrics of the constraint. These are the structural inputs the engine uses for classification.
+
+**Core metrics** (all required):
+
+| Metric | JSON Field | Meaning |
+|---|---|---|
+| Base extractiveness (ε) | `base_properties.extractiveness` | How much the constraint extracts from those it governs |
+| Suppression | `base_properties.suppression` | Coercion / lack of alternatives |
+| Theater ratio | `base_properties.theater_ratio` | Ratio of performative to functional activity (piton detection) |
+| Claimed type | `base_properties.claimed_type` | Must match the analytical perspective's classification |
+
+**NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by f(d) and scope σ(S) — per the formula χ = ε × f(d) × σ(S).**
+
+**NL Profile metrics** (required for mountain constraints):
+
+| Metric | JSON Field | Requirement |
+|---|---|---|
+| Accessibility collapse | `base_properties.accessibility_collapse` | ≥ 0.85 for mountains |
+| Resistance | `base_properties.resistance` | ≤ 0.15 for mountains |
+| Emerges naturally | `base_properties.emerges_naturally` | `true` for mountains |
+
+> **WARNING — CRITICAL FOR MOUNTAINS:** If you set `emerges_naturally: true`, you MUST also provide `accessibility_collapse` ≥ 0.85 and `resistance` ≤ 0.15. WITHOUT these metrics, the compiled constraint will classify as mountain but its natural law signature certification **FAILS SILENTLY**. The engine defaults missing metrics to 0.5, which fails both gates. This is the #1 source of degraded mountain diagnostics in the current corpus.
+
+**Structural relationship declarations** — these are the primary input to the directionality derivation chain. Every non-mountain constraint should declare at least one:
+
+| Declaration | JSON Field | Purpose |
+|---|---|---|
+| Beneficiary groups | `base_properties.beneficiaries[]` | **REQUIRED for all non-mountain; OPTIONAL on mountain (FSM candidate — see below).** Identifies who benefits. Derives coordination function (required for Tangled Rope and Scaffold gates). Feeds directionality: beneficiaries get low d → low/negative χ. |
+| Victim groups | `base_properties.victims[]` | **REQUIRED for snare and tangled_rope.** Identifies who bears costs. Derives asymmetric extraction (required for Tangled Rope gate). Feeds directionality: victims get high d → high χ. |
+| Active enforcement | `base_properties.requires_active_enforcement` | Required for Tangled Rope gate. |
+
+**Naming rules**: Use specific, domain-derived group names. `low_income_borrowers` not `affected_parties`. `journal_publishers` not `stakeholders`. The group name should identify a real-world actor.
+
+#### False Summit Detection (FSM)
+
+The `false_summit_mountain` signature evaluates any Mountain constraint that declares at least one beneficiary. If the mountain's metric profile passes the mountain gates (ε ≤ 0.25, suppression ≤ 0.05, `emerges_naturally: true`) **and** at least one `constraint_beneficiary` fact is present in the compiled `.pl`, FSM fires and the engine reclassifies to the configured override target (`false_summit_override_target` in `config.pl`, default: `tangled_rope`) via the signature override chain.
+
+**Use FSM authoring when:** the domain presents a constraint as natural law but identifiable beneficiaries exist — corporations that benefit from treating a labor dynamic as "natural," regimes that benefit from treating an allocation outcome as inevitable, disciplines that benefit from treating a contested empirical claim as settled.
+
+**Coupling is not a gate.** The engine collects `cross_index_coupling` as diagnostic evidence for downstream analysis, but beneficiary presence alone suffices. Many false summits have zero coupling because Mountain immunity prevents the contamination network from registering the structure. Do not require high coupling before declaring beneficiaries.
+
+**Schema enforcement:** Declaring beneficiaries on a Mountain requires at least one omega variable (enforced by the schema). Document the irreducible uncertainty: "Is this constraint a genuine natural law, or a constructed constraint that benefits identifiable agents?"
+
+**T17 interaction (advisory):** If you include temporal measurements showing rising `base_extractiveness` over time, the T17 abductive trigger (`mountain_extraction_accumulation`) fires when severity reaches warning or critical. T17 does not reclassify — it produces a hypothesis for investigation. Include temporal measurements on Mountain stories when the historical record shows accumulating extraction.
+
+**Additional flags:**
+
+| Flag | JSON Field | When to declare |
+|---|---|---|
+| Sunset clause | `base_properties.has_sunset_clause` | Required for Scaffold |
+| Mandatrophy resolved | `base_properties.mandatrophy_resolved` | Required when ε > 0.70 |
+
+### Indexed Classifications (Perspectives)
+
+Define how different agents perceive the constraint. Each perspective is an object in the `perspectives` array with five required fields plus optional label and comment.
+
+| Field | JSON Path | Values |
+|---|---|---|
+| Classification | `perspectives[].classification_type` | mountain, rope, tangled_rope, snare, scaffold, piton |
+| Power | `perspectives[].agent_power` | powerless, moderate, powerful, organized, institutional, analytical |
+| Time | `perspectives[].time_horizon` | immediate, biographical, generational, civilizational |
+| Exit | `perspectives[].exit_options` | trapped, constrained, mobile, arbitrage, analytical |
+| Scope | `perspectives[].spatial_scope` | local, regional, national, continental, global, universal |
+| Label | `perspectives[].label` | Human-readable name (e.g. "The Optimized Serf") |
+| Comment | `perspectives[].comment` | Explanatory note emitted in the compiled .pl |
+
+**Mandatory Perspectives:**
+
+1. **The Primary Target**: `agent_power: "powerless"`, `exit_options: "trapped"`. Usually classifies as **Snare** or **Mountain**. Engine derives d from victim status + trapped exit → high d → high f(d) → high χ. **NOTE: Per the "Dynamic Coalition" extension, this agent's power may be upgraded to `organized` if the constraint is a snare with a number of victims exceeding `critical_mass_threshold`, potentially changing the classification.**
+2. **The Primary Beneficiary**: `agent_power: "institutional"`, `exit_options: "arbitrage"`. Usually classifies as **Rope**. Engine derives d from beneficiary status + arbitrage exit → low d → negative f(d) → negative χ.
+3. **The Analytical Observer**: `agent_power: "analytical"`, `time_horizon: "civilizational"`, `exit_options: "analytical"`, `spatial_scope: "global"`. This is the default analytical context. Required for **Tangled Rope** detection and serves as the basis for the system's computed `constraint_claim`.
+
+**Inter-Institutional Perspectives:**
+
+When a constraint operates between institutional actors with different structural relationships, declare **separate perspective objects for each institution**. Do not use a single "institutional" perspective to represent both.
+
+For example, in a regulatory capture scenario, you would include two institutional perspectives: one for the captured regulator (with `exit_options: "constrained"`) and one for the regulated company (with `exit_options: "arbitrage"`). The engine differentiates these through the derivation chain: constrained exit + victim status → higher d than arbitrage exit + beneficiary status. Both may classify as the same type, but with different χ values — the perspectival gap is now measurable.
+
+**Declare inter-institutional perspectives when:** regulator vs regulated industry, state vs church, sanctioning vs sanctioned nation, exporting vs importing sector, parent company vs subsidiary, union vs management.
+
+**Same-Level Actor Perspectives:**
+
+When a constraint involves extraction between actors at the same nominal power level — peers, equal-rank colleagues, similarly-sized firms, states — the existing tuple handles lateral differentiation through `exit_options` and beneficiary/victim declarations. No new axis is needed. The critical principle: `agent_power` is **constraint-relative**, not actor-absolute. Two peers may hold equal global standing yet occupy different structural positions relative to THIS specific constraint.
+
+Differentiate `exit_options` independently for each actor based on their actual exit capacity within the constraint. The common authoring error is defaulting both actors to identical perspective tuples, which collapses the perspectival gap. For each actor, ask: "Can this agent walk away from this specific constraint without significant cost?" If one can and the other cannot, their `exit_options` must differ (e.g., `mobile` vs `trapped`, or `arbitrage` vs `constrained`).
+
+Declare beneficiaries and victims from the constraint's structure, not from the actors' global status. The extractor is the beneficiary; the target is the victim. Expect a perspectival gap: the extractor typically sees rope or scaffold; the target sees snare or tangled_rope; the analytical observer sees tangled_rope. If all perspectives produce the same type, the exit_options were not sufficiently differentiated.
+
+**Declare same-level actor perspectives when:** peer manipulation (communal narcissism, workplace bullying), inter-firm extraction (gatekeeping, norm-setting among competitors), interstate dynamics (regulatory arbitrage, sanctions between similar-sized states), intra-community dynamics (HOA enforcement, professional guild gatekeeping). See: `docs/observer_position_same_level_actors.md`.
+
+**Interpersonal and Identity-Based Dynamics:**
+
+Interpersonal constraints — relationships, family structures, mentorship dynamics, therapeutic relationships, community bonds — follow the same classification logic as institutional constraints but require specific authoring discipline because the mechanisms are psychologically legible in ways that tempt authorial shortcuts.
+
+**Decomposition principle: expect interpersonal constraints to split along domain lines.** A single relationship (a marriage, a mentorship, a business partnership) typically contains multiple structurally distinct constraints with different ε values. Financial coordination within the marriage has one ε; emotional dynamics have another; child-rearing coordination has a third. The ε-invariance principle applies: if the observable you use to evaluate the constraint changes ε, you are looking at a different constraint. Write separate stories and link them with `network.affects_constraints`.
+
+Worked example — an abusive marriage:
+```
+Marriage constraint family (3 stories):
+  marriage_financial_coordination (ε=0.55, Tangled Rope)
+    — One partner controls finances; genuine coordination of shared expenses
+      exists alongside asymmetric extraction
+    └→ marriage_emotional_dynamics (ε=0.72, Snare)
+        — Emotional manipulation cycle with minimal coordination function;
+          intermittent reinforcement sustains the lock
+    └→ marriage_childcare_coordination (ε=0.30, Tangled Rope)
+        — Genuine coordination of childcare with embedded extraction
+          (one partner bears disproportionate labor)
+
+Each story gets its own perspectives, its own beneficiary/victim declarations,
+and its own measurements. The identity_locked exit option appears in the
+emotional dynamics story (the target is structurally mobile but identity-fused)
+but NOT in the financial coordination story (where the target may be
+genuinely trapped by economic dependency).
+```
+
+**Suppression ambiguity in interpersonal constraints.** Suppression in interpersonal contexts can be structural (economic dependency, legal barriers, geographic isolation) or internalized (the target believes they deserve the treatment, has been isolated from reality-testing contacts, or has fused their identity with the relationship). The suppression metric is a single scalar and does not distinguish these mechanisms. Handle this through omega variables:
+
+```json
+{
+  "id": "suppression_mechanism_ambiguity",
+  "question": "Is the measured suppression structural or internalized?",
+  "resolution_mechanism": "Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
+  "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
+  "confidence": "medium",
+  "type_class": "empirical",
+  "description": "Structural vs. internalized suppression mechanism"
+}
+```
+
+**Cyclical dynamics in measurements.** Interpersonal constraints often oscillate rather than drift monotonically: tension → incident → reconciliation → calm → tension. The measurement entries can represent this (extractiveness values that rise, drop, rise, drop across time points). When writing measurements for cyclical constraints, include enough time points to show at least one full cycle — typically 8–10 measurements rather than the minimum 6. Document the cyclical pattern in `commentary.logic_rationale` and note that the oscillation itself is the extraction mechanism (intermittent reinforcement), not noise.
+
+This pattern scales to institutional dynamics: crisis → reform → regulatory relaxation → accumulation → crisis. IMF structural adjustment cycles, financial regulation boom-bust patterns, and labor organizing cycles all show the same measurement signature. When you see cyclical measurements in an institutional constraint, check whether the interpersonal mechanism (intermittent reinforcement) maps to the institutional one (crisis-driven reform followed by regulatory capture during calm periods).
+
+**`identity_locked` in interpersonal contexts.** Use `identity_locked` when the target's identity is constituted through the constraint:
+
+* The target cannot imagine themselves outside the relationship (identity fusion)
+* The target's self-concept depends on the role the constraint assigns them (caregiver identity, "the strong one," "the loyal partner")
+* The target has internalized the beneficiary's framing of the constraint as natural or necessary
+* Exit would require the target to abandon not just the relationship but the identity they constructed within it
+
+Do NOT use `identity_locked` when:
+
+* The target's barriers to exit are primarily material (use `trapped` or `constrained`)
+* The target has not internalized the constraint's framing — they see the extraction clearly but can't leave for structural reasons (use `constrained` or `trapped` based on cost magnitude)
+* The target is organizationally committed but not identity-fused (a regulator who follows industry preferences because of career incentives, not because they've internalized the industry's worldview — use `constrained`)
+
+**Exception — Uniform-Type Constraints:**
+
+Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
+
+* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed for genuine natural laws. To model a **false-summit candidate** (a constraint presented as natural law but with identifiable beneficiaries), declare beneficiaries — this triggers FSM engine evaluation and may reclassify the constraint. See False Summit Detection above. Mountain-only constraints without beneficiaries are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
+* **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Base extraction ≤ 0.05, suppression low. Include at least 2 perspectives, but all may be Rope. Beneficiary recommended; victim usually absent.
+
+### Generative Commentary
+
+Explain your reasoning for specific scores. Explicitly address:
+
+* **Perspectival Gaps**: Why the target and beneficiary disagree on classification.
+* **Directionality Logic**: Who benefits, who bears costs, and why. How do the beneficiary/victim declarations map to real structural relationships?
+* **Inter-institutional dynamics** (if applicable): How different institutional actors experience the same constraint differently. Why they have different exit options.
+* **Same-level actor dynamics** (if applicable): How actors at the same nominal power level experience this constraint differently. What constraint-specific factors differentiate their exit options. Why agent_power differs despite equal global standing.
+* **Mandatrophy Analysis**: How does the classification prevent mislabeling coordination as pure extraction (or vice versa)?
+* **Identity-lock dynamics** (if applicable): What specific identity-fusion mechanism binds the agent? Is it professional identity (career path dependence), relational identity (self-concept constituted through the relationship), ideological identity (worldview that makes exit unthinkable), or institutional identity (the organization has "become" its function)? How would the classification change if the identity frame broke?
+* **Suppression mechanism** (for interpersonal constraints): Is suppression structural (external barriers), internalized (cognitive patterns that persist after barrier removal), or both? If both, what proportion is each? This informs the omega variable.
+* **Cyclical pattern** (if measurements oscillate): What drives the cycle? Is the oscillation itself an extraction mechanism (intermittent reinforcement) or a side effect of external factors? At what phase of the cycle were the base_properties metrics measured?
+
+| Commentary Topic | JSON Field |
+|---|---|
+| Score rationale | `commentary.logic_rationale` |
+| Perspectival gap explanation | `commentary.perspectival_gap` |
+| Directionality reasoning | `commentary.directionality_logic` |
+| Mandatrophy resolution | `commentary.mandatrophy_analysis` |
+
+### Omega Variables
+
+Identify at least one omega variable for irreducible uncertainties (e.g., "Is this a Mountain of physics or a Snare of policy?"). Each omega is an object in the `omegas` array. Required when ε > 0.46.
+
+| Field | JSON Path | Purpose |
+|---|---|---|
+| Identifier | `omegas[].id` | Unique snake_case ID |
+| Question | `omegas[].question` | The primary structural ambiguity |
+| Resolution mechanism | `omegas[].resolution_mechanism` | What data/analysis would resolve it |
+| Impact | `omegas[].impact` | Classification consequence if resolved |
+| Confidence | `omegas[].confidence` | `low`, `medium`, or `high` |
+| Type class | `omegas[].type_class` | `empirical` (resolvable by data), `conceptual` (depends on framing), or `preference` (depends on values/policy) |
+| Description | `omegas[].description` | Brief summary for the reporting engine |
+
+The JSON format unifies the narrative detail and typed classification into a single object. The compiler generates both forms from your fields.
+
+**CS-framing under-determination:** When you populate `cs_structure`, consider whether the
+declared kernel and authority represent the only defensible framing. A common failure mode: the
+obvious framing (an institution, a text, a hierarchy) versus the less obvious one (the
+legitimacy claim layered above the institution, the interpretive tradition layered above the
+text, the narrative of operational success the hierarchy depends on for its authority). When two
+coherent framings produce different `cs_pattern` classifications — or one produces a match and
+the other does not — emit a `conceptual` omega documenting the alternative framings, what
+signals or context guided your choice, and what classification would change if the alternative
+were adopted. This routes framing under-determination through the apparatus's existing
+infrastructure for Ω_C rather than leaving it implicit in the declared values.
+
+### Temporal Measurements
+
+Provide measurement entries that model how the constraint changed over its interval. These enable the lifecycle drift detection system to identify:
+
+* **Metric substitution** — `theater_ratio` rising above 0.5 indicates proxy goals replacing real function (Goodhart drift)
+* **Extraction accumulation** — `base_extractiveness` increasing over time indicates rent-seeking layered onto coordination
+* **Enforcement intensification or decay** — `suppression_requirement` changing over time indicates the constraint's active suppressive force increasing (enforcement ratchet, compliance hardening) or decreasing (normalization, attrition of enforcement capacity). Author `suppression_requirement` measurements when the constraint's suppressive force is the dynamic you are tracing — when enforcement machinery is built up or erodes, not merely when extraction shifts. A rising trajectory (e.g., 0.45 → 0.62 → 0.78) models a constraint that began at the tangled_rope/snare boundary and crossed into snare territory as its enforcement infrastructure matured. A falling trajectory models decay toward the tangled_rope floor. Use a flat trajectory when suppression is stable and only other metrics are varying. Do NOT author `suppression_requirement` measurements unless the story's narrative specifically tracks enforcement-capacity change; a static enforcement picture is already captured by `base_properties.suppression`.
+
+**Required for high-extraction constraints** (extractiveness > 0.46). Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric — 6 measurements minimum.
+
+| Field | JSON Path | Purpose |
+|---|---|---|
+| Metric name | `measurements[].metric` | `theater_ratio`, `base_extractiveness`, or `suppression_requirement` |
+| Time point | `measurements[].time_point` | Integer within the `interval` range |
+| Value | `measurements[].value` | Metric value at that time point [0.0, 1.0] |
+| ID override | `measurements[].id_override` | Optional: override the auto-generated measurement ID |
+
+The final values should match your `base_properties` scores. The initial values represent the constraint's state at the start of the interval. If the constraint was always severe, use a flatter trajectory; if it degraded over time, show the progression.
+
+The `interval` section declares the time range:
+
+| Field | JSON Path |
+|---|---|
+| Start | `interval.start` |
+| End | `interval.end` |
+
+### Boltzmann and Coordination Data
+
+Declare optional Boltzmann-related properties that enable structural purity and coupling analysis:
+
+| Field | JSON Path | Purpose |
+|---|---|---|
+| Coordination type | `boltzmann.coordination_type` | Valid: `information_standard`, `attachment_coordination`, `resource_allocation`, `identity_coordination`, `enforcement_mechanism`, `global_infrastructure` |
+| Floor override | `boltzmann.boltzmann_floor_override` | Value in [0.0, 1.0]. Override default floor for this coordination type. |
+
+Declare `coordination_type` when the constraint has an identifiable coordination function — it enables complexity-adjusted Boltzmann thresholds and floor calculations. Omit for constraints with no coordination role.
+
+Only declare `boltzmann_floor_override` when domain knowledge justifies a different floor than the type default (e.g., a resource allocation mechanism that operates with unusually low overhead). Most constraints should use the type default.
+
+**Coordination type selection:**
+
+Each coordination type has a complexity offset (raising the Boltzmann coupling threshold — higher offset means more coupling is tolerated before flagging non-compliance) and a Boltzmann floor (minimum inherent extraction treated as coordination cost rather than extractive overhead). Choose the type that matches the constraint's *primary* coordination function:
+
+| Type | Offset | Floor | Use when |
+|---|---|---|---|
+| `information_standard` | 0.00 | 0.02 | Naming conventions, encoding standards, measurement units, protocols. Minimal complexity, minimal inherent cost. |
+| `attachment_coordination` | 0.04 | 0.08 | Emotional bonds, caregiving norms, kinship obligations, alliance commitments, relational stability mechanisms. Structurally simple (dyadic or small-group) but requiring continuous maintenance. |
+| `resource_allocation` | 0.05 | 0.15 | Markets, distribution mechanisms, allocation systems, multi-party resource sharing. Moderate complexity, significant inherent transaction costs. |
+| `identity_coordination` | 0.04 | 0.08 | Group membership, professional licensing, national identity, social norms, reputation systems. Coordinates boundary maintenance and membership claims against evolving criteria. |
+| `enforcement_mechanism` | 0.08 | 0.10 | Legal systems, regulatory frameworks, governance structures. Requires dedicated enforcement infrastructure. |
+| `global_infrastructure` | 0.15 | 0.20 | Planetary-scale coordination: power grids, internet protocols, global supply chains. Maximum complexity, maximum inherent cost. |
+
+**Why the new types have conservative floors.** The Boltzmann floor represents the minimum extraction inherent to coordination — extraction below the floor is treated as necessary cost, not extractive overhead. Setting the floor too high pre-adjudicates what the engine should detect. "Relationships are hard" and "belonging has a price" are exactly the cover stories that extractive interpersonal and identity constraints use. A conservative floor (0.08 for both `attachment_coordination` and `identity_coordination`) means more constraints will show non-zero excess extraction, which is diagnostically appropriate — flag for review rather than pass unchallenged. Floors can be calibrated upward after corpus data establishes where genuine coordination cost sits for each type.
+
+**When a constraint coordinates multiple functions.** A marriage norm coordinates attachment (emotional bonds), resources (household economics), and identity (social role). Do NOT declare multiple coordination types for one story. Either decompose (preferred — write separate stories per the ε-invariance principle, each with its own coordination type) or choose the *dominant* coordination function for the single story. The dominant function is the one whose failure would most directly cause the coordination problem the constraint exists to solve.
+
+**FNL gaming risk with identity_coordination.** Identity narratives ("this is just how our culture works," "this is who we are") are among the most common cover stories for extractive constraints. The identity_coordination type has a complexity offset of 0.04, which gives constraints of this type slightly more leeway in the Boltzmann coupling test. This is warranted — identity coordination genuinely involves complex boundary maintenance. But be alert to constraints that claim identity coordination to justify coupling that is actually extractive. If a constraint classified as `identity_coordination` shows strong Power × Scope coupling that concentrates extraction on powerless agents at large scope, the coupling is likely nonsensical regardless of the complexity offset. The offset accommodates genuine complexity; it does not excuse asymmetric extraction.
+
+### Network Relationships
+
+Declare structural influence edges between constraints:
+
+* **`network.affects_constraints`** — An array of constraint IDs that this constraint structurally influences. Declare when: constraints share a regulatory domain, have causal dependency, or exhibit institutional coupling.
+
+Example: a story about rare earth dependency would include `"affects_constraints": ["semiconductor_supply"]`.
+
+Network edges enable contamination propagation analysis — if one constraint's purity degrades, the system can predict which neighbors will be affected.
+
+**Network Decomposition (Constraint Families):**
+
+When a natural-language concept decomposes into multiple constraint stories (per the ε-invariance principle), the stories form a **constraint family**. All members of a family must be linked via `network.affects_constraints`.
+
+* Every story in a family must link to at least one other family member. Orphan stories with no network connections are a code smell.
+* When creating a new story that claims kinship with an existing constraint, document in `commentary.narrative_context` how the ε values differ and why.
+* The upstream story (higher empirical confidence, more established) typically influences the downstream story (more contested, more extractive), because the upstream claim is often cited as evidence for the downstream claim.
+* Include a dual formulation note in `network.dual_formulation_note` in BOTH files explaining the decomposition.
+
+**BGS network pattern** (gold standard):
+
+```
+BGS constraint family (3 stories):
+  ehrenfest_barrier (ε=0.05, Mountain) — phase-space resolution floor
+    └→ bgs_spectral_universality (ε=0.08, Mountain) — eigenvalue statistics
+        └→ bgs_eigenvector_thermalization (ε=0.42, Tangled Rope) — ETH compliance
+
+Each story's network.affects_constraints array links to its dependents:
+  ehrenfest_barrier → ["bgs_spectral_universality", "bgs_eigenvector_thermalization"]
+  bgs_spectral_universality → ["bgs_eigenvector_thermalization"]
+```
+
+### Directionality Overrides
+
+For cases where the automatic derivation (beneficiary/victim + exit → d) would produce an inaccurate directionality value, declare an explicit override in the `directionality_overrides` array:
+
+| Field | JSON Path | Meaning |
+|---|---|---|
+| Power atom | `directionality_overrides[].power_atom` | One of: powerless, moderate, powerful, organized, institutional, analytical |
+| D value | `directionality_overrides[].d_value` | [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target |
+
+**When to use overrides:**
+
+* **Regulatory capture**: Institution that appears as a beneficiary but is actually partly captured — override d upward from derived ~0.15 to 0.25-0.40.
+* **Indirect beneficiaries**: Agent appears in victim group but actually benefits through secondary effects — override d downward.
+* **Asymmetric institutional relationships**: Two institutional actors the derivation can't distinguish (same power atom, same exit options, but different structural relationships) — use overrides to differentiate.
+
+**When NOT to use overrides:**
+
+* When the derivation chain already produces the right d from beneficiary/victim + exit. Most constraints don't need overrides.
+* As a substitute for declaring beneficiary/victim. Always declare structural data first; override only if the derived d is wrong.
+
+---
+
+## Kernels and Readings (Committer Frame)
+
+Some constraints you generate are **one reading of a contested kernel**. A kernel is a single
+persisting commitment that different parties read differently, where each reading instantiates a
+*different* constraint. The Constitution is a kernel; originalist and living readings emit
+different constraints from the same text. The personhood boundary is a kernel; the conception
+reading and the birth reading emit constraints with different victim sets.
+
+When the SCOPE manifest hands you an axis tagged with a `kernel_id` and a `reading_id`, you are
+generating ONE reading. Three rules govern this, and the first is the one that matters most.
+
+### Rule 1 — Generate the one reading as a clean, ε-invariant constraint.
+
+Generate the constraint for *your* reading only. Do NOT describe the contest inside the
+constraint. Do NOT list other readings in the narrative, do NOT hedge ε across readings, do NOT
+average over them. Your reading instantiates one specific constraint with one stable ε, one
+beneficiary/victim structure, one type — exactly as DP-001 (ε-invariance) requires. The other
+readings are *other constraints* (other files); they are not part of this one.
+
+This is the same discipline as the closed context tuple: just as you must not add a fifth
+argument to context/4, you must not fold alternative readings into one constraint's
+classification. One reading, one constraint, one ε.
+
+### Rule 2 — Route the committer content to omega variables.
+
+The committer structure — which kernel this is, which reading you are instantiating, what the
+sibling readings would change, where the disagreement is located — does NOT go in standard fields
+and does NOT get its own invented field. It goes in **omega variables**. Write one or more omegas
+that record:
+
+- that this constraint is one reading of `kernel_id`, naming the reading;
+- what a sibling reading would change structurally;
+- where the disagreement is *located* — the specific structural element readings differ on.
+
+If you find yourself wishing for a field the schema doesn't have to express committer structure,
+that wish IS the omega. Write it as an omega rather than inventing the field.
+
+### Rule 3 — Record the reading in `kernel_context` (optional free-text).
+
+If the schema's optional `commentary.kernel_context` field is present, write a short free-text
+note naming the kernel, your reading, and the sibling readings. Prose, not IDs-and-relations.
+
+### When NOT to use the committer frame
+
+- When the manifest entry has NO `kernel_id` / `reading_id` — generate as an ordinary constraint.
+  Do NOT invent a kernel. Most constraints are not readings of kernels.
+- As a substitute for declaring beneficiary/victim. Declare structural data first.
+- To describe a mere difference of opinion. If two parties agree on what the constraint is and
+  only disagree about whether it is good, that is the observer axis, not a kernel.
+
+### Rule 4 — Author `reading_relations` and `axioms` in `cs_structure` for kernel readings.
+
+**Only apply Rule 4 when the KERNEL CONTEXT section identifies a `kernel_id` and `reading_id`.**
+For ordinary (non-kernel) CS constraints — even those with a `cs_structure` block — omit
+`reading_relations` and `axioms` entirely. Do NOT invent sibling readings for a constraint that
+is not a kernel reading.
+
+When generating a kernel reading, populate two additional fields inside `cs_structure`:
+
+**`cs_structure.reading_relations`** — For EACH sibling reading listed in the kernel context,
+declare the structural relationship FROM this reading TO the sibling:
+
+- **`forecloses`**: This reading makes the sibling logically impossible to hold within the SAME
+  commitment framework. Use when the core premise of YOUR reading directly contradicts the
+  sibling's core premise such that no single framework could hold both. Example: a personhood
+  reading that places moral status at conception FORECLOSES the birth-only reading — they cannot
+  coexist in one legal framework. This is the rarest relation.
+
+- **`coexists_with`**: The readings occupy different parties' commitments simultaneously and
+  NEITHER rules out the other within any single party's framework. The readings compete in public
+  discourse but neither logically eliminates the other. Example: originalist and living-
+  constitution readings coexist across different judicial coalitions; abolition, retributive, and
+  deterrence readings of capital punishment all coexist as live positions held by different
+  actors. Use `coexists_with` when the readings are held by different factions of an ongoing
+  dispute with no logical resolution.
+
+- **`influences`**: This reading creates structural downstream pressure on the sibling — changing
+  legitimacy conditions, resource availability, or institutional configuration — without logically
+  foreclosing it. Example: a reading that codifies a higher evidentiary standard INFLUENCES (but
+  does not foreclose) a sibling reading about burden-of-proof allocation. Use `influences` when
+  there is a clear upstream/downstream causal structure between readings.
+
+**The diagnostic question for relation choice:** Would a party adopting this reading be
+*logically committed* to rejecting the sibling's core premise (`forecloses`)? Or can the party
+simply *disagree* with the sibling while both readings remain live options for other parties
+(`coexists_with`)? Or does this reading create *structural conditions* that change the sibling's
+operating environment without resolving the dispute (`influences`)?
+
+**`cs_structure.axioms`** — Declare the foundational normative claim(s) that distinguish this
+reading from its siblings. Each axiom is a Prolog-compatible atom (snake_case) naming the claim.
+Axiom atoms must be unique across sibling readings — the point is to name what is *distinct*
+about each reading.
+
+- **`role`**: `foundational` for the core distinguishing premise; `secondary` for implications
+  that follow but are not the distinguishing claim.
+- **`status`**: TWO values only — do NOT use `foreclosed` (that is computed by the engine):
+  - `holdable` — the axiom is a live normative claim that can be maintained without internal
+    contradiction in contemporary discourse. Use for readings that remain live in public dispute.
+  - `overridden` — the axiom was once active but has been formally superseded or rejected within
+    this reading's own tradition or legal history. Use when the reading itself has acknowledged
+    the axiom is no longer operative.
+- **`grounding_type`**: What kind of claim grounds this axiom's legitimacy (NOT whether the claim
+  is true — this is a structural fact about the axiom's epistemic type):
+  - `empirically_contingent` — grounded in testable, falsifiable empirical claims. Use when the
+    axiom's force depends on whether something IS true in the world (deterrence studies, economic
+    outcomes, causal mechanisms). The engine uses this to compute foreclosure when combined with
+    axiom_overriding drift.
+  - `deontological` — grounded in duties, rights, or intrinsic moral status that are not
+    empirically falsifiable. Does NOT route to foreclosed regardless of drift.
+  - `conventional` — grounded in social coordination, enacted rules, or institutionalized norms
+    (legal positivism, parliamentary procedure). Legitimate because accepted, not because true.
+  - `theological` — grounded in religious or divine authority.
+  - `instrumental` — grounded in means-ends efficacy about achieving a normative goal (empirical
+    about the means, normative about the goal). Does NOT route to foreclosed on its own.
+
+Aim for 1–2 foundational axioms per reading. A foundational axiom names the claim that, if
+denied, would dissolve this reading into a different one.
+
+**Example — capital punishment triplet:**
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "lineage",
+  "reading_relations": [
+    {"sibling_id": "retributive_reading", "relation": "coexists_with"},
+    {"sibling_id": "deterrence_reading", "relation": "coexists_with"}
+  ],
+  "axioms": [
+    {
+      "atom": "execution_categorically_impermissible",
+      "role": "foundational",
+      "status": "holdable",
+      "grounding_type": "deontological"
+    }
+  ]
+}
+```
+
+**Distribution check:** If every sibling gets `coexists_with` and every axiom gets `holdable`,
+ask whether any reading genuinely forecloses another within a single framework (rare but real),
+and whether any axiom has been formally overridden within the reading's own tradition. Do not
+default to `coexists_with` out of caution — assess the logical structure. Some kernels have
+genuine `forecloses` pairs (personhood-boundary, constitutional amendment). Some axioms are
+genuinely `overridden` (e.g., a jurisprudential reading that has abandoned a prior premise
+after case law).
+
+### Rule 5 — Author `reference_frame` and `drift_state` in `cs_structure` for kernel readings.
+
+**Only apply Rule 5 when the KERNEL CONTEXT section identifies a `kernel_id` and `reading_id`.**
+For ordinary (non-kernel) CS constraints, omit `reference_frame` and `drift_state` entirely.
+
+When generating a kernel reading, populate two additional fields inside `cs_structure`:
+
+**`cs_structure.reference_frame`** — A snake_case atom naming the reference state *this reading*
+takes the kernel to be. This is the committer-axis's declared starting point — NOT a historical
+date, NOT a contested origin, NOT a discovered fact. It names what the reading's own framework
+holds as the normal or legitimate state of the kernel. Example: a legal-positivist reading of
+constitutional authority might declare `legislative_supremacy_framework`; a natural-law reading
+might declare `natural_law_proportional_justice`. The reference frame is unique to the reading.
+
+**`cs_structure.drift_state`** — Describes the gap between the reference frame (t0) and a named
+historical or counterfactual moment of observation (t1). The gap is the drift vector. Fields:
+
+- `moment`: snake_case atom naming the observation point (e.g. `contemporary`, `post_meta_analysis_era`, `post_empirical_challenge`)
+- `direction`: the type of drift relative to the reference frame. Choose from:
+  - `authority_erosion` — the authority structure's legitimacy has weakened
+  - `codification_collapse` — the written rules or transmitted text no longer function
+  - `axiom_overriding` — a foundational empirical or normative premise has been substantially challenged
+  - `practice_drift` — actual practice has substantially departed from the reference frame
+  - `revival_pressure` — active forces are reconstructing the reference frame
+  - `repudiation_pressure` — active forces are explicitly rejecting the reference frame
+  - `stable` — no significant drift; the reading's reference frame is intact
+- `magnitude`: `minor`, `substantial`, or `severe`
+- `acknowledged`: `true` if the authority structure explicitly recognizes this gap; `false` otherwise
+
+**Critical:** Author `direction` and `magnitude` from the reading's actual structural
+relationship to its reference frame — what the reading's epistemic premises commit it to.
+**Do NOT choose magnitude to produce a desired terminal state.** The engine computes t2
+(the terminal attractor) from your t1 inputs; your job is to characterize the gap accurately.
+If a reading's foundational premise has been substantially challenged by systematic evidence
+but the authority structure treats it as settled, that is `substantial + false`, not `severe`.
+
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "lineage",
+  "reference_frame": "classical_punitive_authority",
+  "drift_state": {
+    "moment": "contemporary_human_rights_era",
+    "direction": "authority_erosion",
+    "magnitude": "substantial",
+    "acknowledged": false
+  },
+  "reading_relations": [...],
+  "axioms": [...]
+}
+```
+
+**Distribution check:** If every reading in a kernel gets `direction: stable` or every reading
+gets the same magnitude, ask whether the readings genuinely have the same relationship to their
+respective reference frames. Sibling readings with different reference frames and different
+epistemic premises should usually produce different directions or magnitudes. Uniform drift
+profiles across a kernel are a signal to reconsider the reference frame declarations.
+
+---
+
+## UKE_SCOPE Integration
+
+When generating a constraint story from a UKE_SCOPE manifest entry, map manifest fields to JSON as follows:
+
+| Manifest Field | JSON Target | Notes |
+|---|---|---|
+| `claim_id` | `header.constraint_id` | Use as the constraint identifier |
+| `epsilon_bin` | `base_properties.extractiveness` | Starting estimate; refine based on analysis |
+| `hypothesis` | `base_properties.claimed_type` | Map the manifest's hypothesis to a constraint type |
+| `downstream_of` | `network.affects_constraints` | Establishes family links |
+
+The `uke_scope` section in the JSON is **informational** — it preserves provenance from the manifest but is not emitted to the `.pl` file. Include it when the story originates from a UKE_SCOPE manifest so that the authoring trail is traceable.
+
+```json
+"uke_scope": {
+  "epsilon_bin": "high",
+  "hypothesis": "snare",
+  "downstream_of": ["parent_constraint_id"]
+}
+```
+
+---
+
+## Pre-Submission Validation Checklist
+
+Before outputting your JSON, verify:
+
+* [ ] **Beneficiary/Victim Declared**: Every non-mountain constraint has `base_properties.beneficiaries[]` with at least one entry. Snare and tangled_rope also require `base_properties.victims[]`. Group names are domain-specific, not generic placeholders (`low_income_borrowers` not `affected_parties`). Mountains may declare beneficiaries to trigger FSM evaluation — see FSM check below.
+* [ ] **FSM Intent Check**: If a mountain declares beneficiaries, is this intentional FSM authoring? Verify the story has at least one omega variable documenting the natural-law vs. constructed ambiguity (required by schema). If beneficiaries were declared by mistake on a genuine natural law, remove them.
+* [ ] **Threshold Accuracy**: Mountains ε ≤ 0.25, suppression ≤ 0.05. Snares ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66.
+* [ ] **Mountain NL Profile**: If claiming mountain, includes `base_properties.accessibility_collapse` ≥ 0.85, `base_properties.resistance` ≤ 0.15, and `base_properties.emerges_naturally: true`. Without all three, the NL certification chain fails and the mountain metric gate does not fire.
+* [ ] **Index Completeness**: Do your perspectives use the expanded 2026 values (e.g., `arbitrage`, `civilizational`)?
+* [ ] **Suppression Check**: Suppression is a raw structural property (unscaled). Extractiveness is scaled by f(d) and σ(S) per χ = ε × f(d) × σ(S). Does the commentary reflect this?
+* [ ] **Coalition Check**: If the constraint is a snare with multiple victims, does the analysis consider the possibility of coalition power for `powerless` agents?
+* [ ] **Tangled Rope Check**: If Tangled Rope is used, does the JSON include `base_properties.beneficiaries[]` (coordination), `base_properties.victims[]` (asymmetric extraction), AND `base_properties.requires_active_enforcement: true`? All three are required by the canonical classifier.
+* [ ] **Scaffold Check**: If Scaffold is used, does the JSON include `base_properties.has_sunset_clause: true` AND `base_properties.beneficiaries[]` (coordination function)?
+* [ ] **Piton Check**: If Piton is used, does `base_properties.theater_ratio` ≥ 0.70?
+* [ ] **Scope Awareness**: Spatial scope now affects χ via σ(S). Local (σ=0.8) dampens extraction; global (σ=1.2) amplifies it. Do your perspectives use appropriate scopes?
+* [ ] **Perspective Minimum**: At least one `powerless` and one `institutional` perspective included — UNLESS the constraint is a uniform-type (mountain-only or rope-only), in which case any 2+ perspectives suffice.
+* [ ] **Inter-Institutional Check**: If the constraint operates between institutional actors with different structural relationships, are separate perspective objects declared for each? Do they have different `exit_options`?
+* [ ] **Same-Level Actor Check**: If the constraint involves extraction between actors at the same nominal power level, are `exit_options` differentiated for each actor? Do the perspectives produce a perspectival gap (not all the same type)?
+* [ ] **Temporal Data**: If `base_properties.extractiveness` > 0.46, include `measurements[]` entries at 3+ time points for `theater_ratio` and `base_extractiveness` (6 entries minimum).
+* [ ] **Constraint Claim**: Does the JSON declare `base_properties.claimed_type`? This is required for Boltzmann compliance analysis and false natural law detection.
+* [ ] **Coordination Type**: If the constraint has a coordination function, is `boltzmann.coordination_type` declared with one of the six valid types?
+* [ ] **Network Relationships**: If the constraint is part of a known constraint cluster, are `network.affects_constraints[]` entries declared?
+* [ ] **Directionality Overrides**: If overrides are used, does the commentary explain WHY the derivation would produce the wrong d?
+* [ ] **Perspective Tuple**: Each perspective object has exactly 5 required fields: `classification_type`, `agent_power`, `time_horizon`, `exit_options`, `spatial_scope`. Do not add beneficiary/victim, measurement_basis, or any other data to perspectives.
+* [ ] **Constraint Identity**: If this constraint could be evaluated via different observables that yield different ε values, have you decomposed into separate stories? Each story must have a single, stable ε. If ε changes when you change how you measure, you have two constraints — write two files and link with `network.affects_constraints`.
+* [ ] **identity_locked Check**: If any perspective uses `exit_options: "identity_locked"`, does the commentary explain the specific identity-fusion mechanism? Is the binding cognitive rather than material? Would `constrained` be more accurate (high-cost external barriers) or `trapped` (insurmountable external barriers)?
+* [ ] **identity_locked Decomposition**: If `identity_locked` appears in an interpersonal constraint, has the relationship been decomposed into structurally distinct stories per the ε-invariance principle? A single relationship typically contains multiple constraints with different ε values.
+* [ ] **Analytical identity_locked**: If a perspective uses `(analytical, identity_locked)`, does the commentary explicitly note that this instantiates the oracle gap (Theorem 4) — the analyst's identity frame prevents seeing structure that cross-position analysis reveals?
+* [ ] **New Coordination Types**: If using `attachment_coordination` or `identity_coordination`, is the coordination function genuine? Does the constraint actually coordinate emotional bonds / group membership, or is it using relational/identity framing as a cover story for extraction?
+* [ ] **Cyclical Measurements**: If the constraint shows cyclical dynamics (oscillating extractiveness over time), are there enough measurement points to show at least one full cycle (8–10 minimum)? Is the cyclical pattern documented in commentary?
+* [ ] **Suppression Ambiguity**: For interpersonal constraints with suppression ≥ 0.40, is there an omega variable addressing whether the suppression is structural or internalized?
+
+---
+
+## Corpus Balance Guidance
+
+The corpus needs balanced representation across all six types. When choosing scenarios for batch generation, prioritize the **underrepresented types**:
+
+| Type | Best Source Domains | Key Metric Signature | Structural Data |
+|------|-------------------|---------------------|----------------|
+| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | ε ≥ 0.30, suppression ≥ 0.40, 0.40 ≤ χ ≤ 0.90 | beneficiaries + victims + enforcement |
+| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | χ ≤ 0.30, theater ≤ 0.70 | beneficiaries + sunset clause |
+| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | victims required |
+| **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Varies by institutional perspective | Multiple institutional perspectives + overrides |
+| **Same-level lateral** (NEW, needed) | Peer manipulation, communal narcissism, workplace gatekeeping, interstate regulatory arbitrage, norm-setting | Varies by actor perspective | Differentiated exit_options + beneficiary/victim per actor |
+| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed for genuine natural laws. False-summit candidates: declare beneficiaries + add omegas (triggers FSM). |
+| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiaries; victims usually absent |
+| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victims possible; beneficiaries unlikely |
+| **Interpersonal dynamics** (NEW, needed) | Abusive relationships, mentorship dynamics, family structures, therapeutic boundaries, cult dynamics, community bonds | Varies by decomposed story; expect constraint families of 2–4 linked stories | identity_locked exit, attachment_coordination or identity_coordination type, cyclical measurements, suppression ambiguity omegas |
+| **Cognitive capture** (NEW, needed) | Regulatory capture with identity fusion, ideological lock-in, institutional identity crisis, post-colonial institutional inheritance, organizational culture traps | identity_locked at institutional power; perspectival gap between identity_locked and arbitrage institutional actors | identity_locked exit differentiating captured from non-captured institutional actors |
+
+**Scenarios that produce the richest perspectival gaps** come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, platform economics, and **inter-institutional dynamics** (regulatory capture, trade agreements, sanctions regimes). These domains naturally generate multiple institutional perspectives with different directionalities.
+
+---
+
+## CS Structure (Optional — Commitment System Constraints Only)
+
+Apply this section only when the constraint describes an **authority structure that grounds its legitimacy in a kernel** — a stabilized commitment (fixed text, formal rule, practice-based norm, or ambiguous claim) that the authority uses to adjudicate legitimate action.
+
+**Warrants CS fields:** Constitutional authority, religious doctrinal systems, professional standards claiming immutability, interpretive traditions grounding legitimacy in founding texts, institutional rule-sets with fixed kernels.
+
+**Does NOT warrant CS fields:** Market mechanisms, physical laws, mathematical theorems, simple extraction mechanisms, incentive structures, biological constraints. If in doubt, omit the `cs_structure` block entirely.
+
+**SCOPE recognition is not a gate:** Also populate `cs_structure` when the constraint independently instantiates commitment-system dynamics — a legitimacy claim grounded in a stabilized kernel — even if the SCOPE manifest did not flag the parent domain.
+
+If applicable, add a top-level `cs_structure` block:
+
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "extraction",
+  "interpretation_layer_present": true
+}
+```
+
+**kernel_codification** (required):
+- `formalized` — formally specified kernel, claimed as authoritative; may or may not be revisable
+- `fixed_text` — authority grounds itself in a specific text; drift migrates into interpretation
+- `distributed` — kernel is under-specified or ambiguous; no single adjudicating authority
+- `implicit` — no codified kernel; the kernel IS whatever the system does
+- `none` — not a commitment system; omit the block instead
+
+**authority_grounding** (required): WHO provides the authority — the role or institution that adjudicates the kernel. This is structurally different from `grounding_type` in axioms, which is WHAT KIND of epistemic warrant the axiom rests on. Do not mix their values (e.g., `deontological` is a grounding_type value, not an authority_grounding value).
+- `expertise` — voluntary authority grounded in demonstrated competence (peer review, mathematics)
+- `lineage` — authority grounds itself in continuity with a founding text or tradition
+- `practice` — authority derives from practice itself; practitioners' action IS the standard
+- `extraction` — authority extracts substantial benefit from preventing kernel revision; drift denial is the source of authority
+- `distributed` — no centralized authority; multiple parties produce competing readings
+- `none` — not applicable; omit the block instead
+
+**interpretation_layer_present** (optional, valid when `authority_grounding` ∈ {lineage, extraction, practice, expertise} — i.e., an active authoritative interpreter exists):
+- `true` — functioning interpretive structure below the kernel absorbs drift without surfacing revision
+- omit (or `false`) — no interpretive buffer; kernel governs practice directly (structurally brittle)
+
+**SCOPE manifest integration:** If the UKE_SCOPE manifest includes a `commitment_system_recognition`
+block, use it as authoring guidance. The manifest's `kernel_description`, `authority_description`,
+and `candidate_pattern` are starting hypotheses — verify them against the specific constraint you
+are authoring and adjust `kernel_codification`, `authority_grounding`, and
+`interpretation_layer_present` accordingly. If your constraint is one component within a larger
+commitment system (e.g., the reporting authority structure within a wartime command hierarchy),
+the `cs_structure` values describe THIS constraint's role in that system, not the system-level
+pattern.
+
+---
+
+## Ready to Generate
+
+When you receive a scenario, respond with a **complete, valid JSON document** following this structure. Make it immediately parseable and schema-compliant. State assumptions explicitly in your commentary. Declare beneficiaries and victims for every non-mountain constraint — these are the structural data that drive the engine's directionality computation.
+
+
+=== JSON SCHEMA ===
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "constraint_story_schema.json",
+  "title": "Constraint Story",
+  "description": "JSON authoring format for Deferential Realism constraint stories. Compiled to .pl by generate_constraint_pl.py.",
+  "type": "object",
+  "required": [
+    "header",
+    "base_properties",
+    "perspectives",
+    "interval"
+  ],
+  "$defs": {
+    "ConstraintType": {
+      "type": "string",
+      "enum": [
+        "mountain",
+        "rope",
+        "tangled_rope",
+        "snare",
+        "scaffold",
+        "piton"
+      ]
+    },
+    "AgentPower": {
+      "description": "Power atoms for classification contexts. Includes individual_moderate (corpus artifact from antifragility.pl).",
+      "type": "string",
+      "enum": [
+        "powerless",
+        "moderate",
+        "powerful",
+        "organized",
+        "institutional",
+        "analytical",
+        "individual_moderate"
+      ]
+    },
+    "DirectionalityPowerAtom": {
+      "description": "Strict 6-set for directionality overrides. Linter Rule 18 validates against this set.",
+      "type": "string",
+      "enum": [
+        "powerless",
+        "moderate",
+        "powerful",
+        "organized",
+        "institutional",
+        "analytical"
+      ]
+    },
+    "TimeHorizon": {
+      "type": "string",
+      "enum": [
+        "immediate",
+        "biographical",
+        "generational",
+        "civilizational"
+      ]
+    },
+    "ExitOptions": {
+      "type": "string",
+      "enum": [
+        "trapped",
+        "identity_locked",
+        "constrained",
+        "mobile",
+        "arbitrage",
+        "analytical"
+      ]
+    },
+    "SpatialScope": {
+      "type": "string",
+      "enum": [
+        "local",
+        "regional",
+        "national",
+        "continental",
+        "global",
+        "universal"
+      ]
+    },
+    "CoordinationType": {
+      "type": "string",
+      "enum": [
+        "information_standard",
+        "attachment_coordination",
+        "resource_allocation",
+        "identity_coordination",
+        "enforcement_mechanism",
+        "global_infrastructure"
+      ]
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "OmegaTypeClass": {
+      "type": "string",
+      "enum": [
+        "empirical",
+        "conceptual",
+        "preference"
+      ]
+    },
+    "MeasurementMetric": {
+      "type": "string",
+      "enum": [
+        "theater_ratio",
+        "base_extractiveness",
+        "suppression_requirement"
+      ]
+    },
+    "Perspective": {
+      "type": "object",
+      "required": [
+        "classification_type",
+        "agent_power",
+        "time_horizon",
+        "exit_options",
+        "spatial_scope"
+      ],
+      "properties": {
+        "classification_type": {
+          "$ref": "#/$defs/ConstraintType"
+        },
+        "agent_power": {
+          "$ref": "#/$defs/AgentPower"
+        },
+        "time_horizon": {
+          "$ref": "#/$defs/TimeHorizon"
+        },
+        "exit_options": {
+          "$ref": "#/$defs/ExitOptions"
+        },
+        "spatial_scope": {
+          "$ref": "#/$defs/SpatialScope"
+        },
+        "label": {
+          "type": "string",
+          "description": "Human-readable label for this perspective (e.g. 'The Optimized Serf')"
+        },
+        "comment": {
+          "type": "string",
+          "description": "Explanatory comment emitted above this classification in the .pl file"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Omega": {
+      "type": "object",
+      "required": [
+        "id",
+        "question",
+        "resolution_mechanism",
+        "impact",
+        "confidence",
+        "type_class",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "question": {
+          "type": "string"
+        },
+        "resolution_mechanism": {
+          "type": "string"
+        },
+        "impact": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/ConfidenceLevel"
+        },
+        "type_class": {
+          "$ref": "#/$defs/OmegaTypeClass"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description for the /3 form (narrative_ontology:omega_variable/3)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Measurement": {
+      "type": "object",
+      "required": [
+        "metric",
+        "time_point",
+        "value"
+      ],
+      "properties": {
+        "metric": {
+          "$ref": "#/$defs/MeasurementMetric"
+        },
+        "time_point": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "id_override": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Override the auto-generated measurement ID"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DirectionalityOverride": {
+      "type": "object",
+      "required": [
+        "power_atom",
+        "d_value"
+      ],
+      "properties": {
+        "power_atom": {
+          "$ref": "#/$defs/DirectionalityPowerAtom"
+        },
+        "d_value": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "header": {
+      "type": "object",
+      "required": [
+        "constraint_id",
+        "version",
+        "generated_date",
+        "status"
+      ],
+      "properties": {
+        "constraint_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Snake_case unique identifier for this constraint"
+        },
+        "version": {
+          "type": "string",
+          "description": "Metadata version (recorded in header comment; does not change output structure)"
+        },
+        "generated_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO 8601 date (YYYY-MM-DD)"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status string (e.g. 'ACTIVE', 'RESOLVED MANDATROPHY')"
+        },
+        "module_name_override": {
+          "type": "string",
+          "pattern": "^constraint_[a-z][a-z0-9_]*$",
+          "description": "Override auto-generated module name (default: constraint_{constraint_id})"
+        },
+        "measurement_id_prefix": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Prefix for auto-generated measurement IDs (default: derived from constraint_id)"
+        },
+        "story_uid": {
+          "type": "string",
+          "description": "UUIDv4 surrogate identity minted per generation event"
+        },
+        "created_at": {
+          "type": "string",
+          "description": "ISO 8601 UTC timestamp of generation event"
+        }
+      },
+      "additionalProperties": false
+    },
+    "base_properties": {
+      "type": "object",
+      "required": [
+        "extractiveness",
+        "suppression",
+        "theater_ratio",
+        "claimed_type",
+        "human_readable",
+        "topic_domain"
+      ],
+      "properties": {
+        "extractiveness": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "suppression": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "theater_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "claimed_type": {
+          "$ref": "#/$defs/ConstraintType"
+        },
+        "human_readable": {
+          "type": "string",
+          "description": "Descriptive display name"
+        },
+        "topic_domain": {
+          "type": "string",
+          "description": "Domain classification (e.g. 'economic/political/social')"
+        },
+        "requires_active_enforcement": {
+          "type": "boolean",
+          "default": false
+        },
+        "emerges_naturally": {
+          "type": "boolean",
+          "default": false
+        },
+        "has_sunset_clause": {
+          "type": "boolean",
+          "default": false
+        },
+        "accessibility_collapse": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "NL profile metric (required for mountain constraints)"
+        },
+        "resistance": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "NL profile metric (required for mountain constraints)"
+        },
+        "beneficiaries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "description": "Domain-specific beneficiary group names"
+        },
+        "victims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "description": "Domain-specific victim group names"
+        },
+        "mandatrophy_resolved": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether mandatrophy has been resolved (required when extractiveness > 0.70)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "perspectives": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/Perspective"
+      }
+    },
+    "omegas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Omega"
+      }
+    },
+    "measurements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Measurement"
+      }
+    },
+    "interval": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "commentary": {
+      "type": "object",
+      "properties": {
+        "narrative_context": {
+          "type": "string",
+          "description": "Summary paragraph for Section 1 narrative context"
+        },
+        "key_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of key agent descriptions"
+        },
+        "logic_rationale": {
+          "type": "string"
+        },
+        "perspectival_gap": {
+          "type": "string"
+        },
+        "directionality_logic": {
+          "type": "string"
+        },
+        "mandatrophy_analysis": {
+          "type": "string"
+        },
+        "kernel_context": {
+          "type": "string",
+          "description": "Optional. Free-text note naming the contested kernel this constraint is a reading of, which reading it instantiates, and the sibling readings. Parallel to directionality_logic. Absent for ordinary (non-kernel) constraints."
+        }
+      },
+      "additionalProperties": false
+    },
+    "boltzmann": {
+      "type": "object",
+      "properties": {
+        "coordination_type": {
+          "$ref": "#/$defs/CoordinationType"
+        },
+        "boltzmann_floor_override": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "network": {
+      "type": "object",
+      "properties": {
+        "affects_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        },
+        "dual_formulation_note": {
+          "type": "string",
+          "description": "Note about constraint family decomposition"
+        }
+      },
+      "additionalProperties": false
+    },
+    "directionality_overrides": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DirectionalityOverride"
+      }
+    },
+    "uke_scope": {
+      "type": "object",
+      "description": "UKE_SCOPE manifest seed fields",
+      "properties": {
+        "epsilon_bin": {
+          "type": "string"
+        },
+        "hypothesis": {
+          "type": "string"
+        },
+        "downstream_of": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cs_structure": {
+      "type": "object",
+      "description": "Commitment-system classification. Omit entirely for non-CS constraints.",
+      "required": [
+        "kernel_codification",
+        "authority_grounding"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kernel_codification": {
+          "type": "string",
+          "enum": [
+            "formalized",
+            "fixed_text",
+            "distributed",
+            "implicit",
+            "none"
+          ],
+          "description": "How the kernel is specified and treated."
+        },
+        "authority_grounding": {
+          "type": "string",
+          "enum": [
+            "expertise",
+            "lineage",
+            "practice",
+            "extraction",
+            "distributed",
+            "none",
+            "self_enforcing",
+            "diffuse_epistemic"
+          ],
+          "description": "What grounds the authority structure's legitimacy."
+        },
+        "interpretation_layer_present": {
+          "type": "boolean",
+          "description": "True = functioning interpretive substructure below the kernel absorbs drift. Valid when authority_grounding ∈ {lineage, extraction, practice} — i.e., an active authoritative interpreter exists (chain of transmission, institutional hierarchy, or community practice). Not valid for distributed/self_enforcing/diffuse_epistemic authority where no designated interpreter exists."
+        },
+        "reading_relations": {
+          "type": "array",
+          "description": "Typed edges to sibling readings in the same kernel. Omit for non-kernel constraints.",
+          "items": {
+            "type": "object",
+            "required": ["sibling_id", "relation"],
+            "properties": {
+              "sibling_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "description": "constraint_id of the sibling reading"
+              },
+              "relation": {
+                "type": "string",
+                "enum": ["forecloses", "coexists_with", "influences"],
+                "description": "Structural relationship from this reading to the sibling: forecloses=logically rules out sibling in same framework, coexists_with=different parties hold both simultaneously, influences=creates structural pressure without foreclosing"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "axioms": {
+          "type": "array",
+          "description": "Foundational normative claims this reading holds. Omit for non-kernel constraints.",
+          "items": {
+            "type": "object",
+            "required": ["atom", "role", "status"],
+            "properties": {
+              "atom": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "description": "Snake_case identifier for the normative claim (unique across sibling readings)"
+              },
+              "role": {
+                "type": "string",
+                "enum": ["foundational", "secondary"],
+                "description": "foundational=core distinguishing premise of this reading, secondary=implication that follows from the foundational claim"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["holdable", "overridden"],
+                "description": "holdable=live normative claim without internal contradiction, overridden=formally superseded within this reading's own tradition. Do NOT use foreclosed — that is computed by the engine from grounding_type + drift_state."
+              },
+              "grounding_type": {
+                "type": "string",
+                "enum": ["empirically_contingent", "deontological", "conventional", "theological", "instrumental"],
+                "description": "What kind of claim grounds this axiom's legitimacy. empirically_contingent=grounded in testable empirical claims (can be refuted by evidence); deontological=grounded in duties, rights, or intrinsic moral status (not empirically falsifiable); conventional=grounded in social coordination or enacted institutional rule; theological=grounded in religious or divine authority; instrumental=grounded in means-ends efficacy (empirical about efficiency, but normative about goal)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "reference_frame": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "t0: snake_case atom naming the reference state this reading takes the kernel to be. NOT a historical date or discovered origin — the committer-axis's declared starting point."
+        },
+        "drift_state": {
+          "type": "object",
+          "description": "t1: drift state at a named historical or counterfactual moment relative to t0. Gap(t0,t1) = the drift vector. Omit for non-kernel constraints.",
+          "required": ["moment", "direction", "magnitude", "acknowledged"],
+          "additionalProperties": false,
+          "properties": {
+            "moment": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "description": "Snake_case name for the observation moment (e.g. contemporary, post_empirical_challenge)"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "authority_erosion",
+                "codification_collapse",
+                "axiom_overriding",
+                "practice_drift",
+                "revival_pressure",
+                "repudiation_pressure",
+                "stable"
+              ],
+              "description": "Direction of drift relative to t0 reference frame"
+            },
+            "magnitude": {
+              "type": "string",
+              "enum": ["minor", "substantial", "severe"],
+              "description": "Size of the gap between t0 and t1"
+            },
+            "acknowledged": {
+              "type": "boolean",
+              "description": "Whether the authority structure explicitly recognizes this gap"
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "mountain"
+              }
+            },
+            "required": [
+              "claimed_type"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "emerges_naturally": {
+                "const": true
+              },
+              "extractiveness": {
+                "maximum": 0.25
+              },
+              "suppression": {
+                "maximum": 0.05
+              }
+            },
+            "required": [
+              "emerges_naturally"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "FSM candidate: Mountain with declared beneficiaries. false_summit_mountain in signature_detection.pl gates on beneficiary presence alone (coupling is diagnostic only). Require omegas to document the natural-law vs. constructed ambiguity.",
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "mountain"
+              },
+              "beneficiaries": {
+                "type": "array",
+                "minItems": 1
+              }
+            },
+            "required": [
+              "claimed_type",
+              "beneficiaries"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "omegas"
+        ],
+        "properties": {
+          "omegas": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "tangled_rope"
+              }
+            },
+            "required": [
+              "claimed_type"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "requires_active_enforcement": {
+                "const": true
+              },
+              "beneficiaries": {
+                "minItems": 1
+              },
+              "victims": {
+                "minItems": 1
+              }
+            },
+            "required": [
+              "requires_active_enforcement",
+              "beneficiaries",
+              "victims"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "snare"
+              }
+            },
+            "required": [
+              "claimed_type"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "victims": {
+                "minItems": 1
+              }
+            },
+            "required": [
+              "victims"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "scaffold"
+              },
+              "requires_active_enforcement": {
+                "const": true
+              }
+            },
+            "required": [
+              "claimed_type",
+              "requires_active_enforcement"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "has_sunset_clause": {
+                "const": true
+              }
+            },
+            "required": [
+              "has_sunset_clause"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": {
+                "const": "piton"
+              }
+            },
+            "required": [
+              "claimed_type"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "theater_ratio": {
+                "minimum": 0.7
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "extractiveness": {
+                "exclusiveMinimum": 0.46
+              }
+            },
+            "required": [
+              "extractiveness"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "header",
+          "base_properties",
+          "perspectives",
+          "interval",
+          "measurements",
+          "omegas"
+        ],
+        "properties": {
+          "measurements": {
+            "minItems": 6
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "extractiveness": {
+                "exclusiveMinimum": 0.7
+              }
+            },
+            "required": [
+              "extractiveness"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "mandatrophy_resolved": {
+                "const": true
+              }
+            },
+            "required": [
+              "mandatrophy_resolved"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "CS structure: interpretation_layer_present is only valid when an active authoritative interpreter exists. Valid authority types: lineage (chain of transmission), extraction (institutional hierarchy wielding canonical text or formal rules — fixed_text+extraction is valid; a fixed canonical text wielded for institutional extraction is a standard CS shape), practice (community of practitioners), expertise (credentialed professional body interpreting evidence or standards — e.g., medical guidelines, engineering standards). Excluded: distributed/self_enforcing/diffuse_epistemic (no designated interpreter).",
+      "if": {
+        "properties": {
+          "cs_structure": {
+            "properties": {
+              "interpretation_layer_present": {
+                "const": true
+              }
+            },
+            "required": [
+              "interpretation_layer_present"
+            ]
+          }
+        },
+        "required": [
+          "cs_structure"
+        ]
+      },
+      "then": {
+        "properties": {
+          "cs_structure": {
+            "anyOf": [
+              {
+                "$comment": "Lineage: interpretation is mediated through a chain of authorized transmitters.",
+                "properties": { "authority_grounding": { "const": "lineage" } },
+                "required": [ "authority_grounding" ]
+              },
+              {
+                "$comment": "Extraction: an institution extracts benefit from kernel stability; a fixed canonical text wielded for institutional authority is a standard CS shape.",
+                "properties": { "authority_grounding": { "const": "extraction" } },
+                "required": [ "authority_grounding" ]
+              },
+              {
+                "$comment": "Practice: the practitioner community IS the interpretive body; oral tradition, professional custom, common-law evolution.",
+                "properties": { "authority_grounding": { "const": "practice" } },
+                "required": [ "authority_grounding" ]
+              },
+              {
+                "$comment": "Expertise: a credentialed professional body interprets evidence or standards (medical guidelines, engineering standards bodies, peer-review communities).",
+                "properties": { "authority_grounding": { "const": "expertise" } },
+                "required": [ "authority_grounding" ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
+
+
+=== EXAMPLE JSON ===
+{
+  "header": {
+    "constraint_id": "verification_bottleneck",
+    "version": "1.2",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "verif",
+    "note": "v1.2: Stripped worked chi arithmetic from perspective comments and directionality_logic to prevent anchoring in LLM-generated constraint stories. Structural rationale preserved. See v1.1 for original with arithmetic."
+  },
+  "base_properties": {
+    "extractiveness": 0.40,
+    "suppression": 0.55,
+    "theater_ratio": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Verification Bottleneck in Quantum Materials Discovery",
+    "topic_domain": "condensed_matter_physics/experimental_verification",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "original_research_group"
+    ],
+    "victims": [
+      "field_epistemic_reliability",
+      "replication_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Field's Epistemic Reliability",
+      "comment": "PERSPECTIVE 1: FIELD EPISTEMIC RELIABILITY (SNARE) — Cannot exit the verification crisis; bears full cost of premature claims. The epistemic commons has no advocate and no exit option. Maximum experienced extraction — abstract collective cannot organize or escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Replication Group",
+      "comment": "PERSPECTIVE 2: REPLICATION GROUP (TANGLED ROPE) — Constrained by resource requirements and career risk of negative results, but also benefits from the verification ecosystem through collaborative access and method development. Significant extraction but not maximal — some agency and some benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Original Research Group",
+      "comment": "PERSPECTIVE 3: ORIGINAL RESEARCH GROUP (ROPE) — Benefits from first-mover advantage. Experiences the constraint as coordination: communicating findings enables follow-up work. Net beneficiary — extraction runs toward this agent, not away from them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Science Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SCIENCE COALITION (SCAFFOLD) — Organized agents (arXiv, registered reports, open-data mandates) see the bottleneck as a temporary coordination failure with a sunset: distributed preprint scrutiny, pre-registration, and open-access norms are building alternative verification pathways that bypass the traditional peer review theater. Low effective extraction because the coalition has agency and sees an exit path.",
+      "has_sunset_clause_rationale": "Open-science protocols (arXiv preprints, registered reports, open data) are creating parallel verification pathways. As these mature, the traditional bottleneck's extraction mechanism loses force — claiming priority via closed-journal publication becomes less valuable when preprints establish priority openly. Estimated sunset: 10-20 years for norms to mature in condensed matter physics."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Editorial System",
+      "comment": "PERSPECTIVE 5: JOURNAL EDITORIAL SYSTEM (PITON) — Traditional peer review for complex quantum materials claims is largely performative: reviewers cannot verify synthesis conditions, measurement protocols, or data quality from a manuscript alone. The review ritual persists through institutional inertia despite low functional verification. The editorial system sees its own process as degraded — maintained because alternatives haven't fully replaced it, not because it works. Piton classification derives from the theater gate, not from high experienced extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some verification lag is inherent to experimental science: complex claims always take time to replicate, and the gap between claim and confirmation is a structural feature of how knowledge advances. This perspective sees the bottleneck as an immutable property of the scientific process itself. However, the structural data contradicts the mountain classification — the engine will compute this as a false summit, revealing that the 'inherent to science' framing naturalizes what is actually a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replication_timeline_threshold",
+      "question": "What timeline threshold distinguishes legitimate discovery lag from extractive claim-staking?",
+      "resolution_mechanism": "Historical analysis of confirmed vs retracted discoveries; correlation between replication timeline and ultimate validity",
+      "impact": "If threshold < 2 years: many legitimate discoveries misclassified as extraction. If threshold > 5 years: extractive claims persist unchallenged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline threshold for distinguishing discovery lag from extraction"
+    },
+    {
+      "id": "alternative_probe_sufficiency",
+      "question": "Do alternative experimental probes (muon spin rotation, NMR, neutron scattering) constitute independent verification or merely correlated measurements?",
+      "resolution_mechanism": "Cross-technique correlation analysis; identification of shared systematic errors or sample preparation dependencies",
+      "impact": "If truly independent: verification bottleneck is coordination problem (Rope from more perspectives). If correlated: bottleneck is extraction mechanism (Snare from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative probes provide independent verification"
+    },
+    {
+      "id": "preprint_scrutiny_effectiveness",
+      "question": "Does distributed preprint scrutiny on arXiv actually catch errors at rates comparable to or better than traditional peer review for complex experimental claims?",
+      "resolution_mechanism": "Comparison of error detection rates: preprint comments/revisions vs journal review rounds for the same manuscripts; longitudinal tracking of claims first posted as preprints vs those going direct to journals",
+      "impact": "If effective: scaffold perspective confirmed — open-science sunset is real. If ineffective: many-eyes logic fails for specialized claims, and the scaffold perspective is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether arXiv distributed scrutiny provides effective verification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.60
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.40
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The verification bottleneck in quantum materials discovery creates a structural tension between the career and funding incentives for claiming novel phenomena and the epistemic requirement for independent replication. This constraint exhibits all six DR types from different perspectives, making it a diagnostic exemplar for how indexical classification works. The same structural phenomenon — the gap between claim and confirmation in complex experimental physics — appears as an immutable law of science (mountain), a coordination mechanism (rope), a temporary problem being solved by open science (scaffold), a degraded review ritual (piton), a mixed coordination-extraction hybrid (tangled rope), or pure extraction (snare), depending on the observer's structural position. The constraint's theater_ratio (0.72) reflects that traditional peer review for complex quantum materials claims is largely performative: reviewers cannot verify synthesis conditions, measurement protocols, or data quality from a manuscript alone. ArXiv preprints represent an alternative pathway with genuinely lower theater — distributed scrutiny skips the performative review ritual entirely, testing the open-source hypothesis that many eyes make bugs shallow.",
+    "key_agents": [
+      "Original Research Group: Primary beneficiary (institutional/arbitrage) — captures citation advantage and funding priority during verification window",
+      "Field Epistemic Reliability: Primary victim (powerless/trapped) — abstract collective good that cannot exit or organize; bears full cost of false positives",
+      "Replication Groups: Secondary victim (moderate/constrained) — face resource barriers and career risk of negative results; also benefit from verification ecosystem",
+      "Open Science Coalition: Organized agents (organized/constrained) — arXiv, registered reports, open-data mandates building alternative verification pathways with sunset logic",
+      "Journal Editorial System: Institutional actor (institutional/arbitrage) — maintains performative review ritual; sees own process as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as inherent scientific limits"
+    ],
+    "logic_rationale": "Extractiveness (0.40): Moderate. The original research group captures career and funding benefits during the 2-5 year verification window, but the extraction is not as severe as the original v1.0 assessment (0.72) suggested — much of the 'extraction' is legitimate first-mover reward for high-risk research. The reduced value reflects that the career asymmetry, while real, is partly a fair coordination incentive. Suppression (0.55): Moderate-high. Significant barriers to independent verification include specialized equipment requirements, tacit knowledge in sample preparation, publication bias against negative results, and career risk. But suppression is not total — some groups can and do replicate, and open-science norms are reducing barriers. Theater ratio (0.72): High. Traditional peer review for complex experimental physics is substantially performative. Reviewers assess plausibility, novelty, and presentation quality but cannot verify synthesis conditions, measurement calibration, or raw data quality. The theater has increased over the interval as experimental complexity has outpaced reviewer capacity. ArXiv preprints bypass this theater entirely — their verification mechanism (distributed scrutiny) has different failure modes but lower performative content.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by the agent's structural position — their power level, exit options, and relationship to the extraction flow. The pipeline computes d from these context parameters and applies the sigmoid f(d) to produce experienced extractiveness chi. Beneficiaries with arbitrage options experience low or negative effective extraction; trapped agents with no exit bear maximum extraction; organized agents with exit paths experience moderate extraction. The piton classification derives from the theater gate rather than from high chi. The mountain classification at the analytical context is perspectival — the engine's false summit detector identifies it as naturalization of a contingent institutional arrangement.",
+    "perspectival_gap": "This constraint demonstrates the full range of DR classification from a single set of base properties. The original research group sees coordination (Rope) — they are solving the legitimate problem of communicating findings. The open science coalition sees a temporary problem with a sunset (Scaffold) — arXiv and registered reports are building alternative pathways. The journal editorial system sees its own degraded ritual (Piton) — peer review persists through inertia, not function. Replication groups see mixed coordination and extraction (Tangled Rope) — the system both enables and constrains their work. The field's epistemic reliability sees pure extraction (Snare) — premature claims contaminate the literature with no self-correction mechanism. The civilizational analytical observer risks seeing an immutable natural law (Mountain) — verification lag is inherent to science — but the structural data reveals this as a false summit: the contingent institutional arrangements (career incentives, funding concentration, publication bias) are not laws of nature.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing that all six types are legitimate perspectival readings of the same structural data. The mandatrophy is not 'which type is correct?' but 'which perspective are you measuring from?' The analytical observer's mountain is a false summit (naturalized). The beneficiary's rope is their genuine experience. The scaffold is a real structural feature (open-science sunset). The piton is a real observation (performative review). The snare is the powerless agent's structural reality. The tangled rope is the moderate agent's mixed experience. No single type is 'the' answer — the presheaf over the observation site IS the answer."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "inverse_spin_valve_signature",
+      "noncentrosymmetric_asoc_coupling"
+    ],
+    "dual_formulation_note": "The verification bottleneck is downstream of specific materials claims but represents a distinct structural constraint. The upstream constraints have their own extractiveness values reflecting the empirical status of the specific physical claims; the verification bottleneck has its own extractiveness reflecting the career incentive asymmetry and resource barriers to replication."
+  },
+  "directionality_overrides": []
+}
+
+
+NOTE: The example above shows ONE structural position pattern (Archetype A — extraction visible from below). Your constraint's structural positions will differ. Refer to the Perspective Diversity section in the generation prompt for other archetypes. Do NOT copy the example's power/exit/directionality assignments.
+
+
+=== YOUR TASK ===
+Generate a complete constraint story JSON for: TOPIC: probe
+Follow the schema exactly. Output ONLY valid JSON — no markdown fences, no commentary.

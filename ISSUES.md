@@ -2980,9 +2980,90 @@ prevalence at 3000-scale).
 
 **The discriminating experiment (what closes this OQ): an authorship-controlled breadth arm.** ~300 NON-nested seeds authored by the same hand/model and template as the lineage (Opus-written commitments/deltas, control summary template, flat kernels with ≈2-sibling fans), run-tagged, same probes. If it also mints ~1.5× classes at matched n → the excess is seed-authorship (a §9 punctuation), depth adds nothing. If it tracks the old control → depth itself re-opens discovery. Mechanics: reuse `build_lineage_seeds.py` seed shape with parent_kernel=null kernels; everything downstream runs unchanged. Until it runs, cite this probe as falsifying *unconditional* boundedness and coupling-invariance only — not as proving depth-specific discovery.
 
+## OQ-72 — Mechanical alignment key for the axiom axis (axiom diff is seat-constituted)
+
+**Ω-type:** Ω_C (what counts as "the same axiom" across readings is a conceptual ruling), with an engineering build once ruled.
+
+**Status:** open — evidence witnessed; design not started (deferred out of the 2026-06-05 de-leak work item by user ruling)
+**Origin:** 2026-06-05 generation-pipeline audit (brief F5). Evidence: `axiom_diff.pl:49-72` —
+`exact_name` alignment is structurally all-blind (0 of 935 within-kernel reading-pairs share an
+axiom NAME; see the OQ-59 axiom-diff demo), so all non-trivial alignment requires the hand-authored
+`axiom_concept/2` declared seat (empty by default, never baked). The observer diff (`reading_diff.pl`)
+aligns mechanically on (P,T,E,S) with zero hand-authoring; the axiom axis has no analogous key, so
+axiom-axis invariance claims are seat-constituted rather than discovered.
+
+**Specific question:** Can a mechanical alignment key (a controlled `axiom_concept` vocabulary
+emitted at SCOPE time, or post-hoc lexical/embedding clustering with human ratification) make the
+axiom diff discoverable without smuggling the analyst's ontology into the seat? The declared-seat
+design (`design_discipline.md`) is intentional — any mechanical key must remain a *proposal* the
+human ratifies, not a silent override.
+
+**What resolution changes:** the cross-axis invariance correlation (OQ-75;
+`the_perturbation_principle.md` §7.1) currently has a hand-authored axiom axis — a mechanical key
+would put all three axes (observer/axiom/time) on the same discovered footing.
+
+## OQ-73 — Cross-cultural frame probe: does the reading-set move when the generation frame moves?
+
+**Ω-type:** Ω_E (one controlled generation run answers it).
+
+**Status:** open — deferred out of the 2026-06-05 de-leak work item (verification hygiene: a second change variable; the de-leak's Stage-1/Stage-2 must read clean first)
+**Origin:** 2026-06-05 generation-pipeline audit (brief F6). Reading-sets inherit one jurisprudential
+tradition's dialectic (the originalist/positivist/realist kit); the framework claims the
+site/reference frame is normative and chooseable (v7 Axiom 7).
+
+**Specific question:** author one existing kernel under a second cultural/jurisprudential frame
+(civil-law, religious-law, customary) and diff the reading-set and type-distribution against the
+original. If neither moves, "the site is normative" is doing less work than claimed. **Sequencing
+constraint:** run only as its own controlled probe AFTER the de-leak Stage-2 baseline (OQ-75)
+exists, and attribute any shift against the lens-diversity commit (`d179423d`) separately — that
+instruction is already live and is itself a frame-diversity lever.
+
+## OQ-74 — coordination_type: kernel-intrinsic or reading-relative? (55% sibling disagreement awaits a ruling)
+
+**Ω-type:** Ω_C (what KIND of fact coordination_type is), with an Ω_P edge (the ruling is the operator's, not the evidence's).
+
+**Status:** open — evidence re-witnessed 2026-06-05; ruling deliberately not made
+**Origin:** 2026-06-05 generation-pipeline audit (brief F9 + §3). Re-witnessed on the live corpus:
+158 of 286 kernels with ≥2 coordination-typed readings have siblings DISAGREEING on
+coordination_type (55%; e.g. `border_normative_status` spans enforcement_mechanism /
+identity_coordination / resource_allocation). coordination_type is signature-layer-ACTIVE via the
+complexity offset (OQ-30: 48 type flips), so the disagreement is not cosmetic.
+
+**Specific question (the operator's ruling):** if coordination_type is constraint-intrinsic, the
+158 disagreements are authored contradictions needing adjudication; if genuinely reading-relative,
+it is a seventh authored field (each reading legitimately sees a different coordination function)
+and the disagreement is signal. **Do not promote coordination_type into `classify_from_metrics` as
+an authored input before this ruling** — it would add authored control over the computed output
+(the de-leak principle, in reverse). No-regret items already done 2026-06-05: linter 4→6 fix +
+canonical 6-value table + offset-active/floor-inactive asymmetry recorded in
+`docs/logic_extensions.md` (commit `29cd45d4`).
+
+## OQ-75 — Stage-2 corpus rebuild under the de-leaked pipeline: diff distribution + cross-axis invariance correlation
+
+**Ω-type:** Ω_E (the staked prediction is measurable).
+
+**Status:** open — gated on operator go; Stage-1 single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05)
+**Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
+longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
+de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
+authored-vs-computed diff is authorable again (witnessed: synthetic claimed-mountain/ε=0.6
+validates, compiles, and fires `type_1_false_summit-severe`).
+
+**Specific question:** rebuild a corpus under the changed pipeline and read (a) the diff
+distribution — which `false_*` / `dr_claim_mismatch` signatures fire, how often, on what (the
+"too-small-a-diff = the author held the key" health check); (b) the cross-axis correlation of
+invariance (observer/axiom/time — `the_perturbation_principle.md` §7.1). **Staked prediction:
+weak/positive-but-far-from-1; strong cross-axis correlation would falsify the form-unity reading.**
+Cite the run manifest. **Sequencing notes:** lens-diversity (`d179423d`) is a separate change
+variable — attribute reading-set shifts to it, not the de-leak. Axis-count distribution needs a
+re-check: the no-cap SCOPE witness returned a uniform 7-7-7 with 0 deferred on 3 topics (novelty
+real — distinct deltas/observables — but the uniformity suggests a new implicit target; watch it at
+scale). OQ-70's bait confound is still live — FNL prevalence in a rebuilt corpus is not a detection
+result until OQ-70 is ruled.
+
 ---
 
-*Last updated: 2026-06-04. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

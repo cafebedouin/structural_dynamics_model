@@ -1,0 +1,230 @@
+[decompose] Running UKE_SCOPE decomposition...
+[decompose] Fracture warning: F03 detected: carbon_accounting_infrastructure classified as mountain but technological advances in supply chain tracking may reclassify it as piton of institutional/policy choice. Generated omega_mountain_validity_accounting to bound this uncertainty. All seven axes passed §3 pairwise independence testing with distinct observables and non-redundant epsilon structures.
+[decompose] SCOPE complete — 7 axes selected
+[dry_run] Manifest assembled — dry-run stops here
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             skipped 
+  decompose            success  (9475→3014 tokens) [60.8s]
+
+  Total tokens: 9475→3014
+  Total time:   60.8s
+
+============================================================
+SCOPE MANIFEST
+============================================================
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "International Political Economy / Climate Policy / Trade Law",
+  "family_id": "carbon_border_adjustment_2026",
+  "topic_summary": "Analysis of carbon border adjustment mechanisms (CBAMs) as policy instruments that impose tariffs or equivalent charges on imports based on their embedded carbon emissions. CBAMs aim to prevent carbon leakage and level the playing field between jurisdictions with different carbon pricing regimes, but intersect with WTO rules, development equity concerns, and geopolitical competition.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 6,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "European Union (CBAM implementer, effective 2026)",
+      "World Trade Organization (adjudicator of trade law compatibility)",
+      "Developing economies (exporters facing new compliance costs)",
+      "Carbon-intensive industries (steel, cement, aluminum, fertilizer)",
+      "Domestic carbon pricing regimes (ETS, carbon taxes)",
+      "Multinational corporations (compliance actors, lobbying agents)",
+      "Climate finance mechanisms (potential offset/compensation structures)",
+      "U.S. Trade Representative (potential CBAM adopter or challenger)"
+    ],
+    "key_tensions": [
+      "Climate effectiveness vs WTO non-discrimination principles (environmental necessity vs protectionism)",
+      "Developed economy decarbonization vs developing economy industrialization pathways",
+      "Border adjustment revenue vs climate finance obligations (who captures the rent)",
+      "Unilateral policy sovereignty vs multilateral trade governance"
+    ],
+    "key_mechanisms": [
+      "Embedded emissions calculation (product-level carbon accounting, verification burden)",
+      "CBAM certificate purchase requirement (importers buy certificates matching carbon content)",
+      "WTO dispute settlement (legal challenge pathway for affected exporters)"
+    ],
+    "key_absences": [
+      "Consumption-based vs production-based accounting (scope 3 emissions treatment)",
+      "Technology transfer provisions (whether CBAMs fund decarbonization in exporting countries)",
+      "Services sector treatment (carbon intensity of digital/financial services)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "carbon_accounting_infrastructure",
+      "human_readable": "Carbon Accounting Infrastructure (Measurement & Verification Capacity)",
+      "structural_delta": "Institutional capacity to measure, verify, and audit embedded emissions at product level across supply chains",
+      "primary_observable": "Existence of national MRV (monitoring, reporting, verification) systems; third-party certification infrastructure; customs data integration capability",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "cbam_as_compliance_barrier",
+        "revenue_vs_climate_finance"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational physical/institutional constraint; different observable from all other axes; feeds two downstream nodes"
+    },
+    {
+      "claim_id": "wto_legal_compatibility",
+      "human_readable": "WTO Legal Compatibility (Trade Law Constraint Space)",
+      "structural_delta": "Compatibility of border carbon adjustments with GATT Article I (MFN), Article III (national treatment), and Article XX (environmental exceptions)",
+      "primary_observable": "WTO dispute panel rulings; legal doctrine on 'like products' and process-and-production methods (PPMs); necessity test jurisprudence",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "cbam_as_geopolitical_lever"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct legal-institutional observable; independent of carbon accounting; coordination constraint affecting policy design space"
+    },
+    {
+      "claim_id": "cbam_as_compliance_barrier",
+      "human_readable": "CBAM as Compliance Barrier (Differential Administrative Burden)",
+      "structural_delta": "Asymmetric compliance costs between exporters with established carbon pricing/MRV systems and those without",
+      "primary_observable": "Per-unit compliance cost differential between EU/developed exporters vs developing economy exporters; market share shifts post-CBAM implementation",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "established_carbon_pricing_jurisdictions",
+      "victim": "developing_economy_exporters",
+      "downstream_of": [
+        "carbon_accounting_infrastructure"
+      ],
+      "feeds_into": [
+        "revenue_vs_climate_finance"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; synthesis node linking infrastructure mountain to revenue distribution; distinct beneficiary/victim structure"
+    },
+    {
+      "claim_id": "revenue_vs_climate_finance",
+      "human_readable": "Revenue Capture vs Climate Finance (Rent Distribution)",
+      "structural_delta": "Whether CBAM revenues accrue to importing jurisdiction treasuries or are recycled as climate finance to affected exporters",
+      "primary_observable": "CBAM revenue allocation in implementing legislation; existence of linked climate finance mechanisms; developing country negotiating demands",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "importing_jurisdiction_treasuries",
+      "victim": "developing_economy_fiscal_capacity",
+      "downstream_of": [
+        "carbon_accounting_infrastructure",
+        "cbam_as_compliance_barrier"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct extractive mechanism; different observable (revenue flows vs compliance costs); downstream synthesis of infrastructure and barrier axes"
+    },
+    {
+      "claim_id": "cbam_as_geopolitical_lever",
+      "human_readable": "CBAM as Geopolitical Lever (Strategic Trade Instrument)",
+      "structural_delta": "Use of CBAM design choices (coverage, exemptions, phase-in) as bargaining leverage in climate negotiations and trade disputes",
+      "primary_observable": "Correlation between CBAM exemption grants and diplomatic concessions; timing of CBAM announcements relative to COP negotiations; retaliatory trade measures",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "cbam_implementing_states",
+      "victim": "export_dependent_economies",
+      "downstream_of": [
+        "wto_legal_compatibility"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct geopolitical observable; independent of compliance/revenue axes; captures strategic use dimension absent from other axes"
+    },
+    {
+      "claim_id": "carbon_leakage_effectiveness",
+      "human_readable": "Carbon Leakage Prevention Effectiveness (Emissions Displacement)",
+      "structural_delta": "Actual reduction in emissions displacement from high-carbon-price to low-carbon-price jurisdictions",
+      "primary_observable": "Shift in production location of carbon-intensive goods; global emissions trajectory in covered sectors; investment flows to carbon havens",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Distinct environmental effectiveness observable; independent of legal, compliance, revenue, and geopolitical axes; captures stated policy goal"
+    },
+    {
+      "claim_id": "domestic_competitiveness_protection",
+      "human_readable": "Domestic Competitiveness Protection (Industrial Policy Dimension)",
+      "structural_delta": "CBAM as mechanism to protect domestic carbon-intensive industries from import competition rather than purely environmental instrument",
+      "primary_observable": "Lobbying expenditure by domestic steel/cement/aluminum industries; CBAM coverage correlation with sectors facing import pressure; exemption patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "domestic_carbon_intensive_industries",
+      "victim": "consumer_welfare_via_higher_prices",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Distinct political economy observable; captures protectionist motivation independent of climate effectiveness; different beneficiary structure from all other axes"
+    }
+  ],
+  "generation_sequence": [
+    "carbon_accounting_infrastructure",
+    "wto_legal_compatibility",
+    "cbam_as_compliance_barrier",
+    "revenue_vs_climate_finance",
+    "cbam_as_geopolitical_lever",
+    "carbon_leakage_effectiveness",
+    "domestic_competitiveness_protection"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_scope_3_boundary",
+      "description": "Does CBAM cover only direct emissions (scope 1) or include supply chain emissions (scope 3)? Scope 3 inclusion would massively expand compliance burden but capture actual carbon footprint. Current EU CBAM excludes scope 3; this is a structural choice that may reclassify carbon_accounting_infrastructure from mountain to piton.",
+      "source": "Absence Inventory (consumption-based vs production-based accounting)"
+    },
+    {
+      "id": "omega_technology_transfer",
+      "description": "If CBAM revenues funded technology transfer to developing exporters, revenue_vs_climate_finance would shift from snare to scaffold. Absence of such provisions in current designs suggests extractive intent, but this is a policy-malleable variable.",
+      "source": "Absence Inventory (technology transfer provisions) + Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_services_sector",
+      "description": "Digital services and financial services have carbon footprints (data centers, business travel) but are excluded from CBAM. Is this a temporary scope limitation or a permanent structural blind spot? If services are eventually included, carbon_accounting_infrastructure becomes vastly more complex.",
+      "source": "Absence Inventory (services sector treatment)"
+    },
+    {
+      "id": "omega_china_retaliation",
+      "description": "China's potential retaliatory CBAM targeting EU luxury goods or aerospace could transform cbam_as_geopolitical_lever from tangled_rope to full trade war scaffold. This is a contingent geopolitical variable, not yet observable.",
+      "source": "Dark Matter Probe 2 (what is treated as background) + geopolitical tension recognition"
+    },
+    {
+      "id": "omega_mountain_validity_accounting",
+      "description": "Is carbon_accounting_infrastructure a true mountain (physical measurement limits) or a piton of institutional choice? Blockchain-based supply chain tracking and AI-driven emissions estimation may dissolve the measurement constraint, reclassifying this axis.",
+      "source": "F03 self-scan (mountain classification check)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: carbon_accounting_infrastructure classified as mountain but technological advances in supply chain tracking may reclassify it as piton of institutional/policy choice. Generated omega_mountain_validity_accounting to bound this uncertainty. All seven axes passed \u00a73 pairwise independence testing with distinct observables and non-redundant epsilon structures."
+  }
+}

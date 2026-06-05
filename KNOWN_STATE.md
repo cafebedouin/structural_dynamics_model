@@ -45,6 +45,57 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-05 — Generation-pipeline de-leak: schema/prompt/feedback boundaries no longer hand the author the engine's bands (audit brief F1–F9)
+**Files:** python/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, python/linter.py, python/regenerate_stories.py, agent/c-orchestrator.py, agent/orchestrator.py, agent/uke_narrative_orchestrator.py, agent/generate_kernel_corpus.py, docs/logic_extensions.md
+**Tier:** landed
+
+The authored-claim-vs-computed-type diff is the research signal (`the_perturbation_principle.md`);
+the pipeline was handing the authoring LLM the engine's decision boundaries, collapsing it.
+**Binding leak was the SCHEMA, not the prompt:** `allOf` conditionals tied `claimed_type` to numeric
+bands AND the schema text ships verbatim in the generator prompt (`story_generator_base.py:28`,
+`build_prompt`), with validation a retry-until-valid gate — a claimed-mountain/high-ε story (the
+false summit the engine exists to catch) was literally unauthorable. Commits, each with same-turn
+witnesses:
+- `29cd45d4` linter coordination_type 4→6 (286 false INVALID_COORDINATION_TYPE cleared, corpus lint
+  1821→1535, delta exactly 286; positive control still fires) + canonical 6-value table with
+  offset-active/floor-inactive asymmetry → `docs/logic_extensions.md`.
+- `9f2d050a` schema de-leak (user ruling: bands AND ε>0.46/0.70 triggers; allOf 9→6; structural
+  conditionals kept; measurements/omegas unconditionally encouraged). Witness: synthetic
+  claimed-mountain/ε=0.6 REJECTED before → AUTHORABLE after; tangled-without-victims still rejected.
+- `b6c4e113` prompt de-leak, maximal scrub (qualitative type criteria; χ/sigmoid/f(d)/σ tables →
+  prose, d∈[0,1] semantics kept for overrides; NL-profile 0.85/0.15 → presence-with-honest-values;
+  worked-example ε anchors removed; epsilon_bin hand-off dropped in all three orchestrators).
+  **Closing witness at the real interface:** assembled `build_prompt` payload, band-near-type hits
+  19→0 and threshold-comparisons 28→0, both greps firing on the pre-change payload.
+- `7ad86c5a` axes cap → optional ceiling (`--axes` default None in c-orchestrator + gkc;
+  SCOPE "THREE IS THE BUDGET" → distinctness-is-the-budget; §4 = ranking/ordering only).
+  No-cap witness on 3 topics: **uniform 7-7-7 axes, 0 deferred** — axes 4+ are NOT near-duplicates
+  (distinct deltas/observables; contingency gate did not fire) but the uniformity suggests a new
+  implicit count target; re-check distribution at Stage 2 (OQ-75).
+- `07f7b1c0` regenerate_stories filters THRESHOLD_COUPLED lint codes (SCAFFOLD_DANGER_ZONE,
+  LOW_THEATER_RATIO, MOUNTAIN_METRIC_CONFLICT) at the build_user_prompt choke point — covers BOTH
+  channels (known_errors from lint_errors.txt + retry_errors). Witness: tripping story's lint shows
+  the code, built prompt doesn't, MISSING_NL_PROFILE passes through. Rules stay as offline
+  diagnostics: their firing rate IS the claim-vs-metric divergence readout.
+- `d179423d` lens-diversity SCOPE instruction — **SEPARATE CHANGE VARIABLE** (user ruling):
+  attribute reading-set shifts to this commit, not the de-leak, in Stage-2 readouts.
+
+Engine-side verification (no engine changes): authored type lands as
+`narrative_ontology:constraint_claim/2`, read ONLY by diff detectors (`drl_core.pl:566
+dr_claim_mismatch/4`, `claimed_natural`); `dr_type/3` computes from metrics; no fallback returns
+the claim (brief F8 moot). Probe controls: clean corpus mountain (`axiom_of_choice_consequence`)
+reads claim=computed=mountain ×4 seats, no mismatch; synthetic false summit compiles and fires
+`type_1_false_summit-severe` (computed tangled_rope at institutional, unknown elsewhere — OQ-37
+surface). Stage-2 rebuild is OQ-75 (gated on operator go). New OQs: 72 (axiom alignment key), 73
+(cross-frame probe), 74 (coordination_type kernel-vs-reading ruling; 55% = 158/286 re-witnessed).
+NOT swept (recorded residuals): coordination offset/floor table in the prompt (engine cost params,
+not classification bands); qualitative f(d)/χ direction-of-effect mentions; schema-validation error
+messages outside c-orchestrator are unsanitized (harmless post-de-leak: the schema no longer
+carries band values to echo). Known limitation (pre-existing): c-orchestrator `_step_generate`
+resolves only `manifest["axes"]` — kernel-reading entries skip (witnessed twice); kernel topics go
+through `generate_kernel_corpus.py`. `agent/data/constraint_story_schema.json` is a stale orphan
+(158-line diff vs canonical, no loader reads it) — deletion proposed, not yet ruled.
+
 ## 2026-06-04 — OQ-71 depth-lineage probe: SCALE RUN COMPLETE — H1/H3 falsified beyond noise (boundedness is within-regime only)
 **Files:** prolog/testsets/lineage_probe_01/, docs/design/a_hypothesis_about_corpus_size.md, ISSUES.md
 **Tier:** correction-key

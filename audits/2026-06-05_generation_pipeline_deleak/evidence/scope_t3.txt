@@ -1,0 +1,224 @@
+[decompose] Running UKE_SCOPE decomposition...
+[decompose] SCOPE complete — 7 axes selected
+[dry_run] Manifest assembled — dry-run stops here
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             skipped 
+  decompose            success  (9477→2717 tokens) [52.8s]
+
+  Total tokens: 9477→2717
+  Total time:   52.8s
+
+============================================================
+SCOPE MANIFEST
+============================================================
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Social Policy / Welfare State Theory",
+  "family_id": "ubi_pilots_welfare_state_2026",
+  "topic_summary": "Analysis of universal basic income pilot programs in relation to existing welfare state structures, examining the structural tensions between unconditional cash transfers and conditional benefit systems, the political economy of pilot design, and the implications for state capacity and social solidarity.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "UBI pilot programs (Finland, Kenya, Stockton CA, various municipalities)",
+      "Existing welfare bureaucracies (means-testing agencies, social workers, benefit administrators)",
+      "Pilot funders (governments, philanthropies, research institutions)",
+      "Pilot participants (selected recipients, often non-random)",
+      "Control groups (non-recipients in pilot regions)",
+      "Welfare state constituencies (labor unions, social service providers, benefit recipients)"
+    ],
+    "key_tensions": [
+      "Unconditional transfers vs conditional benefits (UBI design vs existing welfare architecture)",
+      "Pilot methodology vs policy implementation (experimental validity vs political feasibility)",
+      "State capacity expansion vs contraction (administrative simplification vs targeting precision)"
+    ],
+    "key_mechanisms": [
+      "Means-testing apparatus (income verification, eligibility determination, benefit calculation)",
+      "Pilot selection processes (randomization vs political targeting)",
+      "Labor market signaling (employment effects, wage bargaining, reservation wages)",
+      "Fiscal sustainability constraints (tax base requirements, deficit limits, political budget cycles)"
+    ],
+    "key_absences": [
+      "Long-term fiscal sustainability analysis beyond pilot duration",
+      "Political coalition dynamics that would sustain UBI at scale",
+      "Interaction effects between UBI and non-cash welfare provisions (healthcare, housing, education)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "conditionality_architecture",
+      "human_readable": "Conditionality Architecture (Unconditional vs Conditional Transfer Logic)",
+      "structural_delta": "Structural difference between unconditional cash transfers and conditional benefit systems in how they define deservingness and enforce compliance",
+      "primary_observable": "Benefit eligibility criteria; enforcement mechanisms; administrative burden on recipients",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "bureaucratic_displacement",
+        "deservingness_politics"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Foundational structural difference; no upstream dependencies; feeds multiple downstream axes"
+    },
+    {
+      "claim_id": "pilot_methodology_gap",
+      "human_readable": "Pilot Methodology Gap (Experimental Validity vs Implementation Feasibility)",
+      "structural_delta": "Structural gap between what pilot programs can measure under experimental conditions and what full implementation would require politically and fiscally",
+      "primary_observable": "Pilot duration vs policy permanence; sample size vs population coverage; funding source (grant vs tax revenue)",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pilot_researchers",
+      "victim": "policy_implementers",
+      "downstream_of": [],
+      "feeds_into": [
+        "fiscal_sustainability_opacity"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable from conditionality; distinct beneficiary structure; methodological rather than substantive axis"
+    },
+    {
+      "claim_id": "bureaucratic_displacement",
+      "human_readable": "Bureaucratic Displacement (Administrative Simplification vs Institutional Resistance)",
+      "structural_delta": "Tension between UBI's promise to eliminate welfare bureaucracy and the political resistance from existing administrative structures",
+      "primary_observable": "Welfare agency employment levels; administrative cost ratios; political opposition from public sector unions",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "ubi_advocates",
+      "victim": "welfare_bureaucrats",
+      "downstream_of": [
+        "conditionality_architecture"
+      ],
+      "feeds_into": [
+        "deservingness_politics"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct from conditionality (focuses on institutional actors not transfer logic); clear beneficiary/victim structure"
+    },
+    {
+      "claim_id": "deservingness_politics",
+      "human_readable": "Deservingness Politics (Universal Entitlement vs Targeted Need)",
+      "structural_delta": "Political framing contest between universal rights-based entitlement and targeted assistance for the deserving poor",
+      "primary_observable": "Public opinion on benefit universality; political coalition composition; media framing of recipients",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "political_entrepreneurs",
+      "victim": "stigmatized_recipients",
+      "downstream_of": [
+        "conditionality_architecture",
+        "bureaucratic_displacement"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Downstream synthesis of conditionality and bureaucratic axes; distinct political observable; high epsilon from stigma extraction"
+    },
+    {
+      "claim_id": "fiscal_sustainability_opacity",
+      "human_readable": "Fiscal Sustainability Opacity (Pilot Funding vs Permanent Tax Base)",
+      "structural_delta": "Structural difference between grant-funded pilots and the tax increases required for permanent UBI at scale",
+      "primary_observable": "Tax rate requirements for full implementation; deficit projections; political feasibility of tax increases",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "pilot_funders",
+      "victim": "future_taxpayers",
+      "downstream_of": [
+        "pilot_methodology_gap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct fiscal observable from other axes; downstream of methodology gap; captures temporal extraction"
+    },
+    {
+      "claim_id": "labor_market_signaling",
+      "human_readable": "Labor Market Signaling (Reservation Wage Effects vs Employment Incentives)",
+      "structural_delta": "Impact of unconditional income on workers' willingness to accept low-wage employment and employers' wage-setting behavior",
+      "primary_observable": "Employment rates among recipients; wage levels in low-skill sectors; labor force participation rates",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Independent observable (labor market vs political/administrative); no beneficiary structure; coordination problem not extraction"
+    },
+    {
+      "claim_id": "welfare_state_crowdout",
+      "human_readable": "Welfare State Crowdout (UBI as Replacement vs Supplement)",
+      "structural_delta": "Whether UBI replaces existing welfare programs or supplements them, determining net fiscal cost and benefit adequacy",
+      "primary_observable": "Benefit replacement rates; total welfare spending levels; adequacy of UBI amount relative to eliminated benefits",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "fiscal_conservatives",
+      "victim": "high_need_recipients",
+      "downstream_of": [],
+      "feeds_into": [
+        "deservingness_politics"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Distinct from conditionality (focuses on benefit levels not eligibility logic); clear extraction structure; independent observable"
+    }
+  ],
+  "generation_sequence": [
+    "conditionality_architecture",
+    "pilot_methodology_gap",
+    "bureaucratic_displacement",
+    "deservingness_politics",
+    "fiscal_sustainability_opacity",
+    "labor_market_signaling",
+    "welfare_state_crowdout"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_healthcare_interaction",
+      "description": "How does UBI interact with non-cash welfare provisions like universal healthcare? If UBI replaces cash benefits but not healthcare, the Mountain of medical need remains while the Rope of income support changes structure.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - non-cash welfare interaction effects"
+    },
+    {
+      "id": "omega_coalition_durability",
+      "description": "What political coalitions sustain UBI beyond pilot phase? Pilots avoid the coalition-building question by using grant funding. At scale, is UBI a Rope (broad coalition) or Snare (narrow beneficiary capture)?",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) - political sustainability beyond pilots"
+    },
+    {
+      "id": "omega_inflation_transmission",
+      "description": "Do unconditional transfers trigger price increases that erode real purchasing power? If landlords capture UBI through rent increases, the transfer becomes a Piton (atrophied intervention) rather than a Rope (coordination).",
+      "source": "Dark Matter Probe 1 (Operational Medium) - monetary transmission mechanisms"
+    },
+    {
+      "id": "omega_global_south_divergence",
+      "description": "Do UBI pilots in Global South contexts (Kenya) operate under fundamentally different constraints than Global North welfare states? The absence of existing welfare bureaucracy may make Kenya's pilot a Mountain (development constraint) rather than a Tangled Rope (institutional resistance).",
+      "source": "Dark Matter Probe 2 (Absence Inventory) - cross-context structural differences"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Seven distinct axes identified through multi-lens scan (political economy, public administration, labor economics, fiscal policy). All axes passed pairwise independence testing with distinct observables and beneficiary structures. Dark matter probes surfaced four omegas addressing healthcare interaction, coalition durability, inflation transmission, and Global South divergence."
+  }
+}

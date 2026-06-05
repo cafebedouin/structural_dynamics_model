@@ -1,0 +1,228 @@
+[decompose] Running UKE_SCOPE decomposition...
+[decompose] Fracture warning: F34 detected: regulatory_capture_dynamics includes platform exit threat credibility assessment, which requires game-theoretic modeling of commitment problems beyond labor law domain expertise. Generated omega_platform_exit_credibility to bound this uncertainty. All other axes remain within labor law, platform economics, and regulatory theory competence boundaries.
+[decompose] SCOPE complete — 7 axes selected
+[dry_run] Manifest assembled — dry-run stops here
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             skipped 
+  decompose            success  (9475→3057 tokens) [63.3s]
+
+  Total tokens: 9475→3057
+  Total time:   63.3s
+
+============================================================
+SCOPE MANIFEST
+============================================================
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Labor Law / Platform Economics / Regulatory Theory",
+  "family_id": "gig_platform_labor_classification",
+  "topic_summary": "Analysis of the legal and economic classification of workers on gig economy platforms (Uber, DoorDash, TaskRabbit, etc.) as either employees or independent contractors. The classification determines access to minimum wage, benefits, collective bargaining rights, and platform liability for working conditions. Jurisdictions worldwide are adopting divergent approaches ranging from statutory employee presumptions to multi-factor tests to sui generis third categories.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Platform companies (Uber, Lyft, DoorDash, Instacart \u2014 intermediaries claiming technology-provider status)",
+      "Gig workers (drivers, couriers, taskers \u2014 performing labor via platform dispatch)",
+      "Regulatory authorities (labor departments, courts, legislatures \u2014 classification adjudicators)",
+      "Traditional employers (comparison class for employment relationship tests)",
+      "Labor unions (organizing entities seeking collective bargaining access)",
+      "Consumers (service purchasers whose prices depend on labor cost structure)"
+    ],
+    "key_tensions": [
+      "Platform autonomy claims vs worker control reality (platforms claim workers are independent; workers experience algorithmic management)",
+      "Flexibility rhetoric vs economic security (platforms emphasize schedule flexibility; workers lack wage/benefit protections)",
+      "Innovation preservation vs labor standards enforcement (regulatory fear of stifling platform innovation vs preventing labor law evasion)"
+    ],
+    "key_mechanisms": [
+      "Algorithmic dispatch and pricing (platforms control job allocation, pricing, and performance metrics without formal employment contract)",
+      "Misclassification arbitrage (platforms achieve cost advantage by avoiding payroll taxes, benefits, minimum wage through contractor classification)",
+      "Regulatory forum shopping (platforms lobby for favorable classification rules; threaten exit from hostile jurisdictions)",
+      "Ballot initiative override (California Prop 22 \u2014 platform-funded referendum overturning legislative employee classification)"
+    ],
+    "key_absences": [
+      "Collective bargaining mechanisms for non-employee workers (most jurisdictions lack legal framework for contractor unionization)",
+      "Platform liability for algorithmic discrimination (classification debate focuses on wage/benefits; algorithmic bias in dispatch largely unaddressed)",
+      "Cross-border labor mobility (gig workers often migrants; classification affects visa status and deportation risk, rarely analyzed in labor law frame)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "control_vs_autonomy_gap",
+      "human_readable": "Control vs. Autonomy Gap (Algorithmic Management Reality)",
+      "structural_delta": "Degree of platform control over work execution vs. legal autonomy threshold for independent contractor status",
+      "primary_observable": "Algorithmic management intensity metrics: dispatch acceptance requirements, route dictation, unilateral deactivation rates, performance surveillance granularity",
+      "epsilon_bin": "mod",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "misclassification_arbitrage",
+        "flexibility_vs_security_tradeoff"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical constraint base; algorithmic control is measurable technical reality independent of legal framing"
+    },
+    {
+      "claim_id": "misclassification_arbitrage",
+      "human_readable": "Misclassification Arbitrage (Cost Externalization via Legal Category)",
+      "structural_delta": "Platform profit margin gained by classifying workers as contractors rather than employees",
+      "primary_observable": "Labor cost differential: employee classification cost (payroll tax + benefits + minimum wage) vs. contractor payment structure; platform margin change under reclassification",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "platform_shareholders",
+      "victim": "workers_and_public_safety_net",
+      "downstream_of": [
+        "control_vs_autonomy_gap"
+      ],
+      "feeds_into": [
+        "regulatory_capture_dynamics"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; core extractive mechanism; downstream synthesis of control reality and legal classification gap"
+    },
+    {
+      "claim_id": "flexibility_vs_security_tradeoff",
+      "human_readable": "Flexibility vs. Security Tradeoff (Schedule Autonomy vs. Income Stability)",
+      "structural_delta": "Worker preference distribution across flexibility-security spectrum vs. platform-imposed binary choice",
+      "primary_observable": "Worker survey data on schedule flexibility value vs. income volatility tolerance; platform policy constraints on hybrid arrangements",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "control_vs_autonomy_gap"
+      ],
+      "feeds_into": [
+        "third_category_viability"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (worker preference distribution) from control_vs_autonomy_gap (algorithmic management intensity); coordination problem independent of misclassification arbitrage"
+    },
+    {
+      "claim_id": "regulatory_capture_dynamics",
+      "human_readable": "Regulatory Capture Dynamics (Platform Lobbying and Forum Shopping)",
+      "structural_delta": "Platform influence over classification rulemaking via lobbying expenditure and jurisdiction arbitrage",
+      "primary_observable": "Lobbying spend by platform industry; ballot initiative funding (e.g., Prop 22 $200M campaign); platform threat credibility to exit jurisdictions",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "platform_industry",
+      "victim": "democratic_rulemaking_process",
+      "downstream_of": [
+        "misclassification_arbitrage"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "Distinct mechanism (political influence) from economic arbitrage; captures how high epsilon in misclassification_arbitrage funds regulatory interference"
+    },
+    {
+      "claim_id": "third_category_viability",
+      "human_readable": "Third Category Viability (Sui Generis Dependent Contractor Status)",
+      "structural_delta": "Feasibility of intermediate legal category providing partial protections without full employment classification",
+      "primary_observable": "Comparative policy outcomes: jurisdictions with third-category frameworks (UK, Canada, Spain) vs. binary employee/contractor regimes; worker outcome metrics under each",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "flexibility_vs_security_tradeoff"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Distinct structural delta (intermediate category design) from binary classification axes; addresses coordination problem identified in flexibility_vs_security_tradeoff"
+    },
+    {
+      "claim_id": "collective_bargaining_exclusion",
+      "human_readable": "Collective Bargaining Exclusion (Antitrust Barrier to Contractor Organizing)",
+      "structural_delta": "Legal prohibition on independent contractor collective bargaining under antitrust law (price-fixing doctrine)",
+      "primary_observable": "Antitrust enforcement actions against contractor organizing; legislative carve-outs for gig worker collective bargaining (e.g., Seattle ordinance struck down)",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "platform_monopsony_power",
+      "victim": "worker_bargaining_power",
+      "downstream_of": [],
+      "feeds_into": [
+        "misclassification_arbitrage"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "Independent mechanism (antitrust law) distinct from labor classification; feeds into misclassification_arbitrage by making contractor status more extractive"
+    },
+    {
+      "claim_id": "algorithmic_accountability_gap",
+      "human_readable": "Algorithmic Accountability Gap (Dispatch Discrimination and Opacity)",
+      "structural_delta": "Platform algorithmic decision-making (dispatch, pricing, deactivation) exempt from employment discrimination law when workers classified as contractors",
+      "primary_observable": "Algorithmic audit findings on dispatch bias (race, gender, disability); legal liability differential under employee vs. contractor classification",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "workers_facing_algorithmic_discrimination",
+      "downstream_of": [
+        "control_vs_autonomy_gap"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "Distinct observable (algorithmic discrimination) from wage/benefit focus of misclassification_arbitrage; surfaces absence from extraction_summary"
+    }
+  ],
+  "generation_sequence": [
+    "control_vs_autonomy_gap",
+    "flexibility_vs_security_tradeoff",
+    "misclassification_arbitrage",
+    "third_category_viability",
+    "regulatory_capture_dynamics",
+    "collective_bargaining_exclusion",
+    "algorithmic_accountability_gap"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_cross_border_mobility",
+      "description": "Does contractor classification affect visa status and deportation risk for migrant gig workers? If so, misclassification_arbitrage may have immigration enforcement as hidden victim. Absence from legal scholarship suggests structural blind spot.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) \u2014 cross-border labor mobility identified in extraction but not decomposed into axis"
+    },
+    {
+      "id": "omega_consumer_price_elasticity",
+      "description": "How much would service prices increase under employee classification? Platform claims of 20-30% increases lack independent verification. If elasticity is low, misclassification_arbitrage epsilon may be overstated (platforms could absorb costs via margin compression).",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) \u2014 consumer impact claimed by platforms but not empirically validated"
+    },
+    {
+      "id": "omega_platform_exit_credibility",
+      "description": "Are platform threats to exit hostile jurisdictions credible? Regulatory_capture_dynamics assumes exit threat is real, but network effects and sunk costs may make threats non-credible. Requires game-theoretic modeling beyond current evidence base.",
+      "source": "F34 (Epistemic Trespass) \u2014 strategic credibility assessment requires game theory expertise"
+    },
+    {
+      "id": "omega_third_category_stability",
+      "description": "Do third-category frameworks remain stable or drift toward employee status over time? UK 'worker' category has expanded via case law; Spanish 'TRADE' status underutilized. Third_category_viability scaffold may be piton of political compromise rather than stable equilibrium.",
+      "source": "Dark Matter Probe 1 (Operational Medium) \u2014 comparative law analysis operates in snapshot; temporal stability unexamined"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: regulatory_capture_dynamics includes platform exit threat credibility assessment, which requires game-theoretic modeling of commitment problems beyond labor law domain expertise. Generated omega_platform_exit_credibility to bound this uncertainty. All other axes remain within labor law, platform economics, and regulatory theory competence boundaries."
+  }
+}
