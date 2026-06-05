@@ -268,8 +268,9 @@ Define the objective metrics of the constraint. These are the structural inputs 
 | Beneficiary groups | `base_properties.beneficiaries[]` | **REQUIRED for all non-mountain; OPTIONAL on mountain (FSM candidate — see below).** Identifies who benefits. Derives coordination function (required for Tangled Rope and Scaffold gates). Feeds directionality: beneficiaries get low d → low/negative χ. |
 | Victim groups | `base_properties.victims[]` | **REQUIRED for snare and tangled_rope.** Identifies who bears costs. Derives asymmetric extraction (required for Tangled Rope gate). Feeds directionality: victims get high d → high χ. |
 | Active enforcement | `base_properties.requires_active_enforcement` | Required for Tangled Rope gate. |
+| Vindicated propositions | `base_properties.vindicated_propositions[]` | OPTIONAL. Propositions, doctrines, or hypotheses the constraint's operation vindicates (e.g. `constitutional_supremacy_doctrine`). These are NOT beneficiaries — a vindicated proposition collects no rents. Never list a proposition under `beneficiaries`. |
 
-**Naming rules**: Use specific, domain-derived group names. `low_income_borrowers` not `affected_parties`. `journal_publishers` not `stakeholders`. The group name should identify a real-world actor.
+**Naming rules**: Use specific, domain-derived group names. `low_income_borrowers` not `affected_parties`. `journal_publishers` not `stakeholders`. The group name should identify a real-world actor. If the thing that "benefits" is a proposition or doctrine rather than an actor, it belongs in `vindicated_propositions`, not `beneficiaries`.
 
 #### False Summit Detection (FSM)
 

@@ -153,6 +153,12 @@ def _build_multifile_declarations(data):
         "narrative_ontology:constraint_claim/2",
     ]
 
+    # Vindicated propositions (OQ-64 split, 2026-06-05): NOT beneficiaries; the fact
+    # feeds no metric or gate — it preserves the authored referent kind so analyses
+    # can consume vindication separately from agency.
+    if (data.get("base_properties") or {}).get("vindicated_propositions"):
+        decls.append("narrative_ontology:constraint_vindicates/2")
+
     # Conditional predicates
     if data.get("network", {}).get("affects_constraints"):
         decls.append("narrative_ontology:affects_constraint/2")
@@ -545,12 +551,18 @@ def generate_pl(data):
     victims = bp.get("victims", [])
     is_mountain_only = bp["claimed_type"] == "mountain"
 
-    if beneficiaries or victims:
+    vindicated = bp.get("vindicated_propositions", [])
+
+    if beneficiaries or victims or vindicated:
         emit("% --- Structural relationships ---")
         for b in beneficiaries:
             emit(f"narrative_ontology:constraint_beneficiary({cid}, {b}).")
         for v in victims:
             emit(f"narrative_ontology:constraint_victim({cid}, {v}).")
+        # OQ-64 split: vindicated propositions are NOT beneficiaries — they collect no
+        # rents, feed no d/chi derivation and no beneficiary gate.
+        for p in vindicated:
+            emit(f"narrative_ontology:constraint_vindicates({cid}, {p}).")
         emit()
     elif is_mountain_only:
         emit("% --- Structural relationships ---")

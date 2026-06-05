@@ -70,6 +70,7 @@
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
+    constraint_vindicates/2,  % OQ-64 split (2026-06-05): propositions a constraint vindicates are NOT beneficiaries; never feeds d/chi or beneficiary gates
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
     coordination_vitality/2,
     cs_story_uid/2,          % cs_story_uid(+C, +UID) — name→UUID identity map; C repeatable, UID unique per generation event
@@ -94,6 +95,7 @@
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, constraint_claim/3,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
+    constraint_vindicates/2,  % OQ-64 split (2026-06-05): propositions a constraint vindicates are NOT beneficiaries; never feeds d/chi or beneficiary gates
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
     coordination_vitality/2,
     cs_story_uid/2,

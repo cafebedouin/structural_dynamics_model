@@ -360,6 +360,14 @@
           },
           "description": "Domain-specific victim group names"
         },
+        "vindicated_propositions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "description": "Propositions/doctrines/hypotheses the constraint's operation vindicates (OQ-64 split, 2026-06-05). NOT beneficiaries: a vindicated proposition collects no rents and must never be listed under beneficiaries (beneficiaries are real-world actors only). Compiled to constraint_vindicates/2, which feeds no metric or gate."
+        },
         "mandatrophy_resolved": {
           "type": "boolean",
           "default": false,
