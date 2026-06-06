@@ -3139,6 +3139,38 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
   (informs whether the recognizer's salience bias also distorts WHICH topics get kernels at
   all — a corpus-composition question, not an axis-loss question).
 
+## OQ-77 — giant_component_analysis SIGSEGV (rc=-11) under concurrent pipeline runs
+
+**Ω-type:** Ω_E (closeable by a controlled serial-vs-concurrent repro).
+
+**Status:** open — caught and non-blocking (pipeline completes 40/41); hypothesis is a concurrency race, not a deterministic graph-topology bug
+**Origin:** 2026-06-06 slow-build session. Three topic runs launched CONCURRENTLY against the
+single flat `prolog/testsets/` + shared `outputs/`. The `giant_comp` step (`_prolog_giant_comp`,
+`run_pipeline.py:416`; swipl on `giant_component_analysis.pl`) segfaulted (`rc=-11`) on exactly
+ONE of the three — the leiden run (n=39), whose pipeline ran at manifest 00:10:49Z, BETWEEN the
+other two (embryo 00:08:36Z, debt 00:12:46Z), i.e. maximally overlapping — and succeeded at n=43
+and n=33. The non-fatal warning `Local definition of drl_core:base_extractiveness/2 overrides
+weak import from constraint_data` precedes the crash but is present on passing runs too (red
+herring).
+
+**Hypothesis (to be tested, not asserted):** the crash is a SYMPTOM of concurrent swipl
+invocations racing on shared `outputs/` artifacts (orbit data, temp files), not an intrinsic
+defect in `giant_component_analysis.pl`. Evidence for: appeared only on the maximally-overlapping
+run; intermittent; a 0-exit-code segfault on otherwise-valid corpora is the shape of a
+file/resource race, not a logic bug.
+
+**Kill-condition (closes the OQ):** run the same N topics SERIALLY (or generate-only then one
+`run_pipeline`). If the segfault does NOT recur across several serial runs at comparable corpus
+sizes, it is a concurrency artifact → resolution is the operational rule "do not run concurrent
+full pipelines against shared testsets/+outputs/" (the slow-build workflow), not a Prolog fix.
+If it DOES recur serially, it is a real defect in `giant_component_analysis.pl` (likely stack
+depth / unbounded recursion on a particular graph topology) → investigate the analysis itself.
+
+**Why it can wait:** `run_prolog` catches it (`[WARN] giant_comp ... non-critical, continuing`)
+and the pipeline finishes 40/41; `giant_component_analysis.md` is simply not refreshed that run.
+But a SIGSEGV is never "fine" — logged so the kill-condition is run before trusting the
+giant-component output on any concurrently-built corpus.
+
 ---
 
 *Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark
