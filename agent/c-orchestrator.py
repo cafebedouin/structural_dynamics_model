@@ -682,6 +682,18 @@ class DRAuditOrchestrator:
                     total_tin += getattr(usage, "input_tokens", 0) or 0
                     total_tout += getattr(usage, "output_tokens", 0) or 0
                 raw = "".join(b.text for b in msg.content if b.type == "text")
+                # Empty response is a TRANSIENT (model returned no text; the batch itself
+                # succeeded) — a different failure class from a malformed story, and the
+                # old path mislabeled it "JSON_PARSE_ERROR: Expecting value line 1 col 1".
+                # Diagnose it honestly, surface stop_reason, and skip the repair attempt
+                # (nothing to repair). Recoverable via the --manifest-file gap-retry; an
+                # identical re-submit almost always succeeds.
+                if not raw.strip():
+                    stop = getattr(msg, "stop_reason", "unknown")
+                    self._progress("generate", f"FAIL {cid}: EMPTY_RESPONSE (stop_reason={stop})")
+                    failed_ids.add(cid)
+                    fail_reasons[cid] = f"EMPTY_RESPONSE: model returned no text (stop_reason={stop})"
+                    continue
                 story_dict, errors = process_response(raw)
 
                 if story_dict is not None and errors:
