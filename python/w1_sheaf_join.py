@@ -124,7 +124,14 @@ def main():
     edge_sum = None
     if isinstance(prof, dict) and all(k in prof for k in ("u1_u2", "u2_u3", "u3_u4")):
         edge_sum = prof["u1_u2"] + prof["u2_u3"] + prof["u3_u4"]
-    field_identity_ok = (edge_sum is not None and abs(edge_sum - argmax_w1) < 1e-6)
+    # Tolerance keyed to the JSON's 6-decimal storage quantum, NOT machine epsilon:
+    # wasserstein_total_fracture is stored rounded to 6 places while edge_sum is
+    # recomputed at full precision, so the two-ways-same-number differ by up to ~1
+    # quantum (~1e-6). The old strict `< 1e-6` cried wolf when a value rounded at the
+    # boundary (witnessed 2026-06-06: argmax 3.498868 vs edge_sum 3.498869 -> false
+    # NOT-CONFIRMED). A GENUINE field-identity break is O(whole W1 units), so 1e-5
+    # confirms the identity while still catching any real mismatch.
+    field_identity_ok = (edge_sum is not None and abs(edge_sum - argmax_w1) < 1e-5)
 
     # --- Join ------------------------------------------------------------
     orbit_ids = set(orbit.keys())
