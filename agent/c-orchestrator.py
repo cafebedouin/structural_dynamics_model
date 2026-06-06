@@ -41,6 +41,8 @@ from agent.story_generator_base import (
     _load_context_file,
     build_prompt,
     build_prompt_parts,
+    axis_source_desc,
+    upstream_context,
     _SYSTEM_INSTRUCTION,
 )
 
@@ -523,38 +525,11 @@ class DRAuditOrchestrator:
             return self._step_generate_serial(manifest)
         return self._step_generate_batch(manifest)
 
-    @staticmethod
-    def _axis_source_desc(manifest: dict, claim_id: str, axis: dict) -> str:
-        """Per-axis source description — shared by serial and batch paths."""
-        source_desc = (
-            f"TOPIC: {manifest.get('domain', 'Unknown')}\n"
-            f"CONSTRAINT: {claim_id}\n"
-            f"Structural delta: {axis['structural_delta']}\n"
-            f"Primary observable: {axis['primary_observable']}\n"
-            f"Hypothesis type: {axis['hypothesis']}"
-        )
-        if axis.get("beneficiary"):
-            source_desc += f"\nBeneficiary: {axis['beneficiary']}"
-        if axis.get("victim"):
-            source_desc += f"\nVictim: {axis['victim']}"
-        cs_recog = manifest.get("commitment_system_recognition")
-        if cs_recog:
-            source_desc += f"\nCommitment System Recognition: {json.dumps(cs_recog)}"
-        return source_desc
-
-    @staticmethod
-    def _upstream_context(axis: dict, generated_by_id: dict, claim_id: str) -> str:
-        """§5.1 upstream context from already-generated stories (shared by both paths)."""
-        upstream_context = ""
-        for upstream_id in axis.get("downstream_of", []):
-            upstream_story = generated_by_id.get(upstream_id)
-            if upstream_story:
-                upstream_context += (
-                    f"\nUPSTREAM CONSTRAINT: {upstream_id}\n"
-                    f"  claimed_type: {upstream_story['base_properties'].get('claimed_type', 'unknown')}\n"
-                    f"  affects_constraint: {upstream_id} → {claim_id}\n"
-                )
-        return upstream_context
+    # Pure delegators to the single source of truth in story_generator_base (moved 2026-06-06).
+    # No wrapper logic — identical output by construction, so the old batch path and the unified
+    # backend cannot drift.
+    _axis_source_desc = staticmethod(axis_source_desc)
+    _upstream_context = staticmethod(upstream_context)
 
     def _step_generate_batch(self, manifest: dict) -> StepResult:
         """Batched generation (2026-06-05): each dependency WAVE is one Anthropic

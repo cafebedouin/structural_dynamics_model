@@ -191,6 +191,45 @@ def build_prompt(source_description, context_text=""):
 
 
 # ---------------------------------------------------------------------------
+# Flat-axis prompt framing (moved here 2026-06-06 as the single source of truth for the
+# unified generation backend; c-orchestrator delegates to these, gkc's shared backend calls
+# them directly — byte-identity of the two paths is therefore structural, not coincidental).
+# ---------------------------------------------------------------------------
+
+def axis_source_desc(manifest: dict, claim_id: str, axis: dict) -> str:
+    """Per-axis source description for a FLAT (ordinary) axis."""
+    source_desc = (
+        f"TOPIC: {manifest.get('domain', 'Unknown')}\n"
+        f"CONSTRAINT: {claim_id}\n"
+        f"Structural delta: {axis['structural_delta']}\n"
+        f"Primary observable: {axis['primary_observable']}\n"
+        f"Hypothesis type: {axis['hypothesis']}"
+    )
+    if axis.get("beneficiary"):
+        source_desc += f"\nBeneficiary: {axis['beneficiary']}"
+    if axis.get("victim"):
+        source_desc += f"\nVictim: {axis['victim']}"
+    cs_recog = manifest.get("commitment_system_recognition")
+    if cs_recog:
+        source_desc += f"\nCommitment System Recognition: {json.dumps(cs_recog)}"
+    return source_desc
+
+
+def upstream_context(axis: dict, generated_by_id: dict, claim_id: str) -> str:
+    """§5.1 upstream context from already-generated stories (wave dependency)."""
+    ctx = ""
+    for upstream_id in axis.get("downstream_of", []):
+        upstream_story = generated_by_id.get(upstream_id)
+        if upstream_story:
+            ctx += (
+                f"\nUPSTREAM CONSTRAINT: {upstream_id}\n"
+                f"  claimed_type: {upstream_story['base_properties'].get('claimed_type', 'unknown')}\n"
+                f"  affects_constraint: {upstream_id} → {claim_id}\n"
+            )
+    return ctx
+
+
+# ---------------------------------------------------------------------------
 # Response processing
 # ---------------------------------------------------------------------------
 def process_response(raw_text):
