@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-06 — Generation-backend unification: c-orchestrator routed through the shared backend; the kernel-dropping fork DELETED
+**Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, agent/story_generator_base.py, python/audits/capture_generation_payloads*.py
+**Tier:** landed
+
+The silent fork (Build-Discipline Pattern 2) where c-orchestrator's flat-only generator silently
+dropped recognized kernel readings (OQ-79 mech-1) is healed by DELETION. New shared backend
+`generate_kernel_corpus.generate_from_manifests` is the single manifest->corpus path: seed-type
+dispatch (flat -> c-orch framing via the moved `axis_source_desc`/`upstream_context` in
+story_generator_base; reading/flat_control -> gkc `build_cached_messages`), c-orch's wave loop ported,
+request defaults caller-supplied (sonnet/string-system for c-orch, haiku/list for gkc). c-orch's
+`_step_generate` now calls it; the forked `_step_generate_batch` (44 ins / 255 del) + delegators +
+dead imports are gone (grep 0). Serial escape hatch kept (self-contained inline source_desc, named
+legacy duplication). OQ-79 guard demoted to a defensive assertion (no ledger; C4 co-mingling gone).
+
+**Witness ladder (all in commits 0f61517c, 099066c4, a7d56a14, ed2ec212):**
+- P0 old==old byte-identical across TWO COLD processes, FULL params (model/system/max_tokens) —
+  the deterministic target is real.
+- W1/W2 new==old byte-identical on 3 flat topics incl. germline (5-wave); re-confirmed AFTER the
+  splice — the wiring that delivered kernels did not perturb the flat path.
+- P3 LIVE: Zionism (frozen 222814 manifest) — the 3 readings the flat path dropped now land with
+  cs_kernel_id; reading classifies tangled_rope/snare/rope/snare across seats.
+- P4 mechanism: synthetic reading-upstream manifest — supplementary axis waves AFTER its reading
+  with the reading's claimed_type injected (wave FIRES; appropriateness = OQ-81, NOT witnessed).
+- The deterministic witness caught a real seed-building dup bug (readings in both axes[] and
+  generation_sequence) BEFORE any live kernel run — fixed, germline still byte-identical.
+
+**TRIPWIRE — partial unification:** gkc's `--scope` entry point STILL runs its own (working,
+wave-free) kernel generation; it is NOT yet routed through generate_from_manifests (OQ-82). So two
+generation implementations coexist — the BUG is gone (both handle kernels) but the literal one-path
+goal + gkc-gains-waves remains. Do not assume gkc --scope already waves. New OQs: OQ-80 (generate-step
+token totals unthreaded = NOT MEASURED, reports 0), OQ-81 (readings-as-wave-upstream appropriateness),
+OQ-82 (the gkc --scope rewire). OQ-76 (never-recognized flat-miss) still uncovered.
+
 ## 2026-06-05 — Pre-build ruling session executed: OQ-70/64/63 ruled and landed, intent_* declared GAP-08, perturbation-principle §1.1 added
 **Files:** prolog/signature_detection.pl, prolog/constraint_indexing.pl, prolog/narrative_ontology.pl, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prompts/constraint_story_generation_prompt_json.md, docs/design/design_gaps.md, docs/the_perturbation_principle.md
 **Tier:** landed
