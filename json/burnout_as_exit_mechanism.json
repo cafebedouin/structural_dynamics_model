@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "burnout_as_exit_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "burnout_exit",
+    "story_uid": "691ab9e5-4dde-4f5b-9b5b-d2b9fbd5d9ed",
+    "created_at": "2026-06-06T03:30:29.904525+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "claimed_type": "rope",
+    "human_readable": "Burnout as Exit Mechanism in Healthcare Workforce",
+    "topic_domain": "health_workforce_economics/organizational_behavior/gender_labor",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "healthcare_workers_with_exit_options",
+      "labor_market_efficiency"
+    ],
+    "victims": [
+      "healthcare_workers_without_exit_options",
+      "patient_care_continuity"
+    ],
+    "vindicated_propositions": [
+      "exit_voice_loyalty_framework",
+      "job_demands_resources_model"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Mobile Physician",
+      "comment": "PERSPECTIVE 1: MOBILE PHYSICIAN (ROPE) — Burnout functions as a coordination mechanism that converts diffuse workplace dissatisfaction into legible exit signal. The physician with transferable credentials and geographic mobility experiences burnout as information: 'this workplace is extractive; I should leave.' Low extraction because exit is available and burnout accelerates the decision rather than trapping the agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Rural Nurse",
+      "comment": "PERSPECTIVE 2: TRAPPED RURAL NURSE (SNARE) — Burnout without exit options becomes pure extraction. Geographic isolation, family ties, credential non-portability, and local monopsony employer create structural trap. Burnout signals 'leave' but exit is unavailable — the mechanism produces suffering without resolution. Maximum extraction because the signal cannot be acted upon."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Career Specialist",
+      "comment": "PERSPECTIVE 3: MID-CAREER SPECIALIST (TANGLED ROPE) — Burnout coordinates exit for those who can afford it while extracting from those who cannot. The specialist with subspecialty training, practice equity, and family obligations faces high exit costs but not impossibility. Burnout functions as both signal (coordination) and penalty (extraction) — the mechanism is genuinely hybrid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Healthcare System Administrator",
+      "comment": "PERSPECTIVE 4: HEALTHCARE SYSTEM (ROPE) — Burnout-driven exit is a labor market clearing mechanism. High-burnout environments lose workers to low-burnout competitors, creating pressure for workplace improvement. The system benefits from this coordination: burnout signals which organizations are failing and reallocates labor accordingly. Net beneficiary because the mechanism disciplines extractive employers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Physician Union Coalition",
+      "comment": "PERSPECTIVE 5: PHYSICIAN UNION (SCAFFOLD) — Organized labor sees burnout-as-exit as a temporary coordination failure with a sunset: collective bargaining, staffing ratios, duty-hour limits, and workplace protections are building structural alternatives to individual exit. The mechanism is transitional — as collective voice strengthens, individual exit becomes less necessary as the primary feedback signal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Labor Economist",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From a civilizational perspective, burnout-as-exit is a coordination mechanism that solves the information asymmetry problem in labor markets: workers have private information about workplace quality that employers and regulators cannot directly observe. Burnout converts private suffering into public signal (exit), enabling market discipline. Low extraction at this scale because the mechanism is genuinely functional for labor market efficiency, though it produces localized extraction for trapped agents."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exit_option_distribution",
+      "question": "What proportion of healthcare workers have genuine exit options versus being structurally trapped?",
+      "resolution_mechanism": "Empirical survey of exit barriers: geographic mobility constraints, credential portability, family obligations, debt burden, visa status, monopsony market structure. Stratify by specialty, geography, gender, and career stage.",
+      "impact": "If >70% have exit options: burnout is primarily coordination (Rope from most perspectives). If <30% have exit options: burnout is primarily extraction (Snare from most perspectives). Current estimate ~40-60% have meaningful exit options, placing the constraint in the Tangled Rope zone at population level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of genuine exit options across healthcare workforce"
+    },
+    {
+      "id": "gender_exit_asymmetry",
+      "question": "Does burnout-as-exit function differently for women versus men due to differential exit barriers (caregiving obligations, specialty segregation, harassment)?",
+      "resolution_mechanism": "Gender-stratified analysis of burnout prevalence, exit rates, and post-exit outcomes. Control for specialty, career stage, and family structure. Measure whether women experience higher burnout but lower exit rates (trapped) or similar exit rates with different destinations (constrained).",
+      "impact": "If women face systematically higher exit barriers: the mechanism is more extractive for women (gender-differentiated directionality). If exit barriers are symmetric: the mechanism's coordination function is gender-neutral. Preliminary evidence suggests asymmetry (women report higher burnout but lower exit rates in some specialties).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gender asymmetry in exit barriers and burnout-exit correlation"
+    },
+    {
+      "id": "collective_voice_substitution",
+      "question": "Can collective bargaining and workplace protections substitute for individual exit as a feedback mechanism, or is exit irreducibly necessary for labor market discipline?",
+      "resolution_mechanism": "Comparative analysis of healthcare systems with strong collective bargaining (unionized hospitals, European national health systems) versus exit-dependent systems (U.S. private practice). Measure workplace quality improvements, burnout prevalence, and exit rates. Test whether voice and exit are complements or substitutes.",
+      "impact": "If voice substitutes for exit: Scaffold perspective is correct — burnout-as-exit has a genuine sunset as collective mechanisms mature. If voice and exit are complements: the mechanism persists even with strong unions, and Scaffold perspective is aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether collective voice can substitute for individual exit"
+    },
+    {
+      "id": "burnout_measurement_validity",
+      "question": "Do self-reported burnout scores measure genuine psychological distress or strategic signaling of exit intent?",
+      "resolution_mechanism": "Validation studies comparing self-reported burnout (Maslach Burnout Inventory) with objective measures (cortisol levels, sleep disruption, cognitive performance) and behavioral outcomes (actual exit, reduced hours, specialty switching). Test whether burnout scores predict exit independent of job satisfaction and whether scores change strategically during exit negotiation.",
+      "impact": "If burnout is genuine distress: the mechanism's extraction component is real psychological harm. If burnout is partly strategic signaling: the mechanism is more purely coordinative (workers use burnout framing to justify exit). Likely mixed: genuine distress that also functions as legible exit justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of burnout measurement as distress versus signal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "burnout_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22,
+      "id_override": "burnout_extract_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25,
+      "id_override": "burnout_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.27,
+      "id_override": "burnout_extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28,
+      "id_override": "burnout_extract_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "burnout_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17,
+      "id_override": "burnout_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "id_override": "burnout_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.21,
+      "id_override": "burnout_theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22,
+      "id_override": "burnout_theater_2020"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "burnout_suppress_2000"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3,
+      "id_override": "burnout_suppress_2010"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35,
+      "id_override": "burnout_suppress_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Burnout in healthcare workers — characterized by emotional exhaustion, depersonalization, and reduced sense of accomplishment — functions as a mechanism that converts workplace dissatisfaction into labor market exit. Approximately 50% of U.S. physicians report burnout symptoms, and burnout scores correlate strongly with exit within 2 years. The constraint exhibits different types depending on the worker's exit options: for mobile workers with transferable credentials, burnout is a coordination mechanism (Rope) that signals 'this workplace is extractive; reallocate to better employer.' For trapped workers with geographic, financial, or credential barriers, burnout becomes pure extraction (Snare) — the signal fires but cannot be acted upon, producing suffering without resolution. The mechanism is genuinely hybrid at population level (Tangled Rope) because exit option distribution is heterogeneous: roughly 40-60% of healthcare workers have meaningful exit options, while the remainder face structural barriers. The constraint is downstream of administrative_burden_extraction and patient_demand_escalation — these upstream constraints produce the workplace stressors that trigger burnout, while burnout-as-exit is the labor market's response mechanism. Theater ratio is low (0.22) because burnout measurement and exit behavior are genuinely functional — this is not performative compliance but real psychological distress producing real labor reallocation. Suppression has increased over the interval (0.25 → 0.35) as exit barriers have risen: credential requirements have intensified, geographic monopsony has increased in rural areas, and debt burdens have grown.",
+    "key_agents": [
+      "Mobile Physician: Primary beneficiary (moderate/mobile) — burnout functions as coordination signal enabling exit to better workplace; experiences low extraction because exit is available",
+      "Trapped Rural Nurse: Primary victim (powerless/trapped) — burnout without exit options produces maximum extraction; geographic isolation and monopsony employer create structural trap",
+      "Mid-Career Specialist: Mixed position (moderate/constrained) — burnout coordinates exit for those who can afford high switching costs while extracting from those who cannot; genuinely hybrid experience",
+      "Healthcare System Administrator: Institutional beneficiary (institutional/arbitrage) — burnout-driven exit disciplines extractive employers and reallocates labor to better organizations; net beneficiary of market clearing mechanism",
+      "Physician Union Coalition: Organized agents (organized/constrained) — building collective voice alternatives to individual exit; sees mechanism as transitional with sunset as bargaining power grows",
+      "Labor Economist: Analytical observer (analytical/analytical) — sees burnout-as-exit as coordination mechanism solving information asymmetry in labor markets; low extraction at civilizational scale despite localized harm to trapped agents"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The mechanism produces genuine psychological harm (emotional exhaustion, depersonalization) but this harm is functional for labor market coordination — it converts private information about workplace quality into public signal (exit). For workers with exit options, the extraction is minimal because burnout accelerates a decision they can act on. For trapped workers, extraction is severe because the signal fires without resolution. Population-level extractiveness reflects the heterogeneous distribution of exit options (roughly 40-60% mobile, 40-60% constrained or trapped). The value has increased modestly over the interval (0.18 → 0.28) as exit barriers have risen and workplace stressors have intensified. Suppression (0.35): Moderate. Exit barriers include geographic immobility (family ties, rural isolation), credential non-portability (specialty training, state licensing), financial constraints (practice equity, debt burden, visa status), and monopsony market structure (single dominant employer in region). Suppression has increased over the interval as these barriers have intensified. Theater ratio (0.22): Low. Burnout measurement (Maslach Burnout Inventory) and exit behavior are genuinely functional — workers report real distress and act on it when able. Some performative element exists (burnout as socially acceptable exit justification, strategic reporting during contract negotiation) but the mechanism is primarily functional rather than theatrical. Theater has increased slightly as burnout discourse has become institutionalized and workers have learned to frame exit in burnout terms.",
+    "directionality_logic": "Directionality is determined by exit options and beneficiary/victim status. Mobile workers with exit options are beneficiaries — burnout functions as coordination signal they can act on, producing low or negative effective extraction. Trapped workers without exit options are victims — burnout signal fires but cannot be acted upon, producing maximum effective extraction. Constrained workers with high-cost exit options experience intermediate extraction — the mechanism coordinates for those who can afford switching costs while extracting from those who cannot. The healthcare system is a beneficiary because burnout-driven exit disciplines extractive employers and reallocates labor efficiently. The analytical observer sees low extraction at civilizational scale because the mechanism is genuinely functional for labor market efficiency, though it produces localized harm. Gender asymmetry likely exists (omega variable) — women may face systematically higher exit barriers due to caregiving obligations, specialty segregation, and harassment, making the mechanism more extractive for women even at the same burnout level.",
+    "perspectival_gap": "The constraint demonstrates how exit options transform the same mechanism from coordination to extraction. The mobile physician sees Rope — burnout is information enabling better job match. The trapped nurse sees Snare — burnout is suffering without resolution. The mid-career specialist sees Tangled Rope — burnout coordinates for some while extracting from others. The healthcare system sees Rope — burnout-driven exit disciplines bad employers. The union sees Scaffold — the mechanism is transitional as collective voice builds. The analytical observer sees Rope at civilizational scale — the mechanism solves information asymmetry despite localized harm. No perspective is wrong — each reflects the agent's structural position. The population-level classification (Tangled Rope) reflects heterogeneous exit option distribution rather than uniform experience.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that burnout-as-exit is simultaneously coordination and extraction depending on exit option distribution. For workers who can leave, burnout is a coordination mechanism that improves job match quality — it converts diffuse dissatisfaction into legible exit signal, enabling labor market discipline of extractive employers. For workers who cannot leave, burnout is pure extraction — the signal fires but cannot be acted upon, producing psychological harm without resolution. The mechanism is not 'really' one or the other — it is genuinely both, and the classification depends on the observer's structural position. The analytical observer's Rope classification at civilizational scale is not a false summit — at that scale, the mechanism genuinely coordinates labor reallocation and improves market efficiency. But this coordination function coexists with severe localized extraction for trapped agents. The Tangled Rope classification at population level reflects this irreducible hybridity: the same mechanism coordinates and extracts simultaneously because exit option distribution is heterogeneous."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Burnout-as-exit is downstream of administrative_burden_extraction and patient_demand_escalation. The upstream constraints produce workplace stressors (administrative load, patient volume, emotional demands); burnout-as-exit is the labor market's response mechanism. The upstream constraints have their own extractiveness values reflecting the direct burden on workers; burnout-as-exit has its own extractiveness reflecting the exit mechanism's functionality versus harm. The constraints are structurally distinct: upstream constraints could exist without producing burnout (if workers had infinite resilience), and burnout could exist without the specific upstream stressors (if other workplace factors produced it). They are linked because the upstream constraints are empirically the primary drivers of burnout prevalence in contemporary U.S. healthcare."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,263 @@
+{
+  "header": {
+    "constraint_id": "dependency_lock_in",
+    "version": "1.0",
+    "generated_date": "2025-06-08",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dep_lock",
+    "story_uid": "a7f3c8e1-4d2a-4b9e-8f1c-2e5d6a9b3c7f",
+    "created_at": "2025-06-08T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.67,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NHS Dependency Lock-In for AI-Guided Healthcare Precision Infrastructure",
+    "topic_domain": "healthcare_technology_policy/genomic_medicine/ai_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_aighp_providers",
+      "proprietary_platform_vendors",
+      "data_intermediaries"
+    ],
+    "victims": [
+      "nhs_autonomy",
+      "nhs_patients",
+      "public_health_system_sovereignty",
+      "alternative_provider_market"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "NHS Patients",
+      "comment": "PERSPECTIVE 1: NHS PATIENTS (SNARE) — Patients have no exit from the NHS system and no visibility into or control over which private vendors process their genomic data. They bear the full cost of vendor lock-in through reduced care quality if proprietary systems fail or extract rents, yet have no agency to switch providers or demand interoperability. Maximum experienced extraction — structurally trapped with no alternative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NHS Procurement Authority",
+      "comment": "PERSPECTIVE 2: NHS PROCUREMENT AUTHORITY (TANGLED ROPE) — The NHS genuinely needs AIGHP infrastructure to deliver genomic medicine (coordination function), but lacks in-house capacity to build or maintain it. Procurement contracts with private providers solve a real problem but embed asymmetric extraction through proprietary lock-in, high switching costs, and audit opacity. The NHS has institutional power but constrained exit — switching vendors requires rebuilding data pipelines, retraining staff, and risking service continuity. Mixed beneficiary and victim."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Private AIGHP Providers",
+      "comment": "PERSPECTIVE 3: PRIVATE AIGHP PROVIDERS (ROPE) — Vendors experience the constraint as pure coordination: they provide infrastructure the NHS cannot build itself, enabling genomic medicine deployment. From their perspective, proprietary systems and data retention are legitimate business models, not extraction. They have arbitrage-level exit (can serve other healthcare systems globally) and are net beneficiaries — extraction flows toward them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Open Health Data Coalition",
+      "comment": "PERSPECTIVE 4: OPEN HEALTH DATA COALITION (SCAFFOLD) — Organized advocacy groups (OpenSAFELY, NHS Digital transformation initiatives, open-source genomics consortia) see the dependency as a temporary coordination failure with a sunset: public investment in open-source AIGHP infrastructure, interoperability standards (FHIR, GA4GH), and in-house NHS AI capacity-building will create exit pathways within 10-15 years. They experience low extraction because they have agency and see a structural path to dissolving the lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "NHS Clinical Staff",
+      "comment": "PERSPECTIVE 5: NHS CLINICAL STAFF (TANGLED ROPE) — Clinicians benefit from AIGHP tools that improve diagnostic accuracy and treatment personalization (coordination), but are constrained by proprietary system opacity, lack of audit trails, and vendor-imposed workflow rigidity. They cannot exit to alternative systems without institutional support, and bear career risk if they challenge vendor recommendations. Mixed experience — genuine utility alongside extractive constraints."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Alternative Provider Market",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE PROVIDER MARKET (SNARE) — Smaller vendors, open-source projects, and academic research groups are structurally excluded by high switching costs, proprietary data formats, and network effects favoring incumbent platforms. They cannot compete on equal terms because NHS data is already locked into proprietary systems, and interoperability is controlled by incumbents. Pure extraction — the lock-in suppresses market alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the constraint exhibits both genuine coordination (private expertise enables genomic medicine deployment the NHS could not achieve alone) and asymmetric extraction (proprietary lock-in, audit opacity, switching costs, suppression of alternatives). The coordination function is real but the extraction is substantial and structurally embedded. Tangled Rope is the analytically correct classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "in_house_capacity_feasibility",
+      "question": "Could the NHS realistically build and maintain in-house AIGHP infrastructure at scale, or does genuine technical complexity require private sector expertise?",
+      "resolution_mechanism": "Comparative analysis of public vs. private AI infrastructure projects in healthcare (e.g., NHS Digital vs. Palantir Foundry deployments); cost-benefit analysis of in-house capacity investment vs. procurement; assessment of NHS AI talent retention capacity",
+      "impact": "If feasible: the dependency is a policy choice (higher extractiveness, snare from more perspectives). If infeasible: the dependency reflects genuine coordination need (lower extractiveness, rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether NHS could build in-house AIGHP capacity"
+    },
+    {
+      "id": "interoperability_standard_adoption",
+      "question": "Will open interoperability standards (FHIR, GA4GH) actually enable NHS to switch AIGHP vendors without prohibitive cost, or do proprietary extensions and data lock-in persist despite nominal standard compliance?",
+      "resolution_mechanism": "Longitudinal tracking of NHS vendor switching attempts; measurement of actual switching costs vs. projected costs; analysis of proprietary extension prevalence in FHIR implementations",
+      "impact": "If standards enable switching: scaffold perspective confirmed, sunset is real. If proprietary lock-in persists: standards are theater, extraction is structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interoperability standards reduce switching costs"
+    },
+    {
+      "id": "audit_opacity_necessity",
+      "question": "Is proprietary system opacity (inability to audit AIGHP algorithms and data flows) a necessary protection of trade secrets, or an extractive mechanism that prevents accountability?",
+      "resolution_mechanism": "Comparison of audit transparency in open-source vs. proprietary AIGHP systems; assessment of whether trade secret protection requires full opacity or whether partial transparency (e.g., model cards, audit APIs) is feasible; analysis of regulatory audit requirements in other jurisdictions",
+      "impact": "If opacity is necessary: lower extractiveness (legitimate coordination cost). If opacity is extractive: higher suppression (prevents accountability and exit).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether audit opacity is necessary or extractive"
+    },
+    {
+      "id": "data_sovereignty_threshold",
+      "question": "At what threshold of genomic data held by private entities does NHS lose effective sovereignty over public health policy, and is that threshold already crossed?",
+      "resolution_mechanism": "Quantitative analysis of NHS genomic data distribution (public vs. private holdings); assessment of policy leverage loss at different data concentration levels; historical case studies of data-driven policy capture",
+      "impact": "If threshold not crossed: dependency is reversible (scaffold logic holds). If threshold crossed: dependency is structural lock-in (snare from more perspectives).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Data concentration threshold for sovereignty loss"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "dep_lock_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42,
+      "id_override": "dep_lock_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5,
+      "id_override": "dep_lock_extract_t4"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55,
+      "id_override": "dep_lock_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58,
+      "id_override": "dep_lock_extract_t8"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "dep_lock_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.52,
+      "id_override": "dep_lock_suppress_t2"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.6,
+      "id_override": "dep_lock_suppress_t4"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65,
+      "id_override": "dep_lock_suppress_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.67,
+      "id_override": "dep_lock_suppress_t8"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "dep_lock_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35,
+      "id_override": "dep_lock_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4,
+      "id_override": "dep_lock_theater_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45,
+      "id_override": "dep_lock_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48,
+      "id_override": "dep_lock_theater_t8"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The NHS dependency lock-in for AI-Guided Healthcare Precision (AIGHP) infrastructure represents a structural tension between the genuine need for advanced genomic medicine capabilities and the asymmetric extraction embedded in proprietary vendor relationships. The NHS lacks in-house capacity to build, deploy, or maintain the computational infrastructure, AI expertise, and data pipelines required for genomic medicine at scale. This capacity gap creates dependency on private providers (Palantir, DeepMind Health, genomic data platforms) whose proprietary systems embed lock-in through non-interoperable data formats, opaque algorithms, high switching costs, and contractual terms that retain vendor control over NHS genomic data. The constraint exhibits genuine coordination (private expertise enables capabilities the NHS cannot achieve alone) alongside substantial extraction (vendor lock-in suppresses alternatives, prevents audit, and concentrates control over public health data in private hands). Theater ratio (0.48) reflects that procurement governance and interoperability standards are partially performative: FHIR compliance is nominal but proprietary extensions persist, audit requirements exist but cannot penetrate algorithmic opacity, and 'partnership' rhetoric masks asymmetric power. The constraint is intensifying over the 8-year interval as more NHS genomic data migrates into proprietary platforms and switching costs compound.",
+    "key_agents": [
+      "NHS Patients: Primary victim (powerless/trapped) — no exit from NHS system, no control over vendor selection, bear full cost of lock-in through reduced care quality or privacy loss",
+      "NHS Procurement Authority: Mixed victim and beneficiary (institutional/constrained) — needs AIGHP infrastructure but constrained by switching costs and lack of in-house capacity; experiences both coordination and extraction",
+      "Private AIGHP Providers: Primary beneficiary (institutional/arbitrage) — capture rents through proprietary lock-in, data retention, and switching costs; global arbitrage exit options",
+      "NHS Clinical Staff: Secondary victim (moderate/constrained) — benefit from diagnostic tools but constrained by system opacity and vendor-imposed workflows",
+      "Alternative Provider Market: Secondary victim (powerless/trapped) — structurally excluded by incumbent lock-in and network effects",
+      "Open Health Data Coalition: Organized agents (organized/mobile) — building open-source alternatives and interoperability standards with sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Substantial. Private vendors capture significant rents through proprietary lock-in, switching costs (estimated at 40-60% of initial deployment cost), data retention clauses, and audit opacity. The NHS pays not just for services but for ongoing dependency — each contract renewal embeds deeper lock-in as more data migrates into proprietary formats. However, extraction is not maximal because genuine coordination value exists: vendors provide expertise and infrastructure the NHS demonstrably lacks. The value reflects asymmetric extraction layered on top of real coordination, not pure rent extraction. Suppression (0.67): High. Switching costs are prohibitive (multi-year data migration, staff retraining, service continuity risk), proprietary data formats prevent interoperability despite nominal FHIR compliance, audit opacity prevents accountability, and network effects favor incumbents. Alternative providers are structurally excluded. However, suppression is not total — open-source initiatives exist, some NHS trusts retain data sovereignty, and regulatory pressure for interoperability is building. Theater ratio (0.48): Moderate. Procurement governance includes audit requirements, interoperability standards, and partnership rhetoric, but much of this is performative: audits cannot penetrate algorithmic black boxes, FHIR compliance is nominal (proprietary extensions dominate), and 'partnership' language masks asymmetric power. The theater is rising over time as governance mechanisms fail to constrain vendor power. All three metrics show upward trajectories, indicating extraction accumulation and enforcement intensification as the dependency deepens.",
+    "directionality_logic": "NHS patients are full victims with trapped exit — they experience maximum effective extraction because they have no agency and no alternative. The NHS procurement authority is a mixed case: institutional power but constrained exit, declared as both beneficiary (receives AIGHP capabilities) and victim (bears lock-in costs). The engine will derive moderate directionality, producing substantial but not maximal chi. Private AIGHP providers are full beneficiaries with arbitrage exit — they experience the constraint as pure coordination (negative chi). NHS clinical staff are moderate-power victims with constrained exit — they experience substantial extraction but have some agency. The alternative provider market is powerless victims with trapped exit — they experience maximum extraction through structural exclusion. The open health data coalition is organized with mobile exit — they experience low extraction because they have agency and see an exit path. The analytical observer sees the structural reality: genuine coordination layered with asymmetric extraction, producing Tangled Rope classification.",
+    "perspectival_gap": "The constraint demonstrates the full indexical range from snare (patients, alternative providers) through tangled rope (NHS authority, clinical staff, analytical observer) to rope (private vendors) and scaffold (open data coalition). Patients see pure extraction — they are trapped in a system where private vendors control their genomic data with no accountability. The NHS procurement authority sees mixed coordination and extraction — they need the infrastructure but are locked into extractive terms. Private vendors see pure coordination — they are solving a problem the NHS cannot solve alone. The open data coalition sees a temporary problem with a sunset — open-source infrastructure and interoperability standards will dissolve the lock-in within a generation. Clinical staff see utility constrained by opacity — the tools work but the black-box nature prevents full trust. Alternative providers see structural exclusion — the lock-in suppresses market competition. The analytical observer sees the structural truth: this is a tangled rope, not a rope or a snare. The coordination function is real (the NHS genuinely lacks capacity) but the extraction is substantial and embedded (proprietary lock-in is not a necessary feature of AIGHP deployment).",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that tangled rope is the structurally correct classification when genuine coordination and asymmetric extraction coexist. The NHS genuinely needs AIGHP infrastructure to deliver genomic medicine — this is not a false coordination story. But the proprietary lock-in, audit opacity, switching costs, and suppression of alternatives are extractive mechanisms layered on top of the coordination function. The mandate (deploy genomic medicine) has not outlived its function, but the execution (proprietary vendor dependency) embeds extraction that is not necessary to achieve the mandate. Open-source alternatives, interoperability standards, and in-house capacity investment could achieve the same coordination function with lower extraction. The tangled rope classification captures this structural reality: the constraint is neither pure coordination (rope) nor pure extraction (snare), but a hybrid where both functions coexist and must be measured independently."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity",
+      "data_sovereignty_erosion"
+    ],
+    "dual_formulation_note": "The dependency lock-in is downstream of scientific_viability_uncertainty (the NHS would not deploy AIGHP infrastructure if the underlying genomic medicine science were not viable) but represents a distinct structural constraint. The upstream constraint has its own extractiveness reflecting the contested empirical status of AIGHP efficacy; the dependency lock-in has its own extractiveness reflecting the vendor power asymmetry and proprietary lock-in mechanisms."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "scientific_viability_uncertainty"
+    ]
+  }
+}

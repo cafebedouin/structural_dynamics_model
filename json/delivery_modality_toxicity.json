@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "delivery_modality_toxicity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dmt",
+    "story_uid": "f8a3c7e1-9d4b-4c2a-8f6e-2d1a5b9c3e7f",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Delivery Modality Toxicity in Adenine Base Editing",
+    "topic_domain": "biomedical_research/genome_editing/reproductive_medicine",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "rnp_delivery_research_groups",
+      "embryo_viability_optimization_programs",
+      "clinical_translation_pathways"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "rna_sensing_pathway_hypothesis",
+      "delivery_modality_primacy_over_editor_identity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "RNP Delivery Research Groups",
+      "comment": "PERSPECTIVE 1: RNP DELIVERY RESEARCH GROUPS (ROPE) — Primary beneficiaries who discovered the delivery modality constraint. Experience this as pure coordination: the constraint solves the genuine problem of enabling base editing in embryos without toxicity. Mobile exit (can switch to other delivery methods or editor types) and institutional power mean low effective extraction. The constraint coordinates research effort toward viable clinical pathways."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Replication Labs",
+      "comment": "PERSPECTIVE 2: INDEPENDENT REPLICATION LABS (ROPE) — Moderate power, constrained exit (invested in base editing infrastructure but can pivot to other genome editing modalities). Experience the constraint as coordination: the delivery modality requirement is a genuine technical boundary that, once known, enables successful experiments. Constrained exit raises effective extraction slightly above institutional/mobile agents, but the coordination function dominates — knowing the constraint prevents wasted effort."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Clinical Translation Consortia",
+      "comment": "PERSPECTIVE 3: CLINICAL TRANSLATION CONSORTIA (ROPE) — Organized agents (multi-institution partnerships, regulatory working groups) with generational time horizon and mobile exit (can pursue alternative therapeutic modalities). See the constraint as coordination: the delivery modality requirement is a design constraint that, once satisfied, enables safe clinical translation. Low effective extraction because the constraint is not suppressing alternatives — it is revealing which technical path works."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Pharmaceutical Development Programs",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL DEVELOPMENT PROGRAMS (ROPE) — Powerful agents with arbitrage-level exit (can invest in multiple therapeutic platforms simultaneously) and immediate time horizon (quarterly decision cycles). Experience minimal effective extraction: the constraint is a technical specification that guides R&D investment toward viable products. The delivery modality requirement is not extractive — it is informative."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational/universal perspective, the delivery modality toxicity appears as a biological constraint: mammalian embryos have an RNA-sensing pathway that responds to exogenous mRNA but not to protein. This is a property of the developmental biology, not an institutional arrangement. The constraint would persist regardless of who studies it or whether anyone enforces it. Zero degrees of freedom for all indices — the embryo's response to mRNA vs RNP is not negotiable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rna_sensing_mechanism_identity",
+      "question": "What is the molecular identity of the RNA-sensing pathway that causes mRNA-delivered ABE toxicity?",
+      "resolution_mechanism": "Systematic knockout screens of candidate innate immune sensors (RIG-I, MDA5, TLR3, PKR, OAS); rescue experiments with pathway inhibitors; transcriptomic profiling of arrested embryos",
+      "impact": "If pathway is identified and can be transiently inhibited: mRNA delivery becomes viable, expanding the coordination solution space. If pathway is essential for early development: RNP delivery remains the only viable modality, confirming the constraint as a hard biological limit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Identity of the RNA-sensing pathway causing mRNA toxicity"
+    },
+    {
+      "id": "species_generalizability",
+      "question": "Does the delivery modality toxicity generalize across mammalian species, or is it specific to the tested model (likely mouse or human)?",
+      "resolution_mechanism": "Cross-species replication: test mRNA vs RNP delivery of ABE in bovine, porcine, primate embryos; compare developmental arrest phenotypes and transcriptomic signatures",
+      "impact": "If species-specific: the constraint is a contingent feature of one developmental program, not a universal mammalian property. If universal: the constraint is a conserved feature of early mammalian development, strengthening the mountain classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether delivery modality toxicity is species-specific or universal"
+    },
+    {
+      "id": "editor_generalizability",
+      "question": "Does the delivery modality toxicity apply to all base editors (CBE, ABE variants, prime editors) or only to the specific ABE variant tested?",
+      "resolution_mechanism": "Systematic comparison: deliver multiple base editor architectures (TadA8e, TadA9, ABE8e, CBE4max, PE2, PE3) as both mRNA and RNP; measure blastocyst rates and arrest phenotypes",
+      "impact": "If editor-specific: the constraint is a property of one protein's mRNA sequence (codon usage, secondary structure, UTR elements), not a general delivery modality effect. If editor-general: the constraint is a property of the delivery modality itself, confirming the structural hypothesis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether toxicity is specific to one ABE variant or general to all base editors"
+    },
+    {
+      "id": "dose_response_threshold",
+      "question": "Is there a dose threshold below which mRNA delivery is tolerated, or is the toxicity binary (any mRNA causes arrest)?",
+      "resolution_mechanism": "Dose-response curve: inject embryos with serial dilutions of ABE mRNA (1 pg to 1000 pg); measure developmental outcomes and identify minimum toxic dose",
+      "impact": "If threshold exists: low-dose mRNA delivery may be viable for some applications, expanding the solution space. If binary: the constraint is all-or-nothing, confirming that RNP is the only viable modality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mRNA toxicity has a dose threshold or is binary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "dmt_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.12,
+      "id_override": "dmt_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.08,
+      "id_override": "dmt_theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "dmt_extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.15,
+      "id_override": "dmt_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.12,
+      "id_override": "dmt_extract_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The delivery modality toxicity constraint in adenine base editing represents a sharp technical boundary in genome editing: the same editor protein (ABE) enables normal embryo development when delivered as ribonucleoprotein (RNP) but causes invariable early arrest when delivered as mRNA. This is not a gradual dose-response or a statistical tendency — it is a binary outcome (32-33% blastocyst rate for RNP vs 0/19 embryos for mRNA). The constraint solves a genuine coordination problem: research groups need to know which delivery modality works to conduct successful experiments and advance toward clinical applications. The structural delta is striking because it isolates delivery modality as the causal variable — the editor identity, the target sequence, and the experimental protocol are held constant. The only difference is the molecular form of the editor when it enters the cell. This constraint is classified as Rope from all non-analytical perspectives because it exhibits the canonical coordination structure: a genuine collective-action problem (how to edit embryos without toxicity) with a solution (RNP delivery) that benefits participants and does not suppress alternatives. The analytical perspective classifies it as Mountain because the embryo's differential response to mRNA vs protein appears to be a biological property of early development, not an institutional arrangement.",
+    "key_agents": [
+      "RNP Delivery Research Groups: Primary beneficiaries (institutional/mobile) — discovered the constraint and benefit from priority in viable clinical pathways",
+      "Independent Replication Labs: Secondary beneficiaries (moderate/constrained) — benefit from knowing the constraint, preventing wasted effort on mRNA delivery",
+      "Clinical Translation Consortia: Organized beneficiaries (organized/mobile) — use the constraint as a design specification for safe therapeutic development",
+      "Pharmaceutical Development Programs: Powerful beneficiaries (powerful/arbitrage) — incorporate the constraint as a technical requirement in R&D investment decisions",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — sees the constraint as a biological property of mammalian embryos"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Low. The constraint has minimal extractive overhead. The original discovery group benefits from priority and citation advantage, but the benefit is proportional to the genuine technical contribution — they solved a real problem. Other groups can immediately adopt RNP delivery without licensing barriers, proprietary reagents, or institutional gatekeeping. The extractiveness reflects only the natural first-mover advantage in a competitive research environment, not structural rent-seeking. Suppression (0.18): Low. The constraint does not suppress alternatives — it reveals which alternative works. Groups are free to pursue mRNA delivery if they believe they can solve the toxicity problem, or to abandon base editing entirely for other genome editing modalities (CRISPR-Cas9, prime editing, homology-directed repair). The suppression value reflects only the resource investment required to switch modalities, not active enforcement. Theater ratio (0.08): Very low. The constraint is directly testable: inject embryos with mRNA or RNP, count blastocysts. There is minimal performative content — the developmental outcome is the verification mechanism. The small theater component reflects only the standard scientific communication overhead (manuscript preparation, peer review) that applies to all experimental findings. The theater ratio has decreased over the interval as replication data accumulated, reducing uncertainty about the constraint's reality.",
+    "directionality_logic": "All non-analytical perspectives are beneficiaries with mobile or constrained exit options, producing low directionality values (d near 0.0-0.3) and correspondingly low or negative effective extraction (chi). The RNP delivery research groups are institutional beneficiaries with mobile exit — they can pivot to other editors or delivery methods if needed — producing d near 0.0 (full beneficiary). Independent replication labs are moderate-power beneficiaries with constrained exit (invested in base editing infrastructure) — producing d near 0.2 (mostly beneficiary, slight extraction from switching costs). Clinical translation consortia are organized beneficiaries with mobile exit and generational time horizon — producing d near 0.1 (strong beneficiary). Pharmaceutical programs are powerful beneficiaries with arbitrage exit — producing d near 0.0 (full beneficiary). The analytical perspective is not a beneficiary or victim in the structural sense — it observes the constraint as a biological property — producing d = 0.5 (symmetric) by default, but the mountain classification derives from the natural law profile (emerges_naturally would be true if this were claimed as mountain), not from extraction metrics.",
+    "perspectival_gap": "The perspectival gap is minimal for this constraint because all agents with structural relationships to it (research groups, clinical programs, pharmaceutical developers) experience it as coordination. The only divergence is the analytical perspective's mountain classification, which reflects a genuine structural difference: from a civilizational/universal view, the embryo's response to mRNA vs RNP is a biological property that would persist regardless of institutional arrangements. This is not a false summit — there are no identifiable beneficiaries who collect rents from the constraint's operation. The constraint is not enforced; it is discovered. The mountain classification is warranted because the constraint exhibits the natural law profile: it emerges from the biology, not from institutional design; it would persist even if all current research groups disbanded; and it meets negligible resistance because it is not contested (groups adopt RNP delivery once they learn it works). The gap between rope (from institutional perspectives) and mountain (from analytical perspective) reflects the difference between experiencing a constraint as a coordination solution and recognizing it as a biological limit.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that rope and mountain classifications can both be structurally valid for the same phenomenon, viewed from different indices. The research groups experience coordination (rope) because the constraint solves their problem — knowing which delivery modality works enables successful experiments. The analytical observer recognizes a biological limit (mountain) because the embryo's differential response to mRNA vs protein is not an institutional arrangement. Both classifications are correct from their respective perspectives. The constraint is not a false summit because no one collects rents from its operation — the original discovery group benefits from priority, but this is proportional to their genuine contribution, not structural extraction. The constraint is not a snare because it does not suppress alternatives — groups are free to pursue other genome editing modalities. The constraint is not a tangled rope because there are no identifiable victims — all agents with structural relationships to the constraint benefit from knowing it exists. The mandatrophy is resolved by recognizing that the indexical tuple determines classification: institutional agents with coordination problems see rope; analytical observers with civilizational time horizons see mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is structurally independent — it is not downstream of other genome editing constraints and does not have sibling constraints with different epsilon values. The delivery modality toxicity is a single, stable phenomenon with one epsilon value regardless of how it is measured (blastocyst rate, cell count, developmental stage). If future work identifies multiple distinct RNA-sensing pathways with different toxicity profiles, those would be separate constraints requiring decomposition."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  }
+}

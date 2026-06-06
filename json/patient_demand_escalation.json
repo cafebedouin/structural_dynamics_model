@@ -1,0 +1,279 @@
+{
+  "header": {
+    "constraint_id": "patient_demand_escalation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pde",
+    "story_uid": "a7f3c8e1-4d2b-4a9e-b8f6-3e5d7c9a1b4f",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patient Demand Escalation in Primary Care",
+    "topic_domain": "health_workforce_economics/organizational_behavior/gender_labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patients_with_complex_needs",
+      "health_system_administrators",
+      "insurance_payers"
+    ],
+    "victims": [
+      "primary_care_physicians",
+      "clinical_support_staff",
+      "physician_families"
+    ],
+    "vindicated_propositions": [
+      "patient_centered_care_doctrine",
+      "healthcare_as_service_industry_framing"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Primary Care Physician",
+      "comment": "PERSPECTIVE 1: PRIMARY CARE PHYSICIAN (SNARE) — Identity-locked by professional commitment and caregiving identity. Structurally mobile (could change specialties, leave medicine, relocate) but identity is constituted through the patient relationship and professional duty. Exit would require abandoning the physician identity constructed over decades of training and practice. Experiences maximum extraction: rising message volume, multi-problem visits, after-hours contact expectations with no corresponding time allocation or compensation increase. The 41.1% exit reason 'unrealistic patient demands' reflects identity lock breaking under sustained extraction — physicians leave only when the identity frame itself fractures."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Clinical Support Staff",
+      "comment": "PERSPECTIVE 2: CLINICAL SUPPORT STAFF (SNARE) — Constrained by regional labor market, specialized training investment, and economic dependency. Face high barriers to exit (retraining costs, wage loss, geographic immobility) but not identity-locked — their professional identity is less fused with patient service than physicians'. Bear extraction through message triage burden, patient frustration management, and schedule compression without decision-making authority or compensation adjustment. Lower power than physicians but similar extraction experience."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Patient with Complex Needs",
+      "comment": "PERSPECTIVE 3: PATIENT WITH COMPLEX NEEDS (TANGLED ROPE) — Mobile within the healthcare system (can switch providers, seek specialists, use urgent care) and benefits from expanded access expectations (can address multiple problems per visit, message between visits, expect after-hours response). But also constrained by the system's capacity limits: longer wait times, shorter visit durations, physician burnout reducing care quality. Genuine coordination function (multi-problem visits are clinically efficient for complex patients) coexists with extraction from physicians. Mixed experience: beneficiary of access expansion, victim of system strain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Health System Administrator",
+      "comment": "PERSPECTIVE 4: HEALTH SYSTEM ADMINISTRATOR (ROPE) — Benefits from patient satisfaction metrics, reduced emergency department utilization, and competitive positioning through expanded access promises. Experiences the constraint as coordination: meeting patient expectations improves market share and payer relationships. Has arbitrage-level exit (can shift between health systems, consulting, policy roles) and institutional power to set access policies. Net beneficiary — extraction runs away from this agent toward physicians."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Insurance Payer",
+      "comment": "PERSPECTIVE 5: INSURANCE PAYER (ROPE) — Benefits from primary care gatekeeping that reduces specialist referrals and emergency utilization. Expanded primary care access (multi-problem visits, message-based triage, after-hours availability) substitutes for higher-cost care settings. Experiences the constraint as efficient coordination: primary care physicians absorb demand that would otherwise flow to expensive alternatives. Has arbitrage exit and institutional power. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Physician Family Member",
+      "comment": "PERSPECTIVE 6: PHYSICIAN FAMILY MEMBER (TANGLED ROPE) — Constrained by economic dependency on physician income and geographic ties to physician's practice location. Benefits from physician's professional status and income but bears extraction through absent evenings (message response), interrupted weekends (patient calls), and biographical-scale burnout affecting family stability. Genuine coordination function (family economic security) coexists with extraction (time and emotional availability). Mixed experience: beneficiary of physician career, victim of demand escalation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Primary Care Advocacy Coalition",
+      "comment": "PERSPECTIVE 7: PRIMARY CARE ADVOCACY COALITION (SCAFFOLD) — Organized agents (medical associations, physician unions, burnout researchers) see the demand escalation as a temporary coordination failure with a sunset: team-based care models, AI-assisted triage, asynchronous care platforms, and scope-of-practice expansion for nurse practitioners and physician assistants are building alternative pathways that redistribute demand. Constrained by institutional inertia and payer resistance but has organizational power and sees an exit path. Estimated sunset: 10-15 years for care team models to mature and for compensation structures to adjust."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the constraint exhibits both genuine coordination (patients with complex needs benefit from expanded access; multi-problem visits are clinically efficient; message-based triage reduces unnecessary office visits) and asymmetric extraction (physicians bear time and emotional costs without compensation adjustment; identity-locked professionals cannot exit; 41.1% cite unrealistic demands as exit reason). The coordination function is real but the extraction is substantial and concentrated on a specific victim group. Requires active enforcement through professional norms, patient satisfaction metrics, and malpractice liability. Tangled Rope classification reflects the structural coexistence of coordination and extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demand_legitimacy_threshold",
+      "question": "What threshold distinguishes legitimate patient need for expanded access from extractive demand escalation enabled by professional duty norms?",
+      "resolution_mechanism": "Clinical outcome analysis: correlation between multi-problem visit frequency and health outcomes; comparison of patient satisfaction vs physician burnout trajectories; identification of demand patterns that improve vs degrade care quality",
+      "impact": "If threshold is low (most demand is legitimate need): constraint is primarily coordination (Rope from more perspectives). If threshold is high (most demand is extractive): constraint is primarily extraction (Snare from more perspectives). Current 41.1% exit rate citing unrealistic demands suggests threshold is being exceeded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing legitimate access need from extractive demand"
+    },
+    {
+      "id": "team_based_care_sufficiency",
+      "question": "Do team-based care models (nurse practitioners, physician assistants, care coordinators) genuinely redistribute demand or merely add coordination overhead while preserving physician extraction?",
+      "resolution_mechanism": "Longitudinal comparison of physician message volume, after-hours contact, and burnout rates in team-based vs traditional practices; analysis of which demand types are successfully delegated vs which remain physician-dependent",
+      "impact": "If effective: scaffold perspective confirmed — team models provide a real sunset. If ineffective: demand escalation is structurally tied to physician role regardless of team composition, and the scaffold perspective is aspirational.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether team-based care models effectively redistribute demand"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is physician identity lock primarily professional (duty to patients, Hippocratic commitment) or economic (sunk training costs, debt burden, income dependency)?",
+      "resolution_mechanism": "Exit pattern analysis: comparison of exit rates and exit reasons across debt levels, career stages, and specialty types; qualitative analysis of exit narratives distinguishing identity-based vs economic barriers",
+      "impact": "If primarily professional: identity lock is cognitive and could shift with reframing (e.g., 'sustainable practice is better patient care'). If primarily economic: identity lock is material constraint misattributed to identity, and interventions must address economic barriers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether physician identity lock is professional duty or economic dependency"
+    },
+    {
+      "id": "gender_differential_extraction",
+      "question": "Does demand escalation extract differentially from female vs male physicians through gendered expectations of emotional labor and availability?",
+      "resolution_mechanism": "Gender-stratified analysis of message volume, after-hours contact frequency, multi-problem visit rates, and burnout scores; comparison of patient expectations and satisfaction ratings by physician gender",
+      "impact": "If differential extraction exists: the constraint has a gender dimension not captured in base extractiveness, and female physicians experience higher effective extraction. If no differential: the constraint extracts uniformly across gender.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether demand escalation extracts differentially by physician gender"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.62) structural (malpractice liability, employment contracts, professional licensing requirements) or internalized (physicians believe they deserve the demands, have been isolated from alternative practice models, or have fused their identity with unlimited availability)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if physicians who leave primary care report continued guilt, anxiety, or identity crisis, reclassify suppression as partially internalized. If they report relief and structural barriers as the primary constraint, suppression is primarily structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — physicians carry the suppression with them after exit. If structural, interventions can target external barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "pde_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38,
+      "id_override": "pde_extract_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45,
+      "id_override": "pde_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52,
+      "id_override": "pde_extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "pde_extract_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "pde_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "id_override": "pde_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "id_override": "pde_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.43,
+      "id_override": "pde_theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48,
+      "id_override": "pde_theater_2020"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "pde_suppress_2000"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.5,
+      "id_override": "pde_suppress_2005"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55,
+      "id_override": "pde_suppress_2010"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.59,
+      "id_override": "pde_suppress_2015"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62,
+      "id_override": "pde_suppress_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Patient demand escalation in primary care represents a structural shift in healthcare delivery expectations over the past two decades. Patients increasingly expect immediate access (same-day appointments, rapid message response), multi-problem visits (addressing 3+ concerns per encounter), and 24/7 availability (after-hours calls, weekend messages) without corresponding increases in physician time allocation or compensation. This constraint exhibits genuine coordination function — patients with complex chronic conditions benefit from expanded access, and multi-problem visits are clinically efficient — but also substantial asymmetric extraction concentrated on primary care physicians and clinical staff. The 41.1% of exiting physicians citing 'unrealistic patient demands' as a reason for leaving primary care signals that the constraint's extraction has reached identity-lock-breaking severity for a significant fraction of the workforce. The constraint is enforced through professional duty norms, patient satisfaction metrics tied to reimbursement, malpractice liability concerns, and the healthcare-as-service-industry framing that positions patients as customers whose expectations must be met. Theater ratio (0.48) reflects the performative dimension: physicians spend substantial time on message response and documentation that does not improve clinical outcomes but satisfies administrative and liability requirements. The constraint's extractiveness has increased steadily from 0.32 (2000) to 0.58 (2020) as electronic health records enabled asynchronous messaging, patient portals expanded access expectations, and value-based care models tied reimbursement to satisfaction scores.",
+    "key_agents": [
+      "Primary Care Physicians: Primary victim (powerless/identity_locked) — bear time and emotional extraction without compensation adjustment; 41.1% exit citing unrealistic demands",
+      "Clinical Support Staff: Secondary victim (powerless/constrained) — bear message triage and patient frustration management without decision authority",
+      "Physician Families: Tertiary victim (moderate/constrained) — bear extraction through absent evenings, interrupted weekends, and burnout affecting family stability",
+      "Patients with Complex Needs: Primary beneficiary (moderate/mobile) — benefit from expanded access and multi-problem visit efficiency",
+      "Health System Administrators: Institutional beneficiary (institutional/arbitrage) — benefit from patient satisfaction metrics and competitive positioning",
+      "Insurance Payers: Institutional beneficiary (institutional/arbitrage) — benefit from primary care gatekeeping reducing specialist and emergency utilization",
+      "Primary Care Advocacy Coalition: Organized agents (organized/constrained) — building alternative care models with sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Substantial. Primary care physicians bear rising message volume (average 50+ patient messages per day in high-volume practices), multi-problem visits that compress clinical time, and after-hours contact expectations without corresponding time allocation or compensation increase. The 41.1% exit rate citing unrealistic demands indicates extraction has reached workforce-destabilizing levels. However, extraction is not maximal (not 0.8+) because some physicians successfully set boundaries, some practices implement team-based triage, and some patients genuinely benefit from expanded access. The value reflects the biographical-scale career impact: physicians who stay adapt their practice or accept burnout; physicians who leave cite demand escalation as a primary driver. Suppression (0.62): Moderate-high. Significant barriers to exit include professional duty norms (Hippocratic commitment, patient abandonment concerns), identity lock (physician identity constituted through patient service), malpractice liability (failure to respond to messages creates legal risk), employment contracts (productivity expectations, patient satisfaction metrics), and economic dependency (medical school debt, income requirements). Suppression has increased over the interval as electronic health records made message volume trackable and patient satisfaction scores became tied to reimbursement. But suppression is not total — physicians can and do exit primary care, shift to concierge models, or reduce clinical hours. Theater ratio (0.48): Moderate. Substantial performative activity includes message documentation for liability protection (not clinical value), satisfaction survey optimization (scripted communication), and administrative response to patient complaints. But theater is not dominant — much of the expanded access does serve genuine clinical coordination (multi-problem visits for complex patients, message-based triage reducing unnecessary office visits). Theater has increased as administrative requirements have grown but remains below the threshold where performance dominates function.",
+    "directionality_logic": "Primary care physicians are the primary victims — they bear the time and emotional costs of demand escalation without compensation adjustment. Their identity lock (professional duty, caregiving identity) combined with powerless structural position produces high directionality toward full target (d approaching 0.9-1.0). Clinical support staff are secondary victims with constrained exit options, producing high but slightly lower directionality (d around 0.8). Physician families are tertiary victims with moderate power and constrained exit, producing moderate-high directionality (d around 0.6-0.7). Patients with complex needs are primary beneficiaries — they gain from expanded access and multi-problem visit efficiency — with mobile exit options, producing low directionality toward beneficiary (d around 0.2-0.3). Health system administrators and insurance payers are institutional beneficiaries with arbitrage exit, producing very low or negative directionality (d around 0.0-0.1). The primary care advocacy coalition has organized power and constrained exit, with mixed beneficiary/victim status (building solutions but bearing organizational costs), producing moderate directionality (d around 0.4-0.5). The analytical observer sees both coordination and extraction, with analytical exit options producing low directionality (d around 0.3).",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon — rising patient expectations for expanded access — appears as pure extraction (Snare) from the powerless physician and staff perspectives, mixed coordination-extraction (Tangled Rope) from the moderate patient and family perspectives, pure coordination (Rope) from the institutional administrator and payer perspectives, and temporary problem with sunset (Scaffold) from the organized advocacy perspective. The physician sees identity-locked extraction: professional duty norms prevent exit while demands escalate without compensation. The patient sees genuine coordination: multi-problem visits are efficient and message-based triage is convenient. The administrator sees market advantage: patient satisfaction drives competitive positioning. The payer sees cost control: primary care gatekeeping reduces expensive specialist and emergency utilization. The advocacy coalition sees a solvable problem: team-based care models and AI-assisted triage can redistribute demand. The analytical observer sees the structural coexistence: genuine coordination function (patients benefit) and asymmetric extraction (physicians bear costs) enforced through professional norms and satisfaction metrics. The perspectival gap is not 'which type is correct?' but 'which structural position are you measuring from?' The 41.1% exit rate citing unrealistic demands is the empirical signal that extraction has exceeded sustainable levels for a significant workforce fraction.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that Tangled Rope classification captures the structural coexistence of genuine coordination and asymmetric extraction. The coordination function is real: patients with complex chronic conditions benefit from expanded access; multi-problem visits are clinically efficient for addressing comorbidities; message-based triage reduces unnecessary office visits and emergency department utilization. But the extraction is also real: physicians bear time costs (50+ messages per day, after-hours contact, multi-problem visit compression) without compensation adjustment; professional duty norms and identity lock prevent exit; 41.1% of exiting physicians cite unrealistic demands. The constraint is not pure coordination (Rope) because identifiable victims exist and extraction is substantial. It is not pure extraction (Snare) because the coordination function is genuine and some patients genuinely benefit. It is Tangled Rope because both functions coexist and the constraint requires active enforcement (professional norms, satisfaction metrics, malpractice liability) to persist. The mandate (expanded patient access) has not outlived its function — the coordination need is real — but the implementation extracts asymmetrically from physicians. The scaffold perspective (advocacy coalition) represents a real structural feature: team-based care models and AI-assisted triage are building alternative pathways with a 10-15 year sunset horizon."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "primary_care_physician_burnout",
+      "electronic_health_record_burden",
+      "fee_for_service_misalignment"
+    ],
+    "dual_formulation_note": "Patient demand escalation is structurally distinct from but causally linked to physician burnout (the psychological outcome), EHR burden (the documentation mechanism), and fee-for-service misalignment (the compensation structure). Each has its own extractiveness value. This constraint focuses on the demand-side structural shift; the linked constraints address the supply-side responses and systemic misalignments."
+  },
+  "directionality_overrides": []
+}

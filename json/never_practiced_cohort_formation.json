@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "never_practiced_cohort_formation",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "npc",
+    "story_uid": "f8a3c7e1-9d4b-4c2a-8f5e-2b1a6c9d3e7f",
+    "created_at": "2025-01-10T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "Never-Practiced Cohort Formation in Medical Workforce",
+    "topic_domain": "health_workforce_economics/organizational_behavior/gender_labor",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "residency_programs",
+      "medical_education_institutions",
+      "specialty_boards"
+    ],
+    "victims": [
+      "never_practiced_physicians",
+      "public_training_investment",
+      "healthcare_access_communities"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Never-Practiced Physician",
+      "comment": "PERSPECTIVE 1: NEVER-PRACTICED PHYSICIAN (SNARE) — Identity-locked rather than structurally trapped: has medical degree and license (structural mobility) but identity constituted through 7-11 years of medical training makes non-clinical career literally unthinkable from within the frame. Exit would require abandoning physician identity entirely. Experiences maximum extraction: sunk cost of training, debt burden, social expectation, no alternative pathway that preserves identity investment. The binding mechanism is cognitive — the agent cannot see exit because their self-concept is fused with clinical practice even as structural barriers (administrative burden, reimbursement cuts, workplace conditions) make practice untenable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Residency Graduate Considering Exit",
+      "comment": "PERSPECTIVE 2: RESIDENCY GRADUATE CONSIDERING EXIT (TANGLED ROPE) — Constrained by debt, credential specificity, and career path lock-in, but not identity-locked (can imagine alternative careers). Experiences mixed coordination and extraction: residency training provided genuine skill development and credential (coordination function) but also created path dependency and debt burden that makes exit costly (extraction). The constraint both enables (medical expertise) and traps (narrow credential, high exit cost). Moderate effective extraction because agent has some agency and can see exit options, even if expensive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Residency Program",
+      "comment": "PERSPECTIVE 3: RESIDENCY PROGRAM (ROPE) — Benefits from training pipeline regardless of graduate outcomes: receives Medicare GME funding, maintains teaching mission, fills service needs during training. Whether graduates practice or not does not affect program revenue or accreditation. Experiences constraint as pure coordination: training physicians is the institutional mandate, and the system delivers credentials on schedule. Net beneficiary — extraction flows toward this agent (training subsidies, resident labor) not away."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Medical Education Accreditation System",
+      "comment": "PERSPECTIVE 4: MEDICAL EDUCATION ACCREDITATION SYSTEM (PITON) — The system measures training completion (board pass rates, program accreditation, competency milestones) but not workforce entry or retention. The original function (ensuring physician competence) has atrophied into measuring proxy goals (test scores, procedure logs, rotation completion). An 11% never-practiced rate reveals the measurement theater: the system certifies physicians who never practice, indicating the certification ritual has decoupled from workforce function. Maintained through institutional inertia and stakeholder investment in the credential pipeline, not because it produces practicing physicians."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Workforce Reform Coalition",
+      "comment": "PERSPECTIVE 5: WORKFORCE REFORM COALITION (SCAFFOLD) — Organized stakeholders (primary care advocacy groups, rural health coalitions, loan forgiveness programs, scope-of-practice expansion advocates) see the never-practiced cohort as a symptom of a transitional crisis in physician workforce design. Building alternative pathways: team-based care models, mid-level provider expansion, loan forgiveness tied to service commitments, administrative burden reduction initiatives. These reforms carry implicit sunset logic: as alternative care models mature and administrative extraction decreases, the structural barriers that create the never-practiced cohort should diminish. Estimated sunset: 15-25 years for workforce model transition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the never-practiced cohort represents a coordination failure (training pipeline misaligned with practice environment) layered with extraction (debt burden, credential lock-in, administrative burden from upstream constraint). The system coordinates training but extracts from trainees through structural barriers that make practice untenable for a substantial minority. Not a mountain (the 11% rate is contingent on institutional arrangements, not a natural law of medical training) and not pure extraction (genuine skill development occurs). Tangled rope: real coordination function with asymmetric extraction embedded in the same structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_vs_structural_binding",
+      "question": "What proportion of the never-practiced cohort is identity-locked (cannot imagine non-clinical career) versus structurally trapped (can imagine alternatives but faces insurmountable barriers)?",
+      "resolution_mechanism": "Longitudinal interviews with never-practiced physicians; analysis of career transition attempts and psychological framing of exit decisions; comparison of debt burden and alternative career exploration between those who exit immediately post-residency versus those who attempt practice first.",
+      "impact": "If primarily identity-locked: the binding mechanism is cognitive and could be addressed through earlier career counseling and identity diversification during training. If primarily structural: the barriers are material (debt, credential specificity, administrative burden) and require policy intervention. Mixed binding suggests both interventions needed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether never-practiced cohort binding is cognitive or structural"
+    },
+    {
+      "id": "gender_differential_mechanism",
+      "question": "Does the never-practiced rate differ by gender, and if so, is the mechanism differential identity-lock (women physicians more likely to fuse identity with caregiving roles that conflict with practice demands) or differential structural barriers (workplace discrimination, work-life balance constraints)?",
+      "resolution_mechanism": "Gender-stratified analysis of never-practiced rates; qualitative analysis of stated reasons for non-entry; comparison with gender differentials in other high-credential professions with similar training investments.",
+      "impact": "If identity mechanism: interventions target professional identity formation during training. If structural mechanism: interventions target workplace conditions and discrimination. If both: reveals that gender operates through multiple channels in physician workforce retention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gender differential in never-practiced cohort formation mechanism"
+    },
+    {
+      "id": "administrative_burden_causality",
+      "question": "What proportion of never-practiced cohort formation is causally downstream of administrative burden extraction (the upstream constraint) versus independent factors (debt, lifestyle preferences, alternative career opportunities)?",
+      "resolution_mechanism": "Natural experiment: compare never-practiced rates in health systems with high versus low administrative burden; longitudinal tracking of residency graduates' stated reasons for non-entry; correlation analysis between administrative burden metrics and workforce entry rates by specialty and region.",
+      "impact": "If administrative burden is primary driver: reducing upstream extraction (EHR optimization, prior authorization reform, billing simplification) should reduce never-practiced rate. If independent factors dominate: workforce entry problem requires different interventions (debt relief, training redesign, alternative career pathways).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal contribution of administrative burden to never-practiced cohort"
+    },
+    {
+      "id": "piton_vs_tangled_rope_threshold",
+      "question": "At what never-practiced rate does the medical education system cross from tangled_rope (coordination with embedded extraction) to piton (atrophied function maintained theatrically)? Is 11% above or below that threshold?",
+      "resolution_mechanism": "Historical analysis of workforce entry rates in other credentialing systems (law, engineering, PhD programs); identification of threshold at which credential production decouples from workforce function; stakeholder analysis of whether accreditation bodies treat never-practiced rate as a problem or ignore it.",
+      "impact": "If 11% is below threshold: system is tangled_rope with fixable coordination problems. If 11% is above threshold: system is piton, and the certification ritual has decoupled from workforce production. Threshold location determines whether reform or replacement is appropriate intervention.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Threshold for piton classification in credentialing systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "npc_theater_1990"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62,
+      "id_override": "npc_theater_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "npc_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.73,
+      "id_override": "npc_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.76,
+      "id_override": "npc_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.78,
+      "id_override": "npc_theater_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "npc_extract_1990"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "npc_extract_1995"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "npc_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63,
+      "id_override": "npc_extract_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66,
+      "id_override": "npc_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "id_override": "npc_extract_2015"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The never-practiced cohort — physicians who complete residency training but never enter clinical practice — represents a complete loss of training investment at the point of workforce entry. At 11% of residency graduates, this cohort reveals a fundamental dysfunction in the medical education pipeline: the system certifies physicians as competent and ready for practice, yet a substantial minority never practice at all. This constraint is structurally downstream of administrative burden extraction (the upstream constraint): many never-practiced physicians cite administrative burden, EHR demands, and reimbursement pressures as reasons for non-entry, suggesting that the practice environment has become untenable before they even begin. The constraint exhibits piton characteristics from the accreditation system's perspective: the original function (producing practicing physicians) has atrophied into measuring proxy goals (board pass rates, competency milestones, rotation completion), and the system maintains the certification ritual even as it decouples from workforce outcomes. The theater_ratio (0.78) reflects that accreditation measures training completion but not workforce entry — an 11% never-practiced rate indicates the measurement theater has lost touch with the system's ostensible purpose. The constraint also demonstrates identity_locked binding: physicians who complete 7-11 years of medical training have fused their identity with the physician role, making non-clinical careers literally unthinkable from within that frame even as structural barriers make practice untenable. This is cognitive capture at the biographical scale: the agent is structurally mobile (has degree, license, transferable skills) but functionally trapped by identity fusion.",
+    "key_agents": [
+      "Never-Practiced Physicians: Primary victims (powerless/identity_locked) — bear full cost of training investment, debt burden, and identity crisis; cannot exit because identity is fused with physician role despite structural barriers to practice",
+      "Residency Graduates Considering Exit: Secondary victims (moderate/constrained) — face high exit costs but can imagine alternatives; experience mixed coordination (skill development) and extraction (debt, path dependency)",
+      "Residency Programs: Primary beneficiaries (institutional/arbitrage) — receive Medicare GME funding and resident labor regardless of graduate outcomes; no accountability for workforce entry rates",
+      "Medical Education Accreditation System: Institutional actor (institutional/mobile) — maintains certification ritual that measures training completion but not workforce entry; piton perspective reveals atrophied function",
+      "Specialty Boards: Secondary beneficiaries (institutional/arbitrage) — collect certification fees and maintain credential monopoly; no incentive to track workforce entry",
+      "Public Training Investment: Abstract victim (powerless/trapped) — taxpayer-funded GME subsidies produce non-practicing physicians; no mechanism to recover investment or redirect training",
+      "Healthcare Access Communities: Secondary victims (powerless/trapped) — underserved populations bear cost of physician shortage exacerbated by never-practiced cohort",
+      "Workforce Reform Coalition: Organized agents (organized/constrained) — building alternative pathways with sunset logic (team-based care, scope expansion, loan forgiveness)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The never-practiced cohort bears substantial extraction: 7-11 years of training investment, median debt burden of $200k-$300k, opportunity cost of alternative careers, social and familial expectation, and identity investment — all with zero return in the form of clinical practice. The extraction is not total (training provides transferable skills and credential has some non-clinical value) but is severe enough to represent near-complete loss of training ROI from the individual and public investment perspectives. The value reflects that extraction accumulates over the training period and crystallizes at the point of non-entry. Suppression (0.42): Moderate. Barriers to workforce entry include debt burden (cannot afford to exit medicine entirely), credential specificity (medical degree has limited transferability), identity lock (physician identity makes non-clinical career unthinkable), and upstream administrative burden (practice environment is untenable). But suppression is not total: some physicians do exit to non-clinical careers (pharma, consulting, policy), and alternative pathways exist even if costly. The moderate value reflects that exit is possible but requires abandoning identity investment and accepting credential devaluation. Theater ratio (0.78): High. The accreditation system measures training completion (board pass rates, competency milestones, procedure logs) but not workforce entry or retention. An 11% never-practiced rate reveals the measurement theater: the system certifies physicians as ready for practice who never practice, indicating certification has decoupled from workforce function. The theater has increased over the interval as administrative burden and practice environment deterioration have made the gap between certification and practice viability wider. The high theater_ratio is the primary signal for piton classification: the function (producing practicing physicians) has atrophied while the ritual (certification) persists.",
+    "perspectival_gap": "The never-practiced cohort demonstrates how the same structural phenomenon appears differently depending on the observer's position. The never-practiced physician experiences a snare: identity-locked by 7-11 years of training, unable to exit because their self-concept is fused with the physician role even as structural barriers make practice untenable. The residency graduate considering exit experiences tangled_rope: genuine skill development (coordination) layered with debt burden and path dependency (extraction). The residency program experiences rope: training physicians is the institutional mandate, and the system delivers credentials on schedule regardless of graduate outcomes — the program is a net beneficiary of GME funding and resident labor. The accreditation system experiences piton: the original function (ensuring competent practicing physicians) has atrophied into measuring proxy goals (test scores, rotation completion), and the certification ritual persists through institutional inertia despite an 11% never-practiced rate revealing functional decoupling. The workforce reform coalition experiences scaffold: the never-practiced cohort is a symptom of a transitional crisis, and alternative care models (team-based care, mid-level expansion, administrative burden reduction) carry sunset logic. The analytical observer sees tangled_rope at the civilizational scale: real coordination (skill development) with asymmetric extraction (debt, credential lock-in, administrative burden) embedded in the same structure. The perspectival gap is not about disagreement over facts but about structural position: beneficiaries see coordination, victims see extraction, and the system maintaining the ritual sees its own degraded function.",
+    "directionality_logic": "Directionality is derived from structural position and beneficiary/victim declarations. Never-practiced physicians are victims with identity_locked exit options: high d (near 1.0) because they bear maximum extraction (training investment loss, debt burden, identity crisis) and cannot exit due to cognitive binding. The engine amplifies their experienced extraction through the exit modulation term. Residency graduates considering exit are victims with constrained exit options: moderate-high d (0.6-0.7) because they bear extraction but have some agency and can see exit paths even if costly. Residency programs are beneficiaries with arbitrage exit options: low d (near 0.0) because they capture GME funding and resident labor regardless of graduate outcomes — extraction flows toward them, not away. The accreditation system is a beneficiary with mobile exit options: low d because it maintains institutional position and credential monopoly without accountability for workforce outcomes. The piton classification for the accreditation system derives from the theater gate (theater_ratio > 0.7) rather than from high experienced extraction — the system sees its own degraded function. The analytical observer at civilizational scale sees tangled_rope: moderate d (0.4-0.5) reflecting mixed coordination and extraction, with the balance determined by whether the training investment produces transferable value (coordination) or merely creates path dependency (extraction). The upstream constraint (administrative_burden_extraction) contributes to never-practiced cohort formation by making the practice environment untenable, raising effective extraction for those who complete training but face insurmountable barriers to entry.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The never-practiced cohort reveals that the medical education system's mandate (producing competent practicing physicians) has outlived its function in the current form. The system continues to certify physicians at historical rates while an 11% never-practiced rate indicates the certification ritual has decoupled from workforce outcomes. The mandate persists because stakeholders benefit from the training pipeline (residency programs receive GME funding, specialty boards collect certification fees, medical schools maintain enrollment) regardless of whether graduates practice. The constraint is maintained theatrically: accreditation measures training completion but not workforce entry, allowing the system to claim success (high board pass rates, accredited programs) while ignoring the workforce failure (never-practiced cohort, physician shortage in underserved areas). The mandatrophy is resolved not by eliminating the training pipeline but by recognizing that the current certification model serves institutional interests (beneficiaries) rather than workforce needs (victims). The scaffold perspective (workforce reform coalition) represents an attempt to resolve the mandatrophy through alternative pathways: team-based care models that reduce physician bottleneck, mid-level provider expansion that creates alternative credentials, loan forgiveness programs that tie training investment to service commitments, and administrative burden reduction that makes practice viable. These reforms carry implicit sunset logic: as they mature, the structural barriers creating the never-practiced cohort should diminish, and the certification ritual should re-couple with workforce function. The piton classification captures the current state: a degraded system maintained through inertia and stakeholder investment, not because it produces practicing physicians."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The never-practiced cohort is structurally downstream of administrative_burden_extraction: many physicians cite administrative burden, EHR demands, and reimbursement pressures as reasons for never entering practice. The upstream constraint makes the practice environment untenable before workforce entry, contributing to the 11% never-practiced rate. However, the never-practiced cohort also has independent drivers (debt burden, credential specificity, identity lock, alternative career opportunities) that would produce some non-entry rate even if administrative burden were eliminated. The two constraints are linked but have distinct extractiveness values: administrative_burden_extraction measures the ongoing extraction from practicing physicians, while never_practiced_cohort_formation measures the complete loss of training investment at the point of non-entry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

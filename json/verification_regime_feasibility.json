@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "verification_regime_feasibility",
+    "version": "1.0",
+    "generated_date": "2025-01-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "verif_regime",
+    "story_uid": "2e593508-827c-47ea-b61d-25438913d956",
+    "created_at": "2026-06-06T00:14:26.683111+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Verification Regime Feasibility for AI Development Pause",
+    "topic_domain": "ai_governance/technology_verification/coordination_mechanisms",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pause_coordination_regime",
+      "compliant_labs",
+      "verification_infrastructure_providers"
+    ],
+    "victims": [
+      "pause_coordination_regime",
+      "compliant_labs",
+      "global_safety_commons"
+    ],
+    "accessibility_collapse": 0.15,
+    "resistance": 0.72
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Global Safety Commons",
+      "comment": "PERSPECTIVE 1: GLOBAL SAFETY COMMONS (SNARE) — The abstract collective good of AI safety cannot exit the verification problem and has no advocate with enforcement power. Bears full cost of defection: undetected training runs undermine coordination without recourse. Maximum experienced extraction from a regime that promises protection but cannot deliver verification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Compliant Lab",
+      "comment": "PERSPECTIVE 2: COMPLIANT LAB (TANGLED ROPE) — Constrained by competitive pressure and verification costs. Benefits from coordination (if all labs pause, competitive disadvantage disappears) but bears asymmetric cost: compliance is observable and costly, defection is concealable and profitable. The verification regime both enables coordination and extracts from those who comply while defectors remain undetected."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Defecting Lab",
+      "comment": "PERSPECTIVE 3: DEFECTING LAB (ROPE) — Primary beneficiary with arbitrage-grade exit. Experiences the verification regime as coordination theater that enables defection: the regime's existence provides cover ('we have verification') while technical infeasibility ensures non-detection. Net beneficiary — captures capability advantage during pause window with negligible detection risk."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Verification Infrastructure Coalition",
+      "comment": "PERSPECTIVE 4: VERIFICATION INFRASTRUCTURE COALITION (SCAFFOLD) — Organized actors (chip manufacturers, energy monitoring systems, international inspection bodies) building verification infrastructure see this as temporary coordination problem with technical solution path. Sunset logic: as side-channel detection matures (energy signatures, chip allocation tracking, whistleblower networks), verification becomes feasible. Low effective extraction because coalition has agency and sees exit from current infeasibility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The National Regulator",
+      "comment": "PERSPECTIVE 5: NATIONAL REGULATOR (TANGLED ROPE) — Benefits from regime existence (political legitimacy, regulatory authority) but constrained by technical infeasibility and jurisdictional limits. Cannot verify cross-border training runs or detect sophisticated concealment. Experiences mixed coordination (domestic compliance monitoring) and extraction (regime credibility depends on verification capacity that does not exist)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational perspective, verification infeasibility appears as immutable constraint: training runs are inherently concealable unlike physical weapons, and no inspection regime can overcome the asymmetry between observable compliance and unobservable defection. This perspective naturalizes what is actually a contingent technical state — side-channel detection is improving, and the 'inherent' concealability claim may be a false summit masking institutional choices about verification investment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "side_channel_detection_maturity",
+      "question": "Can side-channel detection (energy consumption patterns, chip allocation tracking, network traffic analysis) achieve sufficiently low false negative rates to make verification feasible?",
+      "resolution_mechanism": "Empirical testing of detection systems against adversarial concealment; measurement of false negative rates for training runs using distributed compute, energy obfuscation, or off-grid power; analysis of detection latency vs capability gain timescales",
+      "impact": "If detection matures to <10% false negative rate: verification regime becomes feasible coordination mechanism (Rope from more perspectives). If false negatives remain >30%: regime is theater enabling defection (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether side-channel detection can achieve verification-grade reliability"
+    },
+    {
+      "id": "concealment_cost_threshold",
+      "question": "At what capability threshold does the cost of concealing a training run exceed the competitive advantage gained from defection?",
+      "resolution_mechanism": "Economic modeling of concealment costs (distributed compute overhead, energy obfuscation infrastructure, operational security) vs capability advantage; identification of threshold where defection becomes economically irrational",
+      "impact": "If threshold is below transformative AI: verification regime is feasible for the critical window. If threshold is above transformative AI: defection remains profitable throughout the risk period and verification is structurally inadequate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Economic threshold where concealment cost exceeds defection benefit"
+    },
+    {
+      "id": "whistleblower_network_sufficiency",
+      "question": "Can insider reporting networks (employees, contractors, supply chain participants) provide sufficient verification coverage to detect concealed training runs?",
+      "resolution_mechanism": "Analysis of whistleblower incentive structures, organizational compartmentalization effectiveness, and historical detection rates for concealed programs in other domains (nuclear, biological); modeling of required network density for reliable detection",
+      "impact": "If whistleblower networks achieve >70% detection probability: human intelligence complements technical verification and regime becomes feasible. If detection probability <30%: organizational compartmentalization defeats human verification and regime remains theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether insider networks can provide verification-grade detection"
+    },
+    {
+      "id": "naturalization_of_infeasibility",
+      "question": "Is verification infeasibility an immutable technical constraint or a contingent state reflecting insufficient investment in verification infrastructure?",
+      "resolution_mechanism": "Comparison with historical verification regimes (nuclear, chemical weapons) that overcame initial infeasibility claims through sustained technical development; analysis of current verification R&D investment levels vs what would be required for feasibility",
+      "impact": "If infeasibility is contingent: the mountain classification is a false summit naturalizing institutional choices. If infeasibility is immutable: verification regime is structurally inadequate regardless of investment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether verification infeasibility is natural law or institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "verif_regime_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.32,
+      "id_override": "verif_regime_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.38,
+      "id_override": "verif_regime_theater_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "verif_regime_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "verif_regime_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5,
+      "id_override": "verif_regime_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.54,
+      "id_override": "verif_regime_extract_t4"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "verif_regime_extract_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "verif_regime_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.6,
+      "id_override": "verif_regime_suppress_t2"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.65,
+      "id_override": "verif_regime_suppress_t4"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "verif_regime_suppress_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The verification regime feasibility constraint captures the structural tension between the coordination benefits of an AI development pause and the technical infeasibility of verifying compliance. Unlike nuclear weapons (missile silos are observable via satellite) or chemical weapons (production facilities have detectable signatures), large AI training runs can be concealed through distributed compute, energy obfuscation, or off-grid power sources. This creates an asymmetry: compliance is observable and costly (labs must halt visible development), while defection is concealable and profitable (defecting labs gain capability advantage without detection risk). The constraint exhibits tangled rope structure because it provides genuine coordination value (if verification were perfect, all labs would benefit from mutual pause) while simultaneously enabling extraction (imperfect verification allows defectors to free-ride on compliant labs' restraint). The regime appears in all six DR types depending on observer position: defecting labs see coordination theater enabling profitable defection (Rope), compliant labs see mixed coordination and extraction (Tangled Rope), the safety commons sees pure extraction from a regime that promises protection but cannot deliver (Snare), verification infrastructure builders see a temporary technical problem with solution path (Scaffold), and analytical observers risk naturalizing contingent technical infeasibility as immutable constraint (Mountain). The theater ratio (0.42) reflects that verification mechanisms exist (energy monitoring proposals, chip allocation tracking, international inspection frameworks) but cannot reliably detect sophisticated concealment — the regime provides political legitimacy and coordination signaling while lacking enforcement teeth.",
+    "key_agents": [
+      "Defecting Lab: Primary beneficiary (institutional/arbitrage) — captures capability advantage during pause window with negligible detection risk; experiences regime as coordination theater",
+      "Compliant Labs: Mixed victim-beneficiary (moderate/constrained) — benefit from coordination if universal, but bear asymmetric cost when defection is undetected",
+      "Global Safety Commons: Primary victim (powerless/trapped) — abstract collective good with no advocate; bears full cost of undetected defection undermining coordination",
+      "Pause Coordination Regime: Mixed victim-beneficiary (institutional/constrained) — benefits from political legitimacy but constrained by technical infeasibility; credibility depends on verification capacity that does not exist",
+      "Verification Infrastructure Coalition: Organized actors (organized/mobile) — chip manufacturers, energy monitoring systems, inspection bodies building detection infrastructure with sunset logic",
+      "National Regulators: Mixed position (institutional/constrained) — benefit from regulatory authority but constrained by jurisdictional limits and technical infeasibility",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent technical state as immutable verification constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regime extracts from compliant labs (observable compliance costs, competitive disadvantage if others defect) and from the safety commons (false sense of security from unenforceable pause). Extraction is substantial but not maximal because some coordination value exists — if verification were perfect, the regime would be net beneficial. The value reflects that defection is profitable precisely because verification is infeasible, creating asymmetric extraction from those who comply in good faith. Suppression (0.68): High. Significant barriers to effective verification include: technical infeasibility of detecting distributed or obfuscated training runs, jurisdictional limits on international inspection, organizational compartmentalization defeating whistleblower networks, and adversarial advantage (concealment is easier than detection). Suppression is rising over the interval as labs develop more sophisticated concealment techniques and the capability threshold for transformative AI approaches. Theater ratio (0.42): Moderate. Verification mechanisms exist and have some function (domestic compliance monitoring, voluntary reporting, chip export controls) but cannot reliably detect sophisticated defection. The theater is rising as the gap between regime promises (enforceable pause) and regime capacity (voluntary compliance monitoring) becomes more apparent. Unlike pure theater (piton), the regime has genuine coordination function for labs that comply voluntarily.",
+    "perspectival_gap": "This constraint demonstrates how verification infeasibility creates divergent experiences of the same coordination mechanism. Defecting labs see pure coordination (Rope) — the regime provides cover for defection while imposing no real constraint. Compliant labs see tangled rope — genuine coordination value if universal, but asymmetric extraction when defection is undetected. The safety commons sees pure extraction (Snare) — a regime that promises protection but delivers false security. Verification infrastructure builders see temporary problem with technical solution (Scaffold) — side-channel detection is improving and will eventually enable feasible verification. National regulators see mixed coordination and extraction (Tangled Rope) — political legitimacy from regime existence but credibility risk from enforcement infeasibility. The analytical observer risks seeing immutable natural law (Mountain) — training runs are inherently concealable unlike physical weapons — but this naturalizes what may be a contingent technical state reflecting insufficient verification investment. The perspectival gap reveals that 'verification infeasibility' is not a single fact but a structural relationship: what appears as coordination theater to the defector is experienced as extraction by the compliant lab and as false security by the safety commons.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the verification regime and their exit options. The defecting lab is the primary beneficiary (captures capability advantage, faces negligible detection risk) with arbitrage-grade exit (can defect without consequence), producing low d and low/negative experienced extraction — the regime runs in their favor. Compliant labs are mixed victim-beneficiaries (bear compliance costs and competitive disadvantage risk, but benefit from coordination if universal) with constrained exit (can defect but face reputational and regulatory costs), producing moderate d and moderate experienced extraction. The safety commons is pure victim (bears full cost of defection undermining coordination) with trapped exit (cannot escape the verification problem), producing high d and maximum experienced extraction. The verification infrastructure coalition is beneficiary (builds detection systems, gains institutional authority) with mobile exit (can pivot to other verification domains), producing low d and low experienced extraction. National regulators are mixed (benefit from regulatory authority, constrained by enforcement infeasibility) with constrained exit (cannot abandon regime without political cost), producing moderate d. The analytical observer with analytical exit experiences the constraint as structural limit rather than extraction, but this may be false summit — naturalizing contingent technical state as immutable constraint.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves the mandatrophy by demonstrating that verification regime feasibility is genuinely hybrid — it provides real coordination value (mutual pause benefits all labs if universal) while simultaneously enabling extraction (imperfect verification allows defectors to free-ride). The coordination function is not cover story: labs that comply voluntarily do benefit from reduced competitive pressure if others also comply. The extraction is not incidental: the regime's technical infeasibility creates structural advantage for defectors who can conceal training runs while compliant labs bear observable costs. Both functions are primary, not one masking the other. The regime requires active enforcement (international inspection, chip export controls, energy monitoring) to maintain even its current limited effectiveness, and the enforcement is rising (suppression increasing from 0.55 to 0.68) as concealment techniques improve. The beneficiary structure is clear: defecting labs benefit from capability advantage, verification infrastructure providers benefit from institutional authority, and compliant labs benefit from coordination if universal. The victim structure is equally clear: compliant labs bear asymmetric costs when defection is undetected, and the safety commons bears full cost of false security. The tangled rope classification captures that this is neither pure coordination (rope) nor pure extraction (snare) but a genuine hybrid where both functions coexist and neither can be eliminated without destroying the other."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of recursive_capability_threshold (the capability level that makes concealment worthwhile) and alignment_tax_defection (the competitive pressure that incentivizes defection). The verification regime's extractiveness reflects the interaction between technical infeasibility and competitive dynamics — if capabilities were lower or alignment costs were negligible, verification infeasibility would matter less. The upstream constraints have their own extractiveness values; this constraint's extractiveness reflects specifically the verification asymmetry between observable compliance and concealable defection."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

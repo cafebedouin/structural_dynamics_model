@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "statutory_ceiling_vs_suspension",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ceiling_susp",
+    "story_uid": "b1c42136-deca-4c02-8619-ec5858513f2b",
+    "created_at": "2026-06-06T00:06:39.495431+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Statutory Ceiling vs Suspension Mechanism in Federal Debt Authorization",
+    "topic_domain": "public_finance/constitutional_law/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [
+      "treasury_operations_office",
+      "congressional_appropriations_committees"
+    ],
+    "victims": [],
+    "vindicated_propositions": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Taxpayer",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL TAXPAYER (MOUNTAIN) — Whether Congress authorizes debt via a fixed dollar ceiling or a time-bounded suspension is a technical legislative choice with no direct extraction from this agent. The taxpayer cannot exit the federal fiscal system and has no power to influence the mechanism choice, but experiences negligible extraction from the choice itself. The constraint is the legal-technical requirement that Congress authorize borrowing in some form — the specific form (ceiling vs suspension) is immaterial to this agent's structural position."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Bond Market Participant",
+      "comment": "PERSPECTIVE 2: BOND MARKET PARTICIPANT (MOUNTAIN) — Treasury debt instruments are fungible regardless of whether authorized via ceiling or suspension. The market participant faces the same credit risk, the same liquidity, the same legal enforceability. The mechanism difference is operationally invisible at the security level. Constrained exit (can shift to other sovereign debt markets at cost) but negligible extraction from the mechanism choice itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury Operations Office",
+      "comment": "PERSPECTIVE 3: TREASURY OPERATIONS OFFICE (MOUNTAIN) — Primary beneficiary of the suspension mechanism (eliminates daily debt-limit monitoring and extraordinary measures choreography during the suspension window) but the benefit is operational efficiency, not extraction. The Treasury cannot choose which mechanism Congress enacts and must operate under either. The constraint is the constitutional requirement that Congress authorize borrowing — the specific statutory form is a parameter within that requirement. Arbitrage exit in the sense that Treasury has discretion over issuance timing and maturity structure, but no exit from the authorization requirement itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Congressional Appropriations Committees",
+      "comment": "PERSPECTIVE 4: CONGRESSIONAL APPROPRIATIONS COMMITTEES (MOUNTAIN) — Beneficiary in the sense that the mechanism choice is within Congress's constitutional authority and both mechanisms preserve legislative control over borrowing authorization. But the choice between ceiling and suspension is a coordination decision about how to structure that control, not an extraction mechanism. The committees cannot exit the constitutional requirement to authorize borrowing. The constraint is the Article I requirement itself; the ceiling-vs-suspension choice is a degree of freedom within that constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — The legal-technical difference between a fixed dollar ceiling and a time-bounded suspension is a structural feature of how statutory authorization can be specified. Both mechanisms implement the same constitutional requirement (Congressional control over federal borrowing per Article I Section 8). The choice between them is a legislative drafting decision with operational consequences (ceiling requires periodic adjustment; suspension requires periodic renewal) but negligible extraction. The constraint is the requirement for legislative authorization; the form of that authorization is a parameter. Alternatives (no debt limit, constitutional amendment, premium bond authority) exist but are not suppressed by the ceiling-vs-suspension choice itself — they are suppressed by the broader political economy of fiscal governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mechanism_choice_naturalness",
+      "question": "Is the ceiling-vs-suspension distinction a genuine structural feature of legislative authorization (Mountain) or does the choice itself embed extractive political dynamics that benefit specific actors?",
+      "resolution_mechanism": "Historical analysis of mechanism adoption patterns: do ceiling regimes correlate with different fiscal outcomes, political leverage distributions, or crisis frequencies than suspension regimes? If the choice is neutral, outcomes should be statistically indistinguishable. If extractive, specific actors should systematically benefit from one mechanism over the other.",
+      "impact": "If the mechanism choice is extractive: reclassify as Tangled Rope (coordination function of authorization + asymmetric extraction from mechanism choice). If neutral: Mountain classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the ceiling-vs-suspension choice is structurally neutral or embeds extraction"
+    },
+    {
+      "id": "beneficiary_structure_ambiguity",
+      "question": "Does Treasury's operational efficiency gain from suspension (eliminating extraordinary measures choreography) constitute a coordination benefit or does it mask extraction by reducing legislative oversight friction?",
+      "resolution_mechanism": "Comparative analysis of Treasury discretion and debt management outcomes under ceiling vs suspension regimes. If suspension correlates with reduced legislative scrutiny of specific issuance decisions or maturity structure choices, the efficiency gain may be covering extraction. If outcomes are equivalent, the gain is pure coordination.",
+      "impact": "If Treasury discretion under suspension enables extractive debt management: reclassify Treasury perspective as Rope (beneficiary of reduced oversight). If discretion is neutral: Mountain classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Treasury's efficiency gain from suspension is coordination or reduced oversight"
+    },
+    {
+      "id": "political_leverage_asymmetry",
+      "question": "Does the ceiling mechanism create extractive political leverage (hostage-taking dynamics, extraordinary measures theater) that the suspension mechanism eliminates, or are both mechanisms equally vulnerable to political extraction?",
+      "resolution_mechanism": "Event study of debt limit episodes: frequency and severity of brinksmanship, market disruption, and policy concessions extracted under ceiling vs suspension regimes. If ceiling episodes systematically produce larger policy concessions or market volatility, the mechanism choice itself is extractive. If equivalent, both are neutral implementations of the authorization requirement.",
+      "impact": "If ceiling mechanism enables systematic extraction via brinksmanship: the constraint is not Mountain but Snare from the perspective of agents targeted by the extracted concessions. If both mechanisms are equally vulnerable: Mountain holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ceiling mechanism enables extractive brinksmanship dynamics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "theater_1990"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12,
+      "id_override": "theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15,
+      "id_override": "theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "id_override": "theater_2020"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05,
+      "id_override": "extract_1990"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.06,
+      "id_override": "extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08,
+      "id_override": "extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.1,
+      "id_override": "extract_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The U.S. federal debt limit can be implemented via two distinct statutory mechanisms: a fixed dollar ceiling (e.g., $41.1 trillion) that remains in effect until amended, or a suspension that lifts the limit entirely until a specified date, after which the limit resets to accommodate all borrowing during the suspension period. This constraint examines whether the choice between these mechanisms is a neutral legislative drafting decision (Mountain) or embeds extractive political dynamics. The base metrics reflect the legal-technical structure: very low extractiveness (0.08) because the mechanism choice itself extracts minimally from most agents; very low suppression (0.12) because alternatives to both mechanisms exist and are not suppressed by the ceiling-vs-suspension choice; low theater ratio (0.15) because both mechanisms are functional implementations of the constitutional authorization requirement, though the ceiling mechanism has accumulated some performative overhead (extraordinary measures, X-date projections) that the suspension mechanism eliminates. The constraint is claimed as Mountain with declared beneficiaries (Treasury operations, Congressional committees) to trigger False Summit Mountain evaluation — the question is whether the operational efficiency gains and legislative control preservation are genuine coordination benefits or whether they mask extraction.",
+    "key_agents": [
+      "Individual Taxpayer: Powerless/trapped — no exit from federal fiscal system, negligible extraction from mechanism choice",
+      "Bond Market Participant: Moderate/constrained — can shift to other sovereign debt at cost, mechanism choice is operationally invisible at security level",
+      "Treasury Operations Office: Institutional/arbitrage — primary beneficiary of suspension mechanism (eliminates extraordinary measures choreography), but benefit is operational efficiency rather than extraction; cannot choose which mechanism Congress enacts",
+      "Congressional Appropriations Committees: Institutional/constrained — beneficiary in sense that mechanism choice is within constitutional authority and both preserve legislative control; cannot exit authorization requirement",
+      "Analytical Observer: Analytical/analytical — sees the ceiling-vs-suspension choice as a parameter within the constitutional requirement for legislative authorization of borrowing"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The legal-technical difference between a fixed dollar ceiling and a time-bounded suspension is a structural feature of how statutory authorization can be specified. Both mechanisms implement the same constitutional requirement. The choice between them has operational consequences (ceiling requires periodic adjustment and triggers extraordinary measures; suspension requires periodic renewal but eliminates intra-period monitoring) but does not systematically extract from any agent class. Treasury gains operational efficiency under suspension, but this is a coordination benefit (reduced administrative overhead) rather than extraction. The modest extractiveness reflects that the ceiling mechanism has historically enabled some political leverage dynamics (brinksmanship, policy concessions) that the suspension mechanism reduces, but these dynamics are not intrinsic to the mechanism choice itself — they are features of the broader political economy of fiscal governance. Suppression (0.12): Very low. Alternatives to both mechanisms exist (no statutory debt limit, constitutional amendment requiring balanced budgets, premium bond authority, consol issuance) and are not suppressed by the ceiling-vs-suspension choice. The suppression that does exist is at the level of the authorization requirement itself (Congress must authorize borrowing per Article I Section 8), not at the level of the mechanism choice. Theater ratio (0.15): Low but rising. Both mechanisms are functional implementations of the authorization requirement. The ceiling mechanism has accumulated some performative overhead: Treasury's extraordinary measures (suspending CSRDF/ESF investments, debt issuance suspension periods) and X-date projections are partly theater — the measures are real but the crisis framing is performative when the outcome (Congressional action before default) is structurally overdetermined. The suspension mechanism eliminates this theater by removing the intra-period monitoring requirement. The rising trajectory reflects increasing politicization of debt limit episodes, but the base level remains low because the core function (legislative authorization) is genuine. Accessibility collapse (0.92): Very high. Once the constitutional requirement for legislative authorization is understood, the space of alternatives collapses almost completely. Congress must authorize borrowing in some form; the choice is only how to structure that authorization. Resistance (0.08): Very low. The requirement meets negligible resistance because it is a constitutional mandate, not a policy choice. The mechanism choice (ceiling vs suspension) meets some resistance (political preference for one form over the other) but this is coordination friction, not resistance to the constraint itself.",
+    "directionality_logic": "Treasury Operations Office is declared as a beneficiary because suspension eliminates the extraordinary measures choreography and daily debt-limit monitoring that ceiling regimes require. This is an operational efficiency gain. Congressional Appropriations Committees are declared as beneficiaries because both mechanisms preserve legislative control over borrowing authorization, and the choice between them is within Congress's constitutional authority. However, these benefits are coordination gains (reduced administrative overhead, preserved constitutional authority) rather than extraction. The engine will derive low directionality values (d near 0.0) for both beneficiaries, producing low or negative effective extraction (chi). No victims are declared because the mechanism choice itself does not systematically extract from any agent class. The modest base extractiveness (0.08) reflects historical political leverage dynamics under ceiling regimes, but these are not intrinsic to the legal-technical structure of the mechanism choice.",
+    "perspectival_gap": "All five perspectives classify as Mountain, which is the expected outcome for a genuine structural feature of legislative authorization. The perspectival invariance is the signal: if the constraint were extractive, we would expect divergence between the powerless/trapped perspective (Individual Taxpayer) and the institutional/arbitrage perspectives (Treasury, Congress). The absence of divergence suggests the mechanism choice is structurally neutral. However, the False Summit Mountain detector will evaluate whether the declared beneficiaries (Treasury, Congressional committees) indicate that the 'neutral technical choice' framing is naturalizing a contingent institutional arrangement that benefits specific actors. The three omega variables document the irreducible uncertainties: (1) Is the mechanism choice genuinely neutral or does it embed extractive political dynamics? (2) Does Treasury's efficiency gain from suspension mask reduced legislative oversight? (3) Does the ceiling mechanism enable extractive brinksmanship that the suspension mechanism eliminates? These are empirical questions resolvable through historical analysis of mechanism adoption patterns, fiscal outcomes, and political leverage distributions.",
+    "mandatrophy_analysis": "This constraint is a candidate False Summit Mountain. The legal-technical structure (fixed dollar ceiling vs time-bounded suspension) is a genuine parameter within the constitutional requirement for legislative authorization of borrowing. Both mechanisms implement the same Article I Section 8 mandate. The choice between them has operational consequences but appears structurally neutral — no agent class is systematically extracted from by the mechanism choice itself. However, the declaration of beneficiaries (Treasury operations, Congressional committees) triggers the False Summit detector because it raises the question: if the choice is truly neutral, why do specific actors benefit? The resolution depends on whether the benefits are coordination gains (operational efficiency, preserved constitutional authority) or extraction (reduced oversight, political leverage). The omega variables document this ambiguity. If historical analysis shows that suspension regimes correlate with reduced legislative scrutiny of Treasury debt management decisions, or that ceiling regimes systematically enable extractive brinksmanship dynamics, the Mountain classification would be false — the constraint would reclassify as Tangled Rope (coordination + extraction) or Snare (pure extraction via political leverage). If outcomes are statistically indistinguishable, the Mountain classification holds and the beneficiaries are genuine coordination beneficiaries rather than extractors."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a component within the broader federal debt authorization system. Upstream constraints include the constitutional requirement for legislative authorization of borrowing (Article I Section 8) and the political economy of fiscal governance. Downstream constraints include Treasury debt management operations and bond market liquidity dynamics. The ceiling-vs-suspension choice is a parameter within the authorization system, not the system itself."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "genetic_mosaicism_timing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mosaic",
+    "story_uid": "f8a3c2d1-9e4b-4f3a-8c7d-1a2b3c4d5e6f",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.15,
+    "theater_ratio": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Genetic Mosaicism Timing Constraint in CRISPR Embryo Editing",
+    "topic_domain": "biomedical_research/genome_editing/reproductive_medicine",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "clinical_embryology_teams",
+      "research_groups_optimizing_protocols",
+      "prospective_parents_seeking_germline_editing"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Clinical Embryology Teams",
+      "comment": "PERSPECTIVE 1: CLINICAL EMBRYOLOGY TEAMS (ROPE) — The timing constraint solves a genuine coordination problem: when to inject CRISPR components to maximize editing uniformity. Teams benefit from the knowledge that post-replication injection creates mosaicism; pre-replication injection (pronuclear stage before S-phase) yields uniform editing. This is pure coordination — the constraint communicates a reproducible causal relationship with minimal extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Research Groups Optimizing Protocols",
+      "comment": "PERSPECTIVE 2: RESEARCH GROUPS (ROPE) — Moderate-power actors developing editing protocols see the timing constraint as a coordination mechanism: it identifies the critical variable (S-phase timing) that determines outcome uniformity. The constraint enables protocol optimization without imposing significant costs. Mobile exit because alternative editing strategies (base editing, prime editing) exist if timing proves intractable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Prospective Parents Seeking Germline Editing",
+      "comment": "PERSPECTIVE 3: PROSPECTIVE PARENTS (ROPE) — Powerless agents seeking germline editing for disease prevention benefit from the timing constraint: it provides a reproducible protocol for achieving uniform edits, reducing the risk of mosaic embryos with mixed edited/unedited cells. Constrained exit (not mobile) because alternatives to germline editing (PGD, adoption, remaining childless) carry significant costs, but the timing constraint itself is not extractive — it coordinates toward the desired outcome."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Regulatory Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES (ROPE) — Organized agents (WHO, national bioethics councils) see the timing constraint as a coordination standard: it establishes a reproducible protocol that can be audited and regulated. The constraint reduces variance in clinical outcomes, which benefits regulatory oversight. Mobile exit because regulation can shift to alternative editing modalities if CRISPR timing proves too complex."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational/universal perspective, the timing constraint reflects an immutable property of cell-cycle biology: DNA replication creates multiple target copies, and CRISPR editing after replication necessarily produces mosaicism because each copy is edited independently. This is a structural feature of how eukaryotic cells replicate DNA, not a contingent institutional arrangement. The constraint would persist regardless of who defends it or whether anyone enforces it — it is a consequence of S-phase mechanics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "s_phase_detection_precision",
+      "question": "Can S-phase timing be detected with sufficient precision in live zygotes to enable real-time injection optimization, or does the timing window remain a probabilistic target?",
+      "resolution_mechanism": "Development of non-invasive S-phase markers (fluorescent cell-cycle reporters, metabolic indicators) with sub-hour temporal resolution; validation in clinical embryology settings",
+      "impact": "If precise detection is achievable: timing constraint becomes a solved coordination problem (Rope strengthens). If detection remains probabilistic: mosaicism risk persists as an irreducible uncertainty, potentially shifting some perspectives toward Mountain (inherent limit of current technology).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether S-phase can be detected precisely enough for real-time injection optimization"
+    },
+    {
+      "id": "alternative_editing_modality_sufficiency",
+      "question": "Do alternative editing modalities (base editing, prime editing) that avoid DSB-mediated repair eliminate the timing constraint entirely, or do they introduce new cell-cycle dependencies?",
+      "resolution_mechanism": "Comparative mosaicism analysis across CRISPR-Cas9, base editors, and prime editors at multiple injection time points; identification of cell-cycle-independent editing windows",
+      "impact": "If alternatives eliminate timing dependence: the constraint becomes obsolete (Scaffold with sunset). If alternatives introduce new dependencies: the constraint generalizes to a broader cell-cycle coordination problem (Rope persists but changes form).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative editing modalities eliminate or transform the timing constraint"
+    },
+    {
+      "id": "mosaic_embryo_clinical_significance",
+      "question": "What proportion of mosaicism is clinically tolerable? Does 78% mosaicism at 2PN injection preclude therapeutic use, or can mosaic embryos with sufficient edited-cell representation achieve disease prevention?",
+      "resolution_mechanism": "Longitudinal tracking of mosaic embryos (animal models, consented human research); correlation between mosaicism percentage and phenotypic outcome; threshold analysis for disease-specific editing targets",
+      "impact": "If low mosaicism is required: timing constraint is critical (Rope classification confirmed). If moderate mosaicism is tolerable: timing constraint is less binding, and the 2PN injection window becomes viable (constraint weakens toward Mountain — inherent variability that does not require optimization).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Clinical significance threshold for mosaicism in edited embryos"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The genetic mosaicism timing constraint in CRISPR embryo editing describes a reproducible causal relationship: injection of editing components after DNA replication (at the 2-pronuclear stage post-S-phase) creates four target DNA copies, each edited independently, yielding mosaic embryos with mixed edited and unedited cells (78% mosaicism rate observed). Injection before S-phase (pronuclear stage) targets two copies, producing uniform editing. This constraint is a coordination mechanism — it communicates the critical variable (S-phase timing) that determines editing uniformity. The constraint exhibits low extraction (0.12) because it solves a genuine technical problem without imposing asymmetric costs: all actors benefit from knowing when to inject to achieve their desired outcome (uniform vs mosaic editing). Suppression is low (0.15) because alternative editing strategies exist (base editing, prime editing, PGD) and the timing constraint does not prevent exit. Theater ratio is very low (0.08) because the constraint is directly testable via single-cell sequencing and has been empirically validated across multiple labs. The constraint's extractiveness has increased slightly over the interval (0.08 → 0.12) as clinical translation has concentrated protocol knowledge in specialized centers, creating minor information asymmetries, but the core coordination function remains dominant.",
+    "key_agents": [
+      "Clinical Embryology Teams: Primary beneficiary (institutional/mobile) — use timing knowledge to optimize editing uniformity; benefit from reproducible protocols",
+      "Research Groups: Beneficiary (moderate/mobile) — develop and refine protocols; benefit from understanding the causal mechanism",
+      "Prospective Parents: Beneficiary (powerless/constrained) — benefit from reduced mosaicism risk when seeking germline editing for disease prevention",
+      "Regulatory Bodies: Beneficiary (organized/mobile) — use timing constraint as an auditable standard for clinical oversight",
+      "Analytical Observer: Views constraint as Mountain (analytical/analytical) — timing dependence is an immutable property of cell-cycle biology"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The timing constraint solves a genuine coordination problem (when to inject to achieve uniform editing) with minimal asymmetric extraction. The slight increase over the interval (0.08 → 0.12) reflects that clinical translation has concentrated protocol expertise in specialized centers, creating minor information asymmetries and potential gatekeeping, but this is far below the threshold for Tangled Rope classification. The constraint does not suppress alternatives or create victims — it communicates a reproducible causal relationship. Suppression (0.15): Very low. Alternative editing strategies (base editing, prime editing) and alternative reproductive strategies (PGD, adoption) exist. The timing constraint does not prevent exit from CRISPR-based germline editing. The modest suppression reflects the technical complexity and resource requirements of embryo editing, not coercive enforcement of the timing protocol. Theater ratio (0.08): Very low. The constraint is directly testable via single-cell Sanger sequencing (mosaicism detection) and NGS (editing uniformity in multicell samples). The causal mechanism (S-phase creates multiple target copies) is well-understood and reproducible. The slight increase over the interval reflects that some protocol optimization has become tacit knowledge in specialized labs, but the core relationship remains transparent and verifiable.",
+    "directionality_logic": "All perspectives in this constraint are beneficiaries or neutral observers — no victims are declared. Clinical embryology teams, research groups, prospective parents, and regulatory bodies all benefit from the timing constraint: it provides actionable knowledge that improves editing outcomes. The directionality derivation chain assigns low d values (beneficiary end of the spectrum) to all non-analytical perspectives, resulting in low or negative effective extraction (chi). The analytical observer is assigned d = 0.5 (symmetric) by default for the analytical power atom, but experiences the constraint as Mountain (immutable cell-cycle biology) rather than as extraction. The constraint's low base extractiveness (0.12) combined with beneficiary-dominant directionality produces uniformly low chi across perspectives, consistent with Rope classification.",
+    "perspectival_gap": "This constraint exhibits minimal perspectival gap — all non-analytical perspectives classify as Rope, reflecting genuine coordination. The only divergence is the analytical observer's Mountain classification, which is structurally appropriate: from a civilizational/universal perspective, the timing constraint reflects an immutable property of eukaryotic cell-cycle biology (DNA replication creates multiple target copies; post-replication editing produces mosaicism). This is not a false summit — the analytical observer is correctly identifying a natural law (S-phase mechanics) that underlies the coordination problem. The coordination problem (when to inject) is real, but the underlying constraint (post-replication editing produces mosaicism) is a consequence of cell biology, not institutional arrangement. The gap between Rope (coordination) and Mountain (natural law) is the difference between the actionable protocol (when to inject) and the immutable mechanism (why timing matters).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Rope and Mountain classifications can coexist without contradiction when the perspectives are properly distinguished. The clinical and research perspectives see Rope (coordination around an actionable protocol). The analytical perspective sees Mountain (immutable cell-cycle biology). Both are correct: the timing protocol is a coordination mechanism built on top of a natural law. The mandate (optimize injection timing to reduce mosaicism) is well-matched to the function (communicate the causal relationship between S-phase and editing uniformity). No mandatrophy is present — the constraint has not outlived its function, and the coordination mechanism remains aligned with the underlying biological reality."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a standalone coordination mechanism in the germline editing domain. It does not decompose into multiple stories because the observable (mosaicism rate) and the constraint (S-phase timing determines editing uniformity) have a stable one-to-one relationship. Alternative observables (e.g., off-target editing rate, embryo viability) would describe different constraints, not different measurements of this one."
+  },
+  "directionality_overrides": []
+}

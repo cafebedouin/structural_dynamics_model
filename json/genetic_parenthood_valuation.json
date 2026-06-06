@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "genetic_parenthood_valuation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gen_parent",
+    "story_uid": "d6c8d09e-284f-4e00-b47f-6184b2d81e3c",
+    "created_at": "2026-06-06T03:14:45.743537+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "claimed_type": "rope",
+    "human_readable": "Genetic Parenthood Valuation in Reproductive Medicine",
+    "topic_domain": "bioethics/reproductive_medicine/genetic_engineering",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "genetic_continuity_seekers",
+      "fertility_industry",
+      "genetic_testing_providers"
+    ],
+    "victims": [
+      "non_genetic_parents",
+      "adoptive_families",
+      "gamete_recipients"
+    ],
+    "vindicated_propositions": [
+      "genetic_essentialism_doctrine",
+      "biological_primacy_thesis"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Genetic Continuity Seeker",
+      "comment": "PERSPECTIVE 1: GENETIC CONTINUITY SEEKER (ROPE) — Moderate power, mobile exit. Experiences the constraint as coordination: the fertility industry's emphasis on genetic relatedness aligns with their preferences and provides clear pathways (IVF, GGM, genetic screening). Can exit to adoption or gamete donation if costs become prohibitive. Net beneficiary — the constraint coordinates resources toward their values."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ambivalent Prospective Parent",
+      "comment": "PERSPECTIVE 2: AMBIVALENT PROSPECTIVE PARENT (TANGLED ROPE) — Moderate power, constrained exit. Values both genetic and non-genetic pathways but faces asymmetric institutional support: fertility clinics emphasize genetic options, insurance coverage favors IVF over adoption, cultural narratives privilege biological parenthood. Benefits from the coordination function (clear protocols exist) but bears extraction through constrained choice architecture and financial barriers to alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Stigmatized Non-Genetic Parent",
+      "comment": "PERSPECTIVE 3: STIGMATIZED NON-GENETIC PARENT (SNARE) — Powerless, identity-locked. Adoptive parents, step-parents, and gamete recipients face persistent cultural devaluation of non-genetic parenthood. Identity is constituted through the parenting role, but the constraint continuously signals that their bond is 'less real' than genetic parenthood. Cannot exit the identity frame without abandoning the parenting relationship. Experiences maximum extraction through social stigma, legal vulnerability (weaker parental rights in some jurisdictions), and internalized hierarchy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fertility Clinic",
+      "comment": "PERSPECTIVE 4: FERTILITY CLINIC (TANGLED ROPE) — Institutional power, constrained exit. Benefits financially from genetic-emphasis services (IVF, PGD, GGM generate higher revenue than adoption referrals) but also provides genuine coordination: helping patients achieve genetic parenthood when medically possible. Constrained by professional norms, insurance structures, and patient demand. Mixed beneficiary-victim: profits from the constraint but also bound by it (cannot easily pivot to non-genetic family-building services without losing market position)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Genetic Testing Industry",
+      "comment": "PERSPECTIVE 5: GENETIC TESTING INDUSTRY (ROPE) — Institutional power, arbitrage exit. Primary beneficiary. The constraint creates sustained demand for ancestry testing, carrier screening, PGD, and embryo selection services. Experiences the constraint as pure coordination: genetic valuation is the market foundation. Can arbitrage across jurisdictions with different regulatory environments. Net beneficiary with minimal extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Adoption Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: ADOPTION ADVOCACY COALITION (SCAFFOLD) — Organized power, mobile exit. Sees the genetic-primacy norm as a temporary cultural artifact being actively dismantled through legal reform (equal parental rights for adoptive parents), cultural campaigns (normalizing diverse family structures), and institutional change (insurance parity for adoption). Sunset logic: as non-genetic family forms gain legal and cultural recognition, the genetic-valuation constraint loses normative force. Estimated sunset: 15-25 years for substantial norm shift in Western contexts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — Analytical context. The constraint exhibits genuine coordination (genetic information is medically relevant for hereditary conditions; genetic relatedness is a legitimate preference for some) AND asymmetric extraction (the preference is culturally amplified beyond its functional basis, creating stigma hierarchies and resource allocation distortions). The coordination function is real but not sufficient to explain the constraint's intensity — cultural narratives, industry incentives, and identity politics layer extraction onto the coordination substrate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genetic_preference_origin",
+      "question": "Is the preference for genetic parenthood a human universal (evolutionary adaptation) or a culturally contingent norm amplified by modern reproductive technology?",
+      "resolution_mechanism": "Cross-cultural anthropological data on parenting norms in societies without access to genetic testing; historical analysis of adoption and fosterage practices; evolutionary psychology evidence on kin recognition and investment",
+      "impact": "If universal: the constraint is closer to mountain (coordination around an immutable preference). If culturally contingent: the constraint is closer to snare (extraction through manufactured preference).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genetic parenthood preference is universal or culturally contingent"
+    },
+    {
+      "id": "medical_utility_threshold",
+      "question": "What proportion of the genetic information sought in reproductive contexts has genuine medical utility (hereditary disease screening) versus identity/ancestry interest?",
+      "resolution_mechanism": "Analysis of genetic testing uptake patterns; comparison of actionable medical findings vs non-actionable ancestry information; patient decision-making studies on test result impact",
+      "impact": "If high medical utility: coordination function is stronger, extraction lower. If low medical utility: the constraint is more extractive (industry profits from non-functional testing).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of genetic testing with genuine medical utility"
+    },
+    {
+      "id": "stigma_internalization_mechanism",
+      "question": "Do non-genetic parents internalize the genetic-primacy hierarchy, or do they resist it while facing external stigma?",
+      "resolution_mechanism": "Qualitative interviews with adoptive parents, step-parents, and gamete recipients; longitudinal studies of parental identity formation; comparison of self-reported vs externally-imposed stigma",
+      "impact": "If internalized: identity_locked classification is accurate and extraction is higher (the constraint operates through self-enforcement). If resisted: constrained classification is more accurate and extraction is lower (external barriers only).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-genetic parents internalize genetic-primacy stigma"
+    },
+    {
+      "id": "sunset_plausibility",
+      "question": "Is the adoption advocacy coalition's sunset timeline realistic, or is genetic valuation intensifying with advancing reproductive technology?",
+      "resolution_mechanism": "Trend analysis of cultural attitudes toward non-genetic parenthood over past 30 years; uptake rates of genetic vs non-genetic family-building pathways; legal reform trajectory; GGM and embryo selection demand curves",
+      "impact": "If sunset is real: scaffold classification is structural. If genetic valuation is intensifying: the constraint is hardening into tangled_rope or snare from more perspectives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether genetic-primacy norm is weakening or intensifying"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "gen_parent_extract_1990"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22,
+      "id_override": "gen_parent_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.26,
+      "id_override": "gen_parent_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28,
+      "id_override": "gen_parent_extract_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "gen_parent_theater_1990"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "gen_parent_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2,
+      "id_override": "gen_parent_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22,
+      "id_override": "gen_parent_theater_2020"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "gen_parent_suppress_1990"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3,
+      "id_override": "gen_parent_suppress_2000"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.33,
+      "id_override": "gen_parent_suppress_2010"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.35,
+      "id_override": "gen_parent_suppress_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The genetic parenthood valuation constraint describes the cultural, institutional, and economic weight assigned to genetic relatedness in reproductive decision-making. This constraint operates across multiple domains: patient preferences in fertility treatment, insurance coverage structures, legal definitions of parenthood, cultural narratives about 'real' family bonds, and the market structure of the fertility industry. The constraint exhibits coordination function (genetic information has genuine medical utility for hereditary disease screening; genetic relatedness is a legitimate preference for some prospective parents) layered with extraction (the preference is culturally amplified beyond its functional basis, creating stigma hierarchies for non-genetic parents and resource allocation distortions favoring expensive genetic technologies over adoption or gamete donation). The constraint's extractiveness has increased modestly over the 30-year interval (0.18 to 0.28) as reproductive technologies have advanced and genetic testing has become more accessible, creating new markets and intensifying the cultural emphasis on genetic connection. Theater ratio remains low (0.22) because the constraint operates through genuine preference expression rather than performative compliance, though some theater exists in the fertility industry's marketing narratives. Suppression has increased (0.25 to 0.35) as the constraint has become more institutionally embedded through insurance structures, legal frameworks, and professional norms that privilege genetic family-building pathways.",
+    "key_agents": [
+      "Genetic Continuity Seekers: Primary beneficiaries (moderate/mobile) — their preferences are institutionally supported and culturally validated",
+      "Ambivalent Prospective Parents: Mixed position (moderate/constrained) — benefit from coordination but face asymmetric choice architecture",
+      "Stigmatized Non-Genetic Parents: Primary victims (powerless/identity_locked) — adoptive parents, step-parents, gamete recipients face cultural devaluation and legal vulnerability",
+      "Fertility Clinics: Institutional actors (institutional/constrained) — profit from genetic-emphasis services but also provide genuine coordination",
+      "Genetic Testing Industry: Primary beneficiaries (institutional/arbitrage) — the constraint is their market foundation",
+      "Adoption Advocacy Coalition: Organized resistance (organized/mobile) — building alternative pathways with sunset logic",
+      "Analytical Observer: Sees both coordination and extraction (analytical/analytical) — genuine medical utility layered with cultural amplification"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The constraint extracts through cultural stigma against non-genetic parenthood, asymmetric institutional support (insurance coverage favors IVF over adoption), and industry profit from genetic-emphasis services. However, extraction is not severe — the coordination function is real (genetic information has medical utility; genetic relatedness is a legitimate preference for some), and alternatives exist (adoption, gamete donation, step-parenting). The modest increase over time (0.18 to 0.28) reflects technology-driven market expansion and cultural intensification rather than fundamental structural change. Suppression (0.35): Low-moderate. Barriers to non-genetic parenthood include adoption costs and bureaucracy, legal vulnerability for non-genetic parents in some jurisdictions, cultural narratives that privilege biological bonds, and insurance structures that favor genetic family-building. But suppression is not high — non-genetic pathways are legally available, cultural acceptance is increasing in many contexts, and organized advocacy exists. The increase over time (0.25 to 0.35) reflects institutional embedding of genetic-primacy norms as reproductive technology has matured. Theater ratio (0.22): Low. The constraint operates primarily through genuine preference expression and institutional coordination rather than performative compliance. Some theater exists in fertility industry marketing (genetic connection framed as essential rather than optional) and cultural narratives (biological parenthood as 'natural'), but most of the constraint's operation is functional. The modest increase (0.15 to 0.22) reflects growing gap between marketed genetic essentialism and actual parenting outcomes.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. Genetic continuity seekers are declared beneficiaries with mobile exit — they experience low effective extraction (the constraint coordinates resources toward their preferences). The genetic testing industry is a declared beneficiary with arbitrage exit — they experience negative effective extraction (the constraint subsidizes them). Stigmatized non-genetic parents are declared victims with identity_locked exit — they experience high effective extraction (the constraint extracts through stigma and legal vulnerability, and they cannot exit the identity frame without abandoning the parenting relationship). Ambivalent prospective parents are both beneficiaries (coordination function) and victims (constrained choice architecture) with constrained exit — they experience moderate extraction. Fertility clinics are mixed beneficiaries-victims with constrained exit — they profit from the constraint but are also bound by it. The adoption advocacy coalition is organized with mobile exit — they experience low extraction because they have agency and see an exit path (the sunset). The analytical observer sees the full structure: genuine coordination layered with cultural amplification and extraction.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon — the weight assigned to genetic relatedness — appears differently from different structural positions. Genetic continuity seekers see coordination (Rope) — the fertility industry aligns with their preferences. Ambivalent prospective parents see mixed coordination and extraction (Tangled Rope) — they benefit from clear protocols but face asymmetric institutional support. Stigmatized non-genetic parents see pure extraction (Snare) — the constraint continuously devalues their bonds. Fertility clinics see mixed coordination and extraction (Tangled Rope) — they profit but are also constrained. The genetic testing industry sees pure coordination (Rope) — genetic valuation is their market foundation. The adoption advocacy coalition sees a temporary problem with a sunset (Scaffold) — cultural norms are shifting. The analytical observer sees the full structure (Tangled Rope) — genuine coordination layered with extraction. The perspectival gap is not about disagreement over facts but about structural position: beneficiaries experience coordination, victims experience extraction, and the analytical observer sees both.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that genetic parenthood valuation is neither pure coordination (Rope from all perspectives) nor pure extraction (Snare from all perspectives). The coordination function is real: genetic information has medical utility for hereditary disease screening, and genetic relatedness is a legitimate preference for some prospective parents. But the preference is culturally amplified beyond its functional basis, creating stigma hierarchies for non-genetic parents and resource allocation distortions. The analytical classification (Tangled Rope) captures this hybrid structure: genuine coordination exists, but extraction is layered on top through cultural narratives, industry incentives, and institutional arrangements that privilege genetic family-building pathways. The constraint is not a false summit (it does not claim to be a natural law), but it does exhibit the tangled_rope signature: active enforcement (cultural stigma, insurance structures, legal frameworks), identifiable beneficiaries (genetic continuity seekers, fertility industry), and identifiable victims (non-genetic parents)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "embryo_selection_ethics",
+      "gamete_donation_anonymity",
+      "adoption_legal_framework"
+    ],
+    "dual_formulation_note": "The genetic parenthood valuation constraint is upstream of specific reproductive technology policies (embryo selection, gamete donation, adoption law) but represents a distinct cultural-institutional structure. The downstream constraints have their own extractiveness values reflecting specific policy choices; the genetic parenthood valuation constraint has its own extractiveness reflecting the broader cultural weight assigned to genetic relatedness."
+  },
+  "directionality_overrides": []
+}

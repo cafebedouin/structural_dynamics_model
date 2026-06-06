@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "benchmark_saturation_vs_deployment_gap",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bench_sat",
+    "story_uid": "f8a3c7e1-9d4f-4b2a-8e5c-1a6b9c3d2e7f",
+    "created_at": "2025-01-10T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Benchmark Saturation vs Deployment Gap in AI Development",
+    "topic_domain": "ai_development/technology_governance/organizational_dynamics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "benchmark_optimizing_labs",
+      "ai_safety_theater_practitioners",
+      "compute_infrastructure_vendors"
+    ],
+    "victims": [
+      "deployment_organizations",
+      "end_users_of_ai_systems",
+      "ai_capabilities_research_integrity"
+    ],
+    "vindicated_propositions": [
+      "benchmark_driven_development_doctrine",
+      "transfer_learning_universality_hypothesis"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) — Trapped by deployment decisions made upstream. Experiences model failures in production without ability to exit or select alternatives. Bears full cost of the benchmark-deployment gap through system unreliability, wasted time on failed tasks, and misplaced trust in advertised capabilities. Maximum extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Deployment Organization",
+      "comment": "PERSPECTIVE 2: DEPLOYMENT ORGANIZATION (TANGLED ROPE) — Constrained by vendor lock-in, integration costs, and competitive pressure to adopt 'state-of-the-art' models. Benefits from genuine coordination function (benchmarks provide comparable performance signals across vendors) but also bears extraction through misaligned capability claims. Can switch vendors at high cost but cannot exit the benchmark-driven procurement paradigm. Mixed experience: coordination value exists but is contaminated by systematic overestimation of production readiness."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Benchmark-Optimizing Lab",
+      "comment": "PERSPECTIVE 3: BENCHMARK-OPTIMIZING LAB (ROPE) — Primary beneficiary. Captures funding, talent recruitment, and market valuation through benchmark performance claims. Experiences the constraint as pure coordination: benchmarks provide a shared language for communicating progress and a legitimate mechanism for demonstrating technical achievement. Low effective extraction because the lab is the extraction source, not target."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Evaluation Reform Coalition",
+      "comment": "PERSPECTIVE 4: EVALUATION REFORM COALITION (SCAFFOLD) — Organized researchers building alternative evaluation frameworks (METR task suites, ARC evals, production-environment benchmarks, adversarial testing protocols). See the benchmark saturation problem as a temporary coordination failure with a clear sunset: as deployment failures accumulate, procurement decisions will shift toward evaluations that predict production performance. Mobile exit options because the coalition can build and promote alternative standards. Experiences low extraction because they have agency and a credible path to replacing the saturated benchmarks."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The AI Safety Auditor",
+      "comment": "PERSPECTIVE 5: AI SAFETY AUDITOR (PITON) — Institutional actors performing safety evaluations based on benchmark performance see their own process as degraded. The audit ritual persists (regulatory compliance, due diligence requirements, safety theater for stakeholders) but the functional verification is minimal: passing SWE-bench Verified does not predict safe deployment behavior. The auditor is constrained by regulatory frameworks that mandate benchmark-based evaluation even as the auditors recognize the benchmarks' predictive failure. Piton classification derives from theater gate and institutional inertia, not from high experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, benchmarks serve a genuine coordination function (enabling comparable measurement across research groups, tracking progress over time, allocating research effort) AND create systematic extraction (overfitting to sanitized test distributions, capability misrepresentation, deployment risk externalization). The constraint is not purely extractive (benchmarks solve real coordination problems) and not purely coordinative (the saturation-deployment gap creates identifiable victims). Tangled Rope is the structurally accurate classification: both functions coexist and neither can be eliminated without destroying the other."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transfer_learning_failure_mechanism",
+      "question": "Is the benchmark-deployment gap a fundamental limitation of current architectures (transfer learning fails on distribution shift) or a contingent feature of benchmark design (sanitized test sets don't capture production complexity)?",
+      "resolution_mechanism": "Controlled experiments varying benchmark design (adversarial examples, production-sampled tasks, long-tail edge cases) while holding architecture constant; measurement of transfer learning degradation as a function of distribution shift magnitude",
+      "impact": "If architectural: the gap is a mountain (immutable limit of current paradigm) and benchmark saturation is a false summit. If contingent on design: the gap is a tangled rope (coordination function contaminated by extractive benchmark gaming) and better evaluation design can reduce extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transfer failure is architectural or design-contingent"
+    },
+    {
+      "id": "deployment_failure_attribution",
+      "question": "When models fail in production, is the failure due to benchmark overfitting (model learned test-specific patterns) or capability misrepresentation (benchmark performance never predicted production performance)?",
+      "resolution_mechanism": "Longitudinal tracking of model performance: benchmark scores at release vs production performance 6-12 months post-deployment; correlation analysis between benchmark saturation rate and deployment failure rate",
+      "impact": "If overfitting: the extraction mechanism is benchmark gaming (labs optimize for test performance at the expense of generalization). If misrepresentation: the extraction mechanism is capability theater (benchmarks were never predictive and the coordination function is illusory).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deployment failures trace to overfitting or misrepresentation"
+    },
+    {
+      "id": "alternative_evaluation_sufficiency",
+      "question": "Do production-environment evaluations (METR tasks, ARC evals, real-world deployment monitoring) provide sufficient signal to replace sanitized benchmarks, or do they introduce new failure modes (evaluation cost, proprietary data requirements, adversarial gaming)?",
+      "resolution_mechanism": "Comparative analysis of evaluation frameworks: predictive validity (correlation between eval performance and deployment success), cost structure (compute/human labor requirements), gaming resistance (rate of evaluation invalidation through optimization pressure)",
+      "impact": "If sufficient: scaffold perspective confirmed — alternative evaluations can sunset the benchmark saturation problem. If insufficient: the coordination function of sanitized benchmarks is irreplaceable and the extraction is structural rather than contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative evaluations can replace sanitized benchmarks"
+    },
+    {
+      "id": "compute_vendor_incentive_alignment",
+      "question": "Do compute infrastructure vendors benefit from benchmark saturation (selling compute for benchmark optimization) or from deployment success (selling compute for production workloads)?",
+      "resolution_mechanism": "Revenue analysis: proportion of compute sales driven by benchmark training vs production deployment; vendor positioning in evaluation reform debates (do they support or resist production-environment evaluations?)",
+      "impact": "If vendors benefit from saturation: they are beneficiaries and the constraint's extraction is higher than base metrics suggest (vendor lobbying sustains benchmark-driven procurement). If vendors benefit from deployment: they are potential coalition members for evaluation reform and the scaffold sunset is more credible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether compute vendors benefit from saturation or deployment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "bench_sat_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48,
+      "id_override": "bench_sat_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58,
+      "id_override": "bench_sat_theater_t4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65,
+      "id_override": "bench_sat_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.68,
+      "id_override": "bench_sat_theater_t8"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "bench_sat_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.35,
+      "id_override": "bench_sat_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42,
+      "id_override": "bench_sat_extract_t4"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.46,
+      "id_override": "bench_sat_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.48,
+      "id_override": "bench_sat_extract_t8"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "bench_sat_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.55,
+      "id_override": "bench_sat_suppress_t4"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.62,
+      "id_override": "bench_sat_suppress_t8"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The benchmark saturation vs deployment gap constraint describes the structural tension between optimizing AI models for controlled evaluation environments and their performance in production settings. Models achieve 80% on SWE-bench Verified (sanitized, well-specified tasks) while scoring 23% on SWE-Bench Pro (production-complexity tasks with ambiguity, missing context, and real-world messiness). This gap creates a coordination-extraction hybrid: benchmarks solve the legitimate problem of comparable measurement across research groups, but the optimization pressure toward benchmark performance creates systematic capability misrepresentation that extracts value from deployment organizations and end users. The constraint exhibits rising theater_ratio (0.35 → 0.68 over 8 years) as benchmark performance increasingly decouples from production utility, and rising extractiveness (0.28 → 0.48) as the deployment gap widens while benchmark-driven procurement decisions persist. Suppression has increased (0.45 → 0.62) as vendor lock-in, integration costs, and competitive pressure to adopt 'state-of-the-art' models reduce deployment organizations' ability to exit benchmark-driven procurement. The constraint is a tangled rope from the analytical perspective: genuine coordination function (benchmarks enable progress tracking and vendor comparison) coexists with asymmetric extraction (labs capture funding and valuation through benchmark gaming while deployment organizations bear the cost of production failures).",
+    "key_agents": [
+      "End Users: Primary victim (powerless/trapped) — bear full cost of deployment failures with no exit option or procurement influence",
+      "Deployment Organizations: Secondary victim (moderate/constrained) — benefit from benchmark coordination function but bear extraction through capability misrepresentation; constrained by vendor lock-in and competitive pressure",
+      "Benchmark-Optimizing Labs: Primary beneficiary (institutional/arbitrage) — capture funding, talent, and market valuation through benchmark performance; experience constraint as pure coordination",
+      "Compute Infrastructure Vendors: Potential beneficiary (institutional/arbitrage) — revenue from benchmark optimization compute; incentive alignment unclear (omega variable)",
+      "AI Safety Theater Practitioners: Beneficiary (institutional/constrained) — perform compliance audits based on benchmark performance; recognize functional degradation but constrained by regulatory frameworks",
+      "Evaluation Reform Coalition: Organized agents (organized/mobile) — building alternative evaluation frameworks with production-environment validity; see constraint as temporary with credible sunset path",
+      "AI Capabilities Research Integrity: Abstract victim (powerless/trapped) — epistemic commons contaminated by benchmark gaming; no advocate and no exit"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The benchmark-deployment gap creates real costs for deployment organizations (wasted integration effort, production failures, misallocated procurement budgets) and end users (unreliable systems, failed tasks). However, extraction is not maximal because benchmarks do provide genuine coordination value — they enable comparable measurement and progress tracking. The value reflects that roughly half the constraint's operation is extractive (capability misrepresentation, deployment risk externalization) and half is coordinative (measurement standardization, vendor comparison). Suppression (0.62): Moderate-high. Deployment organizations face significant barriers to exiting benchmark-driven procurement: vendor lock-in through API integration, competitive pressure to adopt 'state-of-the-art' models, procurement frameworks that mandate benchmark-based evaluation, and high switching costs. However, suppression is not total — some organizations can and do build internal evaluation frameworks or demand production-environment testing. Suppression has increased over the interval as the AI deployment ecosystem matured and lock-in effects accumulated. Theater ratio (0.68): High. Benchmark performance is increasingly performative: models are optimized for test set characteristics (sanitized tasks, well-specified requirements, controlled distributions) that do not transfer to production environments. The theater has increased sharply over the interval as benchmark saturation accelerated — early benchmarks (t=0) had moderate predictive validity, but as models saturated them, labs optimized for test-specific patterns rather than generalizable capabilities. Safety audits based on benchmark performance are largely theatrical: passing SWE-bench Verified does not predict safe or reliable deployment behavior.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon — the benchmark-deployment performance gap — appears as different constraint types depending on the observer's position. End users see pure extraction (Snare): they are trapped by upstream deployment decisions and bear the full cost of production failures with no coordination benefit. Deployment organizations see mixed coordination and extraction (Tangled Rope): benchmarks provide genuine vendor comparison value but also systematic capability misrepresentation. Benchmark-optimizing labs see pure coordination (Rope): they are solving the legitimate problem of demonstrating technical progress and communicating capabilities. The evaluation reform coalition sees a temporary problem with a sunset (Scaffold): alternative evaluation frameworks are being built and will replace saturated benchmarks as deployment failures accumulate. AI safety auditors see degraded ritual (Piton): benchmark-based safety evaluation persists through regulatory inertia despite recognized predictive failure. The analytical observer sees tangled rope: both coordination and extraction functions are structurally real and neither can be eliminated without destroying the other. The perspectival gap is not 'which type is correct?' but 'which structural position are you measuring from?' — the presheaf over observation sites IS the answer.",
+    "directionality_logic": "Directionality values are derived from each agent's structural relationship to the constraint. End users are full victims with trapped exit options — they sit at the high-d end of the spectrum, experiencing maximum effective extraction. Deployment organizations are victims with constrained exit — they experience substantial extraction but have some agency and some coordination benefit, placing them at moderate-high d. Benchmark-optimizing labs are primary beneficiaries with arbitrage exit — they sit at the low-d end, experiencing the constraint as net subsidy (extraction flows toward them). Compute vendors' directionality is uncertain (omega variable) — if they benefit from benchmark optimization compute sales, they are beneficiaries; if they benefit from production deployment compute, they are potential coalition members. The evaluation reform coalition has mobile exit options and is building alternative standards — they experience low extraction because they have agency and a credible exit path. AI safety auditors are constrained by regulatory frameworks but recognize the theater — they experience moderate extraction despite institutional power because they cannot exit the benchmark-driven compliance paradigm. The analytical observer's directionality is neutral (d ≈ 0.5) because the coordination and extraction functions are balanced at the civilizational scale.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that tangled rope is the structurally accurate classification from the analytical perspective: benchmarks serve a genuine coordination function (enabling comparable measurement, tracking progress, allocating research effort) AND create systematic extraction (capability misrepresentation, deployment risk externalization, benchmark gaming). The coordination function cannot be dismissed as pure theater — benchmarks do solve real measurement problems and enable legitimate technical communication. The extraction function cannot be dismissed as incidental — the benchmark-deployment gap creates identifiable victims (end users, deployment organizations, research integrity) who bear real costs. Both functions coexist and neither can be eliminated without destroying the other: removing benchmarks eliminates the coordination mechanism; removing optimization pressure eliminates the research incentive structure. The mandatrophy is not 'is this coordination or extraction?' but 'how do coordination and extraction coexist in the same structure?' The tangled rope classification captures this: active enforcement is required (suppression = 0.62), beneficiaries exist (labs, vendors, safety theater practitioners), victims exist (users, deployment orgs, research integrity), and the coordination function is genuine but contaminated."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_evaluation_theater",
+      "compute_infrastructure_lock_in",
+      "research_reproducibility_crisis"
+    ],
+    "dual_formulation_note": "The benchmark saturation constraint is upstream of specific AI safety evaluation failures and compute vendor lock-in dynamics. Each downstream constraint has its own extractiveness reflecting its specific structural features; the benchmark saturation constraint's extractiveness reflects the capability misrepresentation and deployment gap that contaminate all downstream evaluation and procurement decisions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

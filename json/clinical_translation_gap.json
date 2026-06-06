@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "clinical_translation_gap",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clin_trans",
+    "story_uid": "0e9d85ac-8681-44e7-92af-8daaf2e2f80b",
+    "created_at": "2026-06-06T00:08:36.185924+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Clinical Translation Gap in Germline Base Editing",
+    "topic_domain": "biomedical_research/genome_editing/reproductive_medicine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "preimplantation_genetic_testing_industry",
+      "academic_genome_editing_labs",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "couples_with_monogenic_disease_risk",
+      "prospective_parents_with_limited_embryos"
+    ],
+    "accessibility_collapse": 0.12,
+    "resistance": 0.45
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Couples with Monogenic Disease Risk",
+      "comment": "PERSPECTIVE 1: COUPLES WITH MONOGENIC DISEASE RISK (SNARE) — Trapped by biological constraints (limited embryos, age-dependent fertility decline) and regulatory barriers. The technical capability exists but remains inaccessible. Base editing eliminates the severe genotoxic risks that made germline editing categorically unsafe, yet the translation gap persists through regulatory conservatism and industry capture. Maximum experienced extraction: the constraint extracts reproductive autonomy and forces acceptance of disease transmission or childlessness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Prospective Parents with Limited Embryos",
+      "comment": "PERSPECTIVE 2: PROSPECTIVE PARENTS WITH LIMITED EMBRYOS (TANGLED ROPE) — Constrained by the same regulatory barriers but with partial access to coordination benefits: PGT-M screening exists as an alternative, though it requires multiple IVF cycles and may fail when all embryos carry the variant. The constraint coordinates access to genetic screening while extracting through the forced choice between imperfect alternatives. Mixed experience: some benefit from the existing testing infrastructure, substantial cost from the translation delay."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Preimplantation Genetic Testing Industry",
+      "comment": "PERSPECTIVE 3: PGT INDUSTRY (ROPE) — Primary beneficiary. The translation gap preserves the PGT-M market: as long as base editing remains clinically unavailable, couples must use embryo screening. The constraint coordinates a genuine service (genetic testing) while the regulatory delay protects market position. Arbitrage exit: industry actors can pivot to base editing services when regulatory approval arrives, capturing both markets sequentially. Net beneficiary with low experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Academic Genome Editing Labs",
+      "comment": "PERSPECTIVE 4: ACADEMIC GENOME EDITING LABS (ROPE) — Benefit from the extended research window. The translation gap sustains funding for mechanistic studies, off-target characterization, and delivery optimization. The constraint coordinates legitimate scientific investigation while the delay provides career stability for researchers. Arbitrage exit: labs can transition to clinical partnership when translation occurs. Low experienced extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Patient Advocacy Organizations",
+      "comment": "PERSPECTIVE 5: PATIENT ADVOCACY ORGANIZATIONS (SCAFFOLD) — Organized agents pushing for regulatory reform and expanded access. See the translation gap as a temporary coordination failure with a clear sunset: as long-term safety data accumulates and regulatory frameworks adapt, the gap will close. The constraint coordinates safety assessment (legitimate function) while the delay is transitional. Mobile exit: advocacy groups can shift focus to implementation equity once approval is achieved."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 6: REGULATORY AGENCIES (TANGLED ROPE) — Constrained by institutional mandate (protect public health) and political pressure (avoid germline editing controversy). The constraint coordinates genuine safety assessment while extracting through regulatory conservatism that exceeds evidence-based risk. Mixed experience: agencies benefit from avoiding catastrophic approval errors but bear reputational cost when delays are perceived as captured or ideological. Constrained exit: cannot easily revise standards without political authorization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — The translation gap exhibits genuine coordination (safety assessment, long-term monitoring, regulatory framework development) and genuine extraction (industry capture of regulatory delay, reproductive autonomy constrained beyond evidence-based risk). The constraint is not a false summit: the unsolved technical problems (mosaicism variance, off-target rates in vivo, unknown long-term effects) are real, but the regulatory response amplifies them through institutional inertia and industry influence. The naturally-occurring-variant restriction is a constructed barrier, not a technical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mosaicism_resolution_timeline",
+      "question": "What timeline is required to resolve mosaicism variance to clinically acceptable levels, and is the current regulatory delay proportional to that timeline?",
+      "resolution_mechanism": "Longitudinal embryo editing studies with single-cell sequencing; comparison of mosaicism rates across delivery methods and developmental stages; regulatory risk-benefit modeling",
+      "impact": "If mosaicism can be resolved within 5 years: current delay is extractive regulatory conservatism. If resolution requires 15+ years: delay is proportional safety assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for mosaicism resolution vs regulatory proportionality"
+    },
+    {
+      "id": "naturally_occurring_variant_restriction",
+      "question": "Is the regulatory requirement that edits must match naturally occurring variants a legitimate safety constraint or a constructed barrier that naturalizes genetic determinism?",
+      "resolution_mechanism": "Comparative analysis of variant pathogenicity: naturally occurring vs synthetic; examination of regulatory justification documents; cross-jurisdictional policy comparison",
+      "impact": "If naturally occurring variants are demonstrably safer: restriction is coordination. If safety profiles are equivalent: restriction is extraction mechanism that limits reproductive autonomy through naturalization.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether naturally-occurring-variant restriction is safety-based or ideological"
+    },
+    {
+      "id": "pgt_industry_regulatory_capture",
+      "question": "To what extent do PGT industry actors influence regulatory timelines through advisory board membership, funding of safety studies, or lobbying?",
+      "resolution_mechanism": "Financial disclosure analysis; regulatory advisory board composition; industry-funded research publication patterns; comparative approval timelines across jurisdictions with different industry influence",
+      "impact": "If industry influence is negligible: translation gap is legitimate safety coordination. If industry influence is substantial: translation gap is partially extractive, preserving PGT market share.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of PGT industry capture of regulatory process"
+    },
+    {
+      "id": "off_target_clinical_significance",
+      "question": "Are the remaining off-target effects of base editing clinically significant at population scale, or are they within the background mutation rate and therefore negligible?",
+      "resolution_mechanism": "Whole-genome sequencing of base-edited embryos vs controls; population genetics modeling of mutation load; long-term health outcome tracking in model organisms",
+      "impact": "If off-target effects exceed background: regulatory caution is warranted coordination. If off-target effects are within background: regulatory delay is extractive risk amplification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Clinical significance of base editing off-target effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "suppress_initial"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Base editing technology eliminated the most severe genotoxic risks of germline genome editing — double-strand breaks, large deletions, chromosomal rearrangements — that made earlier CRISPR applications categorically unsafe for human reproduction. The technical advance was substantial: base editors chemically convert single nucleotides without cutting DNA, reducing off-target damage by orders of magnitude. Yet clinical translation remains blocked nearly a decade after the technology's development. The gap persists due to four unresolved technical problems (mosaicism variance, off-target effects in vivo, delivery toxicity, unknown long-term consequences) and two regulatory barriers (requirement for naturally occurring variants, institutional conservatism). This constraint exhibits tangled rope structure: genuine coordination (safety assessment is necessary) coexists with asymmetric extraction (regulatory delay exceeds evidence-based risk and preserves incumbent industry market share). The translation gap extracts from couples with monogenic disease risk who have limited embryos or face age-dependent fertility decline, while benefiting the PGT industry, academic labs sustained by research funding, and regulatory agencies avoiding political controversy. The constraint's theater ratio (0.38) reflects that much regulatory activity is substantive safety assessment, but a significant fraction is performative risk amplification and naturally-occurring-variant restriction that naturalizes genetic determinism.",
+    "key_agents": [
+      "Couples with Monogenic Disease Risk: Primary victim (powerless/trapped) — face biological constraints and regulatory barriers; technical capability exists but remains inaccessible",
+      "Prospective Parents with Limited Embryos: Secondary victim (moderate/constrained) — partial access to PGT-M alternatives but forced into imperfect choices",
+      "Preimplantation Genetic Testing Industry: Primary beneficiary (institutional/arbitrage) — translation gap preserves PGT-M market share; can pivot to base editing when approved",
+      "Academic Genome Editing Labs: Secondary beneficiary (institutional/arbitrage) — extended research window sustains funding and careers",
+      "Regulatory Agencies: Mixed position (institutional/constrained) — coordinate legitimate safety assessment while extracting through conservatism exceeding evidence-based risk",
+      "Patient Advocacy Organizations: Organized agents (organized/mobile) — push for regulatory reform; see gap as temporary with clear sunset",
+      "Analytical Observer: Civilizational view (analytical/analytical) — identifies genuine coordination and genuine extraction coexisting"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts reproductive autonomy from couples with monogenic disease risk and limited embryos, forcing acceptance of disease transmission, childlessness, or repeated IVF cycles with uncertain outcomes. The extraction is substantial but not maximal because PGT-M provides a partial alternative for some couples. The increasing trajectory (0.38 → 0.52 over 9 years) reflects accumulating evidence that base editing's safety profile is acceptable while regulatory barriers persist, widening the gap between technical capability and clinical access. Suppression (0.68): High. Regulatory barriers are severe: germline editing is prohibited in most jurisdictions, clinical trials require extensive preclinical data, and the naturally-occurring-variant restriction eliminates most therapeutic applications. Biological constraints (limited embryos, age-dependent fertility decline) compound regulatory suppression. The increasing trajectory (0.55 → 0.68) reflects regulatory frameworks hardening as political controversy intensifies, despite improving safety data. Theater ratio (0.38): Moderate. Much regulatory activity is substantive: long-term safety monitoring, off-target characterization, and mosaicism studies address real unknowns. However, significant performative content exists: the naturally-occurring-variant restriction has weak safety justification and functions primarily as ideological boundary maintenance; repeated calls for 'more data' without specifying evidentiary thresholds; and regulatory agency risk amplification that exceeds evidence-based assessment. The increasing trajectory (0.25 → 0.38) reflects growing performative content as technical problems are progressively solved but regulatory timelines do not adjust proportionally.",
+    "directionality_logic": "Couples with monogenic disease risk are full victims with trapped exit options, yielding maximum directionality (d ≈ 1.0) and maximum experienced extraction. They cannot exit the constraint: biological fertility windows are fixed, alternative reproductive options are limited, and regulatory barriers are jurisdictionally uniform. Prospective parents with limited embryos are victims with constrained exit (d ≈ 0.7): PGT-M provides partial access to genetic screening, reducing but not eliminating extraction. The PGT industry is the primary beneficiary with arbitrage exit (d ≈ 0.1): the translation gap directly preserves their market, and they can pivot to base editing services when regulatory approval arrives, capturing both markets sequentially. Academic genome editing labs are secondary beneficiaries with arbitrage exit (d ≈ 0.2): the extended research window sustains funding, and they can transition to clinical partnerships when translation occurs. Regulatory agencies occupy a mixed position (d ≈ 0.5): they coordinate legitimate safety assessment (beneficiary aspect) while bearing reputational cost from delays perceived as captured or ideological (victim aspect). Their constrained exit reflects institutional mandate and political pressure. Patient advocacy organizations have mobile exit (d ≈ 0.3): they can shift focus to implementation equity once approval is achieved, and their organized power reduces experienced extraction. The analytical observer's directionality is neutral (d = 0.5) by definition, yielding the base extractiveness value without amplification or damping.",
+    "perspectival_gap": "The constraint demonstrates indexical classification across structural positions. Couples with monogenic disease risk experience pure extraction (Snare): the technical capability exists but remains inaccessible through regulatory barriers that exceed evidence-based risk. Prospective parents with limited embryos experience mixed coordination and extraction (Tangled Rope): PGT-M provides partial benefit while the translation gap forces imperfect choices. The PGT industry experiences coordination (Rope): the constraint preserves their market while coordinating genetic screening services. Academic labs experience coordination (Rope): the research window sustains legitimate scientific investigation. Patient advocacy organizations see a temporary problem with sunset logic (Scaffold): as safety data accumulates and regulatory frameworks adapt, the gap will close. Regulatory agencies experience mixed coordination and extraction (Tangled Rope): they coordinate genuine safety assessment while extracting through conservatism. The analytical observer identifies the constraint as Tangled Rope at the civilizational scale: genuine coordination (safety assessment is necessary given unsolved technical problems) coexists with genuine extraction (regulatory delay exceeds evidence-based risk and preserves incumbent industry position). The perspectival gap is not a measurement error — it reflects real differences in structural position relative to the constraint.",
+    "mandatrophy_analysis": "The clinical translation gap resolves mandatrophy by demonstrating that tangled rope classification is stable across multiple perspectives when genuine coordination and genuine asymmetric extraction coexist. The constraint is not mislabeled coordination (it extracts substantially from trapped victims) and not mislabeled pure extraction (it coordinates legitimate safety assessment). The naturally-occurring-variant restriction is the clearest extraction signal: it has weak safety justification (synthetic variants with equivalent pathogenicity profiles are excluded) and functions primarily to naturalize genetic determinism, limiting reproductive autonomy through ideological boundary maintenance rather than evidence-based risk assessment. The regulatory conservatism that exceeds proportional response to unsolved technical problems (mosaicism, off-target variance) is the second extraction mechanism: industry influence and institutional inertia amplify risk beyond evidence, preserving PGT market share. Yet the coordination function is genuine: base editing does have unsolved technical problems, long-term effects are unknown, and regulatory frameworks for germline modification require careful development. The constraint exhibits the tangled rope signature: beneficiaries declared (PGT industry, academic labs, regulatory agencies), victims declared (couples with monogenic disease risk, prospective parents with limited embryos), active enforcement required (regulatory prohibition, clinical trial restrictions), and the analytical perspective confirms mixed structure rather than resolving to pure coordination or pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The clinical translation gap is downstream of four technical constraints (dna_repair_substrate_difference, delivery_modality_toxicity, guide_rna_off_target_variance, genetic_mosaicism_timing) but represents a distinct regulatory and institutional constraint. The upstream constraints have their own extractiveness values reflecting the technical barriers; the translation gap has its own extractiveness reflecting regulatory conservatism, industry capture, and ideological boundary maintenance that exceed evidence-based risk assessment."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "dna_repair_substrate_difference",
+      "delivery_modality_toxicity",
+      "guide_rna_off_target_variance",
+      "genetic_mosaicism_timing"
+    ]
+  }
+}
