@@ -3173,6 +3173,42 @@ and the pipeline finishes 40/41; `giant_component_analysis.md` is simply not ref
 But a SIGSEGV is never "fine" — logged so the kill-condition is run before trusting the
 giant-component output on any concurrently-built corpus.
 
+## OQ-78 — The ε authoring idiom: a 0.68 mode + 8/2 last-digit grid compresses the ε perturbation axis
+
+**Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
+
+**Status:** open — measurement caveat, not a defect; NOT a leak (no author-facing surface discloses
+0.68; the de-leak's assembled-payload grep is clean). Watch as the corpus grows.
+**Origin:** n=91 build assessment (2026-06-06, commit `0fd22ea`, manifest run 03:50Z — coherent
+snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
+new `0.68` mode emerging); escalated to a finding at n=91.
+
+**The observation:** authored `base_extractiveness` clusters hard. At n=91: **31/91 stories sit at
+exactly ε=0.68**; the mode stack is 0.68(31), 0.58(12), 0.48(11), 0.28(10), 0.08(6) — only 13
+distinct values over 91 stories; the last-digit grid is **8: 78, 5: 7, 2: 6** (86% end in 8). The
+model authors ε on a coarse 0.1-spaced grid biased to the `.x8` rail, with a strong central mode.
+
+**Why it matters (and why it is not a defect):** ε is one of the perturbation axes. A third of the
+corpus sharing one ε value makes the ε axis **low-variance**, so claimed-vs-computed divergence and
+χ are driven by directionality f(d) and scope σ(S) **more than by ε**. Any ε-binned Stage-2 statistic
+(the digit-grid health check, ε-stratified divergence rates) inherits this compression — bins will be
+sparse and lumpy. It is the AUTHORING regularity the perturbation principle expects to read off, not
+an engine fault: the engine recomputes correctly on whatever ε is authored. But it is a standing
+caveat on every ε-keyed denominator, and a candidate signal in its own right (does the model's ε mode
+track topic, claimed-type, or nothing?).
+
+**Distinguish from OQ-26 (ε reading-relative across runs):** OQ-26 is about ε varying for the SAME
+topic across generation runs; OQ-78 is about ε CLUSTERING across DIFFERENT topics within one run.
+Orthogonal.
+
+**What would resolve / act on it:** (a) track the mode fraction and distinct-value count as the
+corpus grows — does 0.68's share fall toward a spread (idiom diluting) or hold (idiom entrenched)?
+(b) cross-tab ε-mode against claimed_type and topic to see whether the clustering is structural
+(0.68 = "the model's default extractive value") or carries signal; (c) if entrenched and signal-free,
+it bounds the usable resolution of the ε axis — report ε-based statistics at grid resolution, not
+continuous. Do NOT "fix" it by disclosing target ε values to the author (that is the de-leak in
+reverse — re-collapses the diff). If anything is steered, it is via topic/source-domain selection.
+
 ---
 
 *Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark
