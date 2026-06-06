@@ -14,7 +14,7 @@ captured = []
 class FakeBatches:
     def __init__(self): self._r = {}
     def create(self, requests):
-        captured.append([{"custom_id": r["custom_id"], "messages": r["params"]["messages"]} for r in requests])
+        captured.append([{"custom_id": r["custom_id"], "params": r["params"]} for r in requests])
         out = []
         for r in requests:
             tail = r["params"]["messages"][0]["content"][1]["text"]

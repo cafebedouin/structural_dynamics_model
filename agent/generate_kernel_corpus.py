@@ -53,6 +53,9 @@ from agent.story_generator_base import (
     strip_json_fences,
     append_to_log,
     load_processed_log,
+    build_prompt_parts,
+    axis_source_desc,
+    upstream_context,
 )
 
 # generate_pl and lint_file live in python/ — story_generator_base adds it to sys.path on import
@@ -715,6 +718,161 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         print(f"  {len(rejected)} rejection(s) logged → {rejections_path}")
 
     return succeeded, failed, kernel_membership, rejected
+
+
+# ---------------------------------------------------------------------------
+# Unified generation backend (2026-06-06) — the single "manifest → corpus" path both
+# c-orchestrator and the --scope flow call. Heals the silent fork (Build-Discipline
+# Pattern 2) that dropped recognized kernel readings (OQ-79).
+#
+# Design (approved plan cc-audit-brief-golden-pebble.md):
+#  - SEED TYPES, dispatched by builder (kept polymorphism, not deletable debt):
+#      flat axis     -> c-orchestrator framing (axis_source_desc + build_prompt_parts)
+#      reading/control -> gkc framing (build_cached_messages)
+#  - FLAT seeds are resolved against manifest["axes"] (NOT flatten_manifests, which never
+#    looks up axes) and carry the axis dict + manifest ref, because axis_source_desc reads
+#    structural_delta/primary_observable/hypothesis/beneficiary/victim from the axis and
+#    domain/csr from the manifest, and upstream_context reads axis.downstream_of.
+#  - The wave loop is c-orchestrator's _step_generate_batch loop, generalized so an item is
+#    a seed: for a PURE-FLAT manifest the seed set + per-item build reduce EXACTLY to
+#    c-orchestrator's behavior (W1/W2 byte-identity). Readings/controls have no
+#    downstream_of -> always wave 1, so only flat seeds inject upstream context.
+#  - Request DEFAULTS (model/max_tokens/system/temperature) are caller-supplied: c-orch
+#    passes sonnet + string system; gkc passes haiku + list system. Necessary for
+#    byte-identity and correct (the two front-ends genuinely use different models).
+# ---------------------------------------------------------------------------
+
+def _flat_seeds_from_manifest(m):
+    """Resolve FLAT (ordinary) axes the way c-orchestrator does: from manifest['axes'] via
+    generation_sequence order, skipping dups and entries with no matching axis (those are
+    kernel readings, handled by flatten_manifests). Carries the axis dict + manifest ref so
+    axis_source_desc/upstream_context get exactly what they read."""
+    axes_by_id = {a["claim_id"]: a for a in m.get("axes", [])}
+    seeds, seen = [], set()
+    for entry in m.get("generation_sequence", []):
+        cid = entry if isinstance(entry, str) else (entry.get("claim_id") or entry.get("constraint_id"))
+        if not cid or cid in seen:
+            continue
+        seen.add(cid)
+        axis = axes_by_id.get(cid)
+        if not axis:
+            continue  # kernel reading — not a flat axis; flatten_manifests emits it
+        seeds.append({
+            "seed_type": "flat",
+            "constraint_id": cid,
+            "_axis": axis,
+            "_manifest": m,
+            "downstream_of": axis.get("downstream_of") or [],
+        })
+    return seeds
+
+
+def _seed_messages(seed, generated_by_id):
+    """Dispatch request MESSAGES by seed type — the flat/kernel framing polymorphism.
+    Flat path is byte-identical to c-orchestrator's _step_generate_batch assembly."""
+    if seed.get("seed_type") == "flat":
+        m, cid, axis = seed["_manifest"], seed["constraint_id"], seed["_axis"]
+        source_desc = axis_source_desc(m, cid, axis)
+        ctx = upstream_context(axis, generated_by_id, cid)
+        static_prefix, dynamic_tail = build_prompt_parts(source_desc, ctx)
+        return [{"role": "user", "content": [
+            {"type": "text", "text": static_prefix, "cache_control": {"type": "ephemeral"}},
+            {"type": "text", "text": dynamic_tail},
+        ]}]
+    # reading / flat_control -> gkc framing (handles KERNEL CONTEXT / FLAT CONSTRUCTION blocks)
+    return build_cached_messages(seed)
+
+
+def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
+                            model, max_tokens, system, temperature,
+                            rejections_path=None, manifest_file=None, progress=None):
+    """The unified backend. Returns (succeeded_ids, failed_ids, fail_reasons)."""
+    progress = progress or (lambda *a, **k: None)
+    client = get_client()
+
+    # --- Seed set: flat axes (c-orch resolution) + kernel readings/controls (flatten) ---
+    flat_seeds = []
+    for m in manifests:
+        flat_seeds.extend(_flat_seeds_from_manifest(m))
+    kr_all, recovery = flatten_manifests(manifests)
+    kr_seeds = []
+    for s in kr_all:
+        if s.get("kernel_id"):
+            s["seed_type"] = "reading"
+        elif s.get("flat_control_of"):
+            s["seed_type"] = "flat_control"
+        else:
+            continue  # flatten's own flat seeds — we build flat seeds ourselves (byte-identity)
+        s["downstream_of"] = []  # readings/controls are wave-1 (siblings/independent)
+        kr_seeds.append(s)
+    if recovery:
+        progress("generate", f"RECOVERY: {recovery} kernel entries missing reading_id")
+    all_seeds = flat_seeds + kr_seeds   # flat first; pure-flat -> identical to c-orch items order
+
+    # Retry-the-gaps: a frozen-manifest run skips seeds whose story already landed.
+    if manifest_file:
+        all_seeds = [s for s in all_seeds
+                     if not (json_dir / f"{s['constraint_id']}.json").exists()]
+
+    run_ids = {s["constraint_id"] for s in all_seeds}
+    generated_by_id = {}
+    succeeded_ids, failed_ids, fail_reasons = set(), set(), {}
+
+    # --- Wave loop (generalized c-orchestrator._step_generate_batch) ---
+    remaining = list(all_seeds)
+    wave_no = 0
+    while remaining:
+        wave_no += 1
+        wave = [s for s in remaining
+                if not any(u in run_ids and u not in generated_by_id and u not in failed_ids
+                           for u in (s.get("downstream_of") or []))]
+        if not wave:
+            progress("generate", f"Wave {wave_no}: dependency cycle among "
+                                 f"{[s['constraint_id'] for s in remaining]} — generating without upstream")
+            wave = remaining
+        remaining = [s for s in remaining if s not in wave]
+
+        requests, idmap = [], {}
+        for idx, seed in enumerate(wave):
+            cid = seed["constraint_id"]
+            custom_id = f"w{wave_no}i{idx}"
+            idmap[custom_id] = cid
+            requests.append({"custom_id": custom_id, "params": {
+                "model": model, "max_tokens": max_tokens, "temperature": temperature,
+                "system": system, "messages": _seed_messages(seed, generated_by_id)}})
+
+        progress("generate", f"Wave {wave_no}: batch of {len(requests)} ({', '.join(idmap.values())})")
+        try:
+            batch = client.messages.batches.create(requests=requests)
+            poll_batch(client, batch.id, 15)
+        except Exception as e:
+            progress("generate", f"Wave {wave_no} batch failed: {e}")
+            for c in idmap.values():
+                failed_ids.add(c); fail_reasons[c] = f"wave batch error: {e}"[:300]
+            continue
+
+        wave_by_id = {s["constraint_id"]: s for s in wave}
+        process_batch_results(client, batch.id, json_dir, testsets_dir, processed_log,
+                              gen_seeds_by_id=wave_by_id, rejections_path=rejections_path,
+                              overwrite=True, id_map=idmap)
+        # Re-read saved stories for downstream-wave upstream context + success accounting.
+        for cid in idmap.values():
+            p = json_dir / f"{cid}.json"
+            if p.exists():
+                succeeded_ids.add(cid)
+                try:
+                    generated_by_id[cid] = json.loads(p.read_text(encoding="utf-8"))
+                except (json.JSONDecodeError, OSError):
+                    pass
+            else:
+                failed_ids.add(cid); fail_reasons.setdefault(cid, "no story saved (see process log)")
+
+    # --- Post-steps (gkc's existing kernel machinery; no-ops on a pure-flat run) ---
+    stamp_kernel_linkage(kr_seeds, json_dir, testsets_dir)
+    validate_reading_relation_integrity(kr_seeds, json_dir, testsets_dir)
+    emit_axiom_contradiction_facts(manifests, json_dir, testsets_dir)
+
+    return succeeded_ids, failed_ids, fail_reasons
 
 
 # ---------------------------------------------------------------------------
