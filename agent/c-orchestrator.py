@@ -40,9 +40,6 @@ from agent.story_generator_base import (
     TESTSETS_DIR,
     _load_context_file,
     build_prompt,
-    build_prompt_parts,
-    axis_source_desc,
-    upstream_context,
     _SYSTEM_INSTRUCTION,
 )
 
@@ -517,263 +514,55 @@ class DRAuditOrchestrator:
     # ------------------------------------------------------------------
 
     def _step_generate(self, manifest: dict) -> StepResult:
-        """Dispatch: batch mode by default (2026-06-05; the uncapped axis budget makes
-        6-8 sequential Sonnet calls the long pole). --serial-generate or
-        DR_SERIAL_GENERATE=1 keeps the legacy per-item loop, which retains the
-        LLM retry-with-feedback path."""
+        """Generate constraint stories from the SCOPE manifest.
+
+        Default: the UNIFIED backend (generate_kernel_corpus.generate_from_manifests) — the
+        single manifest->corpus path. It handles flat axes (c-orch framing + dependency
+        waves), kernel readings, and forced-flat controls, plus the stamp / integrity /
+        contradiction post-steps. The old _step_generate_batch (flat-only, which silently
+        DROPPED recognized kernel readings — OQ-79) is deleted: the fork is healed by
+        deletion, not left orphaned. --serial-generate / DR_SERIAL_GENERATE=1 keeps the
+        legacy per-item loop (its own inline source_desc + LLM retry-with-feedback; a known
+        legacy duplication, deletable later — NOT the wave logic).
+        """
         if self.serial_generate or os.environ.get("DR_SERIAL_GENERATE") == "1":
             return self._step_generate_serial(manifest)
-        return self._step_generate_batch(manifest)
 
-    # Pure delegators to the single source of truth in story_generator_base (moved 2026-06-06).
-    # No wrapper logic — identical output by construction, so the old batch path and the unified
-    # backend cannot drift.
-    _axis_source_desc = staticmethod(axis_source_desc)
-    _upstream_context = staticmethod(upstream_context)
-
-    def _step_generate_batch(self, manifest: dict) -> StepResult:
-        """Batched generation (2026-06-05): each dependency WAVE is one Anthropic
-        batch — parallel server-side, 50% cheaper, static prefix cache-controlled
-        (pattern shared with generate_kernel_corpus; poll_batch reused from there).
-
-        Waves preserve §5.1 upstream context: an axis whose downstream_of names
-        another axis in this run generates in a later wave, with the upstream's
-        claimed_type injected. A pure dependency chain degenerates to sequential
-        waves, which is the correct behavior.
-
-        The per-item LLM retry-with-feedback loop of the serial path is replaced by
-        deterministic repair (strip_extra_properties + repair_story — schema-shape
-        only, never reconciling authored claims to metrics). Failures fall out for a
-        later regenerate pass. NO LINTING here: authored-vs-computed divergence is
-        the research signal and is read downstream (enhanced_report), never "fixed"
-        at generation time.
-        """
-        self._progress("generate", "Generating constraint stories (batch mode)...")
+        self._progress("generate", "Generating constraint stories (unified backend)...")
         t0 = time.time()
-        from agent.generate_kernel_corpus import poll_batch
-        from story_repair import repair_story
+        from agent.generate_kernel_corpus import generate_from_manifests
 
-        sequence = manifest["generation_sequence"]
-        axes_by_id = {a["claim_id"]: a for a in manifest["axes"]}
+        # c-orchestrator runs are per-topic, not seed-laddered; give process_batch_results a
+        # writable ladder next to where this run's manifest was persisted.
+        processed_log = (self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")) / "processed.txt"
+        processed_log.parent.mkdir(parents=True, exist_ok=True)
 
-        # Resolve sequence entries → (claim_id, axis, entry), preserving order
-        items = []
-        seen = set()
-        dropped_kernel_readings = []   # recognized-but-undeliverable kernel readings
-        for entry in sequence:
-            if isinstance(entry, dict):
-                claim_id = entry.get("claim_id") or entry.get("constraint_id")
-            else:
-                claim_id = entry
-            if not claim_id or claim_id in seen:
-                continue
-            seen.add(claim_id)
-            axis = axes_by_id.get(claim_id)
-            if not axis:
-                # A generation_sequence entry with a kernel_id but no matching flat axis is
-                # a RECOGNIZED KERNEL READING that c-orchestrator's flat generate path cannot
-                # produce (kernel readings live in commitment_system_recognition.readings, not
-                # in manifest["axes"]). Dropping it silently is the absence-presenting-as-
-                # presence defect: the run reports "Generated N" while the contested readings —
-                # the whole point of the kernel — evaporate (witnessed: Zionism recognized 3
-                # readings, all dropped). Do NOT let "skipping" read as benign. Kernel topics
-                # must go through generate_kernel_corpus.py (readings + flat controls +
-                # integrity sweep). See OQ-79.
-                if isinstance(entry, dict) and entry.get("kernel_id"):
-                    dropped_kernel_readings.append(claim_id)
-                else:
-                    self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
-                continue
-            # Retry-the-gaps semantics: a frozen-manifest run (--manifest-file) is the
-            # retry path for batch failures — skip axes whose story already landed so
-            # only the gaps are regenerated.
-            if self.manifest_file and (self._json_dir / f"{claim_id}.json").exists():
-                self._progress("generate", f"Skipping {claim_id} (already saved; frozen-manifest retry mode)")
-                continue
-            items.append((claim_id, axis, entry))
-
-        # LOUD signal: SCOPE recognized a kernel and c-orchestrator cannot deliver its
-        # readings. Convert silent loss into an actionable record (manifest is persisted,
-        # so the kernel is recoverable via generate_kernel_corpus).
-        csr = manifest.get("commitment_system_recognition") or {}
-        if dropped_kernel_readings or csr.get("is_contested_kernel"):
-            kid = csr.get("kernel_id", "?")
-            self._progress("generate",
-                f"⚠ KERNEL RECOGNIZED ({kid}) but c-orchestrator's flat path cannot generate its "
-                f"readings — DROPPED: {dropped_kernel_readings}. The contested readings are the "
-                f"point of the kernel; re-run this topic through generate_kernel_corpus "
-                f"(--scope) to capture them (readings + flat controls + integrity sweep). "
-                f"Manifest: {getattr(self, '_last_manifest_path', '<persisted>')}")
-            try:
-                ledger = REPO_ROOT / "outputs" / "generation_failures.jsonl"
-                ledger.parent.mkdir(parents=True, exist_ok=True)
-                with ledger.open("a", encoding="utf-8") as fh:
-                    fh.write(json.dumps({
-                        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                        "family_id": manifest.get("family_id", ""),
-                        "manifest": getattr(self, "_last_manifest_path", None),
-                        "kernel_dropped": {"kernel_id": kid, "readings": dropped_kernel_readings},
-                        "reason": "KERNEL_RECOGNIZED_BUT_UNDELIVERABLE: re-run via generate_kernel_corpus --scope",
-                    }) + "\n")
-            except Exception as e:
-                self._progress("generate", f"(kernel-drop ledger write failed: {e})")
-
-        run_ids = {cid for cid, _, _ in items}
-        generated_stories: list[dict] = []
-        generated_by_id: dict[str, dict] = {}
-        failed_ids: set[str] = set()
-        fail_reasons: dict[str, str] = {}
-        total_tin = total_tout = 0
-        client = _get_client()
-
-        remaining = list(items)
-        wave_no = 0
-        while remaining:
-            wave_no += 1
-            # An item is wave-ready when every in-run upstream has been generated
-            # or has terminally failed (failed upstream ⇒ generate without its context
-            # rather than deadlocking).
-            wave = [it for it in remaining
-                    if not any(u in run_ids and u not in generated_by_id and u not in failed_ids
-                               for u in (it[1].get("downstream_of") or []))]
-            if not wave:
-                self._progress("generate",
-                               f"Wave {wave_no}: dependency cycle among "
-                               f"{[c for c, _, _ in remaining]} — generating without upstream context")
-                wave = remaining
-            remaining = [it for it in remaining if it not in wave]
-
-            requests, idmap, entry_map = [], {}, {}
-            for idx, (cid, axis, entry) in enumerate(wave):
-                source_desc = self._axis_source_desc(manifest, cid, axis)
-                context_text = self._upstream_context(axis, generated_by_id, cid)
-                static_prefix, dynamic_tail = build_prompt_parts(source_desc, context_text)
-                custom_id = f"w{wave_no}i{idx}"   # batch custom_id is capped at 64 chars
-                idmap[custom_id] = cid
-                entry_map[cid] = entry
-                requests.append({
-                    "custom_id": custom_id,
-                    "params": {
-                        "model": self.MODELS["architect"],
-                        "max_tokens": self.MAX_TOKENS["architect"],
-                        "temperature": float(os.environ.get("DR_TEMPERATURE", "0.2")),
-                        "system": _SYSTEM_INSTRUCTION,
-                        "messages": [{
-                            "role": "user",
-                            "content": [
-                                {"type": "text", "text": static_prefix,
-                                 "cache_control": {"type": "ephemeral"}},
-                                {"type": "text", "text": dynamic_tail},
-                            ],
-                        }],
-                    },
-                })
-
-            self._progress("generate",
-                           f"Wave {wave_no}: submitting batch of {len(requests)} "
-                           f"({', '.join(idmap.values())})")
-            try:
-                batch = client.messages.batches.create(requests=requests)
-                poll_batch(client, batch.id, 15)
-            except Exception as e:
-                self._progress("generate", f"Wave {wave_no} batch failed: {e}")
-                failed_ids.update(idmap.values())
-                for _cid in idmap.values():
-                    fail_reasons[_cid] = f"wave batch error: {e}"[:300]
-                continue
-
-            for result in client.messages.batches.results(batch.id):
-                cid = idmap.get(result.custom_id, result.custom_id)
-                entry = entry_map.get(cid, cid)
-                if result.result.type != "succeeded":
-                    self._progress("generate", f"FAIL {cid}: {result.result.type}")
-                    failed_ids.add(cid)
-                    fail_reasons[cid] = f"batch result: {result.result.type}"
-                    continue
-                msg = result.result.message
-                usage = getattr(msg, "usage", None)
-                if usage:
-                    total_tin += getattr(usage, "input_tokens", 0) or 0
-                    total_tout += getattr(usage, "output_tokens", 0) or 0
-                raw = "".join(b.text for b in msg.content if b.type == "text")
-                # Empty response is a TRANSIENT (model returned no text; the batch itself
-                # succeeded) — a different failure class from a malformed story, and the
-                # old path mislabeled it "JSON_PARSE_ERROR: Expecting value line 1 col 1".
-                # Diagnose it honestly, surface stop_reason, and skip the repair attempt
-                # (nothing to repair). Recoverable via the --manifest-file gap-retry; an
-                # identical re-submit almost always succeeds.
-                if not raw.strip():
-                    stop = getattr(msg, "stop_reason", "unknown")
-                    self._progress("generate", f"FAIL {cid}: EMPTY_RESPONSE (stop_reason={stop})")
-                    failed_ids.add(cid)
-                    fail_reasons[cid] = f"EMPTY_RESPONSE: model returned no text (stop_reason={stop})"
-                    continue
-                story_dict, errors = process_response(raw)
-
-                if story_dict is not None and errors:
-                    # Deterministic repair only — schema shape, never claim/metric
-                    # reconciliation (the divergence is signal, not defect).
-                    repaired, props_removed = strip_extra_properties(story_dict, self._schema)
-                    repaired = repair_story(repaired, self._schema)
-                    retry_errors = validate_json(repaired)
-                    if not retry_errors:
-                        story_dict, errors = repaired, []
-                        if props_removed:
-                            self._progress("generate", f"Repaired {cid}: stripped {props_removed}")
-
-                if story_dict is None or errors:
-                    self._progress("generate",
-                                   f"FAIL {cid}: invalid after repair "
-                                   f"({(errors or ['parse error'])[0][:90]})")
-                    failed_ids.add(cid)
-                    fail_reasons[cid] = (errors or ["parse error"])[0][:300]
-                    continue
-
-                kernel_id = entry.get("kernel_id") if isinstance(entry, dict) else None
-                if kernel_id:
-                    story_dict["_kernel_id"] = kernel_id
-
-                json_path, _pl_path = save_story_tagged(
-                    story_dict, self._json_dir, self._testsets_dir, overwrite=True
-                )
-                if json_path:
-                    generated_stories.append(story_dict)
-                    generated_by_id[story_dict["header"]["constraint_id"]] = story_dict
-                    self._progress("generate", f"Saved {cid}")
-                else:
-                    failed_ids.add(cid)
-
-        if failed_ids:
-            # Persist the failure ledger — a printed failure is a lost failure.
-            # Retry: python3 agent/c-orchestrator.py --manifest-file <manifest> <topic-ignored>
-            # (frozen-manifest mode skips already-saved stories, regenerating only the gaps).
-            try:
-                ledger = REPO_ROOT / "outputs" / "generation_failures.jsonl"
-                ledger.parent.mkdir(parents=True, exist_ok=True)
-                with ledger.open("a", encoding="utf-8") as fh:
-                    fh.write(json.dumps({
-                        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                        "family_id": manifest.get("family_id", ""),
-                        "manifest": getattr(self, "_last_manifest_path", None),
-                        "run_tag": self._run_tag,
-                        "failed": sorted(failed_ids),
-                        "reasons": fail_reasons,
-                    }) + "\n")
-                self._progress("generate",
-                               f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — ledgered to "
-                               f"{ledger}; retry with --manifest-file "
-                               f"{getattr(self, '_last_manifest_path', '<manifest>')}")
-            except Exception as e:
-                self._progress("generate",
-                               f"Failed ({len(failed_ids)}): {sorted(failed_ids)} — "
-                               f"LEDGER WRITE FAILED ({e}); ids above are the only record")
-        self._progress("generate",
-                       f"Generated {len(generated_stories)}/{len(items)} stories in {wave_no} wave(s)")
-        return StepResult(
-            step="generate", status="success", data=generated_stories,
-            tokens_in=total_tin, tokens_out=total_tout,
-            duration_s=time.time() - t0,
+        succeeded, failed, _reasons = generate_from_manifests(
+            [manifest], self._json_dir, self._testsets_dir, processed_log,
+            model=self.MODELS["architect"], max_tokens=self.MAX_TOKENS["architect"],
+            system=_SYSTEM_INSTRUCTION,
+            temperature=float(os.environ.get("DR_TEMPERATURE", "0.2")),
+            manifest_file=self.manifest_file, progress=self._progress,
         )
+
+        # Rebuild the story-dict list downstream expects (reports reads header.constraint_id).
+        stories = []
+        for cid in succeeded:
+            p = self._json_dir / f"{cid}.json"
+            if p.exists():
+                try:
+                    stories.append(json.loads(p.read_text(encoding="utf-8")))
+                except (json.JSONDecodeError, OSError):
+                    pass
+        if failed:
+            self._progress("generate", f"Failed ({len(failed)}): {sorted(failed)} — "
+                                       f"recoverable via --manifest-file (gap retry)")
+        self._progress("generate",
+                       f"Generated {len(stories)} stories via the unified backend. "
+                       f"(NOTE: per-step token totals unthreaded through the unified backend — "
+                       f"reported as 0 = NOT MEASURED, not zero; OQ-80.)")
+        return StepResult(step="generate", status="success", data=stories,
+                          tokens_in=0, tokens_out=0, duration_s=time.time() - t0)
 
     def _step_generate_serial(self, manifest: dict) -> StepResult:
         self._progress("generate", "Generating constraint stories (serial mode)...")

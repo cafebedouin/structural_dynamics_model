@@ -3256,6 +3256,30 @@ it recoverable via `generate_kernel_corpus --scope`). The "skipping" line no lon
   that topic through gkc to capture them; the 6 flat Zionism axes already in the corpus can stay
   (they are a legitimate flat construction — keeping both IS the topic-level construction pair).
 
+## OQ-80 — generate-step token totals are unthreaded through the unified backend: reports 0, meaning "not measured"
+
+**Ω-type:** Ω_E (a measured quantity that is currently unmeasured-but-presented-as-zero).
+
+**Status:** open — harmless today (no behavior keys on it; the runtime note + docstring prevent
+misreading), filed so the distinction survives this session.
+**Origin:** 2026-06-06 backend-merge P3. The old `_step_generate_batch` summed batch-result `usage`
+into the StepResult; `generate_from_manifests` delegates result-processing to
+`process_batch_results` (which consumes the results iterator and does not return token usage), so
+the unified `_step_generate` returns `tokens_in/out = 0`.
+
+**Why it's filed, not just "cosmetic later":** `tokens_in/out = 0` in the pipeline summary is the
+genus of defect this whole merge exists to kill — a number that reads as a FACT (zero tokens) when
+it means "not measured." It is harmless HERE (summary-only; runtime note printed), but if anything
+downstream ever sums that field for cost tracking or a budget gate, a hard 0 is **absence
+presenting as a measured zero** (Build-Discipline spine). The label must outlive the session's
+memory of why it's zero.
+
+**Fix (cheap, deferred):** thread usage through `process_batch_results` — add an optional
+`token_acc` accumulator (default None, backward-compatible with gkc callers) that sums
+`result.result.message.usage` input/output tokens; `generate_from_manifests` passes one and returns
+the totals; `_step_generate` puts them on the StepResult. Until then the field is "not measured,"
+not "zero."
+
 ---
 
 *Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark

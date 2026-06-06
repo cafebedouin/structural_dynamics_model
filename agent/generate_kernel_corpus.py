@@ -867,6 +867,25 @@ def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
             else:
                 failed_ids.add(cid); fail_reasons.setdefault(cid, "no story saved (see process log)")
 
+    # --- OQ-79 guard, demoted to a DEFENSIVE ASSERTION (post-merge meaning) ---
+    # Pre-merge, a recognized kernel's readings were silently dropped because c-orchestrator
+    # resolved only manifest["axes"]. Now readings are seeds, so they are always accounted for
+    # (succeeded or failed like any seed). A reading that is in NEITHER never became a seed —
+    # that is a BACKEND BUG (flatten_manifests regression), not a retryable generation failure:
+    # warn loudly, do NOT write the failures ledger (it is not a re-run-able drop).
+    accounted = succeeded_ids | failed_ids
+    for m in manifests:
+        csr = m.get("commitment_system_recognition") or {}
+        if not csr.get("is_contested_kernel"):
+            continue
+        for r in csr.get("readings", []):
+            rid = r.get("reading_id")
+            if rid and rid not in accounted:
+                progress("generate",
+                         f"⚠ BACKEND BUG (OQ-79 defensive guard): recognized reading {rid!r} of "
+                         f"kernel {csr.get('kernel_id')!r} never became a seed — flatten_manifests "
+                         f"regression; not a retryable failure.")
+
     # --- Post-steps (gkc's existing kernel machinery; no-ops on a pure-flat run) ---
     stamp_kernel_linkage(kr_seeds, json_dir, testsets_dir)
     validate_reading_relation_integrity(kr_seeds, json_dir, testsets_dir)
