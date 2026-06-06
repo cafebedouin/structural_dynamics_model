@@ -391,3 +391,43 @@ triage. Logged on OQ-43.
 **What revival requires:** a research question that consumes intent evidence; then schema
 block + prompt guidance + compiler emission as its own work item (do NOT add authoring
 surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
+
+---
+
+## GAP-09 — No kernel-dominance stage: the kernel set is unfiltered for dominance (by ruling, not accident)
+
+**Declared:** 2026-06-06 (operator ruling LIBERAL, kernel-first router; OQ-79).
+
+**The absence:** the kernel-first router (`c-orchestrator._step_decompose`, primed scope prompt)
+routes a topic to kernel whenever a foundational reading is *constructible*. Phase 0
+(`outputs/kernel_first_phase0/PHASE0_READOUT.md`) measured this as **kernel-liberal**: loud
+means-disputes that share a foundational axiom (nuclear-as-climate-solution, the phonics/whole-language
+"reading wars") route to kernel alongside genuine kernels (magnifica, Zionism), because they are
+*contentful* (the situation does not settle them — `docs/seat-theorem-v1.md` Coupling Theorem) and
+contentful ⇒ seated ⇒ admits a foundational construction. There is **no stage that judges whether a
+kernel-positive is *dominantly* a foundational contest** (the main structure) versus a means-dispute
+with an available-but-minority foundational strand. So the kernel set is unfiltered for dominance.
+
+**Why it is absent (deliberate, two reasons):**
+1. **A seat-FREE dominance ranking is forbidden** by the seat theorem (§6: the framework cannot
+   deliver a seat-free ranking of rival selection-premises). So a dominance stage cannot be an
+   "objective" filter; it can only be a *declared, seated* curation. The kernel-positive label is
+   demoted accordingly ("admits a foundational construction," dominance unjudged) — see CLAUDE.md
+   Critical Distinctions; that label demotion is the honest substitute for the absent filter.
+2. **A seated dominance stage is permitted but deferred.** Building it now would be designing the
+   discriminator blind, ahead of a witnessed pile of kernel-positives — the measure-first mistake
+   Phase 0 just avoided (it is what falsified the pre-built A3 grounding leg). Kernels accrue
+   uncurated first; a dominance stage, if ever wanted, is designed *against* the accrued pile.
+
+**What was NOT built (and why that's correct here):** the A3 grounding leg (per-reading
+real-constituency check, the planned 0b backstop) was dropped, not built — Phase 0 showed it is the
+wrong instrument: over-routed readings have real constituencies, so grounding would *confirm* them,
+not flag the over-routing. No half-apparatus is left declared-but-unfed.
+
+**What closing the gap would require:** (a) a research question that needs dominance-filtered
+kernels; (b) a witnessed pile of kernel-positives to study; (c) a *declared seated* discriminator
+(not a grounding check, not a manifest-text predicate — both shown insufficient), e.g. a human
+curation pass or a learned dominance signal, with its selection-seat declared per the seat theorem.
+Interim safety: the failure direction is bounded — an over-routed topic yields a construction *pair*
+(kernel readings + the auto forced-flat control), never a silent flat-loss; over-routing costs
+generation, not lost signal.

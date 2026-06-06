@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Catholic Social Doctrine / Technology Ethics / Political Theology",
+  "family_id": "magnifica_humanitas_ai_2026",
+  "topic_summary": "Papal encyclical Magnifica Humanitas addresses safeguarding human dignity in the era of artificial intelligence. The document synthesizes Catholic Social Doctrine with analysis of AI's transformative impact on work, truth, freedom, and peace, proposing a 'civilization of love' grounded in subsidiarity, solidarity, and the common good as an alternative to technocratic power.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 12,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 3,
+    "key_entities": [
+      "Catholic Church / Magisterium (authoritative teaching body interpreting Gospel for contemporary issues)",
+      "AI / Digital Technologies (computational systems reshaping communication, work, governance)",
+      "Technocratic Paradigm (efficiency-driven logic reducing persons to data/optimization targets)",
+      "Transhumanism / Posthumanism (ideological currents seeking human enhancement/transcendence via technology)",
+      "Global Economic Actors (private transnational entities controlling platforms, data, infrastructure)",
+      "The Poor / Marginalized (victims of exclusion, exploitation, new forms of digital slavery)",
+      "States / Multilateral Institutions (weakened political authorities struggling to govern digital power)",
+      "Christian Community / People of God (ecclesial body called to synodal discernment and witness)"
+    ],
+    "key_tensions": [
+      "Divine grace vs. technological self-transcendence (authentic 'more than human' through God vs. Promethean enhancement)",
+      "Human dignity as gift vs. dignity as earned performance (ontological vs. functional worth)",
+      "Common good vs. concentrated digital power (universal destination of goods vs. monopolistic control of data/algorithms)",
+      "Subsidiarity vs. technocratic centralization (local participation vs. opaque automated governance)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "ai_governance_legitimacy",
+      "human_readable": "AI Governance Legitimacy (Authority to Regulate vs. Private Control)",
+      "structural_delta": "Shift from State-centered regulation to private transnational actors controlling digital infrastructure, creating legitimacy gap in who governs AI for common good",
+      "primary_observable": "Distribution of regulatory authority: percentage of AI governance decisions made by States vs. private platforms; existence/enforcement of transparency/accountability mechanisms",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "global_tech_corporations",
+      "victim": "democratic_publics_lacking_oversight",
+      "downstream_of": [],
+      "feeds_into": [
+        "digital_slavery_extraction",
+        "war_automation_threshold"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest centrality; upstream structural condition enabling multiple downstream harms; distinct from kernel (governance mechanism vs. anthropological commitment)"
+    },
+    {
+      "claim_id": "digital_slavery_extraction",
+      "human_readable": "Digital Slavery & Extraction (Hidden Labor in AI Supply Chains)",
+      "structural_delta": "AI systems depend on invisible exploited labor (data labeling, content moderation, rare earth mining) creating new slavery structures masked by technological abstraction",
+      "primary_observable": "Working conditions and wages in AI supply chains; child labor in rare earth extraction; prevalence of traumatic content moderation work",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "ai_industry_consumers_of_cheap_labor",
+      "victim": "global_south_workers_children",
+      "downstream_of": [
+        "ai_governance_legitimacy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct observable (labor conditions vs. governance structure); high epsilon; concrete instantiation of encyclical's slavery condemnation"
+    },
+    {
+      "claim_id": "war_automation_threshold",
+      "human_readable": "War Automation Threshold (Lowering Barrier to Lethal Force)",
+      "structural_delta": "AI-enabled autonomous weapons and decision systems reduce moral/temporal friction in use of force, normalizing violence as optimizable process",
+      "primary_observable": "Deployment of autonomous weapons systems; decision timeframes for lethal force; civilian casualty rates in AI-assisted conflicts",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "military_industrial_complex",
+      "victim": "civilian_populations_under_automated_targeting",
+      "downstream_of": [
+        "ai_governance_legitimacy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Different observable and victim set from governance axis; encyclical dedicates entire chapter to war/peace; passes independence test"
+    },
+    {
+      "claim_id": "educational_formation_deficit",
+      "human_readable": "Educational Formation Deficit (Pedagogy Lag Behind Digital Transformation)",
+      "structural_delta": "Educational systems structurally unable to form critical digital literacy and moral discernment at pace of AI adoption, creating vulnerability to manipulation",
+      "primary_observable": "Curriculum integration of AI ethics/literacy; teacher training in digital pedagogy; student exposure to AI tools vs. formation in their limits",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "youth_lacking_formation",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality than selected axes; captured indirectly via kernel's formation dimension and governance axis's participation requirements"
+    },
+    {
+      "claim_id": "unemployment_automation_transition",
+      "human_readable": "Unemployment & Automation Transition (Job Displacement Without Social Redesign)",
+      "structural_delta": "AI-driven automation eliminates jobs faster than retraining/redistribution mechanisms can adapt, threatening work as path to dignity",
+      "primary_observable": "Unemployment rates in automated sectors; availability/effectiveness of retraining programs; income inequality trends in AI-adopting economies",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "displaced_workers_families",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: overlaps significantly with digital_slavery_extraction (both concern labor conditions under AI); encyclical treats work extensively but as manifestation of deeper anthropological question captured in kernel"
+    }
+  ],
+  "generation_sequence": [
+    "ai_governance_legitimacy",
+    {
+      "claim_id": "technocratic_vs_incarnational_reading",
+      "kernel_id": "human_transcendence_pathway",
+      "reading_id": "technocratic_vs_incarnational_reading"
+    },
+    {
+      "claim_id": "babel_reading",
+      "kernel_id": "human_transcendence_pathway",
+      "reading_id": "babel_reading"
+    },
+    {
+      "claim_id": "jerusalem_reading",
+      "kernel_id": "human_transcendence_pathway",
+      "reading_id": "jerusalem_reading"
+    },
+    "digital_slavery_extraction",
+    "war_automation_threshold"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "educational_formation_deficit",
+      "structural_delta": "Educational systems lag behind AI adoption, unable to form critical literacy",
+      "hypothesis": "piton",
+      "deferral_reason": "Lower centrality; formation dimension captured in kernel's Jerusalem reading (patient rebuilding via education); governance axis already addresses participation infrastructure"
+    },
+    {
+      "claim_id": "unemployment_automation_transition",
+      "structural_delta": "Job displacement outpaces retraining and redistribution mechanisms",
+      "hypothesis": "rope",
+      "deferral_reason": "Significant overlap with digital_slavery_extraction (both labor under AI); encyclical's work analysis is anthropological (work as dignity) rather than purely economic, captured in kernel"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_collapse_risk",
+      "description": "If the three readings (technocratic, Babel, Jerusalem) collapse into a single 'Church vs. secular modernity' binary, the kernel is not genuinely contested but a rhetorical frame. Monitor whether generation reveals structural distinctness or ideological packaging.",
+      "source": "§1.3-K coherence test"
+    },
+    {
+      "id": "omega_magisterial_authority_scope",
+      "description": "Encyclical claims competence to interpret AI's anthropological impact via Social Doctrine, but §1.3 epistemic trespass check: does model have sufficient domain expertise in AI governance, labor economics, military ethics to evaluate these claims, or is it reproducing theological framing without independent verification?",
+      "source": "F34 (Epistemic Trespass) self-scan"
+    },
+    {
+      "id": "omega_global_south_voice",
+      "description": "Encyclical speaks extensively about exploitation of Global South labor and data extraction, but the document itself is a Vatican production. Absence: perspectives from affected communities as co-authors rather than subjects. Does this reproduce colonial knowledge structure?",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_secular_pluralism_gap",
+      "description": "The 'civilization of love' framework assumes Christian anthropology as normative foundation. In pluralistic democracies with non-Christian majorities or secular governance, how does this translate to actionable policy without imposing confessional commitments? Encyclical addresses 'all people of goodwill' but grounds legitimacy in Incarnation.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — who benefits from this framing?"
+    },
+    {
+      "id": "omega_implementation_mechanism",
+      "description": "Encyclical is rich in principles (subsidiarity, solidarity, common good) but thin on enforcement. Who operationalizes these in contexts where States are weak and corporations are strong? Risk of noble vision without structural teeth.",
+      "source": "§2.2 Dark Matter Probe 1 (Operational Medium)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: Encyclical treats 'technocratic paradigm' as a mountain (persistent structural reality) but this may be a piton (contingent policy choice that could be reversed). Generated omega_kernel_collapse_risk to bound. F34 detected: Model lacks deep expertise in military AI ethics, labor economics of Global South extraction, and Catholic moral theology's internal debates. Encyclical's claims about AI's anthropological impact are theologically grounded; model can catalog structure but not adjudicate theological validity. Generated omega_magisterial_authority_scope."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The pathway to authentic human transcendence and fulfillment — whether through technological self-enhancement, autonomous collective power (Babel), or grace-mediated communion in shared responsibility (Jerusalem)",
+    "authority_description": "Magisterial interpretation of Gospel and natural law tradition, claiming competence to discern what genuinely serves integral human development vs. dehumanizing trajectories",
+    "drift_status": "functioning",
+    "candidate_pattern": "Interpretive Tradition (Catholic Social Doctrine as living corpus adapting perennial truths to historical 'signs of the times')",
+    "is_contested_kernel": true,
+    "kernel_id": "human_transcendence_pathway",
+    "readings": [
+      {
+        "reading_id": "technocratic_vs_incarnational_reading",
+        "commitment": "Human transcendence achieved through technological optimization and elimination of limits (transhumanism/posthumanism) vs. transcendence as gift of divine grace received in vulnerability (Incarnational)",
+        "authority_grounding": "Secular: scientific progress and individual autonomy as self-justifying; Religious: Revelation and Magisterial interpretation of human dignity as imago Dei",
+        "sibling_readings": [
+          "babel_reading",
+          "jerusalem_reading"
+        ],
+        "expected_structural_delta": "Technocratic: high suppression of 'inefficient' populations, beneficiaries are enhancement-capable elites, victims are those deemed obsolete. Incarnational: solidarity with vulnerable, beneficiaries are 'the least', victims are those excluded by optimization logic. Fundamentally different victim sets and epsilon sources."
+      },
+      {
+        "reading_id": "babel_reading",
+        "commitment": "Collective human power through unified technological/linguistic systems can secure stability and self-sufficiency without reference to transcendent authority",
+        "authority_grounding": "Immanent: human consensus and technical capability as sufficient grounds for legitimacy",
+        "sibling_readings": [
+          "technocratic_vs_incarnational_reading",
+          "jerusalem_reading"
+        ],
+        "expected_structural_delta": "Babel: uniformity enforced, diversity suppressed, communication breaks down when power fails. Beneficiaries: architects of the tower (concentrated power). Victims: those whose languages/cultures are erased. Epsilon: high (coercive homogenization)."
+      },
+      {
+        "reading_id": "jerusalem_reading",
+        "commitment": "Authentic human community rebuilt through patient, participatory labor under divine blessing, integrating plurality into communion rather than uniformity",
+        "authority_grounding": "Transcendent: God's presence as center; subsidiarity and synodality as structural principles reflecting Trinitarian relationality",
+        "sibling_readings": [
+          "technocratic_vs_incarnational_reading",
+          "babel_reading"
+        ],
+        "expected_structural_delta": "Jerusalem: diversity preserved as resource, shared responsibility, slow rebuilding. Beneficiaries: the community as whole, especially returning exiles (marginalized). Victims: none structurally (though requires sacrifice of efficiency for solidarity). Epsilon: low to moderate (persuasion and formation vs. coercion)."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "technocratic_vs_incarnational_reading",
+        "reading_b": "technocratic_vs_incarnational_reading",
+        "basis": "Within this reading pair, the technocratic pole (human limits as errors to correct via technology) and Incarnational pole (limits as sites of grace and communion) hold mutually exclusive axioms: no single framework can simultaneously affirm that vulnerability is a defect to eliminate AND that vulnerability is the locus of divine encounter. Accepting one requires rejecting the other's foundational claim about what constitutes human flourishing."
+      },
+      {
+        "reading_a": "babel_reading",
+        "reading_b": "jerusalem_reading",
+        "basis": "Babel's axiom (human self-sufficiency through unified power without transcendent reference) contradicts Jerusalem's axiom (authentic community requires divine blessing and subsidiarity under God's authority). A coherent framework cannot hold both 'we need no authority beyond our own consensus' and 'our authority is derivative and must submit to transcendent good' as simultaneously true."
+      }
+    ]
+  }
+}

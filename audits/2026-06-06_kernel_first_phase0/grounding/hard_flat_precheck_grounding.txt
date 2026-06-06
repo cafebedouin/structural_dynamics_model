@@ -1,0 +1,102 @@
+I'll research this topic for you, looking into the factual background, key actors, and structural tensions around date format standards.
+Based on my research, here's a comprehensive analysis of the ISO 8601 vs. US date format dispute:
+
+---
+
+## FACTUAL BACKGROUND
+
+### ISO 8601 Standard
+
+
+ISO 8601 was first published in 1988, with updates in 1991, 2000, 2004, and 2019, and an amendment in 2022.
+ 
+The standard provides a well-defined, unambiguous method of representing calendar dates and times in worldwide communications, especially to avoid misinterpreting numeric dates and times when such data is transferred between countries with different conventions for writing numeric dates and times.
+
+
+
+The core principle behind ISO 8601 is that date and time values are ordered from the largest unit to the smallest: year, month, day, hour, minute, second. This "big-endian" ordering mirrors how we write ordinary numbers (thousands, hundreds, tens, ones) and has a critical practical benefit: ISO 8601 dates sort correctly in alphabetical order.
+
+
+### US MM/DD/YYYY Format
+
+
+The United States is one of the few countries that use "mm-dd-yyyy" as their date format–which is very very unique!
+ 
+One hypothesis is that the United States borrowed the way it was written from the United Kingdom who used it before the 20th century and then later changed it to match Europe (dd-mm-yyyy). American colonists liked their original format and it's been that way ever since.
+
+
+
+The best theory is that Americans generally gravitate towards speaking and writing out dates with the month first. As a result, it makes sense to replicate that in the numbered American date format of MM/DD/YY, where the month comes before the day and year.
+
+
+---
+
+## KEY ACTORS
+
+### Institutional Advocates for ISO 8601
+
+
+The tech industry, NASA, the Canadian government, and several East Asian countries already use it as their standard.
+ 
+RESTful APIs, GraphQL services, and data interchange formats like JSON overwhelmingly use ISO 8601 for date-time fields. It has become the de facto standard for web services.
+
+
+
+NASA and scientific agencies default to ISO 8601 (YYYY-MM-DD) for data exchange and documentation. When you're coordinating spacecraft telemetry across international teams, there's no room for "did they mean March 4th or April 3rd?"
+
+
+
+The World Wide Web Consortium (W3C) explicitly recommends ISO 8601 to eliminate this problem. Their reasoning is blunt: when you write dates numerically, the American and European conventions are ambiguous, and the only way to remove the ambiguity is to put the year first.
+
+
+### US Institutional Resistance
+
+
+Even within the United States, MM/DD/YYYY isn't universal. Different institutions have quietly adopted clearer formats for high-stakes communication: The US military uses DD MMM YYYY (e.g., 15 MAR 2027). By spelling out the three-letter month abbreviation, ambiguity disappears completely.
+
+
+
+Unlike the metric system, which has the Metric Conversion Act of 1975 technically designating it as the "preferred system," no federal law has even gestured toward ISO 8601 for civilian use.
+
+
+---
+
+## STRUCTURAL TENSIONS
+
+### The Ambiguity Problem
+
+
+The first two formats produce identical strings for any date where both the day and month are 12 or below. For roughly 132 dates each year, MM/DD and DD/MM are indistinguishable without context.
+ 
+Write "01/02/2027" and you've written either January 2nd or February 1st, depending on who reads it. Any date where both the month and day are 12 or below is ambiguous without context.
+
+
+### Real-World Consequences
+
+
+The costs aren't theoretical. Cross-border contracts get scheduled for the wrong month. International shipping manifests cause delays when a warehouse in Rotterdam reads a date differently than the office in Houston. Medical records are particularly high-stakes, since a misread date on a prescription or lab result can affect patient care.
+
+
+### Technical vs. Social Inertia
+
+
+The practical barriers are steep. Every government form, every software system that serves American users, every printed document would need updating. And during any transition period, confusion would get worse, not better.
+
+
+
+Americans don't experience the problem domestically. The format works fine when everyone around you uses it. The friction only surfaces in international contexts, and for most people, that friction is rare enough to tolerate.
+
+
+### Competing Logics
+
+
+The two common orders—month–day–year (MM/DD/YYYY) and day–month–year (DD/MM/YYYY)—reflect different priorities: placing the most to least varying element first, or the reverse.
+ 
+The big-endian format has a key practical advantage: when dates are sorted alphabetically (as in filenames or database columns), they automatically sort chronologically. This property makes it the preferred format for computing and data management.
+
+
+---
+
+## SUMMARY
+
+This dispute represents a clash between **linguistic/cultural convention** (how Americans speak dates) and **technical/logical optimization** (how computers sort and process dates). The US format is entrenched through historical accident and linguistic reinforcement, while ISO 8601 is championed by technical communities and international organizations. The tension persists because the domestic cost of change exceeds the perceived benefit for most Americans, even as the international cost of non-compliance grows with globalization.

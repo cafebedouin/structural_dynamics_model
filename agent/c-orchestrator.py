@@ -412,26 +412,25 @@ class DRAuditOrchestrator:
     # ------------------------------------------------------------------
 
     def _step_decompose(self, topic: str, research_context: str) -> StepResult:
-        self._progress("decompose", "Running UKE_SCOPE decomposition...")
+        self._progress("decompose", "Running UKE_SCOPE decomposition (kernel-first / primed)...")
         t0 = time.time()
 
-        if self.axes is None:
-            axes_instruction = (
-                "Select every axis that survives the §3 pairwise independence test. "
-                "Do not pad to a fixed count and do not truncate distinct axes to fit one."
-            )
-        else:
-            axes_instruction = (
-                f"Select every axis that survives the §3 pairwise independence test, "
-                f"up to a budget ceiling of {self.axes} axes. Do not pad to reach the ceiling."
-            )
-        prompt = (
-            f"Analyze the following topic using the UKE_SCOPE protocol.\n\n"
-            f"TOPIC: {topic}\n\n"
-            f"RESEARCH CONTEXT:\n{research_context}\n\n"
-            f"{axes_instruction}\n\n"
-            f"Remember: OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
-        )
+        # Kernel-first routing (2026-06-06): use the PRIMED SCOPE user-prompt — the one that asks
+        # the kernel question ("is this a contested kernel? if so emit READINGS; else decompose flat
+        # with a collapse omega") — instead of the old unprimed §3-independence prompt that never
+        # asked and silently flattened genuine kernels (magnifica; OQ-76 / OQ-79 mech-2). Phase 0
+        # (outputs/kernel_first_phase0/PHASE0_READOUT.md) showed the primed verdict is a
+        # KERNEL-LIBERAL gate: it routes to kernel whenever a foundational reading is constructible
+        # (= the topic is contentful, per docs/seat-theorem-v1.md) and flat only when the situation
+        # settles it by itself. A kernel-positive means "admits a foundational construction"
+        # (dominance UNJUDGED) — never "certified dominant kernel"; kernels accrue uncurated.
+        # Reuse gkc's _scope_user_prompt so the primed prompt has ONE source and cannot drift
+        # between the two front-ends (both run the same uke_scope_v2_json.md §1.3-K system prompt).
+        # Downstream _step_generate already handles kernel manifests: readings + the auto forced-flat
+        # control (flatten_manifests) = the construction pair.
+        from agent.generate_kernel_corpus import _scope_user_prompt
+        prompt = _scope_user_prompt({"human_readable": topic, "summary": ""},
+                                    research_context, self.axes)
 
         try:
             text, tin, tout = self._call(

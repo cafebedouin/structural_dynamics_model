@@ -1,0 +1,41 @@
+SCOPE model: claude-sonnet-4-5-20250929
+
+[pre-check grounding] reading_wars: Phonics vs whole-language reading instruction ('the reading wars')
+  grounding chars: 8708  (saved reading_wars_precheck_grounding.txt)
+  -> CONFIRM: loud/contested AND means-only (no foundational strand). Readout = absence-of-finding in this search, not absence.
+
+[pre-check grounding] nuclear_climate: Nuclear power as a climate-change solution
+  grounding chars: 7109  (saved nuclear_climate_precheck_grounding.txt)
+  -> CONFIRM: loud/contested AND means-only (no foundational strand). Readout = absence-of-finding in this search, not absence.
+
+[pre-check grounding] oss_vs_proprietary: Free/open-source software vs proprietary software
+  grounding chars: 10854  (saved oss_vs_proprietary_precheck_grounding.txt)
+  -> BORDERLINE: grounding INFORMS adjudication only; no label assigned.
+
+=== reading_wars (loud_hard_flat, reps=3) ===
+  [reading_wars rep1] 59.5s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.25  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [reading_wars rep2] 76.8s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.212  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [reading_wars rep3] 64.3s  is_kernel=True  readings=3  axiom_contra=1  genseq=5  maxJ=0.25  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+
+=== nuclear_climate (loud_hard_flat, reps=3) ===
+  [nuclear_climate rep1] 58.4s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.222  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [nuclear_climate rep2] 66.5s  is_kernel=True  readings=3  axiom_contra=2  genseq=4  maxJ=0.13  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [nuclear_climate rep3] 67.1s  is_kernel=True  readings=3  axiom_contra=3  genseq=5  maxJ=0.379  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+
+=== oss_vs_proprietary (borderline_calibration, reps=3) ===
+  [oss_vs_proprietary rep1] 59.6s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.273  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [oss_vs_proprietary rep2] 63.3s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.162  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+  [oss_vs_proprietary rep3] 57.3s  is_kernel=True  readings=4  axiom_contra=2  genseq=6  maxJ=0.167  -> kernel-distinct(needs-eyeball:real-vs-confabulated)
+| topic | kind | rep | is_kernel | readings | axiom_contra | genseq | maxJ | mech_label |
+|---|---|---|---|---|---|---|---|---|
+| reading_wars | loud_hard_flat | 1 | True | 4 | 2 | 6 | 0.25 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| reading_wars | loud_hard_flat | 2 | True | 4 | 2 | 6 | 0.212 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| reading_wars | loud_hard_flat | 3 | True | 3 | 1 | 5 | 0.25 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| nuclear_climate | loud_hard_flat | 1 | True | 4 | 2 | 6 | 0.222 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| nuclear_climate | loud_hard_flat | 2 | True | 3 | 2 | 4 | 0.13 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| nuclear_climate | loud_hard_flat | 3 | True | 3 | 3 | 5 | 0.379 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| oss_vs_proprietary | borderline_calibration | 1 | True | 4 | 2 | 6 | 0.273 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| oss_vs_proprietary | borderline_calibration | 2 | True | 4 | 2 | 6 | 0.162 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+| oss_vs_proprietary | borderline_calibration | 3 | True | 4 | 2 | 6 | 0.167 | kernel-distinct(needs-eyeball:real-vs-confabulated) |
+
+Wrote /home/scott/bin/structural_dynamics_model/outputs/kernel_first_phase0/widen_table.md , widen_rows.json , per-rep manifests + precheck grounding.

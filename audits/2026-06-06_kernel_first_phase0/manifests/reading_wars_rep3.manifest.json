@@ -1,0 +1,243 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Educational Psychology / Literacy Pedagogy / Cognitive Science",
+  "family_id": "reading_instruction_wars",
+  "topic_summary": "The decades-long dispute over reading instruction methodology: systematic phonics (explicit decoding instruction) versus whole-language/balanced-literacy (meaning-centered, implicit skill acquisition). Characterized by rival research paradigms, professional faction conflict, and cyclical policy shifts despite accumulating cognitive science evidence.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 5,
+    "tension_count": 3,
+    "mechanism_count": 4,
+    "absence_count": 3,
+    "key_entities": [
+      "Phonics advocates (systematic explicit instruction; cognitive science grounding)",
+      "Whole-language advocates (constructivist pedagogy; teacher autonomy emphasis)",
+      "National Reading Panel (2000 meta-analysis favoring phonics)",
+      "Teachers College Reading and Writing Project (Lucy Calkins; balanced literacy)",
+      "Struggling readers (disproportionately harmed by whole-language)",
+      "Education schools (teacher preparation programs; historically whole-language dominated)"
+    ],
+    "key_tensions": [
+      "Explicit systematic instruction vs implicit skill acquisition through exposure",
+      "Cognitive science evidence vs constructivist pedagogical philosophy",
+      "Centralized curriculum mandates vs teacher professional autonomy"
+    ],
+    "key_mechanisms": [
+      "Orthographic mapping (phonics pathway: grapheme-phoneme correspondence → automatic word recognition)",
+      "Three-cueing system (whole-language: semantic/syntactic/graphophonic cues for word guessing)",
+      "Matthew Effect (early reading failure compounds; whole-language delays intervention)",
+      "Professional credentialing (education schools control teacher certification; embed pedagogical commitments)"
+    ],
+    "key_absences": [
+      "Explicit discussion of which children are harmed by delayed phonics (socioeconomic/linguistic background interaction)",
+      "Institutional incentive structure sustaining whole-language despite evidence (education school prestige, publishing revenue)",
+      "International comparison (transparent vs opaque orthographies; English-specific challenges)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The foundational question of how written language maps to spoken language in the developing reader's mind, and what instructional sequence best establishes that mapping",
+    "authority_description": "Contested between cognitive science research consensus (phonics) and constructivist pedagogical tradition (whole-language); authority grounded in either empirical evidence or professional practice wisdom",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "reading_acquisition_mechanism",
+    "readings": [
+      {
+        "reading_id": "phonics_reading",
+        "commitment": "Reading acquisition requires explicit systematic instruction in grapheme-phoneme correspondence as foundational skill",
+        "authority_grounding": "Cognitive science / experimental psychology evidence base",
+        "sibling_readings": [
+          "whole_language_reading",
+          "balanced_literacy_reading"
+        ],
+        "expected_structural_delta": "High initial instructional cost (systematic scope-and-sequence); low long-term remediation cost; narrows teacher discretion; benefits struggling readers disproportionately"
+      },
+      {
+        "reading_id": "whole_language_reading",
+        "commitment": "Reading acquisition occurs through meaningful engagement with authentic texts; decoding skills emerge implicitly from exposure",
+        "authority_grounding": "Constructivist pedagogy / teacher professional judgment",
+        "sibling_readings": [
+          "phonics_reading",
+          "balanced_literacy_reading"
+        ],
+        "expected_structural_delta": "Low initial instructional cost (no systematic sequence); high long-term remediation cost; maximizes teacher autonomy; harms struggling readers disproportionately"
+      },
+      {
+        "reading_id": "balanced_literacy_reading",
+        "commitment": "Reading acquisition requires both explicit phonics and authentic literature exposure in integrated practice",
+        "authority_grounding": "Pragmatic synthesis / professional consensus-seeking",
+        "sibling_readings": [
+          "phonics_reading",
+          "whole_language_reading"
+        ],
+        "expected_structural_delta": "Variable implementation fidelity; often collapses to whole-language in practice due to insufficient phonics systematicity; institutional compromise position"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "phonics_reading",
+        "reading_b": "whole_language_reading",
+        "basis": "Phonics axiom (alphabetic principle must be explicitly taught as prerequisite) contradicts whole-language axiom (meaning-making drives skill emergence). No coherent framework holds both: either decoding is foundational or it is derivative."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "reading_acquisition_mechanism_kernel",
+      "human_readable": "Reading Acquisition Mechanism (Contested Kernel)",
+      "structural_delta": "Foundational disagreement on whether alphabetic decoding is prerequisite or emergent skill",
+      "primary_observable": "Instructional sequence (systematic phonics scope-and-sequence vs literature-first exposure); student decoding accuracy at grade 1",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "institutional_persistence_mechanism",
+        "socioeconomic_harm_distribution"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel; all three readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "institutional_persistence_mechanism",
+      "human_readable": "Institutional Persistence Mechanism (Education School Credentialing Lock-In)",
+      "structural_delta": "Teacher preparation programs control certification; embed whole-language commitments resistant to external evidence",
+      "primary_observable": "Education school curriculum content analysis; teacher survey on phonics training adequacy",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "education_school_faculty",
+      "victim": "novice_teachers_and_students",
+      "downstream_of": [
+        "reading_acquisition_mechanism_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent mechanism explaining persistence despite evidence; distinct observable (institutional structure vs pedagogical content)"
+    },
+    {
+      "claim_id": "socioeconomic_harm_distribution",
+      "human_readable": "Socioeconomic Harm Distribution (Differential Impact by Home Literacy Environment)",
+      "structural_delta": "Whole-language approach disproportionately harms children without print-rich home environments",
+      "primary_observable": "Reading achievement gap by SES under phonics vs whole-language regimes",
+      "epsilon_bin": "high",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "affluent_families",
+      "victim": "low_ses_students",
+      "downstream_of": [
+        "reading_acquisition_mechanism_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct structural delta (distributional harm vs pedagogical mechanism); high epsilon; independent observable"
+    },
+    {
+      "claim_id": "orthographic_transparency_interaction",
+      "human_readable": "Orthographic Transparency Interaction (English-Specific Phonics Necessity)",
+      "structural_delta": "English orthography opacity makes phonics more critical than in transparent orthographies (Spanish, Finnish)",
+      "primary_observable": "Cross-linguistic reading acquisition timelines; decoding error patterns by orthography",
+      "epsilon_bin": "low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "reading_acquisition_mechanism_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: upstream linguistic constraint but lower centrality; captured implicitly in kernel readings"
+    },
+    {
+      "claim_id": "matthew_effect_amplification",
+      "human_readable": "Matthew Effect Amplification (Early Failure Compounds)",
+      "structural_delta": "Delayed phonics instruction creates early reading failure that compounds via reduced practice volume",
+      "primary_observable": "Longitudinal reading trajectory divergence; intervention timing vs outcome correlation",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": "late_intervention_students",
+      "downstream_of": [
+        "reading_acquisition_mechanism_kernel"
+      ],
+      "feeds_into": [
+        "socioeconomic_harm_distribution"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mechanistic detail of socioeconomic_harm_distribution; not structurally independent"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "phonics_reading",
+      "kernel_id": "reading_acquisition_mechanism",
+      "reading_id": "phonics_reading"
+    },
+    {
+      "claim_id": "whole_language_reading",
+      "kernel_id": "reading_acquisition_mechanism",
+      "reading_id": "whole_language_reading"
+    },
+    {
+      "claim_id": "balanced_literacy_reading",
+      "kernel_id": "reading_acquisition_mechanism",
+      "reading_id": "balanced_literacy_reading"
+    },
+    "institutional_persistence_mechanism",
+    "socioeconomic_harm_distribution"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "orthographic_transparency_interaction",
+      "structural_delta": "English orthography opacity makes phonics more critical than transparent orthographies",
+      "hypothesis": "mountain",
+      "deferral_reason": "Upstream linguistic constraint captured implicitly in kernel readings; lower centrality"
+    },
+    {
+      "claim_id": "matthew_effect_amplification",
+      "structural_delta": "Early reading failure compounds via reduced practice volume",
+      "hypothesis": "piton",
+      "deferral_reason": "Mechanistic detail of socioeconomic_harm_distribution; fails pairwise independence test (same observable: longitudinal achievement divergence)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_balanced_literacy_collapse",
+      "description": "Does balanced literacy constitute a genuine third reading or does it collapse to whole-language in practice? Implementation fidelity data suggests systematic phonics component often atrophies, making it a nominal compromise rather than structural alternative.",
+      "source": "Kernel decomposition analysis; balanced_literacy_reading expected_structural_delta notes variable implementation"
+    },
+    {
+      "id": "omega_institutional_incentive_structure",
+      "description": "What sustains education school resistance to phonics evidence? Candidate mechanisms: publishing revenue (Lucy Calkins Units of Study), faculty ideological commitment, prestige hierarchy (constructivism as 'sophisticated' vs phonics as 'drill'). Requires institutional ethnography beyond model competence.",
+      "source": "Absence inventory (extraction); institutional_persistence_mechanism beneficiary identification"
+    },
+    {
+      "id": "omega_neurodivergent_interaction",
+      "description": "Do dyslexic students require even more systematic phonics than neurotypical struggling readers, or does whole-language harm them identically? Orthographic mapping deficit may create distinct constraint structure. Beyond model's neuroscience competence.",
+      "source": "Dark Matter Probe 2 (Absence Inventory); F34 epistemic trespass boundary"
+    },
+    {
+      "id": "omega_teacher_autonomy_legitimacy",
+      "description": "Is teacher professional autonomy a legitimate constraint (rope) or a credentialing artifact (piton)? Whole-language advocates frame autonomy as intrinsic professional good; phonics advocates frame it as obstacle to evidence-based practice. Normative question beyond empirical resolution.",
+      "source": "Beneficiary scan; institutional_persistence_mechanism classification uncertainty"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F34 detected: omega_neurodivergent_interaction and omega_institutional_incentive_structure identify boundaries of model's domain competence. Neuroscience of dyslexia and institutional ethnography of education schools require specialist expertise. Generated omegas to bound uncertainty."
+  }
+}

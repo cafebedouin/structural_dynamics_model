@@ -1,0 +1,210 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Theological Ethics / Technology Governance / Philosophical Anthropology",
+  "family_id": "magnifica_humanitas_ai_dignity",
+  "topic_summary": "Analysis of the contested commitment to 'safeguarding the human person in the age of AI' as articulated across Catholic magisterial teaching, secular liberal governance frameworks, and transhumanist/posthumanist movements. The shared kernel—human dignity must be protected as AI advances—is read through incompatible anthropological foundations that emit structurally different constraints on what AI may become and what constitutes a dignity violation.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 2,
+    "key_entities": [
+      "Catholic Magisterium (authoritative teaching body grounding dignity in imago Dei)",
+      "Secular liberal governance bodies (rights-based regulatory frameworks)",
+      "Transhumanist/posthumanist movements (enhancement advocacy, longtermism)",
+      "AI systems (technological substrate under normative contestation)",
+      "Human person (contested category—fixed vs. mutable)",
+      "Technocratic paradigm (named threat in magisterial reading)"
+    ],
+    "key_tensions": [
+      "Imago Dei (fixed divine image) vs. posthumanist mutability (dignity attaches to enhanced/synthetic persons)",
+      "Subordination of AI to human (magisterial) vs. continuity of AI with human flourishing (transhumanist)",
+      "Autonomy-as-dignity (liberal) vs. dignity-prior-to-autonomy (magisterial)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "imago_dei_reading",
+      "human_readable": "Imago Dei Reading (Dignity as Divine Image)",
+      "structural_delta": "Dignity grounded in inviolable image of Triune God, equal in all persons prior to capability; AI must remain subordinate tool; enhancement/transhumanism rejected as idolatry",
+      "primary_observable": "Magisterial documents (encyclicals, Vatican statements); rejection of cognitive enhancement, superintelligence as threat to human telos",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "magisterial_authority",
+      "victim": "enhancement_seekers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; highest suppression of alternatives"
+    },
+    {
+      "claim_id": "autonomy_rights_reading",
+      "human_readable": "Autonomy-Rights Reading (Dignity as Rational Self-Determination)",
+      "structural_delta": "Dignity grounded in human autonomy, rationality, rights; safeguarding via democratic regulation, transparency, labor/privacy protection; cautious enhancement within rights limits",
+      "primary_observable": "EU AI Act, GDPR, UNESCO AI ethics frameworks; bioethics literature on informed consent for enhancement",
+      "epsilon_bin": "mod",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "regulatory_bodies",
+      "victim": "unregulated_ai_developers",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; bridge position between magisterial and posthumanist"
+    },
+    {
+      "claim_id": "posthumanist_reading",
+      "human_readable": "Posthumanist Reading (Dignity as Person-Continuity Beyond Human)",
+      "structural_delta": "Human not fixed limit; cognitive/biological enhancement and superintelligence continuous with flourishing; dignity attaches to persons however constituted; 'more than human' is fulfillment",
+      "primary_observable": "Transhumanist manifestos, longtermist AI safety frameworks prioritizing superintelligence alignment over human preservation",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel_reading",
+      "beneficiary": "enhancement_advocates",
+      "victim": "traditional_human_category",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; explicit target of magisterial rejection"
+    },
+    {
+      "claim_id": "technocratic_paradigm_extraction",
+      "human_readable": "Technocratic Paradigm as Structural Extraction",
+      "structural_delta": "AI development driven by efficiency/control logic that treats human person as optimizable resource rather than inviolable end",
+      "primary_observable": "Corporate AI deployment metrics (productivity gains, labor displacement); surveillance capitalism infrastructure",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "tech_capital",
+      "victim": "workers_and_users",
+      "downstream_of": [],
+      "feeds_into": [
+        "imago_dei_reading",
+        "autonomy_rights_reading"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent axis; named mechanism in magisterial reading but operates across all three kernel readings as structural threat"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "imago_dei_reading",
+      "kernel_id": "human_dignity_ai_safeguarding",
+      "reading_id": "imago_dei_reading"
+    },
+    {
+      "claim_id": "autonomy_rights_reading",
+      "kernel_id": "human_dignity_ai_safeguarding",
+      "reading_id": "autonomy_rights_reading"
+    },
+    {
+      "claim_id": "posthumanist_reading",
+      "kernel_id": "human_dignity_ai_safeguarding",
+      "reading_id": "posthumanist_reading"
+    },
+    "technocratic_paradigm_extraction"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "labor_displacement_mechanism",
+      "structural_delta": "AI-driven automation as direct threat to human work as dignity-constitutive activity",
+      "hypothesis": "rope",
+      "deferral_reason": "Captured within technocratic_paradigm_extraction snare; not structurally independent"
+    },
+    {
+      "claim_id": "algorithmic_bias_as_dignity_violation",
+      "structural_delta": "Discriminatory AI systems as violations of equal dignity",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "Downstream manifestation of technocratic paradigm; readings disagree on what constitutes violation but mechanism is shared"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_buddhist_confucian_absence",
+      "description": "Non-Western traditions (Buddhist no-self, Confucian relational personhood) hold dignity readings structurally distinct from all three Western readings. Their absence may indicate Eurocentric framing bias.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_indigenous_cosmologies",
+      "description": "Indigenous cosmologies that do not privilege human over non-human persons may reject the kernel itself (human exceptionalism) rather than offering a fourth reading. Kernel validity contested.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_ai_moral_patienthood",
+      "description": "If AI systems achieve moral patienthood, does dignity extend to them? Posthumanist reading says yes; magisterial reading has no framework for non-imago-Dei persons; autonomy reading unclear.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_technocratic_paradigm_independence",
+      "description": "Is technocratic paradigm truly independent of the kernel, or is it a fourth reading (dignity as efficiency/optimization)? Current classification treats it as orthogonal mechanism, but it may be a suppressed reading.",
+      "source": "§3 Pairwise Independence Testing"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": true,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F15 detected: Non-Western dignity traditions (Buddhist, Confucian, Indigenous) not included in reading set despite structural distinctness. Generated omega_buddhist_confucian_absence and omega_indigenous_cosmologies. Readings limited to Western traditions present in source material."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The human person must be safeguarded/protected as artificial intelligence advances",
+    "authority_description": "Contested across traditions: Magisterium claims interpretive authority via apostolic succession and natural law; secular governance via democratic legitimacy and rights frameworks; transhumanist movements via scientific/technological expertise and individual autonomy",
+    "drift_status": "absent",
+    "candidate_pattern": "Interpretive Traditions (Type 3)",
+    "is_contested_kernel": true,
+    "kernel_id": "human_dignity_ai_safeguarding",
+    "readings": [
+      {
+        "reading_id": "imago_dei_reading",
+        "commitment": "Dignity is the inviolable image of the Triune God, equal in all persons prior to any capability",
+        "authority_grounding": "Magisterial teaching authority via apostolic succession and natural law tradition",
+        "sibling_readings": [
+          "autonomy_rights_reading",
+          "posthumanist_reading"
+        ],
+        "expected_structural_delta": "AI must remain subordinate tool; enhancement/transhumanism categorically rejected; high suppression of alternatives via doctrinal authority"
+      },
+      {
+        "reading_id": "autonomy_rights_reading",
+        "commitment": "Dignity grounded in human autonomy, rationality, and rights rather than divine image",
+        "authority_grounding": "Democratic legitimacy, international human rights frameworks, secular bioethics consensus",
+        "sibling_readings": [
+          "imago_dei_reading",
+          "posthumanist_reading"
+        ],
+        "expected_structural_delta": "Regulatory frameworks prioritize transparency, consent, labor/privacy protection; cautious enhancement permitted within rights constraints; moderate suppression"
+      },
+      {
+        "reading_id": "posthumanist_reading",
+        "commitment": "The human is not a fixed limit; dignity attaches to persons however constituted, including enhanced or synthetic",
+        "authority_grounding": "Scientific/technological expertise, individual autonomy, longtermist consequentialism",
+        "sibling_readings": [
+          "imago_dei_reading",
+          "autonomy_rights_reading"
+        ],
+        "expected_structural_delta": "Enhancement and superintelligence continuous with flourishing; 'more than human' is fulfillment not threat; low suppression of alternatives (pluralist)"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "imago_dei_reading",
+        "reading_b": "posthumanist_reading",
+        "basis": "Imago Dei requires human nature as fixed divine image; posthumanist requires human nature as mutable substrate. No coherent framework holds both: accepting enhancement-as-fulfillment requires rejecting image-as-inviolable-limit."
+      },
+      {
+        "reading_a": "imago_dei_reading",
+        "reading_b": "autonomy_rights_reading",
+        "basis": "Imago Dei grounds dignity prior to and independent of autonomy/capability; autonomy-rights grounds dignity in rational self-determination. Frameworks can hold both as complementary (Catholic personalism does), so NOT axiom-contradictory despite tension."
+      }
+    ]
+  }
+}

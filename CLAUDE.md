@@ -396,6 +396,21 @@ an engine demo from `constraint_instances.pl`) — exclude it, or corpus counts 
 the manifest. Runs from 2026-06-04 on enumerate `corpus_loader:corpus_constraint/1` and match
 the manifest exactly; check `manifest.pipeline_run_at` to know which regime an output is in.
 
+**A kernel-positive means "admits a foundational construction," dominance UNJUDGED — never
+"this topic IS a dominant/certified kernel" (kernel-first router, 2026-06-06; OQ-79).**
+`c-orchestrator._step_decompose` now uses the PRIMED scope prompt (asks the kernel question on
+every topic; reuses gkc `_scope_user_prompt` — do not revert to the unprimed §3 prompt, it silently
+re-flattens genuine kernels). The primed `is_contested_kernel` verdict is **kernel-liberal**: it
+routes to kernel whenever a foundational reading is *constructible* (= the topic is contentful,
+`docs/seat-theorem-v1.md` Coupling Theorem), flat only when the situation settles it — so loud
+means-disputes (nuclear-as-climate-solution, reading-wars) route kernel alongside genuine kernels.
+The kernel set therefore accrues UNCURATED for dominance (operator ruling LIBERAL, 2026-06-06). **Do
+not cite a kernel count, Tier headline, or essay as "the corpus contains N genuine axiom-level
+contests"** — that asserts a seat-free dominance ranking the seat theorem forbids (§6). Report
+kernel-positives as "topics admitting a foundational construction." A *seated* dominance stage is
+permitted but deferred (design against a witnessed pile). Full provenance + the eyeball's role
+(liveness, not dominance): `outputs/kernel_first_phase0/PHASE0_READOUT.md`, KNOWN_STATE 2026-06-06.
+
 **`json/` files are LLM-generated constraint specifications, not analysis output.**
 Each file in `json/` is produced by step 3 of the orchestrator (Sonnet generates it
 from an axis in the UKE_SCOPE manifest). The orchestrator writes the JSON to `json/`

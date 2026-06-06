@@ -1,0 +1,245 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Energy Policy / Climate Mitigation / Technology Governance",
+  "family_id": "nuclear_climate_solution_2026",
+  "topic_summary": "Analysis of the contested role of nuclear power expansion in climate decarbonization strategy. The dispute centers on whether nuclear is a necessary complement to renewables for reliable baseload power or a capital-intensive distraction that delays faster renewable deployment. The kernel is the climate-mitigation imperative itself; parties read it through incompatible frameworks that emit structurally different constraints.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power industry (existing fleet + new reactor designs)",
+      "Renewable energy sector (solar, wind, storage)",
+      "Climate mitigation imperative (Paris Agreement targets, net-zero commitments)",
+      "Grid reliability requirements (baseload vs intermittency management)",
+      "Capital allocation mechanisms (public subsidy, private investment, opportunity cost)",
+      "Waste disposal systems (geological repositories, interim storage)"
+    ],
+    "key_tensions": [
+      "Baseload reliability vs renewable intermittency (nuclear advocates vs renewable advocates)",
+      "Construction timeline vs deployment urgency (nuclear's 10-15 year build vs renewable's 2-3 year)",
+      "Centralized vs distributed generation (large reactors vs distributed renewables + storage)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The climate mitigation imperative — the shared commitment to rapid, deep decarbonization to avoid catastrophic warming",
+    "authority_description": "Scientific consensus (IPCC) establishes the physical constraint; interpretive authority over what constitutes adequate response is contested between techno-optimist, risk-minimization, and systems-transition frameworks",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "climate_mitigation_imperative",
+    "readings": [
+      {
+        "reading_id": "portfolio_optimization_reading",
+        "commitment": "Mitigation requires maximizing all low-carbon sources; nuclear is necessary for reliable baseload",
+        "authority_grounding": "Engineering techno-optimism / energy systems modeling",
+        "sibling_readings": [
+          "opportunity_cost_reading",
+          "systems_transition_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters beneficiary set (receives subsidy/support); fossil fuels are primary victim; constraint is technology-neutral carbon intensity"
+      },
+      {
+        "reading_id": "opportunity_cost_reading",
+        "commitment": "Mitigation requires fastest deployment per dollar; nuclear's capital intensity and timeline make it net-harmful",
+        "authority_grounding": "Economic efficiency / deployment-rate empiricism",
+        "sibling_readings": [
+          "portfolio_optimization_reading",
+          "systems_transition_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters victim set (diverts capital from faster alternatives); renewables are beneficiaries; constraint is carbon-per-dollar-per-year"
+      },
+      {
+        "reading_id": "systems_transition_reading",
+        "commitment": "Mitigation requires transforming energy systems toward decentralization and democratic control; nuclear perpetuates extractive centralization",
+        "authority_grounding": "Political ecology / energy democracy movements",
+        "sibling_readings": [
+          "portfolio_optimization_reading",
+          "opportunity_cost_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters victim set (incompatible with democratic energy transition); distributed renewables are beneficiaries; constraint is governance structure not just carbon"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "portfolio_optimization_reading",
+        "reading_b": "opportunity_cost_reading",
+        "basis": "Portfolio reading holds 'all low-carbon sources are complementary' as axiomatic; opportunity-cost reading holds 'capital scarcity makes nuclear and renewables substitutes' as axiomatic. No single framework can hold both: either capital is abundant enough for portfolio diversification (A) or scarce enough that nuclear crowds out renewables (B)."
+      },
+      {
+        "reading_a": "portfolio_optimization_reading",
+        "reading_b": "systems_transition_reading",
+        "basis": "Portfolio reading treats governance structure as orthogonal to mitigation effectiveness; systems-transition reading treats centralized vs democratic control as constitutive of what counts as mitigation. No framework can hold both: either mitigation is technology-neutral (A) or governance structure is part of the climate problem (B)."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "portfolio_optimization_reading",
+      "human_readable": "Portfolio Optimization Reading (Nuclear as Necessary Baseload)",
+      "structural_delta": "Nuclear power is necessary complement to renewables for reliable low-carbon baseload",
+      "primary_observable": "Grid reliability metrics (capacity factor, dispatchability); carbon intensity per kWh",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "nuclear_industry",
+      "victim": "fossil_fuel_incumbents",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "First reading of contested kernel; represents techno-optimist framework"
+    },
+    {
+      "claim_id": "opportunity_cost_reading",
+      "human_readable": "Opportunity Cost Reading (Nuclear as Capital Diversion)",
+      "structural_delta": "Nuclear's capital intensity and construction timeline make it net-harmful to mitigation goals",
+      "primary_observable": "Deployment rate (GW/year); cost per ton CO2 avoided; construction timeline data",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "renewable_energy_sector",
+      "victim": "nuclear_industry",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Second reading of contested kernel; represents economic-efficiency framework"
+    },
+    {
+      "claim_id": "systems_transition_reading",
+      "human_readable": "Systems Transition Reading (Nuclear as Governance Incompatibility)",
+      "structural_delta": "Nuclear perpetuates centralized extractive energy systems incompatible with democratic transition",
+      "primary_observable": "Ownership structure (state/corporate vs community); decision-making locus; waste burden distribution",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": "centralized_state_apparatus",
+      "victim": "communities_near_reactors_and_waste_sites",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Third reading of contested kernel; represents political-ecology framework"
+    },
+    {
+      "claim_id": "grid_intermittency_constraint",
+      "human_readable": "Grid Intermittency Constraint (Physical Limits of Variable Renewables)",
+      "structural_delta": "Physical limits on grid stability with high penetration of variable renewables without storage or baseload",
+      "primary_observable": "Duck curve severity; curtailment rates; storage deployment vs need",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "portfolio_optimization_reading"
+      ],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Independent mountain; upstream physical constraint that portfolio_optimization_reading invokes but opportunity_cost_reading contests as solvable via storage"
+    },
+    {
+      "claim_id": "construction_timeline_lock_in",
+      "human_readable": "Construction Timeline Lock-In (Nuclear's Decade-Scale Deployment Lag)",
+      "structural_delta": "Nuclear plants require 10-15 years from approval to operation vs 2-3 years for renewables",
+      "primary_observable": "Historical construction duration data; project completion rates",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "opportunity_cost_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: mountain feeding into opportunity_cost_reading but structurally captured by that reading's deployment-rate observable; independent generation would duplicate"
+    },
+    {
+      "claim_id": "waste_disposal_externality",
+      "human_readable": "Waste Disposal Externality (Unresolved Long-Term Storage)",
+      "structural_delta": "No operational geological repository for high-level waste; costs and risks externalized to future generations",
+      "primary_observable": "Repository status (operational, under construction, planned); interim storage capacity vs accumulation rate",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": "future_generations",
+      "downstream_of": [],
+      "feeds_into": [
+        "systems_transition_reading"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: feeds into systems_transition_reading's governance critique but lacks independent structural delta beyond that reading's waste-burden observable"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "portfolio_optimization_reading",
+      "kernel_id": "climate_mitigation_imperative",
+      "reading_id": "portfolio_optimization_reading"
+    },
+    {
+      "claim_id": "opportunity_cost_reading",
+      "kernel_id": "climate_mitigation_imperative",
+      "reading_id": "opportunity_cost_reading"
+    },
+    {
+      "claim_id": "systems_transition_reading",
+      "kernel_id": "climate_mitigation_imperative",
+      "reading_id": "systems_transition_reading"
+    },
+    "grid_intermittency_constraint"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "construction_timeline_lock_in",
+      "structural_delta": "Nuclear's 10-15 year build time vs renewables' 2-3 years",
+      "hypothesis": "mountain",
+      "deferral_reason": "Mountain feeding into opportunity_cost_reading but structurally captured by that reading's deployment-rate observable; independent generation would duplicate constraint story"
+    },
+    {
+      "claim_id": "waste_disposal_externality",
+      "structural_delta": "No operational geological repository; intergenerational cost externalization",
+      "hypothesis": "rope",
+      "deferral_reason": "Feeds into systems_transition_reading's governance critique but lacks independent structural delta beyond that reading's waste-burden distribution observable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_storage_breakthrough",
+      "description": "If grid-scale storage costs drop 80%+ (plausible by 2035), does grid_intermittency_constraint collapse from mountain to rope? Portfolio_optimization_reading's baseload necessity claim depends on storage remaining expensive.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + grid_intermittency_constraint mountain validity"
+    },
+    {
+      "id": "omega_smr_deployment",
+      "description": "Small modular reactors (SMRs) claim 3-5 year construction timelines. If realized, does construction_timeline_lock_in mountain collapse? Opportunity_cost_reading's timeline critique depends on large-reactor data; SMR track record is zero.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + deferred axis construction_timeline_lock_in"
+    },
+    {
+      "id": "omega_china_deployment_rate",
+      "description": "China is deploying nuclear at 6-8 GW/year. Does this invalidate opportunity_cost_reading's deployment-rate claim, or does it confirm systems_transition_reading's centralized-state prerequisite? Western liberal democracies have not matched this rate.",
+      "source": "Dark Matter Probe 1 (Operational Medium) — model trained primarily on Western energy-policy discourse"
+    },
+    {
+      "id": "omega_reading_collapse_risk",
+      "description": "Do portfolio_optimization and opportunity_cost readings collapse if both accept 'maximize carbon reduction per dollar per year' as the shared metric? Current separation depends on portfolio reading treating reliability as non-fungible with cost, but both could converge on cost-effectiveness if storage costs drop.",
+      "source": "§1.3-K coherence check — readings may not remain distinct under all future conditions"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: grid_intermittency_constraint classified as mountain (physical limit) but storage technology trajectory may reclassify it as rope (coordination problem) or piton (policy choice to under-invest in storage). Generated omega_storage_breakthrough to bound this uncertainty. Also: construction_timeline_lock_in deferred as mountain but SMR claims (unproven) could collapse it; omega_smr_deployment documents this."
+  }
+}

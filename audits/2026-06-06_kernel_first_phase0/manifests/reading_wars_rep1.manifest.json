@@ -1,0 +1,229 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Education Policy / Cognitive Science / Literacy Pedagogy",
+  "family_id": "reading_instruction_wars",
+  "topic_summary": "The decades-long dispute over reading instruction methodology: systematic phonics (explicit decoding instruction) versus whole-language/balanced-literacy (meaning-centered, implicit skill acquisition). Characterized by rival research paradigms, professional faction conflict, and cyclical policy adoption patterns.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 2,
+    "absence_count": 3,
+    "key_entities": [
+      "Phonics advocates (systematic explicit instruction camp)",
+      "Whole-language advocates (meaning-centered implicit instruction camp)",
+      "Cognitive science research community (reading acquisition neuroscience)",
+      "Teacher training institutions (colleges of education)",
+      "Education policy apparatus (state standards, curriculum adoption)",
+      "Publishing industry (textbook/curriculum materials producers)"
+    ],
+    "key_tensions": [
+      "Explicit decoding instruction vs implicit skill acquisition through exposure",
+      "Cognitive science evidence base vs practitioner experience/philosophy",
+      "Centralized evidence-based mandates vs teacher professional autonomy"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment to literacy as the foundational educational outcome, with contested readings of what constitutes legitimate reading acquisition and how authority to define 'reading' is grounded",
+    "authority_description": "Competing authority structures: cognitive science research (empirical evidence), practitioner wisdom (classroom experience), philosophical tradition (progressive education theory)",
+    "drift_status": "partial",
+    "candidate_pattern": "interpretive_drift",
+    "is_contested_kernel": true,
+    "kernel_id": "reading_acquisition_legitimacy",
+    "readings": [
+      {
+        "reading_id": "phonics_decoding_primacy",
+        "commitment": "Reading is decoding; legitimate instruction makes the alphabetic principle explicit through systematic phonics",
+        "authority_grounding": "Cognitive neuroscience (orthographic mapping research, simple view of reading model)",
+        "sibling_readings": [
+          "whole_language_meaning_primacy",
+          "balanced_literacy_integration"
+        ],
+        "expected_structural_delta": "High structure, explicit sequencing, decodable texts; teacher as direct instructor; struggling readers identified early via decoding assessments"
+      },
+      {
+        "reading_id": "whole_language_meaning_primacy",
+        "commitment": "Reading is meaning-making; legitimate instruction immerses children in authentic literature, allowing decoding to emerge naturally",
+        "authority_grounding": "Progressive education philosophy (Dewey, constructivism), practitioner experience with engaged readers",
+        "sibling_readings": [
+          "phonics_decoding_primacy",
+          "balanced_literacy_integration"
+        ],
+        "expected_structural_delta": "Low structure, authentic texts from day one, teacher as facilitator; struggling readers receive individualized support via running records and guided reading"
+      },
+      {
+        "reading_id": "balanced_literacy_integration",
+        "commitment": "Reading requires both decoding and meaning-making; legitimate instruction balances explicit phonics with authentic literature exposure",
+        "authority_grounding": "Pragmatic synthesis (professional organizations, mainstream teacher training)",
+        "sibling_readings": [
+          "phonics_decoding_primacy",
+          "whole_language_meaning_primacy"
+        ],
+        "expected_structural_delta": "Mixed structure, both decodable and authentic texts, teacher toggles between direct instruction and facilitation; struggling readers receive both phonics intervention and guided reading"
+      },
+      {
+        "reading_id": "structured_literacy_remediation",
+        "commitment": "Reading instruction must be designed for the most vulnerable learners first; legitimate instruction follows explicit, cumulative, diagnostic principles from structured literacy",
+        "authority_grounding": "Special education research (dyslexia intervention science, Orton-Gillingham tradition)",
+        "sibling_readings": [
+          "phonics_decoding_primacy",
+          "whole_language_meaning_primacy",
+          "balanced_literacy_integration"
+        ],
+        "expected_structural_delta": "Highest structure, multisensory explicit instruction, continuous diagnostic assessment; all students receive intervention-grade instruction preventatively"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "phonics_decoding_primacy",
+        "reading_b": "whole_language_meaning_primacy",
+        "basis": "Phonics reading grounds legitimacy in making the code explicit before meaning; whole-language reading grounds legitimacy in meaning-making from which code knowledge emerges. No single framework can hold both 'explicit-first' and 'emergent-from-meaning' as simultaneously true about the same developmental process."
+      },
+      {
+        "reading_a": "structured_literacy_remediation",
+        "reading_b": "whole_language_meaning_primacy",
+        "basis": "Structured literacy reading holds that vulnerable learners require maximum explicitness and structure as the baseline; whole-language reading holds that all learners benefit from authentic meaning-making contexts with minimal imposed structure. No framework can hold both 'structure-first-for-all' and 'meaning-first-for-all' as true."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "reading_acquisition_legitimacy",
+      "human_readable": "Reading Acquisition Legitimacy (Contested Kernel)",
+      "structural_delta": "Foundational disagreement over what constitutes reading and legitimate instruction authority",
+      "primary_observable": "Curriculum adoption patterns, teacher training content, state reading standards language",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "professional_autonomy_extraction",
+        "evidence_authority_collision"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel; all four readings proceed to generation as expansion of this single axis"
+    },
+    {
+      "claim_id": "professional_autonomy_extraction",
+      "human_readable": "Professional Autonomy vs Evidence Mandates",
+      "structural_delta": "Teacher autonomy to select methods vs centralized evidence-based curriculum mandates",
+      "primary_observable": "State/district curriculum prescription levels, teacher survey data on autonomy perception",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "teacher_training_institutions",
+      "victim": "teachers_under_mandates",
+      "downstream_of": [
+        "reading_acquisition_legitimacy"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent observable (autonomy vs mandate), distinct from kernel readings; downstream synthesis of kernel conflict"
+    },
+    {
+      "claim_id": "evidence_authority_collision",
+      "human_readable": "Evidence Authority Collision (Research Paradigm Conflict)",
+      "structural_delta": "Cognitive science RCT evidence vs qualitative practitioner research as legitimate knowledge",
+      "primary_observable": "Citation patterns in policy documents, research methodology distribution in education journals",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "reading_acquisition_legitimacy"
+      ],
+      "feeds_into": [
+        "professional_autonomy_extraction"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Different observable (epistemology) from kernel and autonomy axis; mediates between kernel and policy layer"
+    },
+    {
+      "claim_id": "publishing_industry_lock_in",
+      "human_readable": "Curriculum Publishing Industry Lock-In",
+      "structural_delta": "Textbook adoption cycles and publisher market concentration create path dependency independent of evidence",
+      "primary_observable": "Market share of major publishers, adoption cycle length, curriculum switching costs",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": "major_publishers",
+      "victim": "districts_locked_into_outdated_programs",
+      "downstream_of": [],
+      "feeds_into": [
+        "professional_autonomy_extraction"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: structural but lower centrality; captured indirectly via professional_autonomy_extraction tangled_rope"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "phonics_decoding_primacy",
+      "kernel_id": "reading_acquisition_legitimacy",
+      "reading_id": "phonics_decoding_primacy"
+    },
+    {
+      "claim_id": "whole_language_meaning_primacy",
+      "kernel_id": "reading_acquisition_legitimacy",
+      "reading_id": "whole_language_meaning_primacy"
+    },
+    {
+      "claim_id": "balanced_literacy_integration",
+      "kernel_id": "reading_acquisition_legitimacy",
+      "reading_id": "balanced_literacy_integration"
+    },
+    {
+      "claim_id": "structured_literacy_remediation",
+      "kernel_id": "reading_acquisition_legitimacy",
+      "reading_id": "structured_literacy_remediation"
+    },
+    "professional_autonomy_extraction",
+    "evidence_authority_collision"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "publishing_industry_lock_in",
+      "structural_delta": "Textbook market concentration creates path dependency",
+      "hypothesis": "piton",
+      "deferral_reason": "Lower centrality; economic structure captured indirectly via professional_autonomy_extraction"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_dyslexia_screening_gap",
+      "description": "Absence: universal dyslexia screening. If structured_literacy_remediation reading is correct that 15-20% need intervention-grade instruction, why is screening not standard? Potential snare: whole-language reading forecloses early identification.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_socioeconomic_differential",
+      "description": "Absence: differential impact by SES. Phonics advocates claim whole-language harms low-SES students disproportionately (less home literacy support). Whole-language advocates claim phonics is culturally narrow. Neither reading fully addresses structural inequality.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_bilingual_learners",
+      "description": "Absence: English learners. Do phonics vs whole-language readings apply identically to L2 acquisition? Orthographic depth varies across languages; Spanish phonics may differ structurally from English phonics.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    },
+    {
+      "id": "omega_reading_definition_collapse",
+      "description": "All four readings claim to produce 'readers,' but measure different outcomes (decoding fluency vs comprehension vs engagement). If 'reading' is not one thing, the kernel may be pseudo-contested—four methods for four different goals.",
+      "source": "Kernel coherence check"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Four readings identified via multi-tradition lens diversity (cognitive science, progressive education, pragmatic synthesis, special education). Axiom contradictions declared for two pairs where no single framework holds both. Balanced_literacy_integration included as live reading despite being potential bridge—it is individually holdable and institutionally dominant."
+  }
+}

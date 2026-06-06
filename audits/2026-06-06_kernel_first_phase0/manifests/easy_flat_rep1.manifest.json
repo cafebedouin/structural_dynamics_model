@@ -1,0 +1,119 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Transportation Policy / Coordination Systems / Path Dependence",
+  "family_id": "traffic_handedness_convention",
+  "topic_summary": "Analysis of the traffic convention mandating which side of the road vehicles drive on (right-hand vs left-hand). This is a coordination equilibrium with high switching costs, not a contested kernel—all parties agree on what the constraint is (a single coordination rule) and disagree only on which equilibrium to select or whether switching is worth the cost.",
+  "extraction_summary": {
+    "entity_count": 3,
+    "claim_count": 2,
+    "tension_count": 1,
+    "mechanism_count": 2,
+    "absence_count": 1,
+    "key_entities": [
+      "National traffic authority (enforcement body setting the rule)",
+      "Vehicle operators (drivers, cyclists, pedestrians adapting to the rule)",
+      "Infrastructure (roads, signage, vehicle design standardized to the rule)"
+    ],
+    "key_tensions": [
+      "Coordination benefit of uniformity vs switching cost of changing equilibrium"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "coordination_equilibrium_lock_in",
+      "human_readable": "Coordination Equilibrium Lock-In (Network Effects of Handedness Choice)",
+      "structural_delta": "Once a handedness convention is adopted, network effects (vehicle design, infrastructure, driver training, cross-border compatibility) create self-reinforcing lock-in",
+      "primary_observable": "Switching cost estimates (infrastructure redesign, vehicle fleet replacement, accident rates during transition); number of countries sharing each convention",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "switching_cost_barrier"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical/coordination constraint base"
+    },
+    {
+      "claim_id": "switching_cost_barrier",
+      "human_readable": "Switching Cost Barrier (Path Dependence Preventing Convergence)",
+      "structural_delta": "The cost of switching from one equilibrium to the other (infrastructure, fleet, retraining) prevents convergence to a single global standard despite efficiency gains",
+      "primary_observable": "Historical switching attempts (Sweden 1967, Samoa 2009); cost-benefit analyses of proposed switches; accident rate data during transitions",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "coordination_equilibrium_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Downstream rope documenting the coordination trap; structurally distinct from mountain"
+    },
+    {
+      "claim_id": "colonial_legacy_distribution",
+      "human_readable": "Colonial Legacy Distribution (Historical Diffusion Pattern)",
+      "structural_delta": "Current global distribution of left-hand vs right-hand driving reflects colonial-era power projection and post-independence path dependence",
+      "primary_observable": "Correlation between former colonial power and current traffic handedness; post-independence switching decisions",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "switching_cost_barrier"
+      ],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: historical explanation for current distribution but does not add independent structural constraint beyond coordination_equilibrium_lock_in"
+    }
+  ],
+  "generation_sequence": [
+    "coordination_equilibrium_lock_in",
+    "switching_cost_barrier"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "colonial_legacy_distribution",
+      "structural_delta": "Current distribution reflects colonial-era diffusion and post-independence path dependence",
+      "hypothesis": "piton",
+      "deferral_reason": "Historical explanation for distribution pattern; does not add independent constraint structure beyond coordination_equilibrium_lock_in mountain"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_not_a_kernel",
+      "description": "Topic was flagged as candidate contested kernel but is NOT a genuine kernel. All parties agree on what the constraint is (a coordination rule mandating one side of the road). Disagreement is about WHICH equilibrium to select (right vs left) or whether switching cost is worth paying—not about what kind of constraint exists. This is observer-position disagreement about a single constraint, not multiple readings of a shared commitment that emit different constraints. No readings to decompose.",
+      "source": "§1.3-K kernel/not-kernel decision"
+    },
+    {
+      "id": "omega_safety_differential",
+      "description": "Is there a measurable safety difference between right-hand and left-hand driving (e.g., due to dominant eye or hand)? If yes, the mountain may have a weak directional preference; if no, pure coordination game.",
+      "source": "Dark Matter Probe 1 (Operational Medium)"
+    },
+    {
+      "id": "omega_autonomous_vehicle_disruption",
+      "description": "Do autonomous vehicles reduce switching costs (software update vs driver retraining) enough to enable future convergence? If yes, the rope may weaken; if no, lock-in persists.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic is a straightforward coordination equilibrium with path dependence, not a contested kernel."
+  },
+  "commitment_system_recognition": {
+    "is_contested_kernel": false,
+    "collapse_note": "Topic was flagged as candidate kernel but does not meet the three-part test. All parties agree on the constraint type (a coordination rule). Disagreement is about which equilibrium (right vs left) or whether switching is worth the cost—this is observer-position disagreement about a single constraint, not multiple readings that emit structurally different constraints. Decomposed into ordinary axes (coordination mountain + switching cost rope) instead of readings."
+  }
+}

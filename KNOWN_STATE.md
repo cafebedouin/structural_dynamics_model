@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-06 — Kernel-first router: `_step_decompose` now uses the PRIMED scope prompt (construction-as-classifier)
+**Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, outputs/kernel_first_phase0/PHASE0_READOUT.md
+**Tier:** tripwire
+
+`c-orchestrator._step_decompose` no longer builds the unprimed §3-independence prompt. It now calls
+gkc `_scope_user_prompt({"human_readable": topic, "summary": ""}, research_context, self.axes)` —
+the PRIMED prompt that asks the kernel question ("contested kernel? emit READINGS; else flat + collapse
+omega"). This closes OQ-79 mechanism-2 (flat-miss: the old path never asked, silently flattening
+genuine kernels — magnifica → 12 flat axes). Downstream is unchanged: `_step_generate` →
+`generate_from_manifests` already handles kernel manifests (readings + the AUTO forced-flat control
+from `flatten_manifests` lines 343–359 = the construction pair).
+
+**TRIPWIRES (silent mistakes a fresh agent would make):**
+1. **Do NOT revert `_step_decompose` to the unprimed "select every axis that survives §3" prompt.**
+   It looks like the "normal" SCOPE call; reverting silently re-breaks kernel routing (the magnifica
+   failure). The primed prompt is the single source in gkc `_scope_user_prompt` — both front-ends
+   share it; do not fork a second copy (Build-Discipline Pattern 2).
+2. **A kernel-positive (`is_contested_kernel=true`) means "admits a foundational construction,"
+   dominance UNJUDGED — NOT "this topic IS a dominant/certified kernel."** The primed verdict is
+   KERNEL-LIBERAL (Phase 0: routes to kernel whenever a foundational reading is constructible =
+   contentful, `docs/seat-theorem-v1.md`; flat only when σ settles it). Loud means-disputes
+   (nuclear-climate, reading-wars) route kernel. A downstream count / Tier headline / essay that
+   reads the kernel set as "N genuine axiom-level contests" commits the seat-theorem no-seat pose
+   (asserts a seat-free dominance ranking, which §6 forbids). Kernels accrue UNCURATED by operator
+   ruling (2026-06-06, LIBERAL); a *seated* dominance stage is permitted but DEFERRED (design against
+   a witnessed pile). See the promoted line in CLAUDE.md Critical Distinctions.
+
+Witnessed (`--dry-run --skip-search` via the front-end): magnifica → `is_contested_kernel=true`
+(3 readings) where the unprimed path flattened it; flat topic → `is_contested_kernel=false`
+(reasoned rejection). Phase 0 + widen evidence + ruling: `outputs/kernel_first_phase0/PHASE0_READOUT.md`.
+A3 grounding-leg DROPPED (Phase 0: wrong instrument — over-routed readings have real constituencies).
+
 ## 2026-06-06 — Generation-backend unification: c-orchestrator routed through the shared backend; the kernel-dropping fork DELETED
 **Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, agent/story_generator_base.py, python/audits/capture_generation_payloads*.py
 **Tier:** landed

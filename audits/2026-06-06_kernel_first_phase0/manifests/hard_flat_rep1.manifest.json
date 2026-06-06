@@ -1,0 +1,120 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Information Standards / Sociotechnical Systems / Representational Conventions",
+  "family_id": "date_format_standards_2026",
+  "topic_summary": "Analysis of the ISO 8601 (YYYY-MM-DD) versus US (MM/DD/YYYY) date format dispute. The topic presents as a representational standard conflict but examination reveals it is NOT a contested kernel—both formats encode identical information with identical precision, differing only in serialization order. The dispute is downstream of network effects and legacy system lock-in, not competing readings of a shared commitment.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "ISO 8601 standard (international date/time representation standard, YYYY-MM-DD)",
+      "US conventional format (MM/DD/YYYY, dominant in American business/government)",
+      "Legacy systems (databases, forms, software with hardcoded format expectations)",
+      "International users (non-US populations expecting DD/MM/YYYY or ISO)",
+      "Standards bodies (ISO, NIST, industry consortia)"
+    ],
+    "key_tensions": [
+      "Lexicographic sortability (ISO) vs cultural familiarity (US format)",
+      "Interoperability (ISO adoption) vs transition costs (legacy system migration)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "network_effect_lock_in",
+      "human_readable": "Network Effect Lock-In (Coordination Trap)",
+      "structural_delta": "Installed base of systems/users creates switching cost barrier independent of format merit",
+      "primary_observable": "Count of legacy systems requiring MM/DD/YYYY; estimated migration cost in person-hours",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "incumbent_format_users",
+      "victim": "interoperability_seekers",
+      "downstream_of": [],
+      "feeds_into": [
+        "sortability_vs_familiarity"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Primary structural constraint; upstream to all format-choice dynamics"
+    },
+    {
+      "claim_id": "sortability_vs_familiarity",
+      "human_readable": "Sortability vs Familiarity (Technical vs Cultural Optimization)",
+      "structural_delta": "Lexicographic sort correctness (ISO) versus cognitive processing speed for enculturated users (US)",
+      "primary_observable": "String sort correctness rate; user comprehension speed in milliseconds by format familiarity",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "network_effect_lock_in"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Distinct observable (technical vs cognitive); independent ε from network lock-in"
+    },
+    {
+      "claim_id": "ambiguity_window",
+      "human_readable": "Ambiguity Window (Parsing Collision Risk)",
+      "structural_delta": "Dates 01-12 in first position create MM/DD vs DD/MM parsing ambiguity; ISO eliminates via YYYY prefix",
+      "primary_observable": "Error rate in international data exchange; support ticket volume for date misinterpretation",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "sortability_vs_familiarity"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Physical constraint (information theory); distinct from coordination dynamics"
+    }
+  ],
+  "generation_sequence": [
+    "network_effect_lock_in",
+    "sortability_vs_familiarity",
+    "ambiguity_window"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_not_a_kernel",
+      "description": "Topic flagged as contested kernel but examination shows it is NOT: both formats encode identical information with identical precision. There is no shared commitment being read differently—only a coordination problem over which arbitrary serialization to standardize on. The 'dispute' is a network effect trap, not competing interpretive frameworks.",
+      "source": "§1.3-K kernel/not-kernel decision"
+    },
+    {
+      "id": "omega_regulatory_mandate",
+      "description": "Would government mandate of ISO 8601 (e.g., federal procurement requirement) convert the Rope of sortability into a Snare for legacy system operators? Transition costs become extraction if imposed without migration support.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan)"
+    },
+    {
+      "id": "omega_yyyy_mm_dd_privilege",
+      "description": "ISO 8601 privileges the Gregorian calendar and Arabic numerals. A true standards dispute would include non-Gregorian calendar systems (Hebrew, Islamic, Chinese). Their absence suggests the 'dispute' is intra-Western coordination, not fundamental representational conflict.",
+      "source": "Dark Matter Probe 2 (Absence Inventory)"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": false,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "No fractures detected. Topic presented as kernel but correctly identified as non-kernel coordination problem. All three axes pass pairwise independence test with distinct observables and ε structures."
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "Not applicable—topic is not a commitment system",
+    "authority_description": "Not applicable—no interpretive authority structure",
+    "drift_status": "Not applicable—no kernel to drift from",
+    "candidate_pattern": "Not applicable—not a commitment system",
+    "is_contested_kernel": false,
+    "collapse_reason": "Both ISO 8601 and US MM/DD/YYYY formats encode identical information (year, month, day) with identical precision. They differ only in serialization order, not in what they commit to representing. There is no shared substrate being read differently—no interpretive disagreement about what a 'date' is or what it should capture. The conflict is purely a coordination problem (which arbitrary standard to converge on) downstream of network effects and legacy lock-in. A contested kernel requires competing readings of a shared commitment that emit structurally different constraints; here the 'readings' collapse into one encoding problem with two arbitrary solutions."
+  }
+}

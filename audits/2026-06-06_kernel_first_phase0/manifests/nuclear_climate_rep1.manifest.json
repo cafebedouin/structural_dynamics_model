@@ -1,0 +1,217 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Energy Policy / Climate Mitigation / Technology Governance",
+  "family_id": "nuclear_climate_solution_2026",
+  "topic_summary": "Analysis of the contested role of nuclear power expansion in climate decarbonization strategy. The dispute centers on whether nuclear is a necessary complement to renewables for reliable baseload power or a capital-intensive distraction that delays faster renewable deployment. The kernel is the climate-mitigation legitimacy claim itself.",
+  "extraction_summary": {
+    "entity_count": 6,
+    "claim_count": 4,
+    "tension_count": 2,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Nuclear power industry (reactor vendors, utilities, national programs)",
+      "Renewable energy sector (solar/wind developers, storage providers)",
+      "Climate policy institutions (IPCC, national climate ministries)",
+      "Environmental movement (split between pro-nuclear ecomodernists and anti-nuclear traditionalists)",
+      "Electricity grid operators (transmission system operators, reliability coordinators)",
+      "Capital markets (infrastructure investors, development banks)"
+    ],
+    "key_tensions": [
+      "Baseload reliability vs intermittency management (nuclear advocates vs renewable advocates)",
+      "Capital allocation competition (nuclear construction vs renewable deployment + storage)"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that climate mitigation legitimizes energy technology choice — all parties argue their preferred technology serves decarbonization, grounding authority in climate science consensus",
+    "authority_description": "Climate science (IPCC synthesis reports) establishes the decarbonization imperative; interpretive legitimacy derives from translating physical climate constraints into technology-pathway requirements",
+    "drift_status": "functioning",
+    "candidate_pattern": "interpretive_pluralism",
+    "is_contested_kernel": true,
+    "kernel_id": "climate_mitigation_legitimacy",
+    "readings": [
+      {
+        "reading_id": "baseload_necessity_reading",
+        "commitment": "Reliable decarbonization requires dispatchable baseload power that renewables cannot provide at scale",
+        "authority_grounding": "Engineering reliability standards + grid physics (frequency stability, capacity factor)",
+        "sibling_readings": [
+          "renewable_primacy_reading",
+          "portfolio_pragmatism_reading",
+          "degrowth_sufficiency_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters beneficiary set as necessary infrastructure; renewable-only pathways classified as inadequate; high capital concentration in long-lived assets"
+      },
+      {
+        "reading_id": "renewable_primacy_reading",
+        "commitment": "Renewables plus storage can achieve full decarbonization faster and cheaper than nuclear",
+        "authority_grounding": "Cost-curve economics + deployment velocity (learning rates, construction timelines)",
+        "sibling_readings": [
+          "baseload_necessity_reading",
+          "portfolio_pragmatism_reading",
+          "degrowth_sufficiency_reading"
+        ],
+        "expected_structural_delta": "Nuclear enters victim set as capital sink delaying renewable deployment; distributed generation privileged; shorter capital cycles"
+      },
+      {
+        "reading_id": "portfolio_pragmatism_reading",
+        "commitment": "Optimal decarbonization requires technology-neutral portfolio including both nuclear and renewables",
+        "authority_grounding": "Systems optimization modeling (integrated assessment models, least-cost pathways)",
+        "sibling_readings": [
+          "baseload_necessity_reading",
+          "renewable_primacy_reading",
+          "degrowth_sufficiency_reading"
+        ],
+        "expected_structural_delta": "Neither technology privileged a priori; regional variation in optimal mix; moderate capital diversification"
+      },
+      {
+        "reading_id": "degrowth_sufficiency_reading",
+        "commitment": "Decarbonization requires demand reduction making large-scale generation expansion unnecessary",
+        "authority_grounding": "Ecological economics + sufficiency principles (energy descent, consumption limits)",
+        "sibling_readings": [
+          "baseload_necessity_reading",
+          "renewable_primacy_reading",
+          "portfolio_pragmatism_reading"
+        ],
+        "expected_structural_delta": "Both nuclear and renewables enter victim set as growth-dependent; energy system downsizing privileged; minimal new capital deployment"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "baseload_necessity_reading",
+        "reading_b": "renewable_primacy_reading",
+        "basis": "Baseload reading holds that grid physics requires dispatchable generation as foundational constraint; renewable primacy reading holds that storage plus demand response can substitute fully. No single framework accepts both the irreducibility of baseload and its eliminability."
+      },
+      {
+        "reading_a": "portfolio_pragmatism_reading",
+        "reading_b": "degrowth_sufficiency_reading",
+        "basis": "Portfolio reading accepts growth-compatible energy expansion as legitimate climate response; degrowth reading holds that expansion itself perpetuates unsustainability. No framework simultaneously validates technology-neutral expansion and rejects expansion as category."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "climate_mitigation_legitimacy_kernel",
+      "human_readable": "Climate Mitigation Legitimacy (Contested Kernel)",
+      "structural_delta": "Different readings of what climate science requires translate into incompatible technology pathways",
+      "primary_observable": "Technology deployment patterns; capital allocation to nuclear vs renewables vs efficiency; policy instrument choice (mandates, subsidies, carbon pricing)",
+      "epsilon_bin": "high",
+      "hypothesis": "contested_kernel",
+      "beneficiary": "varies_by_reading",
+      "victim": "varies_by_reading",
+      "downstream_of": [],
+      "feeds_into": [
+        "construction_timeline_asymmetry",
+        "waste_legacy_externality"
+      ],
+      "centrality_score": 8,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel with four structurally distinct readings; highest centrality; upstream to all other axes"
+    },
+    {
+      "claim_id": "construction_timeline_asymmetry",
+      "human_readable": "Construction Timeline Asymmetry (Deployment Velocity Gap)",
+      "structural_delta": "Nuclear projects require 10-15 year construction timelines vs 1-3 years for utility-scale renewables",
+      "primary_observable": "Median construction duration by technology type; capacity additions per year; learning curve slopes",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "climate_mitigation_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Independent mountain providing physical constraint base; affects kernel interpretation but structurally distinct observable"
+    },
+    {
+      "claim_id": "waste_legacy_externality",
+      "human_readable": "Waste Legacy Externality (Intergenerational Cost Transfer)",
+      "structural_delta": "Nuclear waste storage imposes costs on future generations who receive no benefit from the energy produced",
+      "primary_observable": "Waste storage duration requirements (10,000+ years); decommissioning cost estimates; intergenerational discount rate assumptions",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "climate_mitigation_legitimacy_kernel"
+      ],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Independent rope with distinct beneficiary/victim structure across time; affects kernel legitimacy claims"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "baseload_necessity_reading",
+      "kernel_id": "climate_mitigation_legitimacy",
+      "reading_id": "baseload_necessity_reading"
+    },
+    {
+      "claim_id": "renewable_primacy_reading",
+      "kernel_id": "climate_mitigation_legitimacy",
+      "reading_id": "renewable_primacy_reading"
+    },
+    {
+      "claim_id": "portfolio_pragmatism_reading",
+      "kernel_id": "climate_mitigation_legitimacy",
+      "reading_id": "portfolio_pragmatism_reading"
+    },
+    {
+      "claim_id": "degrowth_sufficiency_reading",
+      "kernel_id": "climate_mitigation_legitimacy",
+      "reading_id": "degrowth_sufficiency_reading"
+    },
+    "construction_timeline_asymmetry",
+    "waste_legacy_externality"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "weapons_proliferation_coupling",
+      "structural_delta": "Civilian nuclear programs provide technical capacity and material pathways for weapons development",
+      "hypothesis": "snare",
+      "deferral_reason": "Structurally dependent on baseload_necessity_reading; captured as constraint modifier rather than independent axis"
+    },
+    {
+      "claim_id": "grid_modernization_prerequisite",
+      "structural_delta": "Both nuclear and high-renewable scenarios require transmission infrastructure upgrades",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Shared dependency across all readings; not discriminating between pathways; omega variable"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_smr_reclassification",
+      "description": "Do small modular reactors (SMRs) collapse the construction_timeline_asymmetry mountain? If factory production achieves claimed 2-3 year deployment, the baseload vs renewable distinction may shift from mountain to rope.",
+      "source": "Dark Matter Probe 2 (Absence Inventory) + construction_timeline_asymmetry mountain validity"
+    },
+    {
+      "id": "omega_storage_breakthrough",
+      "description": "Does long-duration energy storage (>100 hours) at grid scale eliminate the baseload necessity claim? Renewable primacy reading depends on storage technology not yet demonstrated at required scale.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) + renewable_primacy_reading authority grounding"
+    },
+    {
+      "id": "omega_discount_rate_ethics",
+      "description": "Is the intergenerational discount rate for waste_legacy_externality a technical parameter or an ethical choice? Different rates flip the cost-benefit analysis; no consensus framework exists.",
+      "source": "waste_legacy_externality rope classification + ethical pluralism"
+    },
+    {
+      "id": "omega_china_deployment_model",
+      "description": "Does China's state-directed nuclear construction (60+ reactors under construction, 5-7 year timelines) invalidate the construction_timeline_asymmetry as universal mountain? May be governance-regime-specific piton rather than physics constraint.",
+      "source": "F03 (Hasty Generalization) + construction_timeline_asymmetry mountain validity"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: construction_timeline_asymmetry classified as mountain but may be governance-regime-specific (China counterexample suggests piton of regulatory/financing structure rather than physics). Generated omega_china_deployment_model and omega_smr_reclassification to bound this uncertainty."
+  }
+}
