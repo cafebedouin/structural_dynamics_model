@@ -3166,6 +3166,8 @@ full pipelines against shared testsets/+outputs/" (the slow-build workflow), not
 If it DOES recur serially, it is a real defect in `giant_component_analysis.pl` (likely stack
 depth / unbounded recursion on a particular graph topology) → investigate the analysis itself.
 
+**Triage-list membership (build_discipline.md citation-time rule):** this OQ is the rung-4 premise *"the live corpus / pipeline_output denominator is current"* failing — concurrent runs race the shared denominator, so any single run's pipeline_output is not a coherent snapshot. The same-run guard catches the orbit/pipeline mismatch; it does not catch two full pipelines interleaving. Do not cite a corpus statistic from a concurrently-built run as settled.
+
 **Why it can wait:** `run_prolog` catches it (`[WARN] giant_comp ... non-critical, continuing`)
 and the pipeline finishes 40/41; `giant_component_analysis.md` is simply not refreshed that run.
 But a SIGSEGV is never "fine" — logged so the kill-condition is run before trusting the

@@ -663,6 +663,65 @@ separation buys nothing.
 
 ---
 
+## A witnessed fact has a shelf life: the citation-time rule and the staleness ladder
+
+The paste-or-untag rule (CLAUDE.md governing stance; the "recap-as-witness" pattern) fires at the
+moment of **assertion** — when you report something done, carry its witness that turn. It is silent
+at the moment of **reuse**. But a premise cited in a later argument is a fresh assertion of the fact
+wearing the clothes of a settled one: "we verified X, so Y" turns the witness into a token, and the
+token travels while the artifact stays behind. Two distinct leaks hide under this:
+
+- **Staleness.** The run was real at commit A; you are at commit C; "tests pass" is now a true
+  statement about a state that no longer exists. The witness wasn't false — the world moved under it.
+- **Compression-laundering.** Even at the same state, "verified X" promotes the witness to "known,"
+  and "known" gets cited by its conclusion-label, never re-checked.
+
+**The edge, unsoftened:** this is *not* fully fixable with a better tag. Summarization is
+definitionally the discarding of the witness — a summary that carried every witness wouldn't be one.
+So "carry the witness everywhere" is self-defeating. The resolution is **triage**, and triage is not
+binary (summarize vs re-run) — it is **assigning each load-bearing premise a rung on a four-rung
+ladder**, each strictly more staleness-resistant than the last:
+
+| Rung | Form | What it resists | Visible to |
+|---|---|---|---|
+| 1 | bare claim ("tests pass") | nothing — the token travels alone | nobody; it's laundered |
+| 2 | **pointer** ("[§turn-1 run]") | nothing automatically, but it's re-checkable | a reader who bothers to follow |
+| 3 | **as-of stamp** ("as of commit A / 00:10Z") | silent promotion — staleness is legible on the page | a reader who notices A ≠ HEAD |
+| 4 | **gate** (consumer refuses on a stale premise) | staleness is *enforced*, not merely visible | the machine; it can't proceed |
+
+**The triage criterion is two-factor: mutable-state-ness × cost-of-acting-on-stale.**
+
+- A load-bearing **structural** claim ("the clause reads `agent_beneficiary`, not raw
+  `constraint_beneficiary`") needs only **rung 2**: its witness is "read current source" — always
+  available, always current, free to re-observe. It cannot silently drift past you, because
+  re-witnessing it costs a `grep`.
+- A load-bearing **state / event** claim ("the run passed," "the corpus held N") is the dangerous
+  kind: the witness was a **past event you cannot re-observe, only re-produce**, so the world moves
+  under the token. These need **rung 3 minimum**, and **rung 4** when a costly or irreversible
+  decision acts on them.
+
+Every rung is already instantiated in this repo — assigning rungs is the work, not building them:
+rung 3 is the **pipeline manifest** (`code_commit`, `pipeline_run_at`, `code_dirty` — the as-of
+stamp, already required for audits); rung 4 is the **same-run guard** in `w1_sheaf_join` (refuses to
+join orbit data and `pipeline_output` from different corpus states); the **leak** is the same join
+*before* that guard existed, frozen at n=563 while the corpus grew to 772 (Pattern 1). The
+highest-leverage move on any rung-4 premise is to promote it from discipline-note to mechanical gate:
+"remember to re-run the check" is rung 2 wearing a rung-4 costume.
+
+### The triage list (which premises may not travel without a live re-witness)
+
+*Stub — set 2026-06-06; the contents are the operator's lever ("name the few"), edit freely. A
+premise here may not be cited as settled without re-witnessing at its rung at point of use.*
+
+| Premise | Kind | Rung | Re-witness at point of use |
+|---|---|---|---|
+| The live corpus / `pipeline_output` denominator is current | state | **4** | the `w1_sheaf_join` same-run guard (manifest `pipeline_run_at`/`code_commit` vs the data being analyzed); the concurrent-runs race (OQ-77) is this premise failing — never cite a corpus statistic without checking `manifest` is from one coherent run |
+| The de-leak holds (no engine band reaches the authoring LLM) | state | **4** | dump `story_generator_base.build_prompt(...)` and grep for band values near type names (AGENTS.md Rule 3b) — currently a note; **candidate to promote to a test** |
+| Validation / tests pass (before a push or a decision that acts on them) | event | **3 min** | re-run against current HEAD; cite with commit, never a prior turn's green |
+| The ruled structural invariants (perception ≠ claim, OQ-70; agency-filtered d, OQ-63) | structural | **2** | `grep` the clause in current source — pointer suffices; reading the file *is* the witness |
+
+---
+
 ## The spine: every defect here is an absence that presents as a presence
 
 The five patterns are one shape seen in five places. In each, something is **missing** — a

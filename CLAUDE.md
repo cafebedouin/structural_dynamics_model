@@ -92,6 +92,11 @@ interpreting a pipeline_output.json diff.
 absence satisfies the gate) with diagnostics — consult before adding a step that writes output,
 copying a file to test it, writing a findall over a cut-ordered predicate, defaulting a metric
 on missing data, or adding a gate/threshold over a table that can be empty.
+It also carries the **citation-time / staleness-ladder** rule (a witnessed fact has a shelf life:
+reusing it as a premise re-asserts it, so rung it — pointer / as-of stamp / gate — by mutable-state
+× cost-of-acting-on-stale) and the **triage list** of premises that may not be cited as settled
+without a live re-witness at point of use. Consult before citing a prior run, "tests pass," or
+"the corpus is current" as a settled premise in a new decision.
 
 **Design intent:** `docs/design/design_discipline.md` is the companion to `build_discipline.md`
 and its peer: where `build_discipline.md` governs *how we build and verify* (separated passes,
