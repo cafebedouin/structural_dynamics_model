@@ -746,7 +746,16 @@ def _flat_seeds_from_manifest(m):
     """Resolve FLAT (ordinary) axes the way c-orchestrator does: from manifest['axes'] via
     generation_sequence order, skipping dups and entries with no matching axis (those are
     kernel readings, handled by flatten_manifests). Carries the axis dict + manifest ref so
-    axis_source_desc/upstream_context get exactly what they read."""
+    axis_source_desc/upstream_context get exactly what they read.
+
+    A READING is NOT a flat axis even if some manifest formats also list it under axes[]
+    (witnessed: dutch_flood_control_culture lists husk_reading/competence_reading in BOTH
+    axes and generation_sequence). Without this exclusion such readings double-emit (once
+    here as a mistyped flat seed, once in flatten_manifests as the real reading) and the
+    flat copy carries no kernel_id. Identify a reading by the entry's kernel_id OR by
+    membership in csr.readings."""
+    csr = m.get("commitment_system_recognition") or {}
+    reading_ids = {r.get("reading_id") for r in csr.get("readings", [])}
     axes_by_id = {a["claim_id"]: a for a in m.get("axes", [])}
     seeds, seen = [], set()
     for entry in m.get("generation_sequence", []):
@@ -754,9 +763,12 @@ def _flat_seeds_from_manifest(m):
         if not cid or cid in seen:
             continue
         seen.add(cid)
+        # Skip kernel readings — flatten_manifests emits them with their kernel framing.
+        if (isinstance(entry, dict) and entry.get("kernel_id")) or cid in reading_ids:
+            continue
         axis = axes_by_id.get(cid)
         if not axis:
-            continue  # kernel reading — not a flat axis; flatten_manifests emits it
+            continue  # kernel reading without an axes[] entry — flatten_manifests emits it
         seeds.append({
             "seed_type": "flat",
             "constraint_id": cid,

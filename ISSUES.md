@@ -3280,6 +3280,37 @@ memory of why it's zero.
 the totals; `_step_generate` puts them on the StepResult. Until then the field is "not measured,"
 not "zero."
 
+## OQ-81 — Do kernel readings make sound wave-upstreams for supplementary axes? (mechanism witnessed, appropriateness open)
+
+**Ω-type:** Ω_E (a generation-quality question, answerable by reading generated stories), surfaced by the backend merge.
+
+**Status:** open — the wave MECHANISM is witnessed (P4); whether the injected context is APPROPRIATE is unwitnessed and not deterministically witnessable.
+**Origin:** 2026-06-06 backend merge (P4). The §5.1 wave logic was written and validated for FLAT
+upstreams — an axis whose `downstream_of` names another structural-delta axis, whose `claimed_type`
+is injected as "UPSTREAM CONSTRAINT … claimed_type: X". The unified backend now wave-partitions
+kernel manifests too (the 176-supplementary-axis-with-edges-across-166-manifests finding), so a
+supplementary axis `downstream_of` a READING (e.g. `dutch_flood_control_culture`'s
+`infrastructure_trust_paradox` ← `husk_reading`; `vatican_ii_composite`'s
+`composite_overdetermination_reading` ← `continuity_reading`/`rupture_reading`) now receives a
+CONTESTED-READING story's `claimed_type` as its upstream context — an input type the wave logic was
+not designed against.
+
+**The question:** is a reading's `claimed_type` the right thing to inject as a supplementary axis's
+upstream context? A reading is one contested construction of a kernel, not a settled structural
+fact; injecting "claimed_type: snare (from settler_colonial_reading)" into a supplementary axis may
+mislead the supplementary author (which reading's claimed_type? the kernel has several, each
+different). **This is a generation-QUALITY question, not payload-identity** — the P4 deterministic
+witness proves only that the wave FIRES (partitioning + injection mechanism), never that the
+injected context is sound. Do not let the partitioning-green be written up as validating the §5.1
+enhancement on kernels.
+
+**What would resolve it:** read generated supplementary-axis stories whose upstream is a reading —
+does the reading's claimed_type visibly distort the supplementary axis's authoring vs the same axis
+generated without it? Candidate fix space (not built): suppress reading-typed upstreams (a
+supplementary axis depends on the kernel, not on one reading's verdict); or inject the kernel
+substrate instead of a reading's claimed_type. Until then, supplementary axes in kernel manifests
+get a reading's claimed_type as upstream — witnessed mechanism, unvalidated quality.
+
 ---
 
 *Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark
