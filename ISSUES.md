@@ -3209,6 +3209,53 @@ it bounds the usable resolution of the ε axis — report ε-based statistics at
 continuous. Do NOT "fix" it by disclosing target ε values to the author (that is the de-leak in
 reverse — re-collapses the diff). If anything is steered, it is via topic/source-domain selection.
 
+## OQ-79 — c-orchestrator recognizes kernels but silently drops their readings; flat-entry topics never engage the kernel question
+
+**Ω-type:** Ω_E (the loss is witnessed and counted) + an Ω_P design call (should the flat-entry path hold the kernel-vs-flat perturbation at all, or delegate).
+
+**Status:** mitigated — silent loss is now loud + ledgered; the full fix (deliver or delegate recognized kernels) is an open design call
+**Origin:** 2026-06-06 n=91 corpus review. Operator observed that fed topics with obvious kernel
+structure (Zionism, germline editing) came out flat. The persisted flat-run manifests
+(`outputs/kernel_manifests/flat/`) split this into TWO mechanisms:
+
+1. **Recognized-then-dropped (a bug).** Zionism: SCOPE returned `is_contested_kernel=True`,
+   `kernel_id=zionist_legitimacy_basis`, 3 readings (national_liberation / settler_colonial /
+   religious_restoration), and emitted all three into `generation_sequence`. But kernel readings
+   live in `commitment_system_recognition.readings`, NOT `manifest["axes"]`, and
+   `_step_generate` resolves only `axes` → the 3 readings hit "Axis … not found, skipping" and
+   were **silently discarded**. The 6 flat supplementary axes landed (`british_mandate_scaffolding`,
+   `transfer_doctrine`, … are in the corpus); the contested readings — the point of reading Zionism
+   structurally — evaporated while the run reported success. Absence-presenting-as-presence at the
+   generate seam.
+2. **Never-engaged (OQ-76 in the wild).** 13/15 flat manifests have NO `csr` block at all — the
+   kernel question never fired. germline editing, debt limit, healthcare, embryo: all plausibly
+   contestable, all flattened without the gate engaging. This is OQ-76's measured salience-driven
+   under-firing, now observed on real topics.
+
+**Design frame:** kernel-vs-flat is itself a seat — the same topic admits both constructions and the
+diff between them is signal (`the_perturbation_principle.md` §7.1, one level up from the within-kernel
+flat control). The flat-entry path (c-orchestrator) currently neither holds that perturbation (it
+under-engages it, mechanism 2) nor handles the kernel branch when it does engage (mechanism 1).
+Generate-both (OQ-76) covers the within-kernel direction only; the flat-miss / dropped-kernel
+direction — the unrecoverable one — is uncovered.
+
+**Mitigation landed:** mechanism-1 silent loss → a LOUD, distinct, ledgered signal
+(`KERNEL_RECOGNIZED_BUT_UNDELIVERABLE` in `generation_failures.jsonl`; the persisted manifest makes
+it recoverable via `generate_kernel_corpus --scope`). The "skipping" line no longer reads as benign.
+
+**Open (the operator's design call):**
+- **Mechanism 1 fix — deliver vs delegate.** Either (a) c-orchestrator generates kernel readings
+  itself (ports gkc's KERNEL CONTEXT prompt + flat-control + integrity machinery — risks the
+  silent-fork, Pattern 2), or (b) on `is_contested_kernel`, c-orchestrator auto-delegates the
+  topic to gkc's `--scope` flow (reuse, no fork; needs the free-text topic → kernel-seed bridge).
+  Recommend (b).
+- **Mechanism 2 — curate vs improve the gate.** Near-term: for topics the operator judges to be
+  kernels, assert via `kernel_seeds.json` + `--scope` rather than trusting the gate (it is
+  measured-unreliable, K1). Longer: K2 (phrasing-sensitivity, OQ-76) diagnoses why it under-fires.
+- **Recoverable now:** the dropped Zionism kernel's readings are in its persisted manifest — re-run
+  that topic through gkc to capture them; the 6 flat Zionism axes already in the corpus can stay
+  (they are a legitimate flat construction — keeping both IS the topic-level construction pair).
+
 ---
 
 *Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark

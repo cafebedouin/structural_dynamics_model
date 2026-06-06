@@ -584,6 +584,7 @@ class DRAuditOrchestrator:
         # Resolve sequence entries → (claim_id, axis, entry), preserving order
         items = []
         seen = set()
+        dropped_kernel_readings = []   # recognized-but-undeliverable kernel readings
         for entry in sequence:
             if isinstance(entry, dict):
                 claim_id = entry.get("claim_id") or entry.get("constraint_id")
@@ -594,7 +595,19 @@ class DRAuditOrchestrator:
             seen.add(claim_id)
             axis = axes_by_id.get(claim_id)
             if not axis:
-                self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
+                # A generation_sequence entry with a kernel_id but no matching flat axis is
+                # a RECOGNIZED KERNEL READING that c-orchestrator's flat generate path cannot
+                # produce (kernel readings live in commitment_system_recognition.readings, not
+                # in manifest["axes"]). Dropping it silently is the absence-presenting-as-
+                # presence defect: the run reports "Generated N" while the contested readings —
+                # the whole point of the kernel — evaporate (witnessed: Zionism recognized 3
+                # readings, all dropped). Do NOT let "skipping" read as benign. Kernel topics
+                # must go through generate_kernel_corpus.py (readings + flat controls +
+                # integrity sweep). See OQ-79.
+                if isinstance(entry, dict) and entry.get("kernel_id"):
+                    dropped_kernel_readings.append(claim_id)
+                else:
+                    self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
                 continue
             # Retry-the-gaps semantics: a frozen-manifest run (--manifest-file) is the
             # retry path for batch failures — skip axes whose story already landed so
@@ -603,6 +616,32 @@ class DRAuditOrchestrator:
                 self._progress("generate", f"Skipping {claim_id} (already saved; frozen-manifest retry mode)")
                 continue
             items.append((claim_id, axis, entry))
+
+        # LOUD signal: SCOPE recognized a kernel and c-orchestrator cannot deliver its
+        # readings. Convert silent loss into an actionable record (manifest is persisted,
+        # so the kernel is recoverable via generate_kernel_corpus).
+        csr = manifest.get("commitment_system_recognition") or {}
+        if dropped_kernel_readings or csr.get("is_contested_kernel"):
+            kid = csr.get("kernel_id", "?")
+            self._progress("generate",
+                f"⚠ KERNEL RECOGNIZED ({kid}) but c-orchestrator's flat path cannot generate its "
+                f"readings — DROPPED: {dropped_kernel_readings}. The contested readings are the "
+                f"point of the kernel; re-run this topic through generate_kernel_corpus "
+                f"(--scope) to capture them (readings + flat controls + integrity sweep). "
+                f"Manifest: {getattr(self, '_last_manifest_path', '<persisted>')}")
+            try:
+                ledger = REPO_ROOT / "outputs" / "generation_failures.jsonl"
+                ledger.parent.mkdir(parents=True, exist_ok=True)
+                with ledger.open("a", encoding="utf-8") as fh:
+                    fh.write(json.dumps({
+                        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                        "family_id": manifest.get("family_id", ""),
+                        "manifest": getattr(self, "_last_manifest_path", None),
+                        "kernel_dropped": {"kernel_id": kid, "readings": dropped_kernel_readings},
+                        "reason": "KERNEL_RECOGNIZED_BUT_UNDELIVERABLE: re-run via generate_kernel_corpus --scope",
+                    }) + "\n")
+            except Exception as e:
+                self._progress("generate", f"(kernel-drop ledger write failed: {e})")
 
         run_ids = {cid for cid, _, _ in items}
         generated_stories: list[dict] = []
