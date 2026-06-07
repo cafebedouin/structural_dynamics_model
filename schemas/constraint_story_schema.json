@@ -232,6 +232,67 @@
         }
       },
       "additionalProperties": false
+    },
+    "StakeholderRole": {
+      "description": "DECLARED dial-set (operator ruling, 2026-06-07; ISSUES.md OQ-83) — a seated, swappable framing chosen for fitness, NOT a complete topology read off the world. Stated bundlings: (1) backgrounds the time-index of role — today's agenda_setter is tomorrow's payer; roles are static in this schema, time-varying role/d is a deferred OQ (OQ-83). (2) backgrounds CONTENTION — contention is a RELATION between seats, derived by the engine from two same-power stakeholders with opposed roles (in_contention/3, engine layer); it is never authored as a role (operator ruling 2026-06-07: no contender role — authoring it would assert the conclusion the cross-framing falsifier measures). Empirical fit on the pre-migration corpus: 85.0% of 1,230 agent mentions align cleanly; systematic residue (contender 6.3%, ritual_operator 1.9%, dual_role ~1.3%, non_agent ~0.6%) is documented in audits/2026-06-07_stakeholder_layer_migration/a4_residue_ledger.md — that ledger is this declaration's attached Omega_C evidence and the revision key for the dial-set.",
+      "$comment": "Role semantics: agenda_setter = sets, administers, or enforces the arrangement (five-questions Q1b: who sets the agenda — distinct from passively collecting); beneficiary = collects from the arrangement without running it; payer = bears its costs; excluded = would object but is not in the conversation (Q4) — commentary-grade only, NEVER correction-grade: an authored absence must not drive classification overrides (R3, OQ-83); observer = analytical seat, neither collecting nor paying.",
+      "type": "string",
+      "enum": [
+        "agenda_setter",
+        "beneficiary",
+        "payer",
+        "excluded",
+        "observer"
+      ]
+    },
+    "Stakeholder": {
+      "type": "object",
+      "description": "A named agent in the constraint story, described in plain situational language — no DR type vocabulary (mountain/rope/snare/...) anywhere in this object (R1, OQ-83: per-seat perception is COMPUTED by the engine from power/exit, never authored).",
+      "required": [
+        "name",
+        "role",
+        "power",
+        "time_horizon",
+        "exit_options",
+        "spatial_scope",
+        "situation"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Domain-specific snake_case agent name (e.g. low_income_borrowers, not affected_parties). Names stay per-story and domain-specific; they are NEVER standardized across readings (OQ-84 guard asymmetry: same-kernel shared names enter inferred_coupling_protocol's edge set unfiltered). Stakeholder facts compile to a NEW predicate; beneficiary/victim derivation preserves per-story naming."
+        },
+        "role": {
+          "$ref": "#/$defs/StakeholderRole"
+        },
+        "secondary_role": {
+          "$ref": "#/$defs/StakeholderRole",
+          "description": "Optional second role for genuinely dual-positioned agents (A4 dual_role residue class, ~1.3%: e.g. a regulator that both coordinates and collects). Use sparingly; a stakeholder needing more than two roles is a sign the agent should be split."
+        },
+        "agent": {
+          "type": "boolean",
+          "default": true,
+          "$comment": "Agent-hood gate (A4 non_agent residue class; OQ-64 recurrence: doctrines, vocabularies, abstract goods appear in agent lists). false = the entry is a non-agent entity kept for narrative completeness — it is EXCLUDED from beneficiary/victim derivation and from directionality (mirrors the narrative_ontology non_agent registry principle: a non-agent must not feed d -> chi as if it collected from the constraint)."
+        },
+        "power": {
+          "$ref": "#/$defs/DirectionalityPowerAtom"
+        },
+        "time_horizon": {
+          "$ref": "#/$defs/TimeHorizon"
+        },
+        "exit_options": {
+          "$ref": "#/$defs/ExitOptions"
+        },
+        "spatial_scope": {
+          "$ref": "#/$defs/SpatialScope"
+        },
+        "situation": {
+          "type": "string",
+          "description": "The stakeholder's situation inside the constraint story, in plain language: what they do, what flows to or from them, what exit looks like from where they stand. Describe the situation; do not classify it."
+        }
+      },
+      "additionalProperties": false
     }
   },
   "properties": {
@@ -484,6 +545,63 @@
       "items": {
         "$ref": "#/$defs/DirectionalityOverride"
       }
+    },
+    "stakeholders": {
+      "type": "array",
+      "description": "Phase-A stakeholder layer (OQ-83; optional alongside perspectives during the A/B perturbation pair — the four-tuple arm is the control arm and is NOT retired until the cross-framing diff is produced and preserved, R4). Named agents with declared roles from the StakeholderRole dial-set. AUTHORED-EMPTY RULE (Pattern-5 guard: absence must never satisfy a gate): an explicitly empty array asserts 'no entity's arrangements depend on this constraint' and REQUIRES six_questions.disappearance_verdict = world_unchanged (enforced below); omitting the field entirely means 'not authored under the stakeholder surface', which is a different fact.",
+      "items": {
+        "$ref": "#/$defs/Stakeholder"
+      }
+    },
+    "six_questions": {
+      "type": "object",
+      "description": "Story-level answers to the six-questions battery (docs/five_questions.md + R5). Q1 (who benefits/pays) and Q4's seats are carried by the stakeholders[] roles; these fields carry the story-level answers. Placement deviation from MIGRATION_PLAN.md noted: R5 genealogy fields live here (story-level), not per-stakeholder — the founding problem is a property of the constraint, not of a seat.",
+      "properties": {
+        "coordination_function": {
+          "type": "string",
+          "description": "Q3, coordination half: the real coordination problem this arrangement solves, stated without evaluation."
+        },
+        "transfer_function": {
+          "type": "string",
+          "description": "Q3, transfer half: what the arrangement moves (money, work, attention, status), from whom to whom."
+        },
+        "absent_voices": {
+          "type": "string",
+          "description": "Q4: who would object if they were here, and where are they? Pairs with role=excluded stakeholders. Commentary-grade only (R3): feeds the consensus-provenance check (did unanimity arise because the reading is real, or because dissenting seats were never in the room) — never a classification override."
+        },
+        "disappearance_verdict": {
+          "type": "string",
+          "enum": [
+            "world_rearranges",
+            "world_unchanged",
+            "contested"
+          ],
+          "description": "Q5: if this constraint disappeared overnight, does the world rearrange itself or stay roughly the same? world_rearranges = arrangements depend on it (stakeholders exist); world_unchanged = closer to natural fact; contested = the parties dispute which."
+        },
+        "disappearance_rationale": {
+          "type": "string",
+          "description": "Q5 supporting text: WHAT would rearrange (or why nothing would)."
+        },
+        "founding_problem": {
+          "type": "string",
+          "description": "R5 (the sixth question, genealogy/obsolescence): what problem was this arrangement built to solve? Plain statement of the founding problem.",
+          "$comment": "GATE CLOSED (operator, 2026-06-07): inclusion of the R5 fields was gated on one read — why the pre-existing mandatrophy_resolved wire never fired. Answered against git history same day: the emission was never written in ANY compiler version (engine consumers entered at 6f997d71, hand-authored era; the schema boolean at 3641ae71, JSON-template migration, whose compiler only ever emitted mandatrophy_analysis prose). A dropped seam at the format migration, NOT a gameability wall — R5 inherits no hidden design wall and is the GROUNDING of that dangling intent, not a net-new surface (OQ-83). CONSUMPTION RULE (mismatch-only): this narrative is the most gameable field in the battery — every constraint authors a flattering origin myth. It is NEVER consumed as a claim. The consumer reads only the (founding_problem_status x disappearance_verdict) MISMATCH: status=dead + verdict=world_rearranges => capture/zombie flag, cross-checked against the computed piton/theater path. The flag rewires has_mandatrophy_declaration / is_mandatrophy_resolved; base_properties.mandatrophy_resolved is superseded by this object and remains unconsumed (see CLAUDE.md Critical Distinctions note, retired when the rewire lands)."
+        },
+        "founding_problem_status": {
+          "type": "string",
+          "enum": [
+            "live",
+            "dead",
+            "contested"
+          ],
+          "description": "R5: is the founding problem still live? live = the problem the arrangement was built for still exists; dead = the problem is gone but the arrangement persists; contested = the parties dispute it."
+        },
+        "founding_problem_corroboration": {
+          "type": "string",
+          "description": "R5 provenance (R3-style: corroborated, not self-asserted): WHO attests the founding problem and its status, from what seat? A genealogy answered only by the constraint's own beneficiaries is a cover-story generator — name at least one corroborating source outside the beneficiary set, or state explicitly that none exists (that statement is itself signal)."
+        }
+      },
+      "additionalProperties": false
     },
     "uke_scope": {
       "type": "object",
@@ -848,6 +966,62 @@
                 "properties": { "authority_grounding": { "const": "expertise" } },
                 "required": [ "authority_grounding" ]
               }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Pattern-5 guard (authored-empty vs absent, OQ-83): an explicitly EMPTY stakeholders array asserts 'nothing is organized around this constraint' — that assertion must be made in the open via the Q5 verdict, not implied by absence. Omitting stakeholders entirely (pre-migration stories) triggers nothing.",
+      "if": {
+        "properties": {
+          "stakeholders": {
+            "type": "array",
+            "maxItems": 0
+          }
+        },
+        "required": [
+          "stakeholders"
+        ]
+      },
+      "then": {
+        "required": [
+          "six_questions"
+        ],
+        "properties": {
+          "six_questions": {
+            "required": [
+              "disappearance_verdict"
+            ],
+            "properties": {
+              "disappearance_verdict": {
+                "const": "world_unchanged"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$comment": "R5 provenance rule (operator ruling, OQ-83): a founding_problem_status may not be authored without the founding_problem narrative AND its corroboration — 'corroborated, not self-asserted' is structural, not advisory. The mismatch consumer reads status x disappearance_verdict only; the narrative is never consumed as a claim.",
+      "if": {
+        "properties": {
+          "six_questions": {
+            "required": [
+              "founding_problem_status"
+            ]
+          }
+        },
+        "required": [
+          "six_questions"
+        ]
+      },
+      "then": {
+        "properties": {
+          "six_questions": {
+            "required": [
+              "founding_problem",
+              "founding_problem_corroboration"
             ]
           }
         }

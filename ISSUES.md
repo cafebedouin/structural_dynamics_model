@@ -3347,7 +3347,278 @@ step is cleanliness + an enhancement on a working path, which deserves a focused
 
 ---
 
-*Last updated: 2026-06-05. Add new items with sequential OQ-NN labels. Mark
+## OQ-83 — Stakeholder-layer migration: replace the four-tuple authoring surface via the five/six-questions interview (the engine's first framing-perturbation)
+
+**Ω-type:** Ω_C (role-set-as-declared-frame — A4-settled with residue ledger) + Ω_E (cross-framing
+independence: does any framing change *move* a mountain — the engine instance of
+`docs/the_mountain_and_the_frame.md` Ω_E) + Ω_P (Type C vs B — operator-deferred, ruled against the
+Phase-A diff, not in advance).
+
+**Status:** open — Pass-1 audit complete and witnessed (`audits/2026-06-07_stakeholder_layer_migration/AUDIT.md`); migration plan written (`MIGRATION_PLAN.md`, same dir). **Phase A step 1 LANDED (2026-06-07): schema dial-set declaration — `stakeholders[]` + `six_questions` optional in `schemas/constraint_story_schema.json`; five roles declared (contender ruled out, contention derived); Pattern-5 authored-empty conditional + R5 provenance conditional; witness suite 7/7 incl. four negative controls each biting at its intended guard (`phase_a_schema_witness.py`/`.txt`, same dir; validated with Draft7, the pipeline's actual validator). R5 genealogy fields included — their gate (mandatrophy-abandonment read) was closed same day.** **Phase A step 2 LANDED (2026-06-07): compiler emission** — `constraint_stakeholder/7` + `stakeholder_secondary_role/3` + `stakeholder_non_agent/2` + `disappearance_verdict/2` + `founding_problem_status/2`, and role-derived beneficiary/victim (beneficiary→beneficiary, payer→victim only; agent-gated; **excluded derives NOTHING** per R3; deduped against authored arrays). Witnesses (audit dir): 0/100 old-vs-new compiler diff (additivity, re-run after fix); pilot `phase_a_pilot_stakeholder_demo.pl` covering all five branches (derive/dedupe×2/excluded/non-agent), lint clean, swipl-loads (5 facts + Q5/R5 atoms). One bug caught by the pilot inspection greps before commit: the six-questions comment loop shadowed the `emit` closure's `lines` accumulator, silently discarding all prior output — "compiled OK" read as success; fixed + commented at site. **A6 sub-gate run inside step 2** (operator pin): 0 engine consumers of the new predicates (positive control fires), derived names add 0 cross-constraint shared atoms, both coupling guard sites untouched — **scope: this clears the DERIVED-name half only; A6 REOPENS at step-3 projection of authored bespoke names against the unguarded `inferred_coupling_protocol.pl:218–222` (OQ-84). Sequencing pin (operator, 2026-06-07): the guard (or an explicit OQ-84 ruling that the asymmetry is intentional) lands BEFORE-OR-WITH the projection, same pass, never after.** The schema-only window is CLOSED (prompt-authored stakeholders now compile). Remaining Pattern-1 hold, one level down: stakeholder/7 + the two six-questions atoms have a producer and no engine consumer until **step 3 (engine layer: projection, per-(C,Name) d, in_contention/3, R5 mismatch consumer rewiring mandatrophy, R3 provenance check — five distinct wirings; the first non-purely-additive step)** — derived beneficiary/victim are consumed immediately by the existing d/FSM machinery, so the classification-relevant output is already wired. **Step 3 LANDED (2026-06-07), scoped as MECHANISM witness (operator correction: a falsifier that cannot fail on its own hand-authored test data is a wiring test; the EXPERIMENT is step 4, generated arms, ε pinned).** Wirings: delegation refactor `extractiveness_for_agent_d/4` (A1-harness byte-identical — keystone-class witness, watched); `dr_type_with_d/4`; `stakeholder_seats.pl` (projection; per-(C,Name) d from the role-d config params — **declared as a fitness-chosen SEAT**, config.pl comment; `in_contention/3`; `seat_perceived_vs_real/4`; `consensus_provenance/2`; `zombie_piton_crosscheck/2` — all commentary-grade, nothing overrides classification); narrative_ontology fact declarations + the R5 zombie clause (`has_mandatrophy_declaration` second clause over the two authored atoms, mismatch-only). Mechanism witness (audit dir `step3_mechanism.txt`): **same substrate, atom-keyed → all-solutions `[0.15]`, one type (rope) for both institutional seats; name-keyed → 0.12 / 0.85 split, types rope vs tangled_rope; split causally located in the role-param clause** (payer-param overlay 0.85→0.40 moved only payer seats; restore verified); `in_contention` = exactly the same-atom opposed pair; control story: no contention pairs, identical same-atom d (0.25/0.25), identical types — the harness returns both answers. Untested this pass (deliberate, mobile-isolation): exit-mod arms beyond trapped(+0.05), the d clamp. **OQ-84 resolved within this step** (see OQ-84). Validation suite passes post-change (0 warnings). Next: **step 4 — the generated-arms cross-framing experiment** (both surfaces on shared topics, ε per A5 raw+pinned, contention story among the topics; the straitjacket verdict and the deferred Type-C/B ruling live there), then Phase B per plan.
+
+**Step-4 FLIP CRITERION (operator-directed pin, 2026-06-07 — declared from step 3's mechanism,
+BEFORE step 4's plan or run, so the criterion cannot fit the output).** "Straitjacket escaped" is
+confirmed only if ALL FOUR hold: (1) REPRESENTATION — the stakeholder arm authors ≥2 same-power
+opposed-role agent stakeholders on the contention topic; if the generator never instantiates the
+opposition, the criterion is UNEVALUABLE (a generation finding, never massaged into a verdict).
+(2) SPLIT SURVIVES ε-PINNING — distinct d at `derive_directionality_for_stakeholder` and distinct
+computed types at the same atom under BOTH ε treatments; the pinned run is load-bearing
+(split-raw-but-not-pinned = ε moved, NOT a flip). (3) COLLAPSE WITNESSED IN THE CONTROL ARM —
+the four-tuple arm yields exactly one d/type at that atom, all-solutions pasted (the step-3
+`[0.15]` pattern), witnessed not assumed. (4) NON-FLIP CONTROL ON GENERATED ARMS — a
+non-contention topic authored both ways shows no same-atom split and no `in_contention`.
+**Renamed-not-escaped verdicts (equally pre-declared):** opposition authored but d collapses;
+split vanishes under pinning (ε artifact); the control splits too (harness flips everything); or
+the generator cannot author same-power opposition across N attempts — schema escaped but the
+generation pipeline re-imposed the straitjacket: a system-level non-escape, its own finding.
+Type difference is corroboration throughout; the d-split + collapse contrast is the witness.
+Step 4's plan is written at step-4 start (its shape depends on what the prompt can author across
+both surfaces); this criterion is fixed now and is not revised against step-4 output.
+
+**STEP 4 — 4b GATE FIRED: RENAMED-NOT-ESCAPED (2026-06-07; STOP, operator's to act on).** Full
+report: `audits/2026-06-07_stakeholder_layer_migration/STEP4_4b_RENAMED_NOT_ESCAPED.md`. 4c
+(cross-framing diff, Type-C/B census, Ω_E measurement) was NOT run — gated on 4b. Pilot prompt
+(neutral, witnessed zero contention-directive language) + scaffold-leak witness (PASS both axes,
+constant scaffold inert; positive control fires) + 6 topics pinned-before-gen (3 contention / 2
+non / 1 mountain), model pinned gemini-2.5-pro. **Finding (dual cause, NOT the crude "generator
+can't author opposition"):** across all 3 contention topics the HEADLINE antagonists never land
+same-power + opposed-role — streaming & hospital authored both antagonists at the SAME power
+(institutional) but the SAME role (both agenda_setter = co-administrators; opposition only in
+situation prose); app_store authored opposed roles but DIFFERENT power (institutional vs
+powerful). `in_contention` (same-atom AND opposed-role) fires on neither shape. The detector is
+live (positive control: fired on 3 non-headline / non-contention / mountain pairs), just
+unaligned with topic-level labels. **Two compounding layers:** (1) generation — gemini-2.5-pro
+under the neutral prompt renders co-equal-institutional contention as two agenda_setters or
+drifts a power atom; (2) vocabulary — `in_contention`/the d-split only separate
+agenda_setter/beneficiary-vs-payer, so opposed co-administrators are structurally invisible (the
+A4 contender-residue 6.3% resurfacing at the generation layer with evidence). **Operator
+decision (candidates in the report, none self-resolved):** re-examine the A4 derive-don't-author
+contention ruling against this evidence / add an opposed-co-administrator case (needs a new
+authored opposed-pair signal — reopens author-vs-derive) / scope the escape claim to
+asymmetric-role opposition only. Prompt-craft NOT chosen (would manufacture the finding).
+Gemini-conditional. Phase B remains gated. **New sub-question filed: OQ-85.**
+
+**UPDATE 2026-06-07 — OQ-85 RESOLVED (silence-is-correct); 4b gate was guarding a non-problem;
+4c UNBLOCKED.** The OQ-85 audit established `in_contention` feeds no classifier (annotation only)
+and the type is metric-driven and correct without it (even on the no-anchor worst case). So the
+4b "renamed-not-escaped" did NOT find a straitjacket gap — the co-equal case is OUTSIDE
+`in_contention`'s job (asymmetric-collapse detection), not failing it. **The straitjacket WAS
+escaped for everything `in_contention` exists to detect.** Consequence: step-4's verdict is no
+longer gated on OQ-85 — **4c (the cross-framing census, the real Ω_E measurement, the Type-C/B
+evidence) is the unblocked next move**, and it is the experiment that was the actual point of
+step 4. 4b stopped on a gate guarding a non-problem; 4c is where the framing-perturbation result
+lives. (The 2×2 model×framing Ω and Phase B sequencing are unchanged.)
+
+**Follow-on Ω (filed, gated on 4b being cleared): 2×2 model×framing perturbation** — the
+straitjacket verdict and Type-C/B census are Gemini-conditional; whether the framing-perturbation
+survival rate survives a model change (mountain-and-frame asked of the generator, not the engine)
+is unmeasured. Run both arms under a second model once 4b passes.
+**Origin:** 2026-06-06/07. Feasibility exploration → five-model review → operator re-read the
+convergence through mountain-and-frame (within-frame agreement measures the shared seat) → CC TASK
+audit-then-plan, executed 2026-06-07.
+
+**The reframe that governs sequencing:** the (P,T,E,S) tuple is the engine's FRAMING (observer
+sweeps are within-framing); this migration is the first perturbation OF the framing. The diff
+between the same topics authored under both surfaces is the primary measurement: a reading H¹=0
+under the four-tuple that flips under stakeholders was never a mountain — the four-tuple authored
+it. **R4 (REVERSED from the multimodel consensus): preserve the A/B perturbation pair; do not
+retire the four-tuple surface before the cross-framing diff is produced and preserved.** Straddle
+(one corpus, mixed schemas) rejected; preserve-the-pair (two clean parallel corpora, shared
+topics) required. Corpus regen only after the diff is pasted (Phase C).
+
+**Audit verdicts (all witnessed, see AUDIT.md):** A1 keystone — computed path (dr_type/χ/signature/H¹,
+canonical-4 + product-156) ignores authored perspective facts; controlled null (perspective flip:
+162/162 byte-identical; ε control moved every register). A2 — straitjacket exists: d keys on
+(power atom × existence booleans × exit); two powerful agents collapse; atom-keyed override moves
+them together. A3 — full consumer table: pipeline `"perspectives"` key is COMPUTED (survives),
+`"classifications"` key is the authored dump (migrates). A4 — role alignment 85.0% (middle band,
+operator-pinned 90/70 declared-revisable cuts → proceed + residue ledger); systematic residue:
+**contender 6.3%** (dial-set backgrounds contention — candidate 6th role at declaration),
+ritual_operator 1.9% (R5's zombie population), dual_role, non_agent (OQ-64 recurrence). A5 —
+post-hoc ε overlay pin witnessed feasible; diff runs raw + pinned with ε-delta as own axis. A6 —
+guard asymmetry: intra-kernel filter exists at `drl_purity_network.pl:96–98` but NOT at
+`inferred_coupling_protocol.pl:218–222`; stakeholder names must ride a NEW predicate. A7 — the
+mandatrophy authoring surface is a Pattern-1 dangling wire (schema field → 0 emissions; engine
+consumers read never-produced inputs); R5 rewires it rather than adding a third surface.
+
+**Rulings of record:** R1 drop authored per-seat perception (redundancy + perturbability; KEEP the
+computed perceived-vs-real gap). R2 dial-set {agenda_setter, beneficiary, payer, excluded,
+observer} DECLARED/SWAPPABLE, bundling stated (backgrounds role's time-index AND — per A4 —
+contention). R3 `excluded` commentary-grade only; consumer = consensus-provenance check. R5 sixth
+question (genealogy/obsolescence); mismatch consumer only; R3-style corroboration; rewires
+mandatrophy apparatus per A7. Operator 2026-06-07: static roles now (time-varying role/d = the
+deferred Ω below); Type C/B deferred to the Phase-A diff.
+
+**Sequencing notes:** stakeholder layer is prerequisite to time-varying-d and cross-reading agent
+joins; the cross-reading join is gated on A6 (new predicate, or guard added at the second site;
+AUDIT OPEN-3 enumerates `run_coupling_protocol` consumers first); Phase-B cutover (new example
+replaces `verification_bottleneck.json`) re-opens FNL-regime re-witnessing (OQ-70 bait convention
+dies with the old example); declared falsifier for the straitjacket fix — the two-powerful-agents
+contention story must FLIP across framings in the Phase-A pilot, else the layer renamed the
+straitjacket, not escaped it. AUDIT OPEN-1/2 (`cross_context_analysis` callee,
+`boltzmann_compliance.pl:472`) resolve during Phase-B consumer migration.
+
+**Deferred Ω (gated on Phase A landing):** committer-axis delegation of R5's "still live" half
+(cross-wiring cs_drift to the observer battery's balance question); time-varying stakeholder
+role/d (the five-questions "run them again later" — would let observer change alter trajectory
+SHAPE, not just transition timing).
+
+**Post-audit operator rulings (2026-06-07):**
+- **Contender: NO sixth role — contention is DERIVED, not authored.** Contention is a structural
+  RELATION between seats (two same-power stakeholders with opposed roles), not an attribute of one
+  seat; a contender role would mis-type a relation as an attribute (the four-tuple's own category
+  error, repeated) and would let the author assert the conclusion the cross-framing falsifier is
+  supposed to measure — the contention story must flip because the engine computed it from opposed
+  roles, not because the author typed "contender." The A4 contender residue (6.3%) stays in the
+  ledger as declared evidence that the frame treats contention relationally. Dial-set declaration
+  is now unblocked at five roles.
+- **R5 is recovery, not net-new scope.** Mandatrophy was originally the authoritarian-grip-limits
+  thesis (tighten → fewer legitimate outlets → more illegitimate ones — the mandate outlives its
+  coordinating function and persists as pure extraction); the genealogy question R5 re-derived was
+  already designed into the engine, named, and schematized. **Abandonment reason RESOLVED against
+  git history (2026-06-07, witnessed):** engine consumers entered at `6f997d71` (hand-authored
+  testsets era, fed by hand-written `attribute(C, lifecycle, mandatrophy)`); the schema boolean
+  arrived at `3641ae71` (JSON-template migration) whose compiler only ever handled
+  `mandatrophy_analysis` prose — the emission was never written in ANY version. A dropped seam at
+  the format migration, NOT a gameability wall: R5 inherits no hidden design wall, and the
+  planned Phase-A "why did it never fire?" check is closed. Silent-mistake promoted to CLAUDE.md
+  Critical Distinctions (retire when the rewire lands).
+- **A6 guard asymmetry split out → OQ-84** (true of the engine today, independent of this
+  migration; bundling it here would mean it only gets looked at if the migration proceeds).
+
+---
+
+## OQ-84 — Intra-kernel shared_agent_link guard exists at the purity-network site but not at inferred_coupling_protocol (latent same-kernel contamination path)
+
+**Ω-type:** Ω_E (engine-hygiene; the edge-set difference is directly witnessable).
+
+**Status:** resolved — guard added at `inferred_coupling_protocol.pl` `compute_baseline_edges`
+(2026-06-07, OQ-83 step 3, same pass as the projection per the operator pin). Branch settled by
+git history BEFORE the edit (operator-required read): the coupling module was frozen 2026-02-18,
+three months before kernels existed; the guard arrived 2026-05-25 (`622d8ece`) at only the
+purity-network consumer; the coupling file never contained `cs_kernel_id` in its entire history —
+never-updated-when-kernels-arrived (bug), NOT deliberate divergence. Witnesses (audit dir
+`step3_guard_zombie.txt`): live corpus guarded=72 = unguarded=72 (zero kernels live — guard is a
+no-op today, fail-closed for kernel-bearing corpora); synthetic same-kernel control (consulted
+multifile facts; note `cs_kernel_id/2` is STATIC — assert throws, consult is the overlay tool):
+unguarded sees the pair (1), guarded filters it (0). Sole consumer `run_coupling_protocol` →
+`outputs/coupling_protocol.md` (run_pipeline.py:430).
+**Origin:** 2026-06-07, `audits/2026-06-07_stakeholder_layer_migration/AUDIT.md` §A6.
+
+The intra-kernel filter on `shared_agent_link/4` (`\+ (cs_kernel_id(C,K), cs_kernel_id(Other,K))`)
+exists at the contamination-network consumer (`drl_purity_network.pl:96–98`) but NOT at the second
+consumer: `inferred_coupling_protocol.pl:218–222` consumes `shared_agent_link(C1, C2, _, _)` raw
+(only `C2 \= C1`). Same-kernel shared agent names are filtered from contamination but DO enter
+`run_coupling_protocol`'s edge set. Live-corpus baseline (witnessed): 504 distinct agent atoms, 25
+shared across ≥2 constraints, 38 cross-constraint pairs; live corpus currently has zero kernels,
+so the path is latent, not firing — it goes live with the first same-kernel sibling readings
+sharing agent names (kernel generation re-enabled, or OQ-83 Phase A).
+
+**Resolution shape:** either add the guard at the second site (mirroring :96–98), or rule the
+asymmetry intentional (components analysis may WANT same-kernel edges) — operator call. Either
+way: enumerate `run_coupling_protocol` output consumers first (= AUDIT OPEN-3) and witness the
+edge-set diff with/without the guard on a kernel-bearing corpus overlay. Sequencing: resolve or
+rule BEFORE OQ-83 Phase A lands sibling readings, but do not gate it on the migration.
+
+---
+
+## OQ-85 — Generated contention arrives as same-role co-administrators, which derived-contention cannot see (the 4b renamed-not-escaped finding)
+
+**Ω-type:** Ω_P (author-vs-derive contention — operator's to rule) + Ω_E (the generation
+behaviour is measurable and model-conditional).
+
+**Status:** resolved — silence-is-correct (operator-ruled 2026-06-07, against the read-only
+decomposition audit). `in_contention`'s scope was already right; the asymmetric-only escape is
+correct, not a limitation. Reports: `STEP4_4b_RENAMED_NOT_ESCAPED.md` (origin) +
+`OQ85_DECOMPOSITION_AUDIT.md` (audit) in `audits/2026-06-07_stakeholder_layer_migration/`.
+**Origin:** 2026-06-07, OQ-83 step-4 4b gate.
+
+**THE WITNESS (load-bearing, leads the record): `in_contention` feeds NO classifier.** Grep:
+zero consumers outside its definition site; `dr_type` / `classify_from_metrics` /
+`signature_detection` read neither `in_contention` nor `constraint_stakeholder`. It is a
+relational ANNOTATION — so its silence on co-equal antagonists cannot be a classification blind
+spot, regardless of any other argument. This is the fact that resolves OQ-85; everything below
+corroborates.
+
+**THE GENERAL RESULT (not corpus-contingent): the type is metric-driven and stays correct even
+with no anchor.** The constructed worst case `oq85_blindspot` — two co-equals both agenda_setter,
+ZERO victims, no powerless anchor — STILL computes `dr_type=snare` from ε/supp alone. So the
+silence is correct because classification doesn't need the pairwise relation *even when the
+anchor is absent* — a general property, not "correct on this corpus because real stories happen
+to carry a powerless payer."
+
+**CORROBORATION (the anchor argument — defensible, but not load-bearing):** both real stories DO
+carry a powerless structured anchor (streaming `independent_artists`, hospital `insured_patients`),
+making the between-setter rivalry second-order. This explains *why it's also defensible* but would
+hold even if false, because the two facts above already settle it.
+
+**Supporting (audit detail):** 1a — the only structured per-agent directional referent is
+role-derived `constraint_beneficiary/victim` (/2, per-constraint-global); multi-constraint,
+per-metric, pairwise `(C,A,B)` ABSENT. 1b dual-level — (TYPE) both stories compute `snare`
+(ε=0.7/supp=0.8), not claimed `rope`, engine already sees it; (PAIR) between-antagonist asymmetry
+is prose-only. Positive controls: W1 clean asymmetric pair → `in_contention` + d-split 0.25/0.85;
+blind-spot located+real yet type correct. A6 multi-constraint branch did not land → coupling
+recount not due.
+
+**Right-sizing (honest accounting):** the 4b gate did its job (stopped a run, surfaced a
+structural fact) but the fact was smaller than the gate's framing — an annotation predicate's
+scope matching what it's for, NOT "the migration re-imposed the straitjacket for half the cases."
+The cheap probe that would have right-sized this at the 4b gate, before the disentanglement
+reasoning, was the consumer grep ("does anything read `in_contention`") — it came three turns
+late. The excursion still banked the 1a inventory ceiling and the dual-level distinction, but the
+fastest path to the verdict was a consumer grep, not a feasibility audit.
+
+**Residual (filed standalone, NOT folded into the migration): OQ-86** — surface the pairwise
+who-extracts-from-whom as commentary for the rare no-anchor case. Unblocked, do-whenever; the
+migration neither needs nor carries it.
+
+The cross-framing experiment's gate revealed that, under the neutral stakeholder prompt,
+gemini-2.5-pro authors the canonical contention (two co-equal institutional players over a
+split) as **two `agenda_setter`s at the same power** — the opposition lives in the situation
+prose, not in any role-difference. `in_contention` and the per-(C,Name) d-split (OQ-83 step 3)
+only separate **agenda_setter/beneficiary vs payer**, so opposed co-administrators are
+structurally invisible; the one contention topic that did author opposed roles drifted the
+antagonists' power atoms apart instead. Net: the straitjacket is escaped for asymmetric-role
+opposition (step-3 mechanism, re-witnessed firing) and **re-imposed for co-equal-administrator
+opposition**, which is the shape the contention topics actually contained. This is the A4
+contender-residue (6.3%, "the dial-set backgrounds contention between co-equals") resurfacing at
+the generation layer with evidence — directly bearing on the operator's A4 ruling (no contender
+role; derive contention from opposed roles), whose premise (opposition shows up as
+role-difference) this evidence challenges.
+
+**Operator decision (candidates; none self-resolved):** (a) re-examine the derive-don't-author
+ruling against this evidence; (b) add an opposed-co-administrator case to `in_contention`/the
+d-model — but two agenda_setters share a role and nothing structured marks them opposed, so this
+needs a NEW authored opposed-pair signal, reopening author-vs-derive; (c) scope the migration's
+straitjacket-escape claim to asymmetric-role opposition only. Prompt-craft is NOT a default
+(would manufacture the finding); if pursued it must avoid contention-directive language.
+Gemini-conditional (single-model pilot; the 2×2 model×framing Ω under OQ-83 is unmeasured).
+**Phase B and 4c remain gated until this is ruled.**
+
+---
+
+## OQ-86 — Surface pairwise who-extracts-from-whom as report commentary (standalone, unblocked)
+
+**Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification).
+
+**Status:** open — standalone, no migration dependency; do-whenever. Filed from the OQ-85 audit's
+one live residual (operator, 2026-06-07).
+**Origin:** 2026-06-07, OQ-85 decomposition audit.
+
+In the rare case of two co-equal agents with NO powerless anchor where one co-equal is the
+unnamed victim (constructed: `oq85_blindspot`), the constraint correctly computes `snare` from
+metrics but the engine names no victim and `in_contention` is silent (correctly — it feeds no
+classifier, OQ-85). For a human reading the report, the pairwise who-extracts-from-whom (today in
+`situation`/`transfer_function` prose) could be surfaced as explicit COMMENTARY. Hard constraints:
+commentary-grade only (R3 — never a classification input; OQ-85 established the type is
+metric-driven and correct without it); authoring-side, never an opposition-directive (the OQ-83
+4b neutrality pin holds). This is a reporting feature, not a classification fix, and carries no
+dependency on the stakeholder migration — explicitly NOT folded into OQ-83/Phase A (scope
+discipline).
+
+---
+
+*Last updated: 2026-06-07. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

@@ -45,6 +45,126 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-07 — Stakeholder-layer migration Pass-1 audit: computed path ignores authored perspectives (controlled null); straitjacket witnessed; mandatrophy surface is a dangling wire
+**Files:** prolog/constraint_indexing.pl, prolog/drl_core.pl, prolog/constraint_data.pl, prolog/probe_harness.pl, prolog/inferred_coupling_protocol.pl, prolog/drl_purity_network.pl, prolog/reading_diff.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, audits/2026-06-07_stakeholder_layer_migration/
+**Tier:** landed
+
+Full report + evidence: `audits/2026-06-07_stakeholder_layer_migration/` (AUDIT.md leads with the
+keystone). Tracker: ISSUES.md OQ-83 (rulings of record R1–R5, R4 reversed-from-consensus,
+sequencing, deferred Ωs). Verdicts, each witnessed in AUDIT.md:
+
+- **A1 keystone (controlled null):** flipping an authored `constraint_classification/3` fact
+  (snare→mountain) leaves dr_type/χ/signature/H¹ byte-identical over canonical-4 + product-156
+  (162/162 lines); the ε-overlay control on the same story moved EVERY register (120/160 type
+  flips, 160/160 χ, sig false_ci_rope→constructed_high_extraction, H1 3→5). The computed
+  classification path does not read authored perspectives — the stakeholder layer is an additive
+  refactor on the engine side.
+- **A2:** d keys on (power atom × beneficiary/victim EXISTENCE booleans × exit) — removing either
+  single victim leaves d=0.5 untouched; removing all moves d to 0.46; the atom-keyed override
+  moves every same-atom agent together. Two-powerful-agents collapse confirmed.
+- **A6 guard asymmetry (silent-mistake warning):** the intra-kernel filter on `shared_agent_link`
+  exists at `drl_purity_network.pl:96–98` but NOT at `inferred_coupling_protocol.pl:218–222` —
+  same-kernel shared agent names DO enter `run_coupling_protocol`'s edge set. Any cross-reading
+  stable-name convention must ride a NEW predicate or add the guard at the second site first.
+- **A7 dangling wire:** schema `base_properties.mandatrophy_resolved` has ZERO compiler emissions
+  (only `mandatrophy_analysis` commentary prose is emitted); `has_mandatrophy_declaration/1` reads
+  `attribute(C, lifecycle, mandatrophy)` = 0 facts corpus-wide; `is_mandatrophy_resolved/1` = 2
+  hardcoded archived-corpus facts. Authoring a `mandatrophy_resolved` value today does NOTHING.
+  R5's genealogy consumer rewires this (OQ-83), not a third surface. Promoted to CLAUDE.md
+  Critical Distinctions (operator, same day); retire that note when the rewire lands.
+  **Abandonment reason git-witnessed same day:** emission never existed in any version — engine
+  consumers entered at `6f997d71` (hand-authored era), the schema boolean at `3641ae71`
+  (JSON-template migration) whose compiler only ever emitted `mandatrophy_analysis` prose. A
+  dropped seam at the format migration, not a gameability wall; R5 inherits no hidden wall.
+  A6's guard asymmetry split out as its own engine-hygiene item → OQ-84 (operator, same day).
+- Probe infra (cost two failed runs): `probe_harness` is NOT loaded by `[stack]` (explicit
+  `use_module` required); `domain_priors:base_extractiveness/2` is STATIC (retract throws) and is
+  not on the ε read path — overlays target `narrative_ontology:constraint_metric/3` (the chain is
+  drl_core.pl:84 → constraint_data.pl:11–13 → constraint_metric).
+- A4 role-alignment: 85.0% (1046/1230) middle band → proceed + residue ledger
+  (`a4_residue_ledger.md`): contender 6.3% (dial-set backgrounds contention), ritual_operator
+  1.9%, dual_role, non_agent. Cuts 90/70 operator-declared, revisable against the ledger.
+- **Phase A step 1 LANDED (same day):** `schemas/constraint_story_schema.json` gains OPTIONAL
+  `stakeholders[]` (five-role declared dial-set; contender ruled out — contention is derived,
+  relational; per-stakeholder agent-hood gate; name rule per OQ-84) + `six_questions` (Q3/Q4/Q5 +
+  R5 genealogy, mismatch-consumer-only, provenance structurally required). Pattern-5
+  authored-empty conditional enforced. Witness: `phase_a_schema_witness.py` 7/7 — pre-migration
+  story still validates (additive), stakeholder story validates, four negative controls each bite
+  at the intended guard; validated with Draft7Validator (the pipeline's actual validator —
+  installed jsonschema has no Draft202012).
+- **Phase A step 2 LANDED (same day): compiler emission closes the window.**
+  `generate_constraint_pl.py` emits `constraint_stakeholder/7` (+ secondary_role/non_agent
+  facts), `disappearance_verdict/2`, `founding_problem_status/2`, and role-derived
+  beneficiary/victim (agent-gated; excluded derives NOTHING — R3; deduped, duplicate facts would
+  inflate victim critical-mass counts). Witnesses: 0/100 old-vs-new diff; pilot with all five
+  derivation branches; lint clean; swipl-loads. ALL witnesses re-ran against the post-fix file
+  (fix → pilot recompiled to disk → branch greps → diff re-run → lint+load), not just the diff.
+  **Bug caught pre-commit, and WHICH probe caught it is the lesson: the additivity diff (0/100,
+  the strongest automated check) was STRUCTURALLY BLIND to it — no corpus story has
+  six_questions, so the corrupted path never executed on the corpus and "0/100 differ" was a true
+  statement about a probe that could not reach the defect. Only the pilot's per-branch greps — a
+  positive control aimed at the path the corpus cannot yet exercise — could see it. PROBE
+  PLACEMENT RULE: every compiler feature with no corpus coverage has this same blind spot; pair
+  it with a per-branch pilot probe on the uncovered path, and never read a green aggregate diff
+  as covering paths the corpus doesn't contain.** The trap itself (generic to generate_pl): a
+  local named `lines` shadows the `emit` closure's accumulator and silently discards all prior
+  output while reporting success — silent-on-success, nothing downstream complains; comment at
+  the site. **A6 sub-gate inside step 2 — clean, but read its scope precisely:** 0 engine
+  consumers of new predicates (control fires), 0 new cross-constraint shared atoms, guard sites
+  untouched — this clears the DERIVED-name half only (derived names reuse existing naming +
+  dedupe). The bespoke AUTHORED stakeholder names (the population the 504/25/38 baseline was
+  about) arrive with step-3 projection, against the still-unguarded
+  `inferred_coupling_protocol.pl:218–222` (OQ-84). **A6 is closed for derived facts and REOPENS
+  at step-3 projection — the guard lands before-or-with the projection, same pass, never
+  after.** Step 3 (engine layer) is the next forward move; until then stakeholder/7 + the two
+  atoms are produced-awaiting-consumer (named hold), while derived beneficiary/victim are
+  consumed immediately by existing d/FSM machinery.
+- **Phase A step 3 LANDED (same day): engine layer; mechanism witnessed (scoped as plumbing —
+  the experiment is step 4).** Delegation refactor `extractiveness_for_agent/3` →
+  `extractiveness_for_agent_d/4` witnessed BYTE-IDENTICAL on the A1 harness (162 rows,
+  canonical-4 + product-156); `dr_type_with_d/4` (skips resolve_coalition_power — caller owns d);
+  `stakeholder_seats.pl` per-(C,Name) layer (role-d config params = DECLARED fitness-chosen seat,
+  config.pl comment; all outputs commentary-grade); narrative_ontology decls (the five
+  stakeholder predicates are dynamic — but **`cs_kernel_id/2` is STATIC: assert throws; consult
+  a temp multifile file as the overlay tool**); R5 zombie clause (second
+  `has_mandatrophy_declaration` clause over the two authored atoms, mismatch-only). OQ-84 guard
+  added in the same pass (bug branch git-witnessed: coupling module frozen 2026-02-18,
+  pre-kernels; live 72=72 no-op, synthetic same-kernel 1→0). Mechanism witness
+  (`step3_mechanism.txt`): same substrate, atom-keyed all-solutions `[0.15]`/one type vs
+  name-keyed 0.12/0.85 split, causally traced via payer-param overlay (only payer seats moved;
+  restore verified); control story no-split. Untested this pass (deliberate mobile-isolation):
+  exit-mod arms beyond trapped(+0.05), the d clamp. Validation suite 0 warnings post-change.
+- **Phase A step 4 — 4b gate fired RENAMED-NOT-ESCAPED (same day); 4c NOT run; STOP, operator's
+  to act on (OQ-85 filed).** Pilot stakeholder prompt (neutral, witnessed) + constant-scaffold
+  adapter + scaffold-leak witness (PASS both axes — type and tuple inert, positive control
+  fires) + 6 topics pinned-before-gen, model pinned gemini-2.5-pro. Across all 3 contention
+  topics the headline antagonists never land same-power+opposed-role: streaming & hospital
+  authored both as agenda_setter at the same power (institutional) — opposition only in prose;
+  app_store opposed-role but power-atom-drifted. `in_contention` (same-atom AND opposed-role)
+  fires on neither headline shape (but IS live — fired on 3 non-headline/non-contention/mountain
+  pairs = positive control). Dual cause: generation (gemini renders co-equal contention as two
+  agenda_setters) + vocabulary (the d-split only separates agenda_setter/beneficiary-vs-payer,
+  so opposed co-administrators are invisible — A4 contender-residue with evidence). Bears on the
+  A4 derive-don't-author ruling. Phase B + 4c + the 2×2 model Ω gated until OQ-85 ruled.
+  Evidence: `audits/.../STEP4_4b_RENAMED_NOT_ESCAPED.md` + 6 `*.stakeholder.json`. No live-corpus
+  writes; four-tuple prompt untouched.
+- **OQ-85 RESOLVED same day — silence-is-correct; the 4b gate was guarding a non-problem; 4c
+  unblocked.** Read-only decomposition audit (`audits/.../OQ85_DECOMPOSITION_AUDIT.md`).
+  Load-bearing witness: **`in_contention` feeds NO classifier** (grep: zero consumers;
+  dr_type/classify_from_metrics/signature read neither it nor `constraint_stakeholder`) — it is
+  annotation, so its silence on co-equal antagonists cannot be a classification blind spot.
+  General result (not corpus-contingent): the constructed no-anchor worst case `oq85_blindspot`
+  (two co-equals both agenda_setter, zero victims) still computes `snare` — type is metric-driven,
+  correct without the pairwise relation even when no powerless anchor exists. Corroboration (not
+  load-bearing): both real stories carry a powerless anchor making the rivalry second-order. The
+  4b renamed-not-escaped did NOT find a straitjacket gap — co-equal contention is outside
+  `in_contention`'s job; the straitjacket was escaped for everything it exists to detect.
+  Right-sizing: a consumer grep would have settled this at the 4b gate, three turns earlier.
+  Residual filed standalone as OQ-86 (pairwise who-extracts commentary; not in the migration).
+  **4c (cross-framing census / Ω_E / Type-C/B) is the unblocked next move.**
+
+---
+
 ## 2026-06-06 — Kernel-first router: `_step_decompose` now uses the PRIMED scope prompt (construction-as-classifier)
 **Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, outputs/kernel_first_phase0/PHASE0_READOUT.md
 **Tier:** tripwire

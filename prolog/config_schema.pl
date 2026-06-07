@@ -87,6 +87,13 @@ param_spec(canonical_d_organized,     number, range(0.0, 1.0), "Canonical direct
 param_spec(canonical_d_institutional, number, range(0.0, 1.0), "Canonical directionality for institutional").
 param_spec(canonical_d_analytical,    number, range(0.0, 1.0), "Canonical directionality for analytical").
 
+% Stakeholder role->d model (OQ-83; DECLARED SEAT — see config.pl comment)
+param_spec(stakeholder_role_d_agenda_setter, number, range(0.0, 1.0), "Role->d base: agenda_setter (runs/administers the constraint)").
+param_spec(stakeholder_role_d_beneficiary,   number, range(0.0, 1.0), "Role->d base: beneficiary (collects without running it)").
+param_spec(stakeholder_role_d_payer,         number, range(0.0, 1.0), "Role->d base: payer (bears the costs)").
+param_spec(stakeholder_role_d_excluded,      number, range(0.0, 1.0), "Role->d base: excluded (would object; not in the conversation)").
+param_spec(stakeholder_role_d_observer,      number, range(0.0, 1.0), "Role->d base: observer (analytical seat)").
+
 % Cognitive displacement (observer calibration)
 param_spec(cognitive_displacement,         number, range(-0.5, 0.5), "Global cognitive displacement delta").
 param_spec(cognitive_displacement_profile, atom,   oneof([uniform, positional]), "Displacement mode: uniform or positional").

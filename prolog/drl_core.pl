@@ -18,6 +18,7 @@
     % PRIMARY API - Context-Indexed Classification
     dr_type/3,                      % dr_type(Constraint, Context, Type)
     dr_type/2,                      % Backward compat: uses default context
+    dr_type_with_d/4,               % OQ-83: dr_type with explicit directionality
     
     % Action Routing (Indexed)
     dr_action/3,                    % dr_action(Constraint, Context, Action)
@@ -421,6 +422,27 @@ dr_type(C, Context, Type) :-
     Type = FinalType.
 
 dr_type(_C, _Context, unknown).
+
+% ----------------------------------------------------------------------------
+% dr_type_with_d/4 — dr_type with EXPLICIT directionality (OQ-83 step 3)
+% ----------------------------------------------------------------------------
+% Same chain as dr_type/3 (metric classification via classify_from_metrics/6,
+% then signature integration), with the caller supplying d instead of the
+% atom-keyed derivation. χ comes from extractiveness_for_agent_d/4.
+% DOCUMENTED DIFFERENCE from dr_type/3: skips resolve_coalition_power — the
+% caller owns d and any power resolution (the per-stakeholder path resolves
+% neither; a stakeholder's power atom is authored, not coalition-upgraded).
+
+dr_type_with_d(C, Context, D, Type) :-
+    constraint_indexing:valid_context(Context),
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent_d(C, Context, D, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, MetricType),
+    signature_detection:integrate_signature_with_modal(C, MetricType, FinalType),
+    !,
+    Type = FinalType.
+dr_type_with_d(_C, _Context, _D, unknown).
 
 % ----------------------------------------------------------------------------
 % Metric-Based Classification (Indexed) - Helper

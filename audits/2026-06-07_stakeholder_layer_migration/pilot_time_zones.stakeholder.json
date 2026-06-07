@@ -1,0 +1,109 @@
+{
+  "header": {
+    "constraint_id": "pilot_time_zones",
+    "version": "1.0",
+    "generated_date": "2024-07-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.01,
+    "suppression": 0.4,
+    "theater_ratio": 0.0,
+    "claimed_type": "rope",
+    "human_readable": "Coordinated Standard Time Zones",
+    "topic_domain": "social/economic/technological",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "emerges_naturally": false
+  },
+  "stakeholders": [
+    {
+      "name": "international_standards_bodies",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Responsible for maintaining and disseminating the global time standard (UTC). They provide a foundational coordination service for global activities like telecommunications, finance, and science, without extracting direct profit."
+    },
+    {
+      "name": "national_governments",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislate and enforce time standards within their borders, including the adoption of daylight saving time. They can change their nation's time zone, balancing domestic economic needs, cultural norms, and international alignment."
+    },
+    {
+      "name": "global_commerce_and_logistics",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Relies heavily on predictable, standardized time for scheduling operations, executing contracts, and coordinating supply chains across the globe. The standard massively reduces coordination costs and enables complex international business."
+    },
+    {
+      "name": "the_general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Uses standard time to structure daily life, work, and travel. While it enables broad social and economic participation, individuals bear the cognitive and physiological costs of time zone changes (jet lag) and daylight saving adjustments."
+    },
+    {
+      "name": "communities_on_timezone_borders",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Experiences the direct friction of the system, often living in one time zone while working or shopping in another. They bear the daily logistical costs of managing mismatched business hours, school schedules, and social appointments."
+    },
+    {
+      "name": "astronomers_and_physicists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Provides the scientific basis for modern timekeeping (atomic clocks) and requires a precise, stable standard (UTC) for research. They are positioned to observe the system's technical functioning, largely independent of the political and social application of civil time zones."
+    },
+    {
+      "name": "pre_industrial_local_timekeepers",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Traditional, local, and solar-based methods of timekeeping were rendered obsolete and actively suppressed by the standardized system. These communities had no voice in the 19th-century conferences that imposed the new industrial time standard."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To create a globally synchronized and predictable system for scheduling, commerce, and communication, resolving the ambiguity of local solar time across vast distances.",
+    "transfer_function": "It transfers authority over timekeeping from local communities (using solar time) to national and international institutions. It also transfers the high coordination costs from individuals and businesses onto centralized standard-setting bodies.",
+    "absent_voices": "Communities whose activities are not aligned with industrial or commercial schedules (e.g., agricultural workers, traditional societies) and whose natural, sun-based rhythms were overridden. They were absent from the 19th-century conferences that established the system.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without a shared standard, every long-distance interaction would require a complex, error-prone calculation of time. Global logistics, financial markets, internet protocols, and air travel would become impossibly inefficient. Society would either descend into coordination chaos or immediately race to re-establish a new standard.",
+    "founding_problem": "The expansion of railways and telegraphs in the 19th century made local solar time untenable. Trains operating on thousands of different local times created chaos and danger in scheduling, necessitating a standardized system for safety and efficiency.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians of technology and science document the 'war of the clocks' and the international conferences, like the 1884 International Meridian Conference, that established the system. This history is attested to by sources outside the direct administration of time, such as universities, national archives, and science museums."
+  },
+  "interval": {
+    "start": 0,
+    "end": 140
+  },
+  "commentary": {
+    "narrative_context": "The adoption of standard time zones in the late 19th century was a direct response to the technological disruption of railways and telegraphs. Previously, time was a local phenomenon tied to the sun's position. This created massive coordination problems for networks that moved faster than the sun appeared to. The constraint is the global agreement, established at the 1884 International Meridian Conference and maintained since, to divide the world into 24 zones, creating a common temporal framework that underpins almost every aspect of modern globalized society."
+  }
+}

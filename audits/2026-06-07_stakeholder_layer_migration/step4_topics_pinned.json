@@ -1,0 +1,25 @@
+{
+  "_pin": "Topic set + labels FIXED 2026-06-07 BEFORE any generation (OQ-83 step4 pin 6).",
+  "_criterion": "contention = two or more agents at the SAME power level with opposed interests in the constraint, identifiable from the topic statement alone, before any DR machinery. Otherwise non_contention.",
+  "_label_is_ground_truth": "These labels are the gate's control ground truth and are NOT revised against generation output.",
+  "topics": [
+    {"id": "pilot_app_store_commission", "label": "contention",
+     "topic": "The app-store commission a dominant mobile platform charges large application publishers for distribution",
+     "why_label": "platform operator (institutional) and the publisher consortium (institutional) are same-power actors with directly opposed interests over the commission rate"},
+    {"id": "pilot_streaming_royalty_split", "label": "contention",
+     "topic": "The royalty split between major record labels and a dominant music-streaming service",
+     "why_label": "record labels (institutional) and the streaming platform (institutional) are same-power actors opposed over the split"},
+    {"id": "pilot_hospital_insurer_reimbursement", "label": "contention",
+     "topic": "Negotiated reimbursement rates between large hospital systems and health insurers",
+     "why_label": "hospital systems (institutional) and insurers (institutional) bilaterally negotiate from comparable power, opposed over the rate (closest-to-ambiguous of the three; judged clear: bilateral institutional standoff)"},
+    {"id": "pilot_payday_lending", "label": "non_contention",
+     "topic": "High-interest payday lending offered to low-income borrowers",
+     "why_label": "power-ASYMMETRIC: lender (institutional) benefits, borrowers (powerless) pay; no two same-power agents in opposition"},
+    {"id": "pilot_time_zones", "label": "non_contention",
+     "topic": "Coordinated standard time zones for scheduling across regions",
+     "why_label": "broad coordination good; no same-power opposed pair"},
+    {"id": "pilot_lightspeed_latency", "label": "non_contention_mountain",
+     "topic": "The speed-of-light floor on communication latency between distant data centers",
+     "why_label": "physical limit; no party collects, no opposed agents (mountain-profile control)"}
+  ]
+}

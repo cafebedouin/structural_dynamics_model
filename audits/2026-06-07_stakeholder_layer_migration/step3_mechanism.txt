@@ -1,0 +1,22 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+ATOM-KEYED phase_a_contention_demo institutional: all-solutions d = [0.15]
+ATOM-KEYED type at institutional ctx: rope
+NAME-KEYED platform_operator role=agenda_setter d=0.12 chi=-0.023238588835458228 type=rope
+NAME-KEYED publisher_consortium role=payer d=0.85 chi=0.722994472182102 type=tangled_rope
+NAME-KEYED independent_creators role=payer d=0.9 chi=0.7472335287781826 type=tangled_rope
+IN_CONTENTION: [platform_operator-publisher_consortium]
+TRACE payer-param->0.40: platform_operator d=0.12
+TRACE payer-param->0.40: publisher_consortium d=0.4
+TRACE payer-param->0.40: independent_creators d=0.45
+TRACE restore: publisher_consortium d=0.85
+CONTROL IN_CONTENTION: []
+CONTROL NAME-KEYED standards_body role=beneficiary d=0.25 type=naturalized
+CONTROL NAME-KEYED platform_vendors role=beneficiary d=0.25 type=naturalized
+CONTROL NAME-KEYED end_users role=payer d=0.9 type=tangled_rope
+CONTROL ATOM-KEYED institutional: all-solutions d = [0.15]

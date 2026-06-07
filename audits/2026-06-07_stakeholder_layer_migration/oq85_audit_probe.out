@@ -1,0 +1,125 @@
+======================================================================
+W1 — positive control: same-power beneficiary+payer => in_contention fires
+======================================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention oq85_pc_clean: [acquirer_institution-supplier_institution]
+  SEAT acquirer_institution role=beneficiary power=institutional d=0.25
+  SEAT supplier_institution role=payer power=institutional d=0.85
+  SEAT retail_customers role=payer power=powerless d=0.85
+  COMPUTED_TYPE tangled_rope
+
+======================================================================
+W2 + W3 + W4-anchor — the two failing stories
+======================================================================
+
+--- pilot_streaming_royalty_split
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention pilot_streaming_royalty_split: [songwriters_and_publishers-major_label_artists]
+  SEAT dominant_streaming_service role=agenda_setter power=institutional d=0.09
+  SEAT major_record_labels role=agenda_setter power=institutional d=0.09
+  SEAT major_label_artists role=payer power=organized d=0.87
+  SEAT independent_artists role=payer power=powerless d=0.87
+  SEAT music_subscribers role=payer power=moderate d=0.85
+  SEAT songwriters_and_publishers role=beneficiary power=organized d=0.27
+  SEAT future_artists role=excluded power=powerless d=0.9500000000000001
+  SEAT music_industry_analysts role=observer power=analytical d=0.72
+  COMPUTED_TYPE snare
+  STRUCT_BENEFICIARIES [music_subscribers,songwriters_and_publishers]
+  STRUCT_VICTIMS [major_label_artists,independent_artists,music_subscribers]
+
+--- pilot_hospital_insurer_reimbursement
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention pilot_hospital_insurer_reimbursement: []
+  SEAT large_hospital_systems role=agenda_setter power=institutional d=0.13999999999999999
+  SEAT large_health_insurers role=agenda_setter power=institutional d=0.13999999999999999
+  SEAT insured_patients role=payer power=powerless d=0.9
+  SEAT employers role=payer power=organized d=0.87
+  SEAT small_providers role=payer power=moderate d=0.87
+  SEAT government_regulators role=agenda_setter power=institutional d=0.12
+  SEAT uninsured_individuals role=excluded power=powerless d=0.9500000000000001
+  SEAT policy_analysts role=observer power=analytical d=0.72
+  COMPUTED_TYPE snare
+  STRUCT_BENEFICIARIES [large_hospital_systems]
+  STRUCT_VICTIMS [insured_patients,employers,small_providers]
+
+======================================================================
+W4 blind-spot positive control: two co-equals extract from each other, NO powerless anchor
+======================================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention oq85_noanchor: [trading_house_a-trading_house_b]
+  SEAT trading_house_a role=beneficiary power=institutional d=0.25
+  SEAT trading_house_b role=payer power=institutional d=0.85
+  SEAT market_oversight role=observer power=institutional d=0.72
+  COMPUTED_TYPE tangled_rope
+  VICTIMS_WITH_POWER [trading_house_b-institutional]
+
+(no temp testsets should remain:)
+======================================================================
+W1 — positive control: same-power beneficiary+payer => in_contention fires
+======================================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention oq85_pc_clean: [acquirer_institution-supplier_institution]
+  SEAT acquirer_institution role=beneficiary power=institutional d=0.25
+  SEAT supplier_institution role=payer power=institutional d=0.85
+  SEAT retail_customers role=payer power=powerless d=0.85
+  COMPUTED_TYPE tangled_rope
+
+======================================================================
+W2 + W3 + W4-anchor — the two failing stories
+======================================================================
+
+--- pilot_streaming_royalty_split
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention pilot_streaming_royalty_split: [songwriters_and_publishers-major_label_artists]
+  SEAT dominant_streaming_service role=agenda_setter power=institutional d=0.09
+  SEAT major_record_labels role=agenda_setter power=institutional d=0.09
+  SEAT major_label_artists role=payer power=organized d=0.87
+  SEAT independent_artists role=payer power=powerless d=0.87
+  SEAT music_subscribers role=payer power=moderate d=0.85
+  SEAT songwriters_and_publishers role=beneficiary power=organized d=0.27
+  SEAT future_artists role=excluded power=powerless d=0.9500000000000001
+  SEAT music_industry_analysts role=observer power=analytical d=0.72
+  COMPUTED_TYPE snare
+  STRUCT_BENEFICIARIES [music_subscribers,songwriters_and_publishers]
+  STRUCT_VICTIMS [major_label_artists,independent_artists,music_subscribers]
+
+--- pilot_hospital_insurer_reimbursement
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention pilot_hospital_insurer_reimbursement: []
+  SEAT large_hospital_systems role=agenda_setter power=institutional d=0.13999999999999999
+  SEAT large_health_insurers role=agenda_setter power=institutional d=0.13999999999999999
+  SEAT insured_patients role=payer power=powerless d=0.9
+  SEAT employers role=payer power=organized d=0.87
+  SEAT small_providers role=payer power=moderate d=0.87
+  SEAT government_regulators role=agenda_setter power=institutional d=0.12
+  SEAT uninsured_individuals role=excluded power=powerless d=0.9500000000000001
+  SEAT policy_analysts role=observer power=analytical d=0.72
+  COMPUTED_TYPE snare
+  STRUCT_BENEFICIARIES [large_hospital_systems]
+  STRUCT_VICTIMS [insured_patients,employers,small_providers]
+
+======================================================================
+W4 blind-spot positive control: two co-equals extract from each other, NO powerless anchor
+======================================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention oq85_noanchor: [trading_house_a-trading_house_b]
+  SEAT trading_house_a role=beneficiary power=institutional d=0.25
+  SEAT trading_house_b role=payer power=institutional d=0.85
+  SEAT market_oversight role=observer power=institutional d=0.72
+  COMPUTED_TYPE tangled_rope
+  VICTIMS_WITH_POWER [trading_house_b-institutional]
+
+(no temp testsets should remain:)
+======================================================================
+W4 blind-spot control CORRECTED: two co-equals BOTH agenda_setter, NO powerless payer
+(role-collapse + no anchor = the genuine blind-spot shape)
+======================================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+W in_contention oq85_blindspot: []
+  SEAT cartel_member_a role=agenda_setter power=institutional d=0.12
+  SEAT cartel_member_b role=agenda_setter power=institutional d=0.12
+  SEAT trade_press role=observer power=analytical d=0.72
+  COMPUTED_TYPE snare
+  STRUCT_VICTIMS []
+
+(temp clean:)

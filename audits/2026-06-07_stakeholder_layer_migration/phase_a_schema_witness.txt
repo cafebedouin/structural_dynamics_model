@@ -1,0 +1,9 @@
+W1 schema well-formed                      PASS  Draft202012Validator.check_schema OK
+W2 pre-migration story validates           PASS  expect valid, got valid
+W3 stakeholder story validates             PASS  expect valid, got valid
+NC1 empty stakeholders, no six_questions   PASS  expect INVALID, got invalid [@[]: 'six_questions' is a required property]
+NC2 empty stakeholders + world_rearranges  PASS  expect INVALID, got invalid [@['six_questions', 'disappearance_verdict']: 'world_unchanged' was expected]
+NC3 role=contender rejected                PASS  expect INVALID, got invalid [@['stakeholders', 0, 'role']: 'contender' is not one of ['agenda_setter', 'beneficiary', 'payer', 'excluded', 'observer']
+NC4 status without corroboration           PASS  expect INVALID, got invalid [@['six_questions']: 'founding_problem_corroboration' is a required property]
+
+7/7 checks passed

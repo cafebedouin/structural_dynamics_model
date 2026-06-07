@@ -215,10 +215,20 @@ compute_baseline_edges(AllCs, Edges) :-
         ),
         ExplicitRaw),
     % Shared agent edges
+    % Intra-kernel guard added 2026-06-07 (OQ-84): same-kernel sibling readings
+    % share agents BY CONSTRUCTION, so a same-kernel shared-agent pair is not a
+    % coupling signal. The guard mirrors drl_purity_network.pl's consumer site
+    % (added there in 622d8ece when kernels were introduced, 2026-05-25); this
+    % module was frozen 2026-02-18 — before kernels existed — and was never
+    % updated when they arrived (bug branch, git-witnessed; not deliberate
+    % divergence). Edge-set witness + synthetic-kernel positive control in
+    % audits/2026-06-07_stakeholder_layer_migration/.
     findall(C1-C2,
         (   member(C1, AllCs),
             drl_purity_network:shared_agent_link(C1, C2, _, _),
-            C2 \= C1
+            C2 \= C1,
+            \+ (narrative_ontology:cs_kernel_id(C1, K),
+                narrative_ontology:cs_kernel_id(C2, K))
         ),
         SharedRaw),
     % Normalize to undirected and deduplicate

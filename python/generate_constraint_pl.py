@@ -176,6 +176,24 @@ def _build_multifile_declarations(data):
     if data.get("directionality_overrides"):
         decls.append("constraint_indexing:directionality_override/3")
 
+    # Stakeholder layer (OQ-83 Phase A step 2). NOTE: an authored-EMPTY
+    # stakeholders array emits no stakeholder facts but DOES emit the
+    # disappearance_verdict fact below (the schema forces world_unchanged) —
+    # the explicit assertion is what distinguishes authored-empty from absent
+    # (Pattern 5).
+    sk_decl = data.get("stakeholders")
+    if sk_decl:
+        decls.append("narrative_ontology:constraint_stakeholder/7")
+        if any(s.get("secondary_role") for s in sk_decl):
+            decls.append("narrative_ontology:stakeholder_secondary_role/3")
+        if any(s.get("agent") is False for s in sk_decl):
+            decls.append("narrative_ontology:stakeholder_non_agent/2")
+    sq_decl = data.get("six_questions") or {}
+    if sq_decl.get("disappearance_verdict"):
+        decls.append("narrative_ontology:disappearance_verdict/2")
+    if sq_decl.get("founding_problem_status"):
+        decls.append("narrative_ontology:founding_problem_status/2")
+
     if bp.get("emerges_naturally"):
         decls.append("domain_priors:emerges_naturally/1")
 
@@ -553,12 +571,40 @@ def generate_pl(data):
 
     vindicated = bp.get("vindicated_propositions", [])
 
-    if beneficiaries or victims or vindicated:
+    # Stakeholder-derived beneficiary/victim (OQ-83 Phase A step 2). Mapping is
+    # EXACTLY beneficiary->beneficiary, payer->victim (primary or secondary
+    # role), gated on agent-hood: agent:false entries derive NOTHING — a
+    # non-agent must not feed d->chi as if it collected from the constraint
+    # (OQ-63/OQ-64). role=excluded derives NOTHING: constraint_victim feeds
+    # directionality, and an authored absence must never drive classification
+    # (R3 — excluded is commentary-grade only). agenda_setter/observer derive
+    # nothing. Deduped against the authored arrays: each name emitted once
+    # (duplicate facts inflate findall counts, e.g. resolve_coalition_power's
+    # victim critical-mass). Names stay per-story and domain-specific (OQ-84).
+    derived_b, derived_v = [], []
+    for s in data.get("stakeholders") or []:
+        if s.get("agent") is False:
+            continue
+        roles = {s.get("role"), s.get("secondary_role")}
+        name = s["name"]
+        if "beneficiary" in roles and name not in beneficiaries and name not in derived_b:
+            derived_b.append(name)
+        if "payer" in roles and name not in victims and name not in derived_v:
+            derived_v.append(name)
+
+    if beneficiaries or victims or vindicated or derived_b or derived_v:
         emit("% --- Structural relationships ---")
         for b in beneficiaries:
             emit(f"narrative_ontology:constraint_beneficiary({cid}, {b}).")
         for v in victims:
             emit(f"narrative_ontology:constraint_victim({cid}, {v}).")
+        if derived_b or derived_v:
+            emit("% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;")
+            emit("% agent-gated; excluded derives nothing; deduped against the authored arrays).")
+            for b in derived_b:
+                emit(f"narrative_ontology:constraint_beneficiary({cid}, {b}).")
+            for v in derived_v:
+                emit(f"narrative_ontology:constraint_victim({cid}, {v}).")
         # OQ-64 split: vindicated propositions are NOT beneficiaries — they collect no
         # rents, feed no d/chi derivation and no beneficiary gate.
         for p in vindicated:
@@ -569,6 +615,58 @@ def generate_pl(data):
         emit("% No enrichment needed. As a Mountain (physical limit), this constraint does")
         emit("% not have beneficiaries or victims in the structural sense.")
         emit()
+
+    # ------------------------------------------------------------------
+    # 7b. Stakeholder layer (OQ-83 Phase A step 2)
+    # ------------------------------------------------------------------
+    sk_list = data.get("stakeholders")
+    sq = data.get("six_questions") or {}
+    if sk_list is not None or sq:
+        emit("/* ==========================================================================")
+        emit("   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —")
+        emit("   see schemas/constraint_story_schema.json $defs/StakeholderRole and the")
+        emit("   attached residue ledger. Names are per-story and domain-specific; never")
+        emit("   standardized across readings (OQ-84).")
+        emit("   ========================================================================== */")
+        emit()
+        if sk_list == []:
+            emit("% Stakeholders authored EMPTY (Pattern-5: an explicit assertion that no")
+            emit("% entity's arrangements depend on this constraint — paired with the")
+            emit("% world_unchanged verdict below, enforced by the schema).")
+            emit()
+        for s in sk_list or []:
+            situation = s.get("situation", "")
+            if situation:
+                for line in situation.split("\n"):
+                    emit(f"% {line}")
+            emit(f"narrative_ontology:constraint_stakeholder({cid}, {s['name']}, {s['role']},")
+            emit(f"    {s['power']}, {s['time_horizon']}, {s['exit_options']}, {s['spatial_scope']}).")
+            if s.get("secondary_role"):
+                emit(f"narrative_ontology:stakeholder_secondary_role({cid}, {s['name']}, {s['secondary_role']}).")
+            if s.get("agent") is False:
+                emit(f"narrative_ontology:stakeholder_non_agent({cid}, {s['name']}).")
+            emit()
+        if sq:
+            emit("% --- Six-questions battery (story-level; texts kept as comments — the")
+            emit("% engine consumes only the two atoms below; the founding-problem narrative")
+            emit("% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---")
+            for key in ("coordination_function", "transfer_function", "absent_voices",
+                        "disappearance_rationale", "founding_problem",
+                        "founding_problem_corroboration"):
+                if sq.get(key):
+                    # NB: do NOT name this 'lines' — that shadows the
+                    # function-level accumulator emit() closes over and
+                    # silently discards everything emitted before this point
+                    # (caught by the pilot inspection greps, 2026-06-07).
+                    txt_lines = str(sq[key]).split("\n")
+                    emit(f"% {key.upper()}: {txt_lines[0]}")
+                    for line in txt_lines[1:]:
+                        emit(f"%   {line}")
+            if sq.get("disappearance_verdict"):
+                emit(f"narrative_ontology:disappearance_verdict({cid}, {sq['disappearance_verdict']}).")
+            if sq.get("founding_problem_status"):
+                emit(f"narrative_ontology:founding_problem_status({cid}, {sq['founding_problem_status']}).")
+            emit()
 
     # ------------------------------------------------------------------
     # 8. Section 3: Indexed classifications

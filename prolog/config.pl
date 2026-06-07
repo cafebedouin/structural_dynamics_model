@@ -144,6 +144,21 @@ param(canonical_d_organized,     0.3990).
 param(canonical_d_institutional, 0.00).
 param(canonical_d_analytical,    0.7250).
 
+% Stakeholder role->d base values (OQ-83 Phase A step 3; stakeholder_seats.pl).
+% DECLARED SEAT (operator pin, 2026-06-07): these five numbers ARE the role->d
+% directionality model — fitness-chosen, not derived, and perturbable with the
+% same revision discipline as the role dial-set (residue-ledger-style evidence
+% revises them; see schemas/constraint_story_schema.json $defs/StakeholderRole
+% and audits/2026-06-07_stakeholder_layer_migration/a4_residue_ledger.md).
+% Whether these VALUES carve reality is NOT witnessed by the step-3 mechanism
+% demo (whose split they partly cause) — only the step-4 generated-arms
+% experiment and corpus data can speak to the values themselves.
+param(stakeholder_role_d_agenda_setter, 0.12).
+param(stakeholder_role_d_beneficiary,   0.25).
+param(stakeholder_role_d_payer,         0.85).
+param(stakeholder_role_d_excluded,      0.90).
+param(stakeholder_role_d_observer,      0.72).
+
 % Power transformation function for sigmoid_f/2 dispatch.
 % sigmoid (default) | piecewise_linear | piecewise_no_flip | sqrt_flip |
 %                     quadratic_flip | step_flip | sigmoid_shifted

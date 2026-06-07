@@ -81,7 +81,13 @@
     cs_axiom_contradiction/2, % cs_axiom_contradiction(+AtomA, +AtomB) — symmetric contradiction pair (axiom-level)
     cs_reference_frame/2,   % cs_reference_frame(+UID, +Atom) — t0: committer-axis's declared reference state
     cs_drift_state/3,       % cs_drift_state(+UID, +Moment, +gap(Direction, Magnitude, Acknowledged)) — t1 gap
-    cs_created_at/2.        % cs_created_at(+UID, +Timestamp) — ISO 8601 UTC generation timestamp ('' for migrated stories)
+    cs_created_at/2,        % cs_created_at(+UID, +Timestamp) — ISO 8601 UTC generation timestamp ('' for migrated stories)
+    % Stakeholder layer (OQ-83 Phase A; compiled from stakeholders[]/six_questions)
+    constraint_stakeholder/7,      % constraint_stakeholder(+C, +Name, +Role, +Power, +T, +E, +S)
+    stakeholder_secondary_role/3,  % stakeholder_secondary_role(+C, +Name, +Role)
+    stakeholder_non_agent/2,       % stakeholder_non_agent(+C, +Name) — excluded from beneficiary/victim derivation and d
+    disappearance_verdict/2,       % disappearance_verdict(+C, +V) — Q5; V ∈ {world_rearranges, world_unchanged, contested}
+    founding_problem_status/2.     % founding_problem_status(+C, +S) — R5; S ∈ {live, dead, contested}; NEVER consumed as a claim, mismatch-only
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -102,7 +108,12 @@
     cs_axiom_grounding/3,
     cs_reference_frame/2,
     cs_drift_state/3,
-    cs_created_at/2.
+    cs_created_at/2,
+    constraint_stakeholder/7,
+    stakeholder_secondary_role/3,
+    stakeholder_non_agent/2,
+    disappearance_verdict/2,
+    founding_problem_status/2.
 
 /* ============================================================
    2. VALIDATION LOGIC
@@ -118,8 +129,19 @@ attribute(S, K, V) :-
 %  A manual override flag used by check_indexical_relativity/1.
 %  If a constraint is explicitly marked as 'mandatrophy' in its metadata,
 %  it passes the indexical relativity gate.
-has_mandatrophy_declaration(C) :- 
+has_mandatrophy_declaration(C) :-
     attribute(C, lifecycle, mandatrophy).
+% OQ-83 R5 rewire (2026-06-07): the genealogy mismatch IS the mandatrophy
+% declaration — founding problem dead + world rearranges on removal = the
+% mandate has outlived its function (capture/zombie). This grounds the
+% dangling intent of the never-emitted mandatrophy_resolved schema field
+% (born dangling at the JSON-template migration, 3641ae71; see ISSUES.md
+% OQ-83 A7 + KNOWN_STATE 2026-06-07). Extend-don't-fork: same consumer the
+% attribute/3 path feeds. The founding-problem NARRATIVE is never read here —
+% only the two authored atoms (mismatch-only consumption, R5).
+has_mandatrophy_declaration(C) :-
+    founding_problem_status(C, dead),
+    disappearance_verdict(C, world_rearranges).
 
 %% validate_ontology
 %  Master entry point for checking Knowledge Base integrity.

@@ -1,0 +1,30 @@
+
+GUARD live corpus: guarded=72 unguarded=72 (expect equal: zero kernels live)
+control pair: administrative_burden_extraction patient_demand_escalation via shared_beneficiary(health_system_administrators)
+
+ERROR: -g 
+CX = administrative_burden_extraction, CY = patient_demand_escalation,
+probe_harness:with_asserted(
+  [narrative_ontology:cs_kernel_id(CX, synthetic_kernel_oq84),
+   narrative_ontology:cs_kernel_id(CY, synthetic_kernel_oq84)],
+  ( findall(A-B, (member(A, [CX]), drl_purity_network:shared_agent_link(A, B, _, _), B == CY), U2),
+    findall(A-B, (member(A, [CX]), drl_purity_network:shared_agent_link(A, B, _, _), B == CY,
+                  \+ (narrative_ontology:cs_kernel_id(A, K2), narrative_ontology:cs_kernel_id(B, K2))), G2),
+    length(U2, NU2), length(G2, NG2),
+    format('GUARD synthetic same-kernel: unguarded=~w guarded=~w (expect 1 / 0)~n', [NU2, NG2]) )),
+length(Z0, NZ0),
+format('ZOMBIE live count: ~w (expect 0)~n', [NZ0]),
+probe_harness:with_asserted(
+  [narrative_ontology:founding_problem_status(ai_governance_accountability, dead),
+   narrative_ontology:disappearance_verdict(ai_governance_accountability, world_rearranges)],
+  ( narrative_ontology:has_mandatrophy_declaration(ai_governance_accountability)
+  -> format('ZOMBIE overlay control: clause FIRES~n', [])
+  ;  format('ZOMBIE overlay control: FAILED TO FIRE~n', []) )),
+( narrative_ontology:has_mandatrophy_declaration(ai_governance_accountability)
+-> format('ZOMBIE post-restore: still firing (BAD)~n', [])
+;  format('ZOMBIE post-restore: clean (restore verified)~n', []) ),
+halt: assertz/1: No permission to modify static procedure `narrative_ontology:cs_kernel_id/2'
+GUARD synthetic same-kernel: unguarded=1 guarded=0 (expect 1 / 0)
+ZOMBIE live count: 0 (expect 0)
+ZOMBIE overlay control: clause FIRES
+ZOMBIE post-restore: clean (restore verified)

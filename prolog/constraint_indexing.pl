@@ -25,6 +25,7 @@
     effective_immutability/3,
     effective_immutability_for_context/2,
     extractiveness_for_agent/3,
+    extractiveness_for_agent_d/4,   % OQ-83: chi with explicit d (per-stakeholder path)
     power_modifier/2,
     scope_modifier/2,
 
@@ -524,16 +525,30 @@ resolve_displacement(Power, Delta) :-
 
 % Formula: χ = ε × f(d_eff) × σ(S)
 % where d_eff = clamp(d + δ, 0, 1) and f is the sigmoid (v6.1)
+% Refactored 2026-06-07 (OQ-83 step 3): the d-parameterized body is the single
+% canonical χ computation (extractiveness_for_agent_d/4); this predicate derives
+% d via the atom-keyed chain and delegates. Behavior-preserving — witnessed
+% byte-identical on the A1 capture harness (canonical-4 + product-156), see
+% audits/2026-06-07_stakeholder_layer_migration/.
 extractiveness_for_agent(Constraint, Context, Score) :-
-    Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
+    Context = context(agent_power(Power), _, _, _),
     resolve_coalition_power(Power, Constraint, ResolvedPower),
     % Build resolved context with coalition-adjusted power
     Context = context(_, T, E, S),
     ResolvedContext = context(agent_power(ResolvedPower), T, E, S),
+    derive_directionality(Constraint, ResolvedContext, D),
+    extractiveness_for_agent_d(Constraint, ResolvedContext, D, Score).
+
+%% extractiveness_for_agent_d(+Constraint, +Context, +D, -Score)
+%  χ with EXPLICIT directionality (OQ-83: per-stakeholder d enters here).
+%  Context supplies the power atom (displacement) and scope (σ); D replaces
+%  the atom-keyed derivation. Does NOT re-run resolve_coalition_power — the
+%  caller owns d and any power resolution.
+extractiveness_for_agent_d(Constraint, Context, D, Score) :-
+    Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(Constraint, ExtMetricName, BaseScore),
-    derive_directionality(Constraint, ResolvedContext, D),
-    resolve_displacement(ResolvedPower, Delta),
+    resolve_displacement(Power, Delta),
     D_eff is max(0.0, min(1.0, D + Delta)),
     sigmoid_f(D_eff, PowerMod),
     scope_modifier(Scope, ScopeMod),

@@ -1,0 +1,130 @@
+{
+  "header": {
+    "constraint_id": "pilot_streaming_royalty_split",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Streaming Music Royalty Split Agreement",
+    "topic_domain": "economic/cultural",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "emerges_naturally": false
+  },
+  "stakeholders": [
+    {
+      "name": "dominant_streaming_service",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates the platform that distributes music to a massive global user base. Negotiates licensing deals with rights holders and pays out a percentage of its revenue as royalties. Aims to maximize subscriber growth and revenue while minimizing content acquisition costs."
+    },
+    {
+      "name": "major_record_labels",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Owns or controls the master recordings for a majority of commercially successful music. Negotiates a 'blanket' license with the streaming service, receiving a large percentage of royalty payments, which it then splits with its artists according to individual contracts."
+    },
+    {
+      "name": "major_label_artists",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Creates the music that populates the service. Is signed to a major label and receives a fraction of the royalties the label collects from the streaming service, after the label's share and other recoupable expenses are deducted. Has little to no direct influence over the top-level royalty split negotiations."
+    },
+    {
+      "name": "independent_artists",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Creates music and uses a third-party distributor to get it onto the streaming service. Receives a higher percentage of the per-stream payout than a major label artist, but the absolute per-stream amount is still extremely low. Lacks the marketing and promotional power of a major label."
+    },
+    {
+      "name": "music_subscribers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Pays a monthly subscription fee or listens to ads in exchange for on-demand access to a near-universal catalog of music. Their collective payments form the revenue pool from which royalties are paid. Benefits from convenience and low cost, but has no say in how the revenue is divided."
+    },
+    {
+      "name": "songwriters_and_publishers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Owns the rights to the underlying musical composition. Receives a separate, smaller stream of royalties from the service, often at rates determined by government regulation or collective bargaining. Their share is distinct from the master recording royalty paid to labels."
+    },
+    {
+      "name": "future_artists",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Not yet active in the music industry. Their future economic prospects and the viability of a career in music are being determined by the royalty structures established today. They have no voice in the negotiations that will shape their professional lives."
+    },
+    {
+      "name": "music_industry_analysts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researches and reports on the economics of the music streaming industry. Analyzes the power dynamics between platforms, labels, and artists, but does not directly participate in or benefit from the royalty flows."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To establish a standardized, scalable financial mechanism for licensing a vast catalog of music from a fragmented set of rights holders for on-demand digital distribution to a global audience.",
+    "transfer_function": "Moves money from millions of individual music subscribers or advertisers to the streaming service, which then transfers a large percentage (typically ~70% of revenue) to rights holders, primarily major record labels, who in turn transfer a smaller fraction to artists. A separate, smaller stream flows to songwriters and publishers.",
+    "absent_voices": "Future artists, whose careers will be shaped by this model, are absent. Also, artists from previous eras whose contracts did not anticipate streaming are often undercompensated, and their specific interests are not represented in current negotiations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "The entire legal basis for the streaming service's operation would collapse. Music would be removed from the platform, revenue would cease, and the primary distribution channel for labels and artists would disappear. A chaotic and urgent renegotiation would ensue to restore service, possibly on different terms.",
+    "founding_problem": "How to monetize digital music at scale in the post-Napster era, combating widespread piracy by offering a legal, comprehensive, and convenient alternative that could generate revenue for rights holders.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The history of the digital music industry in the early 2000s is widely documented by technology and music journalists (e.g., reporting in Billboard, Wired), academic studies on media economics, and public statements from industry bodies like the RIAA. They all attest to the existential threat of piracy that services like Spotify were designed to solve."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the complex web of licensing agreements that govern how much money a dominant music streaming service pays to rights holders (primarily major record labels) for the right to stream their music catalogs. This 'royalty split' is the central economic engine of the modern music industry, but it is also a major point of contention, as the per-stream payments to artists are often fractions of a cent, making it difficult for many musicians to earn a living."
+  },
+  "omegas": [
+    {
+      "id": "pro_rata_vs_user_centric",
+      "question": "Would switching from the current 'pro-rata' royalty pool system to a 'user-centric' model significantly redistribute revenue toward niche artists and increase overall artist earnings?",
+      "resolution_mechanism": "Implementation of a user-centric payment model by a major streaming service and analysis of the resulting payment data over several years.",
+      "impact": "Could fundamentally alter the economic viability of careers for non-superstar musicians and change the incentives for platforms and labels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether a user-centric payment model would be more equitable than the current pro-rata system."
+    }
+  ]
+}

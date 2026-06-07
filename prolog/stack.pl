@@ -25,6 +25,7 @@
 :- use_module(purity_scoring, []).
 :- use_module(structural_signatures).   % facade kept for backward-compat qualified calls
 :- use_module(drl_core).
+:- use_module(stakeholder_seats, []).   % OQ-83: per-(C,Name) observer layer
 :- use_module(drl_composition, []).
 :- use_module(drl_counterfactual, []).
 :- use_module(drl_boltzmann_analysis, []).
