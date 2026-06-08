@@ -3727,19 +3727,30 @@ orbit (two-axis note). This pass measured it.
   drift-authoring convention, **NOT OQ-70 FNL** which is observer-axis), so the summed density (23.6%)
   is NOT a trustworthy quantitative gate; the agree-dead majority is two saturated axes coinciding.
 
-**Verdict:** detection-independence OCCURS on real contested kernels (diverge-A 74 clean cases, 68
-kernels) — orthogonal detection is empirically real, not just architecturally possible. The clean
-DENSITY is not measurable on the confounded archive (needs a de-leaked re-measure).
+**Verdict (REVISED by the diverge-A cause-of-death per-item witness — the 74 count overclaimed):**
+diverge-A's deaths are PREDOMINANTLY one drift-authoring convention, not heterogeneous cause. Of 74:
+66 died via drift-trajectory only (reads drift_state alone); `cs_axiom_foreclosed` (only verdict
+reading axiom grounding) fired 8; drift magnitude substantial 88%, acknowledged=false 92%; single
+profile (practice_drift|authority_erosion, substantial, false)→husk = 50/74 (68%). So ~89% is the
+same convention firing in the observer-coherent slice = **saturation wearing Theorem-7's clothes**,
+NOT real orthogonality; the clean content-driven core shrinks to ~8 (the axiom-grounding-gated
+cases). **The detection-independence existence proof is NOT load-bearing on kernel_v1** — it needs a
+de-leaked re-measure before it stands. (The per-item witness caught the count standing in for the
+substrate, again.)
 
 **Two corpora, two gates (operator):** (a) a **detection-independence corpus** — CA-3 qualitative
-gate GREEN (real signal exists); precise richness pending a de-leaked kernel pilot. (b) a **C/B
-(framing-dependence) corpus** — gated on **CA-2** (generation: same commitment, two framings); the
-archive CANNOT substitute (it varies content, not framing); CA-3 says nothing about it. A rebuild
-must name which corpus it builds for; do not let diverge-A authorize a C/B corpus.
+gate is **NOT green after the cause-of-death witness**: the de-leaked kernel pilot is now a
+PREREQUISITE to a clean existence proof (not just to a precise density), because kernel_v1's
+diverge-A is ~89% drift-convention saturation; the clean core (~8) is too thin to authorize a
+corpus on its own. (b) a **C/B (framing-dependence) corpus** — gated on **CA-2** (generation: same
+commitment, two framings); the archive CANNOT substitute (it varies content, not framing); CA-3
+says nothing about it. A rebuild must name which corpus it builds for; do not let diverge-A
+authorize a C/B corpus.
 
-**Next moves (operator's to sequence):** CA-2 (committer generation-variance / the real C/B test),
-the 2×2 model×framing Ω (observer claim-drift model-stability, filed under OQ-83), and/or a small
-de-leaked kernel pilot to get a clean detection-independence density. None started.
+**Next moves (operator's to sequence):** a small de-leaked kernel pilot is now the PREREQUISITE for
+the detection-independence existence proof (kernel_v1 is too saturated — diverge-A ~89% convention);
+CA-2 (committer generation-variance / the real C/B test); the 2×2 model×framing Ω (observer
+claim-drift model-stability, filed under OQ-83). None started.
 
 ---
 

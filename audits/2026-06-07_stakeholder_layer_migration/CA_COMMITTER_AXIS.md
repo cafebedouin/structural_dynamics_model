@@ -58,6 +58,29 @@ observer-incoherent       140 (diverge-B)  648
   the dominant agree-dead cell (71.5%) is "two saturated axes coinciding," not clean detector
   agreement, and the summed divergence density is **not a trustworthy quantitative gate number**.
 
+## diverge-A cause-of-death witness (per-item under the 74 — the count was overclaiming)
+
+The 74 is the aggregate; cause-of-death is the substrate (operator: "you've been burned once this
+thread by a count standing in for the per-item check"). Distribution across the 74
+(`ca3_divergeA_causes.txt`, `ca3_divergeA_cause_summary.txt`):
+- **death path:** 66/74 via drift-trajectory ONLY (reads `cs_drift_state` alone);
+  `cs_axiom_foreclosed` (the only committer verdict reading axiom GROUNDING = content beyond drift)
+  fired just **8**.
+- **terminal:** husk 51, axiom_foreclosure 13, repudiation 8, extinction 2 (4 distinct).
+- **drift profile concentrated:** magnitude `substantial` 65/74 (88%), `acknowledged=false` 68/74
+  (92%); the single profile `(practice_drift|authority_erosion, substantial, false)→husk` is
+  **50/74 (68%)**.
+
+**Verdict: predominantly SATURATION, small heterogeneous core.** ~89% of diverge-A deaths run the
+drift-only path dominated by ONE drift-authoring convention (substantial+unacknowledged → husk) —
+the same convention firing uniformly in the observer-coherent slice = saturation wearing Theorem-7's
+clothes, NOT heterogeneous-cause orthogonality. The genuinely content-driven core is the 8
+`cs_axiom_foreclosed` cases (read the axiom's grounding), and even those share `axiom_overriding/
+substantial` drift. So the existence proof for detection-independence is **NOT load-bearing on
+kernel_v1**: the clean signal shrinks from 74 to ~8, and the bulk is convention-leak. The de-leaked
+re-measure is required before the existence proof stands — exactly the operator's "if same convention
+every time, diverge-A is saturation wearing Theorem-7's clothes."
+
 ## Verdict + corpus gate
 
 - **Qualitative (trustworthy): detection-independence OCCURS on real contested kernels.** diverge-A
