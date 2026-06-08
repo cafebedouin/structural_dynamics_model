@@ -45,6 +45,56 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-08 — make_brief: source-abstraction tool for oversized/refusing inputs (canonical llm_call; measured ingest ceiling; STOP-by-default refusal)
+**Files:** agent/llm_call.py, agent/make_brief.py, agent/c-orchestrator.py
+**Tier:** tripwire
+
+Built a reusable brief tool so big/refusing source docs (spacex_s-1.txt 1.6 MB; the
+PIIS vaccine paper that flat-refuses on Sonnet) can feed the orchestrator. Three pieces:
+
+- **`agent/llm_call.py` — the ONE canonical Anthropic call path.** `get_client`,
+  `call_with_retry`, `extract_text`, `count_tokens`, `context_window`, and
+  `ModelCallError` (now carries `stop_reason`/`model`/`refusal_text`). `c-orchestrator.py`
+  imports these; its `_call` is a thin wrapper. Consolidates the fix-#1 refusal detection
+  (commit 7e85b261) into one spot so it cannot fork (Build Discipline pattern 2). NOTE: the
+  orchestrator filename's hyphen blocks normal import — new callers import `agent.llm_call`,
+  never the orchestrator.
+- **`agent/make_brief.py` — NEUTRAL structural compression.** Emits MAIN IDEA / SOURCE'S OWN
+  FRAMINGS / KEY FACTS / WHAT IS CONTESTED, and does NOT pre-partition into named READINGS
+  (keeps primed SCOPE's kernel call un-anchored). Map-reduce over `SINGLE_PASS_BUDGET_CHARS`
+  (~250 KB): Haiku maps chunks, Sonnet reduces. CLI: `python3 agent/make_brief.py f.txt`.
+- **Orchestrator triggers (asymmetric, by design).** SIZE → auto-brief, but only when the
+  topic exceeds the **MEASURED** ingest ceiling (`_ingest_decision`: window − step
+  scaffolding − reserved − margin, min over research+decompose; **decompose binds** because
+  the raw topic is packed only by research+decompose — generate works from the manifest).
+  REFUSAL → **STOP by default** with a manual-route message (schema + scope prompt +
+  build_prompt pointers); `--auto-bypass-refusal` is opt-in and logs the witness (refusal +
+  the reframing that got it through), never a silent classifier bypass.
+
+**Tripwires for a cold reader:**
+1. **A brief is LOSSY — never feed one when the doc would fit whole.** The measured ceiling
+   (~175K tok for decompose) deliberately sits far above the old asserted ~120 KB idea:
+   witnessed spacex (~417K tok) briefs, but **magnifica (267 KB / ~69K tok) feeds WHOLE**
+   (headroom +106K) — the old default would have needlessly briefed it (Phase-0: whole reads
+   richer). Don't reintroduce a KB default below the measured ceiling.
+2. **Neutral brief of a SINGLE-VOICE source under-routes to flat without research.** spacex
+   S-1 is a prospectus (issuer voice only); the neutral brief faithfully says "no real
+   contest… it is a prospectus." With `--skip-search` → SCOPE routes FLAT (8 risk axes,
+   is_contested_kernel=None). WITH research grounding → recovers a contested kernel
+   (`valuation_legitimacy`, 7 axes, readings dcf_fundamentalist/real_options_technologist/
+   musk_cult_believer/governance_skeptic). **Research grounding is load-bearing for kernels
+   from single-voice docs.** The hand-authored kernel-shaped `spacex_s-1_brief.md` (left
+   untouched) imported external constituencies and routed kernel `dual_class_legitimacy` even
+   without research — i.e. the two brief styles foreground DIFFERENT kernels (seat/framing-
+   relativity), and a `--skip-search` manifest comparison is NOT apples-to-apples.
+
+Verification (all witnessed this session): no-regression dry-run (no brief, manifest OK);
+unit brief has no READINGS partition; measured ceiling (spacex trips, PIIS/magnifica fit);
+map-reduce 44 chunks→6 KB brief, fidelity spot-checked against source (10:1 votes,
+controlled-company, $41,311M deficit all present); PIIS default STOP prints manual route;
+PIIS `--auto-bypass-refusal` succeeds on Haiku with logged before/after, fidelity confirmed
+(DIOSynVax/S309/"not observed"/modest/baseline all in source).
+
 ## 2026-06-08 — Type-A snapshot floor + observer residual detector landed (time-aware d; ε-driven flips are NOT empty — 56/100)
 **Files:** prolog/constraint_indexing.pl, prolog/drl_composition.pl, prolog/transition_paths.pl, prolog/temporal_residual.pl, prolog/json_report.pl, prolog/stack.pl, audits/2026-06-08_typea_template_extensibility/, docs/deferential_realism_paper_v7.md
 **Tier:** landed

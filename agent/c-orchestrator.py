@@ -42,20 +42,10 @@ from agent.story_generator_base import (
     build_prompt,
     _SYSTEM_INSTRUCTION,
 )
-
-# ---------------------------------------------------------------------------
-# Exceptions
-# ---------------------------------------------------------------------------
-
-class ModelCallError(RuntimeError):
-    """A completion came back unusable (safety refusal or empty body).
-
-    Raised by `_call` so the stop_reason is reported explicitly instead of
-    surfacing downstream as a misleading "JSON parse failed: ... char 0"
-    (which is what an empty refusal body parses to). Every step handler wraps
-    `_call` in try/except, so this propagates as a clear per-step error.
-    """
-
+from agent import llm_call, make_brief
+# Re-exported for back-compat; the canonical definition lives in llm_call so the
+# refusal/empty detection cannot fork (Build Discipline pattern 2).
+from agent.llm_call import ModelCallError
 
 # ---------------------------------------------------------------------------
 # Data classes
@@ -70,6 +60,7 @@ class StepResult:
     tokens_in: int = 0
     tokens_out: int = 0
     duration_s: float = 0.0
+    refused: bool = False  # True iff the step failed on a safety refusal (stop_reason=refusal)
 
 
 @dataclass
@@ -84,21 +75,6 @@ class PipelineResult:
     total_tokens_in: int = 0
     total_tokens_out: int = 0
     total_duration_s: float = 0.0
-
-
-# ---------------------------------------------------------------------------
-# Anthropic client helper
-# ---------------------------------------------------------------------------
-
-_anthropic_client = None
-
-def _get_client():
-    """Return a cached Anthropic client instance."""
-    global _anthropic_client
-    if _anthropic_client is None:
-        import anthropic
-        _anthropic_client = anthropic.Anthropic()   # reads ANTHROPIC_API_KEY from env
-    return _anthropic_client
 
 
 # ---------------------------------------------------------------------------
@@ -167,6 +143,9 @@ class DRAuditOrchestrator:
         dry_run: bool = False,
         manifest_file: str | None = None,
         progress_callback: Callable[[str, str], None] | None = None,
+        source_name: str = "",
+        brief_mode: str = "auto",          # auto | force | never  (size-driven briefing)
+        auto_bypass_refusal: bool = False,  # opt-in, logged bypass of a content refusal
     ):
         self.axes = axes
         self.serial_generate = serial_generate
@@ -177,6 +156,17 @@ class DRAuditOrchestrator:
         self.dry_run = dry_run
         self.manifest_file = manifest_file
         self._progress = progress_callback or (lambda step, msg: print(f"[{step}] {msg}"))
+        self.source_name = source_name
+        self._source_path = Path(source_name) if (source_name and Path(source_name).is_file()) else None
+        self.brief_mode = brief_mode
+        self.auto_bypass_refusal = auto_bypass_refusal
+        # Optional explicit token cap on the raw topic (env override). When unset,
+        # the ingest ceiling is MEASURED per-step (see _ingest_decision).
+        import os as _os
+        self.brief_threshold = (
+            int(_os.environ["DR_BRIEF_THRESHOLD"]) if "DR_BRIEF_THRESHOLD" in _os.environ else None
+        )
+        self.ingest_margin = int(_os.environ.get("DR_INGEST_MARGIN", "8000"))
 
         # Output dirs — run-tagged if run_tag given, else flat main corpus dirs
         if run_tag:
@@ -211,15 +201,6 @@ class DRAuditOrchestrator:
     # Claude call helper
     # ------------------------------------------------------------------
 
-    @staticmethod
-    def _extract_text(response) -> str:
-        """Pull all text blocks out of a Claude response."""
-        parts = []
-        for block in response.content:
-            if hasattr(block, "text"):
-                parts.append(block.text)
-        return "\n".join(parts)
-
     def _call(
         self,
         prompt: str,
@@ -231,99 +212,17 @@ class DRAuditOrchestrator:
     ) -> tuple[str, int, int]:
         """Call Claude and return (text, tokens_in, tokens_out).
 
-        Handles the pause_turn continuation loop required by server-side
-        tools like web_search.
+        Thin wrapper over the canonical `llm_call.call` (pause_turn loop +
+        refusal/empty detection live there). Maps the orchestrator's
+        `system_instruction` kwarg to llm_call's `system`.
         """
-        client = _get_client()
-
-        if max_tokens is None:
-            # Pick a sensible default based on which model-role this is
-            max_tokens = 8192
-
-        kwargs: dict[str, Any] = {
-            "model": model,
-            "max_tokens": max_tokens,
-            "temperature": temperature,
-            "messages": [{"role": "user", "content": prompt}],
-        }
-        if system_instruction:
-            kwargs["system"] = system_instruction
-        if tools:
-            kwargs["tools"] = tools
-
-        total_in, total_out = 0, 0
-
-        response = self._call_with_retry(client, **kwargs)
-
-        total_in += response.usage.input_tokens
-        total_out += response.usage.output_tokens
-
-        # Handle pause_turn continuation (web search may need multiple rounds)
-        max_continuations = 5
-        messages = kwargs["messages"]
-
-        while response.stop_reason == "pause_turn" and max_continuations > 0:
-            max_continuations -= 1
-            messages = [
-                {"role": "user", "content": prompt},
-                {"role": "assistant", "content": response.content},
-            ]
-            kwargs["messages"] = messages
-            response = self._call_with_retry(client, **kwargs)
-            total_in += response.usage.input_tokens
-            total_out += response.usage.output_tokens
-
-        text = self._extract_text(response)
-
-        # An API safety refusal returns stop_reason=="refusal" with no text
-        # blocks; a truncated/empty completion returns no text under any other
-        # stop_reason. Either way json.loads(text) downstream throws the
-        # misleading "Expecting value: line 1 column 1 (char 0)". Report the
-        # real cause here instead. (max_tokens with partial text is left alone:
-        # text is non-empty, so the caller's own parse/validation handles it.)
-        if response.stop_reason == "refusal":
-            raise ModelCallError(
-                f"API safety refusal (stop_reason=refusal) from {model}; "
-                f"no content returned. Reframe the topic away from sensitive "
-                f"specifics (e.g. the structural/governance kernel rather than "
-                f"raw domain detail)."
-            )
-        if not text.strip():
-            raise ModelCallError(
-                f"empty completion (stop_reason={response.stop_reason}) from "
-                f"{model}; nothing to parse."
-            )
-
-        return text, total_in, total_out
-
-    @staticmethod
-    def _call_with_retry(client, max_retries: int = 3, **kwargs):
-        """Retry with exponential backoff on transient errors.
-
-        Large-cap calls stream: the SDK refuses non-streaming requests whose
-        max_tokens implies >10 minutes (the essayist's 64k cap trips this).
-        get_final_message() returns the same Message object create() would,
-        so usage accounting and the pause_turn loop are unaffected.
-        """
-        import anthropic
-
-        for attempt in range(max_retries):
-            try:
-                if kwargs.get("max_tokens", 0) >= 16384:
-                    with client.messages.stream(**kwargs) as s:
-                        return s.get_final_message()
-                return client.messages.create(**kwargs)
-            except (
-                anthropic.RateLimitError,
-                anthropic.InternalServerError,
-                anthropic.APIConnectionError,
-            ) as e:
-                if attempt == max_retries - 1:
-                    raise
-                wait = 2 ** attempt * 2      # 2s, 4s, 8s
-                time.sleep(wait)
-            except anthropic.APIError:
-                raise                        # don't retry auth / bad request
+        return llm_call.call(
+            prompt, model,
+            system=system_instruction,
+            temperature=temperature,
+            max_tokens=8192 if max_tokens is None else max_tokens,
+            tools=tools,
+        )
 
     # ------------------------------------------------------------------
     # Pipeline
@@ -333,6 +232,18 @@ class DRAuditOrchestrator:
         """Execute the full DR audit pipeline for *topic*."""
         result = PipelineResult()
         t0 = time.time()
+
+        # Size-driven briefing (lossy fallback for oversized inputs). Skipped with
+        # a frozen manifest (decompose is bypassed; the raw topic is unused there).
+        if not self.manifest_file:
+            try:
+                topic = self._maybe_brief_for_size(topic)
+            except make_brief.BriefRefusal as e:
+                self._progress("brief", make_brief.manual_route_message(self.source_name, e.witness))
+                result.steps.append(StepResult(step="brief", status="error",
+                                               error=str(e), refused=True))
+                result.total_duration_s = time.time() - t0
+                return result
 
         # Step 1: Research
         step = self._step_research(topic)
@@ -356,6 +267,35 @@ class DRAuditOrchestrator:
                 step = StepResult(step="decompose", status="error", error=str(e))
         else:
             step = self._step_decompose(topic, research_context)
+
+        # Refusal handling — STOP by default; opt-in bypass briefs + retries ONCE.
+        # (A size-fitting topic that still refuses is a content refusal; the right
+        # default is the guided manual route, not a silent classifier bypass.)
+        if (not self.manifest_file) and step.refused:
+            if not self.auto_bypass_refusal:
+                self._progress("decompose", make_brief.manual_route_message(self.source_name))
+                result.steps.append(step)
+                result.total_duration_s = time.time() - t0
+                self._tally_tokens(result)
+                return result
+            self._progress("decompose", "AUTO-BYPASS (opt-in): briefing topic and retrying once.")
+            try:
+                brief = make_brief.make_brief(
+                    topic, source_name=self.source_name,
+                    on_progress=lambda m: self._progress("brief", m), auto_bypass=True)
+            except make_brief.BriefRefusal as e:
+                self._progress("decompose", make_brief.manual_route_message(self.source_name, e.witness))
+                result.steps.append(step)
+                result.total_duration_s = time.time() - t0
+                self._tally_tokens(result)
+                return result
+            self._save_brief(brief)
+            topic = brief
+            step_r = self._step_research(topic)
+            result.steps.append(step_r)
+            research_context = step_r.data or topic
+            step = self._step_decompose(topic, research_context)
+
         result.steps.append(step)
 
         if step.status == "error":
@@ -416,13 +356,8 @@ class DRAuditOrchestrator:
                 "name": "web_search",
                 "max_uses": 5,
             }
-            prompt = (
-                f"Research the following topic thoroughly. Provide factual background, "
-                f"key actors, recent developments, structural tensions, and data points.\n\n"
-                f"TOPIC: {topic}"
-            )
             text, tin, tout = self._call(
-                prompt,
+                self._research_prompt(topic),
                 model=self.MODELS["researcher"],
                 max_tokens=self.MAX_TOKENS["researcher"],
                 temperature=0.1,
@@ -434,12 +369,27 @@ class DRAuditOrchestrator:
                 tokens_in=tin, tokens_out=tout,
                 duration_s=time.time() - t0,
             )
+        except ModelCallError as e:
+            self._progress("research", f"Search failed, proceeding without: {e}")
+            return StepResult(
+                step="research", status="error", error=str(e),
+                refused=(e.stop_reason == "refusal"),
+                duration_s=time.time() - t0,
+            )
         except Exception as e:
             self._progress("research", f"Search failed, proceeding without: {e}")
             return StepResult(
                 step="research", status="error", error=str(e),
                 duration_s=time.time() - t0,
             )
+
+    @staticmethod
+    def _research_prompt(topic: str) -> str:
+        return (
+            f"Research the following topic thoroughly. Provide factual background, "
+            f"key actors, recent developments, structural tensions, and data points.\n\n"
+            f"TOPIC: {topic}"
+        )
 
     # ------------------------------------------------------------------
     # Step 2: Decompose (UKE_SCOPE)
@@ -473,6 +423,13 @@ class DRAuditOrchestrator:
                 max_tokens=self.MAX_TOKENS["architect"],
                 system_instruction=self.protocols["uke_scope"],
                 temperature=0.2,
+            )
+        except ModelCallError as e:
+            self._progress("decompose", f"SCOPE call failed: {e}")
+            return StepResult(
+                step="decompose", status="error", error=str(e),
+                refused=(e.stop_reason == "refusal"),
+                duration_s=time.time() - t0,
             )
         except Exception as e:
             self._progress("decompose", f"SCOPE call failed: {e}")
@@ -911,6 +868,88 @@ class DRAuditOrchestrator:
         )
 
     # ------------------------------------------------------------------
+    # Size-driven briefing (the LOSSY fallback for inputs that won't fit)
+    # ------------------------------------------------------------------
+
+    def _ingest_decision(self, topic: str) -> tuple[bool, dict]:
+        """Decide whether *topic* must be briefed for size, by MEASURING per-step
+        headroom (not asserting a KB number). The raw topic is packed only by the
+        research and decompose steps (generate works from the manifest), so the
+        ceiling is the min headroom across those two. Returns (should_brief, info).
+        """
+        from agent.generate_kernel_corpus import _scope_user_prompt
+        info: dict = {"steps": {}}
+
+        # Explicit operator cap on the raw topic (env DR_BRIEF_THRESHOLD), if set.
+        if self.brief_threshold is not None:
+            t = llm_call.count_tokens(self.MODELS["architect"], topic)
+            info["topic_tokens"] = t
+            info["explicit_cap"] = self.brief_threshold
+            return (t > self.brief_threshold), info
+
+        over = False
+        # decompose — always packs the topic; the large uke_scope system usually binds.
+        d_model = self.MODELS["architect"]
+        d_user = _scope_user_prompt({"human_readable": topic, "summary": ""}, "", self.axes)
+        d_tokens = llm_call.count_tokens(d_model, d_user, system=self.protocols["uke_scope"])
+        d_cap = llm_call.context_window(d_model) - self.MAX_TOKENS["architect"] - self.ingest_margin
+        info["steps"]["decompose"] = {"model": d_model, "tokens": d_tokens,
+                                      "cap": d_cap, "headroom": d_cap - d_tokens}
+        over = over or d_tokens > d_cap
+
+        # research — only when not skipped. web_search injects results at runtime,
+        # so the static prompt count + the reserved margin is a floor, not exact.
+        if not self.skip_search:
+            r_model = self.MODELS["researcher"]
+            r_tokens = llm_call.count_tokens(r_model, self._research_prompt(topic))
+            r_cap = llm_call.context_window(r_model) - self.MAX_TOKENS["researcher"] - self.ingest_margin
+            info["steps"]["research"] = {"model": r_model, "tokens": r_tokens,
+                                         "cap": r_cap, "headroom": r_cap - r_tokens}
+            over = over or r_tokens > r_cap
+
+        return over, info
+
+    def _maybe_brief_for_size(self, topic: str) -> str:
+        """Return *topic* unchanged if it fits; else a structural brief. STOPs the
+        run (via BriefRefusal) if briefing is needed but the content is refused."""
+        if self.brief_mode == "never":
+            return topic
+
+        if self.brief_mode == "force":
+            should = True
+        else:
+            should, info = self._ingest_decision(topic)
+            for name, s in info.get("steps", {}).items():
+                self._progress("ingest", f"{name}: {s['tokens']:,} tok / cap {s['cap']:,} "
+                               f"(headroom {s['headroom']:,}) [{s['model']}]")
+            if "explicit_cap" in info:
+                self._progress("ingest", f"topic {info['topic_tokens']:,} tok vs "
+                               f"explicit DR_BRIEF_THRESHOLD {info['explicit_cap']:,}")
+            if not should:
+                return topic
+
+        self._progress("brief", "LOSSY SUBSTITUTION: topic exceeds the measured ingest ceiling; "
+                       "compressing to a structural brief. Results are BRIEF-DERIVED, not "
+                       "whole-doc (Phase-0: whole reads richer).")
+        brief = make_brief.make_brief(
+            topic, source_name=self.source_name,
+            on_progress=lambda m: self._progress("brief", m),
+            auto_bypass=self.auto_bypass_refusal,
+        )
+        self._save_brief(brief)
+        return brief
+
+    def _save_brief(self, brief: str) -> None:
+        stem = (Path(self.source_name).stem if self.source_name else "topic") or "topic"
+        if self._source_path is not None:
+            dest = self._source_path.with_name(self._source_path.stem + "_brief.md")
+        else:
+            dest = REPO_ROOT / "outputs" / "briefs" / f"{stem}_brief.md"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(brief, encoding="utf-8")
+        self._progress("brief", f"brief ({len(brief):,} chars) saved to {dest} — review it.")
+
+    # ------------------------------------------------------------------
     # Helpers
     # ------------------------------------------------------------------
 
@@ -943,23 +982,38 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
     parser.add_argument("--manifest-file", default=None,
                         help="Load frozen SCOPE manifest from file, skip decompose step")
+    parser.add_argument("--auto-bypass-refusal", action="store_true",
+                        help="On a content safety-refusal, attempt an opt-in, fully-logged "
+                             "bypass (brief via permissive model + analytical-intent reframe) "
+                             "instead of stopping with the manual-route guidance.")
+    bg = parser.add_mutually_exclusive_group()
+    bg.add_argument("--brief", dest="brief_mode", action="store_const", const="force",
+                    help="Force size-briefing even if the topic would fit.")
+    bg.add_argument("--no-brief", dest="brief_mode", action="store_const", const="never",
+                    help="Never size-brief (feed the topic whole; may overflow context).")
+    parser.set_defaults(brief_mode="auto")
     args = parser.parse_args()
 
-    # Resolve topic — positional arg can be a file path or a literal string
+    # Resolve topic — positional arg can be a file path or a literal string.
+    # source_name carries the originating file path (for brief naming/save-beside).
     topic = None
+    source_name = ""
     if args.topic:
         candidate = Path(args.topic)
         if candidate.is_file():
             topic = candidate.read_text(encoding="utf-8").strip()
+            source_name = str(candidate)
         else:
             # Also check relative to repo root (agent/ prefix, etc.)
             repo_candidate = Path(__file__).resolve().parent.parent / args.topic
             if repo_candidate.is_file():
                 topic = repo_candidate.read_text(encoding="utf-8").strip()
+                source_name = str(repo_candidate)
             else:
                 topic = args.topic
     elif args.input_file:
         topic = Path(args.input_file).read_text(encoding="utf-8").strip()
+        source_name = args.input_file
     elif not sys.stdin.isatty():
         topic = sys.stdin.read().strip()
     else:
@@ -974,6 +1028,9 @@ def main():
         skip_essay=args.skip_essay,
         dry_run=args.dry_run,
         manifest_file=args.manifest_file,
+        source_name=source_name,
+        brief_mode=args.brief_mode,
+        auto_bypass_refusal=args.auto_bypass_refusal,
     )
     result = orch.run(topic)
 

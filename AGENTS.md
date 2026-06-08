@@ -97,6 +97,9 @@ structural_dynamics_model/
 │   └── audits/                       # audit, diagnostic, probe scripts (19 files)
 ├── agent/
 │   ├── c-orchestrator.py         # Primary authoring entry point (6-step chain)
+│   ├── llm_call.py               # Canonical Anthropic call path (ModelCallError, count_tokens) —
+│   │                             #   import this, NOT c-orchestrator (its hyphen blocks import)
+│   ├── make_brief.py             # Compress oversized/refusing sources → NEUTRAL structural brief
 │   └── generate_json_haiku.py    # Batch corpus expansion via Haiku
 ├── json/                         # LLM-generated constraint specs (INPUTS, not outputs)
 ├── audits/                       # Completed audits — one audits/<YYYY-MM-DD>_<slug>/ per
@@ -485,6 +488,14 @@ This chains six steps automatically:
 | 4 Corpus update | Runs `python/run_pipeline.py` to re-classify full corpus | `outputs/pipeline_output.json` |
 | 5 Reports | `python/enhanced_report.py` writes per-constraint reports | `outputs/constraint_reports/<id>_report.md` |
 | 6 Essay | Sonnet synthesizes draft essay from constraint reports | `outputs/essays/`, `agent/analysis/essays/` |
+
+**Big or refusing source files** (e.g. a 1.6 MB S-1, a paper the safety classifier refuses):
+the orchestrator auto-compresses to a NEUTRAL brief only when the topic exceeds its MEASURED
+ingest ceiling (`--brief`/`--no-brief` to force/suppress). A content safety-refusal STOPs by
+default with a manual-route message; `--auto-bypass-refusal` is opt-in and logs the witness.
+Standalone: `python3 agent/make_brief.py <file.txt>`. Caveat: a neutral brief of a single-voice
+source (a prospectus) routes FLAT without research grounding — the kernel emerges once research
+reintroduces the external contest (KNOWN_STATE 2026-06-08).
 
 **To expand the corpus without a full topic run** (faster, uses Haiku batch API):
 
