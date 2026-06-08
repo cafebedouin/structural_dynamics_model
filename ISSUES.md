@@ -3750,7 +3750,25 @@ authorize a C/B corpus.
 **Next moves (operator's to sequence):** a small de-leaked kernel pilot is now the PREREQUISITE for
 the detection-independence existence proof (kernel_v1 is too saturated — diverge-A ~89% convention);
 CA-2 (committer generation-variance / the real C/B test); the 2×2 model×framing Ω (observer
-claim-drift model-stability, filed under OQ-83). None started.
+claim-drift model-stability, filed under OQ-83).
+
+**Pilot in progress (2026-06-07/08); plan in `audits/.../` + report `CA_COMMITTER_AXIS.md`-adjacent.**
+- **Step 0 DONE — 2×2 model Ω: the 4c observer claim-drift is MODEL-STABLE, not a Gemini artifact.**
+  Re-ran both arms under Sonnet (`claude-sonnet-4-5-20250929`) on the 3 contention topics:
+  stakeholder→`rope`, four-tuple→`tangled_rope`, **3/3**, identical to Gemini (engine corrects both
+  to snare). The claim-layer framing effect reproduces across model families → the cleanest
+  framing result of the thread; observer-axis loose end closed. (artifacts:
+  `*.sonnet_{stake,four}.json`, `step0_model_omega.py`.)
+- **Key pilot finding (reshapes it):** the de-leak fixed type/metric leakage but NEVER touched the
+  drift-example bait — the generation prompt's Rule 5 drift worked-example is
+  `authority_erosion/substantial/false` (the kernel_v1 saturation profile), single-source
+  (verified: the one-shot example JSON and SCOPE prompt carry no drift). The distribution-check
+  counter-instruction was present in kernel_v1 and FAILED. So a naive de-leaked pilot reproduces the
+  saturation. Restructured (operator-approved): Step 1 = drift example-neutralization gate (example
+  REMOVED not rebalanced; current-vs-neutral arms, Haiku GEN_MODEL both, compare drift
+  distribution); Step 2 (existence proof) only if Step 1 = artifact; if it persists, the
+  second-model arm (≠Haiku) separates "real property of contested kernels" from "Haiku authoring
+  prior" before any "true property" claim. Cost ceiling 500 calls total; composition-in-same-pass.
 
 ---
 
