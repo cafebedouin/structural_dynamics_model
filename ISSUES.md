@@ -3409,6 +3409,73 @@ evidence) is the unblocked next move**, and it is the experiment that was the ac
 step 4. 4b stopped on a gate guarding a non-problem; 4c is where the framing-perturbation result
 lives. (The 2×2 model×framing Ω and Phase B sequencing are unchanged.)
 
+**4c DESIGN CORRECTED (operator, 2026-06-07 — Type-C/B dichotomy dissolved a THIRD time; the
+global cut pin is RETRACTED).** Type C / Type B is an aggregate over a per-topic census; forcing a
+global C-or-B answer reads a per-position result as a position-free verdict (the mountain-and-frame
+error). **4c produces a PARTITION, not a verdict:** per topic ∈ {survived (H¹ stable across both
+framings = real, two coordinates on one structure), flipped (H¹ moved = the four-tuple was
+authoring it), unevaluable-by-resolution}. Pins:
+- **No global Type-C/B threshold** (retracted): the rate is a SUMMARY of the partition, never a
+  verdict; a summary standing in for the partition is a reasoning step reintroduced (count-for-
+  witness error). The partition is the operator's to read, against the list, not the rate.
+- **same-RESOLUTION exclusion (the surviving, sharpened pin):** strengthen conjunct-1's
+  same-constraint check to same-GRAIN. OQ-85 proved one topic can author at different resolutions;
+  if the two surfaces carve a topic at different grain (one bundling what the other splits), the
+  orbits differ for a reason that is neither survival nor framing-movement → the topic is
+  UNEVALUABLE and leaves the census entirely, NOT counted as a flip.
+- **bias asymmetry (pin into the read before the run):** every uncontrolled error mode (resolution
+  mismatch, topic divergence, ε drift) inflates FLIPS, and flips feed Type-B, the
+  project-vindicating finding. So flips are cheap/contamination-prone, survivals expensive/clean:
+  each individual flip earns more scrutiny than each survival before entering the flipped bin;
+  the ε-pinned arm is load-bearing; report the ε-pinned, resolution-excluded rate as the believed
+  figure and the raw (unpinned, unexcluded) rate as the contaminated upper bound on movement,
+  never a second data point.
+- **the real finding is STRUCTURE, not the ratio:** run one pass at whether bin membership is
+  predicted by ε / signature / type. Survivors=low-ε coordination + flippers=high-ε extraction
+  would be the strong specific claim (the four-tuple was authoring the *extraction*
+  classifications); random-wrt-measured-properties is also a result.
+Deliverable: the per-topic partition (survived/flipped/unevaluable), ε-pinned, resolution-mismatch
+excluded-not-counted, + the structure pass. Not a Type-C/B ruling.
+
+**4c RAN (2026-06-07, PILOT n=6); report `STEP4C_PARTITION.md`. Presented, not ruled.**
+Pre-registered bin-blind partition (ε-pinned): 2 survived (hospital, payday), 2 flipped
+(app_store, streaming), 2 unevaluable (time_zones, lightspeed — profile mismatch fired correctly
+bin-blind). Headline (analytic) type survived in ALL 4 evaluable (snare both arms). **Per-flip
+scrutiny dissolved both flips into a resolution artifact:** the all-metric-pin control showed the
+flips are NOT metric-drift (persist with ε/supp/theater all pinned); the mechanism is victim
+COUNT × `critical_mass_threshold`(=3) via `resolve_coalition_power` at the powerless seat —
+app_store/streaming stake-arm derived 3 victims (coalition fires) vs four-tuple 2 (no fire);
+hospital 3-vs-3 survived, consistent. **Finding about the criterion (NOT retro-applied — bin-blind
+discipline):** (b) is incomplete — the orbit reads victim count via coalition, not only the
+(HasB,HasV) boolean; a corpus-scale run must pre-register extended (b) = boolean match AND
+victim-count same-side-of-threshold. **Robust separate signal — CLAIM-layer framing effect:** all
+3 evaluable contention topics, stakeholder arm claims `rope`, four-tuple claims `tangled_rope`
+(3/3); engine corrects both to snare (claim moves, computed type doesn't). **Type-C/B mechanism
+read:** the engine has no framing-sensitive classification layer (orbit = f(authored metrics +
+victim-count); perspectives ignored, A1); "framing moves the type" reduces to "framing authors
+different structure" — here the claim (robust) and victim-enumeration granularity (resolution,
+excludable). The computed classification SURVIVED every same-grain comparison; the framing
+perturbed the authored claim (seat-dependent) and the enumeration grain. Whether residual
+structure-drift is Type-B or generation noise is NOT settled at n=6 → corpus-scale run + the 2×2
+model×framing Ω. Structure pass untestable (all 4 evaluable high-ε; the one low-ε topic was
+resolution-excluded). Swallowing-trap note: the all-metric-pin control's first run returned
+empty-equals-empty and falsely read "metric-drift"; caught + re-run, corrected result is the
+opposite. **Method validated; corpus-scale census is the next forward move (with corrected (b)).**
+
+**4c evaluability refinements (operator, 2026-06-07):** (1) **evaluability is judged BIN-BLIND** —
+the (a)+(b) call is made/recorded with its basis BEFORE bin (survived/flipped) is computed, so a
+cold reader can confirm the exclusion wasn't bin-aware; a bin-correlated exclusion criterion is
+how the flattering bias re-enters under the name of strictness (option-2 "exact match" was
+rejected for exactly this — tightening (b) preferentially drops marginal SURVIVORS, shifting the
+census toward flips/Type-B). The asymmetry lives ONLY in per-flip scrutiny, applied after bin
+assignment. (2) **(b) is a substrate DIFF, not a judgment** — but NOT literal derived-name-set
+equality (names are chosen independently per arm → would mark all topics unevaluable for a naming
+reason). The orbit-relevant substrate the name-set stands in for is the `(HasBeneficiaries,
+HasVictims)` existence profile (A2: `derive_directionality` reads those booleans + context-power +
+metrics, never agent names/counts); (b) = bin-blind equality of that boolean profile between arms.
+(3) **(a) same primary object** remains the residual judgment (does each arm's `human_readable`/
+constraint name the same object), recorded bin-blind with basis — the watched call.
+
 **Follow-on Ω (filed, gated on 4b being cleared): 2×2 model×framing perturbation** — the
 straitjacket verdict and Type-C/B census are Gemini-conditional; whether the framing-perturbation
 survival rate survives a model change (mountain-and-frame asked of the generator, not the engine)

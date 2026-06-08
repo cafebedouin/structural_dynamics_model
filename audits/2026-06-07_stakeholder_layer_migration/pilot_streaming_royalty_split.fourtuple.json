@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "pilot_streaming_royalty_split",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Streaming Royalty Split Between Major Labels and Dominant Service",
+    "topic_domain": "media/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_record_labels",
+      "dominant_streaming_service",
+      "superstar_artists"
+    ],
+    "victims": [
+      "mid_list_and_independent_artists",
+      "songwriters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mid-List Artist",
+      "comment": "PERSPECTIVE 1: MID-LIST ARTIST (SNARE) \u2014 Bound by long-term contracts and dependent on platform exposure for career viability. Exit from their label or the streaming ecosystem is career-threatening. They experience the system as almost pure extraction, receiving a minuscule fraction of the value they create."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Music Subscriber",
+      "comment": "PERSPECTIVE 2: MUSIC SUBSCRIBER (ROPE) \u2014 Experiences a pure coordination good: near-universal access to music for a low, flat fee. Unaware of the extractive dynamics and can easily exit to a competitor or alternative listening methods. Experiences no extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Record Label",
+      "comment": "PERSPECTIVE 3: MAJOR RECORD LABEL (ROPE) \u2014 Wields its consolidated catalog as a non-negotiable asset, allowing it to dictate terms. From this seat, the arrangement is a highly efficient, global-scale coordination mechanism for monetizing its assets. Experiences net-negative extraction (subsidy)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Dominant Streaming Service",
+      "comment": "PERSPECTIVE 4: THE STREAMING SERVICE (TANGLED_ROPE) \u2014 An institutional actor that both benefits from and is constrained by the arrangement. It requires the labels' catalogs to maintain its market position (constraining exit), but its platform is the primary coordination point. It experiences the system as a hybrid of high-stakes coordination and paying significant rents to the labels."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED_ROPE) \u2014 Sees the complete structure: a genuine and powerful global coordination function (music distribution) that is inextricably linked to an asymmetric extraction mechanism, transferring value from a large base of creators to a small number of institutional consolidators."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "black_box_royalty_accounting",
+      "question": "Is the opaque accounting for royalty pools (e.g., 'pro rata' calculations, non-attributed revenues) a necessary complexity of a global system or an intentional mechanism to obscure and maximize extraction?",
+      "resolution_mechanism": "Mandated third-party audits of streaming service royalty calculations and label distribution statements.",
+      "impact": "If primarily intentional extraction, the constraint's `extractiveness` is understated and it leans more heavily towards a Snare for all non-institutional actors. If necessary complexity, it's a cost of coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether opaque royalty accounting is a coordination cost or an extraction mechanism"
+    },
+    {
+      "id": "artist_leverage_threshold",
+      "question": "At what point of market power or fame does an artist transition from being a victim to a beneficiary of this system?",
+      "resolution_mechanism": "Empirical analysis correlating artist contract terms (royalty percentages, ownership) with listenership metrics, social media reach, and ticket sales.",
+      "impact": "Defines the boundary between the `superstar_artists` (beneficiary) and `mid_list_and_independent_artists` (victim) classes, which affects the perceived ratio of coordination to extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical threshold at which an artist shifts from victim to beneficiary"
+    },
+    {
+      "id": "algorithmic_promotion_as_gatekeeping",
+      "question": "Does the streaming service's algorithmic promotion (e.g., editorial playlists, personalized recommendations) function primarily as a neutral coordination tool (artist discovery) or an extractive gatekeeping mechanism that favors label priorities?",
+      "resolution_mechanism": "Independent audits of the platform's recommendation and playlist-inclusion algorithms to detect bias towards major label content.",
+      "impact": "If it functions as gatekeeping, the `suppression` metric is higher, as artists without label backing are actively suppressed from reaching audiences, reinforcing the Snare-like properties of the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic promotion is a coordination or suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "The royalty split model between a dominant music streaming service and the major record labels represents a textbook Tangled Rope. It solves a massive, genuine coordination problem: providing consumers with instant access to a near-complete catalog of global music. However, this coordination is built upon a highly asymmetric extractive structure. The major labels, holding vast and essential copyright portfolios, leverage their power to negotiate terms that funnel a majority of revenue to them. The streaming service, despite its market dominance, is structurally dependent on these catalogs. The ultimate cost is borne by the artists and songwriters, particularly those in the mid-list or independent tiers, who receive a very small fraction of the revenue generated by their work.",
+    "key_agents": [
+      "Major Record Labels: Primary beneficiary (institutional/arbitrage) - Use consolidated catalogs to dictate terms and maximize revenue share.",
+      "Dominant Streaming Service: Key beneficiary & coordinator (institutional/constrained) - Benefits from subscriber revenue but is constrained by its need for label content.",
+      "Mid-list and Independent Artists: Primary victim (powerless/constrained) - Locked into unfavorable contracts and dependent on the system for exposure, with minimal power to negotiate terms.",
+      "Songwriters: Secondary victim (powerless/constrained) - Often receive even smaller royalty shares than performing artists, despite creating the foundational intellectual property.",
+      "Superstar Artists: Secondary beneficiary (powerful/mobile) - Possess enough leverage to negotiate better terms, benefiting from the system's reach.",
+      "Music Subscribers: Tertiary beneficiary (powerless/mobile) - Receive the coordination benefit (access) with no direct experience of the extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.65) is high because the share of revenue that flows through the institutional layers to the actual creators is exceptionally low. Suppression (0.70) is high due to the oligopolistic power of major labels, the use of long-term and restrictive artist contracts, and the market dominance of the streaming platform, all of which limit viable alternatives for artists. Theater Ratio (0.20) is low because while the royalty accounting is opaque, the core function of global music delivery and payment collection is highly effective, not performative.",
+    "perspectival_gap": "The gap is stark. For labels and subscribers, the system is a Rope, a seamless coordination solution. For the streaming platform, it's a Tangled Rope\u2014a necessary but costly partnership. For the majority of artists, however, it is a Snare\u2014an extractive system they cannot easily escape without sacrificing their careers. This gap between the user/beneficiary experience (Rope) and the creator experience (Snare) is the central feature of the constraint, with the analytical view correctly identifying the overall structure as a Tangled Rope.",
+    "directionality_logic": "Value flows from two sources: subscribers (paying fees) and artists (providing creative labor). It is consolidated by the streaming service and then disproportionately directed towards the major record labels, who in turn distribute a small fraction to their artists based on pre-existing contracts. The primary direction of extraction is from artists towards the institutional actors (labels and the streaming service).",
+    "mandatrophy_analysis": "This constraint story prevents mandatrophy by refusing to accept the 'coordination' narrative at face value. While the service provides a genuine public good (access to music), the DR classification insists on examining who pays for it and who benefits. By classifying it as a Tangled Rope, the system correctly identifies that a valid coordination function is being used to operate and legitimize a simultaneous, and severe, extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "artist_label_contract_terms",
+      "live_music_venue_viability"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "pilot_payday_lending",
+    "version": "1.0",
+    "generated_date": "2024-05-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "High-Interest Payday Lending",
+    "topic_domain": "financial_services/consumer_credit",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payday_lending_companies"
+    ],
+    "victims": [
+      "low_income_borrowers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Low-Income Borrower",
+      "comment": "PERSPECTIVE 1: THE BORROWER (SNARE) - Facing an immediate cash shortfall with no access to traditional credit, the borrower is trapped by high fees and interest rates that create a cycle of debt. Exit is structurally impossible for many."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Payday Lending Company",
+      "comment": "PERSPECTIVE 2: THE LENDER (ROPE) - From the lender's perspective, this is a pure coordination mechanism: providing a high-risk financial product (liquidity) to an underserved market. The high rates are framed as pricing-in risk. They are a net beneficiary and can exit the market at will."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumer Protection Advocate",
+      "comment": "PERSPECTIVE 3: THE ADVOCATE (TANGLED ROPE) - Advocacy groups see both the genuine coordination problem (a real need for emergency credit) and the deeply extractive nature of the current solution. They work within the system to reform it, so they engage with both its functions. Their exit is constrained by political opposition and funding."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: THE ANALYST (SNARE) - The analyst sees the 'liquidity provision' story as a thin cover for a pure extraction mechanism. The product is designed to be difficult to repay, ensuring repeat business and maximizing fees. The coordination function is minimal compared to the extractive function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "necessity_vs_exploitation",
+      "question": "Is payday lending an exploitative practice, or a necessary (if high-cost) service for a population with no other options?",
+      "resolution_mechanism": "Analysis of economic outcomes for borrowers in areas with and without access to payday loans. Comparison with outcomes for users of alternative financial services (e.g., community development financial institutions).",
+      "impact": "If deemed a necessary service, classification could shift towards Tangled Rope, acknowledging a more substantial coordination function. If purely exploitative, Snare classification is confirmed.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the service fills a necessary market gap or is purely exploitative."
+    },
+    {
+      "id": "rationality_vs_cognitive_exploitation",
+      "question": "Are borrowers rational actors knowingly choosing a high-cost option, or are they victims of cognitive biases (e.g., optimism bias, present bias) that the industry is designed to exploit?",
+      "resolution_mechanism": "Behavioral economics studies of payday loan borrowers' decision-making processes and their understanding of the long-term costs.",
+      "impact": "If primarily cognitive exploitation, this strengthens the Snare classification by highlighting the asymmetry of knowledge and the suppression of rational choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Role of cognitive biases in borrower decision-making."
+    },
+    {
+      "id": "regulatory_effectiveness",
+      "question": "Does government regulation (e.g., interest rate caps) effectively mitigate the harm, or does it eliminate access to credit and push borrowers to even more dangerous, unregulated lenders?",
+      "resolution_mechanism": "Comparative jurisdictional analysis of states with varying levels of regulation, tracking consumer bankruptcy rates, use of illegal lenders, and other welfare indicators.",
+      "impact": "Effective regulation would lower the constraint's suppression and extractiveness scores. Ineffective regulation might inadvertently increase them by creating a black market.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of regulatory interventions like rate caps on borrower welfare."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "High-interest payday lending targets low-income individuals who lack access to conventional credit. Lenders offer small, short-term loans with extremely high fees and interest rates, often equivalent to APRs of 300-700%. The business model relies on borrowers being unable to repay the initial loan, forcing them to 'roll over' the debt into a new loan, thereby trapping them in a cycle of accumulating fees and principal.",
+    "key_agents": [
+      "Low-Income Borrowers: Primary target (powerless/trapped) - Bear the full cost of the extraction.",
+      "Payday Lending Companies: Primary beneficiary (institutional/arbitrage) - Profit from the interest and fees generated by the debt cycle.",
+      "Consumer Protection Advocates: Organized opposition (organized/constrained) - Attempt to reform the system through legal and political action.",
+      "Analytical Observer: External analyst (analytical/analytical) - Recognizes the structural nature of the debt trap."
+    ],
+    "logic_rationale": "Extractiveness (0.85) is extremely high due to the triple-digit APRs designed for debt rollover. Suppression (0.75) is high because the target demographic has few or no alternative sources of credit, making them a captive market. Lenders also use aggressive collection tactics. Theater Ratio (0.30) is moderate; while the primary function is extraction, there is a performance of providing a legitimate financial service, complete with storefronts, marketing, and contractual paperwork.",
+    "perspectival_gap": "The primary gap is between the lender, who sees a legitimate (if high-risk) Rope providing a service, and the borrower, who experiences a Snare they cannot escape. The analyst confirms the borrower's perspective, seeing the service-provision narrative as a cover for a structurally extractive model. The advocate sees a Tangled Rope, acknowledging the real need for credit that the industry purports to serve, while fighting the extractive terms.",
+    "directionality_logic": "The flow of value is unambiguously from the low-income borrowers (victims) to the payday lending companies (beneficiaries). The borrowers' trapped status and the lenders' arbitrage-level exit options create the maximum possible potential difference for the directionality derivation, ensuring the effective extraction (chi) is very high for the victim and negative (a subsidy) for the beneficiary.",
+    "mandatrophy_analysis": "This classification correctly identifies the 'coordination' function (providing liquidity) as a pretext for a Snare. A naive analysis might label this a Rope ('a contract between two consenting parties') or a Tangled Rope ('it helps people but is expensive'). The Deferential Realism framework, by centering the perspectival experience of the trapped agent and the structural design of the product, correctly identifies the arrangement as a pure extraction mechanism with a cover story."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "household_financial_stability",
+      "consumer_bankruptcy_rates"
+    ]
+  }
+}

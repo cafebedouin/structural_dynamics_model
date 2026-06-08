@@ -1,0 +1,81 @@
+==============================================================================
+EVALUABILITY (bin-blind: computed from (a) same-object + (b) HasB/HasV profile only)
+==============================================================================
+
+pilot_app_store_commission [contention]
+  (a) object  stake='Dominant Mobile Platform App Store Commission'  four='Dominant Mobile Platform App Store Commission'
+  (b) profile stake=('true', 'true') four=('true', 'true')  match=True
+
+pilot_streaming_royalty_split [contention]
+  (a) object  stake='Streaming Music Royalty Split Agreement'  four='Streaming Royalty Split Between Major Labels and Domina'
+  (b) profile stake=('true', 'true') four=('true', 'true')  match=True
+
+pilot_hospital_insurer_reimbursement [contention]
+  (a) object  stake='Negotiated Reimbursement Rates for Healthcare Services'  four='Negotiated Reimbursement Rates between Large Hospital S'
+  (b) profile stake=('true', 'true') four=('true', 'true')  match=True
+
+pilot_payday_lending [non_contention]
+  (a) object  stake='High-Interest Payday Lending'  four='High-Interest Payday Lending'
+  (b) profile stake=('true', 'true') four=('true', 'true')  match=True
+
+pilot_time_zones [non_contention]
+  (a) object  stake='Coordinated Standard Time Zones'  four='Coordinated Standard Time Zones'
+  (b) profile stake=('true', 'true') four=('true', 'false')  match=False
+
+pilot_lightspeed_latency [non_contention_mountain]
+  (a) object  stake='Speed-of-light Floor on Communication Latency'  four='Speed-of-light floor on inter-datacenter communication '
+  (b) profile stake=('true', 'true') four=('false', 'false')  match=False
+
+==============================================================================
+BINS (ε-pinned primary; raw = contaminated upper bound on movement)
+==============================================================================
+
+pilot_app_store_commission [contention] eval(b)=True
+  eps stake=0.8 four=0.7  supΔ=0.05 thΔ=0.00
+  orbit stake     ['tangled_rope', 'snare', 'rope', 'snare']
+  orbit stake-pin ['tangled_rope', 'snare', 'rope', 'snare']  (at ε=0.7)
+  orbit four      ['snare', 'snare', 'rope', 'snare']
+  sig stake=false_ci_rope four=constructed_high_extraction | analytic stake=snare four=snare
+  BIN(ε-pinned): FLIPPED
+
+pilot_streaming_royalty_split [contention] eval(b)=True
+  eps stake=0.7 four=0.65  supΔ=0.10 thΔ=0.10
+  orbit stake     ['tangled_rope', 'snare', 'rope', 'snare']
+  orbit stake-pin ['naturalized', 'snare', 'rope', 'snare']  (at ε=0.65)
+  orbit four      ['snare', 'snare', 'rope', 'snare']
+  sig stake=false_ci_rope four=constructed_high_extraction | analytic stake=snare four=snare
+  BIN(ε-pinned): FLIPPED
+
+pilot_hospital_insurer_reimbursement [contention] eval(b)=True
+  eps stake=0.7 four=0.7  supΔ=0.05 thΔ=0.10
+  orbit stake     ['tangled_rope', 'snare', 'rope', 'snare']
+  orbit stake-pin ['tangled_rope', 'snare', 'rope', 'snare']  (at ε=0.7)
+  orbit four      ['tangled_rope', 'snare', 'rope', 'snare']
+  sig stake=false_ci_rope four=constructed_high_extraction | analytic stake=snare four=snare
+  BIN(ε-pinned): SURVIVED
+
+pilot_payday_lending [non_contention] eval(b)=True
+  eps stake=0.8 four=0.85  supΔ=0.05 thΔ=0.10
+  orbit stake     ['snare', 'snare', 'rope', 'snare']
+  orbit stake-pin ['snare', 'snare', 'rope', 'snare']  (at ε=0.85)
+  orbit four      ['snare', 'snare', 'rope', 'snare']
+  sig stake=constructed_high_extraction four=constructed_high_extraction | analytic stake=snare four=snare
+  BIN(ε-pinned): SURVIVED
+
+pilot_time_zones [non_contention] eval(b)=False
+  eps stake=0.01 four=0.02  supΔ=0.20 thΔ=0.01
+  orbit stake     ['rope', 'rope', 'rope', 'rope']
+  orbit stake-pin ['rope', 'rope', 'rope', 'rope']  (at ε=0.02)
+  orbit four      ['rope', 'rope', 'rope', 'rope']
+  sig stake=constructed_low_extraction four=coupling_invariant_rope | analytic stake=rope four=rope
+  BIN(ε-pinned): UNEVALUABLE(b-profile-mismatch)
+
+pilot_lightspeed_latency [non_contention_mountain] eval(b)=False
+  eps stake=0.0 four=0.0  supΔ=1.00 thΔ=0.00
+  orbit stake     ['scaffold', 'scaffold', 'scaffold', 'scaffold']
+  orbit stake-pin ['scaffold', 'scaffold', 'scaffold', 'scaffold']  (at ε=0.0)
+  orbit four      ['mountain', 'mountain', 'mountain', 'mountain']
+  sig stake=constructed_low_extraction four=natural_law | analytic stake=scaffold four=mountain
+  BIN(ε-pinned): UNEVALUABLE(b-profile-mismatch)
+
+saved step4c_partition.json

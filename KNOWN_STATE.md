@@ -162,6 +162,21 @@ sequencing, deferred Ωs). Verdicts, each witnessed in AUDIT.md:
   Right-sizing: a consumer grep would have settled this at the 4b gate, three turns earlier.
   Residual filed standalone as OQ-86 (pairwise who-extracts commentary; not in the migration).
   **4c (cross-framing census / Ω_E / Type-C/B) is the unblocked next move.**
+- **4c RAN (same day, PILOT n=6); report `STEP4C_PARTITION.md`; presented not ruled.** Per-topic
+  partition (bin-blind evaluability = (a) same-object + (b) (HasB,HasV) profile; ε-pinned): 2
+  survived, 2 flipped, 2 unevaluable. Headline type survived in all 4 evaluable (snare). **Both
+  flips dissolved to a resolution artifact by per-flip scrutiny:** all-metric-pin control showed
+  not-metric-drift; mechanism = victim COUNT × critical_mass_threshold(=3) via
+  resolve_coalition_power at the powerless seat (flips = stake 3 victims vs four 2; hospital 3-v-3
+  survived). **Criterion finding (next corpus-scale run, pre-register):** (b) incomplete — orbit
+  reads victim count via coalition, not just the boolean; extend (b) to count-same-side-of-
+  threshold. **Robust separate signal:** claim-layer framing effect — stakeholder claims `rope`,
+  four-tuple claims `tangled_rope` (3/3 contention), engine corrects both to snare (claim moves,
+  computed type doesn't). Engine has no framing-sensitive classification layer (orbit =
+  f(metrics, victim-count); perspectives ignored per A1). Type-C/B not settled at n=6 → corpus
+  run + 2×2 model Ω. **Swallowing-trap recurred:** the all-metric-pin control's first run
+  returned empty==empty and falsely read "identical/metric-drift"; caught, re-run, corrected
+  result was the OPPOSITE — a diff-of-two-empties is a false pass, not a witness.
 
 ---
 
