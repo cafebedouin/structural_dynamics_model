@@ -3700,14 +3700,26 @@ discipline).
 
 ---
 
-## OQ-87 — Committer-axis experiments (CA-1/CA-3 done): detection-independence is real; two corpora, two gates
+## OQ-87 — Committer-axis experiments (detection-independence / Type-B): BANKED, existence proof UNPROVEN
 
-**Ω-type:** Ω_E (detection-independence is measurable and witnessed real) + Ω_P (whether to build a
-detection-independence corpus and/or a C/B corpus — operator's, two separate green lights).
+**Ω-type:** Ω_E (detection-independence is measurable; on kernel_v1 it is saturation-confounded, not
+proven) + Ω_P (whether to fund a larger de-leaked study — operator's, fresh decision).
 
-**Status:** open — CA-1 + CA-3 complete (2026-06-07); report
-`audits/2026-06-07_stakeholder_layer_migration/CA_COMMITTER_AXIS.md`. CA-2 (framing-dependence /
-C/B) unstarted.
+**Status:** partial — **BANKED/PARKED 2026-06-08.** Cold-read entry point:
+`audits/2026-06-07_stakeholder_layer_migration/COMMITTER_THREAD_HANDOFF.md`. Sub-questions answered;
+the overarching detection-independence existence proof is **UNPROVEN** and its next move is a
+fresh-decision larger study (NOT a parameter change). **Banked verdicts:** two-axis architecture
+real, observer-axis Type-B architecturally foreclosed, committer axis is the separate
+structure-sensitive surface (TWO_AXIS_NOTE); CA-1 field partition confirmed (cross-check);
+CA-3 kernel_v1 diverge-A is ~89% drift-convention saturation, NOT load-bearing (cause-witness);
+Step 0 observer claim-drift MODEL-STABLE (reproduces under Sonnet); pilot — husk-saturation is
+reading-set + magnitude-authoring, NOT a Haiku prior, NOT removable by the Haiku→Sonnet bump
+(matched run overturned the unmatched Step 1b). **Next move (fresh decision):** a much-LARGER
+de-leaked kernel study to average out the dominant reading-set variance, then CA-3 + diverge-A
+cause-composition vs the pinned 3-conjunct criterion — rebuild-scale, NOT a model swap. Independent
+second experiment: **CA-2** (committer C/B / framing-dependence; archive cannot substitute — varies
+content not framing). Reports: TWO_AXIS_NOTE, CA_COMMITTER_AXIS, PILOT_STEP01_REPORT. Run-tagged
+pilot stories untracked/glob-isolated/disposable. Cost spent ≈284 calls.
 **Origin:** 2026-06-07, the two-axis correction (TWO_AXIS_NOTE) → "more experiments before a corpus."
 
 The committer axis is a real, content-driven classification surface separate from the observer

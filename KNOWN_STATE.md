@@ -177,6 +177,21 @@ sequencing, deferred Ωs). Verdicts, each witnessed in AUDIT.md:
   run + 2×2 model Ω. **Swallowing-trap recurred:** the all-metric-pin control's first run
   returned empty==empty and falsely read "identical/metric-drift"; caught, re-run, corrected
   result was the OPPOSITE — a diff-of-two-empties is a false pass, not a witness.
+- **Committer-axis thread BANKED/PARKED (2026-06-08); cold-read entry
+  `audits/2026-06-07_stakeholder_layer_migration/COMMITTER_THREAD_HANDOFF.md`; tracker OQ-87
+  (partial).** Banked verdicts: two-axis architecture real (observer orbit framing-blind incl. to
+  cs_structure; committer axis separate structure-sensitive surface → observer-axis Type-B
+  architecturally foreclosed); CA-1 committer field partition confirmed (framing-invariant,
+  content-sensitive); CA-3 kernel_v1 diverge-A 74 is ~89% one drift convention (saturation), NOT
+  load-bearing (per-item cause witness — banked the standing rule *a gating count needs its
+  composition in the same pass*, build_discipline.md); Step 0 observer claim-drift MODEL-STABLE
+  (rope/tangled_rope reproduces 3/3 under Sonnet); pilot Steps 1/1b/matched — kernel_v1
+  husk-saturation is reading-set + magnitude-authoring, NOT a Haiku prior, NOT removable by the
+  Haiku→Sonnet bump (the MATCHED run — same manifests, vary only GEN model — overturned the
+  unmatched Step 1b "Sonnet de-saturates"; ack-false is reading-set-dominated 49–92%, substantial
+  robustly 62–88%). Detection-independence existence proof UNPROVEN; next move is a fresh-decision
+  LARGER de-leaked study (not a model swap), + CA-2 for committer C/B. Run-tagged pilot stories
+  (`prolog/testsets/pilot_*`, `json/pilot_*`) untracked, glob-isolated, disposable. ≈284 gen calls.
 
 ---
 
