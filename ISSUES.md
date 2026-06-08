@@ -3462,6 +3462,21 @@ resolution-excluded). Swallowing-trap note: the all-metric-pin control's first r
 empty-equals-empty and falsely read "metric-drift"; caught + re-run, corrected result is the
 opposite. **Method validated; corpus-scale census is the next forward move (with corrected (b)).**
 
+**TWO-AXIS correction (2026-06-07; report `TWO_AXIS_NOTE.md`).** The 4c "engine has no
+framing-sensitive classification layer" reasoning is scoped to the OBSERVER axis and overreaches
+in the general form. Witnessed (`two_axis_witness.py`): two constraints identical on the observer
+axis (same metrics/benef/victim/scaffold) differing ONLY in committer `cs_structure` give a
+BYTE-IDENTICAL observer orbit but a DIFFERENT committer verdict (`cs_axiom_foreclosed`: base `[]`,
+variant `[core_premise]`). So: observer-axis Type-B is architecturally foreclosed for `dr_type`
+(perspectives ignored, A1 — correct); but the COMMITTER axis (cs_axiom_engine/cs_drift_engine,
+v7 Axiom 7 / Theorem 7) is a SEPARATE structure-sensitive classification surface, untouched by the
+(observer-axis) stakeholder migration and unexercised by the pilot (all 12 arms `cs_structure`=
+absent). **Consequence:** the corpus-scale observer-axis run measures generation-resolution
+variance, NOT C-vs-B (do not inherit the C/B label — observer C/B is answered by architecture).
+The genuine two-axis C/B / detection-independence question is a DIFFERENT, unstarted experiment on
+the committer axis (vary axioms/grounding/drift, hold observer, measure where foreclosure diverges
+from observer-coherence — Theorem 7).
+
 **4c evaluability refinements (operator, 2026-06-07):** (1) **evaluability is judged BIN-BLIND** —
 the (a)+(b) call is made/recorded with its basis BEFORE bin (survived/flipped) is computed, so a
 cold reader can confirm the exclusion wasn't bin-aware; a bin-correlated exclusion criterion is
