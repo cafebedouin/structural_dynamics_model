@@ -45,6 +45,70 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-08 — Type-A snapshot floor + observer residual detector landed (time-aware d; ε-driven flips are NOT empty — 56/100)
+**Files:** prolog/constraint_indexing.pl, prolog/drl_composition.pl, prolog/transition_paths.pl, prolog/temporal_residual.pl, prolog/json_report.pl, prolog/stack.pl, audits/2026-06-08_typea_template_extensibility/, docs/deferential_realism_paper_v7.md
+**Tier:** landed
+
+Pre-rebuild audit (`audits/2026-06-08_typea_template_extensibility/AUDIT.md`) then a **strict Tier-2,
+schema-deferred** build of the Type-A (temporal) observer floor. The engine could express
+classification drift over the authored timeline only through ε (both temporal classifiers read
+time-varying ε from `measurement/5` but called `derive_directionality/3` with **no Time** — d
+frozen). This build threads Time without authoring any time-indexed-d, and adds a read-only residual
+detector.
+
+**What landed (engine plumbing only; NO schema/template change):**
+- `constraint_indexing.pl`: `derive_directionality_at/4` + deterministic `effective_time/3` (the C2
+  frame_policy insertion point) + `:- dynamic time_indexed_directionality_source/4` (empty — the
+  future C1 hook). Fail-closes to `derive_directionality/3`; **byte-identical on the current corpus**
+  (no source facts).
+- `drl_composition.pl`: `classify_at_time/5` surfacing `snap(D, Backed, Eps, Supp, Theater)` (the `/4`
+  delegates; cs_kernel_registry + tests untouched). `Backed=false` flags the `:201` ε=0.5 fabrication
+  and the STOPGAP scalar suppression — so phantom flips across real→fabricated transitions are
+  excludable. Classification math unchanged.
+- `transition_paths.pl`: `snapshot_type` `:130` swapped to `derive_directionality_at` (sync only, NO
+  `backed` — it is default_context-only and nothing reads its backed).
+- `temporal_residual.pl` (NEW, observer-only **category-B** seam diagnostic; reads NO `cs_`): per
+  `(C,Context)` ran-witness (`times_examined`, `backed_times`) + flip composition — real flips only
+  between adjacent `Backed=true` snapshots; type-changes touching a fabricated snapshot counted apart
+  as `fabrication_adjacent_transitions` (a cross-metric hygiene counter, NOT signal). Emitted per
+  constraint by `json_report.pl` (manifest-stamped via the single-writer pipeline).
+
+**Finding (re-witness before citing): the residual is NOT empty on the current corpus.** 56/100
+constraints show ≥1 backed flip; **155 counted flips** across the canonical contexts (e.g.
+`ai_governance_accountability` at the analytical seat: scaffold→tangled_rope, t3→t6, Δε=0.05). Because
+d is frozen on the current corpus (no time-indexed source), **every backed flip is observer-metric-
+driven (ε/suppression/theater), not d-driven.** This contradicts the pre-build "expected empty" prior
+and bears on the D-fork: substantial ε-driven flips at fixed role/d mean the cheap path produces
+signal, so role-time-indexing (OQ-83 branch b) is NOT forced by emptiness.
+
+**Bounds on the 155 (so it is not banked as an unqualified count):** |Δε| median 0.07, 120/155 > 0.05,
+only 1/155 in the ≤0.02 jitter band → the flips track real ε movement, not boundary jitter; 150/155
+flip-intervals sit on a fully-backed series. **Caveat (the classifier-sync OPEN, below): at the
+default context — the only context with a second classifier — 2 of 52 counted flips touch a
+snapshot_type-vs-classify_at_time disagreement point and are flagged classifier-sensitive for the
+offline join.** Whether each flip is a genuine Type-A residual vs a committer-shadow is the OFFLINE
+join — gated on the committer-time enrichment (see OQ-83 note).
+
+**Verification (all 9 pass; audit dir has the recipes):** V1 pipeline byte-identical after stripping
+the new block + manifest (no regression); V2 `derive_directionality_at` ≡ `derive_directionality` +
+deterministic over 500 (C,T) pairs; **V3 — `test_snapshot_migration` green, but the named-test "sync"
+is the WEAK claim: full `classify_at_time` ≡ `snapshot_type` is FALSE and was always false (3 unique
+mismatch points at default context — the earlier "7" was metric-duplicated; my edit is sync-neutral,
+witnessed on stashed code). The "two classifiers in sync" must-hold is OPEN, not passed. Contamination
+join {3 mismatch}∩{52 default flips} = 2 flagged (clinical_deskilling_automation 0→2; milblogger
+12→18). Likely cause [UNVERIFIED]: snapshot_type calls classify_from_metrics WITHOUT the `nb_setval`
+temporal theater/eps state classify_at_time threads, so the piton/excess gates read stale/static.**
+V4 residual reads d off
+`/5` (0 second-derive); V5 real flip well-formed; V6 retracting an authored ε moves a real flip into
+`fabrication_adjacent` and restores (guard fires); V8 no `cs_` in the module, imported only by
+stack+json_report; V9 `git diff` touches only 5 engine files, no `schemas/`.
+
+**Stale doc corrected (operator-flagged, substrate-confirmed):** v7 §4.5 "exactly one intentional
+bridge … and nothing else" undercounts the cross-axis seam. The **(A) data bridge** is still exactly
+one (`influences`→`detect_necessity_inheritance`); but **(B) read-only seam diagnostics** number ≥3
+(`cs_drift_mismatch`, `cs_kernel_registry`→`classify_at_time`, `cs_pattern_detection`→
+`constraint_signature`). Separation holds; the enumeration is wrong. (Audit §0; OQ-83 follow-on.)
+
 ## 2026-06-07 — Stakeholder-layer migration Pass-1 audit: computed path ignores authored perspectives (controlled null); straitjacket witnessed; mandatrophy surface is a dangling wire
 **Files:** prolog/constraint_indexing.pl, prolog/drl_core.pl, prolog/constraint_data.pl, prolog/probe_harness.pl, prolog/inferred_coupling_protocol.pl, prolog/drl_purity_network.pl, prolog/reading_diff.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, audits/2026-06-07_stakeholder_layer_migration/
 **Tier:** landed

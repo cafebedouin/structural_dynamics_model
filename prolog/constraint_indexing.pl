@@ -33,6 +33,7 @@
     sigmoid_f/2,
     canonical_d_for_power/2,
     derive_directionality/3,
+    derive_directionality_at/4,     % Type-A snapshot floor: time-aware d (OQ-83)
     sigmoid_params/5,
     sigmoid_d1/2,
     sigmoid_d2/2,
@@ -411,6 +412,33 @@ derive_directionality(Constraint, Context, D) :-
     ->  true
     ;   canonical_d_for_power(Power, D)
     ).
+
+%% derive_directionality_at(+Constraint, +Context, +Time, -D)
+%  Time-aware directionality (Type-A snapshot floor, OQ-83 / 2026-06-08).
+%  Precedence: a future time-indexed-d source at the effective time, else the
+%  static derive_directionality/3 — fail-CLOSE to real data, never fabricate d.
+%
+%  On the current corpus time_indexed_directionality_source/4 has NO facts, so
+%  this is byte-identical to derive_directionality/3 at every Time (the
+%  no-regression / fail-close witness, V2). effective_time/3 is the C2
+%  (frame_policy) insertion point and MUST stay deterministic — a choice point
+%  here would break the backtracking-identity the static pipeline relies on.
+:- dynamic time_indexed_directionality_source/4.  % (C,Context,Time,D); empty — future C1 hook
+
+derive_directionality_at(Constraint, Context, Time, D) :-
+    effective_time(Constraint, Time, EffTime),
+    (   time_indexed_directionality_source(Constraint, Context, EffTime, D0)
+    ->  D = D0
+    ;   derive_directionality(Constraint, Context, D)
+    ).
+
+%% effective_time(+Constraint, +Time, -EffTime) is det.
+%  Default (no frame_policy authored): EffTime = Time (Living-shaped, and
+%  identical to today because there is no time-indexed source to evaluate).
+%  When C2 lands, an Originalist policy rebinds EffTime to interval start (t0);
+%  THIS clause is the insertion point — keep C2 an insert, not a rewrite of
+%  derive_directionality_at. Must remain deterministic (single solution).
+effective_time(_Constraint, Time, Time).
 
 %% beneficiary_victim_directionality(+Constraint, +Context, -D)
 %  Derive directionality from constraint structure (beneficiary/victim data).

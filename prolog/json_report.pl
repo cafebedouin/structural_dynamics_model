@@ -21,6 +21,7 @@
 :- use_module(signature_detection, [false_natural_law/2]).
 :- use_module(cs_pattern_detection, [cs_pattern/3, cs_verdict/2, cs_has_fields/1,
                                      cs_grounding_mismatch/3]).
+:- use_module(temporal_residual, [residual_report/2]).  % Type-A observer residual (OQ-83; category-B)
 :- use_module(logical_fingerprint).
 :- use_module(report_generator).
 :- use_module(drl_lifecycle).
@@ -474,6 +475,17 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   true
     ),
 
+    % temporal_residual (Type-A observer residual: per-context flip-events; OQ-83).
+    % Gated on measurement presence (same as drift_trajectory; absent = no temporal
+    % data, distinct from times_examined>0/flips=0). OBSERVER-ONLY — committer drift
+    % is emitted separately (cs_drift_* below); reconciliation is an offline join.
+    (   narrative_ontology:measurement(_, C, _, _, _)
+    ->  format(S, '      "temporal_residual": ', []),
+        write_temporal_residual(S, C),
+        format(S, ',~n', [])
+    ;   true
+    ),
+
     % --- Compute diagnostic summary once (hoisted for T12 access) ---
     (   catch(diagnostic_summary:diagnostic_summary(C, Summary), _, fail)
     ->  true
@@ -764,6 +776,47 @@ write_accel_list(S, [acc(T, A)]) :- !,
 write_accel_list(S, [acc(T, A) | Rest]) :-
     format(S, '{"t": ~w, "acc": ~6f}, ', [T, A]),
     write_accel_list(S, Rest).
+
+%% write_temporal_residual(+Stream, +Constraint)
+%  Type-A observer residual: per-context ran-witness (times_examined,
+%  backed_times) + flip composition (real flips vs fabrication_adjacent_transitions).
+%  Reads temporal_residual only — observer-axis, no cs_ read here.
+write_temporal_residual(S, C) :-
+    temporal_residual:residual_report(C, Report),
+    format(S, '{~n', []),
+    write_ctx_residual_list(S, Report),
+    format(S, '      }', []).
+
+write_ctx_residual_list(_, []).
+write_ctx_residual_list(S, [ctx(Label, Res)]) :- !,
+    write_one_ctx_residual(S, Label, Res, false).
+write_ctx_residual_list(S, [ctx(Label, Res) | Rest]) :-
+    write_one_ctx_residual(S, Label, Res, true),
+    write_ctx_residual_list(S, Rest).
+
+write_one_ctx_residual(S, Label, ctx_residual(NT, NB, Flips, FabAdj), Comma) :-
+    length(Flips, NFlips),
+    format(S, '        "~w": {"times_examined": ~w, "backed_times": ~w, "flips": ~w, "fabrication_adjacent_transitions": ~w, "flip_events": [',
+           [Label, NT, NB, NFlips, FabAdj]),
+    write_flip_list(S, Flips),
+    format(S, ']}', []),
+    (Comma == true -> format(S, ',~n', []) ; format(S, '~n', [])).
+
+write_flip_list(_, []).
+write_flip_list(S, [F]) :- !, write_one_flip(S, F).
+write_flip_list(S, [F | Rest]) :-
+    write_one_flip(S, F), format(S, ', ', []),
+    write_flip_list(S, Rest).
+
+write_one_flip(S, flip(T1, T2, Ty1, Ty2, DEps, DSupp, DTheater)) :-
+    format(S, '{"t1": ~w, "t2": ~w, "from": "~w", "to": "~w", "d_eps": ', [T1, T2, Ty1, Ty2]),
+    write_num_or_null(S, DEps),
+    format(S, ', "d_supp": ', []), write_num_or_null(S, DSupp),
+    format(S, ', "d_theater": ', []), write_num_or_null(S, DTheater),
+    format(S, '}', []).
+
+write_num_or_null(S, V) :- number(V), !, format(S, '~4f', [V]).
+write_num_or_null(S, _) :- format(S, 'null', []).
 
 %% mono_status_to_string(+Status, -String)
 %  Converts orbit_monotonicity/2 term to a JSON-safe string.

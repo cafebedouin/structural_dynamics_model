@@ -170,7 +170,20 @@ constraint_history(C, Timeline) :-
 %% classify_at_time(+C, +Time, +Context, -Type)
 %  Determines constraint type at a specific time from a given context.
 %  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
+%  /4 is the stable API (cs_kernel_registry, tests); it delegates to /5 and
+%  discards the snapshot Info.
 classify_at_time(C, Time, Context, Type) :-
+    classify_at_time(C, Time, Context, Type, _Info).
+
+%% classify_at_time(+C, +Time, +Context, -Type, -Info)
+%  Type-A snapshot floor (2026-06-08): surfaces Info = snap(D, Backed, Eps, Supp,
+%  Theater) for the observer residual detector WITHOUT changing Type. Backed=false
+%  marks a snapshot whose ε or suppression was FABRICATED (the :201 0.5 default or
+%  the STOPGAP scalar) rather than authored at this Time, so the residual can
+%  exclude phantom flips across real→fabricated transitions (catch #3). The
+%  classification math is unchanged; only derive_directionality is now time-aware
+%  (identical on the current corpus — no time-indexed source).
+classify_at_time(C, Time, Context, Type, Info) :-
     % Row-23 fail-close (OQ-41): absent temporal suppression_requirement must NOT
     % fabricate Supp=0.5 — that value sits below snare_suppression_floor=0.60 and
     % silently mis-sorts the temporal timeline low.
@@ -191,27 +204,38 @@ classify_at_time(C, Time, Context, Type) :-
     % requirement, not an engine ruling). Do NOT build a scalar/temporal equivalence check on
     % top of this bridge — it is a stopgap, not a sanctioned second representation.
     (   narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)
-    ->  classify_at_time_with_supp(C, Time, Context, Supp, Type)
+    ->  classify_at_time_with_supp(C, Time, Context, Supp, true, Type, Info)
     ;   narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
-    ->  classify_at_time_with_supp(C, Time, Context, Supp, Type)   % STOPGAP scalar fallback
-    ;   Type = unknown
+    ->  classify_at_time_with_supp(C, Time, Context, Supp, false, Type, Info) % STOPGAP scalar (not Backed)
+    ;   Type = unknown, Info = snap(none, false, none, none, none)
     ).
 
-classify_at_time_with_supp(C, Time, Context, Supp, Type) :-
-    (narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
+%% classify_at_time_with_supp(+C,+Time,+Context,+Supp,+SuppBacked,-Type,-Info)
+%  Internal. SuppBacked = was Supp authored at this Time (measurement/5) vs the
+%  STOPGAP scalar fallback. Info = snap(D, Backed, Eps, Supp, Theater).
+classify_at_time_with_supp(C, Time, Context, Supp, SuppBacked, Type,
+                           snap(D, Backed, BaseX, Supp, TheaterOut)) :-
+    (   narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX)
+    ->  EpsBacked = true
+    ;   BaseX = 0.5, EpsBacked = false   % :201 fabrication — now FLAGGED, not silent
+    ),
     Context = context(_, _, _, spatial_scope(Scope)),
-    constraint_indexing:derive_directionality(C, Context, D),
+    constraint_indexing:derive_directionality_at(C, Context, Time, D),
     constraint_indexing:sigmoid_f(D, PowerMod),
     constraint_indexing:scope_modifier(Scope, ScopeMod),
     Chi is BaseX * PowerMod * ScopeMod,
     % Thread temporal theater_ratio so piton gate sees the time-varying value.
     (narrative_ontology:measurement(_, C, theater_ratio, Time, TR_t)
-    ->  nb_setval(classify_at_time_theater, tr(C, TR_t))
-    ;   nb_setval(classify_at_time_theater, none)
+    ->  nb_setval(classify_at_time_theater, tr(C, TR_t)), TheaterOut = TR_t
+    ;   nb_setval(classify_at_time_theater, none), TheaterOut = none
     ),
     % Thread temporal ε so excess_extraction subscore sees the time-varying value.
     nb_setval(classify_at_time_eps, eps(C, BaseX)),
-    drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type).
+    drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type),
+    % Backed iff BOTH ε and suppression were authored at this Time. Theater
+    % absence is motion-neutral (gate falls back to the constant static theater,
+    % which cannot itself create a between-time flip), so it does not gate Backed.
+    (   EpsBacked == true, SuppBacked == true -> Backed = true ; Backed = false ).
 
 %% transformation_detected(+C, +FromType, +ToType, -T1, -T2)
 % Detects when constraint transformed from one type to another

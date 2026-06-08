@@ -127,7 +127,12 @@ snapshot_type(C, Time, Type) :-
     ),
     constraint_indexing:default_context(Context),
     Context = context(_, _, _, spatial_scope(Scope)),
-    constraint_indexing:derive_directionality(C, Context, D),
+    % Time-aware d (Type-A floor): keeps snapshot_type ≡ classify_at_time under
+    % the d-threading (test_snapshot_migration). Identical to the static call on
+    % the current corpus (no time-indexed source). No `backed` flag here:
+    % snapshot_type is default_context-only and nothing reads it (the residual
+    % reads classify_at_time/5).
+    constraint_indexing:derive_directionality_at(C, Context, Time, D),
     constraint_indexing:sigmoid_f(D, PowerMod),
     constraint_indexing:scope_modifier(Scope, ScopeMod),
     Chi is E * PowerMod * ScopeMod,

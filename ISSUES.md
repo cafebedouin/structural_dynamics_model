@@ -3356,6 +3356,42 @@ Phase-A diff, not in advance).
 
 **Status:** open — Pass-1 audit complete and witnessed (`audits/2026-06-07_stakeholder_layer_migration/AUDIT.md`); migration plan written (`MIGRATION_PLAN.md`, same dir). **Phase A step 1 LANDED (2026-06-07): schema dial-set declaration — `stakeholders[]` + `six_questions` optional in `schemas/constraint_story_schema.json`; five roles declared (contender ruled out, contention derived); Pattern-5 authored-empty conditional + R5 provenance conditional; witness suite 7/7 incl. four negative controls each biting at its intended guard (`phase_a_schema_witness.py`/`.txt`, same dir; validated with Draft7, the pipeline's actual validator). R5 genealogy fields included — their gate (mandatrophy-abandonment read) was closed same day.** **Phase A step 2 LANDED (2026-06-07): compiler emission** — `constraint_stakeholder/7` + `stakeholder_secondary_role/3` + `stakeholder_non_agent/2` + `disappearance_verdict/2` + `founding_problem_status/2`, and role-derived beneficiary/victim (beneficiary→beneficiary, payer→victim only; agent-gated; **excluded derives NOTHING** per R3; deduped against authored arrays). Witnesses (audit dir): 0/100 old-vs-new compiler diff (additivity, re-run after fix); pilot `phase_a_pilot_stakeholder_demo.pl` covering all five branches (derive/dedupe×2/excluded/non-agent), lint clean, swipl-loads (5 facts + Q5/R5 atoms). One bug caught by the pilot inspection greps before commit: the six-questions comment loop shadowed the `emit` closure's `lines` accumulator, silently discarding all prior output — "compiled OK" read as success; fixed + commented at site. **A6 sub-gate run inside step 2** (operator pin): 0 engine consumers of the new predicates (positive control fires), derived names add 0 cross-constraint shared atoms, both coupling guard sites untouched — **scope: this clears the DERIVED-name half only; A6 REOPENS at step-3 projection of authored bespoke names against the unguarded `inferred_coupling_protocol.pl:218–222` (OQ-84). Sequencing pin (operator, 2026-06-07): the guard (or an explicit OQ-84 ruling that the asymmetry is intentional) lands BEFORE-OR-WITH the projection, same pass, never after.** The schema-only window is CLOSED (prompt-authored stakeholders now compile). Remaining Pattern-1 hold, one level down: stakeholder/7 + the two six-questions atoms have a producer and no engine consumer until **step 3 (engine layer: projection, per-(C,Name) d, in_contention/3, R5 mismatch consumer rewiring mandatrophy, R3 provenance check — five distinct wirings; the first non-purely-additive step)** — derived beneficiary/victim are consumed immediately by the existing d/FSM machinery, so the classification-relevant output is already wired. **Step 3 LANDED (2026-06-07), scoped as MECHANISM witness (operator correction: a falsifier that cannot fail on its own hand-authored test data is a wiring test; the EXPERIMENT is step 4, generated arms, ε pinned).** Wirings: delegation refactor `extractiveness_for_agent_d/4` (A1-harness byte-identical — keystone-class witness, watched); `dr_type_with_d/4`; `stakeholder_seats.pl` (projection; per-(C,Name) d from the role-d config params — **declared as a fitness-chosen SEAT**, config.pl comment; `in_contention/3`; `seat_perceived_vs_real/4`; `consensus_provenance/2`; `zombie_piton_crosscheck/2` — all commentary-grade, nothing overrides classification); narrative_ontology fact declarations + the R5 zombie clause (`has_mandatrophy_declaration` second clause over the two authored atoms, mismatch-only). Mechanism witness (audit dir `step3_mechanism.txt`): **same substrate, atom-keyed → all-solutions `[0.15]`, one type (rope) for both institutional seats; name-keyed → 0.12 / 0.85 split, types rope vs tangled_rope; split causally located in the role-param clause** (payer-param overlay 0.85→0.40 moved only payer seats; restore verified); `in_contention` = exactly the same-atom opposed pair; control story: no contention pairs, identical same-atom d (0.25/0.25), identical types — the harness returns both answers. Untested this pass (deliberate, mobile-isolation): exit-mod arms beyond trapped(+0.05), the d clamp. **OQ-84 resolved within this step** (see OQ-84). Validation suite passes post-change (0 warnings). Next: **step 4 — the generated-arms cross-framing experiment** (both surfaces on shared topics, ε per A5 raw+pinned, contention story among the topics; the straitjacket verdict and the deferred Type-C/B ruling live there), then Phase B per plan.
 
+**Type-A snapshot floor LANDED (2026-06-08) — adjacent to this OQ's deferred "time-varying role/d".**
+The DR-axis observer-temporal floor shipped strict-Tier-2, schema-deferred (KNOWN_STATE 2026-06-08;
+`audits/2026-06-08_typea_template_extensibility/`): `derive_directionality_at/4` threads Time
+(byte-identical on the current corpus — no time-indexed source), and a category-B `temporal_residual.pl`
+emits per-`(C,Context)` flip-events with a ran-witness and a phantom-flip guard. **Finding: the
+residual is NOT empty — 56/100 constraints show ≥1 backed flip, all ε/suppression/theater-driven (d is
+frozen on the current corpus).** This bears on the D-fork below: substantial ε-driven flips at fixed
+role/d mean the cheap path produces signal, so **role-time-indexing (branch b of the author-vs-derive
+fork) is NOT forced by emptiness** — the fork stays the operator's, decided by the offline join, not
+this build. Open follow-ons (sequenced):
+1. **CS-path precondition (required for the subtraction join):** enrich the existing CS export
+   (`json_report.pl:539–553`, which emits committer drift *outcome flags* only) with `cs_drift_state`
+   moment/gap — the committer *stage-time*. Day-one output enables the non-emptiness verdict
+   (observer-only); the committer-shadow *subtraction* (genuine Type-A residual vs committer-shadow
+   flip) is definitionally gated on this. CS export path, never the observer module (hub separation).
+2. **Offline residual join** (several committer-moment ↔ observer-time reconciliation rules; no
+   in-engine rule baked) decides the author-vs-derive D-fork; opens branch b (time-varying role/d)
+   only if backed residuals are ε-unexplained.
+3. **C2 `frame_policy` + C1 time-indexed-d land as a PAIR** via `effective_time/3` +
+   `time_indexed_directionality_source/4` (use-site coupled; shipping a source without a policy gate
+   forecloses Originalist-over-a-time-source). Shape ruled by the offline join.
+4. **v7 §4.5 bridge paragraph is stale as a census** (operator-flagged, substrate-confirmed): "exactly
+   one intentional bridge … and nothing else" conflates the one (A) data bridge (`influences`) with the
+   ≥3 (B) read-only seam diagnostics (`cs_drift_mismatch`, `cs_kernel_registry`→`classify_at_time`,
+   `cs_pattern_detection`→`constraint_signature`). Separation holds; amend §4.5 to state the (A)/(B)
+   distinction.
+5. **Classifier-sync OPEN (NOT introduced by the floor; surfaced by it).** `test_snapshot_migration`
+   passes, but full `classify_at_time` ≡ `snapshot_type` is FALSE and always was: 3 unique mismatch
+   points at default context (the d-threading edit is sync-neutral, witnessed on stashed code). The
+   contamination join flags **2 of 52 counted default-context flips** (`clinical_deskilling_automation`
+   0→2, `milblogger_legitimacy_erosion` 12→18) as classifier-sensitive — they must be carried as
+   flagged into the offline join, not as clean ε-signal. Likely cause **[UNVERIFIED, not root-caused
+   this pass]**: `snapshot_type` calls `classify_from_metrics` WITHOUT the `nb_setval` temporal
+   theater/eps state that `classify_at_time` threads and the piton/excess gates read. Graduation:
+   witness the nb_setval mechanism at one mismatch point (clear vs set), then decide fix-or-document.
+
 **Step-4 FLIP CRITERION (operator-directed pin, 2026-06-07 — declared from step 3's mechanism,
 BEFORE step 4's plan or run, so the criterion cannot fit the output).** "Straitjacket escaped" is
 confirmed only if ALL FOUR hold: (1) REPRESENTATION — the stakeholder arm authors ≥2 same-power
