@@ -3700,6 +3700,49 @@ discipline).
 
 ---
 
+## OQ-87 — Committer-axis experiments (CA-1/CA-3 done): detection-independence is real; two corpora, two gates
+
+**Ω-type:** Ω_E (detection-independence is measurable and witnessed real) + Ω_P (whether to build a
+detection-independence corpus and/or a C/B corpus — operator's, two separate green lights).
+
+**Status:** open — CA-1 + CA-3 complete (2026-06-07); report
+`audits/2026-06-07_stakeholder_layer_migration/CA_COMMITTER_AXIS.md`. CA-2 (framing-dependence /
+C/B) unstarted.
+**Origin:** 2026-06-07, the two-axis correction (TWO_AXIS_NOTE) → "more experiments before a corpus."
+
+The committer axis is a real, content-driven classification surface separate from the observer
+orbit (two-axis note). This pass measured it.
+- **CA-1 (synthetic field-partition cross-check):** committer verdicts framing-INVARIANT
+  (reference_frame / story_uid varied → identical) and content-SENSITIVE (grounding flip stopped
+  `cs_axiom_foreclosed`; probe live). Confirms the field partition by a 2nd method (perturbation on
+  top of the static read) — NOT a fresh architectural finding; no mis-binned field (the only
+  interesting surprise) occurred.
+- **CA-3 (detection-independence on kernel_v1, READ-ONLY, kernel_v1-REGIME):** per-axis verdicts
+  pinned before the run (observer coherent=H0=1; committer dead=cs_axiom_foreclosed OR drift terminal
+  ∈ {axiom_foreclosure,husk,extinction,repudiation}); H0 pre-check passed (non-degenerate, no
+  stale-site collapse). N=906. 2×2: agree-live 44, agree-dead 648, **diverge-A (coherent+dead) 74 =
+  8.2%** (clean Theorem-7, spread across 68 kernels), **diverge-B (incoherent+live) 140 = 15.5%**
+  (artifact-prone, reported separately). **Both axes SATURATED** (observer 87% incoherent — plausibly
+  real for contested kernels, staleness component unquantified; committer 80% dead — kernel_v1
+  drift-authoring convention, **NOT OQ-70 FNL** which is observer-axis), so the summed density (23.6%)
+  is NOT a trustworthy quantitative gate; the agree-dead majority is two saturated axes coinciding.
+
+**Verdict:** detection-independence OCCURS on real contested kernels (diverge-A 74 clean cases, 68
+kernels) — orthogonal detection is empirically real, not just architecturally possible. The clean
+DENSITY is not measurable on the confounded archive (needs a de-leaked re-measure).
+
+**Two corpora, two gates (operator):** (a) a **detection-independence corpus** — CA-3 qualitative
+gate GREEN (real signal exists); precise richness pending a de-leaked kernel pilot. (b) a **C/B
+(framing-dependence) corpus** — gated on **CA-2** (generation: same commitment, two framings); the
+archive CANNOT substitute (it varies content, not framing); CA-3 says nothing about it. A rebuild
+must name which corpus it builds for; do not let diverge-A authorize a C/B corpus.
+
+**Next moves (operator's to sequence):** CA-2 (committer generation-variance / the real C/B test),
+the 2×2 model×framing Ω (observer claim-drift model-stability, filed under OQ-83), and/or a small
+de-leaked kernel pilot to get a clean detection-independence density. None started.
+
+---
+
 *Last updated: 2026-06-07. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
