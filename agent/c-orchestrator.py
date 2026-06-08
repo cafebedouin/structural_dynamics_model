@@ -44,6 +44,20 @@ from agent.story_generator_base import (
 )
 
 # ---------------------------------------------------------------------------
+# Exceptions
+# ---------------------------------------------------------------------------
+
+class ModelCallError(RuntimeError):
+    """A completion came back unusable (safety refusal or empty body).
+
+    Raised by `_call` so the stop_reason is reported explicitly instead of
+    surfacing downstream as a misleading "JSON parse failed: ... char 0"
+    (which is what an empty refusal body parses to). Every step handler wraps
+    `_call` in try/except, so this propagates as a clear per-step error.
+    """
+
+
+# ---------------------------------------------------------------------------
 # Data classes
 # ---------------------------------------------------------------------------
 
@@ -260,6 +274,26 @@ class DRAuditOrchestrator:
             total_out += response.usage.output_tokens
 
         text = self._extract_text(response)
+
+        # An API safety refusal returns stop_reason=="refusal" with no text
+        # blocks; a truncated/empty completion returns no text under any other
+        # stop_reason. Either way json.loads(text) downstream throws the
+        # misleading "Expecting value: line 1 column 1 (char 0)". Report the
+        # real cause here instead. (max_tokens with partial text is left alone:
+        # text is non-empty, so the caller's own parse/validation handles it.)
+        if response.stop_reason == "refusal":
+            raise ModelCallError(
+                f"API safety refusal (stop_reason=refusal) from {model}; "
+                f"no content returned. Reframe the topic away from sensitive "
+                f"specifics (e.g. the structural/governance kernel rather than "
+                f"raw domain detail)."
+            )
+        if not text.strip():
+            raise ModelCallError(
+                f"empty completion (stop_reason={response.stop_reason}) from "
+                f"{model}; nothing to parse."
+            )
+
         return text, total_in, total_out
 
     @staticmethod
