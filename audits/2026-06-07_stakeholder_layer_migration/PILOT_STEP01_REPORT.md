@@ -56,3 +56,34 @@ NOT run (I chose separate-runs to avoid a custom manifest-reuse driver). Differe
 - **Clean stop taken here** (operator's standing offer + the over-descend watch): the suggestive
   finding (saturation is model/example-driven, not ground truth) + the named confound are the
   honest result; whether to spend the matched/Sonnet run is a fresh decision.
+
+## Step 2 (matched run) — the clean control OVERTURNS Step 1b (operator: do the matched run, confirm the Haiku→Sonnet bump)
+Generated BOTH arms from the SAME 12 saved manifests via the SAME backend (`generate_from_manifests`)
++ SAME neutral prompt, varying ONLY the GEN model — removes both the reading-set (re-SCOPE) and the
+legacy-vs-unified-path confounds. `step2_matched_run.py`.
+
+| (matched) | substantial-share | ack-false-share | dominant direction |
+|---|---|---|---|
+| pilot_matched_haiku N=41 | 76% | **49%** | practice_drift 22 |
+| pilot_matched_sonnet N=45 | 62% | **80%** | practice_drift 30 |
+
+- substantial: Haiku 76% → Sonnet 62% (**Δ 13pts, below the 15pt threshold**) — no clean de-saturation.
+- ack-false: Haiku 49% → Sonnet **80%** (Δ −31pts, **WRONG direction** — Sonnet authors MORE unacknowledged).
+
+**VERDICT: the Haiku→Sonnet bump is NOT confirmed.** On confound-controlled matched data, Sonnet
+does not cleanly de-saturate; magnitude barely moves and acknowledged goes the wrong way. **This
+overturns Step 1b's "Sonnet de-saturates → Haiku prior"** — which was the UNMATCHED re-SCOPE arm.
+The tell: `ack-false` ranges 49–92% across all arms (matched-Haiku 49, s1-neutral-Haiku 72,
+kernel_v1 92, sonnet 66–80) — it is **dominated by reading-set variance, not model**; Step 1b's
+de-saturation was its particular reading-set, not Sonnet. `substantial` is robustly high (62–88%)
+across model/prompt/reading-set — a genuinely persistent authoring feature.
+
+**Corrected disposition:** the husk-saturation is NOT cleanly a Haiku prior and is NOT cleanly
+removable by switching GEN model — the easy model-bump path is closed. Its components separate:
+magnitude=`substantial` dominance is robust (model/reading-set-invariant); `acknowledged`=false is
+reading-set-dominated. The detection-independence existence proof remains UNPROVEN, and the clean
+path is NOT a model swap — it would need a much larger run to average out the dominant reading-set
+variance and measure diverge-A cause-composition properly, OR accepting that the committer
+death-mode is characteristically substantial-magnitude drift (a real feature) with the per-reading
+heterogeneity living in direction + acknowledged. The matched control was worth its cost: it caught
+a wrong conclusion (Step 1b) before it became a GEN_MODEL change. Cost ≈284/500.

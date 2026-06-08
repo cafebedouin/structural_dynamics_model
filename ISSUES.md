@@ -3785,6 +3785,20 @@ claim-drift model-stability, filed under OQ-83).
   ground truth); a clean proof needs a MATCHED run (SCOPE-once / same manifests, vary only GEN
   model; ideally Sonnet) + CA-3 + diverge-A cause-composition — a fresh-decision Step 2 (~250 calls,
   approaches the 500 ceiling). CLEAN STOP taken here (over-descend watch). Cost so far ≈198/500.
+- **Step 2 MATCHED run DONE (2026-06-08) — the clean control OVERTURNS Step 1b; the Haiku→Sonnet
+  bump is NOT confirmed.** Generated both arms from the SAME 12 manifests via the SAME backend
+  (`generate_from_manifests`) + neutral prompt, varying ONLY GEN model (removes the reading-set +
+  path confounds). substantial: Haiku 76% → Sonnet 62% (Δ13pts, below threshold); ack-false: Haiku
+  49% → Sonnet **80%** (WRONG direction). So Sonnet does NOT cleanly de-saturate. Step 1b's "Sonnet
+  de-saturates" was a reading-set artifact (unmatched re-SCOPE): `ack-false` ranges 49–92% across
+  arms = **reading-set-dominated, not model**; `substantial` is robustly 62–88% (persistent
+  authoring feature). **Corrected disposition:** husk-saturation is NOT cleanly a Haiku prior and
+  NOT removable by model swap — the easy path is closed; components separate (substantial =
+  robust; acknowledged = reading-set-dominated). Detection-independence existence proof remains
+  UNPROVEN; a clean proof needs a MUCH larger run to average out reading-set variance (not a model
+  swap), or accepting substantial-magnitude drift as the characteristic committer death-mode. The
+  matched control was worth its cost — it caught a wrong conclusion (Step 1b) before it became a
+  GEN_MODEL change. Report `PILOT_STEP01_REPORT.md`. Cost ≈284/500.
 
 ---
 
