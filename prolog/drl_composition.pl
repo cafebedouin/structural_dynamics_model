@@ -175,18 +175,20 @@ classify_at_time(C, Time, Context, Type) :-
     % fabricate Supp=0.5 — that value sits below snare_suppression_floor=0.60 and
     % silently mis-sorts the temporal timeline low.
     %
-    % Corpus regenerated (2026-06): the generation template now authors a temporal
+    % Corpus rebuild (reset 2026-06-05): the generation template authors a temporal
     % suppression_requirement series for most constraints. Engine-measured coverage on the
-    % live corpus: 471/562 constraints carry a temporal series (the first branch below);
-    % 91/562 are scalar-only and hit the STOPGAP fallback; 0/562 reach the `unknown` branch
-    % (every constraint authors at least a scalar suppression_requirement). Pre-rebuild this
-    % was inverted — 650/656 rows lacked a temporal series, so the old code ran almost the
-    % entire temporal classification on a fabricated constant.
+    % live corpus AS OF 2026-06-08 (re-witness on growth — cite the manifest, not this
+    % number): 88/100 carry a temporal series (the first branch below); 12/100 are
+    % scalar-only and hit the STOPGAP fallback; 0/100 reach the `unknown` branch (every
+    % constraint authors at least a scalar suppression_requirement). The earlier 471/562
+    % cited here was the pre-reset kernel_v1 regime — stale. Pre-rebuild this was inverted —
+    % 650/656 rows lacked a temporal series, so the old code ran almost the entire temporal
+    % classification on a fabricated constant.
     %
     % STOPGAP — TEMPORARY BRIDGE, strip when temporal coverage is complete: fall back to the
     % authored SCALAR suppression_requirement (real per-constraint data; genuine-no-data = 0).
     % Return `unknown` only if no suppression is authored anywhere. Still load-bearing for the
-    % 91 scalar-only constraints — do NOT delete the scalar clause until the template authors a
+    % 12 scalar-only constraints (as of 2026-06-08) — do NOT delete the scalar clause until the template authors a
     % temporal series for every constraint (D4-for-suppression is a GENERATION-TEMPLATE
     % requirement, not an engine ruling). Do NOT build a scalar/temporal equivalence check on
     % top of this bridge — it is a stopgap, not a sanctioned second representation.

@@ -1522,8 +1522,20 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   58 unknown→snare, 9 scaffold→mountain, 6 rope→mountain, 10 tangled_rope→unknown) — mostly the
   snare_suppression_floor=0.60 low-mis-sort the census predicted. Validation suite clean (0/0).
   **The scalar fallback is a labeled STOPGAP** — see **OQ-46** (generation-template fix retires it).
-- Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (tripwire artifact: 0 changes; extractiveness
-  required-authored).
+- Rows 24–25 `BaseX=0.5` (`drl_composition.pl:201`): **REACHABLE-BUT-LOCKED, not latent — the
+  prior "0 changes; extractiveness required-authored" reason is STALE** (corrected, witnessed
+  2026-06-08). Re-witness on the live corpus: the `; BaseX = 0.5` branch *would* fire at **11
+  (C,T) cells** (e.g. `attribution_erosion-3`) — constraints with an authored
+  `suppression_requirement` measurement at time T but no `base_extractiveness` at that T, so
+  extractiveness is NOT required-authored per-timepoint. What locks it is the **call path, not
+  authoring**: all 11 cells are at **non-zero times (3,5,8,10,16,19), 0 at t=0**, and the only
+  live caller (`cs_kernel_registry`, `classify_at_time(...,0,...)`) classifies at **t=0**; the
+  non-zero times are reached only via `constraint_history`, which is **dormant** (consumed by
+  nothing — positive-controlled: the same consumer-probe finds `classify_at_time`'s consumer
+  but none for `constraint_history`/`snapshot_type`/`degradation_chain`). So it does not touch
+  live classification today, but the fix is a member of the OQ-44 fail-closed-vs-impute class
+  (decide once for the class), not a free per-site hardening. (extractiveness→0.5 elsewhere:
+  required-authored at the static path; tracked under OQ-44.)
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
   Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
   `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
@@ -1614,6 +1626,17 @@ natural laws yields zero beneficiaries and zero flips; it only bites a mis-autho
 **Status:** open — (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
 class (OQ-41, OQ-36/OQ-37, OQ-43).
 
+**Class members in the DR-trajectory (observer) subsystem — DORMANT/LOCKED, not live
+(witnessed 2026-06-08).** Flagged here so the once-for-class ruling covers them, NOT so they
+are fixed per-site: (i) `drl_composition.pl:201` `BaseX = 0.5` — reachable-but-locked (OQ-41
+rows 24–25; fires only via the dormant `constraint_history` sweep); (ii)
+`transition_paths.pl:115–134` `snapshot_type/3` fabricated `default_extractiveness=0.10` /
+`default_suppression=0.10` (`config.pl:300–301`) — entirely inside the dormant trajectory
+classifier (`snapshot_type`/`degradation_chain` consumed by nothing, positive-controlled).
+These are the same fail-closed-vs-impute decision as the live sites; reviving the surface
+that would make them live is itself the coupled rebuild ruling (see KNOWN_STATE 2026-06-08
+"three deferred temporal threads = one ruling").
+
 **Premise:** the engine must distinguish "authored to be zero" from "absent" everywhere, and
 never let absence satisfy a gate. Zero-because-measured and zero-because-missing collapse to the
 same value at a comparison site, so a gate that cannot tell them apart is testing nothing whenever
@@ -1667,15 +1690,30 @@ Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance
 (`classify_at_time`) currently bridges absent temporal `suppression_requirement` to the authored
 **scalar** value — a **labeled stopgap**, not a sanctioned second representation. The real fix is
 **upstream, in generation**: the story template must author a *temporal* `suppression_requirement`
-series. **Partially progressed by the 2026-06 rebuild:** engine-measured on the live corpus, the
-template now authors a temporal series for **471/562** constraints; **91/562** remain scalar-only and
-still hit the stopgap (0/562 reach `unknown`). (Pre-rebuild this was inverted — 650/656 rows had only
-the scalar.) This is a **generation-template requirement, not an engine representation ruling** — i.e.
-D4 (G5 scalar-vs-temporal) for suppression is resolved by authoring the series, not by the engine
-choosing a representation. **Once the template authors the series for the remaining 91: delete the
-scalar-fallback clause in `classify_at_time` and let the temporal path stand alone** (it is still
-load-bearing for those 91 — do not delete early). Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
-bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
+series. **Partially progressed by the rebuild:** engine-measured on the live corpus
+**AS OF 2026-06-08** (N=100; re-witness on growth — the prior **471/562** here was the
+**pre-reset kernel_v1 regime, stale**): the template authors a temporal series for **88/100**
+constraints; **12/100** remain scalar-only and still hit the stopgap (**0/100** reach
+`unknown`). (Pre-rebuild this was inverted — 650/656 rows had only the scalar.) This is a
+**generation-template requirement, not an engine representation ruling** — i.e. D4 (G5
+scalar-vs-temporal) for suppression is resolved by authoring the series, not by the engine
+choosing a representation. **Once the template authors the series for the remaining 12: delete
+the scalar-fallback clause in `classify_at_time` and let the temporal path stand alone** (it
+is still load-bearing for those 12 — do not delete early). Do **not** build a scalar/temporal
+equivalence check on the bridge — skip it; the bridge is temporary. Sequenced: this rides the
+regeneration arc (OQ-47), not Commit B.
+
+**Gap-vs-design for the 12 (witnessed 2026-06-08).** The 12 scalar-only constraints are
+**asymmetric-authoring gaps, NOT scalar-by-design**: all 12 carry a temporal
+`base_extractiveness` AND `theater_ratio` series — only the suppression dimension of an
+already-temporal timeline is missing. None are synchronic, so completing the suppression
+series would **not fabricate motion** into a static constraint (the re-bake trap is avoided
+at the corpus-structure level). OQ-46 is therefore a real lever for these 12. **Residue
+deferred to template/rebuild authoring (a genuine authoring judgment, not an engine fact):**
+whether `suppression_requirement` is genuinely *flat by design* for any specific one of the
+12 (rising extraction with constant suppression is admissible) — for any that are, the
+correct outcome is "the STOPGAP is the right handler; reclassify it, don't delete," not
+authoring an invented series. Per-story call belongs with whoever sets the rebuild template.
 
 **Post-reset check (2026-06-05):** the live corpus' first 20 stories author a temporal `suppression_requirement` series **20/20** — the generation-template requirement lands universally under the de-leaked prompt. Once the live corpus accumulates with this holding, the row-23 stopgap (`classify_at_time` scalar bridge) is retirable + fail-closed `unknown` added (output-changing engine edit; needs its own witnessed pass).
 
@@ -3544,6 +3582,25 @@ straitjacket, not escaped it. AUDIT OPEN-1/2 (`cross_context_analysis` callee,
 (cross-wiring cs_drift to the observer battery's balance question); time-varying stakeholder
 role/d (the five-questions "run them again later" — would let observer change alter trajectory
 SHAPE, not just transition timing).
+
+**Substrate finding for time-varying-d (witnessed 2026-06-08, observer-temporal review).**
+Directionality is **frozen across every observer timeline by construction**: `derive_directionality/3`
+is not time-indexed, and beneficiary/victim are static-only (277 `constraint_beneficiary` +
+260 `constraint_victim` live; **0** time-indexed beneficiary/victim/directionality
+measurements in live OR archives). So a constraint whose beneficiary/role structure shifts
+over time is **unauthorable today**. Proof the engine already needs it: `check_capture_between/3`
+(`drl_composition.pl:265`) detects "capture" (the rope→snare role-shift) purely via **ε rising
+over time** — it launders a directionality shift it cannot see into an ε-magnitude event,
+because there is no temporal directionality to read.
+
+**Coupling (operator, 2026-06-08) — three deferred temporal threads are ONE ruling, gated on
+time-varying-d, due before the rebuild template is fixed** (see KNOWN_STATE 2026-06-08):
+(a) time-varying-d (this deferral); (b) revive-or-gap the dormant observer trajectory
+classifier (`constraint_history`/`snapshot_type`, consumed by nothing); (c) rebuild
+temporal-authoring density (whether to author dense series at all). Coupled because the
+trajectory classifier is dormant **and** would freeze directionality even if revived —
+reviving it (b) is worth it only if (a) is in scope, and authoring dense series in the rebuild
+(c) is worth it only if (b) will consume them. Rule together, not as three independent OQs.
 
 **Post-audit operator rulings (2026-06-07):**
 - **Contender: NO sixth role — contention is DERIVED, not authored.** Contention is a structural
