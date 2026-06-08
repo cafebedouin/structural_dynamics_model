@@ -533,6 +533,9 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ->  format(S, '      "cs_instance_count": 0,~n', []),
         format(S, '      "cs_drift_terminal": null,~n', []),
         format(S, '      "cs_axiom_foreclosed": null,~n', []),
+        format(S, '      "cs_reference_frame": null,~n', []),
+        format(S, '      "cs_drift_moment": null,~n', []),
+        format(S, '      "cs_drift_gap": null,~n', []),
         format(S, '      "cs_drift_unacknowledged": false~n', [])
     ;   length(UIDs, NInst),
         format(S, '      "cs_instance_count": ~w,~n', [NInst]),
@@ -557,6 +560,22 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAtom), _, fail)
         ->  format(S, '      "cs_axiom_foreclosed": "~w",~n', [AxAtom])
         ;   format(S, '      "cs_axiom_foreclosed": null,~n', [])
+        ),
+        % Committer STAGE-TIME (UID-keyed) — the offline residual join needs these to
+        % reconcile the committer t0->t1->t2 against the observer integer timeline.
+        % reference_frame = t0 baseline; cs_drift_state moment+gap = t1; cs_drift_terminal
+        % (above) = t2. Serialization of committer OUTPUT only — no observer read, no join
+        % computed here (hub separation; the join is offline).
+        (   catch(narrative_ontology:cs_reference_frame(UID, RF), _, fail)
+        ->  format(S, '      "cs_reference_frame": "~w",~n', [RF])
+        ;   format(S, '      "cs_reference_frame": null,~n', [])
+        ),
+        (   catch(narrative_ontology:cs_drift_state(UID, Moment, gap(DDir, DMag, DAck)), _, fail)
+        ->  format(S, '      "cs_drift_moment": "~w",~n', [Moment]),
+            format(S, '      "cs_drift_gap": {"direction": "~w", "magnitude": "~w", "acknowledged": ~w},~n',
+                   [DDir, DMag, DAck])
+        ;   format(S, '      "cs_drift_moment": null,~n', []),
+            format(S, '      "cs_drift_gap": null,~n', [])
         ),
         % cs_drift_unacknowledged (UID-keyed)
         (   catch(cs_pattern_detection:cs_drift_unacknowledged(UID, _), _, fail)

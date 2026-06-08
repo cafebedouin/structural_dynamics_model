@@ -3366,11 +3366,16 @@ frozen on the current corpus).** This bears on the D-fork below: substantial ε-
 role/d mean the cheap path produces signal, so **role-time-indexing (branch b of the author-vs-derive
 fork) is NOT forced by emptiness** — the fork stays the operator's, decided by the offline join, not
 this build. Open follow-ons (sequenced):
-1. **CS-path precondition (required for the subtraction join):** enrich the existing CS export
-   (`json_report.pl:539–553`, which emits committer drift *outcome flags* only) with `cs_drift_state`
-   moment/gap — the committer *stage-time*. Day-one output enables the non-emptiness verdict
-   (observer-only); the committer-shadow *subtraction* (genuine Type-A residual vs committer-shadow
-   flip) is definitionally gated on this. CS export path, never the observer module (hub separation).
+1. **CS-path precondition — LANDED (2026-06-08).** The existing CS block now emits the committer
+   *stage-time* per constraint: `cs_reference_frame` (t0), `cs_drift_moment` + `cs_drift_gap`
+   (t1 = `cs_drift_state` moment/gap), alongside the pre-existing `cs_drift_terminal` (t2). 7
+   constraints carry it (the kernel readings); non-committer constraints emit null. Serialization of
+   committer OUTPUT only — no observer read, no in-engine join (hub separation; the join is offline).
+   Witness: pipeline JSON well-formed, no-regression diff empty modulo the 3 new keys + manifest;
+   `british_mandate_scaffolding` t0→t1→t2 = `ancient_jewish_sovereignty…`→`post_mandate_establishment_1948`
+   (`practice_drift/substantial/false`)→`husk`. **The offline-join precondition is now met:** both
+   temporal descriptors (observer integer-time `temporal_residual` + committer named-moment stages)
+   are joinable per constraint `id`. The reconciliation rule(s) remain offline (item 2), not baked.
 2. **Offline residual join** (several committer-moment ↔ observer-time reconciliation rules; no
    in-engine rule baked) decides the author-vs-derive D-fork; opens branch b (time-varying role/d)
    only if backed residuals are ε-unexplained.

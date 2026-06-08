@@ -109,6 +109,13 @@ one (`influences`→`detect_necessity_inheritance`); but **(B) read-only seam di
 (`cs_drift_mismatch`, `cs_kernel_registry`→`classify_at_time`, `cs_pattern_detection`→
 `constraint_signature`). Separation holds; the enumeration is wrong. (Audit §0; OQ-83 follow-on.)
 
+**Follow-up (same day): committer stage-time enrichment LANDED** (OQ-83 follow-on #1). The CS block in
+`json_report.pl` now emits `cs_reference_frame` (t0), `cs_drift_moment`+`cs_drift_gap` (t1) beside the
+pre-existing `cs_drift_terminal` (t2) — 7 constraints carry it, null otherwise; no-regression empty
+modulo the 3 new keys. Both temporal descriptors (observer integer-time + committer named-moment) are
+now joinable per constraint `id`: the offline residual-subtraction join is unblocked; the
+moment-to-integer reconciliation rule stays offline (not baked in-engine).
+
 ## 2026-06-07 — Stakeholder-layer migration Pass-1 audit: computed path ignores authored perspectives (controlled null); straitjacket witnessed; mandatrophy surface is a dangling wire
 **Files:** prolog/constraint_indexing.pl, prolog/drl_core.pl, prolog/constraint_data.pl, prolog/probe_harness.pl, prolog/inferred_coupling_protocol.pl, prolog/drl_purity_network.pl, prolog/reading_diff.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, audits/2026-06-07_stakeholder_layer_migration/
 **Tier:** landed
