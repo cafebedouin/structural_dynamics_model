@@ -551,6 +551,36 @@ directions of the absence-as-value sin and that it composes on itself:
 
 ---
 
+## A gating count is not a finding without its composition (compute the breakdown in the SAME pass)
+
+A count that is about to gate a decision (a corpus build, a verdict, a "build vs don't") is **not a
+weaker version of the result — it is a different and usually wrong result.** The count and its
+composition can point in **opposite directions**, not just differ in magnitude. So the
+cause/composition breakdown is computed **in the same pass that produces the count**, never as a
+follow-on when someone doubts the headline. The count-alone should not be written down as a
+candidate gate number even provisionally, because once written it gets reasoned about as if it were
+the finding.
+
+Two instances this thread, both the same shape, both caught only because a per-item check ran
+*before* the count became a gate:
+- **OQ-83 4b:** "renamed-not-escaped, the migration re-imposed the straitjacket" — the headline. A
+  one-line consumer grep ("does anything read `in_contention`": zero consumers) showed the count was
+  about an annotation predicate that feeds no classifier; the finding was the opposite size and kind.
+- **OQ-87 diverge-A:** "74 detection-independence cases" read as "orthogonal detection is real." The
+  cause-of-death distribution under the 74 showed **~89% is one drift-authoring convention firing
+  uniformly through the observer-coherent slice** (the saturation already declared untrustworthy,
+  leaking into the one cell thought clean); the clean content-driven core was ≤8. The count did not
+  overstate the effect — it **misidentified** it.
+
+**The rule:** for any count that will gate a decision, its composition (cause distribution / the
+per-item breakdown that says *what the count is made of*) is part of the deliverable that produces
+the count, in the same pass. "N cases of X" is never the finding; "N cases, of which k are
+content-driven and N−k are one convention" is the finding. This is the positive-control discipline
+applied to your own headline: the breakdown is the control that catches the count standing in for
+the substrate.
+
+---
+
 ## Perturbation is the probe; invariance is the read (a claimed invariant needs a perturbation that moves it)
 
 The engine's whole read is **perturb one axis, hold the rest, sort what stays (invariant) from what
