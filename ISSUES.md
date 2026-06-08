@@ -3769,6 +3769,22 @@ claim-drift model-stability, filed under OQ-83).
   distribution); Step 2 (existence proof) only if Step 1 = artifact; if it persists, the
   second-model arm (≠Haiku) separates "real property of contested kernels" from "Haiku authoring
   prior" before any "true property" claim. Cost ceiling 500 calls total; composition-in-same-pass.
+- **Step 1 + 1b DONE (2026-06-08); report `PILOT_STEP01_REPORT.md`.** Step 1 (Haiku, example
+  removed vs kept): husk-driving fields PERSIST (substantial 84%→79%, ack-false 77%→72%, neither
+  >15pts) but the example DID anchor DIRECTION (authority_erosion 14→4 on removal). Step 1b
+  (Sonnet GEN, neutral prompt — the operator's model-confound guard): substantial drops 79%→**59%**
+  (severe+minor appear) → **the husk-saturation is substantially a HAIKU GEN_MODEL authoring prior,
+  NOT a true property of contested commitments** (kernel_v1 was Haiku-generated; its 89%-husk
+  diverge-A is that prior + the direction example, not detection-independence ground truth). The
+  guard caught the exact misread it was for (Step 1 alone read "persists→real"; the second model
+  revealed "Haiku prior"). **HONEST LIMITATION:** arms were separate full gkc runs → each
+  re-SCOPEd a different reading-set, so comparisons co-vary prompt/model with reading-set on small
+  N (~35/arm); direction-anchoring survives this (selective depletion of the example's own
+  direction), husk-as-Haiku-prior is suggestive-but-confounded. **Disposition:** detection-
+  independence existence proof remains UNPROVEN but the saturation is plausibly REDUCIBLE (not
+  ground truth); a clean proof needs a MATCHED run (SCOPE-once / same manifests, vary only GEN
+  model; ideally Sonnet) + CA-3 + diverge-A cause-composition — a fresh-decision Step 2 (~250 calls,
+  approaches the 500 ceiling). CLEAN STOP taken here (over-descend watch). Cost so far ≈198/500.
 
 ---
 

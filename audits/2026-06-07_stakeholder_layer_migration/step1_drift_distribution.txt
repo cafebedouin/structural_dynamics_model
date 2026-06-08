@@ -1,0 +1,27 @@
+=== Step 1 drift distribution (composition in same pass); kernel_v1 baseline: substantial 88%, ack-false 92% ===
+
+--- pilot_s1_current: N drift-states=31
+  magnitude: {'substantial': 26, 'severe': 2, 'minor': 3}  | substantial-share=84%
+  acknowledged: {'false': 24, 'true': 7}  | false-share=77%
+  direction: {'practice_drift': 7, 'authority_erosion': 14, 'axiom_overriding': 6, 'stable': 3, 'codification_collapse': 1}
+  top (dir,mag,ack): [(('authority_erosion', 'substantial', 'false'), 11), (('practice_drift', 'substantial', 'false'), 7), (('axiom_overriding', 'substantial', 'false'), 5), (('stable', 'minor', 'true'), 2), (('authority_erosion', 'substantial', 'true'), 2)]
+
+--- pilot_s1_neutral: N drift-states=39
+  magnitude: {'minor': 4, 'substantial': 31, 'severe': 4}  | substantial-share=79%
+  acknowledged: {'false': 28, 'true': 11}  | false-share=72%
+  direction: {'authority_erosion': 4, 'practice_drift': 17, 'axiom_overriding': 12, 'stable': 2, 'codification_collapse': 4}
+  top (dir,mag,ack): [(('axiom_overriding', 'substantial', 'false'), 10), (('practice_drift', 'substantial', 'false'), 9), (('practice_drift', 'substantial', 'true'), 6), (('codification_collapse', 'substantial', 'false'), 3), (('authority_erosion', 'substantial', 'false'), 2)]
+
+=== GATE (drop >15pts on BOTH = artifact -> Step 2; persist = candidate-real -> Step 1b second-model) ===
+  substantial-share: current 84% -> neutral 79%  (drop 4pts)
+  ack-false-share:   current 77% -> neutral 72%  (drop 6pts)
+  VERDICT: PERSISTS (candidate-real) -> Step 1b second-model check before any true-property claim
+=== Step 1b — second model (Sonnet GEN) on NEUTRAL prompt: real-vs-model-prior ===
+baselines: kernel_v1 (Haiku?) substantial 88%/ack-false 92%; s1_neutral (Haiku) substantial 79%/ack-false 72%
+
+pilot_s1b_sonnet (Sonnet, neutral): N=32
+  magnitude {'severe': 7, 'substantial': 19, 'minor': 6} | substantial-share=59%
+  acknowledged {'false': 21, 'true': 11} | false-share=66%
+  direction {'practice_drift': 26, 'repudiation_pressure': 1, 'stable': 3, 'codification_collapse': 2}
+
+  VERDICT: SPREADS on Sonnet -> the Haiku husk-saturation was a model authoring prior, not a property of the commitments
