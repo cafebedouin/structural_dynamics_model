@@ -45,6 +45,60 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-08 — Flat router stably under-routes a COUPLED methodological kernel (World3); false-mountain (mountain→rope) is a candidate missed-kernel signal (OQ-88)
+**Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, ISSUES.md
+**Tier:** correction-key
+
+First end-to-end `c-orchestrator.py` runs (kernel-first branch) audited against prior corpora and
+essays. Routing discrimination works as designed: china wage-convergence + World3 → FLAT (no
+`cs_structure`); magnifica AI encyclical → KERNEL (5 readings with `cs_structure.reading_relations` +
+axioms; the seat layer reaches the essay — "Four Irreconcilable Frameworks", axiom contradictions,
+foreclosure graph — which the pre-modification `magnifica_humanitas_ai_encyclical_original_run.md`
+structurally could not produce). **But the flat path has a witnessed blind spot.** Comparing the
+pipeline's `world3_recalibration_2024.md` to a thesis-driven web-Claude critique ("The Robustness Is
+the Tell") surfaced a load-bearing seat — the policy REGIME (collapse is mountain-within-BAU,
+rope-across-regimes; Stabilized-World = positive control) — that World3 never seated. Re-ran
+`--dry-run --run-tag world3_kernel_probe` on the same source: **stably FLAT across 2 samples**
+(`outputs/kernel_manifests/flat/…171605` and `…/world3_kernel_probe/…183123`, 0 readings). The
+re-roll emitted the robustness fact itself as a standalone axis (`parameter_sensitivity_structural_robustness`)
+AND `collapse_timing_credibility` as a separate axis but **never coupled them** (robustness ⊥
+forecast), filing the regime as omegas (`omega_earth4all_paradigm_shift`,
+`omega_belief_system_change_mechanism`). The gate decomposes a coupled kernel into independent axes +
+epistemic omegas, dropping the coupling that makes it a kernel.
+
+**Engine-vocabulary finding (the actionable one):** the mountain↔rope type-divergence IS the
+necessity-vs-contingency kernel question. `collapse_mechanism_ambiguity` classified authored=mountain
+→ computed=**rope**, conf 0.01, `type_1_false_summit` severe — the engine adjudicated the seat SCOPE
+never built. Second witnessed instance same run: `demographic_skill_mismatch` (china, flat),
+mountain→rope, conf 0.01. ⇒ **OQ-88**: flat-routed ∧ false-mountain = candidate kernel false-negative;
+N=2 = positive control; a negative control sweep (don't blanket-fire on authoring-flinch
+false-mountains) is REQUIRED before it auto-routes (else it repeats OQ-79's kernel-liberal
+over-routing one level up). Also logged in the magnifica run (separate, not yet OQ'd): one of the 5
+readings (`technocratic_paradigm_resistance`) carries 3 DANGLING `cs_reading_relation` edges to
+`*_ai_governance` sibling-ids that were never generated (naming drift; OQ-58 integrity sweep is
+skipped on the no-scope/kernel path) and duplicates the magisterial reading's axioms — the essay
+silently treats it as 4 readings, but the broken 5th is in the corpus. Provenance: this analysis;
+detector design + control requirement in ISSUES.md OQ-88.
+
+## 2026-06-08 — Register OQ-83 committer-stage-time / observer-residual fields in pipeline schema
+**Files:** python/shared/schemas.py, prolog/json_report.pl
+**Tier:** landed
+
+`json_report.pl` emits four OQ-83 fields per constraint — `cs_reference_frame`,
+`cs_drift_moment`, `cs_drift_gap` (committer stage-time, commit ef5a9188) and
+`temporal_residual` (Type-A observer residual, de3736a6) — but `PIPELINE_FIELDS` in
+`python/shared/schemas.py` never listed them, so the drift detector printed
+`[WARN] unexpected field: …` for every one on every constraint across every pipeline
+tier (~280 lines/run; visible in the world3 orchestrator run). Added the four as
+nullable declarations (str/str/dict/dict), grouped with their CS-UID siblings and the
+temporal-trajectory block. Nullable ⇒ absence/null permitted, present values typed.
+
+**Witness:** `PYTHONPATH=python` → `validate_pipeline_output` and
+`validate_enriched_pipeline` on the on-disk artifacts both return **0 errors, 0
+warnings** (was: 4 drift warnings × every constraint). No new type-validation errors.
+Producer side (`json_report.pl`) unchanged — schema caught up to the emitter, not the
+reverse.
+
 ## 2026-06-08 — make_brief: source-abstraction tool for oversized/refusing inputs (canonical llm_call; measured ingest ceiling; STOP-by-default refusal)
 **Files:** agent/llm_call.py, agent/make_brief.py, agent/c-orchestrator.py
 **Tier:** tripwire

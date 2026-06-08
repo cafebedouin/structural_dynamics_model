@@ -3853,9 +3853,71 @@ claim-drift model-stability, filed under OQ-83).
   matched control was worth its cost — it caught a wrong conclusion (Step 1b) before it became a
   GEN_MODEL change. Report `PILOT_STEP01_REPORT.md`. Cost ≈284/500.
 
+## OQ-88 — Flat router under-routes COUPLED methodological kernels; a false-mountain (authored mountain → computed rope) on a flat-entry topic is a candidate missed-kernel signal
+
+**Ω-type:** Ω_E (the under-routing is witnessed and counted — World3, 2 stable dry-run samples; the
+proposed detector is corpus-measurable) + Ω_P (design call: should the SCOPE gate treat an authored
+inevitability/"mountain"/"irreducible" framing as a kernel trigger — seat necessity-vs-contingency —
+operator's, fresh decision).
+
+**Status:** open — candidate detector, N=2 witnessed instances; the positive/negative control sweep
+that would license it as a gate signal has NOT been run.
+
+**Origin:** 2026-06-08, World3 essay comparison. A thesis-driven critique of the Nebel et al. 2024
+World3 recalibration ("The Robustness Is the Tell", web Claude) landed a spine the pipeline essay
+(`agent/analysis/essays/world3_recalibration_2024.md`) does not have: the **robustness inversion** —
+parameter-insensitivity is evidence the collapse is architecture-determined and therefore evidence
+*against* the calibrated forecast (date/mechanism), resolved by **seating the policy regime**
+(collapse is mountain-within-BAU, rope-across-regimes; Stabilized-World scenario = the positive
+control that the model is not a pure collapse engine). That regime is a contested SEAT.
+
+**The under-routing, witnessed.** World3 routed FLAT under the kernel-liberal primed prompt (OQ-79),
+stably across two `--dry-run` samples: `outputs/kernel_manifests/flat/world3_recalibration_2024_20260608_171605.manifest.json`
+and `outputs/kernel_manifests/world3_kernel_probe/world3_recalibration_2024_20260608_183123.manifest.json`
+(no `csr`/readings block; 0 readings, 4 axes). The second sample is the revealing one: it **emitted
+the robustness fact itself as a standalone flat axis** (`parameter_sensitivity_structural_robustness`:
+"different parameter sets yield different trajectories vs preservation of overshoot-collapse pattern
+across parameters") AND `collapse_timing_credibility` as a *separate* flat axis — but never coupled
+them (robustness ⊥ forecast) and never seated the regime, filing it instead as epistemic omegas
+(`omega_earth4all_paradigm_shift`: "extending a dying paradigm or validating a still-useful one?";
+`omega_belief_system_change_mechanism`). The gate decomposes a *coupled* methodological kernel into
+its component axes + omegas, **dropping the coupling/foreclosure relation that makes it a kernel.**
+This is the OQ-79 kernel-liberal gate's blind spot in the wild: it fires on a *constructible
+foundational reading* but misses the necessity-vs-contingency seat when the topic dresses it as
+measurement/epistemic uncertainty (both samples' F03 note reads the ambiguity as proxy/optimization
+underdetermination, not a reading contest).
+
+**The engine, however, DID flag it — in its own vocabulary.** `collapse_mechanism_ambiguity` (today's
+report) classified authored=mountain → computed=**rope**, conf 0.01, `type_1_false_summit` severe,
+boundary mountain→rope, all four observers agree (H¹=0). The **mountain↔rope type-divergence IS the
+necessity-vs-contingency kernel question** — "is this an immutable necessity or a policy/coordination-
+contingent arrangement?" The engine adjudicated the seat (rope) that the SCOPE gate never built.
+
+**Candidate detector (the actionable claim):** a flat-routed topic the engine flags as FALSE MOUNTAIN
+(authored mountain → computed rope, `type_1_false_summit`) is a **kernel false-negative candidate** —
+the unseated seat is necessity-vs-contingency. Not World3-specific: same run, `demographic_skill_mismatch`
+(china, flat) is authored=mountain → rope, conf 0.01 (aging-as-inevitability vs policy-contingent —
+retirement age / immigration / automation). Two witnessed instances, one run.
+
+**Positive/negative control REQUIRED before this becomes a gate (Build Discipline — every diagnostic
+needs a positive control).** Sweep the live corpus for `flat-routed ∧ (authored mountain → computed
+rope ∨ type_1_false_summit)`; verify (a) it FIRES on the known instances (World3 collapse, demographic)
+— positive control — and (b) it does NOT blanket-fire on genuine false-mountains that are just an
+authoring flinch with no contestable regime seat — negative control. Without (b) the detector
+over-routes, which is exactly the OQ-79 kernel-liberal failure mode one level up.
+
+**What resolution would change:** if the detector survives the control sweep, the SCOPE gate gains a
+cheap, engine-grounded kernel trigger (an authored inevitability/"mountain"/"irreducible" framing
+routes to seat necessity-vs-contingency as competing readings rather than flattening). If it
+over-fires, the finding narrows to "the engine's false-mountain flag is a *prompt* for an operator
+kernel-vs-flat review, not an auto-route." Cross-refs: OQ-79 (kernel-liberal gate / flat-entry path —
+this is its measured blind spot), OQ-76 (salience-driven under-firing), `docs/seat-theorem-v1.md`
+(Coupling Theorem), `docs/the_perturbation_principle.md` §7.1 (kernel-vs-flat is itself a seat).
+Provenance: this analysis + KNOWN_STATE 2026-06-08.
+
 ---
 
-*Last updated: 2026-06-07. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-08. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
