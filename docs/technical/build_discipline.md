@@ -167,6 +167,48 @@ not delete on wiring grounds.
 
 ---
 
+## Two over-confident moves on the synthesis side: false-absence and false-unification
+
+These are the auditor/assistant's own failure modes, distinct from the five build defects: they are
+errors of *claiming*, not of building. Both were caught repeatedly in one session (2026-06-10) — each
+time by the human supplying the positive control the assistant should have generated. "Be careful" does
+not fix them; a structural rule does.
+
+**False-absence — owe a positive control before any "absent / can't / unrepresentable / no X."** An
+absence or impossibility claim is the highest-confidence-lowest-evidence move available, and it is the
+assistant's characteristic error. It must carry its probe — *grep a name you KNOW exists to prove the
+search fires; construct the case the thing must flag* — or be tagged **OPEN**, never emitted as a
+finding. Instances: claimed "no fixer predicate exists" (missed `agenda_setter` — wrong grep layer);
+claimed a constraint type "unrepresentable, needs new design," then over-corrected to "representable
+now" (the *headline* oscillated to match the interlocutor while the *body* kept the true caveat). Two
+sub-rules: **(a) the headline must carry the body's caveat** — if the body says "X deferred / proxy
+only," the headline may not say "solved"; a proxy improving is not the mechanism becoming checkable.
+**(b) Control the claim at the altitude it's made** — a probe over predicate `f` licenses "absent in
+`f`," not "absent in the system"; to claim the broader thing, extend the control to the other named
+sites or narrow the claim to what was probed (the `transition_path` decay-vs-repair case: the grep
+licensed "no upgrade head in the predicate"; the system-level claim needed the live-path and
+trajectory-reporter checks added before it was earned).
+
+**False-unification — owe a distinction-check before merging things that share concepts.** The
+synthesis twin: two components sharing a vocabulary or a dynamics is NOT license to fold them, import
+one's machinery into the other, or treat them as one. Check whether the architecture *mandates* their
+separation first, and cite where it rules. Instance: proposed "import the repair half from the
+committer axis into the observer axis" — exactly the fold `deferential_realism_paper_v7.md` mandatorily
+refuses (Theorem 7 Detection Independence: the axes detect disjoint failures; "the cost of the second
+axis is the discipline of keeping it separate"). Shared dynamics across distinct objects is **analogy**
+(inspiration), not a bridge. A subtler form is **cross-metaphor welding**: "scaffold = {maintain,
+splice, replace}" composes the construction metaphor with the rigging metaphor; the type vocabulary is
+multi-metaphor *by design* and the source domains do not compose. Rule: when a synthesis wants to
+combine two named things, state the separation it might be violating and cite the ruling, before
+proposing the merge.
+
+**The shared root:** both are the generative/confident faculty outrunning its evidence — false-absence
+collapses "I didn't find it" into "it isn't there"; false-unification collapses "these rhyme" into
+"these are one." The same fix shape works on both: name the witness the claim would need (a firing
+probe; a ruling on separation) and either produce it or tag the claim OPEN.
+
+---
+
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)
 
 **Shape:** a file or record is copied to a scratch/test location, possibly edited, and now

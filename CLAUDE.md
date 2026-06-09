@@ -291,6 +291,21 @@ unsure, preserve and adjudicate. Full version + instances (the 8 zero-firing sig
 `snapshot_type`/`degradation_chain` type-path vs `drift_trajectory` metric-series):
 `docs/technical/build_discipline.md` → *Unwired ≠ worthless*.
 
+**False-absence and false-unification — the two over-confident moves on the synthesis side; each owes
+a witness before it ships.** Distinct from the build defects: these are errors of *claiming*.
+**(1) Before any "absent / can't / unrepresentable / no X," owe a positive control** — grep a name you
+KNOW exists to prove the search fires, or construct the case it must flag — else tag it **OPEN**, never
+a finding. Corollaries: the headline must carry the body's caveat ("proxy only" in the body ≠ "solved"
+in the title); control the claim at its altitude (a probe over predicate `f` licenses "absent in `f`,"
+not "absent in the system" — extend the control or narrow the claim). **(2) Before merging two things
+that share a vocabulary or dynamics, owe a distinction-check** — verify the architecture doesn't
+*mandate* their separation, and cite the ruling, before folding (e.g. the observer/committer axes:
+`deferential_realism_paper_v7.md` Theorem 7 forbids the fold; shared dynamics across distinct objects
+is analogy, not a bridge; "scaffold = {splice,replace}" is a cross-metaphor weld — the type vocabulary
+does not compose). Both collapse a distinction the material holds open; the fix is to name the witness
+(a firing probe; a separation ruling) and produce it or stay OPEN. Full version:
+`docs/technical/build_discipline.md` → *Two over-confident moves on the synthesis side*.
+
 ## Critical Distinctions
 
 **The live corpus is the post-de-leak REBUILD (reset 2026-06-05) — never cite a memorized count;
