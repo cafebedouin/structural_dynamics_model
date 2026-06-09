@@ -35,3 +35,8 @@ testsets_failed_*/
 json_backup_*/
 json_failed_*/
 .claude/
+
+# Run-tagged pilot story dirs: intentionally untracked + glob-isolated + disposable (OQ-87).
+# Canonical json/ stories live flat at json/*.json; other run-tagged subdirs (e.g. a live
+# probe run) stay VISIBLE in git status until an operator rules track-or-discard.
+json/pilot_*/

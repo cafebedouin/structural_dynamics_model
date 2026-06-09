@@ -429,6 +429,15 @@ offer updates (as a diff or edit proposal, not a verbal summary) to:
   AGENDA.md, AUDIT.md, TODO.md, PRIORITIES.md were consolidated into it and deleted (2026-06-04)
   — do not recreate parallel trackers (Build Discipline Pattern 2).
 
+**Git autonomy (operator ruling, 2026-06-09).** Standing permission to commit without asking:
+when a coherent unit of work is witnessed, commit it then — do not batch a session into one
+end-commit; in-flight work is what compaction and harness outages destroy (full rationale:
+`docs/technical/build_discipline.md` → *Commit-as-you-go*). Everything here is CC0; the operator
+values iteration over correctness; mistakes are recoverable. Push is also permitted once the
+pre-push check below passes. **Multi-instance sessions: one instance per git worktree**
+(`git worktree add ../wt-<task> <branch>`) — two instances editing one working tree step on each
+other's uncommitted state.
+
 **Before any `git push`:** verify the three files above are current with respect to the changes
 being pushed.
 

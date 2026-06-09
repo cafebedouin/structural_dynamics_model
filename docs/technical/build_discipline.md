@@ -805,6 +805,31 @@ separation buys nothing.
 
 ---
 
+## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end
+
+**Operator ruling (2026-06-09): standing permission to commit without asking.** The repo is CC0,
+single-operator, iteration-over-correctness; mistakes are recoverable through git itself. The
+agent does not need (and should not wait for) per-session commit authorization.
+
+**Why this is a build-discipline rule, not a convenience.** Uncommitted work has the same failure
+mode as an unpasted witness: it exists only in a volatile medium. A session that resolves five
+items and plans one end-commit holds all five in-flight for hours — exposed to context compaction
+(the agent loses the detail needed to write the commit honestly), harness outages (observed
+2026-06-09: an execution-classifier outage froze all commits for a working session whose changes
+were complete), and cross-instance interference. The end-of-session batch commit is
+recap-as-witness applied to git: "I'll commit it all later" is a done-claim whose witness does not
+yet exist.
+
+**The discipline:** when a unit of work is *witnessed* (its paste-or-untag obligation is
+discharged), commit it then, as its own commit. Granularity follows witness boundaries, not
+session boundaries. The output-changing vs behavior-preserving split (memory:
+`feedback_output_changing_commit_discipline`) still applies within this — committing often does
+not license mixing the two in one commit. Corollary for multi-instance work: **one instance per
+git worktree** (`git worktree add ../wt-<task> <branch>`); two instances sharing a working tree
+step on each other's uncommitted state — which commit-as-you-go shrinks but does not eliminate.
+
+---
+
 ## A witnessed fact has a shelf life: the citation-time rule and the staleness ladder
 
 The paste-or-untag rule (CLAUDE.md governing stance; the "recap-as-witness" pattern) fires at the
