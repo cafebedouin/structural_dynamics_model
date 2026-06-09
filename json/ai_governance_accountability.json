@@ -2,33 +2,37 @@
   "header": {
     "constraint_id": "ai_governance_accountability",
     "version": "1.0",
-    "generated_date": "2025-01-10",
+    "generated_date": "2025-01-09",
     "status": "ACTIVE",
-    "measurement_id_prefix": "ai_gov_acct",
-    "story_uid": "424e4d52-a373-4ab5-a478-1ae479ca6351"
+    "measurement_id_prefix": "ai_gov",
+    "story_uid": "0f6a73e2-0919-426f-800d-96e33fb52a1a"
   },
   "base_properties": {
-    "extractiveness": 0.35,
-    "suppression": 0.5,
+    "extractiveness": 0.62,
+    "suppression": 0.68,
     "theater_ratio": 0.58,
-    "claimed_type": "scaffold",
+    "accessibility_collapse": 0.42,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
     "human_readable": "AI Governance Accountability Gap",
-    "topic_domain": "technology_ethics/political_theology/regulatory_policy",
+    "topic_domain": "political_theology/technology_ethics/governance",
     "requires_active_enforcement": true,
-    "has_sunset_clause": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "ai_deploying_corporations",
-      "regulatory_agencies_building_capacity"
+      "tech_monopolies",
+      "states_with_regulatory_capture"
     ],
     "victims": [
-      "algorithmic_decision_subjects",
-      "workers_displaced_without_recourse",
-      "communities_facing_discriminatory_systems"
+      "states_lacking_governance_capacity",
+      "civil_society_organizations",
+      "affected_populations_global_south"
     ],
     "vindicated_propositions": [
-      "technological_neutrality_doctrine",
-      "innovation_imperative"
-    ]
+      "technological_sovereignty_doctrine",
+      "market_efficiency_in_innovation"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -36,9 +40,9 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Algorithmic Decision Subject",
-      "comment": "PERSPECTIVE 1: ALGORITHMIC DECISION SUBJECT (SNARE) — Trapped by opacity: cannot understand why denied employment/credit/services, cannot appeal effectively, cannot exit systems that have become infrastructure. Maximum extraction — bears full cost of errors and bias with no recourse mechanism."
+      "spatial_scope": "global",
+      "label": "Affected Populations in Global South",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATIONS (SNARE) — Communities subject to algorithmic decisions (credit scoring, content moderation, surveillance) with no meaningful recourse. Trapped by digital dependency and lack of alternative infrastructure. Maximum extraction: decisions made by distant actors with no accountability mechanism."
     },
     {
       "classification_type": "tangled_rope",
@@ -46,8 +50,17 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Regulatory Agency",
-      "comment": "PERSPECTIVE 2: REGULATORY AGENCY (TANGLED ROPE) — Constrained by technical capacity gaps and industry capture risk, but genuinely coordinating toward accountability frameworks (EU AI Act, algorithmic impact assessments). Mixed: building necessary governance infrastructure while vulnerable to regulatory arbitrage and lobbying pressure."
+      "label": "Civil Society Organizations",
+      "comment": "PERSPECTIVE 2: CIVIL SOCIETY (TANGLED ROPE) — NGOs and advocacy groups benefit from coordination mechanisms (multi-stakeholder forums, transparency initiatives) but bear costs of asymmetric information access and resource constraints. Can participate in governance theater but cannot compel accountability. Mixed experience: some voice, limited power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "States Lacking Governance Capacity",
+      "comment": "PERSPECTIVE 3: UNDER-RESOURCED STATES (TANGLED ROPE) — National governments without technical expertise or regulatory infrastructure. Benefit from international coordination frameworks (OECD AI Principles, UNESCO recommendations) but cannot enforce them domestically. Constrained by technical complexity and resource asymmetry. The coordination function is real but extraction dominates."
     },
     {
       "classification_type": "rope",
@@ -55,73 +68,73 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The AI Deploying Corporation",
-      "comment": "PERSPECTIVE 3: AI DEPLOYING CORPORATION (ROPE) — Benefits from accountability gap: can deploy systems without liability exposure, can forum-shop across jurisdictions, can claim trade secrecy to resist transparency. Experiences current state as coordination problem being solved too slowly — prefers voluntary frameworks to binding regulation."
+      "label": "Tech Monopolies",
+      "comment": "PERSPECTIVE 4: TECH MONOPOLIES (ROPE) — Primary beneficiaries. Experience governance gap as coordination: voluntary frameworks (Partnership on AI, industry standards) enable market expansion while avoiding binding regulation. Arbitrage across jurisdictions. Net beneficiary — extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "States with Regulatory Capture",
+      "comment": "PERSPECTIVE 5: CAPTURED REGULATORS (TANGLED ROPE) — Advanced economies (US, UK) where regulatory agencies are structurally dependent on industry expertise and revolving-door employment. Benefit from industry tax revenue and innovation narrative but bear legitimacy costs. Constrained by political economy of capture. Mixed coordination and extraction."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "constrained",
+      "exit_options": "mobile",
       "spatial_scope": "continental",
-      "label": "The Accountability Coalition",
-      "comment": "PERSPECTIVE 4: ACCOUNTABILITY COALITION (SCAFFOLD) — Organized civil society, labor unions, digital rights groups, and aligned regulators building transitional governance: explainability requirements, algorithmic audits, liability frameworks, worker consultation rights. Sees current gap as temporary coordination failure with clear sunset: binding accountability mechanisms are under construction (EU AI Act 2024-2027 implementation, US state-level algorithmic accountability bills, international AI governance frameworks). Moderate extraction because coalition has agency and sees viable path to resolution."
+      "label": "EU Regulatory Coalition",
+      "comment": "PERSPECTIVE 6: EU REGULATORY COALITION (SCAFFOLD) — Organized actors (EU AI Act, GDPR enforcement, Digital Services Act) building binding accountability mechanisms. See current gap as temporary coordination failure with sunset logic: hard law is replacing soft governance. Mobile — can exit voluntary frameworks and impose requirements. Transitional structure with declared endpoint."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Catholic Social Teaching Framework",
-      "comment": "PERSPECTIVE 5: CATHOLIC SOCIAL TEACHING FRAMEWORK (TANGLED ROPE) — Institutional voice (Papal Magisterium via encyclicals, Vatican AI ethics initiatives) coordinating toward human dignity-centered governance while constrained by limited enforcement power outside Catholic institutions. Genuine coordination function (articulating subsidiarity, common good, solidarity principles for AI) coexists with structural extraction (teaching authority cannot compel secular compliance; prophetic witness competes with technocratic paradigm's material power)."
-    },
-    {
-      "classification_type": "scaffold",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD) — From civilizational scope, the accountability gap is a transitional governance failure characteristic of technology deployment outpacing institutional adaptation. Historical pattern: steam power, electricity, automobiles, internet all showed similar lag between deployment and liability/safety frameworks. Current gap has clear sunset mechanisms under construction: binding regulation (EU AI Act), technical standards (IEEE P7000 series), legal precedent (algorithmic discrimination cases), and normative consensus (AI ethics principles converging across secular and religious frameworks). Scaffold classification reflects that the gap is temporary and the transition is structurally underway, not that extraction is low."
+      "spatial_scope": "universal",
+      "label": "Catholic Social Teaching Analytical Position",
+      "comment": "PERSPECTIVE 7: CST ANALYTICAL (TANGLED ROPE) — From civilizational perspective grounded in human dignity and common good, current governance structures provide genuine coordination (international dialogue, ethical frameworks) but embed asymmetric extraction (private actors capture decision authority that affects universal human goods). The encyclical's call for 'sound politics' and participatory governance recognizes both functions. Analytical classification aligns with claimed type."
     }
   ],
   "omegas": [
     {
-      "id": "enforcement_capacity_threshold",
-      "question": "Do regulatory agencies have sufficient technical capacity to audit complex AI systems, or will enforcement remain theatrical?",
-      "resolution_mechanism": "Track regulatory hiring of AI specialists, audit completion rates, enforcement actions with technical findings vs procedural violations. Compare to historical regulatory capacity-building timelines (FDA drug approval, EPA emissions testing).",
-      "impact": "If capacity remains low: scaffold degrades to piton (performative compliance theater). If capacity builds: scaffold sunset proceeds as designed.",
+      "id": "binding_enforcement_threshold",
+      "question": "At what point does voluntary industry self-regulation transition from coordination to extraction — when does lack of binding enforcement constitute structural suppression rather than coordination lag?",
+      "resolution_mechanism": "Comparative analysis of voluntary vs. mandatory frameworks: compliance rates, enforcement actions, remedy availability for affected parties. Historical precedent from other industries (finance, pharmaceuticals) transitioning from self-regulation to public oversight.",
+      "impact": "If voluntary frameworks show high compliance and effective remedy: coordination function dominates, Rope from more perspectives. If compliance is performative and remedy unavailable: extraction dominates, Snare from more perspectives.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulatory agencies can build technical audit capacity"
+      "description": "Threshold distinguishing coordination lag from structural extraction in voluntary governance"
     },
     {
-      "id": "liability_assignment_coherence",
-      "question": "Can legal systems coherently assign liability for AI harms when decision-making is distributed across training data providers, model developers, deploying organizations, and users?",
-      "resolution_mechanism": "Track evolution of case law on algorithmic harms; emergence of strict liability vs negligence standards; insurance market development for AI liability.",
-      "impact": "If liability remains diffuse: accountability gap persists indefinitely (scaffold fails to sunset). If coherent assignment emerges: recourse pathways become real.",
+      "id": "subsidiarity_implementation_ambiguity",
+      "question": "Does CST principle of subsidiarity support decentralized governance (local/national AI regulation) or require coordinated global frameworks to address transnational corporate power?",
+      "resolution_mechanism": "Doctrinal analysis of subsidiarity in contexts of asymmetric power (Quadragesimo Anno §79-80, Centesimus Annus §48). Does subsidiarity require capacity-building at lower levels before devolving authority, or does it permit higher-level intervention when lower levels are structurally incapable?",
+      "impact": "If subsidiarity requires local primacy: current global governance initiatives may violate CST principles. If subsidiarity permits intervention under incapacity: global frameworks are doctrinally warranted. Affects whether CST supports or contests current governance trajectory.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether distributed AI decision-making admits coherent liability assignment"
+      "description": "Whether subsidiarity principle supports decentralized or coordinated global AI governance"
     },
     {
-      "id": "explainability_sufficiency",
-      "question": "Do current explainability techniques (LIME, SHAP, attention visualization) provide meaningful recourse, or merely legibility theater?",
-      "resolution_mechanism": "Empirical studies of whether explanations enable successful appeals; comparison of appeal success rates with vs without explanations; user comprehension testing.",
-      "impact": "If explanations are theatrical: accountability frameworks built on explainability requirements will not reduce extraction. If explanations enable genuine recourse: scaffold proceeds toward sunset.",
-      "confidence": "medium",
+      "id": "participation_theater_measurement",
+      "question": "Do multi-stakeholder governance forums (Partnership on AI, Global Partnership on AI) constitute genuine participatory governance or performative inclusion that legitimates pre-determined industry positions?",
+      "resolution_mechanism": "Process tracing of forum decisions: correlation between civil society input and policy outcomes; resource asymmetries in participation (who can afford sustained engagement); veto points and agenda-setting power. Comparison with historical cases of captured multi-stakeholder processes (Internet governance, climate negotiations).",
+      "impact": "If forums show genuine influence: theater_ratio should be lower, coordination function stronger. If forums are performative: current theater_ratio (0.58) may underestimate extraction, and the scaffold perspective's sunset logic is aspirational rather than structural.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether technical explainability provides meaningful accountability"
+      "description": "Whether multi-stakeholder forums provide genuine participation or performative legitimation"
     },
     {
-      "id": "subsidiarity_enforcement_gap",
-      "question": "Can Catholic Social Teaching's subsidiarity principle (decisions at lowest competent level) be enforced in AI governance, or does it remain aspirational against technocratic centralization?",
-      "resolution_mechanism": "Track whether AI governance frameworks include worker consultation rights, community input mechanisms, local override capacity. Compare to historical subsidiarity enforcement in labor law, environmental justice.",
-      "impact": "If subsidiarity remains aspirational: CST perspective is prophetic witness without structural power (tangled rope persists). If enforced: CST coordination function strengthens (moves toward rope).",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether subsidiarity principle can be structurally enforced in AI systems"
+      "id": "doctrinal_development_necessity",
+      "question": "Does AI governance require NEW doctrinal development in CST (novel principles for algorithmic dignity, data rights, automated decision-making) or APPLICATION of existing principles (dignity, common good, justice) to new context?",
+      "resolution_mechanism": "Magisterial interpretation: does the encyclical's language ('add my own voice,' 'res nova') signal doctrinal development or emphatic application? Comparison with historical doctrinal development (Dignitatis Humanae on religious freedom, Laudato Si' on ecological conversion) vs. application (Rerum Novarum applying justice to industrial labor).",
+      "impact": "If doctrinal development: CST authority structure must absorb new content, creating interpretive instability during development period. If application: existing doctrine suffices, and the encyclical's authority is continuous with tradition. Affects cs_structure classification and interpretation_layer stability.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether AI requires doctrinal development or application of existing CST principles"
     }
   ],
   "measurements": [
@@ -129,110 +142,116 @@
       "metric": "theater_ratio",
       "time_point": 0,
       "value": 0.35,
-      "id_override": "ai_gov_acct_theater_2015"
+      "id_override": "ai_gov_theater_2015"
     },
     {
       "metric": "theater_ratio",
       "time_point": 3,
       "value": 0.48,
-      "id_override": "ai_gov_acct_theater_2018"
+      "id_override": "ai_gov_theater_2018"
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
       "value": 0.58,
-      "id_override": "ai_gov_acct_theater_2021"
+      "id_override": "ai_gov_theater_2021"
     },
     {
       "metric": "theater_ratio",
       "time_point": 9,
-      "value": 0.62,
-      "id_override": "ai_gov_acct_theater_2024"
+      "value": 0.58,
+      "id_override": "ai_gov_theater_2024"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.25,
-      "id_override": "ai_gov_acct_extract_2015"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.3,
-      "id_override": "ai_gov_acct_extract_2018"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.35,
-      "id_override": "ai_gov_acct_extract_2021"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.38,
-      "id_override": "ai_gov_acct_extract_2024"
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.4,
-      "id_override": "ai_gov_acct_suppress_2015"
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 3,
       "value": 0.45,
-      "id_override": "ai_gov_acct_suppress_2018"
+      "id_override": "ai_gov_extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54,
+      "id_override": "ai_gov_extract_2018"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62,
+      "id_override": "ai_gov_extract_2021"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62,
+      "id_override": "ai_gov_extract_2024"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "ai_gov_suppress_2015"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.61,
+      "id_override": "ai_gov_suppress_2018"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 6,
-      "value": 0.5,
-      "id_override": "ai_gov_acct_suppress_2021"
+      "value": 0.68,
+      "id_override": "ai_gov_suppress_2021"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 9,
-      "value": 0.52,
-      "id_override": "ai_gov_acct_suppress_2024"
+      "value": 0.68,
+      "id_override": "ai_gov_suppress_2024"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 9
   },
   "commentary": {
-    "narrative_context": "The AI governance accountability gap describes the structural lag between widespread deployment of algorithmic decision systems in high-stakes domains (employment screening, credit allocation, criminal justice, healthcare triage, social services) and the construction of effective accountability mechanisms (explainability requirements, independent audits, liability frameworks, appeal pathways). This constraint exhibits scaffold dynamics: it is a transitional coordination failure with identifiable sunset mechanisms under construction. The EU AI Act (2024-2027 phased implementation), US state-level algorithmic accountability legislation, IEEE technical standards for algorithmic transparency, and emerging case law on algorithmic discrimination represent concrete institutional responses building the accountability infrastructure. However, the gap's theater_ratio (0.58 and rising) reflects that much current 'AI ethics' activity is performative: voluntary principles without enforcement, explainability techniques that provide legibility without recourse, audit frameworks that lack technical capacity. The constraint sits downstream of two structural forces: the technocratic paradigm (which treats efficiency optimization as self-justifying) and private power concentration (which resists transparency and liability as threats to competitive advantage). Catholic Social Teaching enters as an institutional voice coordinating toward human dignity-centered governance, constrained by limited enforcement power outside Catholic institutions but contributing normative framework (subsidiarity, common good, solidarity) that aligns with secular accountability movements.",
+    "narrative_context": "The AI governance accountability gap describes the structural asymmetry between the locus of decision-making authority over AI systems (concentrated in private transnational corporations) and the locus of accountability mechanisms (fragmented across under-resourced national regulators and voluntary industry frameworks). This constraint emerges from the interaction of three structural features: (1) technical complexity that creates information asymmetry between developers and regulators, (2) transnational deployment that fragments regulatory jurisdiction, and (3) market concentration that gives dominant firms agenda-setting power in governance forums. The encyclical Antiqua et Nova identifies this gap as a failure of 'sound politics' (§73) and calls for governance structures that 'ensure that the development and use of technology serve the common good' (§75). The constraint exhibits genuine coordination function — international frameworks (OECD AI Principles, UNESCO Recommendation, Partnership on AI) enable dialogue and standard-setting — but embeds asymmetric extraction: affected populations bear algorithmic harms with no meaningful recourse, while tech monopolies capture the benefits of innovation without corresponding accountability. The theater_ratio (0.58) reflects that much governance activity is performative: multi-stakeholder forums provide legitimation without binding enforcement, ethics boards issue recommendations without implementation mechanisms, and transparency initiatives disclose process without enabling contestation. The EU regulatory coalition represents a structural alternative (scaffold perspective) with sunset logic: hard law (AI Act, DSA) is replacing soft governance, creating binding accountability mechanisms with enforcement teeth. Whether this sunset is real or aspirational depends on implementation — the omega on participation theater addresses this uncertainty.",
     "key_agents": [
-      "Algorithmic Decision Subjects: Primary victims (powerless/trapped) — bear costs of opaque decisions without recourse; cannot exit systems that have become infrastructure",
-      "AI Deploying Corporations: Primary beneficiaries (institutional/arbitrage) — capture efficiency gains and competitive advantage during accountability gap; can forum-shop and claim trade secrecy",
-      "Regulatory Agencies: Mixed actors (moderate/constrained) — building accountability capacity but vulnerable to technical complexity and industry capture",
-      "Accountability Coalition: Organized transition agents (organized/constrained) — civil society, labor, digital rights groups building binding frameworks with clear sunset timeline",
-      "Catholic Social Teaching Framework: Institutional normative voice (institutional/constrained) — coordinating toward dignity-centered governance without secular enforcement power",
-      "Workers and Communities: Secondary victims (powerless/trapped) — face displacement and discriminatory systems without consultation rights or appeal mechanisms"
+      "Tech Monopolies: Primary beneficiary (institutional/arbitrage) — capture decision authority over AI deployment, arbitrage across jurisdictions, shape governance frameworks through industry forums and regulatory capture",
+      "Affected Populations (Global South): Primary victim (powerless/trapped) — subject to algorithmic decisions with no recourse, trapped by digital dependency and lack of alternative infrastructure",
+      "Civil Society Organizations: Secondary victim (moderate/constrained) — participate in governance forums but lack resources and information access to compel accountability; mixed coordination and extraction",
+      "States Lacking Governance Capacity: Victim (institutional/constrained) — benefit from international coordination frameworks but cannot enforce domestically due to technical complexity and resource asymmetry",
+      "States with Regulatory Capture: Mixed beneficiary/victim (institutional/constrained) — benefit from industry tax revenue and innovation narrative but bear legitimacy costs of capture; constrained by political economy",
+      "EU Regulatory Coalition: Organized agents (organized/mobile) — building binding accountability mechanisms (AI Act, GDPR, DSA) with sunset logic; can exit voluntary frameworks and impose requirements",
+      "CST Analytical Position: Analytical observer (analytical/analytical) — recognizes both coordination function (international dialogue, ethical frameworks) and asymmetric extraction (private capture of authority over universal human goods)"
     ],
-    "logic_rationale": "Extractiveness (0.35): Moderate and rising. Corporations capture efficiency gains and avoid liability costs during the accountability gap. Workers face displacement without recourse; decision subjects bear costs of errors and bias. But extraction is not maximal — some jurisdictions have functioning appeal mechanisms, some sectors face reputational costs for algorithmic harms, and accountability infrastructure is under construction. The rising trajectory (0.25→0.38 over 9 years) reflects that deployment is outpacing governance. Suppression (0.50): Moderate and rising. Significant barriers to accountability include: technical opacity (black-box models), trade secrecy claims, jurisdictional arbitrage, asymmetric technical capacity between deployers and regulators, and lack of legal precedent. But suppression is not total — some transparency requirements exist, some audits occur, some cases succeed. The rising trajectory (0.40→0.52) reflects hardening of opacity as systems become more complex and proprietary. Theater ratio (0.58): Substantial and rising. Much AI ethics activity is performative: voluntary principles without enforcement teeth, explainability techniques that provide post-hoc rationalization rather than genuine recourse, ethics boards without veto power, audit frameworks that lack technical capacity to verify claims. The rising trajectory (0.35→0.62) reflects Goodhart dynamics: as accountability pressure increases, performative compliance substitutes for substantive change. However, binding regulation (EU AI Act) represents a potential inflection point.",
-    "directionality_logic": "Algorithmic decision subjects are full victims with trapped exit — they experience maximum effective extraction because they cannot exit systems that have become infrastructure and have no recourse when harmed. AI deploying corporations are primary beneficiaries with arbitrage exit — they experience low or negative effective extraction because they capture gains and can avoid accountability through forum-shopping and trade secrecy. Regulatory agencies are mixed: they are building necessary coordination infrastructure (beneficiary aspect) but face capture risk and capacity constraints (victim aspect) — constrained exit yields moderate effective extraction. The accountability coalition has organized power and sees a viable exit path (the sunset mechanisms under construction) — constrained exit with agency yields moderate extraction. Catholic Social Teaching framework is an institutional voice with constrained exit (cannot compel secular compliance) — experiences moderate extraction as prophetic witness competing with technocratic paradigm's material power. The perspectival gap is diagnostic: beneficiaries see coordination (rope), victims see extraction (snare), transition agents see temporary failure with sunset (scaffold).",
-    "perspectival_gap": "This constraint demonstrates how scaffold classification depends on observer position and time horizon. Algorithmic decision subjects at biographical scope see pure extraction (snare) — they are trapped in opaque systems with no recourse and no exit. AI deploying corporations at immediate scope see coordination (rope) — they are solving the legitimate problem of scaling decision-making, and accountability requirements are friction. Regulatory agencies at biographical scope see mixed coordination and extraction (tangled rope) — they are building necessary governance while vulnerable to capture. The accountability coalition at generational scope sees a transitional problem with clear sunset (scaffold) — binding frameworks are under construction with concrete timelines. Catholic Social Teaching at biographical scope sees tangled rope — genuine normative coordination constrained by limited enforcement power. The analytical observer at civilizational scope sees scaffold — historical pattern of technology outpacing governance, with accountability infrastructure following predictable institutional adaptation timeline. The gap reveals that 'temporary' vs 'permanent' is observer-relative: those trapped in the gap experience it as indefinite extraction; those building the exit see the sunset approaching.",
-    "mandatrophy_analysis": "SCAFFOLD SUNSET LOGIC: The accountability gap carries a declared sunset through multiple converging mechanisms: (1) EU AI Act phased implementation 2024-2027 creates binding explainability, audit, and liability requirements for high-risk AI systems in EU market; (2) US state-level legislation (Illinois Biometric Information Privacy Act, California algorithmic accountability bills) building patchwork that creates compliance pressure; (3) IEEE P7000 series technical standards for algorithmic transparency maturing toward industry adoption; (4) case law on algorithmic discrimination accumulating (employment screening, credit allocation, criminal justice) establishing liability precedent; (5) insurance market development for AI liability creating economic pressure for accountability. The sunset is not guaranteed — omega variables identify failure modes (regulatory capacity gaps, liability assignment incoherence, explainability theater) — but the institutional infrastructure is under active construction with concrete timelines. The scaffold classification reflects that the gap is a coordination failure being addressed, not a permanent extraction mechanism. However, the rising theater_ratio (0.35→0.62) indicates Goodhart risk: performative compliance may substitute for substantive accountability, degrading scaffold toward piton. The critical test: do binding regulations with technical enforcement capacity arrive before the gap normalizes into permanent opacity?"
+    "logic_rationale": "Extractiveness (0.62): Substantial. Tech monopolies capture decision authority over systems affecting billions while bearing minimal accountability costs. Affected populations experience algorithmic harms (discriminatory credit scoring, biased content moderation, invasive surveillance) with no meaningful remedy. The extraction is not total — some coordination mechanisms exist (transparency requirements, ethics review) — but the asymmetry is severe and growing. The value reflects that much of the 'governance' activity is theater rather than binding constraint on corporate power. Suppression (0.68): High. Multiple mechanisms suppress alternatives: technical complexity creates information asymmetry that excludes non-expert participation; transnational deployment fragments regulatory jurisdiction; market concentration gives dominant firms veto power over governance frameworks; revolving-door employment captures regulatory agencies; intellectual property regimes prevent independent audit. Resistance is substantial (civil society advocacy, EU regulation, academic criticism) but structurally disadvantaged. Theater ratio (0.58): Moderate-high. Multi-stakeholder forums, ethics boards, and transparency initiatives provide legitimation without binding enforcement. Much governance activity is performative: principles are declared, commitments are made, but implementation mechanisms are absent or voluntary. The theater has increased over the interval (0.35 → 0.58) as governance activity proliferated without corresponding accountability. Accessibility collapse (0.42): Moderate. Alternatives to current governance structure are visible and contested: public utility models, cooperative ownership, mandatory algorithmic impact assessment, independent oversight boards. The gap is not naturalized as inevitable — resistance is high (0.71) — but alternatives face structural barriers (market concentration, regulatory capture, technical complexity). Resistance (0.71): High. Substantial organized opposition from civil society, academic researchers, EU regulators, and affected communities. The encyclical itself is an act of resistance — magisterial teaching authority contesting the technocratic paradigm. Resistance is structurally disadvantaged but not absent.",
+    "perspectival_gap": "The constraint demonstrates indexical classification across power and exit dimensions. Affected populations (powerless/trapped) experience pure extraction (Snare) — algorithmic decisions with no recourse. Civil society organizations (moderate/constrained) experience mixed coordination and extraction (Tangled Rope) — can participate in forums but cannot compel accountability. Under-resourced states (institutional/constrained) experience the same mixed structure from a different seat — benefit from international frameworks but cannot enforce domestically. Tech monopolies (institutional/arbitrage) experience coordination (Rope) — voluntary frameworks enable market expansion without binding constraint. Captured regulators (institutional/constrained) experience Tangled Rope from yet another angle — benefit from industry relationship but bear legitimacy costs. The EU coalition (organized/mobile) sees a temporary problem with sunset (Scaffold) — hard law is replacing soft governance. The CST analytical position (analytical/analytical) recognizes the mixed structure at civilizational scale — genuine coordination function embedded with asymmetric extraction. The perspectival gap is not about disagreement over facts but about structural position: the same governance arrangements extract from some agents while coordinating for others. The analytical classification (Tangled Rope) aligns with the claimed type because the coordination function is real (international dialogue, standard-setting, ethical frameworks) but so is the extraction (private capture of authority over universal goods).",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. Tech monopolies are declared beneficiaries with arbitrage exit — they capture decision authority and can exit unfavorable jurisdictions. This produces low d (near beneficiary end) and low or negative chi (experienced as coordination). Affected populations are declared victims with trapped exit — they bear algorithmic harms with no recourse and cannot exit digital dependency. This produces high d (near target end) and high chi (experienced as extraction). Civil society organizations are victims with constrained exit — they participate but lack power to compel accountability. This produces moderate-high d and moderate chi (mixed experience). Under-resourced states are victims with constrained exit — they benefit from frameworks but cannot enforce. Moderate-high d, moderate chi. Captured regulators are beneficiaries (industry revenue, innovation narrative) with constrained exit (political economy of capture) — this produces moderate d and moderate chi, but the mixed beneficiary/victim status creates the Tangled Rope classification. The EU coalition is neither pure beneficiary nor victim — they are organized agents building alternatives — with mobile exit (can impose requirements). This produces low-moderate d and low chi (experienced as temporary coordination problem). The analytical position has analytical exit and recognizes both functions — moderate d reflecting the mixed structure. No directionality overrides are needed because the structural declarations (beneficiary/victim + exit options) produce the correct d values for each perspective's classification.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that Tangled Rope classification captures the structural reality: genuine coordination function (international dialogue, standard-setting, ethical frameworks enable collective action on AI governance) coexists with asymmetric extraction (private actors capture decision authority over systems affecting universal human goods, while affected populations bear harms with no recourse). The coordination is not mere cover story — the frameworks do enable information-sharing, norm-setting, and capacity-building. But the extraction is also real — the governance gap concentrates power in private hands while fragmenting accountability. The CST analytical position recognizes both: the encyclical calls for 'sound politics' that can 'ensure technology serves the common good' (§75), acknowledging that current structures provide some coordination (the encyclical itself participates in international dialogue) while demanding transformation to address extraction (binding accountability, participatory governance, subsidiarity). The mandate (coordinate AI governance for common good) persists, but the structure embeds extraction alongside coordination. This is the definitional structure of Tangled Rope: both functions are real, both are necessary for classification, and neither reduces to the other. The perspectival gap (Snare from powerless/trapped, Rope from institutional/arbitrage, Scaffold from organized/mobile) demonstrates that the mixed structure is experienced differently depending on structural position, but the analytical classification integrates both functions at civilizational scale."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [],
-    "dual_formulation_note": "This constraint is downstream of technocratic_paradigm_vs_human_dignity (which treats efficiency optimization as self-justifying, resisting accountability as friction) and private_power_vs_subsidiarity_common_good (which concentrates AI development in corporations that resist transparency and liability). The accountability gap is a distinct structural constraint with its own extractiveness reflecting the governance lag, not merely an instance of the upstream constraints."
+    "dual_formulation_note": "This constraint is downstream of technocratic_paradigm_vs_human_primacy. The upstream constraint describes the ideological/cultural contest between technocratic rationality and human-centered values; this constraint describes the institutional/governance structure that embeds that contest. The upstream constraint's extractiveness reflects the cultural-epistemic asymmetry (technocratic framing suppresses alternative rationalities); this constraint's extractiveness reflects the institutional-political asymmetry (private capture of public authority). Both are Tangled Rope but at different levels of analysis."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.25
-    }
-  ],
+  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true
+  },
+  "six_questions": {
+    "coordination_function": "International frameworks (OECD AI Principles, UNESCO Recommendation, Partnership on AI, Global Partnership on AI) coordinate standard-setting, information-sharing, and norm development across jurisdictions. Multi-stakeholder forums enable dialogue between industry, civil society, and governments. Transparency initiatives and ethics review processes provide procedural coordination for AI deployment decisions.",
+    "transfer_function": "Decision authority over AI systems flows from affected populations and national governments to transnational tech corporations. Algorithmic harms (discriminatory outcomes, privacy violations, manipulative design) flow from corporations to affected populations. Legitimation flows from multi-stakeholder participation to industry self-regulation. Resources (regulatory capacity, technical expertise, agenda-setting power) concentrate in dominant firms.",
+    "absent_voices": "Affected populations in the Global South are systematically excluded from governance forums due to resource constraints, language barriers, and lack of technical expertise. Workers subject to algorithmic management are absent from labor governance discussions. Indigenous communities affected by data extraction and surveillance lack representation. Small states without regulatory capacity are present in name but lack meaningful voice. The excluded would object to: concentration of decision authority in private hands, lack of binding enforcement, performative participation without remedy mechanisms, and suppression of alternative governance models (public utility, cooperative ownership).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the governance gap disappeared overnight — if binding accountability mechanisms with enforcement teeth replaced voluntary frameworks — the world would rearrange substantially. Tech monopolies would face constraints on deployment decisions, affected populations would gain remedy mechanisms, regulatory agencies would require technical capacity-building, and market concentration would face structural challenge. The arrangements (corporate self-regulation, multi-stakeholder forums, voluntary ethics review) depend on the gap's persistence. This is not a natural fact — it is a constructed institutional arrangement that serves identifiable beneficiaries.",
+    "founding_problem": "The founding problem was coordination failure in early AI governance (circa 2015-2017): rapid AI deployment across jurisdictions with no international standards, no shared ethical frameworks, and no mechanisms for information-sharing between researchers, industry, and policymakers. The initial governance initiatives (Partnership on AI 2016, OECD AI Principles 2019) addressed genuine coordination needs: establishing common terminology, identifying shared risks, building trust between stakeholders, and creating forums for dialogue.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Industry actors and captured regulators attest the founding problem remains live: they argue voluntary frameworks are maturing, binding regulation would stifle innovation, and coordination is improving incrementally. Civil society organizations and EU regulators attest the founding problem is dead: the coordination need has been met (standards exist, dialogue forums function), but the structure now serves extraction (industry captures governance to avoid accountability). Academic researchers are divided: some see ongoing coordination needs (technical complexity requires expert input), others see regulatory capture (industry expertise becomes veto power). The CST analytical position (encyclical §73-75) implicitly attests the founding problem is dead: the call for 'sound politics' and binding accountability mechanisms presumes current voluntary coordination is insufficient, and the structure now serves private power rather than common good."
   }
 }

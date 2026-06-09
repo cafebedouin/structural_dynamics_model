@@ -2,55 +2,65 @@
   "header": {
     "constraint_id": "war_normalization_ai_weapons",
     "version": "1.0",
-    "generated_date": "2025-01-10",
+    "generated_date": "2025-01-09",
     "status": "ACTIVE",
-    "measurement_id_prefix": "war_ai",
-    "story_uid": "6677f45b-5c25-432a-9418-2dc8666fcc43"
+    "measurement_id_prefix": "war_norm_ai",
+    "story_uid": "6f9a6a74-eead-49ef-bad7-1186d809c8cd"
   },
   "base_properties": {
-    "extractiveness": 0.78,
-    "suppression": 0.82,
-    "theater_ratio": 0.68,
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
     "claimed_type": "snare",
     "human_readable": "War Normalization Through AI Weapons Systems",
-    "topic_domain": "political_theology/military_ethics/technology",
+    "topic_domain": "theological_ethics/technology_governance/political_economy",
     "requires_active_enforcement": true,
     "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
       "military_industrial_complex",
-      "states_seeking_dominance",
-      "autonomous_weapons_manufacturers"
+      "states_pursuing_dominance",
+      "defense_contractors",
+      "surveillance_technology_firms"
     ],
     "victims": [
-      "civilian_populations",
-      "combatants_reduced_to_data",
-      "humanity_at_large",
-      "moral_deliberation_capacity",
-      "international_humanitarian_law"
+      "civilians_in_conflict_zones",
+      "future_generations_inheriting_arms_races",
+      "democratic_accountability_structures",
+      "just_war_tradition"
     ],
     "vindicated_propositions": [
-      "technocratic_efficiency_doctrine",
-      "strategic_necessity_override"
+      "technological_determinism",
+      "security_through_superiority_doctrine"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "Civilian Population in Conflict Zone",
-      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) — Trapped in conflict zones where AI weapons operate with reduced human oversight. No exit from algorithmic targeting decisions. Experiences maximum extraction: reduced to data points in kill chains, bearing full cost of lowered threshold for lethal force. The speed of AI strike decisions eliminates traditional warning mechanisms and civilian protection protocols."
+      "spatial_scope": "regional",
+      "label": "Civilians in Conflict Zones",
+      "comment": "PERSPECTIVE 1: CIVILIANS IN CONFLICT ZONES (SNARE) — Trapped by geography and lack of resources. Cannot exit drone strike zones or cyberattack targets. Bear maximum extraction: lethal force decisions made faster, more impersonally, with less accountability. The speed and impersonality of AI weapons systems removes human hesitation that previously provided minimal protection."
     },
     {
       "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 2: FUTURE GENERATIONS (SNARE) — Inherit an arms race they did not consent to. Trapped in a security environment where autonomous weapons are normalized infrastructure. The threshold for lethal force has been permanently lowered; accountability mechanisms have been structurally eroded. No exit from the world this constraint creates."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Military Personnel / Operators",
-      "comment": "PERSPECTIVE 2: MILITARY OPERATORS (SNARE) — Constrained by chain of command and operational doctrine that increasingly automates lethal decisions. Career path depends on operating within AI-augmented systems. Experiences high extraction: moral agency eroded as 'man-in-the-loop' becomes performative approval of algorithmic recommendations. The constraint extracts their capacity for moral deliberation while maintaining nominal responsibility."
+      "label": "Military Personnel and Operators",
+      "comment": "PERSPECTIVE 3: MILITARY PERSONNEL (TANGLED ROPE) — Constrained by chain of command and operational requirements. Experience both coordination (AI systems enhance battlefield awareness, reduce friendly fire risk through faster processing) and extraction (moral injury from remote killing, deskilling of human judgment, liability ambiguity when systems fail). Cannot easily exit military service; career path is locked in."
     },
     {
       "classification_type": "rope",
@@ -58,171 +68,183 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Defense Contractors / AI Weapons Manufacturers",
-      "comment": "PERSPECTIVE 3: DEFENSE INDUSTRY (ROPE) — Primary beneficiary with arbitrage-level exit options. Experiences the constraint as pure coordination: AI weapons development solves the 'problem' of human hesitation in kill decisions, creates new markets, and generates sustained revenue through arms race dynamics. Net beneficiary — extraction flows toward this agent."
+      "label": "Defense Contractors and Military-Industrial Complex",
+      "comment": "PERSPECTIVE 4: DEFENSE CONTRACTORS (ROPE) — Primary beneficiaries. Experience the constraint as pure coordination: AI weapons systems solve the 'problem' of maintaining military superiority and generating procurement contracts. Arbitrage-level exit: can shift between markets, lobby for favorable regulation, capture standard-setting bodies. Extraction flows toward this agent."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "Nation-State Military Establishment",
-      "comment": "PERSPECTIVE 4: STATE MILITARY (TANGLED ROPE) — Institutional actor facing genuine coordination problem (maintaining strategic capability) while simultaneously extracting from moral deliberation capacity and international norms. Constrained by security dilemma and arms race logic. Experiences mixed extraction: benefits from tactical efficiency while bearing long-term costs of normalized perpetual conflict and eroded legitimacy."
+      "label": "States Pursuing Dominance",
+      "comment": "PERSPECTIVE 5: DOMINANT STATES (ROPE) — Institutional beneficiaries with arbitrage exit. AI weapons systems solve coordination problems: force projection, deterrence signaling, cost reduction in military operations. Can exit specific weapons programs or treaties at will. The normalization of AI weapons serves their strategic interests; they experience minimal extraction."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "International Humanitarian Law Regime",
-      "comment": "PERSPECTIVE 5: IHL REGIME (SNARE) — Organized but constrained by state sovereignty and enforcement gaps. Experiences high extraction: AI weapons systematically undermine distinction, proportionality, and precaution principles. The constraint extracts from the regime's functional capacity while maintaining its theatrical form. Treaty negotiations proceed while deployment accelerates."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "UN Conventional Weapons Review Process",
-      "comment": "PERSPECTIVE 6: UN REVIEW PROCESS (PITON) — Institutional mechanism whose primary function (meaningful constraint on weapons development) has atrophied. Maintains performative review cycles while deployment proceeds unchecked. Theater ratio high: annual meetings produce reports and recommendations with negligible binding force. The process persists through institutional inertia, not functional effectiveness."
+      "label": "International Arms Control Advocates",
+      "comment": "PERSPECTIVE 6: ARMS CONTROL COALITION (SCAFFOLD) — Organized agents (Campaign to Stop Killer Robots, ICRC, UN working groups) see the current normalization as a temporary failure of coordination that can be reversed through treaty mechanisms. Constrained by state sovereignty and enforcement gaps, but working toward a sunset: binding international prohibition on fully autonomous weapons (LAWS treaty). The constraint is transitional if the treaty path succeeds."
     },
     {
       "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Democratic Accountability Structures",
+      "comment": "PERSPECTIVE 7: DEMOCRATIC INSTITUTIONS (SNARE) — Legislatures, courts, oversight bodies experience this as extraction. AI weapons decisions happen faster than democratic deliberation; accountability is obscured by technical complexity and classification. Constrained exit: cannot fully withdraw from security policy but lack tools to govern autonomous systems effectively. The constraint erodes their function."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Catholic Social Teaching / Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL (CST FRAMEWORK) — From civilizational scope, AI weapons normalization is a snare: it extracts from human dignity (reducing persons to data), common good (perpetual conflict), subsidiarity (centralized algorithmic control), and solidarity (algorithmic dehumanization of the other). The lowered threshold for lethal force is not a coordination solution but an extraction mechanism that benefits concentrated power while diffusing costs across humanity. High extractiveness, high suppression, substantial theater (ethical review boards with no veto power)."
+      "label": "Analytical Observer (Just War Tradition)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective grounded in just war theory, the constraint exhibits both coordination (AI could theoretically improve discrimination and proportionality through precision) and extraction (in practice, speed and impersonality erode jus in bello principles; accountability gaps violate jus ad bellum). The encyclical's claim that just war theory is 'outdated' reflects this mixed reality: the tradition's criteria remain valid, but AI weapons systems structurally undermine the human judgment those criteria presuppose."
     }
   ],
   "omegas": [
     {
-      "id": "meaningful_human_control_threshold",
-      "question": "What constitutes 'meaningful human control' in AI weapons systems — is nominal approval of algorithmic recommendations sufficient, or does it require genuine deliberative capacity?",
-      "resolution_mechanism": "Empirical analysis of operator decision timelines, override rates, post-strike review processes; comparison with historical human-only decision patterns; cognitive load studies of operators in AI-augmented systems",
-      "impact": "If nominal approval suffices: current systems meet ethical threshold and extraction is lower. If genuine deliberation required: current 'man-in-the-loop' is theatrical and extraction is higher than measured.",
+      "id": "human_in_loop_sufficiency",
+      "question": "Do 'human-in-the-loop' or 'human-on-the-loop' configurations provide meaningful accountability, or do they merely provide legal cover for functionally autonomous systems?",
+      "resolution_mechanism": "Empirical analysis of operator override rates, decision timelines, and post-incident investigations. Comparison of stated vs. actual human control in deployed systems. Psychological studies of automation bias and moral deskilling.",
+      "impact": "If meaningful: the constraint's extractiveness is lower (human judgment remains in the loop, accountability is preserved). If cover: extractiveness is higher (the 'human control' claim is theatrical, and the normalization is more complete than it appears).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Threshold for meaningful human control in lethal AI systems"
+      "description": "Whether human-in-the-loop provides real accountability or theatrical cover"
     },
     {
       "id": "arms_race_inevitability",
-      "question": "Is the AI weapons arms race structurally inevitable given security dilemma logic, or is it a contingent outcome of specific policy choices that could be reversed through coordinated restraint?",
-      "resolution_mechanism": "Historical analysis of successful arms control regimes (chemical weapons, landmines, blinding lasers); game-theoretic modeling of coordination equilibria; assessment of current diplomatic efforts and their structural barriers",
-      "impact": "If inevitable: constraint is closer to mountain (immutable security logic). If contingent: constraint is snare (extractive policy choice naturalizing itself as necessity).",
-      "confidence": "low",
+      "question": "Is the AI weapons arms race a genuine security dilemma (states must develop AI weapons because adversaries will) or a constructed narrative that benefits defense contractors and dominant states?",
+      "resolution_mechanism": "Game-theoretic analysis of actual vs. perceived threats. Historical comparison with previous arms control successes (chemical weapons, landmines). Analysis of lobbying expenditures and revolving-door patterns between defense industry and government.",
+      "impact": "If genuine dilemma: the constraint is closer to mountain (immutable security logic). If constructed narrative: the constraint is snare (extraction mechanism disguised as necessity).",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether AI arms race is structurally inevitable or contingent"
+      "description": "Whether AI weapons arms race is security necessity or constructed extraction"
     },
     {
-      "id": "civilian_casualty_attribution",
-      "question": "Do AI weapons systems actually reduce civilian casualties through precision (as manufacturers claim), or do they increase casualties by lowering the political cost of strikes and enabling higher operational tempo?",
-      "resolution_mechanism": "Longitudinal comparison of civilian casualty rates in conflicts with/without AI weapons; analysis of strike frequency and targeting thresholds; assessment of accountability mechanisms and their effectiveness",
-      "impact": "If casualties reduced: coordination function is real and extractiveness is lower. If casualties increased: precision claim is cover story and extractiveness is higher.",
+      "id": "just_war_obsolescence",
+      "question": "Is just war theory genuinely 'outdated' in the AI era (as the encyclical claims), or is the theory still valid but systematically violated by AI weapons systems?",
+      "resolution_mechanism": "Philosophical analysis of whether just war criteria (right intention, proportionality, discrimination, legitimate authority, last resort) are conceptually applicable to autonomous systems, or whether AI fundamentally changes the ontology of warfare. Empirical tracking of whether AI weapons deployments meet or violate traditional jus ad bellum and jus in bello standards.",
+      "impact": "If theory is obsolete: need new ethical framework (the encyclical's call for this is structurally correct). If theory is valid but violated: the constraint is extractive evasion of existing moral standards, not a genuine conceptual gap.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Net effect of AI weapons on civilian casualties"
+      "type_class": "conceptual",
+      "description": "Whether just war theory is obsolete or merely violated by AI weapons"
     },
     {
-      "id": "moral_injury_automation",
-      "question": "Does automation of lethal decisions reduce moral injury to operators (by removing direct killing), or does it create new forms of moral injury through complicity in algorithmic violence and erosion of agency?",
-      "resolution_mechanism": "Psychological studies of drone operators vs. traditional combatants; long-term mental health outcomes; qualitative interviews on moral distress and responsibility perception",
-      "impact": "If reduced: some genuine benefit to operators offsets extraction. If increased or transformed: extraction extends to psychological domain and total cost is higher.",
+      "id": "precision_vs_threshold_tradeoff",
+      "question": "Does AI precision in targeting reduce civilian casualties (as proponents claim) or does the lower threshold for force deployment increase overall violence despite precision?",
+      "resolution_mechanism": "Longitudinal analysis of civilian casualty rates in conflicts using AI-enabled weapons vs. conventional weapons, controlling for conflict type and intensity. Analysis of strike frequency: does precision enable more frequent strikes, offsetting precision gains?",
+      "impact": "If precision reduces casualties: coordination function is real, extractiveness is lower. If threshold effect dominates: the precision claim is cover for increased violence, extractiveness is higher.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Effect of lethal decision automation on operator moral injury"
+      "description": "Whether AI precision reduces harm or threshold-lowering increases overall violence"
     },
     {
-      "id": "perpetual_conflict_normalization",
-      "question": "Does the lowered threshold for AI-enabled strikes create a new equilibrium of perpetual low-intensity conflict, or is current deployment a transitional phase before international norms stabilize?",
-      "resolution_mechanism": "Analysis of conflict duration and intensity trends in AI-weapon-enabled theaters; assessment of norm formation processes in international law; historical comparison with previous weapons technology transitions",
-      "impact": "If perpetual: snare classification confirmed with civilizational-scale extraction. If transitional: scaffold elements present and long-term extraction may be lower.",
+      "id": "treaty_enforceability",
+      "question": "Can a LAWS treaty be effectively verified and enforced, or is the technology too dual-use and too easy to conceal for arms control to work?",
+      "resolution_mechanism": "Technical analysis of verification mechanisms (inspection regimes, algorithmic transparency requirements, use-detection systems). Comparison with verification challenges in other arms control domains (nuclear, chemical, biological). Analysis of dual-use problem: civilian AI vs. military AI distinguishability.",
+      "impact": "If enforceable: scaffold perspective is structurally sound (sunset is achievable). If unenforceable: treaty path is theatrical, and the normalization is irreversible without deeper structural change.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether AI weapons create perpetual conflict equilibrium"
+      "description": "Whether LAWS treaty can be verified and enforced effectively"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45,
-      "id_override": "war_ai_extract_2010"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.58,
-      "id_override": "war_ai_extract_2013"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.68,
-      "id_override": "war_ai_extract_2016"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.73,
-      "id_override": "war_ai_extract_2019"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.78,
-      "id_override": "war_ai_extract_2022"
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
       "value": 0.35,
-      "id_override": "war_ai_theater_2010"
+      "id_override": "war_norm_ai_extract_2010"
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 3,
       "value": 0.48,
-      "id_override": "war_ai_theater_2013"
+      "id_override": "war_norm_ai_extract_2013"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "war_norm_ai_extract_2016"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65,
+      "id_override": "war_norm_ai_extract_2019"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68,
+      "id_override": "war_norm_ai_extract_2022"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "war_norm_ai_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "war_norm_ai_theater_2013"
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.57,
-      "id_override": "war_ai_theater_2016"
+      "value": 0.52,
+      "id_override": "war_norm_ai_theater_2016"
     },
     {
       "metric": "theater_ratio",
       "time_point": 9,
-      "value": 0.63,
-      "id_override": "war_ai_theater_2019"
+      "value": 0.56,
+      "id_override": "war_norm_ai_theater_2019"
     },
     {
       "metric": "theater_ratio",
       "time_point": 12,
-      "value": 0.68,
-      "id_override": "war_ai_theater_2022"
+      "value": 0.58,
+      "id_override": "war_norm_ai_theater_2022"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.55,
-      "id_override": "war_ai_suppress_2010"
+      "value": 0.5,
+      "id_override": "war_norm_ai_suppress_2010"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "war_norm_ai_suppress_2013"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 6,
-      "value": 0.72,
-      "id_override": "war_ai_suppress_2016"
+      "value": 0.65,
+      "id_override": "war_norm_ai_suppress_2016"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.7,
+      "id_override": "war_norm_ai_suppress_2019"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 12,
-      "value": 0.82,
-      "id_override": "war_ai_suppress_2022"
+      "value": 0.72,
+      "id_override": "war_norm_ai_suppress_2022"
     }
   ],
   "interval": {
@@ -230,32 +252,88 @@
     "end": 12
   },
   "commentary": {
-    "narrative_context": "The normalization of AI weapons systems represents a structural transformation in the political and moral threshold for lethal force. What began as precision-strike technology marketed as reducing civilian casualties has evolved into an extraction mechanism that benefits concentrated military-industrial power while diffusing costs across multiple victim classes: civilians reduced to algorithmic targets, combatants stripped of moral agency, international humanitarian law rendered theatrical, and humanity's collective capacity for moral deliberation systematically eroded. The constraint operates through three coupled mechanisms: (1) automation lowers the political cost of strikes by removing human operators from immediate moral responsibility, (2) algorithmic speed eliminates traditional deliberation windows and civilian protection protocols, and (3) arms race dynamics create suppression through security dilemma logic that naturalizes deployment as strategic necessity. The theater ratio (0.68) reflects the gap between nominal ethical oversight (review boards, 'meaningful human control' doctrine, UN conventional weapons processes) and actual functional constraint on deployment. Measurements show steady extraction accumulation from 2010-2022 as systems moved from experimental to operational status, with corresponding increases in theater (ethical review becomes performative) and suppression (alternatives foreclosed by arms race logic).",
+    "narrative_context": "The normalization of war through AI weapons systems represents a structural shift in the threshold for lethal force. Autonomous and semi-autonomous weapons make decisions faster, more impersonally, and with less accountability than human-controlled systems. The encyclical 'Antiqua et Nova' declares traditional just war theory inadequate for the AI era and warns that autonomous weapons normalize violence while obscuring moral responsibility. This constraint exhibits extraction primarily through the erosion of accountability structures and the lowering of the threshold for violence. The theater_ratio (0.58) reflects that 'human-in-the-loop' and 'meaningful human control' rhetoric often provides legal cover for functionally autonomous systems. The suppression trajectory shows increasing enforcement: states pursuing AI weapons dominance suppress treaty negotiations, classify weapons capabilities, and create fait accompli deployments that make arms control harder. The extractiveness trajectory shows accumulation: as AI weapons become normalized infrastructure, the costs (civilian casualties, democratic erosion, arms race escalation) compound while benefits concentrate in defense contractors and dominant states.",
     "key_agents": [
-      "Civilian Populations: Primary victim (powerless/trapped) — reduced to data points in algorithmic kill chains; no exit from targeting decisions; bear immediate cost of lowered threshold for lethal force",
-      "Military Operators: Secondary victim (moderate/constrained) — moral agency eroded as 'man-in-the-loop' becomes performative; constrained by doctrine and career path; experience extraction of deliberative capacity",
-      "Defense Contractors: Primary beneficiary (institutional/arbitrage) — capture revenue from arms race dynamics; experience constraint as pure coordination (solving 'problem' of human hesitation)",
-      "Nation-State Military: Mixed position (institutional/constrained) — face genuine security dilemma while extracting from moral norms; benefit from tactical efficiency while bearing long-term legitimacy costs",
-      "International Humanitarian Law Regime: Organized victim (organized/constrained) — systematic erosion of distinction, proportionality, precaution principles; maintains theatrical form while functional capacity degrades",
-      "UN Review Process: Degraded institution (institutional/constrained) — piton perspective; performative review cycles with negligible binding force; persists through inertia",
-      "Analytical Observer (CST Framework): Civilizational view (analytical/analytical) — identifies extraction from human dignity, common good, subsidiarity, solidarity; sees lowered threshold as snare not coordination"
+      "Civilians in Conflict Zones: Primary victims (powerless/trapped) — bear lethal force with reduced human judgment and accountability; cannot exit strike zones",
+      "Future Generations: Intergenerational victims (powerless/trapped) — inherit normalized AI weapons infrastructure and lowered threshold for violence without consent",
+      "Military Personnel: Mixed position (moderate/constrained) — experience both coordination benefits (enhanced awareness) and extraction (moral injury, deskilling, liability gaps)",
+      "Defense Contractors: Primary beneficiaries (institutional/arbitrage) — capture procurement contracts and standard-setting; extraction flows toward them",
+      "Dominant States: Institutional beneficiaries (institutional/arbitrage) — AI weapons serve force projection and deterrence goals; can exit treaties at will",
+      "Arms Control Coalition: Organized agents (organized/constrained) — Campaign to Stop Killer Robots, ICRC, UN working groups building treaty path with sunset logic",
+      "Democratic Accountability Structures: Institutional victims (moderate/constrained) — legislatures and courts lack tools to govern autonomous systems; function eroded by speed and opacity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — just war tradition sees mixed coordination and extraction; encyclical's 'outdated' claim reflects that AI structurally undermines human judgment presupposed by traditional criteria"
     ],
-    "logic_rationale": "Extractiveness (0.78): High. The constraint extracts from multiple victim classes simultaneously: civilians bear immediate physical costs, operators lose moral agency, international law loses functional force, and humanity loses deliberative capacity. The extraction is structural rather than incidental — the lowered threshold for lethal force is the mechanism, not a side effect. Manufacturers' precision claims function as cover story; empirical question (omega_3) is whether net civilian casualties actually decrease. Suppression (0.82): Very high. Arms race dynamics create powerful lock-in: states that refrain face strategic disadvantage, creating security dilemma that forecloses alternatives. International coordination attempts (UN CCW process) lack enforcement mechanisms. Operators face career constraints and chain-of-command pressure. Civilians have zero exit options from algorithmic targeting. Theater ratio (0.68): Substantial. Ethical review boards exist but lack veto power over deployment decisions. 'Meaningful human control' doctrine is implemented as nominal approval of algorithmic recommendations with insufficient time for genuine deliberation. UN review process produces annual reports with negligible binding effect. The gap between nominal oversight and actual constraint is wide and growing.",
-    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence driven by structural position. Defense contractors experience pure coordination (rope) — they are solving the market problem of sustained revenue generation and the tactical problem of removing human hesitation from kill chains. Nation-states experience tangled rope — genuine security coordination (maintaining strategic capability) entangled with extraction from moral norms and long-term legitimacy. Military operators, IHL regime, and civilians all experience snare but from different structural positions: operators lose moral agency while maintaining nominal responsibility, IHL loses functional force while maintaining theatrical form, civilians lose protection while being told precision is improving. The UN review process experiences piton — a degraded mechanism maintained through institutional inertia. The analytical observer (CST framework) identifies the constraint as snare from civilizational scope: the lowered threshold extracts from human dignity (persons reduced to data), common good (perpetual conflict normalized), subsidiarity (centralized algorithmic control), and solidarity (algorithmic dehumanization of the other). The precision-reduces-casualties claim is the cover story; the structural reality is that automation lowers political cost of strikes and enables higher operational tempo, with net effect on casualties remaining empirically contested (omega_3).",
-    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. Defense contractors are explicit beneficiaries with arbitrage exit → d near 0.0 → negative or very low chi (they experience subsidy, not extraction). Nation-state militaries are both beneficiaries (tactical efficiency) and victims (long-term legitimacy costs), with constrained exit → d around 0.4-0.5 → moderate chi (mixed experience). Military operators are victims with constrained exit → d around 0.7 → high chi (substantial extraction of moral agency). IHL regime is organized victim with constrained exit → d around 0.65 → high chi (functional capacity eroded). Civilian populations are victims with trapped exit → d near 1.0 → maximum chi (full target of extraction, no agency, no exit). The analytical perspective computes chi from the universal scope and civilizational time horizon, identifying extraction from humanity's collective moral capacity. No directionality overrides needed — the structural declarations (beneficiaries: military-industrial complex, states seeking dominance; victims: civilians, combatants, humanity at large, moral deliberation capacity, IHL) combined with exit options produce accurate d values across all perspectives.",
-    "mandatrophy_analysis": "The constraint resolves mandatrophy by revealing that 'strategic necessity' and 'precision warfare' framings are perspectival cover stories for extraction. From the defense industry perspective, AI weapons are genuine coordination (rope) — they solve real market and tactical problems. From the state military perspective, they are tangled rope — genuine security coordination entangled with moral extraction. From civilian, operator, and IHL perspectives, they are snare — extraction mechanisms naturalized as strategic necessity. The analytical observer (CST framework) identifies the core extraction: AI weapons lower the threshold for lethal force not by improving precision (empirically contested) but by removing political and moral costs from decision-makers. The automation transfers costs from powerful actors (who gain speed and deniability) to powerless actors (who lose protection and agency). The constraint's claimed coordination function (precision reduces casualties) is empirically unverified and structurally suspect — if true, it would show in casualty data, but omega_3 flags this as unresolved. The mandatrophy resolution: this is not 'technology serving human dignity' (coordination) but 'technology extracting from human dignity while claiming to serve it' (snare with coordination cover story)."
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts from civilians (lethal force with reduced accountability), future generations (inherited arms race), and democratic institutions (eroded oversight capacity). Benefits concentrate in defense contractors (procurement rents) and dominant states (strategic advantage). The extraction is not total (0.68 rather than 0.85+) because some coordination function exists: AI systems can improve targeting precision and reduce friendly fire risk. But the threshold-lowering effect and accountability erosion dominate. Suppression (0.72): High. Victims cannot exit: civilians are trapped by geography, future generations by temporal lock-in, democratic institutions by security imperatives. Alternatives are suppressed: treaty negotiations stall due to great power opposition, whistleblowers face prosecution, technical complexity creates opacity. The suppression trajectory shows enforcement intensification: as AI weapons become normalized, the window for arms control narrows. Theater ratio (0.58): Moderate-high. 'Meaningful human control' rhetoric often provides legal cover for functionally autonomous systems. Operator override rates are low; decision timelines are too fast for genuine human judgment; automation bias and moral deskilling are documented. The theater is not total (0.58 rather than 0.75+) because some human-in-the-loop systems do preserve meaningful control, and some oversight mechanisms function. But much of the accountability apparatus is performative.",
+    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Defense contractors and dominant states see pure coordination (Rope): AI weapons solve legitimate problems of military effectiveness and deterrence. They are net beneficiaries with arbitrage exit options; extraction flows toward them. Military personnel see mixed coordination and extraction (Tangled Rope): AI systems provide tactical benefits but impose moral injury and liability ambiguity. They are constrained by chain of command and cannot easily exit. Civilians and future generations see pure extraction (Snare): they bear lethal force with reduced accountability and cannot exit. Democratic institutions also see extraction (Snare): their oversight function is structurally eroded. The arms control coalition sees a temporary coordination failure with a sunset (Scaffold): they are building treaty mechanisms to reverse the normalization. The analytical observer sees mixed coordination and extraction (Tangled Rope): just war criteria remain conceptually valid, but AI weapons systems structurally undermine the human judgment those criteria presuppose. The encyclical's claim that just war theory is 'outdated' reflects this structural undermining, not the obsolescence of the moral principles themselves.",
+    "directionality_logic": "Directionality is determined by structural position. Defense contractors and dominant states are primary beneficiaries: they capture procurement rents and strategic advantages. The engine derives low d values (beneficiary status + arbitrage exit) producing low or negative effective extraction — they experience the constraint as coordination. Civilians in conflict zones are primary victims with trapped exit: they bear lethal force decisions made faster and more impersonally. The engine derives high d values (victim status + trapped exit) producing maximum effective extraction. Future generations are also victims with trapped exit: they inherit an arms race they did not consent to. Military personnel are in a mixed position: they benefit from tactical coordination (enhanced awareness, reduced friendly fire risk) but also bear costs (moral injury from remote killing, deskilling of judgment, liability ambiguity). The engine derives moderate d values (mixed beneficiary/victim status + constrained exit). Democratic accountability structures are victims with constrained exit: their oversight function is eroded by speed and opacity, but they cannot fully withdraw from security policy. The arms control coalition has organized power and constrained exit: they see a path to treaty-based sunset but face state sovereignty barriers. The analytical observer has analytical power and exit: they see the full structural picture including both coordination potential and extraction reality.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the 'coordination' claim (AI weapons improve precision and reduce casualties) and the 'extraction' claim (AI weapons normalize violence and erode accountability) are both structurally true from different positions. The defense industry's coordination story is not mere cover — AI systems do solve legitimate military problems. But the coordination function coexists with severe extraction: the threshold for lethal force is lowered, accountability is obscured, democratic oversight is eroded, and costs are externalized onto civilians and future generations. The tangled_rope classification at the analytical level captures this: genuine coordination function plus asymmetric extraction requiring active enforcement. The encyclical's warning is structurally sound: just war theory presupposes human judgment at key decision points (right intention, proportionality assessment, discrimination in targeting), and AI weapons systems structurally undermine that judgment through speed, impersonality, and opacity. The theory is not 'outdated' in the sense of conceptually obsolete — its criteria remain valid — but it is undermined in practice by systems that make those criteria unenforceable. The scaffold perspective (arms control coalition) represents a real structural possibility: if a LAWS treaty succeeds, the normalization could be reversed. But the omega on treaty enforceability is critical: if verification is impossible due to dual-use and concealment, the treaty path is theatrical and the normalization is irreversible without deeper change."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is downstream of technocratic_paradigm_vs_human_dignity (the broader paradigm that treats efficiency as overriding moral value) and truth_democracy_disinformation (the information environment that enables normalization of algorithmic violence). It is a specific instantiation of the technocratic paradigm in the military domain, where the efficiency logic ('faster decisions, more precise strikes') functions as cover for extraction from moral deliberation and civilian protection. The constraint could be further decomposed into sub-constraints (autonomous targeting systems, lethal autonomous weapons, AI-augmented command and control) but is modeled here as a unified phenomenon because the extraction mechanism (lowered threshold for lethal force) is shared across all implementations."
+    "affects_constraints": [
+      "algorithmic_bias_in_targeting",
+      "cyberwarfare_attribution_gap",
+      "military_ai_safety_standards"
+    ],
+    "dual_formulation_note": "War normalization through AI weapons is structurally distinct from but causally linked to algorithmic bias in targeting systems (which affects who bears the costs within the normalization), cyberwarfare attribution gaps (which create parallel accountability erosion), and military AI safety standards (which could mitigate but currently fail to prevent the normalization). Each has its own extractiveness value reflecting its specific structural dynamics."
   },
-  "directionality_overrides": [],
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ],
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
-    "interpretation_layer_present": true
+    "interpretation_layer_present": true,
+    "reference_frame": "thomistic_just_war_framework",
+    "drift_state": {
+      "moment": "post_ai_weapons_deployment_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "secular_humanist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "techno_optimist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pluralist_pragmatic_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_dignity_as_imago_dei",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "moral_agency_requires_human_judgment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "just_war_criteria_presuppose_deliberation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
   }
 }
