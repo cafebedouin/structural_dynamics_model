@@ -167,7 +167,7 @@ not delete on wiring grounds.
 
 ---
 
-## Two over-confident moves on the synthesis side: false-absence and false-unification
+## Over-confident moves on the synthesis side: false-absence, false-unification, and the unguarded axis-swap
 
 These are the auditor/assistant's own failure modes, distinct from the five build defects: they are
 errors of *claiming*, not of building. Both were caught repeatedly in one session (2026-06-10) — each
@@ -202,10 +202,31 @@ multi-metaphor *by design* and the source domains do not compose. Rule: when a s
 combine two named things, state the separation it might be violating and cite the ruling, before
 proposing the merge.
 
-**The shared root:** both are the generative/confident faculty outrunning its evidence — false-absence
-collapses "I didn't find it" into "it isn't there"; false-unification collapses "these rhyme" into
-"these are one." The same fix shape works on both: name the witness the claim would need (a firing
-probe; a ruling on separation) and either produce it or tag the claim OPEN.
+**Axis-introduction owes a PRE-REGISTERED discriminating control — the operational guard for
+false-unification, and a peer rule because it reaches a layer the others don't.** Read-before-write
+guards against writing a file wrong; escalate-what's-yours guards against deciding a human's call.
+Neither catches the move where a synthesis *introduces or relabels an axis* and quietly re-labels a
+settled one — no file is written wrong, and it doesn't feel like a ruling. So: when you propose a new
+axis (or claim that some axis X separates two types), construct the case where the new axis and the
+**nearest prior axis come apart**, **pre-register what each outcome means before the run** (so the
+result can't be narrated into agreement), then run it. Witnessed instance (2026-06-10): a proposed
+"designed vs undesigned" 2×2 was falsified by the DMV control — designed + *uncaptured* extraction
+landed in `snare`, so the real axis is **capture**, not design; and "emergent coordination = piton's
+mirror cell" was falsified by the desire-path control (`→FSM`) vs the unmaintained-coordination
+control (`→FCR`) being distinct cells (scatter). **The honest framing is the standing risk this names,
+not a victory:** in every instance so far the discriminating case and the pre-registration came from
+*outside* the loop (the operator), not from the synthesizer. The job the rule sets — generate the
+discriminating control *for your own synthesis, before it lands* — is the one still unmet by default;
+the rule is the named guard against a gap that is real and, so far, externally caught. Corollary
+(under-claim): one discriminating witness earns "the axes are separable / the prior label is wrong on
+this point," NOT "orthogonal/independent across the range" — that is the hypothesis it opens.
+
+**The shared root:** all three are the generative/confident faculty outrunning its evidence —
+false-absence collapses "I didn't find it" into "it isn't there"; false-unification collapses "these
+rhyme" into "these are one"; the axis gap is "I relabeled the axis and never ran the case that would
+tell." The same fix shape works on each: name the witness the claim would need (a firing probe; a
+ruling on separation; a pre-registered discriminating control) and either produce it or tag the claim
+OPEN.
 
 ---
 
