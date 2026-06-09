@@ -192,5 +192,28 @@ The seal is therefore **real but local**: it holds for anyone who grants P3, and
 
 ---
 
+## Amendment provenance (the witness-asymmetry, named)
+
+Of the v1.1 honesty edits this document carries forward, one is run-witnessed and two are
+not, and the asymmetry is intentional rather than an oversight (OQ-28):
+
+1. **The §3 correction** (seat-orthogonality of `forecloses`) is a **result-claim** — it
+   corrects what the prose asserted about representability — and accordingly carries its
+   witness inline: `prolog/tests/test_forecloses_fpn_injection.pl`.
+2. **The §5 incompleteness-downgrade** (parallel of *moral, not mechanism*) is a
+   **scope-clarification**, not a result-claim: §5 never claimed a formal incompleteness
+   derivation, so narrowing the prose to what was actually derived closes a gap the prose
+   opened. There is no measurable property for a run to witness.
+3. **The P3-locality clause** (§8, the seal is "real but local") is likewise a
+   **scope-clarification**: P3 is explicitly contestable, so localizing the theorem's reach
+   makes explicit what was already true of it. Again, nothing measurable to witness.
+
+The rule this records: a run-witness is owed where an edit *corrects a claim about a
+measurable property*; an edit that *narrows a claim's scope* needs declaration, not
+run-grounding. A reader who finds one witnessed edit and two unwitnessed ones is seeing
+that rule applied, not discipline lapsing.
+
+---
+
 
 *CC0 Universal.*

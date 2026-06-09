@@ -1,6 +1,6 @@
 # Two-Axis Architecture: Observer and Committer
 
-**Purpose:** Architectural note recording a decision that had, until now, been made by omission: that the commitment-systems (CS) layer and the observer-axis classification machinery are *separate axes*, deliberately decoupled, joined at exactly one bridge. This document fixes that reference frame so the rest of the system can be reasoned about as drift from it. It explains what the two axes are, why they must not be unified, the one empirical result that turns "should be separate" from a preference into a constraint, and the gaps that remain open by design rather than by accident.
+**Purpose:** Architectural note recording a decision that had, until now, been made by omission: that the commitment-systems (CS) layer and the observer-axis classification machinery are *separate axes*, deliberately decoupled. As first written this document claimed they were joined at exactly one bridge; that claim was superseded by the cross-axis inventory and the mediator-layer decision — see the dated amendment below. This document fixes that reference frame so the rest of the system can be reasoned about as drift from it. It explains what the two axes are, why they must not be unified, the one empirical result that turns "should be separate" from a preference into a constraint, and the gaps that remain open by design rather than by accident.
 
 **Audience:** Whoever reads this codebase next — most likely a later version of the person who wrote it. It assumes familiarity with the Deferential Realism (DR) framework (the observer axis) but explains the committer-axis vocabulary as it goes.
 
@@ -15,6 +15,34 @@ The CS layer was not designed alongside the observer axis. It grew beside it. Ke
 That is, in the vocabulary of the system itself, **unmarked drift**: an architectural mutation that accumulated without the structure ever naming it. Three independent surveys of the codebase — one of the observer-diagnostics, one of the network properties, one architectural — converged on the same observation: the CS layer sits *beside* the observer-axis machinery, the two are mutually blind in several places, and where they ought to agree they sometimes contradict each other with nothing surfacing the contradiction.
 
 The honest response to discovering unmarked drift is not to write a document that pretends the architecture was always coherent. It is to **mark the drift** — to declare the reference frame explicitly, so that from here forward the relationship between the axes is a decision on the record rather than an accident in the code. That is what this document does. Everything below is the marking.
+
+### Amendment (2026-06-09): the bridge is unblessed; the mediator layer is the decided join
+
+This document's original central topological claim — that the axes are "joined only by the
+`influences`-entailment bridge through `drl_composition`" — is false of the live code and was
+false when written. The Tranche-2 cross-axis inventory (ISSUES.md OQ-15) found **16 distinct
+cross-axis surfaces threaded through 7 modules in both directions**; the blessed bridge was one
+of them, not the only one. The decided architecture — recorded here per this document's own
+mark-the-drift rule; until this amendment the decision existed in conversation only (OQ-14):
+
+- A third layer, neither CS nor DR (the **comparison/mediator layer**), becomes the sole
+  sanctioned reader of both axes. Both axes become read-only sources; the mediator writes only
+  to JSON output.
+- Three grep-enforceable invariants: no axis reads the other; no axis reads the mediator; only
+  the mediator may read both.
+- `influences` → `detect_necessity_inheritance` is thereby **unblessed**: it stops being the
+  privileged junction and enters the mediator like any other cross-axis read.
+- The 16 inventoried surfaces triage into three buckets: genuine comparisons (→ mediator);
+  substrate-level story-field readers in `cs_pattern_detection.pl` (→ a named substrate layer,
+  since they read the shared authored input, not the other axis's outputs); and the
+  `constraint_neighbors/3` exclusion-filter case (decision per item).
+
+The mediator is **decided but not built** (OQ-15, open). Until it exists, every cross-axis read
+is a nominal boundary violation that happens to be behaviorally clean — the inventory found zero
+back-channel violations (no module asserts facts the other axis reads at runtime). The sections
+below that stated the single-bridge topology have been edited to match this amendment; the
+document's core argument — that the axes must not be *unified* — is untouched, since it never
+depended on the join being singular, only on the join being narrow, named, and sanctioned.
 
 A note on ordering, because it matters and it is the same shape as the thing being documented. The detection-independence result (below) is, logically, *prior* to the decision to keep the axes separate — the math implies the architecture. But it cannot be *written* in that order, because at the moment of writing, the decision has not yet been made; there is no fixed frame for the math to be "prior to." You have to declare the reference frame before you can state what is downstream of it. This document fixes the frame. A later theory treatise can state the math as prior, because by then the frame will exist. Logical priority and authoring priority run in opposite directions here, and conflating them would produce a clean theorem resting on an undocumented choice. This is the t0-fixing problem the CS layer itself describes — you have to decide which reading of the kernel you are in before you can measure anything as drift — applied to the act of writing about the system.
 
@@ -42,7 +70,7 @@ The purity-contamination network assumes scalar flow: contamination moves from l
 
 Forcing these into the contamination model would corrupt the network's semantics and, concretely, would invalidate the fixed-point convergence proof the network relies on — that proof assumes contamination only flows downward in purity and never forces a categorical type change, and `forecloses` carries exactly the kind of influence the proof excludes. So the separation is not a matter of taste. It is that the algebra of the committer-axis edges is incompatible with the algebra the network assumes. **Feeding them in would not be integration; it would be a category error.** This is precisely the displaced-beneficiary mistake — inferring a semantic claim from an edge that does not encode it — that the build already learned to avoid once, now seen at the level of whole subsystems.
 
-The one intentional bridge is `influences` → `detect_necessity_inheritance`. That is the single defined junction where committer-axis structure feeds observer-axis machinery, and it is narrow on purpose: it carries entailment, which both layers understand, and nothing else.
+The `influences` → `detect_necessity_inheritance` junction was originally the one *blessed* bridge — the single defined junction where committer-axis structure feeds observer-axis machinery. Per the 2026-06-09 amendment above it is no longer privileged: it is one of the 16 inventoried cross-axis reads, all destined to route through the mediator layer. Its narrowness — it carries entailment, which both layers understand, and nothing else — remains a design virtue; what changed is that narrowness no longer confers sole-sanctioned status.
 
 There is also one *accidental* coupling that should be severed regardless of any other decision: `shared_agent_link` generates contamination edges between any two constraints that share victim/beneficiary classes, and all readings of a single kernel share those classes (the abolition, deterrence, and retributive readings of capital punishment all involve the same social agents). So the network was silently generating weak contamination edges between sibling readings — edges that already have explicit, typed `cs_reading_relation` coverage, now expressed twice: once intentionally and once as noise. The fix is a one-line filter excluding intra-kernel pairs from the shared-agent calculation. This is not an architectural choice; it is removing spurious structure that contradicts the separation. (Applied.)
 
@@ -83,7 +111,7 @@ Step back and the same architectural move appears at three nested scales:
 
 2. **Within the committer axis:** the discrete, categorical typed reading-relations (`forecloses`/`coexists_with`/`influences`) sit beside the continuous drift-and-axiom machinery, and their conjunction is the diagnostic (contradictory axioms + `coexists_with` = licensed plurality; contradictory axioms + `forecloses` = real closure — the same contradiction reads as two opposite structures depending on the edge it co-occurs with).
 
-3. **Between the axes:** the whole observer-axis apparatus and the whole committer-axis apparatus are independent, kept separate because their algebras are incompatible, interacting at the single `influences`-entailment bridge — and the cross-axis interaction point is where the *committer false-stable* diagnostic lives (observer-coherent but committer-foreclosed, detectable only because the axes are independent).
+3. **Between the axes:** the whole observer-axis apparatus and the whole committer-axis apparatus are independent, kept separate because their algebras are incompatible, interacting at a small inventoried set of cross-axis reads (originally summarized as the single `influences`-entailment bridge; per the amendment, the decided sole join is the mediator layer) — and the cross-axis interaction point is where the *committer false-stable* diagnostic lives (observer-coherent but committer-foreclosed, detectable only because the axes are independent).
 
 It is one principle, applied recursively: **hold mathematically-incompatible mechanisms separate, and read the diagnostics off their interaction points.** The committer/observer decoupling is not unfinished integration. It is this principle at the top level. The fact that the same shape recurs at every scale examined — and that the surveys surfaced the top-level instance as unmarked drift with exactly the structure of the false-mountain conflict the observer axis already knew how to handle — is the clearest evidence the system is tracking something real rather than generating structure to fit.
 
@@ -111,6 +139,12 @@ The foreclosure routing and the drift trajectory **corroborate**: every reading 
 
 **Open by deferral (real work, not yet done):**
 
+- **The comparison/mediator layer itself (OQ-15).** Decided, designed at the invariant level
+  (sole reader of both axes; axes read-only; writes only to JSON; three grep-enforceable
+  invariants), not built. Until it lands, the 16 inventoried cross-axis surfaces remain
+  nominal boundary violations that are behaviorally clean. Building it also gives the DR/CS
+  Π-difference annotation (OQ-08) its natural permanent home, and is where `classify_at_time`
+  would split (OQ-17).
 - **`coexists_with` gate in `constraint_neighbors/3`.** The `coexists_with` exclusion from the contamination network holds by absence (no edge constructor exists), not by mechanical enforcement. `constraint_neighbors/3` is label-blind — a coexists_with edge, if constructed, would be admitted and computed identically to a scalar injection. The enforcement site is `constraint_neighbors/3`; adding a label filter there is the gate that would make the exclusion mechanical. Deferred until coexists_with edge construction is on the near horizon.
 
 - **Abductive-trigger blindness.** The abductive engine imports no CS module, so no committer-axis finding — kernel divergence, axiom conflict, drift trajectory — can surface as a hypothesis. The system's explanatory layer is currently observer-axis only: perspectival incoherence generates hypotheses, axiom conflict does not. This is a genuine asymmetry and a known limitation, not merely future work. It is the sharpest single integration point: the junction where, eventually, both axes' findings would converge into unified hypotheses.
@@ -136,7 +170,7 @@ This document is that argument one scale up. Where the two-hub note keeps two me
 
 ## Summary
 
-The system has two axes. The observer axis measures perspectival variation — how a fixed constraint classifies differently across positions, quantified by H¹. The committer axis measures commitment structure — which reading of a contested kernel, resting on what axioms, drifting toward what terminal. They are orthogonal coordinates with incompatible algebras, deliberately decoupled, joined only by the `influences`-entailment bridge through `drl_composition`.
+The system has two axes. The observer axis measures perspectival variation — how a fixed constraint classifies differently across positions, quantified by H¹. The committer axis measures commitment structure — which reading of a contested kernel, resting on what axioms, drifting toward what terminal. They are orthogonal coordinates with incompatible algebras, deliberately decoupled, joined today by 16 inventoried cross-axis reads (the formerly-blessed `influences`-entailment bridge among them) and, by decision (2026-06-09 amendment), eventually by a single comparison/mediator layer — decided, unbuilt (OQ-15).
 
 The decoupling is a decision, now marked: the committer-axis edges must not enter the contamination network, because their categorical/zero-flow/entailment characters are incompatible with the network's scalar-flow algebra. The decision is made a constraint rather than a preference by a single fully-measured result: a reading (hanbali) that is observer-coherent at genuine H¹ = 0 while being committer-foreclosed, proving that perspectival coherence does not imply axiomatic validity and that the committer axis detects a failure mode observer cohomology cannot see in principle. The finding is scoped to the cohomological layer (the metric-stability half rests on sparse data) and is an existence proof rather than a distribution (one clean case, nine uncomputed mismatches outstanding) — both caveats kept visible because they are what make the claim trustworthy.
 

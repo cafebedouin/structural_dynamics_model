@@ -196,25 +196,17 @@ direction=stable or magnitude=minor and observe that the predicate stays silent.
 
 ## OQ-07 — Hand-traced mismatch candidate unverified at runtime
 
-**Status:** open
-**Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.  
-**File:** `prolog/testsets/conceptual_emergence_reading.pl`  
-**UID:** `72c8aa61-6909-40a1-83ef-a460510f3b82` (verified present in file, 13 occurrences)
-
-**Specific question:** Does `cs_is_metric_stable(conceptual_emergence_reading)` actually
-succeed at runtime, making UID 72c8aa61 a live `cs_drift_mismatch` case?
-
-**Evidence so far:** Architecturally, the conditions for mismatch are met —
-`gap(axiom_overriding, substantial, false)` routes to axiom_foreclosure via the
-attractor table. Whether DR sees the constraint as metric-stable at analytical context
-has not been verified by running the engine and observing `cs_drift_mismatch/2` output
-for this UID.
-
-**What resolution changes:** Either confirms `cs_drift_mismatch/2` fires on real corpus
-data for this UID (the predicate has been exercised end-to-end with a concrete case),
-or reveals it as architecturally-possible-but-empirically-empty so far. The simplest
-check: run `cs_drift_mismatch('72c8aa61-6909-40a1-83ef-a460510f3b82', Source)` in the
-Prolog REPL after loading the CS schema and conceptual_emergence_reading testset.
+**Status:** resolved — (2026-06-09, runtime probe). Verdict: **does NOT fire** — the
+hand-trace's foreclosure half holds at runtime (`cs_drift_trajectory → axiom_foreclosure`)
+but `cs_is_metric_stable` FAILS (DR detects network drift), so `cs_drift_mismatch/2`
+correctly stays silent for this UID. Positive control: detector fires on 11 UIDs on the
+same load, so the predicate IS exercised end-to-end on real corpus data; this candidate
+is a witnessed off-case where exactly one named conjunct blocks. Corpus note: the UID
+exists only in `archives/datasets/kernel_test/` (per-generation surrogate; the live
+post-reset corpus lacks the testset; other archive copies carry different UIDs).
+Evidence: `audits/2026-06-09_oq07_mismatch_runtime_probe/` (probe.pl, raw output, writeup).
+**Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.
+**UID:** `72c8aa61-6909-40a1-83ef-a460510f3b82` *(body compressed at close per footer rule)*
 
 ---
 
@@ -346,33 +338,17 @@ sites) is moot. Pylint-config hygiene, if ever wanted, is new work, not this que
 
 ## OQ-14 — Two-axis architecture doc stale on `influences` bridge
 
-**Status:** open
-**Origin:** Cross-axis comparison layer design pass, May 2026.  
-**File:** `docs/two_axis_architecture_v7.md` (lines 41, 109, 116, 139, 143)
-
-**Specific question:** The doc asserts in multiple places that the two axes are
-"joined only by the `influences`-entailment bridge through `drl_composition`."
-That claim was load-bearing under the prior architecture. The design decision to
-unbless the bridge and route `influences` through the not-yet-built comparison
-layer (alongside every other cross-axis edge) makes the doc's central claim
-false. When does the doc get updated to reflect the new topology?
-
-**Evidence so far:** The cross-axis inventory (OQ-15) found 16 predicates
-crossing the axis boundary, only one of which is the blessed `influences`
-bridge. Routing all 16 through a single named comparison/mediator layer was
-agreed; the bridge stops being privileged and becomes one cross-axis read among
-others. The doc's own thesis (line 17, "mark the drift") prescribes that
-architectural decisions get recorded *in* the doc when they're made. Currently
-the decision exists in conversation only.
-
-**What resolution changes:** The doc either accurately describes the live
-architecture (comparison layer is the sole sanctioned join, `influences` enters
-it like any other cross-axis read) or remains stale on its central
-architectural claim. The "Why they must not be unified" section needs the
-rewrite; the "Open by design" section (line 109) needs the bridge demoted from
-sanctioned-singleton to one-of-many. Until the doc is updated, the next reader
-trusts a document that describes a topology the code no longer matches —
-exactly the unmarked-drift failure the doc was written to prevent.
+**Status:** resolved — (2026-06-09). `docs/design/two_axis_architecture_v7.md` (the file
+moved to `docs/design/`; the OQ's original path was stale too) now carries a dated
+**Amendment (2026-06-09)** section recording the decision that previously existed in
+conversation only: the `influences` bridge is unblessed (one of OQ-15's 16 inventoried
+cross-axis surfaces, not the sole join); the decided sole join is the comparison/mediator
+layer (decided, NOT built — OQ-15 stays open); three grep-enforceable invariants and the
+three-bucket triage recorded. All four single-bridge claim sites (Purpose, "one
+intentional bridge", recurring-principle item 3, Summary) edited to historical/superseded
+phrasing; the mediator added to "Open by deferral" with OQ-08/OQ-17 cross-refs.
+*(body compressed at close per footer rule)*
+**Origin:** Cross-axis comparison layer design pass, May 2026.
 
 ---
 
@@ -783,15 +759,17 @@ yields genuinely different readings with different ε under different SCOPE deco
 
 ## OQ-28 — Seat Theorem v1.1 honesty edits batched but not all witnessed by runs
 
-**Status:** open
-**Origin:** Seat Theorem amendment work, May 2026.  
-**File:** `docs/seat-theorem-v1.md` (now v1.1 with three pending edits)
-
-**Specific question:** The Seat Theorem v1.1 batch contains three edits: (1) §3 correction against the FPN injection run — witnessed by test_forecloses_fpn_injection.pl, fully grounded; (2) §5 incompleteness-downgrade from claimed structural parallel to acknowledged analogy — not witnessed by any run, justified by the observation that the parallel to Gödel was never formally derived; (3) P3-locality clause appended to every self-sealing claim — also not witnessed by a run, justified by the observation that P3 is contestable and the theorem cannot defeat someone who rejects it. Two of three edits are arguments-from-the-chair while the third was an argument-against-the-chair-from-a-run. Is the asymmetry acceptable, or should edits (2) and (3) carry their own falsifiability discipline?
-
-**Evidence so far:** Edit (1) is the model the build has been honing for months — abstract theorem corrected by a Prolog run, citation direction from engine to theorem. Edits (2) and (3) are corrections the theorem could in principle make to itself by inspection: §5 never claimed a formal incompleteness derivation, so downgrading it to analogy is closing a gap the prose opened; P3 is explicitly contestable by direct realists, so localizing the theorem's reach is making explicit what was already true. Neither requires a run because neither claims a measurable property — they're scope clarifications, not result claims. But the asymmetry matters for how the document is read: a reader who sees one witnessed edit and two unwitnessed ones may wonder why the unwitnessed ones aren't also conditional on a test.
-
-**What resolution changes:** Either (a) edits (2) and (3) are clearly marked as scope-clarifications rather than result-claims, so the asymmetry is intentional and on the record (the witnessed edit corrects a claim; the unwitnessed edits narrow scopes and don't need run-grounding for that reason); or (b) edits (2) and (3) acquire their own falsifiability — what would falsify the analogy-not-derivation framing of §5, what would refute the conditionality on P3 — and the document carries those alongside the §3 witness. Option (a) is the honest distinction; option (b) is overkill but would make the document fully symmetric. The asymmetry is acceptable as long as it's named, which it currently isn't.
+**Status:** resolved — (2026-06-09, option (a) as the entry pre-ruled: "the asymmetry is
+acceptable as long as it's named"). An **Amendment provenance** section was added to
+`docs/seat-theorem-v1.md` (now v2.4) naming the witness-asymmetry: edit (1), the §3
+seat-orthogonality correction, is a result-claim and carries its run-witness
+(`test_forecloses_fpn_injection.pl`); edits (2) (§5 moral-not-mechanism downgrade) and
+(3) (§8 P3-locality) are scope-clarifications — they narrow what the prose claims rather
+than assert measurable properties, so they owe declaration, not run-grounding. All three
+edits were already present in the doc body; what was missing (and is now added) was the
+asymmetry being named. *(body compressed at close per footer rule)*
+**Origin:** Seat Theorem amendment work, May 2026.
+**File:** `docs/seat-theorem-v1.md`
 
 ---
 

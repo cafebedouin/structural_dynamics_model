@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-09 — Three doc-sync OQs closed with witnesses: OQ-07 (mismatch candidate runtime-probed SILENT, blocking conjunct named), OQ-28 (seat-theorem amendment provenance), OQ-14 (bridge unblessed; mediator is the decided join)
+**Files:** ISSUES.md, docs/seat-theorem-v1.md, docs/design/two_axis_architecture_v7.md, prolog/cs_drift_mismatch.pl
+**Tier:** landed
+
+- **OQ-07 resolved.** `cs_drift_mismatch/2` runtime-probed for the hand-traced UID `72c8aa61…`
+  on the only corpus carrying it (`archives/datasets/kernel_test`, 229 testsets; UIDs are
+  per-generation surrogates — same-named archive copies differ). Positive control: 11
+  corpus-wide firings on the same load. Candidate: SILENT; decomposition shows the
+  foreclosure half HOLDS (`axiom_foreclosure_trajectory`) and `cs_is_metric_stable` FAILS —
+  runtime falsified exactly the hand-trace's unverified metric-stability assumption.
+  Verdict: architecturally-possible-but-not-this-case. Evidence:
+  `audits/2026-06-09_oq07_mismatch_runtime_probe/` (probe.pl, probe_output.txt, WRITEUP.md).
+- **OQ-28 resolved (option a, as the entry pre-ruled).** `docs/seat-theorem-v1.md` gained an
+  "Amendment provenance" section naming the witness-asymmetry: the §3 correction is a
+  result-claim carrying its run-witness (`test_forecloses_fpn_injection.pl`); the §5 and §8
+  edits are scope-clarifications owing declaration, not run-grounding.
+- **OQ-14 resolved.** `docs/design/two_axis_architecture_v7.md` amended (2026-06-09 section):
+  the `influences` bridge is no longer the one blessed cross-axis join (16 cross-axis
+  surfaces in 7 modules); the OQ-15 mediator layer is the decided-but-unbuilt join; three
+  grep-enforceable invariants recorded; four stale claim-sites corrected in place.
+
+---
+
 ## 2026-06-09 — Capture-cut discriminating control HALTED (Outcome 2): `has_computed_capturer` proxy false-positives; capture needs an authored gain-flow surface (OQ-92 / GAP-10, gates OQ-90)
 **Files:** ISSUES.md, docs/design/design_gaps.md, prolog/stakeholder_seats.pl, prolog/constraint_indexing.pl
 **Tier:** correction-key
