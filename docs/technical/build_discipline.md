@@ -118,6 +118,55 @@ PY
 
 ---
 
+## Unwired ≠ worthless — judge a dangling wire by its contribution, not its consumers
+
+Pattern 1 is a **build-time** rule: when you *create* a producer, finish the wire. It does **not**
+license the inverse at **audit time** — finding an unwired producer and concluding it is cruft.
+"Has a consumer" / "is wired into `run_pipeline.py`" answers *is it currently used*, not *is it
+useful*. Those are different questions, and the consumer test is the wrong one for worth — it is
+the test every model reaches for first because it is mechanical and cheap, which is exactly why it
+misleads. The same trap holds for *fires on the corpus*: a diagnostic that never fires may be dead,
+or the corpus may simply not exercise it (test cross-corpus + against reference exemplars before
+concluding anything — see *Every diagnostic needs a positive control*).
+
+**Every subsystem here was initiated for a reason.** Boltzmann compliance, the FPN, the signature
+taxonomy, the trajectory classifiers — each was built to extract a specific analytical product. An
+unwired one is evidence the *build* was left unfinished, not that the *idea* was worthless. The
+verdict comes from the value question, not the wiring status:
+
+1. **What analytical product does it yield?** (a classified type, a coupling score, a type-path
+   over time, an observer residual …)
+2. **Does any *live* subsystem already yield that?** If yes → candidate **duplicate** (cruft).
+3. **If not, what would it add once wired?** **Unique** signal, or a **refinement** of an existing
+   signal → *unfinished value*. Remedy: **wire it** (or record it as an intended, not-yet-built
+   capability in `design_gaps.md`), **never retire it on wiring grounds**.
+4. Only **duplicate-of-X** or **yields-nothing-interpretable (vestigial)** is genuine cruft.
+
+So the liveness / firing / consumer passes are **evidence-gathering** (what exists, what is
+exercised — across the live corpus *and* the archives) that *feeds* the value adjudication; they are
+not the adjudication. Wiring status is at most a **prompt** to ask "what does this bring?", never the
+answer.
+
+**The asymmetry that makes the consumer-test dangerous:** retiring valuable-but-unwired silently
+destroys a distinct analytical capability (it reads as "removed dead code"); keeping a duplicate
+costs a little clutter. The error is not symmetric — when unsure, **preserve and adjudicate**, do
+not delete on wiring grounds.
+
+**Instances (including this doc author's own slip):**
+- The **8 zero-firing signatures** (`natural_law`, `coordination_scaffold`, `piton`,
+  `false_natural_law`, `false_summit_mountain`, `constructed_low`/`constructed_constraint`,
+  `ambiguous`) fire on none of the live corpus. Each names a *distinct* constraint type — unique
+  signal even at zero current firings; "not exercised here" is a fact about the corpus, not a worth
+  verdict.
+- The **old trajectory classifier** (`snapshot_type`/`degradation_chain`) sits unwired beside the
+  now-live `drift_trajectory`/`temporal_residual`. Reaching for "superseded ⇒ cruft" was the error:
+  the old classifier yields a **categorical type-path** (rope→snare→…); the live one yields a
+  **quantitative metric series**. Different products — so it is plausibly *unfinished value to wire*,
+  not a duplicate. The wiring told you it was unused; only the value question tells you whether it is
+  worth keeping.
+
+---
+
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)
 
 **Shape:** a file or record is copied to a scratch/test location, possibly edited, and now

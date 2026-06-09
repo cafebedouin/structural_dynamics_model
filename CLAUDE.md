@@ -275,6 +275,22 @@ nowhere / is unique" is an unfalsified diagnostic until run against a case you k
 Full table: `docs/technical/build_discipline.md` → *The spine* and *Every diagnostic needs a
 positive control*.
 
+**Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
+*build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an
+unwired or zero-firing subsystem cruft. "Has a consumer / is wired into `run_pipeline` / fires on
+the corpus" answers *is it used*, not *is it useful* — the mechanical test every model reaches for,
+and the wrong one for worth. Each subsystem (Boltzmann, FPN, the signature taxonomy, the trajectory
+classifiers) was built to yield a specific analytical product; unwired = the *build* was left
+unfinished, not the *idea* worthless. Adjudicate by value: (1) what product does it yield? (2) does
+a live subsystem already yield it → **duplicate** (cruft); (3) else what would it add → **unique/
+refinement** = *unfinished value*, **wire it or log it in `design_gaps.md`, never retire on wiring
+grounds**. Only duplicate or yields-nothing-interpretable is genuine cruft. Liveness/firing/consumer
+sweeps are evidence that *feeds* this adjudication, not the adjudication. Asymmetry: retiring
+valuable-but-unwired silently destroys a capability; keeping a duplicate is mild clutter — when
+unsure, preserve and adjudicate. Full version + instances (the 8 zero-firing signatures; the
+`snapshot_type`/`degradation_chain` type-path vs `drift_trajectory` metric-series):
+`docs/technical/build_discipline.md` → *Unwired ≠ worthless*.
+
 ## Critical Distinctions
 
 **The live corpus is the post-de-leak REBUILD (reset 2026-06-05) — never cite a memorized count;
