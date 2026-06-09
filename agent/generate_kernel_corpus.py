@@ -570,7 +570,7 @@ def strip_extra_properties(story: dict, schema: dict) -> tuple:
 
 def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_log,
                           gen_seeds_by_id=None, rejections_path=None, overwrite=False,
-                          id_map=None):
+                          id_map=None, token_acc=None):
     """Write each result to run-tagged dirs: json_dir/.json + testsets_dir/.pl.
 
     Error handling (two tracks):
@@ -583,6 +583,13 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
 
     Linting uses a temp file in flat prolog/testsets/ so dirname(dirname) resolves to
     prolog/ and finds config.pl (run-tagged subdir would resolve to prolog/testsets/).
+
+    token_acc (OQ-80): optional mutable dict {"input_tokens": n, "output_tokens": n} —
+    when supplied, API usage from every succeeded result is summed into it (tokens are
+    spent even when the story later fails validation, so accumulation happens at receipt,
+    not at save). Mutable out-param rather than a return value so the (succeeded, failed,
+    membership, rejected) signature stays intact for existing CLI callers. When None
+    (the default), usage is NOT measured — callers must report "not measured", never 0.
     """
     succeeded = failed = 0
     kernel_membership = {}
@@ -598,6 +605,10 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             print(f"  FAIL {cid}: {result.result.type}")
             failed += 1
             continue
+        if token_acc is not None:  # OQ-80: sum usage at receipt (spend is real even if save fails)
+            usage = getattr(result.result.message, "usage", None)
+            token_acc["input_tokens"] = token_acc.get("input_tokens", 0) + (getattr(usage, "input_tokens", 0) or 0)
+            token_acc["output_tokens"] = token_acc.get("output_tokens", 0) + (getattr(usage, "output_tokens", 0) or 0)
         raw = "".join(b.text for b in result.result.message.content if b.type == "text")
         story, errors = process_response(raw)
         if story is None:
@@ -797,8 +808,13 @@ def _seed_messages(seed, generated_by_id):
 
 def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
                             model, max_tokens, system, temperature,
-                            rejections_path=None, manifest_file=None, progress=None):
-    """The unified backend. Returns (succeeded_ids, failed_ids, fail_reasons)."""
+                            rejections_path=None, manifest_file=None, progress=None,
+                            token_acc=None):
+    """The unified backend. Returns (succeeded_ids, failed_ids, fail_reasons).
+
+    token_acc (OQ-80): optional mutable dict forwarded to process_batch_results per wave;
+    the caller reads accumulated usage from it after the run. Out-param, not a return
+    value, so the 3-tuple stays intact for existing callers."""
     progress = progress or (lambda *a, **k: None)
     client = get_client()
 
@@ -866,7 +882,7 @@ def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
         wave_by_id = {s["constraint_id"]: s for s in wave}
         process_batch_results(client, batch.id, json_dir, testsets_dir, processed_log,
                               gen_seeds_by_id=wave_by_id, rejections_path=rejections_path,
-                              overwrite=True, id_map=idmap)
+                              overwrite=True, id_map=idmap, token_acc=token_acc)
         # Re-read saved stories for downstream-wave upstream context + success accounting.
         for cid in idmap.values():
             p = json_dir / f"{cid}.json"

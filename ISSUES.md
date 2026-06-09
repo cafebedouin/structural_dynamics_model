@@ -212,25 +212,18 @@ Evidence: `audits/2026-06-09_oq07_mismatch_runtime_probe/` (probe.pl, raw output
 
 ## OQ-08 — DR/CS context asymmetry not surfaced in mismatch reports
 
-**Status:** open
-**Origin:** Tranche 2 audit Item 2.  
-**File:** `prolog/cs_drift_mismatch.pl` (~line 52, "by design" comment)
-
-**Specific question:** When `cs_drift_mismatch/2` fires, should the mismatch report
-annotate that DR and CS are computing over different framing Π — DR at the fixed
-analytical context, CS over context-free authored facts?
-
-**Evidence so far:** The predicate's comment (~line 52) documents the asymmetry as by
-design: "DR is instance-blind; two instances sharing C both see the same DR stability
-result — by design." Reports that emit mismatch findings currently do not surface this
-— a reader could interpret it as "CS and DR disagree about the same thing" when the
-correct reading is "CS and DR are answering structurally different questions."
-
-**What resolution changes:** One annotation line in the mismatch report section makes
-the Π-difference visible at the report level, consistent with the declaration
-discipline the schema runs on. No logic change required — this is a report-layer
-change in `prolog/json_report.pl` or the Python report formatter. Low cost, high
-clarity value for any external reader of mismatch output.
+**Status:** resolved — (2026-06-09, both report layers annotated). When `cs_drift_mismatch`
+fires, `json_report.pl` now emits a `cs_drift_mismatch_note` field and
+`enhanced_report.py`'s kernel-reading section appends a note line: Π-asymmetric by design —
+DR classifies instance-blind at the fixed analytical context; CS reads context-free authored
+facts; cross-frame disagreement, not two answers to one question. Witnessed both directions:
+Prolog side on the kernel_test archive (note present + fragment parses as JSON on a firing
+UID; absent on the OQ-07 silent UID); Python side via mock-pipeline witness (note present iff
+a reading carries `cs_drift_mismatch`). The OQ-15 mediator layer is the note's eventual
+permanent home (cross-ref'd in both code comments). *(body compressed at close per footer rule)*
+**Origin:** Tranche 2 audit Item 2.
+**File:** `prolog/json_report.pl` (~1797), `python/enhanced_report.py` (~2192),
+`prolog/cs_drift_mismatch.pl` (~line 52, the "by design" comment)
 
 ---
 
@@ -3239,25 +3232,18 @@ it recoverable via `generate_kernel_corpus --scope`). The "skipping" line no lon
 
 **Ω-type:** Ω_E (a measured quantity that is currently unmeasured-but-presented-as-zero).
 
-**Status:** open — harmless today (no behavior keys on it; the runtime note + docstring prevent
-misreading), filed so the distinction survives this session.
+**Status:** resolved — (2026-06-09, the deferred fix built as specified). `process_batch_results`
+takes an optional `token_acc` mutable out-param (None = NOT measured, never 0; 4-tuple signature
+intact for gkc CLI callers); usage summed at receipt (spend is real even if the save fails);
+`generate_from_manifests` forwards it per wave; `_step_generate` reads it onto the StepResult and
+the "unthreaded — reported as 0" runtime note is replaced with actual counts. Witness:
+`python/tests/test_token_acc_threading.py` (3 cases: summed-at-receipt incl. parse-failures;
+errored-only leaves 0; `token_acc=None` path unchanged) — all pass 2026-06-09.
+*(body compressed at close per footer rule)*
 **Origin:** 2026-06-06 backend-merge P3. The old `_step_generate_batch` summed batch-result `usage`
-into the StepResult; `generate_from_manifests` delegates result-processing to
-`process_batch_results` (which consumes the results iterator and does not return token usage), so
-the unified `_step_generate` returns `tokens_in/out = 0`.
-
-**Why it's filed, not just "cosmetic later":** `tokens_in/out = 0` in the pipeline summary is the
-genus of defect this whole merge exists to kill — a number that reads as a FACT (zero tokens) when
-it means "not measured." It is harmless HERE (summary-only; runtime note printed), but if anything
-downstream ever sums that field for cost tracking or a budget gate, a hard 0 is **absence
-presenting as a measured zero** (Build-Discipline spine). The label must outlive the session's
-memory of why it's zero.
-
-**Fix (cheap, deferred):** thread usage through `process_batch_results` — add an optional
-`token_acc` accumulator (default None, backward-compatible with gkc callers) that sums
-`result.result.message.usage` input/output tokens; `generate_from_manifests` passes one and returns
-the totals; `_step_generate` puts them on the StepResult. Until then the field is "not measured,"
-not "zero."
+into the StepResult; the unified backend delegated result-processing to `process_batch_results`,
+which consumed the iterator without returning usage, so `_step_generate` reported a hard 0 —
+absence presenting as a measured zero (Build-Discipline spine).
 
 ## OQ-81 — Do kernel readings make sound wave-upstreams for supplementary axes? (mechanism witnessed, appropriateness open)
 

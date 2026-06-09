@@ -2174,6 +2174,7 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
         f"{kernel_entry['diverging_pair_count']} diverging pairs | "
         f"{kernel_entry['axiom_conflict_count']} axiom conflicts"
     )
+    any_mismatch = False
     for r in kernel_entry["readings"]:
         rid = r["reading_id"]
         r_uid = r.get("story_uid")
@@ -2188,8 +2189,20 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
             parts.append(f"unacknowledged")
         if r.get("cs_drift_mismatch"):
             parts.append(f"mismatch")
+            any_mismatch = True
         suffix = f" [{', '.join(parts)}]" if parts else ""
         lines.append(f"{marker}{rid}{suffix}")
+
+    if any_mismatch:
+        # OQ-08: surface the DR/CS framing asymmetry at the report level. Without this
+        # line, "mismatch" reads as CS and DR disagreeing about the same thing; the
+        # correct reading is that they answer structurally different questions
+        # (DR: instance-blind, fixed analytical context; CS: context-free authored facts).
+        lines.append(
+            "  note: 'mismatch' is Pi-asymmetric by design — DR classifies instance-blind"
+            " at the fixed analytical context; CS reads context-free authored facts."
+            " Cross-frame disagreement, not two answers to one question."
+        )
 
     return "\n".join(lines)
 

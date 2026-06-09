@@ -532,12 +532,17 @@ class DRAuditOrchestrator:
         processed_log = (self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")) / "processed.txt"
         processed_log.parent.mkdir(parents=True, exist_ok=True)
 
+        # OQ-80 (resolved 2026-06-09): usage is summed by the backend into this out-param.
+        # Before this, the StepResult carried a hard 0 that read as "zero tokens" when it
+        # meant "not measured" — absence presenting as a measured value.
+        token_acc = {"input_tokens": 0, "output_tokens": 0}
         succeeded, failed, _reasons = generate_from_manifests(
             [manifest], self._json_dir, self._testsets_dir, processed_log,
             model=self.MODELS["architect"], max_tokens=self.MAX_TOKENS["architect"],
             system=_SYSTEM_INSTRUCTION,
             temperature=float(os.environ.get("DR_TEMPERATURE", "0.2")),
             manifest_file=self.manifest_file, progress=self._progress,
+            token_acc=token_acc,
         )
 
         # Rebuild the story-dict list downstream expects (reports reads header.constraint_id).
@@ -553,11 +558,12 @@ class DRAuditOrchestrator:
             self._progress("generate", f"Failed ({len(failed)}): {sorted(failed)} — "
                                        f"recoverable via --manifest-file (gap retry)")
         self._progress("generate",
-                       f"Generated {len(stories)} stories via the unified backend. "
-                       f"(NOTE: per-step token totals unthreaded through the unified backend — "
-                       f"reported as 0 = NOT MEASURED, not zero; OQ-80.)")
+                       f"Generated {len(stories)} stories via the unified backend "
+                       f"({token_acc['input_tokens']}→{token_acc['output_tokens']} tokens).")
         return StepResult(step="generate", status="success", data=stories,
-                          tokens_in=0, tokens_out=0, duration_s=time.time() - t0)
+                          tokens_in=token_acc["input_tokens"],
+                          tokens_out=token_acc["output_tokens"],
+                          duration_s=time.time() - t0)
 
     def _step_generate_serial(self, manifest: dict) -> StepResult:
         self._progress("generate", "Generating constraint stories (serial mode)...")

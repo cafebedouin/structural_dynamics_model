@@ -1794,8 +1794,15 @@ write_reading_comparison_entry(S, UID-C, Comma) :-
     ->  format(S, '            "cs_drift_unacknowledged": true,~n', [])
     ;   format(S, '            "cs_drift_unacknowledged": false,~n', [])
     ),
+    % OQ-08: when a mismatch fires, annotate the DR/CS framing asymmetry so a reader
+    % does not take it as "two answers to one question". DR is instance-blind and
+    % evaluates at the fixed analytical context; CS evaluates context-free authored
+    % facts (see cs_drift_mismatch.pl, the by-design comment). The disagreement is
+    % cross-frame (different Pi), which is exactly why it is a finding (OQ-15's
+    % mediator layer is this note's eventual permanent home).
     (   catch(cs_drift_mismatch:cs_drift_mismatch(UID, _), _, fail)
-    ->  format(S, '            "cs_drift_mismatch": true~n', [])
+    ->  format(S, '            "cs_drift_mismatch": true,~n', []),
+        format(S, '            "cs_drift_mismatch_note": "Pi-asymmetric by design: DR classifies instance-blind at the fixed analytical context; CS reads context-free authored facts. The two axes answer structurally different questions; this is a cross-frame disagreement, not two answers to one question."~n', [])
     ;   format(S, '            "cs_drift_mismatch": false~n', [])
     ),
     (Comma == true -> format(S, '          },~n', []) ; format(S, '          }~n', [])).

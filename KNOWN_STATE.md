@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-09 — OQ-80 + OQ-08 closed: generate-step token totals threaded (hard-0 retired); DR/CS Π-asymmetry annotated in both mismatch report layers
+**Files:** agent/generate_kernel_corpus.py, agent/c-orchestrator.py, prolog/json_report.pl, python/enhanced_report.py, python/tests/test_token_acc_threading.py
+**Tier:** landed
+
+- **OQ-80 resolved.** `process_batch_results` gained an optional `token_acc` mutable out-param
+  (None = NOT measured, never 0; return signature intact for gkc CLI callers); usage summed at
+  receipt (spend is real even when the story later fails parse/validation);
+  `generate_from_manifests` forwards per wave; `_step_generate` now reports real token counts on
+  the StepResult instead of the hard 0 + "unthreaded (OQ-80)" note. Witness:
+  `python/tests/test_token_acc_threading.py` — summed-at-receipt-incl-parse-failures,
+  errored-only→0 negative control, and None-path-unchanged all pass (2026-06-09).
+- **OQ-08 resolved.** When `cs_drift_mismatch` fires, `json_report.pl` emits
+  `cs_drift_mismatch_note` and `enhanced_report.py`'s kernel-reading section appends the note:
+  Π-asymmetric by design — DR instance-blind at the fixed analytical context, CS context-free
+  authored facts; cross-frame disagreement, not two answers to one question. Witnessed both
+  directions on each layer (Prolog: kernel_test archive, firing UID note+parses / silent UID no
+  note; Python: mock-pipeline, note iff mismatch). Eventual permanent home: the OQ-15 mediator.
+
+---
+
 ## 2026-06-09 — Three doc-sync OQs closed with witnesses: OQ-07 (mismatch candidate runtime-probed SILENT, blocking conjunct named), OQ-28 (seat-theorem amendment provenance), OQ-14 (bridge unblessed; mediator is the decided join)
 **Files:** ISSUES.md, docs/seat-theorem-v1.md, docs/design/two_axis_architecture_v7.md, prolog/cs_drift_mismatch.pl
 **Tier:** landed
