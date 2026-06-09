@@ -431,3 +431,45 @@ curation pass or a learned dominance signal, with its selection-seat declared pe
 Interim safety: the failure direction is bounded — an over-routed topic yields a construction *pair*
 (kernel readings + the auto forced-flat control), never a silent flat-loss; over-routing costs
 generation, not lost signal.
+
+---
+
+## GAP-10 — No gain-flow / authored-receipt surface: the engine cannot tell capture from non-harm
+
+**Declared:** 2026-06-09. **Witness:** `audits/2026-06-09_capture_axis_cut_control/`
+(PREREGISTRATION.md + FINDINGS.md + step1_capturer_cut_control.out). **Drives:** OQ-92 (the surface),
+OQ-90 (piton/capture split that halted on it).
+
+**The absence:** there is no authored fact for **who the extraction accrues to** (gain-flow /
+receipt). The engine's χ (`constraint_indexing:extractiveness_for_agent_d/4`,
+`χ = ε · sigmoid_f(d) · σ(S)`) is **extraction *from* a seat's directional view, not gain *to* a
+seat.** A beneficiary-side seat has low role-`d` (`config.pl:156–160`: agenda_setter 0.12,
+beneficiary 0.25) → low/negative χ → a favorable computed type — **regardless of whether the payers'
+extraction actually accrues to it.** So a genuine capturer and a merely-unharmed/benignly-aligned
+beneficiary seat are **computed-identical**. The one authored fact in the vicinity,
+`constraint_beneficiary/2`, is not a gain-flow signal: it feeds `has_coordination_function/1`
+(`narrative_ontology.pl:303`), which pushes a capturer's seat toward *scaffold* (benign coordination)
+— the wrong direction for capture detection.
+
+**Why it is absent (deliberate):** the snare/piton split was ruled to turn on *capture* (OQ-90,
+operator 2026-06-10: snare = a seat captures the extraction; piton = uncaptured dead-weight), and the
+no-capture test was ruled **must be computed, never authored-absence** (OQ-83 R3 / Pattern 5). The
+Step-1 discriminating control (2026-06-09) established that the best computed proxy
+(`has_computed_capturer/1` = beneficiary-side seat with favorable `dr_type_for_stakeholder`)
+**false-positives on a mild-favorable non-capturer** (witnessed two-part: candidate-set membership
+TRUE *and* cut TRUE on a non-capturer) and even fires on an uncaptured designed DMV's agenda_setter.
+The proxy is upstream-broken (the d-derivation), so it is not shipped — building the piton refinement
+on it would be shipping the loose proxy the review flagged.
+
+**What closing the gap would require:** an **authored gain-flow surface** — a per-(C, seat) or
+per-constraint fact recording who *receives* the extraction (not who is unharmed by it), consumed
+*positively* (a seat computes as capturer because gain is authored to it), never by authored-absence.
+Plausibly the same surface answers `fixing_cost`/benefit-of-fixing (OQ-90's other open term) — both
+are missing authored scalars in the receipt/accrual family — but the two are **distinct scalars**
+(accrual-of-gain vs cost-to-fix) and whether one surface covers both is a design ruling, not a
+settled equivalence (see OQ-92; distinction-check owed before merging — build_discipline rule #2).
+
+**Interim safety:** the capture axis is simply not computed — the engine does not *claim* to
+distinguish snare from piton by capture; the `Supp ≤ 0.2` piton gate stays in place (OQ-90), and the
+piton type stays where OQ-90 left it (subsumed under false_ci_rope), not falsely refined on a broken
+proxy. No half-apparatus is left declared-but-unfed.

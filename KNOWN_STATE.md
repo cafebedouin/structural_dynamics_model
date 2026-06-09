@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-09 — Capture-cut discriminating control HALTED (Outcome 2): `has_computed_capturer` proxy false-positives; capture needs an authored gain-flow surface (OQ-92 / GAP-10, gates OQ-90)
+**Files:** ISSUES.md, docs/design/design_gaps.md, prolog/stakeholder_seats.pl, prolog/constraint_indexing.pl
+**Tier:** correction-key
+
+Ran the pre-registered Step-1 control for OQ-90's proposed capture cut (`has_computed_capturer/1` =
+beneficiary-side seat with favorable `dr_type_for_stakeholder`) against four seat-sets. **Outcome 2 →
+HALT:** the cut fires TRUE on a *mild-favorable non-capturer* (two-part witness: candidate-set
+membership TRUE *and* cut TRUE on a seat with no `constraint_beneficiary`) and on an uncaptured
+designed DMV's agenda_setter. Root cause: χ (`extractiveness_for_agent_d/4`) is
+**extraction-from-seat, not gain-to-seat**, and every beneficiary-side role gets low `d`
+(`config.pl:156–160`) → favorable type regardless of receipt; the cut degenerates into "C has a
+beneficiary-side-*role* seat at all." Bonus: `constraint_beneficiary/2` (the only authored signal
+nearby) feeds `has_coordination_function/1` (`narrative_ontology.pl:303`) → pushes a capturer toward
+*scaffold*, the wrong way. **Capture is not computed-representable from current signals;** needs an
+authored gain-flow / receipt surface (OQ-92, GAP-10; proposed — for operator ruling — to possibly
+unify with OQ-90's `fixing_cost` term, flagged not folded). OQ-90 Steps 2–4 (piton refinement,
+`Supp ≤ 0.2` gate retirement) stay gated on OQ-92; the proxy is NOT shipped. Pre-registration written
+before the run; favorable-set choice shown irrelevant (problem is upstream in d-derivation).
+Witnesses: `audits/2026-06-09_capture_axis_cut_control/` (PREREGISTRATION.md, FINDINGS.md,
+step1_capturer_cut_control.out, capturer_cut_control.pl).
+
+**Promotion test:** no silent-mistake tripwire — this corrects how a *prior proposal* may be cited
+(the capture cut is rejected, not pending), which is correction-key, not an always-loaded warning;
+the χ-is-extraction-from-seat fact is already in the cut's own comment in `stakeholder_seats.pl:86–88`
+and now in GAP-10/OQ-92. Stays history-side, not promoted to CLAUDE.md.
+
+---
+
 ## 2026-06-10 — Cell controls (witnessed): snare is capture-blind (`Supp ≤ 0.2` is not the piton discriminator); coordination "non-rope" cases scatter (FSM vs FCR) — falsification-grade; rebuild held (OQ-90/OQ-91)
 **Files:** prolog/signature_detection.pl, docs/repair_dynamics.md, ISSUES.md
 **Tier:** correction-key

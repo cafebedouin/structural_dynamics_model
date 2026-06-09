@@ -3979,7 +3979,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
 
-**Status:** open — design ruled (operator 2026-06-10), refinement predicate + prompt change drafted below, not yet wired/tested.
+**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested.
 
 **Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
 across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
@@ -4036,6 +4036,17 @@ has_computed_capturer(C) :-
 ```
 Wiring point: inside `signature_detection` where FCR resolves (a label refinement on the false_ci_rope
 result), NOT a new cascade clause.
+
+**Capture-cut discriminating control (2026-06-09) — HALT, proxy rejected.** The `has_computed_capturer`
+proposal above was run against four pre-registered seat-sets (genuine capturer / mild-favorable
+non-capturer / DMV-no-beneficiary / realistic DMV-with-agenda_setter). **It false-positives:** the cut
+fires TRUE on the mild-favorable non-capturer (two-part witness: candidate-set membership TRUE *and*
+cut TRUE on a seat with no `constraint_beneficiary`) and on the uncaptured designed DMV's
+agenda_setter. Root cause: χ is **extraction-from-seat, not gain-to-seat**, and every beneficiary-side
+role gets low `d`, so the cut degenerates into "C has a beneficiary-side-*role* seat at all," not "C
+has a capturer." So `seat_captures/1` is **not constructible from current signals** — capture needs an
+authored gain-flow surface (**OQ-92 / GAP-10**). Steps 2–4 (piton refinement, `Supp ≤ 0.2` gate
+retirement) stay gated on OQ-92. Witness: `audits/2026-06-09_capture_axis_cut_control/`.
 
 **Decisive pre-wiring control (the fixing_cost-is-load-bearing test).** Construct a
 **cheap-fix-not-yet-done** story: low-d `agenda_setter` + distributed high-d `payer`s + no computed
@@ -4133,9 +4144,58 @@ ordering), not only decay — and the asymmetry that currently makes the type dy
 ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axis), v7 Theorem 7,
 `docs/repair_dynamics.md`, `docs/six_questions.md` (Q6), build_discipline "Unwired ≠ worthless".
 
+## OQ-92 — No authored gain-flow / receipt surface: capture is not computed-representable (gates OQ-90)
+
+**Ω-type:** Ω_C (design choice — whether to add an authored surface; the operator's ruling, not the
+engine's to settle).
+
+**Status:** open — discriminating control run (2026-06-09, Outcome 2 HALT); surface not built;
+operator ruling needed on (a) whether to add it and (b) whether one surface covers capture +
+fixing_cost.
+
+**Origin.** OQ-90 ruled the snare/piton split turns on *capture* (snare = a seat captures the
+extraction; piton = uncaptured) and that the no-capture test must be **computed, not authored-absence**
+(OQ-83 R3 / Pattern 5). The proposed computed proxy `has_computed_capturer/1` (beneficiary-side seat
+with favorable `dr_type_for_stakeholder`) was put to its pre-registered discriminating control
+(plan `jaunty-juggling-wozniak`, build_discipline rule #3). **It HALTED at Outcome 2.**
+
+**The finding (witnessed).** The cut **false-positives on a mild-favorable non-capturer.** χ
+(`extractiveness_for_agent_d/4`, `ε·sigmoid_f(d)·σ(S)`) is **extraction-from-seat, not gain-to-seat**;
+every beneficiary-side role gets low `d` (`config.pl:156–160`), so any beneficiary-side seat reads
+favorable **whether or not the extraction accrues to it.** The cut degenerates into "does C have a
+beneficiary-side-*role* seat at all." Two-part witness on the adversarial case (b): candidate-set
+membership TRUE *and* cut TRUE on a seat with no `constraint_beneficiary` (so the false-positive is
+real, not a no-candidate artifact). It also fires on an uncaptured designed DMV's agenda_setter.
+Bonus: the only authored fact in the vicinity (`constraint_beneficiary/2`) feeds
+`has_coordination_function/1` (`narrative_ontology.pl:303`) → pushes a capturer toward *scaffold*, the
+wrong direction. Witnesses: `audits/2026-06-09_capture_axis_cut_control/` (PREREGISTRATION.md,
+FINDINGS.md, step1_capturer_cut_control.out). Under-claim: witnessed on the constructed cases — the
+false-positive is structural (upstream in the d-derivation, insensitive to the favorable-type set),
+stated as a reading, not "unrepresentable across the whole range."
+
+**What's needed.** An **authored gain-flow / receipt surface** — a per-(C, seat) or per-constraint
+fact recording who *receives* the extraction (not who is unharmed), consumed *positively* (capturer =
+gain authored to a seat), never by authored-absence. See GAP-10 (`docs/design/design_gaps.md`).
+
+**Proposed unification (design proposal, NOT asserted — operator to rule).** OQ-90's other open term,
+`fixing_cost`/benefit-of-fixing (the piton's `extraction < fixing_cost` second term), is also a
+missing authored scalar in the receipt/accrual family. It is plausible that one authored-receipt
+surface answers both — "who does the extraction accrue to, and at what cost to whom" — unifying the
+capture split and the fixing_cost question. But accrual-of-gain and cost-to-fix are **distinct
+scalars**; whether one surface covers both is a design ruling, and merging them owes a distinction-
+check first (build_discipline rule #2). Flagged here for the operator, not folded.
+
+**What resolution would change.** With a gain-flow surface, the capture axis becomes computed
+(positively, Pattern-5-safe), OQ-90's piton refinement (Steps 2–4 of the plan) can be built on it
+rather than on the broken proxy, and the `Supp ≤ 0.2` piton gate can be superseded by capture. Until
+then OQ-90's piton stays subsumed under false_ci_rope (not refined on a broken proxy). Cross-refs:
+OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
+GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
+Pattern 5.
+
 ---
 
-*Last updated: 2026-06-10. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-09. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

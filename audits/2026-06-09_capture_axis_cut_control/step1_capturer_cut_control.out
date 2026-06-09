@@ -1,0 +1,39 @@
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/maxent_classifier.pl:849:
+Warning:    Singleton variables: [C2]
+Warning: /home/scott/bin/structural_dynamics_model/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+==== Step 1 capturer-cut discriminating control ====
+
+CASE cap_a
+    seat=capturer_a role=beneficiary | candidate | raw_metric=scaffold final_type=scaffold (favorable)
+    seat=payer_a role=payer | not-candidate | raw_metric=snare final_type=snare (unfavorable)
+  RESULT cap_a | candidate_set=[capturer_a] | cut=true
+
+CASE mild_b
+    seat=bystander_b role=beneficiary | candidate | raw_metric=naturalized final_type=naturalized (favorable)
+    seat=payer_b role=payer | not-candidate | raw_metric=snare final_type=snare (unfavorable)
+  RESULT mild_b | candidate_set=[bystander_b] | cut=true
+
+CASE dmv_c
+    seat=excluded_c role=excluded | not-candidate | raw_metric=snare final_type=snare (unfavorable)
+    seat=payer_c role=payer | not-candidate | raw_metric=snare final_type=snare (unfavorable)
+  RESULT dmv_c | candidate_set=[] | cut=false
+
+CASE dmv_designed
+    seat=admin_d role=agenda_setter | candidate | raw_metric=rope final_type=rope (favorable)
+    seat=payer_d role=payer | not-candidate | raw_metric=snare final_type=snare (unfavorable)
+  RESULT dmv_designed | candidate_set=[admin_d] | cut=true
+
+==== verdict mapping: see PREREGISTRATION.md (cut true on (a)&(b) => Outcome 2 HALT) ====
