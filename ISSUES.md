@@ -3961,6 +3961,18 @@ orphan+replacement; residual 3 audited → confirms whether the fail-closed fix 
 other default/threshold pairs. Provenance: `audits/2026-06-08_coordination_washing_clean_pass/`,
 KNOWN_STATE 2026-06-09.
 
+**Evidence — the fail-closed fix made cross-corpus liveness sweeps runnable (2026-06-10).** Ran the
+current `constraint_signature/2` across four corpora via `corpus_path` overlay; **0 throws** on all
+(live 34, kernel_v1 1106, original_v5 702, original_v6 3380) — pre-fix these would have thrown on
+under-vectored stories. Of the 12 signatures, **7 fire somewhere ⇒ LIVE** (natural_law,
+false_summit_mountain, false_natural_law — all zero on live n=34 — are live-but-narrow); **5 are
+dark across all ~5,222 stories** (coordination_scaffold, piton_signature, constructed_low_extraction,
+constructed_constraint, ambiguous) — cruft-candidates pending the reference-exemplar control + the
+value question (build_discipline *"Unwired ≠ worthless"*: firing-anywhere is evidence, not verdict).
+Consistency: natural_law=404 on original_v6 reproduces the OQ-43 "404 NL on testsets_3000" count;
+FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
+`audits/2026-06-10_signature_liveness_crosscorpus/MATRIX.md`; KNOWN_STATE 2026-06-10.
+
 ---
 
 *Last updated: 2026-06-09. Add new items with sequential OQ-NN labels. Mark

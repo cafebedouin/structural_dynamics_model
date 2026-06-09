@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — Cross-corpus signature-liveness sweep: 7/12 signatures LIVE, 5 dark everywhere; the fail-closed fix makes archive sweeps runnable (OQ-89)
+**Files:** prolog/signature_detection.pl, prolog/corpus_loader.pl, audits/2026-06-10_signature_liveness_crosscorpus/
+**Tier:** correction-key
+
+Corrects the naive read "8 signatures don't fire on the live n=34 ⇒ dead." Ran the current
+`signature_detection:constraint_signature/2` across four corpora via `corpus_path` overlay
+(retract default → assert `archives/datasets/<x>` → `load_all_testsets`; non-recursive glob =
+top-level only). **0 throws on all four** (live 34, kernel_v1 1106, original_v5 702, original_v6
+3380; bucket sums equal loaded counts) — the 2026-06-09 fail-closed fix is what makes this safe:
+old under-vectored stories abstain to `unknown` instead of throwing. Matrix + provenance:
+`audits/2026-06-10_signature_liveness_crosscorpus/MATRIX.md`.
+
+- **7/12 signatures fire somewhere** ⇒ LIVE: false_ci_rope, coupling_invariant_rope,
+  constructed_high_extraction, **natural_law** (404 on v6 / 26 on kernel_v1 — zero on live),
+  **false_summit_mountain** (kernel_v1+v6 — zero on live), **false_natural_law** (15 on v5 only).
+  The three bolded were zero on live → resolved **live-but-narrow**, not dead.
+- **5 DARK across all ~5,222 stories:** `coordination_scaffold`, `piton_signature`,
+  `constructed_low_extraction`, `constructed_constraint`, `ambiguous`. Strongest cruft-candidates
+  but NOT a verdict — per CLAUDE.md *"Unwired ≠ worthless"*, firing-anywhere is evidence feeding the
+  value question, not the answer. Next discriminator: the reference-exemplar control
+  (`constraint_instances.pl`: SI-units→scaffold, QWERTY→piton) + what each would detect. The three
+  constructed_*/ambiguous are intermediate/fallback bands (corpus data lands in constructed_high or
+  is overridden) → narrow-data, not proven dead-code.
+- **Consistency checks:** `natural_law`=404 on original_v6 reproduces the OQ-43 "404 NL on
+  testsets_3000" figure; `false_natural_law`=0 on kernel_v1 (despite OQ-70 recording FNL-dominance
+  on its ancestors) corroborates that the OQ-70 bait-clause removal worked.
+- **Caveat:** counts are liveness, NOT prevalence — archives are bait-era/ID-reuse and 67–81%
+  abstain under current schema.
+
+**Tripwire:** to sweep an archive, overlay `corpus_path` (retract the default `param/2` first — it's
+dynamic, first solution wins) to `archives/datasets/<x>` and call `load_all_testsets`; the
+non-recursive glob skips run-tag subdirs. Do NOT cite archive firing RATES as corpus content (OQ-70
+bait, OQ-25 ID-reuse, schema-drift abstention).
+
 ## 2026-06-09 — `accessibility_collapse`/`resistance` now REQUIRED for all constraint types; `get_metric_average` fail-closes to `unknown` (was 0.5); 3 articles regenerated (OQ-89)
 **Files:** prolog/signature_detection.pl, schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, python/generate_constraint_pl.py, agent/c-orchestrator.py
 **Tier:** landed
