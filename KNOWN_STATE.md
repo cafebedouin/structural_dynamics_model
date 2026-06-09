@@ -45,6 +45,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — Piton: agenda_setter is a BETTER proxy (the fixer role), but extraction<fixing_cost stays uncheckable; build as computed false_ci_rope refinement — OPEN pending the fixing_cost control (OQ-90)
+**Files:** prolog/signature_detection.pl, prolog/stakeholder_seats.pl, prompts/constraint_story_generation_prompt_json.md
+**Tier:** correction-key
+
+Resolves the piton arm of the cross-corpus dark-signature finding (this same day's entry). Two
+in-conversation overreaches corrected, both from incomplete recon (the failure the *"witness before
+claiming"* / *"unwired ≠ worthless"* disciplines warn about; operator's DMV worked-example + the
+agenda_setter pointer were the positive controls):
+1. **NOT "operationalization invalid / resistance-sign inverted."** A piton has HIGH resistance
+   (people complain) — the gate's `resistance > 0.2` is correct. What's absent is the *fix*. The
+   gate (low enforcement + resistance + theater + evolving) is a lossy *symptom-proxy* of the
+   cost-asymmetry, not backwards.
+2. **NOT "fully representable / no new design" either — the headline overshot (corrected after
+   Claude-web push-back).** The fixer exists as **`agenda_setter`** (d=0.12) over distributed
+   `payer`s (d=0.85), authored + populated (22/57) — but that encodes only **"the fixer isn't much
+   hurt,"** NOT the comparison `extraction < fixing_cost`. The piton condition has two terms; the
+   proxy carries one. It is lossy in both directions: **misses** a moderately-hurt fixer for whom
+   fixing still isn't worth it (canonical collective-action piton, moderate d), and
+   **false-positives** transient neglect (low-d fixer + a cheap fix nobody's done yet — not a piton).
+   So `fixing_cost`/benefit-of-fixing is **potentially load-bearing, not deferred**; "representable
+   via the stakeholder layer" is **OPEN**, gated on the cheap-fix-not-done positive control (OQ-90),
+   not a finding. What actually improved across the thread was proxy quality (theater_ratio →
+   stakeholder structure); the mechanism is still not directly checkable.
+
+**Design (operator-ruled 2026-06-10; full spec + drafts in OQ-90):**
+- Piton ⊂ `false_ci_rope`, refined **in-branch** (no cascade reorder; piton is FCR-shadowed because
+  its low ε trips `appears_as_rope` and FCR fires at priority 2 before the profile fallback).
+- Snare implies a capturing beneficiary → keep piton OUT of snare; the split turns on *capture*.
+- **The no-capture test is COMPUTED (per-seat χ), never authored beneficiary-absence** — gating on
+  "no beneficiary authored" would be a Pattern-5 regression and violate OQ-83 R3 (authored absence
+  must not drive classification). Idiomatic here: `in_contention`/`consensus_provenance` are
+  computed-not-authored.
+- Prompt fix is **non-leaky**: guide authoring of `agenda_setter`/`payer` roles + the cost-asymmetry
+  qualitatively; DROP the `theater_ratio ≥ 0.70` recitation (threshold-leakage = tuning-to-target,
+  same class as the 0.5 default). Theater becomes an honest-if-present symptom, not the test.
+
+**Tripwire:** when building OQ-90, verify the `chi_for_stakeholder/3` sign convention before writing
+`seat_captures/1` (capturer = beneficiary-side seat whose computed χ shows real gain); positive-
+control on a constructed DMV seat-set (piton) vs a capturing seat-set (snare) before wiring.
+
 ## 2026-06-10 — Cross-corpus signature-liveness sweep: 7/12 signatures LIVE, 5 dark everywhere; the fail-closed fix makes archive sweeps runnable (OQ-89)
 **Files:** prolog/signature_detection.pl, prolog/corpus_loader.pl, audits/2026-06-10_signature_liveness_crosscorpus/
 **Tier:** correction-key

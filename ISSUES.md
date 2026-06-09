@@ -3975,7 +3975,148 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 ---
 
-*Last updated: 2026-06-09. Add new items with sequential OQ-NN labels. Mark
+## OQ-90 — Piton: build as a computed `false_ci_rope` refinement keyed on the stakeholder layer
+
+**Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
+
+**Status:** open — design ruled (operator 2026-06-10), refinement predicate + prompt change drafted below, not yet wired/tested.
+
+**Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
+across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
+profile — not dead code). Investigation then established: (1) the cascade-shadow test shows
+`coordination_scaffold` is reachable but **`piton` is shadowed by FCR** — a piton has real
+distributed extraction, low ε trips `appears_as_rope`, a Boltzmann failure fires FCR (priority 2)
+before the profile fallback (priority 6); (2) the piton's defining feature is a **cost-asymmetry**
+(per-entity extraction < the fixing cost for whoever could fix it → rational inaction), of which the
+engine gate's `theater_ratio ≥ 0.70` + `resistance > 0.2` are lossy *symptom* proxies.
+
+**Representability (2026-06-10 — corrected; do NOT read as "fully representable").** The proxy got
+*better* (theater_ratio → stakeholder structure), but the mechanism is still NOT directly checkable.
+The piton condition has TWO terms — `extraction < fixing_cost` — and the available predicates encode
+only the first:
+- **Fixer = `agenda_setter`** (`constraint_stakeholder/7`, "sets/administers/enforces"), base
+  `d = 0.12`; **`payer`** (`d = 0.85`, typically several = "extracts from everyone," can't set the
+  agenda). Authored + populated (22 agenda_setter / 57 payer). This encodes **"the fixer isn't much
+  hurt"** — NOT `extraction < fixing_cost`.
+- **The low-d proxy is therefore lossy in BOTH directions** (it is a symptom-proxy too, not the
+  mechanism — the same caveat that applied to theater_ratio): it **misses** the canonical
+  collective-action piton (a *moderately*-hurt fixer for whom fixing still costs more than the
+  benefit — moderate d, excluded by a low-d gate), and it **false-positives transient neglect**
+  (low-d agenda_setter + distributed payers + no capturer, but a *cheap* fix nobody has gotten to —
+  not a piton).
+- **`fixing_cost` (or benefit-of-fixing) is therefore potentially LOAD-BEARING, not "deferred."**
+  Without it, piton and transient-neglect are the same gate output. Whether the structural proxy is
+  good enough is **OPEN**, settled by the positive control below — not asserted either way.
+
+**Operator rulings (2026-06-10):**
+- **Piton ⊂ `false_ci_rope`, refined IN-BRANCH** — do NOT reorder the cascade; once FCR fires, run a
+  piton sub-check. (Piton-as-false_ci_rope is acceptable subsumption; refine to recover the type.)
+- **Snare implies a benefiting party; keep piton OUT of snare.** The split therefore turns on
+  *capture*: snare = a seat actually captures the extraction; piton = uncaptured dead-weight.
+- **The no-capture test must be COMPUTED, never authored-absence.** Gating piton on "no beneficiary
+  authored" is a Pattern-5 regression and violates the engine's own OQ-83 R3 ("authored absence must
+  not drive classification overrides"; cf. `in_contention`/`consensus_provenance` are computed-not-
+  authored). Use per-seat χ (`chi_for_stakeholder/3` / `dr_type_for_stakeholder/3`): NAF over the
+  *computed* capturer test, not over an authored fact.
+
+**Build spec — PROPOSAL (not wired; χ-sign convention to verify before building):**
+```prolog
+% Piton = special false_ci_rope: in the FCR branch, cost-asymmetry holds and NO seat captures.
+piton_refinement(C) :-
+    false_ci_rope(C, _),                         % already rope-appearing + Boltzmann-failing
+    stakeholder_seats:role_of(C, _, agenda_setter),   % a fixer exists (low-d administrator)
+    findall(P, stakeholder_seats:role_of(C, P, payer), Payers), Payers \= [],  % distributed cost-bearers
+    drl_core:get_raw_suppression(C, Supp), Supp =< 0.2,    % persists by inertia, not active enforcement (positive metric, not NAF)
+    \+ has_computed_capturer(C).                 % NAF over a COMPUTED test (Pattern-5-safe), not authored-absence
+% A seat positively COMPUTES as a capturer (verify χ-sign: capturer = beneficiary-side seat whose
+% chi_for_stakeholder shows real gain). If none does -> uncaptured -> piton; if one does -> snare-flavored.
+has_computed_capturer(C) :-
+    stakeholder_seats:role_of(C, N, R), stakeholder_seats:beneficiary_side(R),
+    stakeholder_seats:chi_for_stakeholder(C, N, Chi), seat_captures(Chi).   % seat_captures/1 TBD per χ convention
+```
+Wiring point: inside `signature_detection` where FCR resolves (a label refinement on the false_ci_rope
+result), NOT a new cascade clause.
+
+**Decisive pre-wiring control (the fixing_cost-is-load-bearing test).** Construct a
+**cheap-fix-not-yet-done** story: low-d `agenda_setter` + distributed high-d `payer`s + no computed
+capturer + low suppression — i.e. structurally identical to the piton seat-set, but where the fix is
+*cheap and simply not yet done* (transient neglect, NOT a piton). Run the refinement. If it **claims
+this as piton**, the structural proxy cannot separate piton from transient-neglect → `fixing_cost`
+(or benefit-of-fixing) is **load-bearing and must be added before wiring**, not deferred. Only if some
+already-authored signal (e.g. persistence/`evolving` over a long measurement series, or FCR-context)
+demonstrably separates the two may the proxy ship without the scalar. Also run: DMV-shaped set → piton;
+snare-shaped set (a seat captures) → NOT piton; then the cross-corpus sweep (pitons surface, snares
+don't leak in). **Until this control is run, "representable via the stakeholder layer" stays OPEN, not
+a finding.**
+
+**Prompt change — PROPOSAL (non-leaky; replaces the symptom/threshold guidance at
+`constraint_story_generation_prompt_json.md:176`):**
+> * **Piton**: extracts from many but persists by inertia — no party benefits enough to maintain it
+>   and no party is hurt enough to fix it. Name the `agenda_setter` (who administers it and could
+>   change it) and the `payer`s (who bear its diffuse costs). A piton characteristically has **no**
+>   stakeholder who meaningfully profits — no concentrated beneficiary capturing the extraction; if
+>   one exists, it is a snare, not a piton. Author `theater_ratio` honestly if performative
+>   maintenance is present, but theatricality is a symptom, not the test — the test is the
+>   cost-asymmetry: the administrator could change it, but the cost to fix exceeds what it bears.
+
+No thresholds recited (no `≥ 0.70`); keys generation on the stakeholder roles (the representable
+signal), not on hitting a metric target.
+
+**What resolution would change:** piton stops being structurally dark — it surfaces as a computed
+refinement of the false ropes it currently hides inside, distinguished from snares by *computed*
+capture. Cross-refs: OQ-89 (cross-corpus liveness + fail-closed), OQ-83 (stakeholder layer / R3
+authored-absence rule), build_discipline *"Unwired ≠ worthless"* + Pattern 5. Provenance:
+KNOWN_STATE 2026-06-10, `audits/2026-06-10_signature_liveness_crosscorpus/`.
+
+---
+
+## OQ-91 — The observer axis encodes decay but not repair: the missing upgrade/scaffold-success transition
+
+**Ω-type:** Ω_C (design choice — what the type dynamics is for; whether to model repair as well as decay).
+
+**Status:** open — finding recorded (verified asymmetry); design/build not started. Theory note: `docs/repair_dynamics.md`.
+
+**Finding (verified this session).** The type space is a dynamics, not a static taxonomy
+(coordination is maintained, not achieved — same content as commitment-systems' "drift is
+intrinsic"). `transition_paths.pl:transition_path/4` encodes **eight transitions, all downward / lateral-into-worse,
+none upward** (rope→tangled_rope, tangled_rope→snare, rope→piton, scaffold→{piton,snare,tangled_rope},
+snare→{piton,false_mountain}) — verified by full enumeration; positive control is that the eight decay
+paths are present, so an upward head would have surfaced beside them. The predicate is consumed by
+`drift_report.pl` (lifecycle) and **0 times in `run_pipeline.py`** — the live classification path
+carries no transition concept at all (static per-constraint). So the engine registers how a constraint
+falls, not how a scaffold lifts it. Mirrors (analogy) the five-questions-without-the-sixth bias: a
+decay/cost-finding apparatus that structurally cannot see repair.
+
+**Three separations to hold when building (constraints, not preferences):**
+1. **Metaphors unwelded.** Repair ops on the rope (maintain / splice / replace) are the rigging
+   metaphor; the **scaffold** is the construction metaphor — the temporary alternative load-path
+   required to take a *load-bearing* constraint offline for repair (logic.md Thm 3, Supp ≥ 0.70),
+   struck on success / ossifies to piton if not. They are not the same operation; the type
+   vocabulary is multi-metaphor and does not compose.
+2. **Axes decoupled.** The repair dynamics rhymes with the committer/CS axis (drift / acknowledgment
+   / atrophy) but v7 Theorem 7 (Detection Independence) makes non-unification mandatory. Build the
+   observer-axis repair in observer-axis terms; do NOT import committer-axis machinery (analogy, not
+   bridge; only v7 §4.5 couples, citation at fixed-ε only).
+3. **Persistence mechanisms distinct.** Scaffold-cost (load-bearing, high-Supp — snare/rope register)
+   ≠ piton persistence (diffuse benefit / rational inaction, low-Supp). Do not collapse; piton
+   `fixing_cost` is OQ-90's open question, not scaffold-cost.
+
+**Candidate home (operator to rule the structure).** The type-trajectory *reporter*
+`degradation_chain`/`snapshot_type` is **direction-neutral** (it reports the `snapshot_type`
+sequence over the measurement series — would surface an upward run if one occurred); it is dormant,
+off the live path. The transition *detector* `transition_path/4` is decay-only and would need upward
+heads. So whether to extend a decay-*named* detector or build a dedicated upward structure is a
+design decision, not a settled home — unfinished, not cruft (build_discipline "Unwired ≠ worthless").
+Sub-question: do `maintain`/`splice`/`replace` warrant named engine operations or stay descriptive?
+
+**What resolution would change:** the engine could register repair (a constraint lifted back up the
+ordering), not only decay — and the asymmetry that currently makes the type dynamics a one-way
+ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axis), v7 Theorem 7,
+`docs/repair_dynamics.md`, `docs/six_questions.md` (Q6), build_discipline "Unwired ≠ worthless".
+
+---
+
+*Last updated: 2026-06-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
