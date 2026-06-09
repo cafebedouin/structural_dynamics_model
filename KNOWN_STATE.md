@@ -45,6 +45,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-09 — `accessibility_collapse`/`resistance` now REQUIRED for all constraint types; `get_metric_average` fail-closes to `unknown` (was 0.5); 3 articles regenerated (OQ-89)
+**Files:** prolog/signature_detection.pl, schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md, python/generate_constraint_pl.py, agent/c-orchestrator.py
+**Tier:** landed
+
+Root cause (audit `audits/2026-06-08_coordination_washing_clean_pass/`): generation never authored
+`accessibility_collapse`/`resistance` for non-mountain constraints; `get_metric_average/3` defaulted
+the missing vectors to **0.5**, which exceeds `snare_epsilon_floor` (0.46) — so an extraction-less
+constraint fabricated `constructed_high_extraction` from no data, and the 0.5 fill was load-bearing
+for the throw the audit removed.
+
+**Landed (witnessed; evidence under the audit's `rebuild_evidence/`):**
+- **Schema** (`constraint_story_schema.json`): `accessibility_collapse` + `resistance` added to
+  `base_properties.required`; rejects each independently (V1 witnessed). `_basic_validate` fallback
+  in `generate_constraint_pl.py` made consistent (else jsonschema-absent path silently skips them).
+- **Prompt**: both promoted to Core-required-for-ALL-types with honest non-mountain guidance
+  (mountains high collapse/low resistance; snares lower collapse/higher resistance). `emerges_naturally`
+  stays mountain-specific.
+- **Engine** (`signature_detection.pl`): `get_metric_average` empty branch `0.5` → `unknown`; added
+  abstain clause `constraint_signature(C, unknown) :- \+ profile_metrics_authored(C), !`; `number/1`
+  guards on `natural_law_signature`/`coordination_scaffold_signature`/`piton_signature`/
+  `constructed_constraint_signature` + a `profile_numeric` gate on `signature_confidence` so absence
+  **fails-closed (abstains), never throws**. Witness: 0 throws across the corpus + probes; the
+  fully-vectored constraints classifiable pre-guard are byte-identical post-guard (anti-over-abstain
+  control); under-authored constructed_high → `unknown`.
+- **Regenerated** magnifica_humanitas, china_blue_collar, world_model3 via c-orchestrator
+  (`DR_TEMPERATURE=0`, `--skip-search` — web search hung ~3.5min on the API in-env; research grounding
+  doesn't affect metric authoring). All 16 regenerated *stories* author both metrics. **V5 deterministic
+  substitution (`probe_harness:with_overlay/3`, caches auto-cleared): B(swap metrics→0.5)==C for all
+  16** → the formerly-defaulted metrics do not move these (extraction/suppression-driven) verdicts;
+  fix value is structural, not a verdict change.
+
+**Tripwire / residuals (OQ-89):**
+- **Full re-run RE-DECOMPOSES into different axes** — not "same stories +2 metrics." world3 went
+  3→4 axes with only `proxy` overlapping; magnifica 11→6; china →5. Old testsets are **orphaned**,
+  left in place (operator ruling 2026-06-09). 9 corpus members now abstain to `unknown`: 2 are
+  `*_contradictions` axiom meta-files (not stories — correct), 7 are orphaned originals
+  (e.g. `war_normalization_ai_weapons` superseded by `war_normalization_autonomous_weapons`). Corpus
+  n=34 carries orphan+replacement duplicate coverage until a cleanup pass.
+- **Legacy corpus not retro-fixed:** ~94/116 historical `json/` files still lack the two metrics;
+  the schema requirement binds future generation only.
+- **Class generalization deferred** (narrow-scope ruling): the neutral-default-crosses-threshold
+  pathology (0.5 > floor) may recur for other `get_metric_average`-style defaults / metric-threshold
+  pairs — see OQ-89, cross-ref OQ-43/44.
+
 ## 2026-06-08 — Flat router stably under-routes a COUPLED methodological kernel (World3); false-mountain (mountain→rope) is a candidate missed-kernel signal (OQ-88)
 **Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, ISSUES.md
 **Tier:** correction-key

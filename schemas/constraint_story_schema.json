@@ -350,6 +350,8 @@
         "extractiveness",
         "suppression",
         "theater_ratio",
+        "accessibility_collapse",
+        "resistance",
         "claimed_type",
         "human_readable",
         "topic_domain"
@@ -397,13 +399,13 @@
           "type": "number",
           "minimum": 0.0,
           "maximum": 1.0,
-          "description": "NL profile metric (required for mountain constraints)"
+          "description": "Required for ALL constraints (2026-06-09): how completely alternatives collapse once the constraint is understood. High for mountains/natural laws (~0.85+); lower for snares/ropes where alternatives persist. Author honestly; the engine decides certification. Absent values used to default to 0.5, fabricating verdicts."
         },
         "resistance": {
           "type": "number",
           "minimum": 0.0,
           "maximum": 1.0,
-          "description": "NL profile metric (required for mountain constraints)"
+          "description": "Required for ALL constraints (2026-06-09): how much active resistance the constraint meets. Near-zero for genuine natural laws; higher for constructs that must be defended. Author honestly; the engine decides certification. Absent values used to default to 0.5, fabricating verdicts."
         },
         "beneficiaries": {
           "type": "array",

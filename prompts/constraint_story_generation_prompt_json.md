@@ -234,32 +234,36 @@ Identify agents by their real structural role, not by conventional labels. The a
 
 Define the objective metrics of the constraint. These are the structural inputs the engine uses for classification.
 
-**Core metrics** (all required):
+**Core metrics** (all required — author for EVERY constraint regardless of claimed type):
 
 | Metric | JSON Field | Meaning |
 |---|---|---|
 | Base extractiveness (ε) | `base_properties.extractiveness` | How much the constraint extracts from those it governs |
 | Suppression | `base_properties.suppression` | Coercion / lack of alternatives |
 | Theater ratio | `base_properties.theater_ratio` | Ratio of performative to functional activity (piton detection) |
+| Accessibility collapse | `base_properties.accessibility_collapse` | How completely alternatives collapse once the constraint is understood |
+| Resistance | `base_properties.resistance` | How much active resistance the constraint meets |
 | Claimed type | `base_properties.claimed_type` | Must match the analytical perspective's classification |
 
 **NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by directionality and scope, in the engine's computation.**
 
-**NL Profile metrics** (required for mountain constraints):
+> **WARNING — `accessibility_collapse` and `resistance` are REQUIRED FOR ALL CONSTRAINTS, not just
+> mountains (2026-06-09).** Author what is descriptively true for THIS constraint's type:
+> - A genuine natural law / mountain collapses alternatives nearly completely (high
+>   `accessibility_collapse`, ~0.85+) and meets almost no real resistance (low `resistance`).
+> - A snare or tangled_rope typically leaves alternatives only partly collapsed (lower
+>   `accessibility_collapse`) and meets real resistance from those it extracts from (higher
+>   `resistance`).
+> - A rope or scaffold sits between — workable alternatives existed, friction is moderate.
+>
+> Do NOT tune the values toward any target — the engine decides certification. Omitting them used
+> to silently default to `0.5`, which fabricated verdicts and is now rejected by the schema.
+
+**NL Profile — mountain-specific:**
 
 | Metric | JSON Field | Requirement |
 |---|---|---|
-| Accessibility collapse | `base_properties.accessibility_collapse` | MUST be authored for mountains — how completely alternatives collapse once the constraint is understood |
-| Resistance | `base_properties.resistance` | MUST be authored for mountains — how much active resistance the constraint meets |
-| Emerges naturally | `base_properties.emerges_naturally` | `true` for mountains |
-
-> **WARNING — CRITICAL FOR MOUNTAINS:** If you set `emerges_naturally: true`, you MUST also
-> author `accessibility_collapse` and `resistance` with honest values. WITHOUT these metrics
-> the compiled constraint's natural law certification degrades silently (the engine cannot
-> certify what was never authored). Author what is descriptively true: a genuine natural law
-> collapses alternatives nearly completely and meets almost no real resistance; a constraint
-> that needs defending does not. Do not tune the values toward any target — the engine decides
-> certification.
+| Emerges naturally | `base_properties.emerges_naturally` | `true` for mountains (do not set unless the constraint is a structural feature of reality, not a human choice) |
 
 **Structural relationship declarations** — these are the primary input to the directionality derivation chain. Every non-mountain constraint should declare at least one:
 

@@ -1626,7 +1626,8 @@ driving data is non-empty in the active corpus:
    (e.g. `count_power_beneficiaries`, `signature_detection.pl:165`).
 2. Threshold over a metric that defaults on absence — `V =< Ceil` where `V` comes from a
    `( ... -> V = Measured ; V = Default )` fallback (cross-link Pattern 4 / OQ-41 sites:
-   `get_metric_average:160` `0.5`; `classify_at_time` `Supp=0.5`; `get_raw_suppression` `Supp=0`).
+   `get_metric_average:160` `0.5` — **RESOLVED 2026-06-09, fail-closed to `unknown`, see OQ-89**;
+   `classify_at_time` `Supp=0.5`; `get_raw_suppression` `Supp=0` — these two still open).
 3. Universal quantifier / negation-as-failure over a possibly-empty table — `forall(P, Q)`,
    `\+ disqualifier(C)` (e.g. `data_verification:verify_interval_completeness`;
    `natural_law_without_beneficiary/1` guards in `drl_core.pl`).
@@ -3917,7 +3918,52 @@ Provenance: this analysis + KNOWN_STATE 2026-06-08.
 
 ---
 
-*Last updated: 2026-06-08. Add new items with sequential OQ-NN labels. Mark
+## OQ-89 — `accessibility_collapse`/`resistance` under-authoring + the 0.5 neutral-default-crosses-threshold class
+
+**Ω-type:** Ω_E (design-relevant — closes a fabricated-default path; generalization deferred).
+
+**Status:** mitigated — core resolved 2026-06-09; residuals open (orphan cleanup, class generalization).
+
+**Origin.** Audit `audits/2026-06-08_coordination_washing_clean_pass/` found `get_metric_average/3`
+defaulted missing metric vectors to **0.5**, which exceeds `snare_epsilon_floor` (0.46), so a
+constraint with no authored extraction fabricated `constructed_high_extraction` from no data.
+Deeper cause: generation never authored `accessibility_collapse`/`resistance` for non-mountain
+constraints (schema marked them mountain-only; prompt tied them to `emerges_naturally`). Removing
+the 0.5 default surfaced the gap as `type_error` throws on 14/18 live constraints.
+
+**Resolved (witnessed; KNOWN_STATE 2026-06-09, `rebuild_evidence/`).** (1) Schema requires both
+metrics for ALL types (rejects each independently; `_basic_validate` fallback made consistent).
+(2) Prompt promotes both to required-for-all with honest non-mountain guidance. (3) Engine fail-closes:
+`get_metric_average` empty→`unknown`, abstain clause + `number/1` guards on the 4 profile-signature
+predicates + `profile_numeric` gate on the confidence path — absence abstains to `unknown`, never
+throws/fabricates (0 throws across corpus+probes; fully-vectored verdicts byte-identical). (4) The 3
+articles regenerated; all 16 regenerated stories author both metrics; V5 substitution (B[metrics→0.5]==C
+for 16/16) shows the formerly-defaulted metrics do not move these extraction-driven verdicts — fix is
+structural, not a verdict change. This is the `get_metric_average:160` instance of OQ-43/OQ-44's
+satisfy-on-absence class, now fail-closed.
+
+**Open residuals.**
+1. **Orphan cleanup.** Full re-run re-decomposes into different axes (world3 3→4, magnifica 11→6,
+   china →5; minimal name overlap), orphaning the original testsets — left in place (operator ruling
+   2026-06-09). 9 corpus members abstain to `unknown`: 2 are `*_contradictions` axiom meta-files
+   (correct — not stories), 7 are orphaned originals superseded by fully-vectored replacements. n=34
+   carries duplicate coverage until a cleanup decides which to retire.
+2. **Legacy corpus** (~94/116 `json/` lack the metrics) is not retro-fixed; schema binds future
+   generation only.
+3. **Class generalization (narrow-scope ruling 2026-06-09 — flag, do not fix here):** any other
+   `get_metric_average`-style default or metric/threshold pair where a neutral midpoint (e.g. 0.5)
+   lands on the wrong side of a floor/ceiling has the same pathology. Audit candidate; cross-ref
+   OQ-43/OQ-44 (satisfy-on-absence) — this is the *value-crosses-boundary* cousin, distinct from
+   *absence-satisfies-quantifier*.
+
+**What resolution would change:** residual 1 cleared → corpus denominator stops double-counting
+orphan+replacement; residual 3 audited → confirms whether the fail-closed fix needs to extend to
+other default/threshold pairs. Provenance: `audits/2026-06-08_coordination_washing_clean_pass/`,
+KNOWN_STATE 2026-06-09.
+
+---
+
+*Last updated: 2026-06-09. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

@@ -59,6 +59,7 @@ def _basic_validate(data):
                 errors.append(f"Missing required header field: {key}")
     if "base_properties" in data:
         for key in ("extractiveness", "suppression", "theater_ratio",
+                     "accessibility_collapse", "resistance",
                      "claimed_type", "human_readable", "topic_domain"):
             if key not in data["base_properties"]:
                 errors.append(f"Missing required base_properties field: {key}")

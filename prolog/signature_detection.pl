@@ -117,12 +117,40 @@ constraint_signature(C, natural_law) :-
 constraint_signature(C, coupling_invariant_rope) :-
     coupling_invariant_rope(C, _), !.
 
+% Honest abstain on absent authored metrics (2026-06-08, audit
+% 2026-06-08_coordination_washing_clean_pass). Missing metric vectors used to
+% default to 0.5 in get_metric_average; 0.5 exceeds snare_epsilon_floor (0.46),
+% so a constraint with no authored extraction vector fabricated a
+% constructed_high_extraction / false_ci_rope verdict from no data. The
+% authored-claim signatures above (FNL/FCR/FSM/NL via emergence/CI_Rope) read
+% constraint_claim / constraint_metric / base_extractiveness / agent_beneficiary
+% directly and fail (not throw) on absence, so they still fire when their
+% authored inputs exist. Only the metric-derived fallback path reaches here; when
+% any metric it consumes is the `unknown` absence sentinel, emit the honest
+% `unknown` signature instead of a default-fabricated verdict. The cut guards the
+% fallback clause below so classify_by_signature never sees `unknown`.
+constraint_signature(C, unknown) :-
+    \+ profile_metrics_authored(C), !.
+
 % Profile-based classification (v3.2 original pipeline)
 constraint_signature(C, Signature) :-
     get_constraint_profile(C, Profile),
     config:param(extractiveness_metric_name, ExtMetricName),
     get_metric_average(C, ExtMetricName, Extraction),
     classify_by_signature(Profile, Extraction, Signature).
+
+%% profile_metrics_authored(+C)
+%  True iff every metric the metric-derived signature fallback path consumes is
+%  an authored number (not the `unknown` absence sentinel returned by
+%  get_metric_average/3 on a missing vector). Gate for the fail-closed abstain
+%  above. Uses number/1, never arithmetic, so it cannot throw on `unknown`.
+profile_metrics_authored(C) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    get_metric_average(C, ExtMetricName, Ext),           number(Ext),
+    get_metric_average(C, accessibility_collapse, AC),   number(AC),
+    get_metric_average(C, SuppMetricName, Sup),          number(Sup),
+    get_metric_average(C, resistance, Res),              number(Res).
 
 /* ================================================================
    PROFILE EXTRACTION
@@ -169,7 +197,13 @@ get_metric_average(C, MetricType, Average) :-
     ->  sum_list(Vals, Sum),
         length(Vals, N),
         Average is Sum / N
-    ;   Average = 0.5  % Default if no data
+    ;   Average = unknown  % Honest abstain on missing data (was 0.5, which
+                           % exceeded snare_epsilon_floor 0.46 and fabricated a
+                           % constructed_high_extraction verdict from no data;
+                           % audit 2026-06-08_coordination_washing_clean_pass).
+                           % Consumers must guard with number/1 — see
+                           % profile_metrics_authored/1 and the unknown-abstain
+                           % clause of constraint_signature/2.
     ).
 
 %% count_power_beneficiaries(+Constraint, -Count)
@@ -305,6 +339,13 @@ natural_law_signature(profile(AccessCollapse, Suppression, Resistance,
                              BeneficiaryCount, HasAlternatives,
                              TemporalStability, _CoordinationSuccess)) :-
 
+    % Fail-closed on the `unknown` absence sentinel (2026-06-09): an unauthored
+    % metric arrives as `unknown` from get_metric_average/3; guard with number/1
+    % so the comparisons below FAIL rather than throw type_error. LOAD-BEARING:
+    % reached pre-abstain via the natural_law clause (:112) and the FNL
+    % claimed_natural path and boltzmann_compliance.pl:580.
+    number(AccessCollapse), number(Suppression), number(Resistance),
+
     % Metric conditions
     config:param(natural_law_collapse_min, CollapseMin),
     AccessCollapse >= CollapseMin,  % Default: 0.85
@@ -351,6 +392,11 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
                                        BeneficiaryCount, HasAlternatives,
                                        _TemporalStability, _CoordinationSuccess)) :-
 
+    % Fail-closed on `unknown` (2026-06-09) — see natural_law_signature. Backstop:
+    % reached only post-abstain via classify_by_signature (:140), but guarded
+    % uniformly (cost-asymmetry ruling: a free guard beats a future throw).
+    number(AccessCollapse), number(Suppression), number(Resistance),
+
     % Metric conditions (same as natural law)
     config:param(coordination_collapse_min, CollapseMin),
     AccessCollapse >= CollapseMin,  % Default: 0.85
@@ -389,6 +435,7 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
 piton_signature(profile(_AccessCollapse, Suppression, Resistance,
                                    _BeneficiaryCount, HasAlternatives,
                                    TemporalStability, _CoordinationSuccess)) :-
+    number(Suppression), number(Resistance),  % fail-closed on `unknown` (2026-06-09)
     Suppression =< 0.2,       % Low active enforcement
     Resistance > 0.2,         % But people are pushing back
     HasAlternatives == true,  % It was a choice
@@ -418,6 +465,10 @@ constructed_constraint_signature(profile(_AccessCollapse, Suppression, Resistanc
                                         BeneficiaryCount, _HasAlternatives,
                                         _TemporalStability, _CoordinationSuccess)) :-
 
+    % Fail-closed on `unknown` (2026-06-09): Suppression is authored corpus-wide so
+    % the disjunction usually short-circuits before Resistance, but guard both so an
+    % unknown Resistance with Suppression =< 0.2 fails rather than throws.
+    number(Suppression), number(Resistance),
     % At least one indicator of constructed constraint
     (   Suppression > 0.2        % Requires enforcement
     ;   Resistance > 0.2         % Faces opposition
@@ -479,7 +530,23 @@ signature_confidence(C, false_summit_mountain, Confidence) :-
 % Profile-based confidence (v3.2 original pipeline)
 signature_confidence(C, Signature, Confidence) :-
     get_constraint_profile(C, Profile),
-    compute_signature_confidence(Profile, Signature, Confidence).
+    % Fail-closed on `unknown` (2026-06-09): compute_signature_confidence/3 compares
+    % AccessCollapse/Suppression/Resistance inside findall/3, which does NOT catch the
+    % type_error an `unknown` would raise. If the profile is not fully numeric the
+    % constraint has abstained (signature `unknown`) and has no scoreable confidence —
+    % return low rather than throw. Separate entry point from the signature cascade,
+    % so this guard is load-bearing, not a backstop.
+    (   profile_numeric(Profile)
+    ->  compute_signature_confidence(Profile, Signature, Confidence)
+    ;   Confidence = low
+    ).
+
+%% profile_numeric(+Profile)
+%  True iff the three arithmetic-compared profile metrics are authored numbers.
+%  (BeneficiaryCount is always a count; HasAlternatives/TemporalStability are atoms
+%  compared with ==, which do not throw on `unknown`.)
+profile_numeric(profile(AccessCollapse, Suppression, Resistance, _, _, _, _)) :-
+    number(AccessCollapse), number(Suppression), number(Resistance).
 
 compute_signature_confidence(Profile, natural_law, Confidence) :-
     Profile = profile(AccessCollapse, Suppression, Resistance, _, _, _, _),
