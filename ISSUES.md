@@ -4049,6 +4049,25 @@ snare-shaped set (a seat captures) → NOT piton; then the cross-corpus sweep (p
 don't leak in). **Until this control is run, "representable via the stakeholder layer" stays OPEN, not
 a finding.**
 
+**Control results (2026-06-10) — falsification-grade, witnessed; correct the gate, hold the rebuild.**
+Ran a DMV-shaped vector (designed, enforced **Supp 0.5**, distributed extraction, no concentrated
+capturer): → **snare** (`constructed_high_extraction`), coordination_fn=no, beneficiary=no. So a
+*high-suppression uncaptured* extraction reads as snare ⇒ **`Supp ≤ 0.2` cannot be the piton
+discriminator** (the live `piton_signature` gate AND the prior `repair_dynamics.md` §4 framing are
+both wrong on this), and the engine's **snare is capture-blind**. Capture and suppression are
+**separable on this witness**; *"orthogonal across the range"* is the opened hypothesis, not
+established by one point. Also ran the coordination side: undesigned/emergent coordination
+(`emerges_naturally` + agent-beneficiaries, low ε) → **`false_summit_mountain`**; designed-but-
+unmaintained coordination → **`false_ci_rope`** — two distinct cells, so **"emergent coordination =
+one cell / piton's mirror" is falsified (scatter, witnessed)**. Emergent coordination → **FSM**, but
+whether FSM is its **correct home or a lossy shadow** (subsumption vs under-naming — the same shape as
+the piton question that opened this thread) is **OPEN**: the probe shows the cell is non-empty, not
+that FSM is the right home. Witnesses:
+`audits/2026-06-10_signature_liveness_crosscorpus/{dmv_cell_control.out,desirepath_cell_control.out}`.
+**Construction held for operator go:** the capture×coordination rebuild, the per-seat-χ no-capturer
+detector wiring, and the `Supp ≤ 0.2` gate fix are *builds*, not deletions — they wait. What landed
+here is only the witnessed correction (gate is wrong; snare is capture-blind; coordination scatters).
+
 **Prompt change — PROPOSAL (non-leaky; replaces the symptom/threshold guidance at
 `constraint_story_generation_prompt_json.md:176`):**
 > * **Piton**: extracts from many but persists by inertia — no party benefits enough to maintain it

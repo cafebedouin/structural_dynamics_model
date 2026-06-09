@@ -65,16 +65,26 @@ still live, where upkeep is the standing price of a still-needed good (the load-
 five cost-finding questions structurally cannot surface). Dead reason → fixing is cheap
 (reorganize); live reason under changed circumstances → fixing is dear (build a better replacement).
 
-Two **distinct** persistence mechanisms fall out, and they must be kept apart **[separation 3]**:
+> **[CORRECTION 2026-06-10 — DMV control witness; falsifies the suppression-keyed split below].**
+> A constructed DMV-shaped constraint (designed, enforced at **Supp 0.5**, distributed extraction,
+> **no concentrated capturer** — coordination_fn=no, beneficiary=no, victim=yes) classifies as
+> **snare** (`constructed_high_extraction`). So a *high-suppression uncaptured* extraction reads as
+> snare, which means **`Supp ≤ 0.2` cannot be the piton discriminator** and the engine's snare is
+> **capture-blind**. The real distinguisher is **capture** (captured → snare / uncaptured → piton),
+> and the witness shows capture and suppression are **separable on this point** — *"orthogonal
+> across the range"* is the hypothesis it opens, **not** established by one witness. The
+> suppression-keyed two-mechanism framing immediately below is therefore the *prior, corrected*
+> reading; the capture×coordination rebuild is **construction held for operator go** (OQ-90).
+> Witness: `audits/2026-06-10_signature_liveness_crosscorpus/dmv_cell_control.out`.
+
+Two persistence mechanisms were *thought* to fall out, split by suppression (now corrected above):
 
 - **Load-bearing repair cost (scaffold-cost):** high suppression (Supp ≥ 0.70, Theorem 3) → a
-  scaffold must be erected before the constraint can be touched → expensive. This is the
-  **snare/rope** register.
-- **Piton persistence (diffuse benefit / rational inaction):** the piton gate is *low* suppression
-  (Supp ≤ 0.2) **[verified]** → cheap to cut, but unfixed because no concentrated party is hurt
-  enough, or benefits enough, to act (per-fixer benefit < even a cheap fix). This is **not**
-  scaffold-cost. It is OQ-90's open `fixing_cost` question and must not be collapsed into
-  scaffold-cost. **[OPEN]**
+  scaffold must be erected before the constraint can be touched → expensive.
+- **Piton persistence (diffuse benefit / rational inaction):** unfixed because no concentrated party
+  is hurt enough, or benefits enough, to act (per-fixer benefit < even a cheap fix). The defining
+  feature is **uncaptured** (the DMV is a piton-by-mechanism at Supp 0.5, invisible to the live
+  `Supp ≤ 0.2` gate). It is OQ-90's open `fixing_cost` question, not scaffold-cost. **[OPEN]**
 
 ## 5. The same dynamics as the committer/CS axis — and why they stay decoupled
 

@@ -45,6 +45,36 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — Cell controls (witnessed): snare is capture-blind (`Supp ≤ 0.2` is not the piton discriminator); coordination "non-rope" cases scatter (FSM vs FCR) — falsification-grade; rebuild held (OQ-90/OQ-91)
+**Files:** prolog/signature_detection.pl, docs/repair_dynamics.md, ISSUES.md
+**Tier:** correction-key
+
+Three pre-registered cell controls settled two theory claims **before** they landed (the reason for
+running them first: the design-axis 2×2 reasoning had called a table coherent that the witness then
+falsified). Witnesses: `audits/2026-06-10_signature_liveness_crosscorpus/{dmv_cell_control.out,desirepath_cell_control.out}`.
+
+- **DMV** (designed, enforced **Supp 0.5**, distributed extraction, **no concentrated capturer**) →
+  **snare** (`constructed_high_extraction`). A high-suppression *uncaptured* extraction reads as
+  snare ⇒ **`Supp ≤ 0.2` cannot be the piton discriminator** (live `piton_signature` gate +
+  prior `repair_dynamics.md` §4 both corrected) and **snare is capture-blind**. Capture and
+  suppression are **separable on this witness**; "orthogonal across the range" is the opened
+  hypothesis, not established. Pre-registered criterion ("DMV in snare ⇒ axis is capture") met.
+- **Coordination side scatters** (pre-registered: FCR ⇒ shared home/not-scatter; not-FCR ⇒ scatter):
+  undesigned/emergent coordination (`emerges_naturally` + agent-beneficiaries, low ε) →
+  **`false_summit_mountain`**; designed-but-unmaintained coordination → **`false_ci_rope`**. Distinct
+  cells ⇒ **"emergent coordination = one cell / piton's mirror" FALSIFIED (scatter)**. Emergent
+  coordination → **FSM**, but **home-vs-shadow is OPEN** — whether FSM correctly absorbs it or is the
+  lossy place it lands for lack of a proper cell (subsumption vs under-naming, same shape as the piton
+  question) is not settled by this probe; it showed the cell non-empty, not that FSM is the right home.
+
+**What is NOT yet established:** "orthogonal across the range" (one witness gives separable, not
+independent everywhere). **What is held for operator go (construction, not deletion):** the
+capture×coordination rebuild, the per-seat-χ no-capturer detector, the `Supp ≤ 0.2` gate fix, the
+environment/perturbation variant. Method note: each control was **pre-registered** before the bash
+call so the result couldn't be narrated into agreement — the standing fix for axis-introduction (a
+new/relabeled axis owes a pre-registered discriminating control; the DMV is the template; see
+build_discipline "false-unification"/memory).
+
 ## 2026-06-10 — Piton: agenda_setter is a BETTER proxy (the fixer role), but extraction<fixing_cost stays uncheckable; build as computed false_ci_rope refinement — OPEN pending the fixing_cost control (OQ-90)
 **Files:** prolog/signature_detection.pl, prolog/stakeholder_seats.pl, prompts/constraint_story_generation_prompt_json.md
 **Tier:** correction-key
