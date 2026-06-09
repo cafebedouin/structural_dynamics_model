@@ -179,6 +179,11 @@ class DRAuditOrchestrator:
             self._json_dir = JSON_DIR
             self._testsets_dir = TESTSETS_DIR
             self._manifests_dir = None
+            # Ensure the flat corpus dirs exist. Post-reset (2026-06-05) prolog/testsets/
+            # is empty-by-intent and therefore absent on disk (git drops empty dirs), so a
+            # flat run would crash on write-out (.tmp lint write + out_pl.write_text).
+            for d in (self._json_dir, self._testsets_dir):
+                d.mkdir(parents=True, exist_ok=True)
 
         # Schema dict for path-aware strip (loaded once)
         self._schema = load_schema()

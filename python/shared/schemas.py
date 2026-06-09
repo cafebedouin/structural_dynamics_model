@@ -233,8 +233,13 @@ PIPELINE_FIELDS = [
     ("cs_drift_terminal",       str,          True),   # null when no drift trajectory
     ("cs_axiom_foreclosed",     str,          True),   # null when no axiom foreclosed
     ("cs_drift_unacknowledged", bool,         False),  # false when no unacknowledged drift
+    # --- Committer stage-time (OQ-83; for the offline observer-residual join) ---
+    ("cs_reference_frame",      str,          True),   # t0 baseline; null when no CS UID / unset
+    ("cs_drift_moment",         str,          True),   # t1 drift moment; null when no cs_drift_state
+    ("cs_drift_gap",            dict,         True),   # {direction, magnitude, acknowledged}; null when no cs_drift_state
     # --- Temporal trajectory ---
     ("drift_trajectory",        dict,         True),   # null/absent when no measurement/5 series
+    ("temporal_residual",       dict,         True),   # Type-A observer residual (OQ-83); absent when no measurement/5 series
 ]
 
 ENRICHED_EXTRA_FIELDS = [
