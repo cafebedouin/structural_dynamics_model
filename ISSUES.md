@@ -4361,6 +4361,21 @@ ghost was referential; the grid's ghosts are different in kind):**
    site, and (b) consumers require their named levels positively (the naturalization verdict
    needs structural AND individual — its two needles — present, else OPEN). The probe's own
    pre-registered values needed 32/32; nothing below full grids has witnessed semantics yet.
+   **CONFIRMED (operator 2026-06-10, not held for the prereg): consumer-named-levels replaces
+   the threshold. Why it generalizes (recorded at operator direction): a global threshold is a
+   property of the DATA; sufficiency is a property of the QUESTION — an 8/32 single-level grid
+   is genuinely adequate for a single-level read and worthless for a two-needle verdict, and
+   no fraction can encode that. Consumer-named-levels is fail-closed applied per-question
+   instead of per-dataset — the third time this thread replaced a number-to-rule with a
+   structure that makes the number unnecessary.**
+5. **NEW HALF-STEP in the build sequence (between compiler and consumer wiring): the
+   coverage-carrying read.** The 8/32 finding has two engine-side halves, neither schema work:
+   `system_gradient` absorbs missing levels (read-side) and the pattern verdict never consults
+   completeness (consumer-side). G_sys-carries-coverage is a PREREQUISITE for consumer wiring
+   — a verdict cannot require its named levels positively if the read it consumes does not
+   expose which levels fed it. Two-sided witness already built: the constructed 8/32 grid must
+   flip from full `increasing_coercion` to OPEN, while the probe's full grids keep their exact
+   values (the unchanged-plus-healed pair, same as the scoping repair).
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
@@ -4583,6 +4598,25 @@ beneficiary emission).
 **Why it matters.** The corpus validation gate is broken-open on main: "validation suite passes" may not be cited without a live re-witness (staleness-ladder triage already says this; this is the live instance). Every story added since Polaris has landed without a working suite gate.
 
 **Resolution options (no verdict asserted; the failing path is the OQ-93 grid-imputation shim, so the fix choice belongs with that fork):** (a) guard `category_of/2` clause 1 (existence-check or catch → fall through to the `constraint_claim` clause / `unknown_novel`) — one-clause fix, restores the suite, but silently re-blesses the OQ-93 prior-flavored imputation path; (b) delete the dangling clause 1 + `use_module` (the registry has been gone four months; clause 1 has been throw-or-dead all that time); (c) fold into the OQ-93 producer/consumer ruling (the only caller chain is the DR-AUDIT repair path). Cross-refs: OQ-93 (the shim), OQ-44 (gate-integrity class), build_discipline *staleness ladder* + *every diagnostic needs a positive control* (the `grep -v Warning` lesson).
+
+## OQ-97 — Success-shaped-absorption census: bounded grep of live code for Pattern-6 candidate sites
+
+**Ω-type:** Ω_E (bounded audit task; verdicts per site are sort-on-encounter until it runs).
+
+**Status:** open — filed 2026-06-10 as future work (operator-directed); the pattern entry it
+flags against is `build_discipline.md` → *Pattern 6 — Success-shaped absorption* (three
+instances witnessed 2026-06-10: the `[] → 0.0` gradient fallback, `grep -v Warning`,
+findall-over-partial-levels).
+
+**The task:** one bounded grep pass over `prolog/*.pl` for the two syntactic shapes —
+`findall`/`setof`-feeding-aggregate with a default-on-empty branch, and literal
+defaults-on-empty (`;  X = 0`, `;  X = 0.0`, `-> ... ; <constant>`) — producing a candidate-site
+list (file:line), each then sorted by the Pattern-6 question: can this site's output
+distinguish measured-empty from didn't-look? Candidates are NOT verdicts (a documented,
+coverage-carrying default is sound). Cheap in a way the waived backward sweep was not: live
+code, two shapes, enumerable. Until it runs: sort-on-encounter, flagging against the Pattern-6
+entry. Cross-refs: OQ-93 (instances 1 and 3), OQ-96 (instance 2), OQ-44 (sibling
+absence-class audit).
 
 ---
 
