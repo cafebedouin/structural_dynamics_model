@@ -71,9 +71,16 @@ separation on these constructed cases, the join in both directions, and coherent
 NOT corpus-range representability or generation-side honesty (that is the step-3 diffuse-audit
 gate: hand-audit a pre-stated-size sample of generated `diffuse` claims with pre-stated tolerance
 BEFORE the field drives classification — authored-diffuse is an authored universal negative with
-no checkable witness, and OQ-70 is the template-convention precedent). Next forward move: OQ-92
-step 3 = schema field + compiler emission + prompt change per the OQ-83 Phase-A playbook, both
-preconditions pinned in its preregistration.
+no checkable witness, and OQ-70 is the template-convention precedent). Post-run promotions
+(operator): the prototype's one production-engine touch — capturer seats computing **scaffold**
+via `constraint_beneficiary/2` → `has_coordination_function/1` — homed as **OQ-94** (the same
+fact-family will make opposite-direction calls once `seat_captures` wires into classification;
+wide consumer surface incl. the Boltzmann/FCR coordination axis; collision structural since the
+OQ-83 compiler derives constraint_beneficiary from role `beneficiary`); and the diffuse-gate
+**tolerance/sample size RESERVED as an operator ruling at step-3 preregistration time**, not a
+drafted default. Next forward move: OQ-92 step 3 = schema field + compiler emission + prompt
+change per the OQ-83 Phase-A playbook — preregistration must carry both preconditions AND name
+OQ-94 as known-interference.
 
 ## 2026-06-10 — OQ-57 re-witnessed post-reset: resolution holds; original behavioral witnesses were pre-reset/corpus-specific, now superseded by a corpus-independent positive control
 **Files:** prolog/drift_events.pl, ISSUES.md, audits/2026-06-10_oq57_live_rewitness/FINDINGS.md

@@ -4176,7 +4176,8 @@ membership TRUE *and* cut TRUE on a seat with no `constraint_beneficiary` (so th
 real, not a no-candidate artifact). It also fires on an uncaptured designed DMV's agenda_setter.
 Bonus: the only authored fact in the vicinity (`constraint_beneficiary/2`) feeds
 `has_coordination_function/1` (`narrative_ontology.pl:303`) → pushes a capturer toward *scaffold*, the
-wrong direction. Witnesses: `audits/2026-06-09_capture_axis_cut_control/` (PREREGISTRATION.md,
+wrong direction (promoted to OQ-94, 2026-06-10 — known-interference item for step 3). Witnesses:
+`audits/2026-06-09_capture_axis_cut_control/` (PREREGISTRATION.md,
 FINDINGS.md, step1_capturer_cut_control.out). Under-claim: witnessed on the constructed cases — the
 false-positive is structural (upstream in the d-derivation, insensitive to the favorable-type set),
 stated as a reading, not "unrepresentable across the whole range."
@@ -4232,7 +4233,10 @@ check first (build_discipline rule #2). Flagged here for the operator, not folde
   hand-audit a pre-stated-size sample of generated `diffuse` claims for obvious capturing seats,
   with a pre-stated tolerance (size + tolerance pinned in the step-3 preregistration). OQ-70 is
   the precedent for a one-shot example value becoming a template convention; prevalence statistics
-  on this field are authoring-convention until this audit passes.
+  on this field are authoring-convention until this audit passes. **Tolerance and sample size are
+  RESERVED as an operator ruling at preregistration time** — the number arrives as a question to
+  the operator, not a drafted value approved by momentum: it is a judgment about how much
+  generation-side dishonesty the corpus can carry, with no evidence-settled default.
 
 **What resolution would change.** With a gain-flow surface, the capture axis becomes computed
 (positively, Pattern-5-safe), OQ-90's piton refinement (Steps 2–4 of the plan) can be built on it
@@ -4241,7 +4245,10 @@ then OQ-90's piton stays subsumed under false_ci_rope (not refined on a broken p
 step-2 eight-control prototype (`audits/2026-06-10_gain_flow_prototype/`, preregistration committed
 before the run) → on pass, step 3 = schema field + compiler emission + prompt change (the OQ-83
 Phase-A playbook), with the diffuse-audit gate and the malformed-gain schema rejection as step-3
-preconditions before any classification wiring. Cross-refs:
+preconditions before any classification wiring. Step-3 sequencing (operator 2026-06-10): the
+preregistration must name OQ-94 (`constraint_beneficiary` coordination-read interference —
+homed first, per ruling) as a known-interference item, and the diffuse-gate tolerance is
+reserved as an operator ruling at preregistration time. Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
@@ -4306,9 +4313,52 @@ invention from category priors to LLM judgment rather than eliminating it.
 generation-template-retires-stopgap arc shape), OQ-83 A7 (sibling severance), OQ-36/37 (empty
 `intent_*` tables feeding intent_engine Conditions 2–4).
 
+## OQ-94 — `constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints
+
+**Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
+receipt surface exists; operator's ruling).
+
+**Status:** open — homed 2026-06-10 (promoted from the 06-09 "bonus" note at operator direction);
+named as a known-interference item for the OQ-92 step-3 preregistration; adjudication not started.
+
+**The behavior (witnessed twice).** `has_coordination_function/1` is one clause:
+`constraint_beneficiary(C, _)` (`narrative_ontology.pl:303-304`) — the fact that *names a
+beneficiary* is consumed as evidence of *benign coordination*. Witnessed pushing capturer seats
+the wrong direction: (1) the 06-09 capture control ("the only authored fact in the vicinity
+actively points the wrong direction for capture,"
+`audits/2026-06-09_capture_axis_cut_control/FINDINGS.md:83`); (2) the 2026-06-10 step-2 prototype:
+both capturer seats (cap_a/capturer_a, captured_cheap_f/capturer_f) computed
+final_type=**scaffold** (`audits/2026-06-10_gain_flow_prototype/gain_flow_prototype.out`) — the
+only production-engine behavior the prototype touched, and it opposes the capture surface's
+purpose (keeping captured constraints snare-flavored).
+
+**Why this goes live as a fight at step 3, not later.** The consumer surface is wide:
+`drl_boltzmann_analysis.pl:111-123` (the CI/coordination side of the Boltzmann test — the FCR
+axis), `transition_paths.pl:35,82,164`, `drift_events.pl:125,203`,
+`logical_fingerprint.pl:176,226,444`, `invertibility_analysis.pl:120`, `gap_diagnostic.pl:135`,
+`cs_pattern_detection.pl:360`. And the collision is structural, not incidental: the OQ-83 Phase-A
+compiler derives `constraint_beneficiary/2` from stakeholder role `beneficiary`, so every
+generated capturer seat (role beneficiary + authored gain_flow) automatically also feeds the
+coordination read. Once step 3 wires `seat_captures` into classification, the same constraint
+carries a snare-direction capture call and a scaffold-direction coordination call from the same
+authored signal family — two live engine behaviors making opposite calls on the same constraints.
+
+**Resolution question (unruled).** What may `constraint_beneficiary/2` evidence once `gain_flow`
+exists? Candidate shapes (sketched, not asserted): gate the coordination read on not-captured (a
+beneficiary that *receives the extraction* is not coordination evidence); or split
+benefits-from-coordination vs receives-the-extraction into distinct reads. Adjudication is the
+operator's; the distinction-check discipline (build_discipline rule #2) applies before any fold,
+and the wide consumer surface means any change owes per-consumer diffs (rule #3).
+
+**Sequencing (operator ruling, 2026-06-10):** homed BEFORE the OQ-92 step-3 build proceeds; the
+step-3 preregistration must name this OQ as a known-interference item so the first corpus run
+does not "discover" a fight the prototype already witnessed. Cross-refs: OQ-92 (Rulings block +
+step-3 preconditions), OQ-90 (snare/piton capture split), GAP-10, OQ-83 (role-derived
+beneficiary emission).
+
 ---
 
-*Last updated: 2026-06-09. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

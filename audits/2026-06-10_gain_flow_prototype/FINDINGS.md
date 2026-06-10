@@ -56,7 +56,11 @@ Incidental observation (consistent with the 06-09 control's "bonus" finding, not
 `constraint_beneficiary/2` pushed both capturer seats (cap_a, captured_cheap_f) to final_type
 **scaffold** via `has_coordination_function/1` — the wrong direction for a captured constraint.
 The authored gain-flow surface is what corrects this at the capture layer; the coordination-read
-behavior itself is unchanged by this prototype.
+behavior itself is unchanged by this prototype. **Promoted post-run to OQ-94 (operator
+2026-06-10):** this is the only production-engine behavior the prototype touched, and once step 3
+wires `seat_captures` into classification, the two will be live in the same engine making
+opposite-direction calls on the same constraints — named as a known-interference item the step-3
+preregistration must carry.
 
 ## Consequence
 

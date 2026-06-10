@@ -449,7 +449,8 @@ extraction actually accrues to it.** So a genuine capturer and a merely-unharmed
 beneficiary seat are **computed-identical**. The one authored fact in the vicinity,
 `constraint_beneficiary/2`, is not a gain-flow signal: it feeds `has_coordination_function/1`
 (`narrative_ontology.pl:303`), which pushes a capturer's seat toward *scaffold* (benign coordination)
-— the wrong direction for capture detection.
+— the wrong direction for capture detection (homed as OQ-94, 2026-06-10 — opposite-direction calls
+go live together at the OQ-92 step-3 classification wiring).
 
 **Why it is absent (deliberate):** the snare/piton split was ruled to turn on *capture* (OQ-90,
 operator 2026-06-10: snare = a seat captures the extraction; piton = uncaptured dead-weight), and the
