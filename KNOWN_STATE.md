@@ -78,7 +78,19 @@ unknowable until gain_flow exists). Q1: K=0 on the observable, halt = Stage D on
 whole-batch-or-≥30 (convention), obviousness criterion pre-written, "0/N observed" never "clean".
 Fabrication ban recorded (gain_flow never synthesized; data_repair.pl the named door). STAGES
 A–C UNBLOCKED — schema → compiler → prompt per
-`audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`.**
+`audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`.** Row 2 then RULED GATE
+(family gate-uniform; evidence-shape distinction preserved: row 1 misfire-witnessed, row 2
+reachability-witnessed/misfire-pending-Stage-D — deferral would have inverted fail-closed).
+**Stage A + Stage B LANDED same day** (schema fields + compiler emission + fail-loud
+referential integrity + narrative_ontology declarations; witnesses in the prereg dir: 8/8
+schema cases, two-sided additivity, 0-diff 134/134 old-vs-new, pilot branches incl. ghost-seat
+REJECTED on both paths, swipl fact queryability). Standing fact with a number: **91/134
+`json/` specs fail the CURRENT schema** — identical pre/post Stage A, the expected residue of
+the 2026-06-09 required-fields tightening; latent (run_pipeline does not read `json/`; the
+generator validates on entry) but a known surprise if old specs are recompiled or used as
+fixtures. NEXT HUMAN GATE: the diffuse-audit "obvious capturing seat" criterion is written
+BEFORE the first Stage-C batch is read (prereg Q1; operator-in-loop by design); Stage C prompt
+work and everything else between is execution.
 
 ## 2026-06-10 — OQ-81 ruled SUPPRESS and wired: reading-typed wave-upstreams dropped at seed build; A/B finds verdict import in the gradable channel (theater_ratio), absorbed before the categorical
 **Files:** agent/generate_kernel_corpus.py, agent/c-orchestrator.py, agent/story_generator_base.py, ISSUES.md, audits/2026-06-10_oq81_reading_upstream_recon/

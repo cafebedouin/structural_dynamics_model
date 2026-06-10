@@ -1,0 +1,23 @@
+== Stage B witness 1: old-vs-new 0-diff sweep over json/ (--no-validate, both sides) ==
+  byte-identical: 134 | differing: 0 | failed-both: 0 | exit-divergent: 0 (of 134)
+
+== Stage B witness 2: pilot branches ==
+  pilot_gf_named: exit=0 gain_flow_facts=1 fixing_cost_facts=1
+  pilot_gf_diffuse: exit=0 gain_flow_facts=1 fixing_cost_facts=1
+  pilot_gf_absent: exit=0 gain_flow_facts=0 fixing_cost_facts=0
+
+== Stage B witness 3: ghost seat REJECTED loud (both with and without --no-validate) ==
+  validated path: exit=1 msg: ghost seat 'ghost_seat_zz' — not in stakeholders[] (['aging_blue_collar_worker
+ugrep: warning: seat: No such file or directory
+ugrep: warning: ghost_seat_zz": No such file or directory
+  --no-validate path: exit=1 msg: 
+== witness 3 (clean re-extraction) ==
+  --no-validate path tail of stderr:
+        raise ValueError(
+    ValueError: gain_flow names ghost seat 'ghost_seat_zz' — not in stakeholders[] (['aging_blue_collar_workers', 'analytical_observer', 'construction_firms', 'manufacturing_employers', 'post_1990_cohort', 'trade_union_coalition', 'vocational_training_system']); REJECTED (OQ-92 step-3 referential integrity, audits/2026-06-10_oq92_step3_preregistration/)
+
+== Stage B witness 4: named pilot loads in swipl; facts queryable ==
+====================================================
+  gain_flow fact: receiver=aging_blue_collar_workers
+  fixing_cost fact: class=prohibitive
+  (tmp pilot removed)

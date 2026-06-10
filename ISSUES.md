@@ -4253,8 +4253,14 @@ ban, and compiler-enforcement notes in the field descriptions; two stakeholders-
 riders. Witness: 8/8 cases (three provenance shapes valid; four negatives biting at intended
 guards; ghost-seat schema-valid BY DESIGN — compiler's job, Stage B) + two-sided additivity
 sweep (91 pre-existing json/ invalids identical pre/post, ZERO new failures —
-`stage_a_schema_witness.{py,txt}` in the prereg dir). Next: Stage B, compiler emission +
-referential integrity.** Cross-refs:
+`stage_a_schema_witness.{py,txt}` in the prereg dir). Stage B LANDED (same day): compiler
+emission + fail-loud referential integrity (`--no-validate` does not bypass) +
+`narrative_ontology.pl` declarations; witnesses (`stage_b_compiler_witness.txt`): 0-diff
+keystone 134/134 byte-identical old-vs-new, pilot branches (absent emits zero against two
+firing twins), ghost seat REJECTED loud on both paths — closing Stage A's documented-open case
+8 — and swipl-load fact queryability. Next: Stage C (prompt); the diffuse-audit criterion is
+the next HUMAN gate — written before the first batch is read (operator-in-loop, prereg Q1).**
+Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
