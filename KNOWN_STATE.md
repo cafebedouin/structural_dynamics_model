@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-96 interim landed (shim OFF, suite green, warning gate wired) + OQ-93 viability probe: gradient cut-bug found and fixed; all pinned values exact post-fix; intent top verdict range-dead witnessed
+**Files:** prolog/config.pl, prolog/config_schema.pl, prolog/scenario_manager.pl, prolog/data_repair.pl, prolog/data_verification.pl, prolog/domain_priors.pl, prolog/coercion_projection.pl, python/run_pipeline.py, python/load_warning_gate.py, prolog/load_warning_allowlist.txt, audits/2026-06-10_oq93_grid_viability_probe/
+**Tier:** tripwire
+
+**Standing behavior change:** `grid_shim_enabled=false` (config + schema spec) — the DR-AUDIT
+grid shim is OFF by default: no injection, no imputation, the 32-point completeness gate
+reports OPEN-and-witnessed instead of failing (or being satisfied by manufactured filler).
+`[INTENT]` confidence on corpus stories now reads honest `low` (real 0/8), not manufactured
+`high`. Set `true` only for archive replays of shim-era behavior. The dead `domain_registry`
+references (module deleted 2026-02-18) are REMOVED — both clauses were throw-only for four
+months (could never succeed), witnessed crashing the suite at TWO sites (repair imputation via
+the Polaris story; `data_validation:127` once repair stopped crashing). Suite GREEN post-change
+(0 errors/0 warnings, 47 [OPEN] witnessed-absence lines). **New pipeline gate:**
+`python/load_warning_gate.py` + `prolog/load_warning_allowlist.txt` (4 known-benign records)
+wired into run_pipeline beside the ISSUES gate — do NOT `grep -v Warning` over load output;
+unexpected load warnings now abort the pipeline (negative control witnessed). **Tripwire for
+anyone touching coercion_projection/pattern_analysis/intent_engine:** `system_gradient`'s
+`[] → 0.0` fallback is a fabricated default — a failed gradient and a flat gradient emit the
+same token; the OQ-93 probe witnessed an "(Optimized)" cut in `time_point_in_interval/2` that
+made EVERY gradient ever computed fail into that 0.0 (stable-only basin = the cut, not data
+starvation; one-char fix landed, corpus regression green). Probe verdict (preregistration
+`e7e78a1b`, FINDINGS in the audit dir): post-fix ALL pinned values exact (G_sys ±0.588 etc.,
+κ 5/5, all three pattern labels reached, first non-stable intent verdicts in the construct's
+history); `structural_coercive_intent` RANGE-DEAD witnessed at the domain edge (max reachable
+G_sys 0.98 < threshold 1.00 strict, with full hand-authored Conditions-2–4 evidence —
+this probe authored those tables' first-ever facts). Retire-vs-migrate ruling PENDING
+(operator; recommendation in FINDINGS).
+
 ## 2026-06-10 — OQ-94 read-site pass complete: rule sorted 12-file consumer surface; benignity-certification family escalated; prior 7-file census was head-truncated
 **Files:** ISSUES.md, audits/2026-06-10_oq94_readsite_pass/READSITE_PASS.md, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, python/issues_status.py
 **Tier:** correction-key

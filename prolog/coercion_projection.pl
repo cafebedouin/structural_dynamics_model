@@ -23,15 +23,22 @@ coercion_magnitude(Level, Time, Kappa) :-
     aggregation_weights(Level, WA, WS, WU, WR),
     Kappa is (WA * A) + (WS * S) + (WU * U) + (WR * R).
 
-% Time points helper (Optimized)
+% Time points helper.
+% OQ-93 probe finding (2026-06-10): this clause ended in `!`, added as an
+% "(Optimized)" change — which made the predicate FIRST-SOLUTION-ONLY (always
+% T_start). Its sole caller (coercion_gradient's setof below) needs
+% enumeration of future time points, so every gradient lookup failed and
+% system_gradient's []-fallback emitted 0.0 — a success-shaped zero — for as
+% long as the cut existed, INCLUDING the shim era. Witness: probe pre-fix run
+% (hand-authored +0.588 gradient read as 0.0000),
+% audits/2026-06-10_oq93_grid_viability_probe/runs/. Cut removed.
 time_point_in_interval(IntervalID, Time) :-
     interval(IntervalID, T_start, T_end),
     % Find all unique times present in the measurement database
     setof(T, is_measurement_time(T), AllTimes),
     member(Time, AllTimes),
     Time >= T_start,
-    Time =< T_end,
-    !.
+    Time =< T_end.
 
 % Helper to isolate the cross-module dynamic call
 is_measurement_time(T) :-

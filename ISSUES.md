@@ -4282,7 +4282,20 @@ for archive replays), and the fork's prototype-run precondition is being execute
 **grid-viability probe** (`audits/2026-06-10_oq93_grid_viability_probe/`) hand-authors
 best-case 32-point grids on probe stories and runs the three consumers against pinned criteria;
 the retire-vs-migrate ruling arrives as an operator question with the probe witness attached
-(also resolves OQ-96's permanent fix).
+(also resolves OQ-96's permanent fix). **Probe RUN 2026-06-10 — Outcome 1 with a bug rider
+(FINDINGS.md):** pre-fix, κ exact on all five stories while every designed gradient read
+0.0000 — `time_point_in_interval/2` carried an "(Optimized)" cut making it first-solution-only,
+so EVERY gradient ever computed failed into `system_gradient`'s success-shaped `0.0` fallback
+(the stable-only basin was the cut, not the data diet; Pattern-4 fabricated default at the
+read site). Cut removed (sole-caller census; corpus regression green). Post-fix: ALL pinned
+values exact (G_sys ±0.588/0/+0.156/+0.980; labels all three reached; κ 5/5) and the
+pre-registered RANGE-DEATH witnessed — story 5 with full hand-authored Conditions-2–4 evidence
+and the maximal reachable gradient (0.98) cannot produce `structural_coercive_intent`
+(threshold 1.00 strict; max reachable 0.98). RULING PENDING (operator): per FINDINGS
+recommendation — intent top verdict retire-or-redesign regardless; gradient/κ/pattern
+mechanically sound + trivially monotone, retire-vs-migrate reduces to the duplicate-value test
+vs drift/trajectory subsystems + producer-side cost. Interim state stable while the ruling
+waits.
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
