@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-92 RESOLVED: gain_flow receipt surface live end-to-end (schema→compiler→prompt→batch→gates); GAP-10 closed; OQ-90 Steps 2–4 unblocked
+**Files:** ISSUES.md, docs/design/design_gaps.md, prompts/constraint_story_generation_prompt_json.md, prolog/narrative_ontology.pl, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, prolog/data_repair.pl, prolog/testsets/gfbatch1/, audits/2026-06-10_oq92_step3_preregistration/
+**Tier:** landed
+
+Stage C promoted stakeholders[] + six_questions + the receipt surface into the LIVE generation
+prompt (additively — four-tuple arrays stay, OQ-83 R4 control arm intact; the live prompt had
+carried NO stakeholder guidance, pilot-only). First batch (gfbatch1, 6 stories, run-tagged out
+of the corpus glob): 6/6 author gain_flow + fixing_cost, 0 diffuse, referential integrity
+clean end-to-end. Diffuse audit at K=0 against the pre-ruled criterion: **0/0 observed —
+vacuous pass stated as vacuous**; 6/6 named-capture flagged authoring-convention-until-checked
+(matters for OQ-90's piton side: a diffuse-starved corpus leaves piton_candidate unreachable —
+check prevalence before reading a piton sweep as absence). Stage D:
+`narrative_ontology:constraint_captured/1` (positive computation; absent/diffuse never block)
++ OQ-94 benignity gates rows 1–3 + maxent scaffold spec same-commit; two-sided controls all
+landed (uncaptured→scaffold vs captured→rope; captured→pure_scaffold; CI_Rope deterministic
+intervention with verified restore). Fabrication-ban grep witness in data_repair.pl. Suite
+green; warning gate fired correctly on a deliberate maxent line-drift (allowlist updated
+849→852). OQ-92 resolved with the Rulings block kept (operative); GAP-10 closed; OQ-90
+Steps 2–4 now pure build on a real surface.
+
 ## 2026-06-10 — OQ-96 interim landed (shim OFF, suite green, warning gate wired) + OQ-93 viability probe: gradient cut-bug found and fixed; all pinned values exact post-fix; intent top verdict range-dead witnessed
 **Files:** prolog/config.pl, prolog/config_schema.pl, prolog/scenario_manager.pl, prolog/data_repair.pl, prolog/data_verification.pl, prolog/domain_priors.pl, prolog/coercion_projection.pl, python/run_pipeline.py, python/load_warning_gate.py, prolog/load_warning_allowlist.txt, audits/2026-06-10_oq93_grid_viability_probe/
 **Tier:** tripwire

@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "property_tax_entitlement",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "curb_prop",
+    "story_uid": "adf8f30c-4ec5-492a-aea7-7da7005f4bff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.67,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Property Tax Entitlement to Curb Space",
+    "topic_domain": "urban_planning/public_resource_allocation/transportation_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "homeowners_with_vehicles",
+      "multi_vehicle_households"
+    ],
+    "victims": [
+      "non_car_owning_residents",
+      "renters_with_vehicles",
+      "visitors_and_commercial_users"
+    ],
+    "vindicated_propositions": [
+      "property_tax_purchases_public_goods_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Non-Car-Owning Resident",
+      "comment": "PERSPECTIVE 1: NON-CAR-OWNING RESIDENT (SNARE) — Pays property taxes (directly as homeowner or indirectly through rent) but receives zero benefit from curb allocation. Cannot exit the tax obligation; cannot access the resource their taxes fund. Experiences pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Single-Car Renter",
+      "comment": "PERSPECTIVE 2: SINGLE-CAR RENTER (TANGLED ROPE) — Benefits from curb access but at higher effective cost than homeowners (permit fees where they exist, plus indirect property tax through rent). Constrained by residential lease and vehicle dependency. Experiences both coordination (parking access enables car ownership) and extraction (unequal cost structure relative to homeowners)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Multi-Vehicle Homeowner",
+      "comment": "PERSPECTIVE 3: MULTI-VEHICLE HOMEOWNER (ROPE) — Primary beneficiary. Property tax payment unlocks unlimited residential parking permits (or zero-fee permits in most jurisdictions). Can store multiple vehicles on public right-of-way at negligible marginal cost. Experiences pure coordination: tax payment solves the parking problem with no meaningful extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Parking Reform Coalition",
+      "comment": "PERSPECTIVE 4: PARKING REFORM COALITION (SCAFFOLD) — Organized advocacy groups (Parking Reform Network, Strong Towns, YIMBY coalitions) see the property-tax entitlement as a transitional arrangement being actively dismantled. Sunset mechanisms include: congestion pricing adoption, residential permit fee increases, parking maximums replacing minimums, and unbundling parking from housing costs. Estimated sunset: 15-25 years for norm shift in major metros."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Municipal Transportation Department",
+      "comment": "PERSPECTIVE 5: MUNICIPAL TRANSPORTATION DEPARTMENT (TANGLED ROPE) — Institutional actor caught between coordination function (managing curb access to prevent chaos) and extraction pressure (political capture by homeowner coalitions demanding free parking). Benefits from administrative authority but constrained by political economy. Experiences the arrangement as both necessary coordination and extractive political constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the constraint solves a genuine coordination problem (allocating scarce curb space) but embeds substantial extraction (regressive subsidy to vehicle owners, exclusion of non-drivers from benefit pool, opportunity cost of alternative curb uses). The property-tax bundling is a contingent institutional choice, not a natural law, but it does provide coordination function alongside its extractive elements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "property_tax_benefit_theory",
+      "question": "Does property tax payment legitimately entitle residents to curb space access, or is this a post-hoc rationalization of an extractive subsidy?",
+      "resolution_mechanism": "Historical analysis of property tax adoption vs parking policy adoption; cross-jurisdictional comparison of property tax rates and parking provision; examination of whether property taxes were explicitly raised to fund parking infrastructure or whether parking access was bundled onto existing tax base.",
+      "impact": "If property taxes were raised to fund parking: coordination function is genuine and extraction is lower. If parking access was bundled onto existing tax base without explicit voter authorization: extraction is higher and the benefit-theory framing is cover.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether property tax payment legitimately purchases parking access"
+    },
+    {
+      "id": "alternative_curb_use_valuation",
+      "question": "What is the opportunity cost of dedicating curb space to free residential parking versus alternative uses (bike lanes, bus lanes, parklets, loading zones, paid parking)?",
+      "resolution_mechanism": "Economic valuation studies of curb space; transportation mode shift analysis when curb space is reallocated; revenue analysis from paid parking vs free residential permits.",
+      "impact": "If opportunity cost is low: extraction is lower and coordination function dominates. If opportunity cost is high (e.g., curb space for bus lanes would serve 10x more people): extraction is higher and the arrangement is misallocation rather than coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Opportunity cost of free residential parking vs alternative curb uses"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the property-tax entitlement reading the legitimate interpretation of curb space governance, or is it one contested reading among several structurally distinct alternatives?",
+      "resolution_mechanism": "Cross-jurisdictional analysis of curb space governance models; examination of whether the property-tax bundling is universal or varies by municipality; identification of alternative readings (public resource pricing, equity redistribution) and their institutional support.",
+      "impact": "If property-tax entitlement is universal: it may be a natural coordination mechanism. If it is one reading among contested alternatives: it is a contingent institutional choice that benefits specific actors (homeowners with vehicles) at the expense of others (non-drivers, renters).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether property-tax entitlement is the only coherent reading of curb space legitimacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.67
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The property-tax entitlement reading of curb space governance asserts that homeowners who pay property taxes have purchased access to unlimited free residential parking on public streets adjacent to their property. This reading is one of three structurally distinct interpretations of the same curb space legitimacy kernel. Under this reading, curb space is treated as a quasi-private good bundled with homeownership: property taxes fund municipal services including parking provision, and homeowners are entitled to park on 'their' block as a return on their tax payment. Most U.S. municipalities implement this reading through zero-fee or nominal-fee residential parking permits with no household vehicle limits. The arrangement solves a genuine coordination problem (preventing parking chaos in residential neighborhoods) but embeds substantial extraction: non-car-owners pay property taxes but receive zero parking benefit; renters pay indirectly through rent but face higher permit fees where they exist; multi-vehicle households capture disproportionate value. The constraint has intensified over the 30-year interval as vehicle ownership per household has increased, curb space has become more contested, and the opportunity cost of dedicating curb space to free parking (versus bus lanes, bike lanes, or paid parking) has risen.",
+    "key_agents": [
+      "Multi-Vehicle Homeowners: Primary beneficiary (institutional/arbitrage) — unlimited free parking for multiple vehicles; property tax payment unlocks access with no marginal cost per vehicle",
+      "Non-Car-Owning Residents: Primary victim (powerless/trapped) — pay property taxes (directly or through rent) but receive zero parking benefit; cannot exit tax obligation or access the resource",
+      "Single-Car Renters: Secondary victim (moderate/constrained) — benefit from parking access but at higher effective cost than homeowners; constrained by lease and vehicle dependency",
+      "Municipal Transportation Department: Institutional actor (institutional/constrained) — manages curb allocation but politically captured by homeowner coalitions; experiences both coordination function and extractive constraint",
+      "Parking Reform Coalition: Organized agents (organized/mobile) — advocacy groups building alternative governance models with sunset logic (congestion pricing, permit fees, parking maximums)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees genuine coordination function embedded with substantial extraction; recognizes property-tax bundling as contingent institutional choice rather than natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The arrangement extracts from non-drivers (who pay taxes but receive no benefit) and from renters (who pay indirectly but face higher permit costs). Multi-vehicle households capture disproportionate value — a household with three cars receives 3x the curb space subsidy of a one-car household despite paying the same property tax. The extraction has increased over the interval as vehicle ownership per household has risen and curb space has become more contested. However, extraction is not maximal because the arrangement does solve a coordination problem and some beneficiaries (single-car homeowners) receive roughly proportional benefit. Suppression (0.67): Moderate-high. Non-drivers cannot exit the property tax obligation and cannot access the parking benefit. Renters are locked into the arrangement through their lease. Alternative curb uses (bus lanes, bike lanes, parklets) are suppressed by political capture — homeowner coalitions block reallocation proposals. Suppression has increased over the interval as enforcement has intensified (more aggressive ticketing of non-permit holders, expansion of permit zones). Theater ratio (0.41): Moderate. Some performative elements exist (permit application processes that serve no verification function, public hearings on parking policy that are captured by homeowner coalitions) but the arrangement is not primarily theatrical — it does allocate curb space, even if inequitably. Theater has increased as the coordination function has been displaced by rent-seeking (permit systems that exist to exclude rather than to manage scarcity). Accessibility collapse (0.52): Moderate. Alternative governance models exist and are being implemented in some jurisdictions (San Francisco's congestion pricing, Seattle's paid parking expansion, Minneapolis's parking maximum ordinance). The property-tax entitlement is not a natural law — it is a contingent institutional choice. However, alternatives face significant political barriers and the entitlement reading remains dominant in most U.S. municipalities. Resistance (0.64): Moderate-high. The arrangement faces substantial organized resistance from parking reform coalitions, urbanist advocacy groups, and equity-focused transportation planners. However, homeowner coalitions defend the entitlement vigorously and have significant political power.",
+    "directionality_logic": "Multi-vehicle homeowners are full beneficiaries with arbitrage exit options — they capture maximum value from the arrangement and can relocate to jurisdictions with more favorable parking policy if needed. Their directionality is near 0.0 (full beneficiary), producing negative or near-zero effective extraction. Non-car-owning residents are full victims with trapped exit options — they pay property taxes but receive zero parking benefit and cannot exit the tax obligation. Their directionality is near 1.0 (full target), producing maximum effective extraction. Single-car renters are partial victims with constrained exit options — they benefit from parking access but at higher cost than homeowners and are locked in by lease and vehicle dependency. Their directionality is moderate (~0.6), producing moderate effective extraction. The municipal transportation department is an institutional actor with constrained exit options — it benefits from administrative authority but is politically captured by homeowner coalitions. Its directionality is moderate (~0.5), reflecting mixed coordination and extraction. The parking reform coalition has mobile exit options and sees the arrangement as temporary — its directionality is low (~0.3), producing low effective extraction. The analytical observer has analytical exit options and sees both coordination and extraction — its directionality is moderate (~0.5).",
+    "perspectival_gap": "The property-tax entitlement reading produces a wide perspectival gap. Multi-vehicle homeowners experience pure coordination (Rope) — their property tax payment solves the parking problem with no meaningful cost. Non-car-owning residents experience pure extraction (Snare) — they pay taxes but receive zero benefit and cannot exit. Single-car renters and the municipal transportation department experience mixed coordination and extraction (Tangled Rope) — the arrangement both enables and constrains them. The parking reform coalition sees a temporary problem with a sunset (Scaffold) — alternative governance models are being built and will eventually replace the entitlement reading. The analytical observer sees the arrangement as genuinely hybrid (Tangled Rope) — it solves a coordination problem but embeds substantial extraction. The gap reveals that the 'property taxes purchase parking access' framing is not a natural law but a contested institutional choice that benefits vehicle-owning homeowners at the expense of non-drivers and renters.",
+    "mandatrophy_analysis": "The property-tax entitlement reading resolves the mandatrophy by demonstrating that curb space governance is a contested kernel with multiple structurally distinct readings, not a single natural coordination mechanism. The entitlement reading's coordination function (preventing parking chaos) is genuine but does not require the specific institutional form of unlimited free parking for homeowners. Alternative readings (public resource pricing, equity redistribution) solve the same coordination problem with different extraction profiles. The mandatrophy is not 'which reading is correct?' but 'which reading does this jurisdiction implement, and who benefits from that choice?' The analytical observer's tangled-rope classification captures the hybrid nature: genuine coordination embedded with substantial extraction. The constraint's intensification over the 30-year interval (rising extractiveness, rising suppression) reflects increasing vehicle ownership and curb space scarcity, not a change in the underlying coordination problem.",
+    "kernel_context": "This constraint is the property_tax_entitlement reading of the curb_space_legitimacy kernel. The kernel is the contested question: what legitimates a claim to curb space access? Three structurally distinct readings exist: (1) property_tax_entitlement (this constraint): homeowners who pay property taxes have purchased unlimited free parking access; (2) public_resource_pricing: curb space is a scarce public resource that should be priced at market rates to manage demand; (3) equity_redistribution: curb space should be allocated to maximize transportation equity and mode shift toward transit/biking/walking. The property_tax_entitlement reading is the dominant institutional arrangement in most U.S. municipalities but is being challenged by the public_resource_pricing and equity_redistribution readings in reform-oriented cities. The structural delta for this reading: zero or nominal permit fees, unlimited permits per household, non-car-owners excluded from benefit pool. The sibling readings would change the fee structure (pricing reading) or the allocation criteria (equity reading)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "residential_parking_minimum_requirements",
+      "street_design_automobile_priority"
+    ],
+    "dual_formulation_note": "The property-tax entitlement reading is one of three readings of the curb_space_legitimacy kernel. The other readings (public_resource_pricing, equity_redistribution) are separate constraint stories with different beneficiary/victim structures and different extractiveness values. This story models only the property_tax_entitlement reading; the sibling readings are linked via the kernel structure but are not part of this constraint's classification."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "multi_vehicle_homeowners",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Homeowners with multiple vehicles who pay property taxes and receive unlimited free residential parking permits. Can store 2-4 vehicles on public curb space at zero marginal cost per vehicle. Property tax payment (typically $3,000-$8,000/year depending on jurisdiction) unlocks parking access worth $1,200-$3,600 per vehicle per year if valued at market rates. Exit options include relocating to jurisdictions with more favorable parking policy or selling vehicles, but neither is necessary — the arrangement is net-positive from their position."
+    },
+    {
+      "name": "non_car_owning_residents",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Residents who do not own vehicles but pay property taxes (directly as homeowners or indirectly through rent). Receive zero benefit from curb space allocation despite funding it through taxes. Cannot exit the tax obligation without leaving the jurisdiction entirely. In dense urban neighborhoods, non-car-owners may constitute 20-40% of residents but receive 0% of the parking subsidy. The arrangement extracts from them to subsidize vehicle-owning neighbors."
+    },
+    {
+      "name": "single_car_renters",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Renters with one vehicle who pay property taxes indirectly through rent and may face additional permit fees ($25-$150/year depending on jurisdiction). Benefit from parking access but at higher effective cost than homeowners. Constrained by residential lease (typically 1-year term) and vehicle dependency (need car for work commute or family obligations). Experience both coordination (parking access enables car ownership) and extraction (unequal cost structure relative to homeowners, plus indirect subsidy of multi-vehicle households)."
+    },
+    {
+      "name": "municipal_transportation_department",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "City agency responsible for curb space management, permit issuance, and parking enforcement. Administers the property-tax entitlement system but is politically captured by homeowner coalitions who demand free parking and block reallocation proposals. Benefits from administrative authority and enforcement revenue but constrained by political economy. Proposals to increase permit fees, limit permits per household, or reallocate curb space to bus lanes face organized homeowner opposition and are typically defeated or watered down."
+    },
+    {
+      "name": "parking_reform_coalition",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organized advocacy groups (Parking Reform Network, Strong Towns, YIMBY coalitions, transportation equity organizations) working to dismantle the property-tax entitlement model. Promote alternative governance models including congestion pricing, residential permit fees scaled to vehicle count, parking maximums replacing minimums, and unbundling parking from housing costs. Have achieved policy wins in reform-oriented cities (San Francisco, Seattle, Minneapolis) but face entrenched opposition in most jurisdictions. See the entitlement model as a transitional arrangement with a 15-25 year sunset as norms shift."
+    },
+    {
+      "name": "visitors_and_commercial_users",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Non-residents who need curb access for visiting, deliveries, or commercial purposes. Excluded from residential permit zones and must pay metered parking rates ($2-$5/hour) or risk tickets. Mobile in the sense that they can choose not to visit permit-restricted neighborhoods, but this exit option imposes costs on both visitors and residents (reduced commerce, reduced social connection). The arrangement prioritizes residential vehicle storage over visitor access and commercial activity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents parking chaos in residential neighborhoods by allocating curb space to residents rather than allowing unrestricted competition for spots. Solves the genuine problem of ensuring residents can park near their homes without circling for hours or parking miles away.",
+    "transfer_function": "Transfers curb space access (a scarce public resource) from the general public to vehicle-owning homeowners at zero or nominal cost. Transfers wealth from non-car-owners and renters (who pay property taxes but receive no parking benefit) to multi-vehicle homeowners (who capture disproportionate value). Estimated annual subsidy: $1,200-$3,600 per vehicle if curb space were priced at market rates.",
+    "absent_voices": "Non-car-owning residents are systematically excluded from parking policy debates because they are not organized and have no direct stake in permit rules. Renters are underrepresented because they are more transient and less likely to attend public hearings. Future residents who would prefer transit-oriented development with less parking are absent because they have not yet moved to the neighborhood. The arrangement is designed and defended by current vehicle-owning homeowners; dissenting voices are not in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property-tax entitlement disappeared overnight, parking allocation would need to be reorganized through alternative mechanisms (metered parking, market-rate permits, time limits, or first-come-first-served). Homeowners would lose their unlimited free parking access and would need to pay market rates or reduce vehicle ownership. Non-car-owners would no longer subsidize vehicle owners through property taxes. Curb space could be reallocated to alternative uses (bus lanes, bike lanes, parklets, loading zones) that serve more people per square foot. The world would rearrange itself around a different governance model.",
+    "founding_problem": "The property-tax entitlement model emerged in the mid-20th century as automobile ownership expanded and residential streets became congested. The founding problem was preventing parking chaos in neighborhoods where most households owned one car and curb space was relatively abundant. Property taxes were already funding street maintenance and traffic management; bundling parking access onto the existing tax base was administratively simple and politically popular with homeowners.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (parking chaos prevention) is corroborated by transportation historians and urban planners as a genuine mid-20th-century coordination challenge. However, the status of the problem is contested: parking reform advocates argue that the problem has changed (curb space is now scarce, vehicle ownership per household has increased, alternative transportation modes are viable) and the property-tax entitlement is no longer the appropriate solution. Homeowner coalitions argue the problem is still live and the entitlement should be preserved. Municipal transportation departments are split — some acknowledge the problem has evolved, others defend the status quo. No neutral outside observer confirms that unlimited free parking for homeowners is still the optimal solution to the coordination problem."
+  },
+  "gain_flow": "multi_vehicle_homeowners",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "mid_century_automobile_expansion",
+    "drift_state": {
+      "moment": "contemporary_urban_density",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_resource_pricing",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "equity_redistribution",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "property_tax_purchases_public_goods_access",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "homeowner_priority_over_public_right_of_way",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

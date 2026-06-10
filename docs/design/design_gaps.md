@@ -434,7 +434,16 @@ generation, not lost signal.
 
 ---
 
-## GAP-10 — No gain-flow / authored-receipt surface: the engine cannot tell capture from non-harm
+## GAP-10 — No gain-flow / authored-receipt surface: the engine cannot tell capture from non-harm — **CLOSED 2026-06-10**
+
+**CLOSED (OQ-92 resolved, all four stages witnessed same day):** the authored receipt surface
+exists end-to-end — `gain_flow`/`fixing_cost` schema fields → compiler emission with fail-loud
+referential integrity → live-prompt authoring guidance → first generated batch authored 6/6 →
+`narrative_ontology:constraint_captured/1` computed positively → benignity gates live
+(drl_core scaffold clause, CI_Rope, pure_coordination + maxent mirror) with two-sided
+controls (`audits/2026-06-10_oq92_step3_preregistration/stage_d_controls.out`). The engine
+now tells capture from non-harm by AUTHORED receipt — never by role, metrics, or absence.
+Original declaration kept below for provenance.
 
 **Declared:** 2026-06-09. **Witness:** `audits/2026-06-09_capture_axis_cut_control/`
 (PREREGISTRATION.md + FINDINGS.md + step1_capturer_cut_control.out). **Drives:** OQ-92 (the surface),

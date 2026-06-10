@@ -3944,7 +3944,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
 
-**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut). Prototype RUN 2026-06-10: Outcome 1 PASS 8/8 — fixing_cost witnessed load-bearing (case 5 vs 4: seat-identical, only the cost class separates piton_candidate from transient_neglect); the OQ-92 step-3 surface build is cleared; piton refinement (Steps 2–4 here) still waits on the BUILT surface, not the prototype.
+**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut). Prototype RUN 2026-06-10: Outcome 1 PASS 8/8 — fixing_cost witnessed load-bearing (case 5 vs 4: seat-identical, only the cost class separates piton_candidate from transient_neglect); the OQ-92 step-3 surface build is cleared; piton refinement (Steps 2–4 here) still waits on the BUILT surface, not the prototype. SURFACE BUILT + WIRED 2026-06-10 (OQ-92 resolved): `stakeholder_gain_flow/2` + `fixing_cost_class/2` authored end-to-end (schema→compiler→prompt→generated batch), `constraint_captured/1` computed live, benignity gates landed with two-sided controls. **Steps 2–4 are UNBLOCKED — the piton refinement (`uncaptured/1` from authored-diffuse + `fixing_cost_class` piton/transient-neglect cut, in the FCR branch) is now pure build on a real surface.** One data flag from the first batch: 6/6 stories authored named-capture, 0 diffuse — a diffuse-starved corpus leaves `piton_candidate` unreachable in practice; check diffuse prevalence (and the OQ-92 prompt-iterate loop) before reading a piton sweep as evidence of absence.
 
 **Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
 across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
@@ -4119,12 +4119,26 @@ ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axi
 **Ω-type:** Ω_C (design choice — whether to add an authored surface; the operator's ruling, not the
 engine's to settle).
 
-**Status:** open — rulings (a)/(b) RECORDED (operator 2026-06-10, Rulings block below); step-2
-prototype RUN 2026-06-10: **Outcome 1 PASS, 8/8 as pre-registered** (pairs 2↔7 and 1↔8 valid;
-case 5 discharged the fixing_cost load-bearing test — `audits/2026-06-10_gain_flow_prototype/`);
-surface not built — step 3 (schema/prompt/compiler, OQ-83 Phase-A playbook) UNBLOCKED, carrying
-the diffuse-audit gate + malformed-gain schema rejection as preconditions before classification
-wiring.
+**Status:** resolved — all four stages LANDED + witnessed 2026-06-10 (one day, prototype to
+wiring; evidence: `audits/2026-06-10_gain_flow_prototype/` + `audits/2026-06-10_oq92_step3_
+preregistration/`). Stage A schema (8/8 witness, two-sided additivity); Stage B compiler
+(0-diff 134/134, ghost-seat REJECTED both paths, swipl fact queryability); Stage C prompt
+(stakeholders + receipt surface promoted additively into the live prompt; 6-story gfbatch1
+generated — 6/6 author both fields, 0 diffuse, referential integrity clean end-to-end);
+diffuse audit at K=0 against the pre-ruled criterion: **0/0 observed — vacuous pass, stated
+as vacuous** (`diffuse_audit_batch1.md`; 6/6 named-capture prevalence flagged as
+authoring-convention-until-checked, matters for OQ-90's piton side, not these gates); Stage D
+wiring: `narrative_ontology:constraint_captured/1` (computed positively; absent/diffuse never
+block) + the three OQ-94 benignity gates (drl_core scaffold clause, signature CI_Rope +
+pure_coordination) + maxent scaffold spec same-commit. Two-sided controls
+(`stage_d_controls.out`): uncaptured→scaffold vs captured-twin→rope; captured→pure_scaffold
+not pure_coordination; CI_Rope deterministic intervention with verified restore
+(certified → constructed_low_extraction under asserted capture → certified again).
+Fabrication-ban grep witness: data_repair.pl returns only the ban comment. Suite green;
+warning gate green (one deliberate allowlist line-drift update, gate fired on it correctly).
+**Consequences: OQ-90 Steps 2–4 UNBLOCKED on a built surface; GAP-10 CLOSED. The Rulings
+block below is kept intact per compress-on-close (operative rulings: tri-valued provenance,
+fabrication ban, diffuse-audit criterion + K=0 parameters, benignity-gate semantics).**
 
 **Origin.** OQ-90 ruled the snare/piton split turns on *capture* (snare = a seat captures the
 extraction; piton = uncaptured) and that the no-capture test must be **computed, not authored-absence**

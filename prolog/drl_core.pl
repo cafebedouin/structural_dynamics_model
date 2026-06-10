@@ -344,6 +344,13 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     config:param(scaffold_extraction_ceil, MaxX),
     Chi =< MaxX,
     narrative_ontology:has_coordination_function(C),
+    % OQ-94 row-1 gate (ruled 2026-06-10): a constraint whose gains demonstrably
+    % accrue to a seat must not certify as benign scaffold — if it genuinely
+    % coordinates, tangled_rope is the cell that says so. Computed capture only
+    % (authored gain_flow); absent surface changes nothing (fail-closed).
+    % Maxent mirror: boolean_spec(scaffold, constraint_captured, forbidden) —
+    % same-commit congruence rule.
+    \+ narrative_ontology:constraint_captured(C),
     scaffold_temporality_check(C),
     config:param(theater_metric_name, TheaterMetricName),
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.

@@ -299,6 +299,20 @@ is_tangled_rope(ConstraintID) :-
     has_coordination_function(ConstraintID),
     has_asymmetric_extraction(ConstraintID).
 
+%% constraint_captured(+C)
+%  OQ-92 Stage D: a seat CAPTURES this constraint's extraction — computed
+%  POSITIVELY from the authored receipt surface, true iff gain_flow names an
+%  existing seat. Authored 'diffuse' or ABSENT surface => false: absence never
+%  blocks benignity certification, only witnessed capture does (tri-valued
+%  provenance, OQ-92 Rulings block). NEVER derived from metrics (fabrication
+%  ban; data_repair.pl is the named door). Consumers: the benignity gates —
+%  drl_core scaffold clause, maxent scaffold spec, signature_detection CI_Rope
+%  + pure_coordination (OQ-94 rows 1-3, all ruled GATE).
+constraint_captured(C) :-
+    stakeholder_gain_flow(C, Receiver),
+    Receiver \== diffuse,
+    constraint_stakeholder(C, Receiver, _, _, _, _, _), !.
+
 %% has_coordination_function(?ConstraintID)
 %  Check if constraint solves a collective action problem.
 %  Evidence: Has multiple beneficiaries or provides network effects.

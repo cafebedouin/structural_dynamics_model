@@ -1,0 +1,44 @@
+[
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "property_tax_entitlement",
+    "target": "public_resource_pricing",
+    "canonical": "curb_space_legitimacy__public_resource_pricing",
+    "relation": "coexists_with"
+  },
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "property_tax_entitlement",
+    "target": "equity_redistribution",
+    "canonical": "curb_space_legitimacy__equity_redistribution",
+    "relation": "coexists_with"
+  },
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "public_resource_pricing",
+    "target": "property_tax_entitlement",
+    "canonical": "curb_space_legitimacy__property_tax_entitlement",
+    "relation": "coexists_with"
+  },
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "public_resource_pricing",
+    "target": "equity_redistribution",
+    "canonical": "curb_space_legitimacy__equity_redistribution",
+    "relation": "influences"
+  },
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "equity_redistribution",
+    "target": "property_tax_entitlement",
+    "canonical": "curb_space_legitimacy__property_tax_entitlement",
+    "relation": "coexists_with"
+  },
+  {
+    "kernel": "curb_space_legitimacy",
+    "source": "equity_redistribution",
+    "target": "public_resource_pricing",
+    "canonical": "curb_space_legitimacy__public_resource_pricing",
+    "relation": "influences"
+  }
+]
