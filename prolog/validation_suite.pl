@@ -31,19 +31,24 @@ test_case('testsets/recalibration_interpretive_validity.pl', '0', 'RECALIBRATION
 test_case('testsets/regime_change_structural_break.pl', 'regime_change_structural_break', 'REGIME_CHANGE_STRUCTURAL_BREAK', 19).
 test_case('testsets/retirement_security_deficit.pl', '0', 'RETIREMENT_SECURITY_DEFICIT', 20).
 test_case('testsets/secular_humanist_reading.pl', 'secular_humanist_reading', 'SECULAR_HUMANIST_READING', 21).
-test_case('testsets/substantive_employment_reading.pl', 'substantive_employment_reading', 'SUBSTANTIVE_EMPLOYMENT_READING', 22).
-test_case('testsets/surveillance_control_freedom.pl', 'surveillance_control_freedom', 'SURVEILLANCE_CONTROL_FREEDOM', 23).
-test_case('testsets/techno_optimist_reading.pl', '0', 'TECHNO_OPTIMIST_READING', 24).
-test_case('testsets/technocratic_paradigm_resistance.pl', '2015', 'TECHNOCRATIC_PARADIGM_RESISTANCE', 25).
-test_case('testsets/technocratic_paradigm_vs_human_primacy.pl', 'technocratic_paradigm_vs_human_primacy', 'TECHNOCRATIC_PARADIGM_VS_HUMAN_PRIMACY', 26).
-test_case('testsets/truth_as_common_good.pl', 'truth_as_common_good', 'TRUTH_AS_COMMON_GOOD', 27).
-test_case('testsets/truth_democracy_disinformation.pl', 'truth_democracy_disinformation', 'TRUTH_DEMOCRACY_DISINFORMATION', 28).
-test_case('testsets/wage_convergence_mechanism.pl', '0', 'WAGE_CONVERGENCE_MECHANISM', 29).
-test_case('testsets/wage_convergence_sustainability.pl', 'wage_convergence_sustainability', 'WAGE_CONVERGENCE_SUSTAINABILITY', 30).
-test_case('testsets/war_normalization_ai_weapons.pl', 'war_normalization_ai_weapons', 'WAR_NORMALIZATION_AI_WEAPONS', 31).
-test_case('testsets/war_normalization_autonomous_weapons.pl', 'war_normalization_autonomous_weapons', 'WAR_NORMALIZATION_AUTONOMOUS_WEAPONS', 32).
-test_case('testsets/work_dignity_automation.pl', 'work_dignity_automation', 'WORK_DIGNITY_AUTOMATION', 33).
-test_case('testsets/work_displacement_dignity.pl', 'work_displacement_dignity', 'WORK_DISPLACEMENT_DIGNITY', 34).
+test_case('testsets/solar_integration_mechanism.pl', 'solar_integration_mechanism', 'SOLAR_INTEGRATION_MECHANISM', 22).
+test_case('testsets/substantive_employment_reading.pl', 'substantive_employment_reading', 'SUBSTANTIVE_EMPLOYMENT_READING', 23).
+test_case('testsets/surveillance_control_freedom.pl', 'surveillance_control_freedom', 'SURVEILLANCE_CONTROL_FREEDOM', 24).
+test_case('testsets/techno_optimist_reading.pl', '0', 'TECHNO_OPTIMIST_READING', 25).
+test_case('testsets/technocratic_paradigm_resistance.pl', '2015', 'TECHNOCRATIC_PARADIGM_RESISTANCE', 26).
+test_case('testsets/technocratic_paradigm_vs_human_primacy.pl', 'technocratic_paradigm_vs_human_primacy', 'TECHNOCRATIC_PARADIGM_VS_HUMAN_PRIMACY', 27).
+test_case('testsets/thermal_dissipation_constraint.pl', 'thermal_dissipation_constraint', 'THERMAL_DISSIPATION_CONSTRAINT', 28).
+test_case('testsets/topology_selection.pl', 'topology_selection', 'TOPOLOGY_SELECTION', 29).
+test_case('testsets/transfer_gap_physics.pl', 'transfer_gap_physics', 'TRANSFER_GAP_PHYSICS', 30).
+test_case('testsets/truth_as_common_good.pl', 'truth_as_common_good', 'TRUTH_AS_COMMON_GOOD', 31).
+test_case('testsets/truth_democracy_disinformation.pl', 'truth_democracy_disinformation', 'TRUTH_DEMOCRACY_DISINFORMATION', 32).
+test_case('testsets/voltage_regulation_tradeoff.pl', 'voltage_regulation_tradeoff', 'VOLTAGE_REGULATION_TRADEOFF', 33).
+test_case('testsets/wage_convergence_mechanism.pl', '0', 'WAGE_CONVERGENCE_MECHANISM', 34).
+test_case('testsets/wage_convergence_sustainability.pl', 'wage_convergence_sustainability', 'WAGE_CONVERGENCE_SUSTAINABILITY', 35).
+test_case('testsets/war_normalization_ai_weapons.pl', 'war_normalization_ai_weapons', 'WAR_NORMALIZATION_AI_WEAPONS', 36).
+test_case('testsets/war_normalization_autonomous_weapons.pl', 'war_normalization_autonomous_weapons', 'WAR_NORMALIZATION_AUTONOMOUS_WEAPONS', 37).
+test_case('testsets/work_dignity_automation.pl', 'work_dignity_automation', 'WORK_DIGNITY_AUTOMATION', 38).
+test_case('testsets/work_displacement_dignity.pl', 'work_displacement_dignity', 'WORK_DISPLACEMENT_DIGNITY', 39).
 
 % --- Test Suite Runner ---
 run_dynamic_suite :-
