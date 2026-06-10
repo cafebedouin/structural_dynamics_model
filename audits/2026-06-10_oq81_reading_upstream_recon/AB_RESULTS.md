@@ -11,7 +11,20 @@ BETWEEN the pinned categories** — it does not meet pinned-DISTORTION (which re
 authored claimed_type to move) and does not meet pinned-INERT (which required secondary
 shifts ≤ within-arm spread). Reported exactly as that, not graded up or down.
 
-### Metric 1/2 — claimed_type (decision-bearing): NO verdict import
+**Reframe (operator review, 2026-06-10 — supersedes "no verdict import" as the closure
+language):** the two findings are one phenomenon at two thresholds, not a relief plus a
+separate concern. **Verdict import occurred in the gradable channel and was absorbed before
+the categorical one**: theater_ratio was pulled toward tangled_rope's genuine-coordination
+profile (reasoned in prose) while claimed_type held — presumably because the explicit snare
+hypothesis in `axis_source_desc` anchors the categorical field hard. The R-arm prose
+explicitly reasoning about theater doubles as the positive control this design would
+otherwise lack: it proves the injected verdict was read and attended to, so the 9/9 snare
+result is a real null, not a dead probe. At n=3, one axis, with a maximally clean hypothesis
+anchor, the categorical channel is established as STICKIER, not safe. The general finding —
+**categorical-stable, continuous-distorted under context injection** — is recorded beyond
+this decision (KNOWN_STATE 2026-06-10; memory).
+
+### Metric 1/2 — claimed_type (decision-bearing): no CATEGORICAL import (see reframe above)
 
 All 9 reps, all arms: **snare** (the axis hypothesis), 3/3 within-arm agreement everywhere.
 The injected upstream verdict (tangled_rope) — deliberately chosen to differ from the

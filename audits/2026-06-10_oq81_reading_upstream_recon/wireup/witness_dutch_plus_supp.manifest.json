@@ -1,0 +1,251 @@
+{
+ "protocol": "UKE_SCOPE",
+ "version": "2.0-json",
+ "domain": "Disaster Preparedness / Institutional Memory / Water Management",
+ "family_id": "dutch_flood_preparedness_generational",
+ "topic_summary": "Analysis of Dutch flood-control preparedness across generations following the 1953 North Sea flood catastrophe. Examines how drills, dike-inspection routines, and institutional structures maintain flood-preparedness knowledge across non-catastrophe generations, with contested readings of whether retention is memorial (institutional husk) or competence-based (live exercised knowledge).",
+ "extraction_summary": {
+  "entity_count": 6,
+  "claim_count": 5,
+  "tension_count": 4,
+  "mechanism_count": 3,
+  "absence_count": 2,
+  "key_entities": [
+   "Water Boards (Waterschappen) - local autonomous institutions managing dikes since 12th century",
+   "Rijkswaterstaat - national water management authority established 1798",
+   "Delta Committee - advisory body established Feb 18 1953",
+   "Deltawerken - coastal defense system 1953-1997",
+   "IHE Delft - knowledge transfer institution training second generation",
+   "1953 North Sea Flood - catastrophic event killing 1,836, triggering system redesign"
+  ],
+  "key_tensions": [
+   "Local water board autonomy vs national centralized coordination (2,700 boards in 1953 → gradual merger)",
+   "Risk-averse institutional inertia vs adaptive capacity (IJsselmonde petrification example)",
+   "Infrastructure trust vs active preparedness (unquestioning trust led to low preparedness)",
+   "Memorial retention vs competence retention (institutional memory vs exercised knowledge)"
+  ],
+  "key_mechanisms": [
+   "Regular inspection and drill routines - mechanism for maintaining preparedness across generations",
+   "Knowledge transfer sender-receiver model - IHE Delft second generation as conduits",
+   "Dike maintenance continuous attention cycle - physical infrastructure requiring ongoing knowledge"
+  ],
+  "key_absences": [
+   "Measurement of actual competence retention vs memorial performance - no observable distinguishing live knowledge from ritual",
+   "Failure mode analysis for non-catastrophe generations - what happens when 70+ years pass without major flood"
+  ]
+ },
+ "commitment_system_recognition": {
+  "kernel_description": "Post-1953 flood preparedness as shared commitment to 'never again' - all parties agree preparedness must be maintained across generations",
+  "authority_description": "Legitimacy grounded in 1953 catastrophe as founding trauma and Delta Works as physical proof of commitment",
+  "drift_status": "partial",
+  "candidate_pattern": "interpretive_drift",
+  "is_contested_kernel": true,
+  "kernel_id": "preparedness_retention",
+  "readings": [
+   {
+    "reading_id": "husk_reading",
+    "commitment": "Preparedness is retained through institutional memory embedded in infrastructure, formal procedures, and memorial rituals",
+    "authority_grounding": "Physical infrastructure (Delta Works) and bureaucratic continuity (water boards, Rijkswaterstaat) as proof of retention",
+    "sibling_readings": [
+     "competence_reading"
+    ],
+    "expected_structural_delta": "Preparedness becomes institutional performance; drills are memorial acts; knowledge atrophies while structures persist; beneficiary is institutional legitimacy; victim is actual response capacity"
+   },
+   {
+    "reading_id": "competence_reading",
+    "commitment": "Preparedness is retained through live exercised knowledge maintained via active drills and continuous skill transmission",
+    "authority_grounding": "Demonstrated capability in drills, knowledge transfer effectiveness (IHE Delft model), measurable competence",
+    "sibling_readings": [
+     "husk_reading"
+    ],
+    "expected_structural_delta": "Preparedness requires continuous active maintenance; drills test real capacity; knowledge must be exercised not just documented; beneficiary is actual flood response capacity; victim is institutional efficiency (drills are costly)"
+   }
+  ],
+  "axiom_contradictions": [
+   {
+    "reading_a": "husk_reading",
+    "reading_b": "competence_reading",
+    "basis": "Husk reading holds that institutional continuity IS preparedness (structure equals function); competence reading holds that preparedness requires active maintenance separate from structure (function requires exercise). No single framework can hold both: either the institution's existence proves preparedness, or preparedness must be continuously demonstrated through performance."
+   }
+  ]
+ },
+ "axes": [
+  {
+   "claim_id": "husk_reading",
+   "human_readable": "Memorial Retention (Institutional Husk)",
+   "structural_delta": "Preparedness retained through institutional memory, infrastructure, and formal procedures without requiring active competence maintenance",
+   "primary_observable": "Institutional continuity metrics: water board survival rate, Delta Works maintenance budget allocation, drill frequency as bureaucratic compliance",
+   "epsilon_bin": "high",
+   "hypothesis": "snare",
+   "beneficiary": "institutional_legitimacy",
+   "victim": "actual_response_capacity",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 4,
+   "selected": true,
+   "generation_order": 1,
+   "selection_reason": "First reading of contested kernel; high epsilon snare with institutional beneficiary structure"
+  },
+  {
+   "claim_id": "competence_reading",
+   "human_readable": "Competence Retention (Live Exercised Knowledge)",
+   "structural_delta": "Preparedness requires continuous active maintenance through drills, knowledge transfer, and demonstrated capability",
+   "primary_observable": "Competence metrics: drill performance outcomes, knowledge transfer effectiveness (IHE Delft second generation), response time in simulations",
+   "epsilon_bin": "mod",
+   "hypothesis": "rope",
+   "beneficiary": "actual_response_capacity",
+   "victim": "institutional_efficiency",
+   "downstream_of": [],
+   "feeds_into": [],
+   "centrality_score": 3,
+   "selected": true,
+   "generation_order": 2,
+   "selection_reason": "Second reading of contested kernel; moderate epsilon rope with different beneficiary/victim structure"
+  },
+  {
+   "claim_id": "generational_transmission_failure",
+   "human_readable": "Generational Transmission Failure (70-Year Knowledge Decay)",
+   "structural_delta": "Knowledge decay across non-catastrophe generations as lived memory of 1953 dies with survivors",
+   "primary_observable": "Generational distance from 1953: survivor population decline, second-generation (IHE Delft trained) retirement, third-generation reliance on documentation vs experience",
+   "epsilon_bin": "v_low",
+   "hypothesis": "mountain",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [],
+   "feeds_into": [
+    "husk_reading",
+    "competence_reading"
+   ],
+   "centrality_score": 5,
+   "selected": true,
+   "generation_order": 3,
+   "selection_reason": "Upstream mountain affecting both readings; captures physical constraint of generational mortality and time-distance from founding catastrophe"
+  },
+  {
+   "claim_id": "autonomy_centralization_tension",
+   "human_readable": "Autonomy vs Centralization (Water Board Fragmentation)",
+   "structural_delta": "Tension between local water board autonomy (2,700 in 1953) and national coordination (Rijkswaterstaat)",
+   "primary_observable": "Water board consolidation rate (2,700 → 21), jurisdictional conflict frequency, coordination failure incidents",
+   "epsilon_bin": "low",
+   "hypothesis": "tangled_rope",
+   "beneficiary": "local_autonomy",
+   "victim": "coordinated_response",
+   "downstream_of": [],
+   "feeds_into": [
+    "husk_reading",
+    "competence_reading"
+   ],
+   "centrality_score": 4,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: structural tension affecting both readings but lower centrality than generational_transmission_failure; captured indirectly via institutional structure in both readings"
+  },
+  {
+   "claim_id": "infrastructure_trust_paradox",
+   "human_readable": "Infrastructure Trust Paradox (Dike Infallibility Belief)",
+   "structural_delta": "Unquestioning trust in infrastructure reduces active preparedness and warning response",
+   "primary_observable": "Public preparedness surveys, warning response rates, evacuation compliance in drills",
+   "epsilon_bin": "mod",
+   "hypothesis": "snare",
+   "beneficiary": "institutional_legitimacy",
+   "victim": "public_preparedness",
+   "downstream_of": [
+    "husk_reading"
+   ],
+   "feeds_into": [],
+   "centrality_score": 2,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: downstream consequence of husk reading rather than independent axis; lower centrality"
+  },
+  {
+   "claim_id": "petrification_inertia",
+   "human_readable": "Institutional Petrification (IJsselmonde Pattern)",
+   "structural_delta": "Risk-averse water boards provide answers to yesterday's challenges rather than adapting to current conditions",
+   "primary_observable": "Adaptation lag metrics: time from identified risk to policy change, IJsselmonde case study response times",
+   "epsilon_bin": "low",
+   "hypothesis": "piton",
+   "beneficiary": null,
+   "victim": null,
+   "downstream_of": [
+    "husk_reading"
+   ],
+   "feeds_into": [],
+   "centrality_score": 1,
+   "selected": false,
+   "generation_order": null,
+   "selection_reason": "Deferred: specific manifestation of husk reading rather than independent constraint; low centrality"
+  }
+ ],
+ "generation_sequence": [
+  {
+   "claim_id": "husk_reading",
+   "kernel_id": "preparedness_retention",
+   "reading_id": "husk_reading"
+  },
+  {
+   "claim_id": "competence_reading",
+   "kernel_id": "preparedness_retention",
+   "reading_id": "competence_reading"
+  },
+  {
+   "claim_id": "generational_transmission_failure",
+   "kernel_id": "preparedness_retention",
+   "reading_id": "generational_transmission_failure"
+  },
+  {
+   "claim_id": "infrastructure_trust_paradox"
+  }
+ ],
+ "deferred_axes": [
+  {
+   "claim_id": "autonomy_centralization_tension",
+   "structural_delta": "Local water board autonomy vs national coordination tension",
+   "hypothesis": "tangled_rope",
+   "deferral_reason": "Structural tension affecting both readings but captured indirectly via institutional structure analysis in both kernel readings; lower centrality than generational_transmission_failure mountain"
+  },
+  {
+   "claim_id": "infrastructure_trust_paradox",
+   "structural_delta": "Infrastructure trust reducing active preparedness",
+   "hypothesis": "snare",
+   "deferral_reason": "Downstream consequence of husk reading rather than independent axis; public trust is effect not cause"
+  },
+  {
+   "claim_id": "petrification_inertia",
+   "structural_delta": "Risk-averse institutional adaptation lag",
+   "hypothesis": "piton",
+   "deferral_reason": "Specific manifestation of husk reading (IJsselmonde case) rather than independent constraint; low centrality"
+  }
+ ],
+ "omegas": [
+  {
+   "id": "omega_observability_gap",
+   "description": "No identified observable distinguishes memorial performance from actual competence. Drill frequency measures bureaucratic compliance, not response capacity. If husk and competence readings produce identical institutional behaviors, the kernel may be empirically uncontestable until D5 break occurs.",
+   "source": "Absence Inventory (§1.1) + kernel reading independence test"
+  },
+  {
+   "id": "omega_third_generation_threshold",
+   "description": "2026 marks 73 years since 1953. First generation (survivors) dead. Second generation (IHE Delft trained by Delta Works builders) retiring. Third generation has no lived connection to catastrophe. Is there a generational threshold where competence reading becomes structurally impossible regardless of drill frequency?",
+   "source": "Generational transmission failure mountain + temporal distance from founding catastrophe"
+  },
+  {
+   "id": "omega_d5_break_definition",
+   "description": "User flagged 'D5 break at national scale' but research context provides no definition. Is D5 a severity classification (e.g., dike failure category), a preparedness drill designation, or a knowledge-loss threshold? Affects whether this is observable failure mode or theoretical construct.",
+   "source": "F01 (Premise Drift) - user term not defined in research context"
+  },
+  {
+   "id": "omega_kernel_collapse_risk",
+   "description": "If both readings produce identical institutional behaviors (drills, inspections, budgets) until catastrophic test, the kernel may collapse into a single constraint with two post-hoc interpretations rather than two live readings. Observability gap threatens kernel validity.",
+   "source": "§1.3-K kernel coherence test + omega_observability_gap"
+  }
+ ],
+ "fracture_scan": {
+  "f14_tunnel_vision": false,
+  "f15_premature_closure": false,
+  "f03_hasty_generalization": false,
+  "f34_epistemic_trespass": false,
+  "f01_premise_drift": true,
+  "notes": "F01 detected: User term 'D5 break at national scale' not defined in research context. Generated omega_d5_break_definition to bound interpretation uncertainty. Kernel decomposition proceeds but D5 reference may indicate user knowledge beyond provided research context."
+ },
+ "_seed_id": "dutch_flood_control_culture"
+}

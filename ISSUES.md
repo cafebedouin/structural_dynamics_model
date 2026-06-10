@@ -3256,79 +3256,15 @@ into the StepResult; the unified backend delegated result-processing to `process
 which consumed the iterator without returning usage, so `_step_generate` reported a hard 0 —
 absence presenting as a measured zero (Build-Discipline spine).
 
-## OQ-81 — Do kernel readings make sound wave-upstreams for supplementary axes? (mechanism witnessed, appropriateness open)
+## OQ-81 — Do kernel readings make sound wave-upstreams for supplementary axes? (no — suppressed)
 
-**Ω-type:** Ω_E (a generation-quality question, answerable by reading generated stories), surfaced by the backend merge.
+**Ω-type:** Ω_E (generation-quality; answered by a pre-registered A/B).
 
-**Status:** open — the wave MECHANISM is witnessed (P4); whether the injected context is APPROPRIATE is unwitnessed and not deterministically witnessable.
-**Origin:** 2026-06-06 backend merge (P4). The §5.1 wave logic was written and validated for FLAT
-upstreams — an axis whose `downstream_of` names another structural-delta axis, whose `claimed_type`
-is injected as "UPSTREAM CONSTRAINT … claimed_type: X". The unified backend now wave-partitions
-kernel manifests too (the 176-supplementary-axis-with-edges-across-166-manifests finding), so a
-supplementary axis `downstream_of` a READING (e.g. `dutch_flood_control_culture`'s
-`infrastructure_trust_paradox` ← `husk_reading`; `vatican_ii_composite`'s
-`composite_overdetermination_reading` ← `continuity_reading`/`rupture_reading`) now receives a
-CONTESTED-READING story's `claimed_type` as its upstream context — an input type the wave logic was
-not designed against.
-
-**The question:** is a reading's `claimed_type` the right thing to inject as a supplementary axis's
-upstream context? A reading is one contested construction of a kernel, not a settled structural
-fact; injecting "claimed_type: snare (from settler_colonial_reading)" into a supplementary axis may
-mislead the supplementary author (which reading's claimed_type? the kernel has several, each
-different). **This is a generation-QUALITY question, not payload-identity** — the P4 deterministic
-witness proves only that the wave FIRES (partitioning + injection mechanism), never that the
-injected context is sound. Do not let the partitioning-green be written up as validating the §5.1
-enhancement on kernels.
-
-**What would resolve it:** read generated supplementary-axis stories whose upstream is a reading —
-does the reading's claimed_type visibly distort the supplementary axis's authoring vs the same axis
-generated without it? Candidate fix space (not built): suppress reading-typed upstreams (a
-supplementary axis depends on the kernel, not on one reading's verdict); or inject the kernel
-substrate instead of a reading's claimed_type. Until then, supplementary axes in kernel manifests
-get a reading's claimed_type as upstream — witnessed mechanism, unvalidated quality.
-
-**Recon 2026-06-10 (`audits/2026-06-10_oq81_reading_upstream_recon/`, read-only — sharpens the
-resolution path, status unchanged):** (1) **No story in any corpus was ever generated with a
-reading's claimed_type injected** — pre-merge c-orch dropped readings (OQ-79), gkc `--scope` is
-wave-free (OQ-82; the kernel_v1 corpus came through it), post-merge live runs had zero reading
-edges (Zionism manifests carry none), and P4 was canned-response. The read-the-stories resolution
-has an EMPTY evidence base; resolving empirically requires a deliberate A/B generation (same
-supplementary axis: reading-claimed_type vs no-context vs kernel-substrate arms). (2) The
-reading-edge population is ARCHIVE-format: 106/263 archived manifests, 184 reading-edge axes
-(positive-controlled on the dutch/vatican examples; `outputs/kernel_manifests/`, gitignored —
-census pasted in the audit dir). The current primed-SCOPE format (22 phase-0 manifests) emits
-ZERO reading-typed edges; kernel supplementary axes instead name the KERNEL CONCEPT
-(`software_source_status_kernel`-style) in `downstream_of` — **21/21 such deps are dangling**
-(no generation_sequence entry matches → wave filter ignores them, `upstream_context` injects
-nothing, silently — Pattern-5 shape at the manifest→wave seam). 22-manifest observation, not a
-schema guarantee: the injection path stays reachable. (3) The current format thus already
-declares the dependency the fix-space proposes (kernel, not one reading's verdict); the backend
-just has no handler for kernel-typed deps. **Operator decision (escalated, not self-resolved):**
-(a) suppress reading-typed upstreams fail-closed; (b) inject kernel substrate for kernel-typed
-deps + suppress reading-typed (resolves both this OQ and the dangling-edge gap in one wiring);
-(c) run the 1-axis × 3-arm A/B first — the only option that answers the appropriateness question
-empirically as posed; cheapest falsifier. Detail + non-claims: the audit RECON.md.
-
-**A/B executed 2026-06-10 (option (c), operator-directed; pre-registered plan + results in the
-audit dir: `AB_PLAN.md`, `AB_RESULTS.md`, raw runs in `ab_runs/`).** Subject: the OQ-cited
-`infrastructure_trust_paradox` ← `husk_reading` (injected verdict tangled_rope, deliberately ≠
-the axis hypothesis snare); 3 arms (no-context / reading-verdict / kernel-substrate) × 3 reps,
-exact `_step_generate` params. Outcome falls BETWEEN the pre-registered grades: (1) PRIMARY
-INERT — authored claimed_type = snare in 9/9, zero verdict import; (2) SECONDARY SHIFT —
-the three-line verdict block moved authored **theater_ratio** from 0.690 [0.68..0.71] (N) to
-0.513 [0.48..0.58] (R) with ZERO range overlap, K = 0.680 [0.68..0.68] ≈ N; the shift is
-authored reasoning (R reps explicitly hedge theater, consistent with the injected tangled_rope
-profile), and theater_ratio is a classification input. (3) **Discovered fact that collapses the
-fix-space:** `axis_source_desc` already injects the full verdict-free kernel CSR (both readings)
-into EVERY supplementary-axis prompt — option (b)'s kernel substrate is already structurally in
-effect (explains K ≈ N), so the decision reduces to one bit: keep or suppress the reading-verdict
-injection. Frame-leakage metric INVALID (confounded by the CSR line — recorded as a metric
-failure, no conclusion). Caveats: n=3, one axis/kernel/verdict, temp 0.2, direct-API transport.
-**Evidence-supported recommendation: suppress reading-typed upstream injection ((a)≡(b) given
-the CSR fact) — the verdict line adds no context the author lacks and perturbs an authored
-metric toward one contested reading's verdict. Ruling + the suppression wire-up remain with the
-operator; until ruled, the unified backend still injects reading verdicts on archive-format
-manifests.**
+**Status:** resolved — operator-ruled SUPPRESS (2026-06-10); wired + payload-witnessed in the same commit.
+**Origin:** 2026-06-06 backend merge (P4, commit `ed2ec212`): the unified backend wave-partitions kernel manifests, so a supplementary axis `downstream_of` a READING received that reading story's claimed_type as upstream context — an input the §5.1 wave logic (designed for flat upstreams) was never validated against.
+**Resolution (evidence: `audits/2026-06-10_oq81_reading_upstream_recon/` — RECON, AB_PLAN, AB_RESULTS, WIREUP, raw runs):** Recon first established zero exposure to date (no story in any corpus was ever generated under reading-verdict injection) and that the reading-edge population is archive-format only. The A/B (3 arms × 3 reps, exact pipeline params, injected verdict deliberately ≠ axis hypothesis) found **verdict import occurred in the gradable channel and was absorbed before the categorical one**: claimed_type held (9/9 snare — a real null, positive-controlled by R-arm prose explicitly reasoning about the injected verdict) while the three-line verdict block pulled authored theater_ratio 0.690→0.513 with zero range overlap (K≈N), toward the injected verdict's profile. Discovered en route: `axis_source_desc` already injects the verdict-free kernel CSR into every supplementary-axis prompt, so kernel substrate needed no new wire (fix (a)≡(b)) and the decision reduced to one bit.
+**Wire:** reading-typed deps suppressed at seed build (`_flat_seeds_from_manifest` — both the seed's wave deps and the axis copy `upstream_context` reads) + the same predicate in the serial escape hatch. Witness: germline (8 flat edges, 5 waves) byte-identical pre/post — flat §5.1 injection preserved; dutch+supp kernel manifest 4/5 payloads identical, the 5th losing exactly the three verdict lines (`wireup/diff_dutchsupp.txt`). Serial-path edit predicate-synced by code-read, NOT payload-witnessed; legacy app orchestrators untouched/out of scope. Kernel-CONCEPT-typed deps (current SCOPE format, 21/21 dangling) stay inert BY DESIGN — their substrate already arrives via CSR.
+**Standing cautions:** (1) channel asymmetry as a general injection finding — categorical authored fields anchored by an explicit hypothesis are sticky; continuous fields absorb the pull (n=3, one axis/kernel/verdict — an instance, not a corpus effect size). (2) The CSR line poisons vocabulary-based leakage probes in ALL arms (the A/B's metric-4 confound, recorded designed-and-invalid) — future leakage probes must key on tokens present ONLY via the injected block.
 
 ## OQ-82 — gkc --scope entry point not yet routed through the unified backend (partial unification)
 

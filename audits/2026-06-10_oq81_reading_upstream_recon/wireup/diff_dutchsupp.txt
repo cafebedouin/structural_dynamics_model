@@ -1,0 +1,11 @@
+seed set identical: ['competence_reading', 'generational_transmission_failure', 'husk_reading', 'infrastructure_trust_paradox', 'preparedness_retention_flat_control']
+competence_reading: wave 1->1, payload IDENTICAL
+generational_transmission_failure: wave 1->1, payload IDENTICAL
+husk_reading: wave 1->1, payload IDENTICAL
+infrastructure_trust_paradox: wave 2->1, payload DIFF:
+    -
+    -
+    -UPSTREAM CONSTRAINT: husk_reading
+    -  claimed_type: mountain
+    -  affects_constraint: husk_reading → infrastructure_trust_paradox
+preparedness_retention_flat_control: wave 1->1, payload IDENTICAL

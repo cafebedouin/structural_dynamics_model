@@ -574,6 +574,18 @@ class DRAuditOrchestrator:
         generated_stories = []
         total_tin, total_tout = 0, 0
 
+        # OQ-81 (operator-ruled 2026-06-10): reading-typed upstream deps are suppressed —
+        # same predicate as generate_kernel_corpus._flat_seeds_from_manifest (see its
+        # docstring for rationale + witness). Kept in sync so the serial escape hatch
+        # does not silently re-inject reading verdicts the unified backend suppresses.
+        _csr = manifest.get("commitment_system_recognition") or {}
+        reading_cids = {r.get("reading_id") for r in _csr.get("readings", [])} - {None}
+        for _e in sequence:
+            if isinstance(_e, dict) and _e.get("kernel_id"):
+                _c = _e.get("claim_id") or _e.get("constraint_id")
+                if _c:
+                    reading_cids.add(_c)
+
         for i, entry in enumerate(sequence):
             # Handle both plain string claim_ids and kernel-style dict entries
             if isinstance(entry, dict):
@@ -607,9 +619,12 @@ class DRAuditOrchestrator:
             if cs_recog:
                 source_desc += f"\nCommitment System Recognition: {json.dumps(cs_recog)}"
 
-            # Build upstream context for downstream axes (§5.1)
+            # Build upstream context for downstream axes (§5.1).
+            # Reading-typed upstreams are skipped (OQ-81 suppression, see above).
             upstream_context = ""
             for upstream_id in axis.get("downstream_of", []):
+                if upstream_id in reading_cids:
+                    continue
                 upstream_story = next(
                     (s for s in generated_stories
                      if s["header"]["constraint_id"] == upstream_id),
