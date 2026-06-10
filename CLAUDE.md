@@ -452,7 +452,12 @@ no registry; a clean `git status` looks identical either way), so insulation mus
 not a response to detection. Two instances editing one working tree step on each other's
 uncommitted state — witnessed 2026-06-10, when two instances each misread this rule as
 conditional and collided in the main tree (operator clarification of intent, same day). Merge
-the worktree branch back to main when its unit of work is witnessed.
+the worktree branch back to main when its unit of work is witnessed; run
+`python3 python/issues_status.py --check` after any merge touching ISSUES.md (it fails on
+duplicate OQ labels — the clean-automerge artifact of two worktrees claiming the same next
+OQ-NN). Multi-writer corollary: a commit's witness is its DIFF or an entry-anchored check, never
+a global count delta — counts aggregate other writers' work and are no longer attributable
+(build_discipline → *Count-as-witness assumes a single writer*).
 
 **Before any `git push`:** verify the three files above are current with respect to the changes
 being pushed.

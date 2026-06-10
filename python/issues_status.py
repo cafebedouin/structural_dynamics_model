@@ -11,8 +11,13 @@ Usage:
     python3 python/issues_status.py open       # list only that token
 
 The checker is the grammar's consumer: if a new entry deviates (old `**Status: x**`
-form, missing line, unknown token), --check fails loudly instead of the deviation
-silently breaking the next census. See KNOWN_STATE.md 2026-06-04 ledger-sweep entry.
+form, missing line, unknown token, DUPLICATE OQ label), --check fails loudly instead
+of the deviation silently breaking the next census. See KNOWN_STATE.md 2026-06-04
+ledger-sweep entry. Duplicate detection added 2026-06-10: under parallel worktree
+instances, two clean-merging entries can claim the same OQ-NN; pre-fix, the second
+header's whole entry was silently SKIPPED (`seen` is label-keyed), so the census
+showed the first entry and the checker passed — witnessed with a constructed
+duplicate before the fix.
 """
 import re
 import sys
@@ -29,12 +34,20 @@ ANY_STATUS = re.compile(r"^\*\*Status\b")
 def scan():
     entries, problems = [], []
     cur, seen = None, set()
+    headers_seen = set()
     for lineno, line in enumerate(ISSUES.read_text().splitlines(), 1):
         m = HEADER.match(line)
         if m:
             if cur and cur not in seen:
                 problems.append(f"{cur}: no Status line found")
             cur = m.group(1)
+            if cur in headers_seen:
+                problems.append(
+                    f"{cur} (line {lineno}): duplicate OQ label — a second `## {cur}` "
+                    f"header exists (parallel-worktree merge artifact?); the duplicate "
+                    f"entry is otherwise INVISIBLE to census and checker"
+                )
+            headers_seen.add(cur)
             continue
         if cur and cur not in seen and ANY_STATUS.match(line):
             seen.add(cur)

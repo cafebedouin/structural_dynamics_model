@@ -4452,5 +4452,8 @@ entries stay full-bodied — they are semi-live.*
 Status line is exactly `**Status:** <token>` optionally followed by ` — <detail>`,
 with token ∈ {open, investigating, mitigated, partial, resolved, disposed}.
 Census: `python3 python/issues_status.py` (table + counts; pass a token to filter);
-`--check` exits 1 on any malformed entry — run it after editing this file.
+`--check` exits 1 on any malformed entry — run it after editing this file, and ALWAYS after
+merging a worktree branch that touches it: since 2026-06-10 it also fails on duplicate OQ
+labels, the artifact two parallel worktrees produce when both claim the same next OQ-NN and
+automerge clean (pre-fix, the duplicate entry was silently invisible to census and checker).
 One-liner equivalent: `awk '/^## OQ-/{oq=$2} /^\*\*Status:\*\* /{print oq, $2}' ISSUES.md`.*
