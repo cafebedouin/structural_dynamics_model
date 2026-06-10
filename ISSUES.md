@@ -4276,6 +4276,13 @@ consumer-side, or keep the shim with carried provenance; operator's ruling).
 report regen diff = provenance-lines-only, store-count probe matches `prov(0,4,28,0,32)`,
 `run_dynamic_suite` 0 errors/0 warnings — KNOWN_STATE 2026-06-09). The migration fork itself
 is unruled. Census: `audits/2026-06-09_imputation_shim_census/census.md`.
+UPDATE 2026-06-10: the shim is now DISABLED by default (`grid_shim_enabled=false`, OQ-96
+interim — absence reported OPEN, never manufactured; `true` restores manufacture-then-certify
+for archive replays), and the fork's prototype-run precondition is being executed: the
+**grid-viability probe** (`audits/2026-06-10_oq93_grid_viability_probe/`) hand-authors
+best-case 32-point grids on probe stories and runs the three consumers against pinned criteria;
+the retire-vs-migrate ruling arrives as an operator question with the probe witness attached
+(also resolves OQ-96's permanent fix).
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
@@ -4489,7 +4496,7 @@ beneficiary emission).
 
 **Ω-type:** Ω_E (defect witnessed and attributed; fix choice interacts with the OQ-93 fork).
 
-**Status:** open — witnessed 2026-06-10 during OQ-92 Stage-B regression witnessing; attribution two-sided (fails identically at `56fc08f6`, BEFORE all OQ-92 work); not fixed — fix choice deferred to operator because the failing path is OQ-93's imputation-shim territory.
+**Status:** mitigated — interim fix LANDED 2026-06-10 (operator-designed, "probe setup IS the interim fix"): grid shim DISABLED fail-closed-loud (`config:param(grid_shim_enabled, false)` + schema spec; injection/imputation skipped with [SHIM]/[OPEN] lines; `data_verification` 32-point gate flipped to expected-OPEN-and-witnessed under the flag); the THROW-ONLY dead-module clauses removed (`domain_priors` `category_of/2` clause 1 + `is_known_domain/1` clause 1 — could never succeed since the 2026-02-18 deletion, so removal preserves all observed behavior; a SECOND suite-path caller, `data_validation:is_complete_constraint/1` at data_validation.pl:127, was witnessed reaching the throw once the repair crash was fixed); dangling `use_module` removed. Suite GREEN: exit 0, 0 [FAIL], 0 errors/0 warnings, 47 [OPEN] + 39 [SHIM] witnessed-absence lines, `[INTENT] Result: stable (Confidence: low)` — confidence now honest (was manufactured `high` from fabricated 8/8 completeness). Warning-channel fix landed alongside: `python/load_warning_gate.py` + `prolog/load_warning_allowlist.txt` (4 known-benign records), wired into `run_pipeline.py` beside the ISSUES gate; negative control witnessed (truncated allowlist → exit 1 naming the warning). PERMANENT fix rides the OQ-93 grid-viability probe verdict (retire vs migrate the grid construct).
 
 **The witness.** `run_dynamic_suite` throws `existence_error(procedure, domain_registry:domain_category/2)` on `testsets/ai_governance_accountability.pl` and the suite exits FALSE. Chain: `scenario_manager:load_and_run` → `data_repair:impute_missing_metrics` (`data_repair.pl:271`) → `domain_priors:get_prior(C, accessibility_collapse(structural), _)` (`domain_priors.pl:64`) → `category_of/2` clause 1 (`domain_priors.pl:71`) = `domain_registry:domain_category(ID, Cat)` — and **`domain_registry.pl` was deleted at `e7ae13fb` (2026-02-18)**. The dangling `use_module(domain_registry)` (`domain_priors.pl:11`) warns at every load — `source_sink 'domain_registry' does not exist` — **a warning that the universal `grep -v Warning` probe habit has been filtering out, including in this session's own earlier runs** (diagnostics lesson: warning-suppressed load failures are absence-presenting-as-presence at the load boundary).
 

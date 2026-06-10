@@ -8,7 +8,12 @@
     category_of/2
 ]).
 
-:- use_module(domain_registry).
+% OQ-96 (2026-06-10): `:- use_module(domain_registry).` REMOVED — the module was
+% deleted 2026-02-18 (commit e7ae13fb) and the directive has warned
+% `source_sink 'domain_registry' does not exist` at every load since, hidden by
+% the universal `grep -v Warning` habit. category_of/2 clause 1 below still
+% references the dead module (throws if reached); unreached while
+% grid_shim_enabled=false. Permanent fix rides the OQ-93 probe verdict.
 :- use_module(drl_core, []).
 
 :- multifile
@@ -42,7 +47,8 @@ category_profile(mandatrophy_collapse,[0.20, 0.95, 0.90, 0.30]).  % Terminal Sta
 %% 2. API DEFINITIONS
 %% ============================================================================
 
-is_known_domain(ID) :- domain_category(ID, _), !.
+% OQ-96: `is_known_domain(ID) :- domain_category(ID, _), !.` removed — same
+% dead reference as category_of clause 1 (throw-only since 2026-02-18).
 is_known_domain(ID) :- base_extractiveness(ID, _), !.
 is_known_domain(ID) :- suppression_score(ID, _), !.
 is_known_domain(ID) :- narrative_ontology:constraint_claim(ID, _), !.
@@ -68,7 +74,18 @@ get_prior(_, _, 0.5).
 
 %% category_of(+ID, -Category)
 %  Determines the domain category for a constraint ID.
-category_of(ID, Cat) :- domain_registry:domain_category(ID, Cat), !.
+% OQ-96 (2026-06-10): the registry clause
+%   category_of(ID, Cat) :- domain_registry:domain_category(ID, Cat), !.
+% was REMOVED. The module was deleted 2026-02-18 (e7ae13fb), making the clause
+% THROW-ONLY for four months — it could never succeed, so removing it preserves
+% every behavior any caller ever observed and removes only the existence_error.
+% Witnessed reaching it on the suite path TWICE before removal: (1) the repair
+% imputation walk (Polaris story, gated off via grid_shim_enabled), and
+% (2) data_validation:is_complete_constraint/1 (suite CHECK 1) — the second
+% found only because fixing the first let the suite run further. Fallbacks
+% below (constraint_claim -> physical_natural; else unknown_novel) are now the
+% whole of category_of/2. is_known_domain/1 clause 1 (domain_category/2,
+% same dead reference, unqualified) removed for the same reason.
 category_of(ID, physical_natural) :-
     (narrative_ontology:constraint_claim(ID, natural_law) ;
      narrative_ontology:constraint_claim(ID, physical_law)), !.

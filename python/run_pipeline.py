@@ -812,6 +812,34 @@ def run_pipeline(
             "the pipeline."
         )
 
+    # --- LOAD-WARNING GATE (OQ-96; sibling of the ISSUES gate above) -------
+    # A swipl load warning outside the allowlist (prolog/
+    # load_warning_allowlist.txt) aborts the run. Rationale: the
+    # domain_registry dangling-module warning was emitted at EVERY load for
+    # four months while ad-hoc `grep -v Warning` filters hid it, until the
+    # dead reference crashed the validation suite at runtime (OQ-96). Do NOT
+    # remove or bypass; to accept a new known-benign warning, add its
+    # normalized record to the allowlist (see
+    # `python3 python/load_warning_gate.py --baseline`).
+    from load_warning_gate import collect_warnings as _lw_collect
+    _lw_allow_path = PROLOG_DIR / "load_warning_allowlist.txt"
+    _lw_allowed = set()
+    if _lw_allow_path.exists():
+        _lw_allowed = {ln.strip() for ln in _lw_allow_path.read_text().splitlines()
+                       if ln.strip() and not ln.startswith("#")}
+    _lw_unexpected = [r for r in _lw_collect() if r not in _lw_allowed]
+    if _lw_unexpected:
+        for _r in _lw_unexpected:
+            _msg = f"[WARNING-GATE] UNEXPECTED: {_r}"
+            if progress:
+                progress("pipeline", _msg)
+            print(_msg, file=sys.stderr)
+        raise SystemExit(
+            f"swipl load-warning gate failed ({len(_lw_unexpected)} unexpected). "
+            "Fix the warning or allowlist it deliberately — verify with "
+            "`python3 python/load_warning_gate.py`, then re-run the pipeline."
+        )
+
     def collect(step_results):
         if isinstance(step_results, list):
             for sr in step_results:

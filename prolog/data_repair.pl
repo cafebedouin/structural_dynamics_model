@@ -266,6 +266,26 @@ bridge_v34_data(IntervalID, Results) :-
 %  Pure version of repair_point + ensure_metric_exists.
 %  Returns bridge_result(measurement(...)) terms for all missing
 %  measurements without asserting into the database.
+%  OQ-96 interim / OQ-93 probe: imputation gated on grid_shim_enabled.
+%  Disabled (default) -> NO facts manufactured; the absent count is reported
+%  loud so the suite stays green on an EXPECTED-AND-WITNESSED absence, never
+%  on manufactured filler. Also keeps the dangling domain_registry call in
+%  domain_priors:category_of/2 unreached (OQ-96 crash path).
+impute_missing_metrics(IntervalID, []) :-
+    \+ config:param(grid_shim_enabled, true),
+    !,
+    narrative_ontology:interval(IntervalID, T0, Tn),
+    findall(Metric-Time,
+        (   config:level(L),
+            member(Time, [T0, Tn]),
+            member(Metric, [accessibility_collapse(L), stakes_inflation(L),
+                           suppression(L), resistance(L)]),
+            \+ narrative_ontology:measurement(_, _, Metric, Time, _)
+        ),
+        AbsentSlots),
+    length(AbsentSlots, NAbsent),
+    format('  [OPEN] grid imputation DISABLED (grid_shim_enabled=false): ~w/32 grid points absent — expected-and-witnessed (OQ-93/OQ-96)~n',
+           [NAbsent]).
 impute_missing_metrics(IntervalID, Results) :-
     narrative_ontology:interval(IntervalID, T0, Tn),
     findall(
