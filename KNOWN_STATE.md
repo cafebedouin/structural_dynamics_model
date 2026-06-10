@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-95 resolved: constraint_neighbors/3 now fail-closed on phantom (zero-fact) constraints; giant_comp edges scoped to enumerated nodes; OQ-96 filed (gitignored domain_registry.pl breaks fresh-clone validation suite)
+**Files:** prolog/drl_purity_network.pl, prolog/giant_component_analysis.pl, prolog/tests/test_phantom_neighbor_filter.pl, prolog/tests/test_forecloses_fpn_injection.pl, ISSUES.md, audits/2026-06-10_oq95_phantom_node_fix/writeup.md
+**Tier:** landed
+
+OQ-95's gating census found ALL five `constraint_neighbors/3` consumers (giant_comp, drl_fpn,
+network_dynamics, json_report, drl_purity_network's own `bfs_path`/cascade walks) inheriting
+phantom endpoints from 26 dangling authored `affects_constraint/2` facts, so the fix landed at
+the shared source: `phantom_subject/1` (neither `constraint_claim/2` nor `constraint_metric/3`)
+makes `constraint_neighbors/3` **symmetric fail-closed** — phantom endpoints are excluded and a
+phantom *subject* returns `[]` (pre-fix the reverse-edge clause made phantoms traversable nodes;
+`contamination_path` could route through a constraint that does not exist). Second layer:
+`giant_component_analysis:precompute_edges_loop` scopes `assert_edge_canonical` to the enumerated
+node set (`ord_memberchk`), making component > node-count impossible by construction.
+
+Witnesses (`audits/2026-06-10_oq95_phantom_node_fix/`): live corpus largest component
+118.9% → 56.8% (44→21 of 37); original_v6 259.9% → 89.2% (8,785→3,014 of 3,380); gc edges
+75→49 = exactly the 26 dangling facts; post-fix phantom endpoint count 0 with firing positive
+control; new 4-test suite `test_phantom_neighbor_filter.pl` (positive control + forward/reverse
+exclusion + corpus census); `fpn_injection` 6/6; validation suite 39/39 exit 0; testset-embedded
+threshold failures byte-identical before/after (9 pre-existing, unrelated).
+
+**Contract change (the part a fresh agent could trip on):** the claim-OR-metric existence test
+is NOT corpus membership — engine demos/probsets still pass — but a synthetic constraint
+asserted by a test/probe now needs at least a `constraint_claim/2` to participate in the
+network; `test_forecloses_fpn_injection` fixtures were updated for exactly this. Contamination
+*values* never needed the fix (the `purity_score/2` `-1.0` sentinel already made phantoms
+inert); the defect was purely topological. Generation-time fail-loud (option b) rejected:
+dangling refs are an expected, separately-censused property of generated corpora
+(`dangle_curve.py` OQ-58, `reading_reference_linter.py`).
+
+Side-finding → **OQ-96**: `prolog/domain_registry.pl` is gitignored (`.gitignore:8`) yet
+load-bearing for the validation suite (`domain_priors.pl:71`); on a fresh clone/worktree the
+documented `run_dynamic_suite` command aborts with an existence error until `run_pipeline.py:268`
+first regenerates it. Also `python/domain_priors.py --output` defaults to an absolute path into
+the main checkout — worktree users must override it.
+
 ## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
 **Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md
 **Tier:** landed
