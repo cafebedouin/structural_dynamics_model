@@ -1623,6 +1623,26 @@ mountains) into either honestly-conditional findings (gate documents its own vac
 genuinely-checked findings (gate fail-closed, requires the table populated). Connects to
 OQ-43, OQ-41, OQ-36/OQ-37. Build-discipline Pattern 5 records the pattern and diagnostic.
 
+**Adjudication instance #1 (2026-06-09, from OQ-93 census —
+`audits/2026-06-09_imputation_shim_census/census.md`).** Operator ruling on jurisprudence:
+common-law, not statute — each instance ruled narrowly with its witness; the engine-wide
+principle gets extracted once instances span the **gate-type** and **report-type** consumer
+classes, or at the next instance, whichever first. Instance #1 supplies both classes:
+- **Gate-type:** `data_verification:verify_interval_completeness` (32-point grid gate,
+  test_harness Step 1). Diet: imputed+injected, pass guaranteed by `data_repair` Stage 1 —
+  the gate certifies what the stage before it manufactured (imputed fraction: 32/32 fabricated;
+  authored grid points possible under live schema: 0). Recommendation: CARRY with provenance
+  (gate line states post-repair status); fail-closed would dark the whole DR-AUDIT suite on the
+  entire corpus until the OQ-93 fork is ruled.
+- **Report-type:** `[INTENT] Result: <pattern> (Confidence: <c>)` (intent_engine). Diet:
+  doubly vacuous — Pattern from gradient over constant priors (only `stable` reachable),
+  Confidence `high` from the manufactured 8/8 completeness, Conditions 2–4 over empty
+  `intent_*` tables (OQ-36/43). Imputed fraction: 100% of its discriminating input.
+  Recommendation: CARRY with an in-line diet flag now; candidate gate-off under OQ-93's
+  consumer-side fork (it has never computed on authored data, so gating it off loses no
+  witnessed capability).
+Both recommendations are instance-narrow; neither asserts the engine-wide policy.
+
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
 **Status:** open — (corpus-quality audit, NOT engine maintenance). Spun off from the D3 ruling so the
@@ -4156,6 +4176,63 @@ then OQ-90's piton stays subsumed under false_ci_rope (not refined on a broken p
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
+
+## OQ-93 — Imputation shim hides an unmigrated v3.4 measurement-grid contract (DR-AUDIT path)
+
+**Ω-type:** Ω_C (design choice — complete the migration producer-side, gate the grid suite
+consumer-side, or keep the shim with carried provenance; operator's ruling).
+
+**Status:** open — class diagnosed and witnessed; provenance-threading write pass (three-bucket
+`[PROVENANCE]` line + section flags, visibility-only) is the next step; the migration fork
+itself is unruled. Census: `audits/2026-06-09_imputation_shim_census/census.md`.
+
+**The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
+`data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
+per interval, `{accessibility_collapse, stakes_inflation, suppression, resistance} ×
+{structural, organizational, class, individual} × {T0, Tn}` — while the live schema's
+`$defs/MeasurementMetric` enum is `{theater_ratio, base_extractiveness,
+suppression_requirement}`, unleveled. **Empty vocabulary intersection: 0 of 32 grid points are
+authorable by any schema-conforming story, ever, corpus-wide.** Witness: `stakes_inflation`
+greps to `prompts/archives/` only (`prompt_data.md:42`); positive control
+`suppression_requirement` fires in live schema + prompt. `scenario_manager:
+inject_minimal_measurements` (8 × 0.5 `m_gen` facts at **hardcoded t=[0,10]**, ignoring the
+declared interval) + `data_repair:impute_missing_metrics` (24–28 `repair_m_*` facts from
+`domain_priors` category profiles) are the shim. Sibling of `mandatrophy_resolved` (OQ-83 A7,
+commit `3641ae71`): same JSON-migration severance, consumer side dangling here. Composes
+OQ-41 (G6 fabricated defaults), OQ-43/44 (Pattern 5: `data_verification`'s completeness gate
+certifies what Stage 1 manufactured).
+
+**Blast radius (census table in the audit dir).** Shim fires only via
+`scenario_manager:load_and_run` (single call site, positive-controlled): per-constraint reports
+(`enhanced_report.py`) + validation suite (`run_pipeline.py:287`). Main pipeline /
+`pipeline_output.json` is authored-fed (no repair call). Fabrication-fed products:
+`[OK] Verification passed.` (guaranteed pass), `coercion_projection`/`pattern_analysis`
+(gradient ≈ 0 over constant priors), `[INTENT] Result` (doubly vacuous: only `stable`
+reachable; Confidence `high` derives from the manufactured 8/8 completeness; `intent_*`
+evidence tables empty corpus-wide per OQ-36/43), `report_generator:91` κ display.
+Authored-fed (clean): MaxEnt confidences (`get_constraint_metrics`, maxent_classifier.pl:
+250-254), `dr_type`/per-index validation, drift/lifecycle temporal series (bound-atom queries).
+
+**Latent bugs recorded here:** (a) injection at hardcoded [0,10] strands 4 mid-interval 0.5
+facts for any interval with Tn ≠ 10 (feeds `coercion_gradient` and unbound-metric time-point
+collectors); (b) unbound-metric readers (`json_report:729`, `temporal_residual:39`,
+`transition_paths:100`, `drl_composition:159`, `logical_fingerprint:188,252`) absorb grid facts
+if ever run post-repair — currently main-pipeline-only, so clean in practice.
+
+**Resolution question (the fork, unruled).** Producer-side (extend schema/prompt to author the
+leveled grid) vs consumer-side (gate/retire the grid suite: coercion_projection,
+pattern_analysis, intent_engine, the 32-point completeness gate) vs keep-shim-with-provenance
+(Phase-2 state). **Adjudication constraint (operator ruling, 2026-06-09): the wire-or-gap
+"unique product" question is UNANSWERABLE from existing reports — every grid output ever
+produced was prior-flavored ("0 of 32 authorable, ever"), so this is not migrate-vs-retire but
+whether to build, for the first time, something whose output has never existed in
+non-counterfeit form. Ruling "wire" requires a prototype run with authored grid data on a few
+hand-authored stories BEFORE committing the schema/prompt change.** Note: producer-side moves
+invention from category priors to LLM judgment rather than eliminating it.
+
+**Cross-refs:** OQ-41 (G6), OQ-43/OQ-44 (instance written there), OQ-46 (same
+generation-template-retires-stopgap arc shape), OQ-83 A7 (sibling severance), OQ-36/37 (empty
+`intent_*` tables feeding intent_engine Conditions 2–4).
 
 ---
 
