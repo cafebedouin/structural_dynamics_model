@@ -541,6 +541,17 @@ These rules are absolute. Violating them silently changes the system's semantics
 - Add classification logic outside `classify_from_metrics/6`. Any new type or
   threshold goes into `drl_core.pl` as a new clause in the correct priority position,
   and into `config.pl` as a new `param/2` fact, and into `logic.md` as a formal rule.
+- `grep -v Warning` over swipl load output. Load warnings are gated:
+  `python3 python/load_warning_gate.py` vs `prolog/load_warning_allowlist.txt`
+  (wired into run_pipeline; a dead-module warning hid for four months this way — OQ-96).
+- Synthesize `stakeholder_gain_flow/2` / `fixing_cost_class/2` from metrics or defaults
+  anywhere (fabrication ban, OQ-92; `data_repair.pl` is the named door). Authored-or-absent,
+  fail-closed; capture is `narrative_ontology:constraint_captured/1`, computed positively.
+- Re-enable the DR-AUDIT grid shim casually: `config:param(grid_shim_enabled, false)` is the
+  permanent design (OQ-93 ruling) — absent grid points report `[OPEN]`, never manufactured
+  0.5s/priors; `true` exists only for archive replays.
+- Add a new `config.pl` param without its `config_schema.pl` `param_spec` — the validator
+  halts the stack load.
 - Add numeric thresholds as hardcoded values. They go in `config.pl` only.
 - Modify `config.pl` default values without re-running the sensitivity sweep.
 - Call `dr_type_at/4` or `classify_snapshot/3` — both are deprecated with stale
