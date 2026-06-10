@@ -48,6 +48,12 @@ generate_full_report(IntervalID) :-
     format('Timeline:       ~w to ~w~n', [T_start, Tn]),
     format('Structural Pattern: ~w~n', [Pattern]),
     format('Confidence:     ~w~n', [Conf]),
+    % OQ-93: Pattern/Confidence come from classify_interval, whose gradient
+    % and completeness inputs are the leveled grid — carry the diet here too.
+    (   catch(data_repair:grid_provenance(IntervalID, prov(HA, HI, HP, _, HTotal)), _, fail)
+    ->  format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)~n', [HA, HTotal, HI, HP])
+    ;   true
+    ),
     
     % --- SECTION 3: META-LOGICAL AUDIT ---
     format('~n[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]~n'),
@@ -89,9 +95,15 @@ generate_full_report(IntervalID) :-
     
     % --- SECTION 6: KINETIC MAGNITUDE ---
     findall(Kappa, (config:level(L), coercion_projection:coercion_magnitude(L, Tn, Kappa)), Kappas),
-    (   Kappas \= [] 
+    (   Kappas \= []
     ->  sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
-        format('~nAggregate Magnitude (Kappa) at Tn: ~2f~n', [AvgK])
+        format('~nAggregate Magnitude (Kappa) at Tn: ~2f', [AvgK]),
+        % OQ-93: kappa is computed over the leveled grid — carry the diet
+        % with the number.
+        (   catch(data_repair:grid_provenance(IntervalID, prov(KA, KI, KP, _, KTotal)), _, fail)
+        ->  format(' [grid diet: authored ~w/~w, injected ~w, imputed ~w — OQ-93]~n', [KA, KTotal, KI, KP])
+        ;   nl
+        )
     ;   format('~nAggregate Magnitude (Kappa): DATA_INSUFFICIENT~n')
     ),
     

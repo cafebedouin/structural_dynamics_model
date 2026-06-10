@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-09 — OQ-93 opened + mitigated: imputation shim diagnosed (unmigrated v3.4 grid contract) and made visible via three-bucket provenance threading
+**Files:** prolog/data_repair.pl, prolog/scenario_manager.pl, prolog/test_harness.pl, prolog/intent_engine.pl, prolog/report_generator.pl, ISSUES.md, audits/2026-06-09_imputation_shim_census/census.md
+**Tier:** landed
+
+- **Class diagnosed (census: `audits/2026-06-09_imputation_shim_census/`).** The `[FIXED]
+  Imputed 24–28 missing vectors` lines in every constraint report are an **unmigrated consumer
+  contract**: the DR-AUDIT harness enforces the archived prompt-era 32-point leveled grid
+  (incl. `stakes_inflation`, which greps to `prompts/archives/` only — positive control
+  `suppression_requirement` fires in live schema+prompt), while the live schema's
+  `MeasurementMetric` enum is `{theater_ratio, base_extractiveness, suppression_requirement}`,
+  unleveled. **Empty intersection: 0/32 grid points authorable, ever, corpus-wide.** Sibling of
+  the `mandatrophy_resolved` severance (OQ-83 A7, same JSON migration).
+- **Blast radius:** shim fires only via `scenario_manager:load_and_run` (reports + validation
+  suite); main pipeline / `pipeline_output.json` authored-fed. **MaxEnt confidences are
+  authored-fed (scalar)** — the "0.95 over invented vectors" caveat was overstated; the
+  fabrication-fed products are `[INTENT]` (only `stable` reachable; Confidence `high` derives
+  from the imputer's own 8/8 completeness), the verification gate, and κ.
+- **Phase 2 landed (visibility-only, witnessed):** `data_repair:grid_provenance/2` +
+  three-bucket `[PROVENANCE]` line (authored / injected-0.5 `m_gen` / imputed `repair_m_*` —
+  a binary split would launder injection into "authored", operator correction); stray-anchor
+  `[WARN]` (injection hardcodes t=[0,10], ignoring the interval); diet flags on
+  `[INTENT]`, report header Pattern/Confidence, and κ. Witnesses: report regen diff =
+  provenance-lines-only (κ 0.39 and all classifications byte-identical); store-count probe
+  matches `prov(0,4,28,0,32)` for transfer_gap_physics; `run_dynamic_suite` 0 errors /
+  0 warnings after.
+- **Unruled fork (OQ-93):** producer-side vs consumer-side migration completion. Adjudication
+  constraint: every grid output ever produced was prior-flavored, so "unique product" is
+  unanswerable from existing reports — "wire" requires a prototype with hand-authored grid data
+  first.
+
+---
+
 ## 2026-06-09 — OQ-80 + OQ-08 closed: generate-step token totals threaded (hard-0 retired); DR/CS Π-asymmetry annotated in both mismatch report layers
 **Files:** agent/generate_kernel_corpus.py, agent/c-orchestrator.py, prolog/json_report.pl, python/enhanced_report.py, python/tests/test_token_acc_threading.py
 **Tier:** landed

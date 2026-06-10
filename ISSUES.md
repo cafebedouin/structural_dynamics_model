@@ -4182,9 +4182,12 @@ Pattern 5.
 **Ω-type:** Ω_C (design choice — complete the migration producer-side, gate the grid suite
 consumer-side, or keep the shim with carried provenance; operator's ruling).
 
-**Status:** open — class diagnosed and witnessed; provenance-threading write pass (three-bucket
-`[PROVENANCE]` line + section flags, visibility-only) is the next step; the migration fork
-itself is unruled. Census: `audits/2026-06-09_imputation_shim_census/census.md`.
+**Status:** mitigated — class diagnosed; provenance-threading write pass LANDED 2026-06-09
+(visibility-only: three-bucket `[PROVENANCE]` line in `data_repair:report_grid_provenance`,
+`[INJECTED]`/stray-anchor `[WARN]` lines, diet flags on `[INTENT]`/report-header/κ; witnesses:
+report regen diff = provenance-lines-only, store-count probe matches `prov(0,4,28,0,32)`,
+`run_dynamic_suite` 0 errors/0 warnings — KNOWN_STATE 2026-06-09). The migration fork itself
+is unruled. Census: `audits/2026-06-09_imputation_shim_census/census.md`.
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points

@@ -3,7 +3,8 @@
     repair_interval/2,           % Pure: repair_interval(+ID, -Results)
     bridge_v34_data/2,           % Pure: bridge_v34_data(+ID, -BridgeResults)
     impute_missing_metrics/2,    % Pure: impute_missing_metrics(+ID, -ImputeResults)
-    persist_bridge_results/1     % Asserts bridge_result list into narrative_ontology
+    persist_bridge_results/1,    % Asserts bridge_result list into narrative_ontology
+    grid_provenance/2            % Per-slot provenance census of the leveled grid (OQ-93)
 ]).
 
 :- use_module(narrative_ontology).
@@ -280,9 +281,77 @@ impute_missing_metrics(IntervalID, Results) :-
         ),
         Results
     ),
-    length(Results, N),
-    (   N > 0
-    ->  format('  [FIXED] Imputed ~w missing vectors using domain priors~n', [N])
+    length(Results, _N).
+
+/* ============================================================
+   GRID PROVENANCE (OQ-93)
+   ============================================================
+   The leveled measurement grid (4 metrics x config:level x {T0,Tn})
+   is unauthorable under the live generation schema (empty vocabulary
+   intersection — census: audits/2026-06-09_imputation_shim_census/).
+   Three distinct sources can populate a slot, and they must never
+   collapse to one bucket at a read site:
+     authored  — any source ID other than the two synthetic classes
+     injected  — m_gen (scenario_manager's hardcoded 0.5 anchors)
+     imputed   — repair_m_* (domain-prior imputation, this module)
+   ============================================================ */
+
+%% grid_provenance(+IntervalID, -prov(Authored, Injected, Imputed, Absent, Total))
+%  Counts every grid slot by the source class of the fact occupying it
+%  (first fact per slot, mirroring persist_single's occupancy guard).
+%  Absent > 0 means repair has not run yet for this interval.
+grid_provenance(IntervalID, prov(A, I, P, Abs, Total)) :-
+    narrative_ontology:interval(IntervalID, T0, Tn),
+    findall(Class,
+        (   config:level(L),
+            member(Time, [T0, Tn]),
+            member(Metric, [accessibility_collapse(L), stakes_inflation(L),
+                           suppression(L), resistance(L)]),
+            (   narrative_ontology:measurement(SrcID, _, Metric, Time, _)
+            ->  source_class(SrcID, Class)
+            ;   Class = absent
+            )
+        ),
+        Classes),
+    length(Classes, Total),
+    aggregate_all(count, member(authored, Classes), A),
+    aggregate_all(count, member(injected, Classes), I),
+    aggregate_all(count, member(imputed,  Classes), P),
+    aggregate_all(count, member(absent,   Classes), Abs).
+
+source_class(m_gen, injected) :- !.
+source_class(ID, imputed) :-
+    atom(ID), sub_atom(ID, 0, _, _, repair_m_), !.
+source_class(_, authored).
+
+%% stray_injected_count(+IntervalID, -S)
+%  m_gen facts for this interval that sit on NO grid slot — the
+%  injector uses hardcoded t=[0,10], so any interval with Tn =\= 10
+%  strands 4 fabricated 0.5s mid-timeline (they feed coercion_gradient
+%  and unbound-metric time-point collectors).
+stray_injected_count(IntervalID, S) :-
+    narrative_ontology:interval(IntervalID, T0, Tn),
+    aggregate_all(count,
+        (   narrative_ontology:measurement(m_gen, IntervalID, _, T, _),
+            T \= T0, T \= Tn
+        ),
+        S).
+
+%% report_grid_provenance(+IntervalID)
+%  Printed by the legacy wrapper AFTER persistence, so every count is
+%  read back from the fact store (bucket truth is witnessed, not
+%  inferred from the impute result list).
+report_grid_provenance(IntervalID) :-
+    grid_provenance(IntervalID, prov(A, I, P, Abs, Total)),
+    format('  [PROVENANCE] grid ~w = authored ~w + injected-0.5 ~w (m_gen) + imputed-from-priors ~w (repair_m_*)~n',
+           [Total, A, I, P]),
+    format('  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93~n'),
+    (   Abs > 0
+    ->  format('  [WARN] ~w grid slots still absent after repair~n', [Abs])
+    ;   true
+    ),
+    (   stray_injected_count(IntervalID, S), S > 0
+    ->  format('  [WARN] ~w stray injected 0.5 anchors off-grid (m_gen at hardcoded t=[0,10], interval endpoints differ)~n', [S])
     ;   true
     ).
 
@@ -374,7 +443,10 @@ repair_interval(IntervalID) :-
 
         % 2. VECTOR REPAIR: Impute missing measurements
         impute_missing_metrics(IntervalID, ImputeResults),
-        persist_bridge_results(ImputeResults)
+        persist_bridge_results(ImputeResults),
+
+        % 3. PROVENANCE LINE (OQ-93): counted from the store post-persist
+        report_grid_provenance(IntervalID)
     ;   format('~n[ERROR] Interval ~w not found.~n', [IntervalID]),
         false
     ).

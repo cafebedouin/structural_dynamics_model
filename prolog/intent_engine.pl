@@ -105,6 +105,13 @@ max_by_value((C, D), List) :-
 %  Harness wrapper to satisfy test_harness.pl.
 analyze_intent(IntervalID) :-
     (   classify_interval(IntervalID, Pattern, Confidence)
-    ->  format('  [INTENT] Result: ~w (Confidence: ~w)~n', [Pattern, Confidence])
+    ->  format('  [INTENT] Result: ~w (Confidence: ~w)', [Pattern, Confidence]),
+        % OQ-93: this verdict's gradient + completeness inputs come from the
+        % leveled grid, which is unauthorable under the live schema — print
+        % the actual diet so the verdict cannot read as evidence-fed.
+        (   catch(data_repair:grid_provenance(IntervalID, prov(A, I, P, _Abs, Total)), _, fail)
+        ->  format(' [grid diet: authored ~w/~w, injected ~w, imputed ~w — OQ-93]~n', [A, Total, I, P])
+        ;   nl
+        )
     ;   format('  [INTENT] Analysis failed for ~w~n', [IntervalID])
     ).

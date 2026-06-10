@@ -45,7 +45,7 @@ run_all_tests(IntervalID, _Context) :-
     % Step 1: Verification Gate
     (   data_verification:verify_all,
         data_verification:check_paired_measurements
-    ->  format('[OK] Verification passed.~n')
+    ->  format('[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).~n')
     ;   format('[FAIL] Verification failed for ~w.~n', [IntervalID]), fail),
 
     % Step 2: Per-Index Validation

@@ -128,4 +128,8 @@ inject_minimal_measurements(ID) :-
           assertz(narrative_ontology:measurement(m_gen, ID, stakes_inflation(structural), T, 0.5)),
           assertz(narrative_ontology:measurement(m_gen, ID, suppression(structural), T, 0.5)),
           assertz(narrative_ontology:measurement(m_gen, ID, resistance(structural), T, 0.5))
-        )).
+        )),
+    % OQ-93: these are fabricated anchors, not data — say so in the output.
+    % The hardcoded t=[0,10] ignores the declared interval; off-grid strays
+    % are flagged by data_repair:report_grid_provenance after repair.
+    format('  [INJECTED] 8 structural-level 0.5 anchors (m_gen) at hardcoded t=[0,10] — fabricated, see OQ-93~n').
