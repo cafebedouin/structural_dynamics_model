@@ -81,6 +81,12 @@
 %  Source ∈ {explicit, inferred_coupling, shared_beneficiary, shared_victim}
 constraint_neighbors(C, Context, Neighbors) :-
     constraint_indexing:valid_context(Context),
+    (   phantom_subject(C)
+    ->  Neighbors = []
+    ;   constraint_neighbors_existing(C, Context, Neighbors)
+    ).
+
+constraint_neighbors_existing(C, Context, Neighbors) :-
     findall(neighbor(Other, 1.0, explicit),
             ( narrative_ontology:affects_constraint(C, Other), Other \= C ),
             ExplicitOut),
@@ -98,7 +104,30 @@ constraint_neighbors(C, Context, Neighbors) :-
               shared_agent_edge_strength(C, Other, LinkType, AgentStrength) ),
             SharedRaw),
     append([ExplicitOut, ExplicitIn, Inferred, SharedRaw], AllRaw),
-    deduplicate_neighbors(AllRaw, Neighbors).
+    exclude(phantom_neighbor, AllRaw, RealRaw),
+    deduplicate_neighbors(RealRaw, Neighbors).
+
+%% phantom_neighbor(+Neighbor)
+%  OQ-95: authored affects_constraint/2 facts may name story IDs with no
+%  ontology presence at all (LLM-authored cross-references to testsets that
+%  don't exist post-reset; every regenerated corpus mints new ones). Such an
+%  atom must not enter the network as a node: it is traversable (it acquires
+%  neighbors via the reverse-edge clause above), so graph walks — giant_comp
+%  BFS, contamination_path, cascade reach — count and route through a
+%  constraint that does not exist. Fail-closed: a neighbor is real only if it
+%  has authored ontology presence (a claim or any metric). Contamination math
+%  was already phantom-inert via the purity_score/2 -1.0 sentinel; this
+%  closes the topological side. The guard is symmetric: a phantom is dropped
+%  as an endpoint AND, queried as the subject, has no neighbors (pre-fix the
+%  ExplicitIn clause manufactured node-ness for it in both directions).
+%  Engine demos and probset constraints author metrics, so they pass —
+%  this is an existence test, not a corpus-membership test.
+phantom_neighbor(neighbor(Other, _, _)) :-
+    phantom_subject(Other).
+
+phantom_subject(C) :-
+    \+ narrative_ontology:constraint_claim(C, _),
+    \+ narrative_ontology:constraint_metric(C, _, _).
 
 %% constraint_neighbors(+C, -Neighbors)
 %  BACKWARD COMPAT: Uses analytical context.

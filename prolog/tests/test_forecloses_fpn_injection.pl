@@ -51,6 +51,11 @@
 %  must use drl_fpn: qualifier.
 fpn_test_setup(Ctx) :-
     fpn_cleanup(Ctx),
+    % OQ-95: constraint_neighbors/3 is fail-closed on zero-fact atoms
+    % (phantom_subject/1) — synthetic constraints must author ontology
+    % presence (a claim suffices) to participate in the network.
+    assertz(narrative_ontology:constraint_claim(tw_deterrence, fpn_injection_test_fixture)),
+    assertz(narrative_ontology:constraint_claim(tw_doctrine,   fpn_injection_test_fixture)),
     assertz(fpn_intrinsic(tw_deterrence, 0.75)),
     assertz(fpn_intrinsic(tw_doctrine,   0.20)),
     assertz(drl_fpn:fpn_type_cache(tw_deterrence, Ctx, rope)),
@@ -62,7 +67,9 @@ fpn_test_setup(Ctx) :-
 fpn_test_teardown(Ctx) :-
     fpn_cleanup(Ctx),
     retractall(narrative_ontology:affects_constraint(tw_deterrence, tw_doctrine)),
-    retractall(narrative_ontology:affects_constraint(tw_doctrine, tw_deterrence)).
+    retractall(narrative_ontology:affects_constraint(tw_doctrine, tw_deterrence)),
+    retractall(narrative_ontology:constraint_claim(tw_deterrence, _)),
+    retractall(narrative_ontology:constraint_claim(tw_doctrine, _)).
 
 %% cache_computed_neighbors(+Cs, +Ctx)
 %  Calls constraint_neighbors/3 live for each C and caches the result into

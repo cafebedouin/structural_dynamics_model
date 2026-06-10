@@ -85,7 +85,7 @@ precompute_all_edges(Constraints, Context) :-
         assertz(config:param(network_coupling_threshold, 0.01)),
         length(Constraints, N),
         format(user_error, '[giant] Pre-computing edges for ~w constraints (threshold=0.01)...~n', [N]),
-        precompute_edges_loop(Constraints, Context, 0, N),
+        precompute_edges_loop(Constraints, Constraints, Context, 0, N),
         % Separately capture inferred_coupling edges for ALL pairs
         % of constraints that have gradient data. This bypasses
         % deduplicate_neighbors which loses inferred sources when
@@ -102,16 +102,24 @@ precompute_all_edges(Constraints, Context) :-
         assertz(gc_edges_precomputed)
     ).
 
-precompute_edges_loop([], _, _, _).
-precompute_edges_loop([C|Cs], Context, Done, Total) :-
+precompute_edges_loop([], _, _, _, _).
+precompute_edges_loop([C|Cs], AllNodes, Context, Done, Total) :-
     (   catch(
             drl_purity_network:constraint_neighbors(C, Context, Neighbors),
             _Err, Neighbors = [])
     ->  true
     ;   Neighbors = []
     ),
+    % OQ-95: only assert edges whose far endpoint is an enumerated node.
+    % constraint_neighbors/3 already drops zero-fact phantoms; this guard
+    % additionally keeps claimed-but-unenumerated constraints (e.g. engine
+    % demos, metric-less sidecars) out of the component graph, so component
+    % size can never exceed the node count by construction. AllNodes comes
+    % from all_corpus_constraints/1, which sorts — ord_memberchk is safe.
     forall(
-        member(neighbor(Other, Strength, Source), Neighbors),
+        (   member(neighbor(Other, Strength, Source), Neighbors),
+            ord_memberchk(Other, AllNodes)
+        ),
         assert_edge_canonical(C, Other, Strength, Source)
     ),
     Done1 is Done + 1,
@@ -119,7 +127,7 @@ precompute_edges_loop([C|Cs], Context, Done, Total) :-
     ->  format(user_error, '[giant]   ~w/~w nodes processed~n', [Done1, Total])
     ;   true
     ),
-    precompute_edges_loop(Cs, Context, Done1, Total).
+    precompute_edges_loop(Cs, AllNodes, Context, Done1, Total).
 
 %% assert_edge_canonical(+C1, +C2, +Strength, +Source)
 %  Stores edge with canonical ordering (C1 @< C2).
