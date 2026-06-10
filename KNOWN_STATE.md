@@ -70,8 +70,15 @@ starvation; one-char fix landed, corpus regression green). Probe verdict (prereg
 κ 5/5, all three pattern labels reached, first non-stable intent verdicts in the construct's
 history); `structural_coercive_intent` RANGE-DEAD witnessed at the domain edge (max reachable
 G_sys 0.98 < threshold 1.00 strict, with full hand-authored Conditions-2–4 evidence —
-this probe authored those tables' first-ever facts). Retire-vs-migrate ruling PENDING
-(operator; recommendation in FINDINGS).
+this probe authored those tables' first-ever facts). **Generalization (operator): the
+`[] → 0.0` fallback is the success-shaped-default pattern — the cut was invisible precisely
+because failure and "measured zero" were byte-identical at the read site; same channel-level
+pathology as `grep -v Warning`, one layer down (suppressed-channel vs collapsed-value).
+Ruling (a) recorded: intent top verdict RETIRE-OR-REDESIGN (sub-fork deferred); backward
+contamination sweep WAIVED (forward only). Redundancy diff (REDUNDANCY_DIFF.md): zero by
+DISJOINTNESS — κ-track's unique product is the level axis; bonus defect:
+`coercion_vector`/`compute_completeness` interval-UNSCOPED (completeness=312.5 on loaded
+corpus; single-story-safe only). Ruling (b) returns priced.**
 
 ## 2026-06-10 — OQ-94 read-site pass complete: rule sorted 12-file consumer surface; benignity-certification family escalated; prior 7-file census was head-truncated
 **Files:** ISSUES.md, audits/2026-06-10_oq94_readsite_pass/READSITE_PASS.md, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, python/issues_status.py

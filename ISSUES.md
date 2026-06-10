@@ -4291,11 +4291,20 @@ read site). Cut removed (sole-caller census; corpus regression green). Post-fix:
 values exact (G_sys ±0.588/0/+0.156/+0.980; labels all three reached; κ 5/5) and the
 pre-registered RANGE-DEATH witnessed — story 5 with full hand-authored Conditions-2–4 evidence
 and the maximal reachable gradient (0.98) cannot produce `structural_coercive_intent`
-(threshold 1.00 strict; max reachable 0.98). RULING PENDING (operator): per FINDINGS
-recommendation — intent top verdict retire-or-redesign regardless; gradient/κ/pattern
-mechanically sound + trivially monotone, retire-vs-migrate reduces to the duplicate-value test
-vs drift/trajectory subsystems + producer-side cost. Interim state stable while the ruling
-waits.
+(threshold 1.00 strict; max reachable 0.98). **RULING (a) RECORDED (operator 2026-06-10):
+the intent top verdict is RETIRE-OR-REDESIGN — current form dead either way (range-dead
+threshold + producerless evidence tables, both witnessed); the redesign-vs-retire sub-fork
+(do the verdict's semantics survive a reachable threshold, or was a never-firing threshold
+measuring the wrong thing?) deferred. Backward contamination sweep explicitly WAIVED
+(operator: forward only). Redundancy diff RUN (REDUNDANCY_DIFF.md, same audit dir):
+redundancy with the drift/trajectory track is ZERO BY DISJOINTNESS (disjoint input surfaces,
+witnessed both directions); the κ-track's unique product is the LEVEL AXIS (level-resolved
+coercion dynamics, witnessed on the divergent story — representable by no live subsystem);
+bonus defect: `coercion_vector`/`compute_completeness` are interval-UNSCOPED
+(completeness=312.5 on the loaded corpus) — single-story-safe only, scoping required under
+any migrate ruling. Ruling (b) returns to the operator PRICED: the level axis + κ composite
+vs producer-side authoring cost + interval-scoping repair + the already-ruled intent
+retirement; pricing on post-fix output only. Interim state stable while (b) waits.**
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
