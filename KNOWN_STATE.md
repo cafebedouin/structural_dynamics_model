@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-94 read-site pass complete: rule sorted 12-file consumer surface; benignity-certification family escalated; prior 7-file census was head-truncated
+**Files:** ISSUES.md, audits/2026-06-10_oq94_readsite_pass/READSITE_PASS.md, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, python/issues_status.py
+**Tier:** correction-key
+
+The OQ-94 per-site decision rule (ruled 2026-06-10) was applied to the full consumer surface.
+**Census correction first:** the recorded "seven-consumer list" was `head -15`-truncated — the
+untruncated census finds **12 files / 33 sites**, and the concealed ones were the most
+load-bearing: `drl_core.pl:346` (scaffold clause) and `:373` (tangled_rope clause) in the
+classification cascade itself, plus the `maxent_classifier` boolean_spec mirror and
+`omega1_audit`. A probe-scope statement must name its output limits. **Sort result:** SOUND = the
+four NL/FSM mountain-likeness gates (beneficiary presence already disqualifies; capture is
+stronger evidence, same direction). FORBIDDEN = the tangled_rope cell (`drl_core:373` + maxent),
+decay detection (`drift_events`, `transition_paths`), `separability_factor`, and two NAF-voids
+(`logical_fingerprint:226,444`) that would FALSE-FIRE on captured constraints under a gate.
+**ESCALATED (the one rule-unsorted family): benignity certification** — `drl_core:346` scaffold
+clause (+ maxent scaffold spec) and `signature_detection:1019` CI_Rope gate ask "is this benign
+coordination?", a third question; gate-on-not-captured there is plausibly correct (it is the
+prototype's witnessed scaffold-push mechanism) but is the operator's call. Step-3 preregistration
+carries TWO operator questions: diffuse tolerance + benignity-family ruling. Bonus finds:
+`constraint_bridge.pl:96` is the first gain_flow-migration candidate;
+`data_repair.pl:124-168` FABRICATES `constraint_beneficiary` from metrics on the DR-AUDIT path
+(OQ-93 circularity). Estimator-classifier congruence: any `drl_core:346/:373` ruling must land in
+maxent's boolean_spec table in the same change. Also this session: `issues_status.py` now fails
+on duplicate OQ labels (pre-fix a duplicate entry was silently invisible — witnessed), and the
+worktree rule is unconditional (CLAUDE.md).
+
 ## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
 **Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md
 **Tier:** landed

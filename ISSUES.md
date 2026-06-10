@@ -4296,11 +4296,22 @@ generation-template-retires-stopgap arc shape), OQ-83 A7 (sibling severance), OQ
 **Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
 receipt surface exists; operator's ruling).
 
-**Status:** open — homed 2026-06-10 (promoted from the 06-09 "bonus" note at operator direction);
-known-interference item for the OQ-92 step-3 preregistration. Per-site decision rule RULED
-2026-06-10 (Read-site pass block below); next move: the read-site pass over the
-closed-with-residuals consumer list, sorting by the rule — the dr_type-path site already stands
-witnessed by the step-2 prototype output.
+**Status:** open — homed 2026-06-10; known-interference item for the OQ-92 step-3
+preregistration. Per-site decision rule RULED 2026-06-10 (Read-site pass block below).
+**Read-site pass COMPLETE 2026-06-10** (`audits/2026-06-10_oq94_readsite_pass/`): 12 consumer
+files (the prior "seven-consumer list" was `head -15`-TRUNCATED — concealed `drl_core.pl:346,373`,
+the classification cascade itself, plus `maxent_classifier` and `omega1_audit`); rule sorted the
+live surface into SOUND (4 NL/FSM mountain-likeness sites) and FORBIDDEN (tangled_rope cell,
+decay detection, separability, NAF-voids) plus raw surfaces, and isolated ONE unsorted family →
+**ESCALATED to operator: benignity certification** (`drl_core:346` scaffold clause + maxent
+scaffold spec + `signature_detection:1019` CI_Rope gate + `:1122` subtype) — contains the
+prototype's witnessed wrong-direction mechanism; gate-on-not-captured there is plausibly correct
+but is a third question the rule doesn't decide. Step-3 preregistration therefore carries TWO
+operator questions: diffuse-gate tolerance + the benignity-family ruling. Also found:
+`constraint_bridge.pl:96` is the first gain_flow-migration candidate (collects extraction actors
+via benefits-from); `data_repair.pl:124-168` FABRICATES beneficiary facts from metrics on the
+DR-AUDIT path (OQ-93 circularity hazard — high extraction manufactures a beneficiary which feeds
+the coordination read).
 
 **The behavior (witnessed twice).** `has_coordination_function/1` is one clause:
 `constraint_beneficiary(C, _)` (`narrative_ontology.pl:303-304`) — the fact that *names a
@@ -4329,8 +4340,13 @@ carries a snare-direction capture call and a scaffold-direction coordination cal
 authored signal family — two live engine behaviors making opposite calls on the same constraints.
 
 **Probe scope (2026-06-10 — so the per-consumer-diffs obligation has a list it can be complete
-against).** The seven-consumer list above = one grep for `has_coordination_function` over
-top-level `prolog/*.pl` (non-recursive; subdirs excluded). The deriving fact's own direct
+against; CORRECTED same day).** The seven-consumer list above = one grep for
+`has_coordination_function` over top-level `prolog/*.pl` (non-recursive; subdirs excluded) —
+**and `| head -15`, which this scope statement originally failed to name: the list was
+truncation-bounded, concealing `drl_core.pl:346,373` (the classification cascade), `maxent_
+classifier`, `omega1_audit`, and further sites. Untruncated census = 12 files / 33 sites
+(`audits/2026-06-10_oq94_readsite_pass/census_raw.txt`). Lesson: a probe-scope statement must
+name its output limits (head/-m/pagination), not only predicate and glob.** The deriving fact's own direct
 consumers are a SECOND, WIDER surface, enumerated separately: `constraint_beneficiary` hits 15
 engine files (`data_repair` 10, `tangled_rope_examples` 8, `signature_detection` 5 — the FSM
 agent-beneficiary gate, `constraint_indexing` 4, `logical_fingerprint` 3, `drl_purity_network` 3,
