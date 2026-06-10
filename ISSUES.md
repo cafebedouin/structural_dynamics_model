@@ -4304,7 +4304,38 @@ bonus defect: `coercion_vector`/`compute_completeness` are interval-UNSCOPED
 (completeness=312.5 on the loaded corpus) — single-story-safe only, scoping required under
 any migrate ruling. Ruling (b) returns to the operator PRICED: the level axis + κ composite
 vs producer-side authoring cost + interval-scoping repair + the already-ruled intent
-retirement; pricing on post-fix output only. Interim state stable while (b) waits.**
+retirement; pricing on post-fix output only.**
+
+**RULING (b) RECORDED (operator 2026-06-10): KEEP-AND-MIGRATE the gradient/κ/pattern track.
+Ruling-kind: NAMED-CONSUMER + DESIGN-INTENT** — the consumer is the masking/naturalization
+verdict family (false_ci_rope/coordination-washing, false_summit, the extraction-blindness and
+beneficiary-naturalization omegas), which currently asks the level question everywhere and
+answers it with static proxies and interview protocols; the migration upgrades it from
+inferred-snapshot to witnessed process (falling individual coercion IS the camouflage; rising
+structural coercion IS the extraction; the level-gradient crossing is the watchable form of
+"extraction blindness"). Review criterion this kind creates: a future reviewer can check
+whether the named consumer actually consumed. **Explicitly EXCLUDED: the intent top verdict —
+ruling (a) stands; migration does not resurrect `structural_coercive_intent`; the κ-track
+ships without it until the threshold-semantics sub-fork gets its own ruling.**
+**Killed on arrival: the injection/imputation path, permanently** — authored-or-absent; the
+gain_flow tri-valued discipline applies verbatim (authored grid → compute; absent →
+fail-closed, reports print OPEN, never a counterfeit "stable, high confidence" beside a
+critical drift alert); the provenance stamps were the honest interim and become unnecessary
+rather than permanent. **Build sequence (the twice-proven playbook): (1) interval-scoping
+repair FIRST (witnessed-broken, 312.5 leakage — precondition for any multi-story context);
+(2) staged build per the OQ-92 pattern — schema (leveled grid + stakes_inflation, optional,
+fail-closed absent) → compiler emission with referential integrity → prompt under the OQ-70
+example discipline → consumer wiring DEAD LAST, each stage 0-diff-witnessed on the unchanged
+corpus; (3) consumer wiring carries the two-sided control: a naturalization verdict that fires
+on rising-structural/falling-individual and stays silent on flat-structural genuine mountain
+(the probe's five stories are most of that battery).** **New operator gate created: the κ
+plausibility audit** — first generated leveled grids need a PRE-WRITTEN plausibility criterion
++ operator-ruled tolerance before any consumer reads them (diffuse-gate structure and
+reasoning: a counterfeit gradient feeding a naturalization verdict is the same failure one
+construct over); arrives at the prompt-stage preregistration, flagged now so it's expected.
+**Scheduling: second track, parallel to the OQ-92 gain_flow line (worktree rule covers it);
+the tracks converge ONLY at the generation prompt, where both authoring surfaces live in one
+template — the prompt-stage drafter serves two masters.**
 
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
@@ -4518,7 +4549,7 @@ beneficiary emission).
 
 **Ω-type:** Ω_E (defect witnessed and attributed; fix choice interacts with the OQ-93 fork).
 
-**Status:** mitigated — interim fix LANDED 2026-06-10 (operator-designed, "probe setup IS the interim fix"): grid shim DISABLED fail-closed-loud (`config:param(grid_shim_enabled, false)` + schema spec; injection/imputation skipped with [SHIM]/[OPEN] lines; `data_verification` 32-point gate flipped to expected-OPEN-and-witnessed under the flag); the THROW-ONLY dead-module clauses removed (`domain_priors` `category_of/2` clause 1 + `is_known_domain/1` clause 1 — could never succeed since the 2026-02-18 deletion, so removal preserves all observed behavior; a SECOND suite-path caller, `data_validation:is_complete_constraint/1` at data_validation.pl:127, was witnessed reaching the throw once the repair crash was fixed); dangling `use_module` removed. Suite GREEN: exit 0, 0 [FAIL], 0 errors/0 warnings, 47 [OPEN] + 39 [SHIM] witnessed-absence lines, `[INTENT] Result: stable (Confidence: low)` — confidence now honest (was manufactured `high` from fabricated 8/8 completeness). Warning-channel fix landed alongside: `python/load_warning_gate.py` + `prolog/load_warning_allowlist.txt` (4 known-benign records), wired into `run_pipeline.py` beside the ISSUES gate; negative control witnessed (truncated allowlist → exit 1 naming the warning). PERMANENT fix rides the OQ-93 grid-viability probe verdict (retire vs migrate the grid construct).
+**Status:** mitigated — interim fix LANDED 2026-06-10 (operator-designed, "probe setup IS the interim fix"): grid shim DISABLED fail-closed-loud (`config:param(grid_shim_enabled, false)` + schema spec; injection/imputation skipped with [SHIM]/[OPEN] lines; `data_verification` 32-point gate flipped to expected-OPEN-and-witnessed under the flag); the THROW-ONLY dead-module clauses removed (`domain_priors` `category_of/2` clause 1 + `is_known_domain/1` clause 1 — could never succeed since the 2026-02-18 deletion, so removal preserves all observed behavior; a SECOND suite-path caller, `data_validation:is_complete_constraint/1` at data_validation.pl:127, was witnessed reaching the throw once the repair crash was fixed); dangling `use_module` removed. Suite GREEN: exit 0, 0 [FAIL], 0 errors/0 warnings, 47 [OPEN] + 39 [SHIM] witnessed-absence lines, `[INTENT] Result: stable (Confidence: low)` — confidence now honest (was manufactured `high` from fabricated 8/8 completeness). Warning-channel fix landed alongside: `python/load_warning_gate.py` + `prolog/load_warning_allowlist.txt` (4 known-benign records), wired into `run_pipeline.py` beside the ISSUES gate; negative control witnessed (truncated allowlist → exit 1 naming the warning). PERMANENT fix RULED 2026-06-10 (OQ-93 ruling (b)): keep-and-migrate; the injection/imputation path is killed permanently — authored-or-absent under the tri-valued discipline, so the interim shim-off state IS the permanent design; this entry closes when the OQ-93 migration's consumer wiring lands and the `grid_shim_enabled` flag + shim code are retired (a flag whose `true` arm restores a killed behavior should not outlive the migration).
 
 **The witness.** `run_dynamic_suite` throws `existence_error(procedure, domain_registry:domain_category/2)` on `testsets/ai_governance_accountability.pl` and the suite exits FALSE. Chain: `scenario_manager:load_and_run` → `data_repair:impute_missing_metrics` (`data_repair.pl:271`) → `domain_priors:get_prior(C, accessibility_collapse(structural), _)` (`domain_priors.pl:64`) → `category_of/2` clause 1 (`domain_priors.pl:71`) = `domain_registry:domain_category(ID, Cat)` — and **`domain_registry.pl` was deleted at `e7ae13fb` (2026-02-18)**. The dangling `use_module(domain_registry)` (`domain_priors.pl:11`) warns at every load — `source_sink 'domain_registry' does not exist` — **a warning that the universal `grep -v Warning` probe habit has been filtering out, including in this session's own earlier runs** (diagnostics lesson: warning-suppressed load failures are absence-presenting-as-presence at the load boundary).
 

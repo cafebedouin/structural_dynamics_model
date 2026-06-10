@@ -43,6 +43,12 @@ analyze_interval(IntervalID) :-
 
 compute_completeness(ID, Score) :-
     narrative_ontology:interval(ID, T0, Tn),
-    findall((L, T), (config:level(L), member(T, [T0, Tn]), coercion_projection:coercion_vector(L, T, _)), Vectors),
+    % Interval-scoped (OQ-93 build unit 1): once/1 caps each (L,T) slot at one
+    % solution — multiple authored sources for the same slot must not inflate
+    % completeness past 1.0 (the unscoped form read 312.5 on the loaded corpus).
+    findall((L, T),
+            (config:level(L), member(T, [T0, Tn]),
+             once(coercion_projection:coercion_vector(ID, L, T, _))),
+            Vectors),
     length(Vectors, N),
     Score is N / 8.

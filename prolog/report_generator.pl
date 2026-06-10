@@ -94,7 +94,7 @@ generate_full_report(IntervalID) :-
     ),
     
     % --- SECTION 6: KINETIC MAGNITUDE ---
-    findall(Kappa, (config:level(L), coercion_projection:coercion_magnitude(L, Tn, Kappa)), Kappas),
+    findall(Kappa, (config:level(L), once(coercion_projection:coercion_magnitude(IntervalID, L, Tn, Kappa))), Kappas),
     (   Kappas \= []
     ->  sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
         format('~nAggregate Magnitude (Kappa) at Tn: ~2f', [AvgK]),
