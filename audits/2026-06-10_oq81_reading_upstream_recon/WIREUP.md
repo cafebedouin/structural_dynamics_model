@@ -51,4 +51,15 @@ transport, which also discharges the A/B's direct-API caveat for the regression)
 - Baseline positive controls (witnessed before editing): the pre-change dutch capture
   contains the verdict line (injection fires); germline baseline contains 8 injection sites.
 
+**The wave 2→1 move is intended consequence, not side effect.** Dropping the dep removes the
+ordering wait along with the injection — confirmed correct by code, not assumption: the wave
+filter (`generate_kernel_corpus.py:882`) holds a downstream seed only while its upstream is
+*pending* (`u in run_ids and u not in generated_by_id and u not in failed_ids`); a FAILED
+upstream releases it to generate uninjected one wave later, and `failed_ids`/`fail_reasons`
+are populated only by a seed's own batch error or missing story (`:906`, `:923`) — no
+downstream failure propagation exists in either regime. The dep was therefore load-bearing
+solely for the injection plus a one-wave delay; once the injection is suppressed, keeping
+the edge would be a false ordering constraint. A reading that errors mid-run leaves the
+formerly-downstream axis unaffected — now immediately, previously after one wave.
+
 Both py_compile clean. No live generation was run for this wire-up; live corpus untouched.
