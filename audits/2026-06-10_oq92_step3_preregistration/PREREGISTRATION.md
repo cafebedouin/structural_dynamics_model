@@ -140,10 +140,25 @@ still does (two-sided, per the verification discipline).
   presence, and receives-extraction is precisely the cleaner signal that special-case existed to
   approximate. A constraint whose gains demonstrably accrue to a seat must not certify as benign
   scaffold; if it genuinely coordinates, tangled_rope is the cell that says so.
-- **Row 2 — DEFERRED pending the reachability control** (reachability asserted from clause order
-  is an intent-label; this thread contains the precedent for ruling on one; the control converts
-  the row to row 1's evidentiary shape). Ruling it on consistency-with-row-1 would be deciding
-  from what hasn't been read. Gates only its own Stage-D clause.
+- **Row 2 — GATE (ruled 2026-06-10 after the reachability control; riding with rows 1+3).**
+  **Evidence-shape distinction, deliberate for future citation: row 1 is MISFIRE-witnessed; row
+  2 is REACHABILITY-witnessed with the misfire witness pending — deferred to the Stage-D
+  two-sided control because it is unobtainable earlier (gain_flow does not exist pre-Stage-C),
+  not because it was skipped. The rows must not flatten into "all gated, all alike."** What the
+  control did: discharged the wait's actual target (reachability-by-intent-label) — the 7/7
+  live-corpus result witnesses the gate running on an entirely beneficiary-bearing population,
+  interception affirmatively killed, not assumed away. What it could not do: produce a captured
+  misfire — a fact about what can exist pre-build, not about the gate; waiting for unobtainable
+  evidence is deferral wearing epistemic caution's costume. Deciding asymmetry: option (b)
+  INVERTS the fail-closed posture — the ungated clause would certify CI_Rope on the first
+  generated batch, the same batch the K=0 diffuse audit is screening, so a slipped captured
+  constraint would certify as benign coordination during precisely the window the audit polices,
+  gate retrofitted only after a caught misfire (fail-open on the highest-stakes read during the
+  least-trusted data's first pass). Gating now, the worst case is benign: if no CI_Rope candidate
+  ever authors captured gain_flow, the gate is a no-op clause that cost one two-sided control.
+  That control needs no new machinery: the 7 certified constraints ARE the
+  uncaptured-still-certifies side once they carry authored gain_flow; the captured-stops-
+  certifying side is one constructed story. Runnable the moment the gate has data to read.
 - **Row 3 — GATE, riding with row 1.** Same question, same signal, commentary-grade misfire cost
   in both directions; consistency with row 1 is worth more than what waiting buys; not left as a
   dangling third state.
