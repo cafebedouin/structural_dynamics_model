@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-57 re-witnessed post-reset: resolution holds; original behavioral witnesses were pre-reset/corpus-specific, now superseded by a corpus-independent positive control
+**Files:** prolog/drift_events.pl, ISSUES.md, audits/2026-06-10_oq57_live_rewitness/FINDINGS.md
+**Tier:** correction-key
+
+OQ-57 (drift report threw on a missing `requires_active_enforcement/1` qualifier) was resolved
+2026-06-04, but **all three behavioral witnesses ran on the corpus reset 2026-06-05** — they
+describe constraints that no longer exist. Re-witnessed across live + archives:
+- **Code fix durable** (`drift_events.pl:236`, `domain_priors:` qualifier). **Diagnostic positive
+  control:** the pre-fix `narrative_ontology:` qualifier still throws `existence_error`, the fixed
+  one resolves — the qualifier change is load-bearing, the probe is not vacuously clean.
+- **Original emitter set reproduced exactly** on `kernel_v1` (1,106): `{kodashim_obligation__memorial_archival,
+  statutory_debt_ceiling__constitutional_nullity_reading}` both fire CLEAN; `kodashim` →
+  `evidence(extraction,0.08,theater,0.85)` byte-identical to the 2026-06-04 record.
+- **Corpus-independent synthetic positive control** proves the clause fires when its guard is
+  reached regardless of corpus content — the witness the original entry lacked.
+- Full `drift_event/3` scan threw on **0 of 4,525** constraints across live(39)+kernel_v1(1,106)+
+  original_v6(3,380); `run_dynamic_suite` live = 39/0/0.
+
+**Tripwire carried:** the `internalized_piton` clause is currently **UNREACHED on the live
+39-constraint corpus** (correct-but-dormant). A future "no drift throw on the live corpus" read
+must not be mistaken for "exercised" — it is the Pattern-5 vacuous pass until a low-extraction/
+high-theater constraint re-enters the rebuild. Not promoted (corpus-state-specific, self-resolving
+as the rebuild grows); recorded so the next reader checks reachability before claiming exercised.
+
 ## 2026-06-09 — OQ-93 opened + mitigated: imputation shim diagnosed (unmigrated v3.4 grid contract) and made visible via three-bucket provenance threading
 **Files:** prolog/data_repair.pl, prolog/scenario_manager.pl, prolog/test_harness.pl, prolog/intent_engine.pl, prolog/report_generator.pl, ISSUES.md, audits/2026-06-09_imputation_shim_census/census.md
 **Tier:** landed

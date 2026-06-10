@@ -1,0 +1,22 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+=== OQ-57 ARCHIVE RE-WITNESS: archives/datasets/kernel_v1 ===
+corpus_constraint denominator: 1106
+
+[reachability] internalized_piton guard reached by: 2 constraint(s)
+  REACHES: kodashim_obligation__memorial_archival  (eps=0.0800, theater=0.8500)
+  REACHES: statutory_debt_ceiling__constitutional_nullity_reading  (eps=0.0000, theater=0.9500)
+
+[symptom] drift_event(C, internalized_piton, _) on reaching constraints:
+  CLEAN: kodashim_obligation__memorial_archival -> [evidence(extraction,0.08,theater,0.85)]
+  CLEAN: statutory_debt_ceiling__constitutional_nullity_reading -> [evidence(extraction,0.0,theater,0.95)]
+
+[full-scan] drift_event/3 over all 1106 constraints, any type:
+  full enumeration completed with NO throw (4473 drift events total)
+=== END archives/datasets/kernel_v1 ===

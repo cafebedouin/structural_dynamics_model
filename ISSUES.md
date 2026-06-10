@@ -2155,6 +2155,22 @@ the predicate's home module — REPL behavior is not pipeline behavior.** Diagno
 consumer's exact `-l` chain (see `docs/technical/swipl_load_path_and_probe_gotchas.md`).
 *(Body compressed 2026-06-04 per footer rule; investigation history in git.)*
 
+**Re-witnessed 2026-06-10 (post-reset; original witnesses were pre-reset/corpus-specific).** The
+2026-06-04 behavioral witnesses ran on the corpus reset 2026-06-05; re-verified across live +
+archives. (a) Fix durable in source (`drift_events.pl:236`). (b) **Diagnostic positive control:**
+the PRE-FIX qualifier `narrative_ontology:requires_active_enforcement/1` still throws
+`existence_error`; the FIXED `domain_priors:` qualifier resolves — qualifier change is load-bearing,
+probe not vacuously clean. (c) **Original emitter set reproduced exactly** on `kernel_v1` (1,106):
+`{kodashim_obligation__memorial_archival, statutory_debt_ceiling__constitutional_nullity_reading}`
+both fire CLEAN, `kodashim` → `evidence(extraction,0.08,theater,0.85)` byte-identical to the record
+above. (d) **Corpus-independent synthetic positive control** proves the clause fires when reached
+regardless of corpus content (`evidence(extraction,0.05,theater,0.85)`, no throw). (e) Full
+`drift_event/3` scan threw on none of 4,525 constraints across live(39)+kernel_v1(1,106)+
+original_v6(3,380); `run_dynamic_suite` live = 39 pass / 0 fail / 0 err. **Caveat carried:** the
+`internalized_piton` clause is currently UNREACHED on the live 39-constraint corpus
+(correct-but-dormant) — a future "no drift throw on live" read must not be mistaken for "exercised."
+Witnesses: `audits/2026-06-10_oq57_live_rewitness/` (FINDINGS.md + raw probe outputs).
+
 ---
 
 ## OQ-58 — Dangling cs_reading_relation targets: edges naming a reading that does not exist
