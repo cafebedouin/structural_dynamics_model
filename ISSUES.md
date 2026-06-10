@@ -4308,8 +4308,12 @@ only production-engine behavior the prototype touched, and it opposes the captur
 purpose (keeping captured constraints snare-flavored).
 
 **Why this goes live as a fight at step 3, not later.** The consumer surface is wide:
-`drl_boltzmann_analysis.pl:111-123` (the CI/coordination side of the Boltzmann test — the FCR
-axis), `transition_paths.pl:35,82,164`, `drift_events.pl:125,203`,
+`drl_boltzmann_analysis.pl:111-123` (`separability_factor` inside `reformability_score` —
+reform-value scoring of coordination/extraction CO-OCCURRENCE; MISLABELED in this entry's first
+version as "the CI/coordination side of the Boltzmann test — the FCR axis," corrected 2026-06-10
+on read-site inspection — the true Boltzmann factorization module `boltzmann_compliance.pl`
+consumes NEITHER fact of this family, a meaningful absence: the probe positive-fired on 7 other
+files), `transition_paths.pl:35,82,164`, `drift_events.pl:125,203`,
 `logical_fingerprint.pl:176,226,444`, `invertibility_analysis.pl:120`, `gap_diagnostic.pl:135`,
 `cs_pattern_detection.pl:360`. And the collision is structural, not incidental: the OQ-83 Phase-A
 compiler derives `constraint_beneficiary/2` from stakeholder role `beneficiary`, so every
@@ -4343,6 +4347,41 @@ case-2 rule at scale): a mass-silence sweep witnesses fail-closed ONLY if someth
 run demonstrably fires through the IDENTICAL read — a spiked story with an injected `gain_flow`
 fact, or live-corpus constraints run through the same harness; without the in-run positive,
 "entire archive lands absent" is byte-identical to a sweep that never looked.
+
+**Read-site pass — first results (2026-06-10, witnessed; provoked by a review premise that
+inverted on inspection).** A per-site decision rule was proposed in review: sort each read-site by
+*which question the read asks* — mountain-likeness ("holds without enforcement") → capture-gating
+sound, arguably correct semantics; coordination-despite-extraction (the tangled_rope/snare-adjacent
+cell) → gating forbidden, split signal required. The rule is OPERATIVE — the first site sorted by
+its intent-label flipped when the clauses were read:
+- `drl_boltzmann_analysis.pl:110-125` (`separability_factor`): asks whether coordination and
+  extraction CO-OCCUR (reform value). Clause 1 fires exactly on the captured-coordination cell
+  (coordination + extraction + beneficiary + victim → 0.9 "separable, worth reform"); gating
+  `has_coordination_function` on not-captured would demote captured constraints to clause 2
+  ("only extraction, nothing to preserve," 0.3). Sorts **FORBIDDEN** — the opposite of what the
+  module name suggests. (Off the dr_type path: reformability is consumed at scaffold-need /
+  surgical-reform sites and `dirac_classification.pl`.)
+- `drl_core.pl:285-288` (`natural_law_without_beneficiary`): literally `emerges_naturally` +
+  `\+ requires_active_enforcement` + `\+ constraint_beneficiary` — the holds-without-enforcement
+  read; beneficiary-existence already disqualifies mountain certification. Strengthening to
+  capture sorts **SOUND**.
+- `signature_detection.pl` NL gates (`count_power_beneficiaries` :211-223, the OQ-43 fail-close):
+  mountain-likeness, same sort. And :102-108 is an IN-ENGINE witness that benefits-from ≠
+  receives-extraction: P≠NP carries incidental `constraint_beneficiary` facts (authored for
+  perspectival analysis) and needed a special natural-law-via-emergence interception to avoid
+  CI_Rope misclassification — the engine already met the conflation and coded around it ad hoc.
+- The CLASSIFICATION-PATH consumer is witnessed live in the step-2 prototype output
+  (`gain_flow_prototype.out`): seats identical in metrics, role, and power split **scaffold**
+  (capturer_a, capturer_f — `constraint_beneficiary` present) vs **naturalized** (bystander_b,
+  bystander_g, capturer_h — absent). That scaffold-direction read on the dr_type path is the
+  fight's live site and the preregistration's classification-path slice.
+Adopting the per-site rule as the ruling is the operator's call — queued as the second
+question-to-operator for the step-3 preregistration alongside the diffuse-gate tolerance
+(which-signal-wins on the classification path is the same class of judgment). Under the rule the
+two resolution options below stop being rivals: per-site sorting likely yields the gate at
+mountain-likeness sites and the split where coordination-despite-extraction is at stake, which
+shrinks the `gain_flow` load-bearing surface relative to all-split — relevant to how tight the
+diffuse tolerance must be.
 
 **Resolution question (unruled).** What may `constraint_beneficiary/2` evidence once `gain_flow`
 exists? Candidate shapes (sketched, not asserted): gate the coordination read on not-captured (a
