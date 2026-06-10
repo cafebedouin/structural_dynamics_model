@@ -4257,8 +4257,14 @@ GATE-UNIFORM — with the evidence-shape distinction preserved (row 1 misfire-wi
 reachability-witnessed, misfire pending the Stage-D two-sided control because unobtainable
 earlier, not skipped); deferral would have inverted fail-closed (ungated CI_Rope certifying on
 the first K=0-audited batch). Gate-uniform also answers Q1's coupling note in the conservative
-direction: K=0 was priced against "a yes on any row" and got yes on all three. Build begins at
-Stage A.** Cross-refs:
+direction: K=0 was priced against "a yes on any row" and got yes on all three. **Stage A LANDED
+(2026-06-10): `gain_flow` + `fixing_cost` schema fields with tri-valued semantics, fabrication
+ban, and compiler-enforcement notes in the field descriptions; two stakeholders-dependency
+riders. Witness: 8/8 cases (three provenance shapes valid; four negatives biting at intended
+guards; ghost-seat schema-valid BY DESIGN — compiler's job, Stage B) + two-sided additivity
+sweep (91 pre-existing json/ invalids identical pre/post, ZERO new failures —
+`stage_a_schema_witness.{py,txt}` in the prereg dir). Next: Stage B, compiler emission +
+referential integrity.** Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
