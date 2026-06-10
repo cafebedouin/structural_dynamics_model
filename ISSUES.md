@@ -4343,12 +4343,41 @@ coordination read. Once step 3 wires `seat_captures` into classification, the sa
 carries a snare-direction capture call and a scaffold-direction coordination call from the same
 authored signal family — two live engine behaviors making opposite calls on the same constraints.
 
+**Probe scope (2026-06-10 — so the per-consumer-diffs obligation has a list it can be complete
+against).** The seven-consumer list above = one grep for `has_coordination_function` over
+top-level `prolog/*.pl` (non-recursive; subdirs excluded). The deriving fact's own direct
+consumers are a SECOND, WIDER surface, enumerated separately: `constraint_beneficiary` hits 15
+engine files (`data_repair` 10, `tangled_rope_examples` 8, `signature_detection` 5 — the FSM
+agent-beneficiary gate, `constraint_indexing` 4, `logical_fingerprint` 3, `drl_purity_network` 3,
+`global_delta_report` 2, `cs_pattern_detection` 2, plus 1 each: `report_generator`, `json_report`,
+`invertibility_analysis`, `drl_core`, `drl_boltzmann_analysis`, `constraint_instances`,
+`constraint_bridge`) and two test files (`tests/test_agent_beneficiary.pl`,
+`tests/test_cs_pattern_detection.pl`). These are file-level hit counts including declarations and
+comments, NOT verified read-sites — read-site verification is owed at adjudication time. Any
+predicate derived from either surface beyond `has_coordination_function` is unenumerated.
+Breadth option (operator, 2026-06-10): if adjudication evidence needs more than the live corpus
+(n per manifest, currently small), `prolog/archives/datasets/` can be overlaid via `corpus_path`
+for cross-corpus sweeps (the OQ-89 liveness sweep pattern, ~5,200 stories) — fit for measuring
+coordination-read liveness/scaffold-push prevalence and for per-consumer behavioral diffs on the
+LEGACY side, and for a mass absent-register witness (archive stories predate the stakeholder
+layer: no `stakeholders[]`, no `gain_flow`, so the entire archive must land fail-closed). NOT fit
+for exercising the new surface itself — pre-reset regime, OQ-70 bait-confound caveats apply to
+any signature-prevalence read.
+
 **Resolution question (unruled).** What may `constraint_beneficiary/2` evidence once `gain_flow`
 exists? Candidate shapes (sketched, not asserted): gate the coordination read on not-captured (a
 beneficiary that *receives the extraction* is not coordination evidence); or split
 benefits-from-coordination vs receives-the-extraction into distinct reads. Adjudication is the
 operator's; the distinction-check discipline (build_discipline rule #2) applies before any fold,
 and the wide consumer surface means any change owes per-consumer diffs (rule #3).
+**Cost asymmetry the step-3 preregistration drafter must know (operator note, 2026-06-10): the
+two options do not cost the same and do not expose the same surface area.** The split option is
+half-built — beneficiary-role already encodes benefits-from-coordination and authored `gain_flow`
+encodes receives-the-extraction, so the authored fact exists and the question reduces to which
+consumers read which. That makes it cheaper than it looks AND higher-stakes: choosing it makes
+`gain_flow` load-bearing across the consumer surface above instead of one capture read, raising
+the diffuse-audit gate's stakes proportionally. The gate-on-not-captured option touches one
+clause but folds capture into a coordination read.
 
 **Sequencing (operator ruling, 2026-06-10):** homed BEFORE the OQ-92 step-3 build proceeds; the
 step-3 preregistration must name this OQ as a known-interference item so the first corpus run
