@@ -329,8 +329,12 @@ used only for retrospective audits that explicitly overlay `corpus_path`): `kern
 run-tags; ALL pre-2026-06-05 empirical findings — OQ-70 FNL stats, OQ-71 lineage, the 55%
 coordination disagreement — were measured on it or its ancestors); `original_v6/` is the
 3,380-story chimera-era corpus (ID reuse across runs, OQ-25 / v7 §5.11 — do not cite 3,337 as a
-live count); `sotu/` holds the 189 SOTU constraints (run_pipeline reports n_sotu=0 now; sotu
-analyses must overlay the archive path).
+live count); `original_v5/` is its 702-story predecessor (same chimera-era caveats);
+`testsets_sotu/` holds the 189 SOTU constraints (`sotu/` itself contains json/pl/raw subdirs, not
+flat .pl files — overlay `testsets_sotu` for sotu analyses; run_pipeline reports n_sotu=0 now).
+While the live corpus is small post-reset, these archives are the breadth option for legacy-side
+sweeps via `corpus_path` overlay (the OQ-89 pattern; ~5,200 stories across kernel_v1 + v5 + v6) —
+all counts here are file counts verified on disk 2026-06-10.
 
 **FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope dominance)
 as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2, which reads
@@ -441,9 +445,14 @@ when a coherent unit of work is witnessed, commit it then — do not batch a ses
 end-commit; in-flight work is what compaction and harness outages destroy (full rationale:
 `docs/technical/build_discipline.md` → *Commit-as-you-go*). Everything here is CC0; the operator
 values iteration over correctness; mistakes are recoverable. Push is also permitted once the
-pre-push check below passes. **Multi-instance sessions: one instance per git worktree**
-(`git worktree add ../wt-<task> <branch>`) — two instances editing one working tree step on each
-other's uncommitted state.
+pre-push check below passes. **Start your own worktree before write work — unconditionally**
+(`git worktree add ../wt-<task> <branch>`, or the harness's worktree mechanism), **not only when
+you know another instance is running**: siblings are undetectable from inside a session (no lock,
+no registry; a clean `git status` looks identical either way), so insulation must be the default,
+not a response to detection. Two instances editing one working tree step on each other's
+uncommitted state — witnessed 2026-06-10, when two instances each misread this rule as
+conditional and collided in the main tree (operator clarification of intent, same day). Merge
+the worktree branch back to main when its unit of work is witnessed.
 
 **Before any `git push`:** verify the three files above are current with respect to the changes
 being pushed.
