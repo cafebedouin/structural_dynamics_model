@@ -4200,6 +4200,15 @@ check first (build_discipline rule #2). Flagged here for the operator, not folde
   as the runtime default (fail-closed is the safe absorption) and witnessed by battery control 8.
   Step-3 validation item: the schema/compiler must REJECT a `gain_flow` value naming a seat not in
   `stakeholders[]` at authoring time, so the runtime absorption never silently hides a data error.
+- **Fabrication ban (settled by the OQ-90 ruling; recorded 2026-06-10 — names the door, asks no
+  question).** `gain_flow` is NEVER synthesized: absent stays absent, fail-closed — no repair,
+  bridge, or imputation clause may infer it from metrics. The named door is `data_repair.pl`
+  (`:124-131` already fabricates `constraint_beneficiary(C, inferred_institutional)` from
+  E>0.46 ∧ S>0.40 on the DR-AUDIT path): a repair that "fixes" missing gain_flow from extraction
+  metrics is structurally the `has_computed_capturer` counterfeit re-entering through a side door
+  — a capture-adjacent fact synthesized from the metrics it feeds back into, on the path where it
+  is least visible. OQ-90's HALT already ruled that route witnessed-broken. Step-3 precondition
+  alongside the schema rejection and the diffuse gate; `data_repair.pl` is the enforcement site.
 - **Step-3 gate (generated-diffuse audit), recorded now.** Authored-`diffuse` is an authored
   universal negative with no checkable witness (gain-to-seat verifies against `stakeholders[]`;
   diffuse verifies against nothing) and is the cheapest token for a generation model to emit
@@ -4224,9 +4233,14 @@ preconditions before any classification wiring. Step-3 sequencing (operator 2026
 preregistration must name OQ-94 (`constraint_beneficiary` coordination-read interference —
 homed first, per ruling) as a known-interference item, and the diffuse-gate tolerance is
 reserved as an operator ruling at preregistration time. With OQ-94's per-site decision rule
-RULED (2026-06-10), classification-path handling is rule-application over the read-site pass's
-output — the tolerance is the single open operator question, plus escalation of any
-rule-unsorted sites. Cross-refs:
+RULED and the read-site pass complete (2026-06-10), classification-path handling is
+rule-application over the pass's output. **Step-3 preregistration DRAFTED
+(`audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`), carrying two OPEN operator
+questions — Q1 diffuse-audit sample/tolerance, Q2 the benignity-certification family as three
+evidenced rows (split ruling permitted) — plus the settled preconditions: schema rejection,
+fabrication ban (gain_flow never synthesized; `data_repair.pl` the named door), maxent
+congruence, and the diffuse gate before any classification wiring. Build starts when Q1/Q2 are
+answered.** Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
@@ -4307,7 +4321,11 @@ decay detection, separability, NAF-voids) plus raw surfaces, and isolated ONE un
 scaffold spec + `signature_detection:1019` CI_Rope gate + `:1122` subtype) — contains the
 prototype's witnessed wrong-direction mechanism; gate-on-not-captured there is plausibly correct
 but is a third question the rule doesn't decide. Step-3 preregistration therefore carries TWO
-operator questions: diffuse-gate tolerance + the benignity-family ruling. Also found:
+operator questions: diffuse-gate tolerance + the benignity-family ruling — **presented as THREE
+evidenced rows permitting a split ruling (format note, operator 2026-06-10): the family is
+unified by its question, not its evidence — `drl_core:346` arrives with the prototype's witnessed
+misfire on the gate's side; the CI_Rope gate and pure_coordination subtype have no equivalent
+witness yet; the format must not prejudge family-atomicity.** Also found:
 `constraint_bridge.pl:96` is the first gain_flow-migration candidate (collects extraction actors
 via benefits-from); `data_repair.pl:124-168` FABRICATES beneficiary facts from metrics on the
 DR-AUDIT path (OQ-93 circularity hazard — high extraction manufactures a beneficiary which feeds
