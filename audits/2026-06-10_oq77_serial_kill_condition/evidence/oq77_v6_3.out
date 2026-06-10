@@ -1,0 +1,420 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+# Giant Component Analysis: Erdos-Renyi Phase Transition
+
+*Investigates whether the constraint network exhibits a phase transition*  
+*in connected component structure as coupling threshold varies.*
+
+---
+
+## Phase 1: Network Topology at Default Threshold
+
+**Context**: analytical/global (default)  
+**Coupling threshold**: 0.500
+
+### Network Summary
+
+| Metric | Value |
+|--------|-------|
+| Total nodes (constraints) | 3380 |
+| Connected nodes (degree > 0) | 3269 |
+| Isolated nodes (degree 0) | 111 |
+| Edges | 32265 |
+| Graph density | 0.005650 |
+| Average degree | 19.09 |
+| Connected components | 182 |
+| E-R critical edge count (n/2) | 1690.0 |
+
+### Degree Distribution
+
+| Stat | Value |
+|------|-------|
+| N | 3380 |
+| Min | 0 |
+| Q1 | 4 |
+| Median | 6 |
+| Q3 | 17 |
+| Max | 211 |
+| Mean | 17.17 |
+
+#### Degree Histogram
+
+| Degree Range | Count |
+|-------------|-------|
+| 0 (isolated) | 111 |
+| 1 | 82 |
+| 2-3 | 571 |
+| 4-6 | 983 |
+| 7-10 | 411 |
+| 11-20 | 489 |
+| 21+ | 733 |
+
+### Connected Components
+
+**182 components** found.
+
+**Largest component**: 8785 nodes (259.9% of network)
+
+**Giant component detected.** The largest component contains >50% of all nodes.
+
+#### Top Components by Size
+
+| Rank | Size | Fraction |
+|------|------|----------|
+| 1 | 8785 | 2.599 |
+| 2 | 27 | 0.008 |
+| 3 | 25 | 0.007 |
+| 4 | 23 | 0.007 |
+| 5 | 20 | 0.006 |
+| 6 | 20 | 0.006 |
+| 7 | 13 | 0.004 |
+| 8 | 13 | 0.004 |
+| 9 | 12 | 0.004 |
+| 10 | 11 | 0.003 |
+| 11 | 11 | 0.003 |
+| 12 | 10 | 0.003 |
+| 13 | 10 | 0.003 |
+| 14 | 10 | 0.003 |
+| 15 | 10 | 0.003 |
+### Type Distribution
+
+| Type | Count | Fraction |
+|------|-------|----------|
+| mountain | 415 | 0.123 |
+| rope | 114 | 0.034 |
+| tangled_rope | 562 | 0.166 |
+| piton | 1 | 0.000 |
+| snare | 2267 | 0.671 |
+| naturalized | 2 | 0.001 |
+| unknown | 19 | 0.006 |
+
+### Purity Landscape
+
+#### Intrinsic Purity (3379 constraints with valid scores)
+
+| Stat | Value |
+|------|-------|
+| Min | 0.271 |
+| Q1 | 0.341 |
+| Median | 0.364 |
+| Q3 | 0.533 |
+| Max | 1.000 |
+| Mean | 0.481 |
+
+#### Effective Purity (3379 constraints with valid scores)
+
+| Stat | Value |
+|------|-------|
+| Min | 0.000 |
+| Q1 | 0.312 |
+| Median | 0.341 |
+| Q3 | 0.389 |
+| Max | 1.000 |
+| Mean | 0.418 |
+
+#### Purity Zone Distribution
+
+| Zone | Intrinsic | Effective | Shift |
+|------|-----------|-----------|-------|
+| Sound (>= 0.70) | 597 | 482 | 115 |
+| Borderline (0.50 - 0.70) | 288 | 117 | 171 |
+| Warning (0.30 - 0.50) | 2427 | 2317 | 110 |
+| Degraded (< 0.30) | 67 | 463 | -396 |
+
+**560 constraints shifted purity zone** due to network contamination effects.
+
+### Super-spreaders (Highest Contamination Potential)
+
+| Constraint | Type | Degree | Contam Str | Eff Purity | Potential |
+|------------|------|--------|------------|------------|-----------|
+| algorithmic_feed_substitution | snare | 211 | 1.00 | 0.213 | 211.00 |
+| algorithmic_recommendation_opacity | snare | 193 | 1.00 | 0.310 | 193.00 |
+| human_ai_epistemic_dependency | snare | 185 | 1.00 | 0.270 | 185.00 |
+| algorithmic_filter_bubbles | snare | 183 | 1.00 | 0.267 | 183.00 |
+| algorithmic_information_curation | snare | 181 | 1.00 | 0.310 | 181.00 |
+| algorithmic_content_amplification | snare | 179 | 1.00 | 0.310 | 179.00 |
+| algorithmic_narrative_gatekeeping | snare | 178 | 1.00 | 0.310 | 178.00 |
+| ai_religion_regulation | snare | 164 | 1.00 | 0.289 | 164.00 |
+| establishment_hegemony_2026 | snare | 157 | 1.00 | 0.000 | 157.00 |
+| artist_economic_precarity | snare | 151 | 1.00 | 0.201 | 151.00 |
+| identity_stack_incompatibility | snare | 150 | 1.00 | 0.201 | 150.00 |
+| platform_algorithmic_transparency | snare | 146 | 1.00 | 0.014 | 146.00 |
+| content_moderation_scalability | snare | 145 | 1.00 | 0.180 | 145.00 |
+| behavioral_data_surveillance | snare | 142 | 1.00 | 0.000 | 142.00 |
+| platform_content_moderation_snare | snare | 140 | 1.00 | 0.188 | 140.00 |
+| platform_algorithmic_capture | snare | 139 | 1.00 | 0.044 | 139.00 |
+| algorithmic_attention_capture | snare | 138 | 1.00 | 0.214 | 138.00 |
+| algorithmic_ranking_enforcement | snare | 137 | 1.00 | 0.224 | 137.00 |
+| digital_ownership_erosion | snare | 136 | 1.00 | 0.268 | 136.00 |
+| algorithmic_opacity_extraction | snare | 135 | 1.00 | 0.302 | 135.00 |
+
+
+---
+
+## Phase 2: Threshold Sweep (Erdos-Renyi Phase Transition)
+
+**No inferred coupling edges** in the corpus (0 constraints with gradient data).
+Threshold sweep is degenerate: all thresholds produce the same edge set (only `explicit` and `shared_agent` edges survive regardless of threshold).
+
+| Threshold | Edges | Components | Largest | Fraction |
+|-----------|-------|------------|---------|----------|
+| 0.500 (all) | 32265 | 182 | 8785 | 2.599 |
+
+
+---
+
+## Phase 3: Contamination Through the Giant Component
+
+**Threshold**: 0.500 (default)
+
+**Giant component size**: 8785 nodes (259.9% of network)
+
+### Giant Component Composition
+
+| Type | Count | Fraction |
+|------|-------|----------|
+| mountain | 206 | 0.023 |
+| rope | 110 | 0.013 |
+| tangled_rope | 501 | 0.057 |
+| piton | 1 | 0.000 |
+| snare | 2209 | 0.251 |
+| naturalized | 2 | 0.000 |
+| unknown | 16 | 0.002 |
+
+#### Purity Within Giant Component
+
+- **Intrinsic**: min=0.271, median=0.358, max=1.000, mean=0.446
+- **Effective**: min=0.000, median=0.339, max=1.000, mean=0.375
+
+- **Active contamination sources** (intrinsic purity < 0.50): 2414
+- **Sound constraints** (effective purity >= 0.70): 247
+
+### Contamination Sources (Super-spreaders in Giant Component)
+
+**208 contamination-capable nodes** in the giant component.
+
+| Constraint | Type | Intra-GC Degree | Contam Str | Eff Purity | Potential |
+|------------|------|-----------------|------------|------------|-----------|
+| algorithmic_feed_substitution | snare | 211 | 1.00 | 0.213 | 211.00 |
+| algorithmic_recommendation_opacity | snare | 193 | 1.00 | 0.310 | 193.00 |
+| human_ai_epistemic_dependency | snare | 185 | 1.00 | 0.270 | 185.00 |
+| algorithmic_filter_bubbles | snare | 183 | 1.00 | 0.267 | 183.00 |
+| algorithmic_information_curation | snare | 181 | 1.00 | 0.310 | 181.00 |
+| algorithmic_content_amplification | snare | 179 | 1.00 | 0.310 | 179.00 |
+| algorithmic_narrative_gatekeeping | snare | 178 | 1.00 | 0.310 | 178.00 |
+| ai_religion_regulation | snare | 164 | 1.00 | 0.289 | 164.00 |
+| establishment_hegemony_2026 | snare | 157 | 1.00 | 0.000 | 157.00 |
+| artist_economic_precarity | snare | 151 | 1.00 | 0.201 | 151.00 |
+| identity_stack_incompatibility | snare | 150 | 1.00 | 0.201 | 150.00 |
+| platform_algorithmic_transparency | snare | 146 | 1.00 | 0.014 | 146.00 |
+| content_moderation_scalability | snare | 145 | 1.00 | 0.180 | 145.00 |
+| behavioral_data_surveillance | snare | 142 | 1.00 | 0.000 | 142.00 |
+| platform_content_moderation_snare | snare | 140 | 1.00 | 0.188 | 140.00 |
+| platform_algorithmic_capture | snare | 139 | 1.00 | 0.044 | 139.00 |
+| algorithmic_attention_capture | snare | 138 | 1.00 | 0.214 | 138.00 |
+| algorithmic_ranking_enforcement | snare | 137 | 1.00 | 0.224 | 137.00 |
+| digital_ownership_erosion | snare | 136 | 1.00 | 0.268 | 136.00 |
+| algorithmic_opacity_extraction | snare | 135 | 1.00 | 0.302 | 135.00 |
+
+### Multi-hop Contamination Simulation
+
+Simulating contamination propagation beyond the current one-hop model.
+Attenuation: 0.50 per hop. Stop when attenuation * strength < 0.01.
+
+**2401 active contamination sources** (type strength >= 0.5, purity < 0.50)
+
+*Showing top 50 of 159 sources by contamination potential.*
+
+| Source | Type | Purity | 1-hop | 2-hop | 3-hop | Total Reach |
+|--------|------|--------|-------|-------|-------|-------------|
+| algorithmic_feed_substitution | snare | 0.341 | 211 | 1077 | 2360 | 3648 |
+| algorithmic_recommendation_opacity | snare | 0.312 | 193 | 1013 | 2347 | 3553 |
+| human_ai_epistemic_dependency | snare | 0.329 | 185 | 1007 | 2366 | 3558 |
+| algorithmic_filter_bubbles | snare | 0.329 | 183 | 1003 | 2340 | 3526 |
+| algorithmic_information_curation | snare | 0.312 | 181 | 987 | 2337 | 3505 |
+| algorithmic_content_amplification | snare | 0.312 | 179 | 980 | 2330 | 3489 |
+| algorithmic_narrative_gatekeeping | snare | 0.312 | 178 | 989 | 2332 | 3499 |
+| ai_religion_regulation | snare | 0.321 | 164 | 1132 | 2549 | 3845 |
+| establishment_hegemony_2026 | snare | 0.429 | 157 | 1093 | 2678 | 3928 |
+| artist_economic_precarity | snare | 0.350 | 151 | 909 | 2101 | 3161 |
+| identity_stack_incompatibility | snare | 0.350 | 150 | 1097 | 2531 | 3778 |
+| platform_algorithmic_transparency | snare | 0.378 | 146 | 924 | 2239 | 3309 |
+| content_moderation_scalability | snare | 0.353 | 145 | 1058 | 2625 | 3828 |
+| behavioral_data_surveillance | snare | 0.429 | 142 | 905 | 2256 | 3303 |
+| platform_content_moderation_snare | snare | 0.354 | 140 | 1044 | 2603 | 3787 |
+| platform_algorithmic_capture | snare | 0.378 | 139 | 892 | 2148 | 3179 |
+| algorithmic_attention_capture | snare | 0.354 | 138 | 852 | 2116 | 3106 |
+| algorithmic_ranking_enforcement | snare | 0.353 | 137 | 858 | 2102 | 3097 |
+| digital_ownership_erosion | snare | 0.341 | 136 | 864 | 2096 | 3096 |
+| algorithmic_opacity_extraction | snare | 0.321 | 135 | 942 | 2286 | 3363 |
+| data_extraction_surveillance | snare | 0.467 | 133 | 860 | 2198 | 3191 |
+| online_harassment_norm_enforcement | snare | 0.329 | 131 | 1014 | 2583 | 3728 |
+| web_app_friction_tax | snare | 0.352 | 130 | 828 | 2077 | 3035 |
+| algorithmic_engagement_loop | snare | 0.325 | 129 | 856 | 2170 | 3155 |
+| algorithmic_labor_control | snare | 0.354 | 128 | 896 | 2233 | 3257 |
+| creator_income_concentration | snare | 0.325 | 126 | 859 | 2117 | 3102 |
+| dark_patterns_manipulation | snare | 0.341 | 125 | 826 | 2073 | 3024 |
+| algorithmic_content_filtering | snare | 0.321 | 123 | 826 | 2162 | 3111 |
+| algorithmic_content_control | snare | 0.329 | 122 | 812 | 2119 | 3053 |
+| algorithmic_ranking_opacity | snare | 0.341 | 121 | 787 | 2031 | 2939 |
+| entertainment_platform_licensing | snare | 0.353 | 120 | 807 | 2045 | 2972 |
+| creator_labor_classification_ambiguity | snare | 0.378 | 118 | 772 | 2018 | 2908 |
+| behavioral_data_monopoly | snare | 0.354 | 117 | 777 | 2014 | 2908 |
+| attention_economy_extraction | snare | 0.354 | 116 | 801 | 2305 | 3222 |
+| attention_allocation_problem | snare | 0.350 | 115 | 791 | 2109 | 3015 |
+| attention_scarcity_commodification | snare | 0.311 | 113 | 810 | 2152 | 3075 |
+| algorithmic_amplification | snare | 0.329 | 112 | 762 | 2004 | 2878 |
+| algorithmic_cultural_curation | snare | 0.312 | 111 | 761 | 1996 | 2868 |
+| content_creator_licensing | snare | 0.321 | 110 | 744 | 1967 | 2821 |
+| algorithmic_curation | snare | 0.329 | 109 | 746 | 1978 | 2833 |
+| algorithmic_addiction_capture_u16 | snare | 0.354 | 108 | 739 | 1978 | 2825 |
+| algorithmic_accountability_gap | snare | 0.321 | 107 | 752 | 2008 | 2867 |
+| algorithmic_recommendation_capture | snare | 0.312 | 106 | 743 | 1988 | 2837 |
+| algorithmic_amplification_of_extremism | snare | 0.366 | 105 | 740 | 1976 | 2821 |
+| algorithmic_curation_lock_in | snare | 0.312 | 104 | 735 | 1973 | 2812 |
+| climate_change_mitigation | snare | 0.341 | 102 | 838 | 2436 | 3376 |
+| drinking_water_contamination_legacy | snare | 0.354 | 101 | 985 | 2742 | 3828 |
+| filter_bubble_closure | snare | 0.329 | 100 | 762 | 2308 | 3170 |
+| knowledge_access_inequality | snare | 0.312 | 99 | 785 | 2315 | 3199 |
+| sovereign_debt_sustainability | snare | 0.366 | 97 | 819 | 2418 | 3334 |
+
+**Total unique nodes reached** within 3 hops of any source: 6143 (69.9% of giant component)
+
+### Sound Constraint Exposure to Contamination
+
+**247 sound constraints** (effective purity >= 0.70) in the giant component.
+
+*Showing first 50 of 247 sound constraints.*
+
+| Sound Constraint | Eff Purity | Nearest Source | Distance | Would Cross Threshold? |
+|------------------|------------|----------------|----------|----------------------|
+| absorbing_markov_chains | 0.960 | nearby_source | 1 | ~ |
+| ackermann_function_bounds | 0.976 | nearby_source | 5 | ~ |
+| ackermann_function_computability | 0.960 | nearby_source | 3 | ~ |
+| age_related_capacity_erosion | 0.976 | nearby_source | 1 | ~ |
+| algebraic_closure_property | 0.976 | nearby_source | 2 | ~ |
+| algorithmic_information_theory | 0.960 | nearby_source | 3 | ~ |
+| algorithmic_randomness | 0.936 | nearby_source | 3 | ~ |
+| angular_momentum_conservation | 0.976 | nearby_source | 9 | ~ |
+| arithmetical_hierarchy_ordering | 0.960 | nearby_source | 3 | ~ |
+| atrophied_optimization_piton | 0.711 | nearby_source | 1 | ~ |
+| attention_as_capturable_resource | 0.936 | nearby_source | 2 | ~ |
+| axiom_of_choice_consequence | 0.960 | nearby_source | 4 | ~ |
+| axiom_of_choice_dependency | 0.960 | nearby_source | 6 | ~ |
+| axiom_of_choice_independence | 0.960 | nearby_source | 5 | ~ |
+| banach_contraction_principle | 0.976 | nearby_source | 4 | ~ |
+| banach_fixed_point_theorem | 0.960 | nearby_source | 3 | ~ |
+| banach_tarski_paradox | 0.976 | nearby_source | 5 | ~ |
+| barcode_standardization | 0.823 | nearby_source | 1 | ~ |
+| battery_chemistry_limitations | 0.936 | nearby_source | 2 | ~ |
+| bgs_eigenvector_thermalization | 0.728 | nearby_source | 3 | ~ |
+| bgs_spectral_universality | 0.976 | nearby_source | 3 | ~ |
+| bifurcation_analysis | 0.726 | nearby_source | 3 | ~ |
+| bilateral_science_innovation_partnership | 0.736 | nearby_source | 1 | ~ |
+| biodiversity_collapse_threshold | 1.000 | nearby_source | 1 | ~ |
+| birthday_paradox_collison | 0.976 | nearby_source | 1 | ~ |
+| boltzmann_universality_2026 | 0.960 | nearby_source | 3 | ~ |
+| brazil_hiv_vtn_elimination | 0.727 | nearby_source | 1 | ~ |
+| brouwer_fixed_point | 0.976 | nearby_source | 3 | ~ |
+| burali_forte_paradox | 0.960 | nearby_source | 5 | ~ |
+| busy_beaver_function | 0.976 | nearby_source | 4 | ~ |
+| busy_beaver_noncomputability | 0.960 | nearby_source | 4 | ~ |
+| cantor_continuum_cardinality | 0.972 | nearby_source | 8 | ~ |
+| cantor_diagonal_argument | 0.976 | nearby_source | 4 | ~ |
+| cantors_diagonal_argument | 0.976 | nearby_source | 5 | ~ |
+| cap_theorem | 0.972 | nearby_source | 1 | ~ |
+| career_duration_compression | 0.921 | nearby_source | 1 | ~ |
+| categorical_instrument_blindness | 0.865 | nearby_source | 1 | ~ |
+| causality_constraint | 0.960 | nearby_source | 7 | ~ |
+| cellular_automaton_universality | 0.960 | nearby_source | 2 | ~ |
+| chaitins_omega_undecidability | 0.960 | nearby_source | 3 | ~ |
+| chaos_theory_determinism | 0.936 | nearby_source | 3 | ~ |
+| chaos_theory_foundation | 0.960 | nearby_source | 3 | ~ |
+| chaotic_dynamical_systems_predictability | 0.960 | nearby_source | 2 | ~ |
+| childhood_magical_thinking_development | 0.976 | nearby_source | 1 | ~ |
+| chip_control_efficacy | 0.750 | nearby_source | 1 | ~ |
+| chip_design_complexity_scaling | 0.801 | nearby_source | 2 | ~ |
+| church_turing_thesis | 0.960 | nearby_source | 4 | ~ |
+| circuit_layout_verification | 0.840 | nearby_source | 5 | ~ |
+| climate_model_initialization | 0.727 | nearby_source | 1 | ~ |
+| climate_model_paleoclimate_dependency | 0.760 | nearby_source | 1 | ~ |
+
+**Hop distance summary**:
+- Within 1 hop of a contamination source: 75/247 sound constraints
+- Within 2 hops: 111/247
+- Within 3 hops: 146/247
+
+### Contamination Collapse Analysis
+
+At what contamination settings would sound constraints in the giant component collapse into the degraded zone?
+
+Current settings: cap=0.30, attenuation=0.50
+Sound constraints in giant component: 247
+
+Sweeping contamination_cap from 0.10 to 1.00 (attenuation fixed at 0.50):
+
+| Cap | Sound (>=0.70) | Borderline | Warning | Degraded (<0.30) |
+|-----|--------|------------|---------|---------|
+| 0.10 | 258 | 122 | 2230 | 434 |
+| 0.20 | 248 | 100 | 2240 | 456 |
+| 0.30 | 247 | 97 | 2239 | 461 |
+| 0.40 | 247 | 97 | 2239 | 461 |
+| 0.50 | 247 | 97 | 2239 | 461 |
+| 0.60 | 247 | 97 | 2239 | 461 |
+| 0.70 | 247 | 97 | 2239 | 461 |
+| 0.80 | 247 | 97 | 2239 | 461 |
+| 0.90 | 247 | 97 | 2239 | 461 |
+| 1.00 | 247 | 97 | 2239 | 461 |
+
+---
+
+## Phase 4: Context Comparison
+
+The edge set is context-independent (edges come from `affects_constraint`, `infer_structural_coupling`, and `shared_agent_link` — none of which depend on observer context). What changes across contexts is the **type classification** and hence the **contamination dynamics**.
+
+**Fixed topology**: 32265 edges, 182 components, largest = 8785 nodes (threshold = 0.500)
+
+### Type Distribution by Context
+
+| Type | Institutional/Local | Moderate/National | Analytical/Global (default) |
+|------|------|------|------|
+| mountain | 404 | 404 | 415 |
+| rope | 2052 | 123 | 114 |
+| scaffold | 35 | 27 | 0 |
+| tangled_rope | 191 | 2318 | 562 |
+| piton | 26 | 2 | 1 |
+| snare | 6 | 471 | 2267 |
+| naturalized | 664 | 7 | 2 |
+| unknown | 2 | 28 | 19 |
+
+### Contamination Source Comparison
+
+Number of constraints that are active contamination sources (type strength > 0, acts as contamination emitter) by context:
+
+| Context | Snare | Piton | Tangled Rope | Scaffold | Total Sources |
+|---------|-------|-------|-------------|----------|---------------|
+| Institutional/Local | 6 | 26 | 191 | 35 | 258 |
+| Moderate/National | 471 | 2 | 2318 | 27 | 2818 |
+| Analytical/Global (default) | 2267 | 1 | 562 | 0 | 2830 |
+
+### Key Finding
+
+Since edges are context-independent, the network topology (connected components, component sizes, degree distribution) is identical across all contexts. What changes is WHICH nodes are contamination sources. A constraint classified as a snare from one context (high contamination strength = 1.0) may be classified as a rope from another (low strength = 0.1). This means the effective contamination pressure varies by context even though the network structure does not.
+
+---
+
+## Embedded Prolog Facts
+
+```prolog
+%% Sweep results: gc_sweep_result(Threshold, NEdges, NComponents, LargestSize, LargestFraction)
+gc_sweep_result(0.500, 32265, 182, 8785, 2.599).
+```
+
+---
+
+*End of giant component analysis*

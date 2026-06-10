@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
+**Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md
+**Tier:** landed
+
+OQ-77's pre-registered kill-condition executed (`audits/2026-06-10_oq77_serial_kill_condition/`):
+serial 10/10 rc=0 at n=39 (the exact crash size; outputs byte-identical), 12/12 rc=0 under 12-way
+co-residency, and serial archive runs at kernel_v1 n=1106 + original_v6 n=3380 ×3 (byte-identical
+complete reports; 8,785-node component BFS). No serial recurrence ⇒ resolved as a concurrency
+artifact per the kill-condition; mechanism inside the concurrent regime stays unidentified (pure
+co-residency ruled out; mutating prep-interleave unsimulated; exact crashing corpus
+unreconstructible). Operational rule promoted to CLAUDE.md Running the System: one pipeline at a
+time against shared testsets/+outputs/ (within-pipeline parallelism fine). Reopen path: any
+SERIAL segfault → kill-condition's "recurs serially" branch, this audit as baseline.
+
+Side-finding → **OQ-95**: giant_comp's component BFS counts dangling `affects_constraint/2`
+targets as nodes — 25 phantom atoms on the live corpus (component = 118.9% of network), ~2.6×
+on original_v6 (259.9%). Node enumeration is corpus-scoped; edge discovery
+(`drl_purity_network:constraint_neighbors/3`) is not. Probe positive-controlled against the
+report's own edge count (75). Census other `constraint_neighbors/affects_constraint` consumers
+before picking the fix point.
+
 ## 2026-06-10 — OQ-92 rulings recorded + step-2 gain-flow prototype PASSED 8/8: capture and fixing_cost separate on authored fields; step-3 surface build unblocked (OQ-92/OQ-90/GAP-10)
 **Files:** ISSUES.md, docs/design/design_gaps.md, audits/2026-06-10_gain_flow_prototype/PREREGISTRATION.md, audits/2026-06-10_gain_flow_prototype/FINDINGS.md
 **Tier:** landed

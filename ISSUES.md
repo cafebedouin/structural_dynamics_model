@@ -3151,35 +3151,10 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 
 **Ω-type:** Ω_E (closeable by a controlled serial-vs-concurrent repro).
 
-**Status:** open — caught and non-blocking (pipeline completes 40/41); hypothesis is a concurrency race, not a deterministic graph-topology bug
-**Origin:** 2026-06-06 slow-build session. Three topic runs launched CONCURRENTLY against the
-single flat `prolog/testsets/` + shared `outputs/`. The `giant_comp` step (`_prolog_giant_comp`,
-`run_pipeline.py:416`; swipl on `giant_component_analysis.pl`) segfaulted (`rc=-11`) on exactly
-ONE of the three — the leiden run (n=39), whose pipeline ran at manifest 00:10:49Z, BETWEEN the
-other two (embryo 00:08:36Z, debt 00:12:46Z), i.e. maximally overlapping — and succeeded at n=43
-and n=33. The non-fatal warning `Local definition of drl_core:base_extractiveness/2 overrides
-weak import from constraint_data` precedes the crash but is present on passing runs too (red
-herring).
-
-**Hypothesis (to be tested, not asserted):** the crash is a SYMPTOM of concurrent swipl
-invocations racing on shared `outputs/` artifacts (orbit data, temp files), not an intrinsic
-defect in `giant_component_analysis.pl`. Evidence for: appeared only on the maximally-overlapping
-run; intermittent; a 0-exit-code segfault on otherwise-valid corpora is the shape of a
-file/resource race, not a logic bug.
-
-**Kill-condition (closes the OQ):** run the same N topics SERIALLY (or generate-only then one
-`run_pipeline`). If the segfault does NOT recur across several serial runs at comparable corpus
-sizes, it is a concurrency artifact → resolution is the operational rule "do not run concurrent
-full pipelines against shared testsets/+outputs/" (the slow-build workflow), not a Prolog fix.
-If it DOES recur serially, it is a real defect in `giant_component_analysis.pl` (likely stack
-depth / unbounded recursion on a particular graph topology) → investigate the analysis itself.
-
-**Triage-list membership (build_discipline.md citation-time rule):** this OQ is the rung-4 premise *"the live corpus / pipeline_output denominator is current"* failing — concurrent runs race the shared denominator, so any single run's pipeline_output is not a coherent snapshot. The same-run guard catches the orbit/pipeline mismatch; it does not catch two full pipelines interleaving. Do not cite a corpus statistic from a concurrently-built run as settled.
-
-**Why it can wait:** `run_prolog` catches it (`[WARN] giant_comp ... non-critical, continuing`)
-and the pipeline finishes 40/41; `giant_component_analysis.md` is simply not refreshed that run.
-But a SIGSEGV is never "fine" — logged so the kill-condition is run before trusting the
-giant-component output on any concurrently-built corpus.
+**Status:** resolved — kill-condition run 2026-06-10: no serial recurrence at any tested size; ruled a concurrency artifact of the three-concurrent-pipelines regime. Operational rule recorded: **never run concurrent full pipelines / topic runs against the shared `prolog/testsets/` + `outputs/`** (promoted to CLAUDE.md Running the System).
+**Origin:** 2026-06-06 slow-build session — three topic runs launched concurrently; `giant_comp` (`run_pipeline.py:416`) segfaulted (`rc=-11`) on exactly the maximally-overlapping run (leiden, n=39, manifest 00:10:49Z) and passed at n=43/n=33.
+**Resolution evidence** (`audits/2026-06-10_oq77_serial_kill_condition/`): serial 10/10 rc=0 at n=39 — the exact crash size — with byte-identical outputs; 12 simultaneous co-resident invocations 12/12 rc=0 (pure co-residency ruled out); serial archive runs kernel_v1 n=1106 rc=0 and original_v6 n=3380 ×3 byte-identical complete reports (8,785-node component BFS — deterministic topology/stack-depth defect ruled out to 87× crash size). The exact crashing corpus is unreconstructible (transient mid-generation testsets state). Mechanism inside the concurrent regime remains unidentified (the mutating prep-phase interleave was not simulated); if a segfault ever recurs under SERIAL operation, reopen via the kill-condition's "recurs serially" branch with this audit as baseline.
+**Carry-forward:** the triage-list premise stands independently of this close (build_discipline.md rung-4: never cite a corpus statistic from a concurrently-built run — the manifest must be from one coherent run). Side-finding filed as OQ-95 (phantom network nodes from dangling `affects_constraint/2` targets, witnessed during this audit's probe validation).
 
 ## OQ-78 — The ε authoring idiom: a 0.68 mode + 8/2 last-digit grid compresses the ε perturbation axis
 
@@ -4389,6 +4364,16 @@ step-3 preregistration must name this OQ as a known-interference item so the fir
 does not "discover" a fight the prototype already witnessed. Cross-refs: OQ-92 (Rulings block +
 step-3 preconditions), OQ-90 (snare/piton capture split), GAP-10, OQ-83 (role-derived
 beneficiary emission).
+
+## OQ-95 — giant_component network counts phantom nodes: dangling `affects_constraint/2` targets enter the component BFS (118.9% of network on the live corpus; 259.9% on original_v6)
+
+**Ω-type:** Ω_E (defect witnessed and counted; the fix is a scoping decision plus a generation-time validation question).
+
+**Status:** open — witnessed 2026-06-10 during the OQ-77 kill-condition audit (`audits/2026-06-10_oq77_serial_kill_condition/`, probe in `evidence/phantom_node_probe.txt`, writeup §5).
+**The witness:** the giant_comp report prints `Total nodes (constraints) | 37` yet `Largest component: 44 nodes (118.9% of network)` — a >100% fraction printed without error (live corpus n=39, manifest 2026-06-09T23:19:26Z; byte-identical across 22 reruns). On `archives/datasets/original_v6` (n=3380) the same defect yields an 8,785-node largest component = **259.9% of the network** — the analysis counted ~2.6× more nodes than exist.
+**Mechanism (probe positive-controlled — edge count 75 matches the report's own):** node enumeration is corpus-scoped (`all_corpus_constraints/1`; 37 = 39 corpus files − 2 `*_contradictions.pl` sidecars, an exclusion documented-intended at OQ-33 D2), but edge discovery (`drl_purity_network:constraint_neighbors/3` via `precompute_all_edges`) is unscoped: **26 authored `affects_constraint/2` facts name 25 targets that do not exist in the live corpus** (e.g. `testsets/retirement_security_deficit.pl:380` → `algorithmic_management_control`), and the component BFS counts the dangling targets as nodes (49 edge-endpoint atoms vs 37 enumerated).
+**Why it matters:** corpus connectivity, giant-component fraction, and contamination-cascade reach are all overstated by phantom nodes that carry no metrics, no classification, and no testset. Build-discipline spine instance: a dangling reference presents as a present node. The dangling targets are LLM-authored cross-references to story IDs that don't exist post-reset — every regenerated corpus will mint new ones, so a scheme-level answer outlives any one cleanup.
+**Resolution options (no verdict asserted):** (a) scope the edge walk to enumerated nodes (filter at `assert_edge_canonical` or BFS entry); (b) validate `affects_constraint` targets at generation/lint time, fail-loud on dangling; (c) keep phantom nodes but carry a provenance bit (corpus-member vs referenced-only) to the read site. Before choosing (a): census which OTHER consumers of `constraint_neighbors/3` / `affects_constraint/2` inherit the same phantom endpoints — the fix point may belong in `drl_purity_network.pl`, not giant_comp.
 
 ---
 
