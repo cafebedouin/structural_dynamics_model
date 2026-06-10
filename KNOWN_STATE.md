@@ -69,7 +69,16 @@ carries TWO operator questions: diffuse tolerance + benignity-family ruling. Bon
 (OQ-93 circularity). Estimator-classifier congruence: any `drl_core:346/:373` ruling must land in
 maxent's boolean_spec table in the same change. Also this session: `issues_status.py` now fails
 on duplicate OQ labels (pre-fix a duplicate entry was silently invisible — witnessed), and the
-worktree rule is unconditional (CLAUDE.md).
+worktree rule is unconditional (CLAUDE.md). **Step-3 rulings landed (operator, same day): Q2
+rows 1+3 GATE (scaffold clause + maxent mirror; pure_coordination subtype), row 2 deferred→
+control RUN: synthetic vectors can't reach Boltzmann-gated signatures
+(`inconclusive(insufficient_classifications)` — diagnosed), and the live-corpus existence check
+witnessed CI_Rope ∧ beneficiary = 7/7 (gate runs entirely on beneficiary-bearers; captured-or-not
+unknowable until gain_flow exists). Q1: K=0 on the observable, halt = Stage D only, N =
+whole-batch-or-≥30 (convention), obviousness criterion pre-written, "0/N observed" never "clean".
+Fabrication ban recorded (gain_flow never synthesized; data_repair.pl the named door). STAGES
+A–C UNBLOCKED — schema → compiler → prompt per
+`audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`.**
 
 ## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
 **Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md

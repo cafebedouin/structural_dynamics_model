@@ -4246,8 +4246,14 @@ CI_Rope reachability control (last pre-build item; gates only its own Stage-D cl
 on the observable (detectability-limited probe — observed rate lower-bounds true rate by an
 unknown multiple), halt = Stage D only never regeneration (regeneration IS the repair path),
 N = whole-batch-if-small else ≥ 30 (labeled convention), obviousness criterion written BEFORE
-reading the batch, findings say "0/N observed" never "clean". STAGES A–C UNBLOCKED.**
-Cross-refs:
+reading the batch, findings say "0/N observed" never "clean". STAGES A–C UNBLOCKED. Row-2
+control RUN same day (`audits/2026-06-10_oq94_row2_cirope_reachability/`): constructed vector
+blocked at `boltzmann_compliant = inconclusive(insufficient_classifications)` (synthetic vectors
+can't feed the Boltzmann test — diagnosed, not an interception proof); live-corpus existence
+check: **CI_Rope ∧ beneficiary = 7 of 7** — the gate runs entirely on beneficiary-bearing
+constraints today, interception hypothesis dead; whether any is CAPTURED is unknowable until
+Stage C authors gain_flow. Row 2 back to operator with evidence: gate now riding with rows 1/3,
+or defer to first post-Stage-C data.** Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
