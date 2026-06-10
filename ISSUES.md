@@ -4355,14 +4355,19 @@ agent-beneficiary gate, `constraint_indexing` 4, `logical_fingerprint` 3, `drl_p
 `tests/test_cs_pattern_detection.pl`). These are file-level hit counts including declarations and
 comments, NOT verified read-sites — read-site verification is owed at adjudication time. Any
 predicate derived from either surface beyond `has_coordination_function` is unenumerated.
-Breadth option (operator, 2026-06-10): if adjudication evidence needs more than the live corpus
-(n per manifest, currently small), `prolog/archives/datasets/` can be overlaid via `corpus_path`
-for cross-corpus sweeps (the OQ-89 liveness sweep pattern, ~5,200 stories) — fit for measuring
-coordination-read liveness/scaffold-push prevalence and for per-consumer behavioral diffs on the
-LEGACY side, and for a mass absent-register witness (archive stories predate the stakeholder
-layer: no `stakeholders[]`, no `gain_flow`, so the entire archive must land fail-closed). NOT fit
-for exercising the new surface itself — pre-reset regime, OQ-70 bait-confound caveats apply to
-any signature-prevalence read.
+Breadth option (operator in-session note, 2026-06-10 CC session — NOT a review-thread item; the
+review flagged this provenance distinction explicitly): if adjudication evidence needs more than
+the live corpus (n per manifest, currently small), `prolog/archives/datasets/` can be overlaid
+via `corpus_path` for cross-corpus sweeps (the OQ-89 liveness sweep pattern, ~5,200 stories) —
+fit for measuring coordination-read liveness/scaffold-push prevalence and for per-consumer
+behavioral diffs on the LEGACY side, and for a mass absent-register witness (archive stories
+predate the stakeholder layer: no `stakeholders[]`, no `gain_flow`, so the entire archive must
+land fail-closed). NOT fit for exercising the new surface itself — pre-reset regime, OQ-70
+bait-confound caveats apply to any signature-prevalence read. Spike requirement (the case-7-via-
+case-2 rule at scale): a mass-silence sweep witnesses fail-closed ONLY if something in the SAME
+run demonstrably fires through the IDENTICAL read — a spiked story with an injected `gain_flow`
+fact, or live-corpus constraints run through the same harness; without the in-run positive,
+"entire archive lands absent" is byte-identical to a sweep that never looked.
 
 **Resolution question (unruled).** What may `constraint_beneficiary/2` evidence once `gain_flow`
 exists? Candidate shapes (sketched, not asserted): gate the coordination read on not-captured (a
