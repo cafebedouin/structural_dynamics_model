@@ -78,7 +78,19 @@ Ruling (a) recorded: intent top verdict RETIRE-OR-REDESIGN (sub-fork deferred); 
 contamination sweep WAIVED (forward only). Redundancy diff (REDUNDANCY_DIFF.md): zero by
 DISJOINTNESS — κ-track's unique product is the level axis; bonus defect:
 `coercion_vector`/`compute_completeness` interval-UNSCOPED (completeness=312.5 on loaded
-corpus; single-story-safe only). Ruling (b) returns priced.**
+corpus; single-story-safe only). Ruling (b) returns priced — then RULED keep-and-migrate
+(named-consumer kind: the masking/naturalization verdict family; intent top verdict stays
+retired; imputation killed permanently; sequence + κ-plausibility gate recorded in OQ-93).
+Build unit 1 (interval scoping) landed: probe values unchanged exact, leakage healed
+(312.5→0), suite green. **once/1 irony (operator flag): the slot-capping fix uses the same
+first-solution-only mechanism as the cut bug it buried — sound ONLY under the
+identical-by-contract premise, with the contract (duplicate slot authorship rejects loud)
+enforced by the stage-2 compiler; once/1 is defense-in-depth, never primary semantics;
+constructed-duplicate control queued to the stage-2 battery. Partial-grid threshold question
+DISSOLVED on evidence: witnessed 8/32 one-level grid → G_sys=0.216 + increasing_coercion at
+completeness 0.25 (findall absorbs missing levels — success-shaped absorption one aggregation
+up); design answer = coverage-carrying G_sys + consumer-named-level requirements, confirm at
+stage-2 prereg.**
 
 ## 2026-06-10 — OQ-94 read-site pass complete: rule sorted 12-file consumer surface; benignity-certification family escalated; prior 7-file census was head-truncated
 **Files:** ISSUES.md, audits/2026-06-10_oq94_readsite_pass/READSITE_PASS.md, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, python/issues_status.py

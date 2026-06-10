@@ -46,6 +46,13 @@ compute_completeness(ID, Score) :-
     % Interval-scoped (OQ-93 build unit 1): once/1 caps each (L,T) slot at one
     % solution — multiple authored sources for the same slot must not inflate
     % completeness past 1.0 (the unscoped form read 312.5 on the loaded corpus).
+    % WHY first-solution-only is sound HERE when the time_point cut was a defect
+    % (operator flag, 2026-06-10): the premise is identical-by-contract — all
+    % solutions for one (ID,L,T) slot must carry the same value, a contract the
+    % stage-2 COMPILER enforces by rejecting duplicate slot authorship loud
+    % (ghost-seat pattern on time-slots). once/1 is defense-in-depth under that
+    % contract, not the primary semantics; without the contract it would absorb
+    % a data conflict silently in load order.
     findall((L, T),
             (config:level(L), member(T, [T0, Tn]),
              once(coercion_projection:coercion_vector(ID, L, T, _))),

@@ -4337,6 +4337,31 @@ construct over); arrives at the prompt-stage preregistration, flagged now so it'
 the tracks converge ONLY at the generation prompt, where both authoring surfaces live in one
 template — the prompt-stage drafter serves two masters.**
 
+**Stage-2 negative battery — RE-DERIVED, not transferred (operator, 2026-06-10: gain_flow's
+ghost was referential; the grid's ghosts are different in kind):**
+1. **Out-of-interval time points** — already a witnessed defect class (the stray-anchor [WARN]
+   under the injection regime); schema/compiler rejects times outside the declared interval.
+2. **Out-of-enum levels** — schema enum.
+3. **Duplicate slot authorship** — COMPILER REJECTS LOUD (ghost-seat pattern applied to
+   time-slots). The `once/1` slot-capping landed in build unit 1 is DEFENSE-IN-DEPTH under an
+   identical-by-contract premise, not primary semantics — first-solution-only via cut was the
+   defect this construct just buried, and first-solution-only via once/1 is sound ONLY while
+   the compiler enforces the contract (contract named at the call site,
+   `pattern_analysis.pl`). No constructed-duplicate positive control has run yet — queued as
+   one asserted-facts case in the stage-2 battery.
+4. **Partial grids — the no-gain_flow-analog case, and the fraction-threshold question
+   DISSOLVES on evidence (witnessed 2026-06-10):** a constructed 8/32 one-level grid yields
+   `G_sys=0.2160, completeness=0.25, pattern=increasing_coercion` — `system_gradient`'s
+   findall silently absorbs missing levels (one level's term presented as a system reading;
+   the success-shaped-absorption pattern one aggregation up), and the pattern verdict does not
+   gate on completeness at all. Arithmetic minima from the code: the 4-metric vector join is
+   already slot-atomic (3-of-4 metrics → no vector); one level at both endpoints (8/32) is the
+   minimum for a nonzero G_sys. Evidence-shaped design (CONFIRM at stage-2 prereg, one line):
+   no global fraction threshold — instead (a) G_sys carries its LEVEL-COVERAGE to the read
+   site, and (b) consumers require their named levels positively (the naturalization verdict
+   needs structural AND individual — its two needles — present, else OPEN). The probe's own
+   pre-registered values needed 32/32; nothing below full grids has witnessed semantics yet.
+
 **The class, witnessed.** The DR-AUDIT harness (`data_repair.pl:274-275`,
 `data_verification.pl:66-67`) enforces the archived prompt-era contract — 32 leveled grid points
 per interval, `{accessibility_collapse, stakes_inflation, suppression, resistance} ×
