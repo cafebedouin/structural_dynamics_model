@@ -3979,7 +3979,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
 
-**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested.
+**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut).
 
 **Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
 across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
@@ -4047,6 +4047,9 @@ role gets low `d`, so the cut degenerates into "C has a beneficiary-side-*role* 
 has a capturer." So `seat_captures/1` is **not constructible from current signals** — capture needs an
 authored gain-flow surface (**OQ-92 / GAP-10**). Steps 2–4 (piton refinement, `Supp ≤ 0.2` gate
 retirement) stay gated on OQ-92. Witness: `audits/2026-06-09_capture_axis_cut_control/`.
+[Amended 2026-06-10: step 2 = the both-fields eight-control prototype recorded in OQ-92's Rulings
+block — the cheap-fix control below discriminates only via the fixing_cost cut, so it is folded
+into that battery rather than run capture-only.]
 
 **Decisive pre-wiring control (the fixing_cost-is-load-bearing test).** Construct a
 **cheap-fix-not-yet-done** story: low-d `agenda_setter` + distributed high-d `payer`s + no computed
@@ -4058,7 +4061,9 @@ already-authored signal (e.g. persistence/`evolving` over a long measurement ser
 demonstrably separates the two may the proxy ship without the scalar. Also run: DMV-shaped set → piton;
 snare-shaped set (a seat captures) → NOT piton; then the cross-corpus sweep (pitons surface, snares
 don't leak in). **Until this control is run, "representable via the stakeholder layer" stays OPEN, not
-a finding.**
+a finding.** [Folded 2026-06-10 into the OQ-92 step-2 battery as control 5 (cheap_fix) with
+`fixing_cost_class` hand-authored — both piton and transient-neglect are uncaptured, so this control
+discriminates only if the prototype reads the fixing_cost field.]
 
 **Control results (2026-06-10) — falsification-grade, witnessed; correct the gate, hold the rebuild.**
 Ran a DMV-shaped vector (designed, enforced **Supp 0.5**, distributed extraction, no concentrated
@@ -4149,9 +4154,10 @@ ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axi
 **Ω-type:** Ω_C (design choice — whether to add an authored surface; the operator's ruling, not the
 engine's to settle).
 
-**Status:** open — discriminating control run (2026-06-09, Outcome 2 HALT); surface not built;
-operator ruling needed on (a) whether to add it and (b) whether one surface covers capture +
-fixing_cost.
+**Status:** open — rulings (a)/(b) RECORDED (operator 2026-06-10, Rulings block below); step-2
+prototype: `audits/2026-06-10_gain_flow_prototype/` (eight-control battery, BOTH fields); surface
+not built — step 3 (schema/prompt/compiler) gated on the prototype outcome and carries the
+diffuse-audit gate + malformed-gain schema rejection as preconditions.
 
 **Origin.** OQ-90 ruled the snare/piton split turns on *capture* (snare = a seat captures the
 extraction; piton = uncaptured) and that the no-capture test must be **computed, not authored-absence**
@@ -4177,7 +4183,9 @@ stated as a reading, not "unrepresentable across the whole range."
 fact recording who *receives* the extraction (not who is unharmed), consumed *positively* (capturer =
 gain authored to a seat), never by authored-absence. See GAP-10 (`docs/design/design_gaps.md`).
 
-**Proposed unification (design proposal, NOT asserted — operator to rule).** OQ-90's other open term,
+**Proposed unification (design proposal — SUPERSEDED 2026-06-10 by ruling (b) in the Rulings block
+below; kept in place per supersede-don't-delete: this paragraph's "distinct scalars" caution is what
+the ruling upholds).** OQ-90's other open term,
 `fixing_cost`/benefit-of-fixing (the piton's `extraction < fixing_cost` second term), is also a
 missing authored scalar in the receipt/accrual family. It is plausible that one authored-receipt
 surface answers both — "who does the extraction accrue to, and at what cost to whom" — unifying the
@@ -4185,10 +4193,53 @@ capture split and the fixing_cost question. But accrual-of-gain and cost-to-fix 
 scalars**; whether one surface covers both is a design ruling, and merging them owes a distinction-
 check first (build_discipline rule #2). Flagged here for the operator, not folded.
 
+**Rulings (operator 2026-06-10).**
+
+- **(a) YES — build the authored gain-flow surface, prototype-first** (the OQ-93 precedent:
+  hand-author the surface on control stories and run the discriminating battery BEFORE any
+  schema/prompt/compiler change). Ruling (a) is "yes to prototype-first" and stands regardless of
+  the prototype outcome; the outcome gates step 3, not the ruling.
+- **(b) ONE authoring surface, TWO distinct fields (gain-flow + fixing_cost) — never one scalar or
+  merged enum.** Justification (design grounds): (i) accrual-of-gain and cost-to-fix are
+  semantically independent axes authored about the same seats; (ii) the fourth cell — captured +
+  cheap fix — is live and the engine must be able to say so (witnessed by battery control 6, so
+  this justification cites no cell the battery never witnesses); (iii) a merged enum would weld
+  provenance to value, re-introducing exactly what the tri-valued design below unwelds. A rejected
+  draft justification is recorded here to prevent re-citation: "one scalar can't encode two
+  independent cuts" is FALSE as an information claim (a four-valued scalar encodes two bits; a
+  three-valued enum covers three cells) — it establishes only that one *binary* bit can't. The
+  design grounds, not the information argument, carry the ruling.
+- **Tri-valued provenance design (the R3/Pattern-5 reconciliation).** `gain_flow` is authored as:
+  gain-to-a-NAMED-seat (capturer; the named seat must exist in `stakeholders[]` — a checkable
+  witness) | explicit `diffuse` (the author affirmatively asserts no seat captures — piton
+  candidate) | ABSENT (surface not authored → fail-closed: no capture verdict, no piton refinement,
+  constraint stays FCR-subsumed). Trap named at ruling time: once the surface is authored, NAF over
+  "any seat has authored gain" is authored-absence in disguise — uncaptured must be authored
+  positively (`diffuse`), never inferred from a missing capturer entry.
+- **Malformed-gain default (DECIDED 2026-06-10, not left to be discovered).** `gain_flow` naming a
+  NONEXISTENT seat fails the capture read (no `role_of` join) and is not `diffuse`, so at runtime
+  it absorbs into the fail-closed register — a fourth condition collapsing into the third. Decided
+  as the runtime default (fail-closed is the safe absorption) and witnessed by battery control 8.
+  Step-3 validation item: the schema/compiler must REJECT a `gain_flow` value naming a seat not in
+  `stakeholders[]` at authoring time, so the runtime absorption never silently hides a data error.
+- **Step-3 gate (generated-diffuse audit), recorded now.** Authored-`diffuse` is an authored
+  universal negative with no checkable witness (gain-to-seat verifies against `stakeholders[]`;
+  diffuse verifies against nothing) and is the cheapest token for a generation model to emit
+  without checking the seats. Hand-authored prototypes cannot surface this risk — controls pass by
+  construction. GATE, not suggestion: before `gain_flow` drives classification on corpus data,
+  hand-audit a pre-stated-size sample of generated `diffuse` claims for obvious capturing seats,
+  with a pre-stated tolerance (size + tolerance pinned in the step-3 preregistration). OQ-70 is
+  the precedent for a one-shot example value becoming a template convention; prevalence statistics
+  on this field are authoring-convention until this audit passes.
+
 **What resolution would change.** With a gain-flow surface, the capture axis becomes computed
 (positively, Pattern-5-safe), OQ-90's piton refinement (Steps 2–4 of the plan) can be built on it
 rather than on the broken proxy, and the `Supp ≤ 0.2` piton gate can be superseded by capture. Until
-then OQ-90's piton stays subsumed under false_ci_rope (not refined on a broken proxy). Cross-refs:
+then OQ-90's piton stays subsumed under false_ci_rope (not refined on a broken proxy). Graduation:
+step-2 eight-control prototype (`audits/2026-06-10_gain_flow_prototype/`, preregistration committed
+before the run) → on pass, step 3 = schema field + compiler emission + prompt change (the OQ-83
+Phase-A playbook), with the diffuse-audit gate and the malformed-gain schema rejection as step-3
+preconditions before any classification wiring. Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.

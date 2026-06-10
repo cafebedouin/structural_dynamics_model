@@ -473,3 +473,13 @@ settled equivalence (see OQ-92; distinction-check owed before merging — build_
 distinguish snare from piton by capture; the `Supp ≤ 0.2` piton gate stays in place (OQ-90), and the
 piton type stays where OQ-90 left it (subsumed under false_ci_rope), not falsely refined on a broken
 proxy. No half-apparatus is left declared-but-unfed.
+
+**Ruling update (2026-06-10):** OQ-92 rulings recorded — (a) build the surface, prototype-first
+(OQ-93 precedent: hand-authored control stories before any schema/prompt change); (b) ONE authoring
+surface, TWO distinct fields (gain-flow + fixing_cost), never one scalar or merged enum — the
+distinction-check the paragraph above owed is DISCHARGED on design grounds (semantically independent
+axes; the captured+cheap-fix fourth cell is live; a merged enum would re-weld provenance to value).
+Tri-valued provenance design (authored-gain-to-named-seat / explicit-diffuse / absent-fails-closed),
+the malformed-gain runtime default, and the step-3 generated-diffuse audit gate: see OQ-92 Rulings
+block (single tracking surface). The gap closes when the surface lands; step-2 prototype:
+`audits/2026-06-10_gain_flow_prototype/`.
