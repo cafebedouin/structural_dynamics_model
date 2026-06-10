@@ -3287,6 +3287,28 @@ supplementary axis depends on the kernel, not on one reading's verdict); or inje
 substrate instead of a reading's claimed_type. Until then, supplementary axes in kernel manifests
 get a reading's claimed_type as upstream — witnessed mechanism, unvalidated quality.
 
+**Recon 2026-06-10 (`audits/2026-06-10_oq81_reading_upstream_recon/`, read-only — sharpens the
+resolution path, status unchanged):** (1) **No story in any corpus was ever generated with a
+reading's claimed_type injected** — pre-merge c-orch dropped readings (OQ-79), gkc `--scope` is
+wave-free (OQ-82; the kernel_v1 corpus came through it), post-merge live runs had zero reading
+edges (Zionism manifests carry none), and P4 was canned-response. The read-the-stories resolution
+has an EMPTY evidence base; resolving empirically requires a deliberate A/B generation (same
+supplementary axis: reading-claimed_type vs no-context vs kernel-substrate arms). (2) The
+reading-edge population is ARCHIVE-format: 106/263 archived manifests, 184 reading-edge axes
+(positive-controlled on the dutch/vatican examples; `outputs/kernel_manifests/`, gitignored —
+census pasted in the audit dir). The current primed-SCOPE format (22 phase-0 manifests) emits
+ZERO reading-typed edges; kernel supplementary axes instead name the KERNEL CONCEPT
+(`software_source_status_kernel`-style) in `downstream_of` — **21/21 such deps are dangling**
+(no generation_sequence entry matches → wave filter ignores them, `upstream_context` injects
+nothing, silently — Pattern-5 shape at the manifest→wave seam). 22-manifest observation, not a
+schema guarantee: the injection path stays reachable. (3) The current format thus already
+declares the dependency the fix-space proposes (kernel, not one reading's verdict); the backend
+just has no handler for kernel-typed deps. **Operator decision (escalated, not self-resolved):**
+(a) suppress reading-typed upstreams fail-closed; (b) inject kernel substrate for kernel-typed
+deps + suppress reading-typed (resolves both this OQ and the dangling-edge gap in one wiring);
+(c) run the 1-axis × 3-arm A/B first — the only option that answers the appropriateness question
+empirically as posed; cheapest falsifier. Detail + non-claims: the audit RECON.md.
+
 ## OQ-82 — gkc --scope entry point not yet routed through the unified backend (partial unification)
 
 **Ω-type:** Ω_P (cleanliness/one-path design) + Ω_E (the gkc-kernel wave change is witnessable).
