@@ -113,6 +113,22 @@ also Stage C regeneration.
   CONVENTION, not derivation: at K = 0, N only sets how confidently a clean audit reads.
 - **The "obvious capturing seat" criterion is written down BEFORE anyone reads the batch** — a
   zero-tolerance gate with an after-the-fact obviousness standard is a tolerance set by mood.
+  **CRITERION RULED (operator 2026-06-10, before any batch existed):** *a generated
+  `gain_flow: diffuse` claim FAILS the audit if the story artifact itself identifies a
+  capturing seat — concretely: any stakeholder whose described benefit is the constraint's
+  extraction product rather than incidental advantage, or any named actor the narrative
+  describes as accruing the constraint's gains. Decidable from the story artifact alone
+  (stakeholder facts + narrative text); no external research, no judgment calls about
+  real-world plausibility. If identifying the seat requires information outside the artifact,
+  the claim PASSES — that is the detectability limit the K=0 asymmetry argument already
+  priced.* The last sentence keeps "obvious" honest by definition rather than reviewer mood.
+- **Decoupling (operator 2026-06-10):** Stage C ships a gain_flow-only prompt change; the
+  OQ-93 leveled grid arrives as a SECOND prompt revision when that track reaches its prompt
+  stage — one extra prompt-change cycle traded for OQ-92 closure now. Discovered precondition
+  folded in: the live prompt carried NO stakeholders[] guidance (it lived only in the pilot
+  variant), so Stage C promotes the stakeholder + six-questions sections into the live prompt
+  ADDITIVELY (perspectives + beneficiaries/victims arrays stay — OQ-83's four-tuple control
+  arm untouched, R4 intact).
 - **Findings language: "0/N observed" with N stated — never "clean."**
 
 ## Q2 — operator ruling: the benignity-certification family (three rows, split ruling permitted)

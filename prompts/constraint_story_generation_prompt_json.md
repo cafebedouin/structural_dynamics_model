@@ -166,6 +166,9 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 | `network` | Structural influence edges, dual formulation notes | Optional |
 | `directionality_overrides` | Per-agent directionality corrections | Optional |
 | `uke_scope` | UKE_SCOPE manifest provenance (informational) | Optional |
+| `stakeholders` | Named agents with declared roles (see Stakeholders section below) | Strongly encouraged |
+| `six_questions` | Story-level answers: coordination, transfer, absent voices, disappearance, founding problem | Strongly encouraged alongside stakeholders |
+| `gain_flow`, `fixing_cost` | The receipt surface: who receives the extraction; cost class of fixing (see Receipt Surface section below) | Optional; only with stakeholders |
 
 **Structural rules enforced by the schema** (these require DATA, not metric values):
 
@@ -555,6 +558,68 @@ For cases where the automatic derivation (beneficiary/victim + exit → d) would
 
 * When the derivation chain already produces the right d from beneficiary/victim + exit. Most constraints don't need overrides.
 * As a substitute for declaring beneficiary/victim. Always declare structural data first; override only if the derived d is wrong.
+
+---
+
+## Stakeholders, Six Questions, and the Receipt Surface (additive layer)
+
+These sections are authored IN ADDITION to `perspectives` and the `beneficiaries`/`victims`
+arrays — do not drop or replace those. The stakeholder layer names the agents; the receipt
+surface records where the gains actually go.
+
+### Stakeholders
+
+List every agent whose situation the constraint shapes. For each, author an object:
+
+| Field | Meaning |
+|---|---|
+| `name` | snake_case, domain-specific, identifies a real actor (`low_income_borrowers`, not `affected_parties`) |
+| `role` | one of: `agenda_setter` (sets/administers/enforces), `beneficiary` (collects something without running it), `payer` (bears the costs), `excluded` (would have something to say but is not in the conversation), `observer` (analytical seat) |
+| `secondary_role` | optional second role, only for a genuinely dual-positioned agent |
+| `agent` | `true` (default) for real actors; `false` for a non-actor entity (a doctrine, an abstract good) listed for completeness |
+| `power` | `powerless`, `moderate`, `powerful`, `organized`, `institutional`, or `analytical` |
+| `time_horizon` | `immediate`, `biographical`, `generational`, or `civilizational` |
+| `exit_options` | `trapped`, `identity_locked`, `constrained`, `mobile`, `arbitrage`, or `analytical` |
+| `spatial_scope` | `local`, `regional`, `national`, `continental`, `global`, or `universal` |
+| `situation` | plain-language: what this agent does, what flows to or from them, what exit looks like from where they stand. Describe; do not classify. |
+
+Author the agents the scenario actually contains, at the power levels they actually hold; do
+not add or omit agents to make the set look any particular way.
+
+### Six Questions (story-level)
+
+`coordination_function` — the real coordination problem solved (if any), stated without
+evaluation. `transfer_function` — what the arrangement moves, from whom to whom.
+`absent_voices` — who would object if present, and where are they (pairs with `excluded`
+stakeholders). `disappearance_verdict` — if it vanished overnight: `world_rearranges`,
+`world_unchanged`, or `contested`; plus `disappearance_rationale`. `founding_problem` — what
+it was built to solve; `founding_problem_status` — `live`, `dead`, or `contested`;
+`founding_problem_corroboration` — who attests it from OUTSIDE the benefiting parties, or
+state plainly that no one does. If `stakeholders` is authored empty, `disappearance_verdict`
+must be `world_unchanged`.
+
+### Receipt Surface (gain_flow, fixing_cost)
+
+Two optional top-level fields, authorable only when `stakeholders` is authored. They record
+**where the gains actually go and what fixing would cost** — facts about the situation, not
+classifications.
+
+- `gain_flow` — who RECEIVES the constraint's extraction. Either the `name` of exactly one
+  stakeholder (the seat the gains demonstrably accrue to), or the literal string `"diffuse"`.
+  **Receipt is not benefit**: a stakeholder may hold `role: beneficiary` (collects something,
+  is unharmed, benefits incidentally) without being the seat the extraction accrues to — name
+  a seat here only when the story establishes the gains land there. **`"diffuse"` is an
+  affirmative claim, not a default**: it asserts you checked every named seat and none
+  captures the gains. Before writing it, re-read your own stakeholder situations — if any of
+  them describes an agent accruing the constraint's gains, that seat is the `gain_flow`, not
+  `"diffuse"`. **Omit the field entirely when the story does not establish where gains go** —
+  omission and `"diffuse"` are different facts (not-authored vs authored-no-capturer).
+- `fixing_cost` — `"cheap"` or `"prohibitive"`: the cost class of fixing/removing the
+  constraint for whoever could fix it, relative to the benefit of fixing. Independent of
+  `gain_flow`; author each on its own evidence. Omit when not established.
+
+There is no example value for these fields anywhere in this prompt, deliberately: author them
+from the story, not from a template.
 
 ---
 
