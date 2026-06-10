@@ -1,7 +1,16 @@
 # Pre-registration — OQ-92 step 3: the authored gain-flow surface (schema + compiler + prompt)
 
-**Status: DRAFT — awaiting two operator rulings (Q1, Q2 below). Build does not start until both
-are answered; everything else here is evidence-settled or derived.** Drafted 2026-06-10.
+**Status: RULED 2026-06-10 (operator) — stages A–C UNBLOCKED.** Q2 ruled per-row (sequenced
+before Q1 at operator direction, since a yes on Q2 prices Q1's tolerance): **row 1 GATE, row 3
+GATE riding with row 1, row 2 deferred pending the reachability control**
+(`audits/2026-06-10_oq94_row2_cirope_reachability/` — the last pre-build item; its ruling gates
+only its own Stage-D clause). **Q1: K = 0 on the observable; halt scope = Stage D only, never
+regeneration; N = every diffuse claim if the batch is small, else N ≥ 30 (labeled convention);
+the "obvious capturing seat" criterion is WRITTEN BEFORE anyone reads the batch; findings report
+"0/N observed" with N stated, never "clean."** Rationale recorded at the questions below.
+Operator context note: regeneration exists to establish that the changes work — this corpus is
+small because it is being used to fix exactly these problems, and will be archived.
+Drafted 2026-06-10; ruled same day.
 
 Step 3 builds, for the first time, the authored surface the step-2 prototype validated
 (`audits/2026-06-10_gain_flow_prototype/`, Outcome 1 PASS 8/8): per-constraint `gain_flow`
@@ -89,6 +98,23 @@ claims against their own story text, not rates.
 with an obvious capturing seat before HALT), and whether a failed audit halts Stage D only or
 also Stage C regeneration.
 
+**RULED (operator 2026-06-10):**
+- **K = 0 on the observable.** The deciding asymmetry: the audit detects OBVIOUS capturing seats
+  — a detectability-limited probe — so the true false-diffuse rate ≥ the observed rate by an
+  unknown multiple. Any K > 0 on the observable implicitly accepts K × that multiple of
+  unobservables feeding a benignity certification Q2 just gated. Zero on the observable is the
+  only floor that does not smuggle in the multiplier.
+- **Halt scope: Stage D (classification wiring) only — NEVER regeneration.** Regeneration is the
+  repair path: a failed audit means iterate the prompt (the OQ-70 lever) and re-audit the next
+  batch; halting regeneration would freeze the only mechanism that fixes the failure the audit
+  detected. (Operator: the corpus is small because it is being used to fix these problems, and
+  will be archived — regeneration is how changes are established to work.)
+- **N: every diffuse claim in the first batch if small; else N ≥ 30** — the 30 floor is labeled
+  CONVENTION, not derivation: at K = 0, N only sets how confidently a clean audit reads.
+- **The "obvious capturing seat" criterion is written down BEFORE anyone reads the batch** — a
+  zero-tolerance gate with an after-the-fact obviousness standard is a tolerance set by mood.
+- **Findings language: "0/N observed" with N stated — never "clean."**
+
 ## Q2 — operator ruling: the benignity-certification family (three rows, split ruling permitted)
 
 The OQ-94 rule sorted every other live site; these three ask "is this benign coordination?" —
@@ -106,6 +132,21 @@ ruling says so.
 first, then rule). A "gate" ruling on any row is implemented in Stage D only, with the per-site
 diff and a control showing a captured constraint no longer certifies there AND an uncaptured one
 still does (two-sided, per the verification discipline).
+
+**RULED (operator 2026-06-10):**
+- **Row 1 — GATE.** Misfire witnessed, two-sided control pinned, maxent mirror same-commit.
+  Semantic check resolved at ruling time: the P≠NP precedent (incidental beneficiary-role facts
+  misclassifying) does NOT apply — this gate reads authored `gain_flow` capture, not beneficiary
+  presence, and receives-extraction is precisely the cleaner signal that special-case existed to
+  approximate. A constraint whose gains demonstrably accrue to a seat must not certify as benign
+  scaffold; if it genuinely coordinates, tangled_rope is the cell that says so.
+- **Row 2 — DEFERRED pending the reachability control** (reachability asserted from clause order
+  is an intent-label; this thread contains the precedent for ruling on one; the control converts
+  the row to row 1's evidentiary shape). Ruling it on consistency-with-row-1 would be deciding
+  from what hasn't been read. Gates only its own Stage-D clause.
+- **Row 3 — GATE, riding with row 1.** Same question, same signal, commentary-grade misfire cost
+  in both directions; consistency with row 1 is worth more than what waiting buys; not left as a
+  dangling third state.
 
 ---
 

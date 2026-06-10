@@ -4239,8 +4239,15 @@ rule-application over the pass's output. **Step-3 preregistration DRAFTED
 questions — Q1 diffuse-audit sample/tolerance, Q2 the benignity-certification family as three
 evidenced rows (split ruling permitted) — plus the settled preconditions: schema rejection,
 fabrication ban (gain_flow never synthesized; `data_repair.pl` the named door), maxent
-congruence, and the diffuse gate before any classification wiring. Build starts when Q1/Q2 are
-answered.** Cross-refs:
+congruence, and the diffuse gate before any classification wiring. RULED 2026-06-10 (operator,
+Q2 sequenced before Q1): Q2 row 1 GATE (P≠NP check dissolved — the gate reads authored
+gain_flow, not beneficiary presence), row 3 GATE riding with row 1, row 2 DEFERRED pending the
+CI_Rope reachability control (last pre-build item; gates only its own Stage-D clause); Q1: K=0
+on the observable (detectability-limited probe — observed rate lower-bounds true rate by an
+unknown multiple), halt = Stage D only never regeneration (regeneration IS the repair path),
+N = whole-batch-if-small else ≥ 30 (labeled convention), obviousness criterion written BEFORE
+reading the batch, findings say "0/N observed" never "clean". STAGES A–C UNBLOCKED.**
+Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
