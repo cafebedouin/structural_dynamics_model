@@ -3300,6 +3300,17 @@ backend.
 witnessed. gkc `--scope` was never broken (flatctl_probe/stage1_probe used it successfully). This
 step is cleanliness + an enhancement on a working path, which deserves a focused witnessed pass.
 
+**Priority raised by the OQ-81 merge (operator, 2026-06-10):** the OQ-81 suppression of
+reading-typed wave-upstreams lives in the unified backend (`_flat_seeds_from_manifest`), which
+makes the unified backend the place where INJECTION POLICY lives — and gkc `--scope` is now the
+only generation route not through it, i.e. the only route the suppression predicate does not
+govern. Its wave-free design probably never injected verdicts, but "probably never" is a
+code-read away from "confirmed never"; the rewire closes the cleanliness goal AND the last
+injection-governance gap in one move. One ungoverned path is worth more than its size — take
+this next over other open items. (The serial escape hatch in c-orchestrator got the predicate
+directly, code-read-synced; the Streamlit-era app orchestrators remain out of scope and could
+re-inject if resurrected — the suppression lives in the backend, not the corpus.)
+
 ---
 
 ## OQ-83 — Stakeholder-layer migration: replace the four-tuple authoring surface via the five/six-questions interview (the engine's first framing-perturbation)
