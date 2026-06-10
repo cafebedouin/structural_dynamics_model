@@ -3309,6 +3309,27 @@ deps + suppress reading-typed (resolves both this OQ and the dangling-edge gap i
 (c) run the 1-axis × 3-arm A/B first — the only option that answers the appropriateness question
 empirically as posed; cheapest falsifier. Detail + non-claims: the audit RECON.md.
 
+**A/B executed 2026-06-10 (option (c), operator-directed; pre-registered plan + results in the
+audit dir: `AB_PLAN.md`, `AB_RESULTS.md`, raw runs in `ab_runs/`).** Subject: the OQ-cited
+`infrastructure_trust_paradox` ← `husk_reading` (injected verdict tangled_rope, deliberately ≠
+the axis hypothesis snare); 3 arms (no-context / reading-verdict / kernel-substrate) × 3 reps,
+exact `_step_generate` params. Outcome falls BETWEEN the pre-registered grades: (1) PRIMARY
+INERT — authored claimed_type = snare in 9/9, zero verdict import; (2) SECONDARY SHIFT —
+the three-line verdict block moved authored **theater_ratio** from 0.690 [0.68..0.71] (N) to
+0.513 [0.48..0.58] (R) with ZERO range overlap, K = 0.680 [0.68..0.68] ≈ N; the shift is
+authored reasoning (R reps explicitly hedge theater, consistent with the injected tangled_rope
+profile), and theater_ratio is a classification input. (3) **Discovered fact that collapses the
+fix-space:** `axis_source_desc` already injects the full verdict-free kernel CSR (both readings)
+into EVERY supplementary-axis prompt — option (b)'s kernel substrate is already structurally in
+effect (explains K ≈ N), so the decision reduces to one bit: keep or suppress the reading-verdict
+injection. Frame-leakage metric INVALID (confounded by the CSR line — recorded as a metric
+failure, no conclusion). Caveats: n=3, one axis/kernel/verdict, temp 0.2, direct-API transport.
+**Evidence-supported recommendation: suppress reading-typed upstream injection ((a)≡(b) given
+the CSR fact) — the verdict line adds no context the author lacks and perturbs an authored
+metric toward one contested reading's verdict. Ruling + the suppression wire-up remain with the
+operator; until ruled, the unified backend still injects reading verdicts on archive-format
+manifests.**
+
 ## OQ-82 — gkc --scope entry point not yet routed through the unified backend (partial unification)
 
 **Ω-type:** Ω_P (cleanliness/one-path design) + Ω_E (the gkc-kernel wave change is witnessable).

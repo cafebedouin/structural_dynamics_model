@@ -1,0 +1,403 @@
+{
+ "header": {
+  "constraint_id": "infrastructure_trust_paradox",
+  "version": "1.0",
+  "generated_date": "2025-01-09",
+  "status": "ACTIVE",
+  "measurement_id_prefix": "infra_trust"
+ },
+ "base_properties": {
+  "extractiveness": 0.58,
+  "suppression": 0.62,
+  "theater_ratio": 0.48,
+  "accessibility_collapse": 0.35,
+  "resistance": 0.42,
+  "claimed_type": "snare",
+  "human_readable": "Infrastructure Trust Paradox in Dutch Flood Preparedness",
+  "topic_domain": "disaster_preparedness/institutional_memory/water_management",
+  "requires_active_enforcement": true,
+  "emerges_naturally": false,
+  "has_sunset_clause": false,
+  "beneficiaries": [
+   "institutional_legitimacy",
+   "water_management_bureaucracy"
+  ],
+  "victims": [
+   "public_preparedness",
+   "active_response_capacity",
+   "generational_knowledge_transmission"
+  ],
+  "mandatrophy_resolved": false
+ },
+ "perspectives": [
+  {
+   "classification_type": "snare",
+   "agent_power": "powerless",
+   "time_horizon": "immediate",
+   "exit_options": "trapped",
+   "spatial_scope": "regional",
+   "label": "The Unprepared Resident",
+   "comment": "PERSPECTIVE 1: UNPREPARED RESIDENT (SNARE) — Trapped by infrastructure trust. Cannot exit the flood zone; relies on institutional assurances that Delta Works provide complete protection. Experiences maximum extraction: trust in infrastructure substitutes for personal preparedness, leaving them vulnerable when infrastructure fails or warnings require active response. No agency to verify institutional claims or develop independent preparedness."
+  },
+  {
+   "classification_type": "tangled_rope",
+   "agent_power": "moderate",
+   "time_horizon": "biographical",
+   "exit_options": "constrained",
+   "spatial_scope": "national",
+   "label": "The Emergency Response Planner",
+   "comment": "PERSPECTIVE 2: EMERGENCY RESPONSE PLANNER (TANGLED ROPE) — Constrained by institutional mandate to maintain preparedness while infrastructure trust undermines drill participation and warning compliance. Benefits from coordination function (drills do transmit some knowledge, evacuation plans do exist) but also bears extraction (public complacency makes their job harder, institutional theater substitutes for real capacity building). Mixed experience: the system both enables and constrains their work."
+  },
+  {
+   "classification_type": "rope",
+   "agent_power": "institutional",
+   "time_horizon": "immediate",
+   "exit_options": "arbitrage",
+   "spatial_scope": "national",
+   "label": "The Water Management Bureaucracy",
+   "comment": "PERSPECTIVE 3: WATER MANAGEMENT BUREAUCRACY (ROPE) — Primary beneficiary. Infrastructure trust validates institutional legitimacy and justifies continued funding without requiring demonstration of actual preparedness capacity. Experiences the constraint as coordination: public trust enables efficient resource allocation and reduces political friction. Can exit to alternative legitimacy narratives if trust erodes. Net beneficiary of the trust dynamic."
+  },
+  {
+   "classification_type": "scaffold",
+   "agent_power": "organized",
+   "time_horizon": "generational",
+   "exit_options": "mobile",
+   "spatial_scope": "national",
+   "label": "The Preparedness Reform Coalition",
+   "comment": "PERSPECTIVE 4: PREPAREDNESS REFORM COALITION (SCAFFOLD) — Organized actors (IHE Delft knowledge transfer programs, community resilience initiatives, participatory flood risk mapping projects) see infrastructure trust as a temporary coordination failure with a potential sunset: active preparedness education, experiential learning programs, and distributed monitoring systems are building alternative pathways that restore active knowledge alongside infrastructure. The coalition has agency and sees an exit path through educational reform and community engagement."
+  },
+  {
+   "classification_type": "piton",
+   "agent_power": "institutional",
+   "time_horizon": "civilizational",
+   "exit_options": "constrained",
+   "spatial_scope": "regional",
+   "label": "The Memorial Ritual System",
+   "comment": "PERSPECTIVE 5: MEMORIAL RITUAL SYSTEM (PITON) — Annual 1953 flood commemorations and evacuation drills have become largely performative. The rituals persist through institutional inertia but their original function (maintaining lived knowledge of flood risk) has atrophied. Participants go through motions without internalizing preparedness knowledge. The system sees its own process as degraded: maintained because alternatives haven't replaced it, not because it transmits real capacity."
+  },
+  {
+   "classification_type": "tangled_rope",
+   "agent_power": "analytical",
+   "time_horizon": "civilizational",
+   "exit_options": "analytical",
+   "spatial_scope": "global",
+   "label": "The Analytical Observer",
+   "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, infrastructure trust creates genuine coordination (public confidence enables large-scale infrastructure investment and reduces panic) but also asymmetric extraction (institutional legitimacy is maintained while actual preparedness capacity atrophies). The constraint coordinates infrastructure funding while extracting from generational knowledge transmission. Both functions are real and structural."
+  }
+ ],
+ "omegas": [
+  {
+   "id": "infrastructure_failure_probability",
+   "question": "What is the actual probability of Delta Works failure or exceedance in a 50-year timeframe, and how does this compare to public perception?",
+   "resolution_mechanism": "Engineering risk assessment of Delta Works under climate change scenarios; public survey data on perceived flood risk; comparison of technical vs perceived failure probability",
+   "impact": "If actual risk is substantially higher than perceived: trust is misplaced and extraction is severe. If actual risk matches low public perception: trust may be justified and extraction is lower than claimed.",
+   "confidence": "medium",
+   "type_class": "empirical",
+   "description": "Gap between actual and perceived infrastructure failure risk"
+  },
+  {
+   "id": "preparedness_substitution_mechanism",
+   "question": "Does infrastructure trust causally reduce active preparedness, or are both independently declining due to generational distance from 1953?",
+   "resolution_mechanism": "Longitudinal analysis comparing preparedness decline rates in high-infrastructure-trust vs low-infrastructure-trust flood-prone regions; controlled studies of preparedness messaging with and without infrastructure emphasis",
+   "impact": "If causal: infrastructure trust is the extraction mechanism (snare confirmed). If independent decline: the constraint is generational memory loss, not infrastructure trust (reclassify toward mountain or different snare).",
+   "confidence": "high",
+   "type_class": "empirical",
+   "description": "Causal relationship between infrastructure trust and preparedness decline"
+  },
+  {
+   "id": "drill_effectiveness_threshold",
+   "question": "At what participation rate and frequency do evacuation drills maintain real response capacity vs become pure theater?",
+   "resolution_mechanism": "Comparative analysis of drill participation rates and actual evacuation performance in real events; identification of threshold below which drills lose functional value",
+   "impact": "If current Dutch drill participation is above threshold: some real capacity is maintained (tangled rope from more perspectives). If below threshold: drills are pure theater (piton from more perspectives, higher theater_ratio).",
+   "confidence": "medium",
+   "type_class": "empirical",
+   "description": "Threshold for drill effectiveness vs theater"
+  },
+  {
+   "id": "institutional_legitimacy_dependency",
+   "question": "Does water management bureaucracy legitimacy depend on maintaining public trust in infrastructure, creating incentive to suppress preparedness messaging that might undermine that trust?",
+   "resolution_mechanism": "Analysis of institutional communication strategies; comparison of preparedness messaging in high-trust vs low-trust periods; identification of suppressed or downplayed risk communications",
+   "impact": "If legitimacy depends on trust maintenance: institutional beneficiary has active incentive to extract from preparedness (snare mechanism confirmed). If legitimacy is independent: extraction may be unintentional side effect (lower suppression score).",
+   "confidence": "high",
+   "type_class": "empirical",
+   "description": "Institutional incentive structure around trust maintenance"
+  },
+  {
+   "id": "cs_framing_underdetermination",
+   "question": "Is the preparedness_retention kernel best framed as 'institutional continuity' (husk reading) vs 'active knowledge' (competence reading), or is there a third framing around 'infrastructure as knowledge embodiment' that neither reading captures?",
+   "resolution_mechanism": "Conceptual analysis of what 'preparedness' means in a high-infrastructure context; examination of whether physical infrastructure itself constitutes a form of distributed knowledge that neither reading acknowledges",
+   "impact": "If third framing exists: both readings may be incomplete, and the kernel itself may need reframing. Current classification assumes husk vs competence exhausts the space.",
+   "confidence": "medium",
+   "type_class": "conceptual",
+   "description": "Completeness of the two-reading framing of preparedness retention"
+  }
+ ],
+ "measurements": [
+  {
+   "metric": "theater_ratio",
+   "time_point": 0,
+   "value": 0.25,
+   "id_override": "theater_1953"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 10,
+   "value": 0.32,
+   "id_override": "theater_1963"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 20,
+   "value": 0.38,
+   "id_override": "theater_1973"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 30,
+   "value": 0.42,
+   "id_override": "theater_1983"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 40,
+   "value": 0.45,
+   "id_override": "theater_1993"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 50,
+   "value": 0.47,
+   "id_override": "theater_2003"
+  },
+  {
+   "metric": "theater_ratio",
+   "time_point": 60,
+   "value": 0.48,
+   "id_override": "theater_2013"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 0,
+   "value": 0.15,
+   "id_override": "extract_1953"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 10,
+   "value": 0.22,
+   "id_override": "extract_1963"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 20,
+   "value": 0.31,
+   "id_override": "extract_1973"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 30,
+   "value": 0.39,
+   "id_override": "extract_1983"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 40,
+   "value": 0.47,
+   "id_override": "extract_1993"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 50,
+   "value": 0.53,
+   "id_override": "extract_2003"
+  },
+  {
+   "metric": "base_extractiveness",
+   "time_point": 60,
+   "value": 0.58,
+   "id_override": "extract_2013"
+  },
+  {
+   "metric": "suppression_requirement",
+   "time_point": 0,
+   "value": 0.3,
+   "id_override": "suppress_1953"
+  },
+  {
+   "metric": "suppression_requirement",
+   "time_point": 20,
+   "value": 0.45,
+   "id_override": "suppress_1973"
+  },
+  {
+   "metric": "suppression_requirement",
+   "time_point": 40,
+   "value": 0.58,
+   "id_override": "suppress_1993"
+  },
+  {
+   "metric": "suppression_requirement",
+   "time_point": 60,
+   "value": 0.62,
+   "id_override": "suppress_2013"
+  }
+ ],
+ "interval": {
+  "start": 0,
+  "end": 60
+ },
+ "commentary": {
+  "narrative_context": "The infrastructure trust paradox emerges from the success of the Dutch Delta Works: comprehensive flood protection infrastructure built after the catastrophic 1953 North Sea flood. As infrastructure trust increased over generations, active preparedness behaviors declined. Residents who once maintained evacuation plans, participated in drills, and monitored water levels now rely entirely on institutional assurances. The constraint creates a structural tension: infrastructure legitimacy depends on public trust, but that trust substitutes for the active preparedness that would be needed if infrastructure failed. This is one reading of the preparedness_retention kernel — the husk reading, where institutional continuity (physical infrastructure, bureaucratic procedures, memorial rituals) is treated as equivalent to preparedness itself, while actual response capacity atrophies. The competence reading (separate constraint story) holds that preparedness requires continuous active exercise, not just institutional memory.",
+  "key_agents": [
+   "Unprepared Resident: Primary victim (powerless/trapped) — infrastructure trust substitutes for personal preparedness; no agency to verify institutional claims or develop independent capacity",
+   "Public Preparedness: Abstract victim (powerless/trapped) — collective capacity that cannot organize or exit; bears full cost of trust-induced complacency",
+   "Active Response Capacity: Abstract victim (powerless/trapped) — generational knowledge transmission interrupted by infrastructure trust",
+   "Emergency Response Planner: Mixed position (moderate/constrained) — benefits from coordination function but extraction makes job harder; public complacency undermines drill effectiveness",
+   "Water Management Bureaucracy: Primary beneficiary (institutional/arbitrage) — infrastructure trust validates legitimacy and justifies funding without requiring demonstration of actual capacity",
+   "Institutional Legitimacy: Abstract beneficiary (institutional/arbitrage) — trust dynamic maintains authority without performance verification",
+   "Preparedness Reform Coalition: Organized agents (organized/mobile) — IHE Delft programs, community resilience initiatives building alternative pathways with sunset logic",
+   "Memorial Ritual System: Institutional actor (institutional/constrained) — annual commemorations and drills have become performative; sees own process as degraded (piton perspective)",
+   "Analytical Observer: Civilizational view (analytical/analytical) — sees both genuine coordination (infrastructure investment) and asymmetric extraction (capacity atrophy)"
+  ],
+  "logic_rationale": "Extractiveness (0.58): Moderate-high. Infrastructure trust extracts from public preparedness capacity: residents who would otherwise maintain evacuation plans, emergency supplies, and flood risk awareness instead rely entirely on institutional assurances. The extraction is substantial because the substitution is nearly complete in high-trust regions, but not maximal because some preparedness capacity persists through institutional channels (emergency services, water boards). The value reflects that trust-induced complacency is a real extraction mechanism, not merely a coordination cost. Suppression (0.62): Moderate-high. Significant barriers to independent preparedness include institutional messaging that emphasizes infrastructure reliability, social norms that treat preparedness as unnecessary or paranoid, resource allocation that prioritizes infrastructure over education, and generational distance from lived flood experience. Suppression has increased over the interval as infrastructure trust deepened and 1953 memory faded. But suppression is not total: some residents do maintain preparedness, reform coalitions do exist, and alternative narratives are possible. Theater ratio (0.48): Moderate. Memorial rituals and evacuation drills have substantial performative content: participants go through motions without internalizing preparedness knowledge, and rituals serve legitimacy maintenance more than capacity building. But theater is not dominant: some drills do transmit real knowledge, some commemorations do maintain risk awareness, and emergency response infrastructure does have real function. The value reflects a system in transition from functional to performative. Accessibility collapse (0.35): Low-moderate. Alternatives to infrastructure trust are not completely collapsed: residents could develop independent preparedness, reform coalitions are building alternative pathways, and the competence reading offers a different framing. But alternatives are substantially harder to access than the default trust narrative. Resistance (0.42): Moderate. The constraint meets real resistance from preparedness advocates, emergency planners frustrated by public complacency, and reform coalitions pushing active knowledge transmission. But resistance is not organized into a coherent opposition movement.",
+  "directionality_logic": "The unprepared resident is a victim with trapped exit options, producing high directionality toward full target (d → 1.0). They cannot exit the flood zone, cannot verify institutional claims, and have no agency to develop independent preparedness against the institutional narrative. The emergency response planner is in a mixed position: victim of public complacity (their job is harder) but also beneficiary of coordination function (drills and plans do exist). Constrained exit options and mixed structural relationship produce moderate directionality. The water management bureaucracy is a primary beneficiary with arbitrage exit options: they collect legitimacy and funding from infrastructure trust and can shift to alternative legitimacy narratives if trust erodes. Beneficiary status with arbitrage exit produces low directionality toward beneficiary end (d → 0.0), resulting in negative or near-zero effective extraction (they experience the constraint as pure coordination). The preparedness reform coalition has organized power and mobile exit options: they can build alternative pathways and are not structurally locked into the trust dynamic. Their directionality is moderate because they bear some costs (institutional resistance, resource constraints) but also see an exit path. The memorial ritual system has institutional power but constrained exit: they are locked into performative rituals by institutional inertia. Their directionality reflects that they experience their own degraded function but cannot easily exit. The analytical observer has analytical power and exit, producing the lowest directionality: they see the full structure without being trapped in any position.",
+  "perspectival_gap": "This constraint demonstrates how the same structural phenomenon — infrastructure trust substituting for active preparedness — appears differently from each position. The unprepared resident sees pure extraction (Snare): trust leaves them vulnerable with no agency to change their situation. The emergency response planner sees mixed coordination and extraction (Tangled Rope): the system both enables their work (coordination infrastructure exists) and constrains it (public complacency undermines effectiveness). The water management bureaucracy sees pure coordination (Rope): trust enables efficient resource allocation and validates their legitimacy. The preparedness reform coalition sees a temporary problem with a sunset (Scaffold): active knowledge transmission programs are building alternative pathways. The memorial ritual system sees its own degraded function (Piton): commemorations persist through inertia, not because they work. The analytical observer sees the full hybrid structure (Tangled Rope): genuine coordination of infrastructure investment alongside asymmetric extraction from preparedness capacity. The perspectival gap reveals that 'infrastructure trust' is not a single phenomenon but a structural relationship that different agents experience in fundamentally different ways.",
+  "mandatrophy_analysis": "The infrastructure trust paradox resolves the mandatrophy by showing that the constraint is neither pure coordination nor pure extraction, but a hybrid that appears differently from different structural positions. The water management bureaucracy genuinely coordinates infrastructure investment and flood protection — that coordination function is real. But the same trust dynamic extracts from public preparedness capacity, leaving residents vulnerable if infrastructure fails. The constraint is a tangled rope from the analytical perspective: both functions coexist in the same structure. The snare classification from the powerless perspective is also legitimate: residents trapped in the flood zone with no agency to verify institutional claims experience pure extraction. The rope classification from the institutional perspective is their genuine experience: they are solving a real coordination problem. The scaffold classification from the organized reform coalition is a real structural feature: alternative pathways with sunset logic are being built. The piton classification from the memorial ritual system is a real observation: commemorations have become performative. No single type is 'the' answer — the presheaf over the observation site IS the answer. The mandatrophy is resolved by recognizing that all classifications are perspectivally valid readings of the same structural data.",
+  "kernel_context": "This constraint is the husk_reading of the preparedness_retention kernel. The kernel is the shared post-1953 commitment that flood preparedness must be maintained across generations ('never again'). The husk reading holds that preparedness IS institutional continuity: physical infrastructure (Delta Works), bureaucratic procedures (water boards, Rijkswaterstaat), and memorial rituals (annual commemorations) constitute preparedness. The competence reading (sibling constraint story) holds that preparedness requires continuous active exercise: drills must test real capacity, knowledge must be transmitted through practice, and competence must be demonstrated, not just documented. The two readings foreclose each other within any single framework: either institutional continuity proves preparedness (husk), or preparedness requires active demonstration separate from institutional structure (competence). The husk reading's authority is grounded in extraction: the water management bureaucracy's legitimacy depends on the claim that infrastructure continuity equals preparedness. The competence reading's authority is grounded in expertise: demonstrated capability in drills and measurable knowledge transfer. This constraint instantiates the husk reading's structural delta: preparedness becomes institutional performance, drills become memorial acts, knowledge atrophies while structures persist, and the beneficiary is institutional legitimacy while the victim is actual response capacity."
+ },
+ "boltzmann": {
+  "coordination_type": "identity_coordination"
+ },
+ "network": {
+  "affects_constraints": [],
+  "dual_formulation_note": "This constraint is one reading (husk_reading) of the preparedness_retention kernel. The sibling reading (competence_reading, separate constraint story) holds that preparedness requires continuous active exercise rather than institutional continuity. The two readings have different beneficiary structures: husk benefits institutional legitimacy at the cost of actual capacity; competence benefits actual capacity at the cost of institutional efficiency (drills are costly). Both readings are structurally valid perspectives on the same kernel, and they foreclose each other within any single commitment framework."
+ },
+ "directionality_overrides": [],
+ "stakeholders": [
+  {
+   "name": "unprepared_resident",
+   "role": "payer",
+   "power": "powerless",
+   "time_horizon": "immediate",
+   "exit_options": "trapped",
+   "spatial_scope": "regional",
+   "situation": "Lives in flood-prone region below sea level. Relies entirely on institutional assurances that Delta Works provide complete protection. Has no evacuation plan, no emergency supplies, no knowledge of flood risk or warning systems. Cannot verify institutional claims about infrastructure reliability. Cannot exit the flood zone due to economic constraints (housing, employment). If infrastructure fails or warnings require active response, has no capacity to act. Trust in infrastructure has completely substituted for personal preparedness."
+  },
+  {
+   "name": "emergency_response_planner",
+   "role": "payer",
+   "secondary_role": "beneficiary",
+   "power": "moderate",
+   "time_horizon": "biographical",
+   "exit_options": "constrained",
+   "spatial_scope": "national",
+   "situation": "Works for regional water board or emergency management agency. Responsible for maintaining evacuation plans, conducting drills, and coordinating flood response. Benefits from coordination infrastructure: plans exist, communication systems are in place, institutional support is available. But public complacency makes the job harder: drill participation is low, warning compliance is poor, residents don't maintain preparedness. Faces institutional pressure to emphasize infrastructure reliability (to maintain public trust) while also trying to build active preparedness capacity. Constrained by resource limits and career risk: pushing too hard on preparedness messaging might undermine institutional legitimacy and damage career."
+  },
+  {
+   "name": "water_management_bureaucracy",
+   "role": "beneficiary",
+   "power": "institutional",
+   "time_horizon": "immediate",
+   "exit_options": "arbitrage",
+   "spatial_scope": "national",
+   "situation": "Rijkswaterstaat, regional water boards, Delta Works management agencies. Collects legitimacy and funding from public trust in infrastructure. Trust validates the institution's authority and justifies continued resource allocation without requiring demonstration of actual preparedness capacity. Can shift to alternative legitimacy narratives if trust erodes (emphasize climate adaptation, international expertise, engineering excellence). Benefits from the trust dynamic: as long as public believes infrastructure provides complete protection, institutional authority is secure and preparedness gaps are not politically costly."
+  },
+  {
+   "name": "preparedness_reform_coalition",
+   "role": "agenda_setter",
+   "power": "organized",
+   "time_horizon": "generational",
+   "exit_options": "mobile",
+   "spatial_scope": "national",
+   "situation": "IHE Delft knowledge transfer programs, community resilience initiatives, participatory flood risk mapping projects, climate adaptation researchers. Building alternative pathways that restore active knowledge alongside infrastructure: experiential learning programs, distributed monitoring systems, community-based preparedness networks. Has agency and resources to create change. Sees infrastructure trust as a temporary coordination failure with a potential sunset: active preparedness education can rebuild capacity. Not trapped in the trust dynamic: can pursue alternative approaches and has institutional support from some quarters (academic, international development, climate adaptation communities)."
+  },
+  {
+   "name": "memorial_ritual_system",
+   "role": "agenda_setter",
+   "power": "institutional",
+   "time_horizon": "civilizational",
+   "exit_options": "constrained",
+   "spatial_scope": "regional",
+   "situation": "Annual 1953 flood commemorations, evacuation drills, memorial sites, educational programs about flood history. Original function was maintaining lived knowledge of flood risk across generations. But rituals have become largely performative: participants go through motions without internalizing preparedness knowledge, commemorations serve legitimacy maintenance more than capacity building. The system sees its own process as degraded: maintained because alternatives haven't replaced it, not because it transmits real capacity. Constrained by institutional inertia: cannot easily exit the ritual cycle or transform the commemorations into more effective knowledge transmission mechanisms."
+  },
+  {
+   "name": "institutional_legitimacy",
+   "role": "beneficiary",
+   "agent": false,
+   "power": "institutional",
+   "time_horizon": "biographical",
+   "exit_options": "arbitrage",
+   "spatial_scope": "national",
+   "situation": "Abstract good: the water management bureaucracy's authority and public confidence in flood protection institutions. Not a real-world actor that collects rents, but a vindicated proposition that the constraint's operation supports. Listed here for narrative completeness but excluded from beneficiary/victim derivation and directionality computation (agent=false). The trust dynamic maintains this legitimacy without requiring performance verification."
+  },
+  {
+   "name": "public_preparedness",
+   "role": "payer",
+   "agent": false,
+   "power": "powerless",
+   "time_horizon": "generational",
+   "exit_options": "trapped",
+   "spatial_scope": "national",
+   "situation": "Abstract collective good: the population's actual capacity to respond to flood warnings and infrastructure failures. Not a real-world actor but a collective capacity that the constraint extracts from. Listed here for narrative completeness but excluded from beneficiary/victim derivation and directionality computation (agent=false). Cannot organize, cannot exit, bears full cost of trust-induced complacency."
+  },
+  {
+   "name": "active_response_capacity",
+   "role": "payer",
+   "agent": false,
+   "power": "powerless",
+   "time_horizon": "generational",
+   "exit_options": "trapped",
+   "spatial_scope": "national",
+   "situation": "Abstract collective good: generational knowledge transmission of flood risk awareness and response skills. Not a real-world actor but a knowledge commons that the constraint extracts from. Listed here for narrative completeness but excluded from beneficiary/victim derivation and directionality computation (agent=false). Infrastructure trust interrupts the transmission chain: each generation knows less than the previous one about how to respond to flood risk."
+  }
+ ],
+ "six_questions": {
+  "coordination_function": "Infrastructure trust coordinates large-scale flood protection investment and reduces panic during normal conditions. Public confidence enables efficient resource allocation to infrastructure maintenance and allows water management institutions to operate without constant political friction over flood risk.",
+  "transfer_function": "The arrangement transfers legitimacy and authority from public trust to water management bureaucracy. It transfers preparedness responsibility from individuals to institutions. It transfers attention and resources from active knowledge transmission (drills, education, community preparedness) to passive infrastructure maintenance.",
+  "absent_voices": "Future generations who will inherit degraded preparedness capacity are not in the room. Residents of regions where infrastructure might fail first (older dikes, climate-vulnerable areas) are underrepresented in policy discussions. International disaster response experts who have seen infrastructure-dependent populations fail to evacuate are not part of Dutch institutional planning. Climate scientists whose projections exceed Delta Works design parameters are present but marginalized in public discourse.",
+  "disappearance_verdict": "world_rearranges",
+  "disappearance_rationale": "If infrastructure trust disappeared overnight, the world would rearrange substantially. Water management bureaucracy would lose primary legitimacy basis and face political pressure to demonstrate actual preparedness capacity. Residents would need to develop independent preparedness (evacuation plans, emergency supplies, risk awareness). Emergency response planners would face different coordination problems (managing public anxiety rather than public complacency). Memorial rituals would need to transform from legitimacy maintenance to genuine knowledge transmission. The preparedness reform coalition would have more political space to build alternative pathways. The constraint organizes real arrangements: institutional authority structures, resource allocation patterns, public behavior, and knowledge transmission mechanisms all depend on the trust dynamic.",
+  "founding_problem": "The founding problem was catastrophic unpreparedness during the 1953 North Sea flood: 1,836 deaths, 72,000 evacuated, massive infrastructure failure. The post-1953 commitment was 'never again' — flood preparedness must be maintained across generations so that no future generation experiences such catastrophic loss. The Delta Works were built to solve the infrastructure problem (physical protection). The preparedness retention kernel was the commitment to solve the knowledge problem (maintaining awareness and response capacity across generations who would not experience floods).",
+  "founding_problem_status": "contested",
+  "founding_problem_corroboration": "The founding problem's status is contested between the two readings. The husk reading (this constraint) holds that the problem is solved: Delta Works provide physical protection, and institutional continuity maintains preparedness through bureaucratic procedures and memorial rituals. This view is attested by water management bureaucracy (Rijkswaterstaat, water boards), political leadership emphasizing Dutch flood protection success, and international reputation of Dutch water management expertise. The competence reading (sibling constraint) holds that the problem is NOT solved: physical infrastructure exists but active preparedness capacity has atrophied, and institutional continuity is not equivalent to exercised knowledge. This view is attested by emergency response planners frustrated by low drill participation, IHE Delft researchers documenting knowledge transmission gaps, climate adaptation experts warning of complacency, and international disaster response literature on infrastructure-dependent population vulnerability. No neutral arbiter exists: the status depends on which reading's framing you accept."
+ },
+ "cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "extraction",
+  "interpretation_layer_present": true,
+  "reading_relations": [
+   {
+    "sibling_id": "competence_reading",
+    "relation": "forecloses"
+   }
+  ],
+  "axioms": [
+   {
+    "atom": "institutional_continuity_equals_preparedness",
+    "role": "foundational",
+    "status": "holdable",
+    "grounding_type": "conventional"
+   },
+   {
+    "atom": "infrastructure_proves_commitment",
+    "role": "secondary",
+    "status": "holdable",
+    "grounding_type": "conventional"
+   }
+  ],
+  "reference_frame": "post_1953_institutional_consolidation",
+  "drift_state": {
+   "moment": "contemporary_climate_era",
+   "direction": "practice_drift",
+   "magnitude": "substantial",
+   "acknowledged": false
+  }
+ },
+ "uke_scope": {
+  "epsilon_bin": "high",
+  "hypothesis": "snare",
+  "downstream_of": [
+   "husk_reading"
+  ]
+ }
+}
