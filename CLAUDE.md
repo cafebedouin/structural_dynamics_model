@@ -63,7 +63,7 @@ not general architecture. Read the relevant file before modifying `config_valida
 diagnosing module-resolution behavior (REPL ≠ pipeline for wrong-qualifier calls), writing
 test-local predicate swaps or retract/re-assert probes, running an in-session corpus sweep or
 overlay counterfactual (validated signature-sweep recipe; Boltzmann memo caches read stale unless
-cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the five
+cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the six
 defect patterns (summarized in Build Discipline below) with diagnostics; it also carries the
 **citation-time / staleness-ladder** rule (a witnessed fact has a shelf life: reusing it as a
 premise re-asserts it, so rung it — pointer / as-of stamp / gate — by mutable-state ×
@@ -261,6 +261,22 @@ on a fabricated default. Instance: `natural_law_signature`'s `BeneficiaryCount =
 establish the datum was authored before it may pass — fail-closed on absence, not pass-open.**
 Diagnostic: count the source predicate's facts on the corpus; 0 ⇒ the gate is a no-op.
 Engine-wide audit: OQ-44.
+
+**6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
+boundaries).** An aggregation or channel that cannot distinguish *measured-empty* from
+*didn't-look* emits success-shaped output either way — and each component is individually sound,
+so no site-level check catches it; the absorption lives where they compose. Three instances
+witnessed in one day (2026-06-10): `system_gradient`'s `[] → 0.0` fallback (every gradient ever
+computed had failed via a cut bug; the fallback made failure byte-identical to measured-flat for
+the construct's whole life); `grep -v Warning` (a dead-module warning printed at every load for
+four months into a universally filtered channel, then crashed the suite — OQ-96); findall-over-
+partial-levels (an 8/32 one-level grid read as a full-system `increasing_coercion` verdict).
+**Rule: aggregates carry their COVERAGE to the read site; channels carry ALLOWLISTS
+(`python/load_warning_gate.py` is the template — never `grep -v Warning` over load output);
+defaults-on-empty return `unknown`/OPEN, never a plausible value. Sufficiency is a property of
+the QUESTION, not the dataset — fail-closed per-question (consumer-named requirements), not by
+global fraction.** Full entry + diagnostics: `build_discipline.md` → Pattern 6; candidate-site
+census: OQ-97.
 
 The first two share a root: **the corpus/codebase you are building for is not the one on disk
 now.** Build naming schemes, linkage rules, and reports correct for the corpus you intend
