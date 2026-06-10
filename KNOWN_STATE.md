@@ -80,6 +80,34 @@ Fabrication ban recorded (gain_flow never synthesized; data_repair.pl the named 
 A–C UNBLOCKED — schema → compiler → prompt per
 `audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`.**
 
+## 2026-06-10 — OQ-81 ruled SUPPRESS and wired: reading-typed wave-upstreams dropped at seed build; A/B finds verdict import in the gradable channel (theater_ratio), absorbed before the categorical
+**Files:** agent/generate_kernel_corpus.py, agent/c-orchestrator.py, agent/story_generator_base.py, ISSUES.md, audits/2026-06-10_oq81_reading_upstream_recon/
+**Tier:** landed
+
+Full chain in `audits/2026-06-10_oq81_reading_upstream_recon/` (RECON → AB_PLAN pre-registered →
+AB_RESULTS → WIREUP): recon established ZERO exposure to date (no story in any corpus was ever
+generated under reading-verdict injection — pre-merge c-orch dropped readings, gkc --scope is
+wave-free, post-merge live runs had no reading edges) and that the current SCOPE format emits
+kernel-CONCEPT deps (21/21 dangling/inert), not reading deps. The A/B (3 arms × 3 reps, exact
+pipeline params, injected verdict deliberately ≠ axis hypothesis): claimed_type held 9/9 snare,
+but the three-line verdict block pulled authored theater_ratio 0.690→0.513 (zero range overlap;
+kernel-substrate arm ≈ no-context arm). Operator reframe adopted as the closure language:
+**verdict import occurred in the gradable channel and was absorbed before the categorical one**
+— the categorical field is STICKY (anchored by the explicit hypothesis line), not safe; the R-arm
+prose reasoning about theater is the positive control proving the injected verdict was read, so
+the categorical null is real. Discovered en route: `axis_source_desc` already injects the
+verdict-free kernel CSR into every supplementary-axis prompt — kernel substrate needed no new
+wire; the fix-space collapsed to one bit. Wire: `_flat_seeds_from_manifest` drops reading-typed
+deps from BOTH the seed's wave deps and the axis copy `upstream_context` reads (two read sites,
+one filter point); same predicate in the serial escape hatch (code-read sync, NOT
+payload-witnessed). Witness: germline byte-identical (8 flat injections preserved — §5.1 flat
+design untouched); dutch+supp kernel capture 4/5 payloads identical, 5th loses exactly the three
+verdict lines. Standing cautions (also in the compressed OQ-81 entry): (1) **injection channel
+asymmetry** — categorical-stable / continuous-distorted is a general finding about context
+injection (n=3, one axis: an instance, not an effect size); (2) the CSR line poisons
+vocabulary-based leakage probes in ALL arms — key future leakage probes on tokens present ONLY
+via the injected block.
+
 ## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
 **Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md
 **Tier:** landed

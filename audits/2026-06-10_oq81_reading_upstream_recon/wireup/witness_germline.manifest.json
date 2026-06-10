@@ -1,0 +1,353 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Bioethics / Reproductive Medicine / Genetic Engineering",
+  "family_id": "germline_genome_modification_ethics_2018",
+  "topic_summary": "Systematic review of ethical arguments regarding clinical applications of germline genome modification (GGM), analyzing 180 articles published 2011-2016 that identified 169 reasons (90 for, 79 against) future clinical use. The review was motivated by CRISPR-Cas9 advances making previously theoretical GGM debates clinically relevant, examining stakeholder perspectives across 13 ethical domains including safety, effectiveness, social justice, and human dignity.",
+  "extraction_summary": {
+    "entity_count": 8,
+    "claim_count": 169,
+    "tension_count": 13,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "CRISPR-Cas9 technology (genome editing tool enabling GGM)",
+      "Germline genome modification (intentional modification of nuclear DNA in embryos/gametes)",
+      "Preimplantation genetic diagnosis/PGD (existing alternative for disease prevention)",
+      "Professional societies (19 articles; regulatory/ethical guidance bodies)",
+      "Bioethics professionals (64 articles; primary analytical stakeholder)",
+      "Biomedical scientists (49 articles; technical feasibility assessors)",
+      "Patient representatives (2 articles; underrepresented stakeholder)",
+      "Regulatory frameworks (regional vs international governance structures)"
+    ],
+    "key_tensions": [
+      "Reproductive liberty vs protection of unborn child (parental rights domain)",
+      "Disease prevention vs eugenics risk (species-level effects domain)",
+      "Technical progress vs safety uncertainty (effectiveness vs safety domains)",
+      "Genetic parenthood value vs alternative availability (clinical need domain)",
+      "Individual benefit vs social justice (equity domain)",
+      "Regional cultural values vs international coordination (governance domain)",
+      "Innovation imperative vs precautionary principle (regulation domain)",
+      "Expert authority vs public participation (stakeholder representation)",
+      "Somatic vs germline modification (boundary definition)",
+      "Medical treatment vs enhancement (boundary definition)",
+      "Embryo moral status vs research necessity (human dignity domain)",
+      "Commercial interests vs public good (special interests domain)",
+      "Current generation risks vs future generation benefits (intergenerational justice)"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "safety_risk_structure",
+      "human_readable": "Safety Risk Structure (Off-Target vs On-Target Effects)",
+      "structural_delta": "Irreducible uncertainty about both unintended modifications (off-target) and unintended consequences of intended modifications (on-target pleiotropy)",
+      "primary_observable": "Frequency of off-target mutations per embryo; phenotypic outcomes of on-target edits across generations; mosaicism rates in edited embryos",
+      "epsilon_bin": "high",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "informed_consent_impossibility",
+        "intergenerational_justice_asymmetry",
+        "regulatory_precaution_threshold"
+      ],
+      "centrality_score": 9,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Highest-frequency concern (153 articles); mountain providing physical constraint base; feeds three distinct downstream axes"
+    },
+    {
+      "claim_id": "genetic_parenthood_valuation",
+      "human_readable": "Genetic Parenthood Valuation (Importance of Biological Connection)",
+      "structural_delta": "The weight assigned to genetic relatedness versus other parenting values (social, gestational, adoptive)",
+      "primary_observable": "Willingness to accept risk/cost for genetic vs non-genetic parenthood; demand for GGM vs gamete donation; patient-reported importance rankings",
+      "epsilon_bin": "mod",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "clinical_need_threshold",
+        "reproductive_liberty_scope"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Authors identify as 'key' to determining GGM value; distinct observable from clinical need (measures preference intensity not medical necessity); feeds two downstream axes"
+    },
+    {
+      "claim_id": "clinical_need_threshold",
+      "human_readable": "Clinical Need Threshold (Unmet Need vs Alternative Availability)",
+      "structural_delta": "Whether GGM addresses medical situations where no acceptable alternative exists (both parents homozygous, polygenic disease, protective alleles parents lack) versus situations where PGD/donor gametes suffice",
+      "primary_observable": "Proportion of genetic disease cases where PGD cannot select unaffected embryo; availability of gamete donors for specific conditions; polygenic risk reduction achievable only via GGM",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "genetic_parenthood_valuation"
+      ],
+      "feeds_into": [
+        "regulatory_precaution_threshold"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Distinct from genetic parenthood (measures medical necessity not preference); 56 articles cite limited need; affects regulatory threshold calculation"
+    },
+    {
+      "claim_id": "treatment_enhancement_boundary",
+      "human_readable": "Treatment-Enhancement Boundary (Medical vs Non-Medical Modification)",
+      "structural_delta": "The line between correcting disease-causing mutations, reducing disease risk, and improving non-medical traits—where 'disease' itself is contested",
+      "primary_observable": "Regulatory classifications of conditions qualifying for GGM; stakeholder agreement on disease vs variation (e.g., deafness, short stature); enhancement application proposals",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "enhancement_advocates",
+      "victim": "disability_communities",
+      "downstream_of": [],
+      "feeds_into": [
+        "social_justice_distribution",
+        "slippery_slope_mechanism"
+      ],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 4,
+      "selection_reason": "Authors flag as 'difficult to define'; 13 articles cite boundary problem; tangled_rope with clear beneficiary/victim structure; feeds justice and slope axes"
+    },
+    {
+      "claim_id": "informed_consent_impossibility",
+      "human_readable": "Informed Consent Impossibility (No Agent Available)",
+      "structural_delta": "The structural impossibility of obtaining consent from the future person whose genome is modified, distinct from parental proxy consent for existing children",
+      "primary_observable": "Legal frameworks for proxy consent in GGM vs pediatric treatment; philosophical positions on non-identity problem; regulatory consent requirements",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "safety_risk_structure"
+      ],
+      "feeds_into": [
+        "reproductive_liberty_scope"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 5,
+      "selection_reason": "28 articles cite consent conflict; mountain (cannot be resolved by policy); distinct from safety (concerns who decides, not what risks exist); feeds liberty scope"
+    },
+    {
+      "claim_id": "social_justice_distribution",
+      "human_readable": "Social Justice Distribution (Wealth-Based Access Inequity)",
+      "structural_delta": "Whether GGM access depends on wealth/privilege, creating genetic stratification ('genobility') within and between countries",
+      "primary_observable": "GGM cost relative to median income; insurance coverage policies; international access disparities; medical tourism patterns",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "low_income_populations",
+      "downstream_of": [
+        "treatment_enhancement_boundary"
+      ],
+      "feeds_into": [
+        "regulatory_governance_level"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 6,
+      "selection_reason": "45 articles cite inequity concern; snare structure (access mechanism creates victim class); distinct from clinical need (concerns distribution not existence); feeds governance level"
+    },
+    {
+      "claim_id": "intergenerational_justice_asymmetry",
+      "human_readable": "Intergenerational Justice Asymmetry (First Generation Risk Burden)",
+      "structural_delta": "The first modified generation bears disproportionate safety risks while future generations receive benefits, creating temporal inequity distinct from standard research risk",
+      "primary_observable": "Risk-benefit ratio for first vs subsequent generations; long-term follow-up data availability; generational consent frameworks",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "safety_risk_structure"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 7,
+      "selection_reason": "3 articles cite generational inequity; distinct from safety (concerns distribution across time not magnitude); independent observable (generational risk ratio)"
+    },
+    {
+      "claim_id": "reproductive_liberty_scope",
+      "human_readable": "Reproductive Liberty Scope (Parental Rights Boundaries)",
+      "structural_delta": "Whether GGM falls within reproductive liberty (16 articles argue yes) or surpasses its limits (5 articles argue no), distinct from whether such liberty is important",
+      "primary_observable": "Legal precedents on reproductive autonomy limits; philosophical frameworks for parental authority over future persons; regulatory restrictions on reproductive choices",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "intended_parents",
+      "victim": "future_children",
+      "downstream_of": [
+        "genetic_parenthood_valuation",
+        "informed_consent_impossibility"
+      ],
+      "feeds_into": [
+        "regulatory_governance_level"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 8,
+      "selection_reason": "21 articles cite liberty arguments; tangled_rope (parental rights vs child rights); distinct from genetic parenthood (concerns authority not preference); feeds governance"
+    },
+    {
+      "claim_id": "slippery_slope_mechanism",
+      "human_readable": "Slippery Slope Mechanism (Treatment to Enhancement Progression)",
+      "structural_delta": "Whether accepting GGM for disease treatment creates institutional/psychological momentum toward enhancement applications, independent of whether enhancement is inherently wrong",
+      "primary_observable": "Historical precedents of medical technology scope expansion; regulatory boundary erosion patterns; stakeholder position shifts over time",
+      "epsilon_bin": "low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "treatment_enhancement_boundary"
+      ],
+      "feeds_into": [],
+      "centrality_score": 2,
+      "selected": true,
+      "generation_order": 9,
+      "selection_reason": "31 articles cite slippery slope; piton (institutional path dependency); distinct from boundary problem (concerns progression not definition); 6 articles argue slope shouldn't be decisive"
+    },
+    {
+      "claim_id": "special_interests_capture",
+      "human_readable": "Special Interests Capture (Commercial/Research Pressure)",
+      "structural_delta": "Whether commercial interests, patient pressure, or researcher career incentives drive premature or inappropriate GGM applications independent of scientific readiness",
+      "primary_observable": "Patent filing patterns; venture capital investment; researcher conflict-of-interest disclosures; patient advocacy group funding sources; regulatory approval timelines vs safety data",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "commercial_entities",
+      "victim": "research_subjects",
+      "downstream_of": [],
+      "feeds_into": [
+        "regulatory_precaution_threshold"
+      ],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 10,
+      "selection_reason": "38 articles cite commercialization concern; snare (profit motive creates victim class); frequency increased post-2015 (13% to 32%); feeds regulatory threshold"
+    },
+    {
+      "claim_id": "regulatory_governance_level",
+      "human_readable": "Regulatory Governance Level (Regional vs International)",
+      "structural_delta": "Whether GGM regulation should be regional (acknowledging cultural values, 11 articles) or international (preventing medical tourism and cross-border effects, 19 articles)",
+      "primary_observable": "Medical tourism flows for GGM; regulatory harmonization vs divergence; enforcement capacity across jurisdictions; cross-border impact mechanisms",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "social_justice_distribution",
+        "reproductive_liberty_scope"
+      ],
+      "feeds_into": [
+        "regulatory_precaution_threshold"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 11,
+      "selection_reason": "30 articles cite governance level; distinct from precaution threshold (concerns jurisdiction not stringency); coordination problem structure; feeds threshold calculation"
+    },
+    {
+      "claim_id": "regulatory_precaution_threshold",
+      "human_readable": "Regulatory Precaution Threshold (Prohibition vs Conditional Permission)",
+      "structural_delta": "The level of safety/effectiveness evidence required before permitting GGM, ranging from prohibition (wait for certainty) to conditional permission (allow with oversight)",
+      "primary_observable": "Regulatory approval criteria; required safety thresholds; preclinical evidence standards; post-approval monitoring requirements",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "regulatory_authorities",
+      "victim": "potential_patients",
+      "downstream_of": [
+        "safety_risk_structure",
+        "clinical_need_threshold",
+        "special_interests_capture",
+        "regulatory_governance_level"
+      ],
+      "feeds_into": [],
+      "centrality_score": 7,
+      "selected": true,
+      "generation_order": 12,
+      "selection_reason": "101 articles call for regulation; tangled_rope (precaution vs access); synthesis node with 4 inbound edges; distinct from safety (concerns policy response not risk magnitude)"
+    },
+    {
+      "claim_id": "stakeholder_representation_gap",
+      "human_readable": "Stakeholder Representation Gap (Expert vs Public Voice)",
+      "structural_delta": "The underrepresentation of non-expert stakeholders (patients, public, disability communities) in GGM ethical discourse relative to bioethicists and scientists",
+      "primary_observable": "Stakeholder composition in reviewed articles; patient representative authorship (2 articles); public consultation mechanisms; disability community participation",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": true,
+      "generation_order": 13,
+      "selection_reason": "Authors explicitly flag 'non-expert perspectives called for but insufficiently studied'; scaffold (procedural deficit); distinct from all other axes (concerns who speaks not what is said)"
+    }
+  ],
+  "generation_sequence": [
+    "safety_risk_structure",
+    "genetic_parenthood_valuation",
+    "clinical_need_threshold",
+    "treatment_enhancement_boundary",
+    "informed_consent_impossibility",
+    "social_justice_distribution",
+    "intergenerational_justice_asymmetry",
+    "reproductive_liberty_scope",
+    "slippery_slope_mechanism",
+    "special_interests_capture",
+    "regulatory_governance_level",
+    "regulatory_precaution_threshold",
+    "stakeholder_representation_gap"
+  ],
+  "deferred_axes": [],
+  "omegas": [
+    {
+      "id": "omega_genetic_parenthood_weight",
+      "description": "Authors identify genetic parenthood valuation as 'key' but provide no empirical data on its actual weight in patient decision-making. If genetic parenthood is less important than assumed, entire clinical need calculation collapses. Requires patient preference studies comparing GGM risk acceptance vs gamete donation.",
+      "source": "Authors' explicit statement: 'Investigating the relative importance of genetic parenthood may be key in determining the value of GGM' + absence of such data in reviewed literature"
+    },
+    {
+      "id": "omega_safety_threshold_circularity",
+      "description": "Safety risk structure is mountain but regulatory precaution threshold depends on 'acceptable risk levels' which cannot be determined without knowing clinical need weight, which depends on genetic parenthood valuation (omega above). Circular dependency may prevent ever reaching consensus on safety adequacy.",
+      "source": "8 articles cite 'difficulty determining acceptable levels of risk'; constraint graph shows safety → threshold ← need ← parenthood loop"
+    },
+    {
+      "id": "omega_non_identity_resolution",
+      "description": "10 articles invoke non-identity problem (child wouldn't exist without GGM, so cannot be harmed by it) while 4 argue it's irrelevant. Review documents disagreement but provides no resolution framework. If non-identity problem is valid, informed consent impossibility axis may dissolve entirely.",
+      "source": "Extraction: 'Could implicate the non-identity problem (10 articles)' vs 'Could lead to no relevant non-identity problem (4 articles)'"
+    },
+    {
+      "id": "omega_effectiveness_measurement",
+      "description": "73 articles cite 'could be ineffective' but review provides no operationalization of effectiveness. Is 50% success rate effective? 80%? 99%? Without effectiveness threshold, cannot determine when clinical need axis activates. May be tangled with safety (mosaicism makes both ineffective AND unsafe).",
+      "source": "Effectiveness domain lists concerns but no measurement framework; authors note 'difficulty determining acceptable levels of effectiveness' (1 article)"
+    },
+    {
+      "id": "omega_disability_community_voice",
+      "description": "21 articles cite 'could reduce acceptability of disability' but only 2 articles include patient representatives (parents of children with genetic diseases, not disability advocates). Stakeholder representation gap axis may understate severity—disability community perspective on treatment/enhancement boundary is structurally absent, not merely underrepresented.",
+      "source": "Stakeholder table shows 2 patient representatives (parents) but zero disability community representatives; 21 articles cite disability acceptability concern"
+    },
+    {
+      "id": "omega_temporal_scope_ambiguity",
+      "description": "Review covers 2011-2016 literature but GGM landscape changed dramatically post-2017 (Ma et al. 2017 reported high on-target specificity; He Jiankui 2018 created first gene-edited babies; subsequent international moratoria). Safety risk structure axis may be outdated mountain—technical progress may have converted it to rope or even piton.",
+      "source": "Authors acknowledge 'remarkable progress reported' post-review period; F34 epistemic trespass risk—model trained on pre-2017 bioethics may not capture post-He Jiankui regulatory shift"
+    },
+    {
+      "id": "omega_somatic_germline_coupling",
+      "description": "24 articles argue GGM regulation needed 'to prevent public outcry resulting in prohibition of somatic genome modification.' If somatic and germline are coupled in public perception, regulatory precaution threshold for GGM may be set by somatic therapy politics, not GGM-specific risk-benefit. Coupling mechanism not analyzed in review.",
+      "source": "Extraction: 'There is a need for regulation to prevent a public outcry resulting in the prohibition of all applications of genome modification (24 articles)'"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": true,
+    "f01_premise_drift": false,
+    "notes": "F03 detected: safety_risk_structure classified as mountain based on 2011-2016 literature, but authors note 'remarkable progress' post-review (Ma et al. 2017 high specificity). Technical advances may reclassify from mountain (irreducible physical uncertainty) to rope (solvable coordination problem) or piton (institutional lag). Generated omega_temporal_scope_ambiguity. F34 detected: model's bioethics training likely pre-2018 He Jiankui scandal and subsequent international moratoria—regulatory landscape transformed after review period. Post-2018 governance developments (WHO expert panel, national moratoria, enforcement actions) may invalidate regulatory_governance_level and regulatory_precaution_threshold axes as described. Generated omega_temporal_scope_ambiguity and flagged for human review."
+  }
+}
