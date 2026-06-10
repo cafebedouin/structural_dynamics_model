@@ -693,6 +693,25 @@ the substrate.
 
 ---
 
+## Count-as-witness assumes a single writer (under parallel instances, the diff is the witness)
+
+A global count used as a commit's witness — "checker: 94 parsed, 0 malformed" offered as proof
+that THIS edit landed correctly — is valid only while one writer holds the ledger. The moment
+parallel instances write the same file, the count's delta carries every writer's changes at once:
+a 94→95 alongside another instance's new entry no longer isolates this session's edit (observed
+2026-06-10: OQ-94 corrections committed while a parallel instance landed OQ-95; the parse-count
+delta was confounded in the same hour the practice would have been cited). The checker's PASS/FAIL
+stays valid — it certifies the whole file's grammar — what breaks is the COUNT as an edit-witness.
+
+**The rule:** a commit's witness must be scoped to the commit — the diff (`git show --stat`, or
+the pasted hunks), or an entry-anchored check (query the specific entry the edit touched) — never
+a global count. Global counts remain fine as whole-file gates (the checker's exit code). This is
+the single-writer assumption made explicit: counts aggregate; diffs attribute. Same family as the
+section above ("a gating count is not a finding without its composition") — under multi-writer,
+the composition of a count delta includes other writers' work.
+
+---
+
 ## Perturbation is the probe; invariance is the read (a claimed invariant needs a perturbation that moves it)
 
 The engine's whole read is **perturb one axis, hold the rest, sort what stays (invariant) from what

@@ -4223,7 +4223,10 @@ Phase-A playbook), with the diffuse-audit gate and the malformed-gain schema rej
 preconditions before any classification wiring. Step-3 sequencing (operator 2026-06-10): the
 preregistration must name OQ-94 (`constraint_beneficiary` coordination-read interference —
 homed first, per ruling) as a known-interference item, and the diffuse-gate tolerance is
-reserved as an operator ruling at preregistration time. Cross-refs:
+reserved as an operator ruling at preregistration time. With OQ-94's per-site decision rule
+RULED (2026-06-10), classification-path handling is rule-application over the read-site pass's
+output — the tolerance is the single open operator question, plus escalation of any
+rule-unsorted sites. Cross-refs:
 OQ-90 (piton/capture split + fixing_cost), OQ-83 (stakeholder layer / R3 authored-absence rule),
 GAP-10, build_discipline rule #3 (axis introduction owes a pre-registered discriminating control) +
 Pattern 5.
@@ -4294,7 +4297,10 @@ generation-template-retires-stopgap arc shape), OQ-83 A7 (sibling severance), OQ
 receipt surface exists; operator's ruling).
 
 **Status:** open — homed 2026-06-10 (promoted from the 06-09 "bonus" note at operator direction);
-named as a known-interference item for the OQ-92 step-3 preregistration; adjudication not started.
+known-interference item for the OQ-92 step-3 preregistration. Per-site decision rule RULED
+2026-06-10 (Read-site pass block below); next move: the read-site pass over the
+closed-with-residuals consumer list, sorting by the rule — the dr_type-path site already stands
+witnessed by the step-2 prototype output.
 
 **The behavior (witnessed twice).** `has_coordination_function/1` is one clause:
 `constraint_beneficiary(C, _)` (`narrative_ontology.pl:303-304`) — the fact that *names a
@@ -4375,9 +4381,20 @@ its intent-label flipped when the clauses were read:
   (capturer_a, capturer_f — `constraint_beneficiary` present) vs **naturalized** (bystander_b,
   bystander_g, capturer_h — absent). That scaffold-direction read on the dr_type path is the
   fight's live site and the preregistration's classification-path slice.
-Adopting the per-site rule as the ruling is the operator's call — queued as the second
-question-to-operator for the step-3 preregistration alongside the diffuse-gate tolerance
-(which-signal-wins on the classification path is the same class of judgment). Under the rule the
+**RULED (2026-06-10; recording delegated by operator to CC after the review's discharge
+argument, and exercised):** the per-site decision rule IS the adjudication frame — no global
+exclusion between capture and coordination; per-site gating permitted (and may be correct) where
+the read's question is mountain-likeness, forbidden where the read needs
+coordination-despite-extraction. The hold was discharged because the rule's justification never
+rested on the inverted Boltzmann anchor: it derives from tangled_rope's definition (capture and
+coordination co-occur by construction), which is untouched, and the anchor's inversion was
+produced BY the rule operating on corrected facts — a site's bucket flipped, not the buckets.
+Positive control passed: the rule has sorted real sites into BOTH buckets (separability_factor →
+forbidden; natural_law_without_beneficiary + the NL gates → sound) — a criterion sorting
+everything one way would be doing no work. Consequence: the classification-path adjudication
+becomes RULE-APPLICATION over the read-site pass's output, not open judgment; the step-3
+preregistration carries ONE question-to-operator (the diffuse-gate tolerance), plus escalation of
+only those sites the rule does not cleanly sort. Under the rule the
 two resolution options below stop being rivals: per-site sorting likely yields the gate at
 mountain-likeness sites and the split where coordination-despite-extraction is at stake, which
 shrinks the `gain_flow` load-bearing surface relative to all-split — relevant to how tight the
