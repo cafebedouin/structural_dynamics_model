@@ -45,6 +45,36 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — OQ-92 rulings recorded + step-2 gain-flow prototype PASSED 8/8: capture and fixing_cost separate on authored fields; step-3 surface build unblocked (OQ-92/OQ-90/GAP-10)
+**Files:** ISSUES.md, docs/design/design_gaps.md, audits/2026-06-10_gain_flow_prototype/PREREGISTRATION.md, audits/2026-06-10_gain_flow_prototype/FINDINGS.md
+**Tier:** landed
+
+Operator rulings recorded (commit `4e04c2dc`, amendments landed BEFORE the rulings since recorded
+rulings become precedent text): **(a)** build the authored gain-flow surface, prototype-first
+(OQ-93 precedent); **(b)** ONE authoring surface, TWO distinct fields (gain_flow + fixing_cost),
+justified on design grounds — the draft binary-bit argument ("one scalar can't encode two cuts")
+was reviewed, found false as an information claim, and recorded as rejected in the OQ-92 Rulings
+block to prevent re-citation. Tri-valued provenance design ruled: authored-gain-to-NAMED-seat /
+explicit-`diffuse` / absent-fails-closed — with the trap named that NAF over authored fields is
+authored-absence in disguise (uncaptured must be authored positively). Malformed-gain
+(gain_flow → nonexistent seat) DECIDED to absorb into fail-closed at runtime, with a step-3
+schema-rejection validation item so the absorption never hides a data error.
+
+Step-2 prototype (preregistration committed `eb24a927` before the run): eight-control battery,
+both fields hand-authored, prototype-only predicates, no production files. **Outcome 1 PASS,
+8/8 as pre-registered.** Positive-control pairs held: 2↔7 (diffuse fires on the twin, making
+absent's silence a witness) and 1↔8 (the `role_of/3` join fires on an existing seat, making the
+malformed silence the absorption witness). Case 5 vs 4 (seat-identical, only `fixing_cost_class`
+differs) **witnessed fixing_cost as load-bearing** — OQ-90's decisive pre-wiring control,
+discharged. Under-claim holds: cases 1–6 are near-tautological as logic tests; the run witnesses
+separation on these constructed cases, the join in both directions, and coherent authorability —
+NOT corpus-range representability or generation-side honesty (that is the step-3 diffuse-audit
+gate: hand-audit a pre-stated-size sample of generated `diffuse` claims with pre-stated tolerance
+BEFORE the field drives classification — authored-diffuse is an authored universal negative with
+no checkable witness, and OQ-70 is the template-convention precedent). Next forward move: OQ-92
+step 3 = schema field + compiler emission + prompt change per the OQ-83 Phase-A playbook, both
+preconditions pinned in its preregistration.
+
 ## 2026-06-10 — OQ-57 re-witnessed post-reset: resolution holds; original behavioral witnesses were pre-reset/corpus-specific, now superseded by a corpus-independent positive control
 **Files:** prolog/drift_events.pl, ISSUES.md, audits/2026-06-10_oq57_live_rewitness/FINDINGS.md
 **Tier:** correction-key

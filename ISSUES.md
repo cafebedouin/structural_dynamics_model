@@ -3979,7 +3979,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
 
-**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut).
+**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut). Prototype RUN 2026-06-10: Outcome 1 PASS 8/8 — fixing_cost witnessed load-bearing (case 5 vs 4: seat-identical, only the cost class separates piton_candidate from transient_neglect); the OQ-92 step-3 surface build is cleared; piton refinement (Steps 2–4 here) still waits on the BUILT surface, not the prototype.
 
 **Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
 across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
@@ -4155,9 +4155,11 @@ ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axi
 engine's to settle).
 
 **Status:** open — rulings (a)/(b) RECORDED (operator 2026-06-10, Rulings block below); step-2
-prototype: `audits/2026-06-10_gain_flow_prototype/` (eight-control battery, BOTH fields); surface
-not built — step 3 (schema/prompt/compiler) gated on the prototype outcome and carries the
-diffuse-audit gate + malformed-gain schema rejection as preconditions.
+prototype RUN 2026-06-10: **Outcome 1 PASS, 8/8 as pre-registered** (pairs 2↔7 and 1↔8 valid;
+case 5 discharged the fixing_cost load-bearing test — `audits/2026-06-10_gain_flow_prototype/`);
+surface not built — step 3 (schema/prompt/compiler, OQ-83 Phase-A playbook) UNBLOCKED, carrying
+the diffuse-audit gate + malformed-gain schema rejection as preconditions before classification
+wiring.
 
 **Origin.** OQ-90 ruled the snare/piton split turns on *capture* (snare = a seat captures the
 extraction; piton = uncaptured) and that the no-capture test must be **computed, not authored-absence**

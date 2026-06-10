@@ -1,0 +1,67 @@
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/maxent_classifier.pl:849:
+Warning:    Singleton variables: [C2]
+Warning: /home/scott/bin/structural_dynamics_model/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+==== OQ-92 step-2 gain-flow prototype: eight-control battery ====
+
+CASE cap_a
+    seat=capturer_a role=beneficiary final_type=scaffold
+    seat=payer_a role=payer final_type=snare
+  authored: gain_flow=capturer_a fixing_cost=prohibitive
+  RESULT cap_a | seat_captures=[capturer_a] uncaptured=false piton_candidate=false transient_neglect=false | fires_any=yes
+
+CASE mild_b
+    seat=bystander_b role=beneficiary final_type=naturalized
+    seat=payer_b role=payer final_type=snare
+  authored: gain_flow=diffuse fixing_cost=prohibitive
+  RESULT mild_b | seat_captures=[] uncaptured=true piton_candidate=true transient_neglect=false | fires_any=yes
+
+CASE dmv_c
+    seat=excluded_c role=excluded final_type=snare
+    seat=payer_c role=payer final_type=snare
+  authored: gain_flow=diffuse fixing_cost=prohibitive
+  RESULT dmv_c | seat_captures=[] uncaptured=true piton_candidate=true transient_neglect=false | fires_any=yes
+
+CASE dmv_designed
+    seat=admin_d role=agenda_setter final_type=rope
+    seat=payer_d role=payer final_type=snare
+  authored: gain_flow=diffuse fixing_cost=prohibitive
+  RESULT dmv_designed | seat_captures=[] uncaptured=true piton_candidate=true transient_neglect=false | fires_any=yes
+
+CASE cheap_fix_e
+    seat=admin_e role=agenda_setter final_type=rope
+    seat=payer_e role=payer final_type=snare
+  authored: gain_flow=diffuse fixing_cost=cheap
+  RESULT cheap_fix_e | seat_captures=[] uncaptured=true piton_candidate=false transient_neglect=true | fires_any=yes
+
+CASE captured_cheap_f
+    seat=capturer_f role=beneficiary final_type=scaffold
+    seat=payer_f role=payer final_type=snare
+  authored: gain_flow=capturer_f fixing_cost=cheap
+  RESULT captured_cheap_f | seat_captures=[capturer_f] uncaptured=false piton_candidate=false transient_neglect=false | fires_any=yes
+
+CASE absent_g
+    seat=bystander_g role=beneficiary final_type=naturalized
+    seat=payer_g role=payer final_type=snare
+  authored: gain_flow=ABSENT fixing_cost=ABSENT
+  RESULT absent_g | seat_captures=[] uncaptured=false piton_candidate=false transient_neglect=false | fires_any=no
+
+CASE malformed_h
+    seat=capturer_h role=beneficiary final_type=naturalized
+    seat=payer_h role=payer final_type=snare
+  authored: gain_flow=ghost_seat_h fixing_cost=prohibitive
+  RESULT malformed_h | seat_captures=[] uncaptured=false piton_candidate=false transient_neglect=false | fires_any=no
+
+==== verdict mapping: PREREGISTRATION.md (pairs 2<->7 and 1<->8; case 5 is the fixing_cost load-bearing test) ====
