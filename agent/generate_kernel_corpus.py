@@ -764,9 +764,29 @@ def _flat_seeds_from_manifest(m):
     axes and generation_sequence). Without this exclusion such readings double-emit (once
     here as a mistyped flat seed, once in flatten_manifests as the real reading) and the
     flat copy carries no kernel_id. Identify a reading by the entry's kernel_id OR by
-    membership in csr.readings."""
+    membership in csr.readings.
+
+    A reading is also not a sound WAVE-UPSTREAM (OQ-81, operator-ruled 2026-06-10):
+    its claimed_type is precisely the contested object, the kernel substrate already
+    reaches every supplementary-axis prompt via axis_source_desc's CSR line, and the
+    A/B witnessed the verdict line shifting an authored classification input
+    (theater_ratio 0.69 -> 0.51, zero overlap) toward one seat's verdict
+    (audits/2026-06-10_oq81_reading_upstream_recon/). Reading-typed deps are therefore
+    SUPPRESSED at seed build — dropped from BOTH the seed's downstream_of (wave
+    ordering) and the axis copy handed to upstream_context (injection reads the axis,
+    story_generator_base.py) — while flat-to-flat deps keep the §5.1 injection
+    unchanged. Kernel-CONCEPT-typed deps (current SCOPE format) stay inert by the
+    same logic: the substrate they would deliver already arrives via CSR."""
     csr = m.get("commitment_system_recognition") or {}
     reading_ids = {r.get("reading_id") for r in csr.get("readings", [])}
+    # OQ-81 suppression set: a dep is reading-typed if it names a csr reading OR a
+    # kernel-tagged generation_sequence entry (some formats key readings by claim_id).
+    reading_cids = reading_ids - {None}
+    for entry in m.get("generation_sequence", []):
+        if isinstance(entry, dict) and entry.get("kernel_id"):
+            ecid = entry.get("claim_id") or entry.get("constraint_id")
+            if ecid:
+                reading_cids.add(ecid)
     axes_by_id = {a["claim_id"]: a for a in m.get("axes", [])}
     seeds, seen = [], set()
     for entry in m.get("generation_sequence", []):
@@ -780,12 +800,19 @@ def _flat_seeds_from_manifest(m):
         axis = axes_by_id.get(cid)
         if not axis:
             continue  # kernel reading without an axes[] entry — flatten_manifests emits it
+        deps = axis.get("downstream_of") or []
+        flat_deps = [d for d in deps if d not in reading_cids]
+        if len(flat_deps) < len(deps):
+            print(f"  [OQ-81] {cid}: suppressed reading-typed upstream dep(s) "
+                  f"{[d for d in deps if d in reading_cids]} (verdict not injected; "
+                  f"kernel substrate reaches the prompt via CSR)")
+            axis = {**axis, "downstream_of": flat_deps}
         seeds.append({
             "seed_type": "flat",
             "constraint_id": cid,
             "_axis": axis,
             "_manifest": m,
-            "downstream_of": axis.get("downstream_of") or [],
+            "downstream_of": flat_deps,
         })
     return seeds
 
