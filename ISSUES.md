@@ -1302,6 +1302,25 @@ default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurem
 theater_ratio/base_extractiveness/suppression_requirement). **Decision per metric:** author it,
 or remove the dead read. **Low-stakes each.**
 
+**`resistance_to_change` row update (2026-06-11, OQ-44 evidence pass).** Re-witnessed never-authored
+on the live corpus AND kernel_v1 (0 facts; positive control: sibling name `resistance` fires, 34
+live facts) — consumer-only vocabulary at 8 sites across 6 modules. One consumer was a
+success-shaped vacuous pass in the validation channel: `data_validation:validate_edge_cases`'s
+piton check (`S > 0.3, R < 0.1` join) printed "✓ No pitons detected" unconditionally — the join is
+`[]` by absence on every corpus ever, and `validate_all` runs in `validation_suite.pl` every
+pipeline. **Fixed 2026-06-11 (honest line, Pattern-6/OQ-96 pass-carries-witness):** the pass branch
+now prints joined-table sizes, and an empty resistance table prints
+`⚠ piton check VACUOUS: 0 resistance_to_change facts authored — check cannot fire (OQ-37)` — never
+the checkmark. Witness: suite run 2026-06-11, line pasted in
+`audits/2026-06-11_oq46_backed_reconciliation/`. **Removal/replacement of the heuristic itself is
+gated on OQ-90** (the FCR-branch piton refinement is the legitimate successor; OQ-90's controls
+already falsified suppression/theater proxies for piton). The row's other consumers are unchanged
+and still under this OQ's author-or-remove fork: `drift_events.pl:141,214` (`safe_metric` has no
+default, so the `function_obsolescence` detector silently never fires — zero-findings-by-absence;
+siblings `alternatives_available`, `sunset_time`, and `has_sunset_clause` are equally unauthored,
+killing `sunset_violation` and `scaffold_temporality_check` clause 1 too), `json_report.pl:250`,
+`report_generator.pl:507` (prints MISSING — honest-flagged), `utils.pl:205,213,346`.
+
 **Surface-2 holdouts — honest band-gap `unknown` + override removed (2026-06-01).** The 5
 load-bearing readings the Surface-2 coupling sweep could not flip (their `metric_type=unknown`
 re-pinned to tangled_rope) were diagnosed per-reading with **errors surfaced** (no-throw engine
