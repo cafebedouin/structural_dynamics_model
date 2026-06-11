@@ -844,6 +844,21 @@ def run_pipeline(
             "`python3 python/load_warning_gate.py`, then re-run the pipeline."
         )
 
+    # --- GRID FIRST-CONTACT GATE (OQ-93 flip ruling, 2026-06-11) ----------
+    # Every grid-authoring story gets the three-indicator plausibility audit
+    # ONCE before any consumer read (ledger: python/grid_audit_ledger.json).
+    # C-echo in a new story HALTS the run and demands the opt-in flip be
+    # reverted. Do NOT remove or bypass — per-story exclusion is the
+    # fail-closed half of the operator's split κ ruling.
+    from grid_first_contact_gate import run_gate as _grid_gate
+    if _grid_gate() != 0:
+        raise SystemExit(
+            "Grid first-contact gate failed — a grid-authoring story fired a "
+            "plausibility indicator (see [GRID-GATE] lines). Remove/fix the "
+            "story or record an operator waiver in "
+            "python/grid_audit_ledger.json, then re-run."
+        )
+
     def collect(step_results):
         if isinstance(step_results, list):
             for sr in step_results:
