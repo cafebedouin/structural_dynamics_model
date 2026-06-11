@@ -10,7 +10,16 @@ ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 DATASETS_DIR = os.path.join(ROOT_DIR, 'prolog', 'testsets')
 OUTPUT_FILE = os.path.join(ROOT_DIR, 'prolog', 'validation_suite.pl')
 
-INTERVAL_REGEX = re.compile(r"interval\s*\(\s*'?(\w+)")
+# Anchored to the compiled FACT form (2026-06-11): the old unanchored
+# r"interval\s*\(\s*'?(\w+)" matched prose first — union_decertification's
+# commentary "The interval (18 months)" produced test_case ID '18', the
+# scenario manager injected an anchor interval('18',0,10), and the phantom
+# ran "green" while the story's real interval never got its suite pass
+# (success-shaped miss; witnessed in the flip-promotion suite run,
+# audits/2026-06-11_oq93_grid_migration/flip_promotion_witness.txt).
+INTERVAL_REGEX = re.compile(r"^narrative_ontology:interval\(\s*'?(\w+)", re.M)
+# Fallback for hand-built testsets that author the fact unqualified.
+INTERVAL_REGEX_FALLBACK = re.compile(r"^interval\(\s*'?(\w+)", re.M)
 
 def build_suite():
     if not os.path.isdir(DATASETS_DIR):
@@ -33,7 +42,8 @@ def build_suite():
             full_path = os.path.join(DATASETS_DIR, filename)
             with open(full_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                match = INTERVAL_REGEX.search(content)
+                match = (INTERVAL_REGEX.search(content)
+                         or INTERVAL_REGEX_FALLBACK.search(content))
                 if match:
                     interval_id = match.group(1)
         except Exception as e:

@@ -1,3 +1,9 @@
+> **SUPERSEDED FOR LIVE GENERATION (2026-06-11, flip ruling):** the live prompt
+> (`constraint_story_generation_prompt_json.md`) now carries the opt-in-by-story-focus grid
+> section; this addendum remains as the DEDICATED-BATCH variant text (every-story-must-author)
+> and as the audit reference for the N=10 gate batch. The one-time κ gate became the
+> FIRST-CONTACT gate (`python/grid_first_contact_gate.py`, wired into run_pipeline).
+
 # GRID BATCH ADDENDUM — leveled coercion grid authoring (OQ-93 Stage C)
 
 This addendum rides the standard JSON generation prompt for the DEDICATED GRID BATCH only

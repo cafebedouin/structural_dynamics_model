@@ -465,6 +465,52 @@ Provide measurement entries that model how the constraint changed over its inter
 | Value | `measurements[].value` | Metric value at that time point [0.0, 1.0] |
 | ID override | `measurements[].id_override` | Optional: override the auto-generated measurement ID |
 
+## Leveled coercion grid (`coercion_grid`) — OPT-IN BY STORY FOCUS
+
+Author the optional top-level `coercion_grid` block ONLY when level-resolved coercion
+dynamics is the story's central subject — when the narrative's point is that coercive
+pressure moves DIFFERENTLY at different social levels over the interval (e.g. structural
+pressure rising while individual-level pressure is dressed down, organizational suppression
+hardening while class resistance grows). Most stories should NOT author it; a story whose
+coercion picture does not distinguish levels gains nothing from the grid and must omit the
+block entirely (absent = the gradient/kappa/pattern track reports OPEN — that is the honest
+state, never a defect).
+
+When you do author it, author the FULL grid:
+
+```
+"coercion_grid": {
+  "t0": <integer — MUST equal interval.start>,
+  "tn": <integer — MUST equal interval.end>,
+  "points": [ { "metric": "...", "level": "...", "time_point": <t0 or tn>, "value": <0.0-1.0> }, ... ]
+}
+```
+
+All 4 metrics x all 4 levels x both endpoints = 32 points, each (metric, level, time_point)
+slot exactly once. The compiler rejects duplicate slots, endpoints differing from the
+interval, and off-endpoint time points.
+
+Metric semantics (value = intensity at that level, at that time, in [0,1]):
+`accessibility_collapse` — how far alternatives/exits have closed off for agents AT THAT
+LEVEL; `stakes_inflation` — how far the cost of noncompliance has risen at that level;
+`suppression` — the active force applied at that level to keep resistance down;
+`resistance` — the resistance actually being mounted at that level at that time.
+Levels: `individual` (one agent's situation), `organizational` (organized actors), `class`
+(similarly-positioned people as a class), `structural` (the system-level arrangement).
+
+Authoring discipline (every generated grid is audited for these before any consumer reads it):
+1. **Every value must come from YOUR story** — never a constant fill, never a values pattern
+   reused from elsewhere; the level axis is the point, so levels must differ where the story
+   differentiates them.
+2. **Direction must match the story** — the grid and your scalar `measurements[]` series are
+   one account; intensifying extraction with a system-wide relaxing grid is incoherent.
+3. **No invented precision** — values are level-resolved judgments; where the story says
+   nothing about a level at a time, make the conservative judgment and note the uncertainty
+   in an omega.
+
+There is deliberately no worked 32-value example: the values are story-derived judgments,
+and a worked table would teach its constants.
+
 The final values should match your `base_properties` scores. The initial values represent the constraint's state at the start of the interval. If the constraint was always severe, use a flatter trajectory; if it degraded over time, show the progression.
 
 The `interval` section declares the time range:

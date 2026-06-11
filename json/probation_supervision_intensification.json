@@ -1,0 +1,560 @@
+{
+  "header": {
+    "constraint_id": "probation_supervision_intensification",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prob_super",
+    "story_uid": "550e8400-e29b-41d4-a716-446655440000",
+    "created_at": "2026-06-11T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.81,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.34,
+    "claimed_type": "snare",
+    "human_readable": "Probation Supervision Intensification via Electronic Monitoring and Fee Stacking",
+    "topic_domain": "criminal_justice/carceral_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_monitoring_vendors",
+      "county_probation_departments",
+      "state_corrections_budgets"
+    ],
+    "victims": [
+      "probationers",
+      "probationer_families",
+      "reentry_capacity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Probationer Under Intensified Supervision",
+      "comment": "A probationer on electronic monitoring with stacked supervision fees faces zero exit capacity. Removal from probation requires perfect compliance, but compliance itself is actively made unaffordable. Noncompliance triggers reincarceration. The constraint extracts both money (through fees) and freedom (through monitoring). This is the maximum-extraction, maximum-suppression perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Probationer's Family",
+      "comment": "Family members experience collateral extraction: they bear costs of monitoring fees, surveillance, and restricted visitation, while carrying stigma from association with a monitored person. They have no standing to object and cannot exit through their own action. Their exit option is trapped via identity linkage rather than direct legal dependency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Private Electronic Monitoring Vendor",
+      "comment": "From the vendor's perspective, intensified monitoring requirements are coordination: they solve the genuine problem of oversight without incarceration. The vendor benefits from expanded contracts but experiences this as legitimate market demand response. Theater is moderate because the vendor's core function (tracking location via GPS/RF) genuinely works; the extraction is via rent-capture on a captured market. Effective extraction is negative from the vendor's seat\u2014they are subsidized through government contracts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The County Probation Department",
+      "comment": "County probation departments face genuine coordination: they must supervise growing populations with flat or declining budgets. Electronic monitoring appears to solve this (more coverage with fewer staff). But the apparatus simultaneously extracts: departments capture supervision fees, staff employment is linked to supervision volume, and perverse incentives drive fee stacking. Exit is constrained\u2014departments could reject fee-based funding but face budget cuts; they could reduce supervision intensity but face political pressure for 'tough on crime' optics. Mixed experience: genuine coordination problem plus embedded extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reentry Capacity Commons",
+      "comment": "Probation departments that drain resources through fee collection have fewer resources for reentry services (job training, substance abuse treatment, housing support). The reentry commons is a collective good that absorbs the extraction. As monitoring intensifies, reentry investment declines, recidivism rises, and the cycle deepens. Organized agents (nonprofits, advocacy groups) can resist but face state-level barriers. The commons sees the constraint as degradation of their mission (snare)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Criminal Justice Legitimacy Narrative",
+      "comment": "Electronic monitoring is narratively framed as 'alternatives to incarceration'\u2014a benign, even progressive technology. This narrative persists despite evidence that intensified monitoring produces functional reincarceration (immobilizing, extractive, without institutional confinement) with lower accountability. The ritual of claiming alternatives-to-incarceration persists through institutional theater, maintained because the core narrative (technology = rehabilitation) is no longer credible but abandoning it would require confronting the system's extractive logic. High theater ratio reflects this performative maintenance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a civilizational view, some level of supervision overhead is inherent to managing probation populations without incarceration: monitoring has real costs, and someone must pay. The mountain framing naturalizes the distribution of costs as inevitable rather than contingent. However, the structural data contradicts the mountain classification\u2014the beneficiary structure is visible, and suppression/theater are high. The false summit detector will identify this as naturalization of a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fee_proportionality_threshold",
+      "question": "At what point do supervision fees become prohibitive barriers to compliance, converting the system from accountability into extraction machinery?",
+      "resolution_mechanism": "Empirical analysis of fee levels vs median probationer income; correlation between fee burden and technical violations (missing payments vs new crimes); post-supervision debt burden tracking.",
+      "impact": "If fees are set below ~5% of median income: framing as legitimate cost-sharing is defensible. If fees exceed 15%: extracted amount is clearly coercive and the classification shifts firmly toward snare. Current ranges (15-40% of income) suggest intentional extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold at which supervision fees become prohibitive barriers"
+    },
+    {
+      "id": "monitoring_effectiveness_paradox",
+      "question": "Do intensified electronic monitoring requirements actually reduce recidivism, or do they increase technical violations and reincarceration without changing underlying crime rates?",
+      "resolution_mechanism": "Longitudinal recidivism tracking: comparison of new-crime rates vs technical-violation rates in high-monitoring vs low-monitoring jurisdictions; analysis of whether monitoring catches new offenses or primarily catches compliance failures unrelated to criminal behavior.",
+      "impact": "If monitoring reduces new crimes: apparatus is coordinating (though still extractive through fees). If monitoring only increases technical violations: the constraint is pure supervision intensification for extraction purposes, snare classification is confirmed. Evidence to date suggests the latter.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether monitoring reduces crime or only increases technical violations"
+    },
+    {
+      "id": "reentry_resource_displacement",
+      "question": "What fraction of probation departments' fee revenue displaces or supplements general supervision budgets vs reentry services?",
+      "resolution_mechanism": "Budget analysis comparing pre/post fee-stacking jurisdictions; audit of allocation patterns; survey of department heads on fee-revenue use.",
+      "impact": "If fees primarily supplement existing budgets with no reentry displacement: extraction is lower than estimated. If fees substitute for general appropriations and reduce reentry investment: the constraint is definitely snare (extraction masked as cost-recovery).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supervision fees displace reentry services"
+    },
+    {
+      "id": "technological_determinism_lock",
+      "question": "Is the intensification of electronic monitoring driven by genuine public safety need or by vendor market capture and path dependence in adoption?",
+      "resolution_mechanism": "Historical analysis of policy adoption: what evidence/threat justified each escalation? Comparison to jurisdictions that have reduced monitoring: what changed? Vendor lobbying records vs policy rationales.",
+      "impact": "If adoption driven by evidence: constraint may be justified tangled rope. If adoption driven by vendor capture and institutional inertia: confirms snare classification and reveals false summit dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether monitoring intensification is driven by need or vendor capture"
+    },
+    {
+      "id": "identity_locked_reentry_identity",
+      "question": "Does the probation regime lock probationers into a 'monitored person' identity that persists even after formal supervision ends, constraining reentry even absent structural barriers?",
+      "resolution_mechanism": "Post-probation trajectory analysis: comparison of employment, housing access, and social integration between those who completed probation in high-monitoring vs low-monitoring regimes; qualitative interviews on identity dissolution post-supervision.",
+      "impact": "If identity lock is substantial: adds internalized suppression layer on top of structural extraction. Even after removal from probation, individuals carry monitoring norms and assume continued surveillance. Classification remains snare but with amplified suppression mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether monitoring creates persistent identity lock"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.79,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "projected"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 15,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 15,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 15,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 15,
+        "value": 0.77
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 15,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 15,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 15,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 15,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 15,
+        "value": 0.41
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 15,
+        "value": 0.84
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 15,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 15,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 15,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 15,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 15,
+        "value": 0.41
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 15,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 15,
+        "value": 0.32
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Electronic monitoring and fee stacking in probation supervision represent a system of intensified extraction masked as 'alternatives to incarceration.' A probationer on GPS monitoring with electronic supervision, day reporting requirements, and accumulated supervision fees faces removal of freedom (through constant monitoring and location restriction) and removal of resources (through stacked fees that can consume 20-40% of income). Compliance itself becomes unaffordable: the person must pay to be supervised, and failure to pay triggers reincarceration. The constraint intensifies across the interval (2010-2025) as vendors penetrate markets, states adopt fee-based probation funding, and supervision requirements expand. Individual-level coercion saturates by 2025 (accessibility_collapse=0.88, stakes_inflation=0.85): probationers face immobilization and unaffordable fees with zero legitimate exit. Simultaneously, structural visibility of the extraction falls (structural accessibility_collapse=0.48, structural suppression=0.35): the apparatus is publicly framed as 'technology-enabled alternatives to prison,' obscuring its extractive logic. The grid captures this inversion: maximum coercion at the individual level, where pressure saturates and resistance is minimal; moderate-to-low pressure at the organizational and structural levels, where beneficiaries (vendors, departments, state budgets) experience coordination benefits and extract value with minimal accountability. The constraint is a snare because no exit legitimate under the law exists, and the coercion is actively managed to increase over time.",
+    "key_agents": [
+      "Probationers: powerless/trapped \u2014 face intensifying surveillance, location restriction, and unaffordable fees with zero lawful exit",
+      "Probationer families: powerless/identity_locked \u2014 carry collateral extraction and stigma; identity fused with monitored person",
+      "Private monitoring vendors (e.g., Atticus, GEO Group): institutional/arbitrage \u2014 capture growing contracts as states expand monitoring; experience as pure market coordination",
+      "County probation departments: moderate/constrained \u2014 face genuine budget/supervision coordination problem but use fees to extract; exit is constrained (budget cuts if they refuse)",
+      "State corrections budgets: institutional/arbitrage \u2014 benefit from probation fee revenue and reduced incarceration costs; low extraction experience",
+      "Reentry services and nonprofits: organized/constrained \u2014 lose funding as probation dollars shift to monitoring; resistance is organized but blocked",
+      "Criminal justice reform advocates: organized/constrained \u2014 document the extraction but lack power to change system",
+      "Analytical observer: analytical/analytical \u2014 risks naturalizing technological control as inevitable"
+    ],
+    "logic_rationale": "Extractiveness (0.72): High and rising. The constraint extracts money (supervision fees stacking to prohibitive levels) and freedom (monitoring immobilization with no legitimate exit). The rise from 0.35 to 0.72 over 15 years tracks the intensification of fee stacking and expanded monitoring requirements. Suppression (0.81): High and rising. The suppression is structural (legal authority to reincarcerate for noncompliance), technological (GPS/RF monitoring with constant tracking), and financial (unaffordable fees block legal compliance). Theater ratio (0.58): Moderate. The constraint is theatrically framed as 'alternatives to incarceration' and 'community supervision'\u2014benign language that obscures the immobilization and extraction. However, the core function (tracking location, enforcing curfew) is not purely theatrical\u2014it genuinely restricts movement. The theater is in the legitimacy narrative, not in the mechanism itself. Accessibility collapse (0.88 individual, 0.48 structural): The critical leveled pattern. Individual probationers see nearly total collapse of alternatives (0.88 by year 15): they cannot afford to comply (fees too high), cannot fail to comply (reincarceration), and cannot legally exit (probation terms are fixed). Structural observers see the system as having alternatives (0.48): the apparatus is presented as a choice between incarceration and probation, and governments claim space to adjust. This inversion\u2014maximum individual coercion, moderate structural visibility\u2014is the core mechanism of snare dynamics. Stakeholders experience maximum pressure where they have zero power (individuals), and moderate/acceptable pressure where they have institutional power (departments, vendors).",
+    "perspectival_gap": "The probationer sees snare (trapped, extracted, unaffordable compliance). The probation department sees tangled rope (genuine coordination\u2014budget constraints\u2014mixed with embedded extraction through fees). The private vendor sees rope (solving a real market demand, tracking genuinely works). The county budget sees benefit (revenue, reduced incarceration costs). The analytical observer risks seeing mountain (unavoidable overhead of probation management) but the high beneficiary structure and rising extraction metrics reveal a false summit. The constraint is only 'natural' if one assumes probation fees and intensified monitoring are inevitable\u2014they are not. The perspectival gap reveals whose interests the 'inevitability' serves.",
+    "directionality_logic": "The engine derives d (directionality toward extraction) from agent power and exit options combined with beneficiary/victim status. Probationers (powerless/trapped) \u2192 d=1.0 (full targets). Probation departments (moderate/constrained) \u2192 d=0.65 (constrained exit, partial beneficiary status through fee revenue). Vendors (institutional/arbitrage) \u2192 d=0.15 (beneficiary, high exit capacity). The high d values for powerless agents combined with structural suppression and beneficiary presence produce the snare classification. The constraint's effective extraction chi is amplified because the primary targets (probationers) have zero mobility and maximum suppression applies to them specifically.",
+    "mandatrophy_analysis": "The constraint exhibits resolved mandatrophy: the original mandate was 'supervise probation populations without mass incarceration.' That mandate was live and legitimate. However, intensified monitoring and fee stacking have converted the apparatus from a supervision mechanism into an extraction and immobilization mechanism. The original coordination function (managing probation populations) has been subordinated to the extraction function (capturing revenue, immobilizing bodies). The mandatrophy is resolved by recognizing that the constraint now serves the extraction, not the supervision. The narrative framing ('alternatives to incarceration') preserves the ghost of the original mandate while the apparatus operates as snare. Declaring mandatrophy_resolved=true captures this: the constraint's founding mandate has been outlived by its actual function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "carceral_labor_extraction",
+      "recidivism_measurement_gaming",
+      "probationer_debt_accumulation"
+    ],
+    "dual_formulation_note": "This constraint is upstream of carceral_labor_extraction (if probationers cannot afford fees, they may enter formal work programs or informal coerced labor). It affects recidivism_measurement_gaming (technical violations from fee noncompliance are counted as recidivism, inflating failure metrics). It drives probationer_debt_accumulation, which is a separate extractive constraint with different epsilon."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "probationers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals under court-ordered probation are subject to electronic monitoring (GPS ankle monitor or RF-based tracking), day reporting requirements, and accumulating supervision fees. They must pay fees ranging from $50-150 monthly plus initial device fees ($300-500), often consuming 15-40% of income. They face curfew enforcement, location restrictions, and automated compliance monitoring. Noncompliance with any requirement (missing a payment, being outside designated zones, missing a day report) triggers arrest and reincarceration. Removal from probation requires perfect compliance for the full probation term (typically 3-5 years). Exit is legal only after the probation term ends; early termination is rare. They have no lawful way to exit the constraints while probation is active."
+    },
+    {
+      "name": "probationer_families",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Families bear collateral costs: they may contribute to probation fees (from household income), experience surveillance of home visits, coordinate around curfew and monitoring restrictions, and carry social stigma. Minor children and dependent adults may experience restricted visitation or movement due to the probationer's conditions. Families have no standing to challenge conditions and cannot exit without severing family bonds. Their identity becomes fused with the monitored person\u2014they are known as 'the family of'\u2014making exit through disaffiliation psychologically costly."
+    },
+    {
+      "name": "private_monitoring_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies providing GPS monitoring devices, RF tracking systems, day reporting infrastructure, and compliance software (e.g., Atticus, GEO Group, Securus) receive government contracts for monitoring services. Revenue grows with jurisdiction adoption and expanded monitoring requirements. They experience the market as organic demand\u2014jurisdictions request solutions to supervision challenges, and vendors supply them. They have exit capacity: contracts are renewed annually, and they operate in multiple jurisdictions. The apparatus itself (tracking technology) functions reliably. They benefit from fee-based revenue models where probationers or probation departments pay per device, per report, per facility visit."
+    },
+    {
+      "name": "county_probation_departments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Probation departments manage growing probation populations (often 300-500% increases over 20 years) with flat or declining general appropriations. Electronic monitoring allows them to supervise more people with fewer staff. They impose and collect supervision fees (authorized by state law) as cost-recovery, which becomes a revenue stream that departments depend on. Exit is constrained: if they reduce monitoring requirements or fees, they face pressure to reduce staff (political pressure for 'tough on crime' and budget cuts). If they expand monitoring, they capture more fee revenue but increase population immobilization. They set the agenda for individual probationers (conditions of probation) but operate within state policy and budget constraints set above them."
+    },
+    {
+      "name": "state_corrections_budgets",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State corrections systems benefit from probation-based supervision: it appears to reduce incarceration costs compared to building prisons, even though probation populations have grown 300%+. States collect portions of probation fee revenue and reduce costs for incarceration infrastructure. They frame the system as cost-effective and evidence-based. They have exit capacity: they could fund probation through general appropriations rather than fees, or reduce probation requirements, but they benefit from fee revenue and low incarceration budgets. The current arrangement subsidizes their budget with extracted probationer fees."
+    },
+    {
+      "name": "reentry_services_nonprofits",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Nonprofits providing job training, substance abuse treatment, mental health services, and housing support to formerly incarcerated people lose funding as probation dollars shift toward monitoring infrastructure and fee collection. They see probationers arriving with accumulated debt, health problems amplified by stress and sleep deprivation from monitoring, and reduced capacity to work or engage in services due to curfew and day reporting requirements. Their reentry effectiveness declines as probation constraints intensify. They resist through advocacy but have constrained exit: they depend on state funding and cannot defund themselves without closing programs."
+    },
+    {
+      "name": "criminal_justice_reform_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocacy organizations document and challenge probation intensification through lawsuits, legislative testimony, and public reporting. They identify fee stacking, vendor capture, and recidivism increase driven by technical violations. They have constrained exit: they depend on foundation funding and public attention, and cannot easily shift focus to other issues without abandoning this constituency. They resist but remain organizationally outside the decision-making apparatus. Success requires changing state law or funding models\u2014high-cost activities with uncertain outcomes."
+    },
+    {
+      "name": "public_legitimacy_apparatus",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The public narrative framing around probation ('alternatives to incarceration,' 'community supervision,' 'technology-enabled management') is not an agent but a non-agent entity (a doctrine, a framing). It is listed because the constraint's persistence depends critically on the legitimacy narrative obscuring the extraction. The analytical seat recognizes this as a non-agent with analytic significance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The genuine coordination problem: managing growing probation populations without mass incarceration. Supervision requires oversight, and electronic monitoring provides a technical mechanism (tracking presence via GPS/RF) that allows one officer to manage 100+ cases instead of 10. The coordination function solves a real resource constraint: states cannot afford to incarcerate or hire probation staff at the rate probation populations have grown.",
+    "transfer_function": "Probation systems transfer freedom (location restriction, surveillance, constant monitoring) and resources (fees, 15-40% of income) FROM probationers TO: (1) private vendors (contract revenue), (2) probation departments (fee revenue and operational budget), (3) state budgets (reduced incarceration costs, fee revenue). Reentry services and families experience net loss. The constraint moves money and mobility upward from powerless agents to institutional beneficiaries.",
+    "absent_voices": "Voices absent from supervision policy design: currently or formerly incarcerated people (policy is made without their participation), economic researchers (cost-benefit analysis is rarely conducted), reentry services providers (their evidence about monitoring barriers to reentry is not weighted), and public defenders (who could speak to noncompliance patterns). Also absent: comparative jurisdiction data on effectiveness of different supervision models. The apparatus hears from vendors, police, and corrections administration; it does not hear from those bearing the costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If probation supervision intensification disappeared tomorrow\u2014if electronic monitoring were discontinued, supervision fees eliminated, and day reporting requirements removed\u2014the arrangements would rearrange substantially. Probation departments would face the original coordination problem (how to supervise large populations with limited staff) and would need to solve it through: (1) hiring more staff (budget increase), (2) reducing probation populations through decriminalization (policy change), or (3) accepting higher incarceration rates (political risk). Vendors would lose contracts. States would lose fee revenue. The system depends on the intensification; removing it exposes the underlying resource constraint.",
+    "founding_problem": "The founding problem was the early-2000s crisis of 'mass incarceration': U.S. prison populations had tripled from 1970-2000. Policymakers sought 'alternatives to incarceration' to reduce prison populations without appearing soft on crime. Electronic monitoring and probation expansion were presented as the solution: supervise more people without building more prisons. The problem was live and real (incarceration costs were becoming unsustainable).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (mass incarceration) is corroborated by every independent researcher and policy analyst working on criminal justice. However, whether probation intensification actually solved the problem is contested. Critics note: (1) incarceration rates did not decrease; they remained flat or increased in many jurisdictions, (2) probation populations grew 300%+ while incarceration remained high, (3) probation-based extraction may have replaced incarceration-based extraction but did not reduce total system coercion. Corroboration on the original problem comes from VERA Institute, Pew Research, scholarly consensus. Corroboration on whether intensified probation solved the problem comes only from correctional administrations claiming success without independent validation."
+  },
+  "gain_flow": "private_monitoring_vendors",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "carceral_labor_extraction",
+      "recidivism_definition_gaming"
+    ]
+  }
+}

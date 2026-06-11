@@ -310,7 +310,14 @@ impute_missing_metrics(IntervalID, []) :-
 %% grid_provenance(+IntervalID, -prov(Authored, Injected, Imputed, Absent, Total))
 %  Counts every grid slot by the source class of the fact occupying it
 %  (first fact per slot, mirroring persist_single's occupancy guard).
-%  Absent > 0 means repair has not run yet for this interval.
+%  Absent > 0 means no fact occupies the slot (authored-or-absent regime).
+%  INTERVAL-SCOPED (2026-06-11, flip promotion): the measurement read was
+%  interval-ANONYMOUS (`measurement(SrcID, _, Metric, Time, _)`) — the same
+%  cross-constraint leakage class as the OQ-93 build-unit-1 coercion_vector
+%  fix, latent while at most ONE loaded interval ever had grid facts
+%  (load_and_run clears the KB). First corpus-wide pipeline with 10 authored
+%  grids: 56/58 constraints read other stories' grid points as their own
+%  (witnessed: audits/2026-06-11_oq93_grid_migration/flip_promotion_witness.txt).
 grid_provenance(IntervalID, prov(A, I, P, Abs, Total)) :-
     narrative_ontology:interval(IntervalID, T0, Tn),
     findall(Class,
@@ -318,7 +325,7 @@ grid_provenance(IntervalID, prov(A, I, P, Abs, Total)) :-
             member(Time, [T0, Tn]),
             member(Metric, [accessibility_collapse(L), stakes_inflation(L),
                            suppression(L), resistance(L)]),
-            (   narrative_ontology:measurement(SrcID, _, Metric, Time, _)
+            (   narrative_ontology:measurement(SrcID, IntervalID, Metric, Time, _)
             ->  source_class(SrcID, Class)
             ;   Class = absent
             )

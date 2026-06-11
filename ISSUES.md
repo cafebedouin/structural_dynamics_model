@@ -4140,9 +4140,18 @@ next-points — compound(Metric) guard) → Stage-D wiring of `level_gradient_di
 FCR/FSM/extraction-blindness omega (two-sided control witnessed; kappa CONDITIONAL 16/32 tag
 FIRED; moderate-cap why-not recorded: 0 correction-grade carriers); injection/imputation killed
 permanently (shim + flag retired → closes OQ-96). Ruling (a) stands: `structural_coercive_intent`
-unwired — sub-fork filed as OQ-106. **PENDING OPERATOR:** live-prompt flip to
-opt-in-by-story-focus (N=10 PASS necessary-not-sufficient, operator's own provision) + promotion
-of the 10 batch stories from the audit dir to the corpus — both arrive as one ruling.
+unwired — sub-fork filed as OQ-106. **FLIP RULED (operator,
+2026-06-11): flip now, gate converted one-time → FIRST-CONTACT** — every grid-authoring story
+gets the three-indicator audit once before any consumer read
+(`python/grid_first_contact_gate.py` + tracked ledger, wired into run_pipeline; C-echo in any
+new story halts and reverts the flip); live prompt carries the opt-in grid section; the 10
+gate-passed stories PROMOTED to the corpus (n_constraints 48→58; every standing 0-diff baseline
+re-pins to the post-promotion corpus). Promotion found and fixed two latent defects with
+witnesses (flip_promotion_witness.txt, flip_promotion_suite.txt): grid_provenance read
+interval-ANONYMOUS (56/58 cross-constraint leakage — build-unit-1 class, latent while only one
+loaded interval ever had grid facts) and the suite generator's unanchored interval regex matched
+prose (three phantom test_case IDs '18'/'0'/'from' ran green against injected anchors while the
+real intervals never got their suite pass).
 Cross-refs: OQ-44 (Pattern-5 instance — the completeness gate now reads authored-or-absent),
 OQ-96, OQ-102 (riders landed with the stages), OQ-105 (the grid block shares t0/tn by
 construction, so it cannot create that misalignment class), OQ-106.
