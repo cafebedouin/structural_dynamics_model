@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-83 RESOLVED: measurement close-out; snapshot_type determinism guard; v7 §4.5 (A)/(B) census; OQ-109/OQ-110 filed
+**Files:** ISSUES.md, prolog/transition_paths.pl, docs/deferential_realism_paper_v7.md, audits/2026-06-11_oq83_close/
+**Tier:** landed
+
+Operator-gated close of the stakeholder-layer migration's measurement question
+(`audits/2026-06-11_oq83_close/`). **R4 ruled SATISFIED** (n=6 pilot diff = "produced and
+preserved"; preservation witness 18 tracked pilot-arm JSONs — the plan's "20" reconciled as a
+grep artifact catching 2 `phase_a_pilot_*` demos); corpus-scale census declined-with-reason
+(structure pass named as what a re-open buys). **Ω_P transferred**, not answered: observer-axis
+Type-B foreclosed (TWO_AXIS), committer C/B → OQ-87. **Classifier-sync item 5 resolved:**
+nb_setval mechanism CONFIRMED at clinical T=0; milblogger T=18 graduates CLEAN (OQ-90/OQ-44
+moved the piton path since the 2026-06-08 flag); NEW ε-sourcing mismatch
+`challenge_as_commons_maintenance` T=5 (grid-misalignment class, no counted flip, unflagged).
+Operator ruled determinism-fix-plus-document (counterfeit-witness rationale — a threading fix
+would read as sync while the semantic ε-sourcing divergence remains): `snapshot_type/3` now
+clears the classify_at_time nb-globals at entry (before/after witnesses + controls pasted;
+`run_migration_tests` green; validation suite 0 warnings). The 2026-06-08 census substrate is
+`archives/datasets/kernel_v2_test` (the then-live corpus, archived at `00c639da`) — overlay it
+to reproduce. v7 §4.5 amended: one (A) data bridge (`influences`, drl_composition.pl:141) vs
+≥3 (B) read-only seam diagnostics, all grep-witnessed live. Spin-offs: **OQ-109** (Phase B/C;
+CLAUDE.md mandatrophy note retires there) and **OQ-110** (residual join + D-fork; inherits
+consumer-side `Backed` verification). Phase-C calculus witnessed: live corpus 62 testsets,
+47 with stakeholder facts / 49 with six-questions atoms → regen scope ≈ 13–15 stories.
+
 ## 2026-06-11 — Pew-typology review exchange landed: hedging-as-rigor dual, false-summit authoring discipline, OQ-107/OQ-108 filed, OQ-103 escalated
 **Files:** docs/technical/build_discipline.md, CLAUDE.md, docs/design/design_discipline.md, ISSUES.md, prolog/testsets/institutional_trust_erosion.pl
 **Tier:** landed
