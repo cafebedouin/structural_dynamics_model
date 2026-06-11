@@ -1,0 +1,33 @@
+=== Probe D: pre-reset artifact scan of live outputs/ ===
+as-of: 2026-06-11T00:28:29.542382-05:00
+scan root: /home/scott/bin/structural_dynamics_model/outputs  reset boundary: 2026-06-05
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_3098uo09.json: Expecting value: line 1 column 1 (char 0)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_4rh7r66d.json: Unterminated string starting at: line 39891 column 7 (char 2539476)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_al962zco.json: Unterminated string starting at: line 261090 column 7 (char 16527358)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_f3gdz3_w.json: Expecting property name enclosed in double quotes: line 81811 column 2 (char 5165056)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_iyeogscq.json: Unterminated string starting at: line 28953 column 56 (char 1794046)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_x6j1rewp.json: Unterminated string starting at: line 364745 column 7 (char 23068667)
+  [unparseable] /home/scott/bin/structural_dynamics_model/outputs/scs_out_xyna7un_.json: Unterminated string starting at: line 27056 column 7 (char 1687509)
+
+scanned: 1066 json files; 7 carried a manifest
+
+POSITIVE HITS: 4 (halt condition — falsifies Block 2 as planned)
+
+  HIT: /home/scott/bin/structural_dynamics_model/outputs/pipeline_output.pre_agency_fix.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-03T16:10:13Z)
+    content: per_constraint.drift_trajectory populated in 1102/1107
+    content: per_constraint.drift_events populated in 1102/1107
+
+  HIT: /home/scott/bin/structural_dynamics_model/outputs/tripwire_fabricated_defaults_results.json
+    why: NO MANIFEST, mtime 2026-05-30T03:30:50.694523 pre-reset, temporal-classification content
+    content: D1a.details_sample: 5 baseline/patched temporal classification rows (e.g. {'key': ['monopoly_transfer_mechanism', '2'], 'baseline': 'tangled_rope', 'patched': 'snare', 'direction': 'other'})
+
+  HIT: /home/scott/bin/structural_dynamics_model/outputs/schema_sieve/analysis.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-04T14:15:56Z)
+
+  HIT: /home/scott/bin/structural_dynamics_model/outputs/schema_sieve/features.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-04T14:15:56Z)
+
+live artifact pipeline_output.json: pipeline_run_at=2026-06-11T02:06:01Z n_constraints=48 commit=0b81e8e dirty=True
+
+live artifact enriched_pipeline.json: pipeline_run_at=2026-06-11T02:06:01Z n_constraints=48 commit=0b81e8e dirty=True
