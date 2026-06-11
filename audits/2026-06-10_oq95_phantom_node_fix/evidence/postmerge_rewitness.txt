@@ -27,3 +27,13 @@ run_dynamic_suite exit 0; [PASS]=39 [FAIL]=0; [OPEN] lines=423, [SHIM] lines=39
 The first post-merge attempt (background pipeline swipl|grep|head) deadlocked at startup:
 0.00s CPU over 6h51m, state Sl, wchan=futex_do_wait — never began loading. Environment/spawn
 quirk (WSL2), not engine behavior; the identical goal completed in ~20s foreground (above).
+
+# Second re-witness (2026-06-11, after merging main c1f78a31 — overnight topic runs grew corpus 39→48)
+load_warning_gate: 4 allowlisted, 0 unexpected
+test_phantom_neighbor_filter: All 4 passed; fpn_injection: All 6 passed
+validation suite: exit 0, PASS=48 FAIL=0
+endpoint probe (48-file corpus):
+enumerated=46 edges=50 endpoint_nodes=24 phantom_in_graph=0 authored_aff_facts=50 distinct_dangling_targets=29
+-> the overnight stories minted NEW dangling affects_constraint targets (25→29 distinct),
+   exactly the regeneration behavior OQ-95 predicted, and ZERO entered the graph —
+   the live confirmation that the engine-side filter is the scheme-level answer.
