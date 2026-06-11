@@ -100,6 +100,37 @@ pre-derivation: the two non-story `cs_axiom_contradiction` files exported the fa
 nullable, null = no authored scalar); (3) report-layer 0.0 defaults CONFORMING as-is (print
 MISSING). OQ-43 resolved in the same stroke, fifth-instance disposition recorded there.
 
+## 2026-06-11 — OQ-93 FLIP RULED + EXECUTED: live prompt opt-in grid section; κ gate → first-contact gate; 10 batch stories promoted (corpus 48→58); two latent defects found by promotion
+**Files:** prompts/constraint_story_generation_prompt_json.md, prompts/grid_batch_addendum.md, python/grid_first_contact_gate.py, python/grid_audit_ledger.json, python/run_pipeline.py, python/python_test_suite.py, prolog/data_repair.pl, prolog/validation_suite.pl, json/, prolog/testsets/
+**Tier:** landed
+
+Operator ruling: flip now; the one-time κ gate becomes FIRST-CONTACT — every grid-authoring
+story is audited once (three indicators, per-story fail-closed) before any consumer read,
+ledgered in `python/grid_audit_ledger.json` (seeded with the 10 gate-passed batch stories);
+C-echo in any new story HALTS run_pipeline and demands the flip be reverted. Gate controls
+4/4 (first_contact_gate_witness.txt). Promotion witnesses: exactly the 10 stories carry
+authored 32/32 grids in pipeline output (flip_promotion_witness.txt); suite 58/58 green —
+48 grid-absent honestly OPEN + 10 real increasing_coercion verdicts on authored data
+(flip_promotion_suite.txt) — the first live-corpus grid consumption in the construct's
+history. **TRIPWIRE — baselines re-pinned:** every standing 0-diff witness referenced the
+pre-promotion substrate (the "143/143 byte-identical" compiler sweep = 143 json files, now
+153; the phase-6 suite diff = 48-corpus, now 58); cite those witnesses as
+of-their-substrate, re-run before reuse (staleness ladder). Two latent defects found by
+first contact and fixed with witnesses:
+1. `data_repair:grid_provenance` read measurement/5 with the interval ANONYMOUS —
+   56/58 constraints read other stories' grid points as their own the moment ten grids
+   coexisted in one KB (build-unit-1 leakage class; single-interval loads had masked it).
+   Interval-scoped now; post-fix pipeline shows exactly the 10.
+2. `python_test_suite.py`'s unanchored interval regex matched PROSE before facts — three
+   phantom test_case IDs ('18' from "interval (18 months)", '0', 'from') ran green against
+   scenario-manager-injected anchors while those stories' real intervals never got their
+   suite pass (success-shaped miss). Regex anchored to the compiled fact form + fallback;
+   59 test_cases all real IDs except the two genuinely interval-less contradiction files.
+Spot-check witnesses added at operator flag: phase-6 diff mechanically traced (105/105
+before-lines name the retired flag; 105/105 after-lines carry RETIRED wording; 22 ELAPSED =
+all 232 lines); FSM number/1 guard two-sided control (sentinel reaches clause, FSM abstains
+cleanly, unguarded comparison witnessed throwing).
+
 ## 2026-06-11 — OQ-93 grid migration LANDED end-to-end (stages A–D + coverage read + shim retirement); OQ-96/OQ-101/OQ-102 closed with it; intent sub-fork filed as OQ-106
 **Files:** schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/coercion_projection.pl, prolog/pattern_analysis.pl, prolog/intent_engine.pl, prolog/report_generator.pl, prolog/signature_detection.pl, prolog/drift_report.pl, prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/narrative_ontology.pl, prolog/config.pl, prolog/config_schema.pl, prolog/scenario_manager.pl, prolog/data_repair.pl, prolog/data_verification.pl, prolog/domain_priors.pl, python/enhanced_report.py, python/run_pipeline.py, python/domain_priors.py, python/shared/schemas.py, python/tensions_ledger.py, agent/c-orchestrator.py, agent/generate_grid_batch.py, prompts/grid_batch_addendum.md
 **Tier:** landed
