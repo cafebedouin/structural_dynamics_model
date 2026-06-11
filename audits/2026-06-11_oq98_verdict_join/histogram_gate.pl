@@ -40,11 +40,14 @@ hist_run(W) :-
     findall(C, corpus_loader:corpus_constraint(C), CsRaw), sort(CsRaw, Cs),
     length(Cs, NC),
     format(W, 'corpus: ~w constraints~n~n', [NC]),
+    % once/1 on both goals: json_report consumes exactly the FIRST solution
+    % (its ->/; hoist); without it diagnostic_summary's nondeterminism
+    % inflated the histogram to 50 rows over 48 constraints (first run).
     findall(row(C, Base, Joined, Cap, AlertTypes, SigGrade),
             ( member(C, Cs),
-              catch(diagnostic_summary:diagnostic_summary(C, S), _, fail),
-              diagnostic_summary:verdict_join(C, S,
-                  verdict_join(Joined, Base, Cap, Alerts, _, _, SigGrade)),
+              once(catch(diagnostic_summary:diagnostic_summary(C, S), _, fail)),
+              once(diagnostic_summary:verdict_join(C, S,
+                  verdict_join(Joined, Base, Cap, Alerts, _, _, SigGrade))),
               findall(T-Sev, member(alert(T, Sev, _), Alerts), AlertTypes)
             ),
             Rows),
