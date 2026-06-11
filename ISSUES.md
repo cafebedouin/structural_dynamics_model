@@ -3276,264 +3276,86 @@ re-inject if resurrected — the suppression lives in the backend, not the corpu
 ## OQ-83 — Stakeholder-layer migration: replace the four-tuple authoring surface via the five/six-questions interview (the engine's first framing-perturbation)
 
 **Ω-type:** Ω_C (role-set-as-declared-frame — A4-settled with residue ledger) + Ω_E (cross-framing
-independence: does any framing change *move* a mountain — the engine instance of
-`docs/the_mountain_and_the_frame.md` Ω_E) + Ω_P (Type C vs B — operator-deferred, ruled against the
-Phase-A diff, not in advance).
+independence) + Ω_P (Type C vs B — transferred, see close note).
 
-**Status:** open — Pass-1 audit complete and witnessed (`audits/2026-06-07_stakeholder_layer_migration/AUDIT.md`); migration plan written (`MIGRATION_PLAN.md`, same dir). **Phase A step 1 LANDED (2026-06-07): schema dial-set declaration — `stakeholders[]` + `six_questions` optional in `schemas/constraint_story_schema.json`; five roles declared (contender ruled out, contention derived); Pattern-5 authored-empty conditional + R5 provenance conditional; witness suite 7/7 incl. four negative controls each biting at its intended guard (`phase_a_schema_witness.py`/`.txt`, same dir; validated with Draft7, the pipeline's actual validator). R5 genealogy fields included — their gate (mandatrophy-abandonment read) was closed same day.** **Phase A step 2 LANDED (2026-06-07): compiler emission** — `constraint_stakeholder/7` + `stakeholder_secondary_role/3` + `stakeholder_non_agent/2` + `disappearance_verdict/2` + `founding_problem_status/2`, and role-derived beneficiary/victim (beneficiary→beneficiary, payer→victim only; agent-gated; **excluded derives NOTHING** per R3; deduped against authored arrays). Witnesses (audit dir): 0/100 old-vs-new compiler diff (additivity, re-run after fix); pilot `phase_a_pilot_stakeholder_demo.pl` covering all five branches (derive/dedupe×2/excluded/non-agent), lint clean, swipl-loads (5 facts + Q5/R5 atoms). One bug caught by the pilot inspection greps before commit: the six-questions comment loop shadowed the `emit` closure's `lines` accumulator, silently discarding all prior output — "compiled OK" read as success; fixed + commented at site. **A6 sub-gate run inside step 2** (operator pin): 0 engine consumers of the new predicates (positive control fires), derived names add 0 cross-constraint shared atoms, both coupling guard sites untouched — **scope: this clears the DERIVED-name half only; A6 REOPENS at step-3 projection of authored bespoke names against the unguarded `inferred_coupling_protocol.pl:218–222` (OQ-84). Sequencing pin (operator, 2026-06-07): the guard (or an explicit OQ-84 ruling that the asymmetry is intentional) lands BEFORE-OR-WITH the projection, same pass, never after.** The schema-only window is CLOSED (prompt-authored stakeholders now compile). Remaining Pattern-1 hold, one level down: stakeholder/7 + the two six-questions atoms have a producer and no engine consumer until **step 3 (engine layer: projection, per-(C,Name) d, in_contention/3, R5 mismatch consumer rewiring mandatrophy, R3 provenance check — five distinct wirings; the first non-purely-additive step)** — derived beneficiary/victim are consumed immediately by the existing d/FSM machinery, so the classification-relevant output is already wired. **Step 3 LANDED (2026-06-07), scoped as MECHANISM witness (operator correction: a falsifier that cannot fail on its own hand-authored test data is a wiring test; the EXPERIMENT is step 4, generated arms, ε pinned).** Wirings: delegation refactor `extractiveness_for_agent_d/4` (A1-harness byte-identical — keystone-class witness, watched); `dr_type_with_d/4`; `stakeholder_seats.pl` (projection; per-(C,Name) d from the role-d config params — **declared as a fitness-chosen SEAT**, config.pl comment; `in_contention/3`; `seat_perceived_vs_real/4`; `consensus_provenance/2`; `zombie_piton_crosscheck/2` — all commentary-grade, nothing overrides classification); narrative_ontology fact declarations + the R5 zombie clause (`has_mandatrophy_declaration` second clause over the two authored atoms, mismatch-only). Mechanism witness (audit dir `step3_mechanism.txt`): **same substrate, atom-keyed → all-solutions `[0.15]`, one type (rope) for both institutional seats; name-keyed → 0.12 / 0.85 split, types rope vs tangled_rope; split causally located in the role-param clause** (payer-param overlay 0.85→0.40 moved only payer seats; restore verified); `in_contention` = exactly the same-atom opposed pair; control story: no contention pairs, identical same-atom d (0.25/0.25), identical types — the harness returns both answers. Untested this pass (deliberate, mobile-isolation): exit-mod arms beyond trapped(+0.05), the d clamp. **OQ-84 resolved within this step** (see OQ-84). Validation suite passes post-change (0 warnings). Next: **step 4 — the generated-arms cross-framing experiment** (both surfaces on shared topics, ε per A5 raw+pinned, contention story among the topics; the straitjacket verdict and the deferred Type-C/B ruling live there), then Phase B per plan.
+**Status:** resolved — measurement close-out (operator-scoped, 2026-06-11). All three Ω-types
+answered or relocated; engineering follow-through spun off: **OQ-109** (Phase B cutover + Phase C
+regen/retire), **OQ-110** (offline residual join + author-vs-derive D-fork). Evidence:
+`audits/2026-06-07_stakeholder_layer_migration/` (Phase A steps 1–4, AUDIT.md, MIGRATION_PLAN.md,
+STEP4C_PARTITION.md, TWO_AXIS_NOTE.md) + `audits/2026-06-11_oq83_close/` (Step-1 classifier-sync
+witness; close session). Full investigation narrative: git history of this entry.
 
-**Type-A snapshot floor LANDED (2026-06-08) — adjacent to this OQ's deferred "time-varying role/d".**
-The DR-axis observer-temporal floor shipped strict-Tier-2, schema-deferred (KNOWN_STATE 2026-06-08;
-`audits/2026-06-08_typea_template_extensibility/`): `derive_directionality_at/4` threads Time
-(byte-identical on the current corpus — no time-indexed source), and a category-B `temporal_residual.pl`
-emits per-`(C,Context)` flip-events with a ran-witness and a phantom-flip guard. **Finding: the
-residual is NOT empty — 56/100 constraints show ≥1 backed flip, all ε/suppression/theater-driven (d is
-frozen on the current corpus).** This bears on the D-fork below: substantial ε-driven flips at fixed
-role/d mean the cheap path produces signal, so **role-time-indexing (branch b of the author-vs-derive
-fork) is NOT forced by emptiness** — the fork stays the operator's, decided by the offline join, not
-this build. Open follow-ons (sequenced):
-1. **CS-path precondition — LANDED (2026-06-08).** The existing CS block now emits the committer
-   *stage-time* per constraint: `cs_reference_frame` (t0), `cs_drift_moment` + `cs_drift_gap`
-   (t1 = `cs_drift_state` moment/gap), alongside the pre-existing `cs_drift_terminal` (t2). 7
-   constraints carry it (the kernel readings); non-committer constraints emit null. Serialization of
-   committer OUTPUT only — no observer read, no in-engine join (hub separation; the join is offline).
-   Witness: pipeline JSON well-formed, no-regression diff empty modulo the 3 new keys + manifest;
-   `british_mandate_scaffolding` t0→t1→t2 = `ancient_jewish_sovereignty…`→`post_mandate_establishment_1948`
-   (`practice_drift/substantial/false`)→`husk`. **The offline-join precondition is now met:** both
-   temporal descriptors (observer integer-time `temporal_residual` + committer named-moment stages)
-   are joinable per constraint `id`. The reconciliation rule(s) remain offline (item 2), not baked.
-2. **Offline residual join** (several committer-moment ↔ observer-time reconciliation rules; no
-   in-engine rule baked) decides the author-vs-derive D-fork; opens branch b (time-varying role/d)
-   only if backed residuals are ε-unexplained.
-3. **C2 `frame_policy` + C1 time-indexed-d land as a PAIR** via `effective_time/3` +
-   `time_indexed_directionality_source/4` (use-site coupled; shipping a source without a policy gate
-   forecloses Originalist-over-a-time-source). Shape ruled by the offline join.
-4. **v7 §4.5 bridge paragraph is stale as a census** (operator-flagged, substrate-confirmed): "exactly
-   one intentional bridge … and nothing else" conflates the one (A) data bridge (`influences`) with the
-   ≥3 (B) read-only seam diagnostics (`cs_drift_mismatch`, `cs_kernel_registry`→`classify_at_time`,
-   `cs_pattern_detection`→`constraint_signature`). Separation holds; amend §4.5 to state the (A)/(B)
-   distinction.
-5. **Classifier-sync OPEN (NOT introduced by the floor; surfaced by it).** `test_snapshot_migration`
-   passes, but full `classify_at_time` ≡ `snapshot_type` is FALSE and always was: 3 unique mismatch
-   points at default context (the d-threading edit is sync-neutral, witnessed on stashed code). The
-   contamination join flags **2 of 52 counted default-context flips** (`clinical_deskilling_automation`
-   0→2, `milblogger_legitimacy_erosion` 12→18) as classifier-sensitive — they must be carried as
-   flagged into the offline join, not as clean ε-signal. Likely cause **[UNVERIFIED, not root-caused
-   this pass]**: `snapshot_type` calls `classify_from_metrics` WITHOUT the `nb_setval` temporal
-   theater/eps state that `classify_at_time` threads and the piton/excess gates read. Graduation:
-   witness the nb_setval mechanism at one mismatch point (clear vs set), then decide fix-or-document.
+**Close note (per Ω):**
+- **Ω_C SETTLED:** role-set-as-declared-frame ruled at A4 (85.0% alignment, middle band,
+  proceed + residue ledger; contender 6.3% stays in the ledger as declared evidence that the
+  frame treats contention relationally — contention is DERIVED, never authored).
+- **Ω_E MEASURED:** the straitjacket WAS escaped for everything `in_contention` exists to detect
+  (the 4b gate fired on a non-problem; OQ-85 silence-is-correct). Computed classification
+  survived every same-grain comparison in the 4c pilot (n=6, ε-pinned, bin-blind: 2 survived /
+  2 flipped / 2 unevaluable; both flips dissolved per-flip into victim-count ×
+  `critical_mass_threshold` resolution, not framing). Robust separate signal: claim-layer
+  framing effect 3/3 (stakeholder arm claims rope, four-tuple claims tangled_rope; the engine
+  corrects both to snare) — model-stable (3/3 under Sonnet, identical to Gemini).
+- **Ω_P TRANSFERRED, not answered:** observer-axis Type-B is architecturally foreclosed
+  (`TWO_AXIS_NOTE.md`, `two_axis_witness.py`: byte-identical observer orbit, different committer
+  verdict). The genuine C/B detection-independence question lives on the committer axis →
+  **OQ-87**. The deferred Type-C/B ruling did not evaporate; it relocated.
 
-**Step-4 FLIP CRITERION (operator-directed pin, 2026-06-07 — declared from step 3's mechanism,
-BEFORE step 4's plan or run, so the criterion cannot fit the output).** "Straitjacket escaped" is
-confirmed only if ALL FOUR hold: (1) REPRESENTATION — the stakeholder arm authors ≥2 same-power
-opposed-role agent stakeholders on the contention topic; if the generator never instantiates the
-opposition, the criterion is UNEVALUABLE (a generation finding, never massaged into a verdict).
-(2) SPLIT SURVIVES ε-PINNING — distinct d at `derive_directionality_for_stakeholder` and distinct
-computed types at the same atom under BOTH ε treatments; the pinned run is load-bearing
-(split-raw-but-not-pinned = ε moved, NOT a flip). (3) COLLAPSE WITNESSED IN THE CONTROL ARM —
-the four-tuple arm yields exactly one d/type at that atom, all-solutions pasted (the step-3
-`[0.15]` pattern), witnessed not assumed. (4) NON-FLIP CONTROL ON GENERATED ARMS — a
-non-contention topic authored both ways shows no same-atom split and no `in_contention`.
-**Renamed-not-escaped verdicts (equally pre-declared):** opposition authored but d collapses;
-split vanishes under pinning (ε artifact); the control splits too (harness flips everything); or
-the generator cannot author same-power opposition across N attempts — schema escaped but the
-generation pipeline re-imposed the straitjacket: a system-level non-escape, its own finding.
-Type difference is corroboration throughout; the d-split + collapse contrast is the witness.
-Step 4's plan is written at step-4 start (its shape depends on what the prompt can author across
-both surfaces); this criterion is fixed now and is not revised against step-4 output.
+**R4 ruling (operator, 2026-06-11): SATISFIED.** The n=6 pilot diff satisfies "produced and
+preserved" — preservation witness: 18 tracked pilot-arm JSONs + `STEP4C_PARTITION.md`
+(the plan's earlier "20" reconciled: grep over `pilot` also caught 2 `phase_a_pilot_*` demo
+files). **Corpus-scale census: DECLINED-WITH-REASON** — TWO_AXIS gutted its payoff to
+generation-resolution characterization with no current consumer. What a re-open would buy is
+the untested STRUCTURE PASS (bin membership predicted by ε/signature/type; the pilot had no
+evaluable low-ε topic). Any re-opened census is governed by the pre-registered extended (b)
+criterion: same `(HasB,HasV)` boolean profile AND victim-count same-side-of-
+`critical_mass_threshold`, ε-pinned, bin-blind, two clean separately-generated arms (the live
+dual-surface prompt cannot serve as the framing perturbation).
 
-**STEP 4 — 4b GATE FIRED: RENAMED-NOT-ESCAPED (2026-06-07; STOP, operator's to act on).** Full
-report: `audits/2026-06-07_stakeholder_layer_migration/STEP4_4b_RENAMED_NOT_ESCAPED.md`. 4c
-(cross-framing diff, Type-C/B census, Ω_E measurement) was NOT run — gated on 4b. Pilot prompt
-(neutral, witnessed zero contention-directive language) + scaffold-leak witness (PASS both axes,
-constant scaffold inert; positive control fires) + 6 topics pinned-before-gen (3 contention / 2
-non / 1 mountain), model pinned gemini-2.5-pro. **Finding (dual cause, NOT the crude "generator
-can't author opposition"):** across all 3 contention topics the HEADLINE antagonists never land
-same-power + opposed-role — streaming & hospital authored both antagonists at the SAME power
-(institutional) but the SAME role (both agenda_setter = co-administrators; opposition only in
-situation prose); app_store authored opposed roles but DIFFERENT power (institutional vs
-powerful). `in_contention` (same-atom AND opposed-role) fires on neither shape. The detector is
-live (positive control: fired on 3 non-headline / non-contention / mountain pairs), just
-unaligned with topic-level labels. **Two compounding layers:** (1) generation — gemini-2.5-pro
-under the neutral prompt renders co-equal-institutional contention as two agenda_setters or
-drifts a power atom; (2) vocabulary — `in_contention`/the d-split only separate
-agenda_setter/beneficiary-vs-payer, so opposed co-administrators are structurally invisible (the
-A4 contender-residue 6.3% resurfacing at the generation layer with evidence). **Operator
-decision (candidates in the report, none self-resolved):** re-examine the A4 derive-don't-author
-contention ruling against this evidence / add an opposed-co-administrator case (needs a new
-authored opposed-pair signal — reopens author-vs-derive) / scope the escape claim to
-asymmetric-role opposition only. Prompt-craft NOT chosen (would manufacture the finding).
-Gemini-conditional. Phase B remains gated. **New sub-question filed: OQ-85.**
+**Classifier-sync (entry item 5) RESOLVED 2026-06-11**
+(`audits/2026-06-11_oq83_close/STEP1_REPORT.md`): the nb_setval hypothesis CONFIRMED at
+clinical_deskilling_automation T=0 (set-manipulation closes the mismatch; controls pass);
+milblogger_legitimacy_erosion T=18 no longer mismatches on current code (OQ-90/OQ-44 moved the
+piton path) → graduates CLEAN; new ε-sourcing mismatch `challenge_as_commons_maintenance` T=5
+(grid-misalignment class, touches no counted flip, unflagged). Operator-ruled determinism fix
+landed (`transition_paths.pl`: snapshot_type clears the globals at entry; order-dependence
+witnessed before/after; the mismatch persists honestly — full snapshot_type ≡ classify_at_time
+remains FALSE with the semantic ε-sourcing divergence documented, by design). Flag inheritance
+→ OQ-110: clinical 0→2 documented exclusion; milblogger 12→18 clean.
 
-**UPDATE 2026-06-07 — OQ-85 RESOLVED (silence-is-correct); 4b gate was guarding a non-problem;
-4c UNBLOCKED.** The OQ-85 audit established `in_contention` feeds no classifier (annotation only)
-and the type is metric-driven and correct without it (even on the no-anchor worst case). So the
-4b "renamed-not-escaped" did NOT find a straitjacket gap — the co-equal case is OUTSIDE
-`in_contention`'s job (asymmetric-collapse detection), not failing it. **The straitjacket WAS
-escaped for everything `in_contention` exists to detect.** Consequence: step-4's verdict is no
-longer gated on OQ-85 — **4c (the cross-framing census, the real Ω_E measurement, the Type-C/B
-evidence) is the unblocked next move**, and it is the experiment that was the actual point of
-step 4. 4b stopped on a gate guarding a non-problem; 4c is where the framing-perturbation result
-lives. (The 2×2 model×framing Ω and Phase B sequencing are unchanged.)
+**Where each surviving obligation went (cold-reader index):**
+- **Consumer-side `Backed` verification** (the OQ-33 and OQ-46 closes both deposit it "with
+  OQ-83") → **OQ-110** — the offline residual join is the consumer that exercises the bit.
+- Phase B cutover, Phase C regen/retire, CLAUDE.md mandatrophy-note retirement, AUDIT OPEN-1/2
+  → **OQ-109**.
+- Author-vs-derive D-fork (time-varying role/d; C1/C2 pair) → **OQ-110** (operator ruling).
+- Type-C/B → **OQ-87** (committer axis). v7 §4.5 bridge census (item 4): LANDED 2026-06-11,
+  seams grep-witnessed (commit `5822c242`).
 
-**4c DESIGN CORRECTED (operator, 2026-06-07 — Type-C/B dichotomy dissolved a THIRD time; the
-global cut pin is RETRACTED).** Type C / Type B is an aggregate over a per-topic census; forcing a
-global C-or-B answer reads a per-position result as a position-free verdict (the mountain-and-frame
-error). **4c produces a PARTITION, not a verdict:** per topic ∈ {survived (H¹ stable across both
-framings = real, two coordinates on one structure), flipped (H¹ moved = the four-tuple was
-authoring it), unevaluable-by-resolution}. Pins:
-- **No global Type-C/B threshold** (retracted): the rate is a SUMMARY of the partition, never a
-  verdict; a summary standing in for the partition is a reasoning step reintroduced (count-for-
-  witness error). The partition is the operator's to read, against the list, not the rate.
-- **same-RESOLUTION exclusion (the surviving, sharpened pin):** strengthen conjunct-1's
-  same-constraint check to same-GRAIN. OQ-85 proved one topic can author at different resolutions;
-  if the two surfaces carve a topic at different grain (one bundling what the other splits), the
-  orbits differ for a reason that is neither survival nor framing-movement → the topic is
-  UNEVALUABLE and leaves the census entirely, NOT counted as a flip.
-- **bias asymmetry (pin into the read before the run):** every uncontrolled error mode (resolution
-  mismatch, topic divergence, ε drift) inflates FLIPS, and flips feed Type-B, the
-  project-vindicating finding. So flips are cheap/contamination-prone, survivals expensive/clean:
-  each individual flip earns more scrutiny than each survival before entering the flipped bin;
-  the ε-pinned arm is load-bearing; report the ε-pinned, resolution-excluded rate as the believed
-  figure and the raw (unpinned, unexcluded) rate as the contaminated upper bound on movement,
-  never a second data point.
-- **the real finding is STRUCTURE, not the ratio:** run one pass at whether bin membership is
-  predicted by ε / signature / type. Survivors=low-ε coordination + flippers=high-ε extraction
-  would be the strong specific claim (the four-tuple was authoring the *extraction*
-  classifications); random-wrt-measured-properties is also a result.
-Deliverable: the per-topic partition (survived/flipped/unevaluable), ε-pinned, resolution-mismatch
-excluded-not-counted, + the structure pass. Not a Type-C/B ruling.
+**Rulings of record (still operative — kept per the compress-on-close exception; OQ-109 builds
+against these):** R1 drop authored per-seat perception (KEEP the computed perceived-vs-real
+gap). R2 dial-set {agenda_setter, beneficiary, payer, excluded, observer} DECLARED/SWAPPABLE,
+bundling stated. R3 `excluded` commentary-grade only; consumer = consensus-provenance check.
+R4 preserve the A/B perturbation pair — ruled satisfied above; the pair stays preserved (audit
+dir now; Phase C archives the arm corpora with manifests). R5 sixth question
+(genealogy/obsolescence); mismatch consumer only; rewires the mandatrophy apparatus per A7
+(recovery, not net-new scope — abandonment was a dropped seam at the format migration,
+witnessed against git history). Contender: NO sixth role — contention is a structural RELATION
+between seats, derived from opposed roles, never authored. Static roles now; time-varying
+role/d is OQ-110's fork.
 
-**4c RAN (2026-06-07, PILOT n=6); report `STEP4C_PARTITION.md`. Presented, not ruled.**
-Pre-registered bin-blind partition (ε-pinned): 2 survived (hospital, payday), 2 flipped
-(app_store, streaming), 2 unevaluable (time_zones, lightspeed — profile mismatch fired correctly
-bin-blind). Headline (analytic) type survived in ALL 4 evaluable (snare both arms). **Per-flip
-scrutiny dissolved both flips into a resolution artifact:** the all-metric-pin control showed the
-flips are NOT metric-drift (persist with ε/supp/theater all pinned); the mechanism is victim
-COUNT × `critical_mass_threshold`(=3) via `resolve_coalition_power` at the powerless seat —
-app_store/streaming stake-arm derived 3 victims (coalition fires) vs four-tuple 2 (no fire);
-hospital 3-vs-3 survived, consistent. **Finding about the criterion (NOT retro-applied — bin-blind
-discipline):** (b) is incomplete — the orbit reads victim count via coalition, not only the
-(HasB,HasV) boolean; a corpus-scale run must pre-register extended (b) = boolean match AND
-victim-count same-side-of-threshold. **Robust separate signal — CLAIM-layer framing effect:** all
-3 evaluable contention topics, stakeholder arm claims `rope`, four-tuple claims `tangled_rope`
-(3/3); engine corrects both to snare (claim moves, computed type doesn't). **Type-C/B mechanism
-read:** the engine has no framing-sensitive classification layer (orbit = f(authored metrics +
-victim-count); perspectives ignored, A1); "framing moves the type" reduces to "framing authors
-different structure" — here the claim (robust) and victim-enumeration granularity (resolution,
-excludable). The computed classification SURVIVED every same-grain comparison; the framing
-perturbed the authored claim (seat-dependent) and the enumeration grain. Whether residual
-structure-drift is Type-B or generation noise is NOT settled at n=6 → corpus-scale run + the 2×2
-model×framing Ω. Structure pass untestable (all 4 evaluable high-ε; the one low-ε topic was
-resolution-excluded). Swallowing-trap note: the all-metric-pin control's first run returned
-empty-equals-empty and falsely read "metric-drift"; caught + re-run, corrected result is the
-opposite. **Method validated; corpus-scale census is the next forward move (with corrected (b)).**
+**Phase A landed surface (one line each; witnesses in the audit dir):** step 1 schema (7/7
+witness suite incl. negative controls); step 2 compiler (0/100 additivity diff; stakeholder/7 +
+secondary_role/3 + non_agent/2 + disappearance_verdict/2 + founding_problem_status/2;
+role-derived beneficiary/victim, excluded derives NOTHING); step 3 engine layer
+(`stakeholder_seats.pl`: per-(C,Name) d, `in_contention/3`, `seat_perceived_vs_real/4`,
+`consensus_provenance/2`, `zombie_piton_crosscheck/2` — all commentary-grade; name-keyed
+0.12/0.85 d-split causally located in the role params); 4b RENAMED-NOT-ESCAPED → OQ-85
+resolved silence-is-correct → 4c pilot partition (above). OQ-84 resolved in-pass. Stage C
+(OQ-92) made the live prompt dual-surface additively; the R4 control arm stayed intact.
 
-**TWO-AXIS correction (2026-06-07; report `TWO_AXIS_NOTE.md`).** The 4c "engine has no
-framing-sensitive classification layer" reasoning is scoped to the OBSERVER axis and overreaches
-in the general form. Witnessed (`two_axis_witness.py`): two constraints identical on the observer
-axis (same metrics/benef/victim/scaffold) differing ONLY in committer `cs_structure` give a
-BYTE-IDENTICAL observer orbit but a DIFFERENT committer verdict (`cs_axiom_foreclosed`: base `[]`,
-variant `[core_premise]`). So: observer-axis Type-B is architecturally foreclosed for `dr_type`
-(perspectives ignored, A1 — correct); but the COMMITTER axis (cs_axiom_engine/cs_drift_engine,
-v7 Axiom 7 / Theorem 7) is a SEPARATE structure-sensitive classification surface, untouched by the
-(observer-axis) stakeholder migration and unexercised by the pilot (all 12 arms `cs_structure`=
-absent). **Consequence:** the corpus-scale observer-axis run measures generation-resolution
-variance, NOT C-vs-B (do not inherit the C/B label — observer C/B is answered by architecture).
-The genuine two-axis C/B / detection-independence question is a DIFFERENT, unstarted experiment on
-the committer axis (vary axioms/grounding/drift, hold observer, measure where foreclosure diverges
-from observer-coherence — Theorem 7).
-
-**4c evaluability refinements (operator, 2026-06-07):** (1) **evaluability is judged BIN-BLIND** —
-the (a)+(b) call is made/recorded with its basis BEFORE bin (survived/flipped) is computed, so a
-cold reader can confirm the exclusion wasn't bin-aware; a bin-correlated exclusion criterion is
-how the flattering bias re-enters under the name of strictness (option-2 "exact match" was
-rejected for exactly this — tightening (b) preferentially drops marginal SURVIVORS, shifting the
-census toward flips/Type-B). The asymmetry lives ONLY in per-flip scrutiny, applied after bin
-assignment. (2) **(b) is a substrate DIFF, not a judgment** — but NOT literal derived-name-set
-equality (names are chosen independently per arm → would mark all topics unevaluable for a naming
-reason). The orbit-relevant substrate the name-set stands in for is the `(HasBeneficiaries,
-HasVictims)` existence profile (A2: `derive_directionality` reads those booleans + context-power +
-metrics, never agent names/counts); (b) = bin-blind equality of that boolean profile between arms.
-(3) **(a) same primary object** remains the residual judgment (does each arm's `human_readable`/
-constraint name the same object), recorded bin-blind with basis — the watched call.
-
-**Follow-on Ω (filed, gated on 4b being cleared): 2×2 model×framing perturbation** — the
-straitjacket verdict and Type-C/B census are Gemini-conditional; whether the framing-perturbation
-survival rate survives a model change (mountain-and-frame asked of the generator, not the engine)
-is unmeasured. Run both arms under a second model once 4b passes.
-**Origin:** 2026-06-06/07. Feasibility exploration → five-model review → operator re-read the
-convergence through mountain-and-frame (within-frame agreement measures the shared seat) → CC TASK
-audit-then-plan, executed 2026-06-07.
-
-**The reframe that governs sequencing:** the (P,T,E,S) tuple is the engine's FRAMING (observer
-sweeps are within-framing); this migration is the first perturbation OF the framing. The diff
-between the same topics authored under both surfaces is the primary measurement: a reading H¹=0
-under the four-tuple that flips under stakeholders was never a mountain — the four-tuple authored
-it. **R4 (REVERSED from the multimodel consensus): preserve the A/B perturbation pair; do not
-retire the four-tuple surface before the cross-framing diff is produced and preserved.** Straddle
-(one corpus, mixed schemas) rejected; preserve-the-pair (two clean parallel corpora, shared
-topics) required. Corpus regen only after the diff is pasted (Phase C).
-
-**Audit verdicts (all witnessed, see AUDIT.md):** A1 keystone — computed path (dr_type/χ/signature/H¹,
-canonical-4 + product-156) ignores authored perspective facts; controlled null (perspective flip:
-162/162 byte-identical; ε control moved every register). A2 — straitjacket exists: d keys on
-(power atom × existence booleans × exit); two powerful agents collapse; atom-keyed override moves
-them together. A3 — full consumer table: pipeline `"perspectives"` key is COMPUTED (survives),
-`"classifications"` key is the authored dump (migrates). A4 — role alignment 85.0% (middle band,
-operator-pinned 90/70 declared-revisable cuts → proceed + residue ledger); systematic residue:
-**contender 6.3%** (dial-set backgrounds contention — candidate 6th role at declaration),
-ritual_operator 1.9% (R5's zombie population), dual_role, non_agent (OQ-64 recurrence). A5 —
-post-hoc ε overlay pin witnessed feasible; diff runs raw + pinned with ε-delta as own axis. A6 —
-guard asymmetry: intra-kernel filter exists at `drl_purity_network.pl:96–98` but NOT at
-`inferred_coupling_protocol.pl:218–222`; stakeholder names must ride a NEW predicate. A7 — the
-mandatrophy authoring surface is a Pattern-1 dangling wire (schema field → 0 emissions; engine
-consumers read never-produced inputs); R5 rewires it rather than adding a third surface.
-
-**Rulings of record:** R1 drop authored per-seat perception (redundancy + perturbability; KEEP the
-computed perceived-vs-real gap). R2 dial-set {agenda_setter, beneficiary, payer, excluded,
-observer} DECLARED/SWAPPABLE, bundling stated (backgrounds role's time-index AND — per A4 —
-contention). R3 `excluded` commentary-grade only; consumer = consensus-provenance check. R5 sixth
-question (genealogy/obsolescence); mismatch consumer only; R3-style corroboration; rewires
-mandatrophy apparatus per A7. Operator 2026-06-07: static roles now (time-varying role/d = the
-deferred Ω below); Type C/B deferred to the Phase-A diff.
-
-**Sequencing notes:** stakeholder layer is prerequisite to time-varying-d and cross-reading agent
-joins; the cross-reading join is gated on A6 (new predicate, or guard added at the second site;
-AUDIT OPEN-3 enumerates `run_coupling_protocol` consumers first); Phase-B cutover (new example
-replaces `verification_bottleneck.json`) re-opens FNL-regime re-witnessing (OQ-70 bait convention
-dies with the old example); declared falsifier for the straitjacket fix — the two-powerful-agents
-contention story must FLIP across framings in the Phase-A pilot, else the layer renamed the
-straitjacket, not escaped it. AUDIT OPEN-1/2 (`cross_context_analysis` callee,
-`boltzmann_compliance.pl:472`) resolve during Phase-B consumer migration.
-
-**Deferred Ω (gated on Phase A landing):** committer-axis delegation of R5's "still live" half
-(cross-wiring cs_drift to the observer battery's balance question); time-varying stakeholder
-role/d (the five-questions "run them again later" — would let observer change alter trajectory
-SHAPE, not just transition timing).
-
-**Post-audit operator rulings (2026-06-07):**
-- **Contender: NO sixth role — contention is DERIVED, not authored.** Contention is a structural
-  RELATION between seats (two same-power stakeholders with opposed roles), not an attribute of one
-  seat; a contender role would mis-type a relation as an attribute (the four-tuple's own category
-  error, repeated) and would let the author assert the conclusion the cross-framing falsifier is
-  supposed to measure — the contention story must flip because the engine computed it from opposed
-  roles, not because the author typed "contender." The A4 contender residue (6.3%) stays in the
-  ledger as declared evidence that the frame treats contention relationally. Dial-set declaration
-  is now unblocked at five roles.
-- **R5 is recovery, not net-new scope.** Mandatrophy was originally the authoritarian-grip-limits
-  thesis (tighten → fewer legitimate outlets → more illegitimate ones — the mandate outlives its
-  coordinating function and persists as pure extraction); the genealogy question R5 re-derived was
-  already designed into the engine, named, and schematized. **Abandonment reason RESOLVED against
-  git history (2026-06-07, witnessed):** engine consumers entered at `6f997d71` (hand-authored
-  testsets era, fed by hand-written `attribute(C, lifecycle, mandatrophy)`); the schema boolean
-  arrived at `3641ae71` (JSON-template migration) whose compiler only ever handled
-  `mandatrophy_analysis` prose — the emission was never written in ANY version. A dropped seam at
-  the format migration, NOT a gameability wall: R5 inherits no hidden design wall, and the
-  planned Phase-A "why did it never fire?" check is closed. Silent-mistake promoted to CLAUDE.md
-  Critical Distinctions (retire when the rewire lands).
-- **A6 guard asymmetry split out → OQ-84** (true of the engine today, independent of this
-  migration; bundling it here would mean it only gets looked at if the migration proceeds).
+**Origin:** 2026-06-06/07 (feasibility → five-model review → operator mountain-and-frame
+re-read → audit-then-plan). Closed 2026-06-11.
 
 ---
 
@@ -4688,6 +4510,100 @@ position from existing story fields — is possible first and already useful as 
 report ("these positions will be inference"). Pattern 6 rule applies: the report must carry
 coverage to the read site, never collapse sparse-position aggregates into confident-looking
 verdicts. Cross-refs: OQ-107, OQ-101 (the tensions ledger is the natural place to surface it).
+
+---
+
+## OQ-109 — Stakeholder-layer migration completion: Phase B cutover + Phase C regen/retire (spun off the OQ-83 measurement close)
+
+**Ω-type:** Ω_E (engineering follow-through with witnessable cutover effects; one embedded
+re-witnessing obligation — the FNL regime resets at the example cutover).
+
+**Status:** open — filed 2026-06-11 at the OQ-83 close. Not gated on any further measurement:
+R4 was ruled SATISFIED (operator, 2026-06-11) and the corpus-scale census recorded
+declined-with-reason in the OQ-83 close.
+
+**Inheritance (explicit):** the four-tuple surface is retirable — the cross-framing diff is
+produced and preserved (18 tracked pilot-arm JSONs + `STEP4C_PARTITION.md`,
+`audits/2026-06-07_stakeholder_layer_migration/`). No census gates Phase C. If the declined
+census is ever re-opened (its payoff: the structure pass), OQ-83's pre-registered extended (b)
+criterion governs — see the OQ-83 close note. All OQ-83 rulings of record (R1–R5, derived
+contention) remain operative build specs here.
+
+**Phase B scope (MIGRATION_PLAN.md §Phase B, same audit dir):**
+- Prompt rewrite: five-questions + R5 interview REPLACES the P/T/E/S + per-seat-type sections.
+  Stage C (OQ-92, 2026-06-10) already made the live prompt dual-surface additively, so cutover
+  = DROPPING the four-tuple sections from the live prompt, not adding the stakeholder ones.
+- NEW one-shot example replacing `agent/verification_bottleneck.json` — kills the OQ-70
+  mountain-template bait convention; **cutover RE-OPENS FNL-regime re-witnessing**
+  (signature-prevalence statistics reset again).
+- Consumer migration per AUDIT A3 table: (a)-class Prolog (perspectival_gap →
+  computed-over-seats; mountain-unanimity retire-or-recompute; validation/repair gates →
+  stakeholder presence; report_generator mandatrophy gaps → rewired R5 consumer) and (a)-class
+  Python; linter rules (powerless/institutional-required → role-coverage rules; Rule 18 →
+  per-(C,Name) overrides).
+- AUDIT OPEN-1/2 (`cross_context_analysis` callee; `boltzmann_compliance.pl:472`) resolve as
+  part of this migration, witnesses pasted.
+- **The CLAUDE.md Critical-Distinctions mandatrophy note retires here**, when the R5
+  report_generator consumer lands (the note says so explicitly).
+
+**Phase C scope (never before B):** `perspectives[]` retired from the schema; `reading_diff`
+re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
+`prolog/archives/datasets/` with manifests (control arm preserved permanently); Build
+Discipline Pattern-3 old-vs-new diffs before any retirement. **Post-reset calculus (witnessed
+2026-06-11):** live corpus = 62 testsets, of which 47 carry compiled stakeholder facts and 49
+carry six-questions atoms — the regen scope is the four-tuple-only minority (~13–15 stories),
+far below the original full-regen estimate.
+
+**Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the Phase B/C half of the
+spin-off; the join half is OQ-110).
+
+---
+
+## OQ-110 — Offline residual join (observer flip-events × committer stages) + the author-vs-derive D-fork, terminating in an operator ruling
+
+**Ω-type:** Ω_E (the join is computable from landed surfaces) + Ω_P (the D-fork — author
+time-varying role/d vs keep-derived — is the operator's, decided on the join's shape, not in
+advance).
+
+**Status:** open — filed 2026-06-11 at the OQ-83 close. Terminates in an OPERATOR RULING, not
+a build.
+
+**Inputs (now clean):**
+- Both temporal descriptors joinable per constraint `id`: observer integer-time
+  `temporal_residual` flip-events + committer named-moment stages (`cs_reference_frame` /
+  `cs_drift_moment` / `cs_drift_gap` / `cs_drift_terminal`), landed 2026-06-08.
+- Backed semantics bucketed (OQ-46 close, 2026-06-11): 59 real flips / 20 `fab_adjacent`
+  EXCLUDED. The blanket alternative was rejected precisely because it launders `fab_adjacent`
+  into THIS fork's count (59→79) — do not re-merge the buckets here.
+- Classifier-sensitive flags graduated (OQ-83 Step 1,
+  `audits/2026-06-11_oq83_close/STEP1_REPORT.md`): `milblogger_legitimacy_erosion` 12→18
+  CLEAN (endpoint no longer classifier-sensitive on current code);
+  `clinical_deskilling_automation` 0→2 DOCUMENTED EXCLUSION (the semantic ε-sourcing
+  divergence stands; the snapshot_type determinism guard landed);
+  `challenge_as_commons_maintenance` T=5 is a known ε-sourcing mismatch touching no counted
+  flip — unflagged.
+- Substrate discipline: the 56/100 backed-flip figure is kernel_v2_test-regime (the then-live
+  corpus, archived at `00c639da`). The join re-runs the residual on its declared substrate and
+  cites the manifest, never the memorized figure.
+
+**Inherits consumer-side `Backed` verification:** the OQ-33 and OQ-46 closes both deposit it
+"with OQ-83"; it lives HERE now — the join is the consumer that finally exercises the bit
+(verify flips consumed downstream actually carry `Backed=true` semantics end-to-end before the
+fork is read).
+
+**The D-fork:** branch b (time-varying role/d) opens ONLY if backed residuals are
+ε-unexplained. If opened: C2 `frame_policy` + C1 time-indexed-d land as a PAIR via
+`effective_time/3` + `time_indexed_directionality_source/4` (use-site coupled; shipping a
+source without a policy gate forecloses Originalist-over-a-time-source). Shape ruled by the
+join; the ruling is the operator's.
+
+**Cross-refs:** OQ-105 (the scalar substitution sets flip TIMING in 2 timelines — the join
+must read flip times against the misalignment buckets before attributing them); OQ-102
+(time-series provenance buckets); OQ-87 (committer-axis C/B — a distinct question that shares
+the committer stage surface).
+
+**Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the join half of the
+spin-off; the Phase B/C half is OQ-109).
 
 ---
 
