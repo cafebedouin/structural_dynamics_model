@@ -20,6 +20,7 @@
 :- module(diagnostic_summary, [
     diagnostic_summary/2,
     diagnostic_verdict/2,
+    verdict_join/3,
     diagnostic_selftest/0
 ]).
 
@@ -29,7 +30,9 @@
 :- use_module(constraint_indexing).
 :- use_module(signature_detection, [
     constraint_signature/2,
-    has_metric_perspectival_variance/1
+    has_metric_perspectival_variance/1,
+    signature_grade/2,
+    signature_severity/2
 ]).
 :- use_module(boltzmann_compliance, [
     boltzmann_compliant/2,
@@ -45,6 +48,7 @@
 :- use_module(dirac_classification).
 
 :- use_module(abductive_helpers, [known_override_signature/1, override_target/2]).
+:- use_module(data_repair, [grid_provenance/2]).  % OQ-98 verdict_join; source_class/2 called module-qualified (unexported; load-path witnessed, p2 probe)
 
 :- use_module(library(lists)).
 
@@ -576,6 +580,129 @@ compute_verdict(_, _, Tensions, red) :-
 compute_verdict(_, [_|_], _, yellow) :- !.
 compute_verdict(_, _, [_|_], yellow) :- !.
 compute_verdict(_, _, _, green).
+
+/* ================================================================
+   VERDICT JOIN (OQ-98)
+   ================================================================
+   The headline verdict is a JOIN over the report's own evidence,
+   not a passthrough of compute_verdict/4. Inputs joined:
+     (a) alerts — drl_core:dr_mismatch/3 (claim mismatches +
+         perspectival incoherence) plus the correction-grade
+         signature alert (signature_severity/2);
+     (b) severity floors — severe => red, moderate => yellow,
+         informational => no floor; Joined = max-badness of the
+         base verdict and all floors, with a cap_applied token
+         naming what raised it;
+     (c) grid provenance — data_repair:grid_provenance/2 per-slot
+         census of the leveled grid (no_interval when the
+         constraint has no interval/3);
+     (d) measurement provenance — counts over
+         narrative_ontology:measurement/5 by
+         data_repair:source_class/2 (what drift actually eats; the
+         drift CONDITIONAL tag keys on this, not the leveled grid).
+
+   Grid provenance does NOT gate the headline (operator ruling 1,
+   per-question branch): probe P1 witnessed BRANCH A — 0/48
+   diagnostic summaries changed under a full synthetic 32-slot
+   grid per interval, positive control firing on
+   report_generator:classify_interval/3 (46/46) — so none of the
+   12 subsystems is grid-fed and the verdict stays scoped to them;
+   grid-fed findings (Pattern/Confidence, kappa) carry CONDITIONAL
+   tags at their own read sites instead. Witness:
+   audits/2026-06-11_oq98_verdict_join/p1_witness.txt. If a
+   subsystem ever becomes grid-fed, this ruling reverts to strict
+   fail-closed (authored < total => headline conditional).
+
+   The join is serialized WITH its raw inputs (json_report.pl),
+   alongside diagnostic_verdict, never instead.
+   ================================================================ */
+
+%% verdict_join(+C, +Summary, -Join)
+%  Join = verdict_join(Joined, Base, CapApplied, Alerts, GridProv, MeasProv,
+%                      SigGrade)
+%    Joined     — headline verdict (green|yellow|red)
+%    Base       — compute_verdict/4 result from Summary (raw input)
+%    CapApplied — none | severe_alert | moderate_alert
+%    Alerts     — list of alert(Type, Severity, Source)
+%    GridProv   — grid_prov(Authored, Injected, Imputed, Absent, Total)
+%                 | no_interval
+%    MeasProv   — meas_prov(Authored, Injected, Imputed, Total)
+%    SigGrade   — correction | commentary | none
+verdict_join(C, Summary, Join) :-
+    Summary = diagnostic_summary(Base, _, _, _, _, _, _),
+    join_alerts(C, Alerts),
+    findall(F, ( member(alert(_, Sev, _), Alerts),
+                 severity_floor(Sev, F) ), Floors),
+    max_badness([Base|Floors], Joined),
+    (   Joined == Base
+    ->  Cap = none
+    ;   Joined == red
+    ->  Cap = severe_alert
+    ;   Cap = moderate_alert
+    ),
+    (   catch(data_repair:grid_provenance(C, prov(GA, GI, GP, GAbs, GT)),
+              _, fail)
+    ->  GridProv = grid_prov(GA, GI, GP, GAbs, GT)
+    ;   GridProv = no_interval
+    ),
+    measurement_provenance(C, MeasProv),
+    (   signature_detection:signature_grade(C, SigGrade)
+    ->  true
+    ;   SigGrade = none
+    ),
+    Join = verdict_join(Joined, Base, Cap, Alerts, GridProv, MeasProv,
+                        SigGrade).
+
+%% join_alerts(+C, -Alerts)
+%  Deduplicated alert(Type, Severity, Source) terms. dr_mismatch/3 is
+%  enumerated via setof (the perspectival clause yields one solution per
+%  context pair; the join needs the fact, not the multiplicity). P3 timing:
+%  full enumeration incl. perspectival = 0.034s over the 48-corpus, so no
+%  clause is dropped and no alerts_omitted marker is needed.
+join_alerts(C, Alerts) :-
+    (   setof(alert(Err, Sev, Src),
+              ( drl_core:dr_mismatch(C, Err, Sev),
+                mismatch_source(Err, Src) ),
+              MisAlerts)
+    ->  true
+    ;   MisAlerts = []
+    ),
+    (   signature_detection:signature_severity(C, SigSev)
+    ->  Alerts = [alert(signature_correction, SigSev, signature_grade)|MisAlerts]
+    ;   Alerts = MisAlerts
+    ).
+
+mismatch_source(perspectival_incoherence, perspectival) :- !.
+mismatch_source(_, claim_mismatch).
+
+%% severity_floor(+Severity, -Floor)
+%  informational carries NO floor (the clause set is closed on purpose:
+%  an unknown severity atom raises no floor rather than a fabricated one).
+severity_floor(severe, red).
+severity_floor(moderate, yellow).
+
+verdict_badness(green, 0).
+verdict_badness(yellow, 1).
+verdict_badness(red, 2).
+
+max_badness(Verdicts, Worst) :-
+    findall(B-V, ( member(V, Verdicts), verdict_badness(V, B) ), Pairs),
+    msort(Pairs, Sorted),
+    last(Sorted, _-Worst).
+
+%% measurement_provenance(+C, -meas_prov(Authored, Injected, Imputed, Total))
+%  Constraint-level census of measurement/5 facts by source class — the
+%  series drift/trajectory consumers actually eat. Distinct from the
+%  leveled-grid census: a constraint with no interval still has this.
+measurement_provenance(C, meas_prov(A, I, P, Total)) :-
+    findall(Cls,
+            ( narrative_ontology:measurement(Src, C, _, _, _),
+              data_repair:source_class(Src, Cls) ),
+            Classes),
+    length(Classes, Total),
+    aggregate_all(count, member(authored, Classes), A),
+    aggregate_all(count, member(injected, Classes), I),
+    aggregate_all(count, member(imputed,  Classes), P).
 
 /* ================================================================
    UTILITIES

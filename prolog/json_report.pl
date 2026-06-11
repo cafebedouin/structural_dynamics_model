@@ -497,6 +497,14 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_diagnostic_verdict_from_summary(S, Summary),
     format(S, ',~n', []),
 
+    % verdict_join (OQ-98): the joined headline verdict, serialized WITH its
+    % raw inputs (alerts, provenance counts, signature grade) — a sibling of
+    % diagnostic_verdict, never a replacement. diagnostic_verdict stays
+    % byte-unchanged; consumers headline verdict_join.verdict.
+    format(S, '      "verdict_join": ', []),
+    write_verdict_join(S, C, Summary),
+    format(S, ',~n', []),
+
     % post_synthesis_flags (T12)
     (   Summary \= none, config:param(post_synthesis_enabled, 1)
     ->  post_synthesis:post_synthesis_check(C, Summary, PSFlags)
@@ -1178,6 +1186,76 @@ write_diagnostic_verdict_from_summary(S, Summary) :-
     format(S, '~n', []),
 
     format(S, '      }', []).
+
+/* ================================================================
+   VERDICT JOIN (OQ-98)
+   ================================================================ */
+
+%% write_verdict_join(+Stream, +Constraint, +Summary)
+%  Serialize diagnostic_summary:verdict_join/3 as a JSON object.
+%  null when the summary is unavailable (mirrors diagnostic_verdict) or
+%  the join itself fails — an absent join must never read as a clean one
+%  (enhanced_report.py renders an explicit UNJOINED marker on null/missing).
+write_verdict_join(S, _, none) :-
+    !, format(S, 'null', []).
+write_verdict_join(S, C, Summary) :-
+    (   catch(diagnostic_summary:verdict_join(C, Summary, Join), _, fail)
+    ->  Join = verdict_join(Joined, Base, Cap, Alerts, GridProv, MeasProv,
+                            SigGrade),
+        format(S, '{~n', []),
+        format(S, '        "verdict": ', []),
+        write_json_string(S, Joined),
+        format(S, ',~n', []),
+        format(S, '        "base_verdict": ', []),
+        write_json_string(S, Base),
+        format(S, ',~n', []),
+        format(S, '        "cap_applied": ', []),
+        write_json_string(S, Cap),
+        format(S, ',~n', []),
+        format(S, '        "alerts": [', []),
+        write_join_alerts(S, Alerts),
+        format(S, '],~n', []),
+        format(S, '        "grid_provenance": ', []),
+        write_grid_prov(S, GridProv),
+        format(S, ',~n', []),
+        MeasProv = meas_prov(MA, MI, MP, MT),
+        format(S, '        "measurement_provenance": {"authored": ~w, "injected": ~w, "imputed": ~w, "total": ~w},~n',
+               [MA, MI, MP, MT]),
+        format(S, '        "signature_grade": ', []),
+        (   SigGrade == none
+        ->  format(S, 'null~n', [])
+        ;   write_json_string(S, SigGrade), format(S, '~n', [])
+        ),
+        format(S, '      }', [])
+    ;   format(S, 'null', [])
+    ).
+
+write_join_alerts(_, []).
+write_join_alerts(S, [alert(Type, Sev, Src)]) :-
+    !, write_join_alert(S, Type, Sev, Src).
+write_join_alerts(S, [alert(Type, Sev, Src)|Rest]) :-
+    write_join_alert(S, Type, Sev, Src),
+    format(S, ', ', []),
+    write_join_alerts(S, Rest).
+
+write_join_alert(S, Type, Sev, Src) :-
+    format(S, '{"type": ', []),
+    write_json_string(S, Type),
+    format(S, ', "severity": ', []),
+    write_json_string(S, Sev),
+    format(S, ', "source": ', []),
+    write_json_string(S, Src),
+    format(S, '}', []).
+
+%% write_grid_prov(+Stream, +GridProv)
+%  no_interval (constraint has no interval/3, so no leveled grid is possible)
+%  serializes as null — distinct from authored 0/32 (a grid that exists and
+%  is empty). The two must not collapse to one token at the read site.
+write_grid_prov(S, no_interval) :-
+    !, format(S, 'null', []).
+write_grid_prov(S, grid_prov(A, I, P, Abs, T)) :-
+    format(S, '{"authored": ~w, "injected": ~w, "imputed": ~w, "absent": ~w, "total": ~w}',
+           [A, I, P, Abs, T]).
 
 %% write_post_synthesis_flags(+Stream, +Flags)
 %  Serialize T12 post-synthesis flags as a JSON array.

@@ -11,7 +11,9 @@
     resolve_modal_signature_conflict/3,
     get_constraint_profile/2,
     has_viable_alternatives/2,
-    has_metric_perspectival_variance/1
+    has_metric_perspectival_variance/1,
+    signature_grade/2,              % OQ-98: correction | commentary
+    signature_severity/2            % OQ-98: correction-grade -> moderate
 ]).
 
 :- use_module(library(lists)).
@@ -1358,3 +1360,50 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore)) :-
     ->  CouplingScore = CS
     ;   CouplingScore = 0.0
     ).
+
+/* ================================================================
+   SIGNATURE GRADE (OQ-98)
+
+   Grade-determines-wiring (verdict grade distinction): a signature
+   finding is CORRECTION-grade iff it is an override signature
+   (abductive_helpers:known_override_signature/1) AND it actually
+   rewired the type at the default context — i.e. the post-signature
+   dr_type/3 departs from the pre-signature metric classification.
+   Everything else with a detected signature is COMMENTARY-grade
+   (annotates, never alerts).
+
+   Severity = moderate for correction grade — RULED (operator,
+   2026-06-11) as the working value: a fired override is one
+   subsystem disagreeing with metrics, the same weight
+   compute_verdict gives a tension (yellow); the false-claim
+   coincidence case already floors red via a severe dr_mismatch.
+   Confirmed by the pre-Commit-2 corpus histogram
+   (audits/2026-06-11_oq98_verdict_join/).
+
+   Load requirement: drl_core and abductive_helpers are called
+   module-qualified at runtime (no use_module here — a static import
+   would cycle through grothendieck_cohomology back into drl_core).
+   The only consumer is diagnostic_summary:verdict_join/3, whose
+   module imports abductive_helpers, so both are loaded on every
+   chain that reaches these predicates. Load-path witnessed on the
+   run_pipeline chain: audits/2026-06-11_oq98_verdict_join/p2.
+   ================================================================ */
+
+%% signature_grade(+Constraint, -Grade)
+%  Grade in {correction, commentary}. Fails if no signature detected.
+signature_grade(C, correction) :-
+    constraint_signature(C, Sig),
+    abductive_helpers:known_override_signature(Sig),
+    constraint_indexing:default_context(Ctx),
+    drl_core:metric_based_type_indexed(C, Ctx, MetricType),
+    drl_core:dr_type(C, Ctx, FinalType),
+    MetricType \= FinalType,
+    !.
+signature_grade(C, commentary) :-
+    constraint_signature(C, _), !.
+
+%% signature_severity(+Constraint, -Severity)
+%  Only correction-grade signatures carry an alert severity.
+%  Commentary-grade gets NO alert (grade-determines-wiring).
+signature_severity(C, moderate) :-
+    signature_grade(C, correction).

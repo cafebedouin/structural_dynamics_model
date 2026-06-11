@@ -396,9 +396,14 @@ def build_sidecar_data(constraint_id, entry, prolog_output, iteration_round=None
     }
 
     # --- Verdict, subsystems, tensions from diagnostic_verdict ---
+    # OQ-98: sidecar["verdict"] is the JOINED verdict (matches the banner
+    # headline, W4); tension/subsystem fields keep reading diagnostic_verdict.
+    vj = entry.get("verdict_join") if entry else None
     dv = entry.get("diagnostic_verdict") if entry else None
+    if vj:
+        sidecar["verdict_join"] = vj
     if dv:
-        verdict_raw = dv.get("verdict", "unknown")
+        verdict_raw = (vj or dv).get("verdict", "unknown")
         sidecar["verdict"] = verdict_raw.upper() if isinstance(verdict_raw, str) else "UNKNOWN"
         n_avail = dv.get("subsystems_available", 0)
         unavail = dv.get("subsystems_unavailable", [])
@@ -515,8 +520,38 @@ def build_level_header(level_num, title):
 
 # --- Verdict Banner ---
 
+def _banner_box(lines):
+    """Render lines in a box sized to the longest line (min 51 inner chars —
+    the historical fixed width; alert/grid lines routinely exceed it)."""
+    inner = max(51, max(len(l) for l in lines) + 2)
+    top = "╔" + "═" * inner + "╗"
+    bot = "╚" + "═" * inner + "╝"
+    body = "\n".join(f"║  {l:<{inner - 2}}║" for l in lines)
+    return f"\n{top}\n{body}\n{bot}\n"
+
+
+def _grid_line(vj):
+    """Always-printed grid-diet line (operator ruling 1, per-question branch)."""
+    gp = vj.get("grid_provenance")
+    if gp is None:
+        return "Grid: no leveled grid"
+    return (
+        f"Grid: authored {gp.get('authored', '?')}/{gp.get('total', '?')}"
+        f" (injected {gp.get('injected', '?')}, imputed {gp.get('imputed', '?')},"
+        f" absent {gp.get('absent', '?')})"
+    )
+
+
 def build_verdict_banner(constraint_id, pipeline_data):
-    """Top-of-report traffic-light banner extracted from diagnostic_verdict."""
+    """Top-of-report traffic-light banner.
+
+    OQ-98: the headline is verdict_join.verdict — a join over the report's
+    own evidence (base verdict + severity-floored alerts), serialized by the
+    Prolog producer with its raw inputs. diagnostic_verdict is one of those
+    raw inputs, shown as BASE when a cap applied. A stale artifact without
+    verdict_join renders the old banner plus an explicit UNJOINED marker so
+    a pre-join GREEN cannot masquerade as a joined one.
+    """
     if pipeline_data is None:
         return "\n  [Verdict unavailable — run full pipeline to include]\n"
 
@@ -528,8 +563,8 @@ def build_verdict_banner(constraint_id, pipeline_data):
     if dv is None:
         return "\n  [Verdict unavailable — run full pipeline to include]\n"
 
-    verdict = dv.get("verdict", "unknown")
-    verdict_upper = verdict.upper() if isinstance(verdict, str) else "UNKNOWN"
+    base_verdict = dv.get("verdict", "unknown")
+    base_upper = base_verdict.upper() if isinstance(base_verdict, str) else "UNKNOWN"
     n_avail = dv.get("subsystems_available", 0)
     unavail = dv.get("subsystems_unavailable", [])
     total = n_avail + len(unavail)
@@ -541,13 +576,32 @@ def build_verdict_banner(constraint_id, pipeline_data):
     else:
         detail = f"{n_avail}/{total} subsystems checked — no tensions"
 
-    return (
-        "\n"
-        "╔═══════════════════════════════════════════════════╗\n"
-        f"║  VERDICT: {verdict_upper:<41}║\n"
-        f"║  {detail:<49}║\n"
-        "╚═══════════════════════════════════════════════════╝\n"
-    )
+    vj = entry.get("verdict_join")
+    if vj is None:
+        # Stale/unjoined artifact: old rendering + explicit marker.
+        return _banner_box([
+            f"VERDICT: {base_upper}",
+            detail,
+            "[UNJOINED verdict — regenerate pipeline (OQ-98)]",
+        ])
+
+    joined = vj.get("verdict", "unknown")
+    joined_upper = joined.upper() if isinstance(joined, str) else "UNKNOWN"
+    cap = vj.get("cap_applied", "none")
+    alerts = vj.get("alerts", [])
+
+    lines = [f"VERDICT: {joined_upper}"]
+    if cap and cap != "none":
+        lines.append(f"BASE: {base_upper} ({detail}) — CAPPED TO {joined_upper}")
+    else:
+        lines.append(detail)
+    for a in alerts:
+        lines.append(
+            f"! [{a.get('severity', '?')}] {a.get('type', '?')}"
+            f" ({a.get('source', '?')})"
+        )
+    lines.append(_grid_line(vj))
+    return _banner_box(lines)
 
 
 # --- Level 1: CONSTRAINT IDENTITY (from old Section A "This Constraint" L1 fields) ---
@@ -709,6 +763,17 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
         return ""
 
     lines = ["", "--- TEMPORAL TRAJECTORY ---", ""]
+
+    # OQ-98: the trajectory eats measurement/5 — carry its provenance here
+    # (constraint-level; per-time-point provenance stays open under OQ-102).
+    mp = (entry.get("verdict_join") or {}).get("measurement_provenance")
+    if mp:
+        authored, mp_total = mp.get("authored", 0), mp.get("total", 0)
+        if authored < mp_total:
+            lines.append(
+                f"    [CONDITIONAL: {mp_total - authored}/{mp_total} measurement"
+                f" points non-authored — OQ-93/OQ-102]"
+            )
 
     # Trigger A: non-monotone shapes
     for m in trigger_a_metrics:

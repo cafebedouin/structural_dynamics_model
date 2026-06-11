@@ -212,6 +212,12 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   under compressed-ceiling sigmoid variants. It looks removable (normal exports pass without it)
   but removing it silently regresses to OOM on those variants. Choice-point question is OQ-02;
   zero-diff proof and history in KNOWN_STATE.md.
+- **Headline verdict = `verdict_join.verdict`; `diagnostic_verdict.verdict` is a raw input,
+  never a headline** (OQ-98, 2026-06-11). `verdict_join` is computed in
+  `diagnostic_summary:verdict_join/3` (base verdict + severity-floored alerts + grid/measurement
+  provenance) and serialized as a sibling of `diagnostic_verdict` — any new report/consumer
+  surface must headline the join; rendering `diagnostic_verdict.verdict` as a summary recreates
+  the GREEN-over-severe-alerts defect. Provenance: KNOWN_STATE 2026-06-11.
 
 ## Build Discipline (recurring failure modes — check before declaring work done)
 

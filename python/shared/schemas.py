@@ -94,6 +94,9 @@ class PipelineConstraint:
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     diagnostic_verdict: dict | None = None        # {verdict, agreements, expected_conflicts, ...}
 
+    # --- Verdict join (OQ-98: joined headline verdict + raw inputs) ---
+    verdict_join: dict | None = None              # {verdict, base_verdict, cap_applied, alerts, grid_provenance, measurement_provenance, signature_grade}
+
     # --- Post-synthesis divergence flags (T12) ---
     post_synthesis_flags: list = field(default_factory=list)  # [{flag_type, details}]
 
@@ -210,6 +213,8 @@ PIPELINE_FIELDS = [
     ("contamination_network",       dict,         False),  # {intrinsic_purity, effective_purity, propagation_delta, neighbors}
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     ("diagnostic_verdict",          dict,         True),   # null if diagnostic_summary fails
+    # --- Verdict join (OQ-98) ---
+    ("verdict_join",                dict,         True),   # null if diagnostic_summary or the join fails
     # --- Post-synthesis divergence flags (T12) ---
     ("post_synthesis_flags",        list,         False),  # [] when no divergence
     # --- Wasserstein transport (continuous perspectival fracture) ---
@@ -455,6 +460,46 @@ def _check_structure(entry, cid):
                     f"[{cid}] diagnostic_verdict.subsystems_unavailable "
                     f"should be list"
                 )
+
+    # verdict_join structure (OQ-98)
+    vj = entry.get("verdict_join")
+    if isinstance(vj, dict):
+        _VJ_VERDICTS = {"green", "yellow", "red"}
+        for vj_key in ("verdict", "base_verdict", "cap_applied", "alerts",
+                       "grid_provenance", "measurement_provenance",
+                       "signature_grade"):
+            if vj_key not in vj:
+                errors.append(f"[{cid}] verdict_join missing key: {vj_key}")
+        for vk in ("verdict", "base_verdict"):
+            vv = vj.get(vk)
+            if isinstance(vv, str) and vv not in _VJ_VERDICTS:
+                errors.append(
+                    f"[{cid}] verdict_join.{vk} '{vv}' "
+                    f"not in {sorted(_VJ_VERDICTS)}"
+                )
+        if "alerts" in vj and not isinstance(vj["alerts"], list):
+            errors.append(f"[{cid}] verdict_join.alerts should be list")
+        for i, a in enumerate(vj.get("alerts", [])):
+            if isinstance(a, dict):
+                for k in ("type", "severity", "source"):
+                    if k not in a:
+                        errors.append(
+                            f"[{cid}] verdict_join.alerts[{i}] missing '{k}'"
+                        )
+        gp = vj.get("grid_provenance")
+        if isinstance(gp, dict):
+            for k in ("authored", "injected", "imputed", "absent", "total"):
+                if k not in gp:
+                    errors.append(
+                        f"[{cid}] verdict_join.grid_provenance missing '{k}'"
+                    )
+        mp = vj.get("measurement_provenance")
+        if isinstance(mp, dict):
+            for k in ("authored", "injected", "imputed", "total"):
+                if k not in mp:
+                    errors.append(
+                        f"[{cid}] verdict_join.measurement_provenance missing '{k}'"
+                    )
 
     # post_synthesis_flags entries must have {flag_type, details}
     ps_flags = entry.get("post_synthesis_flags")

@@ -50,8 +50,14 @@ generate_full_report(IntervalID) :-
     format('Confidence:     ~w~n', [Conf]),
     % OQ-93: Pattern/Confidence come from classify_interval, whose gradient
     % and completeness inputs are the leveled grid — carry the diet here too.
+    % OQ-98 (operator ruling 1, per-question branch — P1 witnessed BRANCH A):
+    % grid-fed findings carry a CONDITIONAL tag whenever authored < total.
     (   catch(data_repair:grid_provenance(IntervalID, prov(HA, HI, HP, _, HTotal)), _, fail)
-    ->  format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)~n', [HA, HTotal, HI, HP])
+    ->  format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)', [HA, HTotal, HI, HP]),
+        (   HA < HTotal
+        ->  format(' [CONDITIONAL: grid authored ~w/~w]~n', [HA, HTotal])
+        ;   nl
+        )
     ;   true
     ),
     
@@ -99,9 +105,14 @@ generate_full_report(IntervalID) :-
     ->  sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
         format('~nAggregate Magnitude (Kappa) at Tn: ~2f', [AvgK]),
         % OQ-93: kappa is computed over the leveled grid — carry the diet
-        % with the number.
+        % with the number. OQ-98: CONDITIONAL tag when authored < total
+        % (per-question branch; P1 witnessed BRANCH A).
         (   catch(data_repair:grid_provenance(IntervalID, prov(KA, KI, KP, _, KTotal)), _, fail)
-        ->  format(' [grid diet: authored ~w/~w, injected ~w, imputed ~w — OQ-93]~n', [KA, KTotal, KI, KP])
+        ->  format(' [grid diet: authored ~w/~w, injected ~w, imputed ~w — OQ-93]', [KA, KTotal, KI, KP]),
+            (   KA < KTotal
+            ->  format(' [CONDITIONAL: grid authored ~w/~w]~n', [KA, KTotal])
+            ;   nl
+            )
         ;   nl
         )
     ;   format('~nAggregate Magnitude (Kappa): DATA_INSUFFICIENT~n')

@@ -115,7 +115,9 @@ def build_manifest(run_at: str) -> dict:
         "code_commit": commit,
         "code_commit_short": commit[:7] if commit != "unknown" else "unknown",
         "code_dirty": _git_dirty(),
-        "schema_version": 1,
+        # 2 (OQ-98): per_constraint entries carry verdict_join (joined headline
+        # verdict + raw inputs) as a sibling of diagnostic_verdict.
+        "schema_version": 2,
     }
 
 

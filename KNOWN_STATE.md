@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-98 RESOLVED: report headline verdict is now verdict_join (Prolog-side join over alerts + provenance, serialized with raw inputs); schema_version 1→2
+**Files:** prolog/diagnostic_summary.pl, prolog/signature_detection.pl, prolog/json_report.pl, prolog/report_generator.pl, python/enhanced_report.py, python/run_pipeline.py, python/shared/schemas.py, ISSUES.md, audits/2026-06-11_oq98_verdict_join/
+**Tier:** landed
+
+Commits `e8ab707b` (plumbing, byte-identical pipeline witness) → `170db693` (pre-output
+histogram gate) → `ce9a26ec` (output-changing, alone). `diagnostic_summary:verdict_join/3`
+joins the base verdict with severity-floored alerts (`drl_core:dr_mismatch/3` + the new
+`signature_detection:signature_grade/2`/`signature_severity/2`: correction-grade = override
+signature that actually rewired the type, alerts at moderate; commentary never alerts) and
+carries grid + measurement provenance (`data_repair:grid_provenance/2`, `source_class/2`).
+Serialized in `json_report.pl` as a SIBLING of `diagnostic_verdict` (raw inputs alongside,
+never instead); `enhanced_report.py` headlines `verdict_join.verdict`, prints BASE +
+per-alert reconciliation when capped, ALWAYS prints the grid line, renders `[UNJOINED]` on
+stale artifacts; sidecar verdict = joined. Corpus effect at close: 8/48 headlines changed
+(6 green→red, 2 yellow→red, all severe claim-mismatch), zero moderate caps. P1 probe ruled
+the grid question: BRANCH A — no diagnostic subsystem is grid-fed (0/48 changed under full
+synthetic grids, positive control 46/46 `classify_interval`), so grid-diet lines carry
+`[CONDITIONAL]` tags instead of gating the headline; revert to strict fail-closed if a
+subsystem ever becomes grid-fed. Tripwire promoted to CLAUDE.md Architecture Invariants:
+headline = `verdict_join.verdict`; `diagnostic_verdict.verdict` is a raw input, never a
+headline. Witnesses W1–W4 + 2 falsifiers: `audits/2026-06-11_oq98_verdict_join/`.
+
 ## 2026-06-10 — OQ-95 resolved: constraint_neighbors/3 now fail-closed on phantom (zero-fact) constraints; giant_comp edges scoped to enumerated nodes; domain_registry throw hit independently (folded into OQ-96 at merge)
 **Files:** prolog/drl_purity_network.pl, prolog/giant_component_analysis.pl, prolog/tests/test_phantom_neighbor_filter.pl, prolog/tests/test_forecloses_fpn_injection.pl, ISSUES.md, audits/2026-06-10_oq95_phantom_node_fix/writeup.md
 **Tier:** landed
