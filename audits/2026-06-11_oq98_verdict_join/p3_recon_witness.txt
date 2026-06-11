@@ -1,0 +1,50 @@
+=== P3 cheap recon (OQ-98 Step 0, 2026-06-11) ===
+
+1. Name-collision grep (positive control: "diagnostic_verdict" must hit — it
+   does: prolog/json_report.pl, prolog/diagnostic_summary.pl,
+   python/enhanced_report.py, python/reports/queries/corpus_profile.py):
+
+   $ grep -rn "verdict_join" prolog/ python/ docs/ | grep -v audits | wc -l
+   0          # no collision; the name is free
+
+2. schema_version readers:
+
+   $ grep -rn "schema_version" --include="*.py" --include="*.pl" .
+   python/run_pipeline.py:118:        "schema_version": 1,
+   # single writer, zero readers — bump 1->2 is cheap (plan verified-fact confirmed)
+
+3. dr_mismatch/3 timing over the 48-constraint live corpus (run on the
+   pipeline loader chain):
+
+   full dr_mismatch/3 (incl perspectival) over 48: 0.034 s
+   claim-mismatch-only over 48:                    0.026 s
+
+   VERDICT: keep the perspectival_incoherence clause in the join; the
+   "alerts_omitted" escape hatch is NOT needed (plan risk 2 dissolves).
+
+4. m_gen injection liveness (from P1 census, same session):
+
+   measurement/5 facts: 576 (m_gen: 0, repair_m_*: 0)
+
+   VERDICT: injection/imputation confirmed dead live (OQ-96 shim-off regime);
+   live measurement_provenance over authored series = authored N/N. The
+   injected>0-on-Tn=10 expectation does not arise on the live corpus.
+
+P1 RESULT (p1_witness.txt): BRANCH A — 0/48 diagnostic summaries changed
+under a full synthetic 32-slot grid per interval; positive control PASS
+(46/46 classify_interval confidence low->high); restore verified (0 probe
+facts remaining; S2 vs S0 diff 0). Coverage precheck: 46 constraint==interval
+bijective pairs; 2 constraints unprobed-by-construction (no interval:
+employment_boundary_contradictions, human_dignity_ai_governance_contradictions);
+0 non-corpus intervals.
+
+=> Operator ruling 1 lands on the per-question branch: banner always prints
+   the grid line; verdict stays scoped to the 12 subsystems; grid-fed
+   findings (classify_interval's Pattern/Confidence, kappa) get CONDITIONAL
+   tags. Strict fail-closed (branch B) NOT triggered.
+
+P2 RESULT (p2_witness.txt): grid_provenance(scale_ceiling)=prov(0,0,0,32,32),
+unexported data_repair:source_class/2 callable module-qualified through the
+exact run_pipeline loader chain (m_gen->injected, repair_m_77->imputed,
+m1->authored), dr_mismatch(scale_ceiling)=[type_1_false_summit-severe].
+Gate for Commit 2: PASS.
