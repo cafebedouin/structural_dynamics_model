@@ -1,0 +1,63 @@
+=== Probe A0: suppression_requirement authored-coverage grep, live testsets ===
+as-of: 2026-06-11T00:26:38-05:00  worktree HEAD: c1f78a317664a7e4f04306b34ad1132f13f07dc7
+dir: /home/scott/bin/wt-oq33-close/prolog/testsets
+total .pl files: 48
+
+--- per-file: scalar constraint_metric facts / temporal measurement facts ---
+agenda_conditioning.pl scalar=1 temporal=4
+ai_governance_accountability.pl scalar=1 temporal=4
+collapse_mechanism_ambiguity.pl scalar=1 temporal=5
+collapse_timing_uncertainty.pl scalar=1 temporal=4
+competition_timeline_pressure.pl scalar=1 temporal=4
+demographic_skill_mismatch.pl scalar=1 temporal=0
+digital_colonialism_data_extraction.pl scalar=1 temporal=3
+digital_power_concentration.pl scalar=1 temporal=6
+employment_boundary_contradictions.pl scalar=0 temporal=0
+employment_boundary_flat_control.pl scalar=1 temporal=5
+formalist_employment_reading.pl scalar=1 temporal=4
+human_dignity_ai_governance_contradictions.pl scalar=0 temporal=0
+human_dignity_ai_governance_flat_control.pl scalar=1 temporal=6
+hybrid_security_reading.pl scalar=1 temporal=3
+information_suppression.pl scalar=1 temporal=5
+magisterial_integralist_reading.pl scalar=1 temporal=4
+optimization_artifact_risk.pl scalar=1 temporal=4
+organization_floor.pl scalar=1 temporal=5
+platform_flexibility_precarity_tradeoff.pl scalar=1 temporal=4
+pluralist_pragmatic_reading.pl scalar=1 temporal=3
+post_1998_convergence.pl scalar=1 temporal=5
+proxy_measurement_validity.pl scalar=1 temporal=0
+recalibration_interpretive_validity.pl scalar=1 temporal=4
+regime_change_structural_break.pl scalar=1 temporal=0
+regulatory_measurement_gap.pl scalar=1 temporal=4
+reprogramming_safety_toxicity.pl scalar=1 temporal=4
+retirement_security_deficit.pl scalar=1 temporal=5
+scale_ceiling.pl scalar=1 temporal=4
+secular_humanist_reading.pl scalar=1 temporal=3
+solar_integration_mechanism.pl scalar=1 temporal=0
+substantive_employment_reading.pl scalar=1 temporal=3
+surveillance_control_freedom.pl scalar=1 temporal=5
+techno_optimist_reading.pl scalar=1 temporal=3
+technocratic_paradigm_resistance.pl scalar=1 temporal=4
+technocratic_paradigm_vs_human_primacy.pl scalar=1 temporal=3
+thermal_dissipation_constraint.pl scalar=1 temporal=0
+topology_selection.pl scalar=1 temporal=4
+transfer_gap_physics.pl scalar=1 temporal=0
+truth_as_common_good.pl scalar=1 temporal=4
+truth_democracy_disinformation.pl scalar=1 temporal=3
+veto_asymmetry.pl scalar=1 temporal=5
+voltage_regulation_tradeoff.pl scalar=1 temporal=0
+wage_convergence_mechanism.pl scalar=1 temporal=3
+wage_convergence_sustainability.pl scalar=1 temporal=2
+war_normalization_ai_weapons.pl scalar=1 temporal=5
+war_normalization_autonomous_weapons.pl scalar=1 temporal=5
+work_dignity_automation.pl scalar=1 temporal=5
+work_displacement_dignity.pl scalar=1 temporal=6
+
+--- files WITHOUT any suppression_requirement mention ---
+employment_boundary_contradictions.pl
+human_dignity_ai_governance_contradictions.pl
+count without: 2
+
+--- positive control: grep pattern fires on a known-positive file ---
+first file with scalar fact: ai_governance_accountability.pl
+narrative_ontology:constraint_metric(ai_governance_accountability, suppression_requirement, 0.68).

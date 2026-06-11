@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-33 close attempt: row-23 fail-close re-witnessed clean on live + kernel_v1; close HALTED on Probe D (4 pre-reset artifacts in live outputs/)
+**Files:** ISSUES.md, audits/2026-06-11_oq33_close/, prolog/drl_composition.pl, outputs/pipeline_output.pre_agency_fix.json, outputs/tripwire_fabricated_defaults_results.json, outputs/schema_sieve/
+**Tier:** correction-key
+
+Evidence pass for closing OQ-33 (plan retargeted from OQ-95). **The fix is sound on current
+substrate:** live corpus (48 files/46 classified) 209 constraint×time rows = 162 temporal / 47
+scalar-STOPGAP / **0 unknown-floor / 0 residual-0.5 anomalies**; kernel_v1 overlay (1,106 loaded,
+path witnessed) 3,497 rows = 2,882/615/**0/0**; D2 `get_raw_suppression` else-branch 0/46. Every
+census process ran its own positive controls (unknown-floor + STOPGAP synthetics; same-call-path
+control for D2) before its zeros. `Backed=true` 161/162 temporal rows; the 1 false =
+`techno_optimist_reading` t=5 (ε fallback, OQ-41 rows 24-25 scope).
+
+**Correction-key (cite-discipline):** the `drl_composition.pl:191-197` comment figures
+**471/562/91/0 are NOT kernel_v1 figures** — commit `b5ccee0d` (2026-06-02) measured them on a
+562-testset working-tree state that was never archived (226 testsets tracked at that commit;
+corpus reached 1,106 by the reset). kernel_v1 measures 934/1106 temporal, 172 scalar-only, 0
+unknown. Do not cite 471/562 against any extant corpus; an exact-match expectation must pin the
+substrate (corpus + commit), not just the figures.
+
+**Close HALTED (pre-registered Probe D condition):** 4 pre-reset artifacts live in `outputs/` —
+`pipeline_output.pre_agency_fix.json` (manifest 2026-06-03, drift fields populated, zero repo
+references), `tripwire_fabricated_defaults_results.json` (2026-05-30 OQ-33 tripwire evidence,
+cited from gitignored `outputs/` by its audit — location-mandate violation),
+`schema_sieve/{analysis,features}.json` (manifests 2026-06-04). OQ-33 stays `investigating`
+(entry annotated); operator ruling on artifact disposition needed, then re-run
+`audits/2026-06-11_oq33_close/evidence/probe_d_preset_artifact_scan.py` and enter Phase 2 of the
+close plan. Also recorded: 7 unparseable `scs_out_*.json` scratch files in `outputs/`.
+
 ## 2026-06-10 — External-review triage (two batches): OQ-98–103 filed; auto-essay synthesis ruled out (ledger replaces it); two topic runs committed under a live-witnessed gate
 **Files:** ISSUES.md, audits/2026-06-10_external_review_vote_market/, audits/2026-06-10_external_review_xprize/, KNOWN_STATE.md, prolog/validation_suite.pl, agent/c-orchestrator.py
 **Tier:** landed

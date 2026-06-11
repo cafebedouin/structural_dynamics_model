@@ -1113,7 +1113,7 @@ are HELD pending re-run.
 
 ## OQ-33 — classify_at_time fabricates suppression on 100% of temporal corpus; 279/647 temporal classifications misclassified as tangled_rope instead of snare
 
-**Status:** investigating — 2026-05-30
+**Status:** investigating — 2026-05-30; close attempt 2026-06-11 HALTED on Probe D (pre-reset artifacts in live outputs/) — fix itself re-witnessed clean on live + kernel_v1, see 2026-06-11 annotation below
 **Origin:** Fabricated-default inventory session, 2026-05-30. Tripwire graduated 2026-05-30.  
 **Files:** `prolog/drl_composition.pl:179` (temporal fallback), `prolog/drl_core.pl:96`
 (static fallback — DORMANT, see below), `prolog/testsets/*.pl` (223 testsets,
@@ -1200,6 +1200,38 @@ decisions (if the engine should treat unmeasured suppression as 0.5) or repair t
    means any existing analysis that attributes static/temporal divergence to observational
    difference rather than filler asymmetry is compromised for suppression-absent
    constraints (currently all constraints).
+
+### 2026-06-11 — close attempt HALTED (fix re-witnessed clean; Probe D positive). Evidence: `audits/2026-06-11_oq33_close/`
+
+**Re-witnessed on current substrate (per-process positive controls fired in every census
+process; all raw output in the audit dir):**
+- **Live corpus (post-reset, 48 files / 46 classified):** 209 constraint×time rows — 162
+  temporal-measurement branch / 47 scalar-STOPGAP / **0 unknown-floor / 0 residual-0.5
+  anomalies** (every row's Info Supp matched the authored value it claims to read). A0 grep:
+  46/48 testsets author the scalar; the 2 without are the `*_contradictions.pl` sidecars
+  (excluded from `all_corpus_constraints/1`, zero measurement rows). 39 testsets also author
+  a temporal series. `Backed=true` on 161/162 temporal rows; the 1 false is
+  `techno_optimist_reading` t=5 (ε-side `BaseX=0.5` flagged fallback — OQ-41 rows 24-25
+  scope, recorded not adjudicated).
+- **kernel_v1 overlay (resolved path + 1,106-loaded witnessed before census):** 3,497 rows —
+  2,882 temporal / 615 scalar / **0 unknown-floor / 0 anomalies**. The recorded 471/562/91/0
+  did NOT reproduce verbatim and cannot: commit `b5ccee0d` (2026-06-02) measured it on a
+  562-testset working-tree state never archived (only 226 testsets were tracked at that
+  commit; the corpus grew to 1,106 by the 2026-06-05 reset archive). Plan premise error,
+  not an engine delta — the regime shape (0 unknown, ~84% temporal) reproduces exactly.
+- **D2 static path:** `get_raw_suppression` else-branch fired on **0/46** live classified
+  constraints; in-denominator-shaped control flagged through the same call path. Still dormant.
+- **HALT (pre-registered Probe D condition): 4 pre-reset artifacts live in `outputs/`** —
+  `pipeline_output.pre_agency_fix.json` (manifest 2026-06-03, `drift_trajectory` populated
+  1102/1107, zero repo references), `tripwire_fabricated_defaults_results.json` (2026-05-30
+  OQ-33 tripwire evidence carrying baseline temporal-classification samples; cited by
+  `audits/2026-05-30_authoring_closure_fabricated_defaults/` from gitignored `outputs/` — a
+  location-mandate violation), `schema_sieve/analysis.json` + `features.json` (manifests
+  2026-06-04). Block 2's "mooted by reset" is falsified as operationalized.
+- **To close:** operator ruling on artifact disposition (move tripwire JSON into its
+  2026-05-30 audit dir; archive/delete or declare-retained `pre_agency_fix` and
+  `schema_sieve/*`), re-run Probe D clean, then Phase 2 of the close plan (resolution note
+  drafted there; everything else is already witnessed).
 
 See `docs/technical/build_discipline.md` Pattern 4 (fabricated default) for the
 defect class.
