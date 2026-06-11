@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — Backed semantics BUCKETED (follow-on to the OQ-46 close): compiler-stamped suppression_profile(static) sanction marker; OQ-105 filed; OQ-37 piton vacuous-green fixed
+**Files:** prolog/drl_composition.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, prolog/data_validation.pl, prolog/testsets/thermal_dissipation_constraint.pl, ISSUES.md
+**Tier:** landed
+
+Same-day follow-on ruling to the OQ-46 close (evidence + witnesses:
+`audits/2026-06-11_oq46_backed_reconciliation/`; commits `00040bb9`, `b0a0e380`, `609dbb47`).
+The close left `Backed=false` on ALL scalar-supplied rows; the operator ruled **bucketed, keyed
+on an explicit sanction, never emptiness-inference**: `suppression_profile(C, static)` is
+compiler-stamped (`generate_constraint_pl.py` §8) only when the JSON authors other series but
+deliberately omits suppression (positive-control absence); `classify_at_time` `SuppBacked` is
+three-way — marker-sanctioned static scalar backs / grid-misalignment substitution excluded
+(OQ-105) / **unmarked seriesless fails closed**. Decision witness: bucketed = 59 flips / 20
+fab_adjacent unchanged (only `backed_times` rises, 7×4 contexts); blanket = 79/0, laundering
+substitution-dated transitions into the OQ-83 D-fork flip count. Corpus-wide the scalar IS the
+series endpoint (37/39 exact, pre-registered one-time query — 0 violations, so the equivalence-
+lint question is closed-no-demonstrated-content) — which makes the misalignment substitution
+ANTI-CAUSAL; it currently sets flip timing in 2 witnessed timelines
+(`substantive_employment_reading` T=9, `post_1998_convergence` T=13; 1 checked-negative). The 7
+seriesless testsets were recompiled from JSON (per-file diff = marker fact + decl only, zero
+drift). Pipeline A/B: 30 diffs = 28 backed_times + 2 manifest, nothing else. Also: the
+`data_validation` piton check joined over never-authored `resistance_to_change` and printed
+"✓ No pitons detected" unconditionally — now prints a VACUOUS notice / joined-table sizes
+(OQ-37 row updated; heuristic removal stays gated on OQ-90). Correction to the close-session
+evidence: deletion-counterfactual phantom transitions surface via `temporal_residual`, not
+`drift_trajectory` (raw series only).
+
 ## 2026-06-11 — OQ-46 RESOLVED: the classify_at_time scalar suppression fallback is SANCTIONED (operator ruling), not a retirable stopgap; OQ-46's premise contradicted the live generation prompt
 **Files:** prolog/drl_composition.pl, docs/technical/classify_at_time_wiring.md, prompts/constraint_story_generation_prompt_json.md, ISSUES.md
 **Tier:** landed

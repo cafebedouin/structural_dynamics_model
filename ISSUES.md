@@ -1540,7 +1540,13 @@ driving data is non-empty in the active corpus:
 2. Threshold over a metric that defaults on absence — `V =< Ceil` where `V` comes from a
    `( ... -> V = Measured ; V = Default )` fallback (cross-link Pattern 4 / OQ-41 sites:
    `get_metric_average:160` `0.5` — **RESOLVED 2026-06-09, fail-closed to `unknown`, see OQ-89**;
-   `classify_at_time` `Supp=0.5`; `get_raw_suppression` `Supp=0` — these two still open).
+   `classify_at_time` `Supp=0.5` — **RESOLVED: row-23 fail-close, then sanctioned scalar +
+   bucketed Backed, OQ-46 2026-06-11**; `get_raw_suppression` `Supp=0` (`drl_core.pl:95-97`) —
+   still open, but blast radius witnessed ~0 on the live corpus (2026-06-11,
+   `audits/2026-06-11_oq46_backed_reconciliation/` probe1: only the 2 non-story
+   `cs_axiom_contradiction` files lack scalar suppression, and both fail `base_extractiveness/2`
+   first, which has no default — the fabricated 0 is currently unreachable; it reactivates on the
+   first metric-bearing story that omits only suppression).
 3. Universal quantifier / negation-as-failure over a possibly-empty table — `forall(P, Q)`,
    `\+ disqualifier(C)` (e.g. `data_verification:verify_interval_completeness`;
    `natural_law_without_beneficiary/1` guards in `drl_core.pl`).

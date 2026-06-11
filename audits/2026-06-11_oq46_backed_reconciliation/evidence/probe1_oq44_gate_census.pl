@@ -1,0 +1,65 @@
+:- [stack].
+:- corpus_loader:load_all_testsets.
+
+count(Label, Goal) :-
+    aggregate_all(count, Goal, N),
+    format("~w = ~w~n", [Label, N]).
+
+run :-
+    % Positive controls (must be > 0 or the probe itself is broken)
+    count(ctl_corpus_constraint, corpus_loader:corpus_constraint(_)),
+    count(ctl_constraint_metric_all, narrative_ontology:constraint_metric(_,_,_)),
+    count(ctl_measurement_all, narrative_ontology:measurement(_,_,_,_,_)),
+    % Gate source tables
+    count(agent_beneficiary, narrative_ontology:agent_beneficiary(_,_)),
+    count(constraint_beneficiary, narrative_ontology:constraint_beneficiary(_,_)),
+    count(intent_power_change, narrative_ontology:intent_power_change(_,_,_)),
+    count(intent_viable_alternative, narrative_ontology:intent_viable_alternative(_,_,_)),
+    count(intent_alternative_rejected, narrative_ontology:intent_alternative_rejected(_,_,_)),
+    count(intent_beneficiary_class, narrative_ontology:intent_beneficiary_class(_,_)),
+    count(intent_suppression_level, narrative_ontology:intent_suppression_level(_,_,_,_)),
+    count(intent_resistance_level, narrative_ontology:intent_resistance_level(_,_,_,_)),
+    count(affects_constraint, narrative_ontology:affects_constraint(_,_)),
+    % Suppression / extractiveness coverage on corpus members
+    count(cc_with_scalar_supp,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:constraint_metric(C, suppression_requirement, _)))),
+    count(cc_without_scalar_supp,
+          (corpus_loader:corpus_constraint(C),
+           \+ narrative_ontology:constraint_metric(C, suppression_requirement, _))),
+    count(cc_with_temporal_supp,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:measurement(_, C, suppression_requirement, _, _)))),
+    count(cc_scalar_only_supp,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:constraint_metric(C, suppression_requirement, _)),
+           \+ narrative_ontology:measurement(_, C, suppression_requirement, _, _))),
+    count(cc_no_supp_at_all,
+          (corpus_loader:corpus_constraint(C),
+           \+ narrative_ontology:constraint_metric(C, suppression_requirement, _),
+           \+ narrative_ontology:measurement(_, C, suppression_requirement, _, _))),
+    count(cc_with_temporal_basex,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:measurement(_, C, base_extractiveness, _, _)))),
+    count(cc_without_temporal_basex,
+          (corpus_loader:corpus_constraint(C),
+           \+ narrative_ontology:measurement(_, C, base_extractiveness, _, _))),
+    count(cc_with_resistance_to_change,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:constraint_metric(C, resistance_to_change, _)))),
+    % NL gate live behaviour
+    count(cc_natural_law_sig,
+          (corpus_loader:corpus_constraint(C),
+           catch(signature_detection:constraint_signature(C, natural_law), _, fail))),
+    count(cc_emerges_naturally,
+          (corpus_loader:corpus_constraint(C),
+           domain_priors:emerges_naturally(C))),
+    count(cc_nl_without_beneficiary,
+          (corpus_loader:corpus_constraint(C),
+           catch(drl_core:natural_law_without_beneficiary(C), _, fail))),
+    count(cc_profile_metrics_unauthored,
+          (corpus_loader:corpus_constraint(C),
+           \+ signature_detection:profile_metrics_authored(C))),
+    count(cc_with_agent_beneficiary,
+          (corpus_loader:corpus_constraint(C),
+           once(narrative_ontology:agent_beneficiary(C, _)))).
