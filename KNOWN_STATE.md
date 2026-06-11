@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-46 RESOLVED: the classify_at_time scalar suppression fallback is SANCTIONED (operator ruling), not a retirable stopgap; OQ-46's premise contradicted the live generation prompt
+**Files:** prolog/drl_composition.pl, docs/technical/classify_at_time_wiring.md, prompts/constraint_story_generation_prompt_json.md, ISSUES.md
+**Tier:** landed
+
+Read-only evidence pass + operator ruling (`audits/2026-06-11_oq46_close/`, branch
+`oq46-ruling`). The OQ-46 retirement plan ("once the template authors a temporal
+`suppression_requirement` series for every constraint, delete the scalar clause") rested on a
+premise the prompt itself contradicts: since 2026-05-30 (commit `220739b8`, pre-reset)
+`constraint_story_generation_prompt_json.md:457` instructs "Do NOT author
+`suppression_requirement` measurements unless the story's narrative specifically tracks
+enforcement-capacity change" — scalar-only is *deliberate authoring* for static-enforcement
+stories, so the wait-state never terminates. Witnessed: 7/46 live stories scalar-only, all
+prompt-conformant (physics/structural, supp 0.01–0.35, two 2026-06-09 batches incl. 3
+regenerated under the required-metrics schema); 21 of 47 fallback rows are time-grid
+misalignment inside 10 series-authoring constraints (series universality alone would not retire
+the clause); deletion counterfactual flips 16/46 timelines (7 collapse to `[unknown]`, 9 gain
+phantom `drift_trajectory` transitions); `snapshot_type`/`degradation_chain` have zero consumers
+(positive-controlled grep), so the OQ-41 divergence concern is latent. **Operator ruled: accept
+the prompt's design.** The read ladder (temporal at T → scalar-as-constant `Backed=false` →
+fail-closed `unknown`) is permanent; no scalar/temporal equivalence check; Surface-3
+temporal-suppression work gates on per-snapshot `Backed`, not corpus-wide series coverage.
+Comment-only edits to `drl_composition.pl` (STOPGAP → sanctioned); wiring doc §1 re-ruled;
+ISSUES.md OQ-46 compressed-on-close with the ruling block kept; cross-refs at OQ-33/OQ-40/OQ-41
+updated. Side observation, same session: the two `*_contradictions` testset files are non-story
+`cs_axiom_contradiction/2` records — they explain every "48 files / 46 classified" denominator gap.
+
 ## 2026-06-11 — Tripwire: the moderate→yellow verdict cap is confirmed-but-never-stressed; re-rule evidence arrives with the first correction-grade signature on a base-GREEN constraint
 **Files:** prolog/diagnostic_summary.pl, prolog/signature_detection.pl
 **Tier:** tripwire

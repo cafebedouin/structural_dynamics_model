@@ -1124,8 +1124,9 @@ D2 static else-branch 0/46. Blocks: (1) Surface-3 primitive unblocked for tempor
 constraints (Probe A); (2) pre-reset classifications mooted — witnessed clean post-disposition
 (Probe D re-scan, archive-side control in-run; artifacts relocated, writeup §5); (3)
 cross-surface divergence carries the `Backed` bit (`drl_composition.pl:238`). Consumer-side
-`Backed` verification stays with OQ-83; scalar-stopgap retirement = OQ-46 (7 live scalar-only
-constraints remain); ε fallback rows 24-27 = OQ-41.
+`Backed` verification stays with OQ-83; the scalar fallback was ruled SANCTIONED, not retirable
+(OQ-46 resolved 2026-06-11 — the prompt deliberately authors scalar-only for static enforcement);
+ε fallback rows 24-27 = OQ-41.
 
 ## OQ-34 — Estimator-classifier independence audit: does the prompt expose MI-decision-rule thresholds to authors?
 
@@ -1389,10 +1390,11 @@ Inside the temporal path there was a *second*, silent G5 split: `classify_at_tim
 fabricated `Supp=0.5` on absent temporal series, while `snapshot_type/3` (transition_paths) already
 fell back to the authored **scalar** via `drift_events:safe_metric` — so the two temporal classifiers
 disagreed on every constraint lacking a temporal suppression series (650/656 rows). The row-23
-scalar-fallback fix **converges them** (both now: temporal → authored scalar → floor). NB this
-convergence depends on the row-23 **stopgap**; if OQ-46 removes the scalar fallback without the
-generation template first authoring a temporal series, the split reopens. The `extractiveness`/
-`base_extractiveness` sub-splits (rows 19–20) remain open.
+scalar-fallback fix **converges them** (both now: temporal → authored scalar → floor). The
+convergence is now permanent: OQ-46 (resolved 2026-06-11) ruled the scalar fallback SANCTIONED —
+it is not removed, so the split stays closed. (`snapshot_type`/`degradation_chain` additionally
+have zero consumers — witnessed grep with positive control, `audits/2026-06-11_oq46_close/`.)
+The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open.
 
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
 
@@ -1411,7 +1413,9 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   (fail-closed floor, fires 0× now). **268 rows corrected** vs fabricated 0.5 (185 tangled_rope→snare,
   58 unknown→snare, 9 scaffold→mountain, 6 rope→mountain, 10 tangled_rope→unknown) — mostly the
   snare_suppression_floor=0.60 low-mis-sort the census predicted. Validation suite clean (0/0).
-  **The scalar fallback is a labeled STOPGAP** — see **OQ-46** (generation-template fix retires it).
+  **The scalar fallback was a labeled STOPGAP until OQ-46 (resolved 2026-06-11) ruled it
+  SANCTIONED** — scalar-as-constant is legitimate authoring for static-enforcement stories;
+  the clause is permanent.
 - Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (tripwire artifact: 0 changes; extractiveness
   required-authored).
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
@@ -1585,32 +1589,28 @@ Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance
 
 ## OQ-46 — D4-for-suppression is a GENERATION-TEMPLATE requirement; it retires the row-23 stopgap
 
-**Status:** open — Sequencing constraint for the row-23 fix (OQ-41). The row-23 fix
-(`classify_at_time`) currently bridges absent temporal `suppression_requirement` to the authored
-**scalar** value — a **labeled stopgap**, not a sanctioned second representation. The real fix is
-**upstream, in generation**: the story template must author a *temporal* `suppression_requirement`
-series. **Partially progressed by the 2026-06 rebuild:** engine-measured on the live corpus, the
-template now authors a temporal series for **471/562** constraints; **91/562** remain scalar-only and
-still hit the stopgap (0/562 reach `unknown`). (Pre-rebuild this was inverted — 650/656 rows had only
-the scalar.) This is a **generation-template requirement, not an engine representation ruling** — i.e.
-D4 (G5 scalar-vs-temporal) for suppression is resolved by authoring the series, not by the engine
-choosing a representation. **Once the template authors the series for the remaining 91: delete the
-scalar-fallback clause in `classify_at_time` and let the temporal path stand alone** (it is still
-load-bearing for those 91 — do not delete early). Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
-bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
+**Status:** resolved — operator ruling 2026-06-11: **the scalar fallback is SANCTIONED, not a stopgap; the premise was wrong.** Full evidence + ruling: `audits/2026-06-11_oq46_close/`.
 
-**Post-reset check (2026-06-05):** the live corpus' first 20 stories author a temporal `suppression_requirement` series **20/20** — the generation-template requirement lands universally under the de-leaked prompt. Once the live corpus accumulates with this holding, the row-23 stopgap (`classify_at_time` scalar bridge) is retirable + fail-closed `unknown` added (output-changing engine edit; needs its own witnessed pass).
+**Why the premise was wrong:** the generation prompt has instructed since 2026-05-30 (commit
+`220739b8`, predating the live corpus): "Do NOT author `suppression_requirement` measurements
+unless the story's narrative specifically tracks enforcement-capacity change"
+(`constraint_story_generation_prompt_json.md:457`); the schema requires neither `measurements`
+nor suppression among them. The 7 scalar-only live constraints are prompt-conformant
+static-enforcement stories, not template failures — the wait-state never terminates by design.
+Second unrecorded load: 21 of 47 fallback rows were time-grid misalignment inside 10
+series-authoring constraints (suppression sampled coarser than other metrics), so universal
+series-authoring alone would not have retired the clause. Deletion counterfactual: 16/46
+timelines change, 7 collapse to `[unknown]`, 9 gain phantom transitions in `drift_trajectory`.
 
-**Live coverage as of 2026-06-11 (OQ-33 close census, `audits/2026-06-11_oq33_close/`):** the
-471/562 figures above are pre-reset-regime (measured 2026-06-02 on an unarchived 562-testset
-state — see `evidence/b5ccee0d_substrate_witness.txt` there; do not cite against any extant
-corpus). Live post-reset corpus (48 files / 46 classified): **39 author a temporal series, 7
-remain scalar-only** (the stopgap's remaining live load; 47 of 209 rows), 0 reach `unknown`.
-So the de-leaked template's 20/20 did NOT hold universally as the corpus grew — 7/46 live
-constraints are scalar-only. Not a regression: the 2026-06-05 check was
-first-rebuild-stories-denominated (20 of 20 stories then extant), never corpus-universal —
-reading it as universal was an unwarranted generalization past its substrate, the same shape
-as the 471/562 pin. kernel_v1 comparator: 934/1106 temporal, 172 scalar-only, 0 unknown.
+**Still-operative ruling:** `classify_at_time`'s read ladder — temporal `measurement/5` at T →
+authored scalar `constraint_metric` as constant (`Backed=false`) → fail-closed `unknown` — is
+the **permanent, sanctioned** representation policy for suppression (D4 ruled: scalar = static
+enforcement is legitimate authoring; the series is authored only when enforcement capacity
+changes). Do not delete the scalar clause; do not add a scalar/temporal equivalence check
+(scalar-as-constant is the defined semantics, there is nothing to reconcile); `Backed=false`
+is the per-snapshot provenance marker for scalar-supplied rows (consumer: `temporal_residual`,
+OQ-83). A future Surface-3 temporal-suppression primitive is gated on per-constraint `Backed`
+coverage, not on corpus-wide series universality.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 

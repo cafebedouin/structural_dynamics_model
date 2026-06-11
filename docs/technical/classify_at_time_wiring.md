@@ -9,6 +9,15 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 
 ## 1. The `suppression_requirement` temporal fallback — corrected by row-23 (was `Supp=0.5`)
 
+> **RULED 2026-06-11 (OQ-46 resolved; `audits/2026-06-11_oq46_close/`).** The scalar fallback is
+> **SANCTIONED and PERMANENT**, not a stopgap: the generation prompt (since 2026-05-30) deliberately
+> authors scalar-only suppression for static-enforcement stories, so scalar-supplied rows are
+> prompt-conformant residents, and even series-authoring stories hit the scalar arm at time-grid
+> points where suppression is sampled coarser than other metrics (21 of 47 fallback rows on the
+> 2026-06-11 live corpus). Do not delete the clause; do not wait on OQ-46 — gate Surface-3
+> temporal-suppression work on per-constraint `Backed` coverage instead. STOPGAP language below
+> this block is pre-ruling history.
+
 > **RECONCILED 2026-05-31 (Commit A / row-23 + a non-arc schema-enum change).** This section's
 > original (2026-05-30) claims are **now false** and were left as a cautionary record of
 > distrust-the-aggregate: (a) `suppression_requirement` is **not** schema-forbidden — the
@@ -21,10 +30,10 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 
 ```prolog
 ( narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)   % temporal series
--> classify_at_time_with_supp(C, Time, Context, Supp, Type)
+-> classify_at_time_with_supp(C, Time, Context, Supp, true, Type, Info)
 ;  narrative_ontology:constraint_metric(C, suppression_requirement, Supp)       % authored SCALAR
--> classify_at_time_with_supp(C, Time, Context, Supp, Type)                      % STOPGAP (OQ-46)
-;  Type = unknown ).
+-> classify_at_time_with_supp(C, Time, Context, Supp, false, Type, Info)         % sanctioned scalar-as-constant (OQ-46 resolved)
+;  Type = unknown, Info = snap(none, false, none, none, none) ).
 ```
 
 **What is true now (verify against the live schema/corpus):**
@@ -45,12 +54,13 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 > not the scalar fallback — is the live path for the majority. Recompute before citing (corpus grows):
 > `aggregate_all(set(C), narrative_ontology:measurement(_,C,suppression_requirement,_,_), L), length(L,N).`
 
-**Why it still matters:** the scalar fallback is still load-bearing for the **91** scalar-only
-constraints, and even an authored scalar is not a measured *trajectory* — for those 91 it is a
-STOPGAP until the generation template authors temporal series (OQ-46). It is no longer a
-*fabrication* (it is authored data). A Surface-3 temporal-suppression primitive should still wait on
-OQ-46, but only for the residual 91, and for the corrected reason (scalar-as-constant, not
-"schema-forbidden").
+**Why it still matters:** the scalar fallback is load-bearing for every scalar-only constraint
+(7 on the 2026-06-11 live corpus) and for the grid-alignment rows of series-authoring constraints —
+and per the 2026-06-11 ruling (top of this section) that is its **permanent job**, not a debt. An
+authored scalar is still not a measured *trajectory*: a Surface-3 temporal-suppression primitive
+must select its substrate by the per-snapshot `Backed` flag (`classify_at_time/5` Info), not assume
+corpus-wide series coverage. (The 91/562 figures in the blocks above are pre-reset-regime —
+recompute before citing.)
 
 **Historical tripwire (2026-05-30, the pre-row-23 `Supp=0.5` fabrication, kept as the row-23 witness):**
 source-patch `Supp=0.5` → `999.9`, `constraint_history` over the corpus: 279/647 rows changed (219

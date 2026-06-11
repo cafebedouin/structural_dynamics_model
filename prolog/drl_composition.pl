@@ -178,48 +178,39 @@ classify_at_time(C, Time, Context, Type) :-
 %% classify_at_time(+C, +Time, +Context, -Type, -Info)
 %  Type-A snapshot floor (2026-06-08): surfaces Info = snap(D, Backed, Eps, Supp,
 %  Theater) for the observer residual detector WITHOUT changing Type. Backed=false
-%  marks a snapshot whose ε or suppression was FABRICATED (the :201 0.5 default or
-%  the STOPGAP scalar) rather than authored at this Time, so the residual can
-%  exclude phantom flips across real→fabricated transitions (catch #3). The
-%  classification math is unchanged; only derive_directionality is now time-aware
-%  (identical on the current corpus — no time-indexed source).
+%  marks a snapshot whose ε or suppression was not authored at this Time (the ε 0.5
+%  default or the sanctioned scalar-as-constant), so the residual can exclude
+%  phantom flips across real→fallback transitions (catch #3). The classification
+%  math is unchanged; only derive_directionality is time-aware (identical on the
+%  current corpus — no time-indexed source).
 classify_at_time(C, Time, Context, Type, Info) :-
-    % Row-23 fail-close (OQ-41): absent temporal suppression_requirement must NOT
-    % fabricate Supp=0.5 — that value sits below snare_suppression_floor=0.60 and
-    % silently mis-sorts the temporal timeline low.
-    %
-    % Coverage (staleness-laddered — recompute before citing, the corpus grows; the
-    % generation template authors a temporal suppression_requirement series for most
-    % constraints):
-    %   PRE-RESET-REGIME (as-of 2026-06-02, commit b5ccee0d, an unarchived 562-testset
-    %   working-tree state — NOT kernel_v1; substrate witness:
-    %   audits/2026-06-11_oq33_close/evidence/b5ccee0d_substrate_witness.txt):
-    %   471/562 temporal, 91/562 scalar-only, 0/562 unknown.
-    %   LIVE post-reset corpus (as-of 2026-06-11, 48 files / 46 classified): 39 temporal,
-    %   7 scalar-only (the STOPGAP's remaining live load), 0 unknown; row-denominated
-    %   162 temporal / 47 scalar-STOPGAP / 0 unknown over 209 rows.
-    %   kernel_v1 archive (as-of 2026-06-11): 934/1106 temporal, 172 scalar-only, 0 unknown.
-    % Pre-rebuild this was inverted — 650/656 rows lacked a temporal series, so the old
-    % code ran almost the entire temporal classification on a fabricated constant.
-    %
-    % STOPGAP — TEMPORARY BRIDGE, strip when temporal coverage is complete: fall back to the
-    % authored SCALAR suppression_requirement (real per-constraint data; genuine-no-data = 0).
-    % Return `unknown` only if no suppression is authored anywhere. Still load-bearing for the
-    % scalar-only constraints (7 on the live corpus as of 2026-06-11) — do NOT delete the
-    % scalar clause until the template authors a temporal series for every constraint
-    % (D4-for-suppression is a GENERATION-TEMPLATE requirement, not an engine ruling; OQ-46).
-    % Do NOT build a scalar/temporal equivalence check on top of this bridge — it is a
-    % stopgap, not a sanctioned second representation.
+    % Suppression read ladder — PERMANENT, SANCTIONED (OQ-46 resolved 2026-06-11;
+    % evidence + ruling: audits/2026-06-11_oq46_close/):
+    %   temporal measurement at this Time → authored SCALAR as constant (Backed=false)
+    %   → fail-closed `unknown` (never fabricate; OQ-41 row 23 killed the Supp=0.5
+    %   default, which sat below snare_suppression_floor=0.60 and mis-sorted low).
+    % The scalar arm is NOT a stopgap: the generation prompt (line ~457, since
+    % 2026-05-30) deliberately authors scalar-only suppression for static-enforcement
+    % stories, reserving a temporal series for stories tracking enforcement-capacity
+    % change — so scalar-supplied rows are prompt-conformant, permanent residents
+    % (and even series-authoring stories hit the scalar arm at time-grid points where
+    % suppression is sampled coarser than other metrics). Do NOT delete the scalar
+    % clause; do NOT add a scalar/temporal equivalence check (scalar-as-constant is
+    % the defined semantics — nothing to reconcile). Backed=false is the provenance
+    % marker consumers use to separate the two regimes (temporal_residual, OQ-83).
+    % Coverage (staleness-laddered — recompute before citing, the corpus grows):
+    %   live as-of 2026-06-11 (48 files / 46 stories): 39 temporal / 7 scalar-only;
+    %   rows 162 temporal / 47 scalar (21 grid-alignment + 26 scalar-only) / 0 unknown.
     (   narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)
     ->  classify_at_time_with_supp(C, Time, Context, Supp, true, Type, Info)
     ;   narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
-    ->  classify_at_time_with_supp(C, Time, Context, Supp, false, Type, Info) % STOPGAP scalar (not Backed)
+    ->  classify_at_time_with_supp(C, Time, Context, Supp, false, Type, Info) % sanctioned scalar-as-constant (not Backed)
     ;   Type = unknown, Info = snap(none, false, none, none, none)
     ).
 
 %% classify_at_time_with_supp(+C,+Time,+Context,+Supp,+SuppBacked,-Type,-Info)
 %  Internal. SuppBacked = was Supp authored at this Time (measurement/5) vs the
-%  STOPGAP scalar fallback. Info = snap(D, Backed, Eps, Supp, Theater).
+%  sanctioned scalar-as-constant fallback (OQ-46). Info = snap(D, Backed, Eps, Supp, Theater).
 classify_at_time_with_supp(C, Time, Context, Supp, SuppBacked, Type,
                            snap(D, Backed, BaseX, Supp, TheaterOut)) :-
     (   narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX)
