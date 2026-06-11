@@ -171,6 +171,13 @@ def _build_multifile_declarations(data):
     if meas and not any(m["metric"] == "suppression_requirement" for m in meas):
         decls.append("narrative_ontology:suppression_profile/2")
 
+    # OQ-102(a) per-time-point basis provenance: explicit fact, not an MID
+    # naming convention — the provenance bit travels WITH the value. Emitted
+    # only when authored; never imputed (absent = unspecified).
+    grid_pts = (data.get("coercion_grid") or {}).get("points") or []
+    if any(m.get("basis") for m in meas) or any(p.get("basis") for p in grid_pts):
+        decls.append("narrative_ontology:measurement_basis/2")
+
     if data.get("boltzmann", {}).get("coordination_type"):
         decls.append("narrative_ontology:coordination_type/2")
 
@@ -890,25 +897,30 @@ def generate_pl(data):
         be_measurements = [m for m in measurements if m["metric"] == "base_extractiveness"]
         sr_measurements = [m for m in measurements if m["metric"] == "suppression_requirement"]
 
+        # OQ-102(a): basis emitted beside the value it qualifies, same MID —
+        # an explicit fact, never an ID convention; absent basis emits nothing.
+        def emit_scalar(m, metric_atom):
+            mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
+            emit(f"narrative_ontology:measurement({mid}, {cid}, {metric_atom}, {m['time_point']}, {m['value']}).")
+            if m.get("basis"):
+                emit(f"narrative_ontology:measurement_basis({mid}, {m['basis']}).")
+
         if tr_measurements:
             emit("% Theater ratio over time")
             for m in tr_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, theater_ratio, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "theater_ratio")
             emit()
 
         if be_measurements:
             emit("% Extraction over time")
             for m in be_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, base_extractiveness, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "base_extractiveness")
             emit()
 
         if sr_measurements:
             emit("% Suppression requirement over time")
             for m in sr_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, suppression_requirement, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "suppression_requirement")
             emit()
         else:
             # OQ-46 bucketed-Backed ruling (2026-06-11): other series were authored
@@ -937,6 +949,8 @@ def generate_pl(data):
             emit(f"narrative_ontology:measurement({mid}, {cid}, "
                  f"{p['metric']}({p['level']}), {p['time_point']}, "
                  f"{p['value']}).")
+            if p.get("basis"):
+                emit(f"narrative_ontology:measurement_basis({mid}, {p['basis']}).")
         emit()
     emit()
 

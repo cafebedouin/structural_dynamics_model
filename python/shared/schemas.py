@@ -495,7 +495,8 @@ def _check_structure(entry, cid):
                     )
         mp = vj.get("measurement_provenance")
         if isinstance(mp, dict):
-            for k in ("authored", "injected", "imputed", "total"):
+            # "projected" (OQ-102(a)): authored sub-bucket with basis=projected
+            for k in ("authored", "injected", "imputed", "projected", "total"):
                 if k not in mp:
                     errors.append(
                         f"[{cid}] verdict_join.measurement_provenance missing '{k}'"
