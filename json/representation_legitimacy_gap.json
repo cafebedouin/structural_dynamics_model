@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "representation_legitimacy_gap",
+    "version": "1.0",
+    "generated_date": "2026-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repgap",
+    "story_uid": "7247d608-1e8e-4792-9a9a-d9bc06080ad0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.42,
+    "claimed_type": "snare",
+    "human_readable": "Representation Legitimacy Gap in Two-Party Systems",
+    "topic_domain": "political_science/public_opinion/democratic_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "two_party_duopoly",
+      "party_fundraising_apparatus",
+      "partisan_media_ecosystem"
+    ],
+    "victims": [
+      "voters_without_viable_alternatives",
+      "left_out_left_cohort",
+      "democratic_legitimacy"
+    ],
+    "vindicated_propositions": [
+      "median_voter_theorem",
+      "duvergers_law_inevitability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Left-Out Left Voter",
+      "comment": "PERSPECTIVE 1: LEFT-OUT LEFT VOTER (SNARE) — 39% report neither party represents them, yet face binary choice with no viable exit. Trapped by first-past-the-post electoral structure, geographic sorting, and ballot access barriers. Maximum extraction: forced to vote for party they believe doesn't care about them or accept spoiler stigma and wasted vote. Cannot organize effective third party due to structural barriers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Disaffected Moderate",
+      "comment": "PERSPECTIVE 2: DISAFFECTED MODERATE (SNARE) — Reports neither party represents them but has slightly more exit capacity than Left-Out Left through strategic primary voting or local third-party viability in specific districts. Still experiences high extraction: must choose lesser evil in general elections, faces social pressure to pick a side, and sees policy preferences ignored by both parties. Constrained rather than trapped due to marginal primary influence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Two-Party Duopoly",
+      "comment": "PERSPECTIVE 3: TWO-PARTY DUOPOLY (ROPE) — Experiences the representation gap as coordination: voters reliably choose between two options regardless of satisfaction, creating stable fundraising base and predictable electoral competition. The gap between representation and voting behavior is not a bug but a feature: it ensures continued participation without requiring genuine responsiveness. Net beneficiary with arbitrage exit: can adjust messaging at margins without structural change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Third-Party Movement",
+      "comment": "PERSPECTIVE 4: THIRD-PARTY MOVEMENT (TANGLED ROPE) — Organized agents attempting to build alternative parties face genuine coordination problem (ballot access, debate inclusion, media coverage) but also experience extraction through spoiler dynamics, strategic voting pressure, and resource asymmetry. Benefits from the gap by recruiting disaffected voters but constrained by structural barriers that protect duopoly. Mixed experience: some agency but high costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Primary Election System",
+      "comment": "PERSPECTIVE 5: PRIMARY ELECTION SYSTEM (PITON) — Originally designed to democratize party nomination and channel dissent into party reform, now largely theatrical. Low turnout, donor influence, and party apparatus control mean primaries rarely produce candidates responsive to disaffected voters. The mechanism persists as legitimation ritual: 'you could have voted in the primary' deflects representation complaints. Function atrophied but performance maintained."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational perspective, the gap reveals genuine coordination problem (aggregating diverse preferences into binary choice) layered with asymmetric extraction (duopoly captures benefits of forced choice without bearing costs of unresponsiveness). Not pure extraction: some voters genuinely prefer binary simplicity and party brand stability. Not pure coordination: structural barriers suppress alternatives beyond what coordination requires. Claimed type matches analytical classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "preference_intensity_threshold",
+      "question": "At what intensity of preference dissatisfaction does continued voting for unrepresentative party shift from rational lesser-evil choice to captured behavior?",
+      "resolution_mechanism": "Longitudinal analysis of voter satisfaction scores, party loyalty, and defection rates; comparison with parliamentary systems where preference intensity can be expressed through coalition bargaining",
+      "impact": "If threshold is low (mild dissatisfaction triggers exit): current 39% Left-Out Left figure represents massive extraction. If threshold is high (voters tolerate substantial dissatisfaction): figure represents normal democratic friction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Preference intensity threshold for distinguishing rational choice from capture"
+    },
+    {
+      "id": "ballot_access_counterfactual",
+      "question": "Would proportional representation or ranked-choice voting eliminate the representation gap, or would new parties simply replicate the same responsiveness failures at different scale?",
+      "resolution_mechanism": "Cross-national comparison of representation satisfaction in PR systems; analysis of new party formation and subsequent institutionalization patterns; study of ranked-choice adoption in US municipalities",
+      "impact": "If structural: gap is artifact of first-past-the-post and duopoly is pure extraction. If behavioral: gap reflects deeper principal-agent problem in representative democracy and duopoly provides genuine coordination value.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether electoral system reform would eliminate representation gap"
+    },
+    {
+      "id": "median_voter_naturalization",
+      "question": "Is median voter theorem a descriptive model of two-party convergence or a normative justification that naturalizes the representation gap?",
+      "resolution_mechanism": "Analysis of how median voter theorem is deployed in political science discourse; examination of whether parties actually converge to median or maintain polarized positions while claiming median; study of theory's role in legitimating unresponsive duopoly",
+      "impact": "If descriptive: theorem explains but doesn't justify gap. If normative naturalization: theorem is false summit that treats contingent institutional arrangement as optimal equilibrium, masking extraction as efficiency.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether median voter theorem naturalizes representation gap"
+    },
+    {
+      "id": "primary_reform_sufficiency",
+      "question": "Can primary election reforms (open primaries, ranked-choice primaries, top-two systems) restore responsiveness function, or is primary system irreversibly captured by party apparatus and donor class?",
+      "resolution_mechanism": "Comparative analysis of primary reform outcomes in states that adopted open/ranked-choice systems; measurement of candidate responsiveness to disaffected voter preferences before and after reform; assessment of donor influence persistence",
+      "impact": "If reforms work: piton perspective is too pessimistic and primary system is scaffold with real sunset. If reforms fail: piton classification confirmed and primary theater is permanent legitimation ritual.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether primary reforms can restore responsiveness function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The representation legitimacy gap describes a structural contradiction in contemporary American democracy: significant portions of the electorate vote for major party candidates while simultaneously reporting that neither party represents them well or cares about people like them. The Hidden Tribes study documents this starkly: 18% of Americans overall say neither party represents them, rising to 39% among the 'Left-Out Left' cohort. Yet these voters continue to participate in binary elections, producing the paradox of high turnout coupled with low perceived representation. This constraint operates through the interaction of first-past-the-post electoral rules, ballot access barriers, strategic voting dynamics, and the two-party duopoly's institutional advantages. The gap has widened over the 30-year measurement interval as party polarization increased while median voter preferences remained more moderate, creating larger representation distance without corresponding increase in viable alternatives. The constraint exhibits rising extraction (0.45 to 0.68), rising theater (0.35 to 0.65), and rising suppression (0.55 to 0.72) as the duopoly has hardened structural barriers while maintaining democratic legitimation rituals.",
+    "key_agents": [
+      "Left-Out Left Voters: Primary victims (powerless/trapped) — 39% report neither party represents them; face binary choice with no viable exit due to electoral structure and ballot access barriers",
+      "Disaffected Moderates: Secondary victims (powerless/constrained) — report representation gap but have marginal exit capacity through primary voting or local third-party viability in specific districts",
+      "Two-Party Duopoly: Primary beneficiary (institutional/arbitrage) — captures stable fundraising base and predictable electoral competition regardless of voter satisfaction; gap between representation and voting behavior ensures participation without requiring responsiveness",
+      "Party Fundraising Apparatus: Secondary beneficiary (institutional/arbitrage) — benefits from forced-choice dynamics that maintain donor base even as satisfaction declines",
+      "Partisan Media Ecosystem: Secondary beneficiary (institutional/mobile) — benefits from binary framing that simplifies coverage and maintains audience engagement through us-versus-them narratives",
+      "Third-Party Movements: Organized agents (organized/constrained) — attempt to build alternatives but face structural barriers (ballot access, debate exclusion, spoiler dynamics) that protect duopoly",
+      "Primary Election System: Institutional mechanism (institutional/mobile) — originally designed to channel dissent into party reform, now largely theatrical due to low turnout, donor influence, and party apparatus control",
+      "Democratic Legitimacy: Abstract victim (powerless/trapped) — the collective good of government responsiveness to citizen preferences; cannot organize or exit; bears full cost of representation gap"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The duopoly captures substantial benefits from forced-choice dynamics: stable fundraising base, predictable electoral competition, and continued participation without requiring genuine responsiveness to disaffected voters. The 39% Left-Out Left figure represents massive extraction when voters must choose between parties they believe don't represent them. The value reflects that extraction is not total (some voters genuinely prefer binary simplicity) but is substantial and rising. Suppression (0.72): High. Multiple structural barriers suppress alternatives: first-past-the-post rules that punish vote-splitting, ballot access requirements that favor established parties, debate inclusion thresholds controlled by duopoly, campaign finance rules that advantage institutional fundraising, geographic sorting that reduces competitive districts, and social pressure to pick a side. The suppression has intensified over the interval as parties have hardened these barriers. Theater ratio (0.65): Moderate-high. Primary elections persist as legitimation ritual ('you could have voted in the primary') but rarely produce responsive candidates due to low turnout, donor influence, and party apparatus control. General election campaigns maintain democratic theater (debates, town halls, voter outreach) while actual policy responsiveness to disaffected voters remains low. The theater has increased as the gap between campaign promises and governing behavior has widened. Accessibility collapse (0.58): Moderate. Alternatives have not completely collapsed — third parties exist, primary challenges occur, local experiments with ranked-choice voting proceed — but the dominant framing treats two-party system as inevitable and alternatives as spoilers. Lower than typical snare because resistance remains visible. Resistance (0.42): Moderate. Significant active resistance through third-party movements, primary challenges to establishment candidates, ranked-choice voting advocacy, and open primary reforms. Higher than typical snare because the representation gap generates ongoing contestation rather than resignation.",
+    "perspectival_gap": "The representation legitimacy gap produces stark perspectival divergence. Trapped voters (Left-Out Left) experience pure extraction: forced to vote for parties they believe don't represent them, with no viable exit and high costs to abstention (spoiler stigma, civic duty pressure, lesser-evil logic). The duopoly experiences coordination: the gap ensures continued participation without requiring responsiveness, creating stable institutional environment. Third-party movements experience mixed coordination and extraction: genuine ballot access and debate inclusion problems layered with structural barriers that protect duopoly beyond what coordination requires. The primary system appears as degraded ritual from institutional perspective: originally designed to democratize nomination, now theatrical due to low turnout and donor capture. The analytical observer sees tangled rope: genuine preference aggregation problem (how to represent diverse views in binary system) layered with asymmetric extraction (duopoly captures benefits of forced choice without bearing costs of unresponsiveness). The gap between powerless/trapped and institutional/arbitrage perspectives is maximum: one sees inescapable extraction, the other sees beneficial coordination.",
+    "directionality_logic": "Directionality is determined by structural position relative to the representation gap. Left-Out Left voters are full targets: they bear the costs (voting for unrepresentative parties, suppressed policy preferences, wasted votes if they defect) and receive no benefits. The engine derives high d (approaching 1.0) from victim status plus trapped exit, producing high effective extraction. Disaffected moderates are also targets but with slightly lower d due to constrained rather than trapped exit — they have marginal influence through primaries. The two-party duopoly is full beneficiary: captures stable participation, fundraising, and institutional advantages from the gap. The engine derives low d (approaching 0.0) from beneficiary status plus arbitrage exit, producing negative effective extraction (subsidy). Third-party movements have intermediate d: they are partly victims (face structural barriers) but also partly benefit from recruiting disaffected voters, and their organized power plus constrained exit places them in moderate extraction range. The primary system has low d as institutional beneficiary with mobile exit, but its piton classification derives from theater gate rather than from directionality. Democratic legitimacy as abstract victim has maximum d (1.0) — powerless, trapped, bearing full cost with no compensation.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the representation gap is simultaneously a coordination problem and an extraction mechanism, with the balance depending on observer position. From the duopoly's perspective, the gap is pure coordination: it solves the genuine problem of aggregating diverse preferences into binary choice while maintaining stable institutional environment. From trapped voters' perspective, the gap is pure extraction: structural barriers suppress alternatives beyond what coordination requires, and the duopoly captures benefits without bearing costs. The analytical perspective sees both: there is a real preference aggregation problem (tangled rope coordination function) but the solution extracts asymmetrically from those with no exit. The mandatrophy is not 'which is it?' but 'for whom?' The constraint's claimed type (snare) reflects the analytical judgment that extraction dominates coordination when measured from the perspective of those who bear the costs. The duopoly's rope perspective is their genuine experience but does not negate the extraction experienced by trapped voters. The primary system's piton classification shows how coordination mechanisms can degrade into theater while maintaining legitimation function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of intra_party_fragmentation: the fragmentation of party coalitions creates the representation gap by forcing diverse preference groups into binary choice. The upstream constraint (intra_party_fragmentation) has its own extractiveness reflecting the costs of coalition maintenance; this constraint (representation_legitimacy_gap) has distinct extractiveness reflecting the costs of forced binary choice when neither option represents you."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "left_out_left_voters",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "39% report neither party represents them. Face binary choice in general elections with no viable third-party alternative due to first-past-the-post rules and ballot access barriers. Must vote for party they believe doesn't care about them or accept spoiler stigma and wasted vote. Cannot organize effective alternative due to geographic dispersion and structural suppression of third parties. Bear full cost of representation gap: policy preferences ignored, civic efficacy undermined, forced into lesser-evil logic every election cycle."
+    },
+    {
+      "name": "disaffected_moderates",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Report neither party represents them but have marginal exit capacity through strategic primary voting or local third-party viability in specific districts. Face social pressure to pick a side and see policy preferences ignored by both parties. Slightly more agency than Left-Out Left through primary participation but still experience high extraction in general elections. Constrained by same structural barriers but with narrow tactical options."
+    },
+    {
+      "name": "two_party_duopoly",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Captures stable fundraising base and predictable electoral competition regardless of voter satisfaction. The gap between representation and voting behavior ensures continued participation without requiring genuine responsiveness. Benefits from structural barriers that suppress third-party alternatives: ballot access rules, debate inclusion thresholds, campaign finance advantages, first-past-the-post rules that punish vote-splitting. Can adjust messaging at margins without structural change. The representation gap is not a bug but a feature: it maintains institutional stability while externalizing costs to voters with no exit."
+    },
+    {
+      "name": "party_fundraising_apparatus",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefits from forced-choice dynamics that maintain donor base even as voter satisfaction declines. Donors continue giving to lesser-evil party because alternative is worse, not because party is responsive. The representation gap creates stable revenue stream disconnected from actual representation quality. Can arbitrage between donor preferences and voter preferences because voters have no exit."
+    },
+    {
+      "name": "partisan_media_ecosystem",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from binary framing that simplifies coverage and maintains audience engagement through us-versus-them narratives. The representation gap creates content: disaffected voters provide ongoing stories of party failure, primary challenges, third-party speculation. But media also reinforces gap by treating third parties as spoilers and framing elections as binary choice. Mobile exit: could cover multiparty systems but benefits from current structure."
+    },
+    {
+      "name": "third_party_movements",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Organized agents attempting to build alternative parties. Benefit from representation gap by recruiting disaffected voters but face structural barriers that protect duopoly: ballot access requirements, debate exclusion, spoiler dynamics, resource asymmetry, media marginalization. Experience genuine coordination problem (how to build party infrastructure) layered with extraction (barriers beyond what coordination requires). Constrained by structural suppression but have some agency through local organizing and ballot access litigation."
+    },
+    {
+      "name": "primary_election_system",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Institutional mechanism originally designed to democratize party nomination and channel dissent into party reform. Now largely theatrical: low turnout, donor influence, and party apparatus control mean primaries rarely produce candidates responsive to disaffected voters. Persists as legitimation ritual: 'you could have voted in the primary' deflects representation complaints. Function atrophied but performance maintained. Listed as non-agent because it is a mechanism, not an actor, but included for narrative completeness."
+    },
+    {
+      "name": "democratic_legitimacy",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Abstract collective good: government responsiveness to citizen preferences. Cannot organize, cannot exit, bears full cost of representation gap. When 39% of a cohort reports neither party represents them yet continues voting, the legitimacy of representative democracy as a system is undermined. The gap between voting behavior and perceived representation corrodes civic trust and democratic norms over generational timescale. Listed as non-agent because it is an abstract good, not an actor."
+    },
+    {
+      "name": "ranked_choice_voting_advocates",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Organized reform movement attempting to change electoral rules to allow preference expression beyond binary choice. Analytical perspective: sees representation gap as artifact of first-past-the-post rules that could be eliminated through ranked-choice voting or proportional representation. Constrained by state-level implementation barriers and duopoly resistance but has achieved local victories. Observes the gap from outside the forced-choice dynamic."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aggregating diverse political preferences into binary electoral choice; maintaining stable party system that can form governing coalitions; reducing transaction costs of electoral competition through brand recognition and institutional continuity.",
+    "transfer_function": "Transfers political representation, policy responsiveness, and civic efficacy from voters without viable alternatives to the two-party duopoly. Transfers stable fundraising base, predictable electoral competition, and institutional advantages to established parties. Transfers legitimation (democratic participation theater) from primary election system to duopoly without corresponding transfer of actual responsiveness.",
+    "absent_voices": "Third-party voters who face spoiler stigma and are excluded from debates and media coverage. Non-voters who have exited the system entirely due to representation gap (not captured in the 39% figure which measures those who still vote). Future generations who will inherit degraded democratic legitimacy. Voters in safe districts where general election is non-competitive and primary is controlled by party apparatus. All are absent from the conversation that sets electoral rules and ballot access requirements — the duopoly writes the rules that protect the duopoly.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the representation legitimacy gap disappeared overnight — if voters suddenly had viable alternatives that represented their preferences — the entire structure of American electoral politics would rearrange. The two-party duopoly would face genuine competition and would have to become responsive or lose voters to alternatives. The fundraising apparatus would fragment as donors could support parties that actually represented their preferences. The partisan media ecosystem would have to cover multiparty competition rather than binary framing. Primary elections would either become genuinely competitive (if parties reformed to retain voters) or become irrelevant (if voters defected to new parties). The gap is not a natural feature of democracy but a structural product of specific electoral rules and institutional barriers — its disappearance would require and produce massive rearrangement.",
+    "founding_problem": "The two-party system emerged to solve genuine coordination problems in early American democracy: aggregating diverse state and regional interests into national coalitions, providing stable governing majorities, reducing transaction costs of electoral competition, and maintaining continuity across administrations. The representation legitimacy gap was not part of the founding design — it emerged as parties became institutionally entrenched and erected barriers to alternatives.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The coordination problem is corroborated by comparative political science: parliamentary systems with proportional representation face genuine challenges in coalition formation and government stability. However, the claim that the current representation gap is necessary to solve this problem is contested. Political scientists studying electoral systems (Duverger, Lijphart, Cox) document that the two-party equilibrium is a product of first-past-the-post rules, not an optimal solution to coordination problems. Ranked-choice voting advocates and proportional representation scholars argue that multiparty systems can solve coordination problems without creating representation gaps. The duopoly's claim that binary choice is necessary for stable governance is not corroborated by observers outside the beneficiary set — it is a self-serving justification for structural barriers that protect incumbents."
+  },
+  "gain_flow": "two_party_duopoly",
+  "fixing_cost": "prohibitive"
+}
