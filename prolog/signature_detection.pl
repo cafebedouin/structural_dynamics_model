@@ -233,11 +233,23 @@ count_power_beneficiaries(C, Count) :-
     length(UniqueBeneficiaries, Count).
 
 %% has_viable_alternatives(+Constraint, -HasAlternatives)
-%  Checks if viable alternatives were considered (indicates choice vs necessity)
+%  Checks if viable alternatives were considered (indicates choice vs necessity).
+%  OQ-43 fifth instance / OQ-44 policy fail-close (operator ruling 2026-06-11):
+%  the default used to be `false`, which the empty corpus-wide
+%  intent_viable_alternative/3 table (GAP-08) satisfied by ABSENCE — and
+%  natural_law_signature requires HasAlternatives == false, so the absence
+%  SUPPORTED every NL certification (pass-open). Default is now `unknown`:
+%  `false` requires authored evidence (none exists — no authoring surface yet),
+%  so NL's == false check fails until the intent layer or an authored
+%  alternatives table exists. The resulting un-certification of
+%  thermal_dissipation_constraint was ACCEPTED in the ruling (a known-vacuous
+%  certification is tolerated rather than undetected). The == true consumers
+%  (coordination_scaffold/successful_coordination) are unchanged: they never
+%  fired on the empty table and still don't.
 has_viable_alternatives(C, true) :-
     narrative_ontology:affects_constraint(I, C),
     narrative_ontology:intent_viable_alternative(I, _, _), !.
-has_viable_alternatives(_, false).
+has_viable_alternatives(_, unknown).
 
 %% compute_temporal_stability(+Constraint, -Stability)
 %  Measures whether constraint metrics remain stable over time
