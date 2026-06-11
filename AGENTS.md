@@ -348,6 +348,17 @@ are pre-computed. The corpus is continuous-growing; the manifest key records
 the timestamp and commit at which values were computed. Always cite the manifest
 when reporting findings.
 
+### Headline verdict contract (OQ-98, 2026-06-11)
+
+Per-constraint entries in `pipeline_output.json` / `enriched_pipeline.json` carry BOTH
+`diagnostic_verdict` (raw 12-subsystem synthesis) and `verdict_join` (the joined headline:
+base verdict + severity-floored alerts + grid/measurement provenance + signature grade;
+manifest `schema_version` 2). Any consumer that summarizes a constraint must headline
+`verdict_join.verdict`; `diagnostic_verdict.verdict` is a raw input — rendering it as a
+summary recreates the GREEN-over-severe-alerts defect. Producer:
+`diagnostic_summary:verdict_join/3`; serialization: `json_report.pl`; contract:
+`python/shared/schemas.py`. Evidence: `audits/2026-06-11_oq98_verdict_join/`.
+
 ### Network existence contract (OQ-95, 2026-06-10)
 
 `drl_purity_network:constraint_neighbors/3` is **fail-closed on zero-fact atoms**
