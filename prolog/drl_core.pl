@@ -92,9 +92,21 @@ emerges_naturally(C) :- domain_priors:emerges_naturally(C).
 %  Power-scaled extractiveness already handles the perspectival dimension.
 %  Temporal scaling on suppression made it mathematically impossible for constraints
 %  to reach snare (0.60) or tangled_rope (0.40) floors from analytical context.
+%  OQ-44 policy fail-close (2026-06-11): absence used to fabricate Value = 0 — the
+%  value most mountain-shaped (0 =< mountain_suppression_ceiling 0.15), inside the
+%  central classification path. Now the `unknown` sentinel, same as
+%  get_metric_average/3; the number/1 guard clause at classify_from_metrics/6
+%  fails closed on it. Witnessed unreachable on the live corpus (only the two
+%  non-story cs_axiom_contradiction files lack the scalar, and both fail
+%  base_extractiveness/2 first) — this kills the dormant reactivation, it does
+%  not change live output. Archive-overlay sweeps: a constraint without the
+%  scalar now classifies to no type (fail) instead of fabricated-0 types.
 get_raw_suppression(Constraint, Value) :-
     config:param(suppression_metric_name, ActualMetricName),
-    (narrative_ontology:constraint_metric(Constraint, ActualMetricName, Value) -> true ; Value = 0).
+    (   narrative_ontology:constraint_metric(Constraint, ActualMetricName, Value)
+    ->  true
+    ;   Value = unknown
+    ).
 
 % Re-export indexed classification predicates from constraint_indexing
 :- reexport(constraint_indexing, [
@@ -306,6 +318,14 @@ coordination_dead(C) :-
     narrative_ontology:coordination_vitality(C, dead).
 coordination_dead(C) :-
     narrative_ontology:coordination_vitality(C, degrading).
+
+% OQ-44 fail-close guard (2026-06-11): a non-numeric Supp is the `unknown`
+% absence sentinel from get_raw_suppression/2 (or any future producer). Fail
+% the whole classification rather than throw type_error in the comparisons
+% below or, worse, classify on a fabricated number. number/1, never
+% arithmetic, so it cannot itself throw.
+classify_from_metrics(_C, _BaseEps, _Chi, Supp, _Context, _Type) :-
+    \+ number(Supp), !, fail.
 
 classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),

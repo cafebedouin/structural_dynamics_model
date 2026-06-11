@@ -57,7 +57,7 @@ class PipelineConstraint:
 
     # --- Continuous metrics ---
     base_extractiveness: float | None = None      # [0, 1] (null: incomplete entry)
-    suppression: float = 0.0                      # [0, 1]
+    suppression: float | None = None              # [0, 1]; null = no authored scalar (OQ-44 fail-close — absence representable, never a fabricated 0)
     theater_ratio: float | None = None            # [0, 1] (null: incomplete entry)
     purity_score: float | None = None             # [0, 1]; null when purity not computed (26/1034)
     maxent_entropy: float = 0.0                   # [0, 1] normalized Shannon entropy
@@ -178,7 +178,7 @@ PIPELINE_FIELDS = [
     ("id",                          str,          False),
     ("perspectives",                dict,         False),
     ("perspective_chi",             dict,         False),
-    ("suppression",                 (int, float), False),
+    ("suppression",                 (int, float), True),    # null = no authored scalar (OQ-44 fail-close 2026-06-11; was a fabricated 0). Expected null only for non-story cs_axiom_contradiction files; null on a story constraint is an authoring defect.
     ("signature",                   str,          False),
     ("coupling",                    dict,         False),
     ("omegas",                      list,         False),
