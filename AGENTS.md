@@ -343,7 +343,11 @@ CI_Rope-certified upstream of FCR never reaches the refinement (designed shadow)
 | `classify_snapshot/3` | `snapshot_type/3` | `transition_paths.pl` |
 
 The legacy predicates used the old `power_modifier` χ path (χ = ε × π, omitting σ).
-The replacements use the canonical sigmoid pipeline.
+The replacements use the canonical sigmoid pipeline. Note: the two replacements are NOT
+equivalent to each other — `snapshot_type/3` is deliberately un-threaded (static-fallback
+semantics, clears the temporal nb-globals at entry) and diverges from `classify_at_time/4`
+at points where temporal and static metrics differ; see
+`audits/2026-06-11_oq83_close/STEP1_REPORT.md` before comparing their outputs.
 
 ### Product site scope exclusion
 
