@@ -4606,42 +4606,42 @@ code, two shapes, enumerable. Until it runs: sort-on-encounter, flagging against
 entry. Cross-refs: OQ-93 (instances 1 and 3), OQ-96 (instance 2), OQ-44 (sibling
 absence-class audit).
 
+**Update 2026-06-11 (OQ-98 close):** the verdict-banner candidate site is now a witnessed join
+(`diagnostic_summary:verdict_join/3`, serialized with its raw inputs) — strike it from the
+candidate list; the census itself stays open.
+
 ## OQ-98 — Report verdict banner is not a join over the report's own evidence: GREEN prints over 0%-authored grids and alongside severe alerts
 
-**Ω-type:** Ω_E (defect witnessed and attributed; resolution interacts with OQ-93 provenance + an operator threshold ruling).
+**Ω-type:** Ω_E (defect witnessed and attributed; resolution interacted with OQ-93 provenance + operator rulings 2026-06-11).
 
-**Status:** open — filed 2026-06-10 from the first external-review batch (`audits/2026-06-10_external_review_vote_market/`); run-outputs commit `2d54826c`.
+**Status:** resolved — 2026-06-11; commits `e8ab707b` (plumbing) / `170db693` (histogram gate) / `ce9a26ec` (output-changing, schema_version 1→2); evidence `audits/2026-06-11_oq98_verdict_join/`; KNOWN_STATE 2026-06-11.
 
-**The witness.** `scale_ceiling_report.md` (2026-06-10; copy in the audit dir) prints
-`VERDICT: GREEN` / `12/12 subsystems checked — no tensions` (lines 95-96) **alongside**
-`! ALERT [severe]: type_1_false_summit` (line 222) and over a grid the same report declares
-`[PROVENANCE] grid 32 = authored 0 + injected-0.5 4 (m_gen) + imputed-from-priors 28` (line 22).
-`build_verdict_banner` (`enhanced_report.py:518`) consumes only `diagnostic_verdict` from
-`enriched_pipeline.json`; the Prolog severity alerts (`report_generator.pl:62`) and the OQ-93
-provenance line never reach it. Correction-grade signature findings ("extraction mechanism that
-metrics failed to classify as snare", `agenda_conditioning_report.md:260`) carry no severity tag
-— the alert taxonomy is inverted relative to actionability.
+**Origin:** filed 2026-06-10, first external-review batch (`audits/2026-06-10_external_review_vote_market/`): `scale_ceiling_report.md` printed `VERDICT: GREEN / 12/12 subsystems — no tensions` over a 0%-authored grid and beside `! ALERT [severe]: type_1_false_summit`; correction-grade signature findings carried no severity tag.
 
-**Framing.** The banner is a join over provenance, alerts, and signature grades, or it is a
-passthrough lying about being a summary (Build Discipline spine: a success-shaped token fills the
-hole where the provenance bit should be at the read site). *Reflexively* (external reviewer, second
-batch): the apparatus performs the same `false_ci_rope` move it detects — a confident measurement
-banner over an empty/imputed table.
-
-**Regime note.** The 0%-authored grid came from the imputation shim now DISABLED permanently
-(OQ-96 interim fix + OQ-93 ruling (b) keep-and-migrate). The witnessed reports are shim-era
-artifacts, but the defect is **regime-independent**: the banner consumes only `diagnostic_verdict`
-and would print GREEN over an all-[OPEN] grid as readily as over an all-imputed one. Do **not**
-close this as "fixed by the shim removal."
-
-**Resolution sketch (deferred; the imputed-fraction threshold is an operator ruling and an
-output-changing commit):** (a) verdict downgrades to INSUFFICIENT-DATA/conditional above the
-threshold; (b) severe alerts force non-GREEN or an explicit reconciliation line; (c)
-correction-grade signature findings get severity tags (grade-determines-wiring). Fixes reviewer
-items 1, 2, and the conditional-marking half of 5. Cross-refs: OQ-92 (RESOLVED — landed receipt
-surface), OQ-93 (grid contract), OQ-44 (gate class), OQ-95 (report-number inconsistency), OQ-97
-(this banner is a Pattern-6 candidate site), OQ-102 (the same "critical"-outranks-"low" inversion
-in drift).
+**Resolution.** Headline verdict is now a join computed at the Prolog producer
+(`diagnostic_summary:verdict_join/3`) and serialized WITH its raw inputs as a sibling of
+`diagnostic_verdict`: joined = max-badness(base, severity floors severe→red, moderate→yellow,
+informational→no floor) with a `cap_applied` token; correction-grade signatures alert at
+moderate (`signature_detection:signature_grade/2` — correction iff an override signature
+actually rewired the type at default context; commentary never alerts). **Operative rulings:**
+(1) grid provenance does NOT gate the headline — probe P1 witnessed BRANCH A (0/48 summaries
+changed under full synthetic 32-slot grids; positive control 46/46 `classify_interval` shifts),
+so grid-fed findings (Pattern/Confidence, kappa) carry `[CONDITIONAL: grid authored A/T]` tags
+instead, the banner ALWAYS prints the grid line, and `enhanced_report.py` headlines
+`verdict_join.verdict` with stale artifacts rendering `[UNJOINED verdict — regenerate pipeline
+(OQ-98)]`; **if any of the 12 subsystems ever becomes grid-fed, revert to strict fail-closed**
+(authored<total ⇒ headline conditional). (2) severity=moderate for correction grade, confirmed
+at the pre-output histogram gate: 8/48 headlines changed (6 green→red, 2 yellow→red, all via
+severe claim-mismatch), zero moderate caps (all 13 correction carriers already base ≥ yellow).
+Witnesses W1–W4 + 2 falsifiers pasted in the audit dir (RED-capped scale_ceiling banner;
+CONDITIONAL tags firing on the live 0-authored regime; clean-green A/B additive-only; 4/4
+sidecar==banner; injected mountain claim caps yellow→red, restore byte-verified; 13/13
+correction-grade carry the join alert). Closes resolution sketch (a)-as-conditional-tags, (b),
+(c) = reviewer items 1, 2, and the conditional-marking half of 5. Known edge: the kappa
+CONDITIONAL branch is unreachable on the live all-absent-grid regime (kappa prints
+DATA_INSUFFICIENT); it fires when a partially-authored grid first exists. Cross-refs: OQ-97
+(banner site now a witnessed join; census stays open), OQ-102 (banner-side inversion fixed;
+per-time-point provenance open), OQ-101 (ledger gains `verdict_join` as a ready-made source).
 
 ## OQ-99 — Omega resolution-scenario generator: unbound constraint name prints `Constraint: unknown`; identical N=30 five-step template across all empirical omegas
 
@@ -4707,7 +4707,9 @@ cross-constraint narrative. Wiring: remove/disable step 6 in `agent/c-orchestrat
 writes to `outputs/` beside the reports; the operator synthesizes live using the checklist in the
 audit README. **The synthesis-fidelity discipline is NOT an OQ** — it lives as that live-synthesis
 checklist (form-not-implementation retires the prompt-guidance route). Cross-refs: OQ-100(d)
-(distillation — subsumed), OQ-102/OQ-103 (the provenance fields the ledger surfaces).
+(distillation — subsumed), OQ-102/OQ-103 (the provenance fields the ledger surfaces), OQ-98
+(closed 2026-06-11: per-constraint `verdict_join` — joined verdict, alerts with severities,
+grid/measurement provenance, signature grade — is a ready-made ledger source).
 
 ## OQ-102 — Drift/temporal subsystem carries no authored-vs-imputed provenance on its time series; "critical" outranks its own "confidence: low" at the read site
 
@@ -4726,6 +4728,13 @@ authored/imputed one — a guessed trajectory prints identically to a real one. 
 actionability inversion shared with OQ-98 — the "critical" alarm dominates the "confidence: low"
 caveat at the read site. Cross-refs: OQ-98 (same inversion in the verdict banner), OQ-93
 (provenance spine), OQ-101 (the ledger must surface this provenance bit).
+
+**Update 2026-06-11 (OQ-98 close; status unchanged).** The banner-side inversion is fixed
+(severe alerts now cap the headline) and the report's TEMPORAL TRAJECTORY section gained a
+coarse constraint-level provenance prefix (`[CONDITIONAL: N/M measurement points non-authored —
+OQ-93/OQ-102]`, fed by `verdict_join.measurement_provenance`, counted via
+`data_repair:source_class/2`). Defect (a) per-TIME-POINT provenance and the drift-section-
+internal inversion ("critical" vs its own "confidence: low") remain open — do not mark partial.
 
 ## OQ-103 — Contamination/purity-network edges carry no story-authored-vs-corpus-derived provenance bit and no salience floor at the read site
 
