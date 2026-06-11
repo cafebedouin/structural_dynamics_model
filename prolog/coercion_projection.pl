@@ -3,6 +3,8 @@
     coercion_magnitude/4,
     coercion_gradient/4,
     system_gradient/3,
+    system_gradient/4,
+    system_gradient_for/4,
     time_point_in_interval/2
 ]).
 
@@ -69,18 +71,52 @@ coercion_gradient(Level, IntervalID, T_now, Grad) :-
     ;   fail % Explicitly fail if no future points exist in the interval
     ).
 
-% System Gradient (Safe Aggregation)
+% System Gradient — coverage-carrying read (OQ-93 half-step, 2026-06-11).
+% The previous /3 ended in ( WGList \= [] -> sum ; SysGrad = 0.0 ): a
+% fabricated default (Pattern 4) that made EVERY failed gradient read
+% byte-identical to measured-flat for the construct's whole life (probe
+% FINDINGS.md, 2026-06-10). KILLED: an empty read now FAILS — callers
+% report OPEN, never a plausible value. Coverage travels with the value
+% (coverage(PresentLevels, AllLevels)) so a consumer can require its named
+% levels positively (consumer-named-levels, operator-CONFIRMED 2026-06-10:
+% sufficiency is a property of the QUESTION, not the dataset — no global
+% fraction threshold). Witness: audits/2026-06-11_oq93_grid_migration/
+% (8/32 one-level grid flips increasing_coercion -> OPEN; five probe
+% stories keep exact pinned values).
 system_gradient(IntervalID, Time, SysGrad) :-
-    findall(WG,
-        ( level(L),
+    system_gradient(IntervalID, Time, SysGrad, _Coverage).
+
+system_gradient(IntervalID, Time, SysGrad, coverage(PresentLevels, AllLevels)) :-
+    findall(L, level(L), AllLevels),
+    findall(L-WG,
+        ( member(L, AllLevels),
           influence_weight(L, W),
           % Ensure coercion_gradient succeeds before calculating
           coercion_gradient(L, IntervalID, Time, G),
           WG is W * G
         ),
-        WGList),
-    % Guard against empty lists at the end of a timeline
-    (   WGList \= []
-    ->  sum_list(WGList, SysGrad), !
-    ;   SysGrad = 0.0 % Return neutral gradient if no changes are detected
+        Pairs),
+    Pairs \= [],   % fail-closed on empty: absence is OPEN, never 0.0
+    findall(L, member(L-_, Pairs), PresentLevels),
+    findall(WG, member(_-WG, Pairs), WGList),
+    sum_list(WGList, SysGrad).
+
+%% system_gradient_for(+IntervalID, +Time, +RequiredLevels, -Result)
+%  Consumer-named-levels read (OQ-93 battery item 4). The consumer states
+%  the levels its question needs; the read answers:
+%    gradient(SysGrad, coverage(Present, All)) — every required level
+%        contributed (SysGrad still sums ALL present levels);
+%    open(missing_levels(Missing))            — required levels absent;
+%    open(no_gradient_data)                   — nothing contributed at all.
+%  Absence semantics (preregistration pin): open(...) means the GRID-DERIVED
+%  SIGNAL is open; a consumer with non-grid evidence falls back to it —
+%  absence never blocks or flips a verdict that has other evidence.
+system_gradient_for(IntervalID, Time, RequiredLevels, Result) :-
+    (   system_gradient(IntervalID, Time, SysGrad, coverage(Present, All))
+    ->  subtract(RequiredLevels, Present, Missing),
+        (   Missing == []
+        ->  Result = gradient(SysGrad, coverage(Present, All))
+        ;   Result = open(missing_levels(Missing))
+        )
+    ;   Result = open(no_gradient_data)
     ).

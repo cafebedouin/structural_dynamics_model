@@ -100,10 +100,20 @@ generate_full_report(IntervalID) :-
     ),
     
     % --- SECTION 6: KINETIC MAGNITUDE ---
-    findall(Kappa, (config:level(L), once(coercion_projection:coercion_magnitude(IntervalID, L, Tn, Kappa))), Kappas),
-    (   Kappas \= []
-    ->  sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
-        format('~nAggregate Magnitude (Kappa) at Tn: ~2f', [AvgK]),
+    % OQ-93 coverage-carrying read: the aggregate kappa averages the levels
+    % PRESENT, so the coverage must travel with the number (an average over
+    % one level previously printed as if it were the system magnitude).
+    % Kappa's own per-question requirement is >=1 full vector at Tn; partial
+    % grids still print, stamped with their level coverage + the OQ-98
+    % CONDITIONAL tag below.
+    findall(L-Kappa, (config:level(L), once(coercion_projection:coercion_magnitude(IntervalID, L, Tn, Kappa))), LKs),
+    (   LKs \= []
+    ->  findall(K, member(_-K, LKs), Kappas),
+        findall(L2, member(L2-_, LKs), KLevels),
+        sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
+        aggregate_all(count, config:level(_), NAllLevels),
+        format('~nAggregate Magnitude (Kappa) at Tn: ~2f [level coverage ~w/~w: ~w]',
+               [AvgK, NK, NAllLevels, KLevels]),
         % OQ-93: kappa is computed over the leveled grid — carry the diet
         % with the number. OQ-98: CONDITIONAL tag when authored < total
         % (per-question branch; P1 witnessed BRANCH A).
