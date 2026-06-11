@@ -63,7 +63,11 @@ def build_messages(source_desc):
     task = (
         f"=== YOUR TASK ===\nGenerate a complete constraint story JSON for: {source_desc}\n"
         f"Follow the schema exactly, INCLUDING the full 32-point coercion_grid "
-        f"per the GRID BATCH ADDENDUM. Output ONLY valid JSON."
+        f"per the GRID BATCH ADDENDUM. Output ONLY valid JSON.\n"
+        f"SCHEMA DISCIPLINE: additionalProperties is false throughout — do NOT "
+        f"invent fields that are not in the schema (no commentary_* variants, "
+        f"no analysis fields outside commentary); no null values; every enum "
+        f"value must be from the schema's list."
     )
     return [{
         "role": "user",
@@ -80,9 +84,15 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--only", default="",
+                    help="comma-separated cids to (re)generate; ledger entries merged")
+    ap.add_argument("--max-tokens", type=int, default=16000)
     args = ap.parse_args()
 
     seeds = SEEDS[: args.limit] if args.limit else SEEDS
+    if args.only:
+        wanted = set(args.only.split(","))
+        seeds = [s for s in seeds if s[0] in wanted]
     (OUT_DIR / "json").mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "pl").mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "raw").mkdir(parents=True, exist_ok=True)
@@ -100,7 +110,7 @@ def main():
         try:
             resp = client.messages.create(
                 model=args.model,
-                max_tokens=12288,
+                max_tokens=args.max_tokens,
                 system=[{"type": "text", "text": _SYSTEM_INSTRUCTION,
                          "cache_control": {"type": "ephemeral"}}],
                 messages=build_messages(source),
@@ -143,9 +153,15 @@ def main():
         ledger.append({"cid": cid, "status": "ok", "grid_points": n_pts})
         print(f"  ok (grid points: {n_pts}, grid present: {has_grid})")
 
-    (OUT_DIR / "generation_ledger.json").write_text(json.dumps(ledger, indent=2))
+    ledger_path = OUT_DIR / "generation_ledger.json"
+    if args.only and ledger_path.exists():
+        old = {e["cid"]: e for e in json.loads(ledger_path.read_text())}
+        for e in ledger:
+            old[e["cid"]] = e
+        ledger = list(old.values())
+    ledger_path.write_text(json.dumps(ledger, indent=2))
     n_ok = sum(1 for e in ledger if e["status"] == "ok")
-    print(f"\n{n_ok}/{len(seeds)} generated clean; ledger at {OUT_DIR}/generation_ledger.json")
+    print(f"\n{n_ok}/{len(ledger)} clean total; ledger at {ledger_path}")
 
 
 if __name__ == "__main__":

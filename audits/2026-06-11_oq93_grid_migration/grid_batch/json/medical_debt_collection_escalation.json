@@ -1,0 +1,555 @@
+{
+  "header": {
+    "constraint_id": "medical_debt_collection_escalation",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meddebt",
+    "story_uid": "550e8400-e29b-41d4-a716-446655440000",
+    "created_at": "2026-06-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Medical Debt Collection Escalation: Pipeline Hardening into Wage Garnishment and Liens",
+    "topic_domain": "healthcare_finance/debt_collection",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.38,
+    "beneficiaries": [
+      "hospital_debt_collection_division",
+      "debt_collection_agencies",
+      "debt_purchasers"
+    ],
+    "victims": [
+      "medically_bankrupted_patients",
+      "low_income_households",
+      "working_uninsured"
+    ],
+    "vindicated_propositions": [
+      "medical_necessity_justifies_cost_recovery",
+      "patient_responsibility_doctrine"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Medically Bankrupted Patient",
+      "comment": "PERSPECTIVE 1: MEDICALLY BANKRUPTED PATIENT (SNARE) \u2014 Trapped by combined medical necessity (cannot refuse treatment), wage dependency (income required for survival), and institutional coercion (garnishment, liens). No exit options. Full extraction realized. The debt follows the patient into bankruptcy, wage seizure, property lien \u2014 the constraint's coercive machinery operates at maximum intensity against this agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Working Uninsured (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: WORKING UNINSURED / IDENTITY-LOCKED (SNARE) \u2014 Structurally mobile (could theoretically change jobs, move, seek debt relief) but identity-locked into the role of 'responsible provider' \u2014 cannot exit the employment market or the identity commitment to paying debts. The bind is cognitive (internalized obligation, shame about medical debt, belief that the debt is legitimately owed) layered over material barriers (no savings, no legal paths to discharge medical debt except bankruptcy). The classification is snare: identity lock does not change the predatory structure, it only prevents the agent from recognizing their own mobility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Community Hospital",
+      "comment": "PERSPECTIVE 3: SMALL COMMUNITY HOSPITAL (TANGLED ROPE) \u2014 Faces genuine coordination problem: must collect payment to sustain operations and repay debt service. But has shifted from billing cooperation (negotiate, forgive where appropriate) to aggressive collection (automated liens, wage garnishment). The small hospital benefits from centralized debt collection services (outsourced collection reduces administrative overhead) while its vulnerable patients bear the full cost. The constraint coordinates hospital solvency while extracting from those least able to pay. Moderate agent power constrained by dependence on collection machinery."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Debt Collection Industry",
+      "comment": "PERSPECTIVE 4: DEBT COLLECTION INDUSTRY (ROPE) \u2014 Experiences the constraint as pure coordination: acquiring medical debt portfolios, automating collection via liens and garnishment, scaling enforcement. No experienced extraction \u2014 instead, net benefit from the pipeline's increasing efficiency. High agency and arbitrage (can shift between hospital clients, markets, regulatory jurisdictions). The constraint is coordination from their seat: how to efficiently collect diffuse patient debt at scale. Theater ratio for this agent is low (direct coercive mechanisms require minimal pretense)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hospital Finance Leadership",
+      "comment": "PERSPECTIVE 5: HOSPITAL FINANCE LEADERSHIP (TANGLED ROPE) \u2014 Coordinating financial solvency (genuine problem: hospitals must sustain operations in a fee-for-service system) while implementing escalating extraction against vulnerable patients. The leadership experiences the constraint as a necessary tightening \u2014 patient revenue is declining, insurance reimbursement is shrinking, operational costs are rising. The 'solution' (aggressive debt collection) is coordination for one goal (institutional survival) that extracts from patients (asymmetric burden). Active enforcement required to maintain the pipeline; stakes inflation appears as operational necessity to hospital finance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a broad analytical position, the medical debt collection escalation is a snare: patients face medical necessity (cannot refuse treatment), no alternatives to the hospital system, escalating coercive machinery (liens, garnishment) with minimal resistance capacity. The coordination story (hospitals need to collect to sustain operations) is genuine but overwhelmed by the extraction intensity. The constraint shows snare characteristics at maximum scale: necessity entrapment + institutional coercion + suppression of alternatives + high theater ratio (billing as 'medical necessity recovery' rather than debt slavery)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "medical_necessity_entrapment",
+      "question": "Is the patient's inability to refuse treatment a legitimate basis for collection escalation, or a coercive mechanism that exploits the absence of choice?",
+      "resolution_mechanism": "Comparative analysis: do hospitals escalate collection against patients with effective alternatives (wealthy patients with lawyers, insured patients with strong coverage) at the same rate as uninsured/underinsured patients? If escalation correlates with power asymmetry, the trap is coercive exploitation rather than coordination.",
+      "impact": "If coercive exploitation: reclassify definitively as snare at all perspectives. If legitimate coordination challenge: some perspectives (hospital finance) may have genuine rope characteristics. The data will distinguish.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether medical necessity is leveraged as coercive mechanism"
+    },
+    {
+      "id": "identity_lock_mechanism_scope",
+      "question": "How many patients experience the debt through identity_locked framing (internalized obligation to pay, shame, belief in legitimacy) versus trapped framing (pure material coercion)?",
+      "resolution_mechanism": "Post-debt survey or interview data from bankrupted patients: ask whether exit was possible (structurally mobile) but unthinkable (identity fused), or genuinely impossible (trapped). Behavioral data: do patients with identity lock exit the constraint after identity disruption (bankruptcy filing, counseling, peer support groups) or remain locked?",
+      "impact": "If identity lock predominates: the constraint's suppression is partly internalized, reducing measured institutional force but increasing post-exit persistence. If trapped predominates: structural barriers alone drive the snare. The mechanism changes clinical/policy intervention design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of patients experiencing identity-locked versus trapped binding"
+    },
+    {
+      "id": "collection_escalation_causality",
+      "question": "Does hospital financial pressure drive collection escalation, or does collection escalation become institutionalized independently of genuine financial necessity?",
+      "resolution_mechanism": "Historical analysis comparing hospitals with different financial pressures (well-funded academic centers vs financially stressed community hospitals). Do all escalate collection at the same rate, suggesting institutional adoption rather than necessity? Or do financially pressured hospitals escalate faster?",
+      "impact": "If institutional adoption dominates: the constraint becomes a piton (performative escalation maintained by inertia). If financial necessity dominates: tangled_rope classification confirmed for hospital finance leadership. The data will show whether 'operational necessity' is genuine or cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collection escalation is driven by financial necessity or institutional inertia"
+    },
+    {
+      "id": "wage_garnishment_enforcement_capacity",
+      "question": "How much enforcement capacity (court infrastructure, collection agency coordination, payroll integration) is required to maintain the wage garnishment pipeline, and where is the scaling limit?",
+      "resolution_mechanism": "Cost accounting: enforcement machinery cost per dollar collected; comparison across states with different garnishment rules (some states cap garnishment, others allow deeper collection). Identify the break-even point where enforcement cost exceeds recovered debt.",
+      "impact": "If enforcement reaches cost break-even before full extraction: constraint is unsustainable and will degrade (piton trajectory). If extraction exceeds enforcement cost indefinitely: institutional machinery will harden further. Understanding the economics reveals the true terminal state.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost economics of wage garnishment enforcement pipeline"
+    },
+    {
+      "id": "patient_coalition_possibility",
+      "question": "Under what conditions could medically bankrupted patients achieve organized power sufficient to resist collection escalation?",
+      "resolution_mechanism": "Case studies of patient collective action: medical debt strikes, bankruptcy courts filing patterns, state attorney general actions, legislative outcomes. Identify what scale of organization generates pressure on hospital systems and collection agencies.",
+      "impact": "If coalition organizing is possible at scale: powerless agents could move toward organized status, reducing experienced snare intensity. If coalition organizing is structurally impossible (patients too dispersed, energy depleted by medical crises, shame isolation): snare persists. The data identifies the structural barriers to collective action.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of patient collective action against medical debt collection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 10,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.84
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.89
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.88
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.61
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.15
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.54
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "A hospital system's debt-collection pipeline has progressively hardened from billing-with-negotiation into automated wage garnishment and property liens. The escalation is not uniform across organizational levels or time. Individual patient stakes inflate fastest \u2014 within 5 years of billing system implementation, wage garnishment becomes standard for all unpaid balances over $5,000. Hospital organizational machinery (collection divisions, debt sales, legal case processing) hardens more slowly \u2014 standardized lien procedures take 7-10 years to become policy. Structural machinery (state garnishment law changes, court system adaptation, debt purchasing markets) lags furthest behind but eventually normalizes the practice as routine. This level-differential is the story's key signal: individual agents experience the snare's tightening immediately (wages garnished within months of missed payment), while the institutional machinery that makes garnishment routine takes years to solidify. The grid captures this asynchrony: individual stakes inflation (0.52 \u2192 0.89 over 10 years) outpaces organizational stakes inflation (0.48 \u2192 0.64) and structural stakes inflation (0.38 \u2192 0.52). Similarly, individual-level suppression intensifies fastest (0.62 \u2192 0.88), driven by wage garnishment and legal machinery aimed at individuals. Organizational suppression (hospital policy, collection procedures) rises slower (0.44 \u2192 0.61). Resistance decays at all levels as the machinery hardens: individual resistance (0.28 \u2192 0.15) collapses as patients lose wage negotiation capacity; organizational resistance (small hospitals objecting to collection escalation) weakens (0.32 \u2192 0.22) as debt sales become standard practice; class resistance (patient coalitions) remains weak (0.48 \u2192 0.38) but shows more stability than individual or organizational resistance because collective organizing preserves potential agency. Structural resistance (state attorneys general, legislative scrutiny) is highest (0.62 \u2192 0.54 \u2014 slight decline) because system-level actors can mount credible challenges. The architecture of coercion is hierarchical: the constraint squeezes hardest where agents are least organized (individuals) and most gently where agents have institutional resources (states, legislatures). The hospital system that initiates the escalation may believe it is coordinating solvency; the collection agencies pursuing the escalation experience it as pure efficiency; the patients experiencing wage seizure experience it as snare. All are correct from their perspective. The engine's classification reveals that the snare-level extraction overwhelms any coordination narrative."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_insurance_coverage_gap",
+      "hospital_debt_restructuring",
+      "bankruptcy_discharge_doctrine_medical_debt"
+    ],
+    "dual_formulation_note": "Medical debt collection escalation decomposes into three distinct constraints with different \u03b5 values: (1) Healthcare access (whether patients can obtain treatment without debt threat) \u2014 \u03b5 low (coordination-heavy, genuine medical necessity driving access). (2) Collection pipeline (whether payment is negotiated vs coercive) \u2014 \u03b5 high (extraction mechanism, the focus of this story). (3) Debt persistence (whether medical debt survives bankruptcy discharge) \u2014 \u03b5 high (legal constraint enabling the snare). This story is constraint family member 2 (collection mechanism). Members 1 and 3 are upstream and downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "medically_bankrupted_patients",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Received necessary medical treatment during acute health crisis (surgery, emergency care, chronic illness management). Unable to pay full bills. Face wage garnishment (up to 25% of wages in many states), property liens (hospitals file liens on homes), and bankruptcy if total debt exceeds income recovery potential. No negotiation mechanism available; collection is automated. Medical debt follows patient across job changes and state lines. No alternative to the hospital system for emergency care. The constraint captures the patient's future earnings through wage garnishment, creating permanent partial insolvency."
+    },
+    {
+      "name": "working_uninsured",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Employed but uninsured due to employer benefit gaps or inability to afford premiums. Seek care only when acutely ill, incurring large bills. Internally committed to 'responsible person' identity \u2014 believe they should pay what they owe, experience shame about debt, do not discuss financial situation with peers. Structurally could change jobs, relocate, or seek legal debt relief, but identity-lock prevents recognizing these options. The debt is experienced as legitimate personal failure rather than structural entrapment. The constraint's suppression operates partially through the agent's own identity frame."
+    },
+    {
+      "name": "small_community_hospitals",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Operate critical regional healthcare infrastructure; must sustain operations through patient revenue collection. Face declining insurance reimbursement (Medicare/Medicaid rates below cost, commercial insurance shifting costs to patients), rising operational costs (labor, supplies, equipment). Outsource collection to specialized debt collection agencies to avoid direct moral responsibility while maintaining revenue. The hospital's finance leadership experiences collection escalation as operational necessity, not coercion. The constraint enables the hospital to defer difficult financial decisions (accepting losses on uncompensable care, renegotiating cost structure) by extracting payment from vulnerable patients instead."
+    },
+    {
+      "name": "hospital_debt_collection_division",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Centralized department or contracted agency that processes patient billing, pursues collection through all available legal mechanisms (liens, garnishment, lawsuits), and sells unrecoverable debt to debt purchasers. Operates with high efficiency through automation: bills are generated, sent, escalated through legal procedures with minimal individual review. The collection division's revenue or cost-recovery targets are independent of patient outcomes; success is measured in dollars collected, not patients served. Experiences constraint as pure coordination: connecting patient debt to legal enforcement machinery efficiently."
+    },
+    {
+      "name": "debt_collection_agencies",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Acquire medical debt portfolios from hospitals at 10-30% face value, pursue collection through aggressive legal and communication strategies (wage garnishment, property liens, repeated contact, credit report damage). Profit from price gap between acquisition cost and recovery. Operate with high leverage: small enforcement cost per case (form generation, court filing fees) relative to large recovery if patient has any collectable assets or wages. Completely decoupled from hospital operations or patient wellbeing; incentive structure rewards maximum extraction regardless of patient hardship."
+    },
+    {
+      "name": "debt_purchasers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Financial firms that purchase debt portfolios from collection agencies at further discounts, hold or resell. Purely financial players with no connection to healthcare delivery or patient care. Profit from secondary market inefficiency (debt purchased at 5-10% face value, pursued aggressively or resold at higher price). The constraint enables financial extraction completely divorced from any coordination function."
+    },
+    {
+      "name": "hospital_finance_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Senior leadership responsible for hospital financial solvency. Face pressure from declining insurance reimbursement, rising debt service costs, board expectations for operational margin maintenance. Implement collection escalation as operational strategy: shift from billing department (patient-facing, negotiation-capable) to debt collection agency outsourcing (coercive, automated, scaled). Experience the constraint as legitimate response to structural financial crisis in healthcare, not as extraction. The constraint enables financial decisions that defer difficult system-level reforms (cost reduction, business model change, advocacy for public insurance expansion) by temporarily solving the budget problem through patient extraction."
+    },
+    {
+      "name": "state_courts_and_magistrates",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Provide legal machinery (court filings, judgment issuance, lien recording, garnishment orders) for medical debt collection. In many jurisdictions, medical debt collection cases are the highest-volume civil docket; judges routinely approve collection motions with minimal adversarial review (default judgment when patient does not appear). Court system capacity is stretched; routine approval of collection cases is treated as administrative processing rather than disputed claims. The constraint operates through institutional routine rather than contested legal principle."
+    },
+    {
+      "name": "hospital_billing_staff",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Hospital employees who generate bills, process payments, attempt initial patient communication about debt. Often experience moral friction between job requirements (pursue collection) and patient harm visibility (direct contact with patients in financial distress). Constrained by employment and automation systems that escalate cases automatically after payment deadline passes. May wish to negotiate or forgive debt but lack authority; cases escalate beyond their decision-making scope within 30-60 days."
+    },
+    {
+      "name": "insurance_companies",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from cost-shifting to patients through high deductibles, narrow networks, preauthorization barriers. Do not directly engage with collection but design policies that leave patients uninsured or underinsured, triggering medical debt. Completely decoupled from patient outcomes or debt consequences; financial incentive is to minimize claims paid. The constraint enables insurance business model optimization at patient expense."
+    },
+    {
+      "name": "uninsured_population_class",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Non-agent entity: the aggregate class of individuals without health insurance. This class has no collective voice, organization, or exit options. Systematically targeted by medical debt collection because individual members cannot negotiate insurance coverage. Listed here for narrative completeness rather than as an agent that collects rents or experiences constraint directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Hospitals need to collect revenue to sustain operations and provide care to future patients (genuine coordination problem: unpaid medical debt threatens operational solvency). The original coordination mechanism was billing-as-service-recovery with built-in negotiation and financial assistance pathways. The actual operation has become automated wage garnishment and property liens with minimal negotiation.",
+    "transfer_function": "The constraint moves wealth (wages through garnishment, property through liens, future earnings through debt claims) from medically bankrupted and uninsured patients to hospitals, debt collection agencies, and debt purchasers. The transferred value originates in patient wages and property, flows through legal machinery (court systems, garnishment rules, lien statutes), and accumulates in beneficiary organizations.",
+    "absent_voices": "Patients who died or suffered permanent disability from deferring care due to medical debt fear (not present at any discussion table). Uninsured patients who avoid hospitals entirely due to collection fear (not present). Healthcare workers (nurses, doctors, social workers) who experience moral injury from being part of extraction machinery (largely absent from institutional decision-making). Community health advocates and public health authorities (excluded from hospital finance decisions).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If medical debt collection escalation disappeared overnight, the entire financial model of hospital operations would need restructuring. Hospitals currently depend on collection revenue to meet debt service and operational budgets. Disappearance would force either (a) acceptance of uncompensable care losses (shifting burden to charitable funding, tax funding, or private donation), (b) dramatic cost reduction, or (c) business model change toward community health focus rather than revenue maximization. Healthcare financing would fundamentally reorganize. The constraint is not a natural law but an institutional choice embedded in financial obligation and reimbursement structure.",
+    "founding_problem": "How do hospitals sustain operations when insurance reimbursement rates are below cost and patients cannot afford care? The original answer was cost-plus billing with negotiated payment and financial assistance. As reimbursement pressure intensified (Medicare/Medicaid rates declining, commercial insurance shifting costs) and hospital debt service increased, the 'solution' shifted from negotiation to coercion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Hospital finance leadership: operational necessity framing (pressure from reimbursement decline, debt service, budget targets). Debt collection agencies: market efficiency framing (high recovery rates justify automation). Patient advocates: structural entrapment framing (patients face medical necessity, no insurance, no wage mobility). State attorneys general: predatory practice framing (collection escalation targets vulnerable populations, violates consumer protection principles). Economic researchers: contradictory evidence on whether collection escalation materially improves hospital financial health or merely transfers cost to patients. NO CORROBORATION from outside beneficiary set that collection escalation is truly necessary (hospital finance officers state necessity, but independent financial analysis is sparse)."
+  },
+  "gain_flow": "hospital_debt_collection_division",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "healthcare_insurance_coverage_gap"
+    ]
+  }
+}

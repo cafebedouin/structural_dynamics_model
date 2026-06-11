@@ -51,9 +51,19 @@ time_point_in_interval(IntervalID, Time) :-
     Time =< T_end.
 
 % Helper to isolate the cross-module dynamic call (interval-scoped: a story's
-% time points are ITS measurement times, not the union across the loaded KB)
+% time points are ITS measurement times, not the union across the loaded KB).
+% GRID TIMES ONLY (OQ-93 Stage C batch finding, 2026-06-11): grid metrics are
+% compound (metric(level)); scalar series metrics are atoms. Without the
+% compound/1 guard, a story authoring BOTH a grid at {t0,tn} AND mid-interval
+% scalar points (theater_ratio at t=10,20 on a [0,30] interval) made
+% coercion_gradient pick the scalar time as the "immediate next point",
+% where no grid vector exists — every gradient failed and the whole batch
+% read open(no_gradient_data). Witnessed on all 10 batch stories
+% (audits/2026-06-11_oq93_grid_migration/kappa_audit_run_prefix.txt);
+% probe stories never hit it because they author no scalar series.
 is_measurement_time(IntervalID, T) :-
-    narrative_ontology:measurement(_, IntervalID, _, T, _).
+    narrative_ontology:measurement(_, IntervalID, Metric, T, _),
+    compound(Metric).
 
 % Gradient logic (Guarded)
 coercion_gradient(Level, IntervalID, T_now, Grad) :-
