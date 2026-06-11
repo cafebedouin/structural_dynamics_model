@@ -1643,6 +1643,17 @@ classes, or at the next instance, whichever first. Instance #1 supplies both cla
   witnessed capability).
 Both recommendations are instance-narrow; neither asserts the engine-wide policy.
 
+**Instance #2 (2026-06-10, from the first external-review batch —
+`audits/2026-06-10_external_review_vote_market/`).** Report-type, DEFAULT-PASS (Pattern 4
+overlap): the forensic false-mountain audit defaults a missing `resistance_to_change` to `0.0` —
+`report_generator.pl:507` (`utils:safe_get_metric(C, resistance_to_change, Resist, 0.0, false)`)
+then prints `Resistance to Change: MISSING (using default 0.0)` (:509), witnessed 4× in
+`scale_ceiling_report.md` (+ `organization_floor_report.md`). `0.0` is the value most likely to
+flip mountain→rope (low resistance reads as not-a-mountain), inside the module issuing the
+forensic verdict. The false-summit findings themselves survive (suppression alone clears the
+threshold), but dependent verdicts should be marked conditional. Sibling defaults at the same
+site: `Suppression Requirement` (:481), `Base Extractiveness` (:500). Instance-narrow.
+
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
 **Status:** open — (corpus-quality audit, NOT engine maintenance). Spun off from the D3 ruling so the
@@ -4439,6 +4450,16 @@ invention from category priors to LLM judgment rather than eliminating it.
 generation-template-retires-stopgap arc shape), OQ-83 A7 (sibling severance), OQ-36/37 (empty
 `intent_*` tables feeding intent_engine Conditions 2–4).
 
+**Evidence note (2026-06-10, first external-review batch).** Downstream report numbers are
+arithmetic over the imputed grid: `Corpus perspectival fracture (W1): 0.0000`, purity figures,
+κ, and the χ table all consume the leveled grid, while the `[PROVENANCE]` line prints but does
+**not** propagate to them (→ OQ-98, the banner does not join over provenance). W1 = 0.0000 most
+likely measures the leveled imputation, not the corpus — a **positive control on a
+known-fractured input is owed** before trusting its silence (cross-ref OQ-51's standing gates).
+Date-stamp as **shim-era evidence**: ruling (b) (keep-and-migrate) killed the imputation path
+after these reports were generated, so future grids are authored-or-absent. Witnesses:
+`audits/2026-06-10_external_review_vote_market/reports/`.
+
 ## OQ-94 — `constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints
 
 **Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
@@ -4589,6 +4610,15 @@ does not "discover" a fight the prototype already witnessed. Cross-refs: OQ-92 (
 step-3 preconditions), OQ-90 (snare/piton capture split), GAP-10, OQ-83 (role-derived
 beneficiary emission).
 
+**Cross-ref note (2026-06-10, second external-review batch).** The XPrize reviewer's "snare,
+right verdict wrong wire" critique is the who-bears-vs-who-benefits axis homed here: the engine
+computed `competition_timeline_pressure` snare from authored `prize_pressure`/`no_exit`, but the
+$101M flows to teams while trial subjects bear the risk — coercion-borne and benefit-flow point
+at different parties. The critique is otherwise authoring/synthesis fidelity (the essay itself
+surfaced the better "right to try" mechanism the engine did not compute); the engine-relevant
+residue is exactly this who-bears/who-benefits separation. See
+`audits/2026-06-10_external_review_xprize/`.
+
 ## OQ-95 — giant_component network counts phantom nodes: dangling `affects_constraint/2` targets enter the component BFS (118.9% of network on the live corpus; 259.9% on original_v6)
 
 **Ω-type:** Ω_E (defect witnessed and counted; the fix is a scoping decision plus a generation-time validation question).
@@ -4613,6 +4643,16 @@ beneficiary emission).
 
 **Resolution options (no verdict asserted; the failing path is the OQ-93 grid-imputation shim, so the fix choice belongs with that fork):** (a) guard `category_of/2` clause 1 (existence-check or catch → fall through to the `constraint_claim` clause / `unknown_novel`) — one-clause fix, restores the suite, but silently re-blesses the OQ-93 prior-flavored imputation path; (b) delete the dangling clause 1 + `use_module` (the registry has been gone four months; clause 1 has been throw-or-dead all that time); (c) fold into the OQ-93 producer/consumer ruling (the only caller chain is the DR-AUDIT repair path). Cross-refs: OQ-93 (the shim), OQ-44 (gate-integrity class), build_discipline *staleness ladder* + *every diagnostic needs a positive control* (the `grep -v Warning` lesson).
 
+**Provenance note (2026-06-10, external-review batches).** The vote-market six (commit `2d54826c`)
+and the XPrize three (commit `96113b05`) were generated 2026-06-10 inside the RED window but
+**landed under a live-witnessed gate**: `run_dynamic_suite` re-run this session over the full
+48-constraint corpus exits 0, 0 errors / 0 warnings (witness:
+`audits/2026-06-10_external_review_vote_market/gate_witness.txt`; positive control — the run
+reaches `work_displacement_dignity`, test_case 48). An earlier draft of this triage carried a
+RED-gate-budget proposal (K landings under a broken gate, pending operator ruling); that premise
+**dissolved** when the OQ-96 interim fix landed GREEN before these commits, so the budget is
+dropped, not deferred.
+
 ## OQ-97 — Success-shaped-absorption census: bounded grep of live code for Pattern-6 candidate sites
 
 **Ω-type:** Ω_E (bounded audit task; verdicts per site are sort-on-encounter until it runs).
@@ -4631,6 +4671,149 @@ coverage-carrying default is sound). Cheap in a way the waived backward sweep wa
 code, two shapes, enumerable. Until it runs: sort-on-encounter, flagging against the Pattern-6
 entry. Cross-refs: OQ-93 (instances 1 and 3), OQ-96 (instance 2), OQ-44 (sibling
 absence-class audit).
+
+## OQ-98 — Report verdict banner is not a join over the report's own evidence: GREEN prints over 0%-authored grids and alongside severe alerts
+
+**Ω-type:** Ω_E (defect witnessed and attributed; resolution interacts with OQ-93 provenance + an operator threshold ruling).
+
+**Status:** open — filed 2026-06-10 from the first external-review batch (`audits/2026-06-10_external_review_vote_market/`); run-outputs commit `2d54826c`.
+
+**The witness.** `scale_ceiling_report.md` (2026-06-10; copy in the audit dir) prints
+`VERDICT: GREEN` / `12/12 subsystems checked — no tensions` (lines 95-96) **alongside**
+`! ALERT [severe]: type_1_false_summit` (line 222) and over a grid the same report declares
+`[PROVENANCE] grid 32 = authored 0 + injected-0.5 4 (m_gen) + imputed-from-priors 28` (line 22).
+`build_verdict_banner` (`enhanced_report.py:518`) consumes only `diagnostic_verdict` from
+`enriched_pipeline.json`; the Prolog severity alerts (`report_generator.pl:62`) and the OQ-93
+provenance line never reach it. Correction-grade signature findings ("extraction mechanism that
+metrics failed to classify as snare", `agenda_conditioning_report.md:260`) carry no severity tag
+— the alert taxonomy is inverted relative to actionability.
+
+**Framing.** The banner is a join over provenance, alerts, and signature grades, or it is a
+passthrough lying about being a summary (Build Discipline spine: a success-shaped token fills the
+hole where the provenance bit should be at the read site). *Reflexively* (external reviewer, second
+batch): the apparatus performs the same `false_ci_rope` move it detects — a confident measurement
+banner over an empty/imputed table.
+
+**Regime note.** The 0%-authored grid came from the imputation shim now DISABLED permanently
+(OQ-96 interim fix + OQ-93 ruling (b) keep-and-migrate). The witnessed reports are shim-era
+artifacts, but the defect is **regime-independent**: the banner consumes only `diagnostic_verdict`
+and would print GREEN over an all-[OPEN] grid as readily as over an all-imputed one. Do **not**
+close this as "fixed by the shim removal."
+
+**Resolution sketch (deferred; the imputed-fraction threshold is an operator ruling and an
+output-changing commit):** (a) verdict downgrades to INSUFFICIENT-DATA/conditional above the
+threshold; (b) severe alerts force non-GREEN or an explicit reconciliation line; (c)
+correction-grade signature findings get severity tags (grade-determines-wiring). Fixes reviewer
+items 1, 2, and the conditional-marking half of 5. Cross-refs: OQ-92 (RESOLVED — landed receipt
+surface), OQ-93 (grid contract), OQ-44 (gate class), OQ-95 (report-number inconsistency), OQ-97
+(this banner is a Pattern-6 candidate site), OQ-102 (the same "critical"-outranks-"low" inversion
+in drift).
+
+## OQ-99 — Omega resolution-scenario generator: unbound constraint name prints `Constraint: unknown`; identical N=30 five-step template across all empirical omegas
+
+**Ω-type:** Ω_E (witnessed, mechanical, output-changing).
+
+**Status:** open — filed 2026-06-10 (first external-review batch; `audits/2026-06-10_external_review_vote_market/`).
+
+**The witness.** 4× `Constraint: unknown` + 4× identical five-step N=30 template in each of the
+six 2026-06-10 reports (e.g. `scale_ceiling_report.md` omega sections; copies in the audit dir).
+Bug: `report_generator.pl:572-583` `resolve_omega_source/3` fallback binds `Constraint = unknown`
+(:581) when the `omega_source/3` lookup fails; the scenario templates (:585+) print it literally
+— even though the generator runs per-constraint, so the subject constraint is in scope.
+
+**Why it matters.** The omega section is the highest-value essay output (omegas were adopted
+directly into the working essay) yet currently the most templated. Resolution: bind the
+constraint from the report subject; differentiate scenario steps per omega type; fail-loud or
+skip when genuinely unresolvable. Output-changing — lands alone, not inline with triage.
+
+## OQ-100 — Report register incoherence: three quantities named "confidence", "HARD DISAGREEMENT" at rival P=0.95, "ONTOLOGICAL FRAUD DETECTION" overclaims the forensic register
+
+**Ω-type:** Ω_E (witnessed; (a)-(c) register-work, (d) structure-work — different sizes).
+
+**Status:** open — filed 2026-06-10 (first external-review batch; `audits/2026-06-10_external_review_vote_market/`).
+
+**The witnesses.** scale_ceiling-style reports: `Confidence: 0.0100 (borderline)` (MaxEnt numeric),
+a corpus histogram "confidence", and Prolog categorical `Confidence: high` — three incompatible
+quantities one word; `HARD DISAGREEMENT` fires on type-mismatch only and ignores rival P, framing
+a rout (`Rival Type: rope (P=0.9500)`) as a tie; `report_generator.pl:59` prints an unconditional
+"ONTOLOGICAL FRAUD DETECTION" header though inputs are author-assigned (a self-consistency audit,
+not fraud detection).
+
+**Substance.** (a) unify/rename the confidence vocabularies; (b) when rival P ≥ threshold the
+header reads "pipeline classification rejected", not a tie; (c) rename the forensic register to
+"declared-type vs own-assigned-metrics self-consistency audit" (the honest version is the more
+defensible one). **(d) — EXPLICITLY SEVERABLE:** one-page verdict block + appendix restructure
+(~40 usable lines of 360; purity/coupling/orbit printed 2-3×). Structure-work, different size:
+closing (a)-(c) closes this OQ **provided (d) is either spun off to its own OQ at that time or
+dropped with a note** — it may not silently ride a "resolved" status (partial-closure guard).
+The ledger (OQ-101) subsumes (d). Cross-ref OQ-95.
+
+## OQ-101 — Replace the auto-essay synthesis (orchestrator step 6) with a deterministic tensions ledger
+
+**Ω-type:** Ω_P (design ruled; build pending).
+
+**Status:** open — operator ruling 2026-06-10 (second external-review batch, `audits/2026-06-10_external_review_xprize/`); run-outputs commit `96113b05`.
+
+**The ruling.** Remove orchestrator step 6 (the Sonnet essay draft); replace it with a
+deterministic, non-generative tensions ledger. Rationale, in force order: (1) the essay *form*
+collapses plurality — the auto-essay literally announced *"converges on a single structural
+conclusion"* (`sinclair_xprize_reprogramming_2026.md:256`) while the reports preserve plurality;
+(2) **form, not implementation** — `uke_think` over-stated the same way, so the failure is
+invariant under synthesizer swap and prompt guidance cannot fix it; (3) the draft is throwaway
+(final synthesis is redone live) and harmful as a pre-collapsed anchor; (4) runs are 3–11
+constraints (avg 5–6), so reading N × ~360-line reports cold justifies a replacement, not bare
+reports.
+
+**Build.** A non-generative extractor (no LLM call — cannot over-state by construction) reading
+`outputs/pipeline_output.json` + the per-constraint `*_report.md`, emitting one bulleted block
+per constraint: per-position types + index mismatches; signature + grade; omegas with confidence;
+drift with confidence **and** authored-vs-imputed provenance (gated on OQ-102); contamination with
+strength **and** story-vs-corpus provenance (gated on OQ-103). A ledger, not prose — no thesis, no
+cross-constraint narrative. Wiring: remove/disable step 6 in `agent/c-orchestrator.py`; ledger
+writes to `outputs/` beside the reports; the operator synthesizes live using the checklist in the
+audit README. **The synthesis-fidelity discipline is NOT an OQ** — it lives as that live-synthesis
+checklist (form-not-implementation retires the prompt-guidance route). Cross-refs: OQ-100(d)
+(distillation — subsumed), OQ-102/OQ-103 (the provenance fields the ledger surfaces).
+
+## OQ-102 — Drift/temporal subsystem carries no authored-vs-imputed provenance on its time series; "critical" outranks its own "confidence: low" at the read site
+
+**Ω-type:** Ω_E (defect witnessed and attributed).
+
+**Status:** open — filed 2026-06-10 (second external-review batch, `audits/2026-06-10_external_review_xprize/`).
+
+**The witness.** `competition_timeline_pressure_report.md`: `evidence(extraction_delta,0,6,0.35,0.58)`
+→ `[critical] extraction_accumulation` (lines 64-65), terminal prediction `confidence: low`
+(:165). The two endpoints are authored guesses (the XPrize competition runs to ~2030 with no
+outcomes yet), not a measured series; the report renders them as a "critical … 66% increase"
+event.
+
+**Two defects.** (a) No provenance bit distinguishing a measured time-point from an
+authored/imputed one — a guessed trajectory prints identically to a real one. (b) The
+actionability inversion shared with OQ-98 — the "critical" alarm dominates the "confidence: low"
+caveat at the read site. Cross-refs: OQ-98 (same inversion in the verdict banner), OQ-93
+(provenance spine), OQ-101 (the ledger must surface this provenance bit).
+
+## OQ-103 — Contamination/purity-network edges carry no story-authored-vs-corpus-derived provenance bit and no salience floor at the read site
+
+**Ω-type:** Ω_E (defect witnessed and attributed; narrowed scope — see below).
+
+**Status:** open — filed 2026-06-10 (second external-review batch, `audits/2026-06-10_external_review_xprize/`).
+
+**The witness.** The `digital_colonialism_data_extraction | snare | shared_beneficiary | 0.30`
+edge (`reprogramming_safety_toxicity_report.md:136`, Δpurity −0.0554) is a corpus-topology
+`shared_beneficiary` computation, **not** authored in
+`prolog/testsets/reprogramming_safety_toxicity.pl` (grep: no neighbor / `affects_constraint`
+declaration there). The article says nothing about biobanks or low-regulation jurisdictions; the
+auto-essay nonetheless spun a whole section off the edge (`sinclair_xprize_reprogramming_2026.md:176-180`).
+A downstream consumer cannot tell, at the read site, that the edge is the corpus's story rather
+than this case's.
+
+**Narrowed scope.** The **engine is not fabricating** — it labels edge-type, strength, and Δ
+honestly. The *proximate* inflator is the synthesis step (handled by OQ-101 + the live-synthesis
+checklist). The engine sub-component is (a) a provenance bit (story-authored vs corpus-topology)
+and (b) a salience floor flagging edges below an interpretive-weight threshold. Distinct from
+OQ-95 (phantom nodes in the `giant_component` BFS — that is node membership; this is edge
+provenance + salience). Cross-refs: OQ-95, OQ-101.
 
 ---
 

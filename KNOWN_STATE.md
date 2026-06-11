@@ -45,6 +45,36 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-10 — External-review triage (two batches): OQ-98–103 filed; auto-essay synthesis ruled out (ledger replaces it); two topic runs committed under a live-witnessed gate
+**Files:** ISSUES.md, audits/2026-06-10_external_review_vote_market/, audits/2026-06-10_external_review_xprize/, KNOWN_STATE.md, prolog/validation_suite.pl, agent/c-orchestrator.py
+**Tier:** landed
+
+Two external-review batches triaged against the reports/code/source (external output = hypothesis,
+verified before any OQ). **Batch 1 (vote-market six, commit `2d54826c`):** 8 claims → OQ-98
+(verdict banner is not a join — GREEN over a 0%-authored grid + alongside `! ALERT [severe]`;
+`build_verdict_banner` reads only `diagnostic_verdict`), OQ-99 (omega generator prints
+`Constraint: unknown`, `report_generator.pl:572-583`), OQ-100 (register incoherence: 3 "confidence"
+meanings, HARD DISAGREEMENT at rival P=0.95, "ONTOLOGICAL FRAUD" overclaim; (d) severable),
++ notes on OQ-44 (resistance_to_change default `0.0` at `report_generator.pl:507`), OQ-93 (W1/purity
+are arithmetic over the imputed grid, shim-era). **Batch 2 (XPrize three, commit `96113b05`):**
+6 critiques → OQ-101, OQ-102, OQ-103, + OQ-94 cross-ref (who-bears vs who-benefits) + an OQ-98
+framing line.
+
+**Load-bearing ruling (operator, 2026-06-10): CUT orchestrator step 6 (the Sonnet auto-essay);
+replace with a deterministic, non-generative tensions ledger (OQ-101).** The essay *form* collapses
+plurality (the auto-essay announced *"converges on a single structural conclusion"*); `uke_think`
+over-stated identically, so the defect is form-not-implementation and prompt guidance can't fix it.
+The synthesis-fidelity discipline is NOT an OQ — it lives as a live-synthesis checklist in
+`audits/2026-06-10_external_review_xprize/README.md`. Step 6 removal in `c-orchestrator.py` is
+pending (OQ-101 build), not done this session.
+
+Run-outputs gate: `run_dynamic_suite` re-run over the full 48-constraint corpus, exit 0 (witness:
+`audits/2026-06-10_external_review_vote_market/gate_witness.txt`; positive control — reaches
+test_case 48). `validation_suite.pl` auto-regen 39→48 (both runs' constraints) committed in
+`2d54826c`. The earlier RED-gate-budget proposal was dropped (premise dissolved when OQ-96 went
+GREEN before these commits). `essays/2026-06/who_owns_younger.md` left untracked (operator
+finished-essay tree, not engine output). Staged plan: `~/.claude/plans/i-ran-an-article-merry-lagoon.md`.
+
 ## 2026-06-10 — OQ-92 RESOLVED: gain_flow receipt surface live end-to-end (schema→compiler→prompt→batch→gates); GAP-10 closed; OQ-90 Steps 2–4 unblocked
 **Files:** ISSUES.md, docs/design/design_gaps.md, prompts/constraint_story_generation_prompt_json.md, prolog/narrative_ontology.pl, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, prolog/data_repair.pl, prolog/testsets/gfbatch1/, audits/2026-06-10_oq92_step3_preregistration/
 **Tier:** landed
