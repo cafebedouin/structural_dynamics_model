@@ -1,0 +1,13 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+stale-read demo: cleared snapshot=piton | classify_at_time=unknown | snapshot-right-after=unknown
+  -> ORDER-DEPENDENT (pre-fix bug state)
+mismatch persistence: snapshot=piton vs classify_at_time=unknown (piton\==unknown->persists;closed)
+control clinical_deskilling_automation T=2: snapshot=tangled_rope classify_at_time=tangled_rope (tangled_rope==tangled_rope->agree;DISAGREE)
+control milblogger_legitimacy_erosion T=0: snapshot=unknown classify_at_time=unknown (unknown==unknown->agree;DISAGREE)
+control milblogger_legitimacy_erosion T=18: snapshot=piton classify_at_time=piton (piton==piton->agree;DISAGREE)

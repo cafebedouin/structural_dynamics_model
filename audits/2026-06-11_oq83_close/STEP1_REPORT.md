@@ -73,6 +73,39 @@ leftover same-C state alters `snapshot_type` output). `degradation_chain/3`
 (transition_paths.pl:98–110) is the consumer exposed to this; it is pipeline-unwired today
 (unfinished-value per the wire-or-gap adjudication), so no live output is affected.
 
+## Determinism fix (operator ruling 2026-06-11: option 1 — fix order-dependence, document divergence)
+
+Operator ruled per the counterfeit-witness rationale: a threading fix would produce an artifact
+that *reads* as sync while the ε-sourcing divergence remains; document-only leaves a live
+six-line bug. Fix applied: `snapshot_type/3` sets both nb-globals to `none` at entry
+(transition_paths.pl), preserving static-fallback semantics, visibly NOT threaded.
+
+**Witness 1 — unwired-consumer grep (with positive control):** `snapshot_type` callers outside
+tests/archives = exactly `degradation_chain` (transition_paths.pl:101); `degradation_chain`
+consumers = none beyond its own export (transition_paths.pl:8). Positive control: the same grep
+pattern finds `constraint_history`'s real consumer (drl_composition.pl:262). No live output path
+touches the edited clause.
+
+**Witness 2 — before/after intervention runs** (`step1c_determinism_fix_witness.pl`, identical
+script both runs; `step1c_prefix.out` / `step1c_postfix.out`):
+
+```
+PRE-FIX:  stale-read demo: cleared snapshot=piton | classify_at_time=unknown | snapshot-right-after=unknown
+          -> ORDER-DEPENDENT (pre-fix bug state)
+POST-FIX: stale-read demo: cleared snapshot=piton | classify_at_time=unknown | snapshot-right-after=piton
+          -> DETERMINISTIC (post-fix expected state)
+```
+
+Post-fix: the clinical T=0 mismatch PERSISTS (`piton` vs `unknown` — the fix does not read as
+sync; the documented semantic reason stands), and all three agreeing controls are undisturbed
+(clinical T=2 `tangled_rope`/`tangled_rope`, milblogger T=0 `unknown`/`unknown`, T=18
+`piton`/`piton`). `run_migration_tests` both tests PASS post-fix; dynamic validation suite on
+the live corpus: Warnings 0, "DATA QUALITY: EXCELLENT".
+
+Graduation: `clinical_deskilling_automation` 0→2 enters the join OQ as **documented exclusion**
+(truthful label while the ε-sourcing divergence stands); `milblogger_legitimacy_erosion` 12→18
+enters **clean**.
+
 ## Sync-claim status
 
 Full `classify_at_time ≡ snapshot_type` remains FALSE with TWO witnessed causes:

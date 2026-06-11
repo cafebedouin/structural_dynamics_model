@@ -113,6 +113,16 @@ degradation_chain(C, Chain, evidence(time_span, T1, T2)) :-
 %  Classifies a constraint at a specific time using measurements available.
 %  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
 snapshot_type(C, Time, Type) :-
+    % Determinism guard (OQ-83 close, 2026-06-11): classify_at_time/5 leaves its
+    % nb-globals set, and they key on the constraint — so without this clear the
+    % piton/excess gates (drl_core:effective_theater_ratio, boltzmann excess_extraction)
+    % read whatever temporal state a prior same-C classify_at_time call left
+    % (order-dependent output, witnessed). snapshot_type is deliberately NOT
+    % threaded: static-fallback semantics, visibly distinct from classify_at_time
+    % (a second, semantic divergence exists in eps-sourcing at unmeasured times).
+    % Witnesses: audits/2026-06-11_oq83_close/STEP1_REPORT.md.
+    nb_setval(classify_at_time_theater, none),
+    nb_setval(classify_at_time_eps, none),
     (   drift_events:metric_at(C, base_extractiveness, Time, E)
     ->  true
     ;   drift_events:safe_metric(C, extractiveness, E)
@@ -130,8 +140,10 @@ snapshot_type(C, Time, Type) :-
     % Time-aware d (Type-A floor): keeps snapshot_type ≡ classify_at_time under
     % the d-threading (test_snapshot_migration). Identical to the static call on
     % the current corpus (no time-indexed source). No `backed` flag here:
-    % snapshot_type is default_context-only and nothing reads it (the residual
-    % reads classify_at_time/5).
+    % snapshot_type is default_context-only and its sole reader is
+    % degradation_chain/3 (pipeline-unwired; the residual reads
+    % classify_at_time/5). Full snapshot_type ≡ classify_at_time is FALSE by
+    % design — see the determinism-guard note above.
     constraint_indexing:derive_directionality_at(C, Context, Time, D),
     constraint_indexing:sigmoid_f(D, PowerMod),
     constraint_indexing:scope_modifier(Scope, ScopeMod),
