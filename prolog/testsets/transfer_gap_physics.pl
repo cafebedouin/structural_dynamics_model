@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -290,6 +291,9 @@ narrative_ontology:measurement(xfer_gap_theater_t50, transfer_gap_physics, theat
 narrative_ontology:measurement(xfer_gap_extract_t0, transfer_gap_physics, base_extractiveness, 0, 0.02).
 narrative_ontology:measurement(xfer_gap_extract_t25, transfer_gap_physics, base_extractiveness, 25, 0.02).
 narrative_ontology:measurement(xfer_gap_extract_t50, transfer_gap_physics, base_extractiveness, 50, 0.02).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(transfer_gap_physics, static).
 
 
 /* ==========================================================================

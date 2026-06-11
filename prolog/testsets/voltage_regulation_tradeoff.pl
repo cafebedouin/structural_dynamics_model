@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -292,6 +293,9 @@ narrative_ontology:measurement(vreg_be_t0, voltage_regulation_tradeoff, base_ext
 narrative_ontology:measurement(vreg_be_t3, voltage_regulation_tradeoff, base_extractiveness, 3, 0.14).
 narrative_ontology:measurement(vreg_be_t6, voltage_regulation_tradeoff, base_extractiveness, 6, 0.15).
 narrative_ontology:measurement(vreg_be_t10, voltage_regulation_tradeoff, base_extractiveness, 10, 0.15).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(voltage_regulation_tradeoff, static).
 
 
 /* ==========================================================================

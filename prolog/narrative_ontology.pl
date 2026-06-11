@@ -19,6 +19,7 @@
 
     % Optional measurement layer (v3.1 coercion metrics)
     measurement/5,
+    suppression_profile/2,  % OQ-46 bucketed-Backed (2026-06-11): compiler-stamped sanction that suppression was authored scalar-only by design
 
     % Optional intent evidence layer
     intent_viable_alternative/3,
@@ -69,6 +70,7 @@
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
+    suppression_profile/2,   % suppression_profile(+C, static) — compiler-stamped (generate_constraint_pl.py section 8) when other series are authored but suppression deliberately is not; an UNMARKED seriesless constraint fails closed to Backed=false (OQ-46/OQ-44)
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     constraint_vindicates/2,  % OQ-64 split (2026-06-05): propositions a constraint vindicates are NOT beneficiaries; never feeds d/chi or beneficiary gates
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
@@ -99,6 +101,7 @@
     cs_reading_relation/3,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
+    suppression_profile/2,
     intent_viable_alternative/3, intent_alternative_rejected/3,
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,

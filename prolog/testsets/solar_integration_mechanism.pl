@@ -40,6 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -279,6 +280,9 @@ narrative_ontology:measurement(solar_integ_be_t0, solar_integration_mechanism, b
 narrative_ontology:measurement(solar_integ_be_t3, solar_integration_mechanism, base_extractiveness, 3, 0.08).
 narrative_ontology:measurement(solar_integ_be_t6, solar_integration_mechanism, base_extractiveness, 6, 0.08).
 narrative_ontology:measurement(solar_integ_be_t10, solar_integration_mechanism, base_extractiveness, 10, 0.08).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(solar_integration_mechanism, static).
 
 
 /* ==========================================================================

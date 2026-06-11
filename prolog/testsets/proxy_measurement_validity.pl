@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -299,6 +300,9 @@ narrative_ontology:measurement(proxy_meas_tr_t30, proxy_measurement_validity, th
 narrative_ontology:measurement(proxy_meas_be_t0, proxy_measurement_validity, base_extractiveness, 0, 0.05).
 narrative_ontology:measurement(proxy_meas_be_t15, proxy_measurement_validity, base_extractiveness, 15, 0.07).
 narrative_ontology:measurement(proxy_meas_be_t30, proxy_measurement_validity, base_extractiveness, 30, 0.08).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(proxy_measurement_validity, static).
 
 
 /* ==========================================================================

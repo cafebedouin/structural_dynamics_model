@@ -40,6 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -319,6 +320,9 @@ narrative_ontology:measurement(regime_break_extract_1992, regime_change_structur
 narrative_ontology:measurement(regime_break_extract_2002, regime_change_structural_break, base_extractiveness, 30, 0.25).
 narrative_ontology:measurement(regime_break_extract_2012, regime_change_structural_break, base_extractiveness, 40, 0.27).
 narrative_ontology:measurement(regime_break_extract_2026, regime_change_structural_break, base_extractiveness, 54, 0.28).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(regime_change_structural_break, static).
 
 
 /* ==========================================================================

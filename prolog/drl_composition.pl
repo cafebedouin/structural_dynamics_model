@@ -178,39 +178,59 @@ classify_at_time(C, Time, Context, Type) :-
 %% classify_at_time(+C, +Time, +Context, -Type, -Info)
 %  Type-A snapshot floor (2026-06-08): surfaces Info = snap(D, Backed, Eps, Supp,
 %  Theater) for the observer residual detector WITHOUT changing Type. Backed=false
-%  marks a snapshot whose ε or suppression was not authored at this Time (the ε 0.5
-%  default or the sanctioned scalar-as-constant), so the residual can exclude
-%  phantom flips across real→fallback transitions (catch #3). The classification
-%  math is unchanged; only derive_directionality is time-aware (identical on the
-%  current corpus — no time-indexed source).
+%  marks a snapshot whose ε or suppression was NOT covered by the story's own
+%  authoring at this Time: the ε 0.5 default, the grid-misalignment scalar
+%  substitution (OQ-105), or an UNMARKED seriesless scalar. A marker-sanctioned
+%  static scalar (suppression_profile(C, static)) IS the story's authoring for
+%  every Time, so it backs. The residual detector excludes phantom flips across
+%  real→fallback transitions (catch #3). The classification math is unchanged;
+%  only derive_directionality is time-aware (identical on the current corpus —
+%  no time-indexed source).
 classify_at_time(C, Time, Context, Type, Info) :-
     % Suppression read ladder — PERMANENT, SANCTIONED (OQ-46 resolved 2026-06-11;
-    % evidence + ruling: audits/2026-06-11_oq46_close/):
-    %   temporal measurement at this Time → authored SCALAR as constant (Backed=false)
+    % evidence + ruling: audits/2026-06-11_oq46_close/; Backed semantics bucketed
+    % same day: audits/2026-06-11_oq46_backed_reconciliation/):
+    %   temporal measurement at this Time → authored SCALAR as constant
     %   → fail-closed `unknown` (never fabricate; OQ-41 row 23 killed the Supp=0.5
     %   default, which sat below snare_suppression_floor=0.60 and mis-sorted low).
     % The scalar arm is NOT a stopgap: the generation prompt (line ~457, since
     % 2026-05-30) deliberately authors scalar-only suppression for static-enforcement
-    % stories, reserving a temporal series for stories tracking enforcement-capacity
-    % change — so scalar-supplied rows are prompt-conformant, permanent residents
-    % (and even series-authoring stories hit the scalar arm at time-grid points where
-    % suppression is sampled coarser than other metrics). Do NOT delete the scalar
-    % clause; do NOT add a scalar/temporal equivalence check (scalar-as-constant is
-    % the defined semantics — nothing to reconcile). Backed=false is the provenance
-    % marker consumers use to separate the two regimes (temporal_residual, OQ-83).
+    % stories. The scalar arm's SuppBacked is BUCKETED, not blanket (operator ruling
+    % 2026-06-11; blanket would graduate +20 substitution-dated transitions into the
+    % real-flip count that decides the OQ-83 D-fork — witnessed 59/20 vs 79/0):
+    %   * suppression_profile(C, static) authored AND no series anywhere →
+    %     SuppBacked = true. The marker is compiler-stamped only on positive-control
+    %     absence (other series authored, suppression deliberately omitted) —
+    %     explicit sanction, never emptiness-inference (OQ-44 Pattern 5).
+    %   * series exists elsewhere but not at this Time (grid misalignment, OQ-105)
+    %     → SuppBacked = false. The scalar ≈ series ENDPOINT corpus-wide (37/39
+    %     exact, one-time query 2026-06-11), so this substitution injects the
+    %     end-state value at earlier times — it stays excluded from Backed.
+    %   * seriesless but UNMARKED (partial regen, generation bug) → SuppBacked =
+    %     false. Fail-closed on unmarked absence.
+    % Do NOT delete the scalar clause. No standing scalar/temporal equivalence
+    % lint: the one-time endpoint query found 0 violations (39 dual-rep: 37 exact,
+    % 2 within 0.05) — closed-no-demonstrated-content; re-run it before re-opening.
     % Coverage (staleness-laddered — recompute before citing, the corpus grows):
     %   live as-of 2026-06-11 (48 files / 46 stories): 39 temporal / 7 scalar-only;
     %   rows 162 temporal / 47 scalar (21 grid-alignment + 26 scalar-only) / 0 unknown.
     (   narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)
     ->  classify_at_time_with_supp(C, Time, Context, Supp, true, Type, Info)
     ;   narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
-    ->  classify_at_time_with_supp(C, Time, Context, Supp, false, Type, Info) % sanctioned scalar-as-constant (not Backed)
+    ->  (   narrative_ontology:suppression_profile(C, static),
+            \+ narrative_ontology:measurement(_, C, suppression_requirement, _, _)
+        ->  SuppBacked = true    % marker-sanctioned authored-static scalar
+        ;   SuppBacked = false   % grid misalignment (OQ-105) or unmarked-seriesless
+        ),
+        classify_at_time_with_supp(C, Time, Context, Supp, SuppBacked, Type, Info)
     ;   Type = unknown, Info = snap(none, false, none, none, none)
     ).
 
 %% classify_at_time_with_supp(+C,+Time,+Context,+Supp,+SuppBacked,-Type,-Info)
-%  Internal. SuppBacked = was Supp authored at this Time (measurement/5) vs the
-%  sanctioned scalar-as-constant fallback (OQ-46). Info = snap(D, Backed, Eps, Supp, Theater).
+%  Internal. SuppBacked = Supp covered by the story's own authoring at this Time:
+%  measurement/5 at T, or the marker-sanctioned static scalar (OQ-46 bucketed
+%  ruling). false = misalignment substitution or unmarked-seriesless.
+%  Info = snap(D, Backed, Eps, Supp, Theater).
 classify_at_time_with_supp(C, Time, Context, Supp, SuppBacked, Type,
                            snap(D, Backed, BaseX, Supp, TheaterOut)) :-
     (   narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX)

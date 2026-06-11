@@ -164,6 +164,13 @@ def _build_multifile_declarations(data):
     if data.get("network", {}).get("affects_constraints"):
         decls.append("narrative_ontology:affects_constraint/2")
 
+    # OQ-46 sanctioned-static suppression marker (bucketed-Backed ruling 2026-06-11):
+    # emitted when the story authors other measurement series but no
+    # suppression_requirement series — mirror of the section-8 emission condition.
+    meas = data.get("measurements") or []
+    if meas and not any(m["metric"] == "suppression_requirement" for m in meas):
+        decls.append("narrative_ontology:suppression_profile/2")
+
     if data.get("boltzmann", {}).get("coordination_type"):
         decls.append("narrative_ontology:coordination_type/2")
 
@@ -848,6 +855,16 @@ def generate_pl(data):
             for m in sr_measurements:
                 mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
                 emit(f"narrative_ontology:measurement({mid}, {cid}, suppression_requirement, {m['time_point']}, {m['value']}).")
+            emit()
+        else:
+            # OQ-46 bucketed-Backed ruling (2026-06-11): other series were authored
+            # but suppression_requirement was deliberately omitted (the prompt's
+            # static-enforcement rule, 2026-05-30). Stamp the sanction so the engine's
+            # scalar-as-constant read may count as Backed. Emitted only inside
+            # `if measurements:` (positive-control absence) — a JSON with no series
+            # at all gets no marker and fails closed downstream (Pattern 5).
+            emit("% Suppression authored static: scalar-only by design, no temporal series")
+            emit(f"narrative_ontology:suppression_profile({cid}, static).")
             emit()
     emit()
 

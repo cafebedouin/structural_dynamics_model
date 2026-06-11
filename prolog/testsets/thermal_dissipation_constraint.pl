@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     domain_priors:emerges_naturally/1,
@@ -236,6 +237,9 @@ narrative_ontology:measurement(therm_diss_tr_t20, thermal_dissipation_constraint
 narrative_ontology:measurement(therm_diss_be_t0, thermal_dissipation_constraint, base_extractiveness, 0, 0.02).
 narrative_ontology:measurement(therm_diss_be_t10, thermal_dissipation_constraint, base_extractiveness, 10, 0.02).
 narrative_ontology:measurement(therm_diss_be_t20, thermal_dissipation_constraint, base_extractiveness, 20, 0.02).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(thermal_dissipation_constraint, static).
 
 
 /* ==========================================================================

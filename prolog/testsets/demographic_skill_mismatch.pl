@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
@@ -335,6 +336,9 @@ narrative_ontology:measurement(demo_skill_tr_t10, demographic_skill_mismatch, th
 narrative_ontology:measurement(demo_skill_be_t0, demographic_skill_mismatch, base_extractiveness, 0, 0.1).
 narrative_ontology:measurement(demo_skill_be_t5, demographic_skill_mismatch, base_extractiveness, 5, 0.12).
 narrative_ontology:measurement(demo_skill_be_t10, demographic_skill_mismatch, base_extractiveness, 10, 0.15).
+
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(demographic_skill_mismatch, static).
 
 
 /* ==========================================================================
