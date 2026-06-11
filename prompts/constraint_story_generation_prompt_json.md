@@ -176,7 +176,7 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 * **Tangled Rope**: must name who is coordinated and who pays — `requires_active_enforcement: true`, at least one beneficiary, at least one victim
 * **Snare**: must name at least one victim
 * **Scaffold** (with enforcement): requires `has_sunset_clause: true`
-* **Piton**: no extra structural requirement — but a piton is *defined* by atrophied function maintained as performance; if nothing about the constraint is theatrical, it is probably not a piton
+* **Piton**: extracts from many but persists by inertia — no party benefits enough to maintain it and no party is hurt enough to fix it. Name the `agenda_setter` (who administers it and could change it) and the `payer`s (who bear its diffuse costs). A piton characteristically has **no** stakeholder who meaningfully profits — no concentrated beneficiary capturing the extraction; if one exists, it is a snare, not a piton. Author `theater_ratio` honestly if performative maintenance is present, but theatricality is a symptom, not the test — the test is the cost-asymmetry: the administrator could change it, but the cost to fix exceeds what it bears.
 
 **THE CLAIM AND THE METRICS ARE INDEPENDENT AUTHORED FACTS — do not reconcile them to each
 other.** State the `claimed_type` you believe is structurally true of the constraint, from the
