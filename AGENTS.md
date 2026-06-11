@@ -570,9 +570,16 @@ These rules are absolute. Violating them silently changes the system's semantics
 - Synthesize `stakeholder_gain_flow/2` / `fixing_cost_class/2` from metrics or defaults
   anywhere (fabrication ban, OQ-92; `data_repair.pl` is the named door). Authored-or-absent,
   fail-closed; capture is `narrative_ontology:constraint_captured/1`, computed positively.
-- Re-enable the DR-AUDIT grid shim casually: `config:param(grid_shim_enabled, false)` is the
-  permanent design (OQ-93 ruling) — absent grid points report `[OPEN]`, never manufactured
-  0.5s/priors; `true` exists only for archive replays.
+- Reintroduce grid injection/imputation in ANY form: the DR-AUDIT grid shim was RETIRED
+  2026-06-11 (OQ-93 ruling (b); the `grid_shim_enabled` flag no longer exists) — the leveled
+  grid is authored-or-absent (`coercion_grid` block in story JSON, compiled by
+  `generate_constraint_pl.py` with fail-loud endpoint/duplicate integrity); absent points
+  report `[OPEN]`, never manufactured 0.5s/priors. `data_repair:source_class/2` keeps its
+  injected/imputed buckets for archive replays only.
+- Call `coercion_projection:system_gradient/3` expecting `0.0` on an empty read: it FAILS
+  on absence (OQ-93 coverage-carrying read killed the fabricated default). Use
+  `system_gradient/4` (coverage(PresentLevels, AllLevels) travels with the value) or
+  `system_gradient_for/4` (consumer-named levels: gradient(...) | open(...)).
 - Add a new `config.pl` param without its `config_schema.pl` `param_spec` — the validator
   halts the stack load.
 - Add numeric thresholds as hardcoded values. They go in `config.pl` only.

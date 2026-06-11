@@ -45,6 +45,68 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-93 grid migration LANDED end-to-end (stages A–D + coverage read + shim retirement); OQ-96/OQ-101/OQ-102 closed with it; intent sub-fork filed as OQ-106
+**Files:** schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/coercion_projection.pl, prolog/pattern_analysis.pl, prolog/intent_engine.pl, prolog/report_generator.pl, prolog/signature_detection.pl, prolog/drift_report.pl, prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/narrative_ontology.pl, prolog/config.pl, prolog/config_schema.pl, prolog/scenario_manager.pl, prolog/data_repair.pl, prolog/data_verification.pl, prolog/domain_priors.pl, python/enhanced_report.py, python/run_pipeline.py, python/domain_priors.py, python/shared/schemas.py, python/tensions_ledger.py, agent/c-orchestrator.py, agent/generate_grid_batch.py, prompts/grid_batch_addendum.md
+**Tier:** landed
+
+Full audit package: `audits/2026-06-11_oq93_grid_migration/` (preregistration + per-stage
+witness scripts/outputs). Worktree branch `oq93-grid-migration`, commits `bc41e8f4..` —
+every stage carries its same-commit witness. Landed, in ruled order:
+- **Stage A:** optional `coercion_grid` block (GridMetric/GridLevel enums DISJOINT from
+  MeasurementMetric; `stakes_inflation` resurrected grid-side only); rider OQ-102(a)
+  `basis` (observed|projected) on Measurement + grid points. 16/16 battery;
+  143-file additivity sweep 0 deltas.
+- **Stage B:** compiler emits sorted `*_grid_NN` measurement/5 facts (source_class
+  authored); fail-loud integrity NOT bypassed by --no-validate: t0/tn == interval
+  endpoints, time_point ∈ {t0,tn}, duplicate-slot REJECT (the contract licensing the
+  once/1 cap in pattern_analysis). 143/143 byte-identical old-vs-new; constructed-
+  duplicate control bit on both CLI paths. Rider: `measurement_basis/2` emission +
+  `projected` bucket in `measurement_provenance` (meas_prov/5; json_report +
+  shared/schemas carry the key).
+- **Coverage read:** `system_gradient/4` carries coverage(Present, All); the `[]→0.0`
+  fabricated default KILLED — empty reads FAIL → OPEN; `system_gradient_for/4` is the
+  consumer-named-levels read; pattern/intent verdicts carry open(...) through (never
+  mapped to stable). Two-sided witness: 8/32 one-level grid flips
+  increasing_coercion→OPEN while all five probe stories hold exact pinned values; suite
+  green with 48/48 [INTENT] OPEN.
+- **Stage C:** grid-batch addendum (no worked value table — OQ-70 discipline) assembled
+  with the live prompt at call time (no fork); N=10 batch (operator-ruled) generated;
+  κ plausibility audit vs the operator-ruled split gate (C-echo zero-tolerance halt;
+  C-flat/C-dir ≥2/10 escalate; per-story fail-closed exclusion): PASS 0/10 excluded.
+  **Bug rider (the probe pattern repeating):** first audit read open(no_gradient_data)
+  on ALL 10 — `time_point_in_interval` enumerated scalar-series times as gradient
+  next-points; fixed with a compound(Metric) guard (grid times = grid-measurement
+  times); probe stories had masked it (no scalar series).
+- **Stage D:** `level_gradient_divergence/2` (rising-structural/falling-individual)
+  wired POSITIVELY into FCR (new fcr_test_failure clause) + FSM (fsm_evidence/3,
+  one-rung confidence bump; `open` on absence leaves pre-wiring values exactly) + the
+  extraction-blindness omega (witnessed-process tail). OQ-94 sort respected (CI_Rope
+  benignity gates untouched); `structural_coercive_intent` stays unwired (ruling (a) →
+  OQ-106). Fire-on-migration: kappa `[CONDITIONAL: grid authored 16/32]` tag WITNESSED
+  FIRING; moderate→yellow cap why-not recorded (0 correction-grade carriers on the
+  48-corpus today).
+- **Shim retirement (closes OQ-96):** `grid_shim_enabled` + injection/imputation/gate
+  arms removed; `domain_registry.pl` regeneration + .gitignore fossil retired;
+  domain_priors.py --output repo-relative; source_class buckets KEPT. Before/after
+  full-suite diff: 0 unclassified lines (wording of the two retirement messages +
+  [ELAPSED] noise only); per-class counts identical (FAIL 0/0, OPEN 513/513, SHIM
+  48/48). NOTE: prereg said "0-diff"; actual = justified-wording-diff because the old
+  messages named the retired flag — recorded here rather than silently absorbed.
+- **OQ-102 closed:** (a) basis chain witnessed end-to-end (fixture → compiler →
+  measurement_basis/2 → meas_prov(39,0,0,2,39) → ledger drift line); (b) drift
+  severity joins its own confidence at the read site (`[warning | confidence: low]`
+  witnessed live on agenda_conditioning) + projected caveat in the report trajectory
+  section.
+- **OQ-101 closed:** `python/tensions_ledger.py` (non-generative) replaces orchestrator
+  step 6 (`_step_essay` REMOVED); 48/48 blocks witnessed on real pipeline output;
+  fidelity spot-check vs two regenerated reports clean.
+
+**PENDING OPERATOR (recorded, not self-resolved):** the live-prompt flip to
+opt-in-by-story-focus — the N=10 PASS is necessary-not-sufficient by the operator's own
+provision (supplemental batch optional); the 10 grid-batch stories sit in
+`audits/2026-06-11_oq93_grid_migration/grid_batch/` (json+pl) pending a
+promote-to-corpus decision with the flip ruling.
+
 ## 2026-06-11 — Backed semantics BUCKETED (follow-on to the OQ-46 close): compiler-stamped suppression_profile(static) sanction marker; OQ-105 filed; OQ-37 piton vacuous-green fixed
 **Files:** prolog/drl_composition.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, prolog/data_validation.pl, prolog/testsets/thermal_dissipation_constraint.pl, ISSUES.md
 **Tier:** landed
