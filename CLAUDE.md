@@ -339,7 +339,12 @@ and feels like no ruling. Standing risk, stated as such: the discriminating case
 *outside* the loop; generating it for one's own synthesis before it lands is the unmet job. Under-claim:
 one witness earns "separable / prior label wrong here," not "orthogonal everywhere." All three collapse
 a distinction the material holds open; fix = name the witness (firing probe / separation ruling /
-pre-registered discriminating control) and produce it or stay OPEN. Full version:
+pre-registered discriminating control) and produce it or stay OPEN. **(4) The under-confident dual —
+hedging-as-rigor: "held open / both readings possible" is earned only when no falsifier can be
+specified; if a kill condition is available, COMMIT and attach the kill condition** (prose commits,
+uncertainty lives in the falsification apparatus). Generation-time trigger: drafting a
+both-readings passage IS the cue to check whether commitment-plus-falsifier is available — don't
+wait for review to catch the flinch. Full version:
 `docs/technical/build_discipline.md` → *Over-confident moves on the synthesis side*.
 
 ## Critical Distinctions

@@ -228,6 +228,26 @@ tell." The same fix shape works on each: name the witness the claim would need (
 ruling on separation; a pre-registered discriminating control) and either produce it or tag the claim
 OPEN.
 
+**Hedging-as-rigor — the under-confident dual (held-open owes a falsifier check).** The mirror
+image of the three moves above, with the same root (claiming decoupled from the witness apparatus)
+and the opposite sign: the synthesis *refuses* a commitment it could make. The default that produces
+it treats hedging as rigor — "two rival readings, the data cannot distinguish, adjudication
+deferred" reads as careful. The house discipline runs on the opposite division of labor: **the
+prose commits, and the uncertainty lives in the falsification apparatus.** "Held open" in the body
+is earned only when no falsifier can be specified; **if a kill condition is available, the claim
+must be made and the kill condition attached.** Under-claiming a committable verdict is not the
+safe direction — it moves the error from the claim to the reader, who now lacks both the verdict
+and the test that would break it. Witnessed instance (2026-06-11, Pew political-typology essay
+exchange): a "Counter-Reading, Held Open" section was drafted agnostic between two rivals while
+the synthesis that adjudicated them was already available in the same material; an external
+reviewer's *question* (not an edit) forced the commitment. **Generation-time trigger:** catching
+yourself drafting a both-readings-possible passage IS the check — ask whether
+commitment-plus-falsifier is available *then*, not at the review round. Two corollaries from the
+same exchange: (a) **claims-with-falsifiers per piece is the draft-time metric** for synthesis
+output (the review round's measurable effect was one claim with two hedges → three claims with
+three clocks); (b) when triaging multi-reviewer feedback, **weight reviewers' questions over their
+line edits** — edits propose substitutions inside your frame; questions force synthesis across it.
+
 ---
 
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)

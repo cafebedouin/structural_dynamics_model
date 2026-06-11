@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — Pew-typology review exchange landed: hedging-as-rigor dual, false-summit authoring discipline, OQ-107/OQ-108 filed, OQ-103 escalated
+**Files:** docs/technical/build_discipline.md, CLAUDE.md, docs/design/design_discipline.md, ISSUES.md, prolog/testsets/institutional_trust_erosion.pl
+**Tier:** landed
+
+Operator review exchange over the Pew political-typology run (source:
+`agent/analysis/originals/Pew_2026.5.10_political-typology_topline.txt`; four story files —
+`institutional_trust_erosion`, `representation_legitimacy_gap`, `intra_party_fragmentation`,
+`generational_value_divergence` — untracked in the main tree at landing time). What landed where:
+
+- **Hedging-as-rigor (the under-confident dual)** → `build_discipline.md` → *Over-confident
+  moves on the synthesis side* (new closing block) + a one-sentence tripwire as item (4) in the
+  CLAUDE.md synthesis-side paragraph. "Held open" is earned only when no falsifier is
+  specifiable; if a kill condition exists, commit and attach it. Trigger fires at generation
+  time (drafting a both-readings passage), not at review. Corollaries recorded with it:
+  claims-with-falsifiers-per-piece as the draft-time metric; weight reviewers' questions over
+  their line edits when triaging. Instance: the "Counter-Reading, Held Open" section, written
+  agnostic while the synthesis was available; an external reviewer's question forced the commit.
+- **False-summit authoring discipline** → `design_discipline.md` §4: author testsets with the
+  honest prior and let the engine fight it; never pre-conform claims to what classifies
+  cleanly. Witness: `institutional_trust_erosion.pl:125` authored `constraint_claim(...,
+  mountain)`, engine refused (false summit), and the refusal became the parent essay's spine.
+  Includes the ontology-as-anomaly-detector point and the two-way essay↔engine loop.
+- **OQ-107** (survey-wave witness adapter: instrument items → metrics; extends the OQ-102
+  `measurement_basis/2` spine with a `witnessed` bucket; converts drift events from
+  self-consistency checks into measurements) and **OQ-108** (per-position witness-coverage
+  report; surveys sample powerless/moderate densely, institutional barely — flags which essay
+  legs will be inference) filed in ISSUES.md.
+- **OQ-103 escalated to load-bearing**: essays now make network claims; the
+  trust↔representation `shared_victim` edge is the relocation thesis in graph form
+  (`institutional_trust_erosion_report.md:142`), and it is corpus-topology, not story-authored
+  (testset grep empty with positive control on `drl_purity_network.pl`).
+- **"The mint"** (information regime as constraint — essay-generated hypothesis, first
+  deliberate instance of the loop) queued as an OQ-69 ledger item.
+
 ## 2026-06-11 — OQ-90 RESOLVED: capture-keyed piton refinement in the FCR branch (piton un-darkened)
 **Files:** prolog/signature_detection.pl, prolog/narrative_ontology.pl, prolog/config.pl, prolog/config_schema.pl, prolog/signature_mapper.pl, prompts/constraint_story_generation_prompt_json.md, ISSUES.md
 **Tier:** landed

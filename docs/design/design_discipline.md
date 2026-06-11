@@ -341,6 +341,28 @@ snare, check reading-multiplicity. A *single-reading* kernel extractive from eve
 position (institutional ceiling included) is a genuine cross-seat snare. A *multi-reading* kernel
 where readings diverge is a plurality, routed to committer machinery, not collapsed.
 
+**Author against the engine, not toward it (the false-summit discipline; operator,
+2026-06-11).** Testsets are authored with the author's *honest prior* — including priors the
+engine will refuse — and the engine fights them. The temptation as the corpus matures is the
+opposite: pre-conform claims to what classifies cleanly, so every story sails through. That
+inverts the engine's purpose (S1: surface structure for a human to take a seat against, not
+return the answer): a corpus of pre-conformed stories gives the immune system nothing to react
+to, and the refusals are where the products live. Witnessed instance (Pew-typology run,
+2026-06-11): `institutional_trust_erosion` was authored claiming mountain
+(`prolog/testsets/institutional_trust_erosion.pl:125`, `constraint_claim(..., mountain)`); the
+engine refused the claim — a false summit — and that refusal became the parent essay's deepest
+sentence ("nothing load-bearing in this essay is a mountain") and the follow-on essay's spine.
+The single most generative artifact of that corpus was a *failure*. Two corollaries: (a) the
+engine's analytical contribution upstream of any verdict is the **ontology as anomaly detector**
+— the mountain/rope/snare frame primes the reader to scan source material for exactly two
+things, conserved quantities and positional disagreements, which is how a two-line relocation in
+a hundreds-of-numbers topline becomes *the finding*; (b) the loop closes in both directions —
+prior engine work determines what an essay can see, and the essay generates constraint
+hypotheses the corpus does not yet contain (first deliberate instance: "the mint," queued in
+ISSUES.md OQ-69). Essay → constraint hypothesis → formalization → engine resistance → sharper
+next essay: the writing is the corpus's generation mechanism, and the engine is its immune
+system.
+
 ---
 
 ## 5. Classification is routing, not truth (consequence of S1)

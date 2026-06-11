@@ -2830,6 +2830,14 @@ canonical χ).
   `../outputs/...`; anchoring writes the way corpus reads are now anchored
   (`resolve_corpus_dir/2`) would complete swipl location-independence and retire the
   remaining `cd prolog/` requirement (gotchas §9).
+- **Author "the mint" as a testset** (2026-06-11 Pew-typology review exchange): the information
+  regime as a constraint in its own right — own beneficiaries, own suppression signature, own
+  perspectival split. It is a constraint hypothesis the corpus does not contain, generated *by*
+  the essay rather than by the engine — the first deliberate instance of the loop the exchange
+  named: essay → constraint hypothesis → formalization → engine resistance → sharper next essay
+  (the writing as the corpus's generation mechanism, the Prolog as its immune system; see
+  design_discipline §4, false-summit discipline). Author it with the essay's honest prior and
+  let the engine fight it the way it refused `institutional_trust_erosion`'s mountain claim.
 
 ---
 
@@ -4516,6 +4524,18 @@ and (b) a salience floor flagging edges below an interpretive-weight threshold. 
 OQ-95 (phantom nodes in the `giant_component` BFS — that is node membership; this is edge
 provenance + salience). Cross-refs: OQ-95, OQ-101.
 
+**Load-bearing escalation (2026-06-11, Pew political-typology review exchange).** The essays are
+now making *network claims*, not just node claims: the trust↔representation `shared_victim` edge
+is the relocation thesis of the parent essay in graph form
+(`outputs/constraint_reports/institutional_trust_erosion_report.md:142` —
+`representation_legitimacy_gap | snare | shared_victim | 0.30`; reciprocal at
+`representation_legitimacy_gap_report.md:143`; testsets untracked as of filing). Grep of both
+testsets finds no authored neighbor/`affects_constraint` declaration (positive control:
+`shared_victim` fires in `drl_purity_network.pl`), so the thesis-bearing edge is corpus-topology.
+When an edge carries an essay's central claim, whether it is story-authored or corpus-derived is
+no longer a hygiene bit — it is the difference between "the source material asserts this
+connection" and "our corpus does." Priority raised accordingly.
+
 ## OQ-104 — Audit-citation integrity has no checker: paths cited from audit writeups can be untracked, gitignored, or nonexistent with nothing failing
 
 **Status:** open — filed 2026-06-11 (OQ-33 close session; operator-flagged class)
@@ -4607,6 +4627,67 @@ without it; an eventual redesign would enter as its own staged build (schema →
 threshold re-derivation → wiring) under a fresh preregistration. Cross-refs: OQ-93 (origin
 ruling), OQ-36/OQ-43 (the empty tables), OQ-44 (a reachable-threshold redesign must not
 reintroduce a pass-open gate over those tables).
+
+## OQ-107 — Survey-wave witness adapter: no path from external instrument data to metrics, so every time series stays authored-or-derived and drift events are self-consistency checks, not measurements
+
+**Ω-type:** Ω_C (design choice — a new ingestion surface; ranked first of the three engine
+improvements in the operator's 2026-06-11 Pew-typology review exchange).
+
+**Status:** open — filed 2026-06-11 (Pew political-typology review exchange; source instrument
+`agent/analysis/originals/Pew_2026.5.10_political-typology_topline.txt`; the four story files it
+grounded — `institutional_trust_erosion`, `representation_legitimacy_gap`,
+`intra_party_fragmentation`, `generational_value_divergence` — untracked as of filing).
+
+**The gap.** Story omegas carry `resolution_mechanism` prose (cross-national comparisons,
+longitudinal tracking, meta-analyses — generic future-evidence text; witnessed in
+`json/institutional_trust_erosion.json` omegas[0..2]), but the engine has no machinery to ingest
+any of it. Meanwhile the 2026-06-11 exchange demonstrated what omega resolution actually looks
+like in practice: **a survey wave IS the instance collection.** The Pew topline already contains
+items that map onto engine metrics — ELITEUND-class items → directionality (the powerless-position
+d), the social-trust series (SOCTRUST-class, with USASOLVE as the divergent pair) →
+suppression/purity trajectories, ATTPOLRLLY-class affective-polarization items → coordination
+capacity. Nothing can carry that mapping today.
+
+**Why it outranks confidence-math improvements.** The OQ-102 `measurement_basis/2` spine (landed
+2026-06-11) distinguishes authored/injected/imputed/projected — but every bucket is still
+*internal*: the best case is "the author said so consistently." Low-confidence drift events
+computed from authored series are consistency checks on the story's own telling, and the essays
+correctly decline to cite them. A thin adapter mapping instrument items to metric time-points
+would add a **`witnessed` basis bucket** — converting some authored-as-projected series into
+externally measured ones, which changes drift events from self-consistency checks into
+measurements. That is a provenance-kind upgrade no amount of confidence-model refinement can buy.
+
+**Shape of the build (not ruled; sequencing only).** (a) A mapping fact schema (instrument item →
+constraint metric × position × time-point, with instrument/wave provenance); (b) extend the
+`measurement_basis/2` bucket set with `witnessed` (the OQ-105 fix-fork note already anticipates
+extending this spine with `interpolated` — same extension point); (c) fail-closed rule inherited
+from Pattern 5: an unmapped item contributes nothing, a mapped item carries its wave id. Gate
+class: OQ-44 (the adapter must not let absence-of-mapping read as measured-zero). Cross-refs:
+OQ-102 (the spine being extended), OQ-105 (parallel bucket extension), OQ-108 (the coverage
+report this adapter would feed), OQ-83 (drift-event consumers).
+
+## OQ-108 — Per-position witness coverage: the perspectival grid cannot report which positions are evidence-dense and which are inference-only
+
+**Ω-type:** Ω_C (design choice — a reporting surface over existing grid data; second of the three
+2026-06-11 review-exchange improvements).
+
+**Status:** open — filed 2026-06-11 (Pew political-typology review exchange).
+
+**The gap.** Survey instruments sample the powerless and moderate positions densely and the
+institutional position almost not at all — which is exactly why the parent essay's
+chokepoint-coordination-story passage had to be *argued* rather than *evidenced*. The engine
+computes per-position classifications across the grid but carries no per-position
+witness-coverage bit, so an essay author cannot know in advance which legs of a piece will be
+inference. Note the interaction with design_discipline §4: the institutional seat is the *most*
+meaningful seat for the extractive-from-every-position test — and it is precisely the seat
+external instruments least often sample, so its legs are systematically the argued ones.
+
+**Shape of the build.** Full version depends on OQ-107's `witnessed` basis bucket (coverage =
+witnessed evidence per position); a cruder standalone version — authored-evidence density per
+position from existing story fields — is possible first and already useful as a pre-drafting
+report ("these positions will be inference"). Pattern 6 rule applies: the report must carry
+coverage to the read site, never collapse sparse-position aggregates into confident-looking
+verdicts. Cross-refs: OQ-107, OQ-101 (the tensions ledger is the natural place to surface it).
 
 ---
 
