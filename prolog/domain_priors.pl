@@ -8,12 +8,16 @@
     category_of/2
 ]).
 
-% OQ-96 (2026-06-10): `:- use_module(domain_registry).` REMOVED — the module was
-% deleted 2026-02-18 (commit e7ae13fb) and the directive has warned
-% `source_sink 'domain_registry' does not exist` at every load since, hidden by
-% the universal `grep -v Warning` habit. category_of/2 clause 1 below still
-% references the dead module (throws if reached); unreached while
-% grid_shim_enabled=false. Permanent fix rides the OQ-93 probe verdict.
+% OQ-96 (2026-06-10; CLOSED 2026-06-11 with the OQ-93 shim retirement):
+% `:- use_module(domain_registry).` REMOVED — the module was deleted
+% 2026-02-18 (commit e7ae13fb) and the directive warned
+% `source_sink 'domain_registry' does not exist` at every load for four
+% months, hidden by the universal `grep -v Warning` habit (the
+% load_warning_gate now guards that channel). The throw-only
+% category_of/2 clause 1 and is_known_domain/1 clause 1 were removed the
+% same day (history at category_of/2 below); the grid imputation walk that
+% reached them was retired permanently with grid_shim_enabled (OQ-93
+% ruling (b)).
 :- use_module(drl_core, []).
 
 :- multifile
@@ -80,7 +84,8 @@ get_prior(_, _, 0.5).
 % THROW-ONLY for four months — it could never succeed, so removing it preserves
 % every behavior any caller ever observed and removes only the existence_error.
 % Witnessed reaching it on the suite path TWICE before removal: (1) the repair
-% imputation walk (Polaris story, gated off via grid_shim_enabled), and
+% imputation walk (Polaris story; that walk was retired permanently
+% 2026-06-11 with the grid_shim_enabled flag, OQ-93 ruling (b)), and
 % (2) data_validation:is_complete_constraint/1 (suite CHECK 1) — the second
 % found only because fixing the first let the suite run further. Fallbacks
 % below (constraint_claim -> physical_natural; else unknown_novel) are now the

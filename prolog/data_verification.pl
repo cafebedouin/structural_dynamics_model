@@ -62,17 +62,17 @@ verify_interval_completeness(ID) :-
              verify_vector_at(L, Tn, ID)
            )).
 
-% OQ-96 interim / OQ-93 probe: with the grid shim DISABLED, absence is the
-% expected state of every shim-era slot (the live schema cannot author them —
-% empty vocabulary intersection, OQ-93). Absent components are reported OPEN
-% and verification SUCCEEDS: the suite goes green on a witnessed absence, not
-% on manufactured filler. Authored grids (the probe stories) still verify
-% silently — Missing == [] takes the true branch. Pattern-5 note: this is not
+% OQ-93 ruling (b) (gate arm retired 2026-06-11): the grid is
+% authored-or-absent, permanently — absence is a legal state of every slot
+% (the live schema authors grids via coercion_grid; stories without one have
+% none). Absent components are reported OPEN and verification SUCCEEDS: the
+% suite goes green on a witnessed absence, not on manufactured filler.
+% Authored grids (probe stories, grid-batch stories) still verify silently —
+% Missing == [] takes the true branch. Pattern-5 note: this is not
 % pass-open-on-absence; the absence is printed per-slot-group, so the gate's
-% pass carries its witness.
+% pass carries its witness. The old fail-closed arm (which certified what
+% Stage-1 repair had just manufactured) is gone with grid_shim_enabled.
 verify_vector_at(Level, Time, ID) :-
-    \+ config:param(grid_shim_enabled, true),
-    !,
     Components = [accessibility_collapse(Level), stakes_inflation(Level),
                   suppression(Level), resistance(Level)],
     findall(M, (member(M, Components), \+ measurement(_, _, M, Time, _)), Missing),
@@ -82,15 +82,6 @@ verify_vector_at(Level, Time, ID) :-
         format('  [OPEN] ~w/4 grid components absent for Level: ~w at T: ~w in ~w (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)~n',
                [NM, Level, Time, ID])
     ).
-verify_vector_at(Level, Time, ID) :-
-    Components = [accessibility_collapse(Level), stakes_inflation(Level),
-                  suppression(Level), resistance(Level)],
-    forall(member(Metric, Components),
-           ( measurement(_, _, Metric, Time, _)
-           -> true
-           ;  format('  [MISSING] ~w for Level: ~w at T: ~w in ~w~n', [Metric, Level, Time, ID]),
-              fail
-           )).
 
 /* ============================================================
    3. VALUE RANGE VALIDATION

@@ -127,7 +127,8 @@ bridge_single_metric_pure(IntervalID, PriorPred, MetricKey, AccIn, AccOut) :-
 % counterfeit re-entering through a side door (a capture-adjacent fact
 % synthesized from the metrics it feeds back into). Absent stays absent,
 % fail-closed. The beneficiary bridge below predates the ban and is OQ-93
-% shim-family (gated off by grid_shim_enabled=false); do not extend it.
+% shim-family (the grid imputation arm itself was retired 2026-06-11,
+% OQ-93 ruling (b)); do not extend it.
 bridge_beneficiary_victim_pure(IntervalID, AccIn, AccOut) :-
     % Beneficiary
     (   acc_has(AccIn, constraint_beneficiary(IntervalID, _))
@@ -272,17 +273,14 @@ bridge_v34_data(IntervalID, Results) :-
     bridge_omega_variables_pure(IntervalID, Acc4, Results).
 
 %% impute_missing_metrics(+IntervalID, -Results)
-%  Pure version of repair_point + ensure_metric_exists.
-%  Returns bridge_result(measurement(...)) terms for all missing
-%  measurements without asserting into the database.
-%  OQ-96 interim / OQ-93 probe: imputation gated on grid_shim_enabled.
-%  Disabled (default) -> NO facts manufactured; the absent count is reported
-%  loud so the suite stays green on an EXPECTED-AND-WITNESSED absence, never
-%  on manufactured filler. Also keeps the dangling domain_registry call in
-%  domain_priors:category_of/2 unreached (OQ-96 crash path).
+%  OQ-93 ruling (b) (2026-06-10; imputation arm RETIRED 2026-06-11):
+%  the grid is authored-or-absent, permanently. NO facts are ever
+%  manufactured; the absent count is reported loud so the suite stays green
+%  on an EXPECTED-AND-WITNESSED absence, never on manufactured filler. The
+%  prior-flavored manufacture arm (repair_m_* facts from domain_priors
+%  category profiles) is gone with the grid_shim_enabled flag;
+%  source_class/2 keeps its imputed bucket for archive replays.
 impute_missing_metrics(IntervalID, []) :-
-    \+ config:param(grid_shim_enabled, true),
-    !,
     narrative_ontology:interval(IntervalID, T0, Tn),
     findall(Metric-Time,
         (   config:level(L),
@@ -293,24 +291,8 @@ impute_missing_metrics(IntervalID, []) :-
         ),
         AbsentSlots),
     length(AbsentSlots, NAbsent),
-    format('  [OPEN] grid imputation DISABLED (grid_shim_enabled=false): ~w/32 grid points absent — expected-and-witnessed (OQ-93/OQ-96)~n',
+    format('  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): ~w/32 grid points absent — expected-and-witnessed~n',
            [NAbsent]).
-impute_missing_metrics(IntervalID, Results) :-
-    narrative_ontology:interval(IntervalID, T0, Tn),
-    findall(
-        bridge_result(measurement(SyntheticID, IntervalID, Metric, Time, Value)),
-        (   config:level(L),
-            member(Time, [T0, Tn]),
-            member(Metric, [accessibility_collapse(L), stakes_inflation(L),
-                           suppression(L), resistance(L)]),
-            \+ narrative_ontology:measurement(_, _, Metric, Time, _),
-            domain_priors:get_prior(IntervalID, Metric, Value),
-            (domain_priors:is_known_domain(IntervalID) -> true ; domain_priors:flag_novelty(IntervalID)),
-            gensym(repair_m_, SyntheticID)
-        ),
-        Results
-    ),
-    length(Results, _N).
 
 /* ============================================================
    GRID PROVENANCE (OQ-93)

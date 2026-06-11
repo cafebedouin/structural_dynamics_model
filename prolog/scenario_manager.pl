@@ -103,13 +103,10 @@ load_and_run(File, IntervalID) :-
         ->  true
         ;   assertz(narrative_ontology:interval(IntervalID, 0, 10))
         ),
-        % OQ-96 interim / OQ-93 probe: injection gated. Disabled (default) means
-        % absent grid points stay ABSENT and are reported OPEN downstream —
-        % never manufactured 0.5s at hardcoded t=[0,10].
-        (   config:param(grid_shim_enabled, true)
-        ->  inject_minimal_measurements(IntervalID)
-        ;   format('[SHIM] grid injection DISABLED (grid_shim_enabled=false; OQ-96 interim / OQ-93 probe) — absent grid points stay OPEN~n')
-        ),
+        % OQ-93 ruling (b) (2026-06-10; retired 2026-06-11): injection KILLED
+        % permanently — authored-or-absent; absent grid points stay ABSENT and
+        % are reported OPEN downstream, never manufactured 0.5s at t=[0,10].
+        format('[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN~n'),
 	
         % FIX: Repair ALL intervals found in the KB, not just the primary one.
         format('[SCENARIO MANAGER] Performing Global Repair...~n'),
@@ -127,15 +124,8 @@ list_active_intervals :-
     findall(ID, narrative_ontology:interval(ID, _, _), IDs),
     format('~nActive Intervals in KB: ~w~n', [IDs]).
 
-% Helper to keep the main predicate clean
-inject_minimal_measurements(ID) :-
-    forall(member(T, [0, 10]),
-        ( assertz(narrative_ontology:measurement(m_gen, ID, accessibility_collapse(structural), T, 0.5)),
-          assertz(narrative_ontology:measurement(m_gen, ID, stakes_inflation(structural), T, 0.5)),
-          assertz(narrative_ontology:measurement(m_gen, ID, suppression(structural), T, 0.5)),
-          assertz(narrative_ontology:measurement(m_gen, ID, resistance(structural), T, 0.5))
-        )),
-    % OQ-93: these are fabricated anchors, not data — say so in the output.
-    % The hardcoded t=[0,10] ignores the declared interval; off-grid strays
-    % are flagged by data_repair:report_grid_provenance after repair.
-    format('  [INJECTED] 8 structural-level 0.5 anchors (m_gen) at hardcoded t=[0,10] — fabricated, see OQ-93~n').
+% inject_minimal_measurements/1 RETIRED (OQ-93 ruling (b), 2026-06-11): the
+% m_gen 0.5-anchor injector is gone with the grid_shim_enabled flag —
+% authored-or-absent only. source_class(m_gen, injected) is KEPT in
+% data_repair so archive replays of shim-era outputs still classify their
+% injected points correctly (provenance buckets are never collapsed).

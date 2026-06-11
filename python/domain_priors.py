@@ -138,7 +138,13 @@ def generate_domain_registry(testsets_dir, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate domain_registry.pl from testset .pl files")
     parser.add_argument("--input", default="/home/scott/bin/structural_dynamics_model/prolog/testsets", help="Path to .pl files")
-    parser.add_argument("--output", default="/home/scott/bin/structural_dynamics_model/prolog/domain_registry.pl", help="Path to output")
+    # Repo-relative default (OQ-96 residue, 2026-06-11): the old absolute path
+    # silently wrote into the main checkout when run from a worktree. NOTE:
+    # nothing in the live system consumes domain_registry.pl (consumer deleted
+    # 2026-02-18; pipeline regeneration retired with OQ-96) — this CLI remains
+    # only for archive replays that consult the registry explicitly.
+    _default_out = str(Path(__file__).resolve().parents[1] / "prolog" / "domain_registry.pl")
+    parser.add_argument("--output", default=_default_out, help="Path to output")
     args = parser.parse_args()
 
     generate_domain_registry(args.input, args.output)

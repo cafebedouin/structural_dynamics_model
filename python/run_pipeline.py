@@ -261,13 +261,15 @@ def _run_parallel(tasks: list[tuple[str, callable]], progress, parallel: int) ->
 
 def _phase_prep(progress):
     """Generate domain registry and test suite."""
-    import domain_priors
     import python_test_suite
 
     if progress:
         progress("pipeline", "[PREP] Preparing test suite...")
 
-    domain_priors.generate_domain_registry(str(TESTSETS_DIR), str(PROLOG_DIR / "domain_registry.pl"))
+    # domain_registry.pl regeneration RETIRED (OQ-96 close, 2026-06-11): the
+    # consuming module was deleted 2026-02-18 and the last dangling reference
+    # was removed 2026-06-10 — regenerating it every run was a
+    # producer-without-consumer (Pattern 1).
     python_test_suite.build_suite()
 
     if progress:

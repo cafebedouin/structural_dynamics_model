@@ -178,14 +178,13 @@ param(cognitive_displacement_profile, uniform).
    Consolidated parameters for the intent_engine and pattern_analysis.
    ================================================================ */
 
-% OQ-96 interim / OQ-93 probe (2026-06-10): gates the DR-AUDIT grid shim
-% (scenario_manager:inject_minimal_measurements + data_repair:impute_missing_metrics)
-% AND flips data_verification's 32-point completeness gate from fail-closed-on-absence
-% to expected-OPEN-and-witnessed. Default false = shim OFF: absent grid points are
-% reported loud ([SHIM]/[OPEN] lines) instead of manufactured from category priors.
-% true restores the pre-2026-06-10 manufacture-then-certify behavior (archive replays).
-% Permanent fix rides the OQ-93 grid-viability probe verdict.
-param(grid_shim_enabled, false).
+% grid_shim_enabled RETIRED (OQ-93 migration close, 2026-06-11): the
+% injection/imputation path was killed permanently by ruling (b) —
+% authored-or-absent is the only behavior; absence reports OPEN. The flag's
+% `true` arm restored a killed behavior and did not outlive the migration.
+% Archive replays of shim-era outputs still classify correctly because
+% data_repair:source_class/2 keeps its injected/imputed buckets.
+% History: KNOWN_STATE 2026-06-10/11; ISSUES.md OQ-93/OQ-96.
 
 % --- Gradient Thresholds ---
 % Minimum change to be considered non-stable.
