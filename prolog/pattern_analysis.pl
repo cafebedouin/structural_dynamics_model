@@ -53,6 +53,11 @@ compute_completeness(ID, Score) :-
     % (ghost-seat pattern on time-slots). once/1 is defense-in-depth under that
     % contract, not the primary semantics; without the contract it would absorb
     % a data conflict silently in load order.
+    % CONTRACT LIVE (Stage B, 2026-06-11): generate_constraint_pl.py
+    % _check_coercion_grid rejects duplicate (metric, level, time_point) slots
+    % fail-loud on every generation path (--no-validate does not bypass);
+    % constructed-duplicate positive control witnessed:
+    % audits/2026-06-11_oq93_grid_migration/stage_b_compiler_witness.txt (3c/3d).
     findall((L, T),
             (config:level(L), member(T, [T0, Tn]),
              once(coercion_projection:coercion_vector(ID, L, T, _))),

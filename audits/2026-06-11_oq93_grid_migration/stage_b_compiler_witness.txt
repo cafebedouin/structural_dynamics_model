@@ -1,0 +1,10 @@
+old compiler ref: HEAD; corpus files: 143
+  [PASS] 1 zero-diff sweep: 143 byte-identical, 0 fail-both-identically, 0 diffs, 0 mismatches
+  [PASS] 2a pilot validates against live schema
+  [PASS] 2b pilot emits 32 grid measurement facts — counted 32
+  [PASS] 2c swipl: 38 measurement facts (32 grid + 6 scalar), V0=0.2, class=authored — N=38 V0=0.2 CLS=authored
+  [PASS] 3a out-of-endpoint time point REJECTED (battery 1) — raised: coercion_grid points[0] time_point=1 is not a grid endpoint {t0=0, tn=10}; REJECTED (OQ-93 battery 1 — the stray-anchor class)
+  [PASS] 3b grid t0 != interval start REJECTED (battery 1, sub-interval) — raised: coercion_grid endpoints (t0=1, tn=10) must equal the declared interval (0, 10) — consumers read at the interval's endpoints, so a sub-interv
+  [PASS] 3c constructed-duplicate slot REJECTED (battery 3 / once-1 contract control) — raised: coercion_grid points[1] duplicates slot (metric=accessibility_collapse, level=structural, time_point=0) already authored at points[0]; REJEC
+  [PASS] 3d duplicate rejected on --no-validate CLI path too — ValueError: coercion_grid points[1] duplicates slot (metric=accessibility_collapse, level=structural, time_point=0) already authored at poin
+8/8 witness cases pass
