@@ -1,0 +1,36 @@
+=== Probe D: pre-reset artifact scan of live outputs/ ===
+as-of: 2026-06-11T00:43:45.292591-05:00
+reset boundary: 2026-06-05
+
+--- positive control: same detectors over the relocated artifacts ---
+control root: /home/scott/bin/structural_dynamics_model/audits/2026-05-30_authoring_closure_fabricated_defaults
+  1 json files; manifest-pre-reset hits: 0; tripwire-content detections: 1
+
+  HIT: /home/scott/bin/structural_dynamics_model/audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json
+    why: temporal-classification content (control-root)
+    content: D1a.details_sample: 5 baseline/patched rows (e.g. {'key': ['monopoly_transfer_mechanism', '2'], 'baseline': 'tangled_rope', 'patched': 'snare', 'direction': 'other'})
+control root: /home/scott/bin/structural_dynamics_model/prolog/archives/pre_reset_outputs
+  3 json files; manifest-pre-reset hits: 3; tripwire-content detections: 0
+
+  HIT: /home/scott/bin/structural_dynamics_model/prolog/archives/pre_reset_outputs/2026-06-03_pipeline_output_pre_agency_fix.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-03T16:10:13Z)
+    content: per_constraint.drift_trajectory populated in 1102/1107
+    content: per_constraint.drift_events populated in 1102/1107
+
+  HIT: /home/scott/bin/structural_dynamics_model/prolog/archives/pre_reset_outputs/2026-06-04_schema_sieve/analysis.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-04T14:15:56Z)
+
+  HIT: /home/scott/bin/structural_dynamics_model/prolog/archives/pre_reset_outputs/2026-06-04_schema_sieve/features.json
+    why: MANIFEST PRE-RESET (pipeline_run_at=2026-06-04T14:15:56Z)
+
+CONTROL PASS: manifest detector fired (3) AND tripwire content detector fired (1) on the control roots
+
+--- live scan: /home/scott/bin/structural_dynamics_model/outputs ---
+
+scanned: 1055 json files; 4 carried a manifest
+
+NO HITS — witnessed-clean (control fired in this same run)
+
+live artifact pipeline_output.json: pipeline_run_at=2026-06-11T02:06:01Z n_constraints=48 commit=0b81e8e dirty=True
+
+live artifact enriched_pipeline.json: pipeline_run_at=2026-06-11T02:06:01Z n_constraints=48 commit=0b81e8e dirty=True

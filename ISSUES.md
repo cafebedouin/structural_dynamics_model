@@ -1113,132 +1113,19 @@ are HELD pending re-run.
 
 ## OQ-33 — classify_at_time fabricates suppression on 100% of temporal corpus; 279/647 temporal classifications misclassified as tangled_rope instead of snare
 
-**Status:** investigating — 2026-05-30; close attempt 2026-06-11 HALTED on Probe D (pre-reset artifacts in live outputs/) — fix itself re-witnessed clean on live + kernel_v1, see 2026-06-11 annotation below
-**Origin:** Fabricated-default inventory session, 2026-05-30. Tripwire graduated 2026-05-30.  
-**Files:** `prolog/drl_composition.pl:179` (temporal fallback), `prolog/drl_core.pl:96`
-(static fallback — DORMANT, see below), `prolog/testsets/*.pl` (223 testsets,
-suppression_requirement measurement absent in all).
-
-### Witnessed (execution-witnessed — tripwire run 2026-05-30)
-
-**Fabricated-default on temporal path (D1a, LOAD-BEARING-WRONG):**  
-`suppression_requirement` measurement is absent in all 223 testsets (grep confirms 0 facts).
-`classify_at_time` (`drl_composition.pl:179`) has no authored value to read and falls back
-unconditionally to `Supp=0.5` — fires on 100% of the temporal path (647/647 measurement rows).
-
-**Tripwire confirmation (execution-witnessed, 2026-05-30):**
-Source-patch `Supp=0.5` → `Supp=999.9`, run `constraint_history` over full corpus:
-- 279/647 temporal rows changed
-- 219 tangled_rope → snare
-- 60 unknown → snare
-- **0 → unknown** (plan's instance-reported claim of 443 unknown flips was WRONG)
-
-The mechanism: `snare_suppression_floor=0.60`. Fabricated `Supp=0.5` falls below this
-floor. Every temporal row that would otherwise be `snare` is demoted to `tangled_rope`
-(if `tangled_rope_suppression_floor=0.40 ≤ 0.5`) or `unknown`. 50.4% of non-unknown
-temporal classifications (279/553) are misclassified — systematically too low, not random.
-
-**Correction to prior instance-reported claim:** The "443/519 non-unknown classifications
-flipped to unknown" (in prior session writeup and original OQ-33 text) was INCORRECT.
-That claim assumed poisoning would push unknown-ward; actual behavior is the opposite —
-higher Supp enables snare. The tripwire run supersedes the instance-reported estimate.
-
-**Cross-surface fabrication (D2, DORMANT — corrected from LOAD-BEARING-WRONG):**  
-The static path (`get_raw_suppression`, `drl_core.pl:96`) fabricates the same missing
-metric as `0`, not `0.5`. BUT: the 32 testsets lacking `suppression_requirement` are the
-`_contradictions.pl` stubs — not classified constraints. `all_corpus_constraints/1`
-excludes them (requires `constraint_metric(C, extractiveness, _)`). Tripwire run:
-`Value=0` → `999.9` produced **0 changes** across 191 classified constraints.
-
-| Surface | Fallback | fires-now (actual corpus) | verdict |
-|---------|----------|--------------------------|---------|
-| Temporal (D1a) | Supp = 0.5 | 647/647 temporal rows | LOAD-BEARING-WRONG |
-| Static (D2) | Supp = 0 | 0 classified constraints | DORMANT |
-
-The cross-surface asymmetry in OQ-33 prior text described a real difference in fallback
-values but overstated D2's impact: D2 fires on contradiction stubs only, not on the
-classified corpus.
-
-**D20/D21 Boltzmann sites (DORMANT — corrected from UNSURE):**  
-Tripwire run: `BaseEps=0.5` → `999.9` and `Supp=0` → `999.9` in `classify_at_context_impl`
-produced **0 changes** across 191 classified constraints. Same mechanism as D2 — the 32
-affected testsets are contradiction stubs, excluded by `all_corpus_constraints/1`.
-
-Audit writeup: `audits/2026-05-30_authoring_closure_fabricated_defaults/audit_authoring_closure_fabricated_defaults.md`
-
-### Resolution options (design decision — no verdict asserted here)
-
-**(a) Author temporal suppression_requirement measurements into testsets.** Fills the
-missing data at source; both surfaces would then read the same authored value. Cost:
-authoring burden on 190+ testsets; requires schema guidance on what a correct
-suppression_requirement measurement looks like.
-
-**(b) Align `classify_at_time` to `get_raw_suppression` fallback (Supp=0).** Eliminates
-the cross-surface asymmetry. **Cost: collapses the Surface-1 / Surface-3 distinction that
-the three-surface model exists to hold.** If the temporal surface uses static-surface
-fallback values, the two surfaces are no longer observationally independent on
-missing-data constraints. The three-surface model's cross-surface divergence signal
-becomes uninterpretable for any constraint where suppression_requirement is absent —
-which is currently all of them. Flag this cost explicitly before choosing (b).
-
-**(c) Formalize "temporal surface returns indeterminate when it lacks its own data."**
-Accept that `classify_at_time` returns `unknown` for constraints without authored temporal
-suppression. The 443 extant `tangled_rope` emissions are reclassified as either policy
-decisions (if the engine should treat unmeasured suppression as 0.5) or repair targets
-(if they are simply wrong). Makes the fabrication visible and opt-in rather than silent.
-
-### Blocks
-
-1. **Surface-3 perturbation primitive** (`constraint_history/3`) — premature until
-   resolved. Perturbing a surface whose baselines are fabricated measures noise against
-   noise: the primitive would compare fabricated-Supp classifications against
-   perturbed-param fabricated-Supp classifications. No clean signal until the fabrication
-   is either authored away (a) or formalized (c).
-2. **Validity of the 443 extant temporal classifications** already in the corpus and any
-   report that cites temporal-surface outputs as independent evidence.
-3. **Cross-surface divergence interpretation** — the static-0/temporal-0.5 sub-finding
-   means any existing analysis that attributes static/temporal divergence to observational
-   difference rather than filler asymmetry is compromised for suppression-absent
-   constraints (currently all constraints).
-
-### 2026-06-11 — close attempt HALTED (fix re-witnessed clean; Probe D positive). Evidence: `audits/2026-06-11_oq33_close/`
-
-**Re-witnessed on current substrate (per-process positive controls fired in every census
-process; all raw output in the audit dir):**
-- **Live corpus (post-reset, 48 files / 46 classified):** 209 constraint×time rows — 162
-  temporal-measurement branch / 47 scalar-STOPGAP / **0 unknown-floor / 0 residual-0.5
-  anomalies** (every row's Info Supp matched the authored value it claims to read). A0 grep:
-  46/48 testsets author the scalar; the 2 without are the `*_contradictions.pl` sidecars
-  (excluded from `all_corpus_constraints/1`, zero measurement rows). 39 testsets also author
-  a temporal series. `Backed=true` on 161/162 temporal rows; the 1 false is
-  `techno_optimist_reading` t=5 (ε-side `BaseX=0.5` flagged fallback — OQ-41 rows 24-25
-  scope, recorded not adjudicated).
-- **kernel_v1 overlay (resolved path + 1,106-loaded witnessed before census):** 3,497 rows —
-  2,882 temporal / 615 scalar / **0 unknown-floor / 0 anomalies**. The recorded 471/562/91/0
-  did NOT reproduce verbatim and cannot: commit `b5ccee0d` (2026-06-02) measured it on a
-  562-testset working-tree state never archived (only 226 testsets were tracked at that
-  commit; the corpus grew to 1,106 by the 2026-06-05 reset archive). Plan premise error,
-  not an engine delta — the regime shape (0 unknown, ~84% temporal) reproduces exactly.
-- **D2 static path:** `get_raw_suppression` else-branch fired on **0/46** live classified
-  constraints; in-denominator-shaped control flagged through the same call path. Still dormant.
-- **HALT (pre-registered Probe D condition): 4 pre-reset artifacts live in `outputs/`** —
-  `pipeline_output.pre_agency_fix.json` (manifest 2026-06-03, `drift_trajectory` populated
-  1102/1107, zero repo references), `tripwire_fabricated_defaults_results.json` (2026-05-30
-  OQ-33 tripwire evidence carrying baseline temporal-classification samples; cited by
-  `audits/2026-05-30_authoring_closure_fabricated_defaults/` from gitignored `outputs/` — a
-  location-mandate violation), `schema_sieve/analysis.json` + `features.json` (manifests
-  2026-06-04). Block 2's "mooted by reset" is falsified as operationalized.
-- **To close:** operator ruling on artifact disposition (move tripwire JSON into its
-  2026-05-30 audit dir; archive/delete or declare-retained `pre_agency_fix` and
-  `schema_sieve/*`), re-run Probe D clean, then Phase 2 of the close plan (resolution note
-  drafted there; everything else is already witnessed).
-
-See `docs/technical/build_discipline.md` Pattern 4 (fabricated default) for the
-defect class.
-
----
-
----
+**Status:** resolved — 2026-06-11
+**Origin:** Fabricated-default inventory session, 2026-05-30. Tripwire graduated 2026-05-30.
+**Resolution:** options (c)+(a); (b) rejected (collapses Surface-1/3 independence). Engine
+fail-close landed 2026-05-31 (OQ-41 row 23, commit `39630182`): temporal `measurement/5` →
+authored-scalar STOPGAP (`SuppBacked=false`) → fail-closed `unknown`; the post-reset template
+authors suppression at source. Re-witnessed 2026-06-11 (`audits/2026-06-11_oq33_close/`):
+0 unknown-floor / 0 residual-0.5 over 209 live + 3,497 kernel_v1 rows, per-process controls;
+D2 static else-branch 0/46. Blocks: (1) Surface-3 primitive unblocked for temporal-backed
+constraints (Probe A); (2) pre-reset classifications mooted — witnessed clean post-disposition
+(Probe D re-scan, archive-side control in-run; artifacts relocated, writeup §5); (3)
+cross-surface divergence carries the `Backed` bit (`drl_composition.pl:238`). Consumer-side
+`Backed` verification stays with OQ-83; scalar-stopgap retirement = OQ-46 (7 live scalar-only
+constraints remain); ε fallback rows 24-27 = OQ-41.
 
 ## OQ-34 — Estimator-classifier independence audit: does the prompt expose MI-decision-rule thresholds to authors?
 
@@ -1713,6 +1600,14 @@ load-bearing for those 91 — do not delete early). Do **not** build a scalar/te
 bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
 
 **Post-reset check (2026-06-05):** the live corpus' first 20 stories author a temporal `suppression_requirement` series **20/20** — the generation-template requirement lands universally under the de-leaked prompt. Once the live corpus accumulates with this holding, the row-23 stopgap (`classify_at_time` scalar bridge) is retirable + fail-closed `unknown` added (output-changing engine edit; needs its own witnessed pass).
+
+**Live coverage as of 2026-06-11 (OQ-33 close census, `audits/2026-06-11_oq33_close/`):** the
+471/562 figures above are pre-reset-regime (measured 2026-06-02 on an unarchived 562-testset
+state — see `evidence/b5ccee0d_substrate_witness.txt` there; do not cite against any extant
+corpus). Live post-reset corpus (48 files / 46 classified): **39 author a temporal series, 7
+remain scalar-only** (the stopgap's remaining live load; 47 of 209 rows), 0 reach `unknown`.
+So the de-leaked template's 20/20 did NOT hold universally as the corpus grew — 7/46 live
+constraints are scalar-only. kernel_v1 comparator: 934/1106 temporal, 172 scalar-only, 0 unknown.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 

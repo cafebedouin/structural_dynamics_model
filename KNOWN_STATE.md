@@ -84,9 +84,9 @@ file NOTHING consumes (Pattern-1 producer; retire with the shim flag), and
 `python/domain_priors.py --output` defaults to an absolute path into the main checkout.
 Note on the witness above: "validation suite 39/39 exit 0" was run pre-merge under the
 stale-registry-file regime; re-witnessed post-merge under the shim-off regime (see merge commit).
-## 2026-06-11 — OQ-33 close attempt: row-23 fail-close re-witnessed clean on live + kernel_v1; close HALTED on Probe D (4 pre-reset artifacts in live outputs/)
-**Files:** ISSUES.md, audits/2026-06-11_oq33_close/, prolog/drl_composition.pl, outputs/pipeline_output.pre_agency_fix.json, outputs/tripwire_fabricated_defaults_results.json, outputs/schema_sieve/
-**Tier:** correction-key
+## 2026-06-11 — OQ-33 RESOLVED: row-23 fail-close re-witnessed clean on live + kernel_v1; halt→disposition→control-gated clean re-scan; .gitignore unanchored-outputs tripwire found
+**Files:** ISSUES.md, audits/2026-06-11_oq33_close/, prolog/drl_composition.pl, prolog/archives/pre_reset_outputs/, audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json, .gitignore
+**Tier:** tripwire
 
 Evidence pass for closing OQ-33 (plan retargeted from OQ-95). **The fix is sound on current
 substrate:** live corpus (48 files/46 classified) 209 constraint×time rows = 162 temporal / 47
@@ -103,14 +103,26 @@ corpus reached 1,106 by the reset). kernel_v1 measures 934/1106 temporal, 172 sc
 unknown. Do not cite 471/562 against any extant corpus; an exact-match expectation must pin the
 substrate (corpus + commit), not just the figures.
 
-**Close HALTED (pre-registered Probe D condition):** 4 pre-reset artifacts live in `outputs/` —
-`pipeline_output.pre_agency_fix.json` (manifest 2026-06-03, drift fields populated, zero repo
-references), `tripwire_fabricated_defaults_results.json` (2026-05-30 OQ-33 tripwire evidence,
-cited from gitignored `outputs/` by its audit — location-mandate violation),
-`schema_sieve/{analysis,features}.json` (manifests 2026-06-04). OQ-33 stays `investigating`
-(entry annotated); operator ruling on artifact disposition needed, then re-run
-`audits/2026-06-11_oq33_close/evidence/probe_d_preset_artifact_scan.py` and enter Phase 2 of the
-close plan. Also recorded: 7 unparseable `scs_out_*.json` scratch files in `outputs/`.
+**Close path:** evidence pass HALTED on the pre-registered Probe D condition — 4 pre-reset
+artifacts live in `outputs/` (`pipeline_output.pre_agency_fix.json` manifest 2026-06-03;
+`tripwire_fabricated_defaults_results.json`, the 2026-05-30 OQ-33 tripwire evidence cited from
+gitignored `outputs/` by its audit; `schema_sieve/{analysis,features}.json` manifests 2026-06-04)
+— escalated; operator ruled same day (archive / relocate-to-audit-dir / probe-then-archive /
+delete scratch). Executed sha256-verified: archives at `prolog/archives/pre_reset_outputs/`,
+tripwire JSON now inside its audit dir (citations fixed), 7 unparseable `scs_out_*.json` deleted.
+Re-scan with in-run archive-side positive control (manifest ×3 + tripwire-content ×1 fired on
+the relocated artifacts, THEN live scan): 1,055 JSONs, **NO HITS — witnessed-clean**. OQ-33 →
+resolved (compressed); OQ-46 annotated with live coverage (the 2026-06-05 "20/20 universal"
+template check did NOT hold — 7/46 live constraints are scalar-only); `drl_composition.pl:191`
+comment re-stamped three-substrate/as-of-dated (comment-only; post-edit `[stack]` load witnessed).
+
+**TRIPWIRE — `.gitignore:2` is an UNANCHORED `outputs/`:** it silently swallows ANY nested dir
+named `outputs` — a disposition commit dropped all four archive files clean (witnessed; commit
+succeeded, files absent) until the archive dir was renamed `pre_reset_outputs`. The same rule is
+currently gitignoring `audits/2026-02-25_spectral_laplacian/outputs/` (25 evidence files — gone
+on fresh clone, same defect class the tripwire-JSON ruling just fixed). Operator call pending:
+anchor to `/outputs/` + force-add that audit's evidence, or relocate it. Until then: never name
+a tracked directory `outputs`, and verify any commit touching such paths lists the files.
 
 ## 2026-06-10 — External-review triage (two batches): OQ-98–103 filed; auto-essay synthesis ruled out (ledger replaces it); two topic runs committed under a live-witnessed gate
 **Files:** ISSUES.md, audits/2026-06-10_external_review_vote_market/, audits/2026-06-10_external_review_xprize/, KNOWN_STATE.md, prolog/validation_suite.pl, agent/c-orchestrator.py

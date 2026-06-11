@@ -1,0 +1,26 @@
+=== Disposition deletions from live outputs/ — 2026-06-11T00:43:33-05:00 ===
+tracked copies verified by sha256 against originals (see commit 9a792e97 + writeup §5) BEFORE deletion:
+
+--- before ---
+-rw-r--r-- 1 scott scott 13554794 Jun  3 21:45 outputs/pipeline_output.pre_agency_fix.json
+-rw------- 1 scott scott        0 Apr  7 09:47 outputs/scs_out_3098uo09.json
+-rw------- 1 scott scott  2539520 Apr  7 09:23 outputs/scs_out_4rh7r66d.json
+-rw------- 1 scott scott 16527360 Apr  7 09:23 outputs/scs_out_al962zco.json
+-rw------- 1 scott scott  5165056 Apr  7 09:50 outputs/scs_out_f3gdz3_w.json
+-rw------- 1 scott scott  1794048 Apr  7 09:23 outputs/scs_out_iyeogscq.json
+-rw------- 1 scott scott 23068672 Apr  7 09:23 outputs/scs_out_x6j1rewp.json
+-rw------- 1 scott scott  1687552 Apr  7 09:41 outputs/scs_out_xyna7un_.json
+-rw-r--r-- 1 scott scott     2535 May 30 03:30 outputs/tripwire_fabricated_defaults_results.json
+
+outputs/schema_sieve/:
+total 1120
+drwxr-xr-x  2 scott scott    4096 Jun  4 20:39 .
+drwxr-xr-x 12 scott scott   16384 Jun  9 17:52 ..
+-rw-r--r--  1 scott scott   69733 Jun  4 20:39 analysis.json
+-rw-r--r--  1 scott scott 1048890 Jun  4 20:38 features.json
+
+--- after (each should error: No such file) ---
+ls: cannot access 'outputs/pipeline_output.pre_agency_fix.json': No such file or directory
+ls: cannot access 'outputs/tripwire_fabricated_defaults_results.json': No such file or directory
+ls: cannot access 'outputs/schema_sieve': No such file or directory
+ls: cannot access 'outputs/scs_out_*.json': No such file or directory

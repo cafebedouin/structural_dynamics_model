@@ -1,10 +1,12 @@
 # OQ-33 close attempt — re-witness of the classify_at_time fail-close on current substrate
 
-**Date:** 2026-06-11. **Worktree:** `wt-oq33-close` @ `c1f78a31` (main).
-**Outcome: HALTED before Phase 2** on the pre-registered Probe D condition. The engine fix
-itself re-witnessed clean on both corpora; the halt is about pre-reset artifacts surviving in
-the live `outputs/` tree, which falsifies Block 2 ("the 443 pre-reset temporal classifications
-are mooted by the corpus reset") as operationalized in the plan.
+**Date:** 2026-06-11. **Worktrees:** `wt-oq33-close` @ `c1f78a31` (evidence pass),
+`wt-oq33-phase2` @ `5a103a01` (disposition + close).
+**Outcome: RESOLVED in two passes.** The evidence pass **HALTED before Phase 2** on the
+pre-registered Probe D condition (pre-reset artifacts in the live `outputs/` tree falsified
+Block 2 as operationalized; engine fix itself re-witnessed clean on both corpora) and
+escalated. The operator ruled on artifact disposition same day; §5 records the executed
+rulings, the control-gated clean re-scan, and the Phase 2 close. OQ-33 → resolved.
 
 Plan: `~/.claude/plans/let-s-close-oq-95-from-snug-steele.md` (retargeted OQ-95 → OQ-33).
 
@@ -117,3 +119,47 @@ call: each file is either deliberate retention or stale debris, and the differen
 - Then re-run `evidence/probe_d_preset_artifact_scan.py`; on a clean scan, Phase 2 of the
   plan closes OQ-33 (resolution-note content is drafted in the plan; all other witnesses are
   in this audit dir).
+
+## 5. Disposition + Phase 2 (operator rulings received and executed, 2026-06-11)
+
+**Rulings:** (1) `pre_agency_fix` → archive, don't delete (forensic baseline); (2) tripwire
+JSON → move into its audit dir, fix citations (approved as recommended); (3) `schema_sieve/`
+→ probe provenance first; (4) 7 unparseable `scs_out_*.json` → delete.
+
+**schema_sieve provenance probe:** producers are `python/audits/schema_sieve.py` +
+`schema_sieve_analyze.py` (audit extractors writing to `outputs/` per convention); repo-wide
+grep found zero consumers and no audit writeup ever absorbed the JSONs (only the producers,
+this audit's own files, and tracker mentions of this halt). Verdict: orphaned → archived
+alongside (1) under the same stamp.
+
+**Executed** (sha256-verified copy before every delete; deletion witness:
+`evidence/disposition_deletions.txt`):
+- `prolog/archives/pre_reset_outputs/2026-06-03_pipeline_output_pre_agency_fix.json` (+
+  provenance README in that dir).
+- `audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json`;
+  citation paths fixed in that writeup (2 sites) and KNOWN_STATE:2712.
+- `prolog/archives/pre_reset_outputs/2026-06-04_schema_sieve/{analysis,features}.json`.
+- 7 `scs_out_*.json` deleted from live `outputs/`.
+
+**Found-in-passing (flagged, not fixed):** `.gitignore:2` is an UNANCHORED `outputs/` — it
+matches any nested dir of that name. First disposition commit silently dropped all four
+archive files (the dir was named `prolog/archives/outputs/`; commit succeeded, files absent —
+witnessed, then renamed to `pre_reset_outputs/`). The same rule is currently swallowing
+`audits/2026-02-25_spectral_laplacian/outputs/` (25 evidence files, gitignored = gone on
+fresh clone — same location-mandate defect class as the tripwire file). Operator call:
+anchor the rule to `/outputs/` and force-add that audit's evidence, or relocate it.
+
+**Re-scan (the absence claim, `evidence/probe_d_rescan_output.txt`):** scanner upgraded
+first — archive-side positive control now runs in the same invocation, before the live scan,
+and a clean live verdict is INVALID unless both detectors fire on the control roots (mtime
+deliberately not trusted post-`cp`; control keys on manifest + content only). Result:
+**CONTROL PASS** (manifest detector ×3, tripwire-content detector ×1, all four relocated
+artifacts found at their new homes) → live scan over 1,055 JSONs: **NO HITS — witnessed-clean.**
+Block 2 is therefore **witnessed**, not adjudicated-by-argument.
+
+**Phase 2 executed:** OQ-33 → resolved, compressed per footer rule; OQ-46 annotated with live
+coverage (39 temporal / 7 scalar-only / 0 unknown of 46 classified — note the 2026-06-05
+"20/20 universal" check did NOT hold as the corpus grew); `drl_composition.pl:191` coverage
+comment re-stamped on the staleness ladder (three substrates, each as-of dated; comment-only —
+post-edit `[stack]` load witnessed clean, `classify_at_time/5` present); KNOWN_STATE entry
+updated. Checkers green pre- and post-merge.

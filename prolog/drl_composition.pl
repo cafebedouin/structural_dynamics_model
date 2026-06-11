@@ -188,21 +188,28 @@ classify_at_time(C, Time, Context, Type, Info) :-
     % fabricate Supp=0.5 — that value sits below snare_suppression_floor=0.60 and
     % silently mis-sorts the temporal timeline low.
     %
-    % Corpus regenerated (2026-06): the generation template now authors a temporal
-    % suppression_requirement series for most constraints. Engine-measured coverage on the
-    % live corpus: 471/562 constraints carry a temporal series (the first branch below);
-    % 91/562 are scalar-only and hit the STOPGAP fallback; 0/562 reach the `unknown` branch
-    % (every constraint authors at least a scalar suppression_requirement). Pre-rebuild this
-    % was inverted — 650/656 rows lacked a temporal series, so the old code ran almost the
-    % entire temporal classification on a fabricated constant.
+    % Coverage (staleness-laddered — recompute before citing, the corpus grows; the
+    % generation template authors a temporal suppression_requirement series for most
+    % constraints):
+    %   PRE-RESET-REGIME (as-of 2026-06-02, commit b5ccee0d, an unarchived 562-testset
+    %   working-tree state — NOT kernel_v1; substrate witness:
+    %   audits/2026-06-11_oq33_close/evidence/b5ccee0d_substrate_witness.txt):
+    %   471/562 temporal, 91/562 scalar-only, 0/562 unknown.
+    %   LIVE post-reset corpus (as-of 2026-06-11, 48 files / 46 classified): 39 temporal,
+    %   7 scalar-only (the STOPGAP's remaining live load), 0 unknown; row-denominated
+    %   162 temporal / 47 scalar-STOPGAP / 0 unknown over 209 rows.
+    %   kernel_v1 archive (as-of 2026-06-11): 934/1106 temporal, 172 scalar-only, 0 unknown.
+    % Pre-rebuild this was inverted — 650/656 rows lacked a temporal series, so the old
+    % code ran almost the entire temporal classification on a fabricated constant.
     %
     % STOPGAP — TEMPORARY BRIDGE, strip when temporal coverage is complete: fall back to the
     % authored SCALAR suppression_requirement (real per-constraint data; genuine-no-data = 0).
     % Return `unknown` only if no suppression is authored anywhere. Still load-bearing for the
-    % 91 scalar-only constraints — do NOT delete the scalar clause until the template authors a
-    % temporal series for every constraint (D4-for-suppression is a GENERATION-TEMPLATE
-    % requirement, not an engine ruling). Do NOT build a scalar/temporal equivalence check on
-    % top of this bridge — it is a stopgap, not a sanctioned second representation.
+    % scalar-only constraints (7 on the live corpus as of 2026-06-11) — do NOT delete the
+    % scalar clause until the template authors a temporal series for every constraint
+    % (D4-for-suppression is a GENERATION-TEMPLATE requirement, not an engine ruling; OQ-46).
+    % Do NOT build a scalar/temporal equivalence check on top of this bridge — it is a
+    % stopgap, not a sanctioned second representation.
     (   narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)
     ->  classify_at_time_with_supp(C, Time, Context, Supp, true, Type, Info)
     ;   narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
