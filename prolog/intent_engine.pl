@@ -71,8 +71,12 @@ collect_intent_evidence(IntervalID, Evidence) :-
     append([VAs, RAs, PCs, Supps, Ress], Evidence).
 
 classify_non_intent(Prelim, Pattern) :-
-    (Prelim = increasing_coercion -> Pattern = increasing_coercion 
-    ; Prelim = decreasing_coercion -> Pattern = decreasing_coercion 
+    (Prelim = increasing_coercion -> Pattern = increasing_coercion
+    ; Prelim = decreasing_coercion -> Pattern = decreasing_coercion
+    % OQ-93 coverage-carrying read: an OPEN grid track stays OPEN here —
+    % mapping open(...) to stable would re-create the success-shaped
+    % default this migration killed (absence must not read as a verdict).
+    ; Prelim = open(Why) -> Pattern = open(Why)
     ; Pattern = stable).
 
 refine_confidence(Evidence, DataScore, Conf) :-
@@ -105,10 +109,16 @@ max_by_value((C, D), List) :-
 %  Harness wrapper to satisfy test_harness.pl.
 analyze_intent(IntervalID) :-
     (   classify_interval(IntervalID, Pattern, Confidence)
-    ->  format('  [INTENT] Result: ~w (Confidence: ~w)', [Pattern, Confidence]),
+    ->  (   Pattern = open(Why)
+        ->  % OQ-93 coverage-carrying read: grid absent or below the system
+            % verdict's named levels — the grid track reports OPEN, never a
+            % default-shaped stable.
+            format('  [INTENT] Result: OPEN (~w) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93)', [Why])
+        ;   format('  [INTENT] Result: ~w (Confidence: ~w)', [Pattern, Confidence])
+        ),
         % OQ-93: this verdict's gradient + completeness inputs come from the
-        % leveled grid, which is unauthorable under the live schema — print
-        % the actual diet so the verdict cannot read as evidence-fed.
+        % leveled grid — print the actual diet so the verdict cannot read as
+        % evidence-fed when it is not.
         (   catch(data_repair:grid_provenance(IntervalID, prov(A, I, P, _Abs, Total)), _, fail)
         ->  format(' [grid diet: authored ~w/~w, injected ~w, imputed ~w — OQ-93]~n', [A, Total, I, P])
         ;   nl

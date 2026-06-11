@@ -626,7 +626,8 @@ compute_verdict(_, _, _, green).
 %    Alerts     — list of alert(Type, Severity, Source)
 %    GridProv   — grid_prov(Authored, Injected, Imputed, Absent, Total)
 %                 | no_interval
-%    MeasProv   — meas_prov(Authored, Injected, Imputed, Total)
+%    MeasProv   — meas_prov(Authored, Injected, Imputed, Projected, Total)
+%                 (Projected = authored sub-bucket with basis=projected, OQ-102(a))
 %    SigGrade   — correction | commentary | none
 verdict_join(C, Summary, Join) :-
     Summary = diagnostic_summary(Base, _, _, _, _, _, _),
@@ -690,19 +691,28 @@ max_badness(Verdicts, Worst) :-
     msort(Pairs, Sorted),
     last(Sorted, _-Worst).
 
-%% measurement_provenance(+C, -meas_prov(Authored, Injected, Imputed, Total))
+%% measurement_provenance(+C, -meas_prov(Authored, Injected, Imputed, Projected, Total))
 %  Constraint-level census of measurement/5 facts by source class — the
 %  series drift/trajectory consumers actually eat. Distinct from the
 %  leveled-grid census: a constraint with no interval still has this.
-measurement_provenance(C, meas_prov(A, I, P, Total)) :-
-    findall(Cls,
+%  Projected (OQ-102(a)) is a SUB-BUCKET of authored: points the author
+%  stamped basis=projected (a guess about an unmeasured/future state) via
+%  narrative_ontology:measurement_basis/2. Per-bucket, never binary
+%  (feedback_provenance_buckets_not_binary): authored-with-no-basis stays
+%  unspecified — it is NOT counted observed and NOT counted projected.
+measurement_provenance(C, meas_prov(A, I, P, Proj, Total)) :-
+    findall(Src-Cls,
             ( narrative_ontology:measurement(Src, C, _, _, _),
               data_repair:source_class(Src, Cls) ),
-            Classes),
-    length(Classes, Total),
-    aggregate_all(count, member(authored, Classes), A),
-    aggregate_all(count, member(injected, Classes), I),
-    aggregate_all(count, member(imputed,  Classes), P).
+            Pairs),
+    length(Pairs, Total),
+    aggregate_all(count, member(_-authored, Pairs), A),
+    aggregate_all(count, member(_-injected, Pairs), I),
+    aggregate_all(count, member(_-imputed,  Pairs), P),
+    aggregate_all(count,
+                  ( member(Src-_, Pairs),
+                    narrative_ontology:measurement_basis(Src, projected) ),
+                  Proj).
 
 /* ================================================================
    UTILITIES

@@ -1,0 +1,17 @@
+  (rider basis field not present in schema yet — R-cases skipped)
+base story: json/demographic_skill_mismatch.json   old schema ref: HEAD
+  [PASS] 1 full 32-point grid
+  [PASS] 2 partial grid (8/32, one level) — legal at schema level
+  [PASS] 3 absent block (back-compat, fail-closed downstream)
+  [PASS] 4 out-of-enum level ('cosmic') — bit at intended guard: $.coercion_grid.points.0.level: 'cosmic' is not one of ['structural', 'organizational', 'class', 'individual']
+  [PASS] 5 out-of-enum grid metric ('vibes') — bit at intended guard: $.coercion_grid.points.0.metric: 'vibes' is not one of ['accessibility_collapse', 'stakes_inflation', 'suppression', 'resis
+  [PASS] 6 grid metric in scalar measurements[] rejected (disjoint surfaces) — bit at intended guard: $.measurements.6.metric: 'suppression' is not one of ['theater_ratio', 'base_extractiveness', 'suppression_requirem
+  [PASS] 7 scalar metric in grid rejected (disjoint surfaces) — bit at intended guard: $.coercion_grid.points.0.metric: 'theater_ratio' is not one of ['accessibility_collapse', 'stakes_inflation', 'suppression'
+  [PASS] 8 value out of [0,1] — bit at intended guard: $.coercion_grid.points.0.value: 1.5 is greater than the maximum of 1.0
+  [PASS] 9 missing t0 — bit at intended guard: $.coercion_grid: 't0' is a required property
+  [PASS] 10 empty points array (minItems 1) — bit at intended guard: $.coercion_grid.points: [] is too short
+  [PASS] 11 duplicate (metric,level,time) slot is schema-VALID BY DESIGN (compiler's job, Stage B)
+  [PASS] 12 time_point outside {t0,tn} is schema-VALID BY DESIGN (compiler's job, Stage B)
+  [PASS] 13 extra property on grid point — bit at intended guard: $.coercion_grid.points.0: Additional properties are not allowed ('surprise' was unexpected)
+13/13 battery cases pass
+additivity sweep: 143 files; pre-existing invalid under OLD schema: 91; error-set deltas old->new: 0; NEW failures: 0

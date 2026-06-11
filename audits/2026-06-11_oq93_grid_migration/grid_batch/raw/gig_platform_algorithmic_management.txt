@@ -1,0 +1,524 @@
+```json
+{
+  "header": {
+    "constraint_id": "gig_platform_algorithmic_management",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gig_algo"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.81,
+    "resistance": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Management Tightening on Gig Platform",
+    "topic_domain": "platform_economy/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator"
+    ],
+    "victims": [
+      "driver_workforce",
+      "labor_market_flexibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dependent Driver",
+      "comment": "PERSPECTIVE 1: DEPENDENT DRIVER (SNARE) — Trapped by financial dependency and platform ubiquity; no structurally viable alternative labor market exists in the region; algorithm controls task assignment and income flow; exit costs are absolute (income replacement, retraining, geographic relocation). Experiences maximum extraction and suppression as the platform consolidates — alternatives collapse from 'difficult' to 'impossible'."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Skilled Multi-App Driver",
+      "comment": "PERSPECTIVE 2: SKILLED MULTI-APP DRIVER (TANGLED ROPE) — Higher education, multiple app credentials, some geographic mobility; can exit to a second platform with friction but not impossibility. Experiences both coordination (task matching, payment certainty vs. street-hail) and extraction (algorithmic rating system determines income). High suppression from rating-based deactivation threat, but higher exit capacity than dependent drivers. Moderate experience of extraction asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) — Views algorithmic management as pure coordination: matching supply to demand, optimizing utilization, reducing deadweight loss from mismatch. Beneficiary position with arbitrage options (can shift to autonomous vehicles, adjust geographic coverage, pivot to adjacent markets). Experiences minimal suppression — enforcement is codified, automated, and aligns with platform profitability. Net positive extraction flow."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Driver Coalition / Labor Union",
+      "comment": "PERSPECTIVE 4: DRIVER COALITION (TANGLED ROPE) — Organized collective action with growing but uneven power; some bargaining leverage from threat of withdrawal or public pressure, but platform's algorithmic ranking system divides the workforce (high-rated drivers less likely to unionize). Experiences both coordination function (the union negotiates scheduling predictability, fare guarantees) and extraction (platform retains unilateral algorithmic control despite negotiation). Moderate suppression from algorithmic ranking and threat of deactivation for 'troublemakers'."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority / Municipal Government",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (SCAFFOLD) — Views algorithmic management as a temporary coordination problem pending formal regulation. Municipal and state actors are legislating requirements for algorithmic transparency, minimum earnings guarantees, and classification status. The scaffold carries a sunset: as regulatory regimes crystallize (driver classification as employee vs. contractor, algorithmic disclosure mandates), the platform's unilateral control loses authority. Organized agent with mobile exit options (can impose fines, licensing restrictions, geographic exclusion). Moderate suppression from industry lobbying and legal uncertainty."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gig-Economy Ideology",
+      "comment": "PERSPECTIVE 6: GIG-ECONOMY IDEOLOGY (PITON) — The narrative of 'flexibility' and 'entrepreneurship' persists even as the platform consolidates control and drivers' actual autonomy declines. The theater of driver independence is maintained (drivers 'accept' or 'decline' tasks, set their own hours) while the algorithmic system makes meaningful rejection costly or impossible (low ratings reduce task flow, income volatility increases, deactivation hangs as permanent threat). The piton classification reflects high theater_ratio: the performative autonomy persists through institutional inertia even as the coordination function it claimed to enable is replaced by unilateral algorithmic extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dependency_threshold_ambiguity",
+      "question": "At what percentage of driver income-from-platform does the exit condition shift from 'constrained' to 'trapped'?",
+      "resolution_mechanism": "Longitudinal income replacement analysis; survey of actual alternative income sources for drivers at different tenure levels and in different geographic markets; cost-benefit analysis of retraining and platform switching by cohort",
+      "impact": "If threshold < 50% of income: majority of drivers classified as 'constrained', reducing suppression effect and lowering chi. If threshold > 80%: most drivers classified as 'trapped', raising suppression and chi substantially, pushing more perspectives toward snare. The classification boundary is empirically resolvable but contingent on labor market conditions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Income dependency threshold for exit classification shift"
+    },
+    {
+      "id": "algorithmic_substitution_path",
+      "question": "Is the platform's consolidation trajectory toward autonomous vehicle replacement, or toward deepening driver dependence through algorithmic control?",
+      "resolution_mechanism": "Analysis of platform investment patterns: R&D spending on autonomous technology vs. algorithmic management infrastructure; public statements and patent filings; market analysis of autonomous vehicle deployment timelines vs. driver base expansion or contraction",
+      "impact": "If toward autonomous replacement: the constraint has a genuine sunset (drivers become obsolete, suppression mechanism fails). If toward algorithmic deepening: extraction mechanism intensifies without eventual release. Classification of scaffold vs. piton perspectives depends heavily on this resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Platform technology trajectory: autonomous replacement or algorithmic deepening"
+    },
+    {
+      "id": "regulatory_capture_risk",
+      "question": "Will platform industry capture regulatory bodies, reducing the regulatory authority's actual constraints and converting the scaffold into a false sunset?",
+      "resolution_mechanism": "Tracking of regulatory outcomes: whether algorithmic disclosure mandates are enforceable; whether classification status decisions favor platforms or workers; comparative analysis across jurisdictions (EU, California, other states) where regulatory variance exists; analysis of regulatory agency staffing and funding relative to platform lobbying power",
+      "impact": "If capture occurs: scaffold perspective overstates actual regulatory constraint; effective suppression remains high despite formal regulation; constraint persists as tangled_rope or snare. If regulation bites: scaffold sunset is real, extracted rents are recovered, platform shifts to managed-labor model with reduced extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory authority will remain independent or captured"
+    },
+    {
+      "id": "multi_platform_switching_feasibility",
+      "question": "Do multi-app strategies genuinely reduce driver dependence on any single platform, or does algorithmic stratification prevent most drivers from achieving sustainable multi-platform income?",
+      "resolution_mechanism": "Cohort analysis of multi-app driver income variance and stability over time; tracking of platform algorithmic policies toward multi-app users; cost-benefit analysis of managing multiple accounts (app switching friction, account suspension risk); comparative income stability for single-app vs. multi-app drivers by skill level",
+      "impact": "If multi-app switching is viable: exit_options for many drivers should be 'mobile' rather than 'constrained' or 'trapped', reducing overall suppression. If algorithmic stratification prevents it: most drivers remain monopsony-dependent on the dominant platform, raising suppression and chi.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multi-app switching reduces platform dependence or remains infeasible for most drivers"
+    },
+    {
+      "id": "extractive_intent_ambiguity",
+      "question": "Are the platform's algorithmic tightening mechanisms designed to extract maximum rent, or are they a side effect of optimizing task-matching efficiency under competitive pressure?",
+      "resolution_mechanism": "Comparative analysis of algorithmic design choices across platforms: platforms with explicit rent-extraction goals vs. those optimizing efficiency. Historical analysis of algorithmic changes: were they motivated by profitability (raising extraction) or by operational efficiency or regulatory compliance? Counterfactual: could equivalent efficiency be achieved with lower suppression?",
+      "impact": "If designed for extraction: tangled_rope classification holds, extraction metrics are descriptively accurate. If side effect of efficiency: constraint might reclassify as rope with high theater_ratio (efficiency theater masking actual extraction). The beneficiary/victim framing depends on intent.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether algorithmic tightening is intentional extraction or efficiency side effect"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.60
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.60
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.70
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 5,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 5,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 5,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 5,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 5,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 5,
+        "value": 0.79
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 5,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.41
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 5,
+        "value": 0.54
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 5,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 5,
+        "value": 0.76
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 5,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 5,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 5,
+        "value": 0.41
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 5,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 5,
+        "value": 0.61
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 5,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 5,
+        "value": 0.31
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic management on gig platforms operates as a multi-level coercion system where individual drivers, driver organizations, and labor markets experience sharply differentiated tightening over five years. At the individual level, accessibility of alternatives collapses as the dominant platform consolidates market share (0.68 → 0.85), stakes inflate as algorithmic deactivation threatens household income (0.62 → 0.79), and suppression hardens through rating systems and task-assignment opacity (0.58 → 0.76). Simultaneously, individual resistance deteriorates (0.28 → 0.18) as atomized drivers lose bargaining power. At the organizational level (driver coalitions, unions), accessibility collapse is slower (0.52 → 0.71) because organized actors retain some bargaining channels, but suppression still hardens (0.44 → 0.62) as the platform weaponizes algorithmic ranking against activist drivers. Class-level (labor market) alternatives also collapse (0.45 → 0.62) as the gig platform becomes the primary wage source for a growing cohort. Structurally, the market's regulatory latitude narrows (accessibility 0.38 → 0.51) as regulatory bodies begin imposing constraints, but suppression remains comparatively modest (0.32 → 0.41) because the platform's enforcement mechanism is algorithmic rather than legally formalized. The coercion profile shows systematic divergence: individual level experiences the steepest tightening (accessibility +0.17, stakes +0.17, suppression +0.18); organizational level mounts growing resistance (+0.09) even as suppression hardens; structural level sees incoming regulation but maintains comparative freedom. This divergence instantiates the tangled_rope classification: the platform coordinates task matching (genuine collective problem solved) while simultaneously extracting rent through algorithmic control, and the extraction mechanism hardens at the individual level faster than alternatives-provision occurs at any level.",
+    "key_agents": [
+      "Dependent Driver: Primary victim (powerless/trapped) — single-platform income dependency, regional market concentration, no viable exit",
+      "Multi-App Driver: Secondary victim (moderate/constrained) — higher skills and geographic mobility, but algorithmic stratification and account-management friction limit exit feasibility",
+      "Driver Coalition/Union: Organized resistance (organized/constrained) — growing bargaining power but algorithmic ranking system divides membership, deactivation threat constrains militant action",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) — extracts rent through algorithmic control; consolidates market power; views tightening as efficiency optimization",
+      "Regulatory Authority: External constraint (organized/mobile) — imposing algorithmic transparency and classification mandates; scaffold perspective with sunset carrying regulatory crystallization",
+      "Gig-Economy Ideology: Institutional performance (institutional/arbitrage) — maintains theater of driver autonomy even as algorithmic control deepens; piton classification reflecting degradation of actual flexibility"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The platform captures the wage differential created by algorithmic task assignment, rating stratification, and income volatility management. Base measurement of 0.38 at t0 reflects the constraint's early form when alternatives were plentiful and driver atomization was incomplete. Final measurement of 0.68 reflects consolidation: the dominant platform has captured regional market share exceeding 70%, drivers' multi-app strategies are becoming prohibitively costly due to algorithmic penalties, and income volatility is stabilized (at lower mean) only for high-rated drivers whose acceptance rates exceed 95%. The extraction mechanism is not overt rent collection but rather: (1) Task assignment pricing that undercuts pre-algorithmic wages due to labor oversupply, (2) Income volatility shifting financial risk to drivers while platform maintains steady commission flow, (3) Algorithmic rating system that extracts information (driver behavior, willingness to accept low-priced tasks) used to further optimize pricing. Suppression (0.72): High and rising. The mechanism is not physical coercion but algorithmic: (1) Deactivation threat for low ratings (< 4.6 stars), account suspension for 'problematic' behavior (unionization, accepting rival-platform tasks, contacting regulatory authorities), (2) Task assignment opacity making it impossible to verify fair-matching claims or challenge algorithmic decisions, (3) Rating inflation and soft penalties (lower task frequency) for drivers who decline low-priced assignments, reducing income without formal termination. Suppression_requirement measurement shows steady hardening: 0.54 → 0.72 over the interval. Theater ratio (0.58): Moderate and stable. The platform maintains performative autonomy — drivers 'choose' their hours, 'accept' or 'decline' tasks, set their vehicle preferences — but the algorithmic system constrains these choices: declined tasks reduce ratings and future task frequency, working 'unusual hours' incurs algorithmic penalties, vehicle preferences are ignored if supply is tight. The theater is substantial but less than pure piton (theater_ratio 0.72 in verification bottleneck); the coordinate problem is real (matching supply to demand is genuinely difficult), so the performance is not entirely fake. Accessibility collapse (0.81): Very high. Individual drivers face collapsing alternatives: competing platforms have reduced to 1-2 viable options in most markets, streetwork and traditional taxi medallions are economically non-viable due to capital requirements, full-time employment in equivalent wage jobs is scarce in lower-income regions, retraining into higher-income alternatives requires time and capital the gig-dependent cannot accumulate. Multi-app strategies are theoretically viable but practically costly (account switching friction, algorithmic penalties, learning curves across interface changes). Resistance (0.42): Moderate and declining. Individual drivers mount little resistance (0.18 by t5) due to atomization and fear of deactivation. Driver coalitions and unions mount growing resistance (0.61 by t5) through negotiation, legal challenges, and public organizing, but this resistance remains constrained by the platform's ability to selectively deactivate activist drivers and by regulatory capture risk (many jurisdictions lack labor standards covering gig workers).",
+    "perspectival_gap": "The dependent driver experiences snare (maximum extraction, immobilized by collapsed alternatives, no organized resistance available). The skilled multi-app driver experiences tangled_rope (partial extraction mitigated by skills and mobility, organized resistance available through multi-app strategies, but substantial algorithmic suppression from ranking system). The platform operator experiences rope (coordination of supply/demand, beneficiary position with low experienced suppression, arbitrage options into autonomous technology or geographic expansion). The driver coalition experiences tangled_rope (coordinating scheduling predictability and fare guarantees while being suppressed by selective deactivation of organizers). The regulatory authority experiences scaffold (imposing algorithmic transparency and worker protections, but carrying risk of capture and false sunset). The gig-economy ideology experiences piton (the narrative of autonomy persists as performative theater despite algorithmic control deepening). The divergence is not random: beneficiaries experience rope, victims experience snare or tangled_rope, organized agents experience scaffold or tangled_rope, and institutional narratives experience piton. The perspectival gap is fundamentally the gap between experienced exit capacity and structural exit capacity: drivers have legal freedom to leave but economic impossibility of doing so (trapped); skilled drivers have economic capacity to leave but algorithmic friction and account management costs (constrained); the platform has infinite optionality (arbitrage); the union has some leverage but faces deactivation threat (constrained).",
+    "directionality_logic": "The platform operator is the beneficiary: they extract rent through algorithmic control of task assignment, rating stratification, and price-setting. Directionality for the platform is d ≈ 0.0 (full beneficiary), producing negative χ (subsidy flow). Dependent drivers are victims: they experience high costs (income volatility, deactivation threat, labor exhaustion) and no compensation mechanism. Directionality for dependent drivers is d ≈ 1.0 (full target), producing maximum χ (extraction flow). Skilled multi-app drivers have mixed directionality (d ≈ 0.6): they benefit from task-matching efficiency and reduced search costs but experience suppression and earning volatility, placing them partway between beneficiary and target. The driver coalition occupies d ≈ 0.5-0.6 territory: they coordinate some gains (scheduling predictability when they mount sufficient pressure) but remain suppressed relative to the platform's gains. The platform's exit options (arbitrage) make its d resilient to suppression changes — even if regulation hardens, the platform can exit into autonomous vehicles or geographic expansion, keeping d low and χ negative. Dependent drivers' exit options (trapped) make their d maximum regardless of outside-world change — they cannot exit even if regulation improves, because structural alternatives don't exist. Skilled drivers' exit options (constrained) give them middle d: they could leave but at high cost, so d settles around 0.55-0.65 depending on alternatives' actual cost. The directionality overrides are not needed here: the structural derivation from beneficiary/victim + exit correctly captures the differential experienced extraction.",
+    "mandatrophy_analysis": "MANDATROPHY SIGNATURE: The original mandate of algorithmic platforms was 'efficient matching of supply and demand, reducing friction in temporary labor markets.' At t0 (year 0), this mandate was live: the platform did reduce search friction, increased utilization of driver capacity, and provided genuine alternatives to traditional taxi labor. By t5, the mandate has partly died: efficiency gains are no longer genuine (algorithmic pricing now extracts most efficiency gains as platform rent rather than passing them to drivers), alternatives are collapsing (the platform is the only viable option in many markets), and the labor-market friction reduction is now a fiction (drivers face higher behavioral friction — deactivation threat, rating anxiety, income volatility — than before algorithmic management). The constraint's persistence is explained by mandatrophy: the platform's authority is no longer grounded in efficiency (the mandate that birthed it) but in consolidated market power and path dependency (drivers have no exit, so the platform retains power even after efficiency gains are exhausted). This is the classic mandatrophy pattern: a coordination mechanism (matching) that justified temporary control becomes a pretext for rent extraction once the original problem is solved or the solver becomes entrenched. The remedy would be restoring the mandate — either by (1) opening the algorithmic system to multi-platform arbitrage (regulatory interoperability), (2) reclassifying drivers as employees with labor protections, or (3) building public-utility alternatives. The scaffold perspective (regulatory authority) is attempting exactly this remedy through mandatrophy resolution: imposing algorithmic transparency and classification changes that restore the original efficiency mandate or establish new mandates (worker protection, fair compensation)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_pricing_wage_suppression",
+      "driver_deactivation_threat",
+      "multi_app_arbitrage_closure"
+    ],
+    "dual_formulation_note": "The algorithmic management constraint is upstream of specific pricing and deactivation mechanisms. Wage suppression, deactivation threat, and multi-app arbitrage closure are downstream constraints that manifest the general algorithmic control structure. Each downstream constraint has its own ε and perspectives; the tightening dynamics of algorithmic management create the conditions for extraction at each downstream point."
+  },
+  "stakeholders": [
+    {
+      "name": "dependent_driver",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Drives 50+ hours per week for primary household income; has no training for alternative employment; regional labor market has no equivalent wages outside gig work. Platform is sole income source. Deactivation would mean household inability to pay rent within 2-3 weeks. Experiences task assignment as arbitrary and income as unpredictable; rating score is the only metric controlling access to high-demand work."
+    },
+    {
+      "name": "skilled_multi_app_driver",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Drives 30-40 hours per week while maintaining alternative income or job prospects; has college education or transferable skills; maintains accounts on 2-3 platforms to reduce dependence on any single algorithmic system. Can leave gig work within 3-6 months of financial planning, but faces friction from account management and algorithmic penalties for low acceptance rates. Experiences both task-matching benefit (predictable supply) and suppression (selective task assignment to high-compliance drivers)."
+    },
+    {
+      "name": "driver_coalition",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized driver collective with growing membership (15-25% of platform workforce in major cities by year 5). Negotiates with platform for scheduling predictability, minimum earnings guarantees, and deactivation appeal processes. Mounts public campaigns for regulatory classification change (employee status). Membership includes both dependent and skilled drivers; platform response is selective deactivation of coalition organizers, rating-system suppression for known activists. Has leveraged power (threat of collective withdrawal) but remains constrained by internal division and platform's ability to divide members through ranking."
+    },
+    {
+      "name": "platform_operator",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates multi-market ride-sharing platform with >1 million active drivers globally by year 5. Extracts rent through algorithmic task assignment, commission rates, and selective deactivation of low-compliance drivers. Controls algorithmic design, pricing, and rating system; faces regulatory pressure in select jurisdictions but maintains unilateral control over driver-facing terms. Can exit market segments, pivot to autonomous vehicles, or consolidate competitors. Views algorithmic tightening as efficiency optimization and rational response to labor-market pressure."
+    },
+    {
+      "name": "regulatory_authority",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Municipal and state labor regulators tasked with implementing worker protections and labor standards. By year 5, has passed algorithmic transparency mandates, minimum-earnings requirements, and begun classification review processes in several jurisdictions. Can impose fines, restrict platform licensing, or mandate operational changes. Faces significant lobbying from platform and industry groups; effectiveness varies by jurisdiction (California, EU have stronger mandates; other regions have weaker enforcement). Has leverage through regulatory authority but faces capture risk and political opposition."
+    },
+    {
+      "name": "gig_economy_narrative",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The narrative of 'flexibility' and 'entrepreneurship' that frames gig-platform work as liberation from traditional employment. Persists despite empirical evidence of declining autonomy and rising algorithmic control. Serves as cover story legitimating the platform's unilateral authority and suppressing regulatory response. Maintained through media narratives, platform marketing, and ideological commitment from platform leadership and sympathetic policy makers. The narrative is not an agent but a non-agent institutional force that affects how the constraint is experienced and regulated."
+    }
+  ],
+  "gain_flow": "platform_operator",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Task-to-driver matching: reducing search friction between demand for rides and available driver capacity. Pre-algorithmic matching required street hail or phone dispatch; algorithmic matching dramatically reduces wait times and increases utilization of driver capacity. This is a genuine coordination problem solved.",
+    "transfer_function": "The platform extracts: (1) Commission on every ride (15-30% of fare), (2) Information rents from driver behavior data used to optimize pricing and suppress alternatives, (3) Risk transfer of income volatility to drivers while platform maintains steady commission. The transfer flows from drivers to platform through algorithmic control of task assignment, pricing, and deactivation threat.",
+    "absent_voices": "Prospective entrants (workers considering gig work who decide against it due to reputation of low pay and algorithmic control); workers who have exited and are unavailable for organizing or research; unemployed workers who could use gig work but face algorithmic barriers to entry; competitors to the dominant platform who have been displaced or prevented from entering; regulatory voices from jurisdictions where platform operates without consent (global south, unregulated markets). These groups would object if present but are structurally excluded from negotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If algorithmic management disappeared overnight, labor market would require major reorganization: dependent drivers would face immediate income crisis (housing insecurity, debt default) within weeks; cities would lose primary on-demand transportation supply within days (drivers would require new dispatch infrastructure or return to traditional taxi model); platform operator would lose primary profit mechanism (algorithmic control and commission extraction) and would be forced into alternative business models (autonomous vehicles, employee classification with wage/benefit obligations). The constraint structures household income, transportation systems, and platform valuation; its disappearance would rearrange all three.",
+    "founding_problem": "Transportation matching inefficiency: traditional taxi models required street hail or phone dispatch, leading to dead time for drivers (searching for passengers), long wait times for passengers (searching for taxis), and inefficient vehicle utilization. Algorithmic matching solved this by providing real-time supply-demand clearing.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Pre-platform transportation economics documents show high deadweight loss from matching friction. Testimonials from drivers who switched from street hail to algorithmic platforms report higher utilization and reduced search time. However, by year 5 this corroboration is weakening: drivers report that algorithmic 'efficiency' now manifests as reduced per-ride income despite higher utilization; the efficiency gains are captured by the platform, not shared with drivers. External labor researchers and transportation economists corroborate that matching efficiency was genuinely improved but is now decoupled from driver welfare. The founding problem remains live (matching is still valuable) but the solution has been captured."
+  }
+}
+```

@@ -67,6 +67,7 @@
     constraint_claim/2, human_readable/2, topic_domain/2, recommendation/2, affects_constraint/2,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, intent_viable_alternative/3, intent_alternative_rejected/3,
+    measurement_basis/2,     % measurement_basis(+MID, +Basis) — OQ-102(a) per-time-point provenance; Basis ∈ {observed, projected}; compiler-emitted ONLY when authored (absent = unspecified, NEVER imputed/defaulted — the provenance bit travels with the value or not at all)
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
@@ -101,6 +102,7 @@
     cs_reading_relation/3,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
+    measurement_basis/2,
     suppression_profile/2,
     intent_viable_alternative/3, intent_alternative_rejected/3,
     intent_beneficiary_class/2, intent_power_change/3,

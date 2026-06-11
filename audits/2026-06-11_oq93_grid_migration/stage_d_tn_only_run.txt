@@ -1,0 +1,79 @@
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: /home/scott/bin/structural_dynamics_model/audits/2026-06-11_oq93_grid_migration/grid_probe_tn_only.pl...
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: grid_probe_tn_only...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 16/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 16 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 16 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: grid_probe_tn_only
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: grid_probe_tn_only (0-10)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in grid_probe_tn_only (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in grid_probe_tn_only (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in grid_probe_tn_only (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in grid_probe_tn_only (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 16/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 0
+  Total drift events:  0
+  Critical: 0 | Warning: 0 | Watch: 0
+
+  No drift events detected.
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 10
+Structural Pattern: open(no_gradient_data)
+Confidence:     moderate
+Grid diet:      authored 16/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 16/32]
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  ! ALERT [informational]: perspectival_incoherence detected for grid_probe_tn_only
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+Aggregate Magnitude (Kappa) at Tn: 0.80 [level coverage 4/4: [structural,organizational,class,individual]] [grid diet: authored 16/32, injected 0, imputed 0 — OQ-93] [CONDITIONAL: grid authored 16/32]
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  No unresolved Omegas. System is epistemically complete.
+====================================================

@@ -3,7 +3,7 @@
 Drop-in replacement for the Gemini orchestrator.  Swaps google.genai
 for the Anthropic Python SDK while keeping all pipeline logic identical.
 
-Chains: research → SCOPE → generate → corpus update → reports → essay.
+Chains: research → SCOPE → generate → corpus update → reports → tensions ledger.
 No Streamlit imports.  Pure Python with optional progress callback.
 
 Usage:
@@ -53,7 +53,7 @@ from agent.llm_call import ModelCallError
 
 @dataclass
 class StepResult:
-    step: str           # research | decompose | generate | corpus_update | reports | essay
+    step: str           # research | decompose | generate | corpus_update | reports | ledger
     status: str         # success | error | skipped
     data: Any = None    # step-specific payload
     error: str = ""
@@ -110,14 +110,13 @@ class DRAuditOrchestrator:
     # ── Model mapping ────────────────────────────────────────────────
     # researcher : fast + cheap, equivalent to gemini-2.0-flash
     # architect  : structured output workhorse, equivalent to gemini-2.5-pro
-    # essayist   : long-form synthesis, equivalent to gemini-2.5-pro
+    # (essayist retired 2026-06-11 with the OQ-101 ledger replacement)
     #
     # Change these to claude-opus-4-5-20251101 (or claude-haiku-4-5-20251001)
     # if you want to test at different price points.
     MODELS = {
         "researcher": "claude-haiku-4-5-20251001",
         "architect":  "claude-sonnet-4-5-20250929",
-        "essayist":   "claude-sonnet-4-5-20250929",
     }
 
     # Default max_tokens per role (Claude requires an explicit cap)
@@ -126,10 +125,6 @@ class DRAuditOrchestrator:
         # Stories now carry 12-23 measurements and run 18-24KB JSON (~6-7k tokens);
         # 8192 was the orchestrator-era cap and truncation = parse-fail in batch mode.
         "architect":  16384,
-        # Essay synthesis input scales with the (uncapped) axis count; 12288 was the
-        # 3-axis-era ceiling. 64000 is the Sonnet 4.5 model max — the cap only bills
-        # what is generated. _call_with_retry streams above the non-streaming limit.
-        "essayist":   64000,
     }
 
     def __init__(
@@ -335,10 +330,15 @@ class DRAuditOrchestrator:
         result.steps.append(step)
         result.report_paths = step.data or []
 
-        # Step 6: Essay
-        step = self._step_essay(manifest, result.report_paths, research_context)
+        # Step 6: Tensions ledger (OQ-101: the auto-essay is REMOVED — the
+        # essay FORM collapses plurality regardless of synthesizer/prompt,
+        # operator ruling 2026-06-10; the ledger is deterministic extraction
+        # and cannot over-state by construction. Live synthesis stays with
+        # the operator + the checklist in
+        # audits/2026-06-10_external_review_xprize/README.md.)
+        step = self._step_ledger(generated_ids)
         result.steps.append(step)
-        result.essay = step.data or ""
+        result.essay = ""
 
         result.total_duration_s = time.time() - t0
         self._tally_tokens(result)
@@ -827,69 +827,36 @@ class DRAuditOrchestrator:
         )
 
     # ------------------------------------------------------------------
-    # Step 6: Essay synthesis
+    # Step 6: Tensions ledger (OQ-101 — replaced essay synthesis)
     # ------------------------------------------------------------------
+    # _step_essay REMOVED 2026-06-11 (OQ-101, operator ruling 2026-06-10):
+    # single-voice generative synthesis collapses plurality by FORM (the
+    # auto-essay announced "converges on a single structural conclusion"
+    # over reports that preserved plurality; uke_think over-stated the same
+    # way — invariant under synthesizer swap, so prompt guidance cannot fix
+    # it). The ledger is non-generative extraction; final synthesis is the
+    # operator's, live, with the checklist at
+    # audits/2026-06-10_external_review_xprize/README.md.
 
-    def _step_essay(self, manifest: dict, report_paths: list[Path],
-                    research_context: str) -> StepResult:
+    def _step_ledger(self, generated_ids: list[str]) -> StepResult:
         if self.skip_essay:
-            return StepResult(step="essay", status="skipped")
+            return StepResult(step="ledger", status="skipped")
 
-        self._progress("essay", "Synthesizing essay...")
+        self._progress("ledger", "Extracting tensions ledger (deterministic, no LLM)...")
         t0 = time.time()
-
-        # Gather report texts
-        report_texts = []
-        for rp in report_paths:
-            try:
-                report_texts.append(rp.read_text(encoding="utf-8"))
-            except Exception:
-                pass
-
-        # Build essay prompt
-        prompt = (
-            f"Write a comprehensive analytical essay based on the following materials.\n\n"
-            f"=== SCOPE MANIFEST ===\n{json.dumps(manifest, indent=2)}\n\n"
-            f"=== RESEARCH CONTEXT ===\n{research_context}\n\n"
-        )
-        if report_texts:
-            prompt += "=== CONSTRAINT REPORTS ===\n"
-            for rt in report_texts:
-                prompt += f"\n---\n{rt}\n"
-
         try:
-            text, tin, tout = self._call(
-                prompt,
-                model=self.MODELS["essayist"],
-                max_tokens=self.MAX_TOKENS["essayist"],
-                system_instruction=self.protocols["uke_w"],
-                temperature=0.7,
-            )
+            sys.path.insert(0, str(REPO_ROOT / "python"))
+            import tensions_ledger
+            out_path, n = tensions_ledger.build_ledger(generated_ids or None)
         except Exception as e:
-            self._progress("essay", f"Essay generation failed: {e}")
+            self._progress("ledger", f"Ledger extraction failed: {e}")
             return StepResult(
-                step="essay", status="error", error=str(e),
+                step="ledger", status="error", error=str(e),
                 duration_s=time.time() - t0,
             )
-
-        # Save essay
-        slug = manifest.get("family_id", "essay")
-        essays_dir = REPO_ROOT / "outputs" / "essays"
-        essays_dir.mkdir(parents=True, exist_ok=True)
-        essay_path = essays_dir / f"{slug}.md"
-        essay_path.write_text(text, encoding="utf-8")
-
-        # Also save to agent/analysis/essays/
-        analysis_essays_dir = Path(__file__).resolve().parent / "analysis" / "essays"
-        analysis_essays_dir.mkdir(parents=True, exist_ok=True)
-        analysis_essay_path = analysis_essays_dir / f"{slug}.md"
-        analysis_essay_path.write_text(text, encoding="utf-8")
-
-        self._progress("essay", f"Essay saved to {essay_path.relative_to(REPO_ROOT)}")
-        self._progress("essay", f"Essay also saved to {analysis_essay_path.relative_to(REPO_ROOT)}")
+        self._progress("ledger", f"Ledger ({n} blocks) saved to {out_path}")
         return StepResult(
-            step="essay", status="success", data=text,
-            tokens_in=tin, tokens_out=tout,
+            step="ledger", status="success", data=str(out_path),
             duration_s=time.time() - t0,
         )
 
@@ -1004,7 +971,7 @@ def main():
                              "and prolog/testsets/<run-tag>/. Corpus update and reports are skipped.")
     parser.add_argument("--skip-corpus-update", action="store_true", help="Skip run_pipeline")
     parser.add_argument("--skip-search", action="store_true", help="Skip search grounding")
-    parser.add_argument("--skip-essay", action="store_true", help="Skip essay synthesis")
+    parser.add_argument("--skip-essay", action="store_true", help="Skip the tensions ledger step (flag kept for compatibility; OQ-101 replaced the essay)")
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
     parser.add_argument("--manifest-file", default=None,
                         help="Load frozen SCOPE manifest from file, skip decompose step")
@@ -1079,11 +1046,13 @@ def main():
         print("=" * 60)
         print(json.dumps(result.scope_manifest, indent=2))
 
-    if result.essay:
-        print("\n" + "=" * 60)
-        print("ESSAY")
-        print("=" * 60)
-        print(result.essay)
+    # OQ-101: the essay step is gone; surface the ledger path instead.
+    for s_ in result.steps:
+        if s_.step == "ledger" and s_.status == "success":
+            print("\n" + "=" * 60)
+            print("TENSIONS LEDGER (deterministic — operator synthesizes live)")
+            print("=" * 60)
+            print(f"  {s_.data}")
 
 
 if __name__ == "__main__":

@@ -1218,9 +1218,9 @@ write_verdict_join(S, C, Summary) :-
         format(S, '        "grid_provenance": ', []),
         write_grid_prov(S, GridProv),
         format(S, ',~n', []),
-        MeasProv = meas_prov(MA, MI, MP, MT),
-        format(S, '        "measurement_provenance": {"authored": ~w, "injected": ~w, "imputed": ~w, "total": ~w},~n',
-               [MA, MI, MP, MT]),
+        MeasProv = meas_prov(MA, MI, MP, MProj, MT),
+        format(S, '        "measurement_provenance": {"authored": ~w, "injected": ~w, "imputed": ~w, "projected": ~w, "total": ~w},~n',
+               [MA, MI, MP, MProj, MT]),
         format(S, '        "signature_grade": ', []),
         (   SigGrade == none
         ->  format(S, 'null~n', [])

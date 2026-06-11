@@ -1,0 +1,510 @@
+```json
+{
+  "header": {
+    "constraint_id": "garment_supplychain_audit_theater",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "garment_audit"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.78,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Garment Supplier Code-of-Conduct Audit Theater Regime",
+    "topic_domain": "labor/supply_chain/corporate_responsibility",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "brand_corporations",
+      "audit_intermediaries"
+    ],
+    "victims": [
+      "garment_workers",
+      "factory_compliance_systems"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Garment Worker",
+      "comment": "PERSPECTIVE 1: GARMENT WORKER (SNARE) — Trapped in the compliance regime by economic necessity. Visible coercion (audit performance, wage suppression, speed-up cycles) paired with opaque beneficiary accountability. No exit capacity; bears full cost of extraction while audit theater masks the mechanism from brand consumers. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Factory Management",
+      "comment": "PERSPECTIVE 2: FACTORY MANAGEMENT (TANGLED ROPE) — Coordinates production scale and supply chain logistics (genuine coordination function) while simultaneously extracting from workers via audit-theater compliance cycles. Constrained by audit schedules and certification requirements but can pass costs downstream. Mixed experience: coordination necessary, extraction embedded in the mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Brand Corporation",
+      "comment": "PERSPECTIVE 3: BRAND CORPORATION (ROPE) — Experiences the audit regime as coordination: certified supply chain legitimizes brand claims and manages reputational risk. Net beneficiary with high arbitrage options (can switch suppliers, regions, audit firms). The regime coordinates their sourcing while protecting their margin. Low experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Audit Intermediary Firms",
+      "comment": "PERSPECTIVE 4: AUDIT INTERMEDIARY FIRMS (ROPE) — Benefit from sustained audit demand and certification revenue. Arbitrage option: can exit individual brand relationships. Experience the regime as pure coordination — they solve the brand's verification problem. Revenue tied to audit volume, not to worker outcomes, creating structural misalignment. Low experienced extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Compliance Certification System",
+      "comment": "PERSPECTIVE 5: COMPLIANCE CERTIFICATION SYSTEM (PITON) — The audit ritual persists through institutional inertia despite atrophying function. Theater ratio (0.78) reveals that compliance audits have become primarily performative: standardized checklists, scheduled inspections, favorable scoring pressure, audit avoidance gaming. The original function (protecting workers) has degraded; the ritual continues to extract resources and legitimacy claims. Maintained because alternatives haven't fully displaced it, not because it works."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From the analytical/civilizational vantage, the regime genuinely coordinates global supply chains (legitimate function) while simultaneously extracting from workers through audit gaming, cost pressure transfer, and informational asymmetry. The constraint cannot be described as pure extraction (Snare) because coordination function is real; cannot be described as pure coordination (Rope) because asymmetric extraction is structural. The theatrical dimension (0.78) indicates the extractive mechanisms are deliberately obscured by the audit performance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "audit_avoidance_gaming_extent",
+      "question": "How much of measured 'compliance' reflects actual workplace condition improvement versus sophisticated audit evasion and gaming?",
+      "resolution_mechanism": "Longitudinal worker interview data; comparison of audit findings vs. independent worker-directed assessment; analysis of post-audit condition reversions",
+      "impact": "If gaming dominates (>70%): suppression and theater ratio should be reclassified higher; the regime is primarily extractive masquerading as coordination. If improvement is genuine (>50%): extraction remains but coordination function is more substantive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of audit gaming versus genuine compliance"
+    },
+    {
+      "id": "worker_visibility_of_extraction_mechanism",
+      "question": "Can workers distinguish between legitimate production coordination demands and engineered audit-theater compliance cycles that extract unpaid labor?",
+      "resolution_mechanism": "Worker perception studies; analysis of which audit requirements correlate with worker complaints vs. production efficiency gains; exit-survey data from workers who leave the industry",
+      "impact": "If workers perceive mechanism clearly: suppression should be lower (workers have epistemic clarity); resistance should be higher (organized response possible). If mechanism is opaque: suppression is higher; the theatrical component obscures the extraction, trapping workers cognitively as well as materially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Worker transparency regarding extraction mechanism"
+    },
+    {
+      "id": "audit_schedule_versus_production_needs",
+      "question": "Are audit inspection schedules genuinely random and unannounced, or do they predictably align with garment seasons when factories can absorb preparation costs?",
+      "resolution_mechanism": "Statistical analysis of audit timing across factories, seasons, and order cycles; interviews with audit schedulers and factory management about planning pressure",
+      "impact": "If schedules are strategically timed to low-impact periods: the regime's suppression and theater ratio are intentionally managed by the intermediaries (institutional coordination of an extraction mechanism). If schedules are random: timing advantage is happenstance, not designed extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Audit schedule timing relative to production cycles"
+    },
+    {
+      "id": "beneficiary_accountability_asymmetry",
+      "question": "What enforceable accountability exists for brands if audit data proves false, factories violate findings, or workers report conditions contradicting certified reports?",
+      "resolution_mechanism": "Legal analysis of audit contract terms; case study review of brand response to audit failure disclosures; comparison of worker restitution clauses vs. brand financial penalties",
+      "impact": "If accountability is asymmetric (workers have no recourse, brands face only reputational risk): the extraction mechanism is protected by institutional design. If accountability is symmetric (enforceable standards apply equally): the regime's extractive character is partially constrained.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Asymmetric accountability protecting extraction"
+    },
+    {
+      "id": "theater_ratio_measurement_basis",
+      "question": "How much of theater ratio (0.78) reflects genuine performance of procedural legitimacy versus measurement artifact of standardized audit protocols themselves?",
+      "resolution_mechanism": "Deconstruction of audit protocols: what proportion of checklist items address worker-identified concerns vs. brand risk categories vs. auditor operational convenience? Comparison of auditor training focus (worker welfare vs. certification maintenance)",
+      "impact": "If protocols are worker-centered but execution is theatrical: theater is implementation drift, fixable. If protocols themselves privilege theater over substance: the regime is designed as extractive masquerading as coordination. The claimed_type (tangled_rope) survives either way, but the mandatrophy mechanism differs.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Sources of theater in audit protocol design"
+    },
+    {
+      "id": "individual_suppression_lowering_mechanism",
+      "question": "As individual-level visible coercion decreases (per audit-theater design), does suppression of collective worker organizing increase proportionally?",
+      "resolution_mechanism": "Time-series analysis of union organizing attempts, worker committees, collective grievance mechanisms pre- vs. post-certification regimes; correlation between audit introduction and suppression of independent worker voice institutions",
+      "impact": "If collective suppression rises as individual suppression theaters down: the regime is substituting invisible structural suppression for visible individual coercion (sophisticated extraction mechanism). If both decrease: suppression itself is declining. If both increase: the regime compounds extraction at multiple levels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trade-off between individual and collective suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 10,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.82
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.76
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 10,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 10,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 10,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 10,
+        "value": 0.62
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The garment supply chain audit-theater regime represents a sophisticated extraction mechanism that disguises itself as coordination through procedural legitimacy. Global brands implement code-of-conduct audits and third-party certifications to address labor rights and safety, creating the appearance of accountability while actual working conditions deteriorate or stagnate. The regime operates through a structural paradox: individual-level visible coercion (audit compliance cycles, speed-ups, wage suppression) appears to lower over the interval as audit theater increases (0.52 → 0.78), but structural and class-level suppression rises simultaneously (0.54 → 0.68 at class level). Workers experience this as a substitution: direct supervisory coercion gives way to opaque audit-driven production pressure and restricted collective organizing. The audit regime coordinates global supply networks and legitimizes brand sourcing while systematically obscuring who bears extraction costs and preventing organized worker response.",
+    "key_agents": [
+      "Garment Workers: Primary victims (powerless/trapped) — bear extraction through wage suppression, speed-ups, audit compliance cycles; economic necessity prevents exit; individual visible coercion lowers as audit theater rises, obscuring the mechanism",
+      "Factory Management: Secondary institutional actor (organized/constrained) — coordinate production and pass audit costs downstream to workers; constrained by audit schedules but can arbitrage compliance costs",
+      "Brand Corporations: Primary beneficiary (institutional/arbitrage) — extract legitimacy, risk management, and margin protection; high arbitrage option; experience regime as coordination",
+      "Audit Intermediary Firms: Secondary beneficiary (institutional/arbitrage) — revenue model tied to audit volume, not worker outcomes; arbitrage options allow exit from individual brand relationships; experience as pure coordination",
+      "Factory Compliance Systems: Engineered institutional actor — the apparatus through which audit performance is staged; enables gaming and cost transfer; maintained through institutional inertia (piton characteristic)",
+      "Worker Collective Organizing: Suppressed actor (organized/constrained) — union attempts, worker committees, independent grievance mechanisms face rising organizational-level suppression (0.62 → 0.71) as individual audit theater substitutes",
+      "Analytical Observer: Civilizational seat (analytical/analytical) — identifies the regime as tangled rope: genuine coordination function (global supply logistics) paired with systematic extraction (asymmetric cost, informational, and political power distribution)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, rising. The regime extracts through multiple channels: (1) wage suppression enforced by brand pressure for cost reduction; (2) unpaid audit-preparation labor cycles; (3) speed-ups disguised as production targets needed for audit compliance; (4) information asymmetry (workers lack access to audit reports and brand compliance decisions). The metric rises from 0.58 to 0.68 over the interval because extraction becomes more sophisticated: as visible individual-level suppression decreases (audit theater's cosmetic function), structural and organizational extraction intensifies. The core extraction — profit margin transfer to brands and auditors — remains constant; the obscuration improves. Suppression (0.62): Stable-to-rising. This constraint declares `suppression` as the raw structural property (unscaled), not modulated by context. Individual-level suppression decreases (0.58 → 0.48) as audit theater aestheticizes the regime, but organizational-level suppression increases (0.62 → 0.71) as factory management hardens compliance mechanisms and restricts collective worker voice. Class-level suppression rises (0.54 → 0.68) as independent worker organizing becomes harder. The net effect is suppression substitution, not reduction: visible individual coercion is replaced with invisible structural coercion. Theater ratio (0.78): High, rising. Audit protocols operate primarily through performance of legitimacy rather than substantive worker condition improvement. Standardized checklists cannot capture factory-floor realities; audit schedules allow advance preparation; favorable scoring pressure creates audit-pass incentives unaligned with worker welfare; post-audit reversions are common. Theater increases as brand demand for certification grows and auditors optimize for scalability over rigor. Accessibility collapse (0.71): High. Workers in global garment supply chains face nearly complete closure of exit alternatives: geographic mobility requires capital; alternative employment in garment-producing regions is structurally similar; relocation out of industry requires asset accumulation impossible at garment wages; political boundaries and visa restrictions prevent arbitrage. The audit regime further collapses alternatives by making non-compliant factories difficult to join (audit blacklisting). Resistance (0.55): Moderate, declining. Worker resistance takes multiple forms: individual departure, silent non-compliance, informal organizing, occasional strikes. The metric declines (0.62 → 0.58 at class level) because audit theater suppresses collective organizing while individual exit capacity remains bounded. Organized resistance requires class consciousness and collective action capacity; the regime systematically undermines both.",
+    "perspectival_gap": "This constraint displays maximum perspectival divergence. The garment worker sees a snare: economic entrapment, visible coercion cycles, no exit, no accountability. Factory management sees tangled rope: they coordinate genuine production and supply logistics while simultaneously extracting from workers; constrained but not powerless. The brand corporation sees rope: the audit regime solves their certification and reputational risk problem; they are net beneficiaries with arbitrage options. Audit intermediaries see rope: pure coordination of verification services; revenue streams with exit options. The compliance system itself appears as piton: the audit ritual persists through inertia despite degraded function; theater ratio (0.78) indicates the mechanism is primarily performative. The analytical observer sees tangled rope at civilizational scale: real coordination function (global supply networks genuinely need synchronization) paired with real extraction (asymmetric cost, information, and political power distribution). The perspectival gap opens because directionality differs sharply: workers have high d (victims, trapped) yielding high χ (experienced extraction); brands have low d (beneficiaries, arbitrage) yielding negative χ (experienced subsidy); factory management has moderate d, experiencing both coordination benefits and extraction costs.",
+    "directionality_logic": "Directionality (d) derives from structural position: (1) beneficiary status and exit options determine baseline d for each agent; (2) the engine's sigmoid f(d) transforms d into experienced extractiveness (χ). Workers: d ≈ 1.0 (victims, trapped exit) → f(d) ≈ high χ. Brands: d ≈ 0.1 (beneficiaries, arbitrage exit) → f(d) ≈ negative χ (subsidy). Factory management: d ≈ 0.55 (secondary to both coordination and extraction) → f(d) ≈ moderate χ. Audit intermediaries: d ≈ 0.2 (beneficiaries, arbitrage exit) → f(d) ≈ low χ. The directionality divergence is the mechanism: the same structural constraint produces radically different experienced extractiveness depending on which seat the agent occupies. No directionality override is needed here because the base derivation captures the true asymmetry: workers are trapped victims; brands are mobile beneficiaries; factory management is constrained secondary actors. The beneficiary/victim declarations in base_properties correctly identify the flow direction.",
+    "mandatrophy_analysis": "Mandatrophy unresolved. The constraint's mandate (protect garment worker rights and safety through verified compliance) has partially degraded but formally persists. The original problem the regime was built to solve — unsafe conditions, wage theft, child labor — remains live in many factories, but the audit mechanism has become insufficient to address it. Theater rising (0.52 → 0.78) while structural extraction steady (0.68) or rises suggests the mandate is being displaced by a new function: legitimacy provision for brands. The regime's primary function has shifted from worker protection to brand risk management without formal acknowledgment. This is mandatrophy in motion: the original mandate is theoretically active (audits still claim to address safety and rights), but the operative mandate has become certification provision. Resolution requires either (1) restoration of the mechanism to genuine worker protection (high cost, high resistance from brands and auditors), or (2) formal transition to a new mandate (reframing audits as supply-chain legitimacy theater, not worker-protection mechanism — this would complete the mandatrophy but acknowledge it). The constraint remains unresolved because institutions invest in the old mandate's language while operating under the new mandate's incentives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fast_fashion_cost_pressure",
+      "worker_collective_bargaining_suppression",
+      "audit_intermediary_capture"
+    ],
+    "dual_formulation_note": "The garment supply chain audit theater is downstream of brand demand for cost reduction (fast_fashion_cost_pressure) and upstream of worker organizing suppression (worker_collective_bargaining_suppression). The audit mechanism mediates both: it translates cost pressure into worker-level speed-ups while obscuring the mechanism; it suppresses organizing by making independent worker action appear as audit violation. The audit intermediary capture constraint (audit_firms increasingly dependent on brand budgets, incentivized toward favorable audits) is concurrent, not upstream/downstream."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "garment_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Workers in garment factories in South and Southeast Asia, primarily women, aged 18-45, earn $3-8 USD daily. Their situation is defined by the audit regime as follows: (1) Production speed increases when audits are scheduled to show 'efficiency improvements' to brands; (2) Wages remain suppressed even when audits report 'compliance'; (3) Audit documentation and brand responses are opaque to workers; (4) Attempting to organize independent unions or worker committees risks factory blacklisting; (5) Economic necessity (supporting families, lack of alternative employment) prevents exit from the industry or factory; (6) Visible supervisory coercion (yelling, threatening termination) has decreased as audit theater increases, but structural coercion (throughput quotas, piece-rate wage systems) has intensified. Workers bear the extraction through unpaid compliance labor, wage suppression, speed-ups, and exclusion from the governance of the system that controls their work."
+    },
+    {
+      "name": "factory_management",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Factory managers operate within the audit regime's constraints: they must maintain certifications to retain brand contracts. Their situation includes: (1) Scheduling production and compliance cycles around audit timelines; (2) Passing cost pressures from brands downstream to workers via wage suppression and speed-ups; (3) Managing the appearance of compliance while maintaining cost competitiveness; (4) Constrained by audit requirements but able to arbitrage compliance costs (hiring temporary workers pre-audit, then laying them off; preparing documents that do not reflect daily practice); (5) Dependent on brand contracts for revenue, so cannot refuse audit demands. Factory management coordinates the supply logistics (matching orders to production capacity, coordinating across shifts and product lines) while simultaneously extracting from workers by enforcing audit-driven production cycles that benefit brands."
+    },
+    {
+      "name": "brand_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Multinational apparel brands (Nike, Adidas, H&M, etc.) benefit from the audit regime through: (1) Certified supply chains that provide reputational protection against labor-rights criticism; (2) Cost reduction enabled by audits that pressure factories to suppress wages and speed up production; (3) Risk transfer: audits create liability shielding if labor violations occur (brands can claim they audited and found compliance); (4) Arbitrage options: brands can switch factories, audit firms, or production regions if a factory loses certification or audit costs rise; (5) Market legitimacy: certifications enable premium positioning (sustainability claims, ethical sourcing) that command higher margins. Brands experience the audit regime as coordination: it solves the problem of verifying supply chain conditions across global production networks. They are net beneficiaries with exit capacity."
+    },
+    {
+      "name": "audit_intermediary_firms",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Third-party audit companies (SGS, Bureau Veritas, Intertek, etc.) and certification bodies profit from the audit regime through: (1) Audit fees per factory inspection ($500-5000 per audit, typically 2-4 audits per factory annually); (2) Certification and training fees (initial certification, recertification, remediation consultation); (3) Revenue model incentivizes audit volume, not rigor (more audits = more revenue); (4) Can exit individual brand relationships if demands become too costly; (5) Market competition among auditors reduces pressure for substantive investigation (brands choose firms willing to pass more factories). Audit intermediaries experience the regime as pure coordination: they solve brands' verification problem. They are net beneficiaries."
+    },
+    {
+      "name": "factory_compliance_systems",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The institutional apparatus of audit protocols, checklists, scoring rubrics, certification standards, and compliance documentation systems. This is not an agent but a structured system: it embodies the regime's design choices about what gets measured, how factories demonstrate compliance, and what counts as 'passing.' The compliance system's situation is institutional reproduction: it persists through habit, regulatory requirement, and brand demand, even as its effectiveness at protecting workers declines. It enables gaming (factories prepare for audits, then revert to non-compliant conditions) and cost transfer (workers absorb the labor of compliance preparation)."
+    },
+    {
+      "name": "worker_organizing_potential",
+      "role": "excluded",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Independent worker unions, worker committees, and collective bargaining mechanisms that could organize workers to demand higher wages, safer conditions, and participation in factory governance. These are not present in the audit regime or are actively suppressed. The situation is absence: workers lack an organized voice in the system that controls their labor. Union organizers face factory retaliation, visa restrictions, and political suppression in many garment-producing countries. Worker committees formed during audits are often dissolved post-audit. This excluded voice represents the mechanism by which workers could challenge extraction if they had collective organizing capacity."
+    },
+    {
+      "name": "consumer_awareness",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Brand consumers in wealthy countries who could, in principle, demand accountability if they understood the gap between audit theater and actual conditions. Currently excluded from the regime because audit reports are not transparent, brands control the narrative, and the media coverage of garment labor is episodic rather than structural. Consumers have the purchasing power and informational access to challenge the regime, but are systematically positioned outside it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The regime coordinates global garment supply networks by creating standardized audit protocols that allow brands to verify (or claim to verify) labor practices across hundreds of factories in dozens of countries. Without this coordination mechanism, brands would face fragmented, non-comparable factory information, making it difficult to manage scale. The coordination solves a real problem: global supply chains require synchronization of product specifications, quality standards, delivery timelines, and (ostensibly) labor standards. The audit regime provides a common language and verification structure for this coordination.",
+    "transfer_function": "The regime transfers: (1) Labor value from workers to brands and auditors via wage suppression, unpaid compliance labor, and opportunity cost of restricted organizing; (2) Risk from brands to factories and workers (liability for violations is pushed to factory management, worker protection responsibility is pushed onto audits); (3) Legitimacy and market premium to brands (certified supply chains enable sustainability claims and premium pricing). The flow is asymmetric: workers provide labor under suppressed terms; factories provide management labor and compliance administration; brands extract profit margin and reputational value; auditors extract fees.",
+    "absent_voices": "Independent worker voices are absent: no workers sit on brand governance committees, no worker representatives review audit findings, no worker unions are consulted on audit protocol design. Garment-worker organizing efforts in producing countries are either excluded by design (not invited to participate in brand decisions) or suppressed (union organizers face retaliation). Consumer voices are absent: brand customers in wealthy countries are not informed about the gap between audit theater and actual conditions; they are not invited to demand transparency. Independent labor-rights NGOs are present but operate in an advisory capacity without decision-making power. The excluded voices represent power positions that could contest the extraction: workers could demand higher wages and collective bargaining; consumers could demand transparency and accountability; unions could enforce labor standards.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the audit regime disappeared overnight, global garment supply networks would face a coordination crisis: brands would lack a common verification mechanism, factory relationships would rely on direct negotiation, and labor standards would revert to bilateral agreement without third-party oversight. Factories would no longer face audit compliance cycles, allowing faster production and (potentially) higher wages if competitive pressure forced wage increases. Workers' ability to organize would increase because audit suppression would be removed. Brands would lose their certification legitimacy and would face immediate pressure to establish alternative verification mechanisms or retreat from ethical-sourcing claims. The market would not remain unchanged: new coordination mechanisms would emerge (brands might develop internal monitoring, rely on factory reputation, or form direct partnerships), but the current regime's specific structure would be gone.",
+    "founding_problem": "The founding problem was legitimate: garment supply chains in the 1990s-2000s had severe labor violations (child labor, forced overtime, wage theft, unsafe conditions) that were largely invisible to brands and consumers. Brands faced activist pressure and reputational risk. Third-party audits emerged to address the problem: creating transparency, documenting conditions, and providing accountability for code-of-conduct violations. The founding mandate was worker protection through verified compliance.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem's status is contested by different stakeholders: (1) Brands claim the problem has been substantially addressed (audits work, conditions have improved); (2) Worker-rights organizations report that serious violations persist in many audited factories and that audit theater masks continued exploitation; (3) Independent researchers find mixed evidence: some conditions have improved in some factories, but wage suppression and speed-ups have intensified; (4) Workers themselves report that visible coercion has decreased but structural pressure has increased. The attestation most independent from the benefiting parties comes from labor-rights NGOs and academic research: both indicate that the founding problem (systematic labor violations) remains live, but that audits are insufficient to address it and increasingly function as a legitimacy mechanism for brands rather than a protection mechanism for workers. The regime itself claims the problem is 'dead' (audits prove compliance), but this claim is self-interested because audits are the beneficiary of that narrative."
+  },
+  "gain_flow": "brand_corporations",
+  "fixing_cost": "prohibitive"
+}
+```

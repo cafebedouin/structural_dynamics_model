@@ -171,6 +171,13 @@ def _build_multifile_declarations(data):
     if meas and not any(m["metric"] == "suppression_requirement" for m in meas):
         decls.append("narrative_ontology:suppression_profile/2")
 
+    # OQ-102(a) per-time-point basis provenance: explicit fact, not an MID
+    # naming convention — the provenance bit travels WITH the value. Emitted
+    # only when authored; never imputed (absent = unspecified).
+    grid_pts = (data.get("coercion_grid") or {}).get("points") or []
+    if any(m.get("basis") for m in meas) or any(p.get("basis") for p in grid_pts):
+        decls.append("narrative_ontology:measurement_basis/2")
+
     if data.get("boltzmann", {}).get("coordination_type"):
         decls.append("narrative_ontology:coordination_type/2")
 
@@ -345,6 +352,56 @@ def _generate_tests(data):
 # Main generation
 # ---------------------------------------------------------------------------
 
+def _check_coercion_grid(grid, interval, cid):
+    """OQ-93 referential integrity for the leveled coercion grid (stage-2
+    negative battery, audits/2026-06-11_oq93_grid_migration/PREREGISTRATION.md).
+    Fail-loud on EVERY generation path; --no-validate does not bypass it
+    (the gain_flow pattern). The schema cannot express any of these
+    (cross-field value references).
+
+    Battery 1 — out-of-interval/out-of-endpoint time points. Grid t0/tn must
+    EQUAL interval start/end: every consumer reads at the declared interval's
+    endpoints (pattern_analysis at interval T0, compute_completeness slots at
+    interval T0/Tn), so a sub-interval grid would be schema-valid but silently
+    unconsumed — the success-shaped-absence class this migration retires. The
+    shared-by-construction t0/tn is also what makes OQ-105-style misalignment
+    unrepresentable here.
+
+    Battery 3 — duplicate (metric, level, time_point) slot REJECTED LOUD.
+    This is the COMPILER CONTRACT that licenses first-solution-only reads
+    downstream (once/1 in pattern_analysis:compute_completeness is
+    defense-in-depth under this contract, not primary semantics)."""
+    t0, tn = grid["t0"], grid["tn"]
+    if not t0 < tn:
+        raise ValueError(
+            f"coercion_grid t0={t0} must be < tn={tn}; REJECTED "
+            f"(OQ-93 grid integrity)")
+    if t0 != interval["start"] or tn != interval["end"]:
+        raise ValueError(
+            f"coercion_grid endpoints (t0={t0}, tn={tn}) must equal the "
+            f"declared interval ({interval['start']}, {interval['end']}) — "
+            f"consumers read at the interval's endpoints, so a sub-interval "
+            f"grid would never be consumed; REJECTED (OQ-93 battery 1)")
+    seen = {}
+    for i, p in enumerate(grid["points"]):
+        if p["time_point"] not in (t0, tn):
+            raise ValueError(
+                f"coercion_grid points[{i}] time_point={p['time_point']} is "
+                f"not a grid endpoint {{t0={t0}, tn={tn}}}; REJECTED "
+                f"(OQ-93 battery 1 — the stray-anchor class)")
+        slot = (p["metric"], p["level"], p["time_point"])
+        if slot in seen:
+            raise ValueError(
+                f"coercion_grid points[{i}] duplicates slot "
+                f"(metric={p['metric']}, level={p['level']}, "
+                f"time_point={p['time_point']}) already authored at "
+                f"points[{seen[slot]}]; REJECTED (OQ-93 battery 3 — "
+                f"duplicate slot authorship; this rejection is the contract "
+                f"that licenses once/1 slot-capping in "
+                f"pattern_analysis:compute_completeness)")
+        seen[slot] = i
+
+
 def generate_pl(data):
     """Generate the .pl file content from validated JSON data."""
     # OQ-92 referential integrity (Stage B precondition 1): a gain_flow naming a
@@ -362,6 +419,10 @@ def generate_pl(data):
                 f"(OQ-92 step-3 referential integrity, "
                 f"audits/2026-06-10_oq92_step3_preregistration/)"
             )
+    # OQ-93 grid integrity — same discipline, see _check_coercion_grid.
+    if data.get("coercion_grid") is not None:
+        _check_coercion_grid(data["coercion_grid"], data["interval"],
+                             data["header"]["constraint_id"])
     cid = data["header"]["constraint_id"]
     header = data["header"]
     bp = data["base_properties"]
@@ -836,25 +897,30 @@ def generate_pl(data):
         be_measurements = [m for m in measurements if m["metric"] == "base_extractiveness"]
         sr_measurements = [m for m in measurements if m["metric"] == "suppression_requirement"]
 
+        # OQ-102(a): basis emitted beside the value it qualifies, same MID —
+        # an explicit fact, never an ID convention; absent basis emits nothing.
+        def emit_scalar(m, metric_atom):
+            mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
+            emit(f"narrative_ontology:measurement({mid}, {cid}, {metric_atom}, {m['time_point']}, {m['value']}).")
+            if m.get("basis"):
+                emit(f"narrative_ontology:measurement_basis({mid}, {m['basis']}).")
+
         if tr_measurements:
             emit("% Theater ratio over time")
             for m in tr_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, theater_ratio, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "theater_ratio")
             emit()
 
         if be_measurements:
             emit("% Extraction over time")
             for m in be_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, base_extractiveness, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "base_extractiveness")
             emit()
 
         if sr_measurements:
             emit("% Suppression requirement over time")
             for m in sr_measurements:
-                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
-                emit(f"narrative_ontology:measurement({mid}, {cid}, suppression_requirement, {m['time_point']}, {m['value']}).")
+                emit_scalar(m, "suppression_requirement")
             emit()
         else:
             # OQ-46 bucketed-Backed ruling (2026-06-11): other series were authored
@@ -866,6 +932,26 @@ def generate_pl(data):
             emit("% Suppression authored static: scalar-only by design, no temporal series")
             emit(f"narrative_ontology:suppression_profile({cid}, static).")
             emit()
+
+    grid = data.get("coercion_grid")
+    if grid:
+        # OQ-93 keep-and-migrate (ruling (b), 2026-06-10): authored leveled
+        # grid. Source IDs carry the _grid_ prefix and are neither m_gen nor
+        # repair_m_* — data_repair:source_class/2 classifies them AUTHORED
+        # (the default clause). Sorted slot order keeps regeneration stable
+        # under authoring-order permutations.
+        emit(f"% Leveled coercion grid (OQ-93): {len(grid['points'])}/32 "
+             f"authored points at t0={grid['t0']}, tn={grid['tn']}")
+        spts = sorted(grid["points"],
+                      key=lambda p: (p["metric"], p["level"], p["time_point"]))
+        for i, p in enumerate(spts, 1):
+            mid = f"{meas_prefix}_grid_{i:02d}"
+            emit(f"narrative_ontology:measurement({mid}, {cid}, "
+                 f"{p['metric']}({p['level']}), {p['time_point']}, "
+                 f"{p['value']}).")
+            if p.get("basis"):
+                emit(f"narrative_ontology:measurement_basis({mid}, {p['basis']}).")
+        emit()
     emit()
 
     # ------------------------------------------------------------------
