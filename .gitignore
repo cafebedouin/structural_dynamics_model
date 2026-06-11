@@ -1,5 +1,10 @@
-# Generated pipeline outputs
-outputs/
+# Generated pipeline outputs — ANCHORED to top level (2026-06-11, OQ-33 close session):
+# the unanchored form silently swallowed ANY nested dir named outputs/, including audit
+# evidence (KNOWN_STATE 2026-06-11). Never rely on this line to ignore a nested outputs dir.
+/outputs/
+# Chimera-era archived run outputs (332 files / 40M), never tracked — kept ignored by its
+# own line when the anchor landed (status-quo preservation; track-or-not is an open call).
+prolog/archives/datasets/original_json/outputs/
 
 # Make stamps
 .stamps/
