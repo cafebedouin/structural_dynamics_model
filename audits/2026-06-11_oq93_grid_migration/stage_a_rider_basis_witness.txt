@@ -1,0 +1,8 @@
+  [PASS] 11 duplicate (metric,level,time) slot is schema-VALID BY DESIGN (compiler's job, Stage B)
+  [PASS] 12 time_point outside {t0,tn} is schema-VALID BY DESIGN (compiler's job, Stage B)
+  [PASS] 13 extra property on grid point — bit at intended guard: $.coercion_grid.points.0: Additional properties are not allowed ('surprise' was unexpected)
+  [PASS] R1 basis=projected on scalar measurement
+  [PASS] R2 basis bad enum ('guessed') — bit at intended guard: $.measurements.6.basis: 'guessed' is not one of ['observed', 'projected']
+  [PASS] R3 basis=observed on grid point
+16/16 battery cases pass
+additivity sweep: 143 files; pre-existing invalid under OLD schema: 91; error-set deltas old->new: 0; NEW failures: 0

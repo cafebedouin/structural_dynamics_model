@@ -156,6 +156,9 @@
           "type": "number",
           "minimum": 0.0,
           "maximum": 1.0
+        },
+        "basis": {
+          "$ref": "#/$defs/MeasurementBasis"
         }
       },
       "additionalProperties": false
@@ -258,9 +261,20 @@
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$",
           "description": "Override the auto-generated measurement ID"
+        },
+        "basis": {
+          "$ref": "#/$defs/MeasurementBasis"
         }
       },
       "additionalProperties": false
+    },
+    "MeasurementBasis": {
+      "description": "OQ-102(a) per-time-point provenance: 'observed' = the point reports something that has happened/been measured; 'projected' = an authored guess about a future or unmeasured state (the competition_timeline_pressure class — endpoints authored for a competition running to ~2030). OPTIONAL: absent = unspecified (back-compat with every pre-rider story); NEVER imputed or defaulted — an absent basis stays absent at every read site (the provenance bit travels with the value, or not at all). Compiler emits narrative_ontology:measurement_basis(MID, Basis) only when authored.",
+      "type": "string",
+      "enum": [
+        "observed",
+        "projected"
+      ]
     },
     "DirectionalityOverride": {
       "type": "object",
