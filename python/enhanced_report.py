@@ -659,11 +659,25 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
                 f"    Live index:       {live_index} (scope={sv}, power={pv})"
             )
 
-        # Drift events
+        # Drift events — OQ-102(b): each event's severity prints WITH it, and
+        # the series-provenance caveat joins at the same read site (a
+        # [critical] derived from projected/non-authored points must not
+        # print bare while its caveat sits in another section).
         drift = entry.get("drift_events", [])
         if drift:
-            drift_types = ", ".join(d.get("type", "?") for d in drift)
-            lines.append(f"    Drift events:     {len(drift)} — {drift_types}")
+            drift_types = ", ".join(
+                f"{d.get('type', '?')} [{d.get('severity', '?')}]" for d in drift)
+            mp = (entry.get("verdict_join") or {}).get("measurement_provenance") or {}
+            caveats = []
+            if mp.get("projected", 0) > 0:
+                caveats.append(
+                    f"{mp['projected']}/{mp.get('total', '?')} series points "
+                    f"authored-as-projected")
+            if mp.get("total", 0) > mp.get("authored", 0):
+                caveats.append(
+                    f"{mp['total'] - mp.get('authored', 0)}/{mp['total']} non-authored")
+            caveat = f" [{'; '.join(caveats)} — OQ-102]" if caveats else ""
+            lines.append(f"    Drift events:     {len(drift)} — {drift_types}{caveat}")
 
         # Tangled rope fields
         t_psi = entry.get("tangled_psi")
@@ -764,16 +778,21 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
 
     lines = ["", "--- TEMPORAL TRAJECTORY ---", ""]
 
-    # OQ-98: the trajectory eats measurement/5 — carry its provenance here
-    # (constraint-level; per-time-point provenance stays open under OQ-102).
+    # OQ-98/OQ-102: the trajectory eats measurement/5 — carry its provenance
+    # here. Per-time-point basis (rider (a)) surfaces as the projected bucket:
+    # authored-as-projected points are guesses, not observations, and the
+    # caveat joins the trajectory at this read site (rider (b)).
     mp = (entry.get("verdict_join") or {}).get("measurement_provenance")
     if mp:
         authored, mp_total = mp.get("authored", 0), mp.get("total", 0)
+        projected = mp.get("projected", 0)
+        bits = []
         if authored < mp_total:
-            lines.append(
-                f"    [CONDITIONAL: {mp_total - authored}/{mp_total} measurement"
-                f" points non-authored — OQ-93/OQ-102]"
-            )
+            bits.append(f"{mp_total - authored}/{mp_total} measurement points non-authored")
+        if projected:
+            bits.append(f"{projected}/{mp_total} authored-as-PROJECTED (guesses, not observations)")
+        if bits:
+            lines.append(f"    [CONDITIONAL: {'; '.join(bits)} — OQ-93/OQ-102]")
 
     # Trigger A: non-monotone shapes
     for m in trigger_a_metrics:

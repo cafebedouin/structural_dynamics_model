@@ -140,8 +140,9 @@ generate_drift_report(C) :-
     scan_constraint_drift(C, Events),
     (   Events = []
     ->  format('  No drift events detected.~n')
-    ;   forall(member(drift(Type, Ev, Sev), Events),
-              format('  [~w] ~w: ~w~n', [Sev, Type, Ev]))
+    ;   drift_confidence_caveat(C, Caveat),
+        forall(member(drift(Type, Ev, Sev), Events),
+              format('  [~w~w] ~w: ~w~n', [Sev, Caveat, Type, Ev]))
     ),
     % Transition paths
     (   transition_paths:transition_path(C, From, To, TEv)
@@ -185,5 +186,20 @@ generate_drift_report(C) :-
 
 print_constraint_drift(C, Events) :-
     format('  ~w:~n', [C]),
+    drift_confidence_caveat(C, Caveat),
     forall(member(drift(Type, Evidence, Severity), Events),
-           format('    [~w] ~w~n        Evidence: ~w~n', [Severity, Type, Evidence])).
+           format('    [~w~w] ~w~n        Evidence: ~w~n', [Severity, Caveat, Type, Evidence])).
+
+%% drift_confidence_caveat(+C, -Caveat)
+%  OQ-102(b): the severity token joins the constraint's own trajectory
+%  confidence AT THE READ SITE (the OQ-98 join pattern) — a [critical]
+%  event must not print bare while its `confidence: low` caveat sits 100
+%  lines away (witness: competition_timeline_pressure_report.md, two
+%  authored-guess endpoints rendered as a bare critical event). Caveat is
+%  the terminal-prediction confidence when one exists; '' when the
+%  prediction abstains (no fabricated confidence on absence).
+drift_confidence_caveat(C, Caveat) :-
+    (   catch(transition_paths:predicted_terminal_state(C, _State, Conf), _, fail)
+    ->  format(atom(Caveat), ' | confidence: ~w', [Conf])
+    ;   Caveat = ''
+    ).
