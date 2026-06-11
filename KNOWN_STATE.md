@@ -134,6 +134,25 @@ pre-derivation: the two non-story `cs_axiom_contradiction` files exported the fa
 nullable, null = no authored scalar); (3) report-layer 0.0 defaults CONFORMING as-is (print
 MISSING). OQ-43 resolved in the same stroke, fifth-instance disposition recorded there.
 
+## 2026-06-12 — First-contact gate C-range corrected: slot-count!=32 removed (partial grids are LEGAL); first misfire had halted the pipeline on an OQ-90 flip target
+**Files:** python/grid_first_contact_gate.py, python/grid_audit_ledger.json
+**Tier:** landed
+
+The gate's C-range clause carried the BATCH addendum's full-grid mandate ("slot count != 32 =
+battery failure") into the standing first-contact gate — but partial grids are operator-CONFIRMED
+legal (no fraction threshold; consumer-named-levels decides sufficiency; the coverage read
+reports OPEN where insufficient). First live-prompt opt-in story
+(`institutional_trust_erosion`, Pew run, 12/32 all-valid points, endpoints correct, no dupes)
+was excluded and run_pipeline HALTED — colliding with OQ-90, whose witnessed delta needed the
+story. Corrected: C-range = value outside [0,1] OR duplicate slots (the genuinely
+schema/compiler-unreachable shapes); C-flat now evaluates the slot-groups PRESENT (>= 2 levels
+at a (metric,time); fires only if evaluable groups exist and all span < 0.05); partial grids
+pass with a `coverage` field + prompt-compliance NOTE in the ledger (surfaced, never excluded).
+Witness 6/6 (`audits/2026-06-12_gate_partial_fix/gate_partial_fix_witness.txt`): misfire story
+passes as legal partial; C-range still bites on out-of-range + duplicate; ECHO/FLAT controls
+unchanged; NEW control — partial-but-degenerate grid still fires C-flat. Pipeline exit 0 on the
+62-corpus, story ledgered `coverage: 12/32`. OQ-90's two-row delta preserved.
+
 ## 2026-06-11 — OQ-93 FLIP RULED + EXECUTED: live prompt opt-in grid section; κ gate → first-contact gate; 10 batch stories promoted (corpus 48→58); two latent defects found by promotion
 **Files:** prompts/constraint_story_generation_prompt_json.md, prompts/grid_batch_addendum.md, python/grid_first_contact_gate.py, python/grid_audit_ledger.json, python/run_pipeline.py, python/python_test_suite.py, prolog/data_repair.pl, prolog/validation_suite.pl, json/, prolog/testsets/
 **Tier:** landed
