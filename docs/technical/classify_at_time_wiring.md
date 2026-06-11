@@ -18,6 +18,15 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 > temporal-suppression work on per-constraint `Backed` coverage instead. STOPGAP language below
 > this block is pre-ruling history.
 
+> **BUCKETED 2026-06-11 (same-day follow-on; `audits/2026-06-11_oq46_backed_reconciliation/`).**
+> Scalar-supplied rows no longer share one `Backed=false`: a compiler-stamped
+> `narrative_ontology:suppression_profile(C, static)` (emitted only when other series are authored
+> and suppression is deliberately omitted) makes the sanctioned static scalar **back**
+> (`SuppBacked=true`); grid-misalignment substitution (series exists, off-grid Time — OQ-105) and
+> UNMARKED seriesless rows stay `false` (fail-closed). Blanket-backing was rejected with witness
+> (59 flips/20 fab_adjacent vs 79/0). Anything below that reads "scalar ⇒ Backed=false" is
+> pre-bucketing history.
+
 > **RECONCILED 2026-05-31 (Commit A / row-23 + a non-arc schema-enum change).** This section's
 > original (2026-05-30) claims are **now false** and were left as a cautionary record of
 > distrust-the-aggregate: (a) `suppression_requirement` is **not** schema-forbidden — the
