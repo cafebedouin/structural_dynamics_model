@@ -514,7 +514,7 @@ signature_confidence(C, false_natural_law, Confidence) :-
     ), !.
 
 signature_confidence(C, false_ci_rope, Confidence) :-
-    (   false_ci_rope(C, fcr_evidence(_, FailedTests, _, _, _, _))
+    (   false_ci_rope(C, fcr_evidence(_, FailedTests, _, _, _, _, _))
     ->  length(FailedTests, NF),
         (   NF >= 3 -> Confidence = high
         ;   NF >= 2 -> Confidence = medium
@@ -724,7 +724,7 @@ explain_signature(C, false_natural_law, Explanation) :-
     ).
 
 explain_signature(C, false_ci_rope, Explanation) :-
-    (   false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore, _, _, _))
+    (   false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore, _, _, _, _))
     ->  length(FailedTests, NF),
         format(atom(Explanation),
                'FALSE CI_ROPE signature for ~w: Appears to be rope (~w) but fails ~d Boltzmann structural test(s): ~w. Coupling score=~w. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.',
@@ -1205,14 +1205,25 @@ determine_pure_subtype(_, pure_unclassified).
 %  Boltzmann structural tests.
 %
 %  Evidence = fcr_evidence(AppearanceType, FailedTests, CouplingScore,
-%                           ExcessExtraction, ScopeResult, ZeroExcessFlag)
+%                           ExcessExtraction, ScopeResult, ZeroExcessFlag,
+%                           CaptureDisposition)
 %
 %  ZeroExcessFlag = zero_excess_exemption_present | none
 %    Records whether the zero-excess exemption condition was met.
 %    Diagnostic only — does not gate the certificate.
+%
+%  CaptureDisposition = captured | piton_candidate | transient_neglect | absent
+%    (OQ-90) The cut's verdict over the authored receipt surface, recorded as
+%    evidence. Populated here at the constructor; the FCR-branch refinement
+%    (resolve_with_perspectival_check, Phase 3) reads piton_candidate from
+%    narrative_ontology directly, NOT from this field — the field is the
+%    evidence trail / per-diffuse-story trace for ruling 4, not a classification
+%    input. 'absent' = the receipt surface was not authored enough to decide
+%    (fail-closed: never promotes to piton).
 
 false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
-                               ExcessExtraction, ScopeResult, ZeroExcessFlag)) :-
+                               ExcessExtraction, ScopeResult, ZeroExcessFlag,
+                               CaptureDisposition)) :-
     % Must appear to be a rope from metrics
     appears_as_rope(C, AppearanceType),
 
@@ -1240,7 +1251,25 @@ false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
     (   zero_excess_coupling_only(ExcessExtraction, FailedTests)
     ->  ZeroExcessFlag = zero_excess_exemption_present
     ;   ZeroExcessFlag = none
-    ).
+    ),
+
+    % OQ-90: record the capture-cut verdict as evidence (does NOT gate the
+    % certificate; classification reads narrative_ontology:piton_candidate/1
+    % directly in resolve_with_perspectival_check, Phase 3).
+    capture_disposition(C, CaptureDisposition).
+
+%% capture_disposition(+C, -Disposition)
+%  OQ-90: the authored receipt-surface verdict, recorded into fcr_evidence/7.
+%  'captured' first (the fail-safe danger reading wins any malformed double-
+%  authoring); piton_candidate/transient_neglect are mutually exclusive uncaptured
+%  cases; 'absent' = surface not authored enough to decide (fail-closed).
+capture_disposition(C, captured) :-
+    narrative_ontology:constraint_captured(C), !.
+capture_disposition(C, piton_candidate) :-
+    narrative_ontology:piton_candidate(C), !.
+capture_disposition(C, transient_neglect) :-
+    narrative_ontology:transient_neglect(C), !.
+capture_disposition(_, absent).
 
 %% zero_excess_coupling_only(+Excess, +FailedTests)
 %  True when the ONLY FCR evidence is Boltzmann coupling and

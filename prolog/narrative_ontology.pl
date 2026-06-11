@@ -318,6 +318,34 @@ constraint_captured(C) :-
     Receiver \== diffuse,
     constraint_stakeholder(C, Receiver, _, _, _, _, _), !.
 
+%% uncaptured(+C)
+%  OQ-90: the piton-side dual of constraint_captured/1. POSITIVE authored — true
+%  iff gain_flow is the literal atom 'diffuse'. NOT \+constraint_captured/1: an
+%  ABSENT receipt surface is neither captured nor uncaptured (fail-closed both
+%  ways — it stays FCR-subsumed, never promoted to piton). Validated cut:
+%  audits/2026-06-10_gain_flow_prototype/ (PASS 8/8).
+uncaptured(C) :-
+    stakeholder_gain_flow(C, diffuse).
+
+%% piton_candidate(+C)
+%  OQ-90: uncaptured AND prohibitive to fix => piton-flavored (a structural
+%  pin nobody profits from removing, too costly to remove). Consumed by the
+%  signature_detection FCR-branch refinement (resolve_with_perspectival_check,
+%  guarded by config:param(piton_refinement_enabled, 1)).
+piton_candidate(C) :-
+    uncaptured(C),
+    fixing_cost_class(C, prohibitive).
+
+%% transient_neglect(+C)
+%  OQ-90: uncaptured AND cheap to fix => not a piton, transient neglect (no one
+%  has bothered, but removal is cheap). Diagnostic predicate + evidence
+%  annotation ONLY (operator ruling, 2026-06-11) — NOT a new type and NOT a
+%  classification driver. The corpus cell is currently EMPTY (all live diffuse
+%  claims are prohibitive); its only witness is prototype control 5.
+transient_neglect(C) :-
+    uncaptured(C),
+    fixing_cost_class(C, cheap).
+
 %% has_coordination_function(?ConstraintID)
 %  Check if constraint solves a collective action problem.
 %  Evidence: Has multiple beneficiaries or provides network effects.
