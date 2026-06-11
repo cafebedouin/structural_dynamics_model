@@ -1312,9 +1312,11 @@ pipeline. **Fixed 2026-06-11 (honest line, Pattern-6/OQ-96 pass-carries-witness)
 now prints joined-table sizes, and an empty resistance table prints
 `⚠ piton check VACUOUS: 0 resistance_to_change facts authored — check cannot fire (OQ-37)` — never
 the checkmark. Witness: suite run 2026-06-11, line pasted in
-`audits/2026-06-11_oq46_backed_reconciliation/`. **Removal/replacement of the heuristic itself is
-gated on OQ-90** (the FCR-branch piton refinement is the legitimate successor; OQ-90's controls
-already falsified suppression/theater proxies for piton). The row's other consumers are unchanged
+`audits/2026-06-11_oq46_backed_reconciliation/`. **Removal/replacement of the heuristic itself was
+gated on OQ-90 — now UNBLOCKED:** OQ-90 RESOLVED 2026-06-11 (the FCR-branch capture-keyed piton
+refinement is the legitimate successor; the old `Supp≤0.2` `piton_signature` dispatch was already
+retired in `fc724ab2`). The `validate_edge_cases` resistance-keyed piton check can now be removed
+outright (its successor exists and fires); doing so is the remaining OQ-37 step for this consumer. The row's other consumers are unchanged
 and still under this OQ's author-or-remove fork: `drift_events.pl:141,214` (`safe_metric` has no
 default, so the `function_obsolescence` detector silently never fires — zero-findings-by-absence;
 siblings `alternatives_available`, `sunset_time`, and `has_sunset_clause` are equally unauthored,
@@ -3894,129 +3896,20 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — operationalize the piton type; rulings recorded, build pending).
 
-**Status:** open — design ruled (operator 2026-06-10); the `has_computed_capturer` proxy HALTED at its discriminating control (2026-06-09, see below + OQ-92); piton refinement (Steps 2–4) now gated on an authored gain-flow surface (OQ-92 / GAP-10), not yet wired/tested. OQ-92 rulings (a)/(b) RECORDED 2026-06-10: step 2 is a BOTH-fields prototype (gain_flow + fixing_cost_class) against the eight-control battery in `audits/2026-06-10_gain_flow_prototype/` — a capture-only prototype passes the cheap-fix control vacuously (its discriminating power IS the fixing_cost cut). Prototype RUN 2026-06-10: Outcome 1 PASS 8/8 — fixing_cost witnessed load-bearing (case 5 vs 4: seat-identical, only the cost class separates piton_candidate from transient_neglect); the OQ-92 step-3 surface build is cleared; piton refinement (Steps 2–4 here) still waits on the BUILT surface, not the prototype. SURFACE BUILT + WIRED 2026-06-10 (OQ-92 resolved): `stakeholder_gain_flow/2` + `fixing_cost_class/2` authored end-to-end (schema→compiler→prompt→generated batch), `constraint_captured/1` computed live, benignity gates landed with two-sided controls. **Steps 2–4 are UNBLOCKED — the piton refinement (`uncaptured/1` from authored-diffuse + `fixing_cost_class` piton/transient-neglect cut, in the FCR branch) is now pure build on a real surface.** One data flag from the first batch: 6/6 stories authored named-capture, 0 diffuse — a diffuse-starved corpus leaves `piton_candidate` unreachable in practice; check diffuse prevalence (and the OQ-92 prompt-iterate loop) before reading a piton sweep as evidence of absence.
+**Status:** resolved — capture-keyed piton refinement built, wired, and witnessed end-to-end (2026-06-11). Audit: `audits/2026-06-11_oq90_piton_refinement/`. Commits: `f2368073` (substrate: `uncaptured/1`, `piton_candidate/1`, `transient_neglect/1` in `narrative_ontology.pl`; `fcr_evidence/6→/7` capture-disposition), `64448411` (output-changing: the `resolve_with_perspectival_check/4` clause + `config:param(piton_refinement_enabled, 1)`), `fc724ab2` (retire the `Supp≤0.2` `piton_signature` dispatch + helper), `3a4e0209` (prompt).
 
-**Origin.** Cross-corpus liveness sweep (OQ-89 evidence / KNOWN_STATE 2026-06-10) left `piton` dark
-across ~5,222 stories. Gate-logic positive control passed (the sub-predicate fires on its canonical
-profile — not dead code). Investigation then established: (1) the cascade-shadow test shows
-`coordination_scaffold` is reachable but **`piton` is shadowed by FCR** — a piton has real
-distributed extraction, low ε trips `appears_as_rope`, a Boltzmann failure fires FCR (priority 2)
-before the profile fallback (priority 6); (2) the piton's defining feature is a **cost-asymmetry**
-(per-entity extraction < the fixing cost for whoever could fix it → rational inaction), of which the
-engine gate's `theater_ratio ≥ 0.70` + `resistance > 0.2` are lossy *symptom* proxies.
+**Origin.** Cross-corpus liveness sweep left `piton` dark across ~5,222 stories: a piton's real distributed extraction trips `appears_as_rope`, a Boltzmann failure fires FCR (priority 2) before the profile fallback (priority 6), so every piton was subsumed as `false_ci_rope`. The old profile gate keyed on `theater_ratio`/`Supp≤0.2` — lossy symptom proxies, both witnessed wrong (2026-06-10 controls).
 
-**Representability (2026-06-10 — corrected; do NOT read as "fully representable").** The proxy got
-*better* (theater_ratio → stakeholder structure), but the mechanism is still NOT directly checkable.
-The piton condition has TWO terms — `extraction < fixing_cost` — and the available predicates encode
-only the first:
-- **Fixer = `agenda_setter`** (`constraint_stakeholder/7`, "sets/administers/enforces"), base
-  `d = 0.12`; **`payer`** (`d = 0.85`, typically several = "extracts from everyone," can't set the
-  agenda). Authored + populated (22 agenda_setter / 57 payer). This encodes **"the fixer isn't much
-  hurt"** — NOT `extraction < fixing_cost`.
-- **The low-d proxy is therefore lossy in BOTH directions** (it is a symptom-proxy too, not the
-  mechanism — the same caveat that applied to theater_ratio): it **misses** the canonical
-  collective-action piton (a *moderately*-hurt fixer for whom fixing still costs more than the
-  benefit — moderate d, excluded by a low-d gate), and it **false-positives transient neglect**
-  (low-d agenda_setter + distributed payers + no capturer, but a *cheap* fix nobody has gotten to —
-  not a piton).
-- **`fixing_cost` (or benefit-of-fixing) is therefore potentially LOAD-BEARING, not "deferred."**
-  Without it, piton and transient-neglect are the same gate output. Whether the structural proxy is
-  good enough is **OPEN**, settled by the positive control below — not asserted either way.
+**Resolution (the executed rulings).** Piton ⊂ `false_ci_rope`, refined IN-BRANCH (no cascade reorder): once FCR fires, `piton_candidate/1` (= authored-`diffuse` gain_flow ∧ `prohibitive` fixing_cost, both POSITIVE-authored, never NAF) relabels `dr_type` → `piton` while `dr_signature` stays `false_ci_rope`. The snare/piton split turns on *computed* capture (`constraint_captured/1`); absence fails closed (stays FCR-subsumed, never promoted). `transient_neglect/1` is a diagnostic + `fcr_evidence` disposition field only — no new type (operator ruling 2026-06-11).
 
-**Operator rulings (2026-06-10):**
-- **Piton ⊂ `false_ci_rope`, refined IN-BRANCH** — do NOT reorder the cascade; once FCR fires, run a
-  piton sub-check. (Piton-as-false_ci_rope is acceptable subsumption; refine to recover the type.)
-- **Snare implies a benefiting party; keep piton OUT of snare.** The split therefore turns on
-  *capture*: snare = a seat actually captures the extraction; piton = uncaptured dead-weight.
-- **The no-capture test must be COMPUTED, never authored-absence.** Gating piton on "no beneficiary
-  authored" is a Pattern-5 regression and violates the engine's own OQ-83 R3 ("authored absence must
-  not drive classification overrides"; cf. `in_contention`/`consensus_provenance` are computed-not-
-  authored). Use per-seat χ (`chi_for_stakeholder/3` / `dr_type_for_stakeholder/3`): NAF over the
-  *computed* capturer test, not over an authored fact.
+**Witnesses (audit dir).** Phase-0 K=0 diffuse hand-audit 0/1 on `institutional_trust_erosion` (`diffuse_audit_institutional_trust_erosion.md`); Phase-2 four-shape control battery through the production `dr_type/3` (as-is→piton; captured/cheap/absent twins fall through; param=0 kill-switch→tangled_rope); Phase-3 `piton_refinement_enabled` 0↔1 pipeline diff = **exactly two rows** `tangled_rope→piton` (`regulatory_measurement_gap`, `institutional_trust_erosion`), signatures unchanged, leak controls held; Phase-4 two-sided retirement (positive control fires-before/falls-through-after + 0-row corpus diff).
 
-**Build spec — PROPOSAL (not wired; χ-sign convention to verify before building):**
-```prolog
-% Piton = special false_ci_rope: in the FCR branch, cost-asymmetry holds and NO seat captures.
-piton_refinement(C) :-
-    false_ci_rope(C, _),                         % already rope-appearing + Boltzmann-failing
-    stakeholder_seats:role_of(C, _, agenda_setter),   % a fixer exists (low-d administrator)
-    findall(P, stakeholder_seats:role_of(C, P, payer), Payers), Payers \= [],  % distributed cost-bearers
-    drl_core:get_raw_suppression(C, Supp), Supp =< 0.2,    % persists by inertia, not active enforcement (positive metric, not NAF)
-    \+ has_computed_capturer(C).                 % NAF over a COMPUTED test (Pattern-5-safe), not authored-absence
-% A seat positively COMPUTES as a capturer (verify χ-sign: capturer = beneficiary-side seat whose
-% chi_for_stakeholder shows real gain). If none does -> uncaptured -> piton; if one does -> snare-flavored.
-has_computed_capturer(C) :-
-    stakeholder_seats:role_of(C, N, R), stakeholder_seats:beneficiary_side(R),
-    stakeholder_seats:chi_for_stakeholder(C, N, Chi), seat_captures(Chi).   % seat_captures/1 TBD per χ convention
-```
-Wiring point: inside `signature_detection` where FCR resolves (a label refinement on the false_ci_rope
-result), NOT a new cascade clause.
+**One-row vs two-row note (substrate drift).** The plan pre-registered ONE flip on a 48-testset snapshot; the live corpus is 52 (4 untracked working-tree testsets feed the pipeline, incl. `institutional_trust_erosion`). Re-registered to 2 rows after the hand-audit gate was extended to the new diffuse claim (operator-ruled). Reproducibility flag: a fresh clone at HEAD sees only 48 testsets and would reproduce a 1-row delta — the 4 untracked testsets must be committed for the 2-row result to reproduce (`corpus_drift_provenance_and_reregistration.md`).
 
-**Capture-cut discriminating control (2026-06-09) — HALT, proxy rejected.** The `has_computed_capturer`
-proposal above was run against four pre-registered seat-sets (genuine capturer / mild-favorable
-non-capturer / DMV-no-beneficiary / realistic DMV-with-agenda_setter). **It false-positives:** the cut
-fires TRUE on the mild-favorable non-capturer (two-part witness: candidate-set membership TRUE *and*
-cut TRUE on a seat with no `constraint_beneficiary`) and on the uncaptured designed DMV's
-agenda_setter. Root cause: χ is **extraction-from-seat, not gain-to-seat**, and every beneficiary-side
-role gets low `d`, so the cut degenerates into "C has a beneficiary-side-*role* seat at all," not "C
-has a capturer." So `seat_captures/1` is **not constructible from current signals** — capture needs an
-authored gain-flow surface (**OQ-92 / GAP-10**). Steps 2–4 (piton refinement, `Supp ≤ 0.2` gate
-retirement) stay gated on OQ-92. Witness: `audits/2026-06-09_capture_axis_cut_control/`.
-[Amended 2026-06-10: step 2 = the both-fields eight-control prototype recorded in OQ-92's Rulings
-block — the cheap-fix control below discriminates only via the fixing_cost cut, so it is folded
-into that battery rather than run capture-only.]
-
-**Decisive pre-wiring control (the fixing_cost-is-load-bearing test).** Construct a
-**cheap-fix-not-yet-done** story: low-d `agenda_setter` + distributed high-d `payer`s + no computed
-capturer + low suppression — i.e. structurally identical to the piton seat-set, but where the fix is
-*cheap and simply not yet done* (transient neglect, NOT a piton). Run the refinement. If it **claims
-this as piton**, the structural proxy cannot separate piton from transient-neglect → `fixing_cost`
-(or benefit-of-fixing) is **load-bearing and must be added before wiring**, not deferred. Only if some
-already-authored signal (e.g. persistence/`evolving` over a long measurement series, or FCR-context)
-demonstrably separates the two may the proxy ship without the scalar. Also run: DMV-shaped set → piton;
-snare-shaped set (a seat captures) → NOT piton; then the cross-corpus sweep (pitons surface, snares
-don't leak in). **Until this control is run, "representable via the stakeholder layer" stays OPEN, not
-a finding.** [Folded 2026-06-10 into the OQ-92 step-2 battery as control 5 (cheap_fix) with
-`fixing_cost_class` hand-authored — both piton and transient-neglect are uncaptured, so this control
-discriminates only if the prototype reads the fixing_cost field.]
-
-**Control results (2026-06-10) — falsification-grade, witnessed; correct the gate, hold the rebuild.**
-Ran a DMV-shaped vector (designed, enforced **Supp 0.5**, distributed extraction, no concentrated
-capturer): → **snare** (`constructed_high_extraction`), coordination_fn=no, beneficiary=no. So a
-*high-suppression uncaptured* extraction reads as snare ⇒ **`Supp ≤ 0.2` cannot be the piton
-discriminator** (the live `piton_signature` gate AND the prior `repair_dynamics.md` §4 framing are
-both wrong on this), and the engine's **snare is capture-blind**. Capture and suppression are
-**separable on this witness**; *"orthogonal across the range"* is the opened hypothesis, not
-established by one point. Also ran the coordination side: undesigned/emergent coordination
-(`emerges_naturally` + agent-beneficiaries, low ε) → **`false_summit_mountain`**; designed-but-
-unmaintained coordination → **`false_ci_rope`** — two distinct cells, so **"emergent coordination =
-one cell / piton's mirror" is falsified (scatter, witnessed)**. Emergent coordination → **FSM**, but
-whether FSM is its **correct home or a lossy shadow** (subsumption vs under-naming — the same shape as
-the piton question that opened this thread) is **OPEN**: the probe shows the cell is non-empty, not
-that FSM is the right home. Witnesses:
-`audits/2026-06-10_signature_liveness_crosscorpus/{dmv_cell_control.out,desirepath_cell_control.out}`.
-**Construction held for operator go:** the capture×coordination rebuild, the per-seat-χ no-capturer
-detector wiring, and the `Supp ≤ 0.2` gate fix are *builds*, not deletions — they wait. What landed
-here is only the witnessed correction (gate is wrong; snare is capture-blind; coordination scatters).
-
-**Prompt change — PROPOSAL (non-leaky; replaces the symptom/threshold guidance at
-`constraint_story_generation_prompt_json.md:176`):**
-> * **Piton**: extracts from many but persists by inertia — no party benefits enough to maintain it
->   and no party is hurt enough to fix it. Name the `agenda_setter` (who administers it and could
->   change it) and the `payer`s (who bear its diffuse costs). A piton characteristically has **no**
->   stakeholder who meaningfully profits — no concentrated beneficiary capturing the extraction; if
->   one exists, it is a snare, not a piton. Author `theater_ratio` honestly if performative
->   maintenance is present, but theatricality is a symptom, not the test — the test is the
->   cost-asymmetry: the administrator could change it, but the cost to fix exceeds what it bears.
-
-No thresholds recited (no `≥ 0.70`); keys generation on the stakeholder roles (the representable
-signal), not on hitting a metric target.
-
-**What resolution would change:** piton stops being structurally dark — it surfaces as a computed
-refinement of the false ropes it currently hides inside, distinguished from snares by *computed*
-capture. Cross-refs: OQ-89 (cross-corpus liveness + fail-closed), OQ-83 (stakeholder layer / R3
-authored-absence rule), build_discipline *"Unwired ≠ worthless"* + Pattern 5. Provenance:
-KNOWN_STATE 2026-06-10, `audits/2026-06-10_signature_liveness_crosscorpus/`.
+**Carry-forward (operative, not blockers):**
+- **Named next step:** post-prompt-change diffuse-eliciting batch (OQ-92 prompt-iterate loop), gated behind the K=0 diffuse hand-audit for that batch. Prompt change (`3a4e0209`) is OPEN-as-to-effect until that batch runs.
+- `transient_neglect` cell is corpus-EMPTY (all 4 live diffuse claims are `prohibitive`); only witness is prototype control 5 + Phase-2 shape 3. Read "piton sparse" only WITH the upstream-shadow caveat: 4 piton_candidates exist, 2 are CI_Rope-shadowed upstream of FCR (not a refinement bug).
+- **Superseded-pending (not removed, ruled scope):** the two `drl_core` theater-based piton clauses (`drl_core.pl:344`, `:403`); the maxent piton `default_profile` (theater-keyed, `maxent_classifier.pl:153–155`) is now stale vs the capture definition; `python/axiom_reachability.py:171,207` is a cascade replica modeling the removed `piton_signature` clause. New tracked item if/when these are reconciled.
 
 ---
 

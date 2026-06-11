@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-90 RESOLVED: capture-keyed piton refinement in the FCR branch (piton un-darkened)
+**Files:** prolog/signature_detection.pl, prolog/narrative_ontology.pl, prolog/config.pl, prolog/config_schema.pl, prolog/signature_mapper.pl, prompts/constraint_story_generation_prompt_json.md, ISSUES.md
+**Tier:** landed
+
+`piton` was dark corpus-wide: a piton's real distributed extraction trips `appears_as_rope`, a
+Boltzmann failure fires FCR before the profile fallback, so every piton was subsumed as
+`false_ci_rope`. Built the refinement (audit: `audits/2026-06-11_oq90_piton_refinement/`; commits
+`f2368073` substrate, `64448411` output-changing, `fc724ab2` retirement, `3a4e0209` prompt):
+
+- `narrative_ontology.pl`: `uncaptured/1` (POSITIVE-authored `diffuse`, never NAF), `piton_candidate/1`
+  (uncaptured ∧ `prohibitive` fixing_cost), `transient_neglect/1` (uncaptured ∧ `cheap`; diagnostic only).
+- `signature_detection.pl`: `fcr_evidence/6→/7` capture-disposition field (evidence trail, populated at
+  the constructor — does NOT gate); new `resolve_with_perspectival_check/4` clause between the
+  dead-coordination piton clause and the generic FCR clause, guarded by `piton_candidate/1` +
+  `config:param(piton_refinement_enabled, 1)`. **Invariant: `dr_signature` stays `false_ci_rope`; only
+  `dr_type` becomes `piton`.** Retired the `Supp≤0.2` `piton_signature` dispatch + helper (atom-keyed
+  handlers left with superseded comments).
+- **TRIPWIRE — `piton_refinement_enabled` fires even when `fcr_override_enabled=0`** (separate axis,
+  intentional). Dedicated kill-switch; do not fold into `fcr_override_enabled`.
+- **TRIPWIRE — read "piton sparse" only WITH the upstream-shadow caveat:** 4 corpus piton_candidates,
+  but only 2 reach FCR (the other 2 are CI_Rope-certified upstream — designed shadow, not a bug).
+  `transient_neglect` cell is corpus-EMPTY (all live diffuse claims are prohibitive).
+- Output delta (`piton_refinement_enabled` 0→1): exactly 2 rows `tangled_rope→piton`
+  (`regulatory_measurement_gap`, `institutional_trust_erosion`); leak controls `organization_floor` +
+  `reprogramming_safety_toxicity` stay `rope`. The plan pre-registered 1 row on a 48-testset snapshot;
+  live corpus is 52 (4 untracked working-tree testsets feed the pipeline) — re-registered to 2 after
+  the K=0 diffuse hand-audit was extended to `institutional_trust_erosion`. **Reproducibility flag:** a
+  fresh clone at HEAD sees only 48 testsets (the 4 are untracked) → would reproduce a 1-row delta; the
+  4 untracked testsets must be committed for the 2-row result to reproduce.
+- Superseded-pending (not removed): `drl_core.pl:344,403` theater piton clauses; maxent piton
+  `default_profile` (`maxent_classifier.pl:153–155`, theater-keyed, now stale vs the capture
+  definition); `python/axiom_reachability.py:171,207` cascade replica models the removed clause.
+- Unblocks OQ-37's `validate_edge_cases` resistance-keyed piton-check removal (successor now exists).
+
 ## 2026-06-11 — OQ-44 RESOLVED: fail-closed-on-absence ruled (statute for new gates, marker carve-out, common-law for existing); OQ-43 closed; thermal_dissipation_constraint un-certified
 **Files:** prolog/signature_detection.pl, prolog/drl_core.pl, python/shared/schemas.py, ISSUES.md
 **Tier:** landed

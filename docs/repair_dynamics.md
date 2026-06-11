@@ -74,8 +74,18 @@ five cost-finding questions structurally cannot surface). Dead reason → fixing
 > and the witness shows capture and suppression are **separable on this point** — *"orthogonal
 > across the range"* is the hypothesis it opens, **not** established by one witness. The
 > suppression-keyed two-mechanism framing immediately below is therefore the *prior, corrected*
-> reading; the capture×coordination rebuild is **construction held for operator go** (OQ-90).
-> Witness: `audits/2026-06-10_signature_liveness_crosscorpus/dmv_cell_control.out`.
+> reading; the capture×coordination rebuild was **construction held for operator go** (OQ-90) and is
+> now **BUILT** (OQ-90 RESOLVED 2026-06-11). Witness:
+> `audits/2026-06-10_signature_liveness_crosscorpus/dmv_cell_control.out`.
+>
+> **[BUILT 2026-06-11 — OQ-90 RESOLVED].** The capture-keyed split is wired: `piton` is now a
+> refinement inside the FCR branch (`signature_detection:resolve_with_perspectival_check/4`), keyed on
+> `narrative_ontology:piton_candidate/1` (= authored-`diffuse` gain_flow ∧ `prohibitive` fixing_cost;
+> uncaptured AND too-costly-to-fix). `dr_signature` stays `false_ci_rope`; only `dr_type` becomes
+> `piton`. The `Supp ≤ 0.2` `piton_signature` gate is retired. So **suppression is no longer the
+> discriminator — capture is** (computed via `constraint_captured/1`, fail-closed on absence). The
+> `fixing_cost` term below is now represented (the `cheap`/`prohibitive` cut), resolving the OQ-90
+> open question. Audit: `audits/2026-06-11_oq90_piton_refinement/`.
 
 Two persistence mechanisms were *thought* to fall out, split by suppression (now corrected above):
 
@@ -83,8 +93,10 @@ Two persistence mechanisms were *thought* to fall out, split by suppression (now
   scaffold must be erected before the constraint can be touched → expensive.
 - **Piton persistence (diffuse benefit / rational inaction):** unfixed because no concentrated party
   is hurt enough, or benefits enough, to act (per-fixer benefit < even a cheap fix). The defining
-  feature is **uncaptured** (the DMV is a piton-by-mechanism at Supp 0.5, invisible to the live
-  `Supp ≤ 0.2` gate). It is OQ-90's open `fixing_cost` question, not scaffold-cost. **[OPEN]**
+  feature is **uncaptured** (the DMV is a piton-by-mechanism at Supp 0.5, invisible to the retired
+  `Supp ≤ 0.2` gate). It was OQ-90's open `fixing_cost` question, not scaffold-cost. **[BUILT
+  2026-06-11 — OQ-90 RESOLVED: `piton_candidate/1` = uncaptured ∧ `prohibitive` fixing_cost; the
+  `cheap`/`prohibitive` cut now represents the fixing-cost term.]**
 
 ## 5. The same dynamics as the committer/CS axis — and why they stay decoupled
 

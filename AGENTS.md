@@ -323,6 +323,18 @@ Override hierarchy:
 Signatures override; they do not replace the metric path. `dr_type/3` always
 runs `metric_based_type_indexed/3` first.
 
+**Piton is an FCR-branch refinement (OQ-90, 2026-06-11):** `piton` is NOT a signature;
+`dr_signature` stays `false_ci_rope` while `dr_type` becomes `piton`. The refinement fires inside
+`resolve_with_perspectival_check/4` (between the dead-coordination piton clause and the generic FCR
+clause), keyed on `narrative_ontology:piton_candidate/1` (= authored-`diffuse` gain_flow ∧
+`prohibitive` fixing_cost — uncaptured AND prohibitive to fix), guarded by
+`config:param(piton_refinement_enabled, 1)` (a separate axis from `fcr_override_enabled` — it fires
+even when that is 0). Any new report/consumer that keys on signature will see `false_ci_rope` for a
+piton; key on `dr_type` to surface the piton. The old `Supp ≤ 0.2` `piton_signature` profile gate is
+retired. Reading "piton sparse" requires the upstream-shadow caveat: a piton_candidate that is
+CI_Rope-certified upstream of FCR never reaches the refinement (designed shadow). Audit:
+`audits/2026-06-11_oq90_piton_refinement/`.
+
 ### Deprecated predicates — do not call
 
 | Deprecated | Replaced by | File |
