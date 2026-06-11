@@ -1478,129 +1478,86 @@ conflated `affects_constraint/2` with the genuinely-empty `intent_*` tables (OQ-
 
 **Ω-type:** Ω_C (design choice — one fail-closed-vs-vacuous-pass policy across the class; generalized by OQ-44).
 
-**Status:** open — Policy decision should be made once across the class, not per site.
+**Status:** resolved — the class policy was made once at OQ-44 (operator ruling 2026-06-11; see
+that entry's ruling block). **Fifth-instance disposition recorded here: FAIL-CLOSED, output-changing,
+un-certification accepted.** `has_viable_alternatives/2` default `false`→`unknown` (commit
+`8b5a34b8`): the empty `intent_viable_alternative/3` table (GAP-08) no longer satisfies
+`natural_law_signature`'s `HasAlternatives == false`, so `thermal_dissipation_constraint` lost its
+NL certification (signature → `ambiguous`; the NL→mountain modal override dropped, surfacing
+rope at moderate/institutional and a `perspectival_incoherence` red verdict). NL certifications
+return when the intent layer or an authored alternatives table exists. Witnesses:
+`audits/2026-06-11_oq44_policy_close/`.
 
-A recurring structural pattern, now seen in four places: an engine gate is **satisfied by the
-absence of data**, so it passes vacuously and the result reads as a positive finding when it is
-really an unauthored blank. The gate looks like it discriminates; on the current corpus it cannot,
-because its input is empty or defaulted. Naming the class so the adjudication happens once:
-
-- **G6 fabricated defaults (OQ-41).** `Supp=0.5` / `BaseX=0.5` substitute for absent authored
-  data; the engine computes on a value nobody authored. Fail-closed vs impute.
-- **Empty `intent_*` tables (OQ-36, OQ-37).** The `intent_*` family is genuinely empty corpus-wide;
-  `forall(...)` and findall-driven consumers succeed vacuously.
-- **`get_metric_average:160` default `0.5`** for metrics with no `constraint_metric` rows.
-- **NL beneficiary gate (this item, 2026-05-31 gap check).** `natural_law_signature`'s
-  `BeneficiaryCount == 0` (`signature_detection.pl:295`) reads `count_power_beneficiaries`, which
-  joins `affects_constraint` x `intent_power_change`. `intent_power_change` is empty corpus-wide
-  (**0 facts** measured on testsets_3000), so `BeneficiaryCount == 0` holds for **every** constraint
-  by absence, not by checking. The gate is dormant-over-empty-table, not discriminating.
-
-**NL-specific evidence (gap check, testsets_3000, 3380 constraints):**
-- 404 constraints carry the `natural_law` engine signature (Pattern-3 unbound query + post-filter).
-- **0/404** carry a `constraint_beneficiary/2` fact (the corpus holds **6739** such facts, none on
-  the 404). FSM coverage of the NL population is therefore empirically **0/404 by cascade
-  construction**: `false_summit_mountain` (`:87`) is checked before `natural_law` (`:97`) and
-  requires `Beneficiaries \= []`, so it catches every beneficiary-bearing mountain first — the NL
-  residue is exactly the beneficiary-blind constraints. FSM is **not** belt-and-suspenders backup
-  for the NL gate; the `:84-86` source comment claiming so was corrected on 2026-05-31.
-- **0/404** carry an `intent_power_change` beneficiary (the gate's own source is empty).
-
-**What the 404 NL certifications currently mean:** "no beneficiary **authored**," not "no
-beneficiary **exists**." The engine-insensitivity result stands (T.1: all 404 are bucket-A
-metric-real mountains, eps 0.00-0.22, supp 0.00-0.04) — the engine will not manufacture beneficiaries.
-
-**Decision (one policy across the class):** for each satisfy-on-absence gate, choose
-fail-closed (require the datum before the gate may pass) vs keep-vacuous-pass (accept that the gate
-is inert on the current corpus and document it as such). **Activating the NL beneficiary gate is a
-content re-audit of the 404** (do any actually have asymmetric winners hidden behind an emergence
-claim?), **not engine maintenance** — populating `intent_power_change` faithfully for genuine
-natural laws yields zero beneficiaries and zero flips; it only bites a mis-authored false-natural-law.
-**Connects to OQ-41 (G6), OQ-36/OQ-37 (empty `intent_*`).**
-
-**Fifth instance (verified 2026-06-05, triage Item 2):** `signature_detection:has_viable_alternatives/2` defaults `false` on the empty `intent_viable_alternative/3` table, and `natural_law_signature` requires `HasAlternatives == false` — the absence SUPPORTS NL certification (pass-open). The sibling BeneficiaryCount gate was re-sourced (D3 fail-close); this one was not. Fail-closing it would un-certify every NL constraint until the intent layer is fed or the gate re-sourced — an output-changing design call not yet made. See `design_gaps.md` GAP-08.
+**Origin (compressed; full history in git).** Named the class — gates satisfied by data-absence
+reading as positive findings — across four then five instances: G6 fabricated defaults (OQ-41),
+empty `intent_*` consumers (OQ-36/OQ-37), `get_metric_average` 0.5, the NL `BeneficiaryCount == 0`
+gate over empty `intent_power_change` (re-sourced to `agent_beneficiary`, D3 fail-close), and
+`has_viable_alternatives` (above). Kernel_v1-regime evidence (404 NL certs = "no beneficiary
+authored," not "none exists") and the FSM-is-the-only-beneficiary-screen correction are preserved
+in git history. **Still-operative pointer:** auditing whether any NL constraint hides a real winner
+is a content re-audit — OQ-45, not engine maintenance.
 
 ## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
 
 **Ω-type:** Ω_C (design choice — the engine-wide fail-closed-on-absence policy; decided once for OQ-41/36/37/43).
 
-**Status:** open — (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
-class (OQ-41, OQ-36/OQ-37, OQ-43).
+**Status:** resolved — operator ruling 2026-06-11; the ruling block below is still-operative
+(compress-on-close exception). Audit evidence: `audits/2026-06-11_oq46_backed_reconciliation/`
+(probe1 gate census, live corpus); dispositions witnessed: `audits/2026-06-11_oq44_policy_close/`.
 
-**Premise:** the engine must distinguish "authored to be zero" from "absent" everywhere, and
-never let absence satisfy a gate. Zero-because-measured and zero-because-missing collapse to the
-same value at a comparison site, so a gate that cannot tell them apart is testing nothing whenever
-its source table is empty. The NL beneficiary gate (OQ-43) is one confirmed instance; this OQ asks
-whether there are others, and fixes the policy once.
+**POLICY RULING (operator, 2026-06-11) — extracted from converged practice, the clock as
+confirmation only.** Five independent conversions went fail-closed on real data and none was
+reverted: `count_power_beneficiaries` re-source (D3), `get_metric_average` → `unknown` sentinel
+(2026-06-08), `classify_at_time` row-23 fail-close + bucketed Backed (OQ-41/OQ-46),
+`verify_vector_at` witness-carrying pass (OQ-96), the piton vacuity line (OQ-37). The common-law
+phase converged; the instance-counter condition from adjudication instance #1 (gate-type +
+report-type spanned, next instance arrived 2026-06-10) is satisfied, but it is the *confirmation*
+the jurisprudence ran its course — not the ground of the ruling. The ruling:
 
-**What to audit.** Enumerate every engine gate of these shapes and, for each, record whether its
-driving data is non-empty in the active corpus:
-1. Equality/threshold over a `findall` count — `Count == 0`, `Count =< K`
-   (e.g. `count_power_beneficiaries`, `signature_detection.pl:165`).
-2. Threshold over a metric that defaults on absence — `V =< Ceil` where `V` comes from a
-   `( ... -> V = Measured ; V = Default )` fallback (cross-link Pattern 4 / OQ-41 sites:
-   `get_metric_average:160` `0.5` — **RESOLVED 2026-06-09, fail-closed to `unknown`, see OQ-89**;
-   `classify_at_time` `Supp=0.5` — **RESOLVED: row-23 fail-close, then sanctioned scalar +
-   bucketed Backed, OQ-46 2026-06-11**; `get_raw_suppression` `Supp=0` (`drl_core.pl:95-97`) —
-   still open, but blast radius witnessed ~0 on the live corpus (2026-06-11,
-   `audits/2026-06-11_oq46_backed_reconciliation/` probe1: only the 2 non-story
-   `cs_axiom_contradiction` files lack scalar suppression, and both fail `base_extractiveness/2`
-   first, which has no default — the fabricated 0 is currently unreachable; it reactivates on the
-   first metric-bearing story that omits only suppression).
-3. Universal quantifier / negation-as-failure over a possibly-empty table — `forall(P, Q)`,
-   `\+ disqualifier(C)` (e.g. `data_verification:verify_interval_completeness`;
-   `natural_law_without_beneficiary/1` guards in `drl_core.pl`).
+- **Statute for new or modified gates:** a gate over a possibly-empty table or a defaulted metric
+  **fails closed on absence** — establish the datum was authored before the gate may pass;
+  defaults-on-empty return `unknown`/OPEN, never a plausible value; the pass carries its witness
+  (joined-table sizes, coverage). This is Build Discipline Pattern 5 made binding at build time.
+- **Absence-to-provenance carve-out (the `suppression_profile` precedent, OQ-46):** absence may be
+  converted into legitimate authored provenance **only by positive-control inference at
+  authoring/compile time** — where the artifact's other authored content proves the omission
+  deliberate (the compiler stamps `suppression_profile(C, static)` because other series WERE
+  authored) — **never by emptiness-inference at the consumption site.** A marker-less absence at
+  read time always fails closed.
+- **Common-law for existing gates:** ruled per-instance with their witness, prioritized by
+  success-shapedness of the vacuous pass (a green checkmark or certification outranks an
+  annotation). CARRY-with-provenance remains an available per-instance verdict (instances #1's two
+  CARRYs stand, gated on the OQ-93 fork; full text in git history at this entry).
 
-**Method (per gate):** measure the source-predicate fact count on the active corpus (the Pattern 5
-diagnostic in `build_discipline.md`). Verdict per gate:
-- **DISCRIMINATING** — source non-empty, gate distinguishes pass from fail on real data.
-- **VACUOUS-PASS** — source empty / always-defaulted, gate passes by absence for all constraints
-  (record the count, as OQ-43 did: `intent_power_change` = 0 facts → `BeneficiaryCount == 0`
-  universal).
-- **DEFAULT-PASS** — source absent but a fabricated default clears the gate (Pattern 4 overlap).
+**Dispositions of the three open sites (2026-06-11, all witnessed in
+`audits/2026-06-11_oq44_policy_close/`):**
+1. **`get_raw_suppression` `Supp=0` → CONVERTED** (commit `966d53c8`): `unknown` sentinel +
+   `number/1` guard clause at `classify_from_metrics/6`. The witness corrected the pre-derivation:
+   the fabricated 0 WAS consumed — the two non-story `cs_axiom_contradiction` files exported
+   `suppression: 0` and each carried a `fingerprint_voids` agreement computed on it; both now
+   honest (null / agreement absent). Classification output unchanged for all 46 stories;
+   `shared/schemas.py` marks suppression nullable (null = no authored scalar).
+2. **`report_generator`/`utils` 0.0 defaults → CONFORMING as-is**, no change: they print
+   `MISSING (using default 0.0)` — the pass already carries its witness. (Instance #2's
+   conditional-verdict caveat stands; sibling sites :481/:500 same status.)
+3. **`has_viable_alternatives` → FAIL-CLOSED** (ruled; commit `8b5a34b8`, output-changing, landed
+   alone): default `false`→`unknown`; the empty `intent_viable_alternative` table no longer
+   satisfies NL's `HasAlternatives == false`. **Un-certification of
+   `thermal_dissipation_constraint` ACCEPTED** — a known-vacuous certification is tolerated rather
+   than undetected; NL certs return when the intent layer or an authored alternatives table exists
+   (GAP-08). Witnessed consequence: signature → `ambiguous`, the NL→mountain modal override
+   dropped (rope at moderate/institutional), diagnostic verdict green→red with a
+   `perspectival_incoherence` alert; all 277 pipeline diffs attribute to this single cause
+   (thermal's own fields + corpus-relative wasserstein/arakelov/signature_pressure aggregates).
 
-**Decision (one policy across the class):** for each VACUOUS-PASS / DEFAULT-PASS gate, choose
-**fail-closed** (the gate may not pass unless the datum was authored — distinguish `\+ exists`
-from `authored(0)`, e.g. via an explicit authored-zero marker or a non-empty-source guard) vs
-**keep-vacuous-pass** (accept the gate is inert on the current corpus and document it at the gate).
-The choice is the same adjudication OQ-41 frames for fabricated defaults; make it once for both
-fabricated-value (Pattern 4) and satisfied-by-absence (Pattern 5) gates rather than per site.
-
-**What resolution changes:** turns "no disqualifier authored" certifications (e.g. the 404 NL
-mountains) into either honestly-conditional findings (gate documents its own vacuity) or
-genuinely-checked findings (gate fail-closed, requires the table populated). Connects to
-OQ-43, OQ-41, OQ-36/OQ-37. Build-discipline Pattern 5 records the pattern and diagnostic.
-
-**Adjudication instance #1 (2026-06-09, from OQ-93 census —
-`audits/2026-06-09_imputation_shim_census/census.md`).** Operator ruling on jurisprudence:
-common-law, not statute — each instance ruled narrowly with its witness; the engine-wide
-principle gets extracted once instances span the **gate-type** and **report-type** consumer
-classes, or at the next instance, whichever first. Instance #1 supplies both classes:
-- **Gate-type:** `data_verification:verify_interval_completeness` (32-point grid gate,
-  test_harness Step 1). Diet: imputed+injected, pass guaranteed by `data_repair` Stage 1 —
-  the gate certifies what the stage before it manufactured (imputed fraction: 32/32 fabricated;
-  authored grid points possible under live schema: 0). Recommendation: CARRY with provenance
-  (gate line states post-repair status); fail-closed would dark the whole DR-AUDIT suite on the
-  entire corpus until the OQ-93 fork is ruled.
-- **Report-type:** `[INTENT] Result: <pattern> (Confidence: <c>)` (intent_engine). Diet:
-  doubly vacuous — Pattern from gradient over constant priors (only `stable` reachable),
-  Confidence `high` from the manufactured 8/8 completeness, Conditions 2–4 over empty
-  `intent_*` tables (OQ-36/43). Imputed fraction: 100% of its discriminating input.
-  Recommendation: CARRY with an in-line diet flag now; candidate gate-off under OQ-93's
-  consumer-side fork (it has never computed on authored data, so gating it off loses no
-  witnessed capability).
-Both recommendations are instance-narrow; neither asserts the engine-wide policy.
-
-**Instance #2 (2026-06-10, from the first external-review batch —
-`audits/2026-06-10_external_review_vote_market/`).** Report-type, DEFAULT-PASS (Pattern 4
-overlap): the forensic false-mountain audit defaults a missing `resistance_to_change` to `0.0` —
-`report_generator.pl:507` (`utils:safe_get_metric(C, resistance_to_change, Resist, 0.0, false)`)
-then prints `Resistance to Change: MISSING (using default 0.0)` (:509), witnessed 4× in
-`scale_ceiling_report.md` (+ `organization_floor_report.md`). `0.0` is the value most likely to
-flip mountain→rope (low resistance reads as not-a-mountain), inside the module issuing the
-forensic verdict. The false-summit findings themselves survive (suppression alone clears the
-threshold), but dependent verdicts should be marked conditional. Sibling defaults at the same
-site: `Suppression Requirement` (:481), `Base Extractiveness` (:500). Instance-narrow.
+**Origin (compressed; full audit scaffolding, gate-shape taxonomy, instance #1/#2 texts in git
+history).** Premise: zero-because-measured and zero-because-missing collapse to one value at a
+comparison site, so a gate that cannot tell them apart tests nothing when its table is empty.
+The 2026-06-11 evidence pass (probe1 census with per-process positive controls) found most of the
+named class already fail-closed by accretion and the remainder enumerated as the three sites
+above. Pattern-5/Pattern-6 candidate-site census across the wider engine remains OQ-97's scope.
+Connects to OQ-43 (class naming, resolved with this ruling), OQ-41, OQ-36/OQ-37, OQ-45 (content
+re-audit, still open), OQ-93 (the CARRY instances' gate), OQ-97.
 
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 

@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-44 RESOLVED: fail-closed-on-absence ruled (statute for new gates, marker carve-out, common-law for existing); OQ-43 closed; thermal_dissipation_constraint un-certified
+**Files:** prolog/signature_detection.pl, prolog/drl_core.pl, python/shared/schemas.py, ISSUES.md
+**Tier:** landed
+
+Operator ruling (witnesses: `audits/2026-06-11_oq44_policy_close/`; ruling text: ISSUES.md OQ-44
+still-operative block). Grounded in converged practice — five fail-closed conversions, none
+reverted — with the instance-counter satisfied as confirmation only. Statute: new/modified gates
+fail closed on absence (`unknown`/OPEN on empty; pass carries its witness). Carve-out: absence →
+authored provenance only via positive-control inference at authoring/compile time (the
+`suppression_profile` precedent), never emptiness-inference at the read site. Existing gates:
+common-law per-instance, prioritized by success-shapedness. Dispositions: (1)
+`has_viable_alternatives` default `false`→`unknown` (commit `8b5a34b8`, output-changing) —
+`thermal_dissipation_constraint` UN-CERTIFIED (natural_law→ambiguous; NL→mountain override
+dropped, rope at moderate/institutional, verdict green→red perspectival_incoherence; all 277
+diffs single-cause); (2) `get_raw_suppression` 0-default → `unknown` sentinel + `number/1` guard
+at `classify_from_metrics` (commit `966d53c8`) — the witness CORRECTED the "never consumed"
+pre-derivation: the two non-story `cs_axiom_contradiction` files exported the fabricated 0 and a
+`fingerprint_voids` agreement computed on it (both now honest; `shared/schemas.py` suppression
+nullable, null = no authored scalar); (3) report-layer 0.0 defaults CONFORMING as-is (print
+MISSING). OQ-43 resolved in the same stroke, fifth-instance disposition recorded there.
+
 ## 2026-06-11 — Backed semantics BUCKETED (follow-on to the OQ-46 close): compiler-stamped suppression_profile(static) sanction marker; OQ-105 filed; OQ-37 piton vacuous-green fixed
 **Files:** prolog/drl_composition.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, prolog/data_validation.pl, prolog/testsets/thermal_dissipation_constraint.pl, ISSUES.md
 **Tier:** landed
