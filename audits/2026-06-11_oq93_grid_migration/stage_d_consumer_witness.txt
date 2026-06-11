@@ -1,0 +1,12 @@
+  [PASS] 1 signal FIRES on grid_probe_divergent — SIG fired divergence(0.54,-0.6000000000000001)
+  [PASS] 1 signal silent on grid_probe_flat_authored — SIG silent
+  [PASS] 1 signal silent on grid_probe_rising — SIG silent
+  [PASS] 1 signal silent on grid_probe_falling — SIG silent
+  [PASS] 2a FCR fires on divergent rope-appearing fixture with divergence in FailedTests — FCR fired app=low_extraction_profile tests=[scope_variant([rope,unknown]),excess_above_floor(0.25),nonsensical_coupling(0.3333333333333333),level_gradient_divergence(0.54,-0.6000000000000001)]
+  [PASS] 2b flat twin carries NO divergence term (silent or divergence-free tests) — FCR fired tests=[scope_variant([rope,unknown]),excess_above_floor(0.25),nonsensical_coupling(0.3333333333333333)]
+  [PASS] 3 FSM on fsm_div_fixture: LevelDiv divergence, confidence medium — FSM fired bc=1 cs=0 ld=divergence(0.54,-0.6000000000000001) conf=medium
+  [PASS] 3 FSM on fsm_flat_fixture: LevelDiv open, confidence low — FSM fired bc=1 cs=0 ld=open conf=low
+  [PASS] 4 extraction-blindness omega carries witnessed-process tail on divergent fixture — OMEGA omega_extraction_blindness_fcr_div_fixture :: Constraint fcr_div_fixture appears extractive (Snare) to individuals but functional (Rope) to institutions... [witnessed process — OQ-93 grid: structural gradient +0.54
+  [PASS] 5 fire-on-migration (i): kappa [CONDITIONAL: grid authored 16/32] tag FIRES — Aggregate Magnitude (Kappa) at Tn: 0.80 [level coverage 4/4: [structural,organizational,class,individual]] [grid diet: authored 16/32, injected 0, imputed 0 — OQ-93] [CONDITIONAL: grid authored 16/32]
+  [PASS] 6 fire-on-migration (ii): cap census recorded (fires iff any correction-grade carrier has base green) — CAPCENSUS corr=0 green_base=0 detail=[]
+11/11 witness cases pass

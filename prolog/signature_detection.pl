@@ -13,7 +13,8 @@
     has_viable_alternatives/2,
     has_metric_perspectival_variance/1,
     signature_grade/2,              % OQ-98: correction | commentary
-    signature_severity/2            % OQ-98: correction-grade -> moderate
+    signature_severity/2,           % OQ-98: correction-grade -> moderate
+    level_gradient_divergence/2     % OQ-93 Stage D: the level-gradient crossing
 ]).
 
 :- use_module(library(lists)).
@@ -22,6 +23,7 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(boltzmann_compliance).
+:- use_module(coercion_projection).   % OQ-93 Stage D: level gradients from the authored grid
 
 /* ================================================================
    STRUCTURAL SIGNATURE DETECTION v3.2
@@ -520,11 +522,18 @@ signature_confidence(C, coupling_invariant_rope, Confidence) :-
 
 % False Summit Mountain confidence: scales with beneficiary count and coupling score.
 % Zero coupling (common for Mountains) → medium; high coupling → high.
+% OQ-93 Stage D: a witnessed level-gradient divergence raises confidence ONE
+% rung (consumed positively); LevelDiv = open leaves the pre-wiring value
+% untouched (absence never lowers, never blocks).
 signature_confidence(C, false_summit_mountain, Confidence) :-
-    (   false_summit_mountain(C, fsm_evidence(BCount, CScore))
-    ->  (   CScore > 0.25 -> Confidence = high
-        ;   BCount > 1   -> Confidence = medium
-        ;                   Confidence = low
+    (   false_summit_mountain(C, fsm_evidence(BCount, CScore, LevelDiv))
+    ->  (   CScore > 0.25 -> Base = high
+        ;   BCount > 1   -> Base = medium
+        ;                   Base = low
+        ),
+        (   LevelDiv = divergence(_, _)
+        ->  confidence_rung_up(Base, Confidence)
+        ;   Confidence = Base
         )
     ;   Confidence = low
     ), !.
@@ -542,6 +551,13 @@ signature_confidence(C, Signature, Confidence) :-
     ->  compute_signature_confidence(Profile, Signature, Confidence)
     ;   Confidence = low
     ).
+
+% OQ-93 Stage D: one-rung confidence bump for a witnessed level-gradient
+% divergence (placed AFTER the last signature_confidence/3 clause to keep
+% that predicate contiguous — the load-warning gate flags interleaving).
+confidence_rung_up(low, medium).
+confidence_rung_up(medium, high).
+confidence_rung_up(high, high).
 
 %% profile_numeric(+Profile)
 %  True iff the three arithmetic-compared profile metrics are authored numbers.
@@ -674,7 +690,7 @@ explain_signature(C, constructed_high_extraction, Explanation) :-
            [C, S, R, Ext]).
 
 explain_signature(C, false_summit_mountain, Explanation) :-
-    (   false_summit_mountain(C, fsm_evidence(BCount, CScore))
+    (   false_summit_mountain(C, fsm_evidence(BCount, CScore, _LevelDiv))
     ->  format(atom(Explanation),
                'FALSE SUMMIT MOUNTAIN signature for ~w: Meets all mountain metric thresholds (low extractiveness, low suppression, emerges naturally) but has ~d identifiable beneficiaries. Genuine natural laws have zero beneficiaries. This constraint has been naturalized — its constructed origin has become invisible. Coupling score=~3f.',
                [C, BCount, CScore])
@@ -1296,6 +1312,35 @@ fcr_test_failure(C, nonsensical_coupling(Strength)) :-
     detect_nonsensical_coupling(C, Pairs, Strength),
     Pairs \= [].
 
+% Test 5 (OQ-93 Stage D, ruling (b) 2026-06-11): the level-gradient crossing.
+% Rising structural coercion while individual-level coercion falls is the
+% WITNESSED-PROCESS form of coordination-washing — falling individual
+% coercion IS the camouflage, rising structural coercion IS the extraction.
+% Consumed POSITIVELY with named-level requirements: both gradients must be
+% PRESENT from the authored grid (level_gradient_divergence/2 fails on an
+% absent/partial grid), so the live grid-absent corpus is untouched and
+% absence never blocks FCR's other tests. OQ-94 read-site sort: FCR is in
+% the SOUND mountain-likeness family; the CI_Rope benignity-family gates
+% (:1019, :1122) are NOT touched by this wiring.
+fcr_test_failure(C, level_gradient_divergence(GS, GI)) :-
+    level_gradient_divergence(C, divergence(GS, GI)).
+
+%% level_gradient_divergence(+C, -divergence(GStructural, GIndividual))
+%  The grid-derived divergence signal (OQ-93's unique product: the level
+%  axis). Requires its two needles — structural AND individual gradients —
+%  computable from authored grid data at the interval's first gradient
+%  point; succeeds only when structural rises and individual falls past the
+%  system gradient threshold. Absent/partial grid: FAILS (the signal is
+%  OPEN; consumers fall back to their non-grid evidence — preregistration
+%  absence-semantics pin, audits/2026-06-11_oq93_grid_migration/).
+level_gradient_divergence(C, divergence(GS, GI)) :-
+    narrative_ontology:interval(C, T0, _),
+    catch(coercion_projection:coercion_gradient(structural, C, T0, GS), _, fail),
+    catch(coercion_projection:coercion_gradient(individual, C, T0, GI), _, fail),
+    config:param(system_gradient_threshold, Thr),
+    GS > Thr,
+    GI < -Thr.
+
 /* ================================================================
    SIGNATURE: FALSE SUMMIT MOUNTAIN (FSM) — v6.9
    ================================================================
@@ -1336,8 +1381,13 @@ fcr_test_failure(C, nonsensical_coupling(Strength)) :-
 %  Primary gate: beneficiary presence (not coupling score).
 %  Coupling collected as diagnostic evidence for abductive T17 trigger.
 %
-%  Evidence = fsm_evidence(BeneficiaryCount, CouplingScore)
-false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore)) :-
+%  Evidence = fsm_evidence(BeneficiaryCount, CouplingScore, LevelDiv)
+%    LevelDiv (OQ-93 Stage D) = divergence(GS, GI) when the authored grid
+%    witnesses rising-structural/falling-individual coercion (the watchable
+%    form of beneficiary naturalization), or the atom `open` when the grid
+%    is absent/partial — consumed POSITIVELY (confidence rung below), never
+%    a gate: an open signal leaves the verdict exactly as before wiring.
+false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore, LevelDiv)) :-
     % Metric profile must be consistent with mountain classification.
     % Replicate mountain conditions from classify_from_metrics/6 without
     % the context-dependent immutability check (which varies by observer).
@@ -1365,6 +1415,13 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore)) :-
     (   catch(cross_index_coupling(C, CS), _, CS = 0.0)
     ->  CouplingScore = CS
     ;   CouplingScore = 0.0
+    ),
+
+    % OQ-93 Stage D: level-gradient divergence as additional positive
+    % evidence; `open` on absent/partial grid (never blocks).
+    (   level_gradient_divergence(C, Div)
+    ->  LevelDiv = Div
+    ;   LevelDiv = open
     ).
 
 /* ================================================================

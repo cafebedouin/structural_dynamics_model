@@ -229,7 +229,14 @@ detect_gap_pattern(C, gap(general_type_mismatch, TypeP, TypeI)) :-
 
 omega_from_gap(C, gap(snare_masked_as_rope, snare, rope), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_extraction_blindness_~w', [C]),
-    format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions...', [C]), !.
+    % OQ-93 Stage D: when the authored grid witnesses the level-gradient
+    % crossing, the omega carries the watched process (upgrade from
+    % inferred-snapshot to witnessed process, ruling (b)); absent/partial
+    % grid -> unchanged question (the signal is OPEN, never a gate).
+    (   catch(signature_detection:level_gradient_divergence(C, divergence(GS, GI)), _, fail)
+    ->  format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions... [witnessed process — OQ-93 grid: structural gradient +~2f while individual gradient ~2f, the level-gradient crossing]', [C, GS, GI])
+    ;   format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions...', [C])
+    ), !.
 
 omega_from_gap(C, gap(mountain_coordination_confusion, mountain, rope), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_cut_safety_~w', [C]),

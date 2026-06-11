@@ -1,6 +1,4 @@
-source of divergence
-  │  2. Gather evidence:
-  │     - Empirical metrics (suppression, extraction, resistance)
+s (suppression, extraction, resistance)
   │     - Historical behavior patterns
   │  3. Create indexical classification:
   │     - From powerless context: classify as X
@@ -173,13 +171,13 @@ Checking Interval: work_displacement_dignity (0-15)
   Critical: 2 | Warning: 2 | Watch: 0
 
   work_displacement_dignity:
-    [warning] metric_substitution
+    [warning | confidence: low] metric_substitution
         Evidence: evidence(theater_delta,0,15,0.35,0.58)
-    [critical] extraction_accumulation
+    [critical | confidence: low] extraction_accumulation
         Evidence: evidence(extraction_delta,0,15,0.45,0.68)
-    [critical] coupling_drift
+    [critical | confidence: low] coupling_drift
         Evidence: evidence(coupling_score,1.0,threshold,0.25,extraction_trend,increasing)
-    [warning] purity_drift
+    [warning | confidence: low] purity_drift
         Evidence: evidence(current_purity,0.3125,decline_signals,[extraction_rising,coupling_above_threshold(1.0),theater_rising,excess_above_floor(0.53)])
 
 --- Transition Path Analysis ---
@@ -366,7 +364,7 @@ Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
   - ubi_vs_job_guarantee_sufficiency (empirical): Whether income support programs restore work's dignity function
 
 ### END REFINEMENT MANIFEST ###
-[ELAPSED] testsets/work_displacement_dignity.pl: 0.007s
+[ELAPSED] testsets/work_displacement_dignity.pl: 0.008s
 
 ==================================================
            TEST SUITE SUMMARY
