@@ -1,0 +1,26 @@
+=== W1/W1b/W3 banners (regenerated reports, pipeline run 2026-06-11) ===
+--- scale_ceiling
+╔══════════════════════════════════════════════════════════════════════╗
+║  VERDICT: RED                                                        ║
+║  BASE: GREEN (12/12 subsystems checked — no tensions) — CAPPED TO RED║
+║  ! [severe] type_1_false_summit (claim_mismatch)                     ║
+║  Grid: authored 0/32 (injected 0, imputed 0, absent 32)              ║
+╚══════════════════════════════════════════════════════════════════════╝
+--- hybrid_security_reading
+╔════════════════════════════════════════════════════════╗
+║  VERDICT: YELLOW                                       ║
+║  12/12 subsystems — 1 tension(s) (fingerprint_voids)   ║
+║  ! [moderate] signature_correction (signature_grade)   ║
+║  Grid: authored 0/32 (injected 0, imputed 0, absent 32)║
+╚════════════════════════════════════════════════════════╝
+--- thermal_dissipation_constraint
+╔════════════════════════════════════════════════════════╗
+║  VERDICT: GREEN                                        ║
+║  12/12 subsystems checked — no tensions                ║
+║  Grid: authored 0/32 (injected 0, imputed 0, absent 32)║
+╚════════════════════════════════════════════════════════╝
+
+=== W2: CONDITIONAL stdout tags (scale_ceiling_report.md) ===
+230:Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+311:Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+(Kappa CONDITIONAL branch unreachable live: kappa prints only when the grid has data; live grids are all-absent => DATA_INSUFFICIENT. Tag logic identical to the witnessed grid-diet tag.)

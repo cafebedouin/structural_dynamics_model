@@ -1,0 +1,23 @@
+=== W3 A/B: thermal_dissipation_constraint (clean green) ===
+OLD: 
+╔═══════════════════════════════════════════════════╗
+║  VERDICT: GREEN                                    ║
+║  12/12 subsystems checked — no tensions           ║
+╚═══════════════════════════════════════════════════╝
+
+NEW: 
+╔════════════════════════════════════════════════════════╗
+║  VERDICT: GREEN                                        ║
+║  12/12 subsystems checked — no tensions                ║
+║  Grid: authored 0/32 (injected 0, imputed 0, absent 32)║
+╚════════════════════════════════════════════════════════╝
+
+=== W4: sidecar verdict vs banner VERDICT line ===
+agenda_conditioning: sidecar=YELLOW banner=YELLOW match=True | verdict_join passthrough: True
+hybrid_security_reading: sidecar=YELLOW banner=YELLOW match=True | verdict_join passthrough: True
+scale_ceiling: sidecar=RED banner=RED match=True | verdict_join passthrough: True
+thermal_dissipation_constraint: sidecar=GREEN banner=GREEN match=True | verdict_join passthrough: True
+W4: PASS
+=== Falsifier 2: zero correction-grade without join alert ===
+correction-grade entries: 13; without alert: 0 []
+Falsifier 2: PASS (non-vacuous)
