@@ -1,0 +1,43 @@
+=== Post-close substrate check: agenda_conditioning grade contradiction (2026-06-11) ===
+
+Contradiction to resolve (operator-flagged): the original OQ-98 witness quoted
+agenda_conditioning's finding as "an extraction mechanism that metrics failed to
+classify as snare" (reads as: metric type != snare, override rewired it =>
+correction-grade), while the close reports it grades COMMENTARY because the
+signature "didn't rewire snare->snare" (metrics DID say snare).
+
+Source of the quoted prose: signature_detection.pl:667 —
+explain_signature(C, constructed_high_extraction, ...) — the sentence is
+UNCONDITIONAL template text fired whenever the signature exists; it never checks
+the metric layer. (Original report line:
+audits/2026-06-10_external_review_vote_market/reports/agenda_conditioning_report.md:260)
+
+Probe (run on the pipeline loader chain, stack + json_report, corpus loaded;
+48 testsets):
+
+  forall(drl_core:standard_context(Ctx),
+         ( drl_core:metric_based_type_indexed(agenda_conditioning, Ctx, MT),
+           drl_core:dr_type(agenda_conditioning, Ctx, FT), ... ))
+
+Output (per agent_power seat):
+
+  powerless:     metric=tangled_rope  final=tangled_rope
+  moderate:      metric=snare         final=snare
+  institutional: metric=rope          final=rope
+  analytical:    metric=snare         final=snare
+  default context = context(agent_power(analytical), time_horizon(civilizational),
+                            exit_options(analytical), spatial_scope(global))
+
+VERDICT: possibility (a). metric_based_type_indexed == dr_type at ALL FOUR standard
+contexts — the signature never rewired the type at any altitude the report uses, so
+metrics DID classify agenda_conditioning as snare at the analytical (default) and
+moderate seats, and the commentary grade assigned by signature_grade/2 is correct.
+Possibility (b) — the grade predicate's default-context comparison excluding a
+divergence visible at the report's context — is ruled out: there is no context with
+a divergence to exclude. The OQ-98 motivating example for sketch (c) was misdescribed
+by the report's own unconditional template prose, not by the grade wiring.
+
+Actions taken: one-paragraph correction in the OQ-98 resolved entry (ISSUES.md);
+code comment at signature_detection.pl explain_signature(constructed_high_extraction)
+flagging the prose as an unchecked assertion. No new OQ (operator: (a) => sentence,
+(b) => new OQ; this is (a)).
