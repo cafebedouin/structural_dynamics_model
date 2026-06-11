@@ -116,13 +116,16 @@ resolved (compressed); OQ-46 annotated with live coverage (the 2026-06-05 "20/20
 template check did NOT hold — 7/46 live constraints are scalar-only); `drl_composition.pl:191`
 comment re-stamped three-substrate/as-of-dated (comment-only; post-edit `[stack]` load witnessed).
 
-**TRIPWIRE — `.gitignore:2` is an UNANCHORED `outputs/`:** it silently swallows ANY nested dir
-named `outputs` — a disposition commit dropped all four archive files clean (witnessed; commit
-succeeded, files absent) until the archive dir was renamed `pre_reset_outputs`. The same rule is
-currently gitignoring `audits/2026-02-25_spectral_laplacian/outputs/` (25 evidence files — gone
-on fresh clone, same defect class the tripwire-JSON ruling just fixed). Operator call pending:
-anchor to `/outputs/` + force-add that audit's evidence, or relocate it. Until then: never name
-a tracked directory `outputs`, and verify any commit touching such paths lists the files.
+**TRIPWIRE (RESOLVED same day, history kept) — `.gitignore:2` was an UNANCHORED `outputs/`:**
+it silently swallowed ANY nested dir named `outputs` — a disposition commit dropped all four
+archive files clean (witnessed; commit succeeded, files absent) until the archive dir was
+renamed `pre_reset_outputs`, and `audits/2026-02-25_spectral_laplacian/outputs/` (25 evidence
+files) had been gitignored since creation. Operator ruled: anchor, don't relocate. Landed as
+commit `09390f0f`: rule anchored to `/outputs/`; pre-anchor survey of every nested outputs dir
+(python/outputs empty; `prolog/archives/datasets/original_json/outputs/` 332 files/40M never
+tracked → own ignore line, status-quo as a visible decision, track-or-not open); post-anchor
+delta = exactly the 25 spectral files, plain `git add` sufficed (anchor-took-effect check).
+Residual invariant (citations can dangle by other routes) filed as OQ-104.
 
 ## 2026-06-10 — External-review triage (two batches): OQ-98–103 filed; auto-essay synthesis ruled out (ledger replaces it); two topic runs committed under a live-witnessed gate
 **Files:** ISSUES.md, audits/2026-06-10_external_review_vote_market/, audits/2026-06-10_external_review_xprize/, KNOWN_STATE.md, prolog/validation_suite.pl, agent/c-orchestrator.py

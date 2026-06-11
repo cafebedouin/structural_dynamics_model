@@ -1607,7 +1607,10 @@ state — see `evidence/b5ccee0d_substrate_witness.txt` there; do not cite again
 corpus). Live post-reset corpus (48 files / 46 classified): **39 author a temporal series, 7
 remain scalar-only** (the stopgap's remaining live load; 47 of 209 rows), 0 reach `unknown`.
 So the de-leaked template's 20/20 did NOT hold universally as the corpus grew — 7/46 live
-constraints are scalar-only. kernel_v1 comparator: 934/1106 temporal, 172 scalar-only, 0 unknown.
+constraints are scalar-only. Not a regression: the 2026-06-05 check was
+first-rebuild-stories-denominated (20 of 20 stories then extant), never corpus-universal —
+reading it as universal was an unwarranted generalization past its substrate, the same shape
+as the 471/562 pin. kernel_v1 comparator: 934/1106 temporal, 172 scalar-only, 0 unknown.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 
@@ -4746,9 +4749,27 @@ and (b) a salience floor flagging edges below an interpretive-weight threshold. 
 OQ-95 (phantom nodes in the `giant_component` BFS — that is node membership; this is edge
 provenance + salience). Cross-refs: OQ-95, OQ-101.
 
+## OQ-104 — Audit-citation integrity has no checker: paths cited from audit writeups can be untracked, gitignored, or nonexistent with nothing failing
+
+**Status:** open — filed 2026-06-11 (OQ-33 close session; operator-flagged class)
+**Origin:** Two same-class instances in one session: `tripwire_fabricated_defaults_results.json`
+cited by its 2026-05-30 audit from gitignored `outputs/` (relocated at the OQ-33 close), and
+`audits/2026-02-25_spectral_laplacian/outputs/` — 25 evidence files cited by that audit's
+writeup but swallowed by the unanchored `.gitignore` `outputs/` rule since creation (fixed by
+the 2026-06-11 anchor, commit `09390f0f`). The anchor fixed the *mechanism* of these two
+instances, not the invariant: typo'd paths, evidence left in a worktree, or the next ignore
+rule arrive by different routes and read identically (writeup cites it, fresh clone lacks it).
+**Candidate fix:** a cheap checker — every path cited from `audits/*/writeup.md` (and the
+audit-dir READMEs) exists AND is tracked (`git ls-files --error-unmatch`); sibling of
+`issues_status.py` / `known_state_status.py`, runnable standalone and at the location-mandate
+seam. Open design point: citation-extraction grammar (backtick-quoted repo-relative paths is
+probably enough; measure false-positive rate on the existing audits/ corpus before gating
+anything). Not wired into run_pipeline until its false-positive rate is witnessed.
+
+
 ---
 
-*Last updated: 2026-06-10. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-11. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
