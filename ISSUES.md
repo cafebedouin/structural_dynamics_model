@@ -1622,14 +1622,34 @@ series-authoring alone would not have retired the clause. Deletion counterfactua
 timelines change, 7 collapse to `[unknown]`, 9 gain phantom transitions in `drift_trajectory`.
 
 **Still-operative ruling:** `classify_at_time`'s read ladder — temporal `measurement/5` at T →
-authored scalar `constraint_metric` as constant (`Backed=false`) → fail-closed `unknown` — is
-the **permanent, sanctioned** representation policy for suppression (D4 ruled: scalar = static
-enforcement is legitimate authoring; the series is authored only when enforcement capacity
-changes). Do not delete the scalar clause; do not add a scalar/temporal equivalence check
-(scalar-as-constant is the defined semantics, there is nothing to reconcile); `Backed=false`
-is the per-snapshot provenance marker for scalar-supplied rows (consumer: `temporal_residual`,
-OQ-83). A future Surface-3 temporal-suppression primitive is gated on per-constraint `Backed`
-coverage, not on corpus-wide series universality.
+authored scalar `constraint_metric` as constant → fail-closed `unknown` — is the **permanent,
+sanctioned** representation policy for suppression (D4 ruled: scalar = static enforcement is
+legitimate authoring; the series is authored only when enforcement capacity changes). Do not
+delete the scalar clause. A future Surface-3 temporal-suppression primitive is gated on
+per-constraint `Backed` coverage, not on corpus-wide series universality.
+
+**Backed semantics BUCKETED (same-day follow-on ruling, 2026-06-11; evidence:
+`audits/2026-06-11_oq46_backed_reconciliation/`).** The close above left `Backed=false` on ALL
+scalar-supplied rows; the follow-on evidence pass split them and the operator ruled bucketed,
+keyed on an EXPLICIT sanction, never emptiness-inference (OQ-44 Pattern 5):
+- **Sanctioned static scalar backs:** `suppression_profile(C, static)` — compiler-stamped
+  (`generate_constraint_pl.py` section 8) only on positive-control absence (other series
+  authored, suppression deliberately omitted) — plus no series anywhere → `SuppBacked=true`.
+  The scalar IS the story's authoring for every Time. Zero flip/fab_adjacent delta witnessed
+  (59/20 unchanged; only `backed_times` rises, 7 constraints × 4 contexts).
+- **Misalignment substitution stays excluded** (series exists, off-grid Time): `SuppBacked=false`.
+  Spun off as **OQ-105** — the substitution is anti-causal (scalar ≈ series endpoint, 37/39
+  exact) and currently sets flip TIMING in 2 witnessed timelines.
+- **Unmarked seriesless fails closed** (`SuppBacked=false`): a missing series without the
+  marker (partial regen, generation bug) is excluded, not silently sanctioned.
+- **Blanket rejected with witness:** counting all scalars as backed graduates the 20
+  `fab_adjacent` transitions into the real-flip count (59→79) that decides the OQ-83 D-fork —
+  laundering substitution-dated motion.
+The earlier "do not add a scalar/temporal equivalence check — nothing to reconcile by
+definition" rationale is RETIRED in favor of a witnessed basis: a one-time endpoint-membership
+query (2026-06-11) found 0 violations (39 dual-rep constraints: 37 exact scalar==endpoint,
+2 within 0.05), so the lint question is closed-no-demonstrated-content — no standing lint;
+re-run the query (`audits/2026-06-11_oq46_backed_reconciliation/`) before re-opening.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
 
@@ -4821,6 +4841,51 @@ seam. Open design point: citation-extraction grammar (backtick-quoted repo-relat
 probably enough; measure false-positive rate on the existing audits/ corpus before gating
 anything). Not wired into run_pipeline until its false-positive rate is witnessed.
 
+## OQ-105 — Suppression grid-misalignment rows: the scalar substitution sets flip TIMING in classify_at_time timelines
+
+**Ω-type:** Ω_C (design choice — grid alignment at generation vs labeled interpolation at read; a narrow representation ruling spun off the OQ-46 close).
+
+**Status:** open — filed 2026-06-11 (OQ-46 Backed-reconciliation session; evidence:
+`audits/2026-06-11_oq46_backed_reconciliation/`).
+
+**Mechanism.** The temporal row grid is the UNION of all metrics' time-points
+(`temporal_residual:constraint_time_set/2`), so suppression gets sampled off its own grid at
+times authored only by `base_extractiveness`/`theater_ratio`. At those rows `classify_at_time`
+substitutes the authored scalar — and the scalar is the series ENDPOINT corpus-wide (one-time
+query 2026-06-11: 39 dual-representation constraints, 37 exact scalar==endpoint, 2 within 0.05,
+0 violations). So the substitution is ANTI-CAUSAL: it injects the end-state suppression value at
+earlier times, inside constraints that DO assert enforcement dynamics — semantically worse than
+the sanctioned static case (OQ-46), where the scalar is the story's whole authoring.
+
+**Live load (as-of 2026-06-11, 48-file corpus):** 21 of 209 rows, inside 10 series-authoring
+constraints (`agenda_conditioning`, `digital_colonialism_data_extraction`, `post_1998_convergence`,
+`scale_ceiling`, `substantive_employment_reading`, `techno_optimist_reading`,
+`technocratic_paradigm_vs_human_primacy`, `truth_democracy_disinformation`,
+`wage_convergence_mechanism`, `wage_convergence_sustainability`).
+
+**Witnessed scope vs mechanism-based prediction — kept separate (do not let the mechanism inflate
+the witness count).** WITNESSED (2 of 3 checked row-by-row): the exported type flip lands ON a
+substituted row — `substantive_employment_reading` flips tangled_rope→snare at T=9 on substituted
+0.67 (own series: 0.58 at T=6, 0.67 at T=12); `post_1998_convergence` flips at T=13 on substituted
+0.72 (own series: 0.48 at T=9, 0.65 at T=18). CHECKED-NEGATIVE (1 of 3): `truth_democracy_disinformation`
+flips at T=4 on a series row — the substitution does not set its flip timing. PREDICTED (unverified):
+the endpoint-injection mechanism implies more of the 21 rows date flips early wherever the scalar
+crosses a floor the local series does not; the per-row sweep of the remaining rows has not been run.
+
+**Exposure.** Bounded: misalignment rows are `Backed=false` under the bucketed semantics
+(2026-06-11), so `temporal_residual` already excludes these transitions from the real-flip count
+(they land in `fab_adjacent`). The exposure is flip TIMING in any consumer of raw
+`classify_at_time`/`constraint_history` timelines that does not read the Backed bit.
+
+**Fix fork (the separate, smaller ruling — not made here):** (a) grid alignment at generation
+(prompt/schema require shared time-points across metrics within a story) — resolves new stories
+only; the 10 live constraints need regen; (b) labeled interpolation at read (interpolate the
+authored series at off-grid times, carrying an `interpolated` provenance tag) — fixes live data,
+adds read-side machinery. Note for (a): the OQ-46 prompt rule (scalar-only for static enforcement)
+is orthogonal and stays — alignment applies only when a suppression series IS authored.
+Cross-refs: OQ-46 (sanctioned-static ruling + bucketed Backed), OQ-83 (flip-count consumer),
+OQ-44 (gate class), OQ-102 (authored-vs-imputed provenance on time series — (b) would add an
+`interpolated` bucket to that spine).
 
 ---
 
