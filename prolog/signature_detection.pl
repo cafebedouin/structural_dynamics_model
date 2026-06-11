@@ -788,6 +788,19 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 %  suspicious.  Exempt from the perspectival variance gate.
 resolve_with_perspectival_check(C, piton, false_ci_rope, piton) :-
     drl_core:coordination_dead(C), !.
+% OQ-90: capture-keyed piton refinement. A constraint that appears as rope, fails
+% the Boltzmann tests (=> false_ci_rope), and whose authored receipt surface says
+% the extraction is uncaptured AND prohibitive to remove is a piton (a structural
+% pin nobody profits from removing). Like the dead-coordination clause above, this
+% is exempt from the perspectival-variance gate: piton_candidate/1 is an authored
+% structural fact, not a perspectival result, so uniform classification is expected,
+% not suspicious. The cut commits before the generic FCR clause below — placement is
+% position-encoded cascade priority. Fires even when fcr_override_enabled=0 (separate
+% axis; kill-switch is piton_refinement_enabled). Reads piton_candidate directly, not
+% the fcr_evidence disposition field (which is the evidence trail, populated upstream).
+resolve_with_perspectival_check(C, _ModalType, false_ci_rope, piton) :-
+    config:param(piton_refinement_enabled, 1),
+    narrative_ontology:piton_candidate(C), !.
 resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     !,
     (   config:param(fcr_override_enabled, 1)
