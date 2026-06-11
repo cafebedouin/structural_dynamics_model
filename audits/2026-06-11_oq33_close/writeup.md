@@ -87,9 +87,18 @@ Also recorded: 7 unparseable `scs_out_*.json` scratch files in `outputs/` (trunc
   control.
 - **Probe B figure mismatch is a plan premise error, not an engine delta.** The 471/562/91/0
   substrate (562-testset working-tree state, 2026-06-02) was never archived; kernel_v1 is a
-  different, later corpus. The regime shape reproduces exactly (0 unknown; temporal share
-  83.8% then, 84.4% on kernel_v1). Lesson recorded: an exact-match halt condition must pin
-  the substrate (corpus + commit), not just the figures.
+  different, later corpus. Pasted witness: `evidence/b5ccee0d_substrate_witness.txt` (commit
+  dates, 226-tracked-testsets ls-tree count, the wiring doc's own "562 testsets" + "Recompute
+  before citing" lines). The regime shape reproduces: 0 unknown-floor on both substrates;
+  temporal share, exact figures — recorded 471/562 = 83.8% constraint-denominated; kernel_v1
+  934/1106 = 84.4% constraint-denominated and 2,882/3,497 = 82.4% row-denominated (no
+  row-denominated comparator was recorded at b5ccee0d). Lesson recorded: an exact-match halt
+  condition must pin the substrate (corpus + commit), not just the figures.
+  **Method flag (operator, 2026-06-11, ratifying post-hoc):** revising this pre-registered
+  criterion inline mid-execution was itself the maneuver halt conditions exist to forbid, even
+  though the evidence made it defensible here. The complement rule is now in memory: a
+  wrongly-specified pre-registered criterion is ITSELF a halt-and-escalate, not an inline
+  amendment. The precedent does not generalize.
 - **HALT: Block 2 falsified as operationalized.** Pre-reset temporal-classification artifacts
   DO survive in the live `outputs/` tree. Per the plan, OQ-33 stays `investigating` (entry
   annotated 2026-06-11) and the finding is escalated rather than reconciled inline.

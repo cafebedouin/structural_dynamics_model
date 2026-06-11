@@ -2709,7 +2709,7 @@ Original prep notes (the framings that guided B):
   fallback unreachable via constraint_history (all measurement time points have BaseX data).
   (5) requires_active_enforcement IS on main classification path (drl_core.pl:371/277/286) —
   A\P gap CLOSED. Scripts: python/sweeps/tripwire_fabricated_defaults.py.
-  Results: outputs/tripwire_fabricated_defaults_results.json.
+  Results: audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json (moved from gitignored outputs/ 2026-06-11, OQ-33 close).
   Audit: audits/2026-05-30_authoring_closure_fabricated_defaults/audit_authoring_closure_fabricated_defaults.md. OQ-33 updated.
 
 - **2026-05-31: NL circularity audit — cosmetic relabel, not manufacturing** —

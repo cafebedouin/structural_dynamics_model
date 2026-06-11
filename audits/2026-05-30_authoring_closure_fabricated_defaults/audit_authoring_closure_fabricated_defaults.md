@@ -130,7 +130,7 @@ requires `constraint_metric(C, extractiveness, _)`). TIER: grep-witnessed.
 ### B2 — Per-site tripwire results
 
 All five tripwire graduation scripts run from `python/sweeps/tripwire_fabricated_defaults.py`.
-Results: `outputs/tripwire_fabricated_defaults_results.json`.
+Results: `audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json` (moved here from gitignored `outputs/` 2026-06-11, OQ-33 close — location mandate).
 
 ---
 
@@ -367,4 +367,4 @@ This audit surfaces the scope: one active defect (D1a), four dormant or latent s
 ## Scripts
 
 - Tripwire script: `python/sweeps/tripwire_fabricated_defaults.py`
-- Tripwire results JSON: `outputs/tripwire_fabricated_defaults_results.json`
+- Tripwire results JSON: `audits/2026-05-30_authoring_closure_fabricated_defaults/tripwire_fabricated_defaults_results.json` (moved here from gitignored `outputs/` 2026-06-11, OQ-33 close — location mandate)

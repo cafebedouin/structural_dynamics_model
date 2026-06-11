@@ -1,0 +1,33 @@
+=== b5ccee0d substrate witness — the 471/562/91/0 figures were NOT measured on kernel_v1 ===
+as-of: 2026-06-11T00:40:51-05:00  repo HEAD: 5a103a01
+
+$ git show --no-patch --format='%h %ad %s' b5ccee0d
+b5ccee0d Tue Jun 2 10:00:56 2026 -0500 fix(drl_core): repair false-summit detector (was a vacuous gate)
+
+$ git show --no-patch --format='%h %ad %s' 39630182   # the row-23 fix commit
+39630182 Sun May 31 12:12:07 2026 -0500 fix(engine): row-23 — replace fabricated Supp=0.5 with temporal→scalar→unknown
+
+$ git ls-tree b5ccee0d --name-only prolog/testsets/ | grep -c '\.pl$'   # testsets TRACKED at the measuring commit
+226
+
+$ git ls-tree b5ccee0d --name-only prolog/testsets/ | grep -c '_contradictions\.pl$'
+32
+
+$ ls prolog/archives/datasets/kernel_v1/*.pl | wc -l   # kernel_v1 top-level files (what the loader glob loads)
+1106
+
+$ git show b5ccee0d:docs/technical/classify_at_time_wiring.md | grep -n -A2 'Engine-measured on'
+41:> corpus regeneration authors temporal suppression series for most constraints. Engine-measured on
+42-> the live corpus (562 testsets): **1452** `suppression_requirement` `measurement/5` facts; **471/562**
+43-> constraints carry a temporal series (first branch); **91/562** are scalar-only (the STOPGAP branch);
+
+$ git show b5ccee0d:docs/technical/classify_at_time_wiring.md | grep -n 'Recompute before citing'
+45:> not the scalar fallback — is the live path for the majority. Recompute before citing (corpus grows):
+
+Reading: the figures entered 2026-06-02 against 'the live corpus (562 testsets)' — a working-tree
+state with only 226 testsets tracked in git (32 of them sidecars). The 562-file state was never
+archived; kernel_v1 (the 2026-06-05 reset archive) has 1,106 top-level files. Exact-match
+re-witness of 471/562/91/0 is impossible on any extant substrate; the doc itself instructs
+recomputation. kernel_v1 re-measured figures (probe_b_output.txt): 934/1106 temporal (84.4%
+constraint-denominated), 172 scalar-only, 0 unknown; row-denominated 2882/3497 = 82.4% temporal.
+Recorded comparator: 471/562 = 83.8% constraint-denominated (no row-denominated figure was recorded).
