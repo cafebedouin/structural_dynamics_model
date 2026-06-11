@@ -307,8 +307,13 @@ classify_by_signature(Profile, _, natural_law) :-
 classify_by_signature(Profile, _, coordination_scaffold) :-
     coordination_scaffold_signature(Profile), !.
 
-classify_by_signature(Profile, _, piton_signature) :-
-    piton_signature(Profile), !.
+% OQ-90 (2026-06-11): the profile-path piton_signature dispatch is RETIRED. piton is
+% now an FCR-branch refinement keyed on computed capture (narrative_ontology:piton_candidate/1
+% via resolve_with_perspectival_check/4), not on the falsified Supp<=0.2 proxy. The old gate
+% was corpus-dark (it never fired on the live corpus) and keyed on metrics witnessed wrong
+% (2026-06-10 controls). Retirement scope is ONLY this clause + the piton_signature/1 helper
+% (operator ruling); the drl_core theater-based piton clauses are superseded-pending, not removed.
+% Two-sided witness: audits/2026-06-11_oq90_piton_refinement/phase4_witness.md.
 
 % Constructed constraint sub-signatures (extraction-aware):
 % Low extraction (ε ≤ rope_chi_ceiling): enforcement exists but extraction is low → rope-like
@@ -448,14 +453,12 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
    - Legacy software monoliths
    ================================================================ */
 
-piton_signature(profile(_AccessCollapse, Suppression, Resistance,
-                                   _BeneficiaryCount, HasAlternatives,
-                                   TemporalStability, _CoordinationSuccess)) :-
-    number(Suppression), number(Resistance),  % fail-closed on `unknown` (2026-06-09)
-    Suppression =< 0.2,       % Low active enforcement
-    Resistance > 0.2,         % But people are pushing back
-    HasAlternatives == true,  % It was a choice
-    TemporalStability == evolving. % It has decayed or gotten worse
+% piton_signature/1 RETIRED (OQ-90, 2026-06-11) together with its dispatch clause above.
+% It keyed on Supp<=0.2 + Resistance>0.2 + alternatives + evolving — proxies witnessed wrong
+% (2026-06-10 controls) and corpus-dark. piton is now an FCR-branch refinement on computed
+% capture (narrative_ontology:piton_candidate/1). Two-sided witness:
+% audits/2026-06-11_oq90_piton_refinement/phase4_witness.md (positive control fires-before /
+% falls-through-after; 0-row corpus diff).
 
 /* ================================================================
    SIGNATURE 4: CONSTRUCTED CONSTRAINT
@@ -608,6 +611,8 @@ compute_signature_confidence(Profile, coordination_scaffold, Confidence) :-
     ;   Confidence = low
     ).
 
+% superseded by OQ-90 FCR refinement; unreachable from profile path (the piton_signature
+% dispatch was retired 2026-06-11). Left in place — removal exceeds the ruled scope.
 compute_signature_confidence(Profile, piton_signature, Confidence) :-
     Profile = profile(_, Suppression, Resistance, _, HasAlternatives, TemporalStability, _),
     % Count strong indicators for a piton
@@ -663,6 +668,7 @@ explain_signature(C, coordination_scaffold, Explanation) :-
            'COORDINATION SCAFFOLD signature for ~w: Extreme accessibility (collapse=~2f) with minimal enforcement (suppression=~2f). Viable alternatives existed historically, indicating this is a successful coordination standard rather than a natural law. Maintains adoption through symmetric benefits.',
            [C, AC, S]).
 
+% superseded by OQ-90 FCR refinement; unreachable from profile path (dispatch retired 2026-06-11).
 explain_signature(C, piton_signature, Explanation) :-
     get_constraint_profile(C, Profile),
     Profile = profile(_, S, R, _, _, _, _),
@@ -910,6 +916,7 @@ resolve_modal_signature_conflict(unknown, coordination_scaffold, Result) :- !, R
 resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :- !, Result = rope.
 resolve_modal_signature_conflict(unknown, constructed_high_extraction, Result) :- !, Result = snare.
 resolve_modal_signature_conflict(unknown, constructed_constraint, Result) :- !, Result = tangled_rope.
+% superseded by OQ-90 FCR refinement; unreachable from profile path (dispatch retired 2026-06-11).
 resolve_modal_signature_conflict(unknown, piton_signature, Result) :- !, Result = piton.
 resolve_modal_signature_conflict(unknown, ambiguous, Result) :- !, Result = unknown.
 

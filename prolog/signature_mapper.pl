@@ -23,6 +23,8 @@ resolve_mapping(natural_law, mountain).
 % Successful voluntary coordination (like decentralized_governance) are Ropes
 resolve_mapping(coordination_scaffold, rope).
 % A scaffold that has decayed into a liability is a Piton
+% superseded by OQ-90 FCR refinement; the piton_signature atom is no longer produced
+% from the profile path (dispatch retired 2026-06-11). Left in place — ruled scope.
 resolve_mapping(piton_signature, piton).
 % Asymmetric, enforced, or extractive rules are Nooses
 resolve_mapping(constructed_constraint, snare).
