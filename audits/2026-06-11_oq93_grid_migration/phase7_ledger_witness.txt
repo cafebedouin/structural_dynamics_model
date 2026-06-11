@@ -1,0 +1,11 @@
+[ledger] Extracting tensions ledger (deterministic, no LLM)...
+[ledger] Ledger (2 blocks) saved to /home/scott/bin/wt-oq93-grid-migration/outputs/tensions_ledger.md
+  [PASS] 1a ledger blocks == manifest n_constraints (48) — blocks=48
+  [PASS] 1b every block carries all 7 required line families — missing=[]
+  [PASS] 1c manifest stamped in ledger header
+  [PASS] 1d OQ-103 provenance gap LABELED on every block with edges
+  [PASS] 2a two reports regenerated (['agenda_conditioning', 'ai_governance_accountability'])
+  [PASS] 2b ledger fields match pipeline entries for both spot-checked constraints — []
+  [PASS] 3 orchestrator _step_ledger returns success with output path — status=success data=/home/scott/bin/wt-oq93-grid-migration/outputs/tensions_ledger.md
+  [PASS] 4 fixture's witnessed meas_prov(39,0,0,2,39) renders 'projected 2' on the ledger drift line — - drift events: extraction_accumulation [warning] [series 2/39 authored-as-projected — OQ-102(a)]
+8/8 witness cases pass
