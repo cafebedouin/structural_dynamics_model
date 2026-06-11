@@ -658,6 +658,12 @@ explain_signature(C, constructed_low_extraction, Explanation) :-
            'CONSTRUCTED LOW-EXTRACTION signature for ~w: Enforcement present (suppression=~2f, resistance=~2f) but extraction is low (~2f). This is a rule-based coordination structure, not an extraction mechanism.',
            [C, S, R, Ext]).
 
+% NOTE (OQ-98 post-close check, 2026-06-11): the "metrics failed to classify as
+% snare" prose below is UNCONDITIONAL — it prints whenever the signature fires,
+% without checking what the metric layer actually returned (witnessed:
+% agenda_conditioning, metric == dr_type == snare at every standard context, yet
+% this line printed and was quoted into OQ-98 as if it reported a rewire). Do not
+% read it as a rewire claim; signature_grade/2 is the checked rewire fact.
 explain_signature(C, constructed_high_extraction, Explanation) :-
     get_constraint_profile(C, Profile),
     Profile = profile(_, S, R, _, _, _, _),

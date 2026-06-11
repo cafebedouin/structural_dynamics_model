@@ -4390,6 +4390,19 @@ Date-stamp as **shim-era evidence**: ruling (b) (keep-and-migrate) killed the im
 after these reports were generated, so future grids are authored-or-absent. Witnesses:
 `audits/2026-06-10_external_review_vote_market/reports/`.
 
+**Fire-on-migration witnesses (added 2026-06-11, OQ-98 close).** Two OQ-98 paths landed
+witnessed-as-code but have never changed an output; this migration's acceptance must witness
+them FIRING (or record why not), or they rot silently: (i) the kappa
+`[CONDITIONAL: grid authored A/T]` tail (`report_generator.pl`, kappa block) — unreachable
+under the live all-absent regime because kappa prints DATA_INSUFFICIENT; the first
+partially-authored grid (authored < total, kappa computable) must show the tag. (ii) the
+moderate→yellow verdict cap (`diagnostic_summary:verdict_join/3`) — zero caps on the
+2026-06-11 corpus (all 13 correction-grade carriers already base ≥ yellow); strictly
+corpus-content-gated (first correction-grade signature on a base-GREEN constraint) rather
+than grid-gated, tracked here because this is the regime-change OQ. At first firing of (ii),
+re-run the histogram gate (`audits/2026-06-11_oq98_verdict_join/histogram_gate.pl`) — the
+severity=moderate ruling is confirmed-but-never-stressed (KNOWN_STATE 2026-06-11 tripwire).
+
 ## OQ-94 — `constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints
 
 **Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
@@ -4642,6 +4655,20 @@ CONDITIONAL branch is unreachable on the live all-absent-grid regime (kappa prin
 DATA_INSUFFICIENT); it fires when a partially-authored grid first exists. Cross-refs: OQ-97
 (banner site now a witnessed join; census stays open), OQ-102 (banner-side inversion fixed;
 per-time-point provenance open), OQ-101 (ledger gains `verdict_join` as a ready-made source).
+
+**Post-close substrate check (2026-06-11, operator-directed).** This OQ's motivating example
+for sketch (c) was misdescribed by the report's own template prose: "an extraction mechanism
+that **metrics failed to classify** as snare" (agenda_conditioning) is UNCONDITIONAL text in
+`explain_signature(C, constructed_high_extraction, …)` (`signature_detection.pl:667`), printed
+whenever that signature fires regardless of what the metric layer returned. Probed against the
+code: `metric_based_type_indexed` == `dr_type` for agenda_conditioning at ALL four standard
+contexts (powerless tangled_rope, moderate snare, institutional rope, analytical snare — the
+signature never rewired anywhere), so metrics DID classify it snare and its commentary grade
+is correct; possibility (b) — grade predicate excluding the divergence by context choice — is
+ruled out at every altitude the report uses. Witness:
+`audits/2026-06-11_oq98_verdict_join/agenda_conditioning_grade_probe.txt`; a code comment at
+the template clause now flags the prose as an unchecked assertion (`signature_grade/2` is the
+checked rewire fact).
 
 ## OQ-99 — Omega resolution-scenario generator: unbound constraint name prints `Constraint: unknown`; identical N=30 five-step template across all empirical omegas
 

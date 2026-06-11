@@ -45,6 +45,20 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — Tripwire: the moderate→yellow verdict cap is confirmed-but-never-stressed; re-rule evidence arrives with the first correction-grade signature on a base-GREEN constraint
+**Files:** prolog/diagnostic_summary.pl, prolog/signature_detection.pl
+**Tier:** tripwire
+
+At the OQ-98 close, severity=moderate for correction-grade signatures was confirmed only in
+the sense that it changed nothing: all 13 correction carriers already had base ≥ yellow, so
+zero moderate caps have ever shipped. The ruling has not been stressed. When the FIRST
+correction-grade signature fires on a base-green constraint (corpus-content event, not
+grid-gated), re-run the histogram gate
+(`audits/2026-06-11_oq98_verdict_join/histogram_gate.pl`) and surface the transition to the
+operator before trusting the new headline — that firing IS the re-rule evidence the
+2026-06-11 ruling deferred to. Cross-listed in OQ-93's fire-on-migration witnesses (with the
+kappa CONDITIONAL tail, the other dormant OQ-98 path).
+
 ## 2026-06-11 — OQ-98 RESOLVED: report headline verdict is now verdict_join (Prolog-side join over alerts + provenance, serialized with raw inputs); schema_version 1→2
 **Files:** prolog/diagnostic_summary.pl, prolog/signature_detection.pl, prolog/json_report.pl, prolog/report_generator.pl, python/enhanced_report.py, python/run_pipeline.py, python/shared/schemas.py, ISSUES.md, audits/2026-06-11_oq98_verdict_join/
 **Tier:** landed
