@@ -1,0 +1,39 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+loaded corpus: archives/datasets/kernel_v2_test, n=100
+default_context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))
+static clinical_deskilling_automation theater_ratio = 0.81
+static clinical_deskilling_automation base_extractiveness = ABSENT
+static clinical_deskilling_automation suppression_requirement = 0.72
+static milblogger_legitimacy_erosion theater_ratio = 0.78
+static milblogger_legitimacy_erosion base_extractiveness = ABSENT
+static milblogger_legitimacy_erosion suppression_requirement = 0.35
+
+corpus-wide unique (C,T) mismatch points at default context: 2
+  mismatch: challenge_as_commons_maintenance T=5
+  mismatch: clinical_deskilling_automation T=0
+
+=== FLAGGED: clinical_deskilling_automation T=0 ===
+  cleared: snapshot_type=piton  classify_at_time=unknown
+  set(theater=0.35 eps=0.28): snapshot_type=unknown
+  VERDICT: mismatch reproduced AND closed by nb-global state -> mechanism CONFIRMED
+
+=== FLAGGED: milblogger_legitimacy_erosion T=18 ===
+  cleared: snapshot_type=piton  classify_at_time=piton
+  set(theater=0.75 eps=0.3): snapshot_type=piton
+  VERDICT: agreement, stable under set-manipulation (control PASS)
+
+=== CONTROL: milblogger_legitimacy_erosion T=0 ===
+  cleared: snapshot_type=unknown  classify_at_time=unknown
+  set(theater=0.35 eps=0.45): snapshot_type=unknown
+  VERDICT: agreement, stable under set-manipulation (control PASS)
+
+=== CONTROL: clinical_deskilling_automation T=2 ===
+  cleared: snapshot_type=tangled_rope  classify_at_time=tangled_rope
+  set(theater=0.48 eps=0.39): snapshot_type=tangled_rope
+  VERDICT: agreement, stable under set-manipulation (control PASS)

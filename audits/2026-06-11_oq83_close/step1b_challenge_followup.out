@@ -1,0 +1,22 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+static theater_ratio = 0.22
+static base_extractiveness = ABSENT
+static suppression_requirement = 0.35
+measurement times: [0,2,4,5,6,8,10]
+
+T=0 snapshot=scaffold classify_at_time=scaffold backed=true (eps=0.15 supp=0.25 theater=0.18)
+T=2 snapshot=scaffold classify_at_time=scaffold backed=false (eps=0.18 supp=0.35 theater=0.19)
+T=4 snapshot=scaffold classify_at_time=scaffold backed=false (eps=0.22 supp=0.35 theater=0.2)
+T=5 snapshot=scaffold classify_at_time=unknown backed=false (eps=0.5 supp=0.3 theater=none)   <-- MISMATCH
+T=6 snapshot=scaffold classify_at_time=scaffold backed=false (eps=0.25 supp=0.35 theater=0.21)
+T=8 snapshot=scaffold classify_at_time=scaffold backed=false (eps=0.27 supp=0.35 theater=0.22)
+T=10 snapshot=scaffold classify_at_time=scaffold backed=true (eps=0.28 supp=0.35 theater=0.22)
+
+T=5 with globals set (theater=none eps=0.5): snapshot=scaffold vs classify_at_time=unknown
+mechanism: T=5 mismatch NOT closed by nb-global state (different cause)
