@@ -498,6 +498,49 @@ leaves empty. See OQ-44 for the engine-wide audit.
 
 ---
 
+## Pattern 6 — Success-shaped absorption (measured-empty and didn't-look collapse to one output at aggregation/channel boundaries)
+
+Three instances witnessed in ONE DAY (2026-06-10), at three altitudes — which is what
+promoted this from notes to a numbered pattern:
+
+1. **Value altitude:** `system_gradient`'s `[] → 0.0` fallback (`coercion_projection.pl`).
+   Every gradient computation ever made failed (the `time_point_in_interval` cut bug) and the
+   fallback emitted `0.0` — byte-identical to a measured flat gradient — for the construct's
+   entire life. The bug was invisible BECAUSE the absorption was downstream of it.
+2. **Channel altitude:** `grep -v Warning`. The `domain_registry` dangling-module warning
+   printed at every load for four months into a universally filtered channel, until the dead
+   reference crashed the validation suite at runtime (OQ-96).
+3. **Aggregation altitude:** `system_gradient`'s findall over levels. A constructed 8/32
+   one-level grid yielded `G_sys=0.216` presented as a SYSTEM reading with a full
+   `increasing_coercion` verdict beside `completeness=0.25` — missing levels contribute
+   silence, not absence-marks, and the consumer never consults coverage (OQ-93 stage-2
+   battery item 4).
+
+**The class:** an aggregation or channel that cannot distinguish *measured-empty* from
+*didn't-look*, emitting success-shaped output either way. It is the spine's defect one
+composition up: each COMPONENT may be individually sound (the findall is correct; the filter
+is deliberate; the default is documented), and the absorption happens where they compose —
+which is why none of the three instances was caught at its own site.
+
+**The rule:** aggregates carry their COVERAGE (what fed them) to the read site; channels carry
+ALLOWLISTS (what silence is allowed to mean — `load_warning_gate.py` is the template);
+defaults-on-empty get the Pattern-4 treatment (return `unknown`/OPEN, never a plausible
+value). Fail-closed per-QUESTION, not per-dataset: sufficiency is a property of the question
+(a one-level grid is adequate for a one-level read and worthless for a two-needle verdict —
+no global threshold encodes that; consumer-named requirements do).
+
+**Diagnostic:** every `findall`-feeding-aggregate and every default-on-empty branch
+(`;  X = 0`, `;  X = 0.0`, `-> ... ; Default`) is a candidate site. Bounded census of live
+code for these two syntactic shapes: OQ-97 (future work; sort-on-encounter until it runs,
+flagging against this entry).
+
+**Relationship to the other patterns:** Pattern 4 is the value-level case (one fabricated
+default), Pattern 5 the gate-level case (absence satisfies a check); Pattern 6 names the
+aggregation/channel level where sound parts compose into an output that erases the
+distinction both lower patterns protect.
+
+---
+
 ## Estimator-classifier independence
 
 The principle, generalized: the boundary logic should live in exactly one place — the
@@ -690,6 +733,25 @@ the count, in the same pass. "N cases of X" is never the finding; "N cases, of w
 content-driven and N−k are one convention" is the finding. This is the positive-control discipline
 applied to your own headline: the breakdown is the control that catches the count standing in for
 the substrate.
+
+---
+
+## Count-as-witness assumes a single writer (under parallel instances, the diff is the witness)
+
+A global count used as a commit's witness — "checker: 94 parsed, 0 malformed" offered as proof
+that THIS edit landed correctly — is valid only while one writer holds the ledger. The moment
+parallel instances write the same file, the count's delta carries every writer's changes at once:
+a 94→95 alongside another instance's new entry no longer isolates this session's edit (observed
+2026-06-10: OQ-94 corrections committed while a parallel instance landed OQ-95; the parse-count
+delta was confounded in the same hour the practice would have been cited). The checker's PASS/FAIL
+stays valid — it certifies the whole file's grammar — what breaks is the COUNT as an edit-witness.
+
+**The rule:** a commit's witness must be scoped to the commit — the diff (`git show --stat`, or
+the pasted hunks), or an entry-anchored check (query the specific entry the edit touched) — never
+a global count. Global counts remain fine as whole-file gates (the checker's exit code). This is
+the single-writer assumption made explicit: counts aggregate; diffs attribute. Same family as the
+section above ("a gating count is not a finding without its composition") — under multi-writer,
+the composition of a count delta includes other writers' work.
 
 ---
 

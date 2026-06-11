@@ -1018,6 +1018,13 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
     % Must have a coordination function
     narrative_ontology:has_coordination_function(C),
 
+    % OQ-94 row-2 gate (ruled 2026-06-10, after the reachability control —
+    % 7/7 of the live CI_Rope set is beneficiary-bearing): a constraint whose
+    % gains demonstrably accrue to a seat must not certify as "structurally
+    % sound true coordination". Computed capture only; absent surface changes
+    % nothing (the 7 corpus certifications carry no gain_flow and still pass).
+    \+ narrative_ontology:constraint_captured(C),
+
     % Collect excess extraction as diagnostic evidence (not a gate).
     % The floor override in boltzmann_floor_for/2 is editorial data,
     % not a classification input — gating here allowed overrides to
@@ -1119,7 +1126,10 @@ determine_pure_subtype(C, pure_natural_law) :-
     get_constraint_profile(C, Profile),
     natural_law_signature(Profile), !.
 determine_pure_subtype(C, pure_coordination) :-
-    narrative_ontology:has_coordination_function(C), !.
+    narrative_ontology:has_coordination_function(C),
+    % OQ-94 row-3 gate (ruled 2026-06-10, riding with row 1): captured
+    % constraints don't label pure_coordination (commentary-grade).
+    \+ narrative_ontology:constraint_captured(C), !.
 determine_pure_subtype(C, pure_scaffold) :-
     narrative_ontology:has_sunset_clause(C), !.
 determine_pure_subtype(_, pure_unclassified).

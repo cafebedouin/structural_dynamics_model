@@ -107,6 +107,7 @@ param_spec(power_function, atom, oneof([sigmoid, piecewise_linear, piecewise_no_
 % 7. INTENT & DETECTION THRESHOLDS
 % ============================================================
 
+param_spec(grid_shim_enabled,                atom,   oneof([true, false]), "OQ-96/OQ-93: false (default) disables DR-AUDIT grid injection+imputation and flips the 32-point completeness gate to expected-OPEN; true restores manufacture-then-certify (archive replays)").
 param_spec(system_gradient_threshold,        number, range(0.0, 1.0), "Min change for non-stable gradient").
 param_spec(system_gradient_strong_threshold, number, range(0.0, 1.0), "Threshold for Strong intent classification").
 param_spec(beneficiary_gain_min,             number, range(0.0, 1.0), "Min power gain for main beneficiary ID").

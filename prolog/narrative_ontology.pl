@@ -87,7 +87,10 @@
     stakeholder_secondary_role/3,  % stakeholder_secondary_role(+C, +Name, +Role)
     stakeholder_non_agent/2,       % stakeholder_non_agent(+C, +Name) — excluded from beneficiary/victim derivation and d
     disappearance_verdict/2,       % disappearance_verdict(+C, +V) — Q5; V ∈ {world_rearranges, world_unchanged, contested}
-    founding_problem_status/2.     % founding_problem_status(+C, +S) — R5; S ∈ {live, dead, contested}; NEVER consumed as a claim, mismatch-only
+    founding_problem_status/2,     % founding_problem_status(+C, +S) — R5; S ∈ {live, dead, contested}; NEVER consumed as a claim, mismatch-only
+    % OQ-92 receipt surface (step 3 Stage B; tri-valued: named-seat/diffuse/ABSENT-fail-closed)
+    stakeholder_gain_flow/2,       % stakeholder_gain_flow(+C, +Receiver) — Receiver = seat name (capturer) | diffuse (authored no-capture). NEVER synthesized (fabrication ban, OQ-92 Rulings; data_repair.pl is the named door). Receipt ≠ beneficiary-role.
+    fixing_cost_class/2.           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -113,7 +116,9 @@
     stakeholder_secondary_role/3,
     stakeholder_non_agent/2,
     disappearance_verdict/2,
-    founding_problem_status/2.
+    founding_problem_status/2,
+    stakeholder_gain_flow/2,
+    fixing_cost_class/2.
 
 /* ============================================================
    2. VALIDATION LOGIC
@@ -293,6 +298,20 @@ is_tangled_rope(ConstraintID) :-
     % Must have both coordination function AND extraction
     has_coordination_function(ConstraintID),
     has_asymmetric_extraction(ConstraintID).
+
+%% constraint_captured(+C)
+%  OQ-92 Stage D: a seat CAPTURES this constraint's extraction — computed
+%  POSITIVELY from the authored receipt surface, true iff gain_flow names an
+%  existing seat. Authored 'diffuse' or ABSENT surface => false: absence never
+%  blocks benignity certification, only witnessed capture does (tri-valued
+%  provenance, OQ-92 Rulings block). NEVER derived from metrics (fabrication
+%  ban; data_repair.pl is the named door). Consumers: the benignity gates —
+%  drl_core scaffold clause, maxent scaffold spec, signature_detection CI_Rope
+%  + pure_coordination (OQ-94 rows 1-3, all ruled GATE).
+constraint_captured(C) :-
+    stakeholder_gain_flow(C, Receiver),
+    Receiver \== diffuse,
+    constraint_stakeholder(C, Receiver, _, _, _, _, _), !.
 
 %% has_coordination_function(?ConstraintID)
 %  Check if constraint solves a collective action problem.

@@ -555,6 +555,17 @@
         "$ref": "#/$defs/Stakeholder"
       }
     },
+    "gain_flow": {
+      "type": "string",
+      "minLength": 1,
+      "description": "OQ-92 receipt surface, capture half: who RECEIVES the extraction. Either the literal 'diffuse' (the author AFFIRMATIVELY asserts no seat captures — an authored universal negative, piton-side candidate) or the snake_case name of a stakeholder in stakeholders[] (that seat is the capturer). Tri-valued provenance by construction: named-seat / explicit-'diffuse' / ABSENT (field omitted = not authored under the receipt surface — fail-closed: no capture verdict, no piton refinement, no benignity-gate effect). REFERENTIAL INTEGRITY IS COMPILER-ENFORCED (Draft7 cannot express the cross-field reference): a non-'diffuse' value naming a seat not in stakeholders[] is REJECTED at compile time, fail-loud — runtime absorption to fail-closed is backstop only. FABRICATION BAN (OQ-92 Rulings block, settled by the OQ-90 HALT): this field is NEVER synthesized from metrics; no repair/bridge/imputation clause may infer it (data_repair.pl is the named door). Receipt-of-gain is NOT beneficiary-role: a stakeholder may hold role=beneficiary (benefits-from) without being named here (receives-the-extraction).",
+      "$comment": "Step-3 build: audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md. Step-2 prototype witness: audits/2026-06-10_gain_flow_prototype/."
+    },
+    "fixing_cost": {
+      "type": "string",
+      "enum": ["cheap", "prohibitive"],
+      "description": "OQ-92 receipt surface, cost half: the cost class of fixing/removing this constraint for whoever could fix it, relative to the benefit of fixing. DISTINCT FIELD from gain_flow by ruling (b) — accrual-of-gain and cost-to-fix are independent axes; never merge into one scalar or enum (a merged enum would weld provenance to value). Cell semantics (step-2 prototype, 8/8): 'prohibitive' + gain_flow='diffuse' is the piton cell; 'cheap' + 'diffuse' is transient neglect (NOT piton); a captured constraint (gain_flow names a seat) stays snare-flavored under EITHER cost class — cost never demotes capture. Class atom, not a calibrated scalar (the prototype tested cut-representability, not calibration)."
+    },
     "six_questions": {
       "type": "object",
       "description": "Story-level answers to the six-questions battery (docs/five_questions.md + R5). Q1 (who benefits/pays) and Q4's seats are carried by the stakeholders[] roles; these fields carry the story-level answers. Placement deviation from MIGRATION_PLAN.md noted: R5 genealogy fields live here (story-level), not per-stakeholder — the founding problem is a property of the constraint, not of a seat.",
@@ -1002,6 +1013,24 @@
             }
           }
         }
+      }
+    },
+    {
+      "$comment": "OQ-92 receipt surface rides the stakeholder layer: gain_flow is a statement about seats, so authoring it without the stakeholders[] surface is incoherent. Presence of gain_flow requires stakeholders (empty-array case governed by the Pattern-5 guard above).",
+      "if": {
+        "required": [ "gain_flow" ]
+      },
+      "then": {
+        "required": [ "stakeholders" ]
+      }
+    },
+    {
+      "$comment": "OQ-92 receipt surface, cost half: same rider — fixing_cost is authored about the same seats (who could fix, at what cost), so it also requires the stakeholders[] surface.",
+      "if": {
+        "required": [ "fixing_cost" ]
+      },
+      "then": {
+        "required": [ "stakeholders" ]
       }
     },
     {

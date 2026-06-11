@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "public_resource_pricing",
+    "version": "1.0",
+    "generated_date": "2026-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "curb_pricing",
+    "story_uid": "3e222097-ee02-4a2f-b9c3-21498bc6244b",
+    "created_at": "2026-01-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cost-Recovery Pricing for Curb Space Allocation",
+    "topic_domain": "urban_planning/public_resource_allocation/transportation_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "municipal_revenue_authority",
+      "alternative_mobility_users",
+      "commercial_delivery_operators"
+    ],
+    "victims": [
+      "low_income_car_dependent_households",
+      "suburban_commuters"
+    ],
+    "vindicated_propositions": [
+      "market_efficiency_doctrine",
+      "congestion_pricing_theory"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Car-Dependent Low-Income Household",
+      "comment": "PERSPECTIVE 1: CAR-DEPENDENT LOW-INCOME HOUSEHOLD (SNARE) — Trapped by residential location and job accessibility; cannot afford permit fees that middle-class households absorb; no viable transit alternative exists in their neighborhood. Experiences maximum extraction with no coordination benefit — the pricing mechanism excludes them from a resource their tax dollars built."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Suburban Commuter",
+      "comment": "PERSPECTIVE 2: SUBURBAN COMMUTER (TANGLED ROPE) — Constrained by residential choice and workplace location; can afford permits but experiences them as a new tax on previously free access. Benefits from reduced cruising time when permits limit competition, but pays substantially more than under the prior regime. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Municipal Revenue Authority",
+      "comment": "PERSPECTIVE 3: MUNICIPAL REVENUE AUTHORITY (ROPE) — Primary beneficiary capturing permit revenue and congestion-reduction benefits. Experiences the constraint as pure coordination: pricing solves the allocation problem, funds alternative mobility, and generates budget flexibility. Net beneficiary with arbitrage-level exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Alternative Mobility Coalition",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE MOBILITY COALITION (ROPE) — Cyclists, transit users, micromobility operators who benefit from curb space reallocation and revenue-funded infrastructure. Organized agents with mobile exit options see genuine coordination: pricing creates space for bike lanes, bus lanes, and loading zones that were previously occupied by free car storage."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Equity-Focused Reform Coalition",
+      "comment": "PERSPECTIVE 5: EQUITY-FOCUSED REFORM COALITION (SCAFFOLD) — Sees cost-recovery pricing as a transitional mechanism with a sunset: once transit density reaches threshold levels and residential parking is decoupled from housing mandates, the pricing mechanism becomes unnecessary. The constraint is justified by the transition, not the steady state. Estimated sunset: 15-25 years as transit-oriented development matures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Commercial Delivery Sector",
+      "comment": "PERSPECTIVE 6: COMMERCIAL DELIVERY SECTOR (TANGLED ROPE) — Benefits from predictable curb access and reduced double-parking enforcement, but pays permit fees that were previously externalized. Mixed experience: coordination function is real (loading zone availability improves), but extraction is also real (new cost burden)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, cost-recovery pricing for scarce public infrastructure is a genuine coordination mechanism (solves the tragedy of the commons), but it is also extractive when applied to populations with inelastic demand and no viable alternatives. The constraint exhibits both functions simultaneously. Not a false summit — the coordination function is real, but so is the asymmetric burden."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transit_density_threshold",
+      "question": "At what transit service density does car ownership become genuinely optional rather than economically coerced?",
+      "resolution_mechanism": "Empirical analysis of car ownership rates vs transit frequency/coverage; identification of threshold where ownership drops below 50% in comparable income cohorts",
+      "impact": "If threshold is 15-minute headways on 3+ routes within 400m: many US cities are decades from making pricing non-extractive. If threshold is lower: pricing becomes coordination sooner.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transit density threshold for non-coercive car ownership"
+    },
+    {
+      "id": "revenue_recycling_mechanism",
+      "question": "Does permit revenue actually fund alternative mobility infrastructure, or does it substitute for general fund allocations that would have occurred anyway?",
+      "resolution_mechanism": "Budget analysis comparing transit/bike infrastructure spending in permit-revenue cities vs control cities; tracking of revenue flows through municipal accounts",
+      "impact": "If revenue is truly additional: coordination function is stronger, beneficiary set expands. If revenue substitutes: extraction is higher, municipal authority is primary capturer.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether permit revenue is additional or substitutive"
+    },
+    {
+      "id": "income_elasticity_of_demand",
+      "question": "How does permit price sensitivity vary across income quintiles, and does the pricing structure account for this elasticity?",
+      "resolution_mechanism": "Econometric analysis of permit take-up rates vs household income; comparison of flat-fee vs income-scaled permit structures",
+      "impact": "If demand is highly inelastic for low-income households: pricing is more extractive than coordinating. If elastic: pricing successfully manages demand rather than excluding participants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Income-stratified price elasticity of curb space demand"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is cost-recovery pricing the legitimate reading of curb space as scarce public infrastructure, or is it one contested reading among several (property tax entitlement, equity redistribution)?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of curb space governance models; analysis of which reading dominates in different political economies; identification of structural factors that select for each reading",
+      "impact": "If cost-recovery is the only coherent reading: this constraint is a mountain (natural law of resource allocation). If multiple readings coexist: this constraint is one reading of a contested kernel, and the classification depends on which reading the observer holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether cost-recovery pricing is the unique legitimate reading or one among contested alternatives"
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the kernel 'curb space allocation rules' (the formal permit system) or 'curb space legitimacy claims' (the normative framework that justifies who gets to use public space)?",
+      "resolution_mechanism": "Analysis of what authority structure adjudicates disputes: if formal rules dominate, kernel is the permit system; if legitimacy narratives dominate, kernel is the normative framework layered above the rules",
+      "impact": "If kernel is formal rules: cs_pattern is likely formalized/extraction. If kernel is legitimacy claims: cs_pattern is likely distributed/practice, and the formal rules are downstream of contested norms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel is the formal rule system or the legitimacy framework above it"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Cost-recovery pricing for curb space allocation represents a contested reading of public infrastructure governance. This constraint instantiates the 'public resource pricing' reading of the curb space legitimacy kernel, where scarce public infrastructure requires market-rate or cost-recovery fees to manage demand efficiently. Sibling readings include 'property tax entitlement' (residents have already paid for curb access through property taxes) and 'equity redistribution' (curb space should be allocated to maximize mobility access for disadvantaged populations). The structural delta for this reading: permit fees at or near market-clearing rates, caps on permits per household, and revenue recycling into alternative mobility infrastructure. The constraint exhibits genuine coordination function (reduces cruising, funds transit and bike infrastructure, improves commercial loading access) alongside asymmetric extraction (low-income car-dependent households face new costs with no viable alternative, suburban commuters pay for previously free access). The extractiveness has increased over the 12-year interval as permit fees have risen faster than income growth and as enforcement has intensified. Theater ratio remains low (0.28) because the pricing mechanism is functionally effective at managing demand — it is not performative. Suppression has increased as enforcement capacity has grown and as alternative parking options have been eliminated.",
+    "key_agents": [
+      "Low-Income Car-Dependent Households: Primary victim (powerless/trapped) — cannot afford permits, no transit alternative, residential location locked by housing costs",
+      "Suburban Commuters: Secondary victim (moderate/constrained) — can afford permits but experience them as extraction; benefit from reduced competition",
+      "Municipal Revenue Authority: Primary beneficiary (institutional/arbitrage) — captures permit revenue, funds budget priorities, experiences as pure coordination",
+      "Alternative Mobility Coalition: Secondary beneficiary (organized/mobile) — cyclists, transit users, micromobility operators benefit from curb reallocation and revenue-funded infrastructure",
+      "Commercial Delivery Sector: Mixed position (institutional/mobile) — benefits from predictable loading access, pays new permit costs",
+      "Equity-Focused Reform Coalition: Organized agents (organized/constrained) — see pricing as transitional mechanism with sunset once transit density reaches threshold",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees both genuine coordination and asymmetric extraction; not a false summit"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The pricing mechanism extracts from car-dependent households (especially low-income) who have no viable alternative, but the extraction is not as severe as pure rent-seeking because the coordination function is real — curb space is genuinely scarce, and pricing does reduce cruising and fund alternative infrastructure. The value has increased over the interval (from 0.15 to 0.35) as permit fees have risen and enforcement has intensified. Suppression (0.45): Moderate. Significant barriers to exit include residential location lock-in, inadequate transit coverage in many neighborhoods, and the high cost of relocating closer to transit. But suppression is not total — some households can and do shift to transit or relocate. Suppression has increased over the interval as enforcement has become more systematic. Theater ratio (0.28): Low. The pricing mechanism is functionally effective at managing demand — it is not performative. Permit systems do reduce cruising time, do generate revenue, and do enable curb reallocation. The theater is limited to the equity-mitigation rhetoric (means-tested discounts that are too small to matter). Accessibility collapse (0.40): Moderate. Alternatives to car ownership exist in principle (transit, cycling, micromobility) but are not accessible to all populations — transit coverage is sparse in many neighborhoods, cycling is unsafe on many routes, and micromobility requires physical ability and digital access. The collapse is partial, not total. Resistance (0.65): High. The constraint meets substantial organized resistance from car-dependent constituencies, suburban commuter coalitions, and equity advocates. The resistance is not merely rhetorical — ballot initiatives, litigation, and political pressure have blocked or rolled back pricing schemes in multiple cities.",
+    "directionality_logic": "Each perspective's directionality is derived from the agent's structural position. Low-income car-dependent households are victims with trapped exit options — they experience high directionality (d → 1.0) and thus high effective extraction. Suburban commuters are victims with constrained exit options — they experience moderate-high directionality. The municipal revenue authority is a beneficiary with arbitrage exit options — it experiences low or negative directionality (d → 0.0), meaning the constraint subsidizes rather than extracts from this agent. Alternative mobility users are beneficiaries with mobile exit options — they experience low directionality. Commercial delivery operators are mixed (both beneficiary and victim) with mobile exit options — they experience moderate directionality, reflecting the genuine coordination benefit alongside the new cost burden. The analytical observer sees both functions and does not experience extraction directly.",
+    "perspectival_gap": "This constraint demonstrates how a single structural arrangement produces radically different experiences depending on the agent's position. The municipal revenue authority sees pure coordination (Rope) — the pricing mechanism solves the allocation problem and funds public goods. The alternative mobility coalition also sees coordination (Rope) — pricing creates space for bike lanes and transit that were previously occupied by free car storage. The equity-focused reform coalition sees a transitional mechanism (Scaffold) — pricing is justified by the transition to higher transit density, not as a permanent steady state. The suburban commuter sees mixed coordination and extraction (Tangled Rope) — benefits from reduced cruising but pays substantially more. The low-income car-dependent household sees pure extraction (Snare) — excluded from a resource their tax dollars built, with no viable alternative. The analytical observer sees both functions simultaneously (Tangled Rope) — the coordination is real, but so is the asymmetric burden. The perspectival gap is not a measurement error — it is the structure of the constraint itself.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Tangled Rope is the correct classification at the analytical level: the coordination function is genuine (curb space is scarce, pricing does manage demand, revenue does fund alternatives), but the extraction is also genuine (low-income households are excluded, suburban commuters pay for previously free access, and the burden is asymmetric). The constraint is not a Rope misclassified as a Snare, nor a Snare misclassified as a Rope — it is genuinely both. The mandate (manage scarce public infrastructure efficiently) is live, but the mechanism also extracts asymmetrically. The Tangled Rope classification captures this dual function. The constraint would only be a Snare if the coordination function were cover (if curb space were not actually scarce, or if pricing did not actually manage demand, or if revenue did not actually fund alternatives). The constraint would only be a Rope if the extraction were negligible (if low-income households had viable alternatives, or if permit fees were trivial relative to income). Neither condition holds — both functions are real.",
+    "kernel_context": "This constraint is the 'public resource pricing' reading of the curb space legitimacy kernel. The kernel is the contested question: what legitimizes who gets to use scarce curb space? This reading answers: market-rate or cost-recovery pricing legitimizes allocation because curb space is scarce public infrastructure requiring demand management. Sibling readings include 'property tax entitlement' (residents have already paid for curb access through property taxes, so additional fees are double taxation) and 'equity redistribution' (curb space should be allocated to maximize mobility access for disadvantaged populations, not to those who can pay). The structural delta for this reading: permit fees at or near market-clearing rates, caps on permits per household to prevent hoarding, and revenue recycling into alternative mobility infrastructure (transit, bike lanes, micromobility subsidies). The sibling readings would produce different constraints with different beneficiary/victim structures and different ε values — this is not one constraint viewed from different angles, but different constraints instantiated by different readings of the same kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "residential_parking_mandates",
+      "transit_service_frequency",
+      "micromobility_infrastructure"
+    ],
+    "dual_formulation_note": "The curb space pricing constraint is part of a constraint family with three sibling readings (public_resource_pricing, property_tax_entitlement, equity_redistribution). Each reading instantiates a different constraint with different ε values. This story models the public_resource_pricing reading. The constraint is downstream of residential parking mandates (which create the scarcity) and upstream of transit service frequency and micromobility infrastructure (which are funded by permit revenue in this reading)."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "low_income_car_dependent_households",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Households earning below 80% area median income, living in neighborhoods with sparse transit coverage (headways > 30 minutes), requiring car access for work commutes or caregiving responsibilities. Cannot afford annual permit fees of $500-$1500 (5-15% of discretionary income). No viable alternative: relocating closer to transit requires higher rent; transit commute times are 2-3x car commute times; cycling is unsafe on arterial routes. Experience permit pricing as exclusion from a resource their property taxes built."
+    },
+    {
+      "name": "suburban_commuters",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Households living outside the urban core, commuting to jobs in permit-priced districts. Can afford permit fees but experience them as a new tax on previously free access. Benefit from reduced cruising time when permits limit competition (average search time drops from 8 minutes to 3 minutes). Could relocate closer to work or shift to transit, but at significant cost (housing price premium, longer total commute including walk time). Pay $800-$2000 annually in permit fees."
+    },
+    {
+      "name": "municipal_revenue_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "City transportation department or parking authority that sets permit fees, enforces compliance, and allocates revenue. Captures $50-$200 million annually in permit revenue (varies by city size). Uses revenue to fund transit expansion, bike infrastructure, and general transportation budget. Experiences permit pricing as pure coordination: solves the allocation problem, reduces cruising-related congestion, and generates budget flexibility. Can adjust fee structure, enforcement intensity, and revenue allocation with minimal external constraint."
+    },
+    {
+      "name": "alternative_mobility_users",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Cyclists, transit users, micromobility operators (bike-share, scooter-share) who benefit from curb space reallocation and revenue-funded infrastructure. Permit pricing creates political and fiscal space for protected bike lanes, bus-only lanes, and micromobility parking corrals that were previously occupied by free car storage. Organized through advocacy coalitions (bike coalitions, transit rider unions). Can shift between modes or relocate with relatively low cost. Receive $20-$80 million annually in infrastructure investment funded by permit revenue."
+    },
+    {
+      "name": "commercial_delivery_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Logistics companies, freight carriers, and last-mile delivery services that require curb access for loading. Pay commercial permit fees ($2000-$10000 annually per vehicle) that were previously externalized. Benefit from predictable loading zone availability and reduced double-parking enforcement (which previously cost $500-$2000 per vehicle annually in fines and delay). Can shift delivery times, consolidate routes, or pass costs to customers. Mixed experience: coordination function is real (loading access improves), but extraction is also real (new cost burden)."
+    },
+    {
+      "name": "equity_focused_reform_coalition",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Advocacy organizations, policy researchers, and community groups focused on transportation equity. See cost-recovery pricing as a transitional mechanism with a sunset: once transit density reaches threshold levels (15-minute headways on 3+ routes within 400m of 80% of residents) and residential parking is decoupled from housing mandates, the pricing mechanism becomes unnecessary. Push for means-tested discounts, revenue recycling into transit, and sunset clauses. Constrained by political feasibility and budget realities. Estimated sunset: 15-25 years as transit-oriented development matures."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers, policy analysts, and systems thinkers examining curb space governance across jurisdictions and time horizons. See both genuine coordination function (pricing does manage scarce resources, does reduce cruising, does fund alternatives) and asymmetric extraction (low-income households are excluded, burden is regressive). Not a false summit — the coordination is real, but so is the extraction. The constraint is genuinely Tangled Rope at the analytical level."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Manages demand for scarce curb space in dense urban areas where parking supply is structurally insufficient relative to car ownership. Reduces cruising time (vehicles searching for parking), which accounts for 30-40% of congestion in commercial districts. Enables curb reallocation to higher-value uses (loading zones, bus lanes, bike corrals).",
+    "transfer_function": "Transfers money from car owners (especially suburban commuters and low-income car-dependent households) to municipal revenue authority. Transfers curb space from private car storage to alternative mobility infrastructure (bike lanes, bus lanes, loading zones). Transfers time from cruising drivers (who benefit from reduced search time) to municipal enforcement capacity (which must monitor compliance).",
+    "absent_voices": "Low-income car-dependent households in neighborhoods with sparse transit coverage are systematically underrepresented in permit pricing debates. They lack organized advocacy capacity, face language and information barriers, and are often excluded from public comment processes that occur during work hours. Suburban commuters are present but politically weaker than urban residents. Future generations who would benefit from transit investment are absent by definition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If permit pricing disappeared overnight, curb space allocation would revert to time-based competition (cruising for parking), cruising-related congestion would increase by 30-40% in commercial districts, municipal revenue would drop by $50-$200 million annually (forcing cuts to transit or other services), and curb space currently allocated to bike lanes and loading zones would face political pressure to revert to free car storage. The world rearranges because multiple stakeholders' arrangements depend on the pricing mechanism.",
+    "founding_problem": "Curb space scarcity in dense urban areas where parking demand exceeds supply, leading to cruising congestion, unpredictable access for commercial loading, and political conflict over curb allocation. The founding problem emerged in the 1970s-1990s as car ownership grew faster than urban land supply.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Curb space scarcity is corroborated by traffic engineers (who measure cruising time and parking occupancy rates), commercial delivery operators (who document loading access delays), and urban planners (who calculate parking supply/demand ratios). The problem is not contested — even critics of permit pricing acknowledge that curb space is scarce. The dispute is over the legitimacy of pricing as the allocation mechanism, not over whether scarcity exists."
+  },
+  "gain_flow": "municipal_revenue_authority",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "market_efficiency_allocation",
+    "drift_state": {
+      "moment": "contemporary_equity_challenge",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "property_tax_entitlement",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "equity_redistribution",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scarcity_requires_price_rationing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "user_pays_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

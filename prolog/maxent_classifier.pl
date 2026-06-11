@@ -172,6 +172,7 @@ boolean_spec(mountain,     emerges_naturally,          required).
 boolean_spec(mountain,     requires_active_enforcement, forbidden).
 boolean_spec(snare,        natural_law_without_beneficiary, forbidden).
 boolean_spec(scaffold,     has_coordination_function,   required).
+boolean_spec(scaffold,     constraint_captured,         forbidden).  % OQ-94 row-1 maxent mirror (same-commit congruence with drl_core scaffold clause)
 boolean_spec(rope,         emerges_naturally,          bonus).
 boolean_spec(tangled_rope, natural_law_without_beneficiary, forbidden).
 boolean_spec(tangled_rope, requires_active_enforcement, required).
@@ -190,6 +191,8 @@ eval_boolean_feature(C, has_asymmetric_extraction, Val) :-
     (narrative_ontology:has_asymmetric_extraction(C) -> Val = true ; Val = false).
 eval_boolean_feature(C, natural_law_without_beneficiary, Val) :-
     (drl_core:natural_law_without_beneficiary(C) -> Val = true ; Val = false).
+eval_boolean_feature(C, constraint_captured, Val) :-
+    (narrative_ontology:constraint_captured(C) -> Val = true ; Val = false).
 
 %% boolean_log_likelihood(+Constraint, +Type, -LogL)
 %  Computes the total boolean contribution to log-likelihood for a type.

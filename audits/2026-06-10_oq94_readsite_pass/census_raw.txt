@@ -1,0 +1,49 @@
+== untruncated has_coordination_function census (2026-06-10) ==
+cs_pattern_detection.pl:360:       CI_Rope requires a beneficiary (has_coordination_function), but
+data_repair.pl:163:        % Bridge has_coordination_function via constraint_beneficiary
+drl_boltzmann_analysis.pl:111:    narrative_ontology:has_coordination_function(C),
+drl_boltzmann_analysis.pl:119:    \+ narrative_ontology:has_coordination_function(C),
+drl_boltzmann_analysis.pl:123:    narrative_ontology:has_coordination_function(C),
+drift_events.pl:125:    narrative_ontology:has_coordination_function(C),
+drift_events.pl:203:    narrative_ontology:has_coordination_function(C),
+gap_diagnostic.pl:135:    (   narrative_ontology:has_coordination_function(C)
+gap_diagnostic.pl:431:    format('| has_coordination_function | ~w | ~w |~n', [NCoord, NCoordNo]),
+gap_diagnostic.pl:479:gate_description(scaffold_no_coordination, 'No has_coordination_function, blocking scaffold') :- !.
+gap_diagnostic.pl:482:gate_description(tangled_rope_no_coordination, 'No has_coordination_function, blocking tangled_rope') :- !.
+logical_fingerprint.pl:176:    narrative_ontology:has_coordination_function(C).
+logical_fingerprint.pl:226:    \+ narrative_ontology:has_coordination_function(C).
+logical_fingerprint.pl:444:    \+ narrative_ontology:has_coordination_function(C), !.
+transition_paths.pl:35:    narrative_ontology:has_coordination_function(C),
+transition_paths.pl:82:    narrative_ontology:has_coordination_function(C).
+transition_paths.pl:164:    narrative_ontology:has_coordination_function(C), !.
+drl_core.pl:203:%       has_coordination_function): structural facts, not observer-indexed.
+drl_core.pl:346:    narrative_ontology:has_coordination_function(C),
+drl_core.pl:373:    narrative_ontology:has_coordination_function(C),
+maxent_classifier.pl:174:boolean_spec(scaffold,     has_coordination_function,   required).
+maxent_classifier.pl:178:boolean_spec(tangled_rope, has_coordination_function,   required).
+maxent_classifier.pl:187:eval_boolean_feature(C, has_coordination_function, Val) :-
+maxent_classifier.pl:188:    (narrative_ontology:has_coordination_function(C) -> Val = true ; Val = false).
+invertibility_analysis.pl:120:    (narrative_ontology:has_coordination_function(C) -> HasCoord = true ; HasCoord = false),
+omega1_audit.pl:124:    (   narrative_ontology:has_coordination_function(C) -> HasCoord = true ; HasCoord = false ),
+omega1_audit.pl:626:        scaffold_no_coordination - 'No has_coordination_function',
+omega1_audit.pl:638:        tangled_no_coordination - 'No has_coordination_function',
+omega1_audit.pl:667:        near_tangled_no_coordination - 'Would be tangled_rope but no has_coordination_function',
+omega1_audit.pl:752:    report_flag_row('has_coordination_function', NCoord, NU),
+omega1_audit.pl:864:        format('but lack required flags (has_coordination_function, requires_active_enforcement, '),
+omega1_audit.pl:886:        format('declarations (has_coordination_function, requires_active_enforcement, '),
+signature_detection.pl:1019:    narrative_ontology:has_coordination_function(C),
+signature_detection.pl:1122:    narrative_ontology:has_coordination_function(C), !.
+
+== agent_beneficiary derivation + consumers ==
+narrative_ontology.pl:40:    agent_beneficiary/2,
+narrative_ontology.pl:371:%% agent_beneficiary(?ConstraintID, ?Beneficiary)
+narrative_ontology.pl:377:agent_beneficiary(ConstraintID, Beneficiary) :-
+constraint_indexing.pl:456:    % agent_beneficiary. Cutover witnessed zero-diff on the live corpus (all-agent
+constraint_indexing.pl:458:    (   narrative_ontology:agent_beneficiary(Constraint, _)
+signature_detection.pl:85:% the constraint vindicates) are filtered by narrative_ontology:agent_beneficiary/2
+signature_detection.pl:91:% that carries an agent_beneficiary/2 solution, so the constraints that fall
+signature_detection.pl:126:% constraint_claim / constraint_metric / base_extractiveness / agent_beneficiary
+signature_detection.pl:229:    findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),
+signature_detection.pl:1286:       agent_beneficiary(C, _).          % has identifiable AGENT beneficiaries
+signature_detection.pl:1338:    % narrative_ontology:agent_beneficiary/2 (June 2026 agency gate; ruling
+signature_detection.pl:1340:    findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),

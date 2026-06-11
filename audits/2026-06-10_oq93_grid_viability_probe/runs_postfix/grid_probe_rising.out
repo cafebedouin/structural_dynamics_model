@@ -1,0 +1,90 @@
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/maxent_classifier.pl:849:
+Warning:    Singleton variables: [C2]
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ../audits/2026-06-10_oq93_grid_viability_probe/stories/grid_probe_rising.pl...
+[SHIM] grid injection DISABLED (grid_shim_enabled=false; OQ-96 interim / OQ-93 probe) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: grid_probe_rising...
+  [OPEN] grid imputation DISABLED (grid_shim_enabled=false): 0/32 grid points absent — expected-and-witnessed (OQ-93/OQ-96)
+  [PROVENANCE] grid 32 = authored 32 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+
+>>> INITIATING DR-AUDIT SUITE: grid_probe_rising
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: grid_probe_rising (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INTENT] Result: increasing_coercion (Confidence: high) [grid diet: authored 32/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 0
+  Total drift events:  0
+  Critical: 0 | Warning: 0 | Watch: 0
+
+  No drift events detected.
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 10
+Structural Pattern: increasing_coercion
+Confidence:     high
+Grid diet:      authored 32/32, injected 0, imputed 0 (OQ-93)
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  ! ALERT [informational]: perspectival_incoherence detected for grid_probe_rising
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+Aggregate Magnitude (Kappa) at Tn: 0.80 [grid diet: authored 32/32, injected 0, imputed 0 — OQ-93]
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  No unresolved Omegas. System is epistemically complete.
+====================================================
+PROBE_GSYS grid_probe_rising 0.5880

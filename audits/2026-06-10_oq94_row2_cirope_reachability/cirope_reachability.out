@@ -1,0 +1,37 @@
+ERROR: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/domain_priors.pl:11:
+ERROR:    source_sink `domain_registry' does not exist
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/domain_priors.pl:11:
+Warning:    Goal (directive) failed: domain_priors:use_module(domain_registry)
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/maxent_classifier.pl:849:
+Warning:    Singleton variables: [C2]
+Warning: /home/scott/bin/structural_dynamics_model/.claude/worktrees/oq94-readsite/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+==== Q2 row-2 CI_Rope reachability control ====
+
+CASE cir_cap
+    boltzmann_compliant = inconclusive(insufficient_classifications)
+    scope_invariance    = invariant
+    coordination_fn     = true
+    excess_extraction   = 0.05
+  RESULT cir_cap | constraint_signature = ambiguous
+
+CASE cir_ctl
+    boltzmann_compliant = inconclusive(insufficient_classifications)
+    scope_invariance    = invariant
+    coordination_fn     = false
+    excess_extraction   = 0.05
+  RESULT cir_ctl | constraint_signature = ambiguous
+
+==== verdict mapping: PREREGISTRATION.md (cir_cap=CI_Rope & cir_ctl/=CI_Rope => Outcome 1 REACHABLE) ====

@@ -1,0 +1,29 @@
+# Post-merge re-witness (2026-06-11, after merging main 0b81e8ef into the OQ-95 branch)
+# Main's day included: OQ-96 interim fix (dead domain_registry clauses removed, shim off,
+# load-warning gate), OQ-92 stages, OQ-93 probe. Re-ran every OQ-95 witness on the merged tree.
+
+== load_warning_gate (new on main; my branch's first run against it) ==
+First run: [WARNING-GATE] UNEXPECTED: prolog/drl_purity_network.pl:89 :: Singleton variables: [Context]
+  -> real defect in my split: the worker constraint_neighbors_existing/3 never used Context
+     (edge discovery is context-independent; the original body only validated it).
+     Fixed by dropping the argument from the worker (now /2).
+After fix: [WARNING-GATE] 4 load warnings: 4 allowlisted, 0 unexpected
+
+== test suites (merged engine) ==
+test_phantom_neighbor_filter: All 4 tests passed
+test_forecloses_fpn_injection (fpn_injection): All 6 tests passed
+
+== validation suite (merged engine, shim-off regime, NO domain_registry.pl present) ==
+run_dynamic_suite exit 0; [PASS]=39 [FAIL]=0; [OPEN] lines=423, [SHIM] lines=39
+(pre-merge witness "39/39 exit 0" had run under the stale-registry-file regime;
+ this run is the honest fresh-clone regime post OQ-96 interim fix)
+
+== giant_component headline (merged engine, live corpus) ==
+| Total nodes (constraints) | 37 |
+**Largest component**: 21 nodes (56.8% of network)
+-> identical to pre-merge AFTER witness (giant_comp_AFTER.md); main's day did not move it.
+
+== note on the 6h51m "run" ==
+The first post-merge attempt (background pipeline swipl|grep|head) deadlocked at startup:
+0.00s CPU over 6h51m, state Sl, wchan=futex_do_wait — never began loading. Environment/spawn
+quirk (WSL2), not engine behavior; the identical goal completed in ~20s foreground (above).

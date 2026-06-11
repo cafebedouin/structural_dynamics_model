@@ -1,0 +1,375 @@
+{
+  "header": {
+    "constraint_id": "enforcement_technology_lock_in",
+    "version": "1.0",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lpr_lock",
+    "story_uid": "d2baa7fa-d014-4753-aa38-94423fa264ca"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "piton",
+    "human_readable": "License Plate Recognition Vendor Lock-In",
+    "topic_domain": "urban_planning/public_resource_allocation/transportation_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "parking_technology_vendors",
+      "surveillance_infrastructure_advocates"
+    ],
+    "victims": [
+      "municipal_fiscal_autonomy",
+      "privacy_advocates",
+      "alternative_enforcement_pathways"
+    ],
+    "vindicated_propositions": [
+      "technology_inevitability_doctrine"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Municipal Fiscal Autonomy",
+      "comment": "PERSPECTIVE 1: MUNICIPAL FISCAL AUTONOMY (SNARE) — Once LPR systems are deployed, municipalities face vendor lock-in through proprietary data formats, multi-year contracts with auto-renewal clauses, and integration dependencies. Exit costs include data migration expenses, retraining staff, and political backlash from enforcement gaps during transition. The municipality is structurally trapped by sunk costs and operational dependencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Privacy Advocates",
+      "comment": "PERSPECTIVE 2: PRIVACY ADVOCATES (TANGLED ROPE) — LPR systems do solve a genuine coordination problem (parking enforcement without meter readers), but the surveillance infrastructure extracts privacy costs asymmetrically. Privacy advocates have constrained exit: they can lobby for data retention limits and usage restrictions, but cannot prevent deployment once vendor contracts are signed. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parking Technology Vendors",
+      "comment": "PERSPECTIVE 3: PARKING TECHNOLOGY VENDORS (ROPE) — Vendors experience the constraint as pure coordination: they provide enforcement technology that municipalities voluntarily adopt. The lock-in mechanisms (proprietary formats, contract terms) are standard business practices from their perspective. Net beneficiaries with arbitrage exit — they can walk away from any single municipality and sell to others."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Municipal Transportation Departments",
+      "comment": "PERSPECTIVE 4: MUNICIPAL TRANSPORTATION DEPARTMENTS (PITON) — Transportation departments recognize that LPR enforcement has become substantially performative: the original function (efficient parking enforcement) has atrophied into vendor dependency management and data privacy theater. Departments maintain the systems through institutional inertia and budget capture, not because they optimize enforcement. The constraint persists as performance of technological modernity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Open-Source Enforcement Coalition",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE ENFORCEMENT COALITION (SCAFFOLD) — Organized advocates for open-source LPR systems and municipal data sovereignty see vendor lock-in as a temporary coordination failure. Open-source alternatives (OpenALPR, municipal data cooperatives) are building exit pathways. This perspective sees a sunset: as open-source tools mature and municipalities share implementation costs, proprietary lock-in loses force. Estimated sunset: 8-15 years for open-source adoption to reach critical mass."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, LPR lock-in represents a genuine coordination problem (automating enforcement) coupled with asymmetric extraction (vendor capture of municipal autonomy and privacy erosion). The constraint requires active enforcement through contract renewal and data integration dependencies. The analytical classification is tangled_rope, not piton, because the extraction mechanism is still functionally active, not merely theatrical."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_source_viability",
+      "question": "Can open-source LPR systems achieve feature parity and reliability comparable to proprietary systems at municipal scale?",
+      "resolution_mechanism": "Comparative deployment studies: accuracy rates, maintenance costs, and operational reliability of open-source vs proprietary systems across municipalities of varying size",
+      "impact": "If viable: scaffold perspective confirmed — open-source sunset is real and vendor lock-in is temporary. If not viable: lock-in is structural rather than contingent, and the piton classification understates the constraint's persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source LPR can match proprietary system performance"
+    },
+    {
+      "id": "data_portability_threshold",
+      "question": "What level of data format standardization would enable municipalities to switch vendors without prohibitive migration costs?",
+      "resolution_mechanism": "Cost-benefit analysis of standardization mandates; identification of minimum interoperability requirements that preserve vendor competition while enabling municipal exit",
+      "impact": "If low threshold: regulatory intervention could break lock-in cheaply (scaffold logic). If high threshold: lock-in is deeply structural and regulatory solutions are prohibitively expensive (snare logic persists).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Standardization requirements for vendor switching feasibility"
+    },
+    {
+      "id": "surveillance_function_creep",
+      "question": "Is LPR infrastructure deployment primarily driven by parking enforcement needs or by broader surveillance objectives using parking as political cover?",
+      "resolution_mechanism": "Analysis of LPR data usage patterns: proportion of queries for parking enforcement vs other law enforcement purposes; correlation between deployment advocacy and surveillance policy agendas",
+      "impact": "If parking-driven: the constraint is primarily about vendor lock-in (piton/tangled_rope). If surveillance-driven: parking enforcement is cover for a snare targeting civil liberties, and the extractiveness is understated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether parking enforcement is primary function or cover story"
+    },
+    {
+      "id": "cs_framing_ambiguity",
+      "question": "Is the kernel 'curb space legitimacy' or the authority structure 'municipal legislative power over public resources'?",
+      "resolution_mechanism": "Examination of which element is stabilized and which absorbs drift: if curb allocation rules change frequently but municipal authority remains constant, the authority is the kernel. If authority is contested but allocation rules are stable, the rules are the kernel.",
+      "impact": "If kernel is authority structure: the readings are about WHO decides, not WHAT is decided, and the commitment system is about legitimacy of municipal power itself. If kernel is allocation rules: the readings are about WHAT rules are legitimate, and municipal authority is the interpretive layer.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel is the allocation rules or the authority structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "License plate recognition (LPR) systems were initially adopted by municipalities to automate parking enforcement and reduce labor costs. Over a 12-year deployment period, the constraint evolved from a coordination mechanism into vendor lock-in with substantial extraction. The theater_ratio increased from 0.25 to 0.58 as the original enforcement function atrophied into vendor dependency management, data privacy compliance theater, and surveillance infrastructure maintenance. Base extractiveness rose from 0.35 to 0.68 as proprietary data formats, multi-year contracts with auto-renewal clauses, and integration dependencies trapped municipalities in vendor relationships. Suppression increased from 0.40 to 0.72 as exit barriers accumulated: data migration costs, staff retraining requirements, enforcement gaps during transition, and political backlash from enforcement interruptions. The constraint demonstrates piton dynamics from the municipal transportation department perspective — the original function has degraded but the system persists through institutional inertia and budget capture. However, the analytical perspective classifies it as tangled_rope because the extraction mechanism remains functionally active, not merely performative.",
+    "key_agents": [
+      "Parking Technology Vendors: Primary beneficiary (institutional/arbitrage) — capture recurring revenue through proprietary lock-in and contract terms; can exit to other municipalities",
+      "Municipal Fiscal Autonomy: Primary victim (powerless/trapped) — loses procurement flexibility and budget control; faces prohibitive exit costs through sunk investments and operational dependencies",
+      "Privacy Advocates: Secondary victim (moderate/constrained) — face surveillance infrastructure expansion with limited ability to prevent deployment once contracts are signed; can lobby for restrictions but not reversal",
+      "Municipal Transportation Departments: Institutional actor (institutional/constrained) — maintain systems through inertia; recognize functional atrophy but lack exit pathways",
+      "Open-Source Enforcement Coalition: Organized agents (organized/mobile) — building alternative pathways through open-source LPR and municipal data cooperatives; see sunset logic",
+      "Surveillance Infrastructure Advocates: Secondary beneficiary (powerful/mobile) — benefit from normalized surveillance infrastructure that parking enforcement legitimizes; can pivot to other deployment justifications"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Vendors capture recurring revenue through proprietary lock-in mechanisms that were not transparent at initial adoption. Municipalities lose procurement flexibility, budget autonomy, and negotiating leverage. The extraction is not total (0.68 rather than 0.85+) because some municipalities have successfully renegotiated contracts or deployed open-source alternatives, demonstrating that exit is costly but not impossible. Suppression (0.72): High. Exit barriers include proprietary data formats requiring expensive migration, multi-year contracts with auto-renewal and penalty clauses, staff trained only on vendor-specific systems, integration dependencies with other municipal IT systems, and political risk of enforcement gaps during transition. Suppression is structural (external barriers) rather than internalized — municipalities recognize the lock-in but face material obstacles to exit. Theater_ratio (0.58): Moderate-high. The original enforcement function (automated parking violation detection) has partially atrophied into vendor relationship management, data privacy compliance theater, and surveillance infrastructure maintenance. However, the systems still perform some genuine enforcement work, so the theater ratio is not as high as a pure piton (0.75+). The increase over time reflects functional degradation as vendor dependency management consumes more resources relative to enforcement output. Accessibility_collapse (0.45): Moderate. Alternative enforcement pathways (meter readers, permit systems, open-source LPR) remain accessible in principle, but LPR deployment creates path dependencies that make alternatives appear obsolete or politically infeasible. The collapse is partial because open-source alternatives are emerging. Resistance (0.62): Moderate-high. Privacy advocates, fiscal conservatives, and open-source proponents actively resist LPR expansion and vendor lock-in. Resistance is substantial but not universal — many stakeholders accept the technology-inevitability framing.",
+    "directionality_logic": "Parking technology vendors are primary beneficiaries with arbitrage exit options — they experience the constraint as pure coordination (rope classification) because lock-in mechanisms are standard business practices from their perspective. They can walk away from any single municipality and sell to others, giving them low directionality (d ≈ 0.1-0.2) and negative or near-zero effective extraction. Municipal fiscal autonomy is the primary victim with trapped exit options — the constraint extracts procurement flexibility and budget control. As a powerless agent (abstract collective good with no advocate), it has high directionality (d ≈ 0.85-0.95) and experiences maximum effective extraction. Privacy advocates are secondary victims with constrained exit — they face surveillance expansion but retain some agency through lobbying and litigation. Moderate power and constrained exit give them mid-range directionality (d ≈ 0.55-0.65) and moderate effective extraction. Municipal transportation departments are institutional actors with constrained exit — they recognize functional atrophy but lack exit pathways due to sunk costs and operational dependencies. Their directionality (d ≈ 0.50-0.60) reflects mixed experience: they benefit from automation but bear vendor dependency costs. The open-source coalition has mobile exit options and sees a sunset, giving them low directionality (d ≈ 0.25-0.35) and low effective extraction despite moderate power.",
+    "perspectival_gap": "The constraint demonstrates a four-way perspectival split. Vendors see pure coordination (rope) — they provide technology that municipalities voluntarily adopt, and lock-in is standard business practice. Municipal transportation departments see degraded function maintained through inertia (piton) — the original enforcement purpose has atrophied into vendor dependency management. Privacy advocates and municipal fiscal autonomy see mixed coordination and extraction (tangled_rope from privacy advocates, snare from fiscal autonomy) — genuine enforcement automation coupled with asymmetric extraction of privacy and procurement flexibility. The open-source coalition sees a temporary problem with a sunset (scaffold) — open-source alternatives are building exit pathways. The analytical observer resolves this as tangled_rope at the civilizational scale: the constraint solves a genuine coordination problem (parking enforcement automation) but embeds asymmetric extraction (vendor capture, surveillance expansion) that requires active enforcement through contract terms and data integration dependencies. The piton classification from the municipal transportation department perspective is a valid local observation but understates the constraint's active extraction mechanism.",
+    "mandatrophy_analysis": "The constraint has not resolved its mandatrophy because the original mandate (efficient parking enforcement) persists alongside the degraded function (vendor dependency management). The mandate is still live — municipalities need parking enforcement — but the implementation has accumulated extractive overhead that exceeds the coordination benefit for some agents. The mandatrophy would resolve if either: (1) open-source alternatives mature to the point where vendor lock-in becomes obviously unnecessary (scaffold sunset), or (2) municipalities recognize that the enforcement function can be achieved through less extractive means (permit systems, meter readers, open-source LPR) and the vendor lock-in is revealed as pure extraction. The current state is mandatrophy-in-progress: the coordination function is real but the extraction is accumulating.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'curb space legitimacy' — the shared commitment that municipal curb space is a public resource requiring legitimate allocation rules. The kernel is contested across three sibling readings: property_tax_entitlement (curb access is a property right purchased through property taxes), public_resource_pricing (curb space is scarce infrastructure requiring cost-recovery pricing), and equity_redistribution (allocation must compensate non-car-owners for subsidy skew). This constraint (enforcement_technology_lock_in) operates WITHIN the public_resource_pricing reading: LPR systems are the enforcement mechanism for cost-recovery pricing regimes (paid parking, residential permit fees). The vendor lock-in extracts from municipal fiscal autonomy regardless of which reading governs allocation rules, but the extraction is most visible under the public_resource_pricing reading because that reading requires active enforcement infrastructure. Under the property_tax_entitlement reading, enforcement is minimal (free parking for residents), so LPR deployment is less justified and vendor lock-in is more obviously extractive. Under the equity_redistribution reading, enforcement infrastructure is necessary but the vendor lock-in undermines the redistributive goal by capturing revenue that should fund alternative mobility."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "residential_permit_pricing",
+      "curb_space_allocation_rules",
+      "municipal_data_sovereignty"
+    ],
+    "dual_formulation_note": "The enforcement technology lock-in is structurally distinct from the curb space allocation rules it enforces. The allocation rules (property_tax_entitlement vs public_resource_pricing vs equity_redistribution) have their own extractiveness values reflecting the distributional consequences of different pricing regimes. The enforcement technology lock-in has its own extractiveness reflecting vendor capture and surveillance expansion. These are separate constraints linked through the network: the choice of allocation rule determines the demand for enforcement infrastructure, which creates the opportunity for vendor lock-in."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "parking_technology_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Vendors provide LPR systems under multi-year contracts with proprietary data formats and auto-renewal clauses. They capture recurring revenue through vendor lock-in mechanisms: data migration costs, integration dependencies, and staff training on vendor-specific systems. Vendors can exit to other municipalities if any single contract becomes unprofitable, giving them arbitrage-level exit options. They experience the constraint as pure coordination — providing technology that municipalities voluntarily adopt."
+    },
+    {
+      "name": "municipal_transportation_departments",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Transportation departments procure and operate LPR systems. They set enforcement policy and manage vendor relationships. Over time, they recognize that the original enforcement function has atrophied into vendor dependency management and data privacy compliance theater, but they lack exit pathways due to sunk costs, operational dependencies, and political risk of enforcement gaps during transition. They bear the costs of vendor lock-in through constrained procurement flexibility and budget capture."
+    },
+    {
+      "name": "municipal_fiscal_autonomy",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Municipal fiscal autonomy is an abstract collective good — the municipality's ability to control its own budget and procurement decisions. LPR vendor lock-in extracts from this autonomy through proprietary data formats, multi-year contracts, and integration dependencies that trap municipalities in vendor relationships. As an abstract good with no advocate, it has no exit options and bears maximum extraction."
+    },
+    {
+      "name": "privacy_advocates",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Privacy advocates lobby for data retention limits, usage restrictions, and transparency requirements for LPR systems. They face surveillance infrastructure expansion with limited ability to prevent deployment once vendor contracts are signed. They can influence policy at the margins (data retention periods, audit requirements) but cannot reverse deployment decisions. Exit is constrained by the political momentum behind enforcement automation and the technology-inevitability framing."
+    },
+    {
+      "name": "open_source_enforcement_coalition",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Organized advocates for open-source LPR systems (OpenALPR, municipal data cooperatives) and municipal data sovereignty. They are building alternative enforcement pathways that bypass proprietary vendor lock-in. They have mobile exit options because they can choose which municipalities to work with and can pivot to other open-source infrastructure projects if LPR efforts stall. They benefit from the constraint's existence because vendor lock-in creates demand for their alternative solutions."
+    },
+    {
+      "name": "surveillance_infrastructure_advocates",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Law enforcement agencies and security-focused policymakers who benefit from normalized surveillance infrastructure that parking enforcement legitimizes. LPR systems deployed for parking enforcement create data streams and technical capacity that can be repurposed for broader surveillance objectives. They have mobile exit options because they can pivot to other surveillance deployment justifications (public safety, counterterrorism) if parking enforcement becomes politically untenable."
+    },
+    {
+      "name": "alternative_enforcement_pathways",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Alternative enforcement methods (meter readers, permit systems without LPR, open-source LPR) that are excluded from consideration once proprietary LPR systems are deployed. These alternatives would object to vendor lock-in if they had a voice in procurement decisions, but they are structurally excluded by path dependencies and the technology-inevitability framing. As abstract alternatives rather than organized agents, they have no exit options."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The analytical observer sees the constraint as tangled_rope at the civilizational scale: genuine coordination (parking enforcement automation) coupled with asymmetric extraction (vendor capture, surveillance expansion). The observer recognizes that the piton classification from the municipal transportation department perspective is a valid local observation but understates the constraint's active extraction mechanism."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Automating parking enforcement to reduce labor costs and increase compliance rates. LPR systems solve the genuine coordination problem of detecting parking violations without deploying meter readers to manually check every vehicle.",
+    "transfer_function": "The arrangement transfers municipal budget autonomy and procurement flexibility from municipalities to parking technology vendors through proprietary lock-in mechanisms. It also transfers privacy (location data, movement patterns) from vehicle owners to surveillance infrastructure operators. Revenue flows from municipalities to vendors through recurring contract payments.",
+    "absent_voices": "Alternative enforcement pathways (meter readers, permit systems without LPR, open-source LPR) are excluded from procurement decisions once proprietary systems are deployed. Municipal fiscal autonomy (the abstract collective good of budget control) has no advocate in vendor contract negotiations. Privacy advocates are present but structurally constrained — they can lobby for restrictions but cannot prevent deployment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If LPR systems disappeared overnight, municipalities would need to rearrange enforcement operations: redeploying meter readers, redesigning permit systems, or adopting open-source alternatives. Parking enforcement would continue but through different mechanisms. The vendor lock-in is not a natural fact — it is a contingent institutional arrangement that shapes municipal operations.",
+    "founding_problem": "High labor costs and low compliance rates for parking enforcement in the early 2000s. Municipalities faced budget pressure to reduce meter reader headcount while maintaining or increasing parking revenue. LPR systems were adopted to automate violation detection and reduce enforcement costs.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Municipal budget offices and transportation departments attest that labor cost reduction was the original driver. However, privacy advocates and fiscal policy analysts argue that the founding problem (labor costs) has been superseded by vendor lock-in costs that now exceed the labor savings. Open-source enforcement coalition members provide corroboration from outside the beneficiary set: they document cases where vendor contract costs exceed the original meter reader budgets, suggesting the founding problem is no longer the primary justification for system persistence."
+  },
+  "gain_flow": "parking_technology_vendors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "municipal_police_power_allocation",
+    "drift_state": {
+      "moment": "post_lpr_deployment_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "property_tax_entitlement_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "equity_redistribution_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "cost_recovery_pricing_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "enforcement_automation_necessity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

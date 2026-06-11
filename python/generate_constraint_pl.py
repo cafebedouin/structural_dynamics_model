@@ -194,6 +194,11 @@ def _build_multifile_declarations(data):
         decls.append("narrative_ontology:disappearance_verdict/2")
     if sq_decl.get("founding_problem_status"):
         decls.append("narrative_ontology:founding_problem_status/2")
+    # OQ-92 receipt surface (step 3 Stage B)
+    if data.get("gain_flow"):
+        decls.append("narrative_ontology:stakeholder_gain_flow/2")
+    if data.get("fixing_cost"):
+        decls.append("narrative_ontology:fixing_cost_class/2")
 
     if bp.get("emerges_naturally"):
         decls.append("domain_priors:emerges_naturally/1")
@@ -335,6 +340,21 @@ def _generate_tests(data):
 
 def generate_pl(data):
     """Generate the .pl file content from validated JSON data."""
+    # OQ-92 referential integrity (Stage B precondition 1): a gain_flow naming a
+    # seat not in stakeholders[] is REJECTED here, fail-loud — Draft7 cannot
+    # express the cross-field reference, so the compiler is the primary check
+    # (runtime fail-closed absorption is backstop only). Runs on EVERY
+    # generation path; --no-validate does not bypass it.
+    gf = data.get("gain_flow")
+    if gf and gf != "diffuse":
+        seat_names = {s.get("name") for s in (data.get("stakeholders") or [])}
+        if gf not in seat_names:
+            raise ValueError(
+                f"gain_flow names ghost seat '{gf}' — not in stakeholders[] "
+                f"({sorted(n for n in seat_names if n)}); REJECTED "
+                f"(OQ-92 step-3 referential integrity, "
+                f"audits/2026-06-10_oq92_step3_preregistration/)"
+            )
     cid = data["header"]["constraint_id"]
     header = data["header"]
     bp = data["base_properties"]
@@ -646,6 +666,19 @@ def generate_pl(data):
                 emit(f"narrative_ontology:stakeholder_secondary_role({cid}, {s['name']}, {s['secondary_role']}).")
             if s.get("agent") is False:
                 emit(f"narrative_ontology:stakeholder_non_agent({cid}, {s['name']}).")
+            emit()
+        # OQ-92 receipt surface (Stage B). Tri-valued by construction: emission
+        # is conditional on AUTHORED presence — an absent field emits nothing
+        # (fail-closed at every read site). Referential integrity was enforced
+        # at the top of generate_pl(); never synthesized (fabrication ban).
+        if data.get("gain_flow"):
+            emit("% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).")
+            emit("% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.")
+            emit("% ABSENT field = not authored, fail-closed. Never synthesized. ---")
+            emit(f"narrative_ontology:stakeholder_gain_flow({cid}, {data['gain_flow']}).")
+        if data.get("fixing_cost"):
+            emit(f"narrative_ontology:fixing_cost_class({cid}, {data['fixing_cost']}).")
+        if data.get("gain_flow") or data.get("fixing_cost"):
             emit()
         if sq:
             emit("% --- Six-questions battery (story-level; texts kept as comments — the")

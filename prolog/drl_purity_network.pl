@@ -83,10 +83,12 @@ constraint_neighbors(C, Context, Neighbors) :-
     constraint_indexing:valid_context(Context),
     (   phantom_subject(C)
     ->  Neighbors = []
-    ;   constraint_neighbors_existing(C, Context, Neighbors)
+    ;   constraint_neighbors_existing(C, Neighbors)
     ).
 
-constraint_neighbors_existing(C, Context, Neighbors) :-
+% Edge discovery is context-independent (Context is only validated by the
+% caller); the argument is kept out of the worker rather than passed unused.
+constraint_neighbors_existing(C, Neighbors) :-
     findall(neighbor(Other, 1.0, explicit),
             ( narrative_ontology:affects_constraint(C, Other), Other \= C ),
             ExplicitOut),

@@ -63,7 +63,7 @@ not general architecture. Read the relevant file before modifying `config_valida
 diagnosing module-resolution behavior (REPL ≠ pipeline for wrong-qualifier calls), writing
 test-local predicate swaps or retract/re-assert probes, running an in-session corpus sweep or
 overlay counterfactual (validated signature-sweep recipe; Boltzmann memo caches read stale unless
-cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the five
+cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the six
 defect patterns (summarized in Build Discipline below) with diagnostics; it also carries the
 **citation-time / staleness-ladder** rule (a witnessed fact has a shelf life: reusing it as a
 premise re-asserts it, so rung it — pointer / as-of stamp / gate — by mutable-state ×
@@ -262,6 +262,22 @@ establish the datum was authored before it may pass — fail-closed on absence, 
 Diagnostic: count the source predicate's facts on the corpus; 0 ⇒ the gate is a no-op.
 Engine-wide audit: OQ-44.
 
+**6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
+boundaries).** An aggregation or channel that cannot distinguish *measured-empty* from
+*didn't-look* emits success-shaped output either way — and each component is individually sound,
+so no site-level check catches it; the absorption lives where they compose. Three instances
+witnessed in one day (2026-06-10): `system_gradient`'s `[] → 0.0` fallback (every gradient ever
+computed had failed via a cut bug; the fallback made failure byte-identical to measured-flat for
+the construct's whole life); `grep -v Warning` (a dead-module warning printed at every load for
+four months into a universally filtered channel, then crashed the suite — OQ-96); findall-over-
+partial-levels (an 8/32 one-level grid read as a full-system `increasing_coercion` verdict).
+**Rule: aggregates carry their COVERAGE to the read site; channels carry ALLOWLISTS
+(`python/load_warning_gate.py` is the template — never `grep -v Warning` over load output);
+defaults-on-empty return `unknown`/OPEN, never a plausible value. Sufficiency is a property of
+the QUESTION, not the dataset — fail-closed per-question (consumer-named requirements), not by
+global fraction.** Full entry + diagnostics: `build_discipline.md` → Pattern 6; candidate-site
+census: OQ-97.
+
 The first two share a root: **the corpus/codebase you are building for is not the one on disk
 now.** Build naming schemes, linkage rules, and reports correct for the corpus you intend
 (thousands of stories, regeneration under schema change, found-article ingestion). A scheme that
@@ -329,8 +345,12 @@ used only for retrospective audits that explicitly overlay `corpus_path`): `kern
 run-tags; ALL pre-2026-06-05 empirical findings — OQ-70 FNL stats, OQ-71 lineage, the 55%
 coordination disagreement — were measured on it or its ancestors); `original_v6/` is the
 3,380-story chimera-era corpus (ID reuse across runs, OQ-25 / v7 §5.11 — do not cite 3,337 as a
-live count); `sotu/` holds the 189 SOTU constraints (run_pipeline reports n_sotu=0 now; sotu
-analyses must overlay the archive path).
+live count); `original_v5/` is its 702-story predecessor (same chimera-era caveats);
+`testsets_sotu/` holds the 189 SOTU constraints (`sotu/` itself contains json/pl/raw subdirs, not
+flat .pl files — overlay `testsets_sotu` for sotu analyses; run_pipeline reports n_sotu=0 now).
+While the live corpus is small post-reset, these archives are the breadth option for legacy-side
+sweeps via `corpus_path` overlay (the OQ-89 pattern; ~5,200 stories across kernel_v1 + v5 + v6) —
+all counts here are file counts verified on disk 2026-06-10.
 
 **FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope dominance)
 as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2, which reads
@@ -441,9 +461,19 @@ when a coherent unit of work is witnessed, commit it then — do not batch a ses
 end-commit; in-flight work is what compaction and harness outages destroy (full rationale:
 `docs/technical/build_discipline.md` → *Commit-as-you-go*). Everything here is CC0; the operator
 values iteration over correctness; mistakes are recoverable. Push is also permitted once the
-pre-push check below passes. **Multi-instance sessions: one instance per git worktree**
-(`git worktree add ../wt-<task> <branch>`) — two instances editing one working tree step on each
-other's uncommitted state.
+pre-push check below passes. **Start your own worktree before write work — unconditionally**
+(`git worktree add ../wt-<task> <branch>`, or the harness's worktree mechanism), **not only when
+you know another instance is running**: siblings are undetectable from inside a session (no lock,
+no registry; a clean `git status` looks identical either way), so insulation must be the default,
+not a response to detection. Two instances editing one working tree step on each other's
+uncommitted state — witnessed 2026-06-10, when two instances each misread this rule as
+conditional and collided in the main tree (operator clarification of intent, same day). Merge
+the worktree branch back to main when its unit of work is witnessed; run
+`python3 python/issues_status.py --check` after any merge touching ISSUES.md (it fails on
+duplicate OQ labels — the clean-automerge artifact of two worktrees claiming the same next
+OQ-NN). Multi-writer corollary: a commit's witness is its DIFF or an entry-anchored check, never
+a global count delta — counts aggregate other writers' work and are no longer attributable
+(build_discipline → *Count-as-witness assumes a single writer*).
 
 **Before any `git push`:** verify the three files above are current with respect to the changes
 being pushed.

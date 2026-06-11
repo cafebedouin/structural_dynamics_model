@@ -1,0 +1,21 @@
+base story: json/demographic_skill_mismatch.json  seat used: aging_blue_collar_workers
+  [PASS] 1 named-seat + prohibitive (authored-gain)
+  [PASS] 2 explicit-diffuse + cheap
+  [PASS] 3 absent (fields omitted; pre-migration shape)
+  [PASS] 4 gain_flow wrong type (42) — bit at intended guard: $.gain_flow: 42 is not of type 'string'
+  [PASS] 5 fixing_cost bad enum ('moderate') — bit at intended guard: $.fixing_cost: 'moderate' is not one of ['cheap', 'prohibitive']
+  [PASS] 6 gain_flow without stakeholders (dependency rider) — bit at intended guard: $.: 'stakeholders' is a required property
+  [PASS] 7 fixing_cost without stakeholders (dependency rider) — bit at intended guard: $.: 'stakeholders' is a required property
+  [PASS] 8 ghost seat is schema-valid BY DESIGN (compiler's job, Stage B)
+8/8 witness cases pass
+additivity sweep: 43/134 existing json specs validate post-change
+  INVALID json/absolutism_attachment.json: 'accessibility_collapse' is a required property
+  INVALID json/administrative_burden_extraction.json: 'accessibility_collapse' is a required property
+  INVALID json/alignment_tax_defection.json: 'accessibility_collapse' is a required property
+  INVALID json/asymmetric_collaboration_terms.json: 'accessibility_collapse' is a required property
+  INVALID json/attribution_erosion.json: 'accessibility_collapse' is a required property
+two-sided additivity: pre-change invalid=91, post-change invalid=91
+  NEW failures introduced by this change: NONE
+  failures FIXED by this change (unexpected if any): NONE
+  (the 91 pre-existing invalids fail on accessibility_collapse-era required fields —
+   json/ accumulates across generation regimes; the live corpus is testsets/, n=39)

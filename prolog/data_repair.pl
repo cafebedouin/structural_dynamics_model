@@ -119,6 +119,15 @@ bridge_single_metric_pure(IntervalID, PriorPred, MetricKey, AccIn, AccOut) :-
 %% bridge_beneficiary_victim_pure(+IntervalID, +AccIn, -AccOut)
 %  Pure version of bridge_beneficiary_victim/1.
 %  Reads metrics from accumulator via acc_has/2.
+% FABRICATION BAN (OQ-92 Rulings block, settled by the OQ-90 HALT; enforcement
+% site per the step-3 preregistration): narrative_ontology:stakeholder_gain_flow/2
+% and fixing_cost_class/2 are NEVER synthesized here or anywhere — no repair,
+% bridge, or imputation clause may infer the receipt surface from metrics.
+% Inferring capture from extraction metrics is the has_computed_capturer
+% counterfeit re-entering through a side door (a capture-adjacent fact
+% synthesized from the metrics it feeds back into). Absent stays absent,
+% fail-closed. The beneficiary bridge below predates the ban and is OQ-93
+% shim-family (gated off by grid_shim_enabled=false); do not extend it.
 bridge_beneficiary_victim_pure(IntervalID, AccIn, AccOut) :-
     % Beneficiary
     (   acc_has(AccIn, constraint_beneficiary(IntervalID, _))
@@ -266,6 +275,26 @@ bridge_v34_data(IntervalID, Results) :-
 %  Pure version of repair_point + ensure_metric_exists.
 %  Returns bridge_result(measurement(...)) terms for all missing
 %  measurements without asserting into the database.
+%  OQ-96 interim / OQ-93 probe: imputation gated on grid_shim_enabled.
+%  Disabled (default) -> NO facts manufactured; the absent count is reported
+%  loud so the suite stays green on an EXPECTED-AND-WITNESSED absence, never
+%  on manufactured filler. Also keeps the dangling domain_registry call in
+%  domain_priors:category_of/2 unreached (OQ-96 crash path).
+impute_missing_metrics(IntervalID, []) :-
+    \+ config:param(grid_shim_enabled, true),
+    !,
+    narrative_ontology:interval(IntervalID, T0, Tn),
+    findall(Metric-Time,
+        (   config:level(L),
+            member(Time, [T0, Tn]),
+            member(Metric, [accessibility_collapse(L), stakes_inflation(L),
+                           suppression(L), resistance(L)]),
+            \+ narrative_ontology:measurement(_, _, Metric, Time, _)
+        ),
+        AbsentSlots),
+    length(AbsentSlots, NAbsent),
+    format('  [OPEN] grid imputation DISABLED (grid_shim_enabled=false): ~w/32 grid points absent — expected-and-witnessed (OQ-93/OQ-96)~n',
+           [NAbsent]).
 impute_missing_metrics(IntervalID, Results) :-
     narrative_ontology:interval(IntervalID, T0, Tn),
     findall(

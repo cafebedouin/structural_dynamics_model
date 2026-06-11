@@ -1,0 +1,186 @@
+# Pre-registration — OQ-92 step 3: the authored gain-flow surface (schema + compiler + prompt)
+
+**Status: RULED 2026-06-10 (operator) — stages A–C UNBLOCKED.** Q2 ruled per-row (sequenced
+before Q1 at operator direction, since a yes on Q2 prices Q1's tolerance): **row 1 GATE, row 3
+GATE riding with row 1, row 2 deferred pending the reachability control**
+(`audits/2026-06-10_oq94_row2_cirope_reachability/` — the last pre-build item; its ruling gates
+only its own Stage-D clause). **Q1: K = 0 on the observable; halt scope = Stage D only, never
+regeneration; N = every diffuse claim if the batch is small, else N ≥ 30 (labeled convention);
+the "obvious capturing seat" criterion is WRITTEN BEFORE anyone reads the batch; findings report
+"0/N observed" with N stated, never "clean."** Rationale recorded at the questions below.
+Operator context note: regeneration exists to establish that the changes work — this corpus is
+small because it is being used to fix exactly these problems, and will be archived.
+Drafted 2026-06-10; ruled same day.
+
+Step 3 builds, for the first time, the authored surface the step-2 prototype validated
+(`audits/2026-06-10_gain_flow_prototype/`, Outcome 1 PASS 8/8): per-constraint `gain_flow`
+(named seat | explicit `diffuse` | absent) + `fixing_cost` class, per OQ-92 rulings (a)/(b).
+Playbook: OQ-83 Phase A (schema dial-set → compiler emission → prompt; additive, witnessed
+per stage). Classification wiring is LAST and separately gated.
+
+## Settled preconditions (no questions here)
+
+1. **Schema rejection of malformed gain.** A `gain_flow` naming a seat not in `stakeholders[]`
+   is rejected at authoring time. JSON Schema Draft7 cannot express the cross-field reference,
+   so the schema declares the shape and the COMPILER enforces referential integrity fail-loud
+   (`generate_constraint_pl.py`, at the stakeholder emission block, lines ~638-648). Runtime
+   absorption to fail-closed (witnessed, prototype control 8) remains as backstop, never as
+   the primary check.
+2. **Fabrication ban (OQ-92 Rulings block, settled by the OQ-90 HALT).** `gain_flow` is never
+   synthesized — absent stays absent, fail-closed. Enforcement site: `data_repair.pl`. No
+   repair/bridge/imputation clause may infer gain_flow from metrics; the existing
+   `constraint_beneficiary` fabrication (`data_repair.pl:124-131`, E>0.46 ∧ S>0.40 →
+   `inferred_institutional`) is the named door and must NOT be extended to the new surface.
+   Witness at build time: grep data_repair for the new predicates returns only the ban comment
+   (positive control: the grep fires on the comment).
+3. **Estimator-classifier congruence.** Any change to `drl_core.pl:346` (scaffold clause) or
+   `:373` (tangled_rope clause) lands in `maxent_classifier.pl` boolean_spec (:173, :177-179)
+   in the same commit.
+4. **Tri-valued provenance (OQ-92 rulings).** Authored-gain-to-NAMED-seat / explicit `diffuse`
+   / absent-fails-closed. NAF over authored fields is authored-absence in disguise; piton-side
+   reads consume `diffuse` positively.
+5. **Diffuse-audit gate before classification wiring** (parameters = Q1).
+6. **OQ-94 known-interference**: the read-site pass verdicts (`audits/2026-06-10_oq94_readsite_pass/`)
+   govern which consumers may change; FORBIDDEN-bucket sites are untouchable by any capture gate.
+
+## The build (three stages, each witnessed before the next)
+
+**Stage A — schema.** `schemas/constraint_story_schema.json`: optional `gain_flow`
+(string: stakeholder name, or literal `"diffuse"`) and `fixing_cost` (enum `cheap|prohibitive`)
+— one authoring surface, two fields, per ruling (b). Pattern-5 conditionals in the OQ-83 style
+(authored-empty ≠ absent). Witness: schema validates the three provenance shapes + rejects a
+wrong-typed value (4 cases, Draft7, the pipeline's validator).
+
+**Stage B — compiler.** `generate_constraint_pl.py` emits
+`narrative_ontology:stakeholder_gain_flow(C, Receiver)` and
+`narrative_ontology:fixing_cost_class(C, Class)`; referential-integrity check (precondition 1)
+fails loud naming the ghost seat. Witness: 0-diff old-vs-new compiler on the full live corpus
+(additivity — no existing story authors the fields); pilot story exercising named-seat /
+diffuse / absent / malformed-REJECTED (the rejection is a witness, not an error to fix).
+
+**Stage C — prompt.** Authoring guidance in the generation prompt: non-leaky (no thresholds
+recited), keyed on the stakeholder roles; the one-shot example VARIES or OMITS the gain_flow
+value (OQ-70: the example value becomes a template convention). Witness: a small generated
+batch (n per Q1) compiles clean; then the diffuse audit (Q1) runs on it BEFORE anything
+consumes the fields for classification.
+
+**Stage D — classification wiring (gated on Q1 pass + Q2 ruling).** `seat_captures/2`,
+`uncaptured/1`, piton-side reads per the prototype's validated shapes; OQ-90 Steps 2-4
+(piton refinement in the FCR branch, `Supp ≤ 0.2` gate retirement) build on it. Benignity-family
+gating per Q2. Every consumer change carries its per-site diff (build_discipline rule 3).
+
+## Expected diffs, derived before any write (per the derive-diff-before-run rule)
+
+Stages A-B: `pipeline_output.json` manifest UNCHANGED (no story authors the fields; emission is
+conditional on presence); `validation_suite` regenerates with zero behavioral delta; compiler
+0-diff is the stage gate. Stage C: new stories carry the two facts; classification UNCHANGED
+(nothing consumes them until Stage D). Any deviation from these expectations is a halt-and-
+diagnose, not a note.
+
+---
+
+## Q1 — operator ruling: diffuse-audit sample size and tolerance
+
+Authored-`diffuse` is an authored universal negative with no checkable witness — the cheapest
+token for a generation model to emit unchecked (OQ-92 Rulings block). Before the fields drive
+classification: hand-audit a sample of generated `diffuse` claims for obvious capturing seats.
+
+**The numbers are yours to set — they are a judgment about how much generation-side dishonesty
+the corpus can carry, with no evidence-settled default.** Decision-relevant context, not a
+recommendation: (i) the OQ-94 sort shrank the gain_flow load-bearing surface relative to
+all-split (per-site, not global), which argues the tolerance need not be maximally tight;
+(ii) a capture-gate at the benignity family (if Q2 rules yes anywhere) RAISES the stakes of a
+false `diffuse` (it would wrongly *preserve* scaffold/CI_Rope certification); (iii) OQ-70
+precedent says first-batch prevalence is authoring-convention — the audit reads individual
+claims against their own story text, not rates.
+
+**Q1 asks:** sample size N (out of the first generated batch), tolerance K (max diffuse claims
+with an obvious capturing seat before HALT), and whether a failed audit halts Stage D only or
+also Stage C regeneration.
+
+**RULED (operator 2026-06-10):**
+- **K = 0 on the observable.** The deciding asymmetry: the audit detects OBVIOUS capturing seats
+  — a detectability-limited probe — so the true false-diffuse rate ≥ the observed rate by an
+  unknown multiple. Any K > 0 on the observable implicitly accepts K × that multiple of
+  unobservables feeding a benignity certification Q2 just gated. Zero on the observable is the
+  only floor that does not smuggle in the multiplier.
+- **Halt scope: Stage D (classification wiring) only — NEVER regeneration.** Regeneration is the
+  repair path: a failed audit means iterate the prompt (the OQ-70 lever) and re-audit the next
+  batch; halting regeneration would freeze the only mechanism that fixes the failure the audit
+  detected. (Operator: the corpus is small because it is being used to fix these problems, and
+  will be archived — regeneration is how changes are established to work.)
+- **N: every diffuse claim in the first batch if small; else N ≥ 30** — the 30 floor is labeled
+  CONVENTION, not derivation: at K = 0, N only sets how confidently a clean audit reads.
+- **The "obvious capturing seat" criterion is written down BEFORE anyone reads the batch** — a
+  zero-tolerance gate with an after-the-fact obviousness standard is a tolerance set by mood.
+  **CRITERION RULED (operator 2026-06-10, before any batch existed):** *a generated
+  `gain_flow: diffuse` claim FAILS the audit if the story artifact itself identifies a
+  capturing seat — concretely: any stakeholder whose described benefit is the constraint's
+  extraction product rather than incidental advantage, or any named actor the narrative
+  describes as accruing the constraint's gains. Decidable from the story artifact alone
+  (stakeholder facts + narrative text); no external research, no judgment calls about
+  real-world plausibility. If identifying the seat requires information outside the artifact,
+  the claim PASSES — that is the detectability limit the K=0 asymmetry argument already
+  priced.* The last sentence keeps "obvious" honest by definition rather than reviewer mood.
+- **Decoupling (operator 2026-06-10):** Stage C ships a gain_flow-only prompt change; the
+  OQ-93 leveled grid arrives as a SECOND prompt revision when that track reaches its prompt
+  stage — one extra prompt-change cycle traded for OQ-92 closure now. Discovered precondition
+  folded in: the live prompt carried NO stakeholders[] guidance (it lived only in the pilot
+  variant), so Stage C promotes the stakeholder + six-questions sections into the live prompt
+  ADDITIVELY (perspectives + beneficiaries/victims arrays stay — OQ-83's four-tuple control
+  arm untouched, R4 intact).
+- **Findings language: "0/N observed" with N stated — never "clean."**
+
+## Q2 — operator ruling: the benignity-certification family (three rows, split ruling permitted)
+
+The OQ-94 rule sorted every other live site; these three ask "is this benign coordination?" —
+neither mountain-likeness nor co-occurrence. Per the format note (operator 2026-06-10): the
+family is unified by its question, NOT its evidence — rule per-row; if they sort together, the
+ruling says so.
+
+| row | site | proposed gate | evidence on hand |
+|---|---|---|---|
+| 1 | `drl_core.pl:346` scaffold clause (+ `maxent_classifier:173`, same commit per congruence) | scaffold certification requires NOT-captured (computed from authored gain_flow) | **Witnessed misfire on the gate's side**: the step-2 prototype's capturer seats reached `scaffold` through exactly this clause (`gain_flow_prototype.out`; absent-fact twins fell to `naturalized`). The gate would have stopped a witnessed wrong-direction call. |
+| 2 | `signature_detection.pl:1019` CI_Rope certification | CI_Rope requires NOT-captured | **No witness yet.** FSM intercepts mountain-metric beneficiary-bearers (priority 3 < 5), but a captured low-ε non-mountain profile can reach this gate — reachability asserted from clause order, not witnessed. Optional pre-ruling control: construct that profile and run it (cheap, prototype-style). |
+| 3 | `signature_detection.pl:1122` `pure_coordination` subtype | subtype label requires NOT-captured | **No witness; commentary-grade stakes** (purity-path label, no classification override). |
+
+**Q2 asks, per row:** gate / don't gate / defer (row 2 optionally: run the reachability control
+first, then rule). A "gate" ruling on any row is implemented in Stage D only, with the per-site
+diff and a control showing a captured constraint no longer certifies there AND an uncaptured one
+still does (two-sided, per the verification discipline).
+
+**RULED (operator 2026-06-10):**
+- **Row 1 — GATE.** Misfire witnessed, two-sided control pinned, maxent mirror same-commit.
+  Semantic check resolved at ruling time: the P≠NP precedent (incidental beneficiary-role facts
+  misclassifying) does NOT apply — this gate reads authored `gain_flow` capture, not beneficiary
+  presence, and receives-extraction is precisely the cleaner signal that special-case existed to
+  approximate. A constraint whose gains demonstrably accrue to a seat must not certify as benign
+  scaffold; if it genuinely coordinates, tangled_rope is the cell that says so.
+- **Row 2 — GATE (ruled 2026-06-10 after the reachability control; riding with rows 1+3).**
+  **Evidence-shape distinction, deliberate for future citation: row 1 is MISFIRE-witnessed; row
+  2 is REACHABILITY-witnessed with the misfire witness pending — deferred to the Stage-D
+  two-sided control because it is unobtainable earlier (gain_flow does not exist pre-Stage-C),
+  not because it was skipped. The rows must not flatten into "all gated, all alike."** What the
+  control did: discharged the wait's actual target (reachability-by-intent-label) — the 7/7
+  live-corpus result witnesses the gate running on an entirely beneficiary-bearing population,
+  interception affirmatively killed, not assumed away. What it could not do: produce a captured
+  misfire — a fact about what can exist pre-build, not about the gate; waiting for unobtainable
+  evidence is deferral wearing epistemic caution's costume. Deciding asymmetry: option (b)
+  INVERTS the fail-closed posture — the ungated clause would certify CI_Rope on the first
+  generated batch, the same batch the K=0 diffuse audit is screening, so a slipped captured
+  constraint would certify as benign coordination during precisely the window the audit polices,
+  gate retrofitted only after a caught misfire (fail-open on the highest-stakes read during the
+  least-trusted data's first pass). Gating now, the worst case is benign: if no CI_Rope candidate
+  ever authors captured gain_flow, the gate is a no-op clause that cost one two-sided control.
+  That control needs no new machinery: the 7 certified constraints ARE the
+  uncaptured-still-certifies side once they carry authored gain_flow; the captured-stops-
+  certifying side is one constructed story. Runnable the moment the gate has data to read.
+- **Row 3 — GATE, riding with row 1.** Same question, same signal, commentary-grade misfire cost
+  in both directions; consistency with row 1 is worth more than what waiting buys; not left as a
+  dangling third state.
+
+---
+
+*Cross-refs: OQ-92 (rulings + graduation), OQ-94 (read-site pass + escalation), OQ-90 (piton
+steps gated on this build), OQ-93 (data_repair shim family), GAP-10 (closes when the surface
+lands). Drafted in worktree `wt-oq94-readsite`; merged to main with the questions OPEN.*

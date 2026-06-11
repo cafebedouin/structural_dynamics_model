@@ -1,0 +1,31 @@
+=== Metric 1/2: claimed_type per rep ===
+  Arm N: ['snare', 'snare', 'snare']  within-arm agreement: 3/3
+  Arm R: ['snare', 'snare', 'snare']  within-arm agreement: 3/3
+  Arm K: ['snare', 'snare', 'snare']  within-arm agreement: 3/3
+
+=== Metric 3: scalars (mean [min..max] per arm) ===
+  extractiveness: N=0.593[0.58..0.62]  R=0.593[0.58..0.62]  K=0.620[0.62..0.62]  
+  suppression: N=0.640[0.62..0.68]  R=0.640[0.62..0.68]  K=0.580[0.58..0.58]  
+  theater_ratio: N=0.690[0.68..0.71]  R=0.513[0.48..0.58]  K=0.680[0.68..0.68]  
+
+=== Metric 4: husk-frame vocabulary + upstream-token leakage ===
+  K1: husk-frame hits={'memorial': 18, 'ritual': 14, 'husk': 13, 'institutional memory': 8, 'atroph': 10, 'performance': 7, 'bureaucratic continuity': 1}  upstream-tokens={'tangled_rope': 5, 'husk_reading': 1}
+  K2: husk-frame hits={'memorial': 25, 'ritual': 7, 'husk': 12, 'institutional memory': 2, 'atroph': 20, 'performance': 6, 'bureaucratic continuity': 1}  upstream-tokens={'tangled_rope': 2, 'husk_reading': 1}
+  K3: husk-frame hits={'memorial': 16, 'ritual': 16, 'husk': 8, 'institutional memory': 1, 'atroph': 26, 'performance': 13, 'bureaucratic continuity': 2, 'ceremon': 2}  upstream-tokens={'tangled_rope': 2, 'husk_reading': 6}
+  N1: husk-frame hits={'memorial': 12, 'ritual': 13, 'husk': 11, 'institutional memory': 3, 'atroph': 16, 'performance': 7, 'bureaucratic continuity': 2, 'ceremon': 6}  upstream-tokens={'tangled_rope': 9, 'husk_reading': 5}
+  N2: husk-frame hits={'memorial': 12, 'ritual': 8, 'husk': 6, 'institutional memory': 3, 'atroph': 7, 'performance': 10, 'bureaucratic continuity': 3, 'ceremon': 4}  upstream-tokens={'tangled_rope': 6, 'husk_reading': 5}
+  N3: husk-frame hits={'memorial': 14, 'ritual': 13, 'husk': 8, 'institutional memory': 7, 'atroph': 6, 'performance': 10, 'bureaucratic continuity': 1}  upstream-tokens={'tangled_rope': 3, 'husk_reading': 2}
+  R1: husk-frame hits={'memorial': 14, 'ritual': 17, 'husk': 12, 'institutional memory': 1, 'atroph': 10, 'performance': 4}  upstream-tokens={'tangled_rope': 2, 'husk_reading': 3}
+  R2: husk-frame hits={'memorial': 25, 'ritual': 6, 'husk': 11, 'institutional memory': 8, 'atroph': 17, 'performance': 2, 'bureaucratic continuity': 1}  upstream-tokens={'tangled_rope': 2, 'husk_reading': 5}
+  R3: husk-frame hits={'memorial': 9, 'ritual': 1, 'husk': 11, 'institutional memory': 9, 'atroph': 10, 'performance': 5, 'bureaucratic continuity': 3}  upstream-tokens={'tangled_rope': 1, 'husk_reading': 6}
+
+=== Run health ===
+  N1: parse=True schema_errors=0 stop=end_turn in=592 out=7278
+  N2: parse=True schema_errors=0 stop=end_turn in=592 out=7414
+  N3: parse=True schema_errors=0 stop=end_turn in=592 out=7270
+  R1: parse=True schema_errors=0 stop=end_turn in=629 out=7849
+  R2: parse=True schema_errors=0 stop=end_turn in=629 out=7213
+  R3: parse=True schema_errors=1 stop=end_turn in=629 out=6900  <-- CHECK
+  K1: parse=True schema_errors=0 stop=end_turn in=764 out=7322
+  K2: parse=True schema_errors=0 stop=end_turn in=764 out=6463
+  K3: parse=True schema_errors=0 stop=end_turn in=764 out=7139

@@ -103,7 +103,13 @@ load_and_run(File, IntervalID) :-
         ->  true
         ;   assertz(narrative_ontology:interval(IntervalID, 0, 10))
         ),
-        inject_minimal_measurements(IntervalID),
+        % OQ-96 interim / OQ-93 probe: injection gated. Disabled (default) means
+        % absent grid points stay ABSENT and are reported OPEN downstream —
+        % never manufactured 0.5s at hardcoded t=[0,10].
+        (   config:param(grid_shim_enabled, true)
+        ->  inject_minimal_measurements(IntervalID)
+        ;   format('[SHIM] grid injection DISABLED (grid_shim_enabled=false; OQ-96 interim / OQ-93 probe) — absent grid points stay OPEN~n')
+        ),
 	
         % FIX: Repair ALL intervals found in the KB, not just the primary one.
         format('[SCENARIO MANAGER] Performing Global Repair...~n'),

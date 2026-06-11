@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-10 — OQ-95 resolved: constraint_neighbors/3 now fail-closed on phantom (zero-fact) constraints; giant_comp edges scoped to enumerated nodes; OQ-96 filed (gitignored domain_registry.pl breaks fresh-clone validation suite)
+## 2026-06-10 — OQ-95 resolved: constraint_neighbors/3 now fail-closed on phantom (zero-fact) constraints; giant_comp edges scoped to enumerated nodes; domain_registry throw hit independently (folded into OQ-96 at merge)
 **Files:** prolog/drl_purity_network.pl, prolog/giant_component_analysis.pl, prolog/tests/test_phantom_neighbor_filter.pl, prolog/tests/test_forecloses_fpn_injection.pl, ISSUES.md, audits/2026-06-10_oq95_phantom_node_fix/writeup.md
 **Tier:** landed
 
@@ -75,11 +75,157 @@ inert); the defect was purely topological. Generation-time fail-loud (option b) 
 dangling refs are an expected, separately-censused property of generated corpora
 (`dangle_curve.py` OQ-58, `reading_reference_linter.py`).
 
-Side-finding → **OQ-96**: `prolog/domain_registry.pl` is gitignored (`.gitignore:8`) yet
-load-bearing for the validation suite (`domain_priors.pl:71`); on a fresh clone/worktree the
-documented `run_dynamic_suite` command aborts with an existence error until `run_pipeline.py:268`
-first regenerates it. Also `python/domain_priors.py --output` defaults to an absolute path into
-the main checkout — worktree users must override it.
+Side-finding: hit the `domain_registry:domain_category/2` existence error independently in this
+clean worktree — same defect the parallel session diagnosed deeper and fixed as **OQ-96** (module
+deleted 2026-02-18; dead clauses removed; suite GREEN without the file). Three residue facts from
+the independent path were folded into the OQ-96 entry at merge: the `.gitignore:8` fossil (stale
+local copies mask the failure on long-lived checkouts), `run_pipeline.py:268` now regenerates a
+file NOTHING consumes (Pattern-1 producer; retire with the shim flag), and
+`python/domain_priors.py --output` defaults to an absolute path into the main checkout.
+Note on the witness above: "validation suite 39/39 exit 0" was run pre-merge under the
+stale-registry-file regime; re-witnessed post-merge under the shim-off regime (see merge commit).
+
+## 2026-06-10 — OQ-92 RESOLVED: gain_flow receipt surface live end-to-end (schema→compiler→prompt→batch→gates); GAP-10 closed; OQ-90 Steps 2–4 unblocked
+**Files:** ISSUES.md, docs/design/design_gaps.md, prompts/constraint_story_generation_prompt_json.md, prolog/narrative_ontology.pl, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, prolog/data_repair.pl, prolog/testsets/gfbatch1/, audits/2026-06-10_oq92_step3_preregistration/
+**Tier:** landed
+
+Stage C promoted stakeholders[] + six_questions + the receipt surface into the LIVE generation
+prompt (additively — four-tuple arrays stay, OQ-83 R4 control arm intact; the live prompt had
+carried NO stakeholder guidance, pilot-only). First batch (gfbatch1, 6 stories, run-tagged out
+of the corpus glob): 6/6 author gain_flow + fixing_cost, 0 diffuse, referential integrity
+clean end-to-end. Diffuse audit at K=0 against the pre-ruled criterion: **0/0 observed —
+vacuous pass stated as vacuous**; 6/6 named-capture flagged authoring-convention-until-checked
+(matters for OQ-90's piton side: a diffuse-starved corpus leaves piton_candidate unreachable —
+check prevalence before reading a piton sweep as absence). Stage D:
+`narrative_ontology:constraint_captured/1` (positive computation; absent/diffuse never block)
++ OQ-94 benignity gates rows 1–3 + maxent scaffold spec same-commit; two-sided controls all
+landed (uncaptured→scaffold vs captured→rope; captured→pure_scaffold; CI_Rope deterministic
+intervention with verified restore). Fabrication-ban grep witness in data_repair.pl. Suite
+green; warning gate fired correctly on a deliberate maxent line-drift (allowlist updated
+849→852). OQ-92 resolved with the Rulings block kept (operative); GAP-10 closed; OQ-90
+Steps 2–4 now pure build on a real surface.
+
+## 2026-06-10 — OQ-96 interim landed (shim OFF, suite green, warning gate wired) + OQ-93 viability probe: gradient cut-bug found and fixed; all pinned values exact post-fix; intent top verdict range-dead witnessed
+**Files:** prolog/config.pl, prolog/config_schema.pl, prolog/scenario_manager.pl, prolog/data_repair.pl, prolog/data_verification.pl, prolog/domain_priors.pl, prolog/coercion_projection.pl, python/run_pipeline.py, python/load_warning_gate.py, prolog/load_warning_allowlist.txt, audits/2026-06-10_oq93_grid_viability_probe/
+**Tier:** tripwire
+
+**Standing behavior change:** `grid_shim_enabled=false` (config + schema spec) — the DR-AUDIT
+grid shim is OFF by default: no injection, no imputation, the 32-point completeness gate
+reports OPEN-and-witnessed instead of failing (or being satisfied by manufactured filler).
+`[INTENT]` confidence on corpus stories now reads honest `low` (real 0/8), not manufactured
+`high`. Set `true` only for archive replays of shim-era behavior. The dead `domain_registry`
+references (module deleted 2026-02-18) are REMOVED — both clauses were throw-only for four
+months (could never succeed), witnessed crashing the suite at TWO sites (repair imputation via
+the Polaris story; `data_validation:127` once repair stopped crashing). Suite GREEN post-change
+(0 errors/0 warnings, 47 [OPEN] witnessed-absence lines). **New pipeline gate:**
+`python/load_warning_gate.py` + `prolog/load_warning_allowlist.txt` (4 known-benign records)
+wired into run_pipeline beside the ISSUES gate — do NOT `grep -v Warning` over load output;
+unexpected load warnings now abort the pipeline (negative control witnessed). **Tripwire for
+anyone touching coercion_projection/pattern_analysis/intent_engine:** `system_gradient`'s
+`[] → 0.0` fallback is a fabricated default — a failed gradient and a flat gradient emit the
+same token; the OQ-93 probe witnessed an "(Optimized)" cut in `time_point_in_interval/2` that
+made EVERY gradient ever computed fail into that 0.0 (stable-only basin = the cut, not data
+starvation; one-char fix landed, corpus regression green). Probe verdict (preregistration
+`e7e78a1b`, FINDINGS in the audit dir): post-fix ALL pinned values exact (G_sys ±0.588 etc.,
+κ 5/5, all three pattern labels reached, first non-stable intent verdicts in the construct's
+history); `structural_coercive_intent` RANGE-DEAD witnessed at the domain edge (max reachable
+G_sys 0.98 < threshold 1.00 strict, with full hand-authored Conditions-2–4 evidence —
+this probe authored those tables' first-ever facts). **Generalization (operator): the
+`[] → 0.0` fallback is the success-shaped-default pattern — the cut was invisible precisely
+because failure and "measured zero" were byte-identical at the read site; same channel-level
+pathology as `grep -v Warning`, one layer down (suppressed-channel vs collapsed-value).
+Ruling (a) recorded: intent top verdict RETIRE-OR-REDESIGN (sub-fork deferred); backward
+contamination sweep WAIVED (forward only). Redundancy diff (REDUNDANCY_DIFF.md): zero by
+DISJOINTNESS — κ-track's unique product is the level axis; bonus defect:
+`coercion_vector`/`compute_completeness` interval-UNSCOPED (completeness=312.5 on loaded
+corpus; single-story-safe only). Ruling (b) returns priced — then RULED keep-and-migrate
+(named-consumer kind: the masking/naturalization verdict family; intent top verdict stays
+retired; imputation killed permanently; sequence + κ-plausibility gate recorded in OQ-93).
+Build unit 1 (interval scoping) landed: probe values unchanged exact, leakage healed
+(312.5→0), suite green. **once/1 irony (operator flag): the slot-capping fix uses the same
+first-solution-only mechanism as the cut bug it buried — sound ONLY under the
+identical-by-contract premise, with the contract (duplicate slot authorship rejects loud)
+enforced by the stage-2 compiler; once/1 is defense-in-depth, never primary semantics;
+constructed-duplicate control queued to the stage-2 battery. Partial-grid threshold question
+DISSOLVED on evidence: witnessed 8/32 one-level grid → G_sys=0.216 + increasing_coercion at
+completeness 0.25 (findall absorbs missing levels — success-shaped absorption one aggregation
+up); design answer = coverage-carrying G_sys + consumer-named-level requirements, confirm at
+stage-2 prereg.**
+
+## 2026-06-10 — OQ-94 read-site pass complete: rule sorted 12-file consumer surface; benignity-certification family escalated; prior 7-file census was head-truncated
+**Files:** ISSUES.md, audits/2026-06-10_oq94_readsite_pass/READSITE_PASS.md, prolog/drl_core.pl, prolog/maxent_classifier.pl, prolog/signature_detection.pl, python/issues_status.py
+**Tier:** correction-key
+
+The OQ-94 per-site decision rule (ruled 2026-06-10) was applied to the full consumer surface.
+**Census correction first:** the recorded "seven-consumer list" was `head -15`-truncated — the
+untruncated census finds **12 files / 33 sites**, and the concealed ones were the most
+load-bearing: `drl_core.pl:346` (scaffold clause) and `:373` (tangled_rope clause) in the
+classification cascade itself, plus the `maxent_classifier` boolean_spec mirror and
+`omega1_audit`. A probe-scope statement must name its output limits. **Sort result:** SOUND = the
+four NL/FSM mountain-likeness gates (beneficiary presence already disqualifies; capture is
+stronger evidence, same direction). FORBIDDEN = the tangled_rope cell (`drl_core:373` + maxent),
+decay detection (`drift_events`, `transition_paths`), `separability_factor`, and two NAF-voids
+(`logical_fingerprint:226,444`) that would FALSE-FIRE on captured constraints under a gate.
+**ESCALATED (the one rule-unsorted family): benignity certification** — `drl_core:346` scaffold
+clause (+ maxent scaffold spec) and `signature_detection:1019` CI_Rope gate ask "is this benign
+coordination?", a third question; gate-on-not-captured there is plausibly correct (it is the
+prototype's witnessed scaffold-push mechanism) but is the operator's call. Step-3 preregistration
+carries TWO operator questions: diffuse tolerance + benignity-family ruling. Bonus finds:
+`constraint_bridge.pl:96` is the first gain_flow-migration candidate;
+`data_repair.pl:124-168` FABRICATES `constraint_beneficiary` from metrics on the DR-AUDIT path
+(OQ-93 circularity). Estimator-classifier congruence: any `drl_core:346/:373` ruling must land in
+maxent's boolean_spec table in the same change. Also this session: `issues_status.py` now fails
+on duplicate OQ labels (pre-fix a duplicate entry was silently invisible — witnessed), and the
+worktree rule is unconditional (CLAUDE.md). **Step-3 rulings landed (operator, same day): Q2
+rows 1+3 GATE (scaffold clause + maxent mirror; pure_coordination subtype), row 2 deferred→
+control RUN: synthetic vectors can't reach Boltzmann-gated signatures
+(`inconclusive(insufficient_classifications)` — diagnosed), and the live-corpus existence check
+witnessed CI_Rope ∧ beneficiary = 7/7 (gate runs entirely on beneficiary-bearers; captured-or-not
+unknowable until gain_flow exists). Q1: K=0 on the observable, halt = Stage D only, N =
+whole-batch-or-≥30 (convention), obviousness criterion pre-written, "0/N observed" never "clean".
+Fabrication ban recorded (gain_flow never synthesized; data_repair.pl the named door). STAGES
+A–C UNBLOCKED — schema → compiler → prompt per
+`audits/2026-06-10_oq92_step3_preregistration/PREREGISTRATION.md`.** Row 2 then RULED GATE
+(family gate-uniform; evidence-shape distinction preserved: row 1 misfire-witnessed, row 2
+reachability-witnessed/misfire-pending-Stage-D — deferral would have inverted fail-closed).
+**Stage A + Stage B LANDED same day** (schema fields + compiler emission + fail-loud
+referential integrity + narrative_ontology declarations; witnesses in the prereg dir: 8/8
+schema cases, two-sided additivity, 0-diff 134/134 old-vs-new, pilot branches incl. ghost-seat
+REJECTED on both paths, swipl fact queryability). Standing fact with a number: **91/134
+`json/` specs fail the CURRENT schema** — identical pre/post Stage A, the expected residue of
+the 2026-06-09 required-fields tightening; latent (run_pipeline does not read `json/`; the
+generator validates on entry) but a known surprise if old specs are recompiled or used as
+fixtures. NEXT HUMAN GATE: the diffuse-audit "obvious capturing seat" criterion is written
+BEFORE the first Stage-C batch is read (prereg Q1; operator-in-loop by design); Stage C prompt
+work and everything else between is execution.
+
+## 2026-06-10 — OQ-81 ruled SUPPRESS and wired: reading-typed wave-upstreams dropped at seed build; A/B finds verdict import in the gradable channel (theater_ratio), absorbed before the categorical
+**Files:** agent/generate_kernel_corpus.py, agent/c-orchestrator.py, agent/story_generator_base.py, ISSUES.md, audits/2026-06-10_oq81_reading_upstream_recon/
+**Tier:** landed
+
+Full chain in `audits/2026-06-10_oq81_reading_upstream_recon/` (RECON → AB_PLAN pre-registered →
+AB_RESULTS → WIREUP): recon established ZERO exposure to date (no story in any corpus was ever
+generated under reading-verdict injection — pre-merge c-orch dropped readings, gkc --scope is
+wave-free, post-merge live runs had no reading edges) and that the current SCOPE format emits
+kernel-CONCEPT deps (21/21 dangling/inert), not reading deps. The A/B (3 arms × 3 reps, exact
+pipeline params, injected verdict deliberately ≠ axis hypothesis): claimed_type held 9/9 snare,
+but the three-line verdict block pulled authored theater_ratio 0.690→0.513 (zero range overlap;
+kernel-substrate arm ≈ no-context arm). Operator reframe adopted as the closure language:
+**verdict import occurred in the gradable channel and was absorbed before the categorical one**
+— the categorical field is STICKY (anchored by the explicit hypothesis line), not safe; the R-arm
+prose reasoning about theater is the positive control proving the injected verdict was read, so
+the categorical null is real. Discovered en route: `axis_source_desc` already injects the
+verdict-free kernel CSR into every supplementary-axis prompt — kernel substrate needed no new
+wire; the fix-space collapsed to one bit. Wire: `_flat_seeds_from_manifest` drops reading-typed
+deps from BOTH the seed's wave deps and the axis copy `upstream_context` reads (two read sites,
+one filter point); same predicate in the serial escape hatch (code-read sync, NOT
+payload-witnessed). Witness: germline byte-identical (8 flat injections preserved — §5.1 flat
+design untouched); dutch+supp kernel capture 4/5 payloads identical, 5th loses exactly the three
+verdict lines. Standing cautions (also in the compressed OQ-81 entry): (1) **injection channel
+asymmetry** — categorical-stable / continuous-distorted is a general finding about context
+injection (n=3, one axis: an instance, not an effect size); (2) the CSR line poisons
+vocabulary-based leakage probes in ALL arms — key future leakage probes on tokens present ONLY
+via the injected block.
 
 ## 2026-06-10 — OQ-77 closed: giant_comp SIGSEGV not serially reproducible (10/10 at exact crash size n=39; archives to n=3380) — concurrency artifact, operational rule promoted; OQ-95 filed (phantom network nodes)
 **Files:** ISSUES.md, CLAUDE.md, prolog/giant_component_analysis.pl, prolog/drl_purity_network.pl, python/run_pipeline.py, audits/2026-06-10_oq77_serial_kill_condition/writeup.md
