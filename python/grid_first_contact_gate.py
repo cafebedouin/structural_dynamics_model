@@ -85,7 +85,17 @@ def audit_story(doc, cid, ledger_hashes, testsets_dir):
 
     n_slots = len(vals)
     pts = grid.get("points") or []
-    if n_slots != 32 or len(pts) != 32 or any(
+    # C-range (corrected 2026-06-12): only the genuinely schema/compiler-
+    # unreachable shapes — a value outside [0,1] or duplicate slots. The
+    # original first-contact form also fired on slot count != 32, welding
+    # the BATCH addendum's full-grid mandate into the standing gate: partial
+    # grids are operator-CONFIRMED legal (no fraction threshold; consumer-
+    # named-levels decides sufficiency, and the coverage read reports OPEN
+    # where insufficient). First misfire: institutional_trust_erosion,
+    # 12/32 all-valid points, excluded and the pipeline halted while the
+    # story was an OQ-90 flip target (witness:
+    # audits/2026-06-12_gate_partial_fix/).
+    if len(pts) != n_slots or any(
             not (0.0 <= p["value"] <= 1.0) for p in pts):
         fired.append("C-range")
 
@@ -95,14 +105,19 @@ def audit_story(doc, cid, ledger_hashes, testsets_dir):
     if vhash in ledger_hashes:
         fired.append(f"C-echo:tuple-collision-with:{ledger_hashes[vhash]}")
 
-    if n_slots == 32:
-        spans = []
-        for m in GRID_METRICS:
-            for t in (grid["t0"], grid["tn"]):
-                group = [vals[(m, lv, t)] for lv in LEVELS]
+    # C-flat over the slot-groups actually present: a group is evaluable
+    # when >= 2 levels carry values at that (metric, time); fire only if
+    # evaluable groups exist and ALL of them span < 0.05. A grid with no
+    # evaluable group (single-level authoring) is flat-UNEVALUABLE — the
+    # coverage read already makes such grids OPEN for system claims.
+    spans = []
+    for m in GRID_METRICS:
+        for t in (grid["t0"], grid["tn"]):
+            group = [vals[(m, lv, t)] for lv in LEVELS if (m, lv, t) in vals]
+            if len(group) >= 2:
                 spans.append(max(group) - min(group))
-        if all(s < 0.05 for s in spans):
-            fired.append("C-flat")
+    if spans and all(s < 0.05 for s in spans):
+        fired.append("C-flat")
 
     g, err = engine_gsys(cid, testsets_dir)
     if err:
@@ -146,12 +161,24 @@ def run_gate(json_dir=JSON_DIR, testsets_dir=TESTSETS_DIR,
         fired, vhash = audit_story(doc, cid, ledger_hashes, testsets_dir)
         if any(x.startswith("C-echo") for x in fired):
             echo.append((cid, fired))
+        n_pts = len(doc["coercion_grid"].get("points") or [])
         if fired:
             problems.append((cid, fired))
         else:
-            new.append({"cid": cid, "audited_at":
-                        datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        "verdict": "pass", "value_hash": vhash})
+            entry = {"cid": cid, "audited_at":
+                     datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                     "verdict": "pass", "value_hash": vhash,
+                     "coverage": f"{n_pts}/32"}
+            if n_pts < 32:
+                # Legal (consumer-named-levels) but the live prompt mandates
+                # the full grid when opting in — surfaced, never excluded.
+                entry["note"] = "partial grid (prompt mandates full 32 on opt-in)"
+                print(f"[GRID-GATE] note: {cid} authored a PARTIAL grid "
+                      f"({n_pts}/32) — legal (coverage read fails closed "
+                      f"downstream), but the live prompt mandates the full "
+                      f"grid on opt-in; prompt-compliance signal, not an "
+                      f"exclusion.")
+            new.append(entry)
             ledger_hashes[vhash] = cid  # within-run cross-story echo check
 
     for cid, fired in problems:
