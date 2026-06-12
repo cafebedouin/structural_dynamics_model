@@ -4687,8 +4687,13 @@ contention) remain operative build specs here.
 
 **Phase C scope (never before B):** D-fork side of the Phase C gate is SATISFIED — OQ-110
 ruled branch b no-open (2026-06-11), so Phase C carries no C1/C2 schema additions and the
-remaining gate is "Phase B complete" alone. **The unanimity guard's C arm
-(`nl_certification_chain/1`) ENTERS LIVE SERVICE at this phase** — through Phase B it is
+remaining gate is "Phase B complete" alone. **ORDERING PINNED (operator, 2026-06-12):
+OQ-114 ruling FIRST → C-arm extension confirmed-or-amended → THEN the four-tuple-only
+regen.** Regen-first would put stakeholder-only stories under the C arm's guard decisions
+before OQ-114 rules its extension — an extension later ruled wrong would have been live on
+fresh corpus (same once-not-twice logic that put the D-fork ruling before Phase C). No
+dependency forces regen-first: the OQ-114 archive probe runs on `corpus_path` overlays.
+**The unanimity guard's C arm (`nl_certification_chain/1`) ENTERS LIVE SERVICE at this phase** — through Phase B it is
 live-unwitnessed by design (every live story routes through the authored-cells arm; its
 only witness is the seam control), so the Phase-C re-witnessing point is NOT skippable on
 "the guard already passed B4" grounds: re-witness the guard on the post-retirement corpus,
@@ -4916,6 +4921,34 @@ whether the FCR firing was OQ-70-class bait or detection).
 **Resolution shape.** Per-story ruling on the 3 (operator) informed by the rate; if ruled
 not-mountains, the chain needs a discriminating conjunct (witnessed, not beneficiary-presence
 — that one failed extension-preservation 1/6) or the un-fire reverts at Phase C re-witness.
+
+## OQ-115 — signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)
+
+**Ω-type:** Ω_E (witnessed, mechanical, OQ-57 class).
+
+**Status:** open — filed 2026-06-12 by the B4 gauntlet reconciliation (the one check_stack
+divergence not on the expected-divergence manifest; investigated to attribution).
+
+**The witness.** check_stack reports `abductive_helpers:known_override_signature/1`
+undefined, referenced by `signature_detection:signature_grade/2` (:1568). Under bare
+`[stack]`: `current_module(abductive_helpers)` TRUE but `module_property(_, file(_))` FAILS
+— a phantom module created by the qualified references; the call throws existence_error.
+The predicate IS defined+exported (`abductive_helpers.pl:22,60`). Three use_module sites
+exist (abductive_engine, abductive_triggers, diagnostic_summary) — NONE loaded by [stack].
+The PIPELINE chain loads it via json_report → diagnostic_summary, so signature_grade and
+the verdict_join alert path (diagnostic_summary:650) work where the pipeline runs —
+witnessed by the green B4 gauntlet. Present at pre-Phase-B `c22ec561` (temp-worktree
+witness, B4 reconciliation); NOT on the 2026-06-04 check_stack baseline (the OQ-98-era
+alert path created the reference after it). The in-file comment
+(signature_detection:1555–1559) claims the load is guaranteed — falsified for the [stack]
+chain.
+
+**Bite.** None in the pipeline today; real for any [stack]-only consumer of
+signature_grade/2 (probes, REPL diagnostics) — exactly the OQ-57 lesson: diagnose on the
+consumer's exact load chain. **Resolution shape:** import abductive_helpers in
+signature_detection (the referencing module owns its imports), or add it to stack.pl;
+either way update the check_stack baseline note and the :1555 comment. Engine-touching —
+lands outside B4.
 
 ---
 

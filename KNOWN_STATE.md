@@ -65,6 +65,22 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — OQ-109 B4 gauntlet PASS against a pre-compiled expected-divergence manifest; Phase C ordering pinned (OQ-114 first); OQ-115 filed (check_stack divergence attributed pre-Phase-B)
+**Files:** ISSUES.md, audits/2026-06-11_oq109_phase_b/B4_EXPECTED_DIVERGENCE_MANIFEST.md
+**Tier:** landed
+
+Manifest compiled BEFORE the run (operator: gauntlet = reconciliation against prediction,
+not post-hoc explanation; unmanifested divergence blocks). Pipeline green; validation suite
+EXCELLENT; plunit 14/14; check_stack = 4 baseline findings + 1 unmanifested →
+investigated to attribution: abductive_helpers phantom-module under [stack]
+(load-path-dependent, OQ-57 class; pipeline chain healthy via json_report →
+diagnostic_summary; present at pre-Phase-B c22ec561, absent from the 2026-06-04 baseline
+— OQ-98-era reference) → OQ-115, not Phase-B-attributable, does not block. Rows 1–10 all
+reconciled (pipeline diff confined to the two A5 gaps nulls). corroborated_zombie
+first-live-exercise flag carries into Phase C. **Phase B is COMPLETE.** Phase C ordering
+pinned in the OQ-109 entry: OQ-114 ruling → C-arm extension confirmed → regen (no
+dependency forces regen-first; archive probe rides corpus_path overlays).
+
 ## 2026-06-12 — OQ-109 B3: empty-table census CLOSED (A1–A6, B1–B3 all discharged); narrative_ontology A3/A4 detectors retired; linter migrated to agent-surface dispatch; gaps key carries coverage bit
 **Files:** prolog/narrative_ontology.pl, python/linter.py, prolog/test_harness.pl, prolog/json_report.pl, prolog/report_generator.pl, python/shared/schemas.py, audits/2026-06-11_oq109_phase_b/
 **Tier:** landed
