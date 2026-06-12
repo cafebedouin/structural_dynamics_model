@@ -461,6 +461,17 @@ format_indexed_report(Classifications, Context, Report) :-
 generate_llm_feedback(IntervalID) :-
     format('~n### START LLM REFINEMENT MANIFEST: ~w ###~n', [IntervalID]),
     format('~n[PERSPECTIVAL_GAPS]~n'),
+    % Census A6 (OQ-109 B3, 2026-06-12): the bare forall printed an empty
+    % section on a cell-less corpus — carry the ran-witness.
+    aggregate_all(count,
+                  ( narrative_ontology:constraint_claim(CCov, _),
+                    constraint_indexing:constraint_classification(CCov, _, context(agent_power(powerless), _, _, _)),
+                    constraint_indexing:constraint_classification(CCov, _, context(agent_power(institutional), _, _, _)) ),
+                  NBothSeats),
+    (   NBothSeats =:= 0
+    ->  format('  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran~n')
+    ;   format('  (~w constraints with both seats examined)~n', [NBothSeats])
+    ),
     (forall(narrative_ontology:constraint_claim(C, _),
            (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
             constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),

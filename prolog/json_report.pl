@@ -303,12 +303,19 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_omega_array(S, Omegas),
     format(S, ',~n', []),
 
-    % gaps
-    findall(gap(GT, TP, TI),
-            report_generator:detect_gap_pattern(C, gap(GT, TP, TI)),
-            Gaps),
-    format(S, '      "gaps": ', []),
-    write_gap_array(S, Gaps),
+    % gaps — census A5 (OQ-109 B3, 2026-06-12): carry the coverage bit. A bare
+    % [] collapsed measured-no-gap with didn't-look (detect_gap_pattern reads
+    % powerless/institutional authored cells; a perspectives-free story can
+    % never produce a gap). null = no authored cells to examine; [] = cells
+    % examined, no gap found.
+    (   constraint_indexing:constraint_classification(C, _, _)
+    ->  findall(gap(GT, TP, TI),
+                report_generator:detect_gap_pattern(C, gap(GT, TP, TI)),
+                Gaps),
+        format(S, '      "gaps": ', []),
+        write_gap_array(S, Gaps)
+    ;   format(S, '      "gaps": null', [])
+    ),
     format(S, ',~n', []),
 
     % beneficiaries

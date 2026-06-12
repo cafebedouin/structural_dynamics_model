@@ -51,3 +51,23 @@ silent-skip on absence is its correct behavior).
 - A2 (`validate_per_index`) and A6 (report :448) are NEW — folded into the seam gate.
 - Every Class-A migration owes the seam positive control (perspectives-free story, shown
   fail-closed or computing over seats) per the gate as written.
+
+## Closure (2026-06-12)
+
+- A1 — closed (unanimity dispatch; seam control passes via C arm).
+- A2 — closed (`validate_per_index` counts first, logs `[INDEX VACUOUS]` on zero; two-sided
+  witness `b3_a2_witness.out`).
+- A3/A4 — closed by RETIREMENT (zero consumers, dead exemption legs; tombstones point at
+  R5/FSM/T17 successors; pipeline identity `b3_no_utilities_pattern3.out`).
+- A5 — closed (`gaps` carries the coverage bit: null = didn't-look, [] = measured-empty;
+  validator extended; output diff confined to the 2 no-cell stories,
+  `b3_a5_a6_witness.out`).
+- A6 — closed (PERSPECTIVAL_GAPS section carries its ran-witness count / explicit vacuity
+  line; rendered witness in `b3_a5_a6_witness.out`; the vacuity branch shares A2's
+  witnessed construction — the empty-corpus side was not separately exercised).
+- B1 — closed (compiler emission gated, two-sided, `b3_emission_seam_control.out`).
+- B2 — closed (`agent_surface_present/1`, 5 two-sided controls).
+- B3 — closed (linter dispatch; example 5→0; sweep 92→80 fully decomposed,
+  `b3_linter_sweep_diff.out`).
+
+**The census class is fully discharged.**

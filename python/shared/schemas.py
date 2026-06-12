@@ -182,7 +182,11 @@ PIPELINE_FIELDS = [
     ("signature",                   str,          False),
     ("coupling",                    dict,         False),
     ("omegas",                      list,         False),
-    ("gaps",                        list,         False),
+    # gaps nullable since OQ-109 B3 (2026-06-12, census A5): null = the story
+    # has no authored classification cells, so detect_gap_pattern never looked
+    # (didn't-look); [] = cells examined, no gap found (measured-empty). The
+    # isinstance branch below still type-checks the list case.
+    ("gaps",                        list,         True),
     ("beneficiaries",               list,         False),
     ("victims",                     list,         False),
     ("emerges_naturally",           bool,         False),

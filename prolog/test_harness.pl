@@ -109,17 +109,30 @@ load_scenario(Path) :-
 %  computation, which is the desired behavior (priors as input, not ground truth).
 validate_per_index(IntervalID) :-
     format('~n--- PER-INDEX VALIDATION ---~n'),
-    forall(
-        constraint_indexing:constraint_classification(IntervalID, DeclaredType, Ctx),
-        (   catch(drl_core:dr_type(IntervalID, Ctx, ComputedType), _, fail)
-        ->  (   DeclaredType = ComputedType
-            ->  format('  [INDEX OK] ~w from ~w: declared=~w, computed=~w~n',
-                       [IntervalID, Ctx, DeclaredType, ComputedType])
-            ;   format('  [INDEX MISMATCH] ~w from ~w: declared=~w, computed=~w~n',
-                       [IntervalID, Ctx, DeclaredType, ComputedType])
+    % Empty-table census A2 fix (OQ-109 B3, 2026-06-12): the bare forall was
+    % VACUOUSLY TRUE on a perspectives-free story — the section printed a clean
+    % header having checked nothing (silent fail-open). Carry the ran-witness:
+    % count first, log vacuity explicitly when zero.
+    findall(Ctx-DeclaredType,
+            constraint_indexing:constraint_classification(IntervalID, DeclaredType, Ctx),
+            Pairs),
+    length(Pairs, NPairs),
+    (   NPairs =:= 0
+    ->  format('  [INDEX VACUOUS] ~w: no authored classifications — ZERO per-index checks ran (not a clean pass)~n',
+               [IntervalID])
+    ;   format('  (~w authored classifications examined)~n', [NPairs]),
+        forall(
+            member(Ctx-DeclaredType, Pairs),
+            (   catch(drl_core:dr_type(IntervalID, Ctx, ComputedType), _, fail)
+            ->  (   DeclaredType = ComputedType
+                ->  format('  [INDEX OK] ~w from ~w: declared=~w, computed=~w~n',
+                           [IntervalID, Ctx, DeclaredType, ComputedType])
+                ;   format('  [INDEX MISMATCH] ~w from ~w: declared=~w, computed=~w~n',
+                           [IntervalID, Ctx, DeclaredType, ComputedType])
+                )
+            ;   format('  [INDEX ERROR] ~w: dr_type failed for context ~w~n',
+                       [IntervalID, Ctx])
             )
-        ;   format('  [INDEX ERROR] ~w: dr_type failed for context ~w~n',
-                   [IntervalID, Ctx])
         )
     ).
 
