@@ -4706,7 +4706,20 @@ and survives Phase C as permanent residue.
 live-unwitnessed by design (every live story routes through the authored-cells arm; its
 only witness is the seam control), so the Phase-C re-witnessing point is NOT skippable on
 "the guard already passed B4" grounds: re-witness the guard on the post-retirement corpus,
-with OQ-114's ruling governing its extension. `perspectives[]` retired from the schema;
+with OQ-114's ruling governing its extension.
+**HARD GATE (operator, 2026-06-12 — gate-shaped, not a list position): NO retirement or
+regen commit may land before the fail-closed per-story exclusion mechanism is LANDED WITH
+ITS WITNESSES PASTED** (trust_erosion shown excluded + the two-sided control of a
+non-listed story reaching the C arm + the list-absent branch shown failing closed).
+Schema retirement and regen both create perspectives-free stories; the moment the first
+one exists the C arm decides live, with the exclusion either enforced or not — auto mode
+may not reorder this on dependency convenience.
+**Falsifier pinned for the trio-filters-nothing held-open (operator, 2026-06-12):** the
+NL trio's filtering power is RE-MEASURED on the post-regen corpus at the Phase C
+re-witness — does the trio separate certified from non-certified among the regenerated
+stakeholder-only stories? Either outcome feeds the general-mechanism item; the archive
+finding (C ≡ claim-mountain) may not be cited as the live corpus's state without the
+re-measure. `perspectives[]` retired from the schema;
 `reading_diff` re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
 `prolog/archives/datasets/` with manifests (control arm preserved permanently); Build
 Discipline Pattern-3 old-vs-new diffs before any retirement. **Post-reset calculus (witnessed
