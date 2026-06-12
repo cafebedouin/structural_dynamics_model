@@ -4630,6 +4630,16 @@ contention) remain operative build specs here.
   never `dr_type/3`. Whoever lands it owes the seam positive control (mountain-claimed
   perspectives-free story) plus a reentrancy witness (signature evaluation terminates on a
   story whose guard path executes the recompute).
+  **Census (2026-06-12, operator-triggered — the class is NOT {2}):**
+  `audits/2026-06-11_oq109_phase_b/b3_empty_table_census.md`. Six SILENT fail-open members
+  (A1 FCR guard; A2 `test_harness:validate_per_index` vacuous-forall; A3
+  `check_indexical_relativity`; A4 mandatrophy omega detectors; A5 `detect_gap_pattern` →
+  `gaps:[]` collapse; A6 report PERSPECTIVAL_GAPS section) + three LOUD false-alarm members
+  (B1 compiler invariance_check — the second known instance, reclassified loud; B2
+  data_validation gates; B3 linter rules). A3–A5 are the existing A3-table items with an
+  added explicit requirement: each migration must distinguish measured-no-gap from no-data
+  (null/coverage bit, never bare `[]`). A2 and A6 are NEW seam-gate members. Every Class-A
+  migration owes the seam positive control.
 - AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
   no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
   `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
