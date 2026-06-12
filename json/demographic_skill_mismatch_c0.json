@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "demographic_skill_mismatch_c0",
+    "version": "1.0",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE",
+    "story_uid": "f8a3c2d1-9e4b-4a5c-8f7d-2b1a3c4d5e6f",
+    "created_at": "2024-01-09T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Demographic Skill Mismatch in Blue-Collar Labor Markets",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "incumbent_blue_collar_workers",
+      "labor_intermediaries",
+      "vocational_training_institutions"
+    ],
+    "vindicated_propositions": [
+      "educational_attainment_mobility_doctrine",
+      "demographic_transition_inevitability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_blue_collar_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers over 40 in manual trades experiencing unprecedented wage growth and bargaining power as their cohort shrinks and demand remains stable. They did not create the demographic transition but capture its wage premium. Their exit options are constrained by age and skill specificity, but within the trades they now command premium compensation."
+    },
+    {
+      "name": "younger_potential_entrants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Workers born after 1990 who systematically avoid manual trades despite rising wages, pursuing college degrees and white-collar work instead. They are excluded not by formal barriers but by cultural narratives about status, educational achievement, and career trajectories that make blue-collar work psychologically inaccessible even when economically rational."
+    },
+    {
+      "name": "labor_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Staffing agencies, trade unions, and contractor networks that capture margin from the wage premium by controlling access to scarce skilled labor. They benefit from the mismatch persisting because it sustains their intermediation rents, though they did not cause the underlying demographic shift."
+    },
+    {
+      "name": "vocational_training_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Community colleges and trade schools that receive increased funding and enrollment as policymakers attempt to address the shortage. They benefit from the mismatch being framed as a skills gap requiring institutional intervention rather than a cultural preference requiring no solution."
+    },
+    {
+      "name": "employers_requiring_manual_labor",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Construction firms, manufacturers, logistics operators facing rising labor costs and project delays due to worker scarcity. They can automate some functions but many tasks remain stubbornly manual. They absorb the wage premium, delay projects, or pass costs to customers; they cannot conjure workers from the missing cohort."
+    },
+    {
+      "name": "end_consumers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Households and businesses paying higher prices for construction, repair, and manual services as labor costs rise. They experience the constraint as unavoidable cost inflation in essential services with no alternative providers offering lower rates."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers analyzing whether the mismatch is a natural demographic transition, a constructed outcome of educational policy and status signaling, or a hybrid where natural trends are amplified by institutional choices that benefit specific actors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None claimed — the constraint is presented as a demographic fact, not a coordinated arrangement. The labor market clears at higher wages; no coordination mechanism is required.",
+    "transfer_function": "Transfers purchasing power from employers and end consumers to incumbent blue-collar workers through wage premiums, and to labor intermediaries and training institutions through increased demand for their services.",
+    "absent_voices": "Younger potential entrants are structurally present but culturally excluded — their voice in labor market discourse is drowned out by educational attainment narratives that treat college as the default path. Alternative framings that would normalize blue-collar work as a rational choice given current wage structures are systematically marginalized in guidance counseling, media representation, and family expectations.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the cultural stigma against manual work vanished overnight, younger workers would rationally enter trades given current wage premiums, the shortage would resolve within a training cycle, and wage premiums would compress — the labor market would rearrange. But if the demographic transition is truly structural (declining birth rates, rising educational attainment as irreversible development), the mismatch persists regardless of cultural framing — the world stays unchanged. The parties dispute which.",
+    "founding_problem": "Post-industrial economies experienced rising educational attainment and declining birth rates, creating a cohort gap where fewer young workers were available for manual trades while older workers aged toward retirement.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Demographic data on birth rates and educational attainment is uncontested and comes from census bureaus and education ministries (outside any benefiting party). The contested element is whether the AVOIDANCE of manual work by educated cohorts is a natural preference or a constructed outcome of status signaling and institutional channeling. Sociologists and cultural historians outside the labor market attest that occupational prestige is socially constructed and historically variable, not a natural fact."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The demographic skill mismatch in blue-collar labor markets describes a structural tension between an aging manual labor workforce (over 50% aged 40+) and systematic avoidance of trades by workers born after 1990. This creates sustained upward wage pressure for blue-collar work. The constraint is CLAIMED as Mountain because the demographic transition appears to be an irreversible structural feature of economic development — declining birth rates, rising educational attainment, and intergenerational mobility away from manual work. The METRICS are authored to reflect low but rising extraction (0.18 at interval end) as intermediaries and institutions capture rents from the mismatch, and very low suppression (0.22) and resistance (0.08) because the constraint operates primarily through cultural preference rather than coercion. The claim/metric independence is deliberate: the engine will measure whether a claimed natural law with identifiable beneficiaries computes as Mountain or triggers false summit detection.\n\nKEY AGENTS (by structural relationship):\n- Incumbent blue-collar workers: Primary beneficiaries (moderate/constrained) — capture wage premium from scarcity\n- Labor intermediaries: Secondary beneficiaries (organized/mobile) — extract margin from controlled access\n- Vocational training institutions: Institutional beneficiaries (institutional/constrained) — receive funding to address framed skills gap\n- Employers requiring manual labor: Primary payers (powerful/constrained) — absorb rising labor costs\n- End consumers: Diffuse payers (powerless/trapped) — pay higher prices for manual services\n- Younger potential entrants: Culturally excluded (moderate/mobile) — avoid trades despite wage signals\n- Labor economists: Analytical observers (analytical/analytical) — investigate natural vs constructed dynamics",
+    "logic_rationale": "Extractiveness is low but rising (0.08 → 0.18) because the demographic transition itself is arguably natural, but identifiable actors increasingly capture rents from its persistence: labor intermediaries control access to scarce workers, training institutions receive funding to solve a problem that may be cultural rather than educational, and incumbent workers benefit from wage premiums that exceed productivity gains. Theater ratio is very low (0.12 at interval end) because most activity is functional — actual training, actual wage negotiation — but a small and growing share is performative policy responses that do not address the cultural stigma driving avoidance. Suppression is low (0.22) because younger workers are not coerced away from trades; they choose college paths in response to status signals and family expectations. Resistance is very low (0.08) because the constraint is widely accepted as demographic reality. Accessibility collapse is very high (0.88) because once the demographic facts are understood, alternative labor supply sources (immigration, automation, cultural shift) appear difficult and slow. The measurement series shows gradual extraction accumulation as institutional actors learn to monetize the mismatch.",
+    "directionality_logic": "Incumbent blue-collar workers are beneficiaries (d near 0.2) — they did not create the shortage but capture its wage premium; their constrained exit options keep them in trades where they now have pricing power. Labor intermediaries and training institutions are also beneficiaries (d near 0.15-0.25) — they extract margin and funding from the mismatch without causing it. Employers and end consumers are payers (d near 0.7-0.85) — they bear rising costs with constrained or trapped exit options. Younger potential entrants are excluded rather than targeted — their exclusion is cultural, not extractive, so they do not map cleanly to the beneficiary/victim axis (d near 0.5, symmetric). The analytical seat sees the full structure.",
+    "perspectival_gap": "From the incumbent worker seat, the constraint is pure demographic luck — a natural scarcity they benefit from but did not engineer. From the employer seat, it is an unavoidable cost increase driven by forces beyond any actor's control. From the analytical seat, the constraint is a hybrid: the demographic transition is real, but the AVOIDANCE of trades by younger workers is amplified by constructed status hierarchies, educational tracking, and cultural narratives that benefit specific institutional actors. The engine computes this divergence from the structural data; the beneficiary declarations trigger false summit evaluation even though the claim is Mountain.",
+    "mandatrophy_analysis": "The constraint is not a mandatrophy in the classical sense — it was not built to solve a problem that has since disappeared. Instead, it is a candidate false summit: a demographic reality that appears natural but has identifiable beneficiaries who gain from its persistence and from the framing that treats it as unsolvable. The omega variables document the irreducible uncertainty: is the avoidance of manual work by educated cohorts a natural preference (supporting Mountain classification) or a constructed outcome of status signaling and institutional channeling (supporting Tangled Rope or Snare classification where cultural gatekeepers extract by maintaining stigma)?"
+  },
+  "omegas": [
+    {
+      "id": "natural_vs_constructed_avoidance",
+      "question": "Is the systematic avoidance of manual trades by younger workers a natural preference arising from educational attainment, or a constructed outcome of status signaling and institutional channeling that benefits specific actors?",
+      "resolution_mechanism": "Cross-national comparison of countries with similar educational attainment but different cultural prestige for trades (e.g., Germany, Switzerland vs. US, UK). If avoidance varies independently of education levels, it is constructed. Longitudinal analysis of occupational prestige shifts in response to wage changes would also resolve: if younger workers enter trades when wages rise sufficiently, preference is economic; if they avoid trades despite wage premiums, preference is cultural/constructed.",
+      "impact": "If avoidance is natural, the constraint is a genuine Mountain — a demographic fact no actor can reverse. If avoidance is constructed and maintained by actors who benefit from the mismatch (training institutions framing it as a skills gap, intermediaries controlling access, cultural gatekeepers maintaining stigma), the constraint is a false summit — a Tangled Rope or Snare where extraction rides on a real demographic trend but is amplified by institutional choices.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether occupational avoidance is natural preference or constructed stigma"
+    },
+    {
+      "id": "beneficiary_amplification",
+      "question": "Do the identifiable beneficiaries (intermediaries, training institutions) actively maintain the cultural stigma against manual work, or do they passively benefit from an independent demographic trend?",
+      "resolution_mechanism": "Analysis of messaging and policy advocacy by training institutions and labor intermediaries: do they promote cultural normalization of trades, or do they frame the problem as a skills gap requiring institutional intervention (which sustains their funding and intermediation rents)? Examination of guidance counseling practices and media representation of trades would reveal whether gatekeepers actively steer younger workers away from manual work.",
+      "impact": "If beneficiaries actively maintain stigma or frame the problem in ways that sustain their rents, the constraint is extractive and constructed. If they passively benefit from an independent cultural shift, the constraint is closer to a natural demographic reality with incidental beneficiaries.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether beneficiaries amplify the constraint or merely benefit from it"
+    },
+    {
+      "id": "immigration_suppression",
+      "question": "Is the labor shortage sustained in part by immigration restrictions that prevent foreign workers from filling blue-collar roles, and do domestic beneficiaries lobby for those restrictions?",
+      "resolution_mechanism": "Analysis of immigration policy advocacy by trade unions, labor intermediaries, and incumbent workers. Comparison of labor shortages in jurisdictions with open vs. restricted immigration for manual trades. If beneficiaries actively lobby against immigration pathways that would resolve the shortage, the constraint is partly constructed.",
+      "impact": "If immigration restrictions are actively maintained by beneficiaries to preserve wage premiums, the constraint is a Snare or Tangled Rope — a natural demographic trend weaponized through policy to extract rents. If immigration policy is independent of beneficiary advocacy, the constraint is closer to a genuine Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether immigration restrictions are maintained to preserve beneficiary rents"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a candidate for decomposition if analysis reveals distinct mechanisms: (1) the demographic transition itself (declining birth rates, aging workforce) as a genuine Mountain, and (2) the cultural stigma against manual work as a constructed Snare or Tangled Rope maintained by institutional actors. Current formulation treats them as a single hybrid constraint pending empirical resolution of the omega variables."
+  },
+  "provenance": {
+    "prompt_commit": "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-12",
+    "source_essay": "cohort_zero_regen",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-5-20250929",
+    "sampling_params": "temperature=0.2",
+    "seeded_from": "demographic_skill_mismatch",
+    "draw": 1
+  }
+}

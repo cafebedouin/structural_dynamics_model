@@ -29,4 +29,8 @@
 ]).
 
 %% nl_chain_exclusion(?Constraint, ?Reason)
+% Pre-cohort-zero id kept for archival sweeps (kernel_v2_test2 overlays load
+% this guard too); the live referent is the _c0 redraw, anchored through
+% seeded_from (provenance) — identity authored forward, never name-recovered.
 nl_chain_exclusion(institutional_trust_erosion, oq114_substantive_dissent).
+nl_chain_exclusion(institutional_trust_erosion_c0, oq114_substantive_dissent).

@@ -102,6 +102,30 @@ reads as an empirical sigma/seat partition (draw-stable = situation-fixed; draw-
 = seat-expressive), not a noise filter. WRITEUP addendum + ISSUES.md OQ-109 + CLAUDE.md
 paragraph all amended with the ruling.
 
+## 2026-06-12 — COHORT ZERO LIVE: pilot 7/7 generated, swap executed (live corpus = 5 _c0 stories; pre-cohort set retired to kernel_v2_test2); C-arm first live decisions witnessed; trio falsifier RESOLVED (filters on new regime); OQ-116 filed
+**Files:** prolog/testsets/ (corpus swap), json/, prolog/guard_exclusions.pl, prolog/archives/datasets/kernel_v2_test2/, agent/cohort_zero_regen.py, ISSUES.md, audits/2026-06-12_cohort_zero/
+**Tier:** landed
+
+Operator rulings executed: pilot-only-for-continuity (5 continuity-critical seeds:
+3 ruled stories + scale_ceiling + adjunctification; organization_floor ×3 replicate);
+archive = kernel_v2_test2 (RENAMED from pre_cohort_zero_2026-06-12, not copied; manifest
+carries both names + schema pin; transient symlink during in-flight rename, removed at
+swap). Pilot: 7/7 driver-owned checks PASS; lint-only failures → OQ-116 (scaffold-zone
+calibration; MOUNTAIN_METRIC_CONFLICT contradicts independence doctrine); operator ruled
+swap-with-findings-recorded. Battery (battery_witnesses.out): trio FILTERS on cohort zero
+(1/4 mountain-claims certify) — archive C≡claim-mountain was old-regime artifact;
+demographic_skill_mismatch_c0 protected on own evidence; organization_floor_c0 examined
+(redraw not NL-certified — ruled-IN = chain decides + we inspect); trust_erosion_c0
+excluded AND chain-false (exclusion bite latent), redraw independently authored the
+substantive-dissent shape (claim-mountain ε=0.68) from topic+summary alone;
+corroborated_zombie none (flag armed); 12 failing JSONs dispositioned
+archived-with-reason. Replicate datum: organization_floor ε=0.42 across all 3 draws
+(against contaminated OQ-26 expectation, with frozen σ prediction; n=1 story, table
+OPEN). Pipeline green at n=5 (manifest 2026-06-12T17:48:34Z). REMAINING OQ-109 TAIL:
+reading_diff re-point (inert until then — no authored cells live), stability table
+(needs cohort-one draws), σ/seat evaluation (frozen prediction 5f2a626c awaits table),
+OQ-109 close-out.
+
 ## 2026-06-12 — DETERMINISM-FRONTIER ruling promoted to CLAUDE.md; Phase C removal commit (schema perspectives[]/mandatrophy_resolved OUT, provenance/8 REQUIRED incl. model+sampling); archive-before-removal executed; replicate probe folded into cohort zero
 **Files:** CLAUDE.md, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/narrative_ontology.pl, prolog/guard_exclusions.pl, prolog/signature_detection.pl, prolog/stack.pl, agent/example_platform_commission.json, ISSUES.md, prolog/archives/datasets/pre_cohort_zero_2026-06-12/
 **Tier:** landed

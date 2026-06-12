@@ -4727,7 +4727,28 @@ NL trio's filtering power is RE-MEASURED on the post-regen corpus at the Phase C
 re-witness — does the trio separate certified from non-certified among the regenerated
 stakeholder-only stories? Either outcome feeds the general-mechanism item; the archive
 finding (C ≡ claim-mountain) may not be cited as the live corpus's state without the
-re-measure.
+re-measure. **RESOLVED at the cohort-zero battery (2026-06-12,
+`audits/2026-06-12_cohort_zero/battery_witnesses.out`): the trio FILTERS on the new
+regime** — of 4 mountain-claimed cohort-zero stories, exactly 1 certifies
+(demographic_skill_mismatch_c0, AC=0.88/R=0.08); institutional_trust_erosion_c0
+(0.71/0.58), organization_floor_c0 (0.78/0.31), scale_ceiling_c0 (0.82/0.15 — AC under
+the 0.85 floor) all fail. The archive finding was an old-authoring-regime artifact, as
+the stricter-authoring hypothesis predicted. **Battery outcomes (n=5, denominators are
+the corpus):** named pair inspected individually — demographic_skill_mismatch_c0
+PROTECTED on its own authored evidence (ruling vindicated by the redraw);
+organization_floor_c0 EXAMINED because its redraw (ε=0.42, AC=0.78) is not NL-certified —
+ruled-IN means the chain decides and we inspect, not unconditional protection; the
+seat-theorem reading applies (new draw, new shape). trust_erosion_c0: excluded AND
+chain-false — the exclusion witness holds (listed → examined); its bite is latent unless
+a future draw certifies. Its redraw independently authored claim-mountain + ε=0.68 — the
+substantive-dissent shape the exclusion preserved for examination, reproduced from
+topic+summary alone. corroborated_zombie: none on cohort zero (flag stays armed);
+adjunctification_c0 carries authored_zombie_uncorroborated (R5 surface lives in the
+redraw). **The 12 pre-existing schema-failing JSONs: ALL dispositioned
+archived-with-reason (kernel_v2_test2; the whole pre-cohort-zero set retired per the
+cost-flag ruling).** Replicate data: organization_floor ×3 draws (ε identical at 0.42
+across draws — first stability datum, AGAINST the OQ-26-contaminated expectation, WITH
+the frozen σ prediction; one story, table stays OPEN pending cohort-one draws).
 **PHASE C REFRAMED (operator ruling, 2026-06-12 — retirement = option 2 reframed as
 cohort-zero seeding; rationale: meta-analysis requires a corpus homogeneous in generation
 era and pinned in snapshot):**
@@ -5186,6 +5207,24 @@ consumer's exact load chain. **Resolution shape:** import abductive_helpers in
 signature_detection (the referencing module owns its imports), or add it to stack.pl;
 either way update the check_stack baseline note and the :1555 comment. Engine-touching —
 lands outside B4.
+
+## OQ-116 — Two linter rules unmigrated for the cohort-zero authoring regime: SCAFFOLD_DANGER_ZONE calibration; MOUNTAIN_METRIC_CONFLICT contradicts the claim/metric-independence doctrine
+
+**Ω-type:** Ω_E (advisory-lint calibration; witnessed on the cohort-zero pilot).
+
+**Status:** open — filed 2026-06-12 at the pilot witness (swap proceeded under the
+operator's ruling: lint is non-blocking by pipeline contract; findings recorded here).
+
+**Witness (`audits/2026-06-12_cohort_zero/pilot_witness.out`):** 5/7 pilot stories fired
+SCAFFOLD_DANGER_ZONE (mid-ε + beneficiaries + no enforcement/sunset + low theater — a
+shape the new prompt authors legitimately); 1/7 fired MOUNTAIN_METRIC_CONFLICT
+(claim=mountain, ε=0.68) — but the prompt's own independence block says a claim/metric
+divergence "is not an error and will not be rejected"; the engine MEASURES that divergence
+(FSM exists for it). The rule predates the doctrine and demands reconciliation the
+doctrine forbids. Resolution shape: recalibrate or demote SCAFFOLD_DANGER_ZONE; retire or
+doctrine-align MOUNTAIN_METRIC_CONFLICT. Driver-owned pilot checks were 7/7 PASS
+(provenance/ids/validation/compile) — the witness bar failed AS WRITTEN on lint only; bar
+discrepancy recorded, not amended.
 
 ---
 
