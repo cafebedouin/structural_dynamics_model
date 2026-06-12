@@ -1437,8 +1437,21 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   **The scalar fallback was a labeled STOPGAP until OQ-46 (resolved 2026-06-11) ruled it
   SANCTIONED** — scalar-as-constant is legitimate authoring for static-enforcement stories;
   the clause is permanent.
-- Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (tripwire artifact: 0 changes; extractiveness
-  required-authored).
+- Rows 24–25 `BaseX=0.5` (`drl_composition.pl:201`): **REACHABLE-BUT-LOCKED, not latent — the
+  prior "0 changes; extractiveness required-authored" reason is STALE** (corrected, witnessed
+  2026-06-08). Re-witness on the live corpus: the `; BaseX = 0.5` branch *would* fire at **11
+  (C,T) cells** (e.g. `attribution_erosion-3`) — constraints with an authored
+  `suppression_requirement` measurement at time T but no `base_extractiveness` at that T, so
+  extractiveness is NOT required-authored per-timepoint. What locks it is the **call path, not
+  authoring**: all 11 cells are at **non-zero times (3,5,8,10,16,19), 0 at t=0**, and the only
+  live caller (`cs_kernel_registry`, `classify_at_time(...,0,...)`) classifies at **t=0**; the
+  non-zero times are reached only via `constraint_history`, which is **dormant** (consumed by
+  nothing — positive-controlled: the same consumer-probe finds `classify_at_time`'s consumer
+  but none for `constraint_history`/`snapshot_type`/`degradation_chain`). So it does not touch
+  live classification today, but the fix is a member of the OQ-44 fail-closed-vs-impute class
+  (decide once for the class), not a free per-site hardening. (extractiveness→0.5 elsewhere:
+  required-authored at the static path; tracked under OQ-44. OQ-44 has since been resolved —
+  class policy ruled fail-closed-on-absence, operator 2026-06-11.)
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
   Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
   `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
@@ -1552,6 +1565,19 @@ the jurisprudence ran its course — not the ground of the ruling. The ruling:
    dropped (rope at moderate/institutional), diagnostic verdict green→red with a
    `perspectival_incoherence` alert; all 277 pipeline diffs attribute to this single cause
    (thermal's own fields + corpus-relative wasserstein/arakelov/signature_pressure aggregates).
+
+**Class members in the DR-trajectory (observer) subsystem — DORMANT/LOCKED, not live
+(witnessed 2026-06-08; merged from the `sdm-temporal-records` review).** Flagged here so the
+once-for-class ruling covers them, NOT so they are fixed per-site: (i) `drl_composition.pl:201`
+`BaseX = 0.5` — reachable-but-locked (OQ-41 rows 24–25; fires only via the dormant
+`constraint_history` sweep); (ii) `transition_paths.pl` `snapshot_type/3` fabricated
+`default_extractiveness=0.10` / `default_suppression=0.10` (`config.pl:300–301`) — entirely
+inside the dormant trajectory classifier (`snapshot_type`/`degradation_chain` consumed by
+nothing, positive-controlled). These are the same fail-closed-vs-impute decision as the live
+sites; reviving the surface that would make them live is the coupled rebuild ruling (KNOWN_STATE
+2026-06-08 "three deferred temporal threads = one ruling"; since adjudicated in part — OQ-83
+resolved 2026-06-11, D-fork ruled NO-OPEN at OQ-110; revive-or-gap of the dormant trajectory
+classifier is OQ-91's candidate-home question).
 
 **Origin (compressed; full audit scaffolding, gate-shape taxonomy, instance #1/#2 texts in git
 history).** Premise: zero-because-measured and zero-because-missing collapse to one value at a

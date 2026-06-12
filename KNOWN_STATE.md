@@ -1184,6 +1184,70 @@ modulo the 3 new keys. Both temporal descriptors (observer integer-time + commit
 now joinable per constraint `id`: the offline residual-subtraction join is unblocked; the
 moment-to-integer reconciliation rule stays offline (not baked in-engine).
 
+## 2026-06-08 — Observer-side temporal review: the DR "trajectory" is mostly dark; three "defects" dissolved; three deferrals are ONE coupled ruling gated on time-varying-d
+**Files:** prolog/drl_composition.pl, prolog/transition_paths.pl, prolog/drift_events.pl, prolog/cs_kernel_registry.pl, ISSUES.md
+**Tier:** correction-key
+
+*[Merged late from worktree `sdm-temporal-records` on 2026-06-11. Superseded in part by later
+entries: OQ-46's "12 scalar-only are GAPS" framing was overruled (scalar-as-constant SANCTIONED,
+bucketed Backed, OQ-46 resolved 2026-06-11); OQ-83 RESOLVED 2026-06-11 with threads moved to
+OQ-109/OQ-110; the time-varying-d D-fork was ruled NO-OPEN at OQ-110 (derived-d stands). The
+OQ-41 rows 24–25 correction and the dormancy findings remain current as of the merge.]*
+
+Pre-rebuild review of how the observer (DR) hub handles temporal declarations
+(`narrative_ontology:measurement/5` series; Time = relative integer step, not calendar year).
+Two hubs: **CS = discrete snapshots t0–t3** (straightforward); **DR/observer = a trajectory**
+(per-time re-classification). Read against `docs/debugging_philosophy.md` Type A (frame-fixing).
+Started as "fix three temporal defects pre-rebuild"; the substrate dissolved all three. No
+engine-logic changed — records-only corrections on existing OQs. Witnesses (read-only, swipl
+`[stack]+ensure_corpus_loaded`, N=100):
+
+- **Coverage re-witnessed; prior 471/562 was pre-reset kernel_v1, STALE.** Live AS OF
+  2026-06-08: temporal `suppression_requirement` **88/100**, `base_extractiveness` 100/100,
+  `theater_ratio` 100/100; **12** scalar-only (STOPGAP), **0** unknown. Corrected in OQ-46 and
+  the `drl_composition.pl:174–198` comment. Re-witness on corpus growth.
+- **The 12 scalar-only are asymmetric-authoring GAPS, not scalar-by-design** — all 12 carry
+  baseE+theater temporal series; only suppression's is missing. Completing it would not
+  fabricate motion (no synchronic constraints in the set). Per-story "is suppression flat by
+  design for any one" deferred to template/rebuild (authoring judgment, not engine fact). OQ-46.
+- **`BaseX=0.5` (`drl_composition.pl:201`) is REACHABLE-BUT-LOCKED, not latent** — OQ-41 rows
+  24–25's "extractiveness required-authored" reason is stale. Branch would fire at 11 (C,T)
+  cells (e.g. `attribution_erosion-3`), **all non-zero-time (3,5,8,10,16,19), 0 at t=0**. The
+  only live caller (`cs_kernel_registry`) classifies at t=0; non-zero times reached only via
+  the dormant `constraint_history` sweep → not live. Corrected in OQ-41.
+- **The DR trajectory classifier is DORMANT (positive-controlled).** Same consumer-probe finds
+  `classify_at_time`'s consumer (`cs_kernel_registry.pl:66–67`) but **none** for
+  `constraint_history`/`snapshot_type`/`degradation_chain`; their entry points
+  (`transformation_detected`/`canonical_transformation`/`transformation_type`/
+  `predict_transformation`) have **zero callers anywhere**. So the "fork" + nb_setval-asymmetry
+  "defects" live in code nothing runs; the `measurement/5` series is authored/live but the
+  thing that turns it into a classified trajectory is wired to nothing. Live temporal consumers:
+  `classify_at_time` at t=0 only, and qualitative drift via `drift_report` (test/lifecycle, NOT
+  `run_pipeline.py`).
+- **The fail-closed-vs-impute choice is the deferred OQ-44 once-for-class ruling** — the three
+  "fixes" were per-site moves on a class decision; recorded as class members (BaseX, snapshot_type
+  defaults) under OQ-44, not fixed per-site.
+
+**Coupling (operator ruling, due before the rebuild template is fixed).** Three deferred
+temporal threads are **ONE ruling with three faces, gated on the time-varying-d decision**, not
+three independent OQs: (a) **time-varying-d** (OQ-83 deferred Ω); (b) **revive-or-gap the dormant
+trajectory classifier**; (c) **rebuild temporal-authoring density** (author dense series at
+all?). Coupled because the trajectory classifier is dormant **and** would freeze directionality
+even if revived: `derive_directionality/3` is not time-indexed and beneficiary/victim are
+static-only (0 temporal beneficiary/victim/directionality facts live OR in archives), so
+`check_capture_between/3` launders a role-shift it cannot see into an ε-magnitude event.
+Reviving (b) is worth it only if (a) is in scope; authoring dense series (c) only if (b) will
+consume them. Substrate finding + coupling recorded on OQ-83.
+
+**Meta-pattern worth flagging at the rebuild.** This is the third consecutive deep-read this
+session to resolve to "this doesn't need doing" (step-4b `in_contention` feeds nothing; OQ-85
+disentangling info absent from substrate; these temporal fixes dormant/locked). The live
+load-bearing surface is smaller than the activity around it — the engine carries more dormant /
+dangling machinery than live. The **rebuild is the decision point for carry-forward vs. shed**:
+regenerating dense temporal series feeds a trajectory classifier nothing consumes, so the
+revive-or-gap of the observer trajectory is not tidy-up — it is whether the rebuild's authoring
+cost is feeding a dark wire.
+
 ## 2026-06-07 — Stakeholder-layer migration Pass-1 audit: computed path ignores authored perspectives (controlled null); straitjacket witnessed; mandatrophy surface is a dangling wire
 **Files:** prolog/constraint_indexing.pl, prolog/drl_core.pl, prolog/constraint_data.pl, prolog/probe_harness.pl, prolog/inferred_coupling_protocol.pl, prolog/drl_purity_network.pl, prolog/reading_diff.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, audits/2026-06-07_stakeholder_layer_migration/
 **Tier:** landed
