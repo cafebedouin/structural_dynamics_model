@@ -666,23 +666,29 @@ dr_signature(C, Signature) :-
 %  Returns structured gap information for Omega generation
 
 perspectival_gap(C, gap(Type1, Ctx1, Type2, Ctx2, PowerDelta)) :-
-    % Find two classifications
-    constraint_indexing:constraint_classification(C, Type1, Ctx1),
-    constraint_indexing:constraint_classification(C, Type2, Ctx2),
-
-    % Must differ in type
-    Type1 \= Type2,
-
-    % Extract power levels
+    % OQ-109 Phase B / A3 (2026-06-12): COMPUTED over the standard observer
+    % site (dr_type/3 across standard_context/1 — same methodology as
+    % dr_mismatch's perspectival_incoherence clause above). Formerly read the
+    % authored constraint_classification/3 table, which Phase C retires.
+    % Zero call sites at migration time (witnessed:
+    % audits/2026-06-11_oq109_phase_b/b3_pgap_zero_caller_witness.out);
+    % API kept per R1 — the computed perceived-vs-real gap is the surviving
+    % object. Gap shape now reflects computed types at canonical seats, not
+    % authored cells, so the report is seat-stable across Phase C.
+    standard_context(Ctx1),
+    standard_context(Ctx2),
     Ctx1 = context(agent_power(P1), _, _, _),
     Ctx2 = context(agent_power(P2), _, _, _),
 
-    % Must be non-analytical
+    % Must be non-analytical, differing in power
     P1 \= analytical,
     P2 \= analytical,
-
-    % Must differ in power
     P1 \= P2,
+
+    % Compute both types; must differ
+    dr_type(C, Ctx1, Type1),
+    dr_type(C, Ctx2, Type2),
+    Type1 \= Type2,
 
     % Calculate power delta using directionality (v5.0)
     constraint_indexing:canonical_d_for_power(P1, D1),

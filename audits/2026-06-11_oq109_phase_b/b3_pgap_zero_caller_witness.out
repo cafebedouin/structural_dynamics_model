@@ -1,0 +1,7 @@
+== zero-caller witness: call-shaped occurrences of perspectival_gap/2 ==
+(exit 1 — 1 = no call sites beyond definition/functor-term/comments)
+== positive control: same grep shape finds dr_mismatch callers ==
+prolog/abductive_triggers.pl:296:    \+ (catch(drl_core:dr_mismatch(C, _, perspectival_incoherence, _), _, fail)),
+prolog/report_generator.pl:71:    (   setof((C, Err, Sev), drl_core:dr_mismatch(C, Err, Sev), Errors)
+prolog/report_generator.pl:452:    (setof((CM, Err, Sev), drl_core:dr_mismatch(CM, Err, Sev), Errors) -> forall(member((CM, Err, Sev), Errors), format('  - ~w: [~w] ~w detected.~n', [CM, Sev, Err])) ; format('  - None detected.~n')),
+prolog/report_generator.pl:492:        (   setof(C-Ctx, Sev^(drl_core:dr_mismatch(C, Ctx, type_1_false_summit, Sev)),
