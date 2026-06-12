@@ -1945,6 +1945,11 @@ four got standard-SWI fixes. Commit A (`1460e873`, behavior-preserving) + Commit
   warnings (constraint_instances weak-import overrides, one singleton, one not-exported
   import in arakelov_height). Findings beyond this list = regressions. NOT wired as a
   pipeline gate while the baseline is non-empty (cleanup tracked in OQ-69).
+  **EXPECTED +1 (added 2026-06-12, REMOVE WHEN OQ-115 CLOSES):**
+  `abductive_helpers:known_override_signature/1` referenced by
+  `signature_detection:signature_grade/2` — known, filed, attributed (OQ-115: phantom
+  module under the [stack] chain; pipeline chain healthy, no production no-op). Future
+  gauntlets reconcile this line instead of re-running the investigation.
 
 **Commit B (output-affecting, witnessed by full pipeline run 2026-06-04T14:15:56Z):**
 - `run_json_report` enumerates `corpus_constraint/1` instead of

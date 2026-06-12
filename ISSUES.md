@@ -4970,6 +4970,19 @@ ALL C-only cases if ≤25 per archive, else a seeded random 25, seed recorded.
    package. This is the honest default — pre-stated so the probe cannot be tortured into
    outcome 1 or 2.
 
+*Zero-divergence case (amendment before freeze, operator 2026-06-12).* Outcomes 1 and 2
+presuppose C-only divergences exist to inspect. **Near-empty C-only cells (< 3 per
+archive) route to OUTCOME 3**, with the live-3 direct inspection under the named
+instruments as the escalation package — zero divergence is neither mixed nor incoherent;
+it is *C tracks unanimity at scale*, which makes the live 3 an anomaly relative to both
+archives and reframes the package (why do they diverge where the archives don't?). **And
+per the empty-result rule: an empty C-only cell counts as evidence of tracking ONLY after
+the comparator's positive control has shown the probe can find divergence** — an empty
+cell from a broken comparator is byte-identical to one from genuine agreement. Control
+satisfiability is verified EARLY: if the archives contain no identifiable seat-disagreeing
+story to serve as the control, that HALTS under the wrongly-specified clause; it is never
+quietly waived.
+
 *Riders.* (a) Whatever the outcome, the no-beneficiary conjunct's failure is RE-READ
 against the archive evidence: if beneficiary-declaration does not anti-correlate with
 genuine mountains at scale, option 4's failure was the conjunct being WRONG, not merely
