@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cohort-zero regen driver (OQ-109 Phase C, cohort ruling 2026-06-12).
 
-Seeds: prolog/archives/datasets/pre_cohort_zero_2026-06-12/json/ (60 stories).
+Seeds: prolog/archives/datasets/kernel_v2_test2/json/ (60 stories; renamed from pre_cohort_zero_2026-06-12 per operator ruling).
 Each archived story is re-authored FROM SCRATCH under the live prompt/schema/example,
 conditioned ONLY on the DECLARED SEED SPEC (SIGMA_SEAT_PREDICTION.md — the prediction
 commit holds this driver to it; deviation = halt):
@@ -43,7 +43,7 @@ import llm_call  # noqa: E402
 from generate_constraint_pl import validate_json, generate_pl  # noqa: E402
 from linter import lint_file  # noqa: E402
 
-ARCHIVE = REPO_ROOT / "prolog/archives/datasets/pre_cohort_zero_2026-06-12/json"
+ARCHIVE = REPO_ROOT / "prolog/archives/datasets/kernel_v2_test2/json"
 STAGE_JSON = REPO_ROOT / "json_cohort0"
 STAGE_PL = REPO_ROOT / "testsets_cohort0"
 REPLICATE_DIR = REPO_ROOT / "audits/2026-06-12_cohort_zero/replicates"
