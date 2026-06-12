@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-99 + OQ-100(a–c) RESOLVED: omega scenarios render authored protocols (subject-bound, fail-loud); report register coherence (qualified confidence labels, rival-P-graded disagreement, self-consistency header)
+**Files:** prolog/report_generator.pl, python/enhanced_report.py, python/enrich_pipeline_json.py, agent/orchestrator.py, ISSUES.md
+**Tier:** landed
+
+Two output-changing commits (worktree oq99-omega-scenarios): `6b1092c0` (OQ-99),
+`e9872538` (OQ-100 a–c). OQ-99: `generate_omega_resolution_scenarios/0→/1` takes the
+report subject; `resolve_omega_source/3→/4` resolves omega_source → subject-binding →
+fail-loud `unresolved_source` (never `Constraint: unknown`); authored 5-arity
+`omega_variable` protocols (251 facts, 60/62 live testsets) now render per omega; catch-all
+clause prevents mid-report abort. **Plan-correction worth keeping:** the 5-arity facts do
+NOT land in module `user` — testsets declare `constraint_<id>` and the facts live there
+(witnessed via wrong-guard first attempt: `current_predicate(user:omega_variable/5)`
+failed silently and the generic template kept rendering; the module-keyed lookup also
+disambiguates the 7 cross-file OID collisions). The 2 testsets without a module header
+(`employment_boundary_contradictions`, `human_dignity_ai_governance_contradictions`)
+author zero omega facts of any arity, so the no-5-arity path has no live instance — it
+was witnessed by probe (typed template, bound constraint). Witnesses: scale_ceiling
+before/after diff (4× unknown → 0); ai_governance gap omega still routes via omega_source;
+probes A (unresolved [OPEN]) / B (catch-all on `empirical_v2`) / C (3-arity-only → typed
+template); no-omega report byte-identical. OQ-100: labels `Pattern confidence
+(categorical):` / `MaxEnt P(claimed):` (×2 sections — inventory sweep caught a 4th bare
+label at the convergence section) / `MaxEnt bands (corpus):`; disagreement header graded
+by rival P with cuts as `enrich_pipeline_json.py` constants (BAND_DEEP/BAND_MODERATE,
+imported by enhanced_report.py; explicit None guard — bare comparison TypeErrors);
+witnessed REJECTED at P=0.9969 (ai_governance_accountability), FAVORS RIVAL at P=0.5776
+(institutional_trust_erosion), plurality + None via crafted entries (zero live <0.5
+cases); `ONTOLOGICAL FRAUD DETECTION` → `DECLARED-TYPE vs OWN-ASSIGNED-METRICS
+SELF-CONSISTENCY` (code grep zero outside archives). Legacy `agent/orchestrator.py:635`
+regex updated to `MaxEnt P\(claimed\):` (groups unchanged, re.search witnessed). Engine
+tests 10/10 + dynamic validation suite clean after each commit. OQ-100(d) subsumed by
+OQ-101 ledger (partial-closure note in the OQ). Full-corpus report regeneration deferred
+to the next `run_pipeline` (reports are re-derived artifacts).
+
+---
+
 ## 2026-06-11 — OQ-83 RESOLVED: measurement close-out; snapshot_type determinism guard; v7 §4.5 (A)/(B) census; OQ-109/OQ-110 filed
 **Files:** ISSUES.md, prolog/transition_paths.pl, docs/deferential_realism_paper_v7.md, audits/2026-06-11_oq83_close/
 **Tier:** landed

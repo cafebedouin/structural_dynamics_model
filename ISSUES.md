@@ -4248,40 +4248,36 @@ checked rewire fact).
 
 **Ω-type:** Ω_E (witnessed, mechanical, output-changing).
 
-**Status:** open — filed 2026-06-10 (first external-review batch; `audits/2026-06-10_external_review_vote_market/`).
+**Status:** resolved — 2026-06-11, commit `6b1092c0` (worktree oq99-omega-scenarios).
 
-**The witness.** 4× `Constraint: unknown` + 4× identical five-step N=30 template in each of the
-six 2026-06-10 reports (e.g. `scale_ceiling_report.md` omega sections; copies in the audit dir).
-Bug: `report_generator.pl:572-583` `resolve_omega_source/3` fallback binds `Constraint = unknown`
-(:581) when the `omega_source/3` lookup fails; the scenario templates (:585+) print it literally
-— even though the generator runs per-constraint, so the subject constraint is in scope.
-
-**Why it matters.** The omega section is the highest-value essay output (omegas were adopted
-directly into the working essay) yet currently the most templated. Resolution: bind the
-constraint from the report subject; differentiate scenario steps per omega type; fail-loud or
-skip when genuinely unresolvable. Output-changing — lands alone, not inline with triage.
+**Resolution.** `generate_omega_resolution_scenarios/0→/1` (takes the report subject);
+`resolve_omega_source/3→/4` (omega_source path, then subject binding, then fail-loud
+`unresolved_source` — never `Constraint = unknown`; dead `omega_from_gap` fallback tombstoned).
+Authored 5-arity `omega_variable` protocols (251 facts, 60/62 testsets) now render per omega.
+The facts live in module `constraint_<id>` (NOT `user` as initially diagnosed — testsets declare
+a module); the lookup keys on that module, which also disambiguates the 7 cross-file OID
+collisions. Catch-all clause prevents mid-report abort. Witnesses: scale_ceiling before/after
+diff (4× unknown → 0, per-omega authored protocols); gap-omega routing unchanged
+(snare_masked_as_rope via omega_source); probes A/B/C (unresolved [OPEN], catch-all, typed
+fallback) in KNOWN_STATE 2026-06-11. Line-drift note: filed against :572-583; at fix time the
+fallback sat at :600-610 (content drift between filing and execution, same predicate).
 
 ## OQ-100 — Report register incoherence: three quantities named "confidence", "HARD DISAGREEMENT" at rival P=0.95, "ONTOLOGICAL FRAUD DETECTION" overclaims the forensic register
 
 **Ω-type:** Ω_E (witnessed; (a)-(c) register-work, (d) structure-work — different sizes).
 
-**Status:** open — filed 2026-06-10 (first external-review batch; `audits/2026-06-10_external_review_vote_market/`).
+**Status:** resolved — 2026-06-11, commit `e9872538` (worktree oq99-omega-scenarios).
 
-**The witnesses.** scale_ceiling-style reports: `Confidence: 0.0100 (borderline)` (MaxEnt numeric),
-a corpus histogram "confidence", and Prolog categorical `Confidence: high` — three incompatible
-quantities one word; `HARD DISAGREEMENT` fires on type-mismatch only and ignores rival P, framing
-a rout (`Rival Type: rope (P=0.9500)`) as a tie; `report_generator.pl:59` prints an unconditional
-"ONTOLOGICAL FRAUD DETECTION" header though inputs are author-assigned (a self-consistency audit,
-not fraud detection).
-
-**Substance.** (a) unify/rename the confidence vocabularies; (b) when rival P ≥ threshold the
-header reads "pipeline classification rejected", not a tie; (c) rename the forensic register to
-"declared-type vs own-assigned-metrics self-consistency audit" (the honest version is the more
-defensible one). **(d) — EXPLICITLY SEVERABLE:** one-page verdict block + appendix restructure
-(~40 usable lines of 360; purity/coupling/orbit printed 2-3×). Structure-work, different size:
-closing (a)-(c) closes this OQ **provided (d) is either spun off to its own OQ at that time or
-dropped with a note** — it may not silently ride a "resolved" status (partial-closure guard).
-The ledger (OQ-101) subsumes (d). Cross-ref OQ-95.
+**Resolution.** (a) labels now name their quantities: `Pattern confidence (categorical):`
+(Prolog), `MaxEnt P(claimed):` (MaxEnt shadow + convergence sections — a 4th bare label found
+by the inventory sweep), `MaxEnt bands (corpus):` (histogram); legacy `agent/orchestrator.py`
+regex + echo updated. (b) disagreement header graded by rival P with cuts extracted to
+`enrich_pipeline_json.py` constants (BAND_DEEP/BAND_MODERATE, imported by enhanced_report.py):
+≥0.8 REJECTED, ≥0.5 FAVORS RIVAL, None/<0.5 plurality split (explicit None guard — bare compare
+would TypeError); plurality + None branches witnessed via crafted entries (zero live <0.5 cases).
+(c) header → `DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY`; code-wide grep zero
+outside archives. Witnesses in KNOWN_STATE 2026-06-11. **(d) partial-closure note:** (d) is
+subsumed by the OQ-101 ledger (resolved 2026-06-11) — not silently riding this resolved status.
 
 ## OQ-101 — Replace the auto-essay synthesis (orchestrator step 6) with a deterministic tensions ledger
 
