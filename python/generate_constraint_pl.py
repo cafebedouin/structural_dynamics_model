@@ -800,6 +800,7 @@ def generate_pl(data):
     emit(f"    '{prov['schema_commit']}', '{prov['generated_date']}',")
     emit(f"    '{prov['source_essay']}', '{prov['one_shot_example']}',")
     emit(f"    '{prov['model']}', '{prov['sampling_params']}').")
+    emit(f"narrative_ontology:story_seed({cid}, '{prov['seeded_from']}', {prov['draw']}).")
     emit()
 
     # ------------------------------------------------------------------

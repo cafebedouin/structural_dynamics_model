@@ -329,7 +329,9 @@
         "source_essay",
         "one_shot_example",
         "model",
-        "sampling_params"
+        "sampling_params",
+        "seeded_from",
+        "draw"
       ],
       "additionalProperties": false,
       "properties": {
@@ -360,6 +362,15 @@
         "sampling_params": {
           "type": "string",
           "description": "Sampling parameters at generation (e.g. 'temperature=1.0'); 'none' for manual stories"
+        },
+        "seeded_from": {
+          "type": "string",
+          "description": "Archived/prior story id this generation was seeded from; 'none' for unseeded. Identity is authored FORWARD here (kind-level only in the engine; never recovered backward by name/signature — CLAUDE.md determinism frontier)."
+        },
+        "draw": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Replicate draw index for this seed (1-based; 0 = unseeded/hand-authored). Each draw is one sample from the generation distribution, never a re-measurement."
         }
       }
     }
