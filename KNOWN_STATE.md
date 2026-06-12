@@ -65,6 +65,29 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — OQ-109 B3 unanimity guard RULED+LANDED: option-2 bridge (authored-cells ∨ nl_certification_chain); census A1 seam closed; OQ-113/OQ-114 filed; output-changing (3 targets + ensemble cascade)
+**Files:** prolog/signature_detection.pl, ISSUES.md, audits/2026-06-11_oq109_phase_b/
+**Tier:** landed
+
+Both named criterion candidates FAILED the pinned gauntlet — computed-seat unanimity splits
+mountain/rope on genuine NL profiles (metric path computes rope at mid-power seats on
+ultra-low ε); natural_law_signature is unsatisfiable by construction (has_viable_alternatives
+never returns false → pure_natural_law unreachable → OQ-113). Escalated; operator ruled
+option-4-conditional → witness failed (C∧no-beneficiary retains 1/6) → option-2 bridge:
+authored-cells arm first (DIES AT PHASE C, named retirement point in code comment) ∨
+nl_certification_chain/1 (claim=mountain + emerges_naturally + NL collapse/resistance,
+fail-closed, signature-layer-safe). Extension 9/62 = old 6 + 3 (OQ-114 adjudicates the 3;
+all FSM-examinable). Output-changing commit landed alone: institutional_trust_erosion FCR
+un-fired (→ coupling_invariant_rope, seats piton→rope); 57 non-target stories moved ONLY in
+corpus-relative statistics (maxent/Wasserstein/Arakelov ensemble cascade; determinism
+control: same-code rerun byte-identical); named non-target effects: 3 maxent_top_type
+piton→rope + regulatory_measurement_gap headline verdict_join yellow→red. Gotchas worth
+keeping: ε lives in domain_priors:base_extractiveness/2 (constraint_metric key is
+`extractiveness` — a wrong-table bite-check read all-none before correction);
+domain_priors:emerges_naturally is static+multifile (with_asserted cannot overlay it — use a
+consulted scratch testset). Criterion-worked framing per operator: the pin rejected
+everything offered; not grounds to loosen leg (1).
+
 ## 2026-06-11 — OQ-109 Phase B1+B2 LANDED: prompt cutover to stakeholder surface; new one-shot example (FNL statistics reset No. 2); schema/compiler perspectives-optionality (guard-not-delete)
 **Files:** prompts/constraint_story_generation_prompt_json.md, agent/example_platform_commission.json, agent/story_generator_base.py, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, ISSUES.md, audits/2026-06-11_oq109_phase_b/
 **Tier:** landed

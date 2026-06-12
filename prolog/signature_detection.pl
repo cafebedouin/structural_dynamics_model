@@ -1339,12 +1339,45 @@ appears_as_rope(C, low_extraction_profile) :-
     \+ only_mountain_classifications(C).
 
 %% only_mountain_classifications(+C)
-%  True if the constraint has at least one indexed classification
-%  AND all of them are mountain. This identifies pure natural laws
-%  that should not be considered "rope-appearing."
+%  FCR's mountain-protection guard: identifies natural-law stories that should
+%  not be considered "rope-appearing."
+%  BRIDGE (operator ruling 2026-06-12, OQ-109 B3; full adjudication:
+%  audits/2026-06-11_oq109_phase_b/UNANIMITY_ADJUDICATION.md):
+%   - Arm 1 (legacy): authored-cell unanimity — decides through Phase B; DIES
+%     AT PHASE C with the perspectives[] retirement (named retirement point;
+%     re-witness the guard there).
+%   - Arm 2 (surviving): the authored NL-certification chain (candidate C) —
+%     claim=mountain + emerges_naturally + NL collapse/resistance profile.
+%     Story-level inputs only; signature-layer-safe (no dr_type, no
+%     classification-table read); fail-closed on absence (unauthored metric
+%     arrives non-numeric and the guard FAILS). Closes census seam A1: a
+%     perspectives-free NL story is protected via this arm.
+%  Both named criterion candidates FAILED the pinned gauntlet (computed-seat
+%  unanimity splits mountain/rope on genuine NL profiles; natural_law_signature
+%  is unsatisfiable — OQ-113). Option 4 (C + no-beneficiary) witnessed
+%  under-restrictive (retains 1/6). Extension today = old 6 + 3 NL-certified
+%  mountains with non-unanimous authored seats (OQ-114 adjudicates the 3;
+%  they all declare beneficiaries, so FSM scrutiny is untouched).
 only_mountain_classifications(C) :-
     constraint_indexing:constraint_classification(C, _, _),  % At least one exists
-    \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain).
+    \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain),
+    !.
+only_mountain_classifications(C) :-
+    nl_certification_chain(C).
+
+%% nl_certification_chain(+C)
+%  The authored natural-law certification chain (adjudication candidate C).
+nl_certification_chain(C) :-
+    narrative_ontology:constraint_claim(C, mountain),
+    drl_core:emerges_naturally(C),
+    narrative_ontology:constraint_metric(C, accessibility_collapse, AC),
+    number(AC),
+    config:param(natural_law_collapse_min, CollapseMin),
+    AC >= CollapseMin,
+    narrative_ontology:constraint_metric(C, resistance, R),
+    number(R),
+    config:param(natural_law_resistance_max, ResMax),
+    R =< ResMax.
 
 %% collect_fcr_failures(+C, -FailedTests)
 %  Collects which Boltzmann structural tests fail for a

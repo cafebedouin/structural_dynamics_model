@@ -56,4 +56,29 @@ reach; the 3-story disagreement set is a genuine semantics question (should FCR 
 mountain-claimed NL-certified stories whose authored seats disagreed?) ⇒ **escalated to the
 operator** with this package. Ruling recorded below.
 
-**Operator ruling (2026-06-12):** _recorded in ISSUES.md OQ-109 after escalation._
+**Operator ruling (2026-06-12):** option 4 conditionally (install iff witnessed
+extension-identical), else option 2 as a bridge; the extension question files as its own
+item (OQ-114). **Process note, per the operator: this escalation was the criterion
+WORKING** — neither named candidate passed, a third appeared with a different extension,
+and it halted instead of self-resolving. The criterion was not wrongly specified; it
+correctly rejected everything offered. "Both candidates failed" reads as the pin doing its
+job, not as grounds to loosen leg (1).
+
+**Execution.** Option-4 witness FAILED — C ∧ no-beneficiary retains only
+thermal_dissipation_constraint (1/6; five of the old six declare beneficiaries). Option-2
+bridge installed: authored-cells arm FIRST (decides through Phase B; dies at Phase C —
+named retirement point in the code comment), `nl_certification_chain/1` (candidate C) as
+the surviving arm. Installed extension = old 6 ∪ the 3 (witnessed, 9/62); seam control
+PASS via the surviving arm; reentrancy/termination witness = full pipeline exit 0.
+
+**Output-changing witness (b3_unanimity_pattern3_diff.out + persisted full diff).**
+60/62 entries changed, decomposed: (i) the 3 ruled targets (institutional_trust_erosion
+FCR → coupling_invariant_rope, computed seats piton→rope; the other 2 leave the
+rope-appearance pool); (ii) 57 non-target stories changed ONLY in corpus-relative
+statistics (maxent, Wasserstein, Arakelov, signature_pressure) — the ensemble cascade:
+those statistics are fit against corpus-wide composition. DETERMINISM CONTROL: same-code
+rerun byte-identical — cascade, not OQ-112-class order-dependency noise. Named non-target
+effects: 3 maxent_top_type flips piton→rope (regulatory_measurement_gap,
+wage_convergence_mechanism, wage_convergence_sustainability) and ONE headline change —
+regulatory_measurement_gap verdict_join yellow→red (ensemble-shifted maxent feeding the
+diagnostic).

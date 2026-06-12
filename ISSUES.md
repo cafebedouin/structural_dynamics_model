@@ -4630,6 +4630,13 @@ contention) remain operative build specs here.
   never `dr_type/3`. Whoever lands it owes the seam positive control (mountain-claimed
   perspectives-free story) plus a reentrancy witness (signature evaluation terminates on a
   story whose guard path executes the recompute).
+  **RULED + LANDED (2026-06-12):** both named candidates FAILED the pinned gauntlet (the
+  criterion working, per operator — the pin rejected everything offered; not grounds to
+  loosen leg (1)). Option-4 witness failed (1/6); option-2 BRIDGE installed:
+  authored-cells arm first (dies at Phase C, named retirement point) ∨
+  `nl_certification_chain/1`. Seam A1 closed (control passes via surviving arm).
+  Extension question → OQ-114. Full package:
+  `audits/2026-06-11_oq109_phase_b/UNANIMITY_ADJUDICATION.md`.
   **Census (2026-06-12, operator-triggered — the class is NOT {2}):**
   `audits/2026-06-11_oq109_phase_b/b3_empty_table_census.md`. Six SILENT fail-open members
   (A1 FCR guard; A2 `test_harness:validate_per_index` vacuous-forall; A3
@@ -4843,6 +4850,36 @@ fail-closed needs an authoring surface for it), or the OQ-43-class fix (gate on
 authored-presence before comparing)? Cross-refs: OQ-43 (sibling leg), OQ-44 (gate class
 audit), OQ-37 (`unknown` sentinel discipline — the sentinel here works correctly; the
 consumer's `== false` test is what can never see it).
+
+## OQ-114 — Are the 3 bridge-extension stories genuine mountains? (FCR un-fire adjudication + archive divergence-rate probe)
+
+**Ω-type:** Ω_E (measurable divergence rate) with an Ω_P edge (the per-story mountain ruling).
+
+**Status:** open — filed 2026-06-12 at the OQ-109 unanimity ruling (operator: the extension
+question is its own item, never a side effect of rewiring).
+
+**The question.** The bridge guard (authored-cells ∨ nl_certification_chain) extends FCR's
+mountain-protection to 3 mountain-claimed NL-certified stories whose authored seats were NOT
+unanimous: `demographic_skill_mismatch`, `organization_floor` (were coupling_invariant_rope),
+`institutional_trust_erosion` (was false_ci_rope — a LIVE FCR un-fired at the bridge commit).
+Are they genuinely mountains, and should that un-fire stand? All 3 declare beneficiaries, so
+FSM scrutiny is untouched either way.
+
+**Method (precondition checked 2026-06-12).** Archive divergence-rate probe: on
+`archives/datasets/kernel_v1` (1,106) and `original_v6` (3,380), compare authored-cell
+unanimity vs `nl_certification_chain/1` per story; the divergence rate + per-story
+inspectables turn the live-62's 3-story anecdote into a measurement. Atoms witnessed present:
+constraint_claim 1106/1106 and 3380/3380; NL-profile trio SPARSE (emerges_naturally 42 / 433,
+accessibility_collapse 51 / 519, resistance 45 / 466) — so the comparison denominator is the
+mountain-claimed subset; stories lacking the trio fail the chain closed (correct, and must be
+reported as not-certifiable, never lumped with certified-divergent). Overlay `corpus_path`
+per the OQ-89 pattern; chimera-era caveats (OQ-25) apply to v6 counts. Fallback if the probe
+disappoints: live-62 per-story inspection of the 3 (their text, beneficiary structure, and
+whether the FCR firing was OQ-70-class bait or detection).
+
+**Resolution shape.** Per-story ruling on the 3 (operator) informed by the rate; if ruled
+not-mountains, the chain needs a discriminating conjunct (witnessed, not beneficiary-presence
+— that one failed extension-preservation 1/6) or the un-fire reverts at Phase C re-witness.
 
 ---
 
