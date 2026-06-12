@@ -1,0 +1,210 @@
+coercion_projection.pl:129:        ;   Result = open(missing_levels(Missing))
+coercion_projection.pl:131:    ;   Result = open(no_gradient_data)
+abductive_report.pl:444:    (Class == signature_override_artifact -> Cat = artifact ; Cat = genuine),
+constraint_bridge.pl:75:    ;   Status = blocked_by_veto)
+constraint_bridge.pl:95:            (Type = snare ; Type = tangled_rope),
+cs_kernel_registry.pl:130:        ;                     Status = untyped
+boltzmann_compliance.pl:100:        ;   Result = non_compliant(CouplingScore, Threshold)
+boltzmann_compliance.pl:102:    ;   Result = inconclusive(insufficient_classifications)
+boltzmann_compliance.pl:557:    ;   T1 = fail(factorization, CompResult)
+boltzmann_compliance.pl:564:    ;   T2 = fail(scope_invariance, ScopeResult)
+boltzmann_compliance.pl:571:        ;   T3 = fail(excess_extraction, Excess)
+boltzmann_compliance.pl:573:    ;   T3 = pass(no_extraction_data)  % Mountains often have ε ≈ 0
+boltzmann_compliance.pl:582:    ;   T4 = fail(natural_law_signature)
+boltzmann_compliance.pl:590:    ;   Result = variant(Failures)
+boltzmann_compliance.pl:609:    ;   Result = variant(UniqueTypes)
+audit3_maxent_compare.pl:113:    ;   CleanTopType = missing,
+audit3_maxent_compare.pl:127:    ;   AccumTopType = missing,
+drift_events.pl:92:    ;   Trend = stable
+drift_events.pl:437:    ;   Acceleration = constant
+drift_events.pl:491:    ;   Severity = warning
+intent_engine.pl:80:    ; Pattern = stable).
+intent_engine.pl:85:    (DataScore >= DH, NEv >= 5 -> Conf = high ; Conf = medium).
+intent_engine.pl:89:    (DataScore >= DH -> Conf = high ; Conf = low).
+fingerprint_report.pl:120:    (catch(drl_core:dr_type(C, CtxL, TL), _, TL = error) ; TL = error),
+fingerprint_report.pl:121:    (catch(drl_core:dr_type(C, CtxN, TN), _, TN = error) ; TN = error),
+fingerprint_report.pl:122:    (catch(drl_core:dr_type(C, CtxG, TG), _, TG = error) ; TG = error),
+pattern_analysis.pl:37:        ; Pattern = stable)
+pattern_analysis.pl:38:    ;   Result = open(Why),
+network_dynamics.pl:218:        ;   Assessment = degrading
+data_repair.pl:330:            ;   Class = absent
+reading_diff.pl:151:        ; Result = disparity(VKey, Ta, Tb)
+reading_diff.pl:154:    ; Result = blind(VKey, b, Tb)
+reading_diff.pl:196:    ( Disparity == [] -> Regime = undersampled ; Regime = binocular ).
+reading_diff.pl:217:    ; Verdict = key_fragile
+reading_diff.pl:258:    ( ND >= 1 -> Regime = binocular ; Regime = undersampled ),
+data_validation.pl:167:      (Cat = unknown ; Cat = unknown_novel)
+data_validation.pl:265:    ; Expected = mountain, Claimed = snare
+covering_analysis.pl:219:    ;   BestCell = cell(BP, BS),
+covering_analysis.pl:699:            ;   Axis = scope
+axiom_diff.pl:83:    ( axiom_concept(Name, C) -> V = C ; V = unmapped(Name) ).
+axiom_diff.pl:121:        ( Ga == Gb -> Result = agree(V, Ga) ; Result = disparity(V, Ga, Gb) )
+axiom_diff.pl:123:    ; Result = blind(V, b, Gb)
+axiom_diff.pl:132:    ( Disp == [] -> Regime = undersampled ; Regime = binocular ).
+axiom_diff.pl:141:    ; Verdict = key_fragile
+axiom_diff.pl:173:    ( ND >= 1 -> Regime = binocular ; Regime = undersampled ),
+global_delta_report.pl:75:    (narrative_ontology:constraint_beneficiary(C, _) -> HasBenef = yes ; HasBenef = no),
+global_delta_report.pl:76:    (narrative_ontology:constraint_victim(C, _) -> HasVict = yes ; HasVict = no),
+global_delta_report.pl:79:    (constraint_indexing:directionality_override(C, ResolvedPower, _) -> HasOverride = yes ; HasOverride = no),
+global_delta_report.pl:106:    ;   Result = no_delta
+global_delta_report.pl:251:    (HasOvr = yes -> Src = override ; Src = structural),
+drl_boltzmann_analysis.pl:188:    ;   ModalConsistency = inconsistent(UniqueTypes)
+drl_boltzmann_analysis.pl:229:        ;   BaseAssessment = scaffold_required,
+drl_boltzmann_analysis.pl:232:        ;   BaseAssessment = scaffold_required
+drl_boltzmann_analysis.pl:234:        ;   BaseAssessment = scaffold_present
+drl_boltzmann_analysis.pl:236:        ;   Assessment = no_scaffold_needed
+drl_boltzmann_analysis.pl:238:    ;   Assessment = no_scaffold_needed
+drl_boltzmann_analysis.pl:609:            ;   Pass = fail, Reason = reformability_too_low
+drl_boltzmann_analysis.pl:611:        ;   Pass = fail, Reason = purity_below_surgical_threshold
+drl_boltzmann_analysis.pl:622:        ;   Pass = fail, Reason = scaffold_purity_insufficient
+drl_boltzmann_analysis.pl:633:        ;   Pass = fail, Reason = coordination_purity_insufficient
+drl_boltzmann_analysis.pl:659:    ;   BaseAssessment = no_scaffold_needed
+diagnostic_summary.pl:155:        ;   DisInfo = hard(Shadow, Det)
+diagnostic_summary.pl:157:        ;   DisInfo = soft(Shadow, Det, P)
+diagnostic_summary.pl:159:        ;   DisInfo = entropy_flag(H)
+diagnostic_summary.pl:161:        ;   DisInfo = residual_override(Shadow, Det)
+diagnostic_summary.pl:163:        ;   Signal = agrees
+diagnostic_summary.pl:165:    ;   Signal = inconclusive
+diagnostic_summary.pl:174:            ;   Status = descends(_OtherType)
+diagnostic_summary.pl:176:            ;   Signal = disagrees(fails_descent(H1))
+diagnostic_summary.pl:180:            ;   Signal = disagrees(h1_nonzero(H1))
+diagnostic_summary.pl:183:    ;   Signal = inconclusive
+diagnostic_summary.pl:196:        ;   Signal = agrees
+diagnostic_summary.pl:198:    ;   Signal = agrees
+diagnostic_summary.pl:208:            ;   Signal = disagrees(override_mismatch(Sig, DetType))
+diagnostic_summary.pl:210:        ;   Signal = agrees
+diagnostic_summary.pl:212:    ;   Signal = agrees
+diagnostic_summary.pl:220:        ;   Result = non_compliant(Score, Threshold)
+diagnostic_summary.pl:222:        ;   Signal = inconclusive
+diagnostic_summary.pl:224:    ;   Signal = inconclusive
+diagnostic_summary.pl:232:        (   (DetType = mountain ; DetType = rope)
+diagnostic_summary.pl:233:        ->  (   (Zone = pristine ; Zone = sound)
+diagnostic_summary.pl:235:            ;   Signal = disagrees(low_purity(PScore, Zone))
+diagnostic_summary.pl:237:        ;   Signal = agrees
+diagnostic_summary.pl:239:    ;   Signal = inconclusive
+diagnostic_summary.pl:248:        ;   Signal = disagrees(dirac_mismatch(Class, DetType))
+diagnostic_summary.pl:250:    ;   Signal = inconclusive
+diagnostic_summary.pl:269:        ;   (DetType = mountain ; DetType = rope)
+diagnostic_summary.pl:272:            ;   Signal = agrees
+diagnostic_summary.pl:274:        ;   Signal = agrees
+diagnostic_summary.pl:276:    ;   Signal = inconclusive
+diagnostic_summary.pl:297:            ;   Signal = agrees
+diagnostic_summary.pl:300:    ;   Signal = agrees
+diagnostic_summary.pl:308:        ;   RestrictedType = indeterminate
+diagnostic_summary.pl:310:        ;   Signal = disagrees(restricted_mismatch(RestrictedType, DetType))
+diagnostic_summary.pl:312:    ;   Signal = inconclusive
+diagnostic_summary.pl:323:                ;   Signal = disagrees(fcr_override_mismatch(DetType))
+diagnostic_summary.pl:326:        ;   Signal = agrees
+diagnostic_summary.pl:328:    ;   Signal = agrees
+diagnostic_summary.pl:338:        ;   Signal = disagrees(multi_type_orbit(UniqueTypes))
+diagnostic_summary.pl:340:    ;   Signal = inconclusive
+diagnostic_summary.pl:357:    ;   Signal = agrees_via_override(_)
+diagnostic_summary.pl:359:    ;   Signal = inconclusive
+diagnostic_summary.pl:361:    ;   Signal = unavailable
+diagnostic_summary.pl:363:    ;   Signal = disagrees(Detail)
+diagnostic_summary.pl:367:        ;   T1 = tension(Sub, Detail),
+diagnostic_summary.pl:642:    ;   Cap = moderate_alert
+diagnostic_summary.pl:647:    ;   GridProv = no_interval
+drl_counterfactual.pl:44:    (Type = snare ; Type = piton ; Type = rope),  % Only cut these types
+drl_counterfactual.pl:79:    ;   Impact = moderate,
+drl_counterfactual.pl:189:        ;   Assessment = scaffold_required
+drl_counterfactual.pl:191:    ;   Assessment = no_scaffold_needed
+logical_fingerprint.pl:338:        ;   Trend = stable
+gap_diagnostic.pl:173:            ;   Direction = above
+gap_diagnostic.pl:333:            (NUniq > 1 -> Varies = yes ; Varies = no)
+gap_diagnostic.pl:629:    ;   Gate = other
+json_report.pl:206:    ;   HumanTitle = null
+json_report.pl:215:    ;   ClaimedType = null
+json_report.pl:234:    ;   BaseEps = null
+json_report.pl:243:    ;   Supp = null
+json_report.pl:252:    ;   Resist = null
+json_report.pl:262:    ;   TheaterVal = null
+json_report.pl:271:    ;   Sig = null
+json_report.pl:281:    ;   PScore = null, PBand = null
+json_report.pl:355:    ;   Domain = null
+json_report.pl:364:    ;   TopicDomain = null
+json_report.pl:705:        ;   Interp = large
+json_report.pl:895:    ;   Type = null
+json_report.pl:922:    ->  (catch(drl_core:base_extractiveness(C, Epsilon), _, fail) -> true ; Epsilon = null),
+json_report.pl:923:        (catch(constraint_indexing:derive_directionality(C, Ctx, D), _, fail) -> true ; D = null),
+json_report.pl:924:        (D \= null -> constraint_indexing:sigmoid_f(D, Fd) ; Fd = null),
+json_report.pl:925:        (D \= null -> (catch(constraint_indexing:sigmoid_d1(D, F1d), _, fail) -> true ; F1d = null) ; F1d = null),
+json_report.pl:926:        (D \= null -> (catch(constraint_indexing:sigmoid_d2(D, F2d), _, fail) -> true ; F2d = null) ; F2d = null),
+json_report.pl:927:        (catch(constraint_indexing:scope_modifier(Scope, ScopeMod), _, fail) -> true ; ScopeMod = null)
+json_report.pl:928:    ;   Chi = null, Epsilon = null, D = null, Fd = null, F1d = null, F2d = null, ScopeMod = null
+json_report.pl:984:    ;   SV = null, PV = null, LiveIndex = inconclusive
+json_report.pl:1019:        ;   IP = null
+json_report.pl:1030:    ;   Delta = null
+json_report.pl:1079:        ;   NP = null
+json_report.pl:1085:    ;   NType = null
+json_report.pl:1432:    ;   StabAssessment = null
+inferred_coupling_protocol.pl:169:                (   Strength >= Thresh -> EdgeFormed = yes ; EdgeFormed = no )
+inferred_coupling_protocol.pl:445:            ;   Bridge = yes
+inferred_coupling_protocol.pl:502:    ;   Type = error
+purity_scoring.pl:67:    ;   Result = variant(Types)
+maxent_diagnostic.pl:144:            (drl_core:base_extractiveness(ND, Eps) -> true ; Eps = missing),
+maxent_diagnostic.pl:145:            (drl_core:get_raw_suppression(ND, Supp) -> true ; Supp = missing),
+maxent_diagnostic.pl:146:            (drl_core:dr_type(ND, Context, DT) -> true ; DT = no_type),
+maxent_diagnostic.pl:155:        (drl_core:dr_type(C, Context, T) -> true ; T = no_dr_type)
+maxent_diagnostic.pl:167:        (T = unknown ; T = naturalized)
+maxent_diagnostic.pl:266:        (   (DetType = mountain ; DetType = piton ; ShadowType = mountain ; ShadowType = piton)
+maxent_diagnostic.pl:267:        ->  (drl_core:base_extractiveness(C, Eps) -> true ; Eps = na),
+maxent_diagnostic.pl:268:            (drl_core:get_raw_suppression(C, Supp) -> true ; Supp = na),
+maxent_diagnostic.pl:270:            (narrative_ontology:constraint_metric(C, TN, Theater) -> true ; Theater = na),
+maxent_diagnostic.pl:271:            (catch(signature_detection:constraint_signature(C, Sig), _, Sig = na) -> true ; Sig = na),
+maxent_diagnostic.pl:274:             ;  DS2 = na),
+maxent_diagnostic.pl:339:        (   member(C-hard(ST, DT), Hards) -> true ; ST = na, DT = na ),
+maxent_diagnostic.pl:348:        (drl_core:base_extractiveness(C, Eps) -> true ; Eps = na),
+maxent_diagnostic.pl:349:        (drl_core:get_raw_suppression(C, Supp) -> true ; Supp = na),
+maxent_diagnostic.pl:351:        (narrative_ontology:constraint_metric(C, TN4, Theater) -> true ; Theater = na),
+maxent_diagnostic.pl:355:        ;   BName = na, BDist = na
+maxent_diagnostic.pl:632:    ;   Avg = na
+stakeholder_seats.pl:117:    ;   Perceived = changeable
+stakeholder_seats.pl:139:    ;   Verdict = plural(UniqueTypes)
+stakeholder_seats.pl:151:    ;   Authored = no_zombie_flag
+stakeholder_seats.pl:155:    ;   Computed = not_piton
+omega1_audit.pl:120:    ;   Sig = no_signature
+omega1_audit.pl:393:    ;   Type = error
+omega1_audit.pl:455:    ;   Result = fail(NMismatch, Mismatches)
+omega1_audit.pl:532:    ;   ConsistencyResult = fail(NM, _)
+omega1_audit.pl:913:        (   omega1_primary_gate(C, Gate) -> true ; Gate = undiagnosed ),
+omega1_audit.pl:918:        (   omega1_cross_context(C, 'Institutional/Local', _, TI) -> true ; TI = error ),
+omega1_audit.pl:919:        (   omega1_cross_context(C, 'Moderate/National', _, TM) -> true ; TM = error ),
+omega1_audit.pl:920:        (   omega1_cross_context(C, 'Analytical/Global', _, TA) -> true ; TA = error ),
+sheaf_analysis.pl:102:    ;   Result = mixed(BlockResults)
+sheaf_analysis.pl:111:    ;   Status = mixed(Unique)
+maxent_classifier.pl:240:        ;   MetricName = suppression, X = Supp
+maxent_classifier.pl:241:        ;   MetricName = theater, X = Theater
+maxent_classifier.pl:781:        ;   MetricName = suppression, X = Supp
+maxent_classifier.pl:782:        ;   MetricName = theater, X = Theater
+report_generator.pl:387:        ;   Sev = moderate
+utils.pl:223:    ;  AltPresent = absent).
+trajectory_report.pl:162:    ;   Feature = standard
+trajectory_mining.pl:176:    ;   Shift = shift(unknown, unknown, unknown, unknown)
+trajectory_mining.pl:213:    ;   Zone = zone(unknown, unknown)
+trajectory_mining.pl:218:    ;   Boltzmann = inconclusive(no_data)
+trajectory_mining.pl:566:            ;   Shift = shift(unknown, unknown, unknown, unknown)
+trajectory_mining.pl:842:    ;   Domain = unknown_domain
+signature_detection.pl:271:        ;   Stability = evolving
+signature_detection.pl:514:        ;   Confidence = low
+signature_detection.pl:516:    ;   Confidence = low
+signature_detection.pl:524:        ;   Confidence = low
+signature_detection.pl:526:    ;   Confidence = low
+signature_detection.pl:533:        ;   Confidence = medium
+signature_detection.pl:535:    ;   Confidence = medium
+signature_detection.pl:547:        ;                   Base = low
+signature_detection.pl:553:    ;   Confidence = low
+signature_detection.pl:567:    ;   Confidence = low
+signature_detection.pl:597:    ;   Confidence = low
+signature_detection.pl:611:    ;   Confidence = low
+signature_detection.pl:628:    ;   Confidence = low
+signature_detection.pl:641:    ;   Confidence = low
+signature_detection.pl:818:        ;   AdjustedType = tangled_rope % Override: uniform classification
+signature_detection.pl:905:    ;   Result = tangled_rope
+signature_detection.pl:1143:    ;   PurityClass = contaminated(Failures)
+signature_detection.pl:1151:    ;   Result = fail(factorization, Comp)
+signature_detection.pl:1158:    ;   Result = fail(scope_invariance, ScopeResult)
+signature_detection.pl:1166:    ;   Result = pass(no_nonsensical_coupling)
+signature_detection.pl:1174:        ;   Result = fail(excess_extraction, Excess)
+signature_detection.pl:1176:    ;   Result = pass(no_extraction_data)
+signature_detection.pl:1490:    ;   LevelDiv = open

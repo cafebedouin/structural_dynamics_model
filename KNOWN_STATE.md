@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-97 RESOLVED: Pattern-6 census executed (160/227/210 raw lines, 19 classes); 8 candidate classes filed as OQ-112; classification path clean
+**Files:** ISSUES.md, audits/2026-06-11_oq97_pattern6_census/
+**Tier:** landed
+
+Worktree `oq97-pattern6-census` from `1bfd0b72`. Bounded grep census over 106 top-level
+`prolog/*.pl` (denominator witness: subdir-load grep empty with 47-hit positive control on
+stack.pl; scoped to STATIC load directives only — WRITEUP §7 residuals). Three shapes, raw
+lists saved verbatim; all 7 pinned positive controls fired — and earned their keep: two Shape-C
+grep iterations were rejected by the controls (bare-atom missed `pass(no_extraction_data)`;
+no-comment-tolerance missed trailing-`%` defaults; Shape A regenerated with the same fix,
+149→160). Class-based triage: 19 classes, file-don't-fix, zero engine edits. **No confirmed
+candidate on the dr_type path** — drl_core.pl has zero Shape-A hits (the census itself
+witnesses OQ-44 commit C's fix), and `signature_detection.pl:818/:905` tangled_rope branches
+read as fired-signature override dispatch, not absence-defaults. 8 candidate classes → OQ-112
+(top: diagnostic_summary agrees-on-absence probe signals, 13 sites, feeding the OQ-98 verdict
+join as absence-of-alert). Census-surfaced interaction: post-OQ-44 `get_raw_suppression`
+`unknown` sentinel makes `maxent_classifier.pl:255/:761` `; Supp = 0.0` dead branches and flows
+an atom toward Gaussian-LL arithmetic (OQ-112 item 4). Row-26 tripwire strikes mapped by
+content (purity_scoring :57→:58; coupling_factor :135, excess_extraction_factor :154);
+`drl_fpn.pl:206` and `drl_boltzmann_analysis.pl:302` were NOT tripwired and stay candidates.
+
 ## 2026-06-11 — OQ-110 RESOLVED: residual join + pinned counterfactuals; operator ruled D-fork branch b NO-OPEN (derived-d stands); Backed deposit chain discharged
 **Files:** ISSUES.md, python/audits/oq110_residual_join.py, audits/2026-06-11_oq110_residual_join/, prolog/temporal_residual.pl, prolog/drl_composition.pl, prolog/json_report.pl
 **Tier:** landed

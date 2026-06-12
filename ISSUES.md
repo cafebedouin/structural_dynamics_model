@@ -4204,24 +4204,18 @@ removal, load-warning gate + allowlist) in git and KNOWN_STATE 2026-06-10/11.
 
 **Ω-type:** Ω_E (bounded audit task; verdicts per site are sort-on-encounter until it runs).
 
-**Status:** open — filed 2026-06-10 as future work (operator-directed); the pattern entry it
-flags against is `build_discipline.md` → *Pattern 6 — Success-shaped absorption* (three
-instances witnessed 2026-06-10: the `[] → 0.0` gradient fallback, `grep -v Warning`,
-findall-over-partial-levels).
+**Status:** resolved — 2026-06-11; census executed (`audits/2026-06-11_oq97_pattern6_census/`),
+106 top-level files, three shape greps (160/227/210 raw lines), all 7 pinned positive controls
+fired; class-based triage (19 classes), file-don't-fix.
 
-**The task:** one bounded grep pass over `prolog/*.pl` for the two syntactic shapes —
-`findall`/`setof`-feeding-aggregate with a default-on-empty branch, and literal
-defaults-on-empty (`;  X = 0`, `;  X = 0.0`, `-> ... ; <constant>`) — producing a candidate-site
-list (file:line), each then sorted by the Pattern-6 question: can this site's output
-distinguish measured-empty from didn't-look? Candidates are NOT verdicts (a documented,
-coverage-carrying default is sound). Cheap in a way the waived backward sweep was not: live
-code, two shapes, enumerable. Until it runs: sort-on-encounter, flagging against the Pattern-6
-entry. Cross-refs: OQ-93 (instances 1 and 3), OQ-96 (instance 2), OQ-44 (sibling
-absence-class audit).
-
-**Update 2026-06-11 (OQ-98 close):** the verdict-banner candidate site is now a witnessed join
-(`diagnostic_summary:verdict_join/3`, serialized with its raw inputs) — strike it from the
-candidate list; the census itself stays open.
+**Origin:** filed 2026-06-10 (operator-directed) against `build_discipline.md` Pattern 6 after
+three same-day instances (`[] → 0.0` gradient fallback, `grep -v Warning`,
+findall-over-partial-levels). **Resolution:** 8 confirmed-candidate classes filed as OQ-112
+(prioritized per the OQ-44 common-law ruling); none on the `dr_type` classification path
+(drl_core Shape-A-clean — the census itself witnesses the OQ-44 commit-C fix). Accepted
+limitations named in WRITEUP §7: static-load-directives-only denominator; 3-line Shape-B
+coupling window (split idioms out of scope); sampled class adjudication. Cross-refs: OQ-93,
+OQ-96, OQ-44, OQ-98 (banner site struck as witnessed join), OQ-112 (successor).
 
 ## OQ-98 — Report verdict banner is not a join over the report's own evidence: GREEN prints over 0%-authored grids and alongside severe alerts
 
@@ -4660,6 +4654,51 @@ else is `narrative_ontology:`/`constraint_indexing:`-qualified or plunit `test/1
 all five `user:`-qualified goals in engine code are loaders (`user:consult` ×4) or the
 `user:file_search_path` hook; `current_predicate(user:` = zero. This entry is the sweep's
 single finding.
+
+## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
+
+**Ω-type:** Ω_E (sites enumerated with read witnesses; per-member verdicts and fixes pending).
+
+**Status:** open — filed 2026-06-11 at OQ-97 close. Full class tables with member lists:
+`audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
+
+**The batch (priority order, per OQ-44's common-law prioritize-by-success-shapedness):**
+
+1. **C4a — `; Signal = agrees` on absent probe input** (`diagnostic_summary.pl`, 13 sites; read
+   witness `probe_abductive` :190–199: no `abd_triggers` fact → `agrees`). Vacuous agreement
+   feeds the OQ-98 verdict join as absence-of-alert — green-over-absence one level below the
+   fixed banner. Honest tokens (`inconclusive`/`unavailable`) already in the file's vocabulary.
+   First job: sort each else-branch as data-absence (defect) vs conflict-absence (sound).
+2. **A6 — absence-certifies-cleanliness** (`purity_scoring.pl:71,80,88`;
+   `drl_boltzmann_analysis.pl:302`; `drl_fpn.pl:206`; `covering_analysis.pl:137`;
+   `signature_detection.pl:1090`) — absence passes the clean gate (OQ-43 semantics). The three
+   tripwired same-family predicates were NEUTRAL (unreachable on 194-row corpus); these five are
+   unmeasured.
+3. **A4 — `BaseEps = 0.5` / `Supp = 0` copied pair** (`boltzmann_compliance.pl:251,257`;
+   `covering_analysis.pl:490,497`; `gap_diagnostic.pl:120,127`; `omega1_audit.pl:102`) — the
+   drl_composition.pl:238 fabrication, flagged at 1 of 5 sites only (OQ-110 lineage).
+4. **A3 — metric-fallback 0.0 on absent authored metric** (23 sites: constraint_indexing,
+   maxent_classifier, invertibility_analysis, omega1_audit, genuine_findings_query,
+   constraint_bridge) — the idiom OQ-44 commit C fixed in drl_core, surviving downstream.
+   **Includes the census-surfaced interaction:** post-OQ-44 `get_raw_suppression` returns the
+   `unknown` sentinel, so `maxent_classifier.pl:255/:761` `; Supp = 0.0` branches are dead and
+   the atom flows toward Gaussian-LL arithmetic — verify a guard exists or fail-close.
+5. **C4b — blind=stable trend family** (`drift_events.pl:92,437`; `intent_engine.pl:80`;
+   `pattern_analysis.pl:37`; `logical_fingerprint.pl:338`) — no-data reads as measured-stable.
+6. **A2 — statistic-on-empty → 0.0** (~40 sites, list in WRITEUP §4) — mean/median/slope/
+   fraction on empty emits measured-flat (system_gradient twin); members co-printing N resort
+   to SOUND.
+7. **A10 — catch(error) → 0.0** (`json_report.pl:415–418`, wasserstein) — errored-unknown
+   collapse.
+8. **Low tier:** C4c `pass(no_*_data)`/`no_scaffold_needed` defaults (provenance arg present
+   but collapsed by `pass(_)` reads); A7 zero-contamination-on-untyped (needs a design ruling:
+   intended semantics vs absorption); B2 collectors over build-stage caches (defect only if the
+   report path runs without the build step).
+
+Disposition per class follows the OQ-44 statute for any site touched (fail-closed on absence,
+pass carries witness); output-changing fixes land alone per the established commit discipline.
+Cross-refs: OQ-97 (census), OQ-44 (statute + common-law queue), OQ-98 (C4a feeds its join),
+OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
 
 ---
 
