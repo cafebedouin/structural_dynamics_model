@@ -415,6 +415,24 @@ pipeline (χ = ε × f(d) × σ(S)). Callers `constraint_history/3` and `degrada
 appear in no canonical context and their scope_modifier values are unvalidated. σ(universal) =
 σ(national) = 1.0 (`config.pl:117,120`) — no differential χ effect.
 
+**Generation is stochastic; the committed story is the determinism frontier (operator
+ruling, 2026-06-12).** LLM generation NEVER reproduces: the same material re-run gets
+different scopings, kernel namings, readings, and ε — witnessed in-repo: OQ-26 (ε is
+generated, not observer-invariant; Axiom 2 was AMENDED for this, v6.13.1), the
+press/Reformation topic generating THREE kernel namings across three runs (9 files,
+kernel_v1), the naming-drift never-generated siblings (KNOWN_STATE 2026-06-03). Do not
+design, test, or reason as if same-prompt → same-story; backchecking a generation tells
+you nothing about the next run; re-generated stories are NEW DRAWS, never re-measurements
+— cross-run "same story" identity does not exist. What IS deterministic: the committed
+JSON onward — and that boundary is CHECKED, not assumed (hash inputs + manifest + output;
+same-code reruns witnessed byte-identical at single commits, but order-dependency is on
+record as the OQ-112 class). Three mechanisms produce "same material, different results"
+— generation stochasticity, ensemble refit (corpus-relative statistics; 3 signature
+changes refit 57 stories), pipeline non-determinism at fixed input (a bug) — attribute by
+the stage-hash diff, never by assumption: "it's the LLM" without the diff is a hypothesis
+sitting where a witness goes. Meta-analysis claims ride snapshot manifests + per-story
+provenance (model, sampling params, prompt/schema/example commits — schema-required).
+
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.
 

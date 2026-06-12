@@ -65,9 +65,15 @@ def _basic_validate(data):
                      "claimed_type", "human_readable", "topic_domain"):
             if key not in data["base_properties"]:
                 errors.append(f"Missing required base_properties field: {key}")
+    # perspectives[] removed at Phase C (cohort-zero ruling, 2026-06-12) — the
+    # archived corpus validates against its archived schema (see
+    # archives/datasets/pre_cohort_zero_2026-06-12/manifest.json).
     if "perspectives" in data:
-        if not isinstance(data["perspectives"], list) or len(data["perspectives"]) < 2:
-            errors.append("perspectives must be an array with at least 2 items")
+        errors.append("perspectives[] was removed at Phase C (2026-06-12); "
+                      "pre-cohort-zero stories validate against the archived schema")
+    if "provenance" not in data:
+        errors.append("Missing required top-level key: provenance (schema-required "
+                      "since Phase C cohort-zero ruling)")
     if "interval" in data:
         for key in ("start", "end"):
             if key not in data["interval"]:
@@ -781,20 +787,20 @@ def generate_pl(data):
     # ------------------------------------------------------------------
     # 8. Section 3: Indexed classifications
     # ------------------------------------------------------------------
+    # Section 3 (INDEXED CLASSIFICATIONS) RETIRED at Phase C (2026-06-12,
+    # cohort-zero ruling): authored perspectives[] left the schema and the
+    # live corpus together; per-seat types are COMPUTED by the engine. The
+    # archived corpus keeps its emitted cells under the archived schema.
     emit("/* ==========================================================================")
-    emit("   3. INDEXED CLASSIFICATIONS (P, T, E, S)")
+    emit("   3. PROVENANCE (cohort metadata — schema-required since Phase C)")
     emit("   ========================================================================== */")
     emit()
-
-    for i, p in enumerate(perspectives):
-        if p.get("comment"):
-            emit(f"% {p['comment']}")
-        emit(f"constraint_indexing:constraint_classification({cid}, {p['classification_type']},")
-        emit(f"    context(agent_power({p['agent_power']}),")
-        emit(f"            time_horizon({p['time_horizon']}),")
-        emit(f"            exit_options({p['exit_options']}),")
-        emit(f"            spatial_scope({p['spatial_scope']}))).")
-        emit()
+    prov = data["provenance"]
+    emit(f"narrative_ontology:story_provenance({cid}, '{prov['prompt_commit']}',")
+    emit(f"    '{prov['schema_commit']}', '{prov['generated_date']}',")
+    emit(f"    '{prov['source_essay']}', '{prov['one_shot_example']}',")
+    emit(f"    '{prov['model']}', '{prov['sampling_params']}').")
+    emit()
 
     # ------------------------------------------------------------------
     # 9. Section 4: Validation tests

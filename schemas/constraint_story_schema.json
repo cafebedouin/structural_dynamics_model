@@ -7,7 +7,8 @@
   "required": [
     "header",
     "base_properties",
-    "interval"
+    "interval",
+    "provenance"
   ],
   "$defs": {
     "ConstraintType": {
@@ -158,42 +159,6 @@
         },
         "basis": {
           "$ref": "#/$defs/MeasurementBasis"
-        }
-      },
-      "additionalProperties": false
-    },
-    "Perspective": {
-      "type": "object",
-      "required": [
-        "classification_type",
-        "agent_power",
-        "time_horizon",
-        "exit_options",
-        "spatial_scope"
-      ],
-      "properties": {
-        "classification_type": {
-          "$ref": "#/$defs/ConstraintType"
-        },
-        "agent_power": {
-          "$ref": "#/$defs/AgentPower"
-        },
-        "time_horizon": {
-          "$ref": "#/$defs/TimeHorizon"
-        },
-        "exit_options": {
-          "$ref": "#/$defs/ExitOptions"
-        },
-        "spatial_scope": {
-          "$ref": "#/$defs/SpatialScope"
-        },
-        "label": {
-          "type": "string",
-          "description": "Human-readable label for this perspective (e.g. 'The Optimized Serf')"
-        },
-        "comment": {
-          "type": "string",
-          "description": "Explanatory comment emitted above this classification in the .pl file"
         }
       },
       "additionalProperties": false
@@ -353,6 +318,50 @@
         }
       },
       "additionalProperties": false
+    },
+    "Provenance": {
+      "type": "object",
+      "description": "Generation provenance — REQUIRED on every story (Phase C growth rule, OQ-109 2026-06-12): the corpus is a sequence of cohorts and cross-cohort comparison is valid only when each story carries its generation conditions. An unprovenanced story is un-meta-analyzable by construction (fail-closed beats backfilling). schema_commit/prompt_commit = repo HEAD of the governing file at generation/validation time.",
+      "required": [
+        "prompt_commit",
+        "schema_commit",
+        "generated_date",
+        "source_essay",
+        "one_shot_example",
+        "model",
+        "sampling_params"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "prompt_commit": {
+          "type": "string",
+          "description": "Commit of prompts/constraint_story_generation_prompt_json.md in effect"
+        },
+        "schema_commit": {
+          "type": "string",
+          "description": "Commit of this schema the story validated against"
+        },
+        "generated_date": {
+          "type": "string",
+          "description": "ISO date of generation"
+        },
+        "source_essay": {
+          "type": "string",
+          "description": "Source essay / topic-run identifier; 'none' for hand-authored"
+        },
+        "one_shot_example": {
+          "type": "string",
+          "description": "Path of the one-shot example in effect (FNL inherited-signature machinery, per-cohort)"
+        },
+        "model": {
+          "type": "string",
+          "description": "Generating model string (e.g. claude-sonnet-4-6); 'none_hand_authored' for manual stories"
+        },
+        "sampling_params": {
+          "type": "string",
+          "description": "Sampling parameters at generation (e.g. 'temperature=1.0'); 'none' for manual stories"
+        }
+      }
     }
   },
   "properties": {
@@ -490,21 +499,9 @@
             "pattern": "^[a-z][a-z0-9_]*$"
           },
           "description": "Propositions/doctrines/hypotheses the constraint's operation vindicates (OQ-64 split, 2026-06-05). NOT beneficiaries: a vindicated proposition collects no rents and must never be listed under beneficiaries (beneficiaries are real-world actors only). Compiled to constraint_vindicates/2, which feeds no metric or gate."
-        },
-        "mandatrophy_resolved": {
-          "type": "boolean",
-          "default": false,
-          "description": "Whether mandatrophy has been resolved. Author it whenever the constraint's mandate has outlived its function; do not key it to any metric value."
         }
       },
       "additionalProperties": false
-    },
-    "perspectives": {
-      "type": "array",
-      "minItems": 2,
-      "items": {
-        "$ref": "#/$defs/Perspective"
-      }
     },
     "omegas": {
       "type": "array",
@@ -652,7 +649,10 @@
     },
     "fixing_cost": {
       "type": "string",
-      "enum": ["cheap", "prohibitive"],
+      "enum": [
+        "cheap",
+        "prohibitive"
+      ],
       "description": "OQ-92 receipt surface, cost half: the cost class of fixing/removing this constraint for whoever could fix it, relative to the benefit of fixing. DISTINCT FIELD from gain_flow by ruling (b) — accrual-of-gain and cost-to-fix are independent axes; never merge into one scalar or enum (a merged enum would weld provenance to value). Cell semantics (step-2 prototype, 8/8): 'prohibitive' + gain_flow='diffuse' is the piton cell; 'cheap' + 'diffuse' is transient neglect (NOT piton); a captured constraint (gain_flow names a seat) stays snare-flavored under EITHER cost class — cost never demotes capture. Class atom, not a calibrated scalar (the prototype tested cut-representability, not calibration)."
     },
     "six_questions": {
@@ -767,7 +767,10 @@
           "description": "Typed edges to sibling readings in the same kernel. Omit for non-kernel constraints.",
           "items": {
             "type": "object",
-            "required": ["sibling_id", "relation"],
+            "required": [
+              "sibling_id",
+              "relation"
+            ],
             "properties": {
               "sibling_id": {
                 "type": "string",
@@ -776,7 +779,11 @@
               },
               "relation": {
                 "type": "string",
-                "enum": ["forecloses", "coexists_with", "influences"],
+                "enum": [
+                  "forecloses",
+                  "coexists_with",
+                  "influences"
+                ],
                 "description": "Structural relationship from this reading to the sibling: forecloses=logically rules out sibling in same framework, coexists_with=different parties hold both simultaneously, influences=creates structural pressure without foreclosing"
               }
             },
@@ -788,7 +795,11 @@
           "description": "Foundational normative claims this reading holds. Omit for non-kernel constraints.",
           "items": {
             "type": "object",
-            "required": ["atom", "role", "status"],
+            "required": [
+              "atom",
+              "role",
+              "status"
+            ],
             "properties": {
               "atom": {
                 "type": "string",
@@ -797,17 +808,29 @@
               },
               "role": {
                 "type": "string",
-                "enum": ["foundational", "secondary"],
+                "enum": [
+                  "foundational",
+                  "secondary"
+                ],
                 "description": "foundational=core distinguishing premise of this reading, secondary=implication that follows from the foundational claim"
               },
               "status": {
                 "type": "string",
-                "enum": ["holdable", "overridden"],
+                "enum": [
+                  "holdable",
+                  "overridden"
+                ],
                 "description": "holdable=live normative claim without internal contradiction, overridden=formally superseded within this reading's own tradition. Do NOT use foreclosed — that is computed by the engine from grounding_type + drift_state."
               },
               "grounding_type": {
                 "type": "string",
-                "enum": ["empirically_contingent", "deontological", "conventional", "theological", "instrumental"],
+                "enum": [
+                  "empirically_contingent",
+                  "deontological",
+                  "conventional",
+                  "theological",
+                  "instrumental"
+                ],
                 "description": "What kind of claim grounds this axiom's legitimacy. empirically_contingent=grounded in testable empirical claims (can be refuted by evidence); deontological=grounded in duties, rights, or intrinsic moral status (not empirically falsifiable); conventional=grounded in social coordination or enacted institutional rule; theological=grounded in religious or divine authority; instrumental=grounded in means-ends efficacy (empirical about efficiency, but normative about goal)"
               }
             },
@@ -822,7 +845,12 @@
         "drift_state": {
           "type": "object",
           "description": "t1: drift state at a named historical or counterfactual moment relative to t0. Gap(t0,t1) = the drift vector. Omit for non-kernel constraints.",
-          "required": ["moment", "direction", "magnitude", "acknowledged"],
+          "required": [
+            "moment",
+            "direction",
+            "magnitude",
+            "acknowledged"
+          ],
           "additionalProperties": false,
           "properties": {
             "moment": {
@@ -845,7 +873,11 @@
             },
             "magnitude": {
               "type": "string",
-              "enum": ["minor", "substantial", "severe"],
+              "enum": [
+                "minor",
+                "substantial",
+                "severe"
+              ],
               "description": "Size of the gap between t0 and t1"
             },
             "acknowledged": {
@@ -855,6 +887,9 @@
           }
         }
       }
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
     }
   },
   "additionalProperties": false,
@@ -1050,23 +1085,47 @@
             "anyOf": [
               {
                 "$comment": "Lineage: interpretation is mediated through a chain of authorized transmitters.",
-                "properties": { "authority_grounding": { "const": "lineage" } },
-                "required": [ "authority_grounding" ]
+                "properties": {
+                  "authority_grounding": {
+                    "const": "lineage"
+                  }
+                },
+                "required": [
+                  "authority_grounding"
+                ]
               },
               {
                 "$comment": "Extraction: an institution extracts benefit from kernel stability; a fixed canonical text wielded for institutional authority is a standard CS shape.",
-                "properties": { "authority_grounding": { "const": "extraction" } },
-                "required": [ "authority_grounding" ]
+                "properties": {
+                  "authority_grounding": {
+                    "const": "extraction"
+                  }
+                },
+                "required": [
+                  "authority_grounding"
+                ]
               },
               {
                 "$comment": "Practice: the practitioner community IS the interpretive body; oral tradition, professional custom, common-law evolution.",
-                "properties": { "authority_grounding": { "const": "practice" } },
-                "required": [ "authority_grounding" ]
+                "properties": {
+                  "authority_grounding": {
+                    "const": "practice"
+                  }
+                },
+                "required": [
+                  "authority_grounding"
+                ]
               },
               {
                 "$comment": "Expertise: a credentialed professional body interprets evidence or standards (medical guidelines, engineering standards bodies, peer-review communities).",
-                "properties": { "authority_grounding": { "const": "expertise" } },
-                "required": [ "authority_grounding" ]
+                "properties": {
+                  "authority_grounding": {
+                    "const": "expertise"
+                  }
+                },
+                "required": [
+                  "authority_grounding"
+                ]
               }
             ]
           }
@@ -1107,19 +1166,27 @@
     {
       "$comment": "OQ-92 receipt surface rides the stakeholder layer: gain_flow is a statement about seats, so authoring it without the stakeholders[] surface is incoherent. Presence of gain_flow requires stakeholders (empty-array case governed by the Pattern-5 guard above).",
       "if": {
-        "required": [ "gain_flow" ]
+        "required": [
+          "gain_flow"
+        ]
       },
       "then": {
-        "required": [ "stakeholders" ]
+        "required": [
+          "stakeholders"
+        ]
       }
     },
     {
       "$comment": "OQ-92 receipt surface, cost half: same rider — fixing_cost is authored about the same seats (who could fix, at what cost), so it also requires the stakeholders[] surface.",
       "if": {
-        "required": [ "fixing_cost" ]
+        "required": [
+          "fixing_cost"
+        ]
       },
       "then": {
-        "required": [ "stakeholders" ]
+        "required": [
+          "stakeholders"
+        ]
       }
     },
     {

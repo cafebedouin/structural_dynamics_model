@@ -65,6 +65,32 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — DETERMINISM-FRONTIER ruling promoted to CLAUDE.md; Phase C removal commit (schema perspectives[]/mandatrophy_resolved OUT, provenance/8 REQUIRED incl. model+sampling); archive-before-removal executed; replicate probe folded into cohort zero
+**Files:** CLAUDE.md, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/narrative_ontology.pl, prolog/guard_exclusions.pl, prolog/signature_detection.pl, prolog/stack.pl, agent/example_platform_commission.json, ISSUES.md, prolog/archives/datasets/pre_cohort_zero_2026-06-12/
+**Tier:** landed
+
+Operator ruling (via web-session analysis): "it's the LLM" is a hypothesis sitting where a
+witness goes — three mechanisms produce same-material-different-results (generation
+stochasticity / ensemble refit / fixed-input non-determinism), attributed by stage-hash
+diff, never assumption. Record check WITNESSED all three in-repo: OQ-26 (ε
+generated-not-invariant; Axiom 2 amended v6.13.1), press/Reformation 3-naming 9-file
+triplet (kernel_v1), naming-drift siblings; the 57-story ensemble refit; OQ-112
+order-dependency class + byte-identical same-code reruns (single commits only). Promoted
+to CLAUDE.md Critical Distinctions: generation NEVER reproduces; committed JSON = the
+checked determinism frontier; re-generated stories are NEW DRAWS never re-measurements.
+Landed with it: GATE-0 exclusion (witnesses W1-W3, c_gate0_exclusion_witnesses.out);
+archive-before-removal (pre_cohort_zero_2026-06-12: 62 pl + 60 json, schema-pinned at
+046e0a40; ab_pilot_pair permanent per R4); schema removal + provenance/8 REQUIRED (model +
+sampling_params per the ruling); compiler emits story_provenance/8, perspectives emission
+retired delete-not-guard (reason left with the corpus); example carries honest
+hand-authored provenance; witnesses W1-W5 (c_removal_commit_witnesses.out): example
+PASS/compiles/lints clean, no-provenance fires, old-format invalid AS DESIGNED (archived
+schema governs the archive). Replicate probe (3-5 stories x 3 draws, field-stability
+table) folded into cohort zero — the table defines which fields n=1 meta-analysis may
+compare. Remaining Phase C: regen driver + cohort zero (API spend), reading_diff
+re-point, re-witness battery (C-arm + named pair + trio re-measure + corroborated_zombie
++ replicate probe), close-out.
+
 ## 2026-06-12 — OQ-114 RESOLVED: archive probe under frozen criterion → OUTCOME 3 (mixed) → operator ruled the live 3 SPLIT (2 in / trust_erosion out, kill conditions + fail-closed exclusion + named re-witness); rider: no-beneficiary conjunct WRONG
 **Files:** ISSUES.md, audits/2026-06-12_oq114_archive_probe/
 **Tier:** landed

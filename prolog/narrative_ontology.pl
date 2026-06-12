@@ -102,6 +102,7 @@
     cs_reading_relation/3,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
+    story_provenance/8,            % story_provenance(C, PromptCommit, SchemaCommit, Date, SourceEssay, OneShotExample, Model, SamplingParams) — cohort metadata (Phase C growth rule + determinism-frontier ruling 2026-06-12)
     measurement_basis/2,
     suppression_profile/2,
     intent_viable_alternative/3, intent_alternative_rejected/3,

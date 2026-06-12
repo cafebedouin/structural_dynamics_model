@@ -15,8 +15,13 @@
     "human_readable": "Dominant OS Marketplace Commission Gate",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
-    "beneficiaries": ["os_marketplace_operator"],
-    "victims": ["major_app_publishers", "independent_developers"]
+    "beneficiaries": [
+      "os_marketplace_operator"
+    ],
+    "victims": [
+      "major_app_publishers",
+      "independent_developers"
+    ]
   },
   "stakeholders": [
     {
@@ -91,24 +96,96 @@
     "end": 30
   },
   "measurements": [
-    { "metric": "base_extractiveness", "time_point": 0, "value": 0.52 },
-    { "metric": "base_extractiveness", "time_point": 6, "value": 0.58 },
-    { "metric": "base_extractiveness", "time_point": 12, "value": 0.63 },
-    { "metric": "base_extractiveness", "time_point": 18, "value": 0.68 },
-    { "metric": "base_extractiveness", "time_point": 24, "value": 0.71 },
-    { "metric": "base_extractiveness", "time_point": 30, "value": 0.74 },
-    { "metric": "theater_ratio", "time_point": 0, "value": 0.15 },
-    { "metric": "theater_ratio", "time_point": 6, "value": 0.18 },
-    { "metric": "theater_ratio", "time_point": 12, "value": 0.22 },
-    { "metric": "theater_ratio", "time_point": 18, "value": 0.27 },
-    { "metric": "theater_ratio", "time_point": 24, "value": 0.31 },
-    { "metric": "theater_ratio", "time_point": 30, "value": 0.35 },
-    { "metric": "suppression_requirement", "time_point": 0, "value": 0.6 },
-    { "metric": "suppression_requirement", "time_point": 6, "value": 0.66 },
-    { "metric": "suppression_requirement", "time_point": 12, "value": 0.72 },
-    { "metric": "suppression_requirement", "time_point": 18, "value": 0.77 },
-    { "metric": "suppression_requirement", "time_point": 24, "value": 0.8 },
-    { "metric": "suppression_requirement", "time_point": 30, "value": 0.83 }
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.83
+    }
   ],
   "commentary": {
     "narrative_context": "A dominant mobile OS operator requires every application distributed through its marketplace to use its proprietary payment system, taking a commission on each transaction. The rule is presented as a security and quality measure; publishers and competition authorities increasingly read it as leveraging control of OS distribution to extract rents from the adjacent market for digital goods. The claim/metric gap is deliberate: the constraint is CLAIMED as rope (the operator's own framing) while the authored metrics describe substantially extractive, actively enforced operation — the engine measures that divergence; do not reconcile the claim to the metrics.",
@@ -135,5 +212,14 @@
       "type_class": "conceptual",
       "description": "Whether the constraint's coordination and extraction components are structurally separable."
     }
-  ]
+  ],
+  "provenance": {
+    "prompt_commit": "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+    "schema_commit": "c6d6880c39ec6bdfedde2a1d41cc00211f451559",
+    "generated_date": "2026-06-11",
+    "source_essay": "none",
+    "one_shot_example": "none_this_is_the_example",
+    "model": "none_hand_authored",
+    "sampling_params": "none"
+  }
 }

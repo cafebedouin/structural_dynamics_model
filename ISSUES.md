@@ -4742,8 +4742,17 @@ era and pinned in snapshot):**
    demographic_skill_mismatch) + the trio re-measure run against cohort zero.
 4. **Growth rule (schema-REQUIRED provenance, fail-closed):** every story carries prompt
    version (commit), schema commit, generation date, source-essay identifier, one-shot
-   example in effect — the FNL inherited-signature machinery generalized per-cohort. An
-   unprovenanced story is un-meta-analyzable by construction.
+   example in effect, **plus MODEL STRING and SAMPLING PARAMS (determinism-frontier
+   ruling, 2026-06-12)** — the FNL inherited-signature machinery generalized per-cohort.
+   An unprovenanced story is un-meta-analyzable by construction.
+   **Replicate probe rides cohort zero (same ruling):** 3–5 stories × 3 draws while the
+   API is warm; field-level stability table (which fields are draw-stable — types? metric
+   values? stakeholder structure? — and which swing). That table DEFINES the claims
+   n=1-per-story meta-analysis may make: cross-story comparison on stable fields is
+   signal; on unstable fields it is sampling noise wearing a story ID. Each regenerated
+   story is ONE DRAW from a distribution (CLAUDE.md: generation is stochastic; the
+   committed story is the determinism frontier — backchecking a generation tells nothing
+   about the next run).
 5. **Snapshot rule:** corpus-relative statistics make the live corpus a moving target —
    pipeline runs that feed analysis get a snapshot ID; cross-story claims are stable only
    WITHIN a snapshot; cross-time claims cite both endpoint manifests. (Extends the
