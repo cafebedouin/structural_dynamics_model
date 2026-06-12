@@ -4616,6 +4616,20 @@ contention) remain operative build specs here.
   computing over seats) by whichever item lands second — recompute-over-seats closes it as
   a side effect; retire leaves it to the presence-gate item's scope. Two individually clean
   Pattern-3 diffs do NOT discharge this; the seam lives between them.
+  **Unanimity recon (2026-06-12, read before adjudication):** the site is
+  `only_mountain_classifications/1` (`signature_detection.pl:1345–1347`), guarding FCR's
+  `appears_as_rope(low_extraction_profile)`. (i) Post-Phase-C failure mode is fail-OPEN:
+  on an empty authored table the negated guard succeeds, so FCR loses its mountain
+  protection on perspectives-free stories — second instance of the same seam class.
+  (ii) Adjudication leans RECOMPUTE (the guard's product — pure natural laws are not
+  "rope-appearing" — has no duplicate). (iii) **Reentrancy hazard, the reason this was not
+  done in-session:** the guard runs INSIDE the signature layer; recomputing it via
+  `dr_type/3` recurses (dr_type → integrate_signature_with_modal → FCR → this guard).
+  The recompute must use a PRE-SIGNATURE computed type — `classify_from_metrics/6`-level
+  unanimity over the canonical contexts, or the `natural_law_signature/1` profile check —
+  never `dr_type/3`. Whoever lands it owes the seam positive control (mountain-claimed
+  perspectives-free story) plus a reentrancy witness (signature evaluation terminates on a
+  story whose guard path executes the recompute).
 - AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
   no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
   `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
