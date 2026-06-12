@@ -4719,9 +4719,40 @@ NL trio's filtering power is RE-MEASURED on the post-regen corpus at the Phase C
 re-witness — does the trio separate certified from non-certified among the regenerated
 stakeholder-only stories? Either outcome feeds the general-mechanism item; the archive
 finding (C ≡ claim-mountain) may not be cited as the live corpus's state without the
-re-measure. `perspectives[]` retired from the schema;
-`reading_diff` re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
-`prolog/archives/datasets/` with manifests (control arm preserved permanently); Build
+re-measure.
+**PHASE C REFRAMED (operator ruling, 2026-06-12 — retirement = option 2 reframed as
+cohort-zero seeding; rationale: meta-analysis requires a corpus homogeneous in generation
+era and pinned in snapshot):**
+1. **Archive-before-removal (hard edge):** the live corpus (62 .pl + paired .json) is
+   archived under `prolog/archives/datasets/` with a SCHEMA-PINNED manifest (schema commit,
+   code commit, n, date) BEFORE the removal commit — the archived corpus validates against
+   its archived schema; the live schema validates only what's live; no window where the 47
+   are live-invalid. The A/B pilot pair corpora archive likewise (control arm permanent,
+   R4).
+2. **Remove `perspectives[]` + `mandatrophy_resolved` OUTRIGHT** from the live schema;
+   `additionalProperties:false` stays strict; the compiler's perspectives emission retires
+   in the SAME commit (its reason — live legacy JSONs recompiling — leaves with the
+   corpus). Witness: post-archival full compile of what remains live, clean. Precondition
+   witnessed, not assumed: nothing from the 47 remains on a live recompile path
+   post-archival (fresh positive-controlled probe; stragglers join the archive or get
+   individual deprecation).
+3. **Regen ALL ~60 as COHORT ZERO** under the new prompt — seeding the single-surface
+   corpus, not modernizing a leaving one. The 12-failing-JSON dispositions mostly collapse
+   to "regenerated"; the C-arm re-witness + the NAMED PAIR (organization_floor,
+   demographic_skill_mismatch) + the trio re-measure run against cohort zero.
+4. **Growth rule (schema-REQUIRED provenance, fail-closed):** every story carries prompt
+   version (commit), schema commit, generation date, source-essay identifier, one-shot
+   example in effect — the FNL inherited-signature machinery generalized per-cohort. An
+   unprovenanced story is un-meta-analyzable by construction.
+5. **Snapshot rule:** corpus-relative statistics make the live corpus a moving target —
+   pipeline runs that feed analysis get a snapshot ID; cross-story claims are stable only
+   WITHIN a snapshot; cross-time claims cite both endpoint manifests. (Extends the
+   existing manifest discipline; witnessed basis: 3 signature changes refit 57 stories.)
+6. **Homogeneity falsifier (checkable at cohort two):** if cohort zero + two essay cohorts
+   show cross-cohort signature drift DESPITE identical prompt/schema/example provenance,
+   era homogeneity was not the binding constraint — engine stochasticity is — and the rule
+   shifts to n-per-cohort large enough to average over it.
+`reading_diff` re-pointed (stakeholder cells / computed seats); Build
 Discipline Pattern-3 old-vs-new diffs before any retirement. **Post-reset calculus (witnessed
 2026-06-11):** live corpus = 62 testsets, of which 47 carry compiled stakeholder facts and 49
 carry six-questions atoms — the regen scope is the four-tuple-only minority (~13–15 stories),
