@@ -127,8 +127,16 @@ ruled PAIR: C2 `frame_policy` + C1 time-indexed d via the existing stubs
 gate land together or not at all, folded into OQ-109 Phase C scope so the four-tuple-only
 minority regens once.
 
-**Operator ruling (2026-06-11):** _recorded in ISSUES.md OQ-110 after escalation; see the
-close note there._
+**Operator ruling (2026-06-11):** branch b does NOT open — OQ-110 resolved with derived-d
+standing. Rationale of record: the supp-pinned distinction existed in the package precisely so
+supp-floor crossings could be ruled not-evidence without amending the criterion, and that is
+the entire residual set; genuinely-unexplained = 0 is the criterion's no-open condition in
+substance, while the 9-flip package escalated exactly as the residual->0 path required.
+Nothing foreclosed: the C1/C2 stubs persist, pair-or-nothing stays satisfiable later.
+**Reopen condition (commit-plus-kill-condition):** ≥1 backed flip on a future residual join
+(post-regen substrate, manifest cited) surviving BOTH ε-pinning and supp-pinning. The
+inherited Backed-verification deposit chain OQ-33 → OQ-46 → OQ-83 → OQ-110 terminates here —
+it lives nowhere else. Close note: ISSUES.md OQ-110.
 
 ## Artifacts
 

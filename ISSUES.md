@@ -4388,7 +4388,9 @@ earlier times, inside constraints that DO assert enforcement dynamics — semant
 the sanctioned static case (OQ-46), where the scalar is the story's whole authoring.
 
 **Live load (as-of 2026-06-11, 48-file corpus):** 21 of 209 rows, inside 10 series-authoring
-constraints (`agenda_conditioning`, `digital_colonialism_data_extraction`, `post_1998_convergence`,
+constraints. *Re-derived 2026-06-11 on the 62-story corpus (OQ-110 join): 23 rows / 11
+constraints — all named-10 still live plus `institutional_trust_erosion`; 0 counted flips on
+or adjacent to a misaligned row (`audits/2026-06-11_oq110_residual_join/`).* Named-10: (`agenda_conditioning`, `digital_colonialism_data_extraction`, `post_1998_convergence`,
 `scale_ceiling`, `substantive_employment_reading`, `techno_optimist_reading`,
 `technocratic_paradigm_vs_human_primacy`, `truth_democracy_disinformation`,
 `wage_convergence_mechanism`, `wage_convergence_sustainability`).
@@ -4542,8 +4544,10 @@ contention) remain operative build specs here.
 - **The CLAUDE.md Critical-Distinctions mandatrophy note retires here**, when the R5
   report_generator consumer lands (the note says so explicitly).
 
-**Phase C scope (never before B):** `perspectives[]` retired from the schema; `reading_diff`
-re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
+**Phase C scope (never before B):** D-fork side of the Phase C gate is SATISFIED — OQ-110
+ruled branch b no-open (2026-06-11), so Phase C carries no C1/C2 schema additions and the
+remaining gate is "Phase B complete" alone. `perspectives[]` retired from the schema;
+`reading_diff` re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
 `prolog/archives/datasets/` with manifests (control arm preserved permanently); Build
 Discipline Pattern-3 old-vs-new diffs before any retirement. **Post-reset calculus (witnessed
 2026-06-11):** live corpus = 62 testsets, of which 47 carry compiled stakeholder facts and 49
@@ -4557,46 +4561,22 @@ spin-off; the join half is OQ-110).
 
 ## OQ-110 — Offline residual join (observer flip-events × committer stages) + the author-vs-derive D-fork, terminating in an operator ruling
 
-**Ω-type:** Ω_E (the join is computable from landed surfaces) + Ω_P (the D-fork — author
-time-varying role/d vs keep-derived — is the operator's, decided on the join's shape, not in
-advance).
+**Ω-type:** Ω_E (join) + Ω_P (D-fork ruling).
 
-**Status:** open — filed 2026-06-11 at the OQ-83 close. Terminates in an OPERATOR RULING, not
-a build.
+**Status:** resolved — 2026-06-11; operator ruled D-fork branch b does NOT open (derived-d stands).
 
-**Inputs (now clean):**
-- Both temporal descriptors joinable per constraint `id`: observer integer-time
-  `temporal_residual` flip-events + committer named-moment stages (`cs_reference_frame` /
-  `cs_drift_moment` / `cs_drift_gap` / `cs_drift_terminal`), landed 2026-06-08.
-- Backed semantics bucketed (OQ-46 close, 2026-06-11): 59 real flips / 20 `fab_adjacent`
-  EXCLUDED. The blanket alternative was rejected precisely because it launders `fab_adjacent`
-  into THIS fork's count (59→79) — do not re-merge the buckets here.
-- Classifier-sensitive flags graduated (OQ-83 Step 1,
-  `audits/2026-06-11_oq83_close/STEP1_REPORT.md`): `milblogger_legitimacy_erosion` 12→18
-  CLEAN (endpoint no longer classifier-sensitive on current code);
-  `clinical_deskilling_automation` 0→2 DOCUMENTED EXCLUSION (the semantic ε-sourcing
-  divergence stands; the snapshot_type determinism guard landed);
-  `challenge_as_commons_maintenance` T=5 is a known ε-sourcing mismatch touching no counted
-  flip — unflagged.
-- Substrate discipline: the 56/100 backed-flip figure is kernel_v2_test-regime (the then-live
-  corpus, archived at `00c639da`). The join re-runs the residual on its declared substrate and
-  cites the manifest, never the memorized figure.
-
-**Inherits consumer-side `Backed` verification:** the OQ-33 and OQ-46 closes both deposit it
-"with OQ-83"; it lives HERE now — the join is the consumer that finally exercises the bit
-(verify flips consumed downstream actually carry `Backed=true` semantics end-to-end before the
-fork is read).
-
-**The D-fork:** branch b (time-varying role/d) opens ONLY if backed residuals are
-ε-unexplained. If opened: C2 `frame_policy` + C1 time-indexed-d land as a PAIR via
-`effective_time/3` + `time_indexed_directionality_source/4` (use-site coupled; shipping a
-source without a policy gate forecloses Originalist-over-a-time-source). Shape ruled by the
-join; the ruling is the operator's.
-
-**Cross-refs:** OQ-105 (the scalar substitution sets flip TIMING in 2 timelines — the join
-must read flip times against the misalignment buckets before attributing them); OQ-102
-(time-series provenance buckets); OQ-87 (committer-axis C/B — a distinct question that shares
-the committer stage surface).
+**Resolution.** Join + pinned counterfactuals on the live corpus (manifest 2026-06-12T00:59:49Z,
+`c22ec561`, clean, n=62): 91 backed flips → 82 ε-explained / 9 supp-explained residual (all
+snare-suppression-floor crossings at the analytical seat — the bucket the pre-registered
+criterion declared not-evidence-for-time-varying-d) / **0 genuinely unexplained**. OQ-105
+cross-read: 0 counted flips on or adjacent to misaligned rows. The inherited consumer-side
+`Backed` verification is DISCHARGED here — the OQ-33 → OQ-46 → OQ-83 → OQ-110 deposit chain
+terminates (1.1 controls A/B/C + full-corpus in-process identity diff, comparator
+positive-controlled). Nothing foreclosed: the C1/C2 stubs persist
+(`constraint_indexing.pl:426–441`), so pair-or-nothing stays satisfiable later.
+**Reopen condition (the ruling's falsifier):** ≥1 backed flip on a future residual join
+(post-regen substrate, manifest cited) surviving BOTH ε-pinning and supp-pinning. Evidence:
+`audits/2026-06-11_oq110_residual_join/` (WRITEUP.md), KNOWN_STATE 2026-06-11.
 
 **Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the join half of the
 spin-off; the Phase B/C half is OQ-109).

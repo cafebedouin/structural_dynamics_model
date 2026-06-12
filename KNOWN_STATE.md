@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-110 RESOLVED: residual join + pinned counterfactuals; operator ruled D-fork branch b NO-OPEN (derived-d stands); Backed deposit chain discharged
+**Files:** ISSUES.md, python/audits/oq110_residual_join.py, audits/2026-06-11_oq110_residual_join/, prolog/temporal_residual.pl, prolog/drl_composition.pl, prolog/json_report.pl
+**Tier:** landed
+
+Worktree `oq110-residual-join`. Fresh pipeline at clean HEAD (manifest 2026-06-12T00:59:49Z,
+`c22ec561`, n=62) — prior output was dirty-tree `25d6a637`; flip totals identical across runs.
+(1.1) Backed end-to-end verified: controls A (fab_adjacent excluded via OQ-105
+SuppBacked=false endpoint), B (backed flip present, deltas match JSON), C
+(`with_retracted` eps@T2 removes flip, restore returns it) + full-corpus in-process identity
+diff over 62 (comparator positive-controlled). The OQ-33 → OQ-46 → OQ-83 → OQ-110
+Backed-verification deposit chain TERMINATES here. (1.2) Join: coverage both=11/62,
+flips_only=23, stages_only=4, neither=24; 91 backed flips / 20 fab_adjacent; OQ-105
+re-derived 23 rows/11 constraints (new host `institutional_trust_erosion`), 0 flips
+on/adjacent. Committer moments are named atoms — presence-level join only. (1.3)
+Pre-registered pins on all 91 flips × 2: 82 ε-explained / 9 supp-explained (ALL
+snare-suppression-floor crossings at the analytical seat) / 0 genuinely unexplained; zero
+third-type outcomes; identity-pin + expected-vanish controls pass. Aggregate v1's verdict
+line keyed to the wrong bucket was corrected to the pinned ε-unexplained definition (buckets
+untouched — implementation fix, not a criterion amendment). (1.4) Package escalated; operator
+ruled branch b NO-OPEN with reopen condition: ≥1 backed flip surviving BOTH pins on a future
+join. C1/C2 stubs persist; OQ-109 Phase C gate now reads "B complete" alone. Gotcha worth
+keeping: `json_report.pl` is a NON-module script — its predicates live in `user`;
+`json_report:write_temporal_residual/2` is an unknown-procedure error.
+
 ## 2026-06-11 — OQ-99 + OQ-100(a–c) RESOLVED: omega scenarios render authored protocols (subject-bound, fail-loud); report register coherence (qualified confidence labels, rival-P-graded disagreement, self-consistency header)
 **Files:** prolog/report_generator.pl, python/enhanced_report.py, python/enrich_pipeline_json.py, agent/orchestrator.py, ISSUES.md
 **Tier:** landed
