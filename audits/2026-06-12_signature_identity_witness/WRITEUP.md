@@ -103,3 +103,29 @@ the seed link authored at generation time — identity is shaped *forward* at ge
 never recovered *backward* by analysis. Deterministic re-runs behind the frontier
 (byte-identical pipeline diffs, gauntlet reconciliations) certify the snapshot, not the
 next cohort.
+
+## ADDENDUM — operator ruling (2026-06-12, same day): the shift IS the mechanism
+
+The Verdict section's valence is corrected by operator ruling, citing the seat series
+(`docs/seat-theorem-v1.md`). "Story-level identity does not survive a redraw" framed
+draw 2's category shift as identity *failing* — which presupposes a seat-free fact of
+what the story really is, for the redraw to have drifted from. The Coupling Theorem
+forbids exactly that: a verdict is seat-free iff contentless, so a classification that
+could not shift across draws would be measuring nothing open. A redraw occupies a new
+seat (different axioms held, different position in possibility space); the engine
+returning a different verdict is seat-dependence functioning as designed — the
+mechanism working correctly. Determinism-as-desideratum is itself part of the problem.
+
+The analysis product is the SHAPE — do the connections, clusters, and shifts generate
+hypotheses we would not otherwise form — not draw-invariant truth. Corollary reading
+(INFERRED, licensed by §6 Q5, where the liveness test is named "the human form of the
+σ/seat distinction itself"): the replicate probe's stability table is an empirical
+σ/seat partition — draw-stable fields are situation-fixed, draw-unstable fields are
+seat-expressive, and the distribution of where draws land is analysis substrate, not
+noise to engineer away.
+
+What stands unchanged: the mechanical findings (no name/signature keying of per-story
+mechanisms across a regen boundary; `seeded_from`/`draw` as provenance plumbing — now
+explicitly with no identity semantics) and the witness discipline itself (Corollary 3:
+pre-committed confrontations still bite; reabsorption is costly and visible). What is
+withdrawn: the "identity lost" valence — there was no seat-free identity to lose.

@@ -433,13 +433,21 @@ the stage-hash diff, never by assumption: "it's the LLM" without the diff is a h
 sitting where a witness goes. Meta-analysis claims ride snapshot manifests + per-story
 provenance (model, sampling params, prompt/schema/example commits — schema-required).
 **The typing machinery (fingerprint/orbit/Boltzmann) carries KIND-level identity only:**
-story-level identity is authored forward (`seeded_from` at generation time), never
-recovered backward by signature matching — witnessed both directions on the naming-drift
-triple (one same-material draw shared nothing positive with its siblings; a cross-topic
-pair matched 6/7; `audits/2026-06-12_signature_identity_witness/`). Kind-level
-meta-analysis over draw-stable fields (the replicate probe's stability table rules which)
-is what survives generation stochasticity; never key an exclusion list, named re-witness,
-or any per-story mechanism on names or signatures across a regen boundary.
+`seeded_from` (authored at generation time) is provenance/coordination plumbing, never
+identity recovered backward by signature matching — witnessed both directions on the
+naming-drift triple (one same-material draw shared nothing positive with its siblings; a
+cross-topic pair matched 6/7; `audits/2026-06-12_signature_identity_witness/`). Never key
+an exclusion list, named re-witness, or any per-story mechanism on names or signatures
+across a regen boundary. **And a category shift on redraw is the mechanism WORKING, not
+identity decaying (operator ruling, 2026-06-12; `docs/seat-theorem-v1.md`):** verdicts
+are seat-indexed, a redraw occupies a new seat, and a classification that could not
+shift would be contentless (Coupling Theorem) — determinism-as-desideratum is part of
+the problem. The analysis product is the SHAPE (clusters, shifts, connections — judged
+by the hypotheses they generate, not by draw-invariant truth); read the replicate
+probe's stability table as an empirical σ/seat partition (draw-stable ≈ situation-fixed;
+draw-unstable ≈ seat-expressive — its distribution is analysis substrate), not a noise
+filter. What Corollary 3 keeps: pre-committed confrontations still bite — the witness
+discipline is untouched, only the determinism valence was wrong.
 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.

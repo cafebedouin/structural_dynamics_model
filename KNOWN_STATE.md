@@ -90,7 +90,17 @@ signature-keying the trust_erosion exclusion list would have lost draw 2. OQ-109
 updated: seeded_from + draw index schema-required for cohort zero; replicate probe
 gains within-vs-between pairwise distances; stability table gates CLAIMS not generation.
 Caveats: one triple, 3 controls, old-prompt regime (upper bound on drift); the funded
-replicate probe is the calibration, this is data point zero.
+replicate probe is the calibration, this is data point zero. RULING APPENDED same day
+(operator, citing docs/seat-theorem-v1.md): a category shift on redraw is the mechanism
+working CORRECTLY — verdicts are seat-indexed, a redraw is a new seat, a classification
+that could not shift would be contentless (Coupling Theorem); the analysis product is
+SHAPE (hypothesis generation), not draw-invariant truth; determinism-as-desideratum is
+part of the problem. Mechanical halves stand (no name/signature keying across regen;
+seeded_from = provenance plumbing, no identity semantics); the "identity does not
+survive" valence is WITHDRAWN — there was no seat-free identity to lose. Stability table
+reads as an empirical sigma/seat partition (draw-stable = situation-fixed; draw-unstable
+= seat-expressive), not a noise filter. WRITEUP addendum + ISSUES.md OQ-109 + CLAUDE.md
+paragraph all amended with the ruling.
 
 ## 2026-06-12 — DETERMINISM-FRONTIER ruling promoted to CLAUDE.md; Phase C removal commit (schema perspectives[]/mandatrophy_resolved OUT, provenance/8 REQUIRED incl. model+sampling); archive-before-removal executed; replicate probe folded into cohort zero
 **Files:** CLAUDE.md, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/narrative_ontology.pl, prolog/guard_exclusions.pl, prolog/signature_detection.pl, prolog/stack.pl, agent/example_platform_commission.json, ISSUES.md, prolog/archives/datasets/pre_cohort_zero_2026-06-12/

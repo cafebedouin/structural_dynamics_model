@@ -4781,6 +4781,27 @@ era and pinned in snapshot):**
    witness. What survives generation stochasticity is KIND-level meta-analysis
    (fingerprint/orbit/Boltzmann distributions over draw-stable fields) — the corpus's
    analysis contract; which fields qualify is exactly what the stability table rules.
+   **RULING APPENDED (operator, 2026-06-12, citing the seat series —
+   `docs/seat-theorem-v1.md`): a category shift on redraw is the mechanism working
+   CORRECTLY, not identity failing.** The exercise's point is better analysis; things
+   should shift with new information. A redraw occupies a new seat (different axioms
+   held, different position in possibility space); verdicts are seat-indexed (Coupling
+   Theorem: seat-free iff contentless — a classification that could not shift across
+   draws would be measuring nothing open), and an earlier seat cannot pre-occupy the
+   later one (Corollary 3). Determinism-as-desideratum is itself part of the problem.
+   The analysis product is the SHAPE — do the connections, clusters, and shifts tell us
+   something interesting, generate hypotheses we would not otherwise form — not
+   draw-invariant truth. Corollary reading for the stability table (INFERRED, licensed
+   by §6 Q5's liveness test = the σ/seat distinction asked in the world): draw-stable
+   fields are situation-fixed (σ-side); draw-unstable fields are seat-expressive — the
+   table is an empirical σ/seat partition, not a noise filter. "Sampling noise wearing a
+   story ID" (item 4 above) indicts citing an unstable field as a story-level
+   re-measurement; the shift itself, as a distribution, is analysis substrate. The
+   witness's mechanical halves stand unchanged (no name/signature keying across regen;
+   `seeded_from`/`draw` are provenance plumbing with no identity semantics); what is
+   corrected is the "identity does not survive" valence — there was no seat-free
+   identity to lose. Corollary 3 keeps the witness discipline intact: pre-committed
+   confrontations still bite (reabsorption is costly and visible).
 5. **Snapshot rule:** corpus-relative statistics make the live corpus a moving target —
    pipeline runs that feed analysis get a snapshot ID; cross-story claims are stable only
    WITHIN a snapshot; cross-time claims cite both endpoint manifests. (Extends the
