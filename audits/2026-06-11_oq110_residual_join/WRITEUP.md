@@ -7,6 +7,9 @@
 prior output was produced at `25d6a637` on a dirty tree; flip totals were identical across the
 two runs (91 context-level flips / 20 fab-adjacent / 34 constraints), so the post-`25d6a637`
 code changes (incl. the `transition_paths.pl` determinism guard) did not move the residual.
+(*Caveat: that is a TOTALS comparison, not a per-flip identity check — a comfort note only;
+do not cite it later as "the runs were equivalent." Everything downstream ran on the fresh
+manifest.*)
 
 **Question:** classify backed observer flips as ε-explained vs ε-unexplained; join against
 committer drift stages; deliver the author-vs-derive D-fork (branch b: time-varying role/d)
@@ -80,7 +83,11 @@ inventory (91 = 91, set equality). Zero classify failures; zero third-type pinne
 **Implementation-correction note (criterion NOT amended):** v1 of `pin_aggregate.py` printed a
 final verdict keyed to the genuinely-unexplained count; the pre-registered text keys the 0/>0
 fork on the **ε-unexplained** count (survivors of ε-pinning). The line was corrected to the
-pinned definition; buckets and per-flip verdicts were never affected.
+pinned definition; buckets and per-flip verdicts were never affected. This is a
+**bug-to-spec repair, not an amendment**: the pinned text was the authority the code was
+corrected *against* — the case study for what "halt-and-escalate, never inline-amend" looks
+like when the defect is in the implementation rather than the criterion (the buckets stayed
+untouched and the package escalated instead of self-closing).
 
 | bucket | count | meaning (pre-registered) |
 |---|---|---|
@@ -110,7 +117,9 @@ tangled_rope.
 Committer-stage alignment of the residual set: 4/9 carry authored drift stages (all
 practice_drift / substantial; 3 husk-terminal unacknowledged, 1 stable_pattern acknowledged);
 5/9 author no committer stages. Presence-level only — named moments admit no timing comparison
-against the integer flip times.
+against the integer flip times. **Coverage caveat for any future reopen evaluation:** the
+stage-alignment dimension rested on both-surfaces = 11/62 — UNDERPOWERED by coverage, not
+null; thin evidence, not absent structure.
 
 ## 1.4 D-fork decision package (the ruling is the operator's)
 

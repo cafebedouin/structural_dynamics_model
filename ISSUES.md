@@ -4627,9 +4627,15 @@ cross-read: 0 counted flips on or adjacent to misaligned rows. The inherited con
 terminates (1.1 controls A/B/C + full-corpus in-process identity diff, comparator
 positive-controlled). Nothing foreclosed: the C1/C2 stubs persist
 (`constraint_indexing.pl:426–441`), so pair-or-nothing stays satisfiable later.
-**Reopen condition (the ruling's falsifier):** ≥1 backed flip on a future residual join
-(post-regen substrate, manifest cited) surviving BOTH ε-pinning and supp-pinning. Evidence:
-`audits/2026-06-11_oq110_residual_join/` (WRITEUP.md), KNOWN_STATE 2026-06-11.
+**Known signature (named so no one re-derives it):** the entire residual set was ONE
+mechanism — the authored suppression series crossing the snare suppression floor (0.60)
+between T1 and T2 at the analytical seat ("snare-floor mechanism"); a future join may
+pre-classify floor-crossing residuals into this bucket. **Reopen condition (the ruling's
+falsifier, mechanism-aware):** ≥1 backed flip on a future residual join (post-regen
+substrate, manifest cited) surviving BOTH ε-pinning and supp-pinning AND not attributable
+to the snare-floor mechanism. Coverage caveat for that evaluation: this close's
+stage-alignment evidence was UNDERPOWERED by coverage (both-surfaces = 11/62), not null.
+Evidence: `audits/2026-06-11_oq110_residual_join/` (WRITEUP.md), KNOWN_STATE 2026-06-11.
 
 **Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the join half of the
 spin-off; the Phase B/C half is OQ-109).
