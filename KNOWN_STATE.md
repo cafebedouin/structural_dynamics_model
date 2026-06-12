@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-12 — OQ-103 RESOLVED: contamination-edge provenance made load-bearing + count-based salience floor at the read site
+**Files:** ISSUES.md, prolog/json_report.pl, python/enhanced_report.py, python/tests/test_contamination_provenance_salience.py
+**Tier:** landed
+
+Scope-corrected the OQ at close: the provenance bit was NOT absent — `constraint_neighbors/3`
+tags each edge with `Source` → `json_report.pl` serializes `edge_type` → `enhanced_report.py`
+already printed it. `edge_type == explicit` IS the story-authored-vs-corpus-derived bit. Defects
+were (1) inert bit (no legend, equal interpretive weight) and (2) no salience floor.
+
+Read-site fix (no engine classification change):
+- `json_report.pl` `write_one_neighbor/6` now emits `shared_agent_count` per neighbor (distinct
+  agents shared on the link type; null for explicit/inferred_coupling). It threads the subject `C`
+  through `write_neighbor_array/4`→`write_neighbor_items/4`. `edge_strength = 0.3 × count`, so the
+  count is the recalibration-proof salience input (don't back-derive from a literal 0.3).
+- `enhanced_report.py` `build_contamination_network` gains Provenance/Salience columns + legend +
+  `_edge_is_authored`/`_edge_is_salient` helpers; "primarily X" ranks salient edges only; explicit
+  empty-above-floor sentence. Floor: authored always salient; derived agent edge salient iff
+  count≥2; inferred_coupling (zero live coverage) falls back to strength≥0.6.
+
+Witness: pipeline 2026-06-12T04:29:38Z n=62; 82/106 (77%) edges demote to low-salience; both filed
+witnesses (reprogramming→digital_colonialism, trust→representation) render `corpus-derived|low`.
+Unit test 5/5. Theorized dedup-mislabel checked on the one live overlap pair, NOT witnessed —
+`edge_type` reliable. Back-propagation to existing essays declined (operator: fix-then-rebuild).
+Synthesis enforcement stays OQ-101 (`tensions_ledger.py` can now consume the new fields). Commit
+`ded4969d` (merge `1bb6e535`). No CLAUDE.md promotion: in-place OQ-103 comments + named helpers
+are loud enough.
+
+---
+
 ## 2026-06-11 — OQ-112 item-4 sentinel trace: verdict SILENT (three mechanisms); absorber-boundary class elevated to item 2; maxent_indexed_run order dependency found
 **Files:** ISSUES.md, audits/2026-06-11_oq112_item4_sentinel_trace/, prolog/maxent_classifier.pl, prolog/json_report.pl
 **Tier:** landed
