@@ -3203,10 +3203,11 @@ reverse — re-collapses the diff). If anything is steered, it is via topic/sour
   bands: mountain (n=9) 0.02–0.15, 0/9 at 0.68; rope (n=10) 0.08–0.28 (3 exceptions at 0.48/0.68
   are kernel-reading stories — flat_control, techno_optimist_reading, post_1998_convergence —
   authored perspectival divergence, not noise); tangled_rope (n=23) 0.42–0.68; snare (n=17)
-  0.68–0.78, only 3 distinct values. 0.68 = "the model's number for a high-extraction type," not a
-  free default. Bands are consistent with config thresholds (rope_epsilon_ceiling 0.45 /
-  snare_epsilon_floor 0.46 / tangled_rope_epsilon_floor 0.30) which remain UNDISCLOSED — generation
-  prompt grep clean for 0.68/0.55/0.56/0.45/0.46, positive control fired on a known number.
+  0.68–0.78, only 3 distinct values; piton (n=1, regime_change_structural_break) 0.28. Denominator
+  reconciled: 9+10+23+17+1 = 60. 0.68 = "the model's number for a high-extraction type," not a
+  free default. The GENERATION prompt is clean of all threshold numbers (grep for
+  0.68/0.55/0.56/0.45/0.46, positive control fired on a known number) — but see the leak re-check
+  below: the SCOPE surface is not clean.
 - **Mechanism found — the compression is two-layer:** (1) PIPELINE-DESIGNED quantization: SCOPE
   co-authors `epsilon_bin` ∈ {v_low, low, mod, high} (numeric boundaries disclosed at the SCOPE
   stage only, `prompts/uke_scope_v2_json.md:292`) alongside `hypothesis` (→ claimed_type); the
@@ -3226,13 +3227,50 @@ reverse — re-collapses the diff). If anything is steered, it is via topic/sour
   upstream, both received by the generator). Never cite the ε↔claimed_type correlation as a
   detection result — it is authoring convention (OQ-70-analog).
 
-**Proposed ruling (pending operator):** adopt (c) mechanism-informed — (1) report ε statistics at
-bin resolution (the 4 SCOPE bins); sub-bin precision is unsupported (usable ε axis ≈ 4 levels
-corpus-wide, ~2 conditional on claimed_type); (2) re-baseline the (a) watch on the cohort-zero
-regime; (3) land the provenance bit: make `uke_scope.epsilon_bin` mandatory-when-manifest-fed and
-schema-validate its enum, so future cross-tabs can separate instruction-following from idiom;
-(4) mark (b) answered as above; (5) keep the no-disclosure rule. Status would move open →
-mitigated once (3) lands.
+**Leak status REVISED (re-check 2026-06-12, against the new mechanism):** "NOT a leak" no longer
+holds as stated. Two of the three interior bin boundaries disclosed at
+`prompts/uke_scope_v2_json.md:292` coincide EXACTLY with config classifier thresholds: **0.10 =
+`piton_epsilon_floor`** (Rule Z, `config.pl:293`) and **0.30 = `tangled_rope_epsilon_floor`**
+(`config.pl:270`). The third boundary (0.55) matches nothing — `grep 0.55 config.pl` is empty
+(control: the same grep family found 0.45/0.46/0.30/0.10 lines), so the rope/snare split
+(`rope_epsilon_ceiling` 0.45 / `snare_epsilon_floor` 0.46) is NOT transmitted: the "mod" bin
+(0.31–0.55) straddles it and that decision boundary remains free. Consequence for bin-conformant
+stories: a "low" assignment guarantees ε > 0.10 (Rule Z pre-satisfied); "mod"/"high" guarantees
+ε > 0.30 (tangled floor pre-satisfied) — concordance on those two gates is manufactured by
+construction (→ OQ-117). Derivation direction is UNESTABLISHED (the boundaries may share ancestry
+with the logic.md zone structure rather than copying config); the disclosure reaches the SCOPE
+bin-assigner only — generation still sees just the token.
+
+**Ruling shape (operator-directed 2026-06-12; formal ruling pending) — a SPLIT, not one status:**
+
+1. **Designed-quantization half — close as working-as-designed.** ε resolution is ~4 levels by
+   construction wherever the manifest path feeds a bin (and ~2 levels conditional on
+   claimed_type). Report ε-keyed statistics at bin resolution; sub-bin precision is unsupported.
+   Provenance hardening rides along: `uke_scope.epsilon_bin` mandatory-when-manifest-fed +
+   schema-validate its enum (4 free-text tokens in the wild).
+2. **Idiom half — stays OPEN, re-baselined on the cohort-zero regime.** The within-bin point mass
+   at 0.68 and the .x8 rail are disclosed nowhere and persist into the new regime UNTESTED (live
+   n=5: rail 4/5). The old regime's tight bands do NOT carry forward automatically — the live
+   corpus already band-breaks (institutional_trust_erosion_c0: claim=mountain, ε=0.68 — the same
+   story behind OQ-116's MOUNTAIN_METRIC_CONFLICT firing; the old regime had mountain 0/9 at
+   0.68). Graduation step = the bin-withdrawal probe below.
+3. **Independence circularity — ESCALATED to OQ-117** (own entry, not a paragraph here): SCOPE
+   co-authoring `hypothesis` + `epsilon_bin` is a validity condition on the divergence machinery,
+   not a measurement caveat on this axis.
+
+**Bin-withdrawal probe (pre-registered, awaiting spend approval — graduation step for fate 2,
+doubles as OQ-117's circularity probe and the (a) re-baseline's control arm):** matched
+generation on cohort-zero machinery, same seed specs, two arms — bin-FED (epsilon_bin token in
+the generation prompt) vs bin-WITHHELD (field omitted); arm size pinned at plan review (≥12/arm
+suggested to resolve a 4-bin grid). Outcome semantics, written before the run: grid (coarse
+vocabulary / .x8 rail / 0.68-given-high) PERSISTS in the withheld arm ⇒ model idiom dominates;
+COLLAPSES toward spread ⇒ instruction-following dominates; PARTIAL ⇒ both layers live — quantify
+the split. Either way the withheld arm breaks the co-authoring channel, giving OQ-117 its
+divergence-rate comparison.
+
+**Direction-of-fix discipline (carried + extended):** still no disclosure of target ε values to
+the author; ADDITIONALLY no tightening of bin boundaries toward config thresholds (e.g. moving
+0.55 to 0.45/0.46 would sharpen the very transmission channel the leak re-check interrogates).
 
 ## OQ-79 — c-orchestrator recognizes kernels but silently drops their readings; flat-entry topics never engage the kernel question
 
@@ -5259,6 +5297,53 @@ doctrine forbids. Resolution shape: recalibrate or demote SCAFFOLD_DANGER_ZONE; 
 doctrine-align MOUNTAIN_METRIC_CONFLICT. Driver-owned pilot checks were 7/7 PASS
 (provenance/ids/validation/compile) — the witness bar failed AS WRITTEN on lint only; bar
 discrepancy recorded, not amended.
+
+## OQ-117 — Claim/metric co-authoring at SCOPE manufactures claimed-vs-computed concordance: a validity condition on the divergence machinery wherever the manifest path feeds both sides
+
+**Ω-type:** Ω_E (witnessed, quantifiable concordance manufacture) + an Ω_P design call (decouple
+at SCOPE vs document-as-condition).
+
+**Status:** open — escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
+entry, not a paragraph inside OQ-78's resolution).
+
+**The problem:** SCOPE co-authors `hypothesis` (→ `claimed_type`, the CLAIM side) and
+`epsilon_bin` (→ `base_properties.extractiveness`, the METRIC side) in the same upstream act
+(`prompts/uke_scope_v2_json.md`; mapping table `prompts/constraint_story_generation_prompt_json.md:756`).
+The generation prompt's "Claim/Metric Independence" checklist item asks the generator to author
+the two sides independently — but both arrive co-authored from upstream, so independence at the
+generation seat cannot be assumed for any manifest-fed story. Witnessed consequence (OQ-78
+cross-tab, kernel_v2_test2 n=60): ε tracks claimed_type in nearly separable bands (snare
+0.68–0.78, mountain 0.02–0.15); recorded-bin conformance 15/15.
+
+**The sharpener (boundary alignment, OQ-78 leak re-check):** two bin boundaries coincide exactly
+with classifier thresholds — 0.10 = `piton_epsilon_floor` (Rule Z), 0.30 =
+`tangled_rope_epsilon_floor`. For bin-conformant stories ε cannot fall on the disqualifying side
+of those gates: "low" pre-satisfies Rule Z; "mod"/"high" with a tangled hypothesis pre-satisfies
+the tangled ε floor. Concordance on those gates is manufactured, not measured. The rope/snare
+split (0.45/0.46) sits inside the "mod" bin and remains a free decision boundary.
+
+**Why a validity condition, not a caveat:** the divergence machinery (FNL/FCR/FSM firings,
+claimed-vs-computed concordance rates, Boltzmann compliance) reads claim-metric divergence as
+authored signal. Where claim and metric are co-authored upstream, LOW divergence measures
+pipeline construction, not authoring honesty — OQ-70's shape (authoring convention read back as
+detection). The witnessed counterexamples — three kernel-reading ropes at ε 0.48–0.68
+(techno_optimist_reading, flat_control, post_1998_convergence) — are deliberately authored
+exceptions: they prove the channel can be opened on purpose, not that it is open in routine
+generation.
+
+**What would resolve:**
+(a) consumer inventory — which divergence consumers read ε-side gates that bin-conformance
+pre-satisfies (Rule Z, tangled floor; per-consumer: does its input cross a manufactured
+boundary?);
+(b) the OQ-78 bin-withdrawal probe (pre-registered there) — the withheld arm breaks the
+co-authoring channel; compare divergence rates across arms;
+(c) operator design call — DECOUPLE at SCOPE (author epsilon_bin blind to hypothesis, or stop
+emitting it) vs DOCUMENT-AS-CONDITION (divergence statistics over manifest-fed stories carry a
+"concordance partly constructed" provenance bit). Direction-of-fix discipline from OQ-78
+applies: no tightening of bin boundaries toward config thresholds.
+
+**Cross-refs:** OQ-78 (mechanism + evidence + probe), OQ-116 (MOUNTAIN_METRIC_CONFLICT lint
+contradicts the same independence doctrine, lint side), OQ-70 (convention-read-as-detection).
 
 ---
 

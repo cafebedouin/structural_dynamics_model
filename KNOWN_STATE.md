@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-12 — OQ-78 evidence pass: ε clustering is two-layer (SCOPE bin quantization + model idiom); two bin boundaries EQUAL config thresholds; claim/metric circularity escalated to OQ-117
+**Files:** prompts/uke_scope_v2_json.md, prompts/constraint_story_generation_prompt_json.md, prolog/config.pl, ISSUES.md
+**Tier:** correction-key
+
+- The ε↔claimed_type correlation (kernel_v2_test2 n=60: snare 0.68–0.78, mountain 0.02–0.15,
+  bands near-separable; recorded-bin conformance 15/15, "high"→0.68 in 8/13) is AUTHORING
+  CONVENTION — never citable as a detection result (OQ-70-analog).
+- OQ-78's "NOT a leak" status REVISED: the bin boundaries disclosed at
+  `uke_scope_v2_json.md:292` include 0.10 and 0.30, EXACTLY `piton_epsilon_floor` (Rule Z) and
+  `tangled_rope_epsilon_floor`; bin-conformant stories pre-satisfy those two gates by
+  construction. 0.55 matches nothing — the rope/snare split (0.45/0.46) is NOT transmitted.
+  Derivation direction unestablished; disclosure reaches the SCOPE bin-assigner only.
+- Ruling shape (operator-directed, formal ruling pending): three-fate SPLIT — quantization half
+  working-as-designed (report ε at bin resolution, ~4 levels); idiom half (0.68 point mass, .x8
+  rail) OPEN, re-baselined on cohort zero, graduation = pre-registered bin-withdrawal probe
+  (fed/withheld arms, outcome semantics in OQ-78); independence circularity → OQ-117 (validity
+  condition on divergence machinery; consumer inventory + decouple-vs-document design call).
+- Reconciliations: the 60th story is regime_change_structural_break (sole claimed piton,
+  ε=0.28); the live cohort-zero corpus already band-breaks (institutional_trust_erosion_c0,
+  claim=mountain ε=0.68 — the OQ-116 MOUNTAIN_METRIC_CONFLICT firing), so old-regime bands do
+  not carry forward automatically.
+- Direction-of-fix: no target-ε disclosure; no tightening bin boundaries toward thresholds.
+
 ## 2026-06-12 — OQ-106 RESOLVED: RETIRE ruled and landed — `structural_coercive_intent` top verdict deleted (range-dead, producerless, consumerless); capture-as-design ratified as piton intension with recorded kill condition; GAP-08 revival stays generic
 **Files:** prolog/intent_engine.pl, prolog/config.pl, prolog/config_schema.pl, ISSUES.md, docs/design/design_gaps.md, audits/2026-06-12_oq106_retire/
 **Tier:** landed
