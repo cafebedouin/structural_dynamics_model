@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-105 per-row sweep: PREDICTED bucket discharged — 4/23 misaligned rows timing-distorted, all one snare-floor mechanism; fork ruling still open
+**Files:** ISSUES.md, audits/2026-06-11_oq105_row_sweep/
+**Tier:** landed
+
+Worktree `oq105-row-sweep` from `37ea069f`. Interpolation counterfactual over ALL 23
+grid-misaligned suppression rows (62-file corpus): substituted scalar vs linear interpolation
+of the constraint's own series through the same `classify_at_time_with_supp` clause path.
+Controls: interp-identity 215/215 authored points exact; same-path re-derivation 0 failures;
+enumeration census re-derives exactly the OQ-110 figures (23 rows / 11 constraints).
+Default context: 3/23 rows diverge; all 156 product contexts: **4/23 rows** (181/3588 cells,
+5.0%) — agenda_conditioning T=10, post_1998_convergence T=13,
+technocratic_paradigm_vs_human_primacy T=9, truth_democracy_disinformation T=2 (non-default
+contexts only). Every divergent cell is the one predicted mechanism: endpoint scalar ≥ snare
+suppression floor (0.60), local series interpolates below → snare dated early
+(sub=snare/interp=tangled_rope, no other type pair). 19/23 rows substitution-robust at every
+context. Witness-bucket refinement: substantive_employment_reading T=9 (an original
+flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 also clears the
+floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
+OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
+fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+
 ## 2026-06-12 — OQ-103 RESOLVED: contamination-edge provenance made load-bearing + count-based salience floor at the read site
 **Files:** ISSUES.md, prolog/json_report.pl, python/enhanced_report.py, python/tests/test_contamination_provenance_salience.py
 **Tier:** landed

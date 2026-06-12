@@ -4448,19 +4448,29 @@ or adjacent to a misaligned row (`audits/2026-06-11_oq110_residual_join/`).* Nam
 `technocratic_paradigm_vs_human_primacy`, `truth_democracy_disinformation`,
 `wage_convergence_mechanism`, `wage_convergence_sustainability`).
 
-**Witnessed scope vs mechanism-based prediction — kept separate (do not let the mechanism inflate
-the witness count).** WITNESSED (2 of 3 checked row-by-row): the exported type flip lands ON a
-substituted row — `substantive_employment_reading` flips tangled_rope→snare at T=9 on substituted
-0.67 (own series: 0.58 at T=6, 0.67 at T=12); `post_1998_convergence` flips at T=13 on substituted
-0.72 (own series: 0.48 at T=9, 0.65 at T=18). CHECKED-NEGATIVE (1 of 3): `truth_democracy_disinformation`
-flips at T=4 on a series row — the substitution does not set its flip timing. PREDICTED (unverified):
-the endpoint-injection mechanism implies more of the 21 rows date flips early wherever the scalar
-crosses a floor the local series does not; the per-row sweep of the remaining rows has not been run.
+**Witnessed scope — the per-row sweep RAN 2026-06-11; the PREDICTED bucket is discharged
+(`audits/2026-06-11_oq105_row_sweep/`).** All 23 misaligned rows swept under the interpolation
+counterfactual (substituted scalar vs linear interpolation of the constraint's own series, same
+clause path via `classify_at_time_with_supp`; controls: interp-identity 215/215 authored points,
+same-path 0 failures, census re-derives exactly 23/11): **4 of 23 rows type-diverge** somewhere in
+the 156-context product site (181/3588 cells, 5.0%) — `agenda_conditioning` T=10,
+`post_1998_convergence` T=13, `technocratic_paradigm_vs_human_primacy` T=9 (those three at the
+default context too), plus `truth_democracy_disinformation` T=2 (22 non-default contexts only).
+Every divergent cell is the ONE mechanism the prediction named: substituted endpoint ≥ snare
+suppression floor (0.60) while the local series interpolates below it → snare dated early
+(`sub=snare / interp=tangled_rope` in all 181 cells); no other floor or type pair fired. The other
+19 rows are substitution-robust at every context. Refinement of the original witness bucket:
+`substantive_employment_reading` T=9 — originally witnessed as flip-ON-substituted-row — is NOT
+timing-distorted (interpolated 0.62 also clears the floor); flip-on-substituted-row was a weaker
+test than the interpolation counterfactual, and of the two original witnesses only
+`post_1998_convergence` T=13 survives it.
 
 **Exposure.** Bounded: misalignment rows are `Backed=false` under the bucketed semantics
 (2026-06-11), so `temporal_residual` already excludes these transitions from the real-flip count
 (they land in `fab_adjacent`). The exposure is flip TIMING in any consumer of raw
-`classify_at_time`/`constraint_history` timelines that does not read the Backed bit.
+`classify_at_time`/`constraint_history` timelines that does not read the Backed bit — now
+ENUMERATED by the sweep above: exactly 4 rows / 4 constraints on the 62-file corpus, all the
+snare-floor mechanism.
 
 **Fix fork (the separate, smaller ruling — not made here):** (a) grid alignment at generation
 (prompt/schema require shared time-points across metrics within a story) — resolves new stories
