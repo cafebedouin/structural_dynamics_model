@@ -65,6 +65,28 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — OQ-109 B3: empty-table census CLOSED (A1–A6, B1–B3 all discharged); narrative_ontology A3/A4 detectors retired; linter migrated to agent-surface dispatch; gaps key carries coverage bit
+**Files:** prolog/narrative_ontology.pl, python/linter.py, prolog/test_harness.pl, prolog/json_report.pl, prolog/report_generator.pl, python/shared/schemas.py, audits/2026-06-11_oq109_phase_b/
+**Tier:** landed
+
+Census closure table in b3_empty_table_census.md. Retirements (zero-consumer grep
+positive-controlled, dead exemption legs, successors named): check_indexical_relativity,
+validate_indexical_completeness, detect_omega(mandatrophy), count_unresolved_omegas,
+detect_mandatrophy_omega — products live in R5 crosscheck / FSM / T17 / linter
+role-coverage; has_mandatrophy_declaration KEPT (exported, R5-grounded clause). Linter:
+MISSING_AGENT_SURFACE dispatch mirrors data_validation; perspectival minimums + variance
+legacy-gated; ROLE_COVERAGE minimal two-sided policy (uniform-claim exemption carried);
+UNRESOLVED_MANDATROPHY satisfied by authored founding_problem_status; Rule 18b validates
+stakeholder_d_override when present. Witnesses: B2 example lints 5→0; corpus sweep 92→80
+fully decomposed (7 mandatrophy cleared via genealogy, 2 correctly retained, 2 no-data
+stories consolidate to accurate MISSING_AGENT_SURFACE). A2 validate_per_index logs
+[INDEX VACUOUS] + ran-count (two-sided witness). A5 gaps: null=didn't-look vs
+[]=measured-empty; python/shared/schemas.py gaps made nullable (the enrich validator
+caught the null LOUDLY first — the chain working); output diff confined to the 2 no-cell
+stories. A6 PERSPECTIVAL_GAPS carries ran-witness (137 incl. engine demos — now visible,
+was absorbed). Remaining B3: NONE — next is the B4 gauntlet, then Phase C
+(gated on B4; C-arm live-service note + OQ-114 ruling govern the guard there).
+
 ## 2026-06-12 — OQ-109 B3: R5 zombie consumer LANDED (A7 seam recovered, first consumer of zombie_piton_crosscheck/2); CLAUDE.md mandatrophy note retired per its own condition; presence gates + emission seam landed same day
 **Files:** prolog/report_generator.pl, prolog/data_validation.pl, python/generate_constraint_pl.py, CLAUDE.md, ISSUES.md, audits/2026-06-11_oq109_phase_b/
 **Tier:** landed
