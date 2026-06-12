@@ -2,7 +2,7 @@
     generate_full_report/1,
     generate_omegas_from_gaps/1,
     omega_from_gap/5,
-    generate_omega_resolution_scenarios/0,
+    generate_omega_resolution_scenarios/1,
     generate_omega_triage/0,
     omega_severity/2,
     type_description/2,
@@ -143,7 +143,9 @@ generate_full_report(IntervalID) :-
     assert_omegas_from_gaps(IntervalID),
 
     % --- SECTION 8B: OMEGA RESOLUTION SCENARIOS ---
-    generate_omega_resolution_scenarios,
+    % OQ-99: the report subject binds authored omegas' Constraint slot
+    % (interval id == constraint id by pipeline convention).
+    generate_omega_resolution_scenarios(IntervalID),
 
     format('====================================================~n').
 
@@ -575,14 +577,17 @@ determine_correct_classification(Supp, Extr, Ceil, Verdict, Rationale) :-
    5. OMEGA RESOLUTION SCENARIOS
    ============================================================================ */
 
-%% generate_omega_resolution_scenarios/0
+%% generate_omega_resolution_scenarios(+Subject)
 %  Generates actionable test scenarios for resolving each unresolved omega.
 %  This drives scenario creation by providing specific resolution strategies.
-generate_omega_resolution_scenarios :-
+%  Subject is the report's constraint id (interval id == constraint id by
+%  pipeline convention); it binds the Constraint slot for authored omegas,
+%  which carry no omega_source/3 metadata (OQ-99).
+generate_omega_resolution_scenarios(Subject) :-
     format('~n[OMEGA RESOLUTION SCENARIO GENERATION]~n'),
     findall(omega_data(OID, OType, ODesc, Constraint, GapPattern),
             (narrative_ontology:omega_variable(OID, OType, ODesc),
-             resolve_omega_source(OID, Constraint, GapPattern)),
+             resolve_omega_source(OID, Subject, Constraint, GapPattern)),
             Omegas),
     (Omegas = []
     -> format('  No unresolved Omegas. System is epistemically complete.~n')
@@ -592,26 +597,84 @@ generate_omega_resolution_scenarios :-
                generate_scenario_for_omega(OID, OType, ODesc, C, Gap)))
     ).
 
-%% resolve_omega_source(+OmegaID, -Constraint, -GapPattern)
-%  Looks up the source constraint and gap pattern for an omega variable
-%  using the structured omega_source/3 metadata (populated at creation
-%  time by assert_omega_if_new/5). Falls back to detecting the gap
-%  pattern from current KB state for omegas created externally.
-resolve_omega_source(OmegaID, Constraint, GapPattern) :-
-    (   omega_source(OmegaID, Constraint, GapPattern),
-        Constraint \= unknown
-    ->  true
-    ;   % Fallback: try to find constraint via KB query
-        (   narrative_ontology:constraint_claim(C, _),
-            detect_gap_pattern(C, gap(GP, _, _)),
-            omega_from_gap(C, gap(GP, _, _), OmegaID, _, _)
-        ->  Constraint = C, GapPattern = GP
-        ;   Constraint = unknown, GapPattern = general_type_mismatch
-        )
-    ).
+%% resolve_omega_source(+OmegaID, +Subject, -Constraint, -GapPattern)
+%  Gap-derived omegas resolve via omega_source/3 (populated at creation time
+%  by assert_omega_if_new/5). Authored omegas (testset 3-arity facts) carry
+%  no omega_source; in the fresh-process-per-constraint report flow
+%  (enhanced_report.py:104 — one swipl per constraint) every authored omega
+%  in scope is the subject story's, so the Subject binds the Constraint slot
+%  when the subject's claim is in the KB. When neither holds, emit
+%  unresolved_source so the scenario layer fails loud instead of fabricating
+%  Constraint = unknown (OQ-99).
+%  The previous omega_from_gap/5 fallback was dead code: it can only generate
+%  omega_<gapname>_<C>-style IDs, which never unify with an authored omega ID
+%  (OQ-99 tombstone — do not reinstate).
+resolve_omega_source(OmegaID, _Subject, Constraint, GapPattern) :-
+    omega_source(OmegaID, Constraint, GapPattern),
+    Constraint \= unknown,
+    !.
+resolve_omega_source(_OmegaID, Subject, Subject, general_type_mismatch) :-
+    narrative_ontology:constraint_claim(Subject, _),
+    !.
+resolve_omega_source(_OmegaID, _Subject, unresolved, unresolved_source).
 
 %% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)
 %  Generates a specific resolution scenario based on omega type and gap pattern.
+%
+%  Clause order is load-bearing:
+%    1. unresolved_source     — fail-loud OPEN marker (broken KB state)
+%    2. authored 5-arity      — authored resolution protocol (OQ-99)
+%    3. typed templates       — gap-derived omegas + authored omegas
+%                               lacking a 5-arity protocol
+%    4. catch-all (last)      — OPEN marker so an unmatched type/gap
+%                               combination never aborts the report
+%                               (a failing inner goal fails the forall)
+
+% (1) Fail-loud: resolve_omega_source found no omega_source and no subject
+%     claim. Print the OPEN marker, skip the protocol steps (OQ-99).
+generate_scenario_for_omega(OID, OType, _Desc, _C, unresolved_source) :-
+    !,
+    format('  ┌─ [~w] (~w)~n', [OID, OType]),
+    format('  │  Constraint: UNRESOLVED — no omega_source and no subject claim [OPEN]~n', []),
+    format('  └─~n~n', []).
+
+% (2) Authored resolution protocol (OQ-99): the story authors a 5-arity
+%     omega_variable(OID, Question, ResolutionMethod, Implications,
+%     confidence_without_resolution(_)) fact. Testsets declare module
+%     constraint_<id> (witnessed 2026-06-11: 60/62 files; the 2 without a
+%     module header author no omega facts at all), so the facts land in
+%     that module — NOT in `user` — and the lookup is keyed on the
+%     constraint's own module, which also disambiguates the cross-file OID
+%     collisions that exist in the live corpus (census 2026-06-11:
+%     magisterial_authority_scope x4, regulatory_capture_depth x3,
+%     kernel_reading_ambiguity x3, ...). PRECONDITION for binding C to the
+%     report subject upstream (resolve_omega_source/4 fallback):
+%     enhanced_report.py runs ONE fresh swipl process per constraint, so
+%     every authored omega in scope is the subject story's; a long-lived
+%     multi-testset process would attribute sibling omegas to the subject.
+%     once/1 guards against within-module duplicate OIDs (census: none).
+generate_scenario_for_omega(OID, OType, _Desc, C, _Gap) :-
+    atom(C),
+    atom_concat(constraint_, C, StoryModule),
+    current_predicate(StoryModule:omega_variable/5),
+    once(StoryModule:omega_variable(OID, Question, ResolutionMethod, Implications,
+                                    confidence_without_resolution(Conf))),
+    !,
+    format('  ┌─ [~w] AUTHORED RESOLUTION PROTOCOL (~w)~n', [OID, OType]),
+    format('  │  Constraint: ~w~n', [C]),
+    format('  │  Question: ~w~n', [Question]),
+    format('  │~n', []),
+    format('  │  RESOLUTION METHOD (authored):~n', []),
+    format('  │  ~w~n', [ResolutionMethod]),
+    format('  │~n', []),
+    format('  │  IMPLICATIONS (authored):~n', []),
+    format('  │  ~w~n', [Implications]),
+    format('  │~n', []),
+    format('  │  Confidence without resolution: ~w~n', [Conf]),
+    format('  └─~n~n', []).
+
+% (3) Typed templates — gap-derived omegas and authored omegas with no
+%     5-arity protocol fact.
 generate_scenario_for_omega(OID, empirical, Desc, C, _Gap) :-
     format('  ┌─ [~w] EMPIRICAL DATA COLLECTION~n', [OID]),
     format('  │  Constraint: ~w~n', [C]),
@@ -742,6 +805,20 @@ generate_scenario_for_omega(OID, preference, Desc, C, _Gap) :-
     format('  │  3. Accept unresolvability if necessary:~n', []),
     format('  │     - Some omegas represent genuine value pluralism~n', []),
     format('  │     - Solution: coexistence, not consensus~n', []),
+    format('  └─~n~n', []).
+
+% (4) Catch-all — MUST BE TEXTUALLY LAST (OQ-99 fail-loud). An omega whose
+%     type/gap combination matches no clause above would otherwise fail the
+%     inner goal of the forall in generate_omega_resolution_scenarios/1 and
+%     abort generate_full_report mid-section. Never fabricate a template:
+%     print an OPEN marker and move on.
+generate_scenario_for_omega(OID, OType, Desc, C, Gap) :-
+    format('  ┌─ [~w] NO SCENARIO TEMPLATE [OPEN]~n', [OID]),
+    format('  │  Constraint: ~w~n', [C]),
+    format('  │  Unmatched type/gap combination: (~w, ~w) — no authored protocol,~n', [OType, Gap]),
+    format('  │  no typed template. Graduation: author a 5-arity omega_variable~n', []),
+    format('  │  protocol in the testset, or add a typed template clause.~n', []),
+    format('  │  Gap: ~w~n', [Desc]),
     format('  └─~n~n', []).
 
 /* ============================================================================
