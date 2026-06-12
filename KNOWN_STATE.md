@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-109 Phase B1+B2 LANDED: prompt cutover to stakeholder surface; new one-shot example (FNL statistics reset No. 2); schema/compiler perspectives-optionality (guard-not-delete)
+**Files:** prompts/constraint_story_generation_prompt_json.md, agent/example_platform_commission.json, agent/story_generator_base.py, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, ISSUES.md, audits/2026-06-11_oq109_phase_b/
+**Tier:** landed
+
+Worktree `oq109-phase-b`. B1: P/T/E/S tuple + Indexed Classifications sections dropped
+(1008→872 lines); d-derivation + ε-invariance KEPT trimmed (operator-approved: substrate-
+general surface for the OQ-110 derived-d ruling, not four-tuple surface); suppression-
+ambiguity omega + cyclical-measurement guidance relocated, not lost; stakeholders +
+six-questions+R5 promoted to required. Witness: 11 tuple-vocabulary terms 0 post / >0 pre
+(b1_vocab_grep_witness.out). B2: example = app_store_commission pilot (minimum-prevalence
+pick 2.483, example_prevalence.out), hand-mutated per EXAMPLE_INHERITED_SIGNATURES.md —
+THE FNL-reset discount list; EXAMPLE_PATH repointed off verification_bottleneck.json;
+prompt working-example pointer off testsets/antifragility.json (OQ-47 leak source).
+**Boundary pin: B2 changed optionality ONLY** — `perspectives` left the schema required
+list and the compiler tolerates absence (.get, 3 sites; emission loop intact — existing
+corpus compiles byte-identical, witnessed); property, $defs/Perspective, and emission stay
+until Phase C Pattern-3 diffs. Known pre-B3 state: linter fires 4 perspective-era rules +
+UNRESOLVED_MANDATROPHY on the example (b2_example_validation.out) — must clear at the B3
+linter migration. Pre-existing: 12/60 live-paired JSONs fail schema validation in BOTH
+pre/post states (b2_schema_failset_diff.out; 2026-06-09 strictening predates them) —
+cross-check against the Phase C regen list. Mountain-claimed perspectives-free stories
+would emit invariance_check over an empty authored table — B3 seam, noted.
+
 ## 2026-06-12 — OQ-103 RESOLVED: contamination-edge provenance made load-bearing + count-based salience floor at the read site
 **Files:** ISSUES.md, prolog/json_report.pl, python/enhanced_report.py, python/tests/test_contamination_provenance_salience.py
 **Tier:** landed

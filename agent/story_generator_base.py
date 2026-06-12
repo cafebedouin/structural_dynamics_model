@@ -27,7 +27,11 @@ SCHEMA_PATH = Path(os.environ.get(
     "DR_SCHEMA",
     str(REPO_ROOT / "schemas" / "constraint_story_schema.json")
 ))
-EXAMPLE_PATH = REPO_ROOT / "agent" / "verification_bottleneck.json"
+# OQ-109 Phase B2 cutover (2026-06-11): stakeholder-surface example replaces
+# verification_bottleneck.json (the OQ-70 mountain-template bait source).
+# Signature-prevalence statistics RESET at this commit — see KNOWN_STATE and
+# the example-inherited signature record in audits/2026-06-11_oq109_phase_b/.
+EXAMPLE_PATH = REPO_ROOT / "agent" / "example_platform_commission.json"
 JSON_DIR = REPO_ROOT / "json"
 TESTSETS_DIR = REPO_ROOT / "prolog" / "testsets"
 PROLOG_DIR = REPO_ROOT / "prolog"

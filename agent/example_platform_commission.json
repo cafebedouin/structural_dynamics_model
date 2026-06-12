@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "example_platform_commission",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.83,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.65,
+    "claimed_type": "rope",
+    "human_readable": "Dominant OS Marketplace Commission Gate",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": ["os_marketplace_operator"],
+    "victims": ["major_app_publishers", "independent_developers"]
+  },
+  "stakeholders": [
+    {
+      "name": "os_marketplace_operator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the commission rate on all in-app transactions and enforces it by reviewing every app and rejecting any that routes payment around the marketplace. Justifies the rate as funding security review, curation, and distribution infrastructure. Collects the commission revenue directly."
+    },
+    {
+      "name": "major_app_publishers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pay a substantial share of mobile revenue to the operator. They argue the fee is decoupled from the cost of the services rendered and is sustained by the operator's control of device distribution. Their options are absorbing the cost, passing it to users, or litigating; leaving the marketplace means abandoning the installed base."
+    },
+    {
+      "name": "device_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Get a curated, low-friction, single-point marketplace with consistent payment handling. They also carry the commission indirectly where publishers raise digital prices to cover it. Their choice set is bounded by what the operator admits to the marketplace."
+    },
+    {
+      "name": "independent_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pay the same rate without the leverage or legal resources of the major publishers. They depend on the marketplace's discovery surface and user trust for market access at all, which makes the commission a high but unavoidable cost of existing in the channel."
+    },
+    {
+      "name": "rival_payment_networks",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are contractually and technically barred from processing in-app transactions on the platform. They would compete on transaction fees if admitted; their exclusion is what the enforcement machinery exists to maintain."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigate whether tying payment processing to OS distribution is anti-competitive. They take testimony from the other seats, commission economic analysis, and can impose remedies that would alter the constraint's enforcement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Operates a single trusted marketplace connecting users with developers: payment handling, malware screening, and distribution are solved once, centrally, instead of per-developer.",
+    "transfer_function": "Moves a fixed percentage of every in-app transaction from publishers and developers to the marketplace operator, as the price of reaching the platform's user base.",
+    "absent_voices": "Rival payment networks and would-be alternative marketplaces are structurally excluded; they would argue for open payment routing and competitive rates but are kept out by the same rules the commission rides on.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commission and its enforcement vanished overnight, publishers would route payments through competing processors within weeks, digital prices would shift as processing fees compressed, and the operator would lose a primary revenue stream — the mobile software economy would reorganize around open payment routing.",
+    "founding_problem": "Early mobile software distribution was fragmented and unsafe: no trusted install path, no reliable payment rail for small developers, malware risk on every download.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The operator attests the problem is still live, citing ongoing security threats. Major publishers and competition authorities attest the founding problem is substantially solved and the arrangement persists as rent collection; legislative-hearing testimony and independent economic analysis from outside the benefiting parties support the shifted-function reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    { "metric": "base_extractiveness", "time_point": 0, "value": 0.52 },
+    { "metric": "base_extractiveness", "time_point": 6, "value": 0.58 },
+    { "metric": "base_extractiveness", "time_point": 12, "value": 0.63 },
+    { "metric": "base_extractiveness", "time_point": 18, "value": 0.68 },
+    { "metric": "base_extractiveness", "time_point": 24, "value": 0.71 },
+    { "metric": "base_extractiveness", "time_point": 30, "value": 0.74 },
+    { "metric": "theater_ratio", "time_point": 0, "value": 0.15 },
+    { "metric": "theater_ratio", "time_point": 6, "value": 0.18 },
+    { "metric": "theater_ratio", "time_point": 12, "value": 0.22 },
+    { "metric": "theater_ratio", "time_point": 18, "value": 0.27 },
+    { "metric": "theater_ratio", "time_point": 24, "value": 0.31 },
+    { "metric": "theater_ratio", "time_point": 30, "value": 0.35 },
+    { "metric": "suppression_requirement", "time_point": 0, "value": 0.6 },
+    { "metric": "suppression_requirement", "time_point": 6, "value": 0.66 },
+    { "metric": "suppression_requirement", "time_point": 12, "value": 0.72 },
+    { "metric": "suppression_requirement", "time_point": 18, "value": 0.77 },
+    { "metric": "suppression_requirement", "time_point": 24, "value": 0.8 },
+    { "metric": "suppression_requirement", "time_point": 30, "value": 0.83 }
+  ],
+  "commentary": {
+    "narrative_context": "A dominant mobile OS operator requires every application distributed through its marketplace to use its proprietary payment system, taking a commission on each transaction. The rule is presented as a security and quality measure; publishers and competition authorities increasingly read it as leveraging control of OS distribution to extract rents from the adjacent market for digital goods. The claim/metric gap is deliberate: the constraint is CLAIMED as rope (the operator's own framing) while the authored metrics describe substantially extractive, actively enforced operation — the engine measures that divergence; do not reconcile the claim to the metrics.",
+    "logic_rationale": "Extraction is high (0.74 at interval end) because the commission rate is decoupled from marginal service cost; suppression is higher still (0.83) because the constraint's persistence depends on actively excluding rival payment routing, not on participant preference. Theater is moderate-low (0.35): the security review function is real, but a growing share of enforcement activity defends the payment exclusivity rather than users. The measurement series run on one shared time grid so every metric is authored at every examined time point.",
+    "directionality_logic": "The operator is the structural beneficiary (collects the commission, controls the rules — d near the beneficiary end). Publishers and independent developers are the targets (pay the transfer, constrained exit — d near the target end). Device users sit near symmetric: genuine coordination benefit, diffuse indirect cost. Rival payment networks are excluded rather than coordinated — their exclusion is the enforcement object itself.",
+    "perspectival_gap": "The payer seats and the agenda-setter seat should compute differently: from the operator's position the arrangement is genuine coordination it built and maintains; from the constrained payer seats the same structure operates as enforced extraction. The engine computes this divergence from the structural data — the authored claim does not adjudicate it."
+  },
+  "omegas": [
+    {
+      "id": "marginal_cost_vs_commission",
+      "question": "What is the operator's actual marginal cost to provide payment, security, and distribution services, relative to the commission it charges?",
+      "resolution_mechanism": "Regulatory discovery compelling cost-structure disclosure, or independent economic analysis of comparable processing and review services.",
+      "impact": "A wide cost-to-rate gap would establish the commission as monopoly rent and support mandated rate or routing remedies; a narrow gap would support the operator's coordination framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the commission tracks service cost or market power."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Is a centralized, exclusive payment rail structurally necessary for the marketplace's trust function, or is the trust function separable from payment exclusivity?",
+      "resolution_mechanism": "Natural experiment from jurisdictions that mandate alternative payment routing: if trust and safety outcomes hold while routing opens, the functions are separable.",
+      "impact": "If separable, the payment exclusivity is pure extraction riding on a real coordination function; if inseparable, part of the measured extraction is the price of the coordination itself.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination and extraction components are structurally separable."
+    }
+  ]
+}

@@ -105,7 +105,7 @@ The confusion was in the language (the label "BGS"), not in the mathematics. The
 
 ## The Output Format: A JSON Constraint Story
 
-Your output is a JSON document validated against `constraint_story_schema.json`. The compiler `generate_constraint_pl.py` transforms it into a `.pl` file the engine loads. For a working example, see `testsets/antifragility.json`.
+Your output is a JSON document validated against `constraint_story_schema.json`. The compiler `generate_constraint_pl.py` transforms it into a `.pl` file the engine loads. For a working example, see `agent/example_platform_commission.json` (the one-shot example; stakeholder surface, aligned measurement grid, claim/metric independence modeled).
 
 | JSON Section | Purpose | Required? |
 |---|---|---|

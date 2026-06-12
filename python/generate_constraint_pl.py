@@ -50,7 +50,9 @@ def validate_json(data):
 def _basic_validate(data):
     """Minimal validation without jsonschema."""
     errors = []
-    for key in ("header", "base_properties", "perspectives", "interval"):
+    # perspectives optional since the OQ-109 Phase B cutover (2026-06-11);
+    # property + $defs retained until Phase C retires the surface.
+    for key in ("header", "base_properties", "interval"):
         if key not in data:
             errors.append(f"Missing required top-level key: {key}")
     if "header" in data:
@@ -266,7 +268,7 @@ def _generate_tests(data):
     """Generate validation test predicates based on constraint properties."""
     cid = data["header"]["constraint_id"]
     bp = data["base_properties"]
-    perspectives = data["perspectives"]
+    perspectives = data.get("perspectives", [])  # optional since Phase B cutover
     tests = []
 
     # Collect distinct types
@@ -426,7 +428,7 @@ def generate_pl(data):
     cid = data["header"]["constraint_id"]
     header = data["header"]
     bp = data["base_properties"]
-    perspectives = data["perspectives"]
+    perspectives = data.get("perspectives", [])  # optional since Phase B cutover
     interval = data["interval"]
     commentary = data.get("commentary", {})
     omegas = data.get("omegas", [])
