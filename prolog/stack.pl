@@ -16,6 +16,7 @@
 % 3. Load Core Logic
 :- use_module(constraint_indexing).
 :- use_module(boltzmann_compliance, []).
+:- use_module(guard_exclusions, []).   % OQ-114 per-story guard exclusions (fail-closed contract)
 :- use_module(signature_detection, []).
 :- use_module(cs_pattern_detection, []).
 :- use_module(cs_drift_engine, []).

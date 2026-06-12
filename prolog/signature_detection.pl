@@ -1371,7 +1371,16 @@ only_mountain_classifications(C) :-
     (   constraint_indexing:constraint_classification(C, _, _)
     ->  % authored-cell arm: old unanimity semantics, verbatim
         \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain)
-    ;   % perspectives-free arm: the surviving NL-certification chain
+    ;   % perspectives-free arm: the surviving NL-certification chain, guarded
+        % by the OQ-114 per-story exclusion list (guard_exclusions.pl) —
+        % FAIL-CLOSED: if the list module is absent/unreadable the
+        % current_predicate check fails and the C arm DISABLES (old pre-C
+        % behavior: no protection, everything examined) — never silent
+        % protection. Listed stories (institutional_trust_erosion, OQ-114
+        % substantive dissent) get old-guard semantics: no cells -> no
+        % protection -> FCR examines.
+        current_predicate(guard_exclusions:nl_chain_exclusion/2),
+        \+ guard_exclusions:nl_chain_exclusion(C, _),
         nl_certification_chain(C)
     ).
 
