@@ -2872,6 +2872,12 @@ canonical χ).
 **Ω-type:** Ω_E (corpus measurement), with an Ω_C committer-axis edge (same family as OQ-65).
 
 **Status:** resolved — operator ruled option A as the CLASS (2026-06-05): no signature may read a single authored perspective as a story-level claim. claimed_natural source 2 AND appears_as_rope's sibling clause removed (commit `72ec2cdd`). Witness on the live 20: FCR 16→5 (remaining are low-ε profile-driven), FNL 3→1; POSITIVE CONTROL manpower_exhaustion_trap (explicit claim-mountain, non-compliant) still fires FNL via source 1 — wrong path removed, detector intact. Signature prevalence is citable as a claims statistic from the rebuild's story 1.
+**Statistics reset No. 2 (2026-06-11, OQ-109 Phase B2):** the one-shot example cut over from
+`verification_bottleneck.json` (the bait-template source) to the stakeholder-surface
+`agent/example_platform_commission.json` at the commit landing this note — signature-prevalence
+statistics reset AGAIN at that commit. The example-inherited signature list (what post-reset
+prevalence must discount as copied-from-example vs pre-existing) is
+`audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`.
 **Origin:** 2026-06-04 session: "is the ~95% disguise-signature dominance substantive or a
 generator artifact?" (older-evaluation question re-examined on the live corpus). Probes 0–5;
 raw artifacts: `audits/2026-06-04_fnl_bait_confound/fnl_probe0_file_constraint_map.json`,
