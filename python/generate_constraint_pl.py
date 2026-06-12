@@ -31,6 +31,8 @@ def validate_json(data):
 
     Returns a list of error strings (empty = valid).
     Falls back to basic structural checks if jsonschema is not installed.
+    Cross-field checks that JSON Schema cannot express (grid alignment,
+    OQ-105) run on both paths.
     """
     try:
         import jsonschema
@@ -42,9 +44,42 @@ def validate_json(data):
         if validator_cls is None:
             validator_cls = jsonschema.Draft4Validator
         validator = validator_cls(schema)
-        return [e.message for e in sorted(validator.iter_errors(data), key=lambda e: list(e.path))]
+        errors = [e.message for e in sorted(validator.iter_errors(data), key=lambda e: list(e.path))]
     except (ImportError, Exception):
-        return _basic_validate(data)
+        errors = _basic_validate(data)
+    return errors + _grid_alignment_errors(data)
+
+
+def _grid_alignment_errors(data):
+    """OQ-105 alignment gate (fail-closed, ruled 2026-06-12): all temporally
+    tracked metrics in one story must share ONE time grid.
+
+    The engine samples every metric on the UNION of authored time points; a
+    metric absent from a row gets its scalar substituted there, and the scalar
+    is the series endpoint corpus-wide — end-state values injected at earlier
+    times (witnessed: tangled_rope->snare flips dated early,
+    audits/2026-06-11_oq105_row_sweep/). One metric with a series, or none,
+    is trivially aligned; the OQ-46 scalar-only static-enforcement path is
+    untouched.
+    """
+    grids = {}
+    for m in data.get("measurements", []) or []:
+        if isinstance(m, dict) and "metric" in m and "time_point" in m:
+            grids.setdefault(m["metric"], set()).add(m["time_point"])
+    if len(grids) < 2:
+        return []
+    union = set().union(*grids.values())
+    misaligned = {k: v for k, v in grids.items() if v != union}
+    if not misaligned:
+        return []
+    detail = "; ".join(
+        f"{k} missing time_points {sorted(union - v)}"
+        for k, v in sorted(misaligned.items()))
+    return [
+        "OQ-105 grid misalignment: every temporally tracked metric must author "
+        f"a value at every time point any metric uses (union grid {sorted(union)}): {detail}. "
+        "Author the missing values (assert what the metric WAS at those times), "
+        "use a sparser shared grid, or drop the metric's series entirely."]
 
 
 def _basic_validate(data):

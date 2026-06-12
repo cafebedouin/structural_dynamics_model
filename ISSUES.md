@@ -4442,59 +4442,47 @@ anything). Not wired into run_pipeline until its false-positive rate is witnesse
 
 **Ω-type:** Ω_C (design choice — grid alignment at generation vs labeled interpolation at read; a narrow representation ruling spun off the OQ-46 close).
 
-**Status:** open — filed 2026-06-11 (OQ-46 Backed-reconciliation session; evidence:
-`audits/2026-06-11_oq46_backed_reconciliation/`).
+**Status:** resolved — 2026-06-12, operator ruled fix-fork option (a) ALONE (grid alignment at
+generation; no read-side interpolation machinery); implementation landed same day
+(`audits/2026-06-12_oq105_alignment_gate/`). Filed 2026-06-11 (OQ-46 Backed-reconciliation
+session).
 
-**Mechanism.** The temporal row grid is the UNION of all metrics' time-points
-(`temporal_residual:constraint_time_set/2`), so suppression gets sampled off its own grid at
-times authored only by `base_extractiveness`/`theater_ratio`. At those rows `classify_at_time`
-substitutes the authored scalar — and the scalar is the series ENDPOINT corpus-wide (one-time
-query 2026-06-11: 39 dual-representation constraints, 37 exact scalar==endpoint, 2 within 0.05,
-0 violations). So the substitution is ANTI-CAUSAL: it injects the end-state suppression value at
-earlier times, inside constraints that DO assert enforcement dynamics — semantically worse than
-the sanctioned static case (OQ-46), where the scalar is the story's whole authoring.
+**Resolution note.** Evidence chain: mechanism + 23-row/11-constraint census
+(`audits/2026-06-11_oq46_backed_reconciliation/`, OQ-110 cross-read); per-row interpolation
+counterfactual over ALL misaligned rows (`audits/2026-06-11_oq105_row_sweep/`) — 4/23 rows
+type-diverge (181/3588 cells across 156 contexts), every divergent cell the one snare-floor
+mechanism (endpoint scalar ≥ 0.60 while the local series interpolates below → snare dated early);
+19/23 robust at every context — *robust relative to LINEAR INTERPOLATION: the sweep enumerated
+(b)'s payoff under (b)'s own semantics, not ground truth about suppression at those times.*
+Containment held throughout: misaligned rows are `Backed=false`, OQ-110 witnessed 0 counted flips
+on/adjacent. The OQ-109 Phase C cohort-zero swap (`7ca48e0b`, 2026-06-12) then retired ALL 11 host
+constraints to `kernel_v2_test2` — live misaligned rows = 0 on the 5-story cohort-zero corpus
+(every `_c0` story authors one shared grid; the ratified time-bound "regen the 11 within Phase C
+or by a named date" was discharged by that retirement; its successor clock — alignment rule lands
+BEFORE cohort-one generation — is met by this close).
 
-**Live load (as-of 2026-06-11, 48-file corpus):** 21 of 209 rows, inside 10 series-authoring
-constraints. *Re-derived 2026-06-11 on the 62-story corpus (OQ-110 join): 23 rows / 11
-constraints — all named-10 still live plus `institutional_trust_erosion`; 0 counted flips on
-or adjacent to a misaligned row (`audits/2026-06-11_oq110_residual_join/`).* Named-10: (`agenda_conditioning`, `digital_colonialism_data_extraction`, `post_1998_convergence`,
-`scale_ceiling`, `substantive_employment_reading`, `techno_optimist_reading`,
-`technocratic_paradigm_vs_human_primacy`, `truth_democracy_disinformation`,
-`wage_convergence_mechanism`, `wage_convergence_sustainability`).
+**Implementation (landed 2026-06-12, witnesses in the audit dir):** prompt rule "One time grid
+per story" (`prompts/constraint_story_generation_prompt_json.md`, Temporal Measurements) + the
+fail-closed compiler gate `_grid_alignment_errors` in `python/generate_constraint_pl.py`'s
+`validate_json` (both jsonschema and fallback paths; every generation driver imports it).
+Witnesses: W1 synthetic misalignment fires; W2 all 5 live `_c0` JSONs clean; W3 the gate over the
+60 archived pre-cohort-zero JSONs flags EXACTLY the 11 known hosts, zero false positives.
 
-**Witnessed scope — the per-row sweep RAN 2026-06-11; the PREDICTED bucket is discharged
-(`audits/2026-06-11_oq105_row_sweep/`).** All 23 misaligned rows swept under the interpolation
-counterfactual (substituted scalar vs linear interpolation of the constraint's own series, same
-clause path via `classify_at_time_with_supp`; controls: interp-identity 215/215 authored points,
-same-path 0 failures, census re-derives exactly 23/11): **4 of 23 rows type-diverge** somewhere in
-the 156-context product site (181/3588 cells, 5.0%) — `agenda_conditioning` T=10,
-`post_1998_convergence` T=13, `technocratic_paradigm_vs_human_primacy` T=9 (those three at the
-default context too), plus `truth_democracy_disinformation` T=2 (22 non-default contexts only).
-Every divergent cell is the ONE mechanism the prediction named: substituted endpoint ≥ snare
-suppression floor (0.60) while the local series interpolates below it → snare dated early
-(`sub=snare / interp=tangled_rope` in all 181 cells); no other floor or type pair fired. The other
-19 rows are substitution-robust at every context. Refinement of the original witness bucket:
-`substantive_employment_reading` T=9 — originally witnessed as flip-ON-substituted-row — is NOT
-timing-distorted (interpolated 0.62 also clears the floor); flip-on-substituted-row was a weaker
-test than the interpolation counterfactual, and of the two original witnesses only
-`post_1998_convergence` T=13 survives it.
+**Operative ruling + densification trade (recorded so it cannot resurface as a discovered
+defect):** (a) trades (b)'s labeled read-side interpolation for unlabeled generation-side value
+assertion at shared time-points the model didn't organically choose. Defense: model-authored-at-
+generation carries the same epistemics as every other authored point — the defect was *code*
+injecting endpoints post hoc, which (a) does not reproduce. The prompt rule therefore frames the
+union grid as a first-class authoring requirement (assert each value, or thin to a sparser shared
+grid, or drop the series — never backfill); the OQ-46 scalar-only-static rule stays orthogonal.
 
-**Exposure.** Bounded: misalignment rows are `Backed=false` under the bucketed semantics
-(2026-06-11), so `temporal_residual` already excludes these transitions from the real-flip count
-(they land in `fab_adjacent`). The exposure is flip TIMING in any consumer of raw
-`classify_at_time`/`constraint_history` timelines that does not read the Backed bit — now
-ENUMERATED by the sweep above: exactly 4 rows / 4 constraints on the 62-file corpus, all the
-snare-floor mechanism.
-
-**Fix fork (the separate, smaller ruling — not made here):** (a) grid alignment at generation
-(prompt/schema require shared time-points across metrics within a story) — resolves new stories
-only; the 10 live constraints need regen; (b) labeled interpolation at read (interpolate the
-authored series at off-grid times, carrying an `interpolated` provenance tag) — fixes live data,
-adds read-side machinery. Note for (a): the OQ-46 prompt rule (scalar-only for static enforcement)
-is orthogonal and stays — alignment applies only when a suppression series IS authored.
-Cross-refs: OQ-46 (sanctioned-static ruling + bucketed Backed), OQ-83 (flip-count consumer),
-OQ-44 (gate class), OQ-102 (resolved 2026-06-11: the `measurement_basis/2` + `projected`-bucket spine is LANDED —
-option (b) here would extend exactly that spine with an `interpolated` bucket).
+**Reopen conditions for (b)** (`interpolated` bucket on the `measurement_basis/2` spine — the
+extension point stays alive via OQ-107's `witnessed` bucket): (1) a misaligned story reaches the
+live corpus despite the gate; (2) the densification cost turns real on cohort-one generation
+(grids thinned below drift-detection usefulness, or evidence of fabricated rather than thinned
+values); (3) a Backed-blind consumer of raw `classify_at_time`/`constraint_history` timelines
+becomes load-bearing over a corpus still containing misaligned rows (archive overlays qualify).
+Cross-refs: OQ-46, OQ-44, OQ-102, OQ-107, OQ-109 (Phase C swap), OQ-110.
 
 
 ## OQ-106 — `structural_coercive_intent`: redesign-vs-retire sub-fork (range-dead threshold + producerless evidence tables)
