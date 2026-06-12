@@ -4689,7 +4689,11 @@ contention) remain operative build specs here.
 ruled branch b no-open (2026-06-11), so Phase C carries no C1/C2 schema additions and the
 remaining gate is "Phase B complete" alone. **ORDERING PINNED (operator, 2026-06-12):
 OQ-114 ruling FIRST → C-arm extension confirmed-or-amended → THEN the four-tuple-only
-regen.** Regen-first would put stakeholder-only stories under the C arm's guard decisions
+regen. RULED 2026-06-12 (OQ-114 resolved, split): C-arm extension CONFIRMED-AS-AMENDED —
+Phase C builds the fail-closed per-story exclusion (institutional_trust_erosion OUT with
+kill conditions; witnesses owed: excluded + two-sided control) and the re-witness inspects
+organization_floor + demographic_skill_mismatch BY NAME (the C arm's first live
+decisions).** Regen-first would put stakeholder-only stories under the C arm's guard decisions
 before OQ-114 rules its extension — an extension later ruled wrong would have been live on
 fresh corpus (same once-not-twice logic that put the D-fork ruling before Phase C). No
 dependency forces regen-first: the OQ-114 archive probe runs on `corpus_path` overlays.
@@ -4895,8 +4899,31 @@ consumer's `== false` test is what can never see it).
 
 **Ω-type:** Ω_E (measurable divergence rate) with an Ω_P edge (the per-story mountain ruling).
 
-**Status:** open — filed 2026-06-12 at the OQ-109 unanimity ruling (operator: the extension
-question is its own item, never a side effect of rewiring). **Exposure-window correction:**
+**Status:** resolved — 2026-06-12; probe ran under the frozen criterion, OUTCOME 3 (mixed),
+operator ruled the live 3 SPLIT: `organization_floor` + `demographic_skill_mismatch` IN
+(benign/artifact-shaped dissent; the C arm's FIRST LIVE DECISIONS — flagged BY NAME for
+individual inspection at the Phase C re-witness, never absorbed into the aggregate diff);
+`institutional_trust_erosion` OUT (substantive snare/piton dissent converging with the live
+FCR firing — two independent instruments agreeing in the fail-open direction).
+**Exclusion kill conditions (both directions, pinned at ruling):** flips IN if the
+snare/piton dissent resolves (seat-dissent traced to a mechanism the instruments discount
+— e.g. its duplicate-seat pairs shown to be authoring noise — or the FCR firing shown
+spurious by its own witness); becomes PERMANENT-WITH-REASON if the dissent confirms as a
+genuine non-mountain reading (at which point "why does C certify it" feeds the
+general-mechanism build item). **Exclusion mechanism (Phase C build item): per-story
+exclusion list read at dispatch time, FAIL-CLOSED — list present + story listed → old-guard
+semantics; list absent/unreadable → halt or old behavior, NEVER silent C (the seam class
+does not get instance three built into the fix for instance one). Phase C witnesses owed:
+trust_erosion shown excluded + two-sided control (a non-listed story shown reaching the C
+arm).** **Rider verdict (recorded so the conjunct is not re-proposed): option 4's
+no-beneficiary conjunct was WRONG, not merely over-restrictive — unanimous (both-cell)
+mountains declare beneficiaries too (7/32 kernel_v1, 12/411 v6), and beneficiary-carrying
+C-only stories read as mountains under every named instrument; beneficiary-presence is an
+FSM routing signal, not a mountain disqualifier (it correlates with seat-disagreement —
+56%/32% vs 22%/3% — but does not separate substantive from artifact dissent).**
+Evidence: `audits/2026-06-12_oq114_archive_probe/` (WRITEUP.md; four-cell tables kernel_v1
+41→32/0/9/0, v6 430→411/0/19/0; all 28 C-only inspected; NL trio filters NOTHING on
+archives — C ≡ claim-mountain there). Filed 2026-06-12 at the OQ-109 unanimity ruling. **Exposure-window correction:**
 the first bridge (disjunction, commit `790bb009`) accidentally made C's extension LIVE on
 main until the same-day dispatch commit — the un-fire and downstream effects (3 signature/
 pool changes, 3 maxent_top_type flips, regulatory_measurement_gap verdict_join yellow→red,

@@ -65,6 +65,28 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — OQ-114 RESOLVED: archive probe under frozen criterion → OUTCOME 3 (mixed) → operator ruled the live 3 SPLIT (2 in / trust_erosion out, kill conditions + fail-closed exclusion + named re-witness); rider: no-beneficiary conjunct WRONG
+**Files:** ISSUES.md, audits/2026-06-12_oq114_archive_probe/
+**Tier:** landed
+
+Worktree oq114-archive-probe. Probe (criterion frozen at first commit c64f32a6): kernel_v1
+41 mountain-claimed → both=32/Uonly=0/Conly=9/neither=0; v6 430 → 411/0/19/0; comparator
+controls PASS both; include-semantics fix caught against the denominator before any
+reading (archived duplicate facts multiplied bare findall). Structural finding: NL trio
+filters NOTHING on archives — C ≡ claim-mountain there (live corpus authors the trio under
+the stricter 2026-06-09 rule; archives cannot witness that). All 28 C-only inspected (≤25
+per archive): instruments read all mountain-profiled (no snare-floor, ε≤0.18, low theater
+except one deliberate piton); disagreements split duplicate-seat artifact (~6/9, ~8/19)
+vs substantive distinct-seat dissent (thai_112 powerless-snare class) — BOTH shapes in
+BOTH archives → outcome 3. Ruling: organization_floor + demographic_skill_mismatch IN
+(first live C-arm decisions, named re-witness at Phase C); institutional_trust_erosion
+OUT (substantive dissent × live FCR firing converging fail-open) with kill conditions
+both directions and a FAIL-CLOSED per-story exclusion as the Phase C build item
+(witnesses owed: excluded + two-sided control). Rider recorded in the entry: option 4's
+no-beneficiary conjunct was WRONG, not over-restrictive (unanimous mountains declare
+beneficiaries; the signal is FSM routing, not validity). Phase C now proceeds: extension
+confirmed-as-amended → regen.
+
 ## 2026-06-12 — OQ-109 B4 gauntlet PASS against a pre-compiled expected-divergence manifest; Phase C ordering pinned (OQ-114 first); OQ-115 filed (check_stack divergence attributed pre-Phase-B)
 **Files:** ISSUES.md, audits/2026-06-11_oq109_phase_b/B4_EXPECTED_DIVERGENCE_MANIFEST.md
 **Tier:** landed

@@ -80,4 +80,15 @@ archives do not settle them as a class; the package's question is per-story: doe
 disagreement read as duplicate-seat/template noise or as a substantive seat (a
 thai_112-class extractive-from-below or a physician_call-class analytical dissent)?
 
-**Operator ruling:** _recorded in ISSUES.md OQ-114 after escalation._
+**Operator ruling (2026-06-12):** SPLIT — organization_floor + demographic_skill_mismatch
+IN (the C arm's first live decisions, flagged by name for the Phase C re-witness);
+institutional_trust_erosion OUT (two independent instruments — substantive authored
+dissent and the live FCR firing — agreeing in the fail-open direction; overriding both on
+archive-level artifact contamination would let the aggregate overrule per-item witnesses).
+Three attachments landed in the OQ-114 entry: exclusion kill conditions both directions;
+fail-closed per-story exclusion mechanism (Phase C build item, witnesses owed); named
+re-witness for the two ruled IN. Rationale of record: option 4 (defer) was the ordering
+pin's named failure mode; option 2 (all in) overrode converging per-item witnesses with an
+aggregate; option 3 (all out) declined to read the split the inspection earned — the split
+IS the conservative ruling: fail-open cases stay examined, artifact cases are not held
+hostage to them.
