@@ -4819,6 +4819,31 @@ pass carries witness); output-changing fixes land alone per the established comm
 Cross-refs: OQ-97 (census), OQ-44 (statute + common-law queue), OQ-98 (C4a feeds its join),
 OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
 
+## OQ-113 — natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable
+
+**Ω-type:** Ω_E (witnessed, mechanical; Pattern-5 absence-gate stack).
+
+**Status:** open — filed 2026-06-12 by the OQ-109 unanimity adjudication (candidate-B gauntlet).
+
+**The witness.** `signature_detection:has_viable_alternatives/2` has exactly two clauses:
+`true` (an `intent_viable_alternative` fact exists) and `unknown` (catch-all) — `false` is
+never produced. `natural_law_signature/1` requires `HasAlternatives == false`, so the
+conjunction is unsatisfiable on any corpus authoring zero `intent_viable_alternative` facts
+(live corpus: zero). Live-62 probe: true-set = 0 including six authored-unanimous-mountain
+physics stories (`audits/2026-06-11_oq109_phase_b/unanimity_adjudication_probe.out`). This
+STACKS on OQ-43's leg (`BeneficiaryCount == 0` reads empty `intent_power_change` —
+vacuously true): one conjunct passes on absence, its sibling FAILS on absence, so the
+predicate is dead while looking profile-gated. Corollary:
+`determine_pure_subtype/2`'s `pure_natural_law` branch is UNREACHABLE — purity subtyping
+never emits it on the live corpus.
+
+**Resolution shape.** Adjudicate by contribution (Unwired ≠ worthless): what should
+NL-profile certification require — an authored absence-of-alternatives datum (then
+fail-closed needs an authoring surface for it), or the OQ-43-class fix (gate on
+authored-presence before comparing)? Cross-refs: OQ-43 (sibling leg), OQ-44 (gate class
+audit), OQ-37 (`unknown` sentinel discipline — the sentinel here works correctly; the
+consumer's `== false` test is what can never see it).
+
 ---
 
 *Last updated: 2026-06-11. Add new items with sequential OQ-NN labels. Mark
