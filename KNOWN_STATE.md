@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-11 — OQ-112 item-4 sentinel trace: verdict SILENT (three mechanisms); absorber-boundary class elevated to item 2; maxent_indexed_run order dependency found
+**Files:** ISSUES.md, audits/2026-06-11_oq112_item4_sentinel_trace/, prolog/maxent_classifier.pl, prolog/json_report.pl
+**Tier:** landed
+
+Worktree `oq112-item4-trace` from `009c793a`. Driven-goal trace of the post-OQ-44 `unknown`
+sentinel into maxent (read-only; probes + raw outputs in the audit dir). Confirmed: the
+`; Supp = 0.0` branches (`maxent_classifier.pl:255/:761`) are dead; with profiles present both
+LL paths throw `type_error(evaluable, unknown/0)` at `is/2` — loud in isolation — but (W8) the
+only two absent-suppression constraints lack `constraint_claim` (drivers run 60/62; firing set
+EMPTY on the live corpus), and every production boundary absorbs: `catch(_, true)` at
+`json_report.pl:72/:76` + `trajectory_mining.pl:912` (vacuous success over a live throw,
+W16); `catch(_, fail)` row drops (`maxent_report.pl:211`, `maxent_diagnostic.pl:395`); and
+`maxent_threshold_proximity` absorbs UNCAUGHT via clause-failure-before-arithmetic (W12a — the
+sink a catch-grep cannot see). Bonus: `maxent_indexed_run` quiet-fails standalone (hidden order
+dependency on `maxent_run`, witnessed v3 vs v3b) — absorbed by the same json_report boundary.
+OQ-112 re-ranked: widened absorber-boundary class (catch-true/catch-fail/clause-failure) is now
+item 2. Tripwire for probe authors: the dynamic `maxent_profile/4` table is empty until
+`maxent_run(Ctx)` runs in-process — sink probes that skip it get success-shaped LL=-10.0
+(prior+bool) without touching the metric; witness profile-present before trusting a sink
+result. Latent hazard: first claim-bearing story missing `suppression_requirement` silently
+voids the whole maxent stage.
+
 ## 2026-06-11 — OQ-97 RESOLVED: Pattern-6 census executed (160/227/210 raw lines, 19 classes); 8 candidate classes filed as OQ-112; classification path clean
 **Files:** ISSUES.md, audits/2026-06-11_oq97_pattern6_census/
 **Tier:** landed

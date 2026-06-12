@@ -4662,38 +4662,62 @@ single finding.
 **Status:** open — filed 2026-06-11 at OQ-97 close. Full class tables with member lists:
 `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
-**The batch (priority order, per OQ-44's common-law prioritize-by-success-shapedness):**
+**The batch (priority order, per OQ-44's common-law prioritize-by-success-shapedness;
+re-ranked 2026-06-11 after the item-4 trace — see update below):**
 
 1. **C4a — `; Signal = agrees` on absent probe input** (`diagnostic_summary.pl`, 13 sites; read
    witness `probe_abductive` :190–199: no `abd_triggers` fact → `agrees`). Vacuous agreement
    feeds the OQ-98 verdict join as absence-of-alert — green-over-absence one level below the
    fixed banner. Honest tokens (`inconclusive`/`unavailable`) already in the file's vocabulary.
    First job: sort each else-branch as data-absence (defect) vs conflict-absence (sound).
-2. **A6 — absence-certifies-cleanliness** (`purity_scoring.pl:71,80,88`;
+2. **A10 widened — exception/failure absorbed at consumer boundary** (elevated from old item 7
+   by the item-4 trace). Stage-level `catch(_, true)` (`json_report.pl:72,76`;
+   `trajectory_mining.pl:912`) absorbs EVERY maxent failure mode — witnessed vacuously
+   succeeding over a live `type_error` (W16) and over `maxent_indexed_run`'s standalone
+   quiet-failure (W14: hidden order dependency on `maxent_run`, runs 60/62 constraints when it
+   runs at all); `catch(_, fail)` row drops (`maxent_report.pl:211`; `maxent_diagnostic.pl:395`
+   — W12b); original `catch(error) → 0.0` members (`json_report.pl:415–418`, wasserstein).
+   Channel-level Pattern 6: the boundary, not the site, is where measured and didn't-look
+   collapse.
+3. **A6 — absence-certifies-cleanliness** (`purity_scoring.pl:71,80,88`;
    `drl_boltzmann_analysis.pl:302`; `drl_fpn.pl:206`; `covering_analysis.pl:137`;
    `signature_detection.pl:1090`) — absence passes the clean gate (OQ-43 semantics). The three
    tripwired same-family predicates were NEUTRAL (unreachable on 194-row corpus); these five are
    unmeasured.
-3. **A4 — `BaseEps = 0.5` / `Supp = 0` copied pair** (`boltzmann_compliance.pl:251,257`;
+4. **A4 — `BaseEps = 0.5` / `Supp = 0` copied pair** (`boltzmann_compliance.pl:251,257`;
    `covering_analysis.pl:490,497`; `gap_diagnostic.pl:120,127`; `omega1_audit.pl:102`) — the
    drl_composition.pl:238 fabrication, flagged at 1 of 5 sites only (OQ-110 lineage).
-4. **A3 — metric-fallback 0.0 on absent authored metric** (23 sites: constraint_indexing,
+5. **A3 — metric-fallback 0.0 on absent authored metric** (23 sites: constraint_indexing,
    maxent_classifier, invertibility_analysis, omega1_audit, genuine_findings_query,
    constraint_bridge) — the idiom OQ-44 commit C fixed in drl_core, surviving downstream.
-   **Includes the census-surfaced interaction:** post-OQ-44 `get_raw_suppression` returns the
-   `unknown` sentinel, so `maxent_classifier.pl:255/:761` `; Supp = 0.0` branches are dead and
-   the atom flows toward Gaussian-LL arithmetic — verify a guard exists or fail-close.
-5. **C4b — blind=stable trend family** (`drift_events.pl:92,437`; `intent_engine.pl:80`;
+   The sentinel interaction sub-item is TRACED (update below): dead branches confirmed, sink
+   loud in isolation, live firing set empty; remaining scope here is the idiom cleanup.
+6. **C4b — blind=stable trend family** (`drift_events.pl:92,437`; `intent_engine.pl:80`;
    `pattern_analysis.pl:37`; `logical_fingerprint.pl:338`) — no-data reads as measured-stable.
-6. **A2 — statistic-on-empty → 0.0** (~40 sites, list in WRITEUP §4) — mean/median/slope/
+7. **A2 — statistic-on-empty → 0.0** (~40 sites, list in WRITEUP §4) — mean/median/slope/
    fraction on empty emits measured-flat (system_gradient twin); members co-printing N resort
    to SOUND.
-7. **A10 — catch(error) → 0.0** (`json_report.pl:415–418`, wasserstein) — errored-unknown
-   collapse.
 8. **Low tier:** C4c `pass(no_*_data)`/`no_scaffold_needed` defaults (provenance arg present
    but collapsed by `pass(_)` reads); A7 zero-contamination-on-untyped (needs a design ruling:
    intended semantics vs absorption); B2 collectors over build-stage caches (defect only if the
    report path runs without the build step).
+
+**Update 2026-06-11 — item-4 sentinel trace executed; verdict SILENT; re-rank applied.**
+Evidence: `audits/2026-06-11_oq112_item4_sentinel_trace/` (probes v1–v3b + raw outputs).
+Witness chain: (W3) `get_constraint_metrics` returns `supp=unknown` — the `; Supp = 0.0`
+branches at `maxent_classifier.pl:255/:761` are DEAD; (W10/W15) with profiles present, both
+standard and indexed LL paths THROW `type_error(evaluable, unknown/0)` at `is/2`
+(`gaussian_log_likelihood`, `maxent_classifier.pl:123`) — loud in isolation, numeric positive
+control LL=7.31; (W8) but both absent-suppression constraints (the OQ-44
+`cs_axiom_contradiction` pair) lack `constraint_claim`, so the drivers enumerate 60/62 and the
+atom never reaches the sink on the live corpus; (W12a) `maxent_threshold_proximity` absorbs
+UNCAUGHT — clause failure before the arithmetic, the catch-free third sink a catch-grep cannot
+see; (W16/W12b) every production boundary is silent (catch-true vacuous success / catch-fail
+row drop). **Hazard is latent, not live:** the first claim-bearing story missing
+`suppression_requirement` voids the entire maxent stage silently through the item-2 boundary.
+Method note kept in the writeup: two probe iterations returned success-shaped non-witnesses
+(LL=-10.0 with the dynamic profile table empty) — profile-present must be witnessed before
+trusting any sink result.
 
 Disposition per class follows the OQ-44 statute for any site touched (fail-closed on absence,
 pass carries witness); output-changing fixes land alone per the established commit discipline.
