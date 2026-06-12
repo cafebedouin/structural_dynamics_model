@@ -3192,6 +3192,48 @@ it bounds the usable resolution of the ε axis — report ε-based statistics at
 continuous. Do NOT "fix" it by disclosing target ε values to the author (that is the de-leak in
 reverse — re-collapses the diff). If anything is steered, it is via topic/source-domain selection.
 
+**Evidence update (2026-06-12, kernel_v2_test2 n=60 + live cohort-zero n=5; ruling PENDING — operator's call):**
+
+- **(a) trajectory:** 0.68 share 34% (n=91) → 30% (n=60); distinct values 13 → 13; last-digit-8
+  86% → 77%. Stable — but the n=60 set is the curated *survivor* of the n=91 corpus (dispositions/
+  OQ-105 archivals), not growth, and the cohort-zero swap (2026-06-11) retired the whole series.
+  No true growth datapoint exists; the watch needs RE-BASELINING on the cohort-zero regime (live
+  n=5: 0.68×1, .x8 rail 4/5 — too small to read).
+- **(b) cross-tab — ANSWERED, and it reframes the OQ:** ε tracks claimed_type in nearly separable
+  bands: mountain (n=9) 0.02–0.15, 0/9 at 0.68; rope (n=10) 0.08–0.28 (3 exceptions at 0.48/0.68
+  are kernel-reading stories — flat_control, techno_optimist_reading, post_1998_convergence —
+  authored perspectival divergence, not noise); tangled_rope (n=23) 0.42–0.68; snare (n=17)
+  0.68–0.78, only 3 distinct values. 0.68 = "the model's number for a high-extraction type," not a
+  free default. Bands are consistent with config thresholds (rope_epsilon_ceiling 0.45 /
+  snare_epsilon_floor 0.46 / tangled_rope_epsilon_floor 0.30) which remain UNDISCLOSED — generation
+  prompt grep clean for 0.68/0.55/0.56/0.45/0.46, positive control fired on a known number.
+- **Mechanism found — the compression is two-layer:** (1) PIPELINE-DESIGNED quantization: SCOPE
+  co-authors `epsilon_bin` ∈ {v_low, low, mod, high} (numeric boundaries disclosed at the SCOPE
+  stage only, `prompts/uke_scope_v2_json.md:292`) alongside `hypothesis` (→ claimed_type); the
+  generation prompt maps bin → `base_properties.extractiveness`
+  (`prompts/constraint_story_generation_prompt_json.md:756`). Where a bin is recorded: conformance
+  15/15; within "high", 8/13 at exactly 0.68. (2) MODEL IDIOM on top: the in-bin point mass and the
+  .x8 just-under-round-number rail (0.08|0.10, 0.28|0.30, 0.48|0.50, 0.78|0.80) — no surface
+  discloses these. CAVEAT: 41/60 stories carry NO recorded bin yet show the same grid (0.68 at
+  22%); the `uke_scope` block is informational/optional, so bin-conditioning is unrecoverable for
+  them (absence of record ≠ absence of conditioning — the provenance bit is missing). Side finding:
+  4 stories carry free-text bin tokens (`moderate_high`, `moderate`, `negligible`) outside the
+  schema enum — the informational block is unvalidated.
+- **Implications:** ε-stratified statistics are claimed_type statistics in disguise (within-type ε
+  variance is 2–5 values); claimed-vs-computed divergence is f(d)/σ(S)-driven — now with mechanism,
+  not just observation. The generation prompt's "Claim/Metric Independence" checklist item is
+  structurally undermined whenever SCOPE feeds both `hypothesis` and `epsilon_bin` (co-authored
+  upstream, both received by the generator). Never cite the ε↔claimed_type correlation as a
+  detection result — it is authoring convention (OQ-70-analog).
+
+**Proposed ruling (pending operator):** adopt (c) mechanism-informed — (1) report ε statistics at
+bin resolution (the 4 SCOPE bins); sub-bin precision is unsupported (usable ε axis ≈ 4 levels
+corpus-wide, ~2 conditional on claimed_type); (2) re-baseline the (a) watch on the cohort-zero
+regime; (3) land the provenance bit: make `uke_scope.epsilon_bin` mandatory-when-manifest-fed and
+schema-validate its enum, so future cross-tabs can separate instruction-following from idiom;
+(4) mark (b) answered as above; (5) keep the no-disclosure rule. Status would move open →
+mitigated once (3) lands.
+
 ## OQ-79 — c-orchestrator recognizes kernels but silently drops their readings; flat-entry topics never engage the kernel question
 
 **Ω-type:** Ω_E (the loss is witnessed and counted) + an Ω_P design call (should the flat-entry path hold the kernel-vs-flat perturbation at all, or delegate).
