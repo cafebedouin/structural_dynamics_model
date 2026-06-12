@@ -36,7 +36,7 @@
 :- use_module(diagnostic_summary).
 :- use_module(post_synthesis).
 :- use_module(drl_fpn, [fpn_ep/3, fpn_intrinsic/2]).
-:- use_module(drl_purity_network, [constraint_neighbors/3]).
+:- use_module(drl_purity_network, [constraint_neighbors/3, shared_agent_link/4]).
 
 :- use_module(library(lists)).
 :- use_module(library(http/json)).
@@ -1046,31 +1046,38 @@ write_contamination_network(S, C, Context) :-
     write_json_number(S, Delta),
     format(S, ',~n', []),
     format(S, '        "neighbors": ', []),
-    write_neighbor_array(S, Neighbors, Context),
+    write_neighbor_array(S, C, Neighbors, Context),
     format(S, '~n', []),
     format(S, '      }', []).
 
-%% write_neighbor_array(+Stream, +Neighbors, +Context)
-%  Writes JSON array of neighbor objects.
-write_neighbor_array(S, [], _) :- !, format(S, '[]', []).
-write_neighbor_array(S, Neighbors, Context) :-
+%% write_neighbor_array(+Stream, +Subject, +Neighbors, +Context)
+%  Writes JSON array of neighbor objects. Subject is the constraint whose
+%  network this is (needed to compute the shared-agent count per edge — OQ-103).
+write_neighbor_array(S, _Subject, [], _) :- !, format(S, '[]', []).
+write_neighbor_array(S, Subject, Neighbors, Context) :-
     format(S, '[~n', []),
-    write_neighbor_items(S, Neighbors, Context),
+    write_neighbor_items(S, Subject, Neighbors, Context),
     format(S, '~n        ]', []).
 
-%% write_neighbor_items(+Stream, +Neighbors, +Context)
+%% write_neighbor_items(+Stream, +Subject, +Neighbors, +Context)
 %  Writes neighbor objects. Last item has no trailing comma.
-write_neighbor_items(_, [], _).
-write_neighbor_items(S, [neighbor(Other, Str, Src)], Ctx) :-
-    !, write_one_neighbor(S, Other, Str, Src, Ctx).
-write_neighbor_items(S, [neighbor(Other, Str, Src)|Rest], Ctx) :-
-    write_one_neighbor(S, Other, Str, Src, Ctx),
+write_neighbor_items(_, _, [], _).
+write_neighbor_items(S, Subj, [neighbor(Other, Str, Src)], Ctx) :-
+    !, write_one_neighbor(S, Subj, Other, Str, Src, Ctx).
+write_neighbor_items(S, Subj, [neighbor(Other, Str, Src)|Rest], Ctx) :-
+    write_one_neighbor(S, Subj, Other, Str, Src, Ctx),
     format(S, ',~n', []),
-    write_neighbor_items(S, Rest, Ctx).
+    write_neighbor_items(S, Subj, Rest, Ctx).
 
-%% write_one_neighbor(+Stream, +Other, +Strength, +Source, +Context)
+%% write_one_neighbor(+Stream, +Subject, +Other, +Strength, +Source, +Context)
 %  Writes a single neighbor JSON object with purity and type.
-write_one_neighbor(S, Other, Strength, Source, Context) :-
+%  shared_agent_count (OQ-103): for agent-derived edges (shared_beneficiary /
+%  shared_victim) it is the number of distinct agents the two constraints share
+%  on that link type — the principled salience input (edge_strength = 0.3 × count
+%  capped at 1.0; reading the count instead of back-deriving it from 0.3 survives
+%  edge-strength recalibration). null for explicit (story-authored) and
+%  inferred_coupling edges, where the concept does not apply.
+write_one_neighbor(S, Subj, Other, Strength, Source, Context) :-
     % Neighbor's purity (effective if FPN ran, else intrinsic)
     (   catch(fpn_ep(Other, Context, NP0), _, fail), NP0 \= -1.0
     ->  NP = NP0
@@ -1084,12 +1091,25 @@ write_one_neighbor(S, Other, Strength, Source, Context) :-
     ->  true
     ;   NType = null
     ),
+    % Shared-agent count (OQ-103 salience input): distinct agents shared on the
+    % edge's link type. Only meaningful for agent-derived edges; null otherwise.
+    (   memberchk(Source, [shared_beneficiary, shared_victim])
+    ->  ( catch(findall(A,
+                        drl_purity_network:shared_agent_link(Subj, Other, Source, A),
+                        As0),
+                _, As0 = []),
+          sort(As0, As),
+          length(As, SAC) )
+    ;   SAC = null
+    ),
     format(S, '          {"constraint_id": ', []),
     write_json_string(S, Other),
     format(S, ', "edge_type": ', []),
     write_json_string(S, Source),
     format(S, ', "edge_strength": ', []),
     write_json_number(S, Strength),
+    format(S, ', "shared_agent_count": ', []),
+    write_json_number(S, SAC),
     format(S, ', "neighbor_purity": ', []),
     write_json_number(S, NP),
     format(S, ', "neighbor_type": ', []),

@@ -4314,8 +4314,11 @@ the essay collapses plurality under any synthesizer); step 6 = `_step_ledger`. W
 48/48 blocks on real pipeline output; fidelity spot-check vs two regenerated reports clean;
 orchestrator step path success. The live-synthesis checklist stays the operator's instrument
 (`audits/2026-06-10_external_review_xprize/README.md`). KNOWN_STATE 2026-06-11;
-`audits/2026-06-11_oq93_grid_migration/phase7_*`. Cross-refs: OQ-102 (closed), OQ-103 (open —
-the ledger labels the gap, never absorbs it).
+`audits/2026-06-11_oq93_grid_migration/phase7_*`. Cross-refs: OQ-102 (closed), OQ-103 (resolved
+2026-06-12 — read-site now carries `edge_type` provenance + a `shared_agent_count` salience floor;
+the ledger's contamination block can consume those fields directly instead of hand-labeling the
+gap. Follow-up, not blocking: have `tensions_ledger.py` read the salience bit so floored
+single-shared-agent edges drop out of the ledger too).
 
 
 ## OQ-102 — Drift/temporal subsystem carries no authored-vs-imputed provenance on its time series; "critical" outranks its own "confidence: low" at the read site
@@ -4340,39 +4343,69 @@ KNOWN_STATE 2026-06-11. Cross-refs: OQ-98 (join pattern), OQ-93 (provenance spin
 bucket).
 
 
-## OQ-103 — Contamination/purity-network edges carry no story-authored-vs-corpus-derived provenance bit and no salience floor at the read site
+## OQ-103 — Contamination/purity-network edges: provenance bit serialized but inert at the read site, and no salience floor — RESOLVED
 
-**Ω-type:** Ω_E (defect witnessed and attributed; narrowed scope — see below).
+**Ω-type:** Ω_E (defect witnessed and attributed; title/scope corrected at close — see Scope correction).
 
-**Status:** open — filed 2026-06-10 (second external-review batch, `audits/2026-06-10_external_review_xprize/`).
+**Status:** resolved — read-site fix landed 2026-06-12 (worktree `oq103-readsite-provenance`); the
+synthesis-step enforcement half stays with OQ-101.
 
-**The witness.** The `digital_colonialism_data_extraction | snare | shared_beneficiary | 0.30`
-edge (`reprogramming_safety_toxicity_report.md:136`, Δpurity −0.0554) is a corpus-topology
+**The witness (filed 2026-06-10, `audits/2026-06-10_external_review_xprize/`).** The
+`digital_colonialism_data_extraction | snare | shared_beneficiary | 0.30` edge
+(`reprogramming_safety_toxicity_report.md`, Δpurity −0.0554) is a corpus-topology
 `shared_beneficiary` computation, **not** authored in
-`prolog/testsets/reprogramming_safety_toxicity.pl` (grep: no neighbor / `affects_constraint`
-declaration there). The article says nothing about biobanks or low-regulation jurisdictions; the
-auto-essay nonetheless spun a whole section off the edge (`sinclair_xprize_reprogramming_2026.md:176-180`).
-A downstream consumer cannot tell, at the read site, that the edge is the corpus's story rather
-than this case's.
+`prolog/testsets/reprogramming_safety_toxicity.pl`. The article says nothing about biobanks; the
+auto-essay spun a whole section off the edge (`sinclair_xprize_reprogramming_2026.md:176-180`).
+Load-bearing escalation (2026-06-11, Pew review exchange): the trust↔representation
+`shared_victim | 0.30` edge IS the relocation thesis of the parent essay in graph form
+(`institutional_trust_erosion_report.md`, reciprocal at `representation_legitimacy_gap_report.md`)
+— a corpus-derived edge carrying an essay's central claim, where authored-vs-derived is the
+difference between "the source material asserts this connection" and "our corpus does."
 
-**Narrowed scope.** The **engine is not fabricating** — it labels edge-type, strength, and Δ
-honestly. The *proximate* inflator is the synthesis step (handled by OQ-101 + the live-synthesis
-checklist). The engine sub-component is (a) a provenance bit (story-authored vs corpus-topology)
-and (b) a salience floor flagging edges below an interpretive-weight threshold. Distinct from
-OQ-95 (phantom nodes in the `giant_component` BFS — that is node membership; this is edge
-provenance + salience). Cross-refs: OQ-95, OQ-101.
+**Scope correction at close (2026-06-12).** The filed title ("carry no provenance bit") was
+wrong: the bit was already there. `constraint_neighbors/3` tags every edge with a `Source`
+(`explicit | shared_beneficiary | shared_victim | inferred_coupling`); `json_report.pl`
+serializes it as `edge_type`; `enhanced_report.py` already printed it in the Edge column.
+`edge_type == explicit` IS the story-authored-vs-corpus-derived bit. The real defects were
+(1) the bit was **inert** — renderer and synthesis step gave all edge types equal interpretive
+weight, with no legend telling a consumer that `shared_beneficiary` means "the corpus computed
+this, the source did not"; (2) **no salience floor** — a strength-0.30 single-shared-agent edge
+headlined contamination identically to a strength-1.0 authored one. A theorized dedup-mislabel
+(an `explicit` edge surfacing relabeled `shared_*` because `deduplicate_neighbors` keeps `MaxS`
+strength but the first-sorted source) was CHECKED on the one live overlap pair
+(`hybrid_security_reading ↔ formalist_employment_reading`, both name `platform_companies`) and
+**NOT witnessed** — it surfaces correctly as `explicit 1.0`. So `edge_type` is a reliable
+provenance bit in practice and no separate `authored` flag was added.
 
-**Load-bearing escalation (2026-06-11, Pew political-typology review exchange).** The essays are
-now making *network claims*, not just node claims: the trust↔representation `shared_victim` edge
-is the relocation thesis of the parent essay in graph form
-(`outputs/constraint_reports/institutional_trust_erosion_report.md:142` —
-`representation_legitimacy_gap | snare | shared_victim | 0.30`; reciprocal at
-`representation_legitimacy_gap_report.md:143`; testsets untracked as of filing). Grep of both
-testsets finds no authored neighbor/`affects_constraint` declaration (positive control:
-`shared_victim` fires in `drl_purity_network.pl`), so the thesis-bearing edge is corpus-topology.
-When an edge carries an essay's central claim, whether it is story-authored or corpus-derived is
-no longer a hygiene bit — it is the difference between "the source material asserts this
-connection" and "our corpus does." Priority raised accordingly.
+**Resolution (read-site; no engine classification change).**
+- `json_report.pl`: each neighbor now serializes `shared_agent_count` — distinct agents shared on
+  the edge's link type (null for `explicit`/`inferred_coupling`). This is the principled salience
+  input: `edge_strength = 0.3 × count` capped at 1.0, so reading the count (not back-deriving from
+  a literal 0.3) survives any edge-strength recalibration. Witnessed across all 106 live edges:
+  explicit→null (22), shared_*→count 1 (82) or 2 (2); `strength == 0.3 × count` exact.
+- `enhanced_report.py`: neighbor table gains **Provenance** (`authored`/`corpus-derived`) and
+  **Salience** (`salient`/`low`) columns + a legend paragraph; the "primarily X" sentence now
+  ranks over SALIENT edges only. Floor: authored always salient; corpus-derived agent edge salient
+  iff `shared_agent_count ≥ 2`; `inferred_coupling` (zero live coverage) falls back to
+  `strength ≥ 0.6`. **Empty-above-floor is explicit**: when a real negative Δ is carried entirely
+  by floored edges, the sentence says "contamination is carried entirely by low-salience
+  corpus-derived edges … No connection here is asserted by this case's source material" rather
+  than promoting a weak edge.
+- Floor demotes **82/106 (77%)** of live edges to low-salience — the network IS mostly weak
+  corpus scaffolding. Both filed witnesses now render `corpus-derived | low` with the no-headline
+  sentence (pipeline run `2026-06-12T04:29:38Z`, n=62).
+- Unit fixture `python/tests/test_contamination_provenance_salience.py` (5/5 pass) pins the
+  partition, the count-based floor, empty-above-floor, the still-headlines-when-salient path, and
+  the live-uncovered `inferred_coupling` branch.
+
+**Back-propagation declined (operator, 2026-06-11).** Post-fix the relocation-thesis edge renders
+low-salience, retroactively weakening the parent essay's graph support — but no re-audit of
+existing essays is owed: this corpus exists to fix these defects and is then rebuilt from scratch;
+no looking backward.
+
+**Remaining (OQ-101).** The synthesis step reading past the now-load-bearing provenance/salience
+tags is enforced by the live-synthesis checklist (OQ-101), not here. Distinct from OQ-95 (phantom
+BFS nodes = node membership; this is edge provenance + salience). Cross-refs: OQ-95, OQ-101.
 
 ## OQ-104 — Audit-citation integrity has no checker: paths cited from audit writeups can be untracked, gitignored, or nonexistent with nothing failing
 
