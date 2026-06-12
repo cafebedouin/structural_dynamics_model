@@ -4618,17 +4618,36 @@ miss — success-shaped absence (Build Discipline Pattern 6: measured-empty and 
 collapse to one token). Live on every report run: `scenario_manager.pl:114` →
 `repair_interval/1` → `bridge_v34_data/2` → `bridge_omega_variables_pure/3`.
 
-**Why zero bite today.** Every 5-arity OID in the live corpus has a same-file
-`narrative_ontology:omega_variable/3` sibling (251/251 paired, census 2026-06-11), so even a
-working bridge would be duplicate-guarded into a no-op. The bridge exists for UNPAIRED
-(v3.4-legacy) testsets — exactly where it would silently fail. Secondary defect to not
-preserve blindly: a working /5 branch imports every omega as hardcoded type `empirical`
-(`data_repair.pl:232`), fabricating the type.
+**Why zero bite today — fact vs prediction.** The pairing census is FACT: every 5-arity OID
+in the live corpus has a same-file `narrative_ontology:omega_variable/3` sibling (251/251,
+census 2026-06-11). "A working bridge would be duplicate-guarded into a no-op" is a
+PREDICTION about code that has never executed its success path — the duplicate guards
+(`acc_has/2` in the bridge; check-before-assert in `persist_bridge_results/1`) are as
+unexercised as the lookup they guard. Fine as triage justification; not a fix-time witness.
+The bridge exists for UNPAIRED (v3.4-legacy) testsets — exactly where it would silently
+fail. Secondary defect to not preserve blindly: a working /5 branch imports every omega as
+hardcoded type `empirical` (`data_repair.pl:232`), fabricating the type.
 
 **Resolution shape.** Either key the lookup on `constraint_<id>` (`atom_concat/3`, as
 `report_generator.pl:661–664` now does — that fix is the template) with a positive-control
 probe, or retire the bridge with a tombstone if v3.4-unpaired testsets are out of scope
-(adjudicate by contribution, not wiring — Unwired ≠ worthless). **Sweep closure note:** the
+(adjudicate by contribution, not wiring — Unwired ≠ worthless). **Fix-time witness set must
+include BOTH cases:** (a) an unpaired case showing new imports (the bridge's purpose), AND
+(b) a PAIRED case showing the duplicate guard actually fires on the now-working bridge — if
+the guard has its own bug, the fix turns a silent no-op into duplicated omegas, a worse
+defect than the one being fixed.
+
+**Output-changing — lands alone, with this baseline.** A working bridge changes which
+3-arity `narrative_ontology:omega_variable/3` facts exist at report time, and the OQ-99
+authored-protocol path (commit `6b1092c0`) joins 5-arity facts against exactly that
+enumeration — so this fix can change which omegas render and how, on every report run.
+Same discipline as OQ-99/OQ-100: output-changing commit lands alone. **Diff baseline for
+the fixer:** reports regenerated 2026-06-11 at code `04bf88ac` (post-OQ-99/100) —
+`scale_ceiling` (4 omegas, all AUTHORED RESOLUTION PROTOCOL boxes),
+`ai_governance_accountability` (authored boxes + 1 gap-derived `snare_masked_as_rope`),
+`employment_boundary_contradictions` (no omegas). Reports are gitignored; regenerate the
+baseline at the pre-fix commit via `python3 python/enhanced_report.py <ids>` before
+applying the fix, then diff. **Sweep closure note:** the
 census found `omega_variable/5` is the ONLY unqualified predicate testsets author (everything
 else is `narrative_ontology:`/`constraint_indexing:`-qualified or plunit `test/1`);
 `user:omega_variable` = zero hits in non-archive code (grep positive-controlled);
