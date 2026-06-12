@@ -4630,12 +4630,15 @@ contention) remain operative build specs here.
   never `dr_type/3`. Whoever lands it owes the seam positive control (mountain-claimed
   perspectives-free story) plus a reentrancy witness (signature evaluation terminates on a
   story whose guard path executes the recompute).
-  **RULED + LANDED (2026-06-12):** both named candidates FAILED the pinned gauntlet (the
-  criterion working, per operator — the pin rejected everything offered; not grounds to
-  loosen leg (1)). Option-4 witness failed (1/6); option-2 BRIDGE installed:
-  authored-cells arm first (dies at Phase C, named retirement point) ∨
-  `nl_certification_chain/1`. Seam A1 closed (control passes via surviving arm).
-  Extension question → OQ-114. Full package:
+  **RULED + LANDED (2026-06-12; spec-corrected same day):** both named candidates FAILED
+  the pinned gauntlet (the criterion working, per operator — the pin rejected everything
+  offered; not grounds to loosen leg (1)). Option-4 witness failed (1/6). Final form is
+  CONDITIONAL DISPATCH (the first disjunction form accidentally had C's extension — old ∨ C
+  where C ⊇ old IS C; corrected same day, byte-identical revert witnessed):
+  `(authored cells present -> old unanimity verbatim ; nl_certification_chain/1)`.
+  Seam A1 closed (control passes via the C arm); live extension = old guard's exactly
+  through Phase B; dispatch collapses to the C arm at Phase C re-witness. Extension
+  question → OQ-114 (with exposure-window note). Full package:
   `audits/2026-06-11_oq109_phase_b/UNANIMITY_ADJUDICATION.md`.
   **Census (2026-06-12, operator-triggered — the class is NOT {2}):**
   `audits/2026-06-11_oq109_phase_b/b3_empty_table_census.md`. Six SILENT fail-open members
@@ -4856,7 +4859,13 @@ consumer's `== false` test is what can never see it).
 **Ω-type:** Ω_E (measurable divergence rate) with an Ω_P edge (the per-story mountain ruling).
 
 **Status:** open — filed 2026-06-12 at the OQ-109 unanimity ruling (operator: the extension
-question is its own item, never a side effect of rewiring).
+question is its own item, never a side effect of rewiring). **Exposure-window correction:**
+the first bridge (disjunction, commit `790bb009`) accidentally made C's extension LIVE on
+main until the same-day dispatch commit — the un-fire and downstream effects (3 signature/
+pool changes, 3 maxent_top_type flips, regulatory_measurement_gap verdict_join yellow→red,
+57-story ensemble shift) WERE in pipeline output during that window; enumerated in
+UNANIMITY_ADJUDICATION.md §Spec correction for tracing any consumer. The dispatch commit
+reverted main to the old extension byte-identically; this question is NOT pre-answered.
 
 **The question.** The bridge guard (authored-cells ∨ nl_certification_chain) extends FCR's
 mountain-protection to 3 mountain-claimed NL-certified stories whose authored seats were NOT

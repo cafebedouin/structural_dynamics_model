@@ -65,6 +65,25 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — SPEC CORRECTION: unanimity bridge disjunction → conditional dispatch; extension change fully reverted (byte-identical witness); OQ-114 exposure window recorded; ensemble-decomposition practice note banked
+**Files:** prolog/signature_detection.pl, ISSUES.md, docs/technical/build_discipline.md, audits/2026-06-11_oq109_phase_b/
+**Tier:** correction-key
+
+The 790bb009 bridge landed as old ∨ C — but C ⊇ old, so the union IS C's extension: the
+3-story protection, the FCR un-fire, and the regulatory_measurement_gap yellow→red were
+LIVE on main for the same-day window, pre-answering OQ-114 (operator: spec
+under-specification — "ordered so the authored path decides" meant dispatch, was written
+disjunction; executable miss here — the 9/62 extension witness was in hand and not read as
+"the deferral didn't defer"). Fix: conditional dispatch (authored cells present → old
+semantics verbatim; else nl_certification_chain). Witnesses: dispatch extension = old 6
+exactly; seam control still passes via C arm; pipeline diff vs PRE-BRIDGE baseline
+BYTE-IDENTICAL (b3_unanimity_dispatch_diff.out). OQ-114 carries the exposure-window note
+(trace any consumer of pipeline output in the window). Banked as infrastructure:
+build_discipline.md → "Extension-touching diffs decompose into direct targets vs ensemble
+refit" (3 signature changes refit 57 stories' corpus-relative statistics; determinism
+control is the standard companion) — required reading before B4 gauntlet / Phase C regen
+diffs.
+
 ## 2026-06-12 — OQ-109 B3 unanimity guard RULED+LANDED: option-2 bridge (authored-cells ∨ nl_certification_chain); census A1 seam closed; OQ-113/OQ-114 filed; output-changing (3 targets + ensemble cascade)
 **Files:** prolog/signature_detection.pl, ISSUES.md, audits/2026-06-11_oq109_phase_b/
 **Tier:** landed

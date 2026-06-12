@@ -82,3 +82,29 @@ effects: 3 maxent_top_type flips piton→rope (regulatory_measurement_gap,
 wage_convergence_mechanism, wage_convergence_sustainability) and ONE headline change —
 regulatory_measurement_gap verdict_join yellow→red (ensemble-shifted maxent feeding the
 diagnostic).
+
+## Spec correction (operator, 2026-06-12, same day): disjunction → conditional dispatch
+
+The first bridge landed as old ∨ C — but C ⊇ old on the live corpus, so the union just IS
+C's extension (clause order controls which arm succeeds, not which stories pass). That
+executed the extension change OQ-114 was filed to defer: the operator's "ordered so the
+authored path decides" meant CONDITIONAL DISPATCH and was written as disjunction
+(under-specification owned by the operator; the executable miss owned here — the 9/62
+extension witness was in hand and should have been read as "the deferral didn't defer").
+
+Fix: `( has_authored_cells -> old semantics verbatim ; nl_certification_chain )`.
+Witnesses: dispatch extension = exactly the old 6 (the 3 re-exclude); seam control still
+PASSES via the C arm (perspectives-free NL scratch story); **pipeline diff vs the pre-bridge
+baseline BYTE-IDENTICAL** (`b3_unanimity_dispatch_diff.out`) — FCR re-fires on
+institutional_trust_erosion, regulatory_measurement_gap's verdict reverts, every ensemble
+statistic returns. Phase C: dispatch collapses to the C arm at the named re-witnessing
+point, by which time OQ-114 has ruled.
+
+**Exposure window:** C's extension was live on main from `790bb009` until the dispatch
+commit (same day). Downstream effects in that window, for tracing any consumer of pipeline
+output: institutional_trust_erosion signature false_ci_rope→coupling_invariant_rope (seats
+piton→rope); demographic_skill_mismatch + organization_floor left the rope-appearance pool;
+maxent_top_type piton→rope on regulatory_measurement_gap / wage_convergence_mechanism /
+wage_convergence_sustainability; regulatory_measurement_gap headline verdict_join
+yellow→red; corpus-relative statistics (maxent/Wasserstein/Arakelov/signature_pressure)
+shifted on 57 stories.

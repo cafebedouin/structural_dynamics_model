@@ -776,6 +776,37 @@ the composition of a count delta includes other writers' work.
 
 ---
 
+## Extension-touching diffs decompose into direct targets vs ensemble refit (or they read as walls)
+
+**Instance (2026-06-12, OQ-109 B3 unanimity guard):** a guard change that moved THREE
+stories' signature membership produced a pipeline diff touching **60/62** entries. The 57
+non-target entries changed only in corpus-relative statistics — MaxEnt distributions,
+Wasserstein profiles, Arakelov heights, signature_pressure are all fit against corpus-wide
+composition, so any change to the type/signature ensemble refits every story's derived
+statistics. Read naively, the diff is either "the change broke everything" (false) or
+"60-story diffs are normal, approve" (worse). Both misreadings were live risks for the B4
+gauntlet and the Phase C regen diffs.
+
+**Practice rule: any old-vs-new diff for an extension-touching change (signature membership,
+classification, corpus composition) is read in TWO layers, never as a flat count:**
+
+1. **Direct targets** — entries whose change the edit predicts (signature, classification,
+   pool membership). Each is justified individually against the ruling that licensed it.
+2. **Ensemble refit** — entries changed ONLY in corpus-relative statistics. Verify the
+   change-set is confined to those fields (field-level census of the diff, target vs
+   non-target — paste it), and name any statistic-driven consumer flips separately
+   (top-type flips, verdict/headline changes on non-target stories are REAL output changes
+   a reader must see, e.g. a verdict_join yellow→red caused purely by the refit).
+
+**Standard companion: the determinism control.** Re-run the pipeline at the same code and
+diff against itself — byte-identical separates a deterministic ensemble cascade from
+order-dependency noise (OQ-112 class). Without it, "ensemble refit" is an assumption with
+the same shape as the noise it would excuse.
+
+Witnessed pair: `audits/2026-06-11_oq109_phase_b/b3_unanimity_pattern3_diff.out` (the
+decomposed 60/62 wall) and `b3_unanimity_dispatch_diff.out` (the byte-identical revert that
+confirmed the decomposition's accounting was complete).
+
 ## Perturbation is the probe; invariance is the read (a claimed invariant needs a perturbation that moves it)
 
 The engine's whole read is **perturb one axis, hold the rest, sort what stays (invariant) from what

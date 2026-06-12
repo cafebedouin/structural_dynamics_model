@@ -1358,12 +1358,22 @@ appears_as_rope(C, low_extraction_profile) :-
 %  under-restrictive (retains 1/6). Extension today = old 6 + 3 NL-certified
 %  mountains with non-unanimous authored seats (OQ-114 adjudicates the 3;
 %  they all declare beneficiaries, so FSM scrutiny is untouched).
+%  SPEC CORRECTION (operator, 2026-06-12): the first bridge landed as a
+%  DISJUNCTION (old ∨ C) — but C ⊇ old, so the union just IS C's extension:
+%  clause order controls which arm succeeds, not which stories pass. That
+%  executed the extension change OQ-114 was filed to defer. Converted to
+%  CONDITIONAL DISPATCH: authored table present → old semantics VERBATIM;
+%  the C arm fires only on perspectives-free stories. Through Phase B every
+%  live story has authored cells, so the corpus-wide extension is exactly the
+%  old guard's; at Phase C the dispatch collapses to the C arm (named
+%  re-witnessing point), by which time OQ-114 has ruled the extension.
 only_mountain_classifications(C) :-
-    constraint_indexing:constraint_classification(C, _, _),  % At least one exists
-    \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain),
-    !.
-only_mountain_classifications(C) :-
-    nl_certification_chain(C).
+    (   constraint_indexing:constraint_classification(C, _, _)
+    ->  % authored-cell arm: old unanimity semantics, verbatim
+        \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain)
+    ;   % perspectives-free arm: the surviving NL-certification chain
+        nl_certification_chain(C)
+    ).
 
 %% nl_certification_chain(+C)
 %  The authored natural-law certification chain (adjudication candidate C).
