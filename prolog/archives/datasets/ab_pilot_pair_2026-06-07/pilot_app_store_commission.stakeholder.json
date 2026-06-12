@@ -1,0 +1,103 @@
+{
+  "header": {
+    "constraint_id": "pilot_app_store_commission",
+    "version": "1.1",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.8,
+    "suppression": 0.9,
+    "theater_ratio": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Dominant Mobile Platform App Store Commission",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Sets the 15-30% commission rate for in-app purchases and app sales. Enforces this rule by reviewing all apps and rejecting those that use alternative payment processors. Justifies the commission as necessary to fund the store's security, curation, and development tools, providing a trusted marketplace for users and a massive distribution channel for developers."
+    },
+    {
+      "name": "large_app_publishers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pays a significant percentage of their mobile revenue to the platform operator. They argue the fee is disproportionate to the services rendered and is only possible due to the platform's market power. They are forced to either absorb the cost, pass it on to consumers, or engage in costly legal and public battles to try and change the rules. Exiting the platform means ceding a huge market segment."
+    },
+    {
+      "name": "platform_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Benefits from a centralized, easy-to-use, and secure marketplace for applications. However, they indirectly pay the commission through higher prices for digital goods and services as publishers pass on the costs. Their ability to choose is limited to the apps and payment methods sanctioned by the platform operator."
+    },
+    {
+      "name": "small_app_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pays the commission and lacks the resources of large publishers to challenge the rules. They rely heavily on the platform's infrastructure, discovery mechanisms, and user trust to run their business, making the fee a high but unavoidable cost of market access."
+    },
+    {
+      "name": "competing_payment_processors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are explicitly barred from offering their services for in-app purchases on the platform. They would offer lower transaction fees if allowed to compete, but are prevented from entering the market by the platform's rules. Their exclusion is a central point of enforcement."
+    },
+    {
+      "name": "antitrust_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigates whether the platform's commission and payment system rules constitute anti-competitive behavior. They hold hearings, gather evidence from other stakeholders, and have the power to impose fines or mandate changes to the platform's business model."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a centralized, trusted, and curated marketplace connecting millions of users with application developers, handling payment processing, security, and distribution.",
+    "transfer_function": "Transfers a percentage (typically 15-30%) of revenue from app publishers to the platform operator in exchange for access to the platform's user base and ecosystem services.",
+    "absent_voices": "Competing payment platforms and potential alternative app stores are structurally excluded. They would argue for open competition and lower fees, but are prevented from participating in the market by the platform's technical and contractual rules.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commission and its enforcement vanished, publishers would immediately implement alternative payment systems, leading to price competition for digital goods. The platform operator would lose a major revenue stream, and the business model of the mobile ecosystem would fundamentally change as a new market for payment processing on mobile devices emerged.",
+    "founding_problem": "To solve the initial chaos of mobile software distribution by creating a safe, centralized, and simple way for users to discover and install applications, and for developers to distribute their software and get paid reliably.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The platform operator claims the problem is still live, citing ongoing security threats. Large publishers and antitrust regulators argue the problem is largely solved and the arrangement now serves as a tool for anti-competitive rent-seeking. Testimony in legislative hearings (e.g., U.S. Senate Judiciary Committee) and independent economic analysis corroborate the view that the arrangement's primary function has shifted from coordination to extraction."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "A dominant mobile operating system platform requires all application publishers to use its proprietary in-app payment system, from which it collects a 15-30% commission on all transactions. This rule is framed as a necessary measure to ensure security, privacy, and a seamless user experience. However, large publishers and antitrust authorities increasingly challenge it as an anti-competitive practice that leverages the platform's monopoly in OS distribution to extract rents from the separate market of digital goods."
+  },
+  "omegas": [
+    {
+      "id": "true_cost_of_service",
+      "question": "What is the actual marginal cost for the platform to provide the app store's payment, security, and distribution services, and how does it compare to the 15-30% commission charged?",
+      "resolution_mechanism": "Regulatory investigation requiring the platform to disclose its cost structure, or independent economic analysis.",
+      "impact": "A large discrepancy would strengthen the argument that the commission is a form of monopoly rent, potentially leading to mandated rate reductions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The open question of the platform's actual cost to provide App Store services versus the revenue it extracts."
+    }
+  ]
+}

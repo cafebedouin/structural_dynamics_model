@@ -1,0 +1,386 @@
+% ============================================================================
+% CONSTRAINT STORY: hybrid_security_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-01-15
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_hybrid_security_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: hybrid_security_reading
+ *   human_readable: Hybrid Security Reading of Platform Employment Boundary
+ *   domain: labor_economics/platform_economy/social_policy
+ *
+ * SUMMARY:
+ *   The hybrid security reading of the employment boundary kernel
+ *   instantiates a third-category framework for platform workers: neither
+ *   employees nor independent contractors, but a distinct classification with
+ *   tailored protections. This reading emerged from policy entrepreneurs and
+ *   platform companies as a compromise between the formalist reading (binary
+ *   employment/contractor distinction based on control tests) and the
+ *   substantive reading (economic realities test that would classify most
+ *   platform workers as employees). The hybrid category provides baseline
+ *   protections — injury insurance (86.2% coverage), medical benefits (91.5%
+ *   coverage) — while excluding full employment benefits: no retirement
+ *   contributions, no unemployment insurance, no collective bargaining
+ *   rights, no career development infrastructure. The reading solves a
+ *   genuine coordination problem (platform work doesn't fit the binary
+ *   distinction cleanly) while institutionalizing extraction (platforms
+ *   externalize costs, workers bear precarity). Theater ratio (0.58) reflects
+ *   that the 'tailored protections' rhetoric increasingly serves political
+ *   cover rather than functional security — the protections are real but
+ *   insufficient for biographical financial stability, and the category
+ *   calcifies rather than transitions toward fuller coverage. Extractiveness
+ *   (0.48) is moderate but rising: the initial compromise (some protection is
+ *   better than none) is hardening into a permanent settlement that
+ *   forecloses expansion. Suppression (0.62) reflects barriers to exit:
+ *   workers cannot escape the category without leaving platform work
+ *   entirely, and the hybrid status fragments labor organizing
+ *   (third-category workers are excluded from traditional union structures).
+ *
+ * KEY AGENTS:
+ *   - Platform Workers: Primary victims (powerless to moderate / constrained to mobile) — receive partial protections while losing full employment benefits; biographical financial security compromised
+ *   - Platform Companies: Primary beneficiaries (institutional / arbitrage) — avoid full employment costs while providing minimal protections; net extraction runs toward platforms
+ *   - Policy Entrepreneurs: Mixed beneficiaries (institutional / constrained) — collect professional capital from framework innovation but reputations tied to policy success; genuine coordination function alongside extraction
+ *   - Labor Reform Coalition: Organized agents (organized / constrained) — accept partial protections as transitional scaffold while building toward full employment or portable benefits; risk calcification
+ *   - Multi-Platform Workers: Moderate power agents (moderate / mobile) — experience genuine coordination (portable coverage) alongside extraction (benefit gaps); portfolio diversification provides some exit
+ *   - Traditional Labor Protections: Abstract victim (powerless / trapped) — the hybrid category fragments solidarity and creates a permanent underclass with partial rights
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(hybrid_security_reading, 0.48).
+domain_priors:suppression_score(hybrid_security_reading, 0.62).
+domain_priors:theater_ratio(hybrid_security_reading, 0.58).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(hybrid_security_reading, extractiveness, 0.48).
+narrative_ontology:constraint_metric(hybrid_security_reading, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(hybrid_security_reading, theater_ratio, 0.58).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(hybrid_security_reading, accessibility_collapse, 0.42).
+narrative_ontology:constraint_metric(hybrid_security_reading, resistance, 0.68).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(hybrid_security_reading, tangled_rope).
+narrative_ontology:human_readable(hybrid_security_reading, "Hybrid Security Reading of Platform Employment Boundary").
+narrative_ontology:topic_domain(hybrid_security_reading, "labor_economics/platform_economy/social_policy").
+
+domain_priors:requires_active_enforcement(hybrid_security_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(hybrid_security_reading, '2f7e6601-4574-454c-b343-b5da36783756').
+narrative_ontology:cs_kernel_codification('2f7e6601-4574-454c-b343-b5da36783756', formalized).
+narrative_ontology:cs_authority_grounding('2f7e6601-4574-454c-b343-b5da36783756', extraction).
+narrative_ontology:cs_interpretation_layer_present('2f7e6601-4574-454c-b343-b5da36783756').
+narrative_ontology:cs_reading_relation('2f7e6601-4574-454c-b343-b5da36783756', hybrid_security_reading__formalist_employment_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2f7e6601-4574-454c-b343-b5da36783756', hybrid_security_reading__substantive_employment_reading, influences).
+narrative_ontology:cs_axiom('2f7e6601-4574-454c-b343-b5da36783756', foundational, third_category_necessity).
+narrative_ontology:cs_axiom_status(third_category_necessity, holdable).
+narrative_ontology:cs_axiom_grounding('2f7e6601-4574-454c-b343-b5da36783756', third_category_necessity, conventional).
+narrative_ontology:cs_axiom('2f7e6601-4574-454c-b343-b5da36783756', secondary, flexibility_protection_compatibility).
+narrative_ontology:cs_axiom_status(flexibility_protection_compatibility, holdable).
+narrative_ontology:cs_axiom_grounding('2f7e6601-4574-454c-b343-b5da36783756', flexibility_protection_compatibility, instrumental).
+narrative_ontology:cs_reference_frame('2f7e6601-4574-454c-b343-b5da36783756', binary_employment_contractor_distinction).
+narrative_ontology:cs_drift_state('2f7e6601-4574-454c-b343-b5da36783756', platform_economy_emergence, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('2f7e6601-4574-454c-b343-b5da36783756', '').
+narrative_ontology:cs_kernel_id(hybrid_security_reading, employment_boundary).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(hybrid_security_reading, platform_companies).
+narrative_ontology:constraint_beneficiary(hybrid_security_reading, policy_entrepreneurs).
+narrative_ontology:constraint_victim(hybrid_security_reading, platform_workers).
+narrative_ontology:constraint_victim(hybrid_security_reading, traditional_labor_protections).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(hybrid_security_reading, multi_platform_workers).
+narrative_ontology:constraint_victim(hybrid_security_reading, multi_platform_workers).
+narrative_ontology:constraint_victim(hybrid_security_reading, labor_reform_coalition).
+narrative_ontology:constraint_vindicates(hybrid_security_reading, third_category_necessity).
+narrative_ontology:constraint_vindicates(hybrid_security_reading, flexibility_protection_compatibility).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Platform workers receive partial protections (injury insurance, medical coverage) while losing access to full employment benefits (retirement security, unemployment insurance, collective bargaining rights, career development). They can switch platforms but cannot escape the third-category classification without leaving platform work entirely. Income volatility and benefit gaps compromise biographical financial security.
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, platform_workers, payer,
+    powerless, biographical, constrained, national).
+
+% Workers who maintain portfolios across multiple platforms and supplement platform income with traditional employment. They benefit from portable injury coverage and flexibility while bearing benefit gaps (no retirement contributions, fragmented benefits). Portfolio diversification provides exit options and bargaining power that single-platform workers lack.
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, multi_platform_workers, payer,
+    moderate, biographical, mobile, regional).
+narrative_ontology:stakeholder_secondary_role(hybrid_security_reading, multi_platform_workers, beneficiary).
+
+% Platform companies provide minimal protections (injury insurance 86.2%, medical coverage 91.5%) while avoiding full employment costs (payroll taxes, retirement contributions, unemployment insurance, collective bargaining obligations). The hybrid category institutionalizes the cost externalization that platforms sought while providing political legitimacy through 'tailored protections' framing. Companies can restructure operations, lobby for favorable rules, or relocate to friendly jurisdictions.
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, platform_companies, beneficiary,
+    institutional, immediate, arbitrage, national).
+
+% Think tanks, legislative staff, and academics who designed the hybrid category framework. They collect professional capital from the policy innovation and career advancement from its adoption. Their reputations are tied to the framework's success, creating constrained exit — they must defend the category even as evidence of its inadequacy accumulates. They experience genuine coordination (solving a real classification problem) alongside extraction (the framework benefits platforms more than workers).
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, policy_entrepreneurs, beneficiary,
+    institutional, biographical, constrained, national).
+
+% Labor advocates, worker centers, and progressive policy groups who accept the hybrid category as a transitional compromise. They gain incremental wins (baseline protections where none existed) while building toward full employment status or portable benefits infrastructure. Constrained by political economy — must work within existing legislative frameworks and corporate lobbying power. Risk that the hybrid category calcifies into a permanent settlement rather than transitioning toward fuller protections.
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, labor_reform_coalition, payer,
+    organized, generational, constrained, national).
+
+% The abstract collective good of comprehensive labor protections (retirement security, unemployment insurance, collective bargaining, career development) that the hybrid category fragments. Not an agent but a structural feature of the labor market that the third category erodes. The hybrid status creates a permanent underclass with partial rights, fragmenting labor solidarity and foreclosing expansion of full employment protections.
+narrative_ontology:constraint_stakeholder(hybrid_security_reading, traditional_labor_protections, excluded,
+    powerless, civilizational, trapped, national).
+narrative_ontology:stakeholder_non_agent(hybrid_security_reading, traditional_labor_protections).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The hybrid category solves a genuine classification ambiguity: platform work involves characteristics (task-based compensation, multi-platform portfolios, flexible scheduling, algorithmic management) that don't fit cleanly into the binary employment/contractor distinction. The category provides legal clarity for platforms, workers, and regulators about what obligations exist.
+% TRANSFER_FUNCTION: The arrangement transfers employment costs (retirement contributions, unemployment insurance, payroll taxes, collective bargaining obligations) from platforms to workers and the public sector. It transfers flexibility benefits (scheduling autonomy, multi-platform arbitrage) from platforms to workers, though the value of this transfer is contested. It transfers political legitimacy from labor advocates to platforms through the 'tailored protections' framing.
+% ABSENT_VOICES: Full-time platform workers with high income dependency and no supplemental employment are underrepresented in the policy design process. Their voices are filtered through platform companies (who claim to speak for worker preferences for flexibility) and through labor advocates (who claim to speak for worker needs for security). The workers themselves — particularly those in precarious financial situations who would benefit most from full employment status — were not directly at the table when the hybrid category was designed. They are structurally excluded because platform work's atomization prevents collective organizing.
+% DISAPPEARANCE_RATIONALE: If the hybrid category disappeared overnight, platform companies would face binary classification: either treat workers as employees (full costs and obligations) or as contractors (no obligations). Workers would either gain full employment protections or lose baseline protections (injury insurance, medical coverage). Labor advocates would return to litigation and legislation strategies to establish employment status. Policy entrepreneurs would lose the framework that justified their professional capital. The world rearranges because the category is a constructed settlement that multiple parties' arrangements depend on — it is not a natural fact that would persist regardless of institutional choices.
+% FOUNDING_PROBLEM: The founding problem was classification ambiguity in the platform economy: existing employment law (designed for industrial-era work relationships with single employers, fixed schedules, and workplace supervision) did not clearly apply to platform work (algorithmic management, multi-platform portfolios, task-based pay, flexible scheduling). Courts and regulators faced inconsistent rulings. Platforms faced legal uncertainty. Workers faced gaps in coverage. The hybrid category was built to resolve this ambiguity by creating a third classification with defined obligations.
+% FOUNDING_PROBLEM_CORROBORATION: Platform companies and policy entrepreneurs claim the founding problem remains live: platform work's characteristics still don't fit the binary distinction, and the hybrid category is the appropriate solution. Labor advocates and worker centers claim the founding problem is dead: the classification ambiguity was always resolvable through existing economic realities tests, and the hybrid category was a political compromise that institutionalized platform preferences rather than solving a genuine legal problem. Legal scholars are divided: some argue the economic realities test is adequate (substantive reading), others argue the control test is adequate (formalist reading), others argue a third category is necessary (hybrid reading). The status is contested because the parties dispute whether the founding problem was ever a genuine legal ambiguity or a constructed problem that served platform interests.
+narrative_ontology:disappearance_verdict(hybrid_security_reading, world_rearranges).
+narrative_ontology:founding_problem_status(hybrid_security_reading, contested).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: PLATFORM WORKER (SNARE) — Constrained exit (can switch platforms but not escape the category), biographical time horizon. Experiences the hybrid category as extraction: receives minimal protections (injury insurance, some medical coverage) while losing access to full employment benefits (retirement security, career development, collective bargaining). The 'tailored protections' rhetoric masks institutionalized precarity. High effective extraction — the worker bears the cost of flexibility that primarily benefits the platform.
+constraint_indexing:constraint_classification(hybrid_security_reading, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: MULTI-PLATFORM WORKER (TANGLED ROPE) — Mobile exit options (can arbitrage across platforms and supplement with traditional employment), moderate power through portfolio diversification. Experiences genuine coordination (injury insurance, medical coverage across gigs) alongside extraction (no retirement security, fragmented benefits). The hybrid category solves real problems (coverage portability) while embedding costs (no employer retirement contributions, no unemployment insurance). Mixed extraction — benefits from flexibility and basic protections but pays through benefit gaps.
+constraint_indexing:constraint_classification(hybrid_security_reading, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: PLATFORM COMPANY (ROPE) — Institutional power, arbitrage exit (can restructure operations, lobby for favorable rules, relocate to friendly jurisdictions). Experiences the hybrid category as coordination: provides minimal protections (injury insurance 86.2%, medical 91.5%) while avoiding full employment costs (payroll taxes, retirement contributions, unemployment insurance, collective bargaining obligations). Net beneficiary — extraction runs toward this agent. The 'third category' institutionalizes the cost externalization that platforms sought.
+constraint_indexing:constraint_classification(hybrid_security_reading, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: LABOR REFORM COALITION (SCAFFOLD) — Organized labor advocates, worker centers, progressive policy groups see the hybrid category as a temporary compromise with a sunset logic: accept partial protections now (injury insurance, medical coverage) while building toward full employment status or portable benefits infrastructure that makes the third category obsolete. Constrained exit (must work within existing political economy) but organized power. Moderate extraction — the coalition gains incremental wins but the hybrid category may calcify rather than transition.
+constraint_indexing:constraint_classification(hybrid_security_reading, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: POLICY ENTREPRENEUR (TANGLED ROPE) — Think tanks, legislative staff, academics who designed the hybrid category framework. Institutional power but constrained exit (reputations tied to the policy's success). Experience genuine coordination (the category resolves a real classification problem — platform work doesn't fit binary employment/contractor distinction) alongside extraction (the framework benefits platforms more than workers, and policy entrepreneurs' careers depend on defending it). Mixed beneficiary — collect professional capital from the innovation while bearing reputational risk if it fails workers.
+constraint_indexing:constraint_classification(hybrid_security_reading, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — Civilizational time horizon reveals the hybrid category as a structural compromise that both coordinates (solves genuine classification ambiguity, provides baseline protections where none existed) and extracts (institutionalizes precarity, fragments labor solidarity, creates a permanent underclass with partial rights). The category is not a natural law — it is a constructed settlement that could have been otherwise. Analytical perspective sees the tangled rope structure: real coordination function (classification clarity, portable injury coverage) coexisting with asymmetric extraction (platforms avoid full employment costs, workers lose retirement security and collective power).
+constraint_indexing:constraint_classification(hybrid_security_reading, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(hybrid_security_reading_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(hybrid_security_reading, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hybrid_security_reading, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(hybrid_security_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(hybrid_security_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.48): Moderate and rising. The hybrid category provides real protections (injury insurance, medical coverage) that represent genuine coordination, but the benefit gaps (no retirement, no unemployment, no collective bargaining) institutionalize precarity. The extraction is not maximal because the protections are real and some workers (multi-platform, supplemental income) benefit from flexibility. But the trajectory is upward: as the category calcifies, the initial 'better than nothing' compromise hardens into a permanent settlement that forecloses expansion. The 0.48 value reflects that roughly half the constraint's operation is coordination (classification clarity, baseline protections) and half is extraction (cost externalization, precarity institutionalization). Suppression (0.62): Moderate-high and rising. Workers face significant barriers to exit: switching platforms doesn't escape the category, and leaving platform work entirely often means income loss. The hybrid status fragments labor organizing — third-category workers are excluded from traditional union structures and lack collective bargaining rights. Policy suppression is also rising: jurisdictions that adopt the hybrid category treat it as settled rather than transitional, and the category's existence forecloses legislative pathways toward full employment status. Theater ratio (0.58): Moderate-high and rising. The 'tailored protections' rhetoric increasingly serves political legitimation rather than functional security. The protections are real (injury insurance, medical coverage) but insufficient for biographical financial stability — retirement savings, unemployment insurance, and career development are absent. The theater is in the framing: calling partial protections 'tailored' implies they are optimized for platform work's unique characteristics, when in fact they are optimized for platform cost structures. The ratio has risen over the interval as the gap between the rhetoric (innovative third category solving classification problems) and the reality (institutionalized precarity with minimal protections) has widened. Accessibility collapse (0.42): Moderate. Alternative frameworks (formalist binary, substantive economic realities test) remain conceptually available, and some jurisdictions have rejected the hybrid category. But once the third category is codified, it becomes the default framing — policy debates shift from 'should platform workers be employees?' to 'what protections should the third category include?' The collapse is partial because resistance is substantial (labor advocates, worker centers, progressive coalitions continue pushing for full employment status). Resistance (0.68): High. The hybrid category faces sustained opposition from labor advocates who see it as institutionalized precarity, from formalist legal scholars who see it as unprincipled compromise, and from workers who experience the benefit gaps directly. The resistance is higher than typical for tangled ropes because the category's construction is recent and contested — it has not yet achieved the normalization that would lower resistance.
+ *
+ * PERSPECTIVAL GAP:
+ *   The platform company sees rope (coordination solving their classification problem). The single-platform worker sees snare (extraction institutionalizing precarity). The multi-platform worker sees tangled rope (real protections alongside real gaps). The labor reform coalition sees scaffold (transitional compromise with sunset logic). The policy entrepreneur sees tangled rope (professional success tied to a framework that benefits platforms more than workers). The analytical observer sees tangled rope at civilizational scale (the category both coordinates and extracts, and the balance depends on whether it transitions or calcifies). The gap is diagnostic: beneficiaries with arbitrage exit see coordination; victims with constrained exit see extraction; organized agents with generational time horizons see transition potential; analytical observers see the structural ambiguity that makes this a contested kernel rather than a settled fact.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Platform workers are victims with constrained to mobile exit options depending on their portfolio diversification and income dependency. Single-platform workers with high income dependency experience the constraint as a snare (high d, high chi) — they bear the cost of flexibility that primarily benefits the platform. Multi-platform workers with supplemental income experience it as a tangled rope (moderate d, moderate chi) — they benefit from portable coverage and flexibility while bearing benefit gaps. Platform companies are beneficiaries with arbitrage exit — they experience low or negative effective extraction (low d, negative chi via f(d) inversion). The hybrid category solves their cost externalization problem while providing political legitimacy through the 'tailored protections' framing. Policy entrepreneurs are mixed beneficiaries with constrained exit — they collect professional capital from the framework innovation (beneficiary status) but their reputations are tied to the policy's success (constrained exit raises d above pure beneficiary levels). The labor reform coalition is organized with constrained exit — they have agency to push for expansion but face political economy barriers; their d is moderate because they experience both coordination (incremental wins) and extraction (calcification risk). The analytical observer sees the structural tangled rope: genuine coordination function (classification clarity, baseline protections) coexisting with asymmetric extraction (platforms avoid costs, workers lose security).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The hybrid security reading resolves mandatrophy by explicitly framing the third category as a response to platform work's unique characteristics — flexibility, multi-platform portfolios, task-based compensation. The mandate is 'tailored protections for a new form of work.' But the resolution is contested: if the 'unique characteristics' are actually platform cost preferences rather than worker needs, the mandate is a cover story for extraction. The omega variables document this ambiguity: is the third category a genuine classification solution (mandate justified) or a constructed compromise that naturalizes platform extraction (mandate is theater)? The measurements show the constraint drifting toward theater and extraction over time, suggesting the mandate is outliving its function — the initial coordination problem (classification ambiguity) has been solved, but the category persists to institutionalize cost externalization. The mandatrophy is not yet fully resolved because the category is recent and contested, but the trajectory suggests it will calcify into a permanent extraction mechanism unless the labor reform coalition's scaffold logic succeeds.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_ambiguity,
+    'Is the hybrid security reading a genuine third category solving irreducible classification problems, or a constructed compromise that naturalizes platform extraction?',
+    'Comparative analysis: jurisdictions that rejected the third category (e.g., California AB5 before Prop 22) vs. those that adopted it. Longitudinal tracking: do hybrid protections expand toward full employment or calcify at minimal baseline? Cross-reading analysis: does the formalist reading (binary employment/contractor) or substantive reading (economic realities test) produce better worker outcomes?',
+    'If genuine third category: the reading is a rope (coordination) from more perspectives. If constructed compromise: the reading is a snare (extraction) from more perspectives, and the ''tailored protections'' rhetoric is a false summit naturalizing contingent institutional arrangements.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_ambiguity, conceptual, 'Whether hybrid category is genuine classification solution or naturalized extraction').
+
+omega_variable(
+    protection_floor_sufficiency,
+    'Do the tailored protections (injury insurance 86.2%, medical coverage 91.5%, no retirement/unemployment) constitute a sufficient safety net for biographical financial security?',
+    'Longitudinal income and wealth tracking of platform workers under hybrid status vs. traditional employment. Retirement savings accumulation rates. Medical bankruptcy rates. Income volatility and emergency savings adequacy.',
+    'If sufficient: hybrid category is coordination (rope/scaffold) from worker perspectives. If insufficient: hybrid category is extraction (snare/tangled_rope) — the partial protections provide political cover while institutionalizing precarity.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(protection_floor_sufficiency, empirical, 'Whether partial protections provide adequate biographical financial security').
+
+omega_variable(
+    calcification_vs_transition,
+    'Is the hybrid category a transitional scaffold toward portable benefits infrastructure, or a permanent settlement that forecloses full employment expansion?',
+    'Policy trajectory analysis: do jurisdictions that adopt hybrid categories subsequently expand protections (scaffold logic) or treat the category as settled (calcification)? Legislative history: do hybrid category laws include sunset clauses, review mechanisms, or expansion triggers?',
+    'If transitional: scaffold classification confirmed from reform coalition perspective. If permanent: the hybrid category is a tangled rope or snare — it solves the platform''s problem (cost externalization) while institutionalizing worker precarity with no exit path.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(calcification_vs_transition, empirical, 'Whether hybrid category transitions to fuller protections or calcifies').
+
+omega_variable(
+    sibling_reading_foreclosure,
+    'Does adoption of the hybrid security reading foreclose the substantive employment reading (economic realities test leading to full employment status), or do both readings remain live options within the same legal framework?',
+    'Jurisdictional comparison: can a legal system hold both the hybrid category AND the economic realities test, or does codifying the third category eliminate the substantive reading''s legal pathway? Case law analysis: do courts in hybrid-category jurisdictions still apply economic realities tests, or does the statutory third category override common-law employment analysis?',
+    'If foreclosed: the hybrid reading''s adoption eliminates the substantive reading''s legal viability, making the choice between readings a one-way door. If coexistent: both readings remain available, and the hybrid category is one option among several rather than a replacement framework.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(sibling_reading_foreclosure, empirical, 'Whether hybrid category forecloses substantive employment reading').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(hybrid_security_reading, 0, 6).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(hybrid_sec_theater_initial, hybrid_security_reading, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(hybrid_sec_theater_mid, hybrid_security_reading, theater_ratio, 3, 0.48).
+narrative_ontology:measurement(hybrid_sec_theater_current, hybrid_security_reading, theater_ratio, 6, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(hybrid_sec_extract_initial, hybrid_security_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(hybrid_sec_extract_mid, hybrid_security_reading, base_extractiveness, 3, 0.44).
+narrative_ontology:measurement(hybrid_sec_extract_current, hybrid_security_reading, base_extractiveness, 6, 0.48).
+
+% Suppression requirement over time
+narrative_ontology:measurement(hybrid_sec_suppress_initial, hybrid_security_reading, suppression_requirement, 0, 0.52).
+narrative_ontology:measurement(hybrid_sec_suppress_mid, hybrid_security_reading, suppression_requirement, 3, 0.58).
+narrative_ontology:measurement(hybrid_sec_suppress_current, hybrid_security_reading, suppression_requirement, 6, 0.62).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(hybrid_security_reading, resource_allocation).
+narrative_ontology:affects_constraint(hybrid_security_reading, formalist_employment_reading).
+narrative_ontology:affects_constraint(hybrid_security_reading, substantive_employment_reading).
+
+% DUAL FORMULATION NOTE:
+% The hybrid security reading is one of three readings of the employment_boundary kernel. The formalist reading (control tests) and substantive reading (economic realities) are sibling constraints with different epsilon values reflecting their different structural relationships to platform workers and companies. This reading has moderate epsilon (0.48) because it both coordinates (classification clarity, baseline protections) and extracts (cost externalization, precarity institutionalization). The formalist reading has lower epsilon (platforms are pure contractors, no obligations) and the substantive reading has higher epsilon from the platform perspective but lower from the worker perspective (full employment status). The three readings form a constraint family linked by their shared kernel.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(hybrid_security_reading, institutional, 0.25).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

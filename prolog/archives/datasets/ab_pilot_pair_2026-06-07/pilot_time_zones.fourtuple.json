@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "pilot_time_zones",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.2,
+    "theater_ratio": 0.01,
+    "claimed_type": "rope",
+    "human_readable": "Coordinated Standard Time Zones",
+    "topic_domain": "global_infrastructure/coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "international_commerce",
+      "transportation_networks",
+      "global_telecommunications",
+      "general_public"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "interoperability_as_public_good"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The 19th Century Railroad Operator",
+      "comment": "The original agenda-setter. For the railroad, which had to schedule trains across thousands of miles of local solar times, a standard was a pure coordination solution enabling its entire business model. They could (and did) create their own standards before the global one was adopted."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Local Community Member",
+      "comment": "Initially, this agent might perceive the imposition of a standard time that misaligns with their local solar noon as an unchangeable rule (Mountain). However, the benefits of being connected to national schedules for commerce, mail, and travel are so significant that the constraint is quickly perceived as a net-beneficial coordination mechanism (Rope)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Modern Business User",
+      "comment": "For any modern business operating across regions, standard time is a foundational, enabling coordination tool. Exit is not feasible without isolating from the global economy. The negligible costs are massively outweighed by the benefits of predictable scheduling."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical view, this is a quintessential Rope. It solves a massive collective action problem with minimal coercive overhead and near-zero extraction. The suppression of alternatives (local solar times) is in service of the coordination function, not an extractive goal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "meridian_choice_contingency",
+      "question": "Was the choice of the Greenwich Meridian as the prime meridian a neutral technical decision or an artifact of British geopolitical power in the 19th century?",
+      "resolution_mechanism": "Historical analysis of the proceedings of the 1884 International Meridian Conference, focusing on the stated justifications versus the political leverage of the participating nations.",
+      "impact": "If primarily a power play, it introduces a trace element of symbolic extraction or national prestige competition, though it doesn't alter the functional Rope classification. If purely technical, it reinforces the pure coordination narrative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Contingency of the Prime Meridian choice on 19th-century geopolitics"
+    },
+    {
+      "id": "daylight_saving_time_coupling",
+      "question": "Is Daylight Saving Time (DST) an intrinsic part of the time zone constraint, or a separate, more extractive constraint layered on top?",
+      "resolution_mechanism": "Decompose DST into its own constraint story. Analyze its beneficiary/victim structure (e.g., benefits to retail/leisure industries vs. costs to agriculture/health) and its coordination function versus its extractive function.",
+      "impact": "If decomposed, DST would likely classify as a Tangled Rope, while standard time remains a pure Rope. This would reveal how an extractive mechanism can be coupled to a benign coordination infrastructure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of Daylight Saving Time as a potentially separate, extractive constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.01
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 140
+  },
+  "commentary": {
+    "narrative_context": "Before the late 19th century, time was a local phenomenon, typically based on the sun's position (local solar time). This created chaos for enterprises like railroads and telegraph companies that needed to coordinate schedules across vast distances. Standard time zones, first implemented by railroads and later codified internationally at the 1884 International Meridian Conference, solved this collective action problem by creating a shared, predictable standard for timekeeping.",
+    "key_agents": [
+      "Transportation Networks (Railroads): Primary beneficiary and original agenda-setter (institutional/arbitrage) - needed the standard to function.",
+      "International Commerce & Telecommunications: Primary beneficiaries (organized/mobile) - relies on the standard for all cross-border scheduling.",
+      "General Public: Broad beneficiary (powerless/constrained) - uses the standard for daily life, benefiting from integration into the wider economy.",
+      "National Governments: Enforcers and institutional beneficiaries (institutional/arbitrage) - codify and maintain the standard."
+    ],
+    "logic_rationale": "Extractiveness (0.02) is negligible. The system is a public good that enables economic activity rather than extracting from it. The primary 'cost' is the minor misalignment of standard time with solar time for most locations, which is not an extractive transfer. Suppression (0.20) is low but non-zero; alternatives like local solar time are functionally suppressed for official and commercial purposes, which is necessary for the coordination to work. Theater Ratio (0.01) is minimal; the system is almost entirely functional, with little to no performative aspect.",
+    "perspectival_gap": "A key feature of this constraint is the *lack* of a significant perspectival gap. It is a strong, uniform-type Rope. From the powerful institutional actors who created it to the powerless local individuals who adopted it, all agents are net beneficiaries. While some may have initially perceived it as an externally imposed rule, its enormous coordinating benefits make its classification as a Rope stable across all relevant perspectives.",
+    "directionality_logic": "The constraint's function is to create a shared utility. As such, benefits flow to all participants. There are no identifiable victim groups from whom value is systematically extracted. The directionality is symmetric (d \u2248 0.5) for most, and skewed toward beneficiary (d < 0.5) for those whose business models depend entirely on it, like transportation and telecommunications. The engine will compute a near-zero or negative effective extraction (chi) for all perspectives.",
+    "mandatrophy_analysis": "This constraint serves as a clear baseline for a pure coordination good (Rope). It avoids mandatrophy by correctly distinguishing between the suppression required for coordination and the suppression used for extraction. Because the base extractiveness is near-zero, the system does not misclassify this as a Snare, despite the fact that alternatives are suppressed. It also avoids being mislabeled as a Mountain by recognizing its constructed and enforced nature (`requires_active_enforcement: true`)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "daylight_saving_time"
+    ]
+  }
+}

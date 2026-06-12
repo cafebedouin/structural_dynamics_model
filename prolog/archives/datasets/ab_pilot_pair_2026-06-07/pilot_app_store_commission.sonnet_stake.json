@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "pilot_app_store_commission_sonnet_stake",
+    "version": "1.0.0",
+    "generated_date": "2024-01-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "App Store Commission on Large Publishers",
+    "topic_domain": "economic/technology",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls the only viable distribution channel for reaching billions of users on their mobile operating system. Sets commission rates unilaterally, defines what constitutes an in-app purchase subject to commission, and can change terms with minimal notice. Faces regulatory pressure but retains market power through device ecosystem lock-in."
+    },
+    {
+      "name": "large_application_publishers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Generate significant revenue through mobile applications but must remit 15-30% of in-app purchases and subscriptions to the platform. Have resources to build alternative payment systems or challenge terms legally, but abandoning the platform means losing access to half the addressable mobile market. Can absorb commission costs but face pressure to pass them to end users or accept reduced margins."
+    },
+    {
+      "name": "small_independent_developers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay the same percentage commission as large publishers but lack negotiating power, legal resources, or alternative revenue streams. The commission can determine whether their application is economically viable. Often qualify for reduced-rate programs (15% for under $1M revenue) but remain price-takers with no voice in policy formation. Exit means abandoning their primary or only distribution channel."
+    },
+    {
+      "name": "platform_shareholders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive returns from app store revenue, which constitutes a high-margin services business that has grown to represent a significant portion of the platform operator's profit. Commission revenue flows directly to enterprise value with minimal marginal cost. Do not set commission policy but benefit from its extraction without bearing reputational or regulatory costs directly."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bear commission costs passed through as higher subscription prices or in-app purchase fees, though the pass-through is rarely made explicit. Switching mobile platforms requires replacing hardware, rebuying apps, and abandoning platform-specific data and social graphs. Benefit from the platform's claimed security vetting and unified payment system, but have no mechanism to contest commission rates or their economic incidence."
+    },
+    {
+      "name": "alternative_payment_providers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Offer payment processing at 2-5% commission but are prohibited from operating within apps distributed through the store. Platform policies forbid developers from directing users to external payment methods, effectively excluding these providers from the mobile app economy. Would compete on price and features if permitted market access, but platform terms foreclose that option."
+    },
+    {
+      "name": "antitrust_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Investigate whether commission structure constitutes monopolistic behavior, particularly the prohibition on alternative payment systems and the tying of payment processing to distribution. Have legal authority to impose remedies but face questions about whether intervention would harm the platform's ability to maintain security and user experience. Rulings are jurisdiction-specific and enforcement is uneven across markets."
+    },
+    {
+      "name": "competing_mobile_platforms",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate similar commission structures on their own app stores, creating a duopoly pricing equilibrium. Could compete on commission rates but have not, suggesting either parallel business logic or tacit coordination. Watch regulatory proceedings carefully as any mandated opening of one platform would create pressure to open theirs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a unified distribution and payment system that handles app delivery, updates, payment processing, and fraud prevention across billions of devices. Offers developers a single integration point to reach a large user base without building separate infrastructure for distribution, hosting, or payment collection.",
+    "transfer_function": "Extracts 15-30% of in-app purchase and subscription revenue from application publishers, flowing those funds to platform operator revenue and ultimately to shareholders. End users bear the economic incidence through higher prices, though the transfer is obscured by bundled pricing. Large publishers transfer millions annually; small developers transfer smaller absolute amounts but often higher proportions of marginal revenue.",
+    "absent_voices": "Alternative payment providers who could offer competitive rates are structurally excluded by platform policy. Small developers in jurisdictions without antitrust enforcement lack organized representation. Future developers who might enter the market under different terms are not at the table. End users who bear passed-through costs have no collective bargaining mechanism and limited visibility into the commission's economic incidence.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Large publishers would immediately integrate alternative payment systems and direct users to external purchase flows, recapturing 15-30% margin. The platform operator argues that security, fraud prevention, and unified user experience would degrade without centralized control, while publishers argue these functions could be provided at commodity payment-processing rates (2-5%) if separated from distribution access. Small developers might face higher friction costs without the current integrated system, or might benefit from competitive payment pricing\u2014the outcome depends on how alternative infrastructure emerges.",
+    "founding_problem": "In the early smartphone era (2008-2010), developers had no standardized way to distribute mobile applications, collect payment, or update software across fragmented device ecosystems. Users faced security risks from unvetted applications and payment fraud. The integrated app store with commission-based revenue sharing solved the cold-start problem of building a developer ecosystem while funding platform investment in distribution infrastructure.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Technology industry analysts and academic researchers document that by the mid-2010s, cloud distribution infrastructure, payment APIs, and code-signing technologies had become commodity services available at market rates well below 15-30%. Security researchers note that the platform's vetting process regularly fails to catch malware while rejecting legitimate apps, undermining the security justification. European Commission market studies (2020-2022) found that app distribution and payment processing could be disaggregated without degrading security, and multiple jurisdictions have mandated alternative payment options without observable security degradation. The founding coordination problem has been solved by technological maturity; what persists is a rent extraction mechanism justified by a now-solved historical problem."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The dominant mobile platform app stores emerged in 2008-2010 as integrated solutions to real coordination problems: fragmented distribution, payment fraud, and lack of software update mechanisms. By 2024, the commission structure persists largely unchanged (15-30% of qualifying revenue) while the underlying technological barriers have dissolved. Cloud infrastructure, payment APIs, and security sandboxing are now commodity services. What began as infrastructure-funded-by-commission has become commission-justified-by-historical-infrastructure. The arrangement exhibits the characteristic piton-to-snare trajectory: a legitimate coordination mechanism that persists after its founding problem is solved, now defended through switching costs, exclusive dealing, and appeals to the original purpose."
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.5
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_necessity",
+      "question": "Does the current commission rate genuinely fund necessary security infrastructure, or could equivalent security be provided at commodity payment-processing rates (2-5%)?",
+      "resolution_mechanism": "Comparison of security outcomes in jurisdictions that have mandated alternative payment options versus those that have not, measured over 3-5 years. Analysis of the marginal cost of security vetting versus commission revenue.",
+      "impact": "If security is achievable at commodity rates, the 15-30% commission is extractive rather than cost-recovery, shifting classification toward snare. If security genuinely requires the integrated model and high commission, the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Security justification empirical test"
+    },
+    {
+      "id": "competitive_equilibrium",
+      "question": "Is the similarity of commission rates across competing platforms (both charge 15-30%) evidence of parallel competitive discovery of efficient pricing, or tacit coordination in a duopoly?",
+      "resolution_mechanism": "Economic analysis of pricing behavior, examination of internal communications during rate-setting, comparison to commission rates in more competitive markets (PC software distribution, web hosting).",
+      "impact": "Parallel pricing in a duopoly without cost justification strengthens the snare classification by revealing collusive extraction. Independent competitive discovery would support the rope framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duopoly pricing structure analysis"
+    },
+    {
+      "id": "developer_surplus",
+      "question": "Do developers (especially small independent developers) capture sufficient surplus from the integrated platform to justify the commission, or are they held in place primarily by sunk costs and user lock-in?",
+      "resolution_mechanism": "Survey of developer profitability, analysis of developer retention after initial app launch, comparison of developer economics on platforms with different commission structures or mandatory alternative payment options.",
+      "impact": "If developers are held by lock-in rather than surplus capture, exit_options should shift from 'constrained' toward 'trapped' for more developers, and the overall classification shifts toward snare. If developers genuinely profit from the integrated system, rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Developer surplus versus lock-in"
+    }
+  ],
+  "perspectives": []
+}

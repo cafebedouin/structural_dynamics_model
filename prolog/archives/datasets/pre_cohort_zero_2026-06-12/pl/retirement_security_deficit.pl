@@ -1,0 +1,393 @@
+% ============================================================================
+% CONSTRAINT STORY: retirement_security_deficit
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2025-01-09
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_retirement_security_deficit, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: retirement_security_deficit
+ *   human_readable: Retirement Security Deficit in Platform Economy
+ *   domain: labor_economics/platform_economy/social_policy
+ *
+ * SUMMARY:
+ *   The retirement security deficit in China's platform economy creates a
+ *   structural tension between immediate welfare gains (high basic insurance
+ *   coverage: 91.5% medical, 86.2% injury) and long-term insecurity (low
+ *   retirement confidence: 42.3%; low career advancement belief: 54.8%). This
+ *   constraint is a tangled_rope: it solves a genuine coordination problem
+ *   (extending basic social protections to 300M flexible workers previously
+ *   in the informal economy with zero coverage) while embedding asymmetric
+ *   extraction (excluding those same workers from pension accumulation and
+ *   career development mechanisms that formal employment provides). The
+ *   employment boundary interpretation — platform workers classified as
+ *   independent contractors rather than employees — is the mechanism that
+ *   enables both functions simultaneously. The constraint requires active
+ *   enforcement: platforms continuously test classification boundaries to
+ *   minimize obligations; the state selectively enforces to balance fiscal
+ *   constraints (avoiding pension liabilities) against social stability
+ *   (maintaining basic safety net). The theater_ratio (0.48) reflects
+ *   moderate performative content: regulatory experiments (occupational
+ *   injury insurance pilots, platform-specific social insurance schemes) are
+ *   presented as innovative solutions to new employment forms, but they
+ *   institutionalize a two-tier system rather than extending full employment
+ *   protections. The constraint's extractiveness has increased over the
+ *   interval (0.35 → 0.58) as the platform workforce has grown and the
+ *   long-term consequences of pension exclusion have become more apparent,
+ *   while suppression has also increased (0.45 → 0.62) as workers' dependence
+ *   on platform income has deepened and alternative employment options have
+ *   contracted.
+ *
+ * KEY AGENTS:
+ *   - Flexible Workers (300M): Primary victims (powerless to moderate / trapped to constrained) — bear long-term retirement insecurity despite immediate income gains and basic insurance coverage; differentiated by exit options (some trapped by age/education/geography, others constrained but could exit to formal employment at cost)
+ *   - Platform Companies: Primary beneficiaries (institutional/arbitrage) — avoid long-term pension obligations while accessing massive flexible labor supply; can restructure classifications or relocate to maintain favorable treatment
+ *   - State Insurance System: Primary beneficiary (institutional/arbitrage) — offloads long-term pension obligations to individual workers while extending basic safety net; maintains fiscal sustainability at cost of future elderly cohort security
+ *   - Future Elderly Cohort: Secondary victims (powerless/trapped, civilizational time horizon) — the 300M flexible workers in 30-40 years when retirement age arrives with no pension accumulation; will bear full cost of employment boundary interpretation
+ *   - Worker Advocacy Coalition: Organized agents (organized/constrained) — labor scholars, NGOs, sympathetic local courts; see both coordination and extraction; constrained by inability to unilaterally reclassify workers or mandate pension coverage
+ *   - Analytical Observer: Sees tangled_rope structure (analytical/analytical) — genuine coordination function (basic protections extended) coexists with asymmetric extraction (long-term security foreclosed)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(retirement_security_deficit, 0.58).
+domain_priors:suppression_score(retirement_security_deficit, 0.62).
+domain_priors:theater_ratio(retirement_security_deficit, 0.48).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(retirement_security_deficit, extractiveness, 0.58).
+narrative_ontology:constraint_metric(retirement_security_deficit, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(retirement_security_deficit, theater_ratio, 0.48).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(retirement_security_deficit, accessibility_collapse, 0.35).
+narrative_ontology:constraint_metric(retirement_security_deficit, resistance, 0.52).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(retirement_security_deficit, tangled_rope).
+narrative_ontology:human_readable(retirement_security_deficit, "Retirement Security Deficit in Platform Economy").
+narrative_ontology:topic_domain(retirement_security_deficit, "labor_economics/platform_economy/social_policy").
+
+domain_priors:requires_active_enforcement(retirement_security_deficit).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(retirement_security_deficit, '55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9').
+narrative_ontology:cs_kernel_codification('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', formalized).
+narrative_ontology:cs_authority_grounding('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', extraction).
+narrative_ontology:cs_interpretation_layer_present('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9').
+narrative_ontology:cs_reading_relation('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', retirement_security_deficit__substantive_employment_reading, coexists_with).
+narrative_ontology:cs_reading_relation('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', retirement_security_deficit__hybrid_security_reading, influences).
+narrative_ontology:cs_axiom('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', foundational, contract_form_dispositive).
+narrative_ontology:cs_axiom_status(contract_form_dispositive, holdable).
+narrative_ontology:cs_axiom_grounding('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', contract_form_dispositive, conventional).
+narrative_ontology:cs_axiom('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', secondary, algorithmic_intermediation_negates_employment).
+narrative_ontology:cs_axiom_status(algorithmic_intermediation_negates_employment, holdable).
+narrative_ontology:cs_axiom_grounding('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', algorithmic_intermediation_negates_employment, conventional).
+narrative_ontology:cs_reference_frame('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', formal_employment_default).
+narrative_ontology:cs_drift_state('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', platform_economy_emergence, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('55b24918-7a1b-4935-b2ab-f6dcc0a0a8b9', '2025-01-09T00:00:00Z').
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(retirement_security_deficit, state_insurance_system).
+narrative_ontology:constraint_beneficiary(retirement_security_deficit, platform_companies).
+narrative_ontology:constraint_victim(retirement_security_deficit, flexible_workers).
+narrative_ontology:constraint_victim(retirement_security_deficit, future_elderly_cohort).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(retirement_security_deficit, flexible_workers_trapped).
+narrative_ontology:constraint_victim(retirement_security_deficit, flexible_workers_constrained).
+narrative_ontology:constraint_vindicates(retirement_security_deficit, flexibility_autonomy_doctrine).
+narrative_ontology:constraint_vindicates(retirement_security_deficit, individual_responsibility_paradigm).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Platform workers with no alternative employment options due to age (over 45), education (junior high or below), or geographic constraints (smaller cities with limited formal employment). Depend on platform income for survival. Receive basic insurance coverage (91.5% medical, 86.2% injury) but accumulate no pension wealth. Express low retirement confidence (42.3%) reflecting realistic assessment of future insecurity. Cannot exit platform work without losing income; cannot build retirement security within it.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, flexible_workers_trapped, payer,
+    powerless, biographical, trapped, national).
+
+% Platform workers who could transition to formal employment but at significant cost: lower income flexibility, geographic constraint, potentially lower immediate earnings. Value the autonomy and flexibility platform work provides. Receive basic insurance coverage and supplemental income. Aware of long-term insecurity (42.3% retirement confidence, 54.8% career advancement belief) but prioritize immediate benefits. Could exit but choose not to, or delay exit while accumulating platform income.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, flexible_workers_constrained, payer,
+    moderate, biographical, constrained, national).
+
+% Major platform companies (delivery, ride-hailing, e-commerce logistics) that classify workers as independent contractors. Avoid long-term pension obligations while accessing massive flexible labor supply (300M workers). Comply with basic insurance mandates (medical, injury) but externalize retirement security costs to workers. Can restructure worker classification, relocate operations, or lobby for favorable regulatory interpretation. Experience the employment boundary as pure coordination — it solves the business problem of scaling labor supply without fixed costs.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, platform_companies, beneficiary,
+    institutional, immediate, arbitrage, national).
+
+% State social insurance administration and fiscal authorities. Extended basic insurance coverage to 300M flexible workers (91.5% medical, 86.2% injury) through platform-specific mandates. Avoided assuming long-term pension obligations by tolerating contractor classification. Faces fiscal constraints from aging population and existing pension liabilities. Can adjust insurance mandates, redefine employment boundaries, or shift costs between platforms, workers, and general revenue. Experience the constraint as coordination — extended safety net without fiscal burden.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, state_insurance_system, beneficiary,
+    institutional, generational, arbitrage, national).
+
+% The 300M flexible workers in 30-40 years when they reach retirement age with no pension accumulation. Not yet organized as a political constituency; many not yet born or not yet aware of the long-term consequences. Will bear the full cost of the employment boundary interpretation that excluded them from pension systems during working years. Current 42.3% retirement confidence will materialize as actual retirement poverty. Cannot retroactively build pension wealth. Powerless and trapped by time — the extraction compounds over decades and cannot be reversed.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, future_elderly_cohort, payer,
+    powerless, civilizational, trapped, national).
+
+% Labor scholars, NGOs, and occasional sympathetic local courts. Document the retirement security deficit and advocate for regulatory reform. Support test litigation to reclassify platform workers as employees. Constrained by inability to unilaterally force reclassification or mandate pension coverage — can advocate and document but cannot directly change the employment boundary interpretation. See both coordination (basic insurance extended) and extraction (long-term security foreclosed). Secondary agenda-setter role reflects their influence on regulatory experiments and public discourse, but not direct control over classification.
+narrative_ontology:constraint_stakeholder(retirement_security_deficit, worker_advocacy_coalition, observer,
+    organized, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(retirement_security_deficit, worker_advocacy_coalition, agenda_setter).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The employment boundary interpretation solves two genuine coordination problems: (1) It extends basic social insurance protections (medical, injury) to 300M workers previously in the informal economy with zero coverage, creating a safety net for a massive flexible workforce. (2) It enables income flexibility and geographic mobility for workers who value autonomy and supplemental earnings, while allowing platforms to scale labor supply without fixed costs.
+% TRANSFER_FUNCTION: The constraint transfers long-term retirement security from flexible workers to platform companies and the state insurance system. Workers trade pension accumulation and career development for immediate income flexibility and basic insurance coverage. Platform companies avoid pension obligations (estimated 15-20% of wages for formal employees) while accessing flexible labor. The state extends basic safety net (medical, injury insurance) while offloading long-term pension liabilities to individual workers and their families. The transfer is asymmetric: immediate benefits (income, basic insurance) flow to workers, but long-term costs (retirement insecurity) remain with workers, while long-term benefits (avoided pension obligations) flow to platforms and state.
+% ABSENT_VOICES: The future elderly cohort — the 300M flexible workers in 30-40 years when retirement age arrives — is not in the conversation. They are not yet organized as a political constituency, many are not yet born, and current workers prioritize immediate income over long-term security they cannot see. Also absent: workers who exited or never entered the platform economy due to retirement insecurity concerns (selection bias in the 42.3% confidence figure — it measures only those who stayed). International labor standards bodies and comparative welfare state scholars who would challenge the two-tier system are outside the domestic policy conversation.
+% DISAPPEARANCE_RATIONALE: If the employment boundary interpretation disappeared overnight and platform workers were reclassified as employees with full pension obligations, multiple arrangements would rearrange: (1) Platform companies would face 15-20% wage cost increase for pension contributions, forcing business model restructuring (higher prices, reduced workforce, or exit from market). (2) State insurance system would assume pension obligations for 300M workers, requiring fiscal reallocation or tax increases. (3) Workers would gain pension accumulation but potentially lose income flexibility and face reduced platform employment opportunities. (4) The informal economy would re-expand as platforms shed workers and workers seek alternative income sources. The world rearranges because the employment boundary is a constructed institutional arrangement that organizes economic activity, not a natural fact.
+% FOUNDING_PROBLEM: The founding problem was extending social insurance coverage to the massive informal economy workforce (estimated 200M+ workers in 2010s with zero coverage) without bankrupting the state pension system, which already faced demographic pressure from aging population and legacy state-owned enterprise obligations. The platform economy emerged as a potential solution: it formalized previously informal work (bringing workers into the insurance system) while avoiding the fiscal burden of full employment classification (no pension obligations). The hybrid security model was built to solve this dual problem: extend basic protections (medical, injury) to previously uncovered workers while maintaining fiscal sustainability by excluding them from pension systems.
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem status is contested between three positions: (1) State fiscal authorities and platform companies claim the problem is still live — the state cannot afford pension obligations for 300M additional workers, and the hybrid model is the only fiscally sustainable way to extend protections. (2) Labor scholars and worker advocacy groups claim the problem is dead or was never the real problem — the state has fiscal capacity to extend pensions (evidenced by continued pension increases for existing retirees and large infrastructure spending), and the hybrid model was chosen to benefit platforms and avoid political conflict, not because of genuine fiscal constraint. (3) Demographic researchers claim the problem is becoming more severe — the aging population and shrinking workforce mean the pension system will face greater pressure in 20-30 years when the current flexible workforce reaches retirement age with no accumulated wealth, potentially creating a larger fiscal crisis than extending pensions now would. Corroboration sources: State Council policy documents (claim problem is live), academic labor economics literature (claim problem is dead or overstated), actuarial projections from pension research institutes (claim problem is deferred and worsening).
+narrative_ontology:disappearance_verdict(retirement_security_deficit, world_rearranges).
+narrative_ontology:founding_problem_status(retirement_security_deficit, contested).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: TRAPPED PLATFORM WORKER (SNARE) — Experiences maximum extraction. Immediate income needs force acceptance of platform work; lack of alternative employment options (age, education, geographic constraints) creates trap. High immediate insurance coverage (91.5% medical, 86.2% injury) masks catastrophic long-term insecurity: 42.3% retirement confidence reflects realistic assessment that no pension accumulation is occurring. Cannot exit platform economy without losing income; cannot build retirement security within it. The coordination story (flexibility, autonomy) is cover for pure extraction of long-term security in exchange for short-term income.
+constraint_indexing:constraint_classification(retirement_security_deficit, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: CONSTRAINED FLEXIBLE WORKER (TANGLED ROPE) — Experiences mixed coordination and extraction. Genuine coordination function exists: platform work provides income flexibility, geographic mobility, supplemental earnings. High basic insurance coverage (91.5% medical, 86.2% injury) represents real protection gain over informal economy alternatives. BUT asymmetric extraction is embedded: low retirement confidence (42.3%) and career advancement belief (54.8%) reflect structural exclusion from long-term security mechanisms. Could exit to formal employment at significant cost (lower flexibility, geographic constraint, potentially lower immediate income). The constraint both enables and extracts.
+constraint_indexing:constraint_classification(retirement_security_deficit, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: PLATFORM COMPANY (ROPE) — Experiences the constraint as pure coordination. The employment boundary classification solves a genuine business problem: how to scale labor supply without fixed costs. High basic insurance coverage (91.5% medical, 86.2% injury) demonstrates platform compliance with immediate obligations while avoiding long-term pension liabilities. Low retirement confidence among workers is not experienced as extraction by the platform — it is an externality, not a cost the platform bears. Arbitrage exit options: can restructure worker classification, relocate operations, or lobby for favorable regulatory interpretation. Net beneficiary of the constraint.
+constraint_indexing:constraint_classification(retirement_security_deficit, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: STATE INSURANCE SYSTEM (ROPE) — Experiences the constraint as coordination with minimal extraction. The hybrid security model solves a genuine state problem: how to extend basic protections to 300M flexible workers without assuming full pension obligations. High basic insurance coverage (91.5% medical, 86.2% injury) represents successful extension of social insurance to previously uncovered workers. Low retirement confidence (42.3%) reflects successful offloading of long-term pension obligations to individual workers and their families. The state provides immediate safety net (injury, medical) while avoiding the fiscal burden of defined-benefit pensions for the platform workforce. Arbitrage exit: can adjust insurance mandates, redefine employment boundaries, or shift costs between platforms, workers, and general revenue.
+constraint_indexing:constraint_classification(retirement_security_deficit, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: WORKER ADVOCACY COALITION (TANGLED ROPE) — Organized labor scholars, NGOs, and occasional sympathetic local courts. Sees both coordination and extraction. Coordination function is real: hybrid security model extended basic protections to 300M workers previously in informal economy with zero coverage. Extraction is also real: low retirement confidence (42.3%) and career advancement belief (54.8%) reveal structural exclusion from long-term security. Constrained exit: can advocate for regulatory reform, support test litigation, document harms, but cannot unilaterally reclassify workers or mandate pension coverage. Requires active enforcement to maintain even current protections — platforms continuously test boundaries.
+constraint_indexing:constraint_classification(retirement_security_deficit, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: FUTURE ELDERLY COHORT (SNARE) — The 300M flexible workers in 30-40 years, when retirement age arrives with no pension accumulation. Powerless (not yet organized, many not yet born), trapped (cannot retroactively build pension wealth), civilizational time horizon (the extraction compounds over decades). Current 42.3% retirement confidence will materialize as actual retirement poverty. This cohort bears the full cost of the employment boundary interpretation that excluded platform workers from pension systems during their working years. Pure extraction with no coordination benefit — the flexibility and autonomy they experienced during working years does not translate to security in old age.
+constraint_indexing:constraint_classification(retirement_security_deficit, snare,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational/global perspective, the constraint exhibits both genuine coordination and asymmetric extraction. Coordination function: hybrid security model solved the immediate problem of extending basic protections to massive informal/flexible workforce (91.5% medical, 86.2% injury coverage represents real welfare gain over zero coverage). Extraction function: the same model institutionalizes long-term insecurity (42.3% retirement confidence, 54.8% career advancement belief) by excluding flexible workers from pension accumulation and career development mechanisms. The employment boundary interpretation absorbs 300M workers into a third category that provides immediate safety net while foreclosing long-term security. Requires active enforcement: platforms continuously test classification boundaries; state selectively enforces to balance fiscal constraints against social stability. This is the claimed type and the structural reality the metrics describe.
+constraint_indexing:constraint_classification(retirement_security_deficit, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(retirement_security_deficit_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(retirement_security_deficit, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(retirement_security_deficit, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(retirement_security_deficit, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(retirement_security_deficit_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderate-high. The constraint extracts long-term retirement security from flexible workers in exchange for immediate income and basic insurance coverage. The 42.3% retirement confidence figure is the key observable — it reflects workers' realistic assessment that no pension accumulation is occurring. The 54.8% career advancement belief similarly reflects structural exclusion from promotion and skill development pathways. However, extraction is not maximal (not 0.8+) because genuine welfare gains exist: 91.5% medical and 86.2% injury coverage represent real protection compared to informal economy alternatives (often zero coverage). The extractiveness has increased over the interval (0.35 → 0.58) as the platform workforce has grown from early adopters (who had alternatives) to workers with fewer options, and as the long-term consequences have become more visible. Suppression (0.62): Moderate-high. Workers face significant barriers to exiting the constraint: immediate income needs, lack of alternative employment options (especially for older workers, those with lower education, those in smaller cities), geographic constraints, and the sunk cost of time spent in platform work without pension accumulation. Platforms and the state actively suppress alternatives: platforms use algorithmic management to maintain worker dependence; the state tolerates platform classification to avoid fiscal burden of pension obligations. Suppression has increased over the interval (0.45 → 0.62) as workers' dependence on platform income has deepened and formal employment opportunities have contracted. Theater ratio (0.48): Moderate. Regulatory experiments (occupational injury insurance pilots 2021-2025, platform-specific social insurance schemes) are presented as innovative solutions to new employment forms, but they institutionalize a two-tier system rather than extending full employment protections. The theater is not as high as pure piton constraints because the basic insurance coverage is real and functional — the performative element is the framing of hybrid security as adequate protection rather than as institutionalized precarity. Theater has increased over the interval (0.30 → 0.48) as the gap between rhetoric (flexibility, autonomy, innovation) and reality (long-term insecurity) has widened. Accessibility collapse (0.35): Low-moderate. Alternatives to the platform economy employment model remain visible and accessible in principle: formal employment with full benefits exists, and some workers do transition between platform and formal work. The low accessibility collapse reflects that the constraint is not presented as inevitable or natural — it is a policy choice, and alternative models (full employment classification, portable benefits, universal basic pension) are actively discussed. However, accessibility is declining as the platform model becomes normalized and as fiscal constraints make full employment classification less politically feasible. Resistance (0.52): Moderate. The constraint meets real resistance from worker advocacy groups, labor scholars, and occasional sympathetic local court rulings that classify platform workers as employees. International precedent (EU Platform Work Directive, California AB5) provides alternative models. However, resistance is not organized at scale — the 300M flexible workers are not unionized, and individual workers often defend the flexibility narrative even as they express low retirement confidence. The moderate resistance reflects genuine contestation without effective power to force reclassification.
+ *
+ * PERSPECTIVAL GAP:
+ *   The constraint demonstrates classic tangled_rope perspectival structure. Platform companies and the state insurance system see pure coordination (Rope) — the employment boundary classification solves genuine business and fiscal problems, and the high basic insurance coverage demonstrates successful protection extension. They experience minimal extraction because the costs (long-term retirement insecurity) are externalized to workers and the future elderly cohort. Flexible workers with exit options see mixed coordination and extraction (Tangled Rope) — the platform provides real income flexibility and basic protections, but also forecloses long-term security and career development. Trapped workers and the future elderly cohort see pure extraction (Snare) — the coordination story (flexibility, autonomy) is cover for extraction of retirement security, and they cannot exit without losing income or cannot retroactively build pension wealth. The analytical observer sees the structural reality: both functions are real, both are embedded in the same mechanism (employment boundary interpretation), and the constraint requires active enforcement to maintain the asymmetry. The gap between beneficiary perspectives (Rope) and victim perspectives (Snare/Tangled Rope) is the extraction gradient the constraint creates.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality is derived from beneficiary/victim declarations and exit options. Platform companies are declared beneficiaries with arbitrage exit options — they avoid long-term pension obligations while accessing flexible labor supply, and can restructure or relocate to maintain favorable treatment. This produces low d (near 0.0-0.15), resulting in low or negative effective extraction (they experience the constraint as net benefit). The state insurance system is similarly a declared beneficiary with arbitrage exit — offloads pension obligations while extending basic safety net, can adjust mandates or redefine boundaries. Also low d, low/negative chi. Flexible workers are declared victims, but differentiated by exit options. Trapped workers (powerless/trapped) have high d (near 0.85-1.0), producing maximum effective extraction — they bear full cost of long-term insecurity with no exit. Constrained workers (moderate/constrained) have moderate d (0.4-0.6), producing moderate effective extraction — they experience both coordination benefits and extraction costs, and could exit at significant cost. The future elderly cohort is declared victims with trapped exit options and civilizational time horizon — high d, maximum extraction, but the extraction is deferred and compounds over decades. Worker advocacy coalition is organized with constrained exit — moderate d, moderate extraction, reflecting their mixed experience of the constraint (see both coordination and extraction, can advocate but cannot unilaterally force change). The analytical observer has analytical exit options and is neither beneficiary nor victim — d near 0.5, moderate effective extraction, reflecting the structural reality that both coordination and extraction are real.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint resolves the mandatrophy by demonstrating that tangled_rope classification is structurally accurate when both coordination and extraction are real and embedded in the same mechanism. The employment boundary interpretation genuinely solves coordination problems: it extends basic protections (91.5% medical, 86.2% injury coverage) to 300M workers previously in informal economy with zero coverage, and it provides income flexibility that workers value (even as they express low retirement confidence). This is not a cover story — the coordination function is real and measurable. Simultaneously, the same mechanism embeds asymmetric extraction: it excludes flexible workers from pension accumulation and career development, creating long-term insecurity (42.3% retirement confidence, 54.8% career advancement belief) that will materialize as retirement poverty for the future elderly cohort. The extraction is also real and measurable. The constraint is not a snare (pure extraction with coordination as cover) because the coordination benefits are genuine and substantial. It is not a rope (pure coordination with minimal extraction) because the long-term insecurity is structural and severe. It is tangled_rope because both functions are real, both are necessary to explain the observable data (high immediate coverage + low long-term confidence), and both are maintained by the same interpretive mechanism (employment boundary classification). The mandatrophy is resolved by showing that the classification is not 'either coordination or extraction' but 'both coordination and extraction, structurally entangled.'
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    pension_accumulation_threshold,
+    'What level of pension wealth accumulation distinguishes adequate retirement security from institutionalized precarity in the platform economy context?',
+    'Longitudinal tracking of platform workers'' pension wealth accumulation rates compared to formal employment cohorts; actuarial modeling of retirement income adequacy under different accumulation scenarios; cross-national comparison of hybrid security models and retirement outcomes.',
+    'If threshold is low (e.g., 30-40% of formal employment pension wealth): current 42.3% retirement confidence may be realistic, and extraction is moderate. If threshold is high (e.g., 70-80% of formal employment): current model institutionalizes severe extraction, and tangled_rope classification understates harm.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(pension_accumulation_threshold, empirical, 'Pension accumulation threshold for adequate retirement security').
+
+omega_variable(
+    employment_boundary_stability,
+    'Is the employment boundary interpretation stable, or will demographic and fiscal pressures force kernel revision to include platform workers in full employment protections?',
+    'Monitoring of regulatory experiments (occupational injury insurance pilots 2021-2025, platform-specific social insurance schemes); tracking of local court rulings on employment classification; analysis of state fiscal capacity to absorb pension obligations for aging flexible workforce; international precedent (EU Platform Work Directive, California AB5).',
+    'If boundary is stable: tangled_rope classification is durable, and extraction is institutionalized. If boundary is unstable and revision is imminent: constraint is actually scaffold (temporary coordination during transition to full employment classification), and current extraction is transitional rather than structural.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(employment_boundary_stability, conceptual, 'Stability of employment boundary interpretation under demographic pressure').
+
+omega_variable(
+    informal_economy_counterfactual,
+    'What would retirement security look like for these 300M workers in the absence of platform economy — would they have formal employment with pensions, or informal work with zero coverage?',
+    'Demographic analysis of platform worker characteristics (age, education, geographic origin, prior employment history); comparison of pension coverage rates in informal economy vs platform economy; assessment of formal employment absorption capacity in Chinese labor market.',
+    'If counterfactual is formal employment: platform economy extraction is severe (displaced secure work with precarious work). If counterfactual is informal economy: platform economy provides welfare gain (basic insurance coverage where none existed), and extraction is moderate (long-term insecurity traded for short-term protection and income).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(informal_economy_counterfactual, empirical, 'Counterfactual retirement security in absence of platform economy').
+
+omega_variable(
+    cs_framing_under_determination,
+    'Is the kernel the employment boundary itself (what counts as employment), or is it the broader social contract about who bears responsibility for long-term security (state, employer, or individual)?',
+    'Analysis of which framing better predicts regulatory behavior, platform strategy, and worker experience. Employment boundary framing emphasizes classification disputes and legal interpretation. Social contract framing emphasizes fiscal policy, welfare state retrenchment, and neoliberal individualization of risk.',
+    'If kernel is employment boundary: cs_structure correctly identifies selective interpretation pattern, and readings focus on formalist vs substantive employment definitions. If kernel is social contract: cs_structure should identify a different pattern (possibly authority erosion or practice drift), and readings focus on collective vs individual responsibility for security.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cs_framing_under_determination, conceptual, 'Kernel framing: employment boundary vs social contract').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(retirement_security_deficit, 0, 12).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(retire_sec_tr_t0, retirement_security_deficit, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(retire_sec_tr_t3, retirement_security_deficit, theater_ratio, 3, 0.35).
+narrative_ontology:measurement(retire_sec_tr_t6, retirement_security_deficit, theater_ratio, 6, 0.4).
+narrative_ontology:measurement(retire_sec_tr_t9, retirement_security_deficit, theater_ratio, 9, 0.44).
+narrative_ontology:measurement(retire_sec_tr_t12, retirement_security_deficit, theater_ratio, 12, 0.48).
+
+% Extraction over time
+narrative_ontology:measurement(retire_sec_be_t0, retirement_security_deficit, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(retire_sec_be_t3, retirement_security_deficit, base_extractiveness, 3, 0.42).
+narrative_ontology:measurement(retire_sec_be_t6, retirement_security_deficit, base_extractiveness, 6, 0.5).
+narrative_ontology:measurement(retire_sec_be_t9, retirement_security_deficit, base_extractiveness, 9, 0.55).
+narrative_ontology:measurement(retire_sec_be_t12, retirement_security_deficit, base_extractiveness, 12, 0.58).
+
+% Suppression requirement over time
+narrative_ontology:measurement(retire_sec_su_t0, retirement_security_deficit, suppression_requirement, 0, 0.45).
+narrative_ontology:measurement(retire_sec_su_t3, retirement_security_deficit, suppression_requirement, 3, 0.5).
+narrative_ontology:measurement(retire_sec_su_t6, retirement_security_deficit, suppression_requirement, 6, 0.55).
+narrative_ontology:measurement(retire_sec_su_t9, retirement_security_deficit, suppression_requirement, 9, 0.6).
+narrative_ontology:measurement(retire_sec_su_t12, retirement_security_deficit, suppression_requirement, 12, 0.62).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(retirement_security_deficit, resource_allocation).
+narrative_ontology:affects_constraint(retirement_security_deficit, algorithmic_management_control).
+narrative_ontology:affects_constraint(retirement_security_deficit, gig_economy_income_volatility).
+narrative_ontology:affects_constraint(retirement_security_deficit, social_insurance_fragmentation).
+
+% DUAL FORMULATION NOTE:
+% The retirement security deficit is one component of a larger platform economy constraint family. Upstream constraints include the employment boundary interpretation (the kernel this story is a reading of) and algorithmic management systems that maintain worker dependence. Downstream constraints include income volatility (lack of stable earnings makes voluntary pension contributions difficult even when available) and social insurance fragmentation (different insurance schemes for different worker categories create coverage gaps and portability barriers). Each constraint has its own extractiveness value, but they form a mutually reinforcing network.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

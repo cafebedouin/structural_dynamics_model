@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "thermal_dissipation_constraint",
+    "version": "1.0",
+    "generated_date": "2026-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "therm_diss",
+    "story_uid": "f79980cf-af36-4455-b8b1-3f5aae7afa1e",
+    "created_at": "2026-01-15T14:23:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.01,
+    "theater_ratio": 0.03,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.02,
+    "claimed_type": "mountain",
+    "human_readable": "Thermal Dissipation Constraint in Schottky Diode Rectification",
+    "topic_domain": "electrical_engineering/power_systems/off_grid_infrastructure",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Off-Grid System Operator",
+      "comment": "PERSPECTIVE 1: OFF-GRID SYSTEM OPERATOR (MOUNTAIN) — Faces the thermal dissipation constraint as an immutable physical law. Cannot exit the requirement for thermal management when using Schottky diodes at load. The 7.33W dissipation at 13.33A is a direct consequence of semiconductor physics, not a policy choice or institutional arrangement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Power Electronics Designer",
+      "comment": "PERSPECTIVE 2: POWER ELECTRONICS DESIGNER (MOUNTAIN) — Constrained by component availability and cost, but the thermal dissipation itself is non-negotiable. Can choose different diode technologies (SiC, GaN) or topologies (synchronous rectification) to reduce losses, but cannot eliminate the fundamental relationship P = V_f × I. The constraint is a design parameter, not a design choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Semiconductor Manufacturer",
+      "comment": "PERSPECTIVE 3: SEMICONDUCTOR MANUFACTURER (MOUNTAIN) — Has arbitrage options across technologies and markets, but the thermal dissipation constraint is a physical limit they work within, not against. Can optimize junction design, package thermal resistance, and material properties, but the forward voltage drop and resulting dissipation follow from band structure and carrier transport physics. No extraction mechanism — the manufacturer sells solutions to a problem they did not create."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) — The thermal dissipation constraint is a direct consequence of semiconductor physics: forward voltage drop across a Schottky barrier is determined by metal-semiconductor work function difference and barrier height. P = V_f × I is not a convention, policy, or institutional arrangement — it is a thermodynamic necessity. No alternatives collapse because no alternatives exist: any rectification mechanism that passes current through a potential barrier dissipates power. This is a genuine natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_substitution_boundary",
+      "question": "At what point does the availability of alternative rectification technologies (SiC, GaN, synchronous rectification) transform this from a universal constraint to a contingent design choice?",
+      "resolution_mechanism": "Cost-performance crossover analysis: when do alternative technologies become economically accessible for off-grid applications? Track adoption rates and cost curves for wide-bandgap semiconductors in power systems under 1kW.",
+      "impact": "If alternatives become cost-competitive within 5 years, the constraint shifts from mountain (universal physical limit) to rope (coordination problem: standardizing on legacy technology). If alternatives remain cost-prohibitive for 20+ years, mountain classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technology substitution timeline for alternative rectification methods"
+    },
+    {
+      "id": "thermal_management_overhead",
+      "question": "Does the thermal management requirement (heatsink, thermal interface material, mounting hardware) constitute a separable extractive layer above the base physical constraint?",
+      "resolution_mechanism": "Decompose total system cost and complexity into (1) irreducible physical dissipation and (2) thermal management overhead. If overhead exceeds 30% of total thermal subsystem cost, it may warrant a separate constraint story for the thermal management supply chain.",
+      "impact": "If thermal management overhead is substantial and has identifiable beneficiaries (heatsink manufacturers, thermal interface material suppliers), the constraint family should be decomposed: one mountain story for the base physics, one tangled_rope or rope story for the thermal management ecosystem.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether thermal management overhead warrants decomposition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.02
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The thermal dissipation constraint in Schottky diode rectification is a direct consequence of semiconductor physics: forward voltage drop (0.5-0.6V for Schottky barriers) multiplied by load current produces continuous heat dissipation that must be removed to prevent junction temperature rise and device failure. At 13.33A load current, worst-case dissipation is 7.33W, requiring thermal sandwich assembly (diode-to-heatsink mounting with thermal interface material) to maintain junction temperature within safe operating limits. This constraint is downstream of the transfer gap physics (the Schottky barrier height that determines forward voltage) and represents the thermodynamic cost of rectification. Unlike institutional or policy constraints, no agent benefits from this dissipation — it is pure loss, and all parties (system operators, designers, manufacturers) work to minimize it within the bounds of physics. The constraint is universal: any rectification mechanism that passes current through a potential barrier dissipates power proportional to barrier height and current. Alternative technologies (SiC, GaN, synchronous rectification) reduce the magnitude of dissipation but do not eliminate the fundamental relationship P = V_f × I.",
+    "key_agents": [
+      "Off-Grid System Operator: Primary target (powerless/trapped) — must manage thermal dissipation to prevent device failure; no exit from the physics",
+      "Power Electronics Designer: Secondary target (moderate/constrained) — can choose technologies to reduce losses but cannot eliminate the constraint; constrained by cost and component availability",
+      "Semiconductor Manufacturer: No extraction role (institutional/arbitrage) — sells solutions to a problem created by physics, not by the manufacturer; no beneficiary relationship to the constraint",
+      "Analytical Observer: Civilizational view (analytical/analytical) — confirms the constraint as genuine natural law with no institutional or extractive component"
+    ],
+    "logic_rationale": "Extractiveness (0.02): Near-zero. The thermal dissipation is pure loss — no agent collects from it. The minimal non-zero value reflects only the indirect coordination cost: designers must account for thermal management in system design, which adds complexity. But this is not extraction in the DR sense (asymmetric benefit capture); it is the unavoidable cost of working within physical limits. Suppression (0.01): Near-zero. No coercion or enforcement mechanism. The constraint operates whether or not anyone acknowledges it. Alternatives are not suppressed — they are physically unavailable. The minimal non-zero value reflects only that the constraint forecloses certain design choices (e.g., cannot use bare diode without heatsink at high current), but this is physical foreclosure, not institutional suppression. Theater ratio (0.03): Near-zero. Thermal management is functional, not performative. Heatsink sizing, thermal interface material selection, and junction temperature monitoring are all directly tied to preventing device failure. The minimal non-zero value reflects only that some thermal management practices may be over-conservative (safety margins beyond strict necessity), but this is engineering prudence, not theater. Accessibility collapse (0.92): Very high. Once the physics is understood, alternatives collapse nearly completely. The only 'alternatives' are different rectification technologies (SiC, GaN, synchronous rectification) that reduce the magnitude of dissipation but do not eliminate the constraint. Resistance (0.02): Near-zero. No active resistance to the constraint because it is not a policy or institutional arrangement. The minimal non-zero value reflects only that engineers work to minimize thermal losses through better designs, but this is optimization within the constraint, not resistance to it.",
+    "perspectival_gap": "No perspectival gap exists for this constraint. All four perspectives classify as mountain because the thermal dissipation is a direct consequence of semiconductor physics with no institutional, extractive, or coordinative component. The off-grid operator, the designer, the manufacturer, and the analytical observer all experience the constraint as an immutable physical law. The operator cannot exit it, the designer cannot negotiate it away, the manufacturer cannot profit from it, and the analytical observer confirms it as genuine natural law. This uniform classification across all perspectives is the signature of a true mountain: the constraint would persist regardless of who observes it, who enforces it, or whether anyone benefits from it. The only open question (omega: technology_substitution_boundary) is whether future cost reductions in alternative technologies will shift the constraint from universal (mountain) to contingent (rope: coordination on legacy technology). But as of the current interval, the constraint is mountain from all perspectives.",
+    "directionality_logic": "All agents have directionality values near 0.5 (symmetric) because no agent is a beneficiary or victim of the thermal dissipation — it is pure loss. The off-grid operator and designer are targets in the sense that they must manage the dissipation, but they are not victims of extraction because no other agent benefits from their cost. The manufacturer is not a beneficiary because the dissipation is not a source of rent — the manufacturer sells components that minimize losses, not components that create them. The analytical observer is neutral. The engine will derive d ≈ 0.5 for all agents, producing low chi across all perspectives, consistent with the mountain classification.",
+    "mandatrophy_analysis": "This constraint demonstrates the mountain end of the mandatrophy spectrum: a genuine natural law with no extractive, coordinative, or institutional component. The mandate (thermal management to prevent device failure) is not separable from the function (safe operation of the rectification circuit) because the mandate is a direct consequence of thermodynamics. There is no gap between the stated purpose and the actual operation, no beneficiary capturing rents, and no enforcement mechanism beyond physics itself. The constraint's mandate has not outlived its function because the mandate IS the function. This is the opposite of a piton (degraded function maintained as performance) or a snare (extraction disguised as coordination). The thermal dissipation constraint is what it claims to be: an unavoidable cost of rectification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of transfer_gap_physics (the Schottky barrier height that determines forward voltage drop). The upstream constraint is also a mountain (band structure physics), and the downstream constraint (thermal dissipation) inherits the mountain classification. If the thermal management overhead (heatsink supply chain, thermal interface materials) were found to have substantial extractive components, that would warrant a separate constraint story linked via affects_constraints, but the base thermal dissipation itself remains a mountain."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "negligible",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "transfer_gap_physics"
+    ]
+  }
+}

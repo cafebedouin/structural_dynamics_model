@@ -1,0 +1,531 @@
+{
+  "header": {
+    "constraint_id": "company_town_scrip_economy",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scrip",
+    "story_uid": "a7f2c8e1-9d4b-4b2e-a1f9-3c7e5d2a1b4f",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Company Town Scrip Economy: Wage Monetization and Class-Level Exit Collapse",
+    "topic_domain": "labor/economic_extraction",
+    "requires_active_enforcement": true,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.35,
+    "beneficiaries": [
+      "company_ownership",
+      "monopoly_merchant_class"
+    ],
+    "victims": [
+      "wage_workers",
+      "regional_alternative_employment"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Wage Worker (Immediate Desperation)",
+      "comment": "PERSPECTIVE 1: WAGE WORKER (SNARE) \u2014 Trapped by immediate survival needs and geographic isolation. Scrip is legally enforced as wages; alternatives have been systematically eliminated (competing employers excluded, independent merchants undercut). The worker perceives the constraint as unchangeable within their lifetime. Maximum experienced extraction with zero exit capacity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Wage Worker's Family (Generational Identity Lock)",
+      "comment": "PERSPECTIVE 2: WAGE WORKER'S FAMILY (SNARE / IDENTITY_LOCKED) \u2014 Trapped not only by immediate economic dependency but by identity fusion: multi-generational inhabitation of the company town has constituted the worker's and their family's self-concept around the role of 'company employee.' Exit would require abandoning family identity and community belonging. The identity lock persists even where structural escape paths exist \u2014 the worker cannot psychologically exercise constrained-level exit capacity because their identity is the company town itself. This perspective reveals the binding mechanism is cognitive capture, not mere economic coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Independent Merchants (Regional Level)",
+      "comment": "PERSPECTIVE 3: INDEPENDENT MERCHANTS (TANGLED_ROPE) \u2014 Moderate power actors at regional scale. They coordinate through scrip acceptance (genuine coordination function: scrip enables local commerce without precious metal scarcity). Simultaneously, the merchant class is extracted from through the company's price-setting on scrip redemption and through exclusion of competitors. Some independent merchants benefit from scrip adoption; others are undercut and driven out. This perspective exhibits the hybrid structure: real coordination (scrip as currency substitute) layered with asymmetric extraction (the company sets the exchange rate and controls merchant access)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Company Management (Operational View)",
+      "comment": "PERSPECTIVE 4: COMPANY MANAGEMENT (ROPE) \u2014 Institutional actors with arbitrage options (capital mobility, management relocation). They experience the scrip system as pure coordination: centralizing wage payment and merchant relationships solves logistics and working-capital problems. The labor force is geographically captive and operationally simplified. Extraction flows toward this seat; management perceives the system as low-friction coordination, not as extraction. The classification is rope because the constraint genuinely solves coordination problems the company faces."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "State Authority (Regulatory Theatre)",
+      "comment": "PERSPECTIVE 5: STATE AUTHORITY (PITON) \u2014 The state maintains scrip-enabling regulations and labor laws (no-strike agreements, scrip legal tender provisions, company-store monopoly protections) long after the genuine coordination problem has atrophied. Modern alternatives (banking infrastructure, state-issued currency, labor mobility) eliminate the coordination rationale, but the regulatory theater persists through institutional inertia and lobbying. State authority sees its own regulations as degraded \u2014 a vestigial framework maintained for political rather than functional reasons. Theater ratio is moderate because enforcement is real (arrests for scrip-rejection, deportations of union organizers) but the underlying function (lack of banking alternatives) is obsolete."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Labor Movement (Class-Level Resistance)",
+      "comment": "PERSPECTIVE 6: REGIONAL LABOR MOVEMENT (SNARE) \u2014 Organized agents with constrained exit (organizing is legal but faces violent suppression, infiltration, and firing of participants). The movement sees the scrip system as pure extraction dressed in coordination language. Unlike individual workers, the movement has capacity to name the mechanism and mount resistance. However, the company town structure systematically eliminates the scale at which the movement operates \u2014 regional organizing cannot match local captivity. The movement's perspective reveals that the constraint is snare, not rope: the coordination story is cover, and persistence depends on coercion."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural-Law Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN CLAIM / FALSE SUMMIT RISK) \u2014 From a civilizational perspective, geographic isolation and wage-labor immobility appear to be natural constraints on labor market function \u2014 'workers in remote areas have limited options by geography alone.' This framing naturalizes the company town as an inevitable response to spatial constraints. However, the structural data reveals this as a false summit: geographic isolation is real, but the scrip system, merchant exclusions, and regulatory protections are human choices that *deepen* immobility. The mountain classification confuses natural constraints (distance) with constructed constraints (monopoly enforcement). The engine's false-summit detector should flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scrip_coordination_vs_extraction",
+      "question": "Is scrip a genuine coordination mechanism (solving currency/logistics problems) that carries extractive overhead, or is the coordination story a cover for pure extraction?",
+      "resolution_mechanism": "Comparative analysis: scrip systems in regions WITH banking infrastructure vs WITHOUT. If scrip is adopted voluntarily in banking-rich regions, it is coordination + extraction. If adoption requires legal mandate and coercion, it is extraction with coordination cover.",
+      "impact": "If coordination: reclassify from snare to tangled_rope (mixed structure justified). If cover: snare classification holds; the 'efficiency' rationale is theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether scrip is a genuine coordination mechanism or extraction cover story"
+    },
+    {
+      "id": "identity_lock_mechanism_durability",
+      "question": "Does the identity lock (generational self-concept as company employee) persist after workers exit the company town, or does it dissolve once the structural mechanism is removed?",
+      "resolution_mechanism": "Longitudinal study of workers who left company towns: post-exit identity persistence, psychological reorientation speed, reintegration into broader labor market. Comparison with workers who never experienced company-town identity lock.",
+      "impact": "If persists: identity lock is internalized; suppression is higher than structural measures suggest (workers carry the lock with them). If dissolves: identity lock is context-dependent; suppression declines rapidly post-exit.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Durability of identity lock post-exit from company-town structure"
+    },
+    {
+      "id": "class_level_alternatives_destruction",
+      "question": "Are regional employment alternatives eliminated by deliberate company action (buying out competitors, excluding unions, lobbying for monopoly protection) or by geographic/economic factors beyond company control?",
+      "resolution_mechanism": "Historical analysis of company communications, testimony, lobbying records. Reconstruction of pre-company-town regional employment landscape and comparison with post-dominance landscape. Attribution of alternative elimination to deliberate strategy vs market forces.",
+      "impact": "If deliberate: suppression is high and intentional; snare classification is robust. If market-driven: some suppression is structural; the constraint carries less extracted intent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of class-level alternative destruction to deliberate strategy vs structural factors"
+    },
+    {
+      "id": "false_summit_natural_vs_constructed",
+      "question": "Is geographic isolation itself (natural) the binding constraint, or does the company town system (constructed) deepen isolation beyond geographic limits?",
+      "resolution_mechanism": "Comparison of mobility rates: workers in remote areas WITH independent employment options vs workers in company towns (same geographic distance, different institutional structure). If mobility is similar, geographic constraint is binding; if company-town mobility is dramatically lower, the constructed system is the binding mechanism.",
+      "impact": "If geographic: mountain classification partially justified. If constructed dominates: false summit confirmed; snare classification is correct; the 'natural limit' framing is ideological cover.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of immobility to geographic constraints vs constructed company-town system"
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is suppression of exit and resistance primarily structural (legal barriers, geographic isolation, economic dependency) or internalized (workers have internalized the company's legitimacy claims, believe exit is impossible, fear retaliation preemptively)?",
+      "resolution_mechanism": "Analysis of resistance attempts and their suppression: when workers attempt collective action, does suppression come from external force (company violence, legal enforcement, deportation) or from internal demoralization, anticipatory compliance, identity fusion? Post-suppression trajectory: does resistance recur despite previous defeats, or does it decline as internalized helplessness grows?",
+      "impact": "If primarily structural: suppression is tractable \u2014 removing barriers could enable exit. If primarily internalized: suppression carries post-exit persistence \u2014 workers may not exercise exit even when barriers are removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: structural vs internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.85,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 30,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 30,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 30,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 30,
+        "value": 0.92
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 30,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 30,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 30,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 30,
+        "value": 0.88
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 30,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 30,
+        "value": 0.79
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 30,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 30,
+        "value": 0.88
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 30,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 30,
+        "value": 0.15
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 30,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 30,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 30,
+        "value": 0.38
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "A company town moves wages entirely into scrip (non-convertible company currency) and establishes a monopoly merchant system through the company store. Individual wage workers face rising stakes as nominal wages rise but purchasing power declines through scrip exchange rates and merchant price markups. Simultaneously, class-level alternatives are systematically dismantled: competing employers are excluded through territorial agreements or buyouts, independent merchants are undercut and driven out, unions are prohibited by employment contract, and state regulation codifies the scrip system. The constraint exhibits a stark coercion-grid divergence: individual-level suppression and stakes inflation rise dramatically (workers are isolated and increasingly desperate), while class-level resistance capacity declines (the scale at which workers could coordinate their opposition is eliminated by design). The scrip system is presented as a coordination mechanism (solving currency scarcity and working-capital logistics), but structural analysis reveals it as extraction with coordination theater: geographic isolation is real but is deepened by institutional choices; the merchant monopoly is justified by efficiency but is maintained by exclusionary practices; wage reductions are framed as necessary adjustments but accumulate as transfer of worker earnings to company ownership through the exchange-rate mechanism.",
+    "key_agents": [
+      "wage_workers: Powerless (immediate), trapped by survival needs and geographic isolation; identity-locked (generational) through multi-generational company-town inhabitation",
+      "company_ownership: Institutional beneficiary (arbitrage exit), experiences scrip as coordination; captures accumulated extraction through exchange rates and merchant control",
+      "monopoly_merchant_class: Moderate institutional power (constrained exit), benefits from scrip adoption but is structured to extract on company's behalf; some independent merchants are driven out (victims)",
+      "state_authority: Institutional regulatory actor (mobile exit), maintains scrip-enabling legal framework long after coordination rationale atrophies; sees own regulations as degraded theater",
+      "regional_labor_movement: Organized agent (constrained exit), organizes against scrip but organizing is criminalized; class-level alternative is systematically eliminated by company design",
+      "independent_employment_alternatives: Structural victim (absent from town), systematically excluded through territorial agreements, buyouts, and competitor suppression"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High and rising over the interval. At t0=0, scrip adoption is partial and extraction is masked as efficiency (0.55). By t30=30, the system is fully mature and extraction is clear (0.80): the company controls wage payment, merchant pricing, and scrip exchange rates. The extraction accumulates because workers' nominal wages rise (theater) while real purchasing power declines (actual extraction flow to company through exchange-rate differential). Theater ratio (0.45, rising to 0.48): Moderate because the coordination story is partially true (scrip does solve logistics problems) but is used to justify much larger extraction flows. Theater is lower than a pure piton because enforcement is active and visible (not just institutional inertia); the theater is the 'efficiency' framing around genuine coercion. Suppression (0.82, built from suppression_requirement trajectory rising from 0.65 to 0.85): High and intensifying. The company eliminates class-level alternatives through exclusionary practices (not merely competition); union prohibition is enforced through employment contracts and company-police violence; state authority codifies and defends the scrip system through legal frameworks. Accessibility collapse (0.88): Very high at end of interval. Individual escape routes collapse as workers accumulate company debt (housing mortgages, store credit); organizational alternatives are eliminated (unions prohibited); class-level coordination is prevented (regional labor organizing is suppressed); structural alternatives (competing employers in the region) are systematically destroyed. Resistance (0.35 overall, falling from 0.38 at t0 to 0.22 at class-level t30): Declining despite rising extraction. Individual resistance falls as desperation grows and hope atrophies. Class-level resistance falls fastest as the organizational capacity (labor movement) is suppressed and scattered. This inverse relationship (rising extraction, falling resistance) is the coercion-grid signature of a snare moving into deeper entrenchment.",
+    "perspectival_gap": "The scrip economy exhibits maximum perspectival divergence. The company ownership perceives rope (coordination of logistics and working capital). The wage worker perceives snare (no exit, rising costs, survival desperation). The state authority perceives piton (degraded legal theater). The regional labor movement perceives snare-with-class-structure (coordinated extraction resisting class-level resistance). The geographic isolation observer risks perceiving mountain (immobility is natural given remoteness). The analytical observer sees a false summit: geographic isolation is real but is NOT the binding constraint; the constructed scrip system, merchant monopoly, and organized elimination of alternatives are. The perspectival divergence is not mere disagreement but reflects structural differentiation: beneficiaries and victims have inverted experiences of the same mechanism because the mechanism actively extracts from one set and subsidizes another.",
+    "directionality_logic": "Wage workers (powerless/trapped): d = 1.0 (full target). They are declared victims with zero exit capacity. The engine derives d from victim status + trapped exit, producing maximum directionality toward extraction. Company ownership (institutional/arbitrage): d = 0.05 (near-full beneficiary). Beneficiary status + arbitrage exit = minimal directionality; the company can leave at any time (exit is costly but possible; capital is mobile). Regional labor movement (organized/constrained): d = 0.72 (moderately targeted). Victim status (extracted from through suppression) + constrained exit (organizing is possible but faces violent retaliation and firing) = high directionality. Independent merchants (moderate/constrained): d = 0.55 (symmetric). Some benefit from scrip adoption (coordination); some are excluded; those remaining are constrained by dependency on company-store traffic. The grid shows directionality diverging MOST at individual and class levels: individual workers face d \u2248 1.0 and stakes rising from 0.58 to 0.85; class-level alternatives face d = 1.0 (structural exclusion) and accessibility collapse rising from 0.68 to 0.92. The company's directionality remains fixed at near-zero (arbitrage mobility protects them from deepening constraint).",
+    "mandatrophy_analysis": "The company-town scrip system exhibits degraded mandate. FOUNDING PROBLEM: In 1880\u20131920 era, company towns in resource-extraction industries (mining, steel, timber) solved genuine logistics problems \u2014 workers were hired from rural populations with no local housing stock, and company towns provided housing + currency liquidity (hard money was scarce in remote areas). The coordination mandate was real. CONTEMPORARY STATE: By mid-20th century, state banking infrastructure exists; currency scarcity is solved by state-issued money; housing markets have developed; public transportation connects remote employment to urban centers. The coordination mandate is dead. Yet the scrip system persists: by t30=30, it is maintained purely for extraction (exchange-rate manipulation, merchant monopoly control), no longer for coordination. The system exhibits all piton signals at the state-authority level (legal theater, regulatory inertia) but exhibits all snare signals at the worker level (active coercion, suppression of alternatives, impossible exit). This is not a single degraded institution but a two-tier system: degraded at the structural level (the mandate is obsolete) and active at the individual level (extraction is intensifying). The mandatrophy is resolved by recognizing that piton and snare are not mutually exclusive across levels: the state sees theater and inertia (piton); the worker sees entrenchment and extraction (snare).",
+    "kernel_context": "Not applicable \u2014 this is an ordinary constraint, not a reading of a contested kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "company_town_housing_debt_trap",
+      "scrip_banking_exclusion",
+      "union_prohibition_enforcement"
+    ],
+    "dual_formulation_note": "The company-town scrip economy is upstream of three downstream constraints: housing debt (the company mortgage traps workers geographically); banking exclusion (scrip prevents access to state banking and credit); union prohibition (employment contracts prohibit organizing). The three stories decompose the different vectors of the constraint family. The scrip economy is the coordinating mechanism through which all three downstream constraints operate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "wage_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Exchange labor for scrip wages; purchase goods at company store using scrip at rates set by company; accumulate debt through mortgages (company housing), store credit, and fines. Cannot refuse scrip, cannot shop elsewhere, cannot leave without forfeiting housing and accumulated credit. Survival depends entirely on continued company employment at wages the company sets. Nominal wages rise but scrip exchange rates decline, producing net wage loss over time. Family identity is constituted through generations of company employment; children expect to work for the company."
+    },
+    {
+      "name": "company_ownership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets wage rates, controls scrip issue, controls merchant pricing through company store, controls scrip-to-cash exchange rates. Manages labor force through debt relationships (mortgages, store credit). Can relocate capital and management at any time; can abandon the town if extraction opportunities decline. Receives accumulated transfer from workers through the mechanism of scrip exchange-rate differential: workers earn scrip worth less at redemption than nominal value suggests."
+    },
+    {
+      "name": "company_store_merchants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Operate stores using company capital; set prices within parameters set by company; receive guaranteed customer base (workers have no alternative). Benefit from lack of competition (independent merchants are excluded). Simultaneously, merchants are constrained by the company (cannot raise prices unilaterally, cannot refuse scrip, operate on company property). Some independent merchants attempted to compete but were undercut and driven out; remaining merchants are integrated into company structure."
+    },
+    {
+      "name": "state_regulatory_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Maintains legal framework treating scrip as valid wage payment; codifies company-store monopoly protections; enforces company employment contracts that prohibit union organizing; prosecutes and deports union organizers; provides company police with legal authority to suppress dissent. Receives lobbying pressure from company ownership. The regulatory role persists long after the coordination rationale (currency scarcity) is solved by state banking. Regulation is maintained through institutional inertia and political capture."
+    },
+    {
+      "name": "regional_labor_movement",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Organizes workers across multiple company towns; builds regional union structures to coordinate labor power against company exploitation. Faces violent suppression: organizers are fired, blacklisted, arrested, and sometimes physically assaulted by company police. Union meetings are infiltrated; union literature is confiscated. Regional coordination is the scale at which class-level resistance is possible, but the company systematically prevents regional alternative employment (buys out or excludes competing employers) so that fired organizers cannot find work elsewhere. The labor movement's capacity to mount sustained regional action is constrained by the geographic isolation of the company towns and the company's control over all employment in the region."
+    },
+    {
+      "name": "independent_alternative_employers",
+      "role": "excluded",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Would provide competitive employment alternatives that would allow workers to exit the company town or increase negotiating power. Systematically prevented from entering the region through company territorial agreements with neighboring firms, acquisition of potential competitors, and political pressure on state authority to exclude them. The absence of this structural alternative is the single most important factor enabling the snare classification \u2014 if workers could find alternative employment within reasonable distance, the trap would collapse immediately."
+    },
+    {
+      "name": "workers_future_generations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Not yet born, but structurally shaped by the company town: education provided by company (teaching company loyalty); social identity constituted through company association; geographic knowledge limited to company town geography (limited understanding of alternatives exists); inheritance of family debt (parents' mortgages may be transferred). Workers' children expect to work for the company as their parents did; exit imagination is preemptively foreclosed before birth."
+    }
+  ],
+  "gain_flow": "company_ownership",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "The scrip system solves a genuine coordination problem at its founding: in the 1880\u20131920 era, remote company towns face currency scarcity (hard money is scarce in resource-extraction regions) and working-capital liquidity (companies need to distribute wages without precious-metal transfer, and need to manage merchant credit). Scrip enables both parties to operate without precious metals and provides a local currency unit. The company store solves a merchant coordination problem: workers need access to goods, and independent merchants cannot profitably serve small remote populations; the company store provides guaranteed inventory and pricing stability.",
+    "transfer_function": "The arrangement transfers worker earnings to company ownership through four mechanisms: (1) scrip exchange-rate differential (workers earn scrip worth less at redemption than nominal value); (2) company-store merchant markups (prices are higher than would prevail in competitive markets); (3) debt relationships (mortgages, store credit accumulate at terms favorable to company); (4) wage suppression (company controls wage rates without market competition). The transfer also flows from independent merchants to company store (competitive merchants are undercut and driven out, or absorbed into company structure). The transfer flows from workers to state authority through regulatory codification (state receives political benefits from codifying company employment practices, gaining authority and legitimacy through 'stabilizing' labor markets).",
+    "absent_voices": "Independent-goods merchants (competitors to company store who are excluded or driven out before they can participate in the arrangement); workers' descendants (future workers whose alternatives are preemptively foreclosed); neighboring-region alternative employers (systematically excluded from the region through territorial agreements); union organizers (violently suppressed before they can voice opposition in company forums). The constraint's structure intentionally silences: if workers could hear from union organizers regularly, if competing merchants could operate openly, if workers' children had genuine knowledge of alternatives, if neighboring employers could recruit, the consent narrative would collapse immediately.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the scrip system disappeared overnight, the regional labor market would rearrange: (1) workers would seek alternative employment in neighboring regions now that the geographic trap is removed; (2) independent merchants would enter the market attracted by the freed customer base; (3) housing markets would develop as company housing loses its monopoly; (4) the state would face loss of a regulatory lever (the scrip framework) and would need to renegotiate labor relations. The company's operational efficiency would decline (working-capital costs would rise; workforce management would become harder without debt leverage). The world would not settle into a new stable equilibrium immediately \u2014 regional unemployment would likely spike as workers leave faster than alternative employers can absorb them \u2014 but the previous stable configuration (workers trapped in company town through scrip and merchant monopoly) would be permanently destroyed.",
+    "founding_problem": "In remote resource-extraction company towns (1880\u20131920s), two genuine problems exist: (1) Currency scarcity \u2014 hard money is difficult to transport to remote locations and is hoarded for external transactions; (2) Merchant availability \u2014 independent merchants cannot profitably serve small, isolated populations. The company town solves both by issuing scrip as local currency and establishing a company store as the sole merchant. These are real coordination problems with no obvious market solution at the time.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "By mid-20th century, state banking infrastructure solves currency scarcity (state-issued fiat money circulates freely; banks operate in remote regions). Public transportation and mail systems reduce merchant scarcity (goods can be imported from regional centers; independent small merchants can serve towns using transportation networks). The founding problems are acknowledged as solved by contemporary economic historians, by business schools that teach company-town systems as historical artifacts, and by workers themselves (workers' correspondence and union organizer testimony from 1930s onward describes the system as obsolete for coordination, perpetuated only for extraction). The only voices that continue to justify the system on coordination grounds are company ownership and captured state regulators \u2014 both benefit from the extraction mechanism."
+  }
+}

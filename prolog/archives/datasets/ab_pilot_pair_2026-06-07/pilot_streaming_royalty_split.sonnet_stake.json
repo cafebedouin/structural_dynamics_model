@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "pilot_streaming_royalty_split_sonnet_stake",
+    "version": "stakeholder_pilot_oq83_phase_a",
+    "generated_date": "2025-06-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.55,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Major-Label Streaming Royalty Split",
+    "topic_domain": "economic/cultural",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "stakeholders": [
+    {
+      "name": "major_record_labels",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The three majors (Universal, Sony, Warner) negotiated the rate structure directly with the platform in closed bilateral deals. They set minimum per-stream rates, recoupment rules, and promotional allocation. They collect the majority share of streaming revenue\u2014typically 52-58% of what the platform pays out\u2014before paying artists under legacy recording contracts that predate streaming. Their catalogs are essential to the platform's competitiveness; they can credibly threaten exit to rival services. They also hold equity stakes in the platform itself, creating a dual income stream."
+    },
+    {
+      "name": "dominant_streaming_platform",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The platform (effectively Spotify in the real-world instance) negotiated rates with each major separately, securing catalog access in exchange for revenue share and promotional visibility. It enforces the split via software and reporting infrastructure. The platform benefits from low per-stream rates because its business model depends on converting free users and managing subscription churn; every basis point paid to rightsholders reduces margin. It has market power over smaller labels and artists but is structurally dependent on the majors' catalogs."
+    },
+    {
+      "name": "contracted_artists_with_legacy_deals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Artists who signed recording contracts before streaming became the dominant format receive a fraction of what the label collects\u2014often 15-25% of the label's streaming share, after recoupment of advances, marketing costs, and other charges. They cannot renegotiate the split unless they have sufficient leverage (a hit, market power, or contract expiry approaching). Most remain bound by multi-album deals signed when physical sales were the revenue model. Exit means abandoning the catalog they recorded under the contract; their identities as recording artists are locked to those works."
+    },
+    {
+      "name": "independent_labels",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Indie labels negotiate through aggregators or licensing collectives rather than directly with the platform, and typically receive lower per-stream rates than the majors\u2014around 40-45% of platform payout. They lack the catalog heft to threaten credible exit. They pay their artists a larger share of what they receive (often 50/50 splits), but the lower rate means less absolute revenue to distribute. Exit is possible\u2014some have pulled catalogs to rival platforms or direct-to-fan models\u2014but losing access to the dominant platform's listener base is commercially damaging."
+    },
+    {
+      "name": "unsigned_artists_and_direct_distributors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Artists who distribute directly via services like DistroKid or TuneCore receive the smallest per-stream payout\u2014typically the aggregator's rate minus the aggregator's fee, often netting 30-35% of what a major-label track would earn per stream. They bear all production, marketing, and distribution costs themselves. They can exit to other platforms or direct sales, but the dominant platform is where the listeners are; opting out means near-invisibility in the current market."
+    },
+    {
+      "name": "session_musicians_and_producers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Session players and producers were typically paid flat fees or points on physical sales under legacy contracts; most receive no streaming revenue at all unless they negotiated specific royalty points. When streaming replaced sales, their income from recorded work collapsed. They have no direct relationship with the platform, no ability to renegotiate label contracts retroactively, and no exit\u2014session work is freelance labor with no ownership stake in the recordings."
+    },
+    {
+      "name": "listeners_with_subscriptions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Subscribers pay a monthly fee that funds the royalty pool. They have no say in how that pool is split among rightsholders. The rate structure is opaque to them; the platform presents a flat monthly price, and the internal allocation is determined by the label deals. Listeners can exit to rival services, but the switching cost is real (playlists, social features, catalog differences), and the royalty structure across major platforms is broadly similar\u2014jumping ship changes the platform, not the underlying split."
+    },
+    {
+      "name": "future_artists_not_yet_contracted",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Artists who will enter the industry in the next decade have no seat at the table when the rate structure is set, but they will inherit the deal structure as a given. If they sign with a major, they enter a contract environment shaped by terms negotiated in the early 2010s. If they go independent, they enter a streaming economy where the per-stream rate is already anchored to the major-label baseline. They are absent because they do not yet exist as market actors, but the arrangement they will face is being set now."
+    },
+    {
+      "name": "music_economists_and_policy_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic researchers and industry analysts document the royalty split, its effect on artist income distribution, and its structural persistence. They neither set the terms nor collect from them. They can see the arrangement from outside, measure its stability, and compare it to alternative models (user-centric payment, direct licensing, cooperative platforms). Their work feeds policy conversations but has no direct enforcement power."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The royalty split solves a bilateral negotiation problem: how much the platform pays for access to essential catalogs, and how that payment is divided between the platform, the labels, and the artists. It standardizes rate structure across millions of tracks and billions of streams, providing predictable revenue flows for the majors and stable catalog access for the platform.",
+    "transfer_function": "The arrangement moves subscription revenue and ad revenue from listeners to the platform, then from the platform to rightsholders (predominantly the major labels), then from the labels to contracted artists (after recoupment and splits). The largest absolute transfers flow to the majors; the smallest per-work transfers flow to session musicians, legacy-contract artists, and unsigned artists. The majors also collect equity value from their ownership stakes in the platform itself.",
+    "absent_voices": "Future artists who will sign contracts or distribute music in a market shaped by this split have no representation in the negotiation. Session musicians and producers who contributed to recordings under pre-streaming contracts are structurally excluded\u2014they have no ongoing relationship with the platform and no way to renegotiate deals that did not anticipate streaming. Both groups would likely object to the rate structure if they had a seat, but one does not yet exist as market actors, and the other has already been paid and severed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the royalty split disappeared overnight\u2014if the majors' negotiated rates and the platform's payout formula vanished\u2014new arrangements would have to be struck immediately. The platform cannot operate without catalog licenses, and the labels cannot collect streaming revenue without contracts. The negotiation would reopen. Whether the new split would favor artists more than the current one depends on bargaining power, but the structure itself would have to be rebuilt. Some direct-to-artist models or user-centric payment schemes might become viable. The market is organized around this split; its absence would force renegotiation.",
+    "founding_problem": "The founding problem was how to monetize music in a digital distribution environment where physical sales were collapsing and piracy was rampant (circa 2008-2011). Streaming services needed catalog access to compete with free piracy; labels needed a new revenue stream to replace lost CD sales. Artists needed some way to earn from recordings in a world where ownership was being replaced by access. The platform-label royalty split emerged as the solution: blanket licenses in exchange for per-stream payments.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Music economists (e.g., Krueger 2019 'The Economics of Music,' Spotify's own public financial filings, artist advocacy groups like the Union of Musicians and Allied Workers) document the shift from physical to streaming as a response to collapsing sales and piracy. The majors and the platform claim the split preserves the music industry in a digital economy. Artists' groups and independent labels argue that the founding problem (piracy and revenue collapse) has been replaced by a different problem (concentration of streaming revenue in the hands of catalog-holders and platforms), but the rate structure persists unchanged. The contested status reflects genuine disagreement about whether the original problem is still the relevant one, or whether the arrangement now solves a different problem (protecting major-label market share)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The royalty split between major record labels and the dominant music-streaming platform (effectively the Spotify-major-label deals, generalized) was negotiated in a series of bilateral agreements between 2008 and 2011, as streaming transitioned from a marginal distribution channel to the primary mode of music consumption. The majors secured high per-stream rates and equity stakes; the platform secured essential catalog access. Artists signed to legacy contracts receive a fraction of the label's share, under terms that predate streaming. The structure has remained stable for over a decade, despite mounting criticism from artists, independent labels, and advocacy groups who argue that it systematically underpays creators while enriching intermediaries."
+  },
+  "omegas": [
+    {
+      "id": "omega_artist_outside_option",
+      "question": "Do artists signed to major labels have a credible outside option in 2024\u2014can they reach audiences and earn comparable income outside the major-label-plus-streaming model?",
+      "resolution_mechanism": "Empirical: track career income and audience size for artists who exit major-label deals and pursue independent distribution, direct-to-fan platforms, or alternative streaming services over a 5-year biographical horizon.",
+      "impact": "If the outside option is real, the arrangement is a rope (artists stay because it is the best available deal, not because they are trapped). If the outside option is not credible, the arrangement is closer to a snare (exit is formally possible but structurally foreclosed by network effects and market concentration).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether artists have a credible outside option in the current market structure."
+    },
+    {
+      "id": "omega_founding_problem_live",
+      "question": "Is piracy still the primary competitive threat to recorded music revenue in 2024, or has the streaming oligopoly stabilized revenue flows such that the founding problem (revenue collapse and piracy) is no longer the constraint's justification?",
+      "resolution_mechanism": "Empirical: compare piracy rates, total industry revenue, and revenue concentration (share flowing to top 1% of artists and top 3 labels) in 2024 vs. 2011. If piracy is negligible and revenue is stable but concentrated, the founding problem is dead but the structure persists.",
+      "impact": "If the founding problem is dead, the arrangement's persistence without renegotiation is a mandatrophy signal\u2014it continues because it serves the parties who set it, not because the original coordination problem remains.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the original founding problem (piracy and revenue collapse) is still live."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "perspectives": []
+}

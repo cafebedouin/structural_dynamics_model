@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "pilot_hospital_insurer_reimbursement_sonnet_stake",
+    "version": "1.0.0",
+    "generated_date": "2025-06-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Negotiated Reimbursement Rates Between Large Hospital Systems and Health Insurers",
+    "topic_domain": "economic/healthcare",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "emerges_naturally": false
+  },
+  "stakeholders": [
+    {
+      "name": "large_hospital_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Operate multi-facility networks with significant market share in their regions. Negotiate reimbursement rates from a position of leverage: insurers need them in-network to offer viable coverage in the area. Set prices for hundreds of procedure codes annually through bilateral negotiation. Can credibly threaten to leave a network if rates are too low, forcing the insurer to either lose members or pay higher rates. Extract rents through market concentration\u2014the same procedure costs substantially more at their facilities than at independent providers in the same market."
+    },
+    {
+      "name": "major_health_insurers",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Negotiate rates with hospital systems while simultaneously setting premiums for employer groups and individual members. Dual-positioned: they set the terms of the negotiation alongside hospitals (no regulator dictates the rate structure), but they also pay the negotiated rates out of collected premiums. Hold leverage through enrollment volume and can credibly threaten to narrow networks. In concentrated markets where one hospital system dominates, their leverage collapses and they pay what the system demands, passing costs to employers and members. Benefit from rate complexity: the opacity of negotiated rates makes it difficult for employers or patients to comparison-shop, reducing pressure on premiums."
+    },
+    {
+      "name": "employer_groups",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Purchase group health coverage for employees. Pay premiums that reflect the negotiated reimbursement rates between their insurer and local hospital systems, but have no seat at the negotiation table. Large employers can switch insurers annually or self-insure, but the underlying hospital rates in their region remain roughly constant across insurers due to market concentration. Small and mid-size employers are price-takers: they receive premium quotes that bake in whatever rates the hospitals and insurers settled on. Rising premiums force them to shift costs to employees through higher deductibles or reduce coverage. Exit options are constrained by geography\u2014if the local market has one dominant hospital system, no insurer can offer meaningfully lower premiums."
+    },
+    {
+      "name": "individual_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive care at in-network hospitals and pay cost-sharing (deductibles, co-insurance, co-pays) based on the negotiated rates they cannot see and did not consent to. If they need hospital care, they pay a share of whatever rate the hospital negotiated with their insurer. Have no ability to negotiate, no advance knowledge of the price for most services, and limited ability to choose providers (emergency care is non-negotiable; even scheduled procedures often require the local dominant hospital's specialized equipment or specialists). When negotiated rates rise, their out-of-pocket costs rise. Trapped by medical need, insurance network rules, and geographic proximity."
+    },
+    {
+      "name": "independent_physicians_and_clinics",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Compete with hospital-owned facilities for the same patients and procedures, but receive lower reimbursement rates for identical services. Insurers pay hospitals significantly more for the same procedure code when performed in a hospital outpatient department versus an independent clinic. This reimbursement gap makes it difficult to cover costs or attract patients if insurers steer members toward higher-cost hospital settings through benefit design. Many independent providers eventually sell their practices to hospital systems to access the higher rates, which further concentrates the market. Those who remain independent operate on thinner margins and face constant pressure to consolidate."
+    },
+    {
+      "name": "uninsured_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive hospital care without an insurer to negotiate on their behalf. Billed at chargemaster rates\u2014often two to three times the negotiated rates that insured patients pay for identical services. Hospitals justify high chargemaster rates by pointing to the need to cover uncompensated care and negotiate with insurers, but the uninsured bear the highest sticker prices. Face medical debt, collections, and sometimes bankruptcy. Have no leverage, no advance price transparency, and no ability to negotiate. Trapped by medical need and lack of coverage."
+    },
+    {
+      "name": "medical_device_and_pharma_suppliers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sell high-cost devices, implants, and pharmaceuticals to hospitals. Benefit from the reimbursement rate structure because hospitals can negotiate higher rates from insurers by citing the cost of expensive inputs. When hospitals receive generous reimbursement for procedures that use costly devices or drugs, they have less price sensitivity when purchasing from suppliers. The rate negotiation arrangement creates a pass-through: hospitals negotiate rates that cover their input costs plus margin, and suppliers face limited downward price pressure. Collect revenue without sitting at the negotiation table."
+    },
+    {
+      "name": "health_policy_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the relationship between hospital market concentration, negotiated rates, insurance premiums, and patient outcomes. Document the price variation for identical procedures across markets and the correlation between system size and reimbursement rates. Positioned outside the arrangement with access to claims data, public filings, and survey evidence. Neither collect from the arrangement nor pay into it. Observe that the same procedure costs two to four times more in concentrated markets and that negotiated rates have risen faster than general inflation for two decades."
+    },
+    {
+      "name": "future_patients_and_taxpayers",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will inherit a healthcare system shaped by today's negotiated rate structure but have no voice in current negotiations. Rising rates compound over time: higher premiums reduce employer-sponsored coverage, shift more people to public programs (Medicaid, Medicare), and increase federal spending. Future taxpayers will pay for today's price escalation through higher taxes or reduced services. Not yet present in the labor market, the insurance pool, or the voting population. Excluded by temporal distance."
+    },
+    {
+      "name": "rural_and_underserved_communities",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live in areas where hospitals have closed or reduced services, in part because negotiated rates in low-population regions do not support facility operations. Large hospital systems concentrate in urban and suburban markets where patient volume and negotiated leverage are higher. Insurers and hospitals negotiate rates that reflect metro-area cost structures; rural facilities operating on thinner margins and lower volumes cannot achieve the same rates and sometimes exit the market. Left without local hospital access, forcing long-distance travel for care. Excluded from the rate-setting process by geography and market size."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The arrangement coordinates payment for hospital services in a multi-payer system. It solves the problem of determining prices for thousands of procedure codes when no central regulator sets rates and hospitals vary widely in cost structure, quality, and market position. Bilateral negotiation allows flexible pricing that can theoretically reflect local cost differences and quality variation, avoiding one-size-fits-all rate regulation.",
+    "transfer_function": "The arrangement moves money from employers, individual patients, and uninsured patients to hospital systems and, indirectly, to medical device and pharmaceutical suppliers. Employer groups pay premiums that reflect negotiated rates; patients pay cost-sharing based on those rates; hospitals collect negotiated payments from insurers and chargemaster payments from the uninsured. A portion of the negotiated margin flows to suppliers when hospitals pay for high-cost inputs and pass those costs through to insurers.",
+    "absent_voices": "Future patients and taxpayers, who will bear the compounding cost of today's rate escalation through reduced coverage and higher public spending, are excluded by temporal distance\u2014they are not yet in the insurance pool or the voting population. Rural and underserved communities are excluded by geography and market size: rate negotiations center on urban and suburban markets where patient volume and leverage are concentrated, leaving low-volume rural markets underserved or unserved.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the negotiated rate arrangement vanished overnight, the entire payment infrastructure for hospital care would collapse. Hospitals would not know what to bill; insurers would not know what to pay; employer groups would have no basis for premium pricing. The system would rearrange itself rapidly: either a centralized rate-setting authority (all-payer rate setting, Medicare-for-All price schedules, or state regulation) would emerge, or hospitals and insurers would reconstruct a negotiation process under a different name. The current arrangement is load-bearing\u2014privately negotiated rates are the primary mechanism for pricing hospital care in the U.S. multi-payer system.",
+    "founding_problem": "The arrangement emerged to solve the problem of hospital payment in a pluralistic insurance system after the collapse of community rating and the rise of employer-sponsored insurance in the mid-20th century. When Blue Cross plans and commercial insurers competed for employer groups, they needed a mechanism to pay hospitals without a government rate-setting authority. Negotiated rates allowed insurers to differentiate on network breadth and price, and allowed hospitals to recover costs and earn margins in a competitive market.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Health policy researchers document that the founding problem\u2014determining hospital payment in a competitive multi-payer system\u2014remains structurally live, but the coordination solution has drifted toward a price-escalation mechanism in concentrated markets. Academic literature (e.g., work by health economists at NBER, researchers publishing in Health Affairs, and scholars studying hospital competition) provides evidence that market concentration has transformed bilateral negotiation from a price-discovery process into a rent-extraction process in many regions. Hospitals and insurers, who benefit from rate complexity and limited transparency, assert that the system still serves its founding coordination function. Independent researchers and employer groups purchasing coverage contest this, pointing to sustained price growth unmoored from cost or quality improvements. The GAO, CBO, and MedPAC (all external to the beneficiary set) have documented the price effects of consolidation and the divergence between negotiated rates and underlying costs, corroborating that the original problem (payment coordination) is now entangled with a new problem (market power and price extraction)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "In the U.S. healthcare system, hospitals and health insurers negotiate reimbursement rates for thousands of procedure codes in bilateral contracts that are not public and not regulated at the federal level. These negotiations determine what insurers pay hospitals for patient care, which in turn determines the premiums employers and individuals pay for coverage and the cost-sharing patients pay when they receive care. The arrangement operates without centralized price-setting: each hospital system negotiates separately with each insurer in its market. In theory, this allows prices to reflect local costs and quality. In practice, the arrangement has become a mechanism for extracting rents in concentrated markets. Large hospital systems with regional dominance negotiate rates far above cost, and insurers pass those costs to employers and patients. Independent providers receive lower rates for identical services, uninsured patients are billed at chargemaster rates multiples higher than negotiated rates, and future patients inherit a system with compounding cost growth."
+  },
+  "omegas": [
+    {
+      "id": "market_concentration_threshold",
+      "question": "At what level of hospital market concentration does bilateral negotiation shift from price discovery to rent extraction?",
+      "resolution_mechanism": "Empirical study of negotiated rate premiums as a function of Herfindahl-Hirschman Index (HHI) across metropolitan statistical areas, controlling for cost and quality measures.",
+      "impact": "If a clear threshold exists, it would distinguish markets where the arrangement serves its coordination function from markets where it operates as a wealth transfer from patients and employers to hospital systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical question about the HHI threshold at which negotiated rates decouple from costs."
+    },
+    {
+      "id": "transparency_counterfactual",
+      "question": "Would public disclosure of negotiated rates reduce price variation and slow cost growth, or would it facilitate tacit collusion and raise rates further?",
+      "resolution_mechanism": "Natural experiment in states that have implemented price transparency mandates, comparing rate growth and variation before and after disclosure.",
+      "impact": "The answer determines whether transparency reforms would discipline the arrangement or entrench it. If disclosure reduces variation, the arrangement's complexity is a bug; if disclosure raises rates, complexity is a feature that prevents coordination on higher prices.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Empirical question about the effect of mandated rate transparency on negotiated prices."
+    },
+    {
+      "id": "beneficiary_structure_legitimacy",
+      "question": "Is the transfer from patients and employers to hospital systems justified by quality, innovation, or uncompensated care, or is it rent extraction enabled by market power?",
+      "resolution_mechanism": "Cross-sectional analysis of negotiated rate premiums versus quality scores, uncompensated care volume, and research output, looking for correlation between price and social benefit.",
+      "impact": "This question determines whether the arrangement is a legitimate coordination mechanism that compensates hospitals for social goods, or a wealth transfer mechanism that benefits hospitals independent of social contribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical question about the relationship between negotiated rate premiums and hospital social contributions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "perspectives": []
+}

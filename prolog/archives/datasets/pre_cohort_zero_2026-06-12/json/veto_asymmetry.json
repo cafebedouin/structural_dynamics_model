@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "veto_asymmetry",
+    "version": "1.0",
+    "generated_date": "2025-06-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "veto_asym",
+    "story_uid": "2b8fd9cc-bd60-4ae1-8c04-4c14b8bcbcad"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Veto Asymmetry in Democratic Policy Formation",
+    "topic_domain": "political_economy/democratic_theory/institutional_analysis",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "concentrated_wealth_holders",
+      "chokepoint_gatekeepers"
+    ],
+    "victims": [
+      "diffuse_majority_coalitions",
+      "policy_enactment_seekers"
+    ],
+    "vindicated_propositions": [
+      "madisonian_faction_control_doctrine",
+      "negative_liberty_primacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Diffuse Majority Coalition",
+      "comment": "PERSPECTIVE 1: DIFFUSE MAJORITY COALITION (SNARE) — Cannot organize at scale to overcome chokepoint vetoes; bears full cost of blocked policy enactment. Trapped by coordination costs that exceed the per-capita benefit of any single policy win. Maximum experienced extraction — the structural position that reveals veto asymmetry as pure extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Issue-Specific Advocacy Coalition",
+      "comment": "PERSPECTIVE 2: ISSUE-SPECIFIC ADVOCACY COALITION (TANGLED ROPE) — Constrained by resource requirements for sustained legislative campaigns but benefits from the same chokepoint architecture when defending existing policy. Experiences both coordination (when blocking threats to achieved gains) and extraction (when seeking new enactments). Mixed structural position — sometimes gatekeeper, sometimes supplicant."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Chokepoint Gatekeeper",
+      "comment": "PERSPECTIVE 3: CHOKEPOINT GATEKEEPER (ROPE) — Committee chairs, filibuster-wielding senators, regulatory agency heads. Benefits from veto asymmetry through rent extraction from both sides: payment to allow passage, payment to block. Experiences the constraint as pure coordination — the architecture creates a valuable service (agenda control) that both enactment-seekers and blockers demand. Net beneficiary with arbitrage-grade exit (can switch between blocking and allowing based on payment)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Concentrated Wealth Holder",
+      "comment": "PERSPECTIVE 4: CONCENTRATED WEALTH HOLDER (ROPE) — Captures chokepoints at lower cost than buying full legislative chains. Experiences veto asymmetry as efficient coordination: the architecture solves the collective action problem of defending property rights and regulatory forbearance by concentrating defensive power at a few purchasable nodes. Low effective extraction because the constraint subsidizes this agent — extraction flows toward them, not away."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (TANGLED ROPE) — Organized agents (campaign finance reform groups, anti-gerrymandering advocates, filibuster abolitionists) see veto asymmetry as a solvable institutional design problem but face high barriers to constitutional amendment or norm change. Benefits from the same chokepoint architecture when blocking backsliding but pays extraction cost when seeking structural reform. Constrained exit — can build pressure but cannot unilaterally exit the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational/global perspective, veto asymmetry exhibits both genuine coordination function (Madisonian stability, protection against majoritarian tyranny, transaction cost reduction for status quo defense) and substantial extraction (wealth-correlated policy influence, suppression of majority-preferred enactments, chokepoint rent-seeking). The constraint is not a natural law — alternative democratic architectures exist with different veto/enactment cost ratios — but neither is it pure extraction. Tangled rope classification reflects the irreducible hybrid: some of the blocking power genuinely coordinates against hasty change; some of it extracts rents from the diffuse majority."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "What fraction of veto asymmetry's blocking power represents genuine Madisonian stability coordination versus extractive suppression of majority-preferred policy?",
+      "resolution_mechanism": "Comparative institutional analysis: policy outcome distributions in democracies with different veto point architectures, controlling for wealth inequality. If high-veto-point systems produce similar policy distributions to low-veto-point systems when wealth concentration is controlled, the asymmetry is primarily extractive. If policy volatility increases substantially in low-veto-point systems regardless of wealth distribution, some coordination function is genuine.",
+      "impact": "If coordination fraction > 0.6: analytical classification shifts toward rope (the blocking power is mostly legitimate stability mechanism). If coordination fraction < 0.3: analytical classification shifts toward snare (the blocking power is mostly extractive rent-seeking dressed in Madisonian language).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of veto asymmetry representing coordination vs extraction"
+    },
+    {
+      "id": "chokepoint_cost_threshold",
+      "question": "At what wealth concentration level does chokepoint capture cost fall below the per-capita benefit threshold that would enable diffuse majority counter-organization?",
+      "resolution_mechanism": "Empirical measurement of lobbying expenditures per chokepoint (committee chair races, filibuster-wielding senator campaigns, regulatory capture budgets) versus the per-capita cost of organizing diffuse coalitions at sufficient scale to overcome vetoes. Threshold is the Gini coefficient at which chokepoint costs equal or exceed distributed organization costs.",
+      "impact": "If current wealth concentration is below threshold: veto asymmetry is a coordination problem (rope from more perspectives) — the diffuse majority could organize but chooses not to. If current concentration is above threshold: veto asymmetry is structural extraction (snare from more perspectives) — the diffuse majority cannot organize at any feasible cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Wealth concentration threshold for chokepoint capture feasibility"
+    },
+    {
+      "id": "constitutional_amendment_sunset",
+      "question": "Is the reform coalition's generational time horizon realistic, or is constitutional amendment to reduce veto points structurally infeasible under current wealth concentration?",
+      "resolution_mechanism": "Historical analysis of successful constitutional amendments in high-inequality periods; game-theoretic modeling of amendment coalition formation costs under veto asymmetry (the constraint defends itself by making its own removal expensive).",
+      "impact": "If amendment is feasible within 2-3 generations: reform coalition's scaffold-like perception is justified. If amendment requires wealth deconcentration first (circular dependency): reform coalition is trapped in the same structure as the diffuse majority, and their 'organized' classification overstates their agency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of constitutional reform under veto asymmetry"
+    },
+    {
+      "id": "madisonian_naturalization",
+      "question": "Is the Federalist 10 framing (faction control via institutional fragmentation) a discovered principle of stable governance or a constructed justification for wealth-holder veto power?",
+      "resolution_mechanism": "Cross-national comparison: do stable democracies with low veto-point counts (unicameral legislatures, no filibuster, proportional representation) exhibit higher policy volatility or majoritarian tyranny? If not, the Madisonian claim is naturalization of a contingent design choice.",
+      "impact": "If Madisonian stability claim is empirically supported: veto asymmetry has genuine mountain-like properties (some blocking power is structural necessity). If unsupported: the 'stability' framing is false summit — naturalization of extractive architecture as democratic necessity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Madisonian stability justification is natural law or constructed cover"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "veto_asym_extract_1970"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54,
+      "id_override": "veto_asym_extract_1985"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.59,
+      "id_override": "veto_asym_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62,
+      "id_override": "veto_asym_extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.62,
+      "id_override": "veto_asym_extract_2025"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "veto_asym_theater_1970"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45,
+      "id_override": "veto_asym_theater_1985"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.52,
+      "id_override": "veto_asym_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.57,
+      "id_override": "veto_asym_theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.58,
+      "id_override": "veto_asym_theater_2025"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "veto_asym_suppress_1970"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58,
+      "id_override": "veto_asym_suppress_1985"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.64,
+      "id_override": "veto_asym_suppress_2000"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.68,
+      "id_override": "veto_asym_suppress_2015"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 55,
+      "value": 0.68,
+      "id_override": "veto_asym_suppress_2025"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 55
+  },
+  "commentary": {
+    "narrative_context": "Veto asymmetry describes the structural inequality in democratic policy influence arising from the lower cost of blocking policy change versus enacting new policy. In systems with multiple veto points (bicameral legislatures, executive veto, judicial review, filibuster rules, committee gatekeeping), blocking requires capturing only one chokepoint while enactment requires assembling majority coalitions across the entire legislative chain. This cost differential creates systematic wealth-correlated policy bias: concentrated wealth holders can afford to purchase chokepoint vetoes (through campaign contributions, lobbying, regulatory capture) at costs far below what diffuse majority coalitions would need to spend to overcome those vetoes and enact policy. The constraint exhibits genuine coordination function (Madisonian stability, protection against policy volatility) layered with substantial extraction (suppression of majority-preferred redistributive policy, chokepoint rent-seeking). The theater_ratio (0.58) reflects increasing performative democratic participation (voting, public comment periods, legislative hearings) whose outcomes are substantially predetermined by chokepoint capture. Measurements show extraction and suppression rising from 1970-2015 as wealth concentration increased, then plateauing as the constraint reached its current mature form.",
+    "key_agents": [
+      "Diffuse Majority Coalitions: Primary victim (powerless/trapped) — cannot organize at scale to overcome chokepoint vetoes; per-capita benefit of any single policy win is below coordination cost threshold",
+      "Concentrated Wealth Holders: Primary beneficiary (institutional/arbitrage) — purchase chokepoint vetoes at costs far below full-chain enactment costs; extraction flows toward this agent through blocked redistributive policy",
+      "Chokepoint Gatekeepers: Secondary beneficiary (institutional/arbitrage) — committee chairs, filibuster-wielding senators, agency heads who extract rents from both enactment-seekers and blockers",
+      "Issue-Specific Advocacy Coalitions: Mixed position (moderate/constrained) — sometimes benefit from veto asymmetry when defending achieved gains, sometimes pay extraction cost when seeking new enactments",
+      "Reform Coalition: Organized agents (organized/constrained) — see structural solution (constitutional amendment, filibuster abolition) but face high barriers to implementation; constrained by the constraint's self-defense mechanism",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees irreducible hybrid of coordination and extraction; risks either naturalizing the asymmetry as necessary democratic stability or dismissing all blocking power as pure extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Substantial. The constraint extracts from diffuse majority coalitions by suppressing majority-preferred policy (particularly redistributive policy) while enabling concentrated wealth holders to defend status quo at low cost. The value reflects that some blocking power serves genuine coordination (preventing hasty policy changes, protecting minority rights) but a significant fraction is extractive rent-seeking. The 0.62 value is higher than a pure coordination mechanism (rope ~0.15-0.25) but lower than a pure extraction mechanism (snare ~0.75-0.85) because the coordination function is real. Suppression (0.68): High. Substantial barriers to policy enactment include: coordination costs for diffuse coalitions that exceed per-capita benefits, wealth-correlated chokepoint capture costs, constitutional amendment difficulty, norm entrenchment around Madisonian stability rhetoric. Suppression has increased over the measurement interval as wealth concentration has risen. Theater_ratio (0.58): Moderate-high. Democratic participation rituals (voting, public comment, legislative hearings) increasingly produce predetermined outcomes due to chokepoint capture, but the theater is not total — some policy enactments do occur, and some chokepoints remain contestable. The ratio has increased as wealth concentration has made chokepoint capture more systematic. Accessibility_collapse (0.42): Moderate. Alternative democratic architectures exist (unicameral legislatures, proportional representation, no filibuster, shorter amendment processes) and are observable in other stable democracies, so the constraint is not a natural law. However, path dependency and constitutional entrenchment make alternatives difficult to access from within the current system. Resistance (0.71): High. The constraint faces sustained resistance from reform coalitions, progressive movements, and periodic populist backlash, indicating it is a constructed arrangement requiring active defense rather than a natural feature of democracy.",
+    "directionality_logic": "Directionality is derived from structural position. Diffuse majority coalitions are full victims (d → 1.0) — they bear the cost of blocked policy with no offsetting benefit and cannot exit due to coordination cost barriers. Concentrated wealth holders are full beneficiaries (d → 0.0) — they capture the value of blocked redistributive policy and can arbitrage between chokepoints. Chokepoint gatekeepers are beneficiaries (d → 0.1-0.2) — they extract rents from both sides but face some constraints from electoral accountability. Issue-specific advocacy coalitions have mixed directionality (d → 0.4-0.6) — they benefit when blocking threats to achieved policy but pay extraction costs when seeking new enactments; their position oscillates based on whether they are defending or advancing. Reform coalitions have moderate directionality (d → 0.5-0.6) — they pay extraction costs when blocked from structural reform but benefit from organization that reduces per-capita coordination costs. The analytical observer's directionality is neutral (d → 0.5) by construction — the analytical position experiences neither extraction nor subsidy, only observation of the structure.",
+    "perspectival_gap": "This constraint demonstrates how structural position determines classification. Diffuse majority coalitions see pure extraction (Snare) — they cannot organize to overcome vetoes and bear full cost of suppressed policy. Concentrated wealth holders see pure coordination (Rope) — the architecture efficiently solves their collective action problem of defending property rights. Chokepoint gatekeepers see coordination (Rope) — they provide a valuable service (agenda control) that both sides demand. Issue-specific advocacy coalitions and reform coalitions see mixed coordination-extraction (Tangled Rope) — they benefit from blocking power when defending gains but pay extraction costs when seeking change. The analytical observer sees irreducible hybrid (Tangled Rope) — genuine Madisonian stability coordination layered with substantial wealth-correlated extraction. The perspectival gap is not a disagreement about facts but a structural consequence of different positions in the extraction flow. The constraint simultaneously coordinates (protects against policy volatility) and extracts (suppresses majority-preferred redistribution) — which function dominates depends on where you sit.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: Veto asymmetry resolves the mandatrophy by demonstrating that coordination and extraction are not mutually exclusive categories but can be structurally layered in the same constraint. The Madisonian stability function is genuine — chokepoint architecture does reduce policy volatility and protect against some forms of majoritarian tyranny. But this coordination function is layered with substantial extraction — the same architecture systematically suppresses majority-preferred redistributive policy and enables wealth-correlated chokepoint capture. The constraint is not 'really' coordination (rope) or 'really' extraction (snare) — it is irreducibly both (tangled rope). The analytical classification as tangled_rope reflects this structural hybridity. The false summit risk is naturalizing the entire asymmetry as necessary democratic stability (mountain) when the coordination/extraction ratio is contingent on wealth distribution and institutional design choices. Alternative architectures (fewer veto points, lower amendment thresholds, campaign finance limits) would preserve some coordination function while reducing extraction — the current ratio is not a natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Veto asymmetry is downstream of organization_floor (the mountain constraint that diffuse coalitions cannot organize below a minimum per-capita benefit threshold). The organization_floor sets the coordination cost barrier; veto_asymmetry exploits that barrier by concentrating blocking power at chokepoints whose capture cost is below the organization threshold for diffuse majorities. The two constraints are structurally distinct: organization_floor is a natural coordination limit (mountain), veto_asymmetry is a constructed institutional architecture that takes advantage of that limit (tangled_rope)."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "diffuse_majority_coalitions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Large coalitions seeking redistributive policy or regulatory enactment. Cannot organize at scale because per-capita benefit of any single policy win is below the coordination cost threshold set by organization_floor. Bear the cost of blocked majority-preferred policy but cannot overcome chokepoint vetoes. Trapped by the structural math: even when 60-70% of the population prefers a policy, the cost of organizing that supermajority exceeds what any individual member would gain from the policy's enactment."
+    },
+    {
+      "name": "concentrated_wealth_holders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Individuals and corporations with sufficient wealth concentration to purchase chokepoint vetoes. Capture committee chairs, filibuster-wielding senators, and regulatory agencies at costs far below what diffuse coalitions would need to spend to overcome those vetoes. Benefit from blocked redistributive policy and regulatory forbearance. Can arbitrage between chokepoints and between blocking and allowing based on which produces higher return."
+    },
+    {
+      "name": "chokepoint_gatekeepers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Committee chairs, filibuster-wielding senators, regulatory agency heads, and other institutional actors who control single points in the legislative chain. Set the agenda by deciding what reaches a vote and extract rents from both enactment-seekers (payment to allow passage) and blockers (payment to block). Benefit from the asymmetry itself — the more veto points exist, the more valuable each gatekeeper position becomes."
+    },
+    {
+      "name": "issue_advocacy_coalitions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Single-issue advocacy groups (environmental, civil rights, labor, industry associations) that have achieved some policy wins and now defend them. Benefit from veto asymmetry when blocking threats to achieved gains (cheaper to defend one chokepoint than to maintain full-chain coalition). Pay extraction cost when seeking new enactments (must overcome multiple vetoes). Constrained by resource limitations but have more organization capacity than fully diffuse coalitions."
+    },
+    {
+      "name": "reform_coalitions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Campaign finance reform groups, anti-gerrymandering advocates, filibuster abolitionists, and other movements seeking to reduce veto points or limit chokepoint capture. See the structural solution (constitutional amendment, norm change, institutional redesign) but face high barriers to implementation. Constrained by the constraint's self-defense mechanism — veto asymmetry makes its own removal expensive by requiring supermajority coalition formation to overcome the chokepoints that defend the current architecture."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Comparative political economists and democratic theorists observing veto asymmetry across multiple democracies and time periods. See both the genuine coordination function (Madisonian stability, protection against policy volatility) and the substantial extraction (wealth-correlated policy bias, suppression of majority-preferred redistribution). Neither collecting from nor paying into the constraint — observing the structure from outside any particular national system."
+    }
+  ],
+  "gain_flow": "concentrated_wealth_holders",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Veto asymmetry coordinates two distinct problems: (1) Madisonian stability — preventing hasty policy changes and protecting against some forms of majoritarian tyranny by requiring broad consensus for enactment. (2) Wealth-holder collective action — solving the coordination problem of defending property rights and regulatory forbearance by concentrating defensive power at a few purchasable chokepoints rather than requiring continuous full-chain coalition maintenance.",
+    "transfer_function": "The arrangement transfers policy influence from diffuse majority coalitions to concentrated wealth holders. What moves: the ability to block or enact policy. From whom: from large coalitions whose per-capita benefit is below organization threshold. To whom: to wealth holders who can afford chokepoint capture costs and to the gatekeepers who control those chokepoints. The transfer is asymmetric — blocking costs far less than enacting, so influence flows toward those who prefer status quo (typically wealth holders defending against redistribution).",
+    "absent_voices": "Diffuse majority coalitions are structurally excluded — not absent from the room but unable to speak effectively because their per-capita benefit from any single policy is below the coordination cost threshold. They vote, they petition, they comment in public hearings, but these participation rituals produce predetermined outcomes when chokepoints are captured. The exclusion is structural rather than procedural — the architecture ensures that even when 60-70% of the population prefers a policy, that preference cannot overcome a single well-funded chokepoint veto.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If veto asymmetry disappeared overnight (unicameral legislature, no filibuster, easy amendment process, strict campaign finance limits), policy outcomes would rearrange substantially. Majority-preferred redistributive policies currently blocked by chokepoint vetoes would pass. Wealth holders would need to maintain full-chain coalitions rather than purchasing single chokepoints. Chokepoint gatekeepers would lose rent-extraction capacity. The rearrangement would be substantial and immediate — this is a constructed institutional architecture, not a natural feature of democracy.",
+    "founding_problem": "The Madisonian founding problem: how to prevent majoritarian tyranny and faction dominance in a large republic. Federalist 10's solution: fragment institutional power across multiple veto points so that no single faction can easily capture the entire system. The architecture was designed to make policy change difficult, requiring broad consensus and protecting minority rights (particularly property rights) against majority redistribution.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The status is contested between two readings: (1) The founding problem is LIVE — majoritarian tyranny remains a threat, and veto points continue to serve their designed function of requiring broad consensus (corroborated by conservative legal scholars, Federalist Society, property rights advocates). (2) The founding problem is DEAD or transformed — the threat today is not majoritarian tyranny but minoritarian capture, and veto points now serve wealth concentration rather than faction control (corroborated by comparative political economists observing that other stable democracies with fewer veto points do not exhibit higher majoritarian tyranny, and by empirical studies showing wealth-correlated policy bias in high-veto-point systems). The corroboration is split along ideological and structural position lines — those who benefit from veto asymmetry attest the problem is live; those who pay the extraction cost attest it is dead."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "organization_floor"
+    ]
+  }
+}

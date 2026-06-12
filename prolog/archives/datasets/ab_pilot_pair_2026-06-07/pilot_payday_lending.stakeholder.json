@@ -1,0 +1,99 @@
+{
+  "header": {
+    "constraint_id": "pilot_payday_lending",
+    "version": "1.0.0-pilot",
+    "generated_date": "2024-07-25",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.8,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "piton",
+    "human_readable": "High-Interest Payday Lending",
+    "topic_domain": "economic/financial",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "emerges_naturally": false
+  },
+  "stakeholders": [
+    {
+      "name": "low_income_borrowers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Faces an urgent, short-term cash need but lacks access to conventional credit. Takes out a high-interest loan as the only available option, often rolling it over and incurring substantial fees that can exceed the original loan amount, creating a cycle of debt."
+    },
+    {
+      "name": "payday_lending_companies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Provides short-term, high-interest loans to a subprime market. Designs loan products with high fees and interest rates that are profitable despite high default rates. Lobbies against regulations that would cap interest rates or limit their business model. Their profits are directly generated from the fees and interest paid by borrowers."
+    },
+    {
+      "name": "consumer_advocacy_groups",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Researches the impact of payday lending on low-income communities, publishing reports and testifying before legislatures. Advocates for stricter regulations, such as interest rate caps and more transparent lending practices, to protect consumers from what they view as predatory financial products."
+    },
+    {
+      "name": "financial_regulators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Charged with overseeing the consumer financial marketplace. Writes and enforces regulations to ensure fairness and transparency, attempting to balance consumer protection with market viability. Their actions are often contested by the lending industry and are subject to political influence."
+    },
+    {
+      "name": "unbanked_or_underbanked_communities",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Lacks access to basic financial services like bank accounts or conventional loans. This exclusion from the mainstream financial system makes them reliant on alternative, often more expensive, services. Their absence from the formal banking system is the structural condition that creates the market for payday loans."
+    },
+    {
+      "name": "the_concept_of_credit_access",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "An abstract principle invoked by the payday lending industry to justify its business model. The argument is that they provide essential credit to people who would otherwise have none, and that restricting them would harm consumers by cutting off this access. This framing presents the industry as a solution rather than a problem."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, rapid mechanism for individuals without access to conventional credit to obtain small, short-term loans to cover immediate cash shortfalls.",
+    "transfer_function": "Moves capital from lenders to borrowers in the short term, and moves a much larger amount of capital (principal plus high interest and fees) from low-income borrowers back to the lending companies over the medium term.",
+    "absent_voices": "The voices of those trapped in debt cycles who may lack the resources, time, or platform to articulate their experience in policy debates. Also, future generations in these communities who will inherit the consequences of wealth extraction.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Its disappearance would be contested. Consumer advocates would see it as the removal of a predatory system, while the lending industry would argue it harms consumers by eliminating their only credit option, potentially pushing them toward illegal lenders. The immediate effect on borrowers would be mixed: relief from debt cycles for some, and a crisis of unmet cash needs for others.",
+    "founding_problem": "The lack of access to small-amount, short-term credit for individuals with low income or poor credit history who are excluded from the mainstream banking system.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The existence of this problem is corroborated by numerous sources outside the lending industry, including research from the Federal Reserve on the unbanked/underbanked, reports by consumer advocacy groups like the Pew Charitable Trusts, and academic studies on financial inclusion. These sources agree on the problem's existence but strongly dispute the payday lending industry's proposed solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the system of high-interest, short-term 'payday' loans marketed to low-income individuals who lack access to traditional forms of credit. These loans are easy to obtain but carry extremely high annual percentage rates (APRs), often trapping borrowers in a cycle of debt where they must take out new loans to pay off old ones. The industry frames itself as providing a vital service\u2014'credit access'\u2014to underserved populations, while critics and regulators describe it as predatory lending that extracts wealth from vulnerable communities."
+  }
+}
