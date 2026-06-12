@@ -3082,6 +3082,14 @@ this rebuild's analysis design: report the construction-pair diff as its own str
 correlation readout (OQ-76 Remaining).** OQ-70's bait confound
 is still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
 
+**Stability-table dependency (2026-06-12, from OQ-109):** this rebuild's readouts are
+cross-story claims, so the stability-table-gates-claims rule (OQ-109 item 4) applies —
+Stage-2 analysis design consumes cohort zero's replicate-probe stability table (compare
+only draw-stable fields, or size n-per-cohort if the OQ-109 homogeneity falsifier fires).
+Cohort zero (~60 stories) is BELOW Tier 1 power and is OQ-109's, not this OQ's — no
+OQ-75 verdict rides it; conversely, Stage-2 cohorts share cohort zero's provenance
+regime, which is when OQ-109's homogeneity falsifier (item 6) becomes checkable.
+
 **Power tiers for the readouts (recorded 2026-06-05, before the data — pre-register criteria at each tier BEFORE looking):** Tier 1 machinery shakedown ~100 stories (~15 topics; pipeline-holds criterion only, no verdicts; e-digit grid needs >=5 expected/cell). Tier 2 diff-distribution verdicts ~250-300 stories (proportions to +-4-5pp; per-claimed-type cells need ~30+ each). Tier 3 cross-axis correlation ~100-150 KERNELS (~500-600 stories; r=0.3 at 80% power needs ~85 kernels, r=0.2 ~195; the unit is the kernel — only kernels carry the axiom axis and construction pair; bounding r away from 1 is cheap and lands by Tier 2). Tier 4 threshold recalibration (OQ-48) ~700+ (old calibration used 691). e-statistics stay scoped to this one generation regime (OQ-26); never mix archived corpora into denominators.
 
 ## OQ-76 — Kernel/flat gate is stochastic on a real boundary band: routing noise lands in Stage-2's cross-axis correlation
@@ -4759,10 +4767,32 @@ era and pinned in snapshot):**
    committed story is the determinism frontier — backchecking a generation tells nothing
    about the next run). **Probe amendment (2026-06-12): also compute pairwise
    fingerprint/signature distances within-draws vs between-stories** — within-vs-between
-   separation is the identity-tolerance question made a number. **Gating relation,
+   separation is the identity-tolerance question made a number. **The distance metric
+   reports positive-agreement and agreement-in-absence SEPARATELY (Pattern-5 guard,
+   2026-06-12):** the witness's draw 2 matched its siblings 3/7 entirely on absence
+   (voids []=[], zone negligible, coupling independent) — a metric that scores
+   absence-match as match imports Pattern 5 into the calibration. **Gating relation,
    pinned: the stability table gates CLAIMS, not generation** — cohort zero does not
    wait on it; no cross-story comparison lands in any analysis until the table says
    which fields are draw-stable.
+   **σ/SEAT FALSIFIER, PRE-REGISTERED (2026-06-12 — pin the prediction BEFORE any draw
+   exists; freezes at its first commit, the OQ-114 pattern):** the σ/seat reading of the
+   stability table (RULING block below) is the most consequential untested claim riding
+   cohort zero, and once the table exists any partition reads as post-hoc confirmation.
+   So: BEFORE the replicate draws run, classify every schema field into THREE buckets —
+   **predicted-σ** (situation-fixed per the theorem), **predicted-seat**
+   (seat-expressive: shift, reading-level classifications, perspectival fields), and
+   **seed-supplied** (fields the regen driver hands the model from the archived
+   material — the three draws of a story SHARE their seed, so seed-echo stability is
+   input-echo, NOT evidence of σ-fixedness; mark these from the driver's prompt spec,
+   not from the data). The synthesis survives iff the observed stability partition
+   matches the predicted σ/seat split beyond chance ON THE NON-SEED-SUPPLIED FIELDS;
+   the noise hypothesis predicts instability tracks boring covariates (field entropy,
+   prose-proximity) and smears across the σ/seat line. A mismatch is a FINDING about
+   where the theory's seat boundary sits — never a license to redraw predictions; a
+   field the theorem underdetermines is halt-and-escalate at classification time, not
+   inline-resolved. (The prediction pass occupies its seat before the table can —
+   Corollary 3 applied to the probe itself.)
    **IDENTITY-ACROSS-REGEN (witness-settled, 2026-06-12;
    `audits/2026-06-12_signature_identity_witness/`): the engine's typing machinery
    carries KIND-level identity only — story-level identity does not survive a redraw and
@@ -4801,7 +4831,12 @@ era and pinned in snapshot):**
    `seeded_from`/`draw` are provenance plumbing with no identity semantics); what is
    corrected is the "identity does not survive" valence — there was no seat-free
    identity to lose. Corollary 3 keeps the witness discipline intact: pre-committed
-   confrontations still bite (reabsorption is costly and visible).
+   confrontations still bite (reabsorption is costly and visible). **SCOPE (one line,
+   so no one cites this ruling against a pipeline-determinism witness):
+   "determinism-as-desideratum is part of the problem" is scoped to GENERATION — forward
+   of the frontier, where seats live; behind the frontier (committed JSON onward),
+   byte-identical reruns, gauntlet reconciliations, and the OQ-112 order-dependency
+   class remain bugs-if-violated, exactly as before.**
 5. **Snapshot rule:** corpus-relative statistics make the live corpus a moving target —
    pipeline runs that feed analysis get a snapshot ID; cross-story claims are stable only
    WITHIN a snapshot; cross-time claims cite both endpoint manifests. (Extends the
