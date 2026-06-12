@@ -128,7 +128,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only", default="")
+    ap.add_argument("--replicates", default="",
+                    help="comma-separated override of REPLICATE_SET (pilot mode)")
     args = ap.parse_args()
+    global REPLICATE_SET
+    if args.replicates:
+        REPLICATE_SET = set(args.replicates.split(","))
 
     seeds = sorted(p.stem for p in ARCHIVE.glob("*.json"))
     if args.only:
