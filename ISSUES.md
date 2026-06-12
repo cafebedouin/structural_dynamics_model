@@ -4489,29 +4489,33 @@ Cross-refs: OQ-46, OQ-44, OQ-102, OQ-107, OQ-109 (Phase C swap), OQ-110.
 
 **Ω-type:** Ω_C (design choice deferred by OQ-93 ruling (a), operator 2026-06-10 — must not evaporate).
 
-**Status:** open — filed 2026-06-11 at the OQ-93 close; the migration shipped the κ-track
-WITHOUT this verdict (explicitly excluded; nothing in stages A–D resurrects it).
+**Status:** resolved — RETIRE ruled and landed (operator, 2026-06-12). Top verdict deleted
+from `intent_engine.pl` (clause + `collect_intent_evidence/1` + dead helpers) with its five
+config params/specs (`system_gradient_strong_threshold`, `beneficiary_gain_min`,
+`structural_suppression_min`, `structural_resistance_min`, docs-only `loser_loss_max_gain`);
+lower verdicts and the OQ-93 open() passthrough untouched. Intent_* tables and all
+non-intent_engine readers (incl. the OQ-43 fail-closed NL gate) preserved as GAP-08
+substrate. Witness: `audits/2026-06-12_oq106_retire/` (suite diff byte-identical on
+substantive lines; warning-attribution residue positive-controlled as same-code run-noise).
+Evidence basis: `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md` §C3 (1.00 strict
+vs 0.98 max reachable), GAP-08 (producerless tables), plus the deciding-pass finding that
+the verdict token had NO consumer even if it fired (`report_generator.pl:22` imports
+intent_engine `except([classify_interval/3])`).
 
-**The double death, both witnessed (grid-viability probe, 2026-06-10).** (1) Threshold
-range-dead by arithmetic: `system_gradient_strong_threshold` = 1.00 strict while the maximal
-reachable G_sys on a best-case authored grid is 0.98 (`intent_max` probe story, full
-hand-authored Conditions-2–4 evidence — verdict still unreachable). (2) Conditions 2–4 read
-`intent_viable_alternative/3`, `intent_alternative_rejected/3`, `intent_power_change/3`,
-`intent_suppression_level/4`, `intent_resistance_level/4` — tables with NO producer anywhere
-(empty corpus-wide, OQ-36/OQ-43; the probe hand-authored their first-ever facts). The lower
-verdicts (increasing/decreasing/stable) ride pattern_analysis and are live under the
-coverage-carrying read; only the TOP verdict is dead.
-
-**The fork (operator's, unruled):** do the verdict's semantics survive a reachable threshold
-(redesign: lower the threshold + build a producer for the intent_* tables — schema/prompt
-surface or derivation), or was a never-firing threshold measuring the wrong thing (retire: delete
-`structural_coercive_intent/4` + the intent_* table readers + the two config params)? Evidence
-for the ruling exists in `audits/2026-06-10_oq93_grid_viability_probe/` (FINDINGS.md §C3,
-range-death witness). Sequencing note: nothing downstream blocks on this — the κ-track ships
-without it; an eventual redesign would enter as its own staged build (schema → producer →
-threshold re-derivation → wiring) under a fresh preregistration. Cross-refs: OQ-93 (origin
-ruling), OQ-36/OQ-43 (the empty tables), OQ-44 (a reachable-threshold redesign must not
-reintroduce a pass-open gate over those tables).
+**Still-operative ruling block (kept per compress-on-close exception).** The fork closed on
+ruling (i) of the 2026-06-12 web-review exchange: **capture-as-design ratified as the piton
+intension** — the snare/piton split's computed `constraint_captured/1` gate (present-tense
+"maintained by a beneficiary now") carries the designed/decayed axis; origin-intent is not
+type-constitutive, and Condition 2 of the dead verdict (alternatives seen and rejected) was
+its only checkable form. **Kill condition (commit-plus-falsifier):** a corpus case where
+proxy and intuition split — capture holds but the extraction is plainly emergent with no
+design even ex post, or design is documented (authored alternative-rejection evidence) but
+capture is absent, AND the operator wants those cases sorted differently. Such a case
+falsifies the proxy and becomes the consuming research question that arms GAP-08's revival
+condition (until then revival stays GENERIC: armed-not-scheduled was explicitly declined —
+naming piton as standing candidate consumer was option (ii), not taken, to avoid an OQ-36
+"build mid-baseline" license misread). Any revival = fresh preregistration (schema →
+producer → threshold re-derivation → wiring), OQ-44 fail-closed on the tables.
 
 ## OQ-107 — Survey-wave witness adapter: no path from external instrument data to metrics, so every time series stays authored-or-derived and drift events are self-consistency checks, not measurements
 

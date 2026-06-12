@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-12 — OQ-106 RESOLVED: RETIRE ruled and landed — `structural_coercive_intent` top verdict deleted (range-dead, producerless, consumerless); capture-as-design ratified as piton intension with recorded kill condition; GAP-08 revival stays generic
+**Files:** prolog/intent_engine.pl, prolog/config.pl, prolog/config_schema.pl, ISSUES.md, docs/design/design_gaps.md, audits/2026-06-12_oq106_retire/
+**Tier:** landed
+
+Worktree `oq106-retire` from `f3f1e99f`. Deciding pass added a third death to the audit's
+two: the verdict token had NO consumer even if it fired — `report_generator.pl:22` imports
+intent_engine `except([classify_interval/3])` and substitutes its own pattern-only
+version; only reachable surface was a format line in validation output via test_harness.
+"Unwired ≠ worthless" adjudication came out duplicate-except-the-conjunction (each
+conjunct has a live constraint-level near-duplicate: κ-track gradient, agent_beneficiary +
+FSM agency gate, authored suppression/resistance metrics, has_viable_alternatives).
+Operator ruled retire via web-review option (i): capture-as-design is the piton intension
+(`constraint_captured/1` carries designed/decayed; origin-intent not type-constitutive);
+kill condition recorded in the OQ-106 close — a proxy/intuition split case arms GAP-08
+revival; option (ii) (naming piton as standing candidate consumer) explicitly declined to
+avoid an OQ-36 build-mid-baseline license misread. Deleted: the 4-condition clause,
+`collect_intent_evidence/1`, `refine_confidence/3`, dead helpers, five params+specs
+(config bijection check forces pairwise deletion). Preserved: lower verdicts, OQ-93 open()
+passthrough, gradient-fact guard (control flow), intent_* tables + the OQ-43 fail-closed
+NL gate. Witness (Pattern 3): full suite before/after byte-identical on substantive lines
+(5 [INTENT] lines identical); warning-attribution residue positive-controlled as same-code
+run-noise (two identical-code runs drift the same way). Rider: GAP-08's stale residual
+paragraph (still described the NL gate as pass-open) updated to record the 2026-06-11
+fail-closed ruling.
+
 ## 2026-06-12 — OQ-105 RESOLVED: operator ruled fork (a) ALONE; alignment rule landed (prompt + fail-closed validate_json gate); live exposure 0 after the cohort-zero swap retired all 11 hosts
 **Files:** ISSUES.md, prompts/constraint_story_generation_prompt_json.md, python/generate_constraint_pl.py, audits/2026-06-12_oq105_alignment_gate/
 **Tier:** landed

@@ -108,11 +108,9 @@ param_spec(power_function, atom, oneof([sigmoid, piecewise_linear, piecewise_no_
 % ============================================================
 
 param_spec(system_gradient_threshold,        number, range(0.0, 1.0), "Min change for non-stable gradient").
-param_spec(system_gradient_strong_threshold, number, range(0.0, 1.0), "Threshold for Strong intent classification").
-param_spec(beneficiary_gain_min,             number, range(0.0, 1.0), "Min power gain for main beneficiary ID").
-param_spec(loser_loss_max_gain,              number, range(0.0, 1.0), "Max gain for non-beneficiaries (asymmetry) [docs-only]").
-param_spec(structural_suppression_min,       number, range(0.0, 1.0), "Required structural suppression alignment").
-param_spec(structural_resistance_min,        number, range(0.0, 1.0), "Required structural resistance alignment").
+% Five intent top-verdict specs RETIRED with their params (OQ-106, 2026-06-12):
+% system_gradient_strong_threshold, beneficiary_gain_min, loser_loss_max_gain,
+% structural_suppression_min, structural_resistance_min.
 param_spec(data_high_threshold,              number, range(0.0, 1.0), "High confidence classification threshold").
 param_spec(data_medium_threshold,            number, range(0.0, 1.0), "Medium confidence classification threshold [docs-only]").
 

@@ -189,19 +189,14 @@ param(cognitive_displacement_profile, uniform).
 % --- Gradient Thresholds ---
 % Minimum change to be considered non-stable.
 param(system_gradient_threshold, 0.01).
-% Threshold for "Strong" intent classification.
-param(system_gradient_strong_threshold, 1.00).
 
-% --- Beneficiary Asymmetry ---
-% Min power gain required to be identified as the "Main Beneficiary".
-param(beneficiary_gain_min, 0.50).
-% Max gain allowed for other classes to maintain "Asymmetry".
-param(loser_loss_max_gain, 0.10).                        % DOCS-ONLY: not referenced in executable code
-
-% --- Suppression & Resistance Alignment ---
-% Required thresholds for structural-level alignment.
-param(structural_suppression_min, 0.70). 
-param(structural_resistance_min, 0.70).
+% structural_coercive_intent top-verdict params RETIRED (OQ-106, operator
+% ruling 2026-06-12): system_gradient_strong_threshold (1.00 — range-dead,
+% strict > 0.98 max reachable G_sys), beneficiary_gain_min,
+% structural_suppression_min, structural_resistance_min, and docs-only
+% loser_loss_max_gain. Sole consumer was intent_engine's top verdict,
+% deleted by the same ruling; the intent_* evidence tables remain GAP-08.
+% History: ISSUES.md OQ-106; audits/2026-06-12_oq106_retire/.
 
 % --- Data Integrity ---
 % Thresholds for high/medium confidence classification.

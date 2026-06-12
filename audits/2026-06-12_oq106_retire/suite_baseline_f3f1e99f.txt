@@ -1,0 +1,1325 @@
+Warning: /home/scott/bin/wt-oq106-retire/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/wt-oq106-retire/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/wt-oq106-retire/prolog/maxent_classifier.pl:852:
+Warning:    Singleton variables: [C2]
+Warning: /home/scott/bin/wt-oq106-retire/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+--- STARTING DYNAMIC VALIDATION ---
+
+[1] EXECUTING: testsets/adjunctification_of_university_teaching_c0.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/adjunctification_of_university_teaching_c0.pl...
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:233:
+Warning:    Clauses of constraint_adjunctification_of_university_teaching_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:223
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_adjunctification_of_university_teaching_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:243:
+Warning:    Clauses of constraint_adjunctification_of_university_teaching_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:223
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_adjunctification_of_university_teaching_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:253:
+Warning:    Clauses of constraint_adjunctification_of_university_teaching_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:223
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_adjunctification_of_university_teaching_c0:omega_variable/5. to suppress this message
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: adjunctification_of_university_teaching_c0...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 32/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 0 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 32 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: adjunctification_of_university_teaching_c0
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: adjunctification_of_university_teaching_c0 (0-25)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 25 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 25 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 25 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 25 in adjunctification_of_university_teaching_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INDEX VACUOUS] adjunctification_of_university_teaching_c0: no authored classifications — ZERO per-index checks ran (not a clean pass)
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 0/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  3
+  Critical: 2 | Warning: 1 | Watch: 0
+
+  adjunctification_of_university_teaching_c0:
+    [critical | confidence: low] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,25,0.58,0.78)
+    [critical | confidence: low] coupling_drift
+        Evidence: evidence(coupling_score,1.0,threshold,0.25,extraction_trend,increasing)
+    [warning | confidence: low] purity_drift
+        Evidence: evidence(current_purity,0.5,decline_signals,[extraction_rising,coupling_above_threshold(1.0),theater_rising,excess_above_floor(0.63)])
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  adjunctification_of_university_teaching_c0 -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  adjunctification_of_university_teaching_c0 (ε=0.78):
+    powerless→organized@local: d=0.500 f(d)=0.65 χ = 0.78 × 0.65 × 0.80 = 0.406
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.78 × 1.11 × 1.00 = 0.863
+    institutional@national: d=0.120 f(d)=-0.04 χ = 0.78 × -0.04 × 1.00 = -0.033
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.78 × 1.14 × 1.20 = 1.069
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: adjunctification_of_university_teaching_c0 ===
+  Shift (computed via dr_type/3):
+    powerless=tangled_rope  moderate=snare  institutional=rope  analytical=snare
+  Properties: [asymmetric,coordination,enforcement,has_beneficiaries]
+  Voids:      [drifting_without_limit,no_exit_for_victims,unaccountable_extraction]
+  Actors:     beneficiaries=distributed  victims=distributed
+  Drift:      extraction=rising  suppression=rising  theater=rising
+  Zone:       extraction=extreme  suppression=extreme
+  Coupling:   strongly_coupled (score=1.000, pairs=[], boltzmann=non_compliant(1.0,0.3))
+  Purity:     0.500 (borderline)
+
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 25
+Structural Pattern: open(no_gradient_data)
+Pattern confidence (categorical): low
+Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+
+[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]
+  ! ALERT [informational]: perspectival_incoherence detected for adjunctification_of_university_teaching_c0
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  adjunctification_of_university_teaching_c0: constructed_high_extraction (confidence: high)
+    → CONSTRUCTED HIGH-EXTRACTION signature for adjunctification_of_university_teaching_c0: Enforcement present (suppression=0.81, resistance=0.71) with high extraction (0.78). This is an extraction mechanism that metrics failed to classify as snare.
+
+Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+  adjunctification_of_university_teaching_c0: R5 ZOMBIE CROSSCHECK: authored_zombie_uncorroborated
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 4 resolution scenario(s):
+
+  ┌─ [identity_lock_mechanism] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: adjunctification_of_university_teaching_c0
+  │  Question: Is the adjunct's inability to exit due to external labor market barriers (PhD holders are overqualified for non-academic work) or internalized identity fusion (leaving academia means abandoning self-concept as scholar)?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Longitudinal study of PhD holders who left academia: if they report the decision as abandoning identity rather than changing jobs, the lock is internalized. If they report external barriers (employer discrimination, skill mismatch) as primary, the lock is structural.
+  │
+  │  IMPLICATIONS (authored):
+  │  If internalized, the suppression is higher than the structural measure suggests because the target carries the constraint with them after exit. If structural, policy interventions that improve PhD-holder employability outside academia would reduce suppression.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [tenured_faculty_complicity] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: adjunctification_of_university_teaching_c0
+  │  Question: Are tenured faculty structurally complicit beneficiaries (they vote to maintain the system through governance) or structurally powerless bystanders (administration controls hiring regardless of faculty votes)?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Analysis of faculty governance records: do tenure-track hiring proposals from faculty get vetoed by administration, or do faculty votes themselves reject tenure-track expansion? If the former, faculty are excluded; if the latter, they are complicit.
+  │
+  │  IMPLICATIONS (authored):
+  │  If complicit, tenured faculty are beneficiaries whose coordination with administration maintains the snare. If powerless, they are excluded voices and the constraint is purely administrative extraction.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [endowment_counterfactual] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: adjunctification_of_university_teaching_c0
+  │  Question: If universities were required to spend endowment returns on instructional labor rather than capital projects, would adjunctification reverse, or would administration find other budget lines to cut?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Natural experiment from states that mandate minimum instructional spending ratios: do adjunct ratios decline, or do universities comply by reclassifying spending categories?
+  │
+  │  IMPLICATIONS (authored):
+  │  If adjunctification reverses, the constraint is purely extractive and endowment growth is the mechanism. If it persists, the extraction has multiple sources and endowment policy alone cannot resolve it.
+  │
+  │  Confidence without resolution: low
+  └─
+
+  ┌─ [naturalness_claim] AUTHORED RESOLUTION PROTOCOL (conceptual)
+  │  Constraint: adjunctification_of_university_teaching_c0
+  │  Question: Is adjunctification a natural market response to technological change and demand uncertainty (the labor economist framing), or a constructed policy choice that benefits identifiable actors (the labor advocate framing)?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Cross-national comparison: do countries with stronger labor protections and public university funding exhibit the same conversion? If not, the U.S. pattern is policy-contingent, not natural.
+  │
+  │  IMPLICATIONS (authored):
+  │  If natural, the constraint is a mountain (inevitable adjustment) and resistance is futile. If constructed, it is a snare (extractive policy) and resistance is justified. The labor economist models that naturalize it are false-summit candidates.
+  │
+  │  Confidence without resolution: high
+  └─
+
+====================================================
+[PASS] testsets/adjunctification_of_university_teaching_c0.pl
+
+### START LLM REFINEMENT MANIFEST: adjunctification_of_university_teaching_c0 ###
+
+[PERSPECTIVAL_GAPS]
+  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran
+
+[ONTOLOGICAL_MISMATCHES]
+  - adjunctification_of_university_teaching_c0: [informational] perspectival_incoherence detected.
+
+[UNRESOLVED_OMEGAS]
+  - endowment_counterfactual (empirical): Whether endowment spending rules would reverse adjunctification.
+  - identity_lock_mechanism (empirical): Whether identity-lock is structural or internalized.
+  - naturalness_claim (conceptual): Whether adjunctification is natural or constructed.
+  - tenured_faculty_complicity (empirical): Whether tenured faculty are complicit beneficiaries or excluded voices.
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/adjunctification_of_university_teaching_c0.pl: 0.012s
+
+[2] EXECUTING: testsets/demographic_skill_mismatch_c0.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/demographic_skill_mismatch_c0.pl...
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:183:
+Warning:    Redefined static procedure narrative_ontology:story_provenance/8
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:183
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:187:
+Warning:    Redefined static procedure narrative_ontology:story_seed/3
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/adjunctification_of_university_teaching_c0.pl:187
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:243:
+Warning:    Clauses of constraint_demographic_skill_mismatch_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:233
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_demographic_skill_mismatch_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:253:
+Warning:    Clauses of constraint_demographic_skill_mismatch_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:233
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_demographic_skill_mismatch_c0:omega_variable/5. to suppress this message
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: demographic_skill_mismatch_c0...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 32/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 0 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 32 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: demographic_skill_mismatch_c0
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: demographic_skill_mismatch_c0 (0-25)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 25 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 25 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 25 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 25 in demographic_skill_mismatch_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INDEX VACUOUS] demographic_skill_mismatch_c0: no authored classifications — ZERO per-index checks ran (not a clean pass)
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 0/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  3
+  Critical: 0 | Warning: 1 | Watch: 2
+
+  demographic_skill_mismatch_c0:
+    [watch | confidence: low] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,25,0.08,0.18)
+    [watch | confidence: low] boltzmann_floor_drift
+        Evidence: evidence(current_eps,0.18,floor,0.15,excess,0.03,trend,increasing)
+    [warning | confidence: low] purity_drift
+        Evidence: evidence(current_purity,0.988,decline_signals,[extraction_rising,theater_rising,excess_above_floor(0.03)])
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  demographic_skill_mismatch_c0 -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  demographic_skill_mismatch_c0 (ε=0.18):
+    powerless@local: d=0.900 f(d)=1.36 χ = 0.18 × 1.36 × 0.80 = 0.196
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.18 × 1.11 × 1.00 = 0.199
+    institutional@national: d=0.120 f(d)=-0.04 χ = 0.18 × -0.04 × 1.00 = -0.008
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.18 × 1.14 × 1.20 = 0.247
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: demographic_skill_mismatch_c0 ===
+  Shift (computed via dr_type/3):
+    powerless=rope  moderate=rope  institutional=rope  analytical=rope
+  Properties: [asymmetric,coordination,has_beneficiaries,natural]
+  Voids:      []
+  Actors:     beneficiaries=distributed  victims=distributed
+  Drift:      extraction=rising  suppression=unknown  theater=rising
+  Zone:       extraction=negligible  suppression=low
+  Coupling:   independent (score=0.000, pairs=[], boltzmann=compliant(0))
+  Purity:     0.988 (pristine)
+
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 25
+Structural Pattern: open(no_gradient_data)
+Pattern confidence (categorical): low
+Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+
+[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]
+  ! ALERT [severe]: type_1_false_summit detected for demographic_skill_mismatch_c0
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  Detected 1 constraint(s) falsely claiming "Mountain" status, across 4 observer-context instance(s):
+
+  ┌─ CONSTRAINT: demographic_skill_mismatch_c0
+  │  Context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))
+  │
+  │  Suppression Requirement: 0.22
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.22 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: demographic_skill_mismatch_c0
+  │  Context: context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.22
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.22 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: demographic_skill_mismatch_c0
+  │  Context: context(agent_power(moderate),time_horizon(biographical),exit_options(mobile),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.22
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.22 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: demographic_skill_mismatch_c0
+  │  Context: context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))
+  │
+  │  Suppression Requirement: 0.22
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.22 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  demographic_skill_mismatch_c0: coupling_invariant_rope (confidence: high)
+    → COUPLING-INVARIANT ROPE signature for demographic_skill_mismatch_c0: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.030. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
+
+Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 3 resolution scenario(s):
+
+  ┌─ [natural_vs_constructed_avoidance] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: demographic_skill_mismatch_c0
+  │  Question: Is the systematic avoidance of manual trades by younger workers a natural preference arising from educational attainment, or a constructed outcome of status signaling and institutional channeling that benefits specific actors?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Cross-national comparison of countries with similar educational attainment but different cultural prestige for trades (e.g., Germany, Switzerland vs. US, UK). If avoidance varies independently of education levels, it is constructed. Longitudinal analysis of occupational prestige shifts in response to wage changes would also resolve: if younger workers enter trades when wages rise sufficiently, preference is economic; if they avoid trades despite wage premiums, preference is cultural/constructed.
+  │
+  │  IMPLICATIONS (authored):
+  │  If avoidance is natural, the constraint is a genuine Mountain — a demographic fact no actor can reverse. If avoidance is constructed and maintained by actors who benefit from the mismatch (training institutions framing it as a skills gap, intermediaries controlling access, cultural gatekeepers maintaining stigma), the constraint is a false summit — a Tangled Rope or Snare where extraction rides on a real demographic trend but is amplified by institutional choices.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [beneficiary_amplification] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: demographic_skill_mismatch_c0
+  │  Question: Do the identifiable beneficiaries (intermediaries, training institutions) actively maintain the cultural stigma against manual work, or do they passively benefit from an independent demographic trend?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Analysis of messaging and policy advocacy by training institutions and labor intermediaries: do they promote cultural normalization of trades, or do they frame the problem as a skills gap requiring institutional intervention (which sustains their funding and intermediation rents)? Examination of guidance counseling practices and media representation of trades would reveal whether gatekeepers actively steer younger workers away from manual work.
+  │
+  │  IMPLICATIONS (authored):
+  │  If beneficiaries actively maintain stigma or frame the problem in ways that sustain their rents, the constraint is extractive and constructed. If they passively benefit from an independent cultural shift, the constraint is closer to a natural demographic reality with incidental beneficiaries.
+  │
+  │  Confidence without resolution: low
+  └─
+
+  ┌─ [immigration_suppression] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: demographic_skill_mismatch_c0
+  │  Question: Is the labor shortage sustained in part by immigration restrictions that prevent foreign workers from filling blue-collar roles, and do domestic beneficiaries lobby for those restrictions?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Analysis of immigration policy advocacy by trade unions, labor intermediaries, and incumbent workers. Comparison of labor shortages in jurisdictions with open vs. restricted immigration for manual trades. If beneficiaries actively lobby against immigration pathways that would resolve the shortage, the constraint is partly constructed.
+  │
+  │  IMPLICATIONS (authored):
+  │  If immigration restrictions are actively maintained by beneficiaries to preserve wage premiums, the constraint is a Snare or Tangled Rope — a natural demographic trend weaponized through policy to extract rents. If immigration policy is independent of beneficiary advocacy, the constraint is closer to a genuine Mountain.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+====================================================
+[PASS] testsets/demographic_skill_mismatch_c0.pl
+
+### START LLM REFINEMENT MANIFEST: demographic_skill_mismatch_c0 ###
+
+[PERSPECTIVAL_GAPS]
+  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran
+
+[ONTOLOGICAL_MISMATCHES]
+  - demographic_skill_mismatch_c0: [severe] type_1_false_summit detected.
+
+[UNRESOLVED_OMEGAS]
+  - beneficiary_amplification (empirical): Whether beneficiaries amplify the constraint or merely benefit from it
+  - immigration_suppression (empirical): Whether immigration restrictions are maintained to preserve beneficiary rents
+  - natural_vs_constructed_avoidance (empirical): Whether occupational avoidance is natural preference or constructed stigma
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/demographic_skill_mismatch_c0.pl: 0.007s
+
+[3] EXECUTING: testsets/institutional_trust_erosion_c0.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/institutional_trust_erosion_c0.pl...
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:193:
+Warning:    Redefined static procedure narrative_ontology:story_provenance/8
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:183
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:197:
+Warning:    Redefined static procedure narrative_ontology:story_seed/3
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:187
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:257:
+Warning:    Clauses of constraint_institutional_trust_erosion_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:247
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_institutional_trust_erosion_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:267:
+Warning:    Clauses of constraint_institutional_trust_erosion_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:247
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_institutional_trust_erosion_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:277:
+Warning:    Clauses of constraint_institutional_trust_erosion_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:247
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_institutional_trust_erosion_c0:omega_variable/5. to suppress this message
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: institutional_trust_erosion_c0...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 32/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 0 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 32 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: institutional_trust_erosion_c0
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: institutional_trust_erosion_c0 (0-60)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 60 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 60 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 60 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 60 in institutional_trust_erosion_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INDEX VACUOUS] institutional_trust_erosion_c0: no authored classifications — ZERO per-index checks ran (not a clean pass)
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 0/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  2
+  Critical: 1 | Warning: 1 | Watch: 0
+
+  institutional_trust_erosion_c0:
+    [critical | confidence: low] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,60,0.38,0.68)
+    [warning | confidence: low] purity_drift
+        Evidence: evidence(current_purity,0.8,decline_signals,[extraction_rising,theater_rising,excess_above_floor(0.6000000000000001)])
+
+--- Transition Path Analysis ---
+  institutional_trust_erosion_c0: snare -> false_mountain (evidence(naturalized,true,claimed,mountain))
+
+--- Terminal State Predictions ---
+  institutional_trust_erosion_c0 -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  institutional_trust_erosion_c0 (ε=0.68):
+    powerless@local: d=0.900 f(d)=1.36 χ = 0.68 × 1.36 × 0.80 = 0.739
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.68 × 1.11 × 1.00 = 0.752
+    institutional@national: d=0.550 f(d)=0.78 χ = 0.68 × 0.78 × 1.00 = 0.528
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.68 × 1.14 × 1.20 = 0.932
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: institutional_trust_erosion_c0 ===
+  Shift (computed via dr_type/3):
+    powerless=snare  moderate=snare  institutional=snare  analytical=snare
+  Properties: [asymmetric,coordination,has_beneficiaries,natural]
+  Voids:      [drifting_without_limit,extractive_immutable,no_exit_for_victims,self_sustaining_extraction,unaccountable_extraction]
+  Actors:     beneficiaries=distributed  victims=distributed
+  Drift:      extraction=rising  suppression=rising  theater=rising
+  Zone:       extraction=extreme  suppression=high
+  Coupling:   independent (score=0.000, pairs=[], boltzmann=compliant(0))
+  Purity:     0.800 (sound)
+
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 60
+Structural Pattern: open(no_gradient_data)
+Pattern confidence (categorical): low
+Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+
+[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]
+  ! ALERT [severe]: type_1_false_summit detected for institutional_trust_erosion_c0
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  Detected 1 constraint(s) falsely claiming "Mountain" status, across 4 observer-context instance(s):
+
+  ┌─ CONSTRAINT: institutional_trust_erosion_c0
+  │  Context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))
+  │
+  │  Suppression Requirement: 0.52
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.52 > 0.05 threshold)
+  │  Base Extractiveness: 0.68
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: SNARE
+  │  → Rationale: High enforcement + high extraction = extractive trap
+  └─
+
+  ┌─ CONSTRAINT: institutional_trust_erosion_c0
+  │  Context: context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.52
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.52 > 0.05 threshold)
+  │  Base Extractiveness: 0.68
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: SNARE
+  │  → Rationale: High enforcement + high extraction = extractive trap
+  └─
+
+  ┌─ CONSTRAINT: institutional_trust_erosion_c0
+  │  Context: context(agent_power(moderate),time_horizon(biographical),exit_options(mobile),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.52
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.52 > 0.05 threshold)
+  │  Base Extractiveness: 0.68
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: SNARE
+  │  → Rationale: High enforcement + high extraction = extractive trap
+  └─
+
+  ┌─ CONSTRAINT: institutional_trust_erosion_c0
+  │  Context: context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))
+  │
+  │  Suppression Requirement: 0.52
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.52 > 0.05 threshold)
+  │  Base Extractiveness: 0.68
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: SNARE
+  │  → Rationale: High enforcement + high extraction = extractive trap
+  └─
+
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  institutional_trust_erosion_c0: constructed_high_extraction (confidence: high)
+    → CONSTRUCTED HIGH-EXTRACTION signature for institutional_trust_erosion_c0: Enforcement present (suppression=0.52, resistance=0.58) with high extraction (0.68). This is an extraction mechanism that metrics failed to classify as snare.
+
+Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 4 resolution scenario(s):
+
+  ┌─ [structural_vs_constructed_erosion] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: institutional_trust_erosion_c0
+  │  Question: Is institutional trust erosion an inevitable consequence of democratic scale and complexity (mountain), or a constructed phenomenon amplified by actors who benefit from institutional delegitimization (false summit)?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Cross-national comparative analysis controlling for scale and complexity: if erosion tracks with beneficiary mobilization (populist movement strength, anti-establishment media penetration) rather than structural variables, the constructed hypothesis is supported. Natural experiments from democracies that implemented trust-restoration reforms: if targeted interventions addressing beneficiary incentives show restoration effects, inevitability is refuted.
+  │
+  │  IMPLICATIONS (authored):
+  │  If structural, the erosion is a mountain and adaptation rather than restoration is the appropriate response. If constructed, it is a false summit and interventions targeting beneficiary extraction mechanisms (media regulation, campaign finance reform, institutional transparency) could restore trust. The classification determines whether declining trust is a fact to accept or a constraint to contest.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [identity_lock_mechanism] AUTHORED RESOLUTION PROTOCOL (conceptual)
+  │  Constraint: institutional_trust_erosion_c0
+  │  Question: Is the identity-locked exit condition for median voters structural (democratic citizenship is constitutive of modern identity) or internalized (citizens have been socialized to view exit as unthinkable even when participation becomes futile)?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Longitudinal analysis of civic identity formation and exit-consideration patterns across cohorts. If younger cohorts show weaker identity fusion with democratic participation and higher exit consideration despite similar socialization, the internalized hypothesis is supported. Cross-cultural comparison with democracies showing different civic identity patterns.
+  │
+  │  IMPLICATIONS (authored):
+  │  If structural, the identity lock is a genuine constraint on exit and suppression is inherent to the democratic form. If internalized, the lock is a product of specific socialization practices and could be altered through civic education reform or alternative participation frameworks, reducing effective suppression.
+  │
+  │  Confidence without resolution: low
+  └─
+
+  ┌─ [beneficiary_causation_vs_opportunism] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: institutional_trust_erosion_c0
+  │  Question: Do populist movements and anti-establishment media cause trust erosion through active delegitimization campaigns, or do they merely benefit opportunistically from erosion caused by genuine institutional failures?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Time-series analysis of trust metrics, beneficiary mobilization, and institutional performance: if trust decline precedes beneficiary mobilization and tracks with performance failures, opportunism is supported. If beneficiary messaging intensity predicts trust decline controlling for performance, causation is supported. Experimental studies of delegitimization messaging effects on institutional confidence.
+  │
+  │  IMPLICATIONS (authored):
+  │  If opportunistic, beneficiaries are incidental to a genuine structural problem and their extraction is a side effect. If causal, beneficiaries are actively producing the erosion they profit from, which supports interventions targeting their amplification mechanisms and reclassifies the constraint from mountain to tangled rope or snare.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [marginalized_community_exclusion_impact] AUTHORED RESOLUTION PROTOCOL (conceptual)
+  │  Constraint: institutional_trust_erosion_c0
+  │  Question: Does the exclusion of marginalized communities from trust-erosion discourse materially affect the constraint's classification, or is their absence merely a narrative gap?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Comparative analysis of trust trajectories in democracies with different inclusion patterns for historically marginalized voices. If inclusion correlates with different erosion patterns or beneficiary structures, exclusion is materially relevant. Counterfactual analysis: if marginalized communities were centered in the discourse, would the erosion be framed differently and would different interventions be prioritized?
+  │
+  │  IMPLICATIONS (authored):
+  │  If exclusion is material, the constraint's beneficiary structure is incomplete and the mountain framing is partly an artifact of whose trust is being measured. If exclusion is merely narrative, the structural analysis holds regardless of whose voices are centered. This affects whether the constraint is a universal democratic phenomenon or a selective loss of trust among previously-privileged populations.
+  │
+  │  Confidence without resolution: low
+  └─
+
+====================================================
+[PASS] testsets/institutional_trust_erosion_c0.pl
+
+### START LLM REFINEMENT MANIFEST: institutional_trust_erosion_c0 ###
+
+[PERSPECTIVAL_GAPS]
+  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran
+
+[ONTOLOGICAL_MISMATCHES]
+  - institutional_trust_erosion_c0: [severe] type_1_false_summit detected.
+
+[UNRESOLVED_OMEGAS]
+  - beneficiary_causation_vs_opportunism (empirical): Whether beneficiaries cause trust erosion or merely exploit it opportunistically.
+  - identity_lock_mechanism (conceptual): Whether identity-locked democratic participation is structural or internalized suppression.
+  - marginalized_community_exclusion_impact (conceptual): Whether marginalized community exclusion from erosion discourse affects structural classification.
+  - structural_vs_constructed_erosion (empirical): Whether trust erosion is structural inevitability or constructed extraction with identifiable beneficiaries.
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/institutional_trust_erosion_c0.pl: 0.007s
+
+[4] EXECUTING: testsets/organization_floor_c0.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/organization_floor_c0.pl...
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:183:
+Warning:    Redefined static procedure narrative_ontology:story_provenance/8
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:193
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:187:
+Warning:    Redefined static procedure narrative_ontology:story_seed/3
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/demographic_skill_mismatch_c0.pl:187
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:245:
+Warning:    Clauses of constraint_organization_floor_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:235
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_organization_floor_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:255:
+Warning:    Clauses of constraint_organization_floor_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:235
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_organization_floor_c0:omega_variable/5. to suppress this message
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: organization_floor_c0...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 32/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 0 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 32 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: organization_floor_c0
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: organization_floor_c0 (0-40)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 40 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 40 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 40 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 40 in organization_floor_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INDEX VACUOUS] organization_floor_c0: no authored classifications — ZERO per-index checks ran (not a clean pass)
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 0/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  3
+  Critical: 0 | Warning: 3 | Watch: 0
+
+  organization_floor_c0:
+    [warning | confidence: low] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,40,0.28,0.42)
+    [warning | confidence: low] coupling_drift
+        Evidence: evidence(coupling_score,1.0,threshold,0.25,extraction_trend,increasing)
+    [warning | confidence: low] purity_drift
+        Evidence: evidence(current_purity,0.4581666666666667,decline_signals,[extraction_rising,coupling_above_threshold(1.0),theater_rising,excess_above_floor(0.24)])
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  organization_floor_c0 -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  organization_floor_c0 (ε=0.42):
+    powerless@local: d=0.900 f(d)=1.36 χ = 0.42 × 1.36 × 0.80 = 0.456
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.42 × 1.11 × 1.00 = 0.465
+    institutional@national: d=0.120 f(d)=-0.04 χ = 0.42 × -0.04 × 1.00 = -0.018
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.42 × 1.14 × 1.20 = 0.575
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: organization_floor_c0 ===
+  Shift (computed via dr_type/3):
+    powerless=unknown  moderate=unknown  institutional=tangled_rope  analytical=unknown
+  Properties: [asymmetric,coordination,has_beneficiaries,natural]
+  Voids:      [extractive_immutable,no_exit_for_victims,self_sustaining_extraction]
+  Actors:     beneficiaries=distributed  victims=distributed
+  Drift:      extraction=rising  suppression=unknown  theater=rising
+  Zone:       extraction=low  suppression=moderate
+  Coupling:   strongly_coupled (score=1.000, pairs=[coupled(power_scope,moderate,local-national,1.0),coupled(power_scope,moderate,global-local,1.0),coupled(power_scope,analytical,local-national,1.0),coupled(power_scope,analytical,global-local,1.0)], boltzmann=non_compliant(1.0,0.3))
+  Purity:     0.458 (contaminated)
+
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 40
+Structural Pattern: open(no_gradient_data)
+Pattern confidence (categorical): low
+Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+
+[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]
+  ! ALERT [informational]: perspectival_incoherence detected for organization_floor_c0
+  ! ALERT [severe]: type_1_false_summit detected for organization_floor_c0
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  Detected 1 constraint(s) falsely claiming "Mountain" status, across 4 observer-context instance(s):
+
+  ┌─ CONSTRAINT: organization_floor_c0
+  │  Context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))
+  │
+  │  Suppression Requirement: 0.38
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.38 > 0.05 threshold)
+  │  Base Extractiveness: 0.42
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: TANGLED_ROPE
+  │  → Rationale: Moderate enforcement + moderate extraction = complex coordination with extractive elements
+  └─
+
+  ┌─ CONSTRAINT: organization_floor_c0
+  │  Context: context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.38
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.38 > 0.05 threshold)
+  │  Base Extractiveness: 0.42
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: TANGLED_ROPE
+  │  → Rationale: Moderate enforcement + moderate extraction = complex coordination with extractive elements
+  └─
+
+  ┌─ CONSTRAINT: organization_floor_c0
+  │  Context: context(agent_power(moderate),time_horizon(biographical),exit_options(mobile),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.38
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.38 > 0.05 threshold)
+  │  Base Extractiveness: 0.42
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: TANGLED_ROPE
+  │  → Rationale: Moderate enforcement + moderate extraction = complex coordination with extractive elements
+  └─
+
+  ┌─ CONSTRAINT: organization_floor_c0
+  │  Context: context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))
+  │
+  │  Suppression Requirement: 0.38
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.38 > 0.05 threshold)
+  │  Base Extractiveness: 0.42
+  │  ✗ Shows extractive pattern (E > 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: TANGLED_ROPE
+  │  → Rationale: Moderate enforcement + moderate extraction = complex coordination with extractive elements
+  └─
+
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  organization_floor_c0: false_natural_law (confidence: high)
+    → FALSE NATURAL LAW signature for organization_floor_c0: Claims naturality (explicit_mountain_claim) but fails Boltzmann independence test. Coupling score=1.000 with 4 coupled dimension pairs. Excess extraction=0.24. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+
+Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 3 resolution scenario(s):
+
+  ┌─ [natural_vs_constructed_floor_height] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: organization_floor_c0
+  │  Question: Is the current height of the organization floor a natural consequence of irreducible transaction costs, or is it constructed and maintainable at the current level because organized interests benefit from keeping it high?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Natural experiments from jurisdictions that successfully implement alternative aggregation mechanisms (participatory budgeting, citizen assemblies, digital platforms) while maintaining policy market functionality. If warrantability holds at lower organization thresholds, the current floor height is constructed.
+  │
+  │  IMPLICATIONS (authored):
+  │  If the floor height is constructed rather than natural, the constraint reclassifies from mountain to tangled rope: genuine coordination function (warrantability) coupled with asymmetric extraction (organized interests benefit from exclusionary threshold). If the floor height is natural, it remains mountain despite beneficiary presence.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [alternative_warrantability_mechanisms] AUTHORED RESOLUTION PROTOCOL (conceptual)
+  │  Constraint: organization_floor_c0
+  │  Question: Can alternative institutional designs provide warrantability in policy exchange without requiring the current level of organizational infrastructure?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Comparative institutional analysis of participatory budgeting systems, sortition-based assemblies, quadratic voting mechanisms, and digital organizing platforms. Measure whether these mechanisms can credibly solve the warrantability problem (distinguish real from manufactured preferences, enable credible commitments) at lower organization costs.
+  │
+  │  IMPLICATIONS (authored):
+  │  If alternative mechanisms can provide warrantability at lower thresholds, the organization floor is not a natural law but a path-dependent institutional choice that benefits current organized interests. This would support reclassification to tangled rope and justify floor-lowering reforms.
+  │
+  │  Confidence without resolution: low
+  └─
+
+  ┌─ [beneficiary_resistance_to_reform] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: organization_floor_c0
+  │  Question: Do organized interests actively resist institutional reforms that would lower the organization floor, and if so, does this resistance indicate the floor's current height serves their interests rather than being a natural minimum?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Historical analysis of organized interest responses to proposed reforms: participatory democracy initiatives, digital organizing platforms, campaign finance reforms that would reduce organization advantages. Measure whether resistance correlates with threat to organizational advantage.
+  │
+  │  IMPLICATIONS (authored):
+  │  If organized interests systematically resist floor-lowering reforms, this suggests the current floor height is constructed to serve their interests rather than being a natural minimum for democratic functionality. This would support false summit reclassification.
+  │
+  │  Confidence without resolution: high
+  └─
+
+====================================================
+[PASS] testsets/organization_floor_c0.pl
+
+### START LLM REFINEMENT MANIFEST: organization_floor_c0 ###
+
+[PERSPECTIVAL_GAPS]
+  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran
+
+[ONTOLOGICAL_MISMATCHES]
+  - organization_floor_c0: [informational] perspectival_incoherence detected.
+  - organization_floor_c0: [severe] type_1_false_summit detected.
+
+[UNRESOLVED_OMEGAS]
+  - alternative_warrantability_mechanisms (conceptual): Whether warrantability requires current organizational threshold.
+  - beneficiary_resistance_to_reform (empirical): Whether beneficiary resistance indicates constructed rather than natural floor.
+  - natural_vs_constructed_floor_height (empirical): Whether current floor height is natural law or constructed constraint.
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/organization_floor_c0.pl: 0.008s
+
+[5] EXECUTING: testsets/scale_ceiling_c0.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/scale_ceiling_c0.pl...
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:184:
+Warning:    Redefined static procedure narrative_ontology:story_provenance/8
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/organization_floor_c0.pl:183
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:188:
+Warning:    Redefined static procedure narrative_ontology:story_seed/3
+Warning:    Previously defined at /home/scott/bin/wt-oq106-retire/prolog/testsets/institutional_trust_erosion_c0.pl:197
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:244:
+Warning:    Clauses of constraint_scale_ceiling_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:234
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_scale_ceiling_c0:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:254:
+Warning:    Clauses of constraint_scale_ceiling_c0:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/wt-oq106-retire/prolog/testsets/scale_ceiling_c0.pl:234
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_scale_ceiling_c0:omega_variable/5. to suppress this message
+[SHIM] grid injection RETIRED (OQ-93 ruling (b), authored-or-absent) — absent grid points stay OPEN
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: scale_ceiling_c0...
+  [OPEN] grid imputation RETIRED (OQ-93 ruling (b), authored-or-absent): 32/32 grid points absent — expected-and-witnessed
+  [PROVENANCE] grid 32 = authored 0 + injected-0.5 0 (m_gen) + imputed-from-priors 0 (repair_m_*)
+  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93
+  [WARN] 32 grid slots still absent after repair
+
+>>> INITIATING DR-AUDIT SUITE: scale_ceiling_c0
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: scale_ceiling_c0 (0-50)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 0 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: structural at T: 50 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 0 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: organizational at T: 50 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 0 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: class at T: 50 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 0 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+  [OPEN] 4/4 grid components absent for Level: individual at T: 50 in scale_ceiling_c0 (shim disabled — absence expected-and-witnessed, OQ-93/OQ-96)
+--- [END] Data Verification Complete ---
+[OK] Verification passed (grid completeness is guaranteed by Stage-1 repair — non-discriminating post-repair, OQ-93).
+
+--- PER-INDEX VALIDATION ---
+  [INDEX VACUOUS] scale_ceiling_c0: no authored classifications — ZERO per-index checks ran (not a clean pass)
+  [INTENT] Result: OPEN (no_gradient_data) — no pattern verdict; leveled grid absent or below named-level coverage (OQ-93) [grid diet: authored 0/32, injected 0, imputed 0 — OQ-93]
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  3
+  Critical: 0 | Warning: 1 | Watch: 2
+
+  scale_ceiling_c0:
+    [watch | confidence: low] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,50,0.12,0.18)
+    [watch | confidence: low] boltzmann_floor_drift
+        Evidence: evidence(current_eps,0.18,floor,0.15,excess,0.03,trend,increasing)
+    [warning | confidence: low] purity_drift
+        Evidence: evidence(current_purity,0.988,decline_signals,[extraction_rising,excess_above_floor(0.03)])
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  scale_ceiling_c0 -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  scale_ceiling_c0 (ε=0.18):
+    powerless@local: d=0.900 f(d)=1.36 χ = 0.18 × 1.36 × 0.80 = 0.196
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.18 × 1.11 × 1.00 = 0.199
+    institutional@national: d=0.120 f(d)=-0.04 χ = 0.18 × -0.04 × 1.00 = -0.008
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.18 × 1.14 × 1.20 = 0.247
+
+--- WASSERSTEIN TRANSPORT ---
+  Corpus perspectival fracture (W1): 0.0000
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: scale_ceiling_c0 ===
+  Shift (computed via dr_type/3):
+    powerless=rope  moderate=rope  institutional=rope  analytical=rope
+  Properties: [asymmetric,coordination,has_beneficiaries,natural]
+  Voids:      []
+  Actors:     beneficiaries=distributed  victims=distributed
+  Drift:      extraction=rising  suppression=unknown  theater=stable
+  Zone:       extraction=negligible  suppression=low
+  Coupling:   independent (score=0.000, pairs=[], boltzmann=compliant(0))
+  Purity:     0.988 (pristine)
+
+
+
+====================================================
+   DR DETAILED ANALYSIS                             
+====================================================
+Timeline:       0 to 50
+Structural Pattern: open(no_gradient_data)
+Pattern confidence (categorical): low
+Grid diet:      authored 0/32, injected 0, imputed 0 (OQ-93) [CONDITIONAL: grid authored 0/32]
+
+[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]
+  ! ALERT [severe]: type_1_false_summit detected for scale_ceiling_c0
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  Detected 1 constraint(s) falsely claiming "Mountain" status, across 4 observer-context instance(s):
+
+  ┌─ CONSTRAINT: scale_ceiling_c0
+  │  Context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))
+  │
+  │  Suppression Requirement: 0.12
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.12 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: scale_ceiling_c0
+  │  Context: context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.12
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.12 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: scale_ceiling_c0
+  │  Context: context(agent_power(moderate),time_horizon(biographical),exit_options(mobile),spatial_scope(national))
+  │
+  │  Suppression Requirement: 0.12
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.12 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+  ┌─ CONSTRAINT: scale_ceiling_c0
+  │  Context: context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))
+  │
+  │  Suppression Requirement: 0.12
+  │  Mountain Ceiling (threshold): 0.05
+  │
+  │  FAILURE ANALYSIS:
+  │  ✗ Requires active enforcement (suppression 0.12 > 0.05 threshold)
+  │  Base Extractiveness: 0.18
+  │  ✓ Non-extractive pattern (E ≤ 0.35)
+  │  Resistance to Change: MISSING (using default 0.0)
+  │
+  │  FORENSIC VERDICT:
+  │  → Should be classified as: ROPE
+  │  → Rationale: Requires enforcement but not extractive = changeable rule
+  └─
+
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  scale_ceiling_c0: coupling_invariant_rope (confidence: high)
+    → COUPLING-INVARIANT ROPE signature for scale_ceiling_c0: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.030. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
+
+Aggregate Magnitude (Kappa): DATA_INSUFFICIENT
+
+[MANDATROPHY GAP ANALYSIS]
+  (Full perspectival detail in Levels 1-2 above)
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 3 resolution scenario(s):
+
+  ┌─ [natural_vs_constructed_scaling] AUTHORED RESOLUTION PROTOCOL (conceptual)
+  │  Constraint: scale_ceiling_c0
+  │  Question: Is the superlinear scaling of coordination costs with polity size a natural law of collective action, or is it the product of constructed institutional choices (regulatory fragmentation, capital mobility rules) that could be redesigned?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Natural experiment from polities that reduce fragmentation or impose capital controls: if economy-wide coordination becomes feasible in large polities under alternative institutional arrangements, the scaling relationship is constructed, not natural. Alternatively, formal modeling of coordination-cost scaling under different institutional regimes.
+  │
+  │  IMPLICATIONS (authored):
+  │  If natural, the constraint is a genuine mountain and the cross-national gradient reflects an irreducible limit. If constructed, the constraint is a false summit — a tangled rope or snare whose beneficiaries (capital holders, arbitrage firms) gain from the mountain framing that forecloses institutional redesign.
+  │
+  │  Confidence without resolution: low
+  └─
+
+  ┌─ [threshold_location] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: scale_ceiling_c0
+  │  Question: Where is the scale threshold above which economy-wide coordination becomes structurally infeasible, and is that threshold fixed or does it shift with communication technology and institutional design?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Cross-national comparison controlling for polity size, regulatory structure, and capital mobility; historical analysis of threshold shifts as communication costs fell and coordination technology improved.
+  │
+  │  IMPLICATIONS (authored):
+  │  A fixed threshold would support the mountain claim; a threshold that shifts with institutional variables would support the constructed-constraint counterclaim. If the threshold has moved upward over time (larger polities can now coordinate economy-wide than could in prior eras), the ceiling is partly a function of available coordination technology, not purely natural.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+  ┌─ [sectoral_vs_economy_wide_distinction] AUTHORED RESOLUTION PROTOCOL (empirical)
+  │  Constraint: scale_ceiling_c0
+  │  Question: Is the distinction between sectoral coordination (feasible at any scale) and economy-wide coordination (infeasible above threshold) a natural feature of coordination-cost scaling, or is it an artifact of how labor law and collective bargaining are institutionally structured?
+  │
+  │  RESOLUTION METHOD (authored):
+  │  Comparison of polities with different collective-bargaining institutional structures: if some large polities achieve economy-wide coordination through alternative institutional designs (e.g., sectoral bargaining with extension mechanisms that approximate economy-wide coverage), the distinction is institutional, not natural.
+  │
+  │  IMPLICATIONS (authored):
+  │  If the sectoral/economy-wide distinction is institutional, the constraint is constructed and the mountain claim is false. If the distinction persists across all institutional designs, it supports the natural-scaling interpretation.
+  │
+  │  Confidence without resolution: medium
+  └─
+
+====================================================
+[PASS] testsets/scale_ceiling_c0.pl
+
+### START LLM REFINEMENT MANIFEST: scale_ceiling_c0 ###
+
+[PERSPECTIVAL_GAPS]
+  [VACUOUS] no constraint carries both powerless and institutional authored cells — zero gap checks ran
+
+[ONTOLOGICAL_MISMATCHES]
+  - scale_ceiling_c0: [severe] type_1_false_summit detected.
+
+[UNRESOLVED_OMEGAS]
+  - natural_vs_constructed_scaling (conceptual): Whether coordination-cost scaling is natural law or institutional artifact.
+  - sectoral_vs_economy_wide_distinction (empirical): Whether the sectoral/economy-wide boundary is natural or institutional.
+  - threshold_location (empirical): Whether the scale threshold is a natural constant or an institutional variable.
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/scale_ceiling_c0.pl: 0.009s
+
+==================================================
+           TEST SUITE SUMMARY
+==================================================
+Passed: 5
+Failed: 0
+==================================================
+
+====================================================
+   DATA VALIDATION SUITE                           
+====================================================
+
+Running validation checks...
+
+[CHECK 1: Constraint Completeness]
+  Checking 1 constraints...
+  ✗ 1 incomplete constraint(s) found
+
+  Constraint: scale_ceiling_c0
+    ⚠ Category is unknown_novel (should be specific)
+
+[CHECK 2: Metric Range Validation]
+  Checking 5 metrics...
+  ✓ All metrics in valid range
+
+[CHECK 3: Classification Consistency]
+  Checking 1 constraints for consistency...
+  ⚠ 1 potential inconsistenc(ies) found
+
+  Constraint: scale_ceiling_c0
+    Claimed: mountain
+    Expected (from metrics): scaffold
+    Metrics: suppression=0.12, extractiveness=0.18, ceiling=0.05
+
+
+[CHECK 4: Edge Case Detection]
+  ✓ No mandatrophies detected
+  ⚠ piton check VACUOUS: 0 resistance_to_change facts authored — check cannot fire (OQ-37)
+  ✓ No extreme values
+
+[CHECK 5: Domain Coverage]
+  Found 1 domain categories
+    - unknown_novel: 1 constraint(s)
+
+  ⚠ Underrepresented categories (<3 constraints):
+    - unknown_novel
+
+====================================================
+   VALIDATION SUMMARY                              
+====================================================
+
+Results:
+  Errors:   0
+  Warnings: 1
+  Info:     1
+
+WARNINGS:
+  [WARN] classification_mismatch: scale_ceiling_c0 - mountain-scaffold
+
+✓ DATA QUALITY: GOOD - Minor warnings only
+
+====================================================
