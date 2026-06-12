@@ -128,10 +128,29 @@ is_complete_constraint(C) :-
     -> (Cat \= unknown, Cat \= unknown_novel)
     ;  (assertz(validation_warning(missing_category, C, 'No domain category assigned')), fail)),
 
-    % Should have at least one indexical classification
-    (constraint_indexing:constraint_classification(C, _, _)
+    % Should have an AGENT SURFACE (OQ-109 B3 presence-gate migration, 2026-06-12;
+    % dispatch-consistent with the unanimity guard): authored classifications
+    % (legacy four-tuple arm — dies at Phase C) OR the stakeholder surface
+    % (>=1 compiled seat, or the schema-sanctioned authored-empty case:
+    % six-questions authored with disappearance_verdict = world_unchanged).
+    % Fail-closed when NEITHER surface exists (Pattern 5 — absence must not
+    % satisfy the gate).
+    (agent_surface_present(C)
     -> true
-    ;  (assertz(validation_warning(missing_classification, C, 'No indexical classification')), fail)).
+    ;  (assertz(validation_warning(missing_agent_surface, C, 'No authored classifications and no stakeholder surface')), fail)).
+
+%% agent_surface_present(+C)
+%  The story's agent surface, either format. Arm order mirrors the unanimity
+%  dispatch: legacy decides where present; stakeholder surface is the
+%  Phase-C-surviving arm.
+agent_surface_present(C) :-
+    constraint_indexing:constraint_classification(C, _, _), !.
+agent_surface_present(C) :-
+    narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _), !.
+agent_surface_present(C) :-
+    % authored-empty stakeholders[] is schema-legal ONLY with world_unchanged;
+    % the compiled verdict fact is the witness that six_questions was authored.
+    narrative_ontology:disappearance_verdict(C, world_unchanged).
 
 %% report_incomplete_constraint(+Constraint)
 %  Reports what data is missing for a constraint.
@@ -168,9 +187,9 @@ report_incomplete_constraint(C) :-
     -> format('    ⚠ Category is ~w (should be specific)~n', [Cat])
     ;  true),
 
-    % Check classification
-    (\+ constraint_indexing:constraint_classification(C, _, _)
-    -> format('    ⚠ Missing: indexical classification~n')
+    % Check agent surface (either format; OQ-109 B3)
+    (\+ agent_surface_present(C)
+    -> format('    ⚠ Missing: agent surface (no classifications, no stakeholders)~n')
     ;  true),
 
     nl.

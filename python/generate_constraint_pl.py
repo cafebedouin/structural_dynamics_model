@@ -312,16 +312,22 @@ def _generate_tests(data):
 
     # Mountain-specific tests
     if bp["claimed_type"] == "mountain":
-        tests.append(
-            f"test(invariance_check) :-\n"
-            f"    % Verify that as a Mountain, the classification is uniform across perspectives.\n"
-            f"    constraint_indexing:constraint_classification({cid}, TypeTarget, "
-            f"context(agent_power(powerless), _, _, _)),\n"
-            f"    constraint_indexing:constraint_classification({cid}, TypeBeneficiary, "
-            f"context(agent_power(institutional), _, _, _)),\n"
-            f"    TypeTarget == TypeBeneficiary,\n"
-            f"    TypeTarget == mountain."
-        )
+        # invariance_check queries the AUTHORED classification table — emitting
+        # it for a perspectives-free story produces a test that fails loudly on
+        # an empty table (empty-table census B1, OQ-109 B3 / 2026-06-12). Gate
+        # the emission on perspectives presence; the metric-based mountain
+        # tests below remain valid for perspectives-free stories.
+        if perspectives:
+            tests.append(
+                f"test(invariance_check) :-\n"
+                f"    % Verify that as a Mountain, the classification is uniform across perspectives.\n"
+                f"    constraint_indexing:constraint_classification({cid}, TypeTarget, "
+                f"context(agent_power(powerless), _, _, _)),\n"
+                f"    constraint_indexing:constraint_classification({cid}, TypeBeneficiary, "
+                f"context(agent_power(institutional), _, _, _)),\n"
+                f"    TypeTarget == TypeBeneficiary,\n"
+                f"    TypeTarget == mountain."
+            )
         tests.append(
             f"test(mountain_threshold_validation) :-\n"
             f"    config:param(extractiveness_metric_name, ExtMetricName),\n"
