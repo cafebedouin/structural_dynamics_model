@@ -432,6 +432,14 @@ changes refit 57 stories), pipeline non-determinism at fixed input (a bug) — a
 the stage-hash diff, never by assumption: "it's the LLM" without the diff is a hypothesis
 sitting where a witness goes. Meta-analysis claims ride snapshot manifests + per-story
 provenance (model, sampling params, prompt/schema/example commits — schema-required).
+**The typing machinery (fingerprint/orbit/Boltzmann) carries KIND-level identity only:**
+story-level identity is authored forward (`seeded_from` at generation time), never
+recovered backward by signature matching — witnessed both directions on the naming-drift
+triple (one same-material draw shared nothing positive with its siblings; a cross-topic
+pair matched 6/7; `audits/2026-06-12_signature_identity_witness/`). Kind-level
+meta-analysis over draw-stable fields (the replicate probe's stability table rules which)
+is what survives generation stochasticity; never key an exclusion list, named re-witness,
+or any per-story mechanism on names or signatures across a regen boundary.
 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.

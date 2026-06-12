@@ -4745,6 +4745,11 @@ era and pinned in snapshot):**
    example in effect, **plus MODEL STRING and SAMPLING PARAMS (determinism-frontier
    ruling, 2026-06-12)** — the FNL inherited-signature machinery generalized per-cohort.
    An unprovenanced story is un-meta-analyzable by construction.
+   **Plus, for cohort zero (witness-settled, 2026-06-12): `seeded_from: <archived
+   story_uid>`** on every regenerated story — provenance/ground-truth, NOT an identity
+   mechanism — and a **`draw` index** on every replicate-probe draw (three draws of one
+   story otherwise share the full provenance tuple; the one that joins the corpus vs the
+   two that remain probe artifacts must be distinguishable records).
    **Replicate probe rides cohort zero (same ruling):** 3–5 stories × 3 draws while the
    API is warm; field-level stability table (which fields are draw-stable — types? metric
    values? stakeholder structure? — and which swing). That table DEFINES the claims
@@ -4752,7 +4757,30 @@ era and pinned in snapshot):**
    signal; on unstable fields it is sampling noise wearing a story ID. Each regenerated
    story is ONE DRAW from a distribution (CLAUDE.md: generation is stochastic; the
    committed story is the determinism frontier — backchecking a generation tells nothing
-   about the next run).
+   about the next run). **Probe amendment (2026-06-12): also compute pairwise
+   fingerprint/signature distances within-draws vs between-stories** — within-vs-between
+   separation is the identity-tolerance question made a number. **Gating relation,
+   pinned: the stability table gates CLAIMS, not generation** — cohort zero does not
+   wait on it; no cross-story comparison lands in any analysis until the table says
+   which fields are draw-stable.
+   **IDENTITY-ACROSS-REGEN (witness-settled, 2026-06-12;
+   `audits/2026-06-12_signature_identity_witness/`): the engine's typing machinery
+   carries KIND-level identity only — story-level identity does not survive a redraw and
+   cannot be recovered backward by signature matching.** On the kernel_v1 naming-drift
+   triple (the free natural experiment, old-prompt regime = upper bound on drift): draws
+   1&3 matched 6/7 fingerprint dims with an identical shift pattern, but draw 2 shared
+   NOTHING positive with its siblings (its 3/7 was all agreement-in-absence — no
+   tolerance re-links it), while a topic-distinct control pair also hit 6/7
+   (kind-overlap across topics is by design, `logical_fingerprint.pl` header).
+   Consequence for every name-/identity-keyed Phase C item — the fail-closed exclusion
+   list (institutional_trust_erosion), the NAMED PAIR re-witness (organization_floor,
+   demographic_skill_mismatch), the per-JSON dispositions: anchor through `seeded_from`
+   at regen time, then key on the cohort-zero story's own id; a name-keyed list
+   evaluated against regenerated stories silently stops matching (the empty-table seam
+   class, pre-empted here). Signature-keying the exclusion list is RULED OUT by the
+   witness. What survives generation stochasticity is KIND-level meta-analysis
+   (fingerprint/orbit/Boltzmann distributions over draw-stable fields) — the corpus's
+   analysis contract; which fields qualify is exactly what the stability table rules.
 5. **Snapshot rule:** corpus-relative statistics make the live corpus a moving target —
    pipeline runs that feed analysis get a snapshot ID; cross-story claims are stable only
    WITHIN a snapshot; cross-time claims cite both endpoint manifests. (Extends the

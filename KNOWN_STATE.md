@@ -65,6 +65,33 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — SIGNATURE-IDENTITY WITNESS: the engine types KINDS, not stories — naming-drift triple probed in fingerprint space; identity-by-signature ruled out for the Phase C regen; seeded_from + draw index added to cohort-zero provenance spec
+**Files:** audits/2026-06-12_signature_identity_witness/, ISSUES.md, CLAUDE.md, prolog/logical_fingerprint.pl, agent/c-orchestrator.py
+**Tier:** correction-key
+
+Question (operator, after two instances proposed name-/inheritance-keyed identity across
+the cohort-zero regen): can the math (fingerprint/orbit/Boltzmann) carry story identity
+across generation draws, licensing meta-analysis despite LLM variability? Probe: the
+kernel_v1 press/Reformation naming-drift triple (3 runs, 3 names, "same" reading) + 3
+topic-distinct controls, pairwise `fingerprint_match/4` over all 7 dims
+(`audits/2026-06-12_signature_identity_witness/`, raw output pasted). Result: draws 1&3
+= 6/7 with IDENTICAL shift pattern; draw 2 = different mechanism class
+(mountain/rope/rope/mountain vs tangled_rope/scaffold/scaffold/tangled_rope), sharing
+NOTHING positive with its siblings (its 3/7 = agreement-in-absence: voids []=[], zone
+negligible, coupling independent); all 9 between-pairs 0/7; BUT control pair
+blockchain|neural_interface also 6/7. Verdict, both directions witnessed: same-material
+draws can escape their kind; different-material stories can share one (by design —
+fingerprints are domain-abstracted isomorphism classes). KIND-level meta-analysis over
+draw-stable fields survives generation stochasticity (the apparatus's purpose — and on
+this triple the CLASSIFICATION ITSELF, shift, was draw-unstable: type prevalence over
+n=1 draws samples generation noise, consistent with OQ-26). STORY-level identity must be
+authored forward (`seeded_from` at regen time), never recovered backward by matching —
+signature-keying the trust_erosion exclusion list would have lost draw 2. OQ-109 item 4
+updated: seeded_from + draw index schema-required for cohort zero; replicate probe
+gains within-vs-between pairwise distances; stability table gates CLAIMS not generation.
+Caveats: one triple, 3 controls, old-prompt regime (upper bound on drift); the funded
+replicate probe is the calibration, this is data point zero.
+
 ## 2026-06-12 — DETERMINISM-FRONTIER ruling promoted to CLAUDE.md; Phase C removal commit (schema perspectives[]/mandatrophy_resolved OUT, provenance/8 REQUIRED incl. model+sampling); archive-before-removal executed; replicate probe folded into cohort zero
 **Files:** CLAUDE.md, schemas/constraint_story_schema.json, python/generate_constraint_pl.py, prolog/narrative_ontology.pl, prolog/guard_exclusions.pl, prolog/signature_detection.pl, prolog/stack.pl, agent/example_platform_commission.json, ISSUES.md, prolog/archives/datasets/pre_cohort_zero_2026-06-12/
 **Tier:** landed
