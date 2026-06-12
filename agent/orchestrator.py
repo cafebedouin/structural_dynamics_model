@@ -632,7 +632,9 @@ class DRAuditOrchestrator:
         # Classification data
         classification: dict[str, Any] = {}
 
-        m = re.search(r"Confidence:\s+([\d.]+)\s+\((\w+)\)", report_text)
+        # OQ-100a: label renamed from bare "Confidence" — the quantity is
+        # MaxEnt P(claimed); capture groups unchanged.
+        m = re.search(r"MaxEnt P\(claimed\):\s+([\d.]+)\s+\((\w+)\)", report_text)
         if m:
             classification["confidence"] = float(m.group(1))
             classification["confidence_band"] = m.group(2)
@@ -789,7 +791,7 @@ class DRAuditOrchestrator:
             f"  Claimed type: {cls.get('claimed_type', 'unknown')}\n"
             f"  Rival type: {cls.get('rival_type', 'unknown')} "
             f"(P={cls.get('rival_p', 'N/A')})\n"
-            f"  Confidence: {cls.get('confidence', 'N/A')} "
+            f"  MaxEnt P(claimed): {cls.get('confidence', 'N/A')} "
             f"({cls.get('confidence_band', 'N/A')})\n"
             f"  Boundary: {cls.get('boundary', 'N/A')}\n\n"
             f"=== ADJUSTMENT GUIDANCE ===\n{guidance}\n\n"

@@ -38,6 +38,18 @@ STABILITY_JSON = OUTPUT_DIR / "game_theory_stability.json"
 MIXED_JSON = OUTPUT_DIR / "game_theory_mixed_strategy.json"
 COVER_JSON = OUTPUT_DIR / "game_theory_cover_story.json"
 
+# ---------------------------------------------------------------------------
+# Confidence band cuts (OQ-100b)
+# ---------------------------------------------------------------------------
+# Canonical cuts for the confidence_band classification below. Also imported
+# by enhanced_report.py to grade MaxEnt-vs-pipeline disagreement headers —
+# do not duplicate these literals there. Distinct from the tangled-psi bands
+# in shared/constants.py:classify_band (different quantity).
+
+BAND_DEEP = 0.8         # P(claimed) above this (with margin) -> "deep"
+BAND_DEEP_MARGIN = 0.5  # margin over rival also required for "deep"
+BAND_MODERATE = 0.5     # P(claimed) at or above this -> "moderate"
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -93,10 +105,10 @@ def enrich_entry(entry, orbit_data, abd_data=None,
         margin = confidence - rival_prob if rival_prob >= 0 else confidence
         entropy = shannon_entropy(dist)
 
-        # Band classification
-        if confidence > 0.8 and margin > 0.5:
+        # Band classification (cuts: module-level BAND_* constants, OQ-100b)
+        if confidence > BAND_DEEP and margin > BAND_DEEP_MARGIN:
             band = "deep"
-        elif confidence >= 0.5:
+        elif confidence >= BAND_MODERATE:
             band = "moderate"
         else:
             band = "borderline"

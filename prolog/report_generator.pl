@@ -47,7 +47,10 @@ generate_full_report(IntervalID) :-
     format('====================================================~n'),
     format('Timeline:       ~w to ~w~n', [T_start, Tn]),
     format('Structural Pattern: ~w~n', [Pattern]),
-    format('Confidence:     ~w~n', [Conf]),
+    % OQ-100a: categorical interval-pattern confidence (high/moderate/low,
+    % from data completeness) — distinct from the Python-side MaxEnt
+    % P(claimed) and corpus band histogram; each label names its quantity.
+    format('Pattern confidence (categorical): ~w~n', [Conf]),
     % OQ-93: Pattern/Confidence come from classify_interval, whose gradient
     % and completeness inputs are the leveled grid — carry the diet here too.
     % OQ-98 (operator ruling 1, per-question branch — P1 witnessed BRANCH A):
@@ -62,7 +65,9 @@ generate_full_report(IntervalID) :-
     ),
     
     % --- SECTION 3: META-LOGICAL AUDIT ---
-    format('~n[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]~n'),
+    % OQ-100c: inputs are author-assigned, so this is a self-consistency
+    % audit (declared type vs own-assigned metrics), not fraud detection.
+    format('~n[META-LOGICAL AUDIT: DECLARED-TYPE vs OWN-ASSIGNED-METRICS SELF-CONSISTENCY]~n'),
     (   setof((C, Err, Sev), drl_core:dr_mismatch(C, Err, Sev), Errors)
     ->  forall(member((C, Err, Sev), Errors),
                format('  ! ALERT [~w]: ~w detected for ~w~n', [Sev, Err, C]))

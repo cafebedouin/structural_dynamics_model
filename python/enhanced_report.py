@@ -57,6 +57,13 @@ import time
 from collections import Counter
 from pathlib import Path
 
+# Confidence band cuts — canonical definition lives with the band
+# classification in enrich_pipeline_json.py (OQ-100b); import, never
+# duplicate the literals. enrich_pipeline_json is main-guarded
+# (verified: `if __name__ == "__main__"` at its tail), so this import
+# runs no pipeline code.
+from enrich_pipeline_json import BAND_DEEP, BAND_MODERATE
+
 # --- Path Setup ---
 
 SCRIPT_DIR = Path(__file__).parent
@@ -306,7 +313,7 @@ def build_header(pipeline_data):
             total = sum(band_counts.values())
             pct = round(n / total * 100) if total else 0
             parts.append(f"{n} {band} ({pct}%)")
-        lines.append(f"  Confidence: {' | '.join(parts)}")
+        lines.append(f"  MaxEnt bands (corpus): {' | '.join(parts)}")
 
     # CS pattern distribution (when present)
     cs_dist = val.get("cs_pattern_distribution") if val else None
@@ -970,11 +977,12 @@ def build_level2_convergence(constraint_id, pipeline_data):
     if batch_str:
         lines.append(f"    Batch Type:       {batch_str}")
 
-    # Confidence fields
+    # Confidence fields (MaxEnt P(claimed) — same quantity as the MaxEnt
+    # shadow section's headline; renamed from bare "Confidence", OQ-100a)
     conf = entry.get("confidence")
     conf_band = entry.get("confidence_band")
     if conf is not None:
-        lines.append(f"    Confidence:       {conf:.4f} ({conf_band})")
+        lines.append(f"    MaxEnt P(claimed): {conf:.4f} ({conf_band})")
         rival = entry.get("rival_type")
         rival_p = entry.get("rival_prob")
         if rival and rival_p is not None:
@@ -1070,13 +1078,32 @@ def build_maxent_section(constraint_id, pipeline_data):
     high_uncertainty = entropy is not None and entropy > 0.5
 
     if hard_disagreement:
-        lines.append(f"  HARD DISAGREEMENT: Pipeline says {claimed}, MaxEnt says {top_type}")
+        # OQ-100b: grade the disagreement header by rival probability (cuts
+        # shared with the confidence_band classification — imported from
+        # enrich_pipeline_json.py). rival_p can be None (or -1.0 when the
+        # distribution holds no rival); a bare comparison would TypeError
+        # on None, so None routes to the ungraded plurality branch.
+        if rival_p is not None and rival_p >= BAND_DEEP:
+            lines.append(
+                f"  PIPELINE CLASSIFICATION REJECTED by MaxEnt: "
+                f"{top_type} at P={rival_p:.4f} (pipeline says {claimed})"
+            )
+        elif rival_p is not None and rival_p >= BAND_MODERATE:
+            lines.append(
+                f"  MAXENT FAVORS RIVAL: {top_type} at P={rival_p:.4f} "
+                f"(pipeline says {claimed})"
+            )
+        else:
+            lines.append(
+                f"  DISAGREEMENT (plurality split): "
+                f"Pipeline says {claimed}, MaxEnt says {top_type}"
+            )
     elif high_uncertainty:
         lines.append("  High Uncertainty (types agree but entropy is elevated)")
     else:
         lines.append("  Classification is stable (low entropy, types agree)")
 
-    lines.append(f"  Confidence:    {conf:.4f} ({conf_band})")
+    lines.append(f"  MaxEnt P(claimed): {conf:.4f} ({conf_band})")
     if rival:
         lines.append(f"  Rival Type:    {rival} (P={rival_p:.4f})" if rival_p is not None else f"  Rival Type:    {rival}")
     if margin is not None:
