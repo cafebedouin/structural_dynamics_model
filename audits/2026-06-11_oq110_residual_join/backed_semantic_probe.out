@@ -1,0 +1,40 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+OQ-110 1.1 Backed end-to-end semantic verification (pre-Phase-B plumbing)
+
+=== CONTROL A: fab_adjacent EXCLUDED (agenda_conditioning, powerless ctx) ===
+    t=10: no suppression measurement; scalar 0.72 present; no static marker => SuppBacked=false (OQ-105 misalignment bucket)
+    t=30: no suppression measurement; scalar 0.72 present; no static marker => SuppBacked=false (OQ-105 misalignment bucket)
+    t=0 type=tangled_rope backed=true eps=0.45 supp=0.55 theater=0.35 d=0.9
+    t=10 type=tangled_rope backed=false eps=0.52 supp=0.72 theater=0.4 d=0.9
+    t=20 type=tangled_rope backed=true eps=0.58 supp=0.62 theater=0.45 d=0.9
+    t=30 type=snare backed=false eps=0.63 supp=0.72 theater=0.5 d=0.9
+    t=40 type=snare backed=true eps=0.66 supp=0.7 theater=0.55 d=0.9
+    t=50 type=snare backed=true eps=0.68 supp=0.72 theater=0.58 d=0.9
+    residual: times_examined=6 backed_times=4 fab_adjacent=1
+    flips=[]
+    witness: type-change tangled_rope->snare at t=20->30 spans unbacked endpoint (B1=true, B2=false)
+    CONTROL A PASS: transition excluded from flips; fab_adjacent=1
+
+=== CONTROL B: backed flip PRESENT (adjunctification_of_university_teaching, powerless ctx) ===
+    t=0 type=tangled_rope backed=true eps=0.42 supp=0.55 theater=0.38 d=0.9
+    t=10 type=tangled_rope backed=true eps=0.54 supp=0.68 theater=0.5 d=0.9
+    t=20 type=snare backed=true eps=0.68 supp=0.72 theater=0.61 d=0.9
+    residual: times_examined=3 backed_times=3 fab_adjacent=0
+    flips=[flip(10,20,tangled_rope,snare,0.14,0.039999999999999925,0.10999999999999999)]
+    flip(10,20,tangled_rope,snare): d_eps=0.14 d_supp=0.039999999999999925 d_theater=0.10999999999999999
+    CONTROL B PASS: present, deltas match serialized JSON (0.14/0.04/0.11)
+
+=== CONTROL C: retract eps@20 -> flip(10,20) must leave flips ===
+    under retraction: backed_times=2 fab_adjacent=0
+    flips=[]
+    in-overlay PASS: flip(10,20) excluded from flips
+    RESTORE WITNESS: flip(10,20) present again post-restore (backed_times=3)
+    CONTROL C PASS
+
+ALL CONTROLS PASS
