@@ -4693,6 +4693,11 @@ regen.** Regen-first would put stakeholder-only stories under the C arm's guard 
 before OQ-114 rules its extension — an extension later ruled wrong would have been live on
 fresh corpus (same once-not-twice logic that put the D-fork ruling before Phase C). No
 dependency forces regen-first: the OQ-114 archive probe runs on `corpus_path` overlays.
+**Regen cross-check disposition rule (operator, 2026-06-12):** the 12 pre-existing
+schema-failing JSONs (witnessed at B2, `b2_schema_failset_diff.out`) get a DISPOSITION PER
+JSON at Phase C — regen-resolves (also four-tuple-only) / separately-fixed /
+accepted-with-reason — never a bare "checked"; otherwise the set shrinks by inattention
+and survives Phase C as permanent residue.
 **The unanimity guard's C arm (`nl_certification_chain/1`) ENTERS LIVE SERVICE at this phase** — through Phase B it is
 live-unwitnessed by design (every live story routes through the authored-cells arm; its
 only witness is the seam control), so the Phase-C re-witnessing point is NOT skippable on
@@ -4918,9 +4923,64 @@ per the OQ-89 pattern; chimera-era caveats (OQ-25) apply to v6 counts. Fallback 
 disappoints: live-62 per-story inspection of the 3 (their text, beneficiary structure, and
 whether the FCR firing was OQ-70-class bait or detection).
 
-**Resolution shape.** Per-story ruling on the 3 (operator) informed by the rate; if ruled
-not-mountains, the chain needs a discriminating conjunct (witnessed, not beneficiary-presence
-— that one failed extension-preservation 1/6) or the un-fire reverts at Phase C re-witness.
+**PINNED CRITERION (operator, 2026-06-12 — written before any archive number exists;
+freezes at the probe's first commit; halt-and-escalate if wrongly specified mid-run,
+never inline-amend):**
+
+*Population & comparator (two traps pinned shut).* Per archive: stories with
+`constraint_claim = mountain` AND authored perspectives PRESENT — both conditions, because
+the comparator (old authored-cell unanimity) is only computable where seats exist. Trap 1
+(the house failure mode): an archived perspectives-free story makes forall-unanimity
+VACUOUSLY true — those stories are bucketed OUT with a count, never folded in; the
+comparator carries its own positive control (shown finding the old-6 analogues or a known
+seat-disagreeing story) before any divergence is counted. Trap 2: `nl_certification_chain`
+reads LIVE config params (natural_law_collapse_min / resistance_max) — archived stories
+were authored under earlier regimes; the probe uses the live params (the question is the
+live guard's extension, not era-faithful reconstruction) and SAYS SO in its output.
+
+*The four-cell table, direction asymmetry pre-stated.* Per story: unanimity-verdict ×
+C-verdict. The divergence cells are NOT symmetric: **C-only** (C protects, unanimity
+doesn't) is the FAIL-OPEN direction — FCR suppressed where the old guard would let it fire
+(the live-3 shape); **unanimity-only** is fail-closed — noisy but safe. Both reported with
+denominators, kernel_v1 and original_v6 SEPARATELY (chimera caveat standing): a direction
+holding in both archives is evidence; a v6-only pattern is discounted.
+
+*Inspection instruments, named in advance (derived from NEITHER candidate):*
+classify_from_metrics-level type, snare-floor position, FSM/theater signals. Sample rule:
+ALL C-only cases if ≤25 per archive, else a seeded random 25, seed recorded.
+
+*Outcome meanings, written before any number exists:*
+1. **Old extension CONFIRMED** iff the C-only divergences inspect as a coherent
+   over-extension MECHANISM — seats disagreeing for substantive reasons the metric trio
+   doesn't see (standing candidate: the beneficiary pattern — 5 of the old 6 declare
+   beneficiaries; the archives test whether beneficiary-declaration co-occurs with
+   seat-disagreement among C-certified stories). Consequence pinned: the C arm is
+   RESTRICTED before Phase C live service; the live 3 stay excluded; the restriction's
+   design becomes a build item with the mechanism as its spec.
+2. **C's extension LICENSED** iff the C-only divergences inspect as comparator ARTIFACT —
+   seat disagreement tracing to authoring noise, bait-era templates, or vacuity-adjacent
+   authoring — while the certified stories read as mountains under the named instruments,
+   **in BOTH archives (operator-ratified: the change is fail-open-direction and the
+   chimera caveat disqualifies v6 as sole support — either-archive does NOT suffice)**.
+   Consequence: the live 3 are inspected under the same instruments and ruled in; FCR
+   un-fires on institutional_trust_erosion BY RULING this time, with the exposure-window
+   entry cross-referenced.
+3. **ESCALATE** if mixed or no coherent mechanism: the four-cell table plus per-story
+   inspectables go to the operator; the live-3 ruling is operator judgment on that
+   package. This is the honest default — pre-stated so the probe cannot be tortured into
+   outcome 1 or 2.
+
+*Riders.* (a) Whatever the outcome, the no-beneficiary conjunct's failure is RE-READ
+against the archive evidence: if beneficiary-declaration does not anti-correlate with
+genuine mountains at scale, option 4's failure was the conjunct being WRONG, not merely
+over-restrictive — recorded in one sentence so it is not re-proposed. (b) Standard text:
+halt-and-escalate if the criterion proves wrongly specified mid-run; the pin freezes at
+the probe's first commit.
+
+**Resolution shape.** Per-story ruling on the 3 (operator) informed by the rate read under
+the pinned criterion; if ruled not-mountains, the chain needs a discriminating conjunct
+(witnessed, not beneficiary-presence — that one failed extension-preservation 1/6) or the
+un-fire reverts at Phase C re-witness.
 
 ## OQ-115 — signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)
 
