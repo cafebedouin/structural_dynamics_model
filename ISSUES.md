@@ -4650,6 +4650,16 @@ contention) remain operative build specs here.
   added explicit requirement: each migration must distinguish measured-no-gap from no-data
   (null/coverage bit, never bare `[]`). A2 and A6 are NEW seam-gate members. Every Class-A
   migration owes the seam positive control.
+  **PRESENCE GATES + EMISSION SEAM LANDED (2026-06-12, commit `8e71faa4`):**
+  `data_validation:agent_surface_present/1` dispatch (legacy cells → stakeholder seats →
+  sanctioned authored-empty world_unchanged; fail-closed on no-surface; 5 two-sided
+  controls + pipeline identity); census-B1 emission seam CLOSED two-sided (compiler gates
+  `invariance_check` on perspectives presence; perspectives-free mountain story SHOWN
+  GATED, metric tests kept; existing-corpus compile byte-identical); `data_repair`
+  discharged no-migration-needed (`b3_data_repair_discharge.md` — scaffold bridge is
+  v3.4-legacy-only, claim chain already falls through to computed). The seam-gate
+  lands-second obligation is DISCHARGED by this unit. Gotcha: `data_validation` is NOT
+  loaded by `[stack]` — `use_module(data_validation)` in probes.
 - AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
   no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
   `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
