@@ -1,0 +1,12 @@
+W1 synthetic: removed suppression_requirement@T=10; gate errors=1; in validate_json=True -> PASS
+  error text: OQ-105 grid misalignment: every temporally tracked metric must author a value at every time point any metric uses (union grid [0, 10, 20, 30, 40, 50, 60]): supp...
+W2 live adjunctification_of_university_teaching_c0.json: gate errors=0
+W2 live demographic_skill_mismatch_c0.json: gate errors=0
+W2 live institutional_trust_erosion_c0.json: gate errors=0
+W2 live organization_floor_c0.json: gate errors=0
+W2 live scale_ceiling_c0.json: gate errors=0
+W2 live corpus: 5 JSONs, misaligned=[] -> PASS
+W3 archive: 60 JSONs scanned, 11 misaligned: ['agenda_conditioning', 'digital_colonialism_data_extraction', 'institutional_trust_erosion', 'post_1998_convergence', 'scale_ceiling', 'substantive_employment_reading', 'techno_optimist_reading', 'technocratic_paradigm_vs_human_primacy', 'truth_democracy_disinformation', 'wage_convergence_mechanism', 'wage_convergence_sustainability']
+W3 subset check (11 OQ-105 hosts all flagged): missing=[] -> PASS
+
+VERDICT: ALL WITNESSES PASS

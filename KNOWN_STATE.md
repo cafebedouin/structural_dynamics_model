@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-12 — OQ-105 RESOLVED: operator ruled fork (a) ALONE; alignment rule landed (prompt + fail-closed validate_json gate); live exposure 0 after the cohort-zero swap retired all 11 hosts
+**Files:** ISSUES.md, prompts/constraint_story_generation_prompt_json.md, python/generate_constraint_pl.py, audits/2026-06-12_oq105_alignment_gate/
+**Tier:** landed
+
+Worktree `oq105-alignment-rule` from `7ca48e0b`. Operator ratified (a)-alone — grid
+alignment at generation, no read-side interpolation machinery — with two amendments: the
+densification trade NAMED in the entry (unlabeled generation-side value assertion vs (b)'s
+labeled interpolation; defense: model-authored-at-generation = same epistemics as any
+authored point; the defect was code injecting endpoints post hoc), and a time-bound reopen.
+Substrate moved under the ruling: the OQ-109 cohort-zero swap (`7ca48e0b`) retired ALL 11
+OQ-105 hosts to kernel_v2_test2 — live misaligned rows re-derived to 0 (all 5 `_c0`
+stories author one shared grid; series-less ones carry `suppression_profile(static)`).
+The ratified time-bound ("regen the 11 within Phase C or by a named date") was discharged
+by that retirement; its successor clock — rule enforced BEFORE cohort-one generation —
+is met by this unit. Landed: prompt rule "One time grid per story" (union grid =
+first-class authoring requirement: assert each value / thin to a shared sparser grid /
+drop the series, never backfill; OQ-46 scalar-static path untouched) + `_grid_alignment_errors`
+in `validate_json` (BOTH jsonschema and fallback paths; all generation drivers import it;
+cannot fire on absence — <2 authored grids returns clean, the sanctioned case). Witnesses:
+W1 synthetic misalignment fires; W2 5/5 live `_c0` JSONs clean (+ full-validate CLEAN
+regression on 2); W3 gate over the 60 archived pre-cohort-zero JSONs flags EXACTLY the 11
+known hosts, 0 false positives — extension equals the defect set. Scope note recorded:
+the row-sweep's "19/23 robust" is robust relative to LINEAR INTERPOLATION ((b)'s payoff
+enumeration), not ground truth. Reopen conditions for (b) in the entry (gate defect /
+densification cost turns real on cohort one / Backed-blind consumer over a
+misaligned-row corpus).
+
 ## 2026-06-11 — OQ-105 per-row sweep: PREDICTED bucket discharged — 4/23 misaligned rows timing-distorted, all one snare-floor mechanism; fork ruling still open
 **Files:** ISSUES.md, audits/2026-06-11_oq105_row_sweep/
 **Tier:** landed
