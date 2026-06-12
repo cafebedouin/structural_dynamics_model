@@ -906,8 +906,12 @@ def build_contamination_network(constraint_id, pipeline_data):
         lines.append("")
         lines.append(f"    Network neighbors ({len(neighbors)}):")
         lines.append("")
-        lines.append("    | Neighbor | Type | Edge | Strength | Purity |")
-        lines.append("    |----------|------|------|----------|--------|")
+        lines.append(
+            "    | Neighbor | Type | Edge | Provenance | Salience | Strength | Purity |"
+        )
+        lines.append(
+            "    |----------|------|------|------------|----------|----------|--------|"
+        )
         for n in neighbors:
             nid = n.get("constraint_id", "?")
             ntype = n.get("neighbor_type") or "?"
@@ -916,30 +920,53 @@ def build_contamination_network(constraint_id, pipeline_data):
             npurity = n.get("neighbor_purity")
             s_str = f"{strength:.2f}" if strength is not None else "N/A"
             p_str = f"{npurity:.4f}" if npurity is not None else "N/A"
+            prov = "authored" if _edge_is_authored(n) else "corpus-derived"
+            sal = "salient" if _edge_is_salient(n) else "low"
             lines.append(
-                f"    | {nid} | {ntype} | {etype} | {s_str} | {p_str} |"
+                f"    | {nid} | {ntype} | {etype} | {prov} | {sal} "
+                f"| {s_str} | {p_str} |"
             )
 
-        # One-sentence interpretation
+        # Provenance legend — the bit is now load-bearing, not just printed (OQ-103).
         lines.append("")
+        lines.append(
+            "    Provenance: 'authored' = an affects_constraint link declared in "
+            "this case's testset (the source material asserts the connection); "
+            "'corpus-derived' = an edge the engine computed from corpus topology "
+            "(two constraints naming the same beneficiary/victim), NOT asserted by "
+            "this case. Salience floor: a corpus-derived agent edge counts as "
+            "'salient' only when the two constraints share ≥2 agents; a single "
+            "shared agent (strength 0.30) is weak corpus scaffolding."
+        )
+
+        # One-sentence interpretation — ranked over SALIENT edges only, so a
+        # single-shared-agent corpus edge can no longer headline the contamination.
+        lines.append("")
+        salient = [n for n in neighbors if _edge_is_salient(n)]
         if delta is not None and delta < -0.0001:
             ranked = sorted(
-                [n for n in neighbors if n.get("neighbor_purity") is not None],
+                [n for n in salient if n.get("neighbor_purity") is not None],
                 key=lambda n: n["neighbor_purity"],
             )
             if ranked:
                 worst = ranked[0]
+                prov = "authored" if _edge_is_authored(worst) else "corpus-derived"
                 lines.append(
                     f"  Purity degraded from {ip:.4f} to {ep:.4f} "
                     f"by contamination from {len(neighbors)} neighbor(s), "
                     f"primarily {worst['constraint_id']} "
-                    f"({worst.get('edge_type', '?')}, "
+                    f"({worst.get('edge_type', '?')}, {prov}, "
                     f"purity {worst['neighbor_purity']:.4f})."
                 )
             else:
+                # Empty-above-floor: the delta is real but no salient edge carries
+                # it. Say so explicitly rather than promoting a weak edge to headline.
                 lines.append(
-                    f"  Purity degraded from {ip:.4f} to {ep:.4f} "
-                    f"by contamination from {len(neighbors)} neighbor(s)."
+                    f"  Purity degraded from {ip:.4f} to {ep:.4f}, but the "
+                    f"contamination is carried entirely by low-salience "
+                    f"corpus-derived edges ({len(neighbors)} neighbor(s), each a "
+                    f"single shared agent / no authored link). No connection here "
+                    f"is asserted by this case's source material."
                 )
         elif delta is not None and delta > 0.0001:
             lines.append(
@@ -953,6 +980,30 @@ def build_contamination_network(constraint_id, pipeline_data):
             )
 
     return "\n".join(lines)
+
+
+def _edge_is_authored(neighbor):
+    """OQ-103 provenance bit: True iff the edge is a story-authored
+    affects_constraint link (edge_type == 'explicit'). Everything else
+    (shared_beneficiary / shared_victim / inferred_coupling) is computed by the
+    engine from corpus topology, not asserted by this case's source material."""
+    return (neighbor.get("edge_type") or "") == "explicit"
+
+
+def _edge_is_salient(neighbor):
+    """OQ-103 salience floor. Authored edges are always salient. A corpus-derived
+    agent edge is salient only when the two constraints share >=2 agents
+    (shared_agent_count); a single coincidental shared agent (count 1,
+    strength 0.30) is weak scaffolding and floored out. inferred_coupling carries
+    no agent count — fall back to its edge strength (no live coverage as of
+    2026-06-11; covered by unit fixture)."""
+    if _edge_is_authored(neighbor):
+        return True
+    count = neighbor.get("shared_agent_count")
+    if count is not None:
+        return count >= 2
+    strength = neighbor.get("edge_strength")
+    return strength is not None and strength >= 0.6
 
 
 # --- Level 2: CLASSIFICATION CONVERGENCE (from old Section A L2 fields) ---
