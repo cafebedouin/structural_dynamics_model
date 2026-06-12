@@ -434,26 +434,17 @@ agent_beneficiary(ConstraintID, Beneficiary) :-
    INDEXICAL GATE (v3.1)
    ========================================================================== */
 
-% Indexical Gate: Flags Mountains that are actually Shadow Nooses.
-check_indexical_relativity(ID) :-
-    constraint_indexing:constraint_classification(ID, mountain, _),
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ID, ExtMetricName, E),
-    E > 0.7,
-    % Require a manual "Mandatrophy Acknowledgement" in the file metadata
-    \+ has_mandatrophy_declaration(ID).
-
-% Every domain must be indexed to power-perspectives (mountain/rope/tangled_rope/snare).
-% Note: With tangled_rope addition, we now have 4 categories but validation remains
-% focused on ensuring at least the traditional 3-pillar coverage is maintained.
-validate_indexical_completeness(ID) :-
-    constraint_indexing:constraint_classification(ID, mountain, _),
-    constraint_indexing:constraint_classification(ID, rope, _),
-    constraint_indexing:constraint_classification(ID, snare, _),
-    !.
-validate_indexical_completeness(ID) :-
-    format('ERROR: Perspectival Gap in ~w. Missing 3-pillar coverage.~n', [ID]),
-    fail.
+% RETIRED (OQ-109 B3, 2026-06-12 — empty-table census A3; adjudicated by
+% contribution): check_indexical_relativity/1 and validate_indexical_completeness/1
+% were v3.1 apparatus reading the authored classification table (Phase C retires
+% it), had ZERO consumers (grep positive-controlled,
+% audits/2026-06-11_oq109_phase_b/), and their exemption legs read dead inputs
+% (hardcoded is_mandatrophy_resolved/1 facts for two non-corpus ids;
+% attribute/3 lifecycle facts nothing produces). Successors on surviving
+% inputs: claimed-mountain-but-extractive → FSM + T17 + the R5 zombie
+% crosscheck (stakeholder_seats:zombie_piton_crosscheck/2, consumed by
+% report_generator since 2026-06-12); 3-pillar/coverage validation → the
+% linter role-coverage rules (B3).
 
 /* ==========================================================================
    MANDATROPHY RECONCILIATION (v3.1)
@@ -463,29 +454,13 @@ validate_indexical_completeness(ID) :-
 is_mandatrophy_resolved(gale_shapley).        % The Algorithm is the Mandate.
 is_mandatrophy_resolved(planetary_boundaries). % The Biological Limit is the Mandate.
 
-% detect_omega/2: Identifies logical friction points.
-% This rule is updated to exempt "Hardened Mandatrophy."
-detect_omega(Name, mandatrophy) :-
-    constraint_indexing:constraint_classification(Name, mountain, _),
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(Name, ExtMetricName, E),
-    E > 0.7,
-    % The Paradox: A Mountain (Fact) behaves like a Snare (Trap).
-    % If the domain is recognized as Mandatrophic, it is no longer an Omega.
-    \+ is_mandatrophy_resolved(Name).
-
-% System Insight: Logic for the Parsing Suite
-count_unresolved_omegas(Count) :-
-    aggregate_all(count, detect_omega(_, _), Count).
-
-% Mandatrophy Detector: Flags Mountains that function as Traps.
-detect_mandatrophy_omega(ID) :-
-    constraint_indexing:constraint_classification(ID, mountain, _),
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ID, ExtMetricName, E),
-    E > 0.7,
-    % Check for the explicit resolution marker in the file
-    \+ is_indexical_resolution_declared(ID).
+% RETIRED (OQ-109 B3, 2026-06-12 — empty-table census A4; same adjudication
+% as above): detect_omega(_, mandatrophy), count_unresolved_omegas/1, and
+% detect_mandatrophy_omega/1 — zero consumers, authored-table reads, dead
+% exemption legs. The genealogy-based mandatrophy product lives in the R5
+% zombie crosscheck (authored founding_problem_status=dead ∧
+% disappearance_verdict=world_rearranges × computed piton), wired into the
+% Section-7 report surface 2026-06-12.
 
 is_indexical_resolution_declared(ID) :-
     % Looks for the standardized resolution hook in the metadata

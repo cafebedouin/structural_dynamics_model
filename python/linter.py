@@ -78,9 +78,20 @@ def lint_file(filepath):
     if "narrative_ontology:interval(" not in content:
         errors.append("MISSING_HOOK: Missing narrative_ontology:interval/3.")
 
-    # Updated to check for v4.0 indexed classification
-    if "constraint_classification(" not in content:
-        errors.append("OUTDATED_HOOK: v4.0 requires constraint_indexing:constraint_classification/3.")
+    # OQ-109 B3 (2026-06-12): the agent surface is EITHER format — authored
+    # classifications (legacy four-tuple, dies at Phase C) or the stakeholder
+    # surface (constraint_stakeholder/7; authored-empty sanctioned only with
+    # disappearance_verdict = world_unchanged). Mirrors
+    # data_validation:agent_surface_present/1.
+    has_legacy_surface = "constraint_classification(" in content
+    has_stakeholder_surface = "constraint_stakeholder(" in content
+    sanctioned_empty = bool(re.search(
+        r'disappearance_verdict\(\s*\w+\s*,\s*world_unchanged\s*\)', content))
+    if not has_legacy_surface and not has_stakeholder_surface and not sanctioned_empty:
+        errors.append(
+            "MISSING_AGENT_SURFACE: requires constraint_classification/3 (legacy) "
+            "or constraint_stakeholder/7 (stakeholder surface) or the sanctioned "
+            "authored-empty case (disappearance_verdict = world_unchanged).")
 
     # Extract classified types once — reused by rules 2 and 4.
     found_types = set(re.findall(
@@ -91,15 +102,44 @@ def lint_file(filepath):
     #   Pure coordination → ⊞C[I] for all I
     uniform_type = found_types in ({'mountain'}, {'rope'})
 
-    # 2. PERSPECTIVAL MINIMUMS
+    # 2. PERSPECTIVAL MINIMUMS (legacy surface only — OQ-109 B3)
     # Uniform-type files are exempt: the classification is identical from all
     # perspectives, so requiring specific power atoms would force boilerplate.
-    if not uniform_type:
+    if has_legacy_surface and not uniform_type:
         if "agent_power(powerless)" not in content:
             errors.append("MISSING_PERSPECTIVE: Must include agent_power(powerless).")
 
         if "agent_power(institutional)" not in content:
             errors.append("MISSING_PERSPECTIVE: Must include agent_power(institutional).")
+
+    # 2b. ROLE COVERAGE (stakeholder surface — OQ-109 B3, the migration target
+    # of the powerless/institutional minimums). Deliberately MINIMAL policy:
+    # (i) every role atom from the R2 dial-set; (ii) unless the story claims a
+    # uniform type (mountain/rope — the legacy exemption carried over) or is
+    # the sanctioned authored-empty case, require one cost-side seat
+    # (payer/excluded) and one power-side seat (agenda_setter/beneficiary) —
+    # the two-sidedness the old minimums enforced. No richer coverage minimums
+    # are invented here.
+    if has_stakeholder_surface:
+        valid_roles = {'agenda_setter', 'beneficiary', 'payer', 'excluded', 'observer'}
+        found_roles = set(re.findall(
+            r'constraint_stakeholder\(\s*\w+\s*,\s*\w+\s*,\s*(\w+)\s*,', content))
+        bad_roles = found_roles - valid_roles
+        if bad_roles:
+            errors.append(
+                f"INVALID_ROLE: stakeholder roles {sorted(bad_roles)} not in "
+                f"{sorted(valid_roles)}.")
+        claimed_match = re.search(r'constraint_claim\(\s*\w+\s*,\s*(\w+)\s*\)', content)
+        claimed_uniform = claimed_match and claimed_match.group(1) in ('mountain', 'rope')
+        if not claimed_uniform and not sanctioned_empty:
+            if not (found_roles & {'payer', 'excluded'}):
+                errors.append(
+                    "ROLE_COVERAGE: stakeholder surface has no cost-side seat "
+                    "(payer or excluded).")
+            if not (found_roles & {'agenda_setter', 'beneficiary'}):
+                errors.append(
+                    "ROLE_COVERAGE: stakeholder surface has no power-side seat "
+                    "(agenda_setter or beneficiary).")
 
     # 3. SPATIAL SCOPE VALIDATION
     # Since scope now affects chi via σ(S), validate scope atoms are from the valid set.
@@ -109,8 +149,10 @@ def lint_file(filepath):
     if invalid_scopes:
         errors.append(f"INVALID_SCOPE: spatial_scope values {sorted(invalid_scopes)} not in valid set {sorted(valid_scopes)}.")
 
-    # 4. TYPE VARIANCE CHECK (Updated for v3.4 Categories)
-    if len(found_types) < 2 and not uniform_type:
+    # 4. TYPE VARIANCE CHECK (Updated for v3.4 Categories; legacy surface only —
+    # OQ-109 B3: variance on stakeholder-surface stories is COMPUTED by the
+    # engine per seat, not authored, so an authored-variance lint has no input)
+    if has_legacy_surface and len(found_types) < 2 and not uniform_type:
         errors.append(f"INSUFFICIENT_VARIANCE: Found {list(found_types)}. Need at least 2 different types across indices.")
 
     # 5. DEPRECATED TERMINOLOGY
@@ -141,8 +183,13 @@ def lint_file(filepath):
     # 7. MANDATROPHY & OMEGA VALIDATION
     if ext_val is not None:
         if ext_val > 0.7:
-            if "is_mandatrophy_resolved" not in content and "[RESOLVED MANDATROPHY]" not in content:
-                errors.append(f"UNRESOLVED_MANDATROPHY: Extraction {ext_val} requires resolution hook.")
+            # OQ-109 B3 (2026-06-12): the R5 genealogy interview IS the
+            # mandatrophy surface (founding_problem_status authored answers the
+            # mandate-vs-function question); legacy hooks still accepted.
+            if ("is_mandatrophy_resolved" not in content
+                    and "[RESOLVED MANDATROPHY]" not in content
+                    and "founding_problem_status(" not in content):
+                errors.append(f"UNRESOLVED_MANDATROPHY: Extraction {ext_val} requires resolution hook (legacy) or the R5 genealogy interview (founding_problem_status).")
         if ext_val > snare_epsilon_floor and "omega_variable(" not in content:
             errors.append(f"MISSING_OMEGA: High-extraction constraints (> {snare_epsilon_floor}) require omega_variable/5.")
 
@@ -351,6 +398,24 @@ def lint_file(filepath):
                 f"INVALID_D_VALUE: directionality_override d value {d_val} "
                 "is out of range. Must be in [0.0, 1.0]."
             )
+
+    # 18b. PER-(C,NAME) OVERRIDES (OQ-109 B3 — validate-when-present, require
+    # never: stakeholder_d_override/3 is a probe surface today, not
+    # compiler-emitted; the engine reader is
+    # stakeholder_seats:derive_directionality_for_stakeholder/3).
+    stakeholder_names = set(re.findall(
+        r'constraint_stakeholder\(\s*\w+\s*,\s*(\w+)\s*,', content))
+    for match in re.finditer(
+            r"stakeholder_d_override\(\s*\w+\s*,\s*(\w+)\s*,\s*([\d.]+)\s*\)", content):
+        name, d_val = match.group(1), float(match.group(2))
+        if name not in stakeholder_names:
+            errors.append(
+                f"INVALID_OVERRIDE_NAME: stakeholder_d_override names '{name}', "
+                "which is not a declared stakeholder in this file.")
+        if d_val < 0.0 or d_val > 1.0:
+            errors.append(
+                f"INVALID_D_VALUE: stakeholder_d_override d value {d_val} "
+                "is out of range. Must be in [0.0, 1.0].")
 
     # 19. GENERIC PLACEHOLDER GROUP CHECK (v6.0)
     # Beneficiary/victim group names must be domain-specific, not generic.
