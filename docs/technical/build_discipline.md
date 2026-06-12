@@ -551,8 +551,9 @@ no global threshold encodes that; consumer-named requirements do).
 
 **Diagnostic:** every `findall`-feeding-aggregate and every default-on-empty branch
 (`;  X = 0`, `;  X = 0.0`, `-> ... ; Default`) is a candidate site. Bounded census of live
-code for these two syntactic shapes: OQ-97 (future work; sort-on-encounter until it runs,
-flagging against this entry).
+code for these two syntactic shapes: EXECUTED 2026-06-11
+(`audits/2026-06-11_oq97_pattern6_census/`, OQ-97 resolved) — 19 idiom classes over 106 files;
+8 confirmed-candidate classes tracked as OQ-112; new sites sort against the class table there.
 
 **Relationship to the other patterns:** Pattern 4 is the value-level case (one fabricated
 default), Pattern 5 the gate-level case (absence satisfies a check); Pattern 6 names the
