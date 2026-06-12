@@ -3160,8 +3160,15 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 
 **Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
 
-**Status:** open — measurement caveat, not a defect; NOT a leak (no author-facing surface discloses
-0.68; the de-leak's assembled-payload grep is clean). Watch as the corpus grows.
+**Status:** partial — three-fate split RATIFIED 2026-06-12 (one amendment: free-gate residual →
+OQ-117 at filing): quantization half CLOSED working-as-designed (ε is ~4-level by construction on
+the manifest path — report ε-keyed statistics at bin resolution); idiom half OPEN, re-baselined on
+cohort zero (graduation: bin-withdrawal probe — design pinned below, spend awaiting operator
+greenlight); independence circularity ESCALATED to OQ-117 (its design call sequenced AFTER the
+probe). Original "NOT a leak" claim REVISED same day — it held only for the generation surface;
+two SCOPE bin boundaries equal config thresholds (see re-check block). Boundary-ancestry question
+(config-copying vs logic.md zones) ruled ARCHAEOLOGY — not chased; effect identical either way;
+ambient monitor is organic corpus growth (the re-baselined watch), problem surfaces if it surfaces.
 **Origin:** n=91 build assessment (2026-06-06, commit `0fd22ea`, manifest run 03:50Z — coherent
 snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
 new `0.68` mode emerging); escalated to a finding at n=91.
@@ -3237,11 +3244,13 @@ holds as stated. Two of the three interior bin boundaries disclosed at
 (0.31–0.55) straddles it and that decision boundary remains free. Consequence for bin-conformant
 stories: a "low" assignment guarantees ε > 0.10 (Rule Z pre-satisfied); "mod"/"high" guarantees
 ε > 0.30 (tangled floor pre-satisfied) — concordance on those two gates is manufactured by
-construction (→ OQ-117). Derivation direction is UNESTABLISHED (the boundaries may share ancestry
-with the logic.md zone structure rather than copying config); the disclosure reaches the SCOPE
-bin-assigner only — generation still sees just the token.
+construction (→ OQ-117). Derivation direction (config-copying vs shared ancestry with the
+logic.md zone structure) ruled ARCHAEOLOGY 2026-06-12 — not chased: the disclosure's effect is
+identical either way, and it reaches the SCOPE bin-assigner only — generation still sees just the
+token.
 
-**Ruling shape (operator-directed 2026-06-12; formal ruling pending) — a SPLIT, not one status:**
+**Ruling (RATIFIED 2026-06-12, operator; one amendment: free-gate residual added to OQ-117 at
+filing) — a SPLIT, not one status:**
 
 1. **Designed-quantization half — close as working-as-designed.** ε resolution is ~4 levels by
    construction wherever the manifest path feeds a bin (and ~2 levels conditional on
@@ -3258,15 +3267,25 @@ bin-assigner only — generation still sees just the token.
    co-authoring `hypothesis` + `epsilon_bin` is a validity condition on the divergence machinery,
    not a measurement caveat on this axis.
 
-**Bin-withdrawal probe (pre-registered, awaiting spend approval — graduation step for fate 2,
-doubles as OQ-117's circularity probe and the (a) re-baseline's control arm):** matched
-generation on cohort-zero machinery, same seed specs, two arms — bin-FED (epsilon_bin token in
-the generation prompt) vs bin-WITHHELD (field omitted); arm size pinned at plan review (≥12/arm
-suggested to resolve a 4-bin grid). Outcome semantics, written before the run: grid (coarse
-vocabulary / .x8 rail / 0.68-given-high) PERSISTS in the withheld arm ⇒ model idiom dominates;
-COLLAPSES toward spread ⇒ instruction-following dominates; PARTIAL ⇒ both layers live — quantify
-the split. Either way the withheld arm breaks the co-authoring channel, giving OQ-117 its
-divergence-rate comparison.
+**Bin-withdrawal probe (design PINNED 2026-06-12; spend awaiting operator greenlight —
+graduation step for fate 2, doubles as OQ-117's circularity probe and the (a) re-baseline's
+control arm):** matched generation on cohort-zero machinery, TOPIC-MATCHED seeds across arms,
+**15 per arm**. Arms: bin-FED (uke_scope block intact, `epsilon_bin` present) vs bin-WITHHELD
+(uke_scope block INTACT, ONLY `epsilon_bin` removed) — withholding the whole block would confound
+the epsilon_bin channel with everything else SCOPE feeds; full-block withdrawal is a different,
+also-useful experiment, not this OQ's. Two pre-registered endpoints: **(1) rail share** (last
+digit = 8) — baseline 86% (n=91) / 77% (n=60); collapse expectation ≈ uniform with
+round-number bias; **(2) exact-0.68 share** — baseline ~30%. Outcome semantics, written before
+the run: both endpoints PERSIST in the withheld arm ⇒ model idiom dominates; COLLAPSE ⇒
+instruction-following dominates; PARTIAL ⇒ both layers live — 15/arm is underpowered for
+quantifying the split, and the result itself sets the follow-up arm size. Pre-noted BEFORE the
+run so it cannot be read back as confirmation: the live corpus already shows the partial
+signature unprompted — institutional_trust_erosion_c0 (claim=mountain, ε=0.68; the story behind
+OQ-116's MOUNTAIN_METRIC_CONFLICT firing) BREAKS the type-coupling (instruction layer does not
+self-propagate across regimes) while LANDING on the rail (the idiom survives regime change
+detached from its type). n=1 of 5: a hypothesis-pointer, not a finding. The withheld arm breaks
+the co-authoring channel, giving OQ-117 its divergence-rate comparison; OQ-117's design call is
+SEQUENCED AFTER this probe.
 
 **Direction-of-fix discipline (carried + extended):** still no disclosure of target ε values to
 the author; ADDITIONALLY no tightening of bin boundaries toward config thresholds (e.g. moving
@@ -5304,7 +5323,9 @@ discrepancy recorded, not amended.
 at SCOPE vs document-as-condition).
 
 **Status:** open — escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
-entry, not a paragraph inside OQ-78's resolution).
+entry, not a paragraph inside OQ-78's resolution). Same-day rulings: free-gate re-weighting
+principle added at filing (below); the (c) design call is SEQUENCED AFTER the OQ-78
+bin-withdrawal probe — downstream, not parallel.
 
 **The problem:** SCOPE co-authors `hypothesis` (→ `claimed_type`, the CLAIM side) and
 `epsilon_bin` (→ `base_properties.extractiveness`, the METRIC side) in the same upstream act
@@ -5322,6 +5343,19 @@ of those gates: "low" pre-satisfies Rule Z; "mod"/"high" with a tangled hypothes
 the tangled ε floor. Concordance on those gates is manufactured, not measured. The rope/snare
 split (0.45/0.46) sits inside the "mod" bin and remains a free decision boundary.
 
+**The free-gate residual (re-weighting principle — operator amendment at filing, 2026-06-12):**
+the UN-transmitted gate is where the evidence lives. The rope/snare split is the only ε decision
+boundary no bin edge touches — and it is exactly where the old corpus separates cleanly without
+instruction (claimed ropes ≤0.28, tangled ≥0.42) AND where the only genuine divergences live
+(the three kernel-reading ropes at 0.48/0.68, failing the rope ceiling by authored intent). The
+free boundary is the one place the divergence machinery was exercising judgment rather than
+reading back instruction. The consumer inventory in (a) is therefore a WEIGHTING, not a list:
+divergence statistics are evidential in proportion to how free the gate is — currently exactly
+one free ε gate. Corollary: OQ-78's earlier "bands consistent with config thresholds"
+observation is retroactively sharper at this boundary — consistency at the untransmitted gate is
+either idiom or shared ancestry, and the OQ-78 probe arbitrates (the ancestry question itself
+ruled archaeology, not chased).
+
 **Why a validity condition, not a caveat:** the divergence machinery (FNL/FCR/FSM firings,
 claimed-vs-computed concordance rates, Boltzmann compliance) reads claim-metric divergence as
 authored signal. Where claim and metric are co-authored upstream, LOW divergence measures
@@ -5331,16 +5365,20 @@ detection). The witnessed counterexamples — three kernel-reading ropes at ε 0
 exceptions: they prove the channel can be opened on purpose, not that it is open in routine
 generation.
 
-**What would resolve:**
-(a) consumer inventory — which divergence consumers read ε-side gates that bin-conformance
-pre-satisfies (Rule Z, tangled floor; per-consumer: does its input cross a manufactured
-boundary?);
-(b) the OQ-78 bin-withdrawal probe (pre-registered there) — the withheld arm breaks the
-co-authoring channel; compare divergence rates across arms;
-(c) operator design call — DECOUPLE at SCOPE (author epsilon_bin blind to hypothesis, or stop
-emitting it) vs DOCUMENT-AS-CONDITION (divergence statistics over manifest-fed stories carry a
-"concordance partly constructed" provenance bit). Direction-of-fix discipline from OQ-78
-applies: no tightening of bin boundaries toward config thresholds.
+**What would resolve (sequencing ruled 2026-06-12: (b) before (c)):**
+(a) consumer inventory AS A WEIGHTING (per the free-gate residual) — which divergence consumers
+read ε-side gates that bin-conformance pre-satisfies (Rule Z, tangled floor); per-consumer: does
+its input cross a manufactured boundary, and how much of its evidence rides the one free gate?;
+(b) the OQ-78 bin-withdrawal probe (design pinned there; 15/arm, bin-only withdrawal) — the
+withheld arm breaks the co-authoring channel; compare divergence rates across arms;
+(c) operator design call, GATED ON (b) — DECOUPLE at SCOPE (author epsilon_bin blind to
+hypothesis, or stop emitting it) vs DOCUMENT-AS-CONDITION (divergence statistics over
+manifest-fed stories carry a "concordance partly constructed" provenance bit). Decision logic,
+recorded ahead: if the probe shows mostly INSTRUCTION, decoupling buys back real ε variance and
+is worth the surgery; if mostly IDIOM, decoupling buys almost nothing and document-as-condition
+is the honest fix — the perturbation principle already frames ε as authored, so documenting the
+coupling does not betray the design; pretending independence would. Direction-of-fix discipline
+from OQ-78 applies: no tightening of bin boundaries toward config thresholds.
 
 **Cross-refs:** OQ-78 (mechanism + evidence + probe), OQ-116 (MOUNTAIN_METRIC_CONFLICT lint
 contradicts the same independence doctrine, lint side), OQ-70 (convention-read-as-detection).
