@@ -18,6 +18,7 @@
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
 :- use_module(config).
+:- use_module(stakeholder_seats).  % R5 zombie crosscheck (OQ-109 B3)
 :- use_module(intent_engine, except([classify_interval/3])).
 :- use_module(coercion_projection).
 :- use_module(pattern_analysis).
@@ -291,6 +292,22 @@ mandatrophy_only_report(C) :-
     ->  format('  ~w (~w vs ~w):~n', [C, TypeP, TypeI]),
         format_mandatrophy_gap(C, powerless, institutional)
     ;   true
+    ),
+    % R5 zombie-flag crosscheck (OQ-109 B3, 2026-06-12 — A7 RECOVERY, extends
+    % this surface; the Phase-A primitive stakeholder_seats:zombie_piton_crosscheck/2
+    % is the single source, no parallel path). Prints on the three non-neither
+    % verdicts; silent on neither. This is the consumer the mandatrophy
+    % apparatus lost at the format migration (OQ-83 A7): authored genealogy
+    % (founding_problem_status=dead /\ disappearance_verdict=world_rearranges)
+    % cross-checked against the computed piton read.
+    r5_zombie_crosscheck_line(C).
+
+%% r5_zombie_crosscheck_line(+C)
+r5_zombie_crosscheck_line(C) :-
+    stakeholder_seats:zombie_piton_crosscheck(C, V),
+    (   V == neither
+    ->  true
+    ;   format('  ~w: R5 ZOMBIE CROSSCHECK: ~w~n', [C, V])
     ).
 
 perspectival_gap_audit(C) :-

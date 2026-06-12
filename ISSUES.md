@@ -4660,6 +4660,18 @@ contention) remain operative build specs here.
   v3.4-legacy-only, claim chain already falls through to computed). The seam-gate
   lands-second obligation is DISCHARGED by this unit. Gotcha: `data_validation` is NOT
   loaded by `[stack]` — `use_module(data_validation)` in probes.
+  **R5 ZOMBIE CONSUMER LANDED (2026-06-12; pre-registered witness shape
+  `b3_r5_consumer_preregistration.md` — predictions exact):** Section-7 mandatrophy
+  surface EXTENDED (not forked) with `r5_zombie_crosscheck_line/1` consuming the Phase-A
+  primitive `stakeholder_seats:zombie_piton_crosscheck/2` (its FIRST consumer — the A7
+  dropped seam recovered). Census: 6 live firings (4 authored_zombie_uncorroborated, 2
+  computed_piton_unflagged); **corroborated_zombie = 0 on the corpus — that bucket's
+  semantics are witnessed ONLY by the overlay control (OPEN-2 scope-read template); do not
+  cite the live diff for it.** Report diff: exactly one additive line per firing report,
+  quiet control clean. CLAUDE.md mandatrophy note RETIRED per its own condition. Residual
+  kept legible: `mandatrophy_resolved` is STILL a dangling schema field (the rewire
+  replaced the apparatus, not the field) — Phase C retires it from the schema alongside
+  `perspectives[]` (provenance: KNOWN_STATE 2026-06-07, OQ-83 A7).
 - AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
   no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
   `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
@@ -4675,7 +4687,12 @@ contention) remain operative build specs here.
 
 **Phase C scope (never before B):** D-fork side of the Phase C gate is SATISFIED — OQ-110
 ruled branch b no-open (2026-06-11), so Phase C carries no C1/C2 schema additions and the
-remaining gate is "Phase B complete" alone. `perspectives[]` retired from the schema;
+remaining gate is "Phase B complete" alone. **The unanimity guard's C arm
+(`nl_certification_chain/1`) ENTERS LIVE SERVICE at this phase** — through Phase B it is
+live-unwitnessed by design (every live story routes through the authored-cells arm; its
+only witness is the seam control), so the Phase-C re-witnessing point is NOT skippable on
+"the guard already passed B4" grounds: re-witness the guard on the post-retirement corpus,
+with OQ-114's ruling governing its extension. `perspectives[]` retired from the schema;
 `reading_diff` re-pointed (stakeholder cells / computed seats); the A/B pair corpora archived under
 `prolog/archives/datasets/` with manifests (control arm preserved permanently); Build
 Discipline Pattern-3 old-vs-new diffs before any retirement. **Post-reset calculus (witnessed

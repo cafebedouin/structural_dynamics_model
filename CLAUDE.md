@@ -418,13 +418,6 @@ appear in no canonical context and their scope_modifier values are unvalidated. 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.
 
-**Authoring `mandatrophy_resolved` in story JSON does NOTHING (silent).** The compiler has never
-emitted it — the field was born dangling at the JSON-template migration (commit `3641ae71`;
-emission never written in any version). Engine consumers (`is_mandatrophy_resolved/1`,
-`has_mandatrophy_declaration/1`) read hardcoded facts and `attribute(C, lifecycle, mandatrophy)`,
-which nothing produces. Witness + rewire plan: KNOWN_STATE 2026-06-07, ISSUES.md OQ-83 (A7).
-Retire this note when the Phase-A R5 rewire lands.
-
 ## Math Employed in the Prolog Engine
 
 Sigmoid/logistic, exponential, least-squares slope, monotonicity tests, drift velocity and

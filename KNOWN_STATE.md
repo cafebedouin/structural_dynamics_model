@@ -65,6 +65,26 @@ flip-ON-substituted-row witness) is NOT timing-distorted — interpolated 0.62 a
 floor; flip-on-substituted-row was a weaker test than the interpolation counterfactual.
 OQ-105 stays OPEN: the (a) grid-alignment-at-generation vs (b) labeled-interpolation-at-read
 fork is the operator's; the sweep bounds (b)'s live-data payoff to exactly these 4 rows.
+## 2026-06-12 — OQ-109 B3: R5 zombie consumer LANDED (A7 seam recovered, first consumer of zombie_piton_crosscheck/2); CLAUDE.md mandatrophy note retired per its own condition; presence gates + emission seam landed same day
+**Files:** prolog/report_generator.pl, prolog/data_validation.pl, python/generate_constraint_pl.py, CLAUDE.md, ISSUES.md, audits/2026-06-11_oq109_phase_b/
+**Tier:** landed
+
+R5 consumer: Section-7 mandatrophy surface EXTENDED with r5_zombie_crosscheck_line/1
+consuming stakeholder_seats:zombie_piton_crosscheck/2 (Phase-A primitive, zero consumers
+until now). Pre-registered witness shape held exactly: 6 live firings (4
+authored_zombie_uncorroborated + 2 computed_piton_unflagged), one additive line per firing
+report inside the existing section, quiet control (scale_ceiling) clean, pipeline JSON
+untouched. corroborated_zombie = 0 on the corpus — witnessed ONLY by the overlay control
+(dead+world_rearranges onto computed-piton regulatory_measurement_gap); the live diff is
+NOT evidence for that bucket. CLAUDE.md mandatrophy tripwire RETIRED (its stated condition
+— the R5 rewire landing with witnesses — met); residual: mandatrophy_resolved is STILL a
+dangling schema field, Phase C retires it alongside perspectives[] (provenance KNOWN_STATE
+2026-06-07 / OQ-83 A7). Same-day earlier units: presence gates
+(agent_surface_present/1 dispatch, 5 two-sided controls) + census-B1 emission seam closed
+two-sided (compiler gates invariance_check on perspectives presence). Gotchas: report
+Section 7 prints only the subject constraint's crosscheck line per report (subject-scoped
+like the OQ-99 scenarios); data_validation NOT loaded by [stack].
+
 ## 2026-06-12 — SPEC CORRECTION: unanimity bridge disjunction → conditional dispatch; extension change fully reverted (byte-identical witness); OQ-114 exposure window recorded; ensemble-decomposition practice note banked
 **Files:** prolog/signature_detection.pl, ISSUES.md, docs/technical/build_discipline.md, audits/2026-06-11_oq109_phase_b/
 **Tier:** correction-key
