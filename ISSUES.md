@@ -4601,6 +4601,41 @@ the committer stage surface).
 **Origin:** 2026-06-11, OQ-83 measurement close-out (this entry is the join half of the
 spin-off; the Phase B/C half is OQ-109).
 
+## OQ-111 — data_repair omega bridge queries module `IntervalID`; testsets declare `constraint_<id>` — guard fails silently, bridge imports zero (OQ-99's wrong-premise twin)
+
+**Ω-type:** Ω_E (witnessed, mechanical; zero output impact on the live corpus today).
+
+**Status:** open — filed 2026-06-11 by the OQ-99 close-out sweep (the wrong-module premise that
+OQ-99 hit and fixed in `report_generator.pl`, searched for elsewhere).
+
+**The witness (probe, 2026-06-11).** After `user:consult('testsets/scale_ceiling.pl')`:
+`current_module(scale_ceiling)` FALSE / `current_module(constraint_scale_ceiling)` TRUE;
+`data_repair:bridge_omega_variables_pure(scale_ceiling, [], R)` imports **0** omegas while
+**4** five-arity facts sit in `constraint_scale_ceiling`. Both arity branches
+(`data_repair.pl:227–257`) guard on `current_module(IntervalID)` +
+`predicate_property(IntervalID:omega_variable(...), defined)` and fall to `Results = []` on
+miss — success-shaped absence (Build Discipline Pattern 6: measured-empty and didn't-look
+collapse to one token). Live on every report run: `scenario_manager.pl:114` →
+`repair_interval/1` → `bridge_v34_data/2` → `bridge_omega_variables_pure/3`.
+
+**Why zero bite today.** Every 5-arity OID in the live corpus has a same-file
+`narrative_ontology:omega_variable/3` sibling (251/251 paired, census 2026-06-11), so even a
+working bridge would be duplicate-guarded into a no-op. The bridge exists for UNPAIRED
+(v3.4-legacy) testsets — exactly where it would silently fail. Secondary defect to not
+preserve blindly: a working /5 branch imports every omega as hardcoded type `empirical`
+(`data_repair.pl:232`), fabricating the type.
+
+**Resolution shape.** Either key the lookup on `constraint_<id>` (`atom_concat/3`, as
+`report_generator.pl:661–664` now does — that fix is the template) with a positive-control
+probe, or retire the bridge with a tombstone if v3.4-unpaired testsets are out of scope
+(adjudicate by contribution, not wiring — Unwired ≠ worthless). **Sweep closure note:** the
+census found `omega_variable/5` is the ONLY unqualified predicate testsets author (everything
+else is `narrative_ontology:`/`constraint_indexing:`-qualified or plunit `test/1`);
+`user:omega_variable` = zero hits in non-archive code (grep positive-controlled);
+all five `user:`-qualified goals in engine code are loaders (`user:consult` ×4) or the
+`user:file_search_path` hook; `current_predicate(user:` = zero. This entry is the sweep's
+single finding.
+
 ---
 
 *Last updated: 2026-06-11. Add new items with sequential OQ-NN labels. Mark

@@ -76,7 +76,12 @@ SELF-CONSISTENCY` (code grep zero outside archives). Legacy `agent/orchestrator.
 regex updated to `MaxEnt P\(claimed\):` (groups unchanged, re.search witnessed). Engine
 tests 10/10 + dynamic validation suite clean after each commit. OQ-100(d) subsumed by
 OQ-101 ledger (partial-closure note in the OQ). Full-corpus report regeneration deferred
-to the next `run_pipeline` (reports are re-derived artifacts).
+to the next `run_pipeline` (reports are re-derived artifacts). **Close-out residuals
+(same day):** the wrong-module premise was swept repo-wide — single finding filed as
+OQ-111 (`data_repair.pl` omega bridge guards on `current_module(IntervalID)`, imports 0;
+probe-witnessed); the orchestrator regex match site was verified unchanged on a full
+regenerated report (first match = convergence section line, before AND after the rename,
+same value as `enriched_pipeline.json` entry confidence).
 
 ---
 
