@@ -4608,8 +4608,12 @@ contention) remain operative build specs here.
   stakeholder presence; report_generator mandatrophy gaps → rewired R5 consumer) and (a)-class
   Python; linter rules (powerless/institutional-required → role-coverage rules; Rule 18 →
   per-(C,Name) overrides).
-- AUDIT OPEN-1/2 (`cross_context_analysis` callee; `boltzmann_compliance.pl:472`) resolve as
-  part of this migration, witnesses pasted.
+- AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
+  no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
+  `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
+  `epistemic_access_check/2` extended to count `constraint_stakeholder/7` seats alongside
+  authored classifications (positive controls + Pattern-3 pipeline-identity witness,
+  b3_open2_*.out).
 - **The CLAUDE.md Critical-Distinctions mandatrophy note retires here**, when the R5
   report_generator consumer lands (the note says so explicitly).
 

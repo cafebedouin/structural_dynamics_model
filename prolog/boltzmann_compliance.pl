@@ -472,7 +472,19 @@ epistemic_access_check(C, true) :-
         constraint_indexing:constraint_classification(C, _, Ctx),
         Ctxs
     ),
-    length(Ctxs, N),
+    % OQ-109 Phase B / AUDIT OPEN-2 (2026-06-12): authored stakeholder seats
+    % are epistemic positions — counted alongside authored classification
+    % contexts so the gate measures position coverage rather than the legacy
+    % perspectives[] table (which Phase C retires). Output-preserving on the
+    % live corpus at change time (witnessed): every story either carries >=3
+    % authored classifications or 0 of both surfaces.
+    findall(Name,
+        narrative_ontology:constraint_stakeholder(C, Name, _, _, _, _, _),
+        Names
+    ),
+    length(Ctxs, NC),
+    length(Names, NS),
+    N is NC + NS,
     N >= MinN, !.
 epistemic_access_check(_, false).
 
