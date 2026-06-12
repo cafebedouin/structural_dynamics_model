@@ -4608,12 +4608,24 @@ contention) remain operative build specs here.
   stakeholder presence; report_generator mandatrophy gaps → rewired R5 consumer) and (a)-class
   Python; linter rules (powerless/institutional-required → role-coverage rules; Rule 18 →
   per-(C,Name) overrides).
+  **SEAM DEPENDENCY (operator, 2026-06-12 — Pattern-5 gate, not a note):** mountain-claimed
+  perspectives-free stories emit `invariance_check` over an empty authored table (compiler
+  `_generate_tests`). Unanimity adjudication lands BEFORE or JOINTLY WITH the
+  validation/repair presence gates; the empty-table emission must be WITNESSED CLOSED
+  (positive control: a mountain-claimed perspectives-free story, shown gated or shown
+  computing over seats) by whichever item lands second — recompute-over-seats closes it as
+  a side effect; retire leaves it to the presence-gate item's scope. Two individually clean
+  Pattern-3 diffs do NOT discharge this; the seam lives between them.
 - AUDIT OPEN-1/2 RESOLVED (2026-06-12, `audits/2026-06-11_oq109_phase_b/`): OPEN-1
   no-migration-needed — `cross_context_analysis/2` already computes via `dr_type/3` over
   `standard_context/1`, never reads the authored table (b3_open1_discharge.md); OPEN-2
   `epistemic_access_check/2` extended to count `constraint_stakeholder/7` seats alongside
-  authored classifications (positive controls + Pattern-3 pipeline-identity witness,
-  b3_open2_*.out).
+  authored classifications (b3_open2_*.out). **Scope-read (2026-06-12):** the byte-identical
+  pipeline diff witnesses NO-REGRESSION-TODAY only — the live corpus exercises no case where
+  seat-counting changes an outcome (corpus is SILENT on the new semantics); the three
+  positive controls are the ONLY witnesses the new semantics has. Do not cite the clean diff
+  as behavior-preservation evidence AND the controls as works-evidence for the same claim —
+  they witness different claims.
 - **The CLAUDE.md Critical-Distinctions mandatrophy note retires here**, when the R5
   report_generator consumer lands (the note says so explicitly).
 
