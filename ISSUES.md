@@ -5376,7 +5376,9 @@ discrepancy recorded, not amended.
 **Ω-type:** Ω_E (witnessed, quantifiable concordance manufacture) + an Ω_P design call (decouple
 at SCOPE vs document-as-condition).
 
-**Status:** open — escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
+**Status:** resolved — (c) RULED **document-as-condition**, seat-framed (operator, 2026-06-13);
+decouple withdrawn as an ε-layer artifact; two forward items filed (OQ-119 join-diff, OQ-120
+rope/snare). Ruling block at the foot of this entry. Originally escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
 entry, not a paragraph inside OQ-78's resolution). Same-day rulings: free-gate re-weighting
 principle added at filing (below); the (c) design call is SEQUENCED AFTER OQ-78's fate-2 read
 (now the OQ-109 Phase C cross-arm read — the bin-withdrawal probe was HALTED pre-spend).
@@ -5559,6 +5561,89 @@ grid 32/32 absent (OQ-93, verdict rests on ε/χ/signature/Boltzmann not grid); 
 but the rejection is independent of it (Boltzmann + false_summit + computed-type are separate gates);
 homogeneous probe corpus inflates the borderline/confidence stats (per-constraint verdicts are the
 robust part).
+
+**(c) RULING — document-as-condition, seat-framed (operator, 2026-06-13).** The ε-layer spends and
+the engine run together resolve (c):
+
+- **Seat-theoretic re-register (operator correction, `docs/seat-theorem-v1.md`).** The engine does
+  not adjudicate whether a claim is "really" a mountain — by the Coupling Theorem a contentful
+  verdict cannot be seat-free. The multi-perspective × multi-axiom × multi-temporal machinery's
+  purpose is to **show the seat** (Q5 liveness = the σ/seat test: maintained-with-a-beneficiary = a
+  live parameter = a seat; removal-rearranges-nothing-no-for-whom = mountain). So "0/30 ratified" is
+  NOT "30 false mountains caught"; it is: from the engine's seats these structures read non-mountain
+  because they carry the liveness flags (maintained extraction, beneficiary, coupling) a mountain
+  claim conceals. `false_natural_law` = concealment-detection (Corollary 2a), not truth-rejection.
+- **Why feeding can't manufacture concordance (the (c) core worry, answered).** The authored claim
+  **label** is not a live parameter of the seat-constituted type — the constituting parameters are
+  ε/coupling/beneficiary/timeline. The engine reads the seat off the **structure**, not the label;
+  feeding moved ε only between *rejecting* gates (free_market_fed_d2 FNL→FCR), never to a mountain
+  reading. 0/30 both arms. **Decouple is WITHDRAWN** — it would do surgery (sever SCOPE→hypothesis→
+  claim) to fix a manufactured-concordance that does not occur at the layer the engine decides types;
+  the Spend-B "real-but-bounded decouple rationale" was an ε-layer artifact the engine catches on
+  both arms.
+- **The documented condition (sharper than the ε version).** Manifest-fed stories have the claim
+  instructed, but that does not bias the seat-constituted classification — the claim-coupling lives
+  at the authored-ε layer and is *shown* downstream (Corollary 2a concealment-detection), not
+  ratified. No provenance-bit code change is forced (the worry it would address does not materialize
+  at the type layer); the condition is the record itself, here.
+- **Scope bound.** Established for the **mountain / false-foundational** case — exactly the case (c)
+  named (manufactured concordance = a concealed seat ratified as σ-fixed). The rope/snare ε boundary
+  is a separate, lower-stakes question (both non-mountain; the dangerous direction is false
+  foundational-ness) → OQ-120.
+- **NOT funded (positive-control instinct, same as the matched-fed-arm gap).** The join-structure
+  fed-vs-withheld diff is the proper *engine-characterization* test, but it is **not cleanly
+  computable on this corpus**: the axiom axis no-opped (`cs_kernel_id` absent), the temporal axis is
+  thin (grid 32/32 absent OQ-93; `classify_at_time` OQ-33 fabrication; confidence low) — only the
+  observer axis is non-vacuously instrumented. A diff over a join measured on ~1.5/3 axes is
+  grid-absent vacuity in a richer outfit. Filed → OQ-119, blocked on a three-axis-instrumented
+  corpus (witness all three non-vacuous before running).
+
+**Cross-refs:** OQ-119 (join-diff, engine-characterization, blocked), OQ-120 (rope/snare boundary),
+OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat-theorem-v1.md`,
+`audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`.
+
+---
+
+## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — blocked on a three-axis-instrumented corpus
+
+**Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
+
+**Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+
+**The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
+the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
+remains: does feeding move the **join structure** — which observer seats disagree, which axioms
+dissent, how the drift trajectory runs — even when the final type holds? That is whether feeding
+shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
+theorem (`docs/seat-theorem-v1.md`).
+
+**Why it is blocked (positive-control before spend).** On the OQ-117 probe corpus the join is
+instrumented on only ~1.5 of its 3 axes: **observer** axis live (four-seat χ spread witnessed,
+e.g. free_market institutional χ=−0.029 vs analytical 0.932); **axiom** axis partial — the
+committer/CS vantage no-opped (`cs_kernel_id` absent from the probe testsets); **temporal** axis
+thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33 fabricated-suppression
+issue; drift confidence "low"). A fed-vs-withheld join diff over that substrate would measure the one
+live axis with two underpowered axes adding noise — the grid-absent vacuity failure (a richer
+instrument computed over substrate that cannot support it is not a richer measurement). **Graduation:
+a corpus where observer + axiom + temporal are each witnessed non-vacuous** (authored grid, present
+`cs_kernel_id`, non-thin timelines) — then the diff is clean. Until then: do not run.
+
+---
+
+## OQ-120 — Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested
+
+**Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
+
+**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
+
+OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
+the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
+(0.45/0.46), the one ε gate no SCOPE bin edge touches. Feeding a rope or snare claim and reading
+whether the engine's seat-constituted type moves across that boundary is the remaining test — but it
+is **lower-stakes**: both rope and snare are non-mountain, and the dangerous concealment (a seat
+asserted as σ-fixed) is the mountain/false-foundational shape OQ-117 already covered. Pick up if a
+rope/snare concordance question arises; not gating anything. Direction-of-fix from OQ-78 binds (no
+numeric disclosure to authoring).
 
 ---
 

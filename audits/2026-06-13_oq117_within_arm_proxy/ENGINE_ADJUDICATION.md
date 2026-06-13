@@ -1,5 +1,27 @@
 # OQ-117 — what the ENGINE says about the mountain claims (operator redirect, 2026-06-13)
 
+> **SEAT-THEORETIC REFRAME (operator, 2026-06-13 — corrects the register of everything below).**
+> The diagnostics do **not** adjudicate whether a claim is "really" a mountain — by the Coupling
+> Theorem (`docs/seat-theorem-v1.md`) a contentful verdict cannot be seat-free, so there is no
+> seat-free fact of mountain-hood to detect. Their purpose is to **show the seat**: what reads as
+> a mountain depends on what you filter for (axioms), where you stand (observer), and your moment
+> (temporal). Q5 — *if this vanished, would the world rearrange?* — is the σ/seat test itself:
+> removal-rearranges-nothing-with-no-for-whom = mountain (fixed by σ); maintained-with-a-beneficiary
+> = a live parameter = a seat. So read everything below in that register, **not** as
+> "robust lie-detector caught 30 false mountains." The correct statement: **from the engine's seats
+> (four observer positions × the filter/axiom battery × the 0–50 timeline) these structures read
+> non-mountain, because they carry the liveness flags — maintained extraction, a beneficiary class,
+> coupling — that constitute a seat, which a mountain claim conceals.** `false_natural_law` is
+> concealment-detection (Corollary 2a: concealment is the error), not truth-rejection — "physics-
+> washed" names the concealed seat made visible, not a lie exposed. And feeding can't change this
+> because the authored claim **label** is not a live parameter of the seat-constituted type — the
+> constituting parameters are ε / coupling / beneficiary / timeline; feeding moved ε only between
+> rejecting gates, never the seat-relative reading. Gravity-on-a-space-station is the case in one
+> line: same phenomenon, mountain from the ground, rope from the station — the engine shows which
+> seat, it does not rule the phenomenon. Wording below that says "rejects / caught / isn't fooled"
+> is the old register; the substance (0/30, both arms identical) stands, re-couched as seat-showing.
+
+
 **The redirect:** the spends (within-arm proxy, Spend A/B) measured authored `claimed_type` + ε by
 hand, treating the mountain claim as the object of study. But the engine's *purpose* is to adjudicate
 a mountain claim — Boltzmann compliance, false-summit / false-natural-law signatures, the genuine
