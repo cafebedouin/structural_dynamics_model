@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "63b4d664-701c-4a8c-b477-ef38b6c9a2ac"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Mandate Legitimacy: Risk Stratification Reading",
+    "topic_domain": "public_health_policy/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "vulnerable_populations"
+    ],
+    "victims": [
+      "individuals_below_risk_threshold",
+      "employers_with_blanket_mandates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for protecting public health, they seek to implement mandates that are proportionate to risk, balancing individual liberties with collective well-being. They face pressure from both sides of the debate."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Benefit from reduced disease transmission when mandates are applied to high-risk groups, as their health is disproportionately affected by outbreaks. They have limited direct agency in policy formulation but are the intended protective target."
+    },
+    {
+      "name": "individuals_below_risk_threshold",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the burden of mandates (e.g., vaccination requirements for employment or travel) even when their individual risk profile or contribution to transmission is low. They argue for proportionality and individual liberty."
+    },
+    {
+      "name": "employers_with_blanket_mandates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implement mandates to comply with public health directives or reduce workplace risk, but face legal challenges and employee resistance when mandates are not risk-stratified. They bear the cost of enforcement and potential litigation."
+    },
+    {
+      "name": "constitutional_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the legal and ethical implications of vaccine mandates, particularly concerning proportionality, individual rights, and state power. They provide frameworks for judicial review and policy development."
+    },
+    {
+      "name": "bioethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Examine the moral justifications for public health interventions, focusing on principles of justice, autonomy, and beneficence. They contribute to the ethical framing of risk-stratified mandates."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public health interventions by establishing a framework for mandates that balances collective protection with individual rights, ensuring interventions are proportionate to actual risk.",
+    "transfer_function": "Transfers the burden of compliance (e.g., vaccination, testing) from the general population to specific individuals or groups whose actuarial risk profile justifies the intervention, while transferring reduced disease burden to vulnerable populations.",
+    "absent_voices": "Individuals who are medically exempt but fall outside the narrowly defined risk thresholds for mandate exemption, and who would argue for broader individual accommodations based on their unique health circumstances.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of mandate legitimacy vanished, public health policy would likely swing to either absolute bodily autonomy or absolute public health primacy, leading to either widespread disease or disproportionate coercion, respectively. The current balance would be lost.",
+    "founding_problem": "The challenge of implementing public health measures that effectively control disease spread without infringing excessively on individual liberties, particularly during widespread health crises.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health authorities and constitutional law scholars widely attest that balancing individual rights and collective health remains a live and complex problem, especially with emerging infectious diseases. Judicial rulings and legislative debates consistently reflect this ongoing tension."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "omegas": [
+    {
+      "id": "actuarial_threshold_definition",
+      "question": "How is the 'actuarial risk threshold' precisely defined and measured, and by whom?",
+      "resolution_mechanism": "Establishment of independent, transparent, and publicly reviewable epidemiological and statistical criteria for risk assessment, with clear governance over data collection and analysis.",
+      "impact": "If the threshold is arbitrary or politically influenced, the constraint's legitimacy as a 'risk-stratified' mandate collapses, increasing its effective extractiveness and suppression for those below the threshold. If robust, it strengthens the coordination claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining the risk threshold for mandate application."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'risk-stratification' reading, or does it merely serve as a rhetorical bridge between the 'public health primacy' and 'bodily autonomy primacy' readings, without a coherent independent structural basis?",
+      "resolution_mechanism": "Analysis of policy outcomes: if policies consistently reflect a nuanced, data-driven proportionality that satisfies neither extreme, it's a genuine reading. If it collapses into one of the extremes under pressure, it's a bridge.",
+      "impact": "If a genuine reading, it offers a viable path for public health policy. If a rhetorical bridge, it's unstable and prone to collapse, leading to higher extractiveness and suppression as one extreme dominates.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the risk-stratification reading is a structurally independent position or a rhetorical compromise."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'risk-stratification' reading of vaccine mandate legitimacy, where mandates are deemed legitimate only if they are proportionate to an actuarial risk threshold. Blanket mandates are considered disproportionate, while targeted mandates for high-risk individuals or settings are permissible. This reading attempts to navigate between the extremes of absolute bodily autonomy and absolute public health primacy, seeking a middle ground based on evidence and proportionality.",
+    "logic_rationale": "The extractiveness (0.6) is moderate-high because even targeted mandates impose costs on individuals, but it's lower than a blanket mandate. Suppression (0.7) is also moderate-high, as active enforcement is required to ensure compliance and prevent free-riding. Theater ratio (0.2) is low, as the justification for mandates is generally tied to real public health goals, though the proportionality argument can be performative if the risk threshold is not rigorously defined. Accessibility collapse (0.4) is moderate, as alternatives (e.g., testing, masking) may exist for some, but not for all situations where mandates apply. Resistance (0.75) is high, reflecting ongoing legal and social challenges to mandates, even when risk-stratified.",
+    "perspectival_gap": "Public health authorities view this as a necessary and balanced approach, while individuals below the risk threshold experience it as an extractive imposition on their autonomy. Vulnerable populations see it as a beneficial coordination mechanism, and employers grapple with the practicalities and costs of implementation and enforcement. Constitutional scholars and bioethicists analyze its theoretical coherence and practical justice.",
+    "directionality_logic": "Public health authorities are agenda-setters, benefiting from a framework that allows them to act. Vulnerable populations are beneficiaries, as their health is protected. Individuals below the risk threshold and employers with blanket mandates are payers, bearing the costs of compliance or enforcement. Constitutional scholars and bioethicists are observers, analyzing the constraint's operation without direct benefit or cost.",
+    "mandatrophy_analysis": "This reading attempts to prevent mandatrophy by tying legitimacy to a live, empirically verifiable problem (actuarial risk). If the risk threshold becomes arbitrary or the problem it addresses ceases to be live, the constraint would lose its justification and risk becoming a piton or snare. The ongoing contestation around the 'founding problem status' (contested) highlights this tension."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'vaccine_mandate_legitimacy' kernel, focusing on risk stratification. It attempts to coordinate between the 'public_health_primacy_reading' and 'bodily_autonomy_primacy_reading' by introducing proportionality."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandates_must_be_proportionate_to_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "blanket_mandates_are_disproportionate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "proportionality_and_evidence_based_governance",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

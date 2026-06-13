@@ -1,0 +1,285 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_kernel__integration_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2cd1f19f-9818-43fa-bff4-512ad1b9077e"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement (Integration Reading)",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mobile_eu_citizens",
+      "eu_employers"
+    ],
+    "victims": [
+      "displaced_local_labor",
+      "receiving_state_welfare_systems",
+      "sending_state_tax_base"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine expression of EU integration, or an extractive interpretation of free movement?",
+      "resolution_mechanism": "Analysis of ECJ jurisprudence evolution and its impact on national welfare systems and labor markets, compared against the original treaties' intent.",
+      "impact": "If extractive, the classification shifts from Tangled Rope to Snare for receiving states and local labor; if genuine integration, the coordination function is affirmed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'integration_reading' of the 'federation_membership_kernel'."
+    },
+    {
+      "id": "welfare_system_sustainability",
+      "question": "Can receiving state welfare systems sustain the fiscal and social costs of expansive free movement without fiscal transfers or policy harmonization?",
+      "resolution_mechanism": "Empirical studies on long-term fiscal impacts, social cohesion metrics, and comparative analysis with other federal systems' fiscal equalization mechanisms.",
+      "impact": "If unsustainable, the 'integration_reading' becomes a Snare for receiving states, requiring either fiscal transfers (shifting the burden) or re-evaluation of the reading's scope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of welfare systems under current free movement interpretation."
+    },
+    {
+      "id": "member_sovereignty_clash",
+      "question": "How would a 'member_sovereignty_reading' alter the victim set and extractiveness for national labor markets and welfare systems?",
+      "resolution_mechanism": "Counterfactual analysis: if member states could restrict economically inactive migrants, the burden on welfare systems would decrease, but mobile citizens' rights would be curtailed.",
+      "impact": "A 'member_sovereignty_reading' would shift extraction from receiving states to mobile citizens, potentially reclassifying the constraint as a Rope for member states and a Snare for mobile citizens.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of a 'member_sovereignty_reading' on free movement."
+    },
+    {
+      "id": "welfare_coordination_alternative",
+      "question": "What would be the classification impact of adopting a 'welfare_coordination_reading'?",
+      "resolution_mechanism": "Modeling the effects of EU-enforced anti-social-dumping rules combined with member state welfare design autonomy on labor mobility and welfare costs.",
+      "impact": "A 'welfare_coordination_reading' would likely reduce extractiveness on receiving state welfare systems and local labor, potentially reclassifying the constraint as a Rope or Tangled Rope with more balanced benefits.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of a 'welfare_coordination_reading' on free movement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'integration_reading' of the EU's free movement principle, where supranational authority (ECJ) interprets the scope expansively to maximize labor mobility and equal treatment across member states. This reading prioritizes the completion of the single market and the rights of EU citizens to move and reside freely, often at the expense of national welfare state autonomy and local labor market protections. The constraint is claimed as a Tangled Rope due to its genuine coordination function (single market, citizen rights) coupled with significant asymmetric extraction (costs borne by specific member states and labor groups).",
+    "logic_rationale": "Extractiveness is high (0.65) because the expansive interpretation of free movement leads to significant fiscal and social costs for receiving states, without corresponding fiscal transfers or compensation. Suppression is also high (0.7) as ECJ rulings actively override national attempts to limit welfare access or protect local labor, effectively suppressing member state sovereignty in these areas. Theater ratio is low (0.1) as the ECJ's enforcement is direct and effective, not performative. Accessibility collapse is moderate (0.4) as member states retain some policy levers, but their ability to use them is constrained by supranational law. Resistance is high (0.6) from national governments and local populations facing the costs.",
+    "perspectival_gap": "From the perspective of mobile EU citizens and EU employers, this constraint is a Rope, facilitating beneficial labor mobility and market access. From the perspective of receiving state welfare systems and displaced local labor, it operates as a Snare, imposing costs without commensurate benefits and suppressing national policy choices. The ECJ, as the agenda-setter, views it as a Mountain (fundamental right) or Rope (essential coordination).",
+    "directionality_logic": "Mobile EU citizens and EU employers are primary beneficiaries (d near 0.0) due to enhanced labor mobility and access to wider talent pools. Receiving state welfare systems and displaced local labor are victims (d near 1.0) as they bear the fiscal and social costs without direct compensation or protection. Sending state tax bases are also victims due to brain drain. The ECJ is the agenda-setter, enforcing the expansive interpretation (d near 0.15, as it benefits from increased supranational authority).",
+    "mandatrophy_analysis": "The constraint's mandate (single market, citizen rights) is still live, but its expansive interpretation has led to a significant shift in its operational character. What began as a coordination mechanism has accumulated substantial extractive elements, particularly for specific member states and labor groups. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination). The rising extractiveness and suppression over time indicate an enforcement ratchet, where the coordination function is increasingly leveraged for asymmetric transfers.",
+    "kernel_context": "This constraint is the 'integration_reading' of the 'federation_membership_kernel', which defines the nature of EU membership and free movement. Sibling readings include the 'member_sovereignty_reading' (emphasizing national control over welfare and labor markets) and the 'welfare_coordination_reading' (focusing on coordinated national welfare systems rather than supranational harmonization)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "member_sovereignty_kernel__member_sovereignty_reading",
+      "federation_membership_kernel__welfare_coordination_reading",
+      "eu_single_market_regulation"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'federation_membership_kernel'. Its expansive interpretation of free movement directly influences the operational space and legitimacy claims of the 'member_sovereignty_reading' and 'welfare_coordination_reading'."
+  },
+  "stakeholders": [
+    {
+      "name": "mobile_eu_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Benefit from the right to live and work freely across EU member states, accessing diverse labor markets and social benefits. Their mobility is a core right protected by this reading."
+    },
+    {
+      "name": "eu_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Benefit from access to a larger, more flexible labor pool across the EU, allowing them to optimize labor costs and skill matching. They lobby for expansive free movement."
+    },
+    {
+      "name": "displaced_local_labor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face increased competition for jobs and downward pressure on wages in receiving states due to an influx of mobile EU citizens. Their options are limited by local labor market conditions and lack of mobility."
+    },
+    {
+      "name": "receiving_state_welfare_systems",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the fiscal costs of providing social benefits and public services to mobile EU citizens, often without corresponding tax contributions or fiscal transfers from the EU budget. Their ability to restrict access is suppressed by ECJ rulings."
+    },
+    {
+      "name": "sending_state_tax_base",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Suffers from brain drain as skilled workers migrate to wealthier EU states, eroding the tax base and human capital needed for national development. Their ability to retain talent is limited by free movement."
+    },
+    {
+      "name": "european_commission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Acts as the guardian of the treaties, promoting and enforcing the expansive interpretation of free movement. It benefits from increased supranational authority and the deepening of EU integration."
+    },
+    {
+      "name": "ecj",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The ultimate arbiter of EU law, consistently issuing rulings that expand the scope of free movement rights and limit member state derogations. Its authority is central to this reading's persistence."
+    },
+    {
+      "name": "national_governments_member_sovereignty_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for greater national control over welfare access and labor market policies, arguing that free movement should be balanced against national sovereignty. Their policy space is actively constrained by ECJ jurisprudence."
+    }
+  ],
+  "gain_flow": "european_commission",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a unified labor market and ensures equal treatment for EU citizens across member states, reducing transaction costs for cross-border employment and residency.",
+    "transfer_function": "Transfers the right to reside and work freely (and access associated welfare benefits) to mobile EU citizens, while transferring fiscal and social costs to receiving state welfare systems and economic costs to displaced local labor and sending state tax bases.",
+    "absent_voices": "National governments advocating for greater member state sovereignty and local labor unions concerned about wage depression are structurally excluded from the ECJ's interpretive process, which prioritizes supranational integration. They would argue for a more balanced interpretation of free movement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expansive interpretation of free movement vanished, national borders would immediately become more restrictive, labor mobility would plummet, and the EU single market would fragment. Member states would reassert control over welfare access and migration, fundamentally altering the European political and economic landscape.",
+    "founding_problem": "The original problem was to overcome national barriers to trade and labor mobility, fostering economic integration and preventing discrimination against citizens of other member states.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The European Commission and ECJ attest that the founding problem of market fragmentation and discrimination remains live, requiring continuous enforcement. However, national governments and academic critics (outside the benefiting parties) argue that while the original problem is largely solved, the current expansive interpretation has created new problems of fiscal strain and social dumping, suggesting the constraint's function has drifted beyond its original mandate."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "federation_membership_kernel__member_sovereignty_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "federation_membership_kernel__welfare_coordination_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "free_movement_as_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "single_market_completion_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "ever_closer_union_principle",
+    "drift_state": {
+      "moment": "contemporary_eurozone_crises_and_migration_pressures",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__sanctity_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "dc10795f-9658-44e0-9061-f6ba378db7ea"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sanctity of Life Principle in End-of-Life Policy",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "religious_institutions",
+      "pro_life_advocacy_groups",
+      "healthcare_systems_focused_on_preservation"
+    ],
+    "victims": [
+      "terminally_ill_patients_seeking_assisted_dying",
+      "elderly_vulnerable_to_coercion",
+      "disabled_persons_at_risk_of_devaluation"
+    ]
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'sanctity of life' reading of end-of-life authority, which holds that human life has intrinsic value and prohibits intentional life-ending, regardless of individual preference. It is a contested kernel, with other readings emphasizing individual autonomy or the empirical risks of a 'slippery slope'. This reading places vulnerable populations (elderly, disabled, economically disadvantaged) into the victim set due to the risk of coercion, and imposes a categorical prohibition on assisted dying, limiting the physician's role to life preservation. The constraint is actively enforced through legal and medical frameworks.",
+    "logic_rationale": "The extractiveness (0.65) is substantial, as it denies individuals control over their own death, leading to prolonged suffering for some. Suppression (0.75) is high due to legal prohibitions and professional ethical codes that actively prevent assisted dying. Theater ratio (0.20) is low, indicating that the constraint's enforcement is largely functional in upholding its stated purpose, though some performative aspects exist in public discourse. The increasing extractiveness and suppression over time reflect the hardening of positions in response to growing advocacy for autonomy.",
+    "directionality_logic": "Religious institutions and pro-life groups are clear beneficiaries, as the constraint aligns with their moral frameworks and policy goals. Healthcare systems and physicians, while also constrained, benefit from clear ethical boundaries. Terminally ill patients seeking assisted dying are direct targets/victims, bearing the cost of denied autonomy. Vulnerable elderly and disabled persons are also victims, as the constraint, while ostensibly protecting them, can also limit their agency and choices, potentially leading to prolonged suffering or a lack of control over their end-of-life process.",
+    "perspectival_gap": "From the perspective of beneficiaries, the constraint is a necessary moral safeguard, a 'rope' that coordinates society around a fundamental value. From the perspective of patients seeking assisted dying, it is a 'snare' that traps them in suffering. The engine's classification as a 'tangled_rope' reflects this hybrid nature: it coordinates a moral stance but does so with significant extraction from those whose preferences are overridden.",
+    "kernel_context": "This constraint is the 'sanctity_reading' of the 'end_of_life_authority' kernel. It stands in contrast to the 'autonomy_reading' (which prioritizes individual choice) and the 'slippery_slope_mechanism' (which focuses on the empirical risks of liberalizing end-of-life laws). This reading asserts a categorical prohibition on intentional life-ending based on intrinsic value."
+  },
+  "omegas": [
+    {
+      "id": "sanctity_vs_autonomy_primacy",
+      "question": "Which principle (sanctity of life or individual autonomy) should take precedence in end-of-life decisions?",
+      "resolution_mechanism": "Societal consensus shift, legislative action, or judicial rulings that re-prioritize one principle over the other.",
+      "impact": "If autonomy gains primacy, the constraint would shift towards a 'rope' or 'scaffold' for those seeking assisted dying, with significantly lower extraction. If sanctity is reaffirmed, the current 'tangled_rope' classification would be reinforced.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The fundamental moral choice between two competing ethical principles."
+    },
+    {
+      "id": "vulnerability_protection_vs_autonomy_denial",
+      "question": "To what extent does the categorical prohibition on assisted dying genuinely protect vulnerable populations from coercion, versus denying autonomy to competent individuals?",
+      "resolution_mechanism": "Empirical studies on the incidence of coercion in jurisdictions with legalized assisted dying, and qualitative research on the experiences of vulnerable populations under both regimes.",
+      "impact": "If coercion is rare and manageable, the 'victim' status of vulnerable groups under this reading would be re-evaluated, potentially reducing the perceived justification for the high suppression. If coercion is widespread, it would reinforce the current structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The actual protective effect of the prohibition versus its cost in autonomy."
+    },
+    {
+      "id": "slippery_slope_empirical_evidence",
+      "question": "Does the empirical evidence from jurisdictions that have legalized assisted dying support the 'slippery slope' hypothesis (expansion beyond initial criteria)?",
+      "resolution_mechanism": "Longitudinal comparative studies of end-of-life practices and legal changes in jurisdictions with varying assisted dying laws.",
+      "impact": "Strong empirical evidence for a 'slippery slope' would strengthen the justification for the sanctity reading's categorical prohibition, potentially increasing its perceived legitimacy. Weak or absent evidence would undermine a key argument for its persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validity of the 'slippery slope' argument."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is the 'sanctity_reading' of the 'end_of_life_authority' kernel. It is structurally distinct from the 'autonomy_reading' and 'slippery_slope_mechanism' readings, which are modeled as separate constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_authority__autonomy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_authority__slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_life_has_intrinsic_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intentional_life_ending_is_categorically_wrong",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "traditional_medical_ethics_preservation",
+    "drift_state": {
+      "moment": "contemporary_autonomy_advocacy_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

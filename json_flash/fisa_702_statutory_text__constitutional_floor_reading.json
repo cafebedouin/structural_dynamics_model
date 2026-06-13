@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b8b0f761-fafd-4621-802c-07477612db07"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.1,
+    "resistance": 0.8,
+    "claimed_type": "rope",
+    "human_readable": "FISA Section 702: Constitutional Floor Reading (Warrant Requirement for US Person Queries)",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_persons",
+      "fourth_amendment_rights"
+    ],
+    "victims": [
+      "intelligence_agencies",
+      "executive_branch"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine constitutional floor, or a policy preference framed as constitutional necessity?",
+      "resolution_mechanism": "Supreme Court ruling explicitly adopting this interpretation, or a constitutional amendment.",
+      "impact": "If a genuine constitutional floor, it would be a Mountain; if a policy preference, it would be a Rope or Tangled Rope depending on enforcement and extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'constitutional_floor_reading' of the 'fisa_702_statutory_text' kernel. Sibling readings ('incidental_collection_reading', 'foreign_target_strict_reading') would treat 702 queries as less constrained by the Fourth Amendment, leading to higher extractiveness and lower suppression for intelligence agencies."
+    },
+    {
+      "id": "executive_branch_compliance_cost",
+      "question": "What is the actual cost (in terms of intelligence collection efficiency and national security risk) of implementing a probable cause warrant requirement for US person queries of 702 data?",
+      "resolution_mechanism": "Declassified intelligence community impact assessments, or independent expert analysis of operational changes in jurisdictions with similar requirements.",
+      "impact": "If costs are genuinely prohibitive, it strengthens the 'extraction' argument for the executive branch's resistance; if costs are manageable, it weakens the argument against this reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the operational impact of a warrant requirement on intelligence operations."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a specific reading of FISA Section 702, asserting that the Fourth Amendment's probable cause warrant requirement applies to any government search of U.S. person communications content, regardless of how that content was initially collected under 702 authority. This interpretation reframes 702 queries as domestic searches, triggering a constitutional floor that supersedes statutory interpretations that might permit warrantless access. The extractiveness (0.25) reflects the operational friction and speed/secrecy preferences of the executive branch, which would be 'extracted' by this constitutional requirement. Suppression (0.15) is low because this reading aims to reduce, not increase, government suppressive power over individuals.",
+    "logic_rationale": "The low extractiveness and suppression reflect the nature of a 'constitutional floor' reading: it aims to limit government power, not to create an extractive mechanism. The 'rope' classification is chosen because it coordinates the government's intelligence needs with individual constitutional rights, albeit with a cost to executive efficiency. The resistance is high (0.8) because this reading is actively contested by intelligence agencies and the executive branch, who view it as an undue burden on national security operations.",
+    "perspectival_gap": "From the perspective of US persons and civil liberties advocates, this constraint is a necessary protection (beneficiary seat). From the perspective of intelligence agencies and the executive branch, it is an impediment to effective foreign intelligence collection (victim seat). The FISA Court, as an agenda-setter, would experience it as a shift in its oversight responsibilities.",
+    "directionality_logic": "US persons are full beneficiaries (d=0.0) as their Fourth Amendment rights are protected. Intelligence agencies and the executive branch are targets (d=1.0) as their operational flexibility is curtailed. Civil liberties advocates are also beneficiaries, while the FISA Court's role shifts to a more robust oversight function, making it a moderate beneficiary of this reading's clarity.",
+    "mandatrophy_analysis": "This reading prevents mandatrophy by ensuring that the original constitutional mandate (Fourth Amendment protections) remains 'live' and applicable even as surveillance technology and statutory frameworks evolve. It directly addresses the risk of the 702 statute's foreign intelligence mandate being used as cover for domestic surveillance without adequate constitutional safeguards.",
+    "kernel_context": "This constraint is the 'constitutional_floor_reading' of the 'fisa_702_statutory_text' kernel. It asserts that the Fourth Amendment requires a probable cause warrant for any government search of U.S. person communications content, independent of the foreign/domestic distinction. Sibling readings, such as the 'incidental_collection_reading' and 'foreign_target_strict_reading', offer alternative interpretations that would permit broader warrantless access to U.S. person data under FISA 702."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__foreign_target_strict_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the FISA Section 702 statutory text kernel, each representing a distinct interpretation of its constitutional and statutory limits. This reading emphasizes Fourth Amendment protections for US persons."
+  },
+  "directionality_overrides": [],
+  "six_questions": {
+    "coordination_function": "Coordinates the government's legitimate foreign intelligence needs with the constitutional rights of U.S. persons by requiring judicial review (warrants) for queries of U.S. person data, ensuring both national security and civil liberties are considered.",
+    "transfer_function": "Transfers a degree of operational flexibility and speed from intelligence agencies to U.S. persons, who gain enhanced privacy and Fourth Amendment protections. It also transfers oversight authority to the FISA Court for individualized probable cause review.",
+    "absent_voices": "The voices of U.S. persons whose communications are incidentally collected and queried without warrants are often absent from the initial authorization process. This reading aims to give those voices a constitutional mechanism for protection.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constitutional floor disappeared, intelligence agencies would likely revert to broader warrantless access to U.S. person data under 702, leading to a significant erosion of Fourth Amendment protections and a reorganization of surveillance practices.",
+    "founding_problem": "The original problem was balancing national security needs with individual privacy rights in the context of foreign intelligence surveillance, particularly concerning the incidental collection of U.S. person data.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Civil liberties organizations, constitutional scholars, and dissenting judges consistently attest that the founding problem of balancing surveillance with rights remains live and unresolved under current statutory interpretations. Their analysis, independent of intelligence agencies, corroborates the ongoing nature of this tension."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fisa_702_statutory_text__incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fourth_amendment_applies_to_us_person_searches",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "warrant_required_for_content_searches",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "fourth_amendment_warrant_framework",
+    "drift_state": {
+      "moment": "contemporary_fisa_702_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "copyright_constitutional_mandate__judicial_ambiguity_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Judicial Deference to Copyright Term Length (Judicial Ambiguity Reading)",
+    "topic_domain": "intellectual_property_law/constitutional_law/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "congressional_authority",
+      "judiciary"
+    ],
+    "victims": [
+      "constitutional_fixity_as_constraint"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "legislative_discretion_scope",
+      "question": "What are the actual limits of 'legislative discretion' in copyright term length, beyond which judicial deference would cease?",
+      "resolution_mechanism": "A Supreme Court ruling explicitly defining the outer bounds of 'limited times' or striking down a term extension as unconstitutional.",
+      "impact": "If limits are found to be narrow, the constraint shifts towards a Mountain for Congress; if broad, it reinforces the current Rope classification, enabling further extensions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity of 'limited times' in the Copyright Clause and the scope of judicial deference."
+    },
+    {
+      "id": "natural_law_vs_construct",
+      "question": "Is the 'rational basis' for copyright term extensions a genuine legislative finding, or a post-hoc justification for rent-seeking by copyright holders?",
+      "resolution_mechanism": "Empirical studies on the incentive effects of term extensions, or judicial review that applies a higher standard of scrutiny to legislative findings.",
+      "impact": "If found to be post-hoc justification, the constraint's extractiveness is higher than currently measured, and its classification shifts towards Tangled Rope or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legislative discretion is genuinely about public good or disguised private benefit."
+    },
+    {
+      "id": "kernel_reading_difference",
+      "question": "This constraint is the 'judicial_ambiguity_reading' of the 'copyright_constitutional_mandate' kernel. How would the classification change under the 'public_scaffold_reading' or 'corporate_enclosure_reading'?",
+      "resolution_mechanism": "Adoption of a different interpretive framework by the judiciary or legislative branch.",
+      "impact": "The 'public_scaffold_reading' would likely classify as a Scaffold, emphasizing the temporary nature and public benefit. The 'corporate_enclosure_reading' would likely classify as a Snare, emphasizing maximal extraction and property rights.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative kernel readings on constraint classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the judicial interpretation of the Copyright Clause ('To promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries') as granting Congress broad discretion over copyright term length. Courts, particularly the Supreme Court, have consistently applied a rational basis review, deferring to Congress's judgment on what constitutes 'limited Times' and 'to promote the Progress'. This reading treats the constitutional language as ambiguous, allowing legislative action to define the practical scope of copyright, even if it leads to successive extensions.",
+    "key_agents": [
+      "congressional_authority: Primary beneficiary (institutional/arbitrage) — exercises broad discretion.",
+      "judiciary: Secondary beneficiary (institutional/analytical) — maintains institutional role by deferring.",
+      "copyright_holders: Indirect beneficiaries (organized/mobile) — benefit from extended terms enabled by deference.",
+      "public_domain_advocates: Payer (organized/constrained) — bear the cost of reduced public domain access.",
+      "constitutional_scholars: Observer (analytical/analytical) — analyze the legal and historical implications of deference."
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because it provides a framework for legislative action (coordination) while allowing for some extraction (extended terms benefit copyright holders). Extractiveness is moderate (0.35) because while terms are extended, the 'limited times' clause still theoretically exists as a boundary. Suppression is moderate (0.6) as judicial deference actively suppresses challenges to term extensions, making it difficult for opponents to prevail. Theater ratio is low (0.1) as the judicial review process is genuinely functional in upholding the legislative framework, even if the outcome consistently favors extension. The increasing extractiveness and suppression over time reflect the historical trend of copyright term extensions and the judiciary's consistent deference.",
+    "perspectival_gap": "Congressional authority and the judiciary experience this as a functional, legitimate exercise of power and a stable interpretive framework, respectively. Public domain advocates, however, experience it as a mechanism that enables the gradual enclosure of the public domain, with their arguments consistently suppressed by judicial deference. The engine's per-seat classification should reflect this divergence.",
+    "directionality_logic": "Congressional authority is a primary beneficiary (d=0.0) as it gains maximal flexibility. The judiciary is also a beneficiary (d=0.1) as deference simplifies its role and avoids constitutional crises. Copyright holders are indirect beneficiaries (d=0.2) as they profit from the extended terms. Constitutional fixity as a constraint is a victim (d=1.0) as its power to limit legislative action is eroded. Public domain advocates are payers (d=0.8) as they bear the cost of reduced access and their arguments are consistently rejected.",
+    "mandatrophy_analysis": "This constraint prevents mislabeling legislative discretion as pure extraction by acknowledging the genuine coordination function of providing a stable legal framework for copyright. However, the increasing extractiveness over time suggests a drift towards a Tangled Rope, where the coordination function increasingly serves as cover for rent-seeking, enabled by judicial deference. The 'founding_problem_status' being 'contested' further highlights this tension.",
+    "kernel_context": "This constraint is the 'judicial_ambiguity_reading' of the 'copyright_constitutional_mandate' kernel. This reading interprets the constitutional language as granting broad legislative discretion, with courts deferring to Congress. Sibling readings include the 'public_scaffold_reading', which emphasizes copyright's role in enriching the public domain, and the 'corporate_enclosure_reading', which views copyright as a maximal property right."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_constitutional_mandate__public_scaffold_reading",
+      "copyright_constitutional_mandate__corporate_enclosure_reading",
+      "copyright_term_extension_acts"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'copyright_constitutional_mandate' kernel, focusing on judicial deference. The other readings emphasize public benefit or corporate property rights."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "copyright_constitutional_mandate__public_scaffold_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "copyright_constitutional_mandate__corporate_enclosure_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "limited_times_is_legislative_discretion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "rational_basis_review_applies_to_copyright",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "judicial_deference_to_congress",
+    "drift_state": {
+      "moment": "contemporary_legal_discourse",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

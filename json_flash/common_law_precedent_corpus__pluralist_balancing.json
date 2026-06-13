@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "common_law_precedent_corpus__pluralist_balancing",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "7c9acfd2-d537-4c61-9023-844343a41077"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Common Law Precedent (Pluralist Balancing Reading)",
+    "topic_domain": "legal/jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "appellate_judges",
+      "legal_scholars"
+    ],
+    "victims": [
+      "litigants",
+      "lower_court_judges"
+    ]
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine instantiation of pluralist balancing, or is it a rhetorical cover for a de facto strict stare decisis or evolutionary framework?",
+      "resolution_mechanism": "Empirical analysis of judicial opinions over time, coding for explicit balancing tests versus strict application or overt reinterpretation. Compare stated methodology with actual outcomes.",
+      "impact": "If it's a cover for strict stare decisis, the effective extractiveness for litigants is higher due to less flexibility. If it's a cover for an evolutionary framework, the extractiveness for lower courts is lower due to more interpretive leeway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the actual application of pluralist balancing versus other readings of precedent."
+    },
+    {
+      "id": "domain_specificity_ambiguity",
+      "question": "How consistently is the 'domain and context' variability applied, and is it predictable for litigants?",
+      "resolution_mechanism": "Quantitative legal studies analyzing variance in precedent application across different legal domains and judicial panels, measuring predictability for legal practitioners.",
+      "impact": "If application is inconsistent and unpredictable, the constraint's effective suppression and extractiveness for litigants are higher due to increased uncertainty and litigation costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the actual variability of precedent weight across domains."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the common law system's treatment of precedent through the lens of 'pluralist balancing,' where the weight of prior judicial decisions varies significantly based on the specific legal domain, factual context, and policy considerations. It aims to balance legal stability with the need for adaptation, but this flexibility introduces complexity and unpredictability for some actors. This is one reading of the 'common_law_precedent_corpus' kernel, distinct from 'strict_stare_decisis' and 'evolutionary_framework' readings.",
+    "key_agents": [
+      "appellate_judges: Agenda setter (institutional/arbitrage) — interpret and apply precedent with discretion.",
+      "legal_scholars: Beneficiary (analytical/analytical) — benefit from the interpretive complexity and debate.",
+      "litigants: Payer (powerless/constrained) — bear the costs of unpredictable outcomes and higher legal fees.",
+      "lower_court_judges: Payer (organized/constrained) — must navigate complex and sometimes conflicting precedents with limited interpretive authority.",
+      "legal_practitioners: Payer (moderate/constrained) — advise clients under conditions of interpretive uncertainty."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates the legal system by providing a framework for judicial decision-making (beneficiaries: appellate judges, legal scholars) but also involves significant asymmetric extraction (victims: litigants, lower court judges) due to the unpredictability and high costs associated with navigating its flexible application. Active enforcement is required to maintain the hierarchy of courts and the authority of appellate decisions. Extractiveness is moderate (0.6) due to the costs of litigation and uncertainty. Suppression is high (0.7) because litigants have limited options to avoid the system, and lower courts are bound by higher court interpretations. Theater ratio is low (0.2) as the balancing act is a genuine, albeit complex, judicial function, not mere performance.",
+    "perspectival_gap": "Appellate judges experience this as a flexible tool for justice, allowing adaptation to new circumstances, while litigants and lower court judges experience it as a source of uncertainty and increased burden. Appellate judges benefit from the intellectual challenge and interpretive authority, while litigants pay for the complexity. Legal scholars benefit from the rich interpretive material it provides.",
+    "directionality_logic": "Appellate judges are beneficiaries (d=0.1) as they wield significant interpretive power and discretion. Legal scholars are also beneficiaries (d=0.2) as the complexity fuels their research and commentary. Litigants are targets (d=0.9) due to the high costs and unpredictable outcomes. Lower court judges (d=0.8) are targets because they must apply complex and sometimes ambiguous precedent without the same interpretive freedom. Legal practitioners (d=0.7) are also targets as they must advise clients under conditions of interpretive uncertainty.",
+    "mandatrophy_analysis": "The pluralist balancing reading prevents mislabeling the system as a pure Snare by acknowledging the genuine coordination function of providing a framework for legal stability and adaptation. However, it also prevents mislabeling it as a pure Rope by highlighting the significant extraction and suppression inherent in its unpredictable application and the costs borne by those subject to it. The 'contested' status of the founding problem reflects the ongoing debate about whether the system's flexibility serves justice or merely judicial discretion.",
+    "kernel_context": "This constraint is the 'pluralist_balancing' reading of the 'common_law_precedent_corpus' kernel. This reading emphasizes that precedent's weight is not absolute but varies by legal domain and context, requiring judges to balance stability with adaptation on a case-by-case basis. Sibling readings include 'strict_stare_decisis' (precedent binds rigidly) and 'evolutionary_framework' (precedent adapts to contemporary norms)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "common_law_precedent_corpus__strict_stare_decisis",
+      "common_law_precedent_corpus__evolutionary_framework"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'common_law_precedent_corpus' kernel. Each reading represents a distinct structural claim about how precedent operates, with different extractiveness and stakeholder dynamics. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "common_law_precedent_corpus__strict_stare_decisis",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "common_law_precedent_corpus__evolutionary_framework",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "precedent_weight_context_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "stability_adaptation_balance_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_realist_jurisprudence",
+    "drift_state": {
+      "moment": "contemporary_judicial_practice",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

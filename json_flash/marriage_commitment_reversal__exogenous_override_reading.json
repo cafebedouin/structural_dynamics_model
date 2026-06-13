@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "marriage_commitment_reversal__exogenous_override_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "41da0010-a1c7-4060-8d55-b7577bf0e04d"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "LDS Marriage Commitment Reversal (Exogenous Override Reading)",
+    "topic_domain": "religious_institutional_history/commitment_systems/political_theology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_government",
+      "us_public_opinion"
+    ],
+    "victims": [
+      "lds_church_sovereignty",
+      "polygamous_families"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint primarily an exogenous override, an endogenous reinterpretation, or a persistent doctrine-practice gap?",
+      "resolution_mechanism": "Analysis of primary source documents (e.g., Woodruff Manifesto, official church statements, federal court records) for explicit causal claims and internal doctrinal shifts vs. external pressures. This reading emphasizes federal coercion as the primary driver.",
+      "impact": "If primarily exogenous, the constraint is a Snare imposed by external power. If endogenous, it's a Rope or Tangled Rope of internal coordination. If a gap, it's a Piton of inertial doctrine.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'exogenous_override_reading' of the 'marriage_commitment_reversal' kernel. Sibling readings include 'endogenous_reinterpretation_reading' and 'practice_doctrine_gap'."
+    },
+    {
+      "id": "doctrinal_revision_ambiguity",
+      "question": "To what extent did the suspension of polygamous practice constitute an internal doctrinal revision versus a temporary compliance under duress?",
+      "resolution_mechanism": "Examination of subsequent doctrinal developments and official interpretations within the LDS Church regarding Section 132 of the Doctrine and Covenants. If Section 132 is still affirmed as principle, it supports the duress reading.",
+      "impact": "If no genuine doctrinal revision occurred, the 'exogenous_override_reading' is strengthened, highlighting the coercive nature of the constraint. If revision is evident, it leans towards the 'endogenous_reinterpretation_reading'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the permanence of doctrinal change versus temporary compliance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1862,
+    "end": 1890
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the reversal of the LDS Church's practice of plural marriage, specifically through the lens of external coercion by the United States federal government. It posits that the change was not primarily driven by internal doctrinal reinterpretation but by overwhelming federal legislative and judicial pressure, including the threat of disincorporation and seizure of church assets. Section 132 of the Doctrine and Covenants, which outlines the principle of plural marriage, is understood to have remained doctrinally intact, with practice suspended due to external force.",
+    "key_agents": [
+      "federal_government: Primary agenda_setter (institutional/civilizational) — imposed the constraint",
+      "lds_church_sovereignty: Primary victim (institutional/generational) — bore the extraction of autonomy",
+      "polygamous_families: Direct victims (powerless/biographical) — forced to abandon practice",
+      "us_public_opinion: Beneficiary (organized/generational) — saw its moral norms enforced",
+      "lds_leadership: Payer/agenda_setter (institutional/generational) — navigated compliance under duress",
+      "historical_scholars: Observer (analytical/civilizational) — analyze the causal drivers"
+    ],
+    "logic_rationale": "The extractiveness (0.85) is high because the federal government successfully compelled a sovereign religious institution to abandon a core practice, effectively extracting institutional autonomy. Suppression (0.90) is severe, reflecting the comprehensive legal and military power brought to bear, leaving no viable exit for the Church or its members to continue the practice publicly. The theater ratio (0.40) indicates that while some internal justification for the change was presented, a significant portion of the public messaging and compliance was performative, masking the underlying coercion. Accessibility collapse (0.75) is high as legal and social alternatives for continuing the practice were systematically eliminated. Resistance (0.80) was initially high, leading to federal escalation, but eventually yielded to overwhelming force.",
+    "perspectival_gap": "The federal government's perspective would frame this as enforcing federal law and moral norms, a legitimate exercise of national sovereignty. The LDS Church, from this reading, experienced it as an existential threat and an infringement on religious freedom, a coercive act. The engine's classification will reflect this divergence, with the federal government as a beneficiary of a Snare, and the Church as a victim.",
+    "directionality_logic": "The federal government is a full beneficiary (d=0.0) as it successfully imposed its will and expanded its territorial control over the LDS Church's institutional autonomy. The LDS Church's sovereignty is a full target (d=1.0) as it was compelled to abandon a core practice under duress. Polygamous families are also targets (d=1.0) as they faced direct legal and social consequences. US public opinion is a beneficiary (d=0.0) as its moral norms were enforced. LDS leadership, while acting as agenda-setters in implementing the change, were also payers (d=0.7) due to the immense pressure they faced.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the constraint as an internal 'Rope' of religious evolution or a 'Mountain' of inevitable social change. By emphasizing exogenous coercion, it correctly identifies the active, extractive force at play, rather than attributing the outcome to internal dynamics or natural progression. The persistence of Section 132 as doctrine, despite the suspension of practice, is key to this distinction, indicating that the mandate for plural marriage was not internally revoked but externally suppressed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_commitment_reversal' kernel, focusing on external coercion. Other readings include 'endogenous_reinterpretation_reading' and 'practice_doctrine_gap', which offer alternative causal accounts for the same historical event."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "marriage_commitment_reversal__endogenous_reinterpretation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "marriage_commitment_reversal__practice_doctrine_gap",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "federal_sovereignty_over_territorial_religious_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "religious_freedom_subordinate_to_public_morality",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "federal_supremacy_over_territorial_morality",
+    "drift_state": {
+      "moment": "contemporary_religious_freedom_jurisprudence",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

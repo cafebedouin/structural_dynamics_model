@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "kodashim_obligation__study_as_preparation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e0d8d90a-77f8-4984-9022-1cb71d90fc40",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Kodashim Obligation: Study as Preparation for Messianic Restoration",
+    "topic_domain": "religious_studies/jewish_law/textual_preservation",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "messianic_future_generation"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_obligation",
+      "question": "Is the obligation to study Kodashim a genuine natural law (divinely ordained, immutable) or a constructed obligation that benefits identifiable agents (the future messianic generation)?",
+      "resolution_mechanism": "Theological consensus on the nature of divine commandment and the role of human agency in its perpetuation.",
+      "impact": "If purely natural law, its classification as Mountain is robust. If significantly constructed, the beneficiary structure (messianic_future_generation) would push it towards a False Summit Mountain (Tangled Rope) classification, highlighting the deferred extraction from the present generation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between divine command and human-maintained obligation."
+    },
+    {
+      "id": "kernel_reading_distinction",
+      "question": "This constraint is the 'study_as_preparation' reading of the 'kodashim_obligation' kernel. How would the classification change under sibling readings?",
+      "resolution_mechanism": "Analyzing the 'study_as_performance' and 'study_as_archive' readings as separate constraints, each with its own metrics and stakeholder analysis.",
+      "impact": "The 'study_as_performance' reading would likely show higher extractiveness (present generation bears full cosmic burden) and potentially a different claimed type (e.g., Tangled Rope). The 'study_as_archive' reading would likely show lower extractiveness and be closer to a Rope or Mountain, with different beneficiaries (e.g., historical scholars).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the Kodashim obligation kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the obligation within Jewish law to study the Kodashim (sacrificial) order, despite the destruction of the Temple rendering actual performance impossible. This specific reading frames study not as a substitute for sacrifice, but as an instrumental preparation for its eventual messianic restoration. The constraint is understood as divinely ordained, immutable, and essential for the continuity of the covenant, with the primary beneficiary being a future, restored state of cosmic order and the generations who will live within it.",
+    "logic_rationale": "The extractiveness is low (0.25) because the 'cost' of study is primarily intellectual and spiritual effort, not material or coercive extraction. Suppression is low (0.1) as the obligation is largely internalized and self-enforced within the religious community, not through external coercion. Theater ratio is very low (0.05) because the study is considered genuinely functional for its stated purpose (preservation of knowledge for future performance), not merely performative. Accessibility collapse is high (0.9) as the divine origin and messianic imperative leave little room for alternative interpretations of the obligation's necessity. Resistance is low (0.05) due to the deeply ingrained theological acceptance of the obligation.",
+    "directionality_logic": "The 'messianic_future_generation' is the primary beneficiary (d=0.0), as they will directly benefit from the preserved knowledge enabling the restoration of sacrificial service. The 'current_generation_of_scholars' are both payers (bear the cost of study) and indirect beneficiaries (spiritual merit, communal role), placing their d closer to symmetric. The 'divine_authority' is the ultimate source and enforcer, but not a beneficiary in the extractive sense.",
+    "perspectival_gap": "From the perspective of the 'current_generation_of_scholars', the constraint is a demanding but spiritually rewarding obligation. From the perspective of the 'messianic_future_generation', it is a foundational act of preservation that ensures their ability to fulfill the commandments. The divine perspective (as understood by adherents) sees it as an eternal, unchanging command.",
+    "kernel_context": "This constraint is the 'study_as_preparation' reading of the 'kodashim_obligation' kernel. This reading emphasizes the instrumental value of study for a future, restored Temple service. It contrasts with the 'study_as_performance' reading, which views study as a present enactment of the sacrificial rite, and the 'study_as_archive' reading, which treats Kodashim as historical documentation without active obligation."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "kodashim_obligation__study_as_performance",
+      "kodashim_obligation__study_as_archive"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'kodashim_obligation' kernel, each representing a distinct structural claim about the nature and purpose of studying sacrificial law in the absence of the Temple."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "kodashim_obligation__study_as_performance",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "kodashim_obligation__study_as_archive",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_is_instrumental_preparation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "messianic_restoration_is_future_event",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "divine_command_and_future_restoration",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

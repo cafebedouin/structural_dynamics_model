@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2dffdb8a-b5f4-414a-878c-830298978048"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Bitcoin as Peer-to-Peer Electronic Cash",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "users_seeking_censorship_resistance",
+      "merchants_accepting_bitcoin"
+    ],
+    "victims": [
+      "users_denied_transactional_access_by_fees"
+    ],
+    "vindicated_propositions": [
+      "decentralized_transaction_processing",
+      "permissionless_innovation"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "p2p_cash_vs_digital_gold_framing",
+      "question": "Is Bitcoin primarily a medium of exchange (p2p_cash_reading) or a store of value (digital_gold_reading)?",
+      "resolution_mechanism": "Long-term trends in transaction volume vs. holding periods, and the average transaction fee relative to typical transaction value. If fees consistently price out small transactions, the digital_gold_reading gains empirical support.",
+      "impact": "If the digital_gold_reading prevails, the constraint's extractiveness for everyday users increases, and its classification shifts towards a Snare for those seeking transactional utility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Contested primary function of Bitcoin."
+    },
+    {
+      "id": "block_size_scalability_debate",
+      "question": "Is block size expansion a legitimate mechanism to maintain low transaction fees and transactional utility (p2p_cash_reading), or does it compromise decentralization and security (protocol_ossification_reading)?",
+      "resolution_mechanism": "Empirical data on network decentralization (node count, geographic distribution) and security (attack vectors, cost of attack) following block size increases, balanced against transaction fee trends.",
+      "impact": "If block size expansion is deemed illegitimate, the p2p_cash_reading's core tenet is undermined, leading to higher fees and a shift towards the digital_gold_reading's implications.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Debate over Bitcoin's scalability path and its impact on core properties."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'p2p_cash_reading' of the 'bitcoin_whitepaper' kernel. What would change if a sibling reading were adopted?",
+      "resolution_mechanism": "Analysis of community consensus shifts, developer roadmap changes, and market behavior. If the 'digital_gold_reading' gains dominance, the focus on low fees and transactional access would diminish. If 'protocol_ossification_reading' dominates, any attempts at block size expansion would be rejected.",
+      "impact": "Adoption of 'digital_gold_reading' would increase effective extraction for transactional users. Adoption of 'protocol_ossification_reading' would make the network less adaptable to scaling needs, potentially increasing fees and limiting transactional utility.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the Bitcoin whitepaper kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint models Bitcoin as a censorship-resistant medium of exchange, emphasizing low transaction fees and direct electronic transactions, consistent with the original whitepaper's vision. This 'p2p_cash_reading' prioritizes transactional utility and scalability (e.g., via block size increases) to ensure broad access. It stands in contrast to other interpretations that emphasize Bitcoin as a store of value ('digital_gold_reading') or prioritize protocol immutability over scalability ('protocol_ossification_reading'). The constraint's effectiveness is measured by its ability to facilitate low-cost, permissionless transactions.",
+    "logic_rationale": "The extractiveness (0.4) reflects the transaction fees, which, while variable, can become significant enough to exclude small transactions, creating a cost for users. Suppression (0.2) is low, as the system is permissionless, but the economic cost of fees can act as a soft suppression mechanism. Theater ratio (0.1) is low, as the core function of transaction processing is real, though debates around scalability introduce some performative aspects. Accessibility collapse (0.7) is relatively high because once Bitcoin is adopted, alternatives for censorship-resistant digital cash are limited. Resistance (0.3) comes from those advocating for alternative scaling solutions or different monetary policies.",
+    "directionality_logic": "Users seeking censorship resistance and merchants accepting Bitcoin are beneficiaries (d near 0.0) as they gain access to a unique payment rail. Users denied transactional access by high fees are victims (d near 1.0). Miners, while enabling the network, are compensated by fees and block rewards, making their position complex but generally aligned with the network's operation. Core developers and protocol maintainers are agenda-setters, influencing the direction of the protocol.",
+    "perspectival_gap": "From the perspective of users prioritizing transactional utility, the constraint is a valuable tool, but rising fees can make it feel extractive. From the perspective of those advocating for a store-of-value narrative, transaction fees are a necessary cost for security and scarcity, and thus less extractive. The engine's classification will highlight this divergence based on the declared beneficiaries and victims.",
+    "kernel_context": "This constraint instantiates the 'p2p_cash_reading' of the 'bitcoin_whitepaper' kernel. This reading emphasizes Bitcoin's role as a medium of exchange with low transaction fees and broad transactional access. Sibling readings include the 'digital_gold_reading' (Bitcoin as a store of value) and the 'protocol_ossification_reading' (Bitcoin's primary virtue is protocol stability and immutability)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'bitcoin_whitepaper' kernel, each with different structural properties and implications. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "users_seeking_censorship_resistance",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Utilize Bitcoin for transactions that might be censored or blocked by traditional financial systems. They benefit from the permissionless nature but are sensitive to transaction fees and network congestion."
+    },
+    {
+      "name": "merchants_accepting_bitcoin",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Accept Bitcoin as payment, benefiting from lower processing fees compared to traditional credit cards and access to a global customer base. Their benefit is contingent on Bitcoin's transactional utility."
+    },
+    {
+      "name": "users_denied_transactional_access_by_fees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are priced out of using Bitcoin for small, everyday transactions due to high and volatile transaction fees. They bear the cost of the network's limited capacity and prioritization of higher-value transactions."
+    },
+    {
+      "name": "bitcoin_miners",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Process transactions and secure the network, earning fees and block rewards. They have significant influence over network capacity and transaction prioritization, acting as de facto enforcers of the fee market."
+    },
+    {
+      "name": "core_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain and propose changes to the Bitcoin protocol. Their decisions on scalability and protocol design directly impact transaction fees and the network's capacity as a medium of exchange."
+    },
+    {
+      "name": "traditional_financial_institutions",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are largely excluded from directly controlling or censoring Bitcoin transactions, which is a core feature of its censorship resistance. They would prefer a more centralized or regulated system."
+    }
+  ],
+  "gain_flow": "bitcoin_miners",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a decentralized, permissionless, and censorship-resistant network for direct electronic transactions, coordinating value transfer without intermediaries.",
+    "transfer_function": "Transfers digital value (Bitcoin) from sender to receiver, with a portion of the value (transaction fees) transferred to network miners for processing and security.",
+    "absent_voices": "Users and developers advocating for alternative scaling solutions (e.g., larger block sizes) are often marginalized in protocol governance debates, leading to a network that may not fully serve the 'p2p cash' vision for all users.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Bitcoin as a censorship-resistant medium of exchange vanished, a significant portion of the global digital economy would lose a critical tool for permissionless transactions, forcing a return to centralized or less secure alternatives, and impacting users and merchants who rely on its unique properties.",
+    "founding_problem": "The problem of 'trusted third parties' in electronic payments, where financial institutions mediate all transactions, leading to censorship, fraud, and privacy concerns.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem of trusted third parties remains live, as evidenced by ongoing financial censorship, privacy breaches, and the desire for permissionless innovation. Independent privacy advocates and civil liberties organizations corroborate the continued relevance of censorship resistance, while traditional financial institutions dispute the necessity of a decentralized alternative."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper__digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper__protocol_ossification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "low_transaction_fees_essential",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "scalability_via_block_size_expansion_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "original_whitepaper_vision",
+    "drift_state": {
+      "moment": "contemporary_network_state",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

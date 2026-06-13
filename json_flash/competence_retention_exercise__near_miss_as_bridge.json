@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "51786b51-5dd9-44b0-a28a-8da26d1000bb"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Near-Miss as Bridge for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_engineers",
+      "training_departments",
+      "frontline_operators"
+    ],
+    "victims": []
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the practice within high-reliability organizations of using near-miss incidents and minor failures as crucial feedback for validating and updating simulator training. It posits that these real-world events provide sufficient data for continuous competence retention without the necessity of full-scale catastrophes. This is one reading of the 'competence_retention_exercise' kernel, emphasizing a hybrid learning system.",
+    "key_agents": [
+      "safety_engineers: Agenda-setter (institutional/constrained) — implement and manage near-miss systems.",
+      "training_departments: Beneficiary (organized/mobile) — refine training with near-miss data.",
+      "frontline_operators: Beneficiary (moderate/constrained) — provide data and benefit from improved training.",
+      "organizational_leadership: Payer (institutional/constrained) — funds the system, benefits from safety.",
+      "catastrophe_as_necessary_advocates: Excluded (organized/constrained) — argue for catastrophe as the only true learning.",
+      "simulation_as_sufficient_advocates: Excluded (organized/constrained) — argue for simulation alone."
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely coordinates a continuous learning process, benefiting multiple parties (safety engineers, training departments, operators) by improving safety and competence. Extractiveness is low (0.3) as the primary goal is collective benefit, not rent-seeking. Suppression is also low (0.2) as participation in near-miss reporting is largely voluntary and incentivized by shared safety goals, though some organizational pressure exists. Theater ratio is low (0.1) as the activities are genuinely functional. The metrics show a slight increase over time, reflecting the growing institutionalization and resource allocation to these systems, which can introduce minor overheads.",
+    "perspectival_gap": "While most stakeholders agree on the value of this approach, 'catastrophe_as_necessary_advocates' would view the extractiveness as too low, arguing that the true costs of learning are externalized by avoiding catastrophes. 'Simulation_as_sufficient_advocates' might see the suppression as too high, arguing that the real-world data collection adds unnecessary friction compared to pure simulation. This reading balances these extremes.",
+    "directionality_logic": "Safety engineers and training departments are clear beneficiaries, as the system provides them with data and justification for their roles. Frontline operators benefit directly from improved safety. Organizational leadership bears the financial cost but gains in safety and reputation, making them net beneficiaries. The 'excluded' groups are targets of the constraint's framing, as their alternative views are not integrated into this specific operational model.",
+    "mandatrophy_analysis": "This constraint actively prevents mandatrophy by ensuring that the learning mandate remains 'live' through continuous feedback from near-misses. It avoids the pitfall of 'catastrophe as necessary' where the mandate only activates after severe failure, and 'simulation as sufficient' where the mandate might drift from real-world relevance. The continuous integration of real-world data keeps the mandate aligned with current operational realities."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'near_miss_as_bridge' reading of the 'competence_retention_exercise' kernel, or does it lean towards 'simulation_as_sufficient' or 'catastrophe_as_necessary'?",
+      "resolution_mechanism": "Analysis of resource allocation: if resources for near-miss investigation decline while simulation investment rises, it leans towards 'simulation_as_sufficient'. If near-miss reporting is suppressed, it leans towards 'catastrophe_as_necessary'.",
+      "impact": "If it leans towards 'simulation_as_sufficient', the constraint's reliance on real-world feedback is overstated. If it leans towards 'catastrophe_as_necessary', the proactive learning aspect is undermined.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing this reading from its siblings within the kernel."
+    },
+    {
+      "id": "near_miss_reporting_culture",
+      "question": "Is the near-miss reporting culture genuinely open and non-punitive, or is there implicit suppression of reporting that biases the feedback loop?",
+      "resolution_mechanism": "Anonymous surveys of frontline operators and analysis of reporting rates vs. incident rates: a low reporting rate relative to minor incidents suggests suppression.",
+      "impact": "If reporting is suppressed, the 'sufficiency' of near-miss data is compromised, and the constraint's effectiveness as a learning mechanism is reduced, potentially pushing it towards a more theatrical or less functional state.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the integrity of the near-miss feedback loop."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__catastrophe_as_necessary"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'competence_retention_exercise' kernel. This reading, 'near_miss_as_bridge', emphasizes a hybrid approach to competence maintenance, distinct from 'simulation_as_sufficient' (pure simulation) and 'catastrophe_as_necessary' (catastrophe-driven learning)."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__simulation_as_sufficient",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proactive_learning_is_superior",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "real_world_feedback_is_essential",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "continuous_adaptive_learning",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

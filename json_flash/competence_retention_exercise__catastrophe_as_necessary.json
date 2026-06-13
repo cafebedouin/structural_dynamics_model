@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__catastrophe_as_necessary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "5374841e-63e2-4a2e-b30b-5fdc1e182f75"
+  },
+  "base_properties": {
+    "extractiveness": 0.8,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Catastrophe as Necessary for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "catastrophe_as_necessary_proponents",
+      "incumbent_safety_bureaucracy"
+    ],
+    "victims": [
+      "frontline_operators",
+      "organizational_culture",
+      "public_safety"
+    ]
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the belief that only actual catastrophic events provide the organizational learning and visceral stakes required to maintain genuine competence, with simulation being merely rehearsal. It's a reading of the 'competence_retention_exercise' kernel, emphasizing the necessity of high-stakes, real-world failure for true learning. The constraint operates as a snare because it extracts the cost of learning through actual harm, while suppressing alternative, less destructive learning pathways.",
+    "logic_rationale": "The extractiveness is high (0.8) because the cost of 'learning' is paid in human lives and material damage, a direct transfer from frontline operators and public safety to the 'knowledge' gained. Suppression (0.7) is also high, as it actively dismisses and devalues alternative learning methods like high-fidelity simulation or near-miss analysis, trapping organizations in a reactive learning cycle. The theater ratio is low (0.1) because the belief is genuinely held by its proponents, not merely performative; the 'learning' is real, but its cost is immense.",
+    "perspectival_gap": "Proponents of 'catastrophe as necessary' (agenda-setter) experience this as a fundamental truth about organizational learning, a 'mountain' of human psychology and institutional inertia. Frontline operators and public safety (victims) experience it as a 'snare,' where their well-being is sacrificed for lessons that could be learned more safely. The engine's classification as a snare reflects the structural reality of extraction and suppression, regardless of the proponents' internal framing.",
+    "directionality_logic": "Proponents and the incumbent safety bureaucracy are beneficiaries (d near 0.0-0.1) as their frameworks and authority are reinforced by this approach. Frontline operators, organizational culture, and public safety are victims (d near 0.8-1.0) as they bear the direct and indirect costs of this learning model. Simulation developers are excluded, their alternative solutions suppressed.",
+    "mandatrophy_analysis": "This constraint is a snare because its coordination story (learning from experience) is a cover for the extraction of costs (catastrophes) and the suppression of alternatives (proactive safety). It prevents mislabeling by highlighting that while learning occurs, the mechanism is highly extractive and coercive, not a benign coordination. The 'founding problem' of ineffective low-stakes training is arguably 'live,' but the 'catastrophe as necessary' solution has become disproportionately extractive."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine reflection of the 'catastrophe as necessary' reading of the competence_retention_exercise kernel, or is it a misinterpretation?",
+      "resolution_mechanism": "Expert review by scholars of high-reliability organizations and safety engineering, comparing the story's details against the established tenets of this specific reading.",
+      "impact": "If a misinterpretation, the classification may be inaccurate, and the story would need to be revised to align with the true structural properties of the intended reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Verifies the accurate instantiation of the 'catastrophe as necessary' reading."
+    },
+    {
+      "id": "alternative_learning_efficacy",
+      "question": "To what extent do high-fidelity simulation and near-miss analysis provide equivalent or superior learning outcomes compared to actual catastrophes, without the associated costs?",
+      "resolution_mechanism": "Empirical studies comparing learning transfer, retention, and behavioral change from simulation-based training versus post-catastrophe learning cycles in similar high-risk domains.",
+      "impact": "If alternatives are proven highly effective, the 'catastrophe as necessary' constraint's suppression of these alternatives becomes indefensible, strengthening its classification as a snare and potentially leading to its repudiation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the true efficacy of alternative, less destructive learning methods."
+    },
+    {
+      "id": "competence_decay_measurement",
+      "question": "How can competence decay during incident-free periods be reliably measured and predicted, independent of catastrophic events?",
+      "resolution_mechanism": "Development and validation of leading indicators for competence decay, such as skill fade assessments, proactive drills, and micro-simulation performance metrics, that do not rely on actual failures.",
+      "impact": "The ability to measure and predict decay proactively would undermine the core premise of 'catastrophe as necessary,' shifting the organizational learning paradigm towards preventative maintenance of competence.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Measures the invisible decay of competence in the absence of real events."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__near_miss_as_bridge"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_retention_exercise' kernel. Its high extractiveness and suppression contrast with sibling readings that emphasize simulation or near-misses as sufficient for competence retention."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "reference_frame": "learning_from_hard_experience",
+    "drift_state": {
+      "moment": "contemporary_safety_science_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__simulation_as_sufficient",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__near_miss_as_bridge",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "catastrophe_as_unavoidable_learning_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_creates_false_confidence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

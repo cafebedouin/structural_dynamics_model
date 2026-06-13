@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__civic_right_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "37c6f97c-bf9a-49ba-ac70-8d9a8dc90744"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Scope: Civic Right Reading (Militia-Conditioned Individual Right)",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "militia_eligible_citizens",
+      "state_governments"
+    ],
+    "victims": [
+      "citizens_unwilling_to_serve",
+      "federal_government"
+    ],
+    "vindicated_propositions": [
+      "civic_republicanism",
+      "states_rights_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "civic_vs_pure_individual_right",
+      "question": "Is the individual right to bear arms truly conditioned on militia participation, or is the militia clause merely prefatory language to an unconditioned individual right?",
+      "resolution_mechanism": "Further Supreme Court rulings clarifying the 'well regulated Militia' clause's operative effect on individual ownership, or a constitutional amendment explicitly defining the scope.",
+      "impact": "If the right is unconditioned (individual_right_reading), the constraint's extractiveness from 'citizens_unwilling_to_serve' would decrease, and the 'state_governments' beneficiary role would diminish, shifting the classification towards a Rope or even a Mountain for the individual right.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between a civic-conditioned individual right and a pure individual right."
+    },
+    {
+      "id": "civic_vs_collective_right",
+      "question": "Does the Second Amendment protect an individual's right to arms for militia service, or only the state's right to maintain a militia (collective_right_reading)?",
+      "resolution_mechanism": "Supreme Court clarification on whether the 'right of the people' refers to individuals or the collective body of the state.",
+      "impact": "If interpreted as a purely collective right, the 'militia_eligible_citizens' would cease to be beneficiaries, and the constraint would shift towards a Mountain for state authority, with negligible individual extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between a civic-conditioned individual right and a collective state right."
+    },
+    {
+      "id": "militia_relevance_drift",
+      "question": "Given the modern military and law enforcement structures, is the concept of a 'well regulated Militia' still functionally relevant to the security of a free state, or has its original purpose atrophied?",
+      "resolution_mechanism": "Empirical analysis of the role of unorganized militias in contemporary state security, or a societal consensus shift on the necessity of such a body.",
+      "impact": "If the militia's relevance has atrophied, the 'civic_right_reading' would lose its primary justification, potentially leading to a re-evaluation of the constraint's purpose and a shift towards a Piton or a Snare if the conditioning remains but the service is meaningless.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional relevance of the militia clause in modern context."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'civic right' reading of the Second Amendment, which interprets the right to bear arms as an individual right, but one that is conditioned on or closely tied to participation in a well-regulated militia. This reading emphasizes the civic duty aspect of arms ownership, allowing for state regulation to ensure that arms are used for collective defense rather than purely private purposes. It stands in contrast to both a purely individual right (unconditioned) and a purely collective right (only states can maintain militias).",
+    "key_agents": [
+      "militia_eligible_citizens: Primary beneficiary (moderate/constrained) — benefits from the right but bears the condition of service.",
+      "state_governments: Secondary beneficiary (institutional/analytical) — benefits from the ability to regulate and maintain militias.",
+      "citizens_unwilling_to_serve: Primary victim (moderate/constrained) — bears extraction by having their right conditioned on an unwanted service.",
+      "federal_government: Secondary victim (institutional/analytical) — constrained in its ability to impose broad federal gun control measures."
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate because while individuals have a right, it comes with a civic obligation that some may not desire, effectively extracting their autonomy. Suppression (0.3) is low to moderate, reflecting the state's ability to regulate arms for militia purposes, but not to outright prohibit them. Theater ratio (0.1) is low as the militia concept, while debated, is still a live legal and theoretical construct in this reading. Accessibility collapse (0.4) is moderate, as alternatives to conditioned ownership exist (e.g., not owning arms, or owning them under stricter conditions), but the core right is still present. Resistance (0.5) is moderate, reflecting ongoing legal and political debates over the interpretation.",
+    "perspectival_gap": "From the perspective of 'militia_eligible_citizens', the constraint is a conditional benefit, offering a right with a duty. For 'citizens_unwilling_to_serve', it's an extractive condition on a fundamental right. 'State_governments' see it as a legitimate regulatory power, while the 'federal_government' may view it as a limitation on its legislative authority. The engine will compute these divergences based on the declared roles and attributes.",
+    "directionality_logic": "'Militia_eligible_citizens' are beneficiaries (d=0.2) as they gain the right to bear arms, albeit with a condition. 'State_governments' are also beneficiaries (d=0.1) as they retain regulatory authority over militias. 'Citizens_unwilling_to_serve' are victims (d=0.8) as the condition extracts their unencumbered right. The 'federal_government' is a victim (d=0.7) as its power to regulate arms is constrained by this reading.",
+    "mandatrophy_analysis": "This reading prevents mislabeling by acknowledging both the individual right and the civic condition. If the militia condition were to become purely theatrical (high theater_ratio) while still extracting from 'citizens_unwilling_to_serve', it would signal mandatrophy, shifting towards a Piton or Snare. The current moderate extractiveness and low theater ratio suggest the mandate is still considered functional within this interpretive framework."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'second_amendment_scope' kernel, each with different structural properties and classifications. This 'civic_right_reading' emphasizes the individual right conditioned on militia participation, distinct from a purely individual or purely collective right."
+  },
+  "stakeholders": [
+    {
+      "name": "militia_eligible_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who are eligible for militia service and wish to exercise their right to bear arms under the condition of civic participation. They benefit from the right but are subject to state regulation for militia purposes."
+    },
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Entities that retain the authority to organize and regulate militias, and thus to condition the individual right to bear arms on militia service. They benefit from this regulatory power for public safety and defense."
+    },
+    {
+      "name": "citizens_unwilling_to_serve",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who desire to exercise their right to bear arms but are unwilling or unable to participate in militia service, finding the condition extractive of their autonomy. Their options are to comply, forgo the right, or challenge the condition."
+    },
+    {
+      "name": "federal_government",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The national authority whose power to enact broad federal gun control legislation is constrained by the individual right, even if conditioned on militia service. It bears the cost of limited legislative scope."
+    },
+    {
+      "name": "gun_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who advocate for expansive interpretations of the Second Amendment, often challenging the 'civic right' reading in favor of a purely individual right. They observe and influence the legal and political discourse."
+    },
+    {
+      "name": "gun_control_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who advocate for stricter gun control measures, often challenging the individual right aspect of this reading in favor of a more collective or state-centric interpretation. They observe and influence the legal and political discourse."
+    }
+  ],
+  "gain_flow": "state_governments",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the individual right to bear arms with the collective security needs of the state by linking arms ownership to a regulated militia, ensuring a trained and disciplined body for defense.",
+    "transfer_function": "Transfers the unencumbered right to bear arms from individuals to the state's regulatory authority, in exchange for the collective benefit of a 'well regulated Militia' for security.",
+    "absent_voices": "Those who believe in an absolute, unconditioned individual right to bear arms are often marginalized in discussions that emphasize the militia clause's conditioning effect. Similarly, those who believe only states should have arms are excluded from the individual right aspect.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Second Amendment vanished, the legal landscape for gun ownership would drastically shift. Either a purely individual right or a purely collective right would likely dominate, leading to significant changes in gun laws, state powers, and individual liberties, reorganizing the entire framework of arms regulation.",
+    "founding_problem": "The need to balance individual liberty to own arms with the collective security of the newly formed states, particularly against potential federal overreach or foreign invasion, by ensuring a citizen militia.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and legal scholars, independent of gun rights or gun control advocacy groups, corroborate that the founding problem involved both individual rights and collective security concerns related to militias. The debate over the balance remains live, as attested by ongoing legal challenges and legislative efforts from various non-beneficiary academic and policy institutions."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "collective_right_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_right_conditioned_by_civic_duty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "well_regulated_militia_essential_for_free_state",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_era_civic_republicanism",
+    "drift_state": {
+      "moment": "contemporary_jurisprudence",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

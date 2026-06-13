@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__behavioral_control_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "895f6471-b033-4982-ac24-a808e557e91c"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "HOA Covenant: Behavioral Control Reading",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "conformist_majority_homeowners",
+      "hoa_board_members"
+    ],
+    "victims": [
+      "nonconformist_homeowners",
+      "homeowners_with_marginal_aesthetics"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint primarily a behavioral control mechanism, a coordination mechanism for shared infrastructure, or an extraction mechanism?",
+      "resolution_mechanism": "Analysis of enforcement patterns: if enforcement disproportionately targets subjective aesthetic judgments and lifestyle choices over genuine externalities or infrastructure maintenance, this reading is corroborated. If fines primarily fund board operations rather than maintenance, the extraction reading is stronger.",
+      "impact": "If the behavioral control reading is primary, the constraint is a Snare. If coordination is primary, it's a Rope. If extraction is primary, it's a Snare with a different beneficiary structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'hoa_covenant_scope' kernel. This 'behavioral_control_reading' emphasizes aesthetic uniformity and conformity as property value maximization. Sibling readings include 'coordination_reading' (shared infrastructure) and 'extraction_reading' (fine proliferation)."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (e.g., legal enforcement, financial penalties) or internalized (e.g., social pressure, fear of ostracism)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if homeowners continue to self-regulate their aesthetics and behavior even after leaving the HOA, it suggests internalized suppression. If conformity immediately drops, it's primarily structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as homeowners carry the suppression with them. If purely structural, removing the HOA would immediately alleviate the pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in HOA covenants."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the operation of a Homeowners Association (HOA) covenant as a mechanism for enforcing aesthetic uniformity and behavioral conformity, primarily justified by the goal of maximizing property values. This reading focuses on the expansive scope of control, including subjective aesthetic judgments, lifestyle restrictions, and even speech suppression (e.g., yard signs, flags), which often extends beyond genuine externalities. The constraint is actively enforced through fines and legal action.",
+    "key_agents": [
+      "hoa_board_members: Agenda setter (institutional/arbitrage) — administers and enforces covenants, benefits from perceived property value stability.",
+      "conformist_majority_homeowners: Beneficiary (organized/constrained) — benefits from perceived property value stability and social conformity.",
+      "nonconformist_homeowners: Payer (moderate/constrained) — bears costs of fines, legal action, and social pressure for non-compliance.",
+      "homeowners_with_marginal_aesthetics: Victim (powerless/trapped) — disproportionately targeted by enforcement, faces financial penalties and social exclusion.",
+      "property_management_company: Agenda setter (organized/mobile) — contracted to enforce covenants, benefits from HOA fees and fine collection."
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the financial burden of fines and the non-pecuniary cost of suppressed expression and lifestyle choices. Suppression (0.7) is high due to the legal enforceability of covenants, the power of the HOA board, and the difficulty of exit (selling a home). Theater ratio (0.2) is low, as enforcement is generally direct and punitive, not merely performative. Accessibility collapse (0.6) is moderate, as homeowners can technically sell and move, but this is a high-friction exit. Resistance (0.4) is present but often fragmented, as individual homeowners face an organized institutional power.",
+    "perspectival_gap": "HOA board members and conformist homeowners perceive the covenant as a legitimate tool for maintaining community standards and property values (closer to a Rope or even a Mountain of 'market forces'). Nonconformist homeowners and those with 'marginal aesthetics' experience it as an arbitrary, extractive Snare that curtails personal freedoms and imposes financial penalties for subjective violations. The engine's classification will highlight this divergence.",
+    "directionality_logic": "The HOA board and conformist majority are beneficiaries (low d) as they gain from perceived property value stability and a desired aesthetic/social environment. Nonconformist homeowners and those with marginal aesthetics are victims (high d) as they bear the direct costs of fines and the indirect costs of suppressed self-expression. The property management company, as an agent of the board, also benefits from the enforcement regime.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a 'Rope' (pure coordination) by highlighting the asymmetric extraction and suppression. While a coordination function (maintaining property values) is claimed, the expansive scope of enforcement into subjective aesthetics and behavior, coupled with high suppression, indicates a Snare. The 'property value maximization' mandate is used to justify broad control, even when the link to actual value is tenuous or contested.",
+    "kernel_context": "This constraint is the 'behavioral_control_reading' of the 'hoa_covenant_scope' kernel. This reading interprets HOA covenants as primarily designed to enforce aesthetic uniformity and behavioral conformity, leveraging property value maximization as a justification. Sibling readings include 'coordination_reading' (focus on shared infrastructure maintenance and genuine externalities) and 'extraction_reading' (focus on revenue generation via fines and board power consolidation)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'hoa_covenant_scope' kernel. This 'behavioral_control_reading' focuses on aesthetic and behavioral conformity, while the 'coordination_reading' emphasizes shared infrastructure, and the 'extraction_reading' highlights fine proliferation for revenue. All three are distinct constraints linked by their common kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hoa_covenant_scope__coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hoa_covenant_scope__extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aesthetic_uniformity_maximizes_property_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "behavioral_conformity_ensures_community_harmony",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "property_value_maximization_framework",
+    "drift_state": {
+      "moment": "contemporary_individual_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

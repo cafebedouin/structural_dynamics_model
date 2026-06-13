@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "border_legitimacy__freedom_of_movement_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "50ce8bb1-c1cc-42ef-a95a-f6d50521d6e8"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.92,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "Presumptive Illegitimacy of Borders (Freedom of Movement Reading)",
+    "topic_domain": "political_philosophy/migration_studies/international_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_enforcement_agencies",
+      "citizens_of_wealthier_states"
+    ],
+    "victims": [
+      "migrants_seeking_entry",
+      "displaced_workers_in_destination_states",
+      "welfare_recipients_in_destination_states"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_right_vs_social_construct",
+      "question": "Is freedom of movement an inherent natural right, or a socially constructed right contingent on state recognition?",
+      "resolution_mechanism": "Philosophical consensus on the grounding of human rights, or a global legal framework explicitly codifying it as a natural right.",
+      "impact": "If a natural right, the constraint's extractiveness and suppression are inherent violations; if socially constructed, its legitimacy is contingent on the political will of states.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity of the grounding of freedom of movement."
+    },
+    {
+      "id": "border_legitimacy_kernel_reading",
+      "question": "This constraint is one reading of the 'border_legitimacy' kernel. How would the classification change under the 'sovereignty_reading' or 'humanitarian_obligation_reading'?",
+      "resolution_mechanism": "Adopting a different reading of the kernel would shift the declared beneficiaries/victims and thus the computed extractiveness and classification. The 'sovereignty_reading' would likely reduce extractiveness for state actors and increase it for migrants, while the 'humanitarian_obligation_reading' would introduce conditional legitimacy.",
+      "impact": "The 'sovereignty_reading' would likely classify border enforcement as a 'rope' or 'mountain' for citizens and 'snare' for migrants, but with lower overall extractiveness. The 'humanitarian_obligation_reading' would introduce a 'scaffold' element for refugees.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'freedom_of_movement_reading' of the 'border_legitimacy' kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.92
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'freedom of movement' reading of the border legitimacy kernel, asserting that freedom of movement is a human right and borders are presumptively illegitimate restrictions. From this perspective, border enforcement is a highly extractive and suppressive mechanism, creating victims not only among those seeking entry but also among certain segments of the destination state's population who bear the economic and social costs of restricted labor markets and welfare systems. The constraint is claimed as a 'snare' due to its high extractiveness and suppression, which are actively maintained by state enforcement agencies.",
+    "logic_rationale": "The extractiveness (0.85) is high because the constraint imposes significant costs on migrants (lost opportunities, danger, exploitation) and distorts labor markets in destination states. Suppression (0.92) is very high, reflecting the coercive force of state border regimes (walls, patrols, detention, deportation) and the lack of legal alternatives for entry. Theater ratio (0.1) is low, as border enforcement is a direct, functional exercise of state power, not primarily performative. Accessibility collapse (0.75) is substantial, as legal avenues for entry are severely limited for many. Resistance (0.8) is high, reflecting ongoing efforts by migrants and advocates to challenge border regimes.",
+    "perspectival_gap": "From the perspective of migrants, the constraint is a clear snare, imposing immense costs and denying fundamental rights. From the perspective of state enforcement agencies, it is a necessary enforcement mechanism, perhaps even a mountain (if sovereignty is taken as absolute). Citizens of wealthier states may experience it as a rope, providing security and economic stability, while displaced workers and welfare recipients within those states may experience it as a snare dueating to labor market distortions and increased competition for resources.",
+    "directionality_logic": "State enforcement agencies are clear beneficiaries (d near 0.0) as they maintain their power and budgets through border control. Citizens of wealthier states are also beneficiaries (d near 0.1-0.2) as they perceive benefits from controlled migration. Migrants seeking entry are the primary victims (d near 1.0), bearing the full brunt of the constraint. Displaced workers and welfare recipients in destination states are also victims (d near 0.8-0.9) due to the economic and social impacts of restricted labor mobility and the political narratives surrounding migration.",
+    "mandatrophy_analysis": "This reading argues that the 'mandate' of border control (if it ever had one beyond pure exclusion) has atrophied, and the constraint now primarily serves extractive functions. The high extractiveness and suppression, coupled with the identification of multiple victim groups, prevent mislabeling this as a coordination mechanism. The persistence of the constraint is due to the concentrated benefits for state power and certain citizen groups, despite the widespread costs.",
+    "kernel_context": "This constraint is the 'freedom_of_movement_reading' of the 'border_legitimacy' kernel. This reading asserts that freedom of movement is a human right and borders are presumptively illegitimate restrictions. Sibling readings include the 'sovereignty_reading' (border authority derives from territorial sovereignty) and the 'humanitarian_obligation_reading' (states have an obligation to admit those fleeing persecution/disaster but not general economic migrants)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'border_legitimacy' kernel, each with distinct structural properties and classifications. This reading emphasizes the human right to freedom of movement."
+  },
+  "stakeholders": [
+    {
+      "name": "migrants_seeking_entry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals attempting to cross borders without legal authorization, facing physical danger, exploitation, detention, and deportation. They bear the direct costs of border enforcement and are denied opportunities for a better life."
+    },
+    {
+      "name": "state_enforcement_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies responsible for border patrol, immigration enforcement, and national security. They benefit from increased budgets, expanded powers, and political legitimacy derived from 'securing' borders. They actively enforce the constraint."
+    },
+    {
+      "name": "citizens_of_wealthier_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Segments of the population in destination countries who perceive benefits from restricted immigration, such as maintaining cultural homogeneity, reducing perceived competition for jobs, or preserving social welfare systems. They support border enforcement policies."
+    },
+    {
+      "name": "displaced_workers_in_destination_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers in destination countries whose wages or employment opportunities are negatively impacted by the artificial scarcity of labor created by border restrictions, or by the exploitation of undocumented workers in shadow economies. They bear indirect economic costs."
+    },
+    {
+      "name": "welfare_recipients_in_destination_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals relying on social welfare programs in destination countries who are often scapegoated in anti-immigrant narratives, leading to political pressure to reduce benefits or restrict access, even if immigration has no direct impact on their situation. They bear social and political costs."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Organizations and individuals who monitor border policies, document abuses, and advocate for the rights of migrants. They challenge the legitimacy of current border regimes and seek to expand freedom of movement."
+    }
+  ],
+  "gain_flow": "state_enforcement_agencies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "From the perspective of this reading, the constraint primarily serves to coordinate the exclusion of certain populations and the maintenance of state power, rather than solving a genuine collective action problem for all parties. Any 'coordination' is for the benefit of the excluding parties.",
+    "transfer_function": "Transfers opportunities, resources, and safety from migrants seeking entry to state enforcement agencies (in terms of power and budget) and to citizens of wealthier states (in terms of perceived security and economic stability). It also transfers economic and social costs to displaced workers and welfare recipients within destination states.",
+    "absent_voices": "The voices of those who would benefit from open borders (e.g., global poor, entrepreneurs seeking new markets, families separated by borders) are largely absent from policy-making discussions, or are actively suppressed by state narratives and enforcement. Their exclusion is fundamental to the constraint's operation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If borders were to vanish overnight, global labor markets would reconfigure, populations would shift, and the concept of national sovereignty would be fundamentally altered. The world would rearrange itself dramatically as people moved to optimize their opportunities and well-being.",
+    "founding_problem": "The constraint of national borders was historically established to define territorial sovereignty, control populations, and manage resources within a defined geographic area, often in the context of nation-state formation and inter-state conflict.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State actors and proponents of national sovereignty attest that the founding problem of territorial control and national security is still live. However, human rights advocates and proponents of freedom of movement argue that the original problem has been superseded by global human rights norms and economic interdependence, and that the constraint now serves primarily to maintain inequality. Independent international legal scholars and economists often corroborate the latter view, highlighting the disjunction between historical justifications and contemporary impacts."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "border_legitimacy__sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "border_legitimacy__humanitarian_obligation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_of_movement_is_a_human_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "borders_are_presumptively_illegitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_human_rights_framework",
+    "drift_state": {
+      "moment": "contemporary_nation_state_system",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

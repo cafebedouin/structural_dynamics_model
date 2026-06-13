@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "honor_violence_legitimacy__composite_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "52abc8e5-ae76-4e2b-9683-708d936f3269"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor Violence Legitimacy (Composite Reading)",
+    "topic_domain": "historical_sociology/legal_anthropology/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "social_elites_maintaining_honor_codes",
+      "legal_authorities_preserving_social_order"
+    ],
+    "victims": [
+      "individuals_subject_to_honor_violence",
+      "families_bound_by_honor_codes"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine composite of 'drop' and 'contraction' mechanisms, or is one mechanism dominant?",
+      "resolution_mechanism": "Detailed historical analysis of specific cases where both external costs and conceptual redefinition were simultaneously active and demonstrably contributed to the decline of honor violence.",
+      "impact": "If one mechanism is dominant, the constraint should be reclassified as either 'drop_reading' (if external costs are primary) or 'contraction_reading' (if conceptual redefinition is primary), leading to different extractiveness and victim profiles.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'composite_reading' of the 'honor_violence_legitimacy' kernel, asserting that both external costs (drop) and conceptual redefinition (contraction) operated simultaneously in its decline. Sibling readings are 'drop_reading' and 'contraction_reading'."
+    },
+    {
+      "id": "relative_contribution_of_mechanisms",
+      "question": "What was the relative contribution of external costs versus conceptual redefinition to the decline of honor violence in specific historical contexts?",
+      "resolution_mechanism": "Quantitative historical sociology comparing the impact of legal prohibitions and economic changes (external costs) against shifts in moral philosophy and social norms (conceptual redefinition) on the incidence of honor violence.",
+      "impact": "A higher contribution from external costs would shift the constraint's extractiveness profile towards a 'snare' (more direct coercion), while a higher contribution from conceptual redefinition would emphasize the 'tangled_rope' aspect (coordination around new norms with residual extraction).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assessing the proportional impact of 'drop' vs. 'contraction' mechanisms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the legitimacy of honor violence (e.g., dueling, blood feuds) as a 'composite reading' of its historical decline. It posits that the decline was 'overdetermined' by two simultaneous mechanisms: 'drop' (external costs, such as legal prohibitions and state enforcement, making it practically unfeasible or too costly) and 'contraction' (an internal redefinition of 'honor' itself, making violence conceptually incompatible with true honor). This reading acknowledges that both structural changes and conceptual shifts contributed to the erosion of its legitimacy, affecting different victim sets and extractiveness profiles.",
+    "key_agents": [
+      "social_elites_maintaining_honor_codes: Primary beneficiary (institutional/generational) — benefits from the social order maintained by honor codes, even as they adapt.",
+      "legal_authorities_preserving_social_order: Agenda setter (institutional/generational) — enforces laws that impose external costs on honor violence, gradually redefining its legitimacy.",
+      "individuals_subject_to_honor_violence: Primary victim (powerless/biographical) — bears the direct costs of honor violence, trapped by social expectations.",
+      "families_bound_by_honor_codes: Payer (organized/generational) — bears the social and economic costs of maintaining honor, even as its definition shifts.",
+      "moral_philosophers_and_reformers: Observer (analytical/generational) — articulate new conceptualizations of honor that exclude violence, influencing the 'contraction' mechanism."
+    ],
+    "logic_rationale": "The extractiveness (0.65) reflects the residual social pressure and potential for violence, even as its overt practice declines. Suppression (0.40) is moderate, as it relies on both active legal enforcement (drop) and internalized social norms (contraction). The low theater ratio (0.10) indicates that while the overt practice of honor violence may become performative, the underlying social pressures and conceptual debates are genuine. The decline in extractiveness over the interval reflects the combined effect of both mechanisms.",
+    "perspectival_gap": "From the perspective of individuals subject to honor violence, the constraint is highly extractive and suppressive, regardless of whether the decline is due to external costs or conceptual shifts. For social elites, the constraint shifts from a direct enforcement mechanism to a more subtle form of social coordination around redefined norms, still benefiting them by maintaining social order. Legal authorities experience it as a successful application of state power to reduce violence.",
+    "directionality_logic": "Social elites and legal authorities are beneficiaries (d near 0.0) as they either maintain social order or enforce new norms. Individuals and families are victims (d near 1.0) as they bear the direct and indirect costs of honor codes, even in decline. The composite nature means that the 'drop' mechanism (external costs) targets individuals more directly, while the 'contraction' mechanism (redefinition of honor) targets the broader social fabric and families.",
+    "mandatrophy_analysis": "The constraint's mandate (maintaining honor) has not atrophied, but its *means* have been redefined. The composite reading prevents mislabeling it as a pure 'snare' (if only external costs were considered) or a pure 'rope' (if only conceptual redefinition were considered as a voluntary shift). It acknowledges the coercive elements of both external enforcement and the social pressure of evolving norms, classifying it as a tangled_rope where coordination around new norms still carries asymmetric extraction from those bound by older interpretations of honor.",
+    "kernel_context": "This constraint is the 'composite_reading' of the 'honor_violence_legitimacy' kernel. This reading argues that the decline of honor violence was due to both external costs (the 'drop_reading') and a redefinition of honor itself (the 'contraction_reading'). The 'drop_reading' emphasizes legal prohibitions and state enforcement, while the 'contraction_reading' focuses on shifts in moral philosophy and social norms. This composite view holds that neither mechanism alone fully explains the historical trajectory."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_violence_legitimacy__drop_reading",
+      "honor_violence_legitimacy__contraction_reading"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "social_elites_maintaining_honor_codes",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "These groups historically benefited from honor codes as a means of social control and status differentiation. As honor violence declines, they adapt by redefining honor to exclude violence, maintaining their social standing through other means, and benefiting from a more stable social order."
+    },
+    {
+      "name": "legal_authorities_preserving_social_order",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State and legal institutions actively enforce laws against honor violence, imposing fines, imprisonment, and other external costs. They benefit from the reduction of private violence and the consolidation of state authority over justice, contributing to the 'drop' mechanism."
+    },
+    {
+      "name": "individuals_subject_to_honor_violence",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals are directly compelled to participate in or suffer the consequences of honor violence due to intense social pressure and the threat of ostracism. Their options are severely limited, making them primary victims of the constraint's extractive force, even as it declines."
+    },
+    {
+      "name": "families_bound_by_honor_codes",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Families are the primary units through which honor codes are transmitted and enforced. They bear the collective social and economic costs of maintaining honor, including potential feuds or social isolation. Their identity is often fused with the honor system, making exit difficult even as norms shift, contributing to the 'contraction' mechanism's lingering effects."
+    },
+    {
+      "name": "moral_philosophers_and_reformers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Intellectuals and social movements that advocate for new ethical frameworks where violence is incompatible with true honor. They influence the 'contraction' mechanism by providing conceptual tools for redefinition, but do not directly enforce the constraint."
+    }
+  ],
+  "gain_flow": "social_elites_maintaining_honor_codes",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates social behavior around a shared understanding of 'honor' and its defense, providing a framework for resolving disputes and maintaining social hierarchy, even as the definition of honor evolves.",
+    "transfer_function": "Transfers social capital, status, and sometimes physical safety from individuals and families to the collective maintenance of honor codes and the authority of social elites and legal institutions.",
+    "absent_voices": "Victims of honor violence, particularly women and marginalized individuals, whose perspectives were historically suppressed and whose suffering was often justified by the very honor codes in question. Their voices would challenge the legitimacy of the entire system.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legitimacy of honor violence vanished overnight, the social structures and power dynamics that sustained it would undergo significant rearrangement. Families and communities would need to find new ways to manage reputation and resolve disputes, and legal systems would face less resistance in enforcing prohibitions against violence. The very concept of 'honor' would likely be decoupled from violence entirely.",
+    "founding_problem": "The founding problem was the need for a mechanism to regulate social status, resolve perceived insults, and maintain social order in contexts where state authority was weak or non-existent, or where personal reputation was paramount.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "While some traditionalists might argue the problem is still live, most legal authorities, human rights organizations, and contemporary social commentators attest that the original problem of regulating status through violence is largely obsolete or has been superseded by state legal systems. The persistence of honor violence is now seen as a problem of social control and human rights, not a legitimate means of dispute resolution. This is corroborated by international legal frameworks and sociological studies from outside the benefiting parties."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "honor_violence_legitimacy__drop_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "honor_violence_legitimacy__contraction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_is_socially_constructed_and_mutable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "decline_is_multicausal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "honor_violence_as_legitimate_social_practice",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

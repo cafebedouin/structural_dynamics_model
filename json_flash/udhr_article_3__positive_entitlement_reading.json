@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "udhr_article_3__positive_entitlement_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3a97bbc4-70f0-452d-8bf1-a87ab9473310"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UDHR Article 3: Positive Entitlement to Material Conditions",
+    "topic_domain": "constitutional_law/human_rights/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vulnerable_citizens",
+      "social_welfare_agencies"
+    ],
+    "victims": [
+      "property_owners",
+      "taxpayers",
+      "free_speech_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine interpretation of UDHR Article 3, or an overreach of state power?",
+      "resolution_mechanism": "Analysis of international jurisprudence and state practice, particularly in jurisdictions with strong social rights provisions.",
+      "impact": "If a genuine interpretation, it strengthens the legitimacy of state intervention for social welfare. If an overreach, it highlights the potential for human rights instruments to be used for extractive purposes.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'positive_entitlement_reading' of the 'udhr_article_3' kernel. Sibling readings include 'negative_liberty_reading' (prohibits state deprivation) and 'procedural_hybrid_reading' (due process guarantees). This reading differs by asserting active state obligations."
+    },
+    {
+      "id": "scope_of_entitlement",
+      "question": "What is the precise scope of 'material conditions necessary for life and security' and how are these determined?",
+      "resolution_mechanism": "Legislative action, judicial precedent, and expert consensus on minimum standards for welfare, healthcare, and housing.",
+      "impact": "A broad interpretation increases state obligations and potential extraction from taxpayers; a narrow interpretation limits state intervention and potential benefits to vulnerable groups.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The specific definition of 'material conditions' is subject to ongoing debate and empirical measurement of societal needs."
+    },
+    {
+      "id": "balancing_rights",
+      "question": "How are the positive entitlements of this reading balanced against other rights, such as property rights and freedom of expression, which may be curtailed by state action to fulfill these entitlements?",
+      "resolution_mechanism": "Constitutional review processes, proportionality tests in legal adjudication, and public discourse on competing rights claims.",
+      "impact": "The balance struck determines the effective extractiveness and suppression experienced by different stakeholder groups. A strong emphasis on positive entitlements may lead to greater limitations on other rights.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The inherent tension between positive entitlements and negative liberties, particularly concerning property and speech, is a core conceptual ambiguity."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'positive entitlement' reading of Article 3 of the Universal Declaration of Human Rights (UDHR), which interprets the right to life, liberty, and security of person as obligating states to provide the material conditions necessary for these rights (e.g., welfare, healthcare, housing). This reading necessitates significant state intervention, often involving wealth redistribution and regulation, leading to high extractiveness and suppression for certain groups, while providing substantial benefits to others. It is claimed as a Tangled Rope due to its dual function of coordinating social welfare provision and extracting resources to do so, requiring active enforcement.",
+    "key_agents": [
+      "vulnerable_citizens: Primary beneficiary (powerless/constrained) — receives state provision",
+      "social_welfare_agencies: Secondary beneficiary/agenda_setter (institutional/analytical) — administers and benefits from expanded mandate",
+      "property_owners: Primary payer (powerful/constrained) — bears wealth redistribution",
+      "taxpayers: Payer (moderate/constrained) — bears the financial burden of state provision",
+      "free_speech_advocates: Victim (organized/constrained) — may experience suppression of expression deemed harmful to 'security'",
+      "state_legislatures: Agenda setter (institutional/mobile) — enacts laws to implement entitlements",
+      "constitutional_courts: Agenda setter/observer (institutional/analytical) — adjudicates the scope and limits of these entitlements"
+    ],
+    "logic_rationale": "The high extractiveness (0.85) reflects the substantial resources transferred from property owners and taxpayers to fund social welfare programs. Suppression (0.75) is high due to the coercive nature of taxation and potential restrictions on other rights (e.g., hate speech laws justified by 'security'). The theater ratio (0.20) is relatively low, indicating that the state's actions are largely functional in providing services, though some performative aspects exist in justifying interventions. Accessibility collapse (0.40) is moderate; while state provision aims to ensure access, alternatives (private healthcare, housing) still exist for those who can afford them. Resistance (0.70) is significant, stemming from those who bear the costs or perceive their rights as being infringed.",
+    "perspectival_gap": "Vulnerable citizens experience this as a vital Rope or even a Mountain, providing essential support. Property owners and taxpayers, however, experience it as a Snare, extracting resources coercively. State legislatures and courts navigate the tension, attempting to balance competing rights and obligations. The engine's per-seat classification will reflect these divergences based on the declared structural relationships.",
+    "directionality_logic": "Vulnerable citizens are full beneficiaries (d=0.0) as they receive direct state provision. Social welfare agencies are also beneficiaries (d=0.1) due to expanded mandates and resources. Property owners and taxpayers are targets (d=0.9-1.0) as they bear the direct costs of redistribution and taxation. Free speech advocates are also targets (d=0.8) if their expression is curtailed for 'security'. State legislatures and constitutional courts, while agenda-setters, have a more symmetric directionality (d=0.5) as they balance competing interests and uphold the constitutional framework.",
+    "mandatrophy_analysis": "This reading of Article 3 is not subject to mandatrophy in the traditional sense, as the 'founding problem' of ensuring basic human dignity and security remains live. However, the *means* of addressing it (e.g., specific welfare programs, levels of taxation) are constantly contested. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination function).",
+    "kernel_context": "This constraint is the 'positive_entitlement_reading' of the 'udhr_article_3' kernel. This reading asserts active state obligations to provide material conditions for life and security. Sibling readings include the 'negative_liberty_reading' (prohibits state deprivation of life/liberty) and the 'procedural_hybrid_reading' (guarantees due process without resolving substantive liberty/welfare contest)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three distinct readings of UDHR Article 3, each with different structural implications and classifications. This reading focuses on positive state obligations."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "udhr_article_3__negative_liberty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "udhr_article_3__procedural_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_has_positive_obligations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "material_conditions_are_prerequisite_for_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "welfare_state_paradigm",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

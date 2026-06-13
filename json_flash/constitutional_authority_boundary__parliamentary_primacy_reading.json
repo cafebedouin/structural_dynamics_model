@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "constitutional_authority_boundary__parliamentary_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "7ac95a1d-3c92-4975-a6b7-de0282a274ae"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Parliamentary Primacy in Constitutional Interpretation",
+    "topic_domain": "constitutional_law/political_philosophy/institutional_design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "elected_legislature",
+      "electorate"
+    ],
+    "victims": [
+      "judiciary",
+      "minority_groups"
+    ],
+    "vindicated_propositions": [
+      "democratic_legitimacy_doctrine",
+      "parliamentary_sovereignty_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "parliamentary_primacy_vs_judicial_supremacy",
+      "question": "Is this constraint a genuine expression of democratic will, or a mechanism for legislative overreach that forecloses essential checks and balances?",
+      "resolution_mechanism": "Analysis of legislative actions: if parliamentary interpretations consistently override fundamental rights protections without effective recourse, it leans towards overreach. If judicial review, even if advisory, consistently influences legislative outcomes, it leans towards genuine democratic expression.",
+      "impact": "If it's primarily legislative overreach, the constraint's effective extractiveness on the judiciary and minority groups is higher, potentially reclassifying it as a Tangled Rope or Snare from those seats. If it's a genuine expression of democratic will, it remains a Rope, with the judiciary's role understood as advisory.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between democratic expression and legislative overreach in constitutional interpretation."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'parliamentary_primacy_reading' of the 'constitutional_authority_boundary' kernel. What would change if the 'judicial_supremacy_reading' were adopted?",
+      "resolution_mechanism": "A shift in legal precedent or constitutional amendment establishing judicial review as final and unchallengeable.",
+      "impact": "The primary beneficiary would shift from the legislature to the judiciary, and the judiciary's exit options would move from 'constrained' to 'arbitrage' or 'analytical'. The extractiveness on the judiciary would drop significantly, and the constraint would likely reclassify to a Mountain or Rope from the judicial seat, and a Snare from the legislative seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of adopting the 'judicial_supremacy_reading' of the 'constitutional_authority_boundary' kernel."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of judicial and minority voices structural (legislative power, lack of legal avenues) or internalized (judicial deference, public acceptance of parliamentary authority)?",
+      "resolution_mechanism": "Post-legislative challenge trajectory: if judicial challenges persist and gain public support even after legislative overrides, reclassify as partially internalized. If challenges are consistently suppressed by legal and political means, it's structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the judiciary and minority groups carry the suppression with them. If structural, the constraint's persistence depends more on active legislative enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for judicial and minority voices."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'parliamentary primacy' reading of the constitutional authority boundary, where the elected legislature holds final authority to define constitutional meaning. This reading positions the constitutional text as subordinate to the will of the parliament, with the judiciary's role limited to advisory or easily-overridden review. It is a specific interpretation of institutional design that prioritizes democratic legitimacy through elected representatives.",
+    "key_agents": [
+      "elected_legislature: Primary beneficiary (institutional/arbitrage) — defines constitutional meaning",
+      "judiciary: Primary victim (institutional/constrained) — limited interpretive authority",
+      "electorate: Secondary beneficiary (organized/mobile) — democratic will is paramount",
+      "minority_groups: Secondary victim (powerless/constrained) — vulnerable to legislative majorities",
+      "constitutional_scholars: Analytical observer (analytical/analytical) — analyze the structural implications"
+    ],
+    "logic_rationale": "The extractiveness (0.2) is low because this reading is framed as a legitimate expression of democratic will, with costs primarily borne by the judiciary's interpretive autonomy. Suppression (0.3) is moderate, reflecting the structural limitations on judicial review and the potential for legislative majorities to override dissenting voices. Theater ratio (0.1) is low, as the constraint's operation is largely direct and functional, not performative. The claimed type is 'rope' because it's presented as a coordination mechanism for democratic governance, even if it involves some extraction from other branches.",
+    "perspectival_gap": "The elected legislature perceives this as a legitimate and necessary coordination mechanism for democratic governance, ensuring the will of the people is supreme. The judiciary, however, experiences it as a constraint on its independence and ability to protect fundamental rights, seeing its interpretive authority diminished. Minority groups may experience it as a vulnerability, as their rights are subject to legislative majorities without strong judicial protection.",
+    "directionality_logic": "The elected legislature is the primary beneficiary (d=0.0-0.1) as it gains ultimate interpretive authority. The electorate is also a beneficiary (d=0.1-0.2) as their democratic will is prioritized. The judiciary is a primary target (d=0.8-0.9) as its interpretive power is curtailed. Minority groups are also targets (d=0.7-0.8) due to potential vulnerability to legislative majorities. Constitutional scholars are analytical observers (d=0.5).",
+    "mandatrophy_analysis": "This constraint's mandate is to ensure democratic accountability in constitutional interpretation. The classification as a 'rope' suggests that, from the perspective of its proponents, it genuinely coordinates democratic governance. However, the presence of victims (judiciary, minority groups) and the 'contested' status of the founding problem (whether it's still about preventing fragmentation or about legislative power) indicate a potential for drift towards a 'tangled rope' or 'snare' if the extractive aspects intensify or the coordination function atrophies. The omegas address this tension directly."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'constitutional_authority_boundary' kernel. It is structurally distinct from the 'judicial_supremacy_reading' and 'coordinate_construction_reading' due to differing beneficiary/victim structures and interpretive authority allocations."
+  },
+  "stakeholders": [
+    {
+      "name": "elected_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "As the elected body, it claims the ultimate authority to interpret and define constitutional meaning, either through ordinary legislation or entrenched constitutional amendments. It benefits from the ability to enact its policy agenda without significant judicial impediment."
+    },
+    {
+      "name": "judiciary",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Its role in constitutional interpretation is subordinate to the legislature. While it may offer advisory opinions or conduct weak-form review, its interpretations can be overridden by parliamentary action. It bears the cost of diminished institutional autonomy and interpretive finality."
+    },
+    {
+      "name": "electorate",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the principle that their elected representatives have the final say on constitutional matters, ensuring that the constitution reflects contemporary democratic will. Their power is exercised through elections, holding the legislature accountable."
+    },
+    {
+      "name": "minority_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are vulnerable to the legislative majority's interpretation of constitutional rights, as there is no strong, independent judicial check to protect their interests. They bear the cost of potentially being excluded from the constitutional consensus."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the theoretical and practical implications of parliamentary primacy, comparing it with other models of constitutional authority. They do not directly benefit or pay but provide critical analysis of the system's operation and legitimacy."
+    }
+  ],
+  "gain_flow": "elected_legislature",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the ultimate authority for constitutional interpretation within a democratic system, ensuring that the will of the elected legislature, representing the people, is supreme.",
+    "transfer_function": "Transfers final interpretive authority over constitutional meaning from the judiciary to the elected legislature, and potentially transfers the burden of constitutional protection for minority rights from courts to political processes.",
+    "absent_voices": "Advocates for strong-form judicial review and proponents of entrenched constitutional rights that are beyond ordinary legislative amendment are structurally marginalized. They would argue for a more robust role for courts in protecting fundamental liberties.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If parliamentary primacy in constitutional interpretation vanished, the balance of power would fundamentally shift. The judiciary would likely assert greater interpretive authority, leading to potential conflicts with the legislature and a re-evaluation of constitutional review mechanisms. The entire institutional framework would need to re-coordinate around a new understanding of constitutional supremacy.",
+    "founding_problem": "The problem of ensuring that constitutional meaning remains responsive to democratic will and preventing an unelected judiciary from thwarting the legitimate policy choices of the people's representatives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Political scientists and legal scholars (outside the legislature itself) attest that the tension between democratic accountability and judicial independence is a persistent, live problem in many constitutional systems. Public opinion polls often show support for elected bodies having final say, corroborating the ongoing relevance of this founding problem from the perspective of the electorate."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coordinate_construction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "democratic_will_is_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "legislature_is_final_arbiter",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "westminster_parliamentary_tradition",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

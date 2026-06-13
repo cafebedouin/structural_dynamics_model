@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__judicial_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "58a282d1-8867-431a-9b43-e2adce41d07a"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Supremacy over Basic Laws (Israel)",
+    "topic_domain": "constitutional_law/comparative_constitutionalism/judicial_review_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supreme_court",
+      "rights_claimants"
+    ],
+    "victims": [
+      "knesset",
+      "legislative_majority"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine expression of judicial supremacy, or a temporary phase in a broader contest over the Basic Laws' interpretive boundary?",
+      "resolution_mechanism": "Future legislative action (e.g., an override clause or a Basic Law explicitly limiting judicial review) or a shift in judicial doctrine.",
+      "impact": "If a temporary phase, the constraint's stability and long-term extractiveness are lower than currently measured; if a settled supremacy, its institutional power is higher.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'judicial_supremacy_reading' of the 'basic_law_interpretive_boundary' kernel. Sibling readings ('parliamentary_sovereignty_reading', 'balanced_contestation_reading') would alter the distribution of interpretive authority and the effective power of the Supreme Court."
+    },
+    {
+      "id": "legitimacy_of_judicial_invalidation",
+      "question": "Is the Supreme Court's power to invalidate legislation derived from a clear constitutional mandate, or is it an assertion of power that lacks explicit textual grounding?",
+      "resolution_mechanism": "Historical analysis of constitutional intent, comparative legal scholarship on unwritten constitutionalism, and public acceptance/rejection of judicial rulings.",
+      "impact": "If explicitly mandated, the constraint's legitimacy is higher, reducing resistance; if an asserted power, its legitimacy is contested, increasing resistance and the need for active enforcement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The extent to which judicial invalidation is textually grounded versus judicially asserted."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'judicial supremacy' reading of the Basic Laws' interpretive boundary in Israel, where the Supreme Court asserts the authority to interpret and enforce the Basic Laws as a higher-order legal framework, including the power to invalidate contradictory legislation passed by the Knesset. This reading positions the Supreme Court as the ultimate arbiter of constitutional legality, binding the legislative branch to its interpretations. It is a contested reading, with significant political and legal resistance from those advocating for parliamentary sovereignty.",
+    "key_agents": [
+      "supreme_court: Agenda setter (institutional/arbitrage) — interprets and enforces Basic Laws, invalidates legislation.",
+      "knesset: Payer (institutional/constrained) — legislative body whose laws are subject to judicial review.",
+      "rights_claimants: Beneficiary (moderate/mobile) — individuals or groups who can petition the court to protect their rights under the Basic Laws.",
+      "legislative_majority: Payer (organized/constrained) — the political coalition whose legislative agenda can be blocked by judicial review.",
+      "legal_scholars: Observer (analytical/analytical) — analyze the constitutional framework and the balance of power between branches."
+    ],
+    "logic_rationale": "The extractiveness (0.65) is high because the Supreme Court's power to invalidate legislation directly extracts legislative authority from the Knesset. Suppression (0.70) is also high, as the Court actively enforces its interpretive authority, suppressing legislative alternatives that contradict its reading of the Basic Laws. The theater ratio is low (0.10) because the Court's actions are genuinely functional in asserting its power, not merely performative. The increasing extractiveness and suppression over the interval reflect the gradual strengthening of judicial review in Israel.",
+    "perspectival_gap": "From the Supreme Court's perspective, this is a necessary 'rope' for upholding constitutional principles and protecting individual rights. From the Knesset's perspective, particularly the legislative majority, it is a 'snare' that usurps democratic legislative power. Rights claimants experience it as a 'rope' providing a vital check on legislative overreach. The engine's per-seat classification will reflect these divergences based on the declared structural relationships.",
+    "directionality_logic": "The Supreme Court and rights claimants are beneficiaries (d near 0.0) as they gain power and protection from this constraint. The Knesset and the legislative majority are targets (d near 1.0) as their legislative power is directly curtailed. The active enforcement by the Supreme Court ensures the constraint's persistence despite political resistance.",
+    "mandatrophy_analysis": "This constraint is far from mandatrophy. Its mandate, the interpretation and enforcement of Basic Laws, is actively contested and exercised. The classification as a Tangled Rope reflects the genuine coordination function (establishing a higher legal order) intertwined with significant asymmetric extraction (from the legislature by the judiciary). The ongoing resistance from the Knesset prevents it from being a settled Mountain, and the clear beneficiaries and victims prevent it from being a Piton.",
+    "kernel_context": "This constraint is the 'judicial_supremacy_reading' of the 'basic_law_interpretive_boundary' kernel, which concerns the ultimate authority to interpret and enforce Israel's Basic Laws. This reading asserts the Supreme Court's binding authority over the Knesset. Sibling readings include 'parliamentary_sovereignty_reading' (Knesset holds ultimate authority) and 'balanced_contestation_reading' (both institutions have legitimate but bounded authority)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+      "basic_law_interpretive_boundary__balanced_contestation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'basic_law_interpretive_boundary' kernel. Each reading represents a distinct structural claim about the locus of constitutional authority in Israel."
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Interprets the Basic Laws as a higher-order legal framework and asserts the power to invalidate legislation that contradicts them. This position grants the Court significant institutional power and influence over the legislative process."
+    },
+    {
+      "name": "knesset",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The legislative body whose power to enact laws is constrained by the Supreme Court's interpretive authority. Its legislation can be nullified, forcing it to reconsider or abandon policy initiatives."
+    },
+    {
+      "name": "rights_claimants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Individuals and groups who can petition the Supreme Court to protect their rights, as enshrined in the Basic Laws, against legislative or executive action. They gain a powerful avenue for redress and a check on majoritarian power."
+    },
+    {
+      "name": "legislative_majority",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The political coalition that forms the government and seeks to implement its agenda through legislation. Its ability to pass laws is directly impacted by the threat or reality of judicial invalidation, leading to frustration and political resistance."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze the constitutional framework, the Supreme Court's jurisprudence, and the balance of power between branches. They contribute to the discourse but do not directly participate in the enforcement or payment of the constraint."
+    }
+  ],
+  "gain_flow": "supreme_court",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a clear hierarchy of legal norms, ensuring that ordinary legislation conforms to fundamental constitutional principles embodied in the Basic Laws, thereby providing legal certainty and protecting individual rights.",
+    "transfer_function": "Transfers ultimate interpretive authority over the Basic Laws from the Knesset (as a simple legislative body) to the Supreme Court, and transfers legislative power from the Knesset to the Court in cases of invalidation.",
+    "absent_voices": "Advocates for pure parliamentary sovereignty, who believe the elected legislature should have the final say on all laws, are structurally marginalized in this reading. They would argue that judicial invalidation is an undemocratic overreach.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Supreme Court's interpretive supremacy vanished, the Knesset would immediately regain full legislative authority, potentially passing laws that contradict previously established constitutional principles. Rights protections would become entirely dependent on legislative majorities, and the legal system would lose its higher-order normative anchor, leading to significant legal and political instability.",
+    "founding_problem": "The absence of a formal, entrenched constitution in Israel created ambiguity regarding the hierarchy of laws and the protection of fundamental rights, leading to a need for a mechanism to ensure legislative adherence to core principles.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars and civil society organizations, alongside the Supreme Court itself, attest that the problem of ensuring constitutional adherence and rights protection remains live, especially given the lack of a fully codified constitution. While the Knesset disputes the Court's specific interpretation, the underlying need for a higher legal framework is widely acknowledged by independent legal experts."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "basic_law_interpretive_boundary__balanced_contestation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "basic_laws_are_supreme_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judicial_review_is_inherent_to_constitutionalism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "constitutional_supremacy_with_judicial_review",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

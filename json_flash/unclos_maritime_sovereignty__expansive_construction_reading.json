@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "unclos_maritime_sovereignty__expansive_construction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "55da1e80-fcab-4155-aeb8-15d7b50a5419"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Expansive Sovereignty via Artificial Island Construction (UNCLOS Reading)",
+    "topic_domain": "international_law/maritime_governance/geopolitical_strategy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "island_constructing_states"
+    ],
+    "victims": [
+      "neighboring_claimant_states",
+      "freedom_of_navigation_states",
+      "international_shipping"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "unclos_interpretation_ambiguity",
+      "question": "Is this constraint a legitimate interpretation of UNCLOS Article 121, or an opportunistic expansion of territorial claims?",
+      "resolution_mechanism": "Adjudication by the International Tribunal for the Law of the Sea (ITLOS) or the International Court of Justice (ICJ) on a specific case, or a new UNCLOS amendment clarifying the status of artificial features.",
+      "impact": "If deemed opportunistic, the constraint's legitimacy collapses, and its effective extraction would be reclassified as pure coercion. If legitimized, it would shift towards a Tangled Rope, acknowledging a coordination function for the constructing state.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in UNCLOS interpretation regarding artificial features."
+    },
+    {
+      "id": "sibling_reading_impact_strict_geographic",
+      "question": "How would the adoption of the 'strict_geographic_reading' alter the structural properties of this 'expansive_construction_reading'?",
+      "resolution_mechanism": "A shift in international legal consensus or a binding judicial ruling affirming the strict geographic interpretation.",
+      "impact": "The 'strict_geographic_reading' would directly foreclose this 'expansive_construction_reading', rendering its claims to territorial waters from artificial features null and void, collapsing its extractiveness and suppression to zero.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of strict geographic reading on expansive construction claims."
+    },
+    {
+      "id": "sibling_reading_impact_hybrid_effective_control",
+      "question": "How would the adoption of the 'hybrid_effective_control_reading' alter the structural properties of this 'expansive_construction_reading'?",
+      "resolution_mechanism": "A shift in international legal consensus or a binding judicial ruling affirming the hybrid effective control interpretation.",
+      "impact": "The 'hybrid_effective_control_reading' would significantly reduce the scope of this 'expansive_construction_reading', limiting territorial claims from artificial features to safety zones unless prolonged, unchallenged effective control is demonstrated, thereby reducing its extractiveness and suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Impact of hybrid effective control reading on expansive construction claims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'expansive construction' reading of UNCLOS maritime sovereignty, where states assert de facto territorial waters (12nm territorial sea or broader) around artificial islands built on submerged features or low-tide elevations. This interpretation leverages effective occupation and administrative control to generate sovereignty, despite UNCLOS Article 121(3) stating that 'rocks which cannot sustain human habitation or economic life of their own shall have no exclusive economic zone or continental shelf.' This reading extends that logic to artificial features, creating new maritime zones and restricting freedom of navigation.",
+    "key_agents": [
+      "island_constructing_states: Primary beneficiary (institutional/arbitrage) — gains territorial control and resources.",
+      "neighboring_claimant_states: Primary victim (institutional/constrained) — loses potential maritime zones and faces increased geopolitical tension.",
+      "freedom_of_navigation_states: Victim (institutional/constrained) — faces restrictions on movement and overflight.",
+      "international_shipping: Victim (organized/constrained) — faces new navigational hazards and potential legal challenges.",
+      "international_legal_bodies: Observer (institutional/analytical) — adjudicates disputes and interprets UNCLOS."
+    ],
+    "logic_rationale": "The extractiveness (0.85) is high because this reading allows states to unilaterally claim vast maritime areas and resources that would otherwise be international waters. Suppression (0.75) is also high, as these claims are often enforced through naval presence, administrative control, and the implicit threat of force, effectively suppressing challenges to the de facto sovereignty. The theater ratio (0.2) is low because the construction and enforcement are genuinely aimed at establishing control, not merely performance. Accessibility collapse (0.6) is moderate as alternative interpretations exist, but the physical presence of artificial islands creates a strong de facto reality. Resistance (0.7) is high due to diplomatic protests, freedom of navigation operations, and legal challenges from other states.",
+    "perspectival_gap": "Island-constructing states perceive this as a legitimate exercise of sovereignty and a necessary measure for national security and resource acquisition. Neighboring states and freedom-of-navigation states perceive it as an illegal land grab and a violation of international law, leading to increased regional instability and restricted access to international waters. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Island-constructing states are full beneficiaries (d=0.0) as they gain territorial control and resources. Neighboring claimant states and freedom-of-navigation states are full targets (d=1.0) as they lose maritime zones and face restrictions. International shipping is also a target (d=0.8) due to increased costs and risks. International legal bodies are analytical observers (d=0.5).",
+    "mandatrophy_analysis": "This constraint is a Snare because its coordination story (e.g., 'securing national interests,' 'protecting maritime resources') is a cover for unilateral extraction of territorial control and resources. Its persistence depends on active enforcement and the suppression of alternative interpretations and challenges. There are clear victims who bear the costs of this expansive claim. The classification prevents mislabeling this as a legitimate coordination mechanism by highlighting the asymmetric extraction and coercive enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "unclos_maritime_sovereignty__strict_geographic_reading",
+      "unclos_maritime_sovereignty__hybrid_effective_control_reading",
+      "freedom_of_navigation_operations"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'unclos_maritime_sovereignty' kernel. This 'expansive_construction_reading' directly influences and is influenced by the 'strict_geographic_reading' and 'hybrid_effective_control_reading' as they represent competing interpretations of international maritime law."
+  },
+  "stakeholders": [
+    {
+      "name": "island_constructing_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "States that undertake artificial island construction on submerged features or low-tide elevations, asserting de facto territorial waters and exclusive economic zones. They benefit from expanded territorial control, access to resources, and enhanced geopolitical influence. They actively enforce these claims through naval patrols and administrative presence."
+    },
+    {
+      "name": "neighboring_claimant_states",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States with overlapping maritime claims or proximity to the constructed features. They bear the costs of lost maritime zones, increased geopolitical tension, and potential military escalation. Their options are diplomatic protest, legal challenge, or military confrontation."
+    },
+    {
+      "name": "freedom_of_navigation_states",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States that advocate for and conduct freedom of navigation operations (FONOPs) to challenge excessive maritime claims. They bear the costs of maintaining naval presence and diplomatic friction. Their goal is to prevent the normalization of expansive claims that restrict international waters."
+    },
+    {
+      "name": "international_shipping",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Commercial and private vessels that transit through or near the claimed maritime zones. They face increased navigational hazards, potential harassment, and the risk of legal challenges or detention if they do not comply with the constructing state's regulations. Their options are to reroute (costly) or comply (risky)."
+    },
+    {
+      "name": "international_legal_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Organizations like the International Tribunal for the Law of the Sea (ITLOS) and the International Court of Justice (ICJ) that interpret UNCLOS and adjudicate maritime disputes. They provide legal opinions and rulings but lack direct enforcement power over sovereign states."
+    }
+  ],
+  "gain_flow": "island_constructing_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "From the perspective of the constructing state, it coordinates the assertion of national sovereignty and control over maritime space, ensuring security and resource exploitation within its claimed territorial limits.",
+    "transfer_function": "Transfers territorial control, access to natural resources (e.g., fisheries, hydrocarbons), and strategic military advantage from the international community and neighboring states to the island-constructing state.",
+    "absent_voices": "The 'international community' as a collective, particularly those states without the capacity or geopolitical will to challenge these claims, are effectively absent from the direct negotiation. Their interests in freedom of navigation and shared maritime resources are suppressed by the unilateral actions of constructing states.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the claims to territorial waters from artificial islands vanished overnight, the geopolitical landscape of the affected regions would immediately shift. Neighboring states would reassert their own claims, freedom of navigation would expand, and the constructing states would lose significant strategic and economic advantages, leading to a major reorganization of maritime governance and power dynamics.",
+    "founding_problem": "The constructing states frame the problem as a need to secure national interests, protect maritime borders, and exploit resources in contested or previously unclaimed areas, often citing historical grievances or perceived threats.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The constructing states' claims are primarily self-attested, supported by their domestic legal interpretations and strategic narratives. Neighboring claimant states, freedom-of-navigation states, and many international legal scholars dispute the legitimacy of these claims, citing UNCLOS and customary international law. Independent legal analysis and diplomatic protests from outside the benefiting parties corroborate the view that the 'founding problem' is a pretext for expansion."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "unclos_maritime_sovereignty__strict_geographic_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "unclos_maritime_sovereignty__hybrid_effective_control_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effective_occupation_generates_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "artificial_features_can_generate_maritime_zones",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unilateral_maritime_expansion",
+    "drift_state": {
+      "moment": "contemporary_geopolitical_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

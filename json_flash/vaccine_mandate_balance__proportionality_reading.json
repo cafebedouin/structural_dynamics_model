@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "cce0cf0d-2931-4209-b40c-46ba0199aef6"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "Vaccine Mandate Proportionality Principle",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "vulnerable_populations"
+    ],
+    "victims": [
+      "individuals_with_conscientious_objections",
+      "individuals_with_medical_contraindications"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "proportionality_threshold_ambiguity",
+      "question": "What specific quantitative thresholds for disease severity, transmission risk, and vaccine safety constitute 'strict proportionality'?",
+      "resolution_mechanism": "Consensus among independent epidemiological and bioethical bodies, or judicial precedent setting clear evidentiary standards.",
+      "impact": "Clearer thresholds would reduce arbitrary application, potentially lowering perceived extraction and suppression for individuals. Ambiguity allows for broader interpretation, potentially increasing extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining 'strict proportionality' for vaccine mandates."
+    },
+    {
+      "id": "reading_of_vaccine_mandate_balance",
+      "question": "Is this constraint a genuine application of proportionality, or a cover for either public health overreach or individualistic refusal?",
+      "resolution_mechanism": "Empirical review of mandate outcomes against declared thresholds, and analysis of judicial review decisions on exemptions.",
+      "impact": "If genuinely applied, it functions as a Rope. If it consistently favors public health without robust proportionality, it drifts towards Tangled Rope. If it is consistently undermined by broad exemptions, it drifts towards Piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "This constraint is the 'proportionality_reading' of the 'vaccine_mandate_balance' kernel. Sibling readings include 'public_health_primary' (collective protection supersedes individual consent) and 'bodily_autonomy_primary' (individual consent is inviolable). This reading differs by making mandate legitimacy context-dependent and conditional on disease parameters, rather than categorical."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines the conditions under which vaccine mandates are ethically and legally permissible, emphasizing proportionality. It asserts that mandates are justified only when the severity of the disease, its transmission risk, and the safety and efficacy of the vaccine meet specific, high thresholds. Furthermore, it requires that robust exemptions be available for individuals with medical contraindications or deeply held conscientious objections. This is one reading of the broader 'vaccine_mandate_balance' kernel, which also includes readings prioritizing 'public_health_primary' and 'bodily_autonomy_primary'.",
+    "key_agents": [
+      "public_health_authorities: Agenda setter (institutional/generational) — sets and enforces mandate policy based on proportionality.",
+      "vulnerable_populations: Beneficiary (powerless/generational) — benefits from reduced disease transmission due to mandates.",
+      "individuals_with_conscientious_objections: Payer (powerless/biographical) — bears the cost of compliance or exclusion if mandates are applied without robust exemptions.",
+      "individuals_with_medical_contraindications: Payer (powerless/biographical) — bears the cost of exclusion if mandates are applied without robust exemptions.",
+      "judicial_bodies: Observer (institutional/generational) — reviews mandate legality and proportionality, shaping its application."
+    ],
+    "logic_rationale": "The constraint is claimed as a Rope because, when genuinely applied, it aims to coordinate public health protection with individual rights, benefiting both the collective and those who can safely comply, while providing off-ramps for those who cannot. However, its extractiveness (0.4) and suppression (0.3) are non-zero because even proportional mandates impose costs and limit choices. The resistance (0.5) reflects ongoing societal debate and legal challenges regarding the interpretation and application of proportionality. The theater ratio (0.1) is low, indicating that the stated justification (proportionality) largely aligns with its actual operation, though some performative elements may exist in justifying specific thresholds.",
+    "perspectival_gap": "Public health authorities, from their institutional seat, view this as a necessary coordination mechanism to protect the population, with individual costs being a regrettable but proportional trade-off. Individuals with objections or contraindications, from their powerless seat, experience the mandate as a coercive imposition, even with exemptions, due to the high stakes of non-compliance (e.g., job loss, exclusion from public spaces). The engine's per-seat classification should reflect this divergence.",
+    "directionality_logic": "Public health authorities and vulnerable populations are beneficiaries (d near 0.0) as they gain collective protection and legitimacy for public health interventions. Individuals with conscientious objections or medical contraindications are targets (d near 1.0) as they bear the direct costs of compliance or exclusion. Judicial bodies are analytical observers (d near 0.5), evaluating the balance without directly benefiting or paying.",
+    "mandatrophy_analysis": "This constraint is designed to prevent mandatrophy by requiring continuous re-evaluation of proportionality. If disease severity or transmission risk decreases, or vaccine safety concerns emerge, the mandate's justification erodes, preventing it from becoming a Piton. If it were to persist without meeting proportionality thresholds, it would drift towards a Snare, extracting compliance without a valid public health justification. The 'contested' status of the founding problem reflects the ongoing debate about whether current health threats justify the level of intervention."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'vaccine_mandate_balance' kernel, alongside 'public_health_primary' and 'bodily_autonomy_primary'. Each reading represents a distinct structural claim about the conditions for legitimate vaccine mandates."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for assessing disease risk, vaccine safety, and implementing public health interventions, including mandates. They interpret and apply proportionality thresholds, balancing collective health with individual liberties. Their legitimacy depends on perceived adherence to these principles."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals (e.g., immunocompromised, elderly, infants) who face severe health risks from infectious diseases and rely on high population immunity for protection. They benefit from mandates that reduce overall transmission, but are often trapped by their health status."
+    },
+    {
+      "name": "individuals_with_conscientious_objections",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals whose deeply held moral, ethical, or religious beliefs preclude vaccination. They face social, professional, or educational exclusion if mandates are enforced without robust, accessible exemptions, making their exit identity-locked."
+    },
+    {
+      "name": "individuals_with_medical_contraindications",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals who cannot safely receive vaccines due to pre-existing medical conditions. They rely on herd immunity for protection and face exclusion or health risks if mandates are not carefully balanced with their medical needs, making their exit trapped by their health."
+    },
+    {
+      "name": "judicial_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and tribunals that review the legality and constitutionality of vaccine mandates, often assessing whether they meet proportionality tests and respect individual rights. Their rulings shape the practical application and enforcement of the constraint."
+    },
+    {
+      "name": "employers_and_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Organizations (e.g., hospitals, schools, businesses) that implement and enforce vaccine mandates based on public health guidance and legal frameworks. They bear the administrative and reputational costs of enforcement, but also benefit from a safer environment and reduced liability."
+    }
+  ],
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate individual liberties with collective public health needs by establishing clear, context-dependent criteria for vaccine mandates, ensuring they are only used when strictly necessary and justly applied.",
+    "transfer_function": "Transfers a degree of individual autonomy and choice to public health authorities in exchange for collective protection from infectious disease, conditional on proportionality. It also transfers the burden of proof for mandate justification to the state.",
+    "absent_voices": "Those who advocate for a purely 'public_health_primary' approach (e.g., some epidemiologists, public health hardliners) would argue this reading is too permissive of individual exemptions, risking collective health. Those advocating for 'bodily_autonomy_primary' (e.g., some civil liberties groups, vaccine skeptics) would argue it is too permissive of state coercion, regardless of proportionality. Both are present in public discourse but are structurally excluded from the internal logic of this specific reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality principle vanished, vaccine mandates would either become categorical (as in 'public_health_primary') or impossible (as in 'bodily_autonomy_primary'), leading to a complete reorganization of public health policy, individual rights, and the legal landscape surrounding medical interventions.",
+    "founding_problem": "The historical tension between state power to protect public health and individual rights to bodily integrity, particularly in the context of compulsory medical interventions during epidemics.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional scholars, bioethicists, and public health legal experts (outside the direct beneficiaries of mandates) consistently attest that this tension remains a live and complex problem, requiring ongoing legal and ethical frameworks like proportionality to navigate. Judicial review of mandates frequently reaffirms the ongoing nature of this problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_power_conditional_on_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "individual_rights_defeasible_by_proportional_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "liberal_constitutional_balance",
+    "drift_state": {
+      "moment": "contemporary_pandemic_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

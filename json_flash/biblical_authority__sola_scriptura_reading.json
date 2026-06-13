@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__sola_scriptura_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "8b25adbf-43bb-45d6-87ef-a422a1e14b7e"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Sola Scriptura: Scripture Alone as Sufficient and Self-Interpreting Authority",
+    "topic_domain": "theology/religious_studies/history_of_christianity",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "lay_believers",
+      "individual_interpreters"
+    ],
+    "victims": [
+      "doctrinal_coherence_across_communities"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "sola_scriptura_vs_tradition_ambiguity",
+      "question": "Is 'Scripture alone' truly self-interpreting, or does it implicitly rely on an unacknowledged interpretive tradition?",
+      "resolution_mechanism": "Comparative analysis of interpretive divergences across 'sola scriptura' denominations; historical tracing of how initial interpretations became normative.",
+      "impact": "If an unacknowledged tradition is found to be operative, the constraint's claimed self-sufficiency is weakened, potentially increasing its effective extractiveness by obscuring the true source of interpretive authority.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity of 'self-interpreting' in practice."
+    },
+    {
+      "id": "doctrinal_fragmentation_as_cost_or_feature",
+      "question": "Is the resulting doctrinal fragmentation (victim: doctrinal_coherence_across_communities) an unavoidable cost of lay autonomy, or a structural flaw that undermines the constraint's coordination function?",
+      "resolution_mechanism": "Empirical study of the impact of fragmentation on faith communities and individual believers; theological arguments for the necessity of a unified interpretive authority.",
+      "impact": "If fragmentation is deemed a structural flaw, the constraint's classification might shift towards a Tangled Rope, as the coordination (lay autonomy) comes at a significant, unacknowledged cost (coherence).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Evaluating doctrinal fragmentation as a cost or feature."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'sola_scriptura_reading' of the 'biblical_authority' kernel. How would its structural properties change if viewed through the 'tradition_scripture_reading' or 'conciliar_reading'?",
+      "resolution_mechanism": "Analyze the structural deltas: 'tradition_scripture_reading' would likely increase clerical extraction and suppression, while 'conciliar_reading' would shift authority to historical councils, potentially reducing individual interpretive autonomy.",
+      "impact": "The 'sola_scriptura_reading' emphasizes lay autonomy and low clerical extraction. Sibling readings would introduce higher institutional authority, potentially increasing extractiveness and suppression for individual believers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this as one reading of the 'biblical_authority' kernel and outlines structural deltas of sibling readings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'Sola Scriptura' principle, a foundational tenet of many Protestant traditions, asserting that the Bible is the sole, sufficient, and self-interpreting source of religious authority for Christian doctrine and practice. It emphasizes individual interpretation and congregational autonomy, leading to lower clerical extraction but also higher doctrinal fragmentation across communities. This is one reading of the broader 'biblical_authority' kernel.",
+    "key_agents": [
+      "lay_believers: Primary beneficiary (moderate/mobile) — gains interpretive autonomy.",
+      "individual_interpreters: Primary beneficiary (moderate/mobile) — gains direct access to authority.",
+      "clergy: Agenda setter (organized/constrained) — shifts role from authoritative interpreter to facilitator/teacher.",
+      "denominational_bodies: Payer/Agenda setter (institutional/constrained) — struggles with maintaining doctrinal coherence.",
+      "doctrinal_coherence_across_communities: Victim (analytical/trapped) — suffers from lack of centralized adjudication.",
+      "theologians: Observer (analytical/analytical) — analyzes interpretive methods and doctrinal outcomes."
+    ],
+    "logic_rationale": "Extractiveness is low (0.3) because the principle inherently resists centralized control over interpretation, thus limiting opportunities for institutional rent-seeking. Suppression is also low (0.2) as it promotes individual conscience and discourages coercive enforcement of specific interpretations beyond local congregational norms. Theater ratio is low (0.1) as the principle is generally enacted directly, with little performative maintenance masking other functions. The metrics reflect the intended structural delta of low clerical extraction and high individual autonomy.",
+    "perspectival_gap": "Clergy within 'sola scriptura' traditions experience this constraint as a Rope, enabling their role as teachers and facilitators, but also as a Payer, as they lose the authoritative interpretive monopoly. Lay believers experience it as a Rope, granting them direct access to divine authority. Doctrinal coherence, as an abstract entity, is a victim, as the lack of a central adjudicator leads to fragmentation.",
+    "directionality_logic": "Lay believers and individual interpreters are beneficiaries (d near 0.0) as they gain direct access to scripture and interpretive freedom. Clergy and denominational bodies are agenda setters/payers (d near 0.5-0.7) as they administer the principle but also bear the costs of maintaining coherence without a centralized authority. Doctrinal coherence is a victim (d near 1.0) as it is structurally undermined by the principle's emphasis on individual interpretation.",
+    "mandatrophy_analysis": "The constraint's mandate (individual access to scripture, resistance to clerical hierarchy) remains live. The classification as Rope prevents mislabeling the resulting doctrinal fragmentation as pure extraction, acknowledging the genuine coordination function of empowering individual believers. The tension between individual autonomy and collective coherence is inherent to this reading, not a sign of mandatrophy.",
+    "kernel_context": "This constraint is the 'sola_scriptura_reading' of the 'biblical_authority' kernel. It posits Scripture alone as the sufficient and self-interpreting authority. Sibling readings include 'tradition_scripture_reading' (Scripture requires tradition for authoritative interpretation, often with a magisterium) and 'conciliar_reading' (Scripture interpreted through ecumenical councils and patristic consensus, tradition as living continuity)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__tradition_scripture_reading",
+      "biblical_authority__conciliar_reading",
+      "denominational_autonomy_norms"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'biblical_authority' kernel. Its structural properties (low clerical extraction, high doctrinal fragmentation) are distinct from sibling readings that emphasize tradition or conciliar authority. Each reading is modeled as a separate constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "biblical_authority__tradition_scripture_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "biblical_authority__conciliar_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scripture_is_perspicuous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "tradition_is_subordinate_to_scripture",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "reformation_era_scriptural_primacy",
+    "drift_state": {
+      "moment": "contemporary_theological_discourse",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "animal_moral_status__property_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4ef8e5a2-1028-4337-9780-63c34c7dd518"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.01,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Animals as Property/Resources (Property Reading)",
+    "topic_domain": "applied_ethics/animal_studies/legal_philosophy",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "animal_property_owners",
+      "animal_resource_users"
+    ],
+    "vindicated_propositions": [
+      "human_dominion_doctrine",
+      "property_rights_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "property_vs_moral_status_ambiguity",
+      "question": "Is the classification of animals as property a natural law or a social construct that benefits identifiable agents?",
+      "resolution_mechanism": "Philosophical argument and shifts in legal precedent regarding animal personhood or rights.",
+      "impact": "If a social construct, the constraint's 'mountain' status is a false summit, reclassifying it as a Tangled Rope or Snare depending on the degree of extraction and suppression.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural law and social construct for animal property status."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'property_reading' of the 'animal_moral_status' kernel. How would the classification change under sibling readings?",
+      "resolution_mechanism": "Analyzing the structural implications of the 'welfare_reading' (minimizing suffering within use) or 'abolitionist_reading' (animals as rights-bearing individuals).",
+      "impact": "The 'welfare_reading' would introduce constraints on use (e.g., anti-cruelty laws), potentially shifting to a Rope or Tangled Rope. The 'abolitionist_reading' would fundamentally challenge property status, leading to a Snare classification for current practices.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the animal moral status kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.01
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines animals as property or resources, inherently lacking independent moral standing. Their interests are legally and ethically subordinate to human interests, meaning their use is permissible, with constraints only on waste or inefficiency, not on their fundamental status or suffering. This is the 'property_reading' of the 'animal_moral_status' kernel, which is contested by 'welfare_reading' and 'abolitionist_reading'.",
+    "key_agents": [
+      "animal_property_owners: Primary beneficiary (institutional/arbitrage) — benefits from unrestricted use.",
+      "animal_resource_users: Primary beneficiary (organized/mobile) — benefits from treating animals as commodities.",
+      "animals: Not a victim in this reading; treated as objects/resources.",
+      "legal_system: Agenda setter (institutional/analytical) — codifies and enforces property status.",
+      "animal_welfare_advocates: Excluded (organized/constrained) — their arguments are outside this reading's framework."
+    ],
+    "logic_rationale": "The constraint is claimed as a Mountain because, within this reading, the property status of animals is treated as a foundational, almost natural, legal and ethical principle. Extractiveness is very low (0.05) because the constraint itself does not extract from its beneficiaries; rather, it enables their extraction from animals. Suppression is low (0.02) as the property status is widely accepted and requires minimal active enforcement against its core tenets. Accessibility collapse is high (0.95) as alternatives to property status are almost entirely foreclosed within this framework. Resistance is low (0.05) because challenges to this fundamental property status are largely external to the legal system that upholds it.",
+    "perspectival_gap": "From the perspective of animal property owners and resource users, this constraint is a fundamental, unchangeable aspect of the legal and economic landscape, enabling their activities. From the perspective of animal welfare or rights advocates (who are largely excluded from this reading's framework), this constraint is the source of all extraction and suffering, but their perspective is not accounted for within this specific 'property_reading'.",
+    "directionality_logic": "Animal property owners and resource users are full beneficiaries (d=0.0) as the constraint directly enables their activities without imposing costs. The legal system is an agenda setter (d=0.15) as it administers and enforces this status, benefiting from the stability it provides. Animals are not considered agents with directionality in this reading, as they are defined as property. Animal welfare advocates are excluded (d=1.0) as their goals are directly opposed to the constraint's premise, and they bear the cost of its persistence.",
+    "mandatrophy_analysis": "This constraint, as a 'property_reading', does not exhibit mandatrophy because its core function (defining animals as property) remains central to the economic and legal systems it underpins. The challenge of mandatrophy arises when considering alternative readings, where the 'founding problem' of animal use might be reframed, but within this reading, the mandate is considered live and essential."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_moral_status__welfare_reading",
+      "animal_moral_status__abolitionist_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'animal_moral_status' kernel. Its 'mountain' classification reflects its foundational status within this specific legal and ethical framework, which is contested by 'welfare_reading' and 'abolitionist_reading'."
+  },
+  "stakeholders": [
+    {
+      "name": "animal_property_owners",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Individuals, corporations, and institutions that own animals (e.g., livestock, pets, research animals). They benefit from the legal right to use, sell, or dispose of animals as property, with minimal external constraints on their interests."
+    },
+    {
+      "name": "animal_resource_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Industries and individuals that utilize animals or animal products as resources (e.g., agriculture, biomedical research, entertainment). They benefit from the legal framework that permits the commodification and exploitation of animals for human purposes."
+    },
+    {
+      "name": "legal_system",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The body of laws, courts, and enforcement agencies that codify and uphold the property status of animals. It benefits from the stability and clarity this framework provides for economic and social activities involving animals."
+    },
+    {
+      "name": "animal_welfare_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations and individuals who argue for greater protection of animals, often advocating for their sentience and interests. Within this 'property_reading' framework, their arguments are largely dismissed or reframed as concerns about human morality rather than animal rights, effectively excluding their core claims."
+    }
+  ],
+  "gain_flow": "animal_property_owners",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a clear, universally understood legal and ethical framework for the ownership, use, and transfer of animals, facilitating economic activity and resource management without ambiguity regarding animal status.",
+    "transfer_function": "Legally transfers the full rights of use and disposal of animals to human owners/users, enabling the extraction of labor, products, or services from animals for human benefit.",
+    "absent_voices": "Animals themselves, whose interests are explicitly subordinated, and animal rights advocates who argue for independent moral standing. Their voices are excluded by the very definition of animals as property, which denies them standing to object.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property status of animals vanished overnight, the entire legal and economic system built upon animal ownership and use (agriculture, pet industry, research, entertainment) would collapse. Property rights, contracts, and resource allocation would be fundamentally disrupted, requiring a complete reorganization of human-animal relations.",
+    "founding_problem": "To establish clear legal and ethical boundaries for human interaction with animals, enabling their domestication, use as resources, and integration into human society and economy without constant moral or legal dispute over their status.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The legal system and property owners attest that the problem of managing human-animal interactions and economic activity remains live, requiring the clarity of property status. While animal welfare advocates contest the 'solution,' the problem of defining animal status for human use is still actively managed by this framework. No external corroboration is sought for this foundational legal premise, as it is self-evident within the property-rights framework."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "animal_moral_status__welfare_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "animal_moral_status__abolitionist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "animals_are_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "human_interests_are_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_property_rights_framework",
+    "drift_state": {
+      "moment": "contemporary_animal_advocacy_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

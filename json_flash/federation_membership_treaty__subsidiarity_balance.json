@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_treaty__subsidiarity_balance",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "470f981f-0509-4537-86cb-c9c7f1cf0b65"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.5,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federation Membership Treaty: Subsidiarity Balance Reading",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mobile_citizens",
+      "member_states_with_labor_shortages"
+    ],
+    "victims": [
+      "member_states_with_high_unemployment",
+      "citizens_in_high_demand_sectors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'subsidiarity balance' reading of the federation membership treaty, or is it a disguised 'integration primary' or 'sovereignty primary' reading?",
+      "resolution_mechanism": "Analysis of judicial rulings and legislative actions over time: consistent application of proportionality tests and balancing of interests would corroborate this reading; consistent prioritization of either integration or sovereignty would indicate a different underlying reading.",
+      "impact": "If it's a disguised 'integration primary' reading, extractiveness for member states seeking to restrict mobility would be higher, and suppression of national interests would be more severe. If 'sovereignty primary', extractiveness for mobile citizens would be higher, and suppression of mobility rights would be more severe.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing this reading from sibling interpretations of the federation membership treaty."
+    },
+    {
+      "id": "proportionality_test_objectivity",
+      "question": "Is the 'proportionality test' applied to national interests genuinely objective, or is it subject to political capture or judicial activism?",
+      "resolution_mechanism": "Empirical study of proportionality test outcomes across diverse cases and political contexts, assessing consistency and predictability of application.",
+      "impact": "If the test is consistently objective, the constraint functions as a legitimate balancing mechanism. If captured, it becomes a tool for either integrationist or sovereignist agendas, increasing extraction for the losing party.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assessing the objectivity of the proportionality test in balancing free movement and national interests."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'subsidiarity balance' reading of a federation's membership treaty, specifically concerning free movement. It posits that while free movement is a fundamental right, it is not absolute and can be legitimately constrained by member states' national interests, provided such constraints are proportionate and do not eliminate the right entirely. This reading seeks a middle ground between full integration and full national sovereignty, leading to a graduated constraint structure where both unrestricted mobility and blanket restrictions are moderately suppressed.",
+    "key_agents": [
+      "mobile_citizens: Primary beneficiary (moderate/mobile) — benefits from mobility, but subject to proportionate national interests.",
+      "member_states_with_labor_shortages: Beneficiary (institutional/constrained) — benefits from inflow of labor, but must respect proportionality.",
+      "member_states_with_high_unemployment: Victim (institutional/constrained) — bears costs of potential labor market disruption, but can impose proportionate restrictions.",
+      "citizens_in_high_demand_sectors: Victim (moderate/constrained) — may face restrictions if their sector is deemed a national interest, but retains mobility rights.",
+      "federal_judiciary: Agenda setter (institutional/analytical) — interprets and enforces the proportionality principle, balancing competing interests."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates free movement (benefiting mobile citizens and states with labor shortages) while simultaneously extracting from states seeking to protect specific national interests and from citizens whose mobility might be restricted. The extractiveness (0.4) and suppression (0.5) are moderate, reflecting the balancing act. The 'requires_active_enforcement' is true as the proportionality tests and judicial oversight are crucial for its operation. Theater ratio is low (0.15) as the balancing function is actively performed, not merely ceremonial.",
+    "perspectival_gap": "Mobile citizens experience this as a beneficial, albeit sometimes friction-filled, coordination mechanism. Member states, depending on their economic situation (labor shortages vs. high unemployment), experience it as either a net benefit or a cost. The federal judiciary, as the agenda setter, views it as a necessary and legitimate balancing act to maintain the federation's integrity.",
+    "directionality_logic": "Mobile citizens are beneficiaries (d=0.0-0.2) as their right to move is largely protected. Member states with labor shortages are also beneficiaries (d=0.1-0.3) as they gain labor. Member states with high unemployment are victims (d=0.7-0.9) as they face pressure on their labor markets. Citizens in high-demand sectors are victims (d=0.6-0.8) if their mobility is restricted. The federal judiciary, while enforcing, aims for a balanced outcome, so its directionality is closer to symmetric (d=0.4-0.6) from an analytical perspective.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (ignoring the extraction from national interests) or a pure Snare (ignoring the genuine coordination of free movement). The 'subsidiarity balance' reading explicitly acknowledges both aspects, making it a Tangled Rope. If the balance were to consistently tip towards one side without genuine justification, it would drift towards a Snare (if integrationist) or a Piton (if national interests became purely theatrical)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_treaty__integration_primary",
+      "federation_membership_treaty__sovereignty_primary"
+    ],
+    "dual_formulation_note": "This constraint is one reading ('subsidiarity_balance') of the 'federation_membership_treaty' kernel. It differs from 'integration_primary' (which prioritizes free movement) and 'sovereignty_primary' (which prioritizes national control) by seeking a proportionate balance. Each reading constitutes a distinct constraint with its own ε and classification."
+  },
+  "stakeholders": [
+    {
+      "name": "mobile_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Individuals who benefit from the right to live and work in any member state, subject to proportionate national restrictions. They experience the constraint as a framework that enables their mobility while occasionally imposing friction."
+    },
+    {
+      "name": "member_states_with_labor_shortages",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States that benefit from the inflow of labor to fill economic gaps. They are coordinated into accepting mobile citizens but must justify any restrictions on national interest grounds."
+    },
+    {
+      "name": "member_states_with_high_unemployment",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States that bear the potential costs of increased competition in their labor markets or strain on social services. They can impose proportionate restrictions to protect national interests, but these are subject to federal oversight."
+    },
+    {
+      "name": "citizens_in_high_demand_sectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Citizens whose mobility might be restricted if their sector is deemed a 'legitimate national interest' by a member state. They bear the cost of reduced mobility but retain the overall right to move."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The ultimate arbiter of the proportionality principle, interpreting the treaty and balancing free movement rights against national interests. Their rulings shape the practical application of the constraint."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To enable the free movement of persons within the federation while allowing member states to protect legitimate national interests through proportionate measures, thereby balancing integration with national autonomy.",
+    "transfer_function": "It transfers the right to unrestricted mobility from individual citizens to the collective federal framework, which then grants mobility rights back, subject to a proportionality test. It also transfers some sovereign control over borders and labor markets from member states to the federal judiciary, in exchange for a framework that manages migration flows.",
+    "absent_voices": "Advocates for completely unrestricted movement (who would argue against any national interest restrictions) and advocates for absolute national sovereignty over borders (who would argue against any federal oversight) are structurally marginalized by this balancing framework. They would object to the compromises inherent in the proportionality test.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this balancing constraint vanished, the federation would either default to absolute free movement (straining national welfare systems and labor markets) or to absolute national sovereignty (fragmenting the common market and restricting individual rights). The current equilibrium would collapse, forcing a fundamental re-negotiation of federal principles.",
+    "founding_problem": "The founding problem was how to create a common market and shared identity within a federation that respected the distinct national interests and sovereignty of its member states, particularly regarding the movement of people.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem remains live, as evidenced by ongoing debates and legal challenges regarding migration policy, labor market impacts, and social welfare provisions across the federation. Federal institutions and independent academic analyses corroborate that the tension between integration and national interest is a persistent challenge, not a solved problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "federation_membership_treaty__integration_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "federation_membership_treaty__sovereignty_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_is_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legitimate_national_interests_exist",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "balanced_federal_integration",
+    "drift_state": {
+      "moment": "contemporary_migration_crises",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

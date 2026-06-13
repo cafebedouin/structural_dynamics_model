@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "article_27_veto_power__sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0a319a7e-7e14-49e9-9b68-6e31f47576e2"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "UNSC Article 27 Veto Power (Sovereignty Reading)",
+    "topic_domain": "international_relations/institutional_design/constitutional_law",
+    "emerges_naturally": true
+  },
+  "omegas": [
+    {
+      "id": "sovereignty_vs_coordination_ambiguity",
+      "question": "Is the P5 veto a structural inevitability reflecting the distribution of global power (sovereignty reading), or a coordination mechanism to prevent great-power conflict (coordination reading)?",
+      "resolution_mechanism": "Counterfactual analysis: if a global institution could compel great powers without their consent, would it be stable? If not, the sovereignty reading is strengthened.",
+      "impact": "If the sovereignty reading is correct, the veto is a Mountain; if the coordination reading is primary, it's a Rope or Tangled Rope, with different implications for reform.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between the veto as a reflection of power distribution and as a coordination mechanism."
+    },
+    {
+      "id": "sovereignty_vs_oligopoly_ambiguity",
+      "question": "Is the P5 veto a necessary expression of great-power sovereignty, or a mechanism for entrenching a geopolitical oligopoly and extracting authority rents?",
+      "resolution_mechanism": "Analysis of institutional evolution: if the veto consistently blocks reforms that would redistribute power without clear security justifications, the oligopoly reading is strengthened.",
+      "impact": "If the sovereignty reading is correct, the veto is a Mountain; if the oligopoly reading is primary, it's a Snare, with implications for legitimacy and reform.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between the veto as sovereignty and as oligopolistic rent extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.02
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the P5 veto power in the UN Security Council as an instantiation of the Westphalian sovereignty principle, specifically applied to great powers with global-reach enforcement capacity. From this 'sovereignty reading,' the veto is not a choice but a structural inevitability: no state, particularly one with nuclear weapons and the capacity to project power globally, can be bound by international law without its consent. Any attempt to create a global institution that could compel such a state would simply fail, as the state would disregard or dismantle it. Thus, the veto is a reflection of the physical reality of power distribution, making it a Mountain.",
+    "logic_rationale": "The low extractiveness (0.05) and suppression (0.02) reflect the view that the veto is not 'extracting' from anyone, nor is it 'suppressing' alternatives in a coercive sense. Instead, it merely reflects an irreducible limit on what international institutions can achieve given the distribution of power. The high accessibility collapse (0.9) indicates that alternatives to this power distribution (e.g., a global government that could compel great powers) are seen as structurally impossible. Resistance is low (0.05) because, from this perspective, resistance to the veto is resistance to the underlying reality of state power, which is futile.",
+    "directionality_logic": "From the sovereignty reading, there are no 'beneficiaries' or 'victims' in the conventional sense. The P5 states are not 'benefiting' from the veto; they are simply exercising an inherent attribute of their sovereign power. Other states are not 'victims' of the veto; they are simply operating within the constraints of a world where great powers cannot be compelled. The constraint derives from the physical reality of power distribution, not from a human-designed system with a beneficiary structure.",
+    "perspectival_gap": "This reading posits the veto as a fundamental, unchangeable aspect of international relations, akin to a natural law. Other readings (coordination, oligopoly) would see it as a constructed mechanism with identifiable beneficiaries and victims, leading to different classifications. The divergence is precisely what the kernel analysis is designed to capture.",
+    "kernel_context": "This constraint is the 'sovereignty reading' of the 'article_27_veto_power' kernel. It posits the veto as a structural inevitability given the distribution of global power. Sibling readings include the 'coordination_reading' (veto as a necessary mechanism to prevent great-power war) and the 'oligopoly_reading' (veto as entrenching geopolitical oligopoly and extracting authority rents)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "article_27_veto_power__coordination_reading",
+      "article_27_veto_power__oligopoly_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the P5 veto power. This 'sovereignty reading' views the veto as a structural inevitability, while the 'coordination reading' sees it as a conflict-prevention mechanism, and the 'oligopoly reading' as a tool for rent extraction."
+  },
+  "stakeholders": [
+    {
+      "name": "p5_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Possess the veto power, which is seen as an inherent attribute of their sovereign power and global enforcement capacity. They are not 'benefiting' from it in a constructed sense, but rather operating within its bounds as a given structural reality."
+    },
+    {
+      "name": "non_p5_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate within an international system where great powers cannot be compelled without their consent. They experience the veto as a limit on collective action, but from this reading, it is a reflection of an unchangeable reality, not an imposed cost."
+    },
+    {
+      "name": "international_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the structural implications of the veto power, debating whether it is a necessary evil, a design flaw, or a reflection of fundamental geopolitical realities. This reading aligns with a realist perspective on international relations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "From this reading, the veto does not 'coordinate' in the sense of solving a collective action problem among states. Instead, it reflects the pre-existing coordination failure inherent in a system of sovereign great powers that cannot be compelled.",
+    "transfer_function": "No direct transfer of resources or benefits is identified from this reading. The veto is seen as preventing certain actions, rather than facilitating a transfer.",
+    "absent_voices": "From this perspective, there are no 'absent voices' whose presence would fundamentally alter the constraint, as the veto reflects an underlying reality of power. Any voice advocating for compelling great powers would be seen as ignoring this reality.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the veto 'disappeared' overnight, it would simply mean that great powers would revert to unilateral action or form new alliances outside the UN framework, as the underlying reality of their sovereignty and enforcement capacity would remain. The world would not 'rearrange' around a new, more powerful international body, but rather revert to a less institutionalized form of great-power politics.",
+    "founding_problem": "The veto was built to acknowledge the reality that great powers would not submit to an international organization that could compel them into action against their vital interests, especially after two world wars.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The P5 states themselves consistently attest that the founding problem (the need to prevent great-power war by ensuring consent) is still live. Realist international relations scholars, from outside the benefiting parties, corroborate this view, arguing that the veto is a necessary evil reflecting the anarchic nature of the international system."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "self_enforcing",
+    "reading_relations": [
+      {
+        "sibling_id": "article_27_veto_power__coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "article_27_veto_power__oligopoly_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "great_power_cannot_be_compelled",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "westphalian_sovereignty_is_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "anarchic_international_system",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "classical_latin_standard__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "ceee3d75-963a-41ca-a98a-bc43863a761b"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Standard for Correct Latin",
+    "topic_domain": "historical_linguistics/philology/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ecclesiastical_scholars",
+      "technical_latin_users"
+    ],
+    "victims": [
+      "unreformed_medieval_latin_speakers",
+      "pure_classical_reconstructionists"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine hybrid standard, or is it a temporary compromise between the continuity and reconstruction readings?",
+      "resolution_mechanism": "Longitudinal study of prescriptive grammars and pedagogical materials: if the hybrid approach stabilizes and generates its own distinct prescriptive tradition, it is a genuine reading; if it oscillates between the other two, it is a compromise.",
+      "impact": "If a genuine reading, the classification holds. If a compromise, the underlying tension between continuity and reconstruction would drive the constraint's dynamics, potentially leading to reclassification as a more extractive or unstable form.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'hybrid_reading' of the 'classical_latin_standard' kernel. Sibling readings are 'continuity_reading' and 'reconstruction_reading'. This reading attempts to reconcile both textual fidelity and post-Classical developments."
+    },
+    {
+      "id": "legitimacy_of_post_classical_development",
+      "question": "What criteria define 'legitimate' post-Classical developments, and are these criteria consistently applied?",
+      "resolution_mechanism": "Analysis of historical linguistic debates and prescriptive rulings: identify the explicit and implicit criteria used to accept or reject post-Classical forms. Assess consistency across different domains and periods.",
+      "impact": "If criteria are arbitrary or inconsistently applied, the 'legitimate development' clause becomes a discretionary tool for extraction, increasing effective extractiveness. If criteria are robust, it reinforces the coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The ambiguity in 'legitimate post-Classical developments' can lead to arbitrary exclusion."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 1800,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines 'Correct Latin' as a hybrid standard, requiring adherence to Classical textual norms while also acknowledging and legitimizing certain post-Classical developments, particularly in technical and ecclesiastical contexts. This reading attempts to bridge the gap between purist Classical reconstruction and the historical reality of Latin's continuous evolution. It implies a selective suppression of 'barbarisms' while accommodating 'legitimate' innovations.",
+    "key_agents": [
+      "ecclesiastical_scholars: Beneficiary (institutional/arbitrage) — benefits from a standard that allows for their specialized vocabulary while retaining prestige.",
+      "technical_latin_users: Beneficiary (organized/mobile) — benefits from a stable, recognized standard that accommodates their domain-specific needs.",
+      "unreformed_medieval_latin_speakers: Payer (powerless/trapped) — their forms are delegitimized, forcing them to conform or be excluded from 'correct' usage.",
+      "pure_classical_reconstructionists: Payer (organized/constrained) — their absolute purism is challenged by the legitimization of post-Classical forms, forcing them to accept a broader definition.",
+      "philological_academies: Agenda Setter (institutional/analytical) — institutions that codify and enforce the hybrid standard through grammars, dictionaries, and teaching.",
+      "historical_linguists: Observer (analytical/analytical) — analyze the historical development and social function of such prescriptive standards."
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate because while some forms are delegitimized, others are accommodated, reducing the overall cost compared to a pure reconstructionist standard. Suppression (0.55) is also moderate, as it requires active enforcement to distinguish 'legitimate' from 'illegitimate' developments, but it's not absolute. Theater ratio (0.15) is low, as the standard genuinely guides usage and scholarship, with minimal performative maintenance. Accessibility collapse (0.4) is moderate, as alternatives (pure medieval or pure classical) exist but are partially delegitimized. Resistance (0.3) is present from both purists and those whose forms are rejected.",
+    "perspectival_gap": "Ecclesiastical and technical users experience this as a beneficial coordination mechanism, allowing them to maintain a prestigious linguistic tradition relevant to their fields. Pure reconstructionists and unreformed medieval speakers, however, experience it as an extractive constraint that delegitimizes their preferred forms, forcing them to adapt or be marginalized. The agenda setters (philological academies) view it as a necessary and balanced act of linguistic stewardship.",
+    "directionality_logic": "Ecclesiastical scholars and technical Latin users are beneficiaries (d near 0.0) as the standard legitimizes their specific needs within a broader prestigious framework. Unreformed medieval Latin speakers and pure classical reconstructionists are payers (d near 1.0) as their preferred usages are either rejected or diluted. Philological academies, as agenda setters, benefit from their role in defining and maintaining the standard (d near 0.1).",
+    "mandatrophy_analysis": "This hybrid standard prevents the mislabeling of genuine linguistic evolution as 'error' (a problem for the reconstruction_reading) while also preventing the complete erosion of Classical norms (a problem for the continuity_reading). It attempts to maintain a functional standard by selectively accommodating change, thus avoiding the mandatrophy of a standard that becomes irrelevant or overly rigid. The contestation around 'legitimate' development is key to its ongoing function."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "classical_latin_standard__continuity_reading",
+      "classical_latin_standard__reconstruction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'classical_latin_standard' kernel. This 'hybrid_reading' attempts to reconcile textual fidelity with post-Classical developments, contrasting with the 'continuity_reading' (which embraces all drift) and the 'reconstruction_reading' (which rejects all post-Classical drift)."
+  },
+  "stakeholders": [
+    {
+      "name": "ecclesiastical_scholars",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from a standard that allows them to use their specialized, historically evolved ecclesiastical Latin vocabulary while still being recognized as 'correct' and prestigious within a Classical framework. They have significant institutional backing and influence over the standard's interpretation."
+    },
+    {
+      "name": "technical_latin_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from a stable Latin standard that accommodates their domain-specific technical terms (e.g., in botany, medicine, law) which often developed post-Classically. They can adapt their usage to meet the standard without abandoning their specialized lexicon, allowing for clear communication within their fields."
+    },
+    {
+      "name": "unreformed_medieval_latin_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Their historically evolved, often regionally diverse, medieval Latin forms are largely delegitimized by the hybrid standard, which prioritizes Classical norms. They face pressure to conform to the 'correct' standard or risk being seen as uneducated or anachronistic, with limited institutional support for their usage."
+    },
+    {
+      "name": "pure_classical_reconstructionists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for a Latin standard based solely on philological reconstruction of Classical usage, rejecting all post-Classical developments. They bear the cost of having their purist ideal diluted by the hybrid standard's accommodation of later forms, which they view as corruptions. Their influence is limited by the broader acceptance of the hybrid approach."
+    },
+    {
+      "name": "philological_academies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These institutions (e.g., pontifical academies, national philological societies) are responsible for codifying, teaching, and enforcing the hybrid standard through grammars, dictionaries, and educational curricula. They define what constitutes 'legitimate' post-Classical development and mediate between competing claims."
+    },
+    {
+      "name": "historical_linguists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the historical evolution of Latin and the social dynamics of prescriptive standards. They analyze how the hybrid standard is constructed, maintained, and contested, without necessarily adhering to its prescriptive rules in their own academic work. They provide an external, empirical perspective on its operation."
+    }
+  ],
+  "gain_flow": "philological_academies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To provide a stable and prestigious standard for Latin that is both historically informed by Classical norms and practically adaptable for specialized post-Classical usage, enabling communication across different domains and historical periods.",
+    "transfer_function": "Transfers linguistic authority and prestige from historically evolved, diverse Latin usages to a codified, hybrid standard. It transfers the burden of conformity from the standard-setters to users whose forms are deemed 'illegitimate'.",
+    "absent_voices": "Speakers of various vernaculars that evolved from Latin, who would argue that 'correctness' is an artificial construct imposed on a naturally evolving language. Also, radical linguistic relativists who would reject any prescriptive standard as inherently extractive.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid standard vanished, the concept of 'Correct Latin' would fragment. Ecclesiastical and technical users would lose a common, prestigious reference point, leading to a proliferation of uncoordinated usages. The ongoing debate between pure Classicists and proponents of continuity would intensify without a mediating framework, leading to significant reordering of pedagogical and scholarly practices.",
+    "founding_problem": "The problem of reconciling the historical reality of Latin's continuous evolution and its diverse post-Classical forms with the desire to maintain a prestigious, unified standard rooted in Classical antiquity, particularly for institutional and scholarly use.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical linguists and philologists, outside the direct beneficiaries, corroborate that the tension between historical evolution and prescriptive standardization remains a live problem in the study and use of Latin. Debates in academic journals and conferences attest to the ongoing nature of this challenge."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "classical_latin_standard__continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "classical_latin_standard__reconstruction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "classical_fidelity_and_legitimate_development_coexist",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "institutional_utility_justifies_adaptation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_renaissance_humanist_synthesis",
+    "drift_state": {
+      "moment": "contemporary_linguistic_pluralism",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

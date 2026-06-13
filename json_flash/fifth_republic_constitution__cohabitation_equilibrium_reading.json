@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__cohabitation_equilibrium_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "48178d22-1b11-40df-b29d-97d0ed8e21a4"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fifth Republic Constitution: Cohabitation Equilibrium Reading",
+    "topic_domain": "constitutional_law/political_systems/comparative_government",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "president_of_france",
+      "prime_minister_of_france",
+      "national_assembly"
+    ],
+    "victims": [
+      "policy_coherence",
+      "political_stability"
+    ]
+  },
+  "interval": {
+    "start": 1986,
+    "end": 2022
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'cohabitation equilibrium' reading of the French Fifth Republic Constitution, where a dual executive (President and Prime Minister) from opposing political parties must negotiate authority allocation. This reading emphasizes mutual constraint and shared power, particularly in domestic policy, leading to periods of both stability and tension. The constraint's extractiveness is moderate but unstable, as it extracts policy coherence and political stability, while benefiting whichever actor controls key policy domains.",
+    "logic_rationale": "The extractiveness (0.55) reflects the costs of policy incoherence and potential gridlock inherent in cohabitation, where the President and Prime Minister may pull in different directions. Suppression (0.40) is moderate, as the constitutional framework actively enforces the power-sharing, but political actors retain significant agency. The theater ratio (0.20) is low, indicating that the power-sharing is a genuine, if often contentious, function of the system, not merely performative. The temporal measurements reflect the ebb and flow of cohabitation periods, with extractiveness and suppression rising during intense cohabitation and falling during periods of political alignment.",
+    "directionality_logic": "The President and Prime Minister, along with the National Assembly, are beneficiaries in that they gain power and influence over policy domains during cohabitation, albeit through negotiation. The French electorate is a payer, bearing the costs of potential policy incoherence and instability. Abstract entities like 'policy_coherence' and 'political_stability' are victims, as they are directly diminished by the constraint's operation.",
+    "perspectival_gap": "From the perspective of the President or Prime Minister during cohabitation, the constraint is a necessary framework for governance, enabling a balance of power. From the perspective of the electorate or those concerned with policy outcomes, it can appear as an extractive mechanism that sacrifices efficiency for political compromise. The engine will compute these divergences based on the declared roles and attributes.",
+    "kernel_context": "This constraint is the 'cohabitation_equilibrium_reading' of the Fifth Republic Constitution. It emphasizes the negotiated allocation of authority between the President and Prime Minister during periods when they come from opposing political parties. This reading contrasts with the 'hyper_presidential_reading' (which sees the President as minimally constrained) and the 'parliamentary_constraint_reading' (which emphasizes legislative supremacy)."
+  },
+  "omegas": [
+    {
+      "id": "cohabitation_stability_vs_gridlock",
+      "question": "Is cohabitation a mechanism for stable power-sharing and democratic accountability, or does it primarily lead to political gridlock and policy incoherence?",
+      "resolution_mechanism": "Comparative analysis of policy outcomes and governmental effectiveness during cohabitation periods versus periods of unified executive control, across multiple Fifth Republic governments.",
+      "impact": "If primarily gridlock, the constraint's extractiveness is higher than currently measured, as it consistently sacrifices effective governance. If primarily stable power-sharing, the extractiveness is lower, reflecting a functional compromise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the functional outcome of cohabitation."
+    },
+    {
+      "id": "presidential_vs_parliamentary_primacy",
+      "question": "To what extent does the 'cohabitation equilibrium' reading genuinely balance presidential and parliamentary power, versus merely shifting the locus of extraction between them?",
+      "resolution_mechanism": "Detailed analysis of legislative output, executive decrees, and judicial review during cohabitation, focusing on which branch ultimately prevails in contested policy areas.",
+      "impact": "If one branch consistently dominates, the reading's claim of 'equilibrium' is weakened, and the constraint might lean more towards a 'snare' for the subordinate branch, or a 'tangled_rope' with a more concentrated beneficiary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The true balance of power during cohabitation."
+    },
+    {
+      "id": "reading_naturalness_vs_political_strategy",
+      "question": "Is the 'cohabitation equilibrium' reading an inherent structural feature of the Fifth Republic Constitution, or a political strategy adopted by actors to legitimize power-sharing when forced by electoral outcomes?",
+      "resolution_mechanism": "Analysis of constitutional debates and political discourse surrounding the adoption of the 1962 direct presidential election, and how interpretations of executive power evolved before and after the first cohabitation periods.",
+      "impact": "If primarily a political strategy, the 'naturalness' of this reading is diminished, suggesting a higher degree of constructedness and potential for manipulation, which could increase its effective extractiveness.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the cohabitation reading is a natural outcome or a strategic interpretation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the Fifth Republic Constitution kernel, focusing on the cohabitation equilibrium. It is structurally distinct from the 'hyper_presidential_reading' and 'parliamentary_constraint_reading' due to differing interpretations of executive-legislative power balance and resulting beneficiary/victim structures."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fifth_republic_constitution__hyper_presidential_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "fifth_republic_constitution__parliamentary_constraint_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dual_executive_mutual_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "negotiated_authority_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "constitutional_balance_of_powers",
+    "drift_state": {
+      "moment": "contemporary_political_practice",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

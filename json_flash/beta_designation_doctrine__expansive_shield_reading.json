@@ -1,0 +1,293 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__expansive_shield_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e46c1058-1226-47d4-8996-ae6492bf66be"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Beta Designation Doctrine (Expansive Shield Reading)",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_developers",
+      "software_publishers"
+    ],
+    "victims": [
+      "end_users",
+      "enterprise_customers"
+    ]
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'expansive shield' reading of the beta designation doctrine, or is it a mischaracterization of a more nuanced legal/contractual reality?",
+      "resolution_mechanism": "Analysis of case law, EULAs, and industry practice across multiple jurisdictions to determine the prevalence and enforceability of comprehensive liability waivers for 'beta' software.",
+      "impact": "If this expansive shield reading is not widely upheld, the constraint's extractiveness and suppression would be lower, potentially reclassifying it as a Tangled Rope or even a Rope, as developers would bear more liability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the actual legal interpretation and enforcement of beta designation as a comprehensive liability shield."
+    },
+    {
+      "id": "temporal_indefiniteness_justification",
+      "question": "Is the indefinite duration of 'beta' status for some software products a legitimate reflection of ongoing development, or a strategic maneuver to perpetually avoid liability?",
+      "resolution_mechanism": "Auditing development roadmaps, bug fix rates, and feature release cycles for 'perpetual beta' products. Comparison with industry standards for product lifecycle management.",
+      "impact": "If found to be a strategic maneuver, the 'theater_ratio' would increase, and the 'extractiveness' would be seen as more deliberate, reinforcing the Snare classification. If legitimate, the constraint might lean more towards a Tangled Rope, acknowledging some coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indefinite beta status is a genuine development state or a liability avoidance tactic."
+    },
+    {
+      "id": "severity_carve_out_absence",
+      "question": "Should the 'expansive shield' reading be modified to include carve-outs for life-safety or critical financial systems, as proposed by the 'severity_carve_out_reading'?",
+      "resolution_mechanism": "Legislative action or landmark court rulings establishing specific categories of software where beta designation cannot waive liability due to public safety or economic impact.",
+      "impact": "If such carve-outs were adopted, the scope of this constraint would narrow significantly, reducing its overall extractiveness and suppression, particularly for enterprise customers in critical sectors. This would shift the constraint towards a more nuanced Tangled Rope or even a Rope for those specific contexts.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The normative question of whether beta designation should apply to all software contexts, regardless of severity."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'expansive shield' reading of the beta designation doctrine, where software labeled 'beta' is understood to carry a comprehensive waiver of developer liability, regardless of the software's actual stage of development, duration in 'beta' status, or the context of its use. This reading allows developers to externalize all defect-related costs to users, effectively making users victims of a system that prioritizes developer protection over product reliability or consumer safety. The constraint is actively enforced through EULAs and legal precedent, suppressing user recourse.",
+    "key_agents": [
+      "software_developers: Primary beneficiary (institutional/arbitrage) — externalizes liability",
+      "software_publishers: Secondary beneficiary (institutional/arbitrage) — benefits from reduced risk",
+      "end_users: Primary victim (powerless/trapped) — bears all defect costs, no recourse",
+      "enterprise_customers: Secondary victim (organized/constrained) — bears defect costs, limited recourse",
+      "consumer_advocacy_groups: Observer (organized/constrained) — advocates for user rights, limited power to change doctrine",
+      "legal_scholars: Observer (analytical/analytical) — analyzes doctrine, proposes reforms"
+    ],
+    "logic_rationale": "The high extractiveness (0.85) reflects the complete transfer of defect costs from developers to users. Suppression (0.7) is significant due to the legal and contractual barriers preventing users from seeking redress. The theater ratio (0.4) indicates that while 'beta' once genuinely signaled a testing phase, it is increasingly used as a perpetual liability shield, with the 'testing' aspect becoming performative. Accessibility collapse (0.6) is moderate because while users can choose not to use specific beta software, the ubiquity of 'beta' labels across essential software makes avoiding the doctrine difficult. Resistance (0.3) is low because individual users have little leverage, and collective action is challenging.",
+    "perspectival_gap": "Software developers and publishers experience this as a legitimate risk management tool, enabling innovation without excessive liability. End-users and enterprise customers, however, experience it as an unfair imposition of risk, where they bear the costs of defects without adequate recourse. Legal scholars and consumer advocates often highlight this asymmetry, arguing for a rebalancing of liability.",
+    "directionality_logic": "Software developers and publishers are clear beneficiaries (d=0.0-0.1) as they offload liability. End-users and enterprise customers are clear targets (d=0.9-1.0) as they absorb all defect costs. Consumer advocacy groups and legal scholars are analytical observers (d=0.5), neither directly benefiting nor paying, but analyzing the structural flows.",
+    "mandatrophy_analysis": "The 'expansive shield' reading prevents mislabeling pure extraction as coordination by highlighting that the original coordination function (facilitating early testing) has atrophied. The constraint persists not because it solves a collective action problem for all parties, but because it benefits developers by externalizing costs, sustained by legal inertia and the suppression of user recourse. The founding problem of fragmented and unsafe early software distribution is now largely solved, but the 'beta' designation has drifted to serve a different, extractive purpose."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_eula_enforceability",
+      "open_source_liability_norms"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'beta_designation_doctrine' kernel. It represents the most expansive interpretation of liability waiver, contrasting with 'narrow_warning_reading' (time-bounded testing disclosure) and 'severity_carve_out_reading' (categorical unavailability for critical systems)."
+  },
+  "stakeholders": [
+    {
+      "name": "software_developers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and release software, often under 'beta' labels, to externalize liability for defects. They benefit from reduced legal and financial risk, allowing them to innovate faster or with fewer resources dedicated to quality assurance."
+    },
+    {
+      "name": "software_publishers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Distribute software, leveraging the 'beta' designation to protect their developers and themselves from liability. They benefit from a more favorable risk profile for their product portfolios."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Utilize 'beta' software, often for essential functions, and bear the full cost and consequences of any defects, with little to no legal recourse due to the liability waiver. Their options are limited by the ubiquity of 'beta' software and the lack of fully 'released' alternatives."
+    },
+    {
+      "name": "enterprise_customers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy 'beta' software in business-critical environments, accepting significant operational and financial risks due to the liability waiver. While they have more leverage than individual users, their options for recourse are still constrained by the doctrine."
+    },
+    {
+      "name": "consumer_advocacy_groups",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for stronger consumer protections and clearer liability standards in software. They analyze the impact of 'beta' designations on users and lobby for legislative or judicial reforms, but face significant institutional resistance."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the evolution of software liability law and the 'beta' doctrine, publishing analyses that inform policy debates and legal challenges. They provide critical commentary but do not directly participate in the enforcement or payment flows."
+    }
+  ],
+  "gain_flow": "software_developers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Originally, to coordinate early user feedback and bug reporting for software under active development, allowing developers to iterate rapidly and users to gain early access to new features.",
+    "transfer_function": "Transfers all liability for software defects from developers and publishers to end-users and enterprise customers, effectively externalizing the costs of quality assurance and bug fixing.",
+    "absent_voices": "Users who suffer significant harm from 'beta' software defects are effectively silenced by the comprehensive liability waivers. Their voices would demand accountability and a rebalancing of risk, but the legal framework prevents their claims from being heard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 'expansive shield' reading of beta designation vanished, software developers and publishers would face significantly increased liability, leading to more rigorous testing, slower release cycles, and potentially higher software prices. Users would gain legal recourse for defects, fundamentally altering the risk distribution in the software industry.",
+    "founding_problem": "The rapid pace of software development in the early internet era, coupled with the complexity of debugging, created a need for a mechanism to release early versions for testing without incurring full product liability, thereby fostering innovation.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "While software development remains complex, the 'founding problem' of needing a comprehensive liability shield for all 'beta' software is largely considered 'dead' by consumer advocacy groups and many legal scholars. They argue that modern development practices and testing tools mitigate much of the original risk, and the doctrine now primarily serves to protect developers from accountability. Software developers and publishers, however, maintain that the problem is still 'live', citing ongoing innovation challenges and the cost of perfect software."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__narrow_warning_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liability_waiver_is_comprehensive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "beta_status_is_developer_discretionary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unfettered_developer_innovation",
+    "drift_state": {
+      "moment": "contemporary_consumer_protection_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

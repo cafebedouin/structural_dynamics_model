@@ -1,0 +1,252 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9d257570-bc41-42df-9c45-24a5b5aa7e54"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shared Liability for AI Systems (Causal Contribution & Control)",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "affected_parties",
+      "insurance_providers"
+    ],
+    "victims": [
+      "ai_developers",
+      "ai_deployers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "causal_contribution_measurement",
+      "question": "How reliably can 'causal contribution' and 'control' be measured and attributed in complex AI systems?",
+      "resolution_mechanism": "Development of standardized forensic tools and methodologies for AI system analysis, coupled with legal precedent on attribution in specific cases.",
+      "impact": "If attribution is consistently difficult, the constraint's enforcement becomes arbitrary or performative, increasing extractiveness for victims and potentially shifting it towards a Snare. If reliable, it strengthens the coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in measuring causal contribution and control for liability attribution."
+    },
+    {
+      "id": "shared_liability_vs_developer_deployer",
+      "question": "Is this 'shared liability' reading of the liability_attribution kernel genuinely distinct from the developer_liability or deployer_liability readings, or does it merely represent a different weighting of their core premises?",
+      "resolution_mechanism": "Analysis of legal frameworks: if shared_liability introduces novel legal duties or mechanisms not present in the other readings, it is distinct. If it only reallocates existing duties, it is a variant.",
+      "impact": "If merely a variant, the underlying structural dynamics of extraction and coordination may be more accurately captured by one of the 'primary' liability readings, with shared_liability acting as a modifier. If distinct, it represents a unique approach to risk distribution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading (shared_liability) of the liability_attribution kernel. Sibling readings (developer_liability, deployer_liability) would shift the primary victim set and alter the distribution of coordination costs and opacity burdens."
+    },
+    {
+      "id": "opacity_burden_distribution",
+      "question": "Does the contractual distribution of opacity burden genuinely distribute risk, or does it disproportionately concentrate it on less powerful actors in the value chain?",
+      "resolution_mechanism": "Empirical study of indemnification clauses and insurance market outcomes across different sizes of AI developers and deployers.",
+      "impact": "If the burden concentrates on less powerful actors, the constraint's effective extractiveness for those actors is higher than the base measure suggests, potentially pushing their seat towards a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contractual opacity burden distribution is equitable or concentrates risk."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint establishes a legal framework for shared liability across the AI value chain, attributing responsibility based on causal contribution to harm and control over the AI system's operation. It aims to distribute risk more equitably than single-point liability models, but introduces new coordination costs and complexities in attribution. This is one reading (shared_liability) of the broader 'liability_attribution' kernel, which also includes developer_liability and deployer_liability readings.",
+    "key_agents": [
+      "ai_developers: Payer (powerful/constrained) — bears costs of potential liability and increased compliance/insurance.",
+      "ai_deployers: Payer (powerful/constrained) — bears costs of potential liability and increased compliance/insurance.",
+      "affected_parties: Beneficiary (powerless/constrained) — benefits from clearer avenues for redress in case of harm.",
+      "insurance_providers: Beneficiary (institutional/arbitrage) — profits from new markets for AI liability insurance.",
+      "regulatory_bodies: Agenda Setter (institutional/analytical) — defines and enforces the liability framework."
+    ],
+    "logic_rationale": "Extractiveness (0.45) is moderate, reflecting the costs imposed on both developers and deployers for compliance, insurance, and potential damages, but also the benefit of distributed risk. Suppression (0.30) is relatively low, as the constraint aims to enable, rather than prevent, innovation, but it does suppress unilateral risk-taking. Theater ratio (0.10) is low, as the primary function is genuine risk distribution, though some performative compliance may exist. Accessibility collapse (0.60) is moderate, as it creates new hurdles for market entry but doesn't eliminate the ability to develop or deploy AI. Resistance (0.25) is moderate, as both developers and deployers push back on increased costs, but also see benefits in a clearer, shared framework.",
+    "perspectival_gap": "AI developers and deployers experience this as a cost-imposing constraint, requiring new investments in risk management and legal counsel. Affected parties, however, see it as a beneficial mechanism for justice and redress. Insurance providers view it as a new market opportunity. Regulatory bodies see it as a necessary evolution of legal frameworks for emerging technologies.",
+    "directionality_logic": "Affected parties are beneficiaries (d=0.0) as they gain new avenues for redress. Insurance providers are also beneficiaries (d=0.0) as they profit from new markets. AI developers and deployers are victims (d=1.0) as they bear the direct costs of liability and compliance. Regulatory bodies are agenda setters (d=0.5) as they administer the system, balancing societal benefit with industry impact.",
+    "mandatrophy_analysis": "This constraint prevents mislabeling genuine risk distribution as pure extraction by ensuring that the costs are tied to a demonstrable coordination function (fairer allocation of risk, clearer redress for harm). It avoids becoming a Snare by distributing the burden rather than concentrating it, and avoids being a Piton by actively evolving with the technology, rather than becoming inert. The ongoing contestation over 'causal contribution' and 'control' is key to preventing mandatrophy, as it forces continuous re-evaluation of the constraint's fit with technological reality."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_system_safety_standards",
+      "ai_ethics_guidelines"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'liability_attribution' kernel. Other readings include 'developer_liability' and 'deployer_liability', which focus on single-point responsibility."
+  },
+  "stakeholders": [
+    {
+      "name": "ai_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Creates the underlying AI models and software. Bears a portion of liability based on their causal contribution to harm and control over the model's design. Must invest in explainability, safety-by-design, and liability insurance."
+    },
+    {
+      "name": "ai_deployers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrates and operates AI systems in specific contexts. Bears a portion of liability based on their causal contribution to harm and control over deployment decisions, monitoring, and human oversight. Must invest in robust testing, monitoring, and indemnification agreements."
+    },
+    {
+      "name": "affected_parties",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals or groups harmed by AI systems. Benefits from clearer and more robust legal avenues for seeking redress, as liability is distributed across multiple responsible parties, increasing the likelihood of successful claims."
+    },
+    {
+      "name": "insurance_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Offers new AI liability insurance products to developers and deployers. Profits from the increased demand for risk coverage driven by the shared liability framework, becoming a key intermediary in risk transfer."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establishes, interprets, and enforces the legal framework for shared liability. Develops guidelines for causal attribution and control, and adjudicates disputes. Aims to balance innovation with public safety and fairness."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyzes the effectiveness, fairness, and unintended consequences of the shared liability framework. Publishes research and advises policymakers, contributing to the ongoing evolution of legal theory in AI governance."
+    }
+  ],
+  "gain_flow": "insurance_providers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates risk distribution and incentivizes responsible development and deployment of AI systems by ensuring that all parties with causal contribution and control share in the liability, preventing single points of failure or blame-shifting.",
+    "transfer_function": "Transfers financial risk and compliance costs from individual developers/deployers to a shared pool, often mediated by insurance, and transfers the burden of seeking redress from affected parties to a more robust, multi-party legal framework.",
+    "absent_voices": "Advocates for 'no-fault' compensation schemes for AI harm, who would argue that the current framework still places too high a burden on affected parties to prove causation and control, are largely absent from the legislative drafting process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If shared liability vanished, the AI industry would likely revert to fragmented, uncertain liability regimes, potentially stifling innovation due to unmanageable risk for individual actors, or leaving affected parties with no clear path to redress. Insurance markets for AI would collapse, and regulatory efforts would lose a key lever.",
+    "founding_problem": "The rapid development and deployment of complex AI systems created a 'liability gap' where existing legal frameworks struggled to attribute responsibility for harms, leading to insufficient incentives for safety and inadequate redress for victims.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, consumer advocacy groups, and some forward-thinking industry leaders corroborate that the liability gap remains a live problem, even with shared liability frameworks, due to the evolving nature of AI and the difficulty of attribution. The problem is not fully 'solved' but is being actively addressed by this constraint."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liability_proportional_to_causal_contribution_and_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "risk_distribution_incentivizes_safety",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "distributed_justice_framework",
+    "drift_state": {
+      "moment": "contemporary_ai_complexity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__popular_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6b5b6440-935b-4ee0-af29-540fede35a0c"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Popular Sovereignty Reading of Secession Legitimacy",
+    "topic_domain": "political_economy/federalism/resource_politics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "provincial_majority_populace",
+      "provincial_government"
+    ],
+    "victims": [
+      "federal_government",
+      "minority_within_province",
+      "indigenous_treaty_holders"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine expression of popular sovereignty, or a strategic interpretation to justify unilateral action?",
+      "resolution_mechanism": "Analysis of historical precedents, international legal opinions on self-determination, and the specific context of the referendum's framing and conduct.",
+      "impact": "If a genuine expression, the constraint is a legitimate (though potentially disruptive) mechanism for political change. If strategic, it functions as a Snare, leveraging democratic rhetoric for extractive ends.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'popular_sovereignty_reading' of the 'secession_legitimacy_boundary' kernel. Sibling readings (constitutional_impossibility_reading, grievance_threshold_reading, treaty_primacy_reading) would alter the beneficiary/victim structure and the perceived legitimacy of unilateral secession."
+    },
+    {
+      "id": "federal_authority_subordination",
+      "question": "To what extent is federal authority truly subordinate to provincial popular will in practice, given the federal government's coercive capacity?",
+      "resolution_mechanism": "Observation of federal response to a hypothetical secession referendum: does the federal government respect the outcome or deploy legal/economic/military countermeasures?",
+      "impact": "If federal authority is effectively subordinate, the provincial majority's exit options are mobile. If federal coercion overrides popular will, the provincial majority is constrained or trapped, and the constraint is a Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The structural delta for this reading is that provincial majority can exit unilaterally and federal authority is subordinate to popular will. This omega addresses the empirical reality of that subordination."
+    },
+    {
+      "id": "extraction_claim_validity",
+      "question": "Are 'extraction' claims valid if the provincial majority perceives them, or must they meet an objective standard of injustice?",
+      "resolution_mechanism": "Legal and political consensus on the definition of 'structural injustice' in federal systems, and whether perceived grievances alone constitute a legitimate basis for secession.",
+      "impact": "If perceived grievances are sufficient, the constraint's legitimacy is self-referential to the provincial majority. If an objective standard is required, the constraint's legitimacy is contestable by external observers, potentially reclassifying it as a Snare if the objective standard is not met.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "This reading asserts that 'extraction' claims are valid if the majority perceives them. This omega questions the epistemic grounding of such claims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'popular sovereignty' reading of the secession legitimacy boundary, where a democratic majority within a provincial boundary holds ultimate sovereignty, and a referendum result is considered self-legitimating for secession. This reading posits that the provincial majority can unilaterally exit, and federal authority is subordinate to their popular will. Claims of 'extraction' by the federal government are considered valid if perceived by the majority. This is a highly contested interpretation within federal systems, often clashing with constitutional and treaty-based claims.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it purports a coordination function (allowing a democratic expression of self-determination) but inherently involves asymmetric extraction. The provincial majority and government benefit from the perceived right to self-determination, while the federal government, internal minorities, and Indigenous treaty holders bear the costs of potential fragmentation and loss of rights. Active enforcement is required to assert and defend this interpretation against federal constitutional claims and to manage internal dissent. Extractiveness is moderate-high (0.6) due to the potential for significant resource and territorial transfers. Suppression is high (0.7) as this reading often requires suppressing alternative constitutional interpretations and the voices of internal minorities or treaty holders. Theater ratio is low (0.2) as the assertion of popular sovereignty is a direct, functional claim, not primarily performative.",
+    "perspectival_gap": "From the perspective of the provincial majority and government, this constraint is a legitimate expression of democratic will and a mechanism for self-determination. From the federal government's perspective, it is an illegitimate challenge to constitutional order. From the perspective of internal minorities and Indigenous treaty holders, it is a potentially highly extractive and suppressive mechanism that disregards their rights and interests.",
+    "directionality_logic": "The provincial majority populace and provincial government are primary beneficiaries (d near 0.0) as they gain the power of self-determination and control over provincial resources. The federal government is a primary target (d near 1.0) as it stands to lose territory, resources, and authority. Minority within the province and Indigenous treaty holders are also targets (d near 1.0) as their rights and status could be significantly diminished or ignored in a unilateral secession. The 'extraction' claims are valid if perceived by the majority, which further amplifies the directionality for the provincial majority.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its 'mandate' (popular sovereignty) is asserted as a foundational principle. However, if the underlying grievances driving the secession movement are resolved, but the provincial government continues to assert this reading for other, potentially extractive, reasons (e.g., resource control), it could drift towards a Snare. The classification as Tangled Rope already captures the hybrid nature of coordination and extraction inherent in this reading."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_impossibility_reading",
+      "grievance_threshold_reading",
+      "treaty_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'secession_legitimacy_boundary' kernel. Its structural delta is that a provincial majority can exit unilaterally, federal authority is subordinate to popular will, and 'extraction' claims are valid if the majority perceives them. It directly influences and is influenced by other readings of this kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_impossibility_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "grievance_threshold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "treaty_primacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "provincial_popular_will_is_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "referendum_is_self_legitimating",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unfettered_self_determination",
+    "drift_state": {
+      "moment": "contemporary_federal_legal_challenges",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

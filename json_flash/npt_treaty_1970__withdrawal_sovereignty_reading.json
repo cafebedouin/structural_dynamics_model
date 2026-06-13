@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_1970__withdrawal_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "564920b0-0a36-4435-baf8-05a974d3ebf0"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Article X Withdrawal as Sovereign Right",
+    "topic_domain": "international_law/nuclear_nonproliferation/regime_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "threshold_states",
+      "non_nuclear_weapon_states_with_security_concerns"
+    ],
+    "victims": [
+      "npt_regime_stability_norm",
+      "nuclear_weapon_states_seeking_status_quo"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "npt_kernel_reading_identification",
+      "question": "Is this constraint a genuine reflection of sovereign rights within the NPT, or a strategic interpretation to justify potential proliferation?",
+      "resolution_mechanism": "Analysis of state practice and legal arguments during NPT review conferences and withdrawal events, focusing on the stated justifications and international community's response.",
+      "impact": "If a genuine reflection, it highlights a structural tension within the NPT. If a strategic interpretation, it underscores the extractive potential of leveraging sovereign rights against collective security norms.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the NPT_treaty_1970 kernel, specifically the withdrawal_sovereignty_reading. Sibling readings (oligopoly_enforcement_reading, reciprocal_disarmament_reading) would emphasize different aspects of the treaty, leading to different classifications and stakeholder dynamics. This reading prioritizes state sovereignty and the right to withdraw, making treaty obligations contingent on the security environment, which undermines the regime stability norm."
+    },
+    {
+      "id": "withdrawal_trigger_legitimacy",
+      "question": "What constitutes 'extraordinary events, related to the subject matter of this Treaty, have jeopardized the supreme interests of its country' (Article X)?",
+      "resolution_mechanism": "International Court of Justice advisory opinion or a consensus among NPT state parties on objective criteria for 'supreme interests' and 'jeopardized'.",
+      "impact": "Clearer criteria would reduce the arbitrary exercise of the withdrawal right, strengthening the regime. Ambiguity allows states to define their own 'supreme interests,' increasing the perceived extractiveness for those committed to regime stability.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Ambiguity in Article X's trigger conditions allows for broad interpretation, impacting the perceived legitimacy of withdrawal threats."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint interprets Article X of the Nuclear Non-Proliferation Treaty (NPT) as a legitimate exercise of state sovereignty, allowing states to withdraw from treaty obligations if their supreme interests are jeopardized by extraordinary events. This reading emphasizes the contingent nature of treaty commitments, particularly for non-nuclear-weapon states facing evolving security threats. While it provides an 'exit valve' for states, it simultaneously introduces instability into the NPT regime by making compliance conditional and undermining the norm of regime stability.",
+    "key_agents": [
+      "threshold_states: Primary beneficiary (powerful/constrained) — gains leverage from withdrawal option",
+      "non_nuclear_weapon_states_with_security_concerns: Primary beneficiary (organized/constrained) — maintains flexibility in security policy",
+      "npt_regime_stability_norm: Primary victim (institutional/trapped) — undermined by credible withdrawal threats",
+      "nuclear_weapon_states_seeking_status_quo: Primary victim (institutional/constrained) — faces challenges to the non-proliferation order",
+      "international_atomic_energy_agency: Agenda setter (institutional/analytical) — monitors compliance but cannot prevent withdrawal",
+      "international_community: Observer (global/analytical) — reacts to withdrawal events, shaping diplomatic consequences"
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate because while it benefits some states by providing an exit option, it extracts from the collective good of non-proliferation regime stability. Suppression (0.30) is low as the right to withdraw is explicitly stated, but there's diplomatic pressure against it. Theater ratio (0.10) is low; the withdrawal right is a real, functional mechanism, not merely performative. Resistance (0.55) is moderate, as states committed to the regime actively resist interpretations that weaken it, while others assert the right.",
+    "perspectival_gap": "Threshold states and non-nuclear-weapon states with security concerns perceive this as a necessary safeguard of sovereignty, a 'rope' that allows them to coordinate their security with the NPT's non-proliferation goals. Nuclear-weapon states and the NPT regime stability norm, however, experience it as a 'snare' or 'tangled rope' that introduces instability and undermines the treaty's core purpose, requiring active enforcement (diplomatic pressure, sanctions) to contain its impact.",
+    "directionality_logic": "Threshold states and non-nuclear-weapon states with security concerns are beneficiaries (d near 0.0) as the withdrawal option provides them leverage and flexibility. The NPT regime stability norm and nuclear-weapon states seeking the status quo are victims (d near 1.0) as their interests are directly undermined by the credible threat of withdrawal. The IAEA is an agenda-setter, tasked with monitoring but structurally unable to prevent withdrawal, placing its d near 0.5.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the withdrawal right as pure extraction by acknowledging its function as a sovereign safeguard for states facing security dilemmas. However, it also highlights how this 'safeguard' can become a mechanism for extracting concessions or undermining the regime, thus classifying it as a tangled rope rather than a pure rope. The founding problem of balancing sovereign security with non-proliferation remains contested, preventing a clear mandatrophy resolution.",
+    "kernel_context": "This constraint is the 'withdrawal_sovereignty_reading' of the 'npt_treaty_1970' kernel. It emphasizes Article X as a fundamental sovereign right, making treaty obligations contingent on a state's security environment. This contrasts with the 'oligopoly_enforcement_reading' which prioritizes horizontal non-proliferation and views Article VI as aspirational, and the 'reciprocal_disarmament_reading' which sees Article VI as a binding obligation for nuclear-weapon states."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_1970__oligopoly_enforcement_reading",
+      "npt_treaty_1970__reciprocal_disarmament_reading",
+      "iran_nuclear_deal_jcpoa",
+      "north_korea_denuclearization_talks"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the NPT_treaty_1970 kernel, focusing on the Article X withdrawal right. Its operation directly influences the stability and perceived legitimacy of the other NPT readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "npt_treaty_1970__oligopoly_enforcement_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "npt_treaty_1970__reciprocal_disarmament_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_sovereignty_is_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "treaty_obligations_are_contingent_on_security",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "westphalian_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_nonproliferation_challenges",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "constitutional_interpretive_authority__judicial_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b2867636-899d-4f4a-aaf8-375e30bd5954"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Supremacy in Constitutional Interpretation",
+    "topic_domain": "constitutional_law/political_theory/jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "judiciary",
+      "rights_advocacy_groups"
+    ],
+    "victims": [
+      "legislature",
+      "executive_branch",
+      "popular_will"
+    ]
+  },
+  "interval": {
+    "start": 1789,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1865,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'judicial supremacy' reading of constitutional interpretive authority, where courts hold the final say on constitutional meaning, including the power to nullify legislative acts. It is one of several competing readings of how constitutional authority is distributed. This reading positions the judiciary as the ultimate guardian of fundamental rights, often at the expense of legislative will. The structural delta is that the judiciary enters the beneficiary set for interpretive authority, the legislature is subordinated, and coercion is legitimated via rights-compliance rather than democratic will.",
+    "logic_rationale": "Extractiveness is high (0.65) because the judiciary's interpretive power can significantly alter policy outcomes and impose costs on other branches and the popular will. Suppression (0.70) is also high, as the finality of judicial decisions actively suppresses alternative interpretations and legislative attempts to circumvent rulings. The theater ratio is low (0.20) because the judiciary's interpretive function is genuinely active, though its 'neutral arbiter' performance may mask some policy-making. The historical measurements show a gradual increase in both extractiveness and suppression as judicial review became more entrenched and expansive over time.",
+    "directionality_logic": "The judiciary is the primary beneficiary and agenda-setter, gaining institutional power and influence (low d). Rights advocacy groups also benefit by having a powerful institutional ally (low d). The legislature and executive branch are payers, as their authority is constrained and their actions subject to nullification (high d). The 'popular_will' is a victim, as its direct expression through elected representatives can be overridden (high d).",
+    "perspectival_gap": "From the judiciary's perspective, this is a necessary 'rope' for constitutional order and rights protection. From the legislature's and executive's perspective, it can feel like a 'snare' that extracts democratic authority. The engine's computation will likely show a tangled_rope or snare from the political branches' seats, while the judiciary's seat might compute as a rope or even a mountain (if its naturalness claim is accepted).",
+    "kernel_context": "This constraint, 'Judicial Supremacy in Constitutional Interpretation,' is a specific reading of the broader kernel 'constitutional_interpretive_authority.' It asserts the judiciary's final interpretive authority. Sibling readings include 'parliamentary_supremacy_reading' (legislative finality) and 'coordinate_construction_reading' (inter-branch dialogue)."
+  },
+  "omegas": [
+    {
+      "id": "judicial_legitimacy_source",
+      "question": "Is judicial supremacy grounded in an inherent, non-majoritarian constitutional design, or is it a historically contingent assertion of power that could be legitimately challenged?",
+      "resolution_mechanism": "Comparative constitutional analysis of systems with different interpretive authority distributions, and historical analysis of the origins and evolution of judicial review in specific jurisdictions.",
+      "impact": "If inherent, the constraint's extractiveness is a necessary cost of constitutionalism. If contingent, it is a constructed constraint whose legitimacy is open to political contestation and potential re-negotiation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Source of judicial supremacy's legitimacy: inherent constitutional design vs. historical contingency."
+    },
+    {
+      "id": "rights_protection_efficacy",
+      "question": "Does judicial supremacy genuinely lead to better protection of fundamental rights compared to systems with more politically accountable interpretive authority?",
+      "resolution_mechanism": "Empirical studies comparing rights outcomes (e.g., civil liberties, social rights) in jurisdictions with judicial supremacy versus those with parliamentary supremacy or coordinate construction.",
+      "impact": "If rights protection is demonstrably superior, it strengthens the coordination function claim. If not, it weakens the justification for the extraction of legislative authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical efficacy of judicial supremacy in protecting rights."
+    },
+    {
+      "id": "popular_will_subordination_threshold",
+      "question": "At what point does judicial nullification of legislative acts transition from legitimate rights protection to an illegitimate subordination of the popular will?",
+      "resolution_mechanism": "Normative and political theory analysis, combined with public opinion research on judicial legitimacy and the perceived democratic deficit. This is a preference-driven boundary.",
+      "impact": "The classification of 'popular_will' as a victim depends on this threshold. If the threshold is low, more judicial actions are seen as extractive; if high, more are seen as legitimate coordination.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Defining the boundary between legitimate judicial review and illegitimate judicial overreach."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "parliamentary_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coordinate_construction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "judicial_review_is_final",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judiciary_is_rights_guardian",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "marbury_v_madison_precedent",
+    "drift_state": {
+      "moment": "contemporary_judicial_activism_debate",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

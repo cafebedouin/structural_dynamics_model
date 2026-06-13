@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__hybrid_degradation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "fb07287a-c801-4dbc-ace6-0e62ca055dfe"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Degradation of Catastrophe Proxy Sufficiency",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "certification_industry",
+      "safety_consultants"
+    ],
+    "victims": [
+      "long_term_safety_margins",
+      "frontline_operators"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint accurately representing the 'hybrid_degradation_reading' of the 'catastrophe_proxy_sufficiency' kernel?",
+      "resolution_mechanism": "Comparison with other generated readings of the same kernel and expert review of the structural deltas.",
+      "impact": "Misidentification would lead to incorrect classification and analysis of the underlying commitment system dynamics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ensures correct instantiation of the kernel reading."
+    },
+    {
+      "id": "tacit_knowledge_measurement",
+      "question": "How can the degradation of tacit knowledge and stress-response capacity be reliably measured over generational timescales in high-reliability organizations?",
+      "resolution_mechanism": "Development of longitudinal ethnographic studies, advanced cognitive task analysis, and physiological stress markers during high-fidelity simulations, correlated with real-world incident data.",
+      "impact": "Without reliable measurement, the 'degradation' aspect of this reading remains an unquantified risk, potentially leading to underestimation of long-term systemic vulnerability.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantification of tacit knowledge and stress-response degradation."
+    },
+    {
+      "id": "generational_timescale_definition",
+      "question": "What constitutes a 'generational timescale' in the context of organizational learning and safety competence, and how does it vary across different high-reliability domains?",
+      "resolution_mechanism": "Comparative historical analysis of organizational memory, personnel turnover rates, and major incident cycles across multiple high-reliability sectors (e.g., nuclear, aviation, medicine).",
+      "impact": "An imprecise definition could lead to misjudging the rate and onset of degradation, affecting policy decisions on training cycles and simulation investment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Defines the temporal scope of degradation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'hybrid degradation' reading of the catastrophe proxy sufficiency kernel. It posits that while simulation-based training effectively maintains explicit procedural competence in high-reliability organizations, it fails to cultivate or sustain the tacit knowledge and acute stress-response capabilities that only real catastrophic events can forge. Over generational timescales (e.g., 20+ years without a major incident), this leads to a subtle but critical degradation of overall safety margins, even as formal metrics of competence remain high. The constraint is a Tangled Rope because it provides a genuine coordination function (procedural training) but simultaneously extracts from long-term safety by masking a deeper decay.",
+    "key_agents": [
+      "certification_industry: Agenda setter (institutional/arbitrage) — benefits from ongoing training revenue, sets standards.",
+      "safety_consultants: Beneficiary (organized/mobile) — profit from designing and implementing simulation programs.",
+      "high_reliability_organizations: Payer (institutional/constrained) — invest heavily in simulation, bear the long-term risk of degraded tacit knowledge.",
+      "frontline_operators: Payer (moderate/identity_locked) — maintain procedural competence but lose deeper resilience; their professional identity is tied to the organization's safety culture.",
+      "regulators: Observer (institutional/analytical) — oversee safety, rely on certification metrics, may miss subtle degradation.",
+      "future_generations: Victim (powerless/trapped) — inherit a system with hidden vulnerabilities."
+    ],
+    "logic_rationale": "The extractiveness (0.65) is high because organizations pay for a solution (simulation) that only partially addresses the problem, leaving a critical gap in resilience. Suppression (0.7) is also high because the success of simulations in maintaining procedural competence suppresses the perceived need for more radical interventions or acknowledgment of the tacit knowledge gap. The theater ratio (0.4) reflects that a significant portion of simulation activity, while appearing to enhance safety, is performative in its ability to address the full spectrum of catastrophic competence. The temporal measurements show a steady increase in extractiveness, suppression, and theater, indicating a growing reliance on a partially effective solution over time, with increasing costs and diminishing returns on true resilience.",
+    "perspectival_gap": "The certification industry and safety consultants perceive this as a successful coordination mechanism, generating revenue while maintaining visible safety standards. High-reliability organizations, while benefiting from procedural competence, bear the hidden cost of degrading tacit knowledge and stress response, which only becomes apparent during a real crisis. Frontline operators experience the immediate benefits of training but are unknowingly exposed to long-term systemic risk. Regulators, relying on formal metrics, may not detect the subtle degradation until it's too late.",
+    "directionality_logic": "The certification industry and safety consultants are clear beneficiaries (d=0.0-0.2) as they profit from the ongoing need for simulation and training. High-reliability organizations are payers (d=0.6-0.8) as they invest heavily but receive an incomplete solution, bearing the long-term risk. Frontline operators are also payers (d=0.7-0.9) as they are the ultimate bearers of risk when the system fails due to degraded tacit knowledge. Future generations are victims (d=1.0) as they inherit a system with hidden vulnerabilities. Regulators are observers (d=0.5) as they are meant to be neutral but may be influenced by the perceived success of simulations.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates procedural competence (a live problem) but simultaneously extracts by creating a false sense of security regarding deeper resilience. The mandate to maintain safety is live, but the method (simulation as a proxy for catastrophe) has atrophied in its ability to address the full scope of the problem. The classification prevents mislabeling it as a pure Rope (ignoring the hidden degradation) or a Snare (ignoring the genuine procedural benefits). The ongoing revenue for the certification industry and consultants ensures its persistence, even as its long-term effectiveness for true resilience degrades."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_fidelity_threshold",
+      "catastrophe_necessity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'catastrophe_proxy_sufficiency' kernel, focusing on the hybrid degradation of competence over generational timescales. It is linked to other readings that emphasize different aspects of simulation's sufficiency or insufficiency."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_fidelity_threshold",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_maintains_explicit_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "tacit_knowledge_degrades_without_real_catastrophe",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "continuous_competence_maintenance",
+    "drift_state": {
+      "moment": "generational_absence_of_catastrophe",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

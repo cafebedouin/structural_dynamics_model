@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__hyper_presidential_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "46b20726-562d-4534-a3d1-78c53806f314"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Fifth Republic Hyper-Presidential Reading",
+    "topic_domain": "constitutional_law/political_systems/comparative_government",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_president",
+      "presidency_as_institution"
+    ],
+    "victims": [
+      "national_assembly",
+      "opposition_parties",
+      "citizens_seeking_legislative_accountability"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "presidential_sovereignty_vs_parliamentary_supremacy",
+      "question": "Is the President's authority derived directly from the national will, or is it ultimately constrained by parliamentary sovereignty?",
+      "resolution_mechanism": "Constitutional court rulings on the limits of presidential decrees and emergency powers, particularly in periods of political crisis or legislative gridlock.",
+      "impact": "If direct national will is affirmed, the constraint operates as a Snare, with high extraction from the legislature. If parliamentary supremacy is affirmed, the constraint shifts towards a Tangled Rope or even a Rope, with lower executive extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity over the ultimate source of presidential legitimacy in the Fifth Republic."
+    },
+    {
+      "id": "article_49_3_legitimacy",
+      "question": "Is the use of Article 49.3 (passing legislation without a vote) a legitimate tool for executive efficiency or an anti-democratic circumvention of legislative process?",
+      "resolution_mechanism": "Public opinion shifts, sustained mass protests, or a constitutional amendment limiting its use. The frequency and context of its invocation also provide empirical data.",
+      "impact": "If seen as legitimate, it reinforces the hyper-presidential reading. If widely delegitimized, it increases the effective resistance and suppression costs for the executive, pushing the constraint towards a Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Contestation over the democratic legitimacy of Article 49.3."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'hyper_presidential_reading' of the 'fifth_republic_constitution' kernel. What would change if a 'parliamentary_constraint_reading' or 'cohabitation_equilibrium_reading' were adopted?",
+      "resolution_mechanism": "A shift in political practice, constitutional interpretation by the Conseil Constitutionnel, or a constitutional reform that explicitly rebalances power towards the legislature or mandates power-sharing.",
+      "impact": "A 'parliamentary_constraint_reading' would significantly reduce executive extractiveness and suppression, likely reclassifying the constraint as a Tangled Rope or Rope. A 'cohabitation_equilibrium_reading' would introduce a more balanced power dynamic, reducing the 'presidency_as_institution's' beneficiary status and increasing the 'national_assembly's' power, likely resulting in a Tangled Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documents this constraint as one reading of the Fifth Republic Constitution kernel and outlines the structural deltas of sibling readings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'hyper-presidential' reading of the French Fifth Republic Constitution, where the President is seen as the direct embodiment of the national will, minimally constrained by the legislature. This interpretation emphasizes strong executive power, particularly through mechanisms like Article 49.3 (allowing bills to pass without a vote) and Article 16 (emergency powers). The legislature, especially opposition parties, often finds its role diminished, becoming a target of executive extraction and suppression.",
+    "logic_rationale": "The high extractiveness (0.85) reflects the executive's ability to implement policy and consolidate power at the expense of legislative influence and accountability. Suppression (0.75) is high due to constitutional mechanisms that limit legislative checks and balances, such as the ability to dissolve the National Assembly or bypass votes. The low theater ratio (0.20) indicates that the executive's actions are largely functional in asserting power, with minimal performative maintenance of a defunct coordination function. The increasing extractiveness and suppression over time reflect a historical trend towards a stronger presidency in practice.",
+    "perspectival_gap": "From the perspective of the incumbent president and the presidency as an institution, this reading represents an efficient and necessary coordination mechanism for national governance. From the perspective of the National Assembly and opposition parties, it is a highly extractive and suppressive mechanism that undermines democratic principles and legislative oversight.",
+    "directionality_logic": "The incumbent_president and presidency_as_institution are clear beneficiaries (d near 0.0) as they directly gain power and policy control. The national_assembly and opposition_parties are primary victims (d near 1.0) as their legislative power is curtailed. Citizens_seeking_legislative_accountability are also victims, as their avenue for democratic input is weakened. The system is actively enforced by the executive's constitutional prerogatives.",
+    "mandatrophy_analysis": "This constraint is claimed as a Snare, reflecting the view that its coordination story (efficient governance) is largely a cover for executive power consolidation. The high extractiveness and suppression, coupled with identifiable victims, prevent it from being mislabeled as a Rope or Tangled Rope, where a genuine, balanced coordination function would be present. The 'founding_problem_status' being 'contested' further highlights the ongoing debate about whether the original intent of the Fifth Republic's strong executive has atrophied into pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_republic_constitution__parliamentary_constraint_reading",
+      "fifth_republic_constitution__cohabitation_equilibrium_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the Fifth Republic Constitution kernel, emphasizing a hyper-presidential system. It is linked to sibling readings that emphasize parliamentary constraint or cohabitation dynamics, as these interpretations directly influence the operationalization of executive power."
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_president",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The current holder of the presidential office, who directly benefits from the expansive powers granted by this reading, enabling swift policy implementation and minimal legislative obstruction. They actively utilize constitutional mechanisms to assert executive dominance."
+    },
+    {
+      "name": "presidency_as_institution",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The enduring institutional structure of the French presidency, which accrues power and prestige under this reading, shaping future political norms and expectations for executive authority. Its identity is fused with the strong executive model."
+    },
+    {
+      "name": "national_assembly",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The legislative body whose power to initiate, amend, and block legislation is significantly curtailed by the hyper-presidential interpretation, particularly through the use of Article 49.3 and the threat of dissolution. Its influence is often reactive rather than proactive."
+    },
+    {
+      "name": "opposition_parties",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Political parties not aligned with the president, who bear the brunt of executive dominance, finding their legislative initiatives blocked and their oversight functions weakened. Their primary recourse is public protest and electoral challenge, not direct legislative power."
+    },
+    {
+      "name": "citizens_seeking_legislative_accountability",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The segment of the populace that values strong legislative oversight and accountability, and finds their democratic representation diminished when the executive bypasses parliamentary processes. Their options for redress are limited to protest or electoral change, which are often insufficient to alter the structural power imbalance."
+    },
+    {
+      "name": "constitutional_council",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The body responsible for reviewing the constitutionality of laws and executive actions. While it can check presidential power, its interpretations are themselves part of the ongoing contest over the constitution's meaning, and it often operates within the established political equilibrium."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To provide stable and decisive executive leadership for the nation, ensuring governmental action and policy implementation even in times of legislative fragmentation or gridlock.",
+    "transfer_function": "Transfers significant legislative and policy-making authority from the National Assembly to the President, enabling the executive to drive the national agenda with minimal parliamentary obstruction.",
+    "absent_voices": "Stronger parliamentary advocates and proponents of a more balanced separation of powers are present in public discourse but are structurally marginalized within the operational framework of this hyper-presidential reading. Their arguments for increased legislative power are often overridden by executive prerogatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hyper-presidential reading vanished, the French political system would undergo a fundamental rebalancing. The National Assembly would reclaim significant legislative power, requiring new forms of coalition-building and negotiation. The executive's ability to act unilaterally would be severely curtailed, leading to a more parliamentary-centric system.",
+    "founding_problem": "The instability and perceived ineffectiveness of the Fourth Republic's parliamentary system, characterized by frequent changes in government and an inability to address pressing national issues effectively.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents of the hyper-presidential reading (often within the executive and its supporters) argue that the problem of governmental instability remains live, justifying strong presidential powers. Critics (opposition parties, some constitutional scholars) contend that the problem is largely solved, and the current system has overcorrected, leading to an imbalance of power. Independent historical analysis and comparative political science studies offer corroboration for both the initial problem and the subsequent shift in power dynamics."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fifth_republic_constitution__parliamentary_constraint_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "fifth_republic_constitution__cohabitation_equilibrium_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "president_embodies_national_will",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "executive_efficiency_trumps_legislative_obstruction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "de_gaulle_founding_vision",
+    "drift_state": {
+      "moment": "contemporary_political_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

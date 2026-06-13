@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e0a69dc5-6ef1-4ef8-bd92-ca3c3cc2dab1"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Provincial Resource Sovereignty Primacy",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "resource_rich_provinces",
+      "provincial_resource_industries"
+    ],
+    "victims": [
+      "federal_government",
+      "national_environmental_groups",
+      "other_provinces"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine expression of constitutional intent, or an interpretive claim advanced by specific provincial interests?",
+      "resolution_mechanism": "Supreme Court of Canada ruling on the scope of s.92A in relation to federal powers (e.g., POGG, trade and commerce).",
+      "impact": "If ruled an interpretive claim, the constraint's legitimacy as a 'mountain' of constitutional law would collapse, reclassifying it as a 'snare' or 'tangled_rope' sustained by political will rather than legal necessity. If upheld, it reinforces the 'mountain' aspect for resource-rich provinces.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'resource_sovereignty_primacy' reading of the 'provincial_sovereignty_boundary' kernel. Sibling readings ('constitutional_subordination', 'compact_federalism') would alter the balance of power and the legitimacy of federal interventions."
+    },
+    {
+      "id": "federal_intervention_legitimacy",
+      "question": "To what extent can federal climate or fiscal policies legitimately override provincial resource jurisdiction without being considered 'illegitimate extraction'?",
+      "resolution_mechanism": "Judicial clarification of the 'double aspect' doctrine and federal paramountcy in areas of shared jurisdiction, or inter-governmental agreements that define clear boundaries.",
+      "impact": "If federal intervention is deemed legitimate, the 'suppression' metric for federal actors would decrease, and the 'extractiveness' from provinces would be re-framed as a necessary cost of national coordination. If deemed illegitimate, provincial resistance would be constitutionally validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the constitutional limits of federal power over provincially-owned resources."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'resource_sovereignty_primacy' reading of the Canadian constitutional kernel concerning provincial sovereignty. It asserts that provincial ownership of natural resources (s.92A Constitution Act 1982) grants absolute sovereignty over those resources, equating resource control with territorial sovereignty. This reading implies that federal climate or fiscal policies impacting resource development are illegitimate extraction and that provinces have a constitutional right to unilateral exit from such federal impositions. The constraint is claimed as a Tangled Rope because while it coordinates provincial resource management, it does so by extracting from federal policy space and other provinces, requiring active enforcement of its jurisdictional claims.",
+    "logic_rationale": "The extractiveness (0.65) is high because this reading allows resource-rich provinces to unilaterally capture the full economic benefit of their resources, often at the expense of national policy coherence or other provinces. Suppression (0.75) is also high, as it requires active political and legal resistance to federal attempts at intervention, effectively suppressing federal policy options. The theater ratio (0.20) is relatively low, as the claims of sovereignty are genuinely asserted and defended, not merely performative. Accessibility collapse (0.40) is moderate, as federal alternatives are constrained but not entirely foreclosed, leading to ongoing disputes. Resistance (0.80) is high, reflecting the strong opposition from federal and national environmental groups to this interpretation.",
+    "perspectival_gap": "Resource-rich provinces experience this as a Mountain or Rope, a fundamental constitutional right that protects their economic interests. The federal government and other provinces, however, experience it as a Snare or Tangled Rope, as it limits their ability to implement national policies or benefit from shared resources. This divergence is central to the ongoing federal-provincial disputes in Canada.",
+    "directionality_logic": "Resource-rich provinces and their industries are clear beneficiaries (d near 0.0), as they gain full control and revenue from resource development. The federal government and national environmental groups are targets (d near 1.0), as their policy space and objectives are constrained. Other provinces are also victims, as they may be denied benefits from national resource management or face negative externalities without recourse.",
+    "mandatrophy_analysis": "This classification prevents mislabeling a politically asserted claim of absolute sovereignty as a 'Mountain' of natural law. By identifying it as a 'Tangled Rope', the framework highlights both its coordination function (provincial resource management) and its extractive nature (from federal policy space and other provinces), which requires active enforcement to maintain. The ongoing contestation and high resistance indicate it is not a settled 'Mountain' but a dynamic, enforced constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "provincial_sovereignty_boundary__constitutional_subordination",
+      "provincial_sovereignty_boundary__compact_federalism",
+      "federal_climate_policy_framework",
+      "interprovincial_trade_barriers"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'provincial_sovereignty_boundary' kernel, focusing on resource control as absolute sovereignty. It is linked to sibling readings that offer alternative interpretations of provincial powers within the Canadian federation."
+  },
+  "stakeholders": [
+    {
+      "name": "resource_rich_provinces",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Provinces with significant natural resource endowments (e.g., Alberta, Saskatchewan). They assert absolute jurisdiction over their resources, interpreting s.92A as granting full sovereignty, and actively resist federal interventions in resource development or revenue sharing. They benefit directly from resource revenues and control."
+    },
+    {
+      "name": "federal_government",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seeks to implement national policies on climate change, environmental protection, and fiscal equalization, which often conflict with provincial resource jurisdiction. Experiences this constraint as a limitation on its legislative and policy authority, leading to legal challenges and political disputes."
+    },
+    {
+      "name": "provincial_resource_industries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate within resource-rich provinces and benefit from stable, predictable provincial regulatory regimes that prioritize resource development. They lobby provincial governments to maintain strong resource sovereignty claims against federal oversight or taxation."
+    },
+    {
+      "name": "national_environmental_groups",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for stronger federal environmental regulations and climate action, often clashing with provincial resource development priorities. They experience this constraint as a barrier to achieving national environmental goals and a source of policy fragmentation."
+    },
+    {
+      "name": "other_provinces",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Provinces with fewer natural resources or different economic priorities. They may support stronger federal powers for national coherence, environmental protection, or fiscal equalization, and experience this constraint as limiting their share of national wealth or exposing them to negative externalities from resource development in other provinces."
+    },
+    {
+      "name": "supreme_court_of_canada",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The ultimate arbiter of constitutional disputes. Its rulings shape the interpretation of s.92A and the balance of federal-provincial powers, directly impacting the operational scope and legitimacy of this constraint. It observes the legal arguments and constitutional history."
+    }
+  ],
+  "gain_flow": "resource_rich_provinces",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates provincial resource management by granting clear, if contested, jurisdiction to provinces, allowing them to develop and manage their natural resources without direct federal interference.",
+    "transfer_function": "Transfers full economic benefit and regulatory control of natural resources from the national commons (or potential federal jurisdiction) to individual resource-rich provinces, and from federal policy space to provincial policy space.",
+    "absent_voices": "Future generations and the global climate are absent voices; they would argue for a national or international approach to resource management and climate policy, but their interests are not directly represented in the current federal-provincial jurisdictional disputes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of provincial resource sovereignty disappeared, the balance of power in Canadian federalism would fundamentally shift. Federal climate and fiscal policies would gain significant new scope, resource revenues might be subject to greater national sharing, and interprovincial disputes over resource development would be re-litigated under a different constitutional framework.",
+    "founding_problem": "The original intent of s.92A was to clarify provincial ownership and control over natural resources, particularly in the context of Western provinces seeking greater economic autonomy and control over their resource wealth.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Resource-rich provinces and their industries consistently attest that the problem of provincial economic autonomy and control over resources remains live, citing ongoing federal attempts to influence resource development. Constitutional scholars and historical records corroborate the original intent to grant provinces greater control, though the extent of 'absolute sovereignty' remains contested by federal actors and other legal experts."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "provincial_sovereignty_boundary__constitutional_subordination",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "provincial_sovereignty_boundary__compact_federalism",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_control_equals_territorial_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "federal_intervention_is_illegitimate_extraction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "absolute_provincial_resource_autonomy",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

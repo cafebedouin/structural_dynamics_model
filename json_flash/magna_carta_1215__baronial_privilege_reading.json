@@ -1,0 +1,165 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__baronial_privilege_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "38042cde-65b6-4780-8c73-6bb462400469"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Magna Carta (1215) as Baronial Privilege",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "landowning_barons"
+    ],
+    "victims": [
+      "king_john"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "scope_of_free_men",
+      "question": "Is 'free men' in Magna Carta (1215) limited to landowning barons, or does it encompass a broader class of individuals?",
+      "resolution_mechanism": "Historical linguistic analysis of 13th-century legal texts and social structures, combined with contemporary interpretations of feudal law.",
+      "impact": "If limited to barons, the constraint is a specific feudal contract (Rope); if broader, it begins to approach a universal rights document (Tangled Rope or Snare, depending on enforcement and extraction from non-barons).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity in the definition of 'free men' in Magna Carta."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "This constraint is the 'baronial_privilege_reading' of the 'magna_carta_1215' kernel. How would the classification change under the 'universal_rights_reading' or 'living_document_reading'?",
+      "resolution_mechanism": "Analyzing the structural properties (beneficiaries, victims, extractiveness, suppression) of the alternative readings as distinct constraints.",
+      "impact": "The 'universal_rights_reading' would likely yield a Tangled Rope or Snare due to broader application and potential for extraction from the state, while the 'living_document_reading' would emphasize adaptive interpretation, potentially shifting classification over time.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of Magna Carta on its classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 1215,
+    "end": 1315
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models Magna Carta (1215) as a specific feudal contract primarily benefiting landowning barons by limiting the arbitrary power of King John. In this reading, 'free men' refers exclusively to the contracting parties (the barons), and the protections offered are not universal but specific to the feudal relationship between the monarch and his direct vassals. The constraint's scope is limited to the direct relationship between the King and the barons, with no explicit or implicit extension to commoners, women, or non-landowners.",
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely coordinated a collective action problem among the barons to limit the King's arbitrary power, with clear beneficiaries (barons) and a clear target (the King). Extraction is moderate (0.3) as it limits the King's ability to extract arbitrarily, but the barons themselves are not extracting from a broader population through this specific document. Suppression (0.6) reflects the need for active enforcement by the barons to hold the King to the terms, but it's not suppressing alternatives for a wider populace. Theater ratio is low (0.1) as its function was direct and immediate for its intended beneficiaries.",
+    "perspectival_gap": "From the perspective of the landowning barons, this was a crucial coordination mechanism to secure their rights against an overreaching monarch. From the King's perspective, it was a forced concession that constrained his power. For commoners and other non-contracting parties, the document had little direct impact, as its protections did not extend to them.",
+    "directionality_logic": "The landowning_barons are the primary beneficiaries (d near 0.0) as the constraint directly protects their feudal rights and property. King_John is the primary target (d near 1.0) as his arbitrary power is curtailed. Commoners and other non-landowners are largely outside the scope of this specific reading, neither directly benefiting nor being directly targeted by its provisions.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the original Magna Carta as a universal rights document, which would obscure its specific historical context and the limited scope of its initial application. By focusing on its function as a feudal contract, it highlights a genuine coordination problem among the elite without projecting later interpretations onto the 1215 text. The constraint's mandate was to stabilize the feudal relationship, which it did for a time, before later reinterpretations broadened its scope.",
+    "kernel_context": "This constraint instantiates the 'baronial_privilege_reading' of the 'magna_carta_1215' kernel. This reading emphasizes the document's origin as a feudal contract between King John and his barons, with 'free men' understood as landowning vassals. Sibling readings include the 'universal_rights_reading', which interprets Magna Carta as a foundational text for broader human rights, and the 'living_document_reading', which views it as an adaptable constitutional substrate whose meaning evolves over time through interpretation and precedent."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_1215__universal_rights_reading",
+      "magna_carta_1215__living_document_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Magna Carta (1215) kernel. Each reading has a different structural interpretation of its beneficiaries, scope, and impact, leading to different classifications. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "magna_carta_1215__universal_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "magna_carta_1215__living_document_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feudal_contract_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "free_men_equals_landowners",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "feudal_contract_framework",
+    "drift_state": {
+      "moment": "contemporary_constitutional_theory",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

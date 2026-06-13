@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority__communal_autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6eef369e-fb30-4989-a783-54dd22156fff"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Marriage Authority: Communal Autonomy Reading",
+    "topic_domain": "legal_pluralism/constitutional_law/comparative_family_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "religious_community_leaders",
+      "religious_community_members"
+    ],
+    "victims": [
+      "intra_community_dissenters",
+      "women_seeking_equality"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "communal_vs_individual_rights",
+      "question": "Does the state's enforcement of communal marriage norms unduly restrict the individual rights of dissenters within the community?",
+      "resolution_mechanism": "Judicial review of specific cases challenging communal norms on constitutional equality grounds; legislative action to establish minimum individual rights protections.",
+      "impact": "If individual rights are found to be unduly restricted, the constraint would shift towards a Tangled Rope or Snare for dissenters, requiring greater state intervention or reclassification of the state's role.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between collective communal autonomy and individual constitutional rights."
+    },
+    {
+      "id": "natural_law_vs_social_construct",
+      "question": "Is the authority of religious marriage law perceived as a natural, immutable order by the community, or as a social construct maintained by tradition and state enforcement?",
+      "resolution_mechanism": "Sociological studies of community members' beliefs; historical analysis of legal evolution and adaptation of religious laws.",
+      "impact": "If perceived as natural law, resistance to change will be higher, and the constraint's persistence will be more robust. If seen as a social construct, it is more vulnerable to internal and external pressures for reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Perception of religious marriage law as natural vs. constructed."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is a 'communal_autonomy_reading' of the 'marriage_authority' kernel. What structural elements would change under a 'secularist_reading'?",
+      "resolution_mechanism": "Analysis of proposed Uniform Civil Code legislation and its impact on personal law variation.",
+      "impact": "A secularist reading would eliminate personal law variation, shifting authority from religious communities to the state legislature, likely increasing suppression for religious communities and decreasing it for dissenters.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as one reading of the marriage_authority kernel and notes structural changes under a secularist reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the operation of marriage authority where the state enforces personal laws derived from religious community traditions, rather than authoring a uniform civil code. This 'communal autonomy' reading emphasizes the right of religious communities to govern their internal affairs, including family law, with state backing. The state's role is primarily to register and enforce these community-specific norms, not to legislate their content. This is one reading of the broader 'marriage_authority' kernel, which is contested across various legal and social perspectives.",
+    "logic_rationale": "The extractiveness (0.35) is moderate, reflecting the costs borne by individuals whose personal choices may be constrained by communal norms, but also the benefits of community cohesion. Suppression (0.6) is significant because the state's enforcement power is used to uphold these norms, limiting exit options for dissenters. Theater ratio (0.1) is low, as the enforcement is direct and functional. Accessibility collapse is moderate (0.4) because while communal norms are strong, some legal avenues for challenge or alternative arrangements may exist, albeit with high friction. Resistance (0.3) is present from intra-community dissenters and women's rights advocates, but often diffuse.",
+    "perspectival_gap": "Religious community leaders experience this as a Rope, providing stable social order and preserving tradition. Intra-community dissenters, particularly women seeking greater equality, experience it as a Tangled Rope or Snare, where the state's enforcement of communal norms limits their autonomy and exit options. The state, from an administrative perspective, sees it as a coordination mechanism for managing diverse populations.",
+    "directionality_logic": "Religious community leaders are primary beneficiaries (d=0.0-0.1) as their authority is upheld and community cohesion maintained. Religious community members are also beneficiaries (d=0.1-0.3) as they benefit from stable social structures, though some bear costs. Intra-community dissenters and women seeking equality are victims (d=0.7-0.9) as their choices are constrained by norms they may not agree with, with state enforcement limiting their exit. The state is an agenda-setter (d=0.4-0.5) in that it administers the system, but its directionality is closer to symmetric as it bears the costs of enforcement while benefiting from social stability.",
+    "mandatrophy_analysis": "The constraint's mandate is to preserve communal identity and tradition through self-governance in family matters. This mandate is still live for the religious communities. However, for dissenters, the original coordination function (community cohesion) has become a cover for extraction (restriction of individual autonomy). The classification as Rope (claimed) vs. potential Tangled Rope/Snare (computed for dissenters) highlights this divergence, preventing mislabeling genuine coordination as pure extraction, or vice-versa, by revealing the per-seat experience."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_authority__secularist_reading",
+      "marriage_authority__gender_rights_reading",
+      "marriage_authority__federalist_millet_reading",
+      "marriage_authority__judicial_harmonization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_authority' kernel, focusing on communal autonomy. Other readings (secularist, gender rights, federalist millet, judicial harmonization) represent alternative structural claims about the same underlying social and legal phenomenon."
+  },
+  "stakeholders": [
+    {
+      "name": "religious_community_leaders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Interpret and administer religious personal laws, acting as the primary authority within their community regarding marriage, divorce, and inheritance. They benefit from the preservation of traditional authority and community cohesion."
+    },
+    {
+      "name": "religious_community_members",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Adhere to the communal marriage norms, benefiting from the social stability, cultural continuity, and identity provided by the community's traditions. Their identity is often deeply intertwined with their religious affiliation, making exit from communal norms difficult."
+    },
+    {
+      "name": "intra_community_dissenters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are members of the religious community who disagree with certain aspects of the traditional marriage laws, particularly regarding gender equality or personal autonomy. They bear the costs of limited legal options and social pressure, with state enforcement reinforcing these constraints."
+    },
+    {
+      "name": "women_seeking_equality",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Specifically seek reform of personal laws to ensure gender equality within marriage, divorce, and inheritance. They face significant structural barriers and social resistance, with limited avenues for legal redress within the communal system."
+    },
+    {
+      "name": "the_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Registers and enforces the personal laws of various religious communities, providing legal backing to communal authority without directly legislating the content of these laws. It benefits from managing social diversity but bears the cost of potential constitutional challenges."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review challenges to personal laws on constitutional grounds, particularly regarding equality and non-discrimination. Their rulings can influence the interpretation and application of communal norms, potentially leading to reform or reinterpretation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates social and legal recognition of marriage, divorce, and inheritance within diverse religious communities, allowing for distinct communal identities and traditions to persist under state recognition.",
+    "transfer_function": "Transfers authority over family law matters from a centralized state legislature to religious community leaders, in exchange for social stability and the preservation of diverse cultural identities. It also transfers legal costs and social pressure to dissenters within these communities.",
+    "absent_voices": "Advocates for a Uniform Civil Code (UCC) are absent from the direct negotiation of communal personal laws; they would argue for a single, secular family law system based on universal principles, but their proposals are often resisted by religious communities and political parties.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If state enforcement of communal marriage authority vanished, religious communities would face legal uncertainty, potentially leading to internal fragmentation or a shift towards informal, non-state-recognized arrangements. The state would lose a mechanism for managing legal pluralism, and individual rights claims might become more prominent, forcing a re-evaluation of family law.",
+    "founding_problem": "The problem of governing diverse religious communities with distinct personal laws, inherited from colonial or pre-modern legal systems, while maintaining state sovereignty and social cohesion.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Religious community leaders and many members attest that the problem of preserving distinct religious identities and traditions in family law remains live. Constitutional scholars and human rights advocates, while acknowledging the historical context, contest the current status, arguing that the problem has evolved into one of individual rights versus communal autonomy, requiring new solutions."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "marriage_authority__secularist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "marriage_authority__gender_rights_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "marriage_authority__federalist_millet_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "marriage_authority__judicial_harmonization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "communal_self_governance_in_personal_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_enforcement_of_religious_personal_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "traditional_communal_legal_autonomy",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

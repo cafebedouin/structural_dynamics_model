@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_commandment__archive_maintenance",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "85fa9f3e-f7ac-420d-96f5-65e480526c88"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Sacrifice Commandment: Archive Maintenance Reading",
+    "topic_domain": "religious_studies/halakhic_theory/commitment_system_analysis",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "future_generations",
+      "halakhic_scholars"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "continuity_of_halakha",
+      "importance_of_oral_tradition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the study of sacrifice law primarily an act of archive maintenance for future restoration, or does it carry present-day spiritual efficacy?",
+      "resolution_mechanism": "Theological consensus shift or a definitive halakhic ruling on the nature of study in the absence of the Temple.",
+      "impact": "If it carries present-day spiritual efficacy (as in the 'study_as_performance' reading), the extractiveness of this constraint would be lower, as the 'cost' of study yields immediate 'benefit'. If it is purely archive maintenance, the current moderate extractiveness is appropriate, reflecting the deferred and uncertain benefit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between archive maintenance and present spiritual performance readings of the sacrifice commandment."
+    },
+    {
+      "id": "future_utility_certainty",
+      "question": "How certain is the future utility of currently preserved knowledge for Temple restoration?",
+      "resolution_mechanism": "Theological developments regarding the nature of the messianic era and the Third Temple, or a re-evaluation of the practical applicability of ancient halakhic details.",
+      "impact": "Higher certainty of future utility would lower the perceived extractiveness, as the investment in study is more reliably recouped. Lower certainty would increase extractiveness, as the present cost is for a more speculative future benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the practical relevance of preserved knowledge for a future Temple."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'archive maintenance' reading of the sacrifice commandment, where the study of Temple laws is understood as preserving technical knowledge for a future messianic restoration, rather than fulfilling the commandment in the present. This reading emphasizes the practical, future-oriented utility of study, acknowledging that the full performance of sacrifices is currently impossible. The constraint's extractiveness is moderate, reflecting the investment in study for a deferred and somewhat uncertain future benefit.",
+    "logic_rationale": "The extractiveness (0.45) is moderate because the benefit of study is primarily for a future generation, making the present investment a form of deferred gratification with uncertain direct returns for the current generation of scholars. Suppression (0.2) is low as participation in this form of study is largely voluntary and driven by religious commitment rather than coercion. Theater ratio (0.1) is low because the study is genuinely aimed at preserving knowledge, not merely performing a ritual without substance. Accessibility collapse (0.15) is low as there are many alternative forms of religious observance and study. Resistance (0.05) is low as this reading is a widely accepted, if not universally dominant, approach to the commandment.",
+    "directionality_logic": "Halakhic scholars are beneficiaries in that they gain intellectual and spiritual engagement, and contribute to a sacred tradition, but they also bear the 'cost' of dedicating time and effort to study whose primary utility is deferred. Future generations are clear beneficiaries, as they will inherit the preserved knowledge. There are no direct 'victims' in this reading, as the 'extraction' is primarily the deferred nature of the benefit rather than a coercive transfer.",
+    "perspectival_gap": "From the perspective of current halakhic scholars, the constraint involves a significant investment of time and intellectual effort for a benefit that is largely deferred to a future messianic era. From the perspective of future generations, this constraint is a pure benefit, as it ensures the continuity of essential knowledge. The engine's classification will reflect this deferred benefit structure.",
+    "kernel_context": "This constraint is the 'archive_maintenance' reading of the 'sacrifice_commandment' kernel. It posits that the study of sacrifice laws is primarily about preserving technical knowledge for a future Temple restoration. This contrasts with the 'study_as_performance' reading, which views study as a present fulfillment of the commandment, and the 'performance_only' reading, which holds the commandment is suspended without a physical Temple."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_commandment__study_as_performance",
+      "sacrifice_commandment__performance_only"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'sacrifice_commandment' kernel, focusing on the preservation of knowledge for future Temple restoration. It is linked to other readings that emphasize present performance or suspension of the commandment."
+  },
+  "stakeholders": [
+    {
+      "name": "halakhic_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Dedicate their lives to the rigorous study and transmission of sacrifice laws, ensuring the continuity of the tradition. They are deeply invested in the intellectual and spiritual framework that justifies this study, even with deferred practical application."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Will inherit the preserved knowledge and technical understanding necessary for the potential restoration of Temple service in a messianic era. They are the primary, albeit indirect, beneficiaries of the current generation's efforts."
+    },
+    {
+      "name": "lay_adherents",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Support the institutions and scholars engaged in this study through donations and communal resources. They may not directly engage in the rigorous study but value its role in maintaining the tradition and preparing for the future."
+    },
+    {
+      "name": "messianic_activists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for immediate, practical steps towards Temple restoration, potentially viewing extensive theoretical study without direct action as insufficient or even delaying the messianic process. Their more immediate-action perspective is not fully accommodated by this reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the intellectual and spiritual efforts of a dispersed community towards a shared, long-term goal of preserving knowledge for a future messianic restoration, ensuring continuity of a complex religious tradition.",
+    "transfer_function": "Transfers intellectual and spiritual labor from current halakhic scholars and financial support from lay adherents to the future generations, in the form of preserved, ready-to-implement knowledge of sacrifice laws.",
+    "absent_voices": "Messianic activists and those who believe the commandment is entirely suspended would object, arguing that this reading either defers action too much or misinterprets the nature of the commandment. They are often marginalized in the discourse dominated by established halakhic authorities.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the dedicated study of sacrifice laws would likely cease or diminish significantly. This would lead to a loss of critical technical knowledge, making future Temple restoration (if it were to occur) far more difficult or impossible, fundamentally altering the long-term trajectory of the tradition.",
+    "founding_problem": "The destruction of the Second Temple rendered the physical performance of sacrifices impossible, creating a crisis of how to fulfill a central divine commandment and preserve its intricate details for a future restoration.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem of Temple destruction and the inability to perform sacrifices remains live, attested by nearly all Jewish religious authorities and historical texts. The need to preserve knowledge for a future restoration is a widely accepted theological premise, corroborated by centuries of rabbinic literature and communal practice, not just by the scholars directly benefiting from the study."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sacrifice_commandment__study_as_performance",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sacrifice_commandment__performance_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_as_preparation_not_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "future_restoration_is_halakhically_relevant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "post_temple_exile_halakha",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

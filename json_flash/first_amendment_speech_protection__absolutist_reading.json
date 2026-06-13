@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "first_amendment_speech_protection__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "43ea5db7-982b-4b37-9822-4cc621898941"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Amendment Absolutist Speech Protection",
+    "topic_domain": "constitutional_law/political_philosophy/speech_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speakers_majority",
+      "political_dissidents"
+    ],
+    "victims": [
+      "targeted_minorities",
+      "hate_speech_targets"
+    ],
+    "vindicated_propositions": [
+      "marketplace_of_ideas_doctrine",
+      "free_speech_absolutism"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "absolutist_vs_harm_limited_framing",
+      "question": "Is the First Amendment's 'no law' clause an absolute prohibition on speech regulation, or does it implicitly yield to demonstrable unconsented-to harm?",
+      "resolution_mechanism": "Supreme Court precedent explicitly adopting a harm-based limitation, or a constitutional amendment clarifying the scope of speech protection.",
+      "impact": "If a harm-limited reading were adopted, the set of protected speech would shrink, and the current victims of speech-related harm would gain legal recourse, shifting the constraint's extractiveness and beneficiary structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'absolutist_reading' of the 'first_amendment_speech_protection' kernel. Sibling readings ('harm_limited_reading', 'categorical_balancing_reading') would alter the balance between speech protection and harm prevention."
+    },
+    {
+      "id": "historical_exclusions_scope",
+      "question": "What is the precise and exhaustive scope of 'narrow historical exclusions' to First Amendment protection, and how are new forms of speech/harm categorized?",
+      "resolution_mechanism": "A definitive historical and legal consensus on the original intent and application of the First Amendment's exclusions, or a clear jurisprudential framework for analogizing new phenomena to old categories.",
+      "impact": "A broader interpretation of historical exclusions would reduce the scope of protected speech, potentially reclassifying some currently protected speech as unprotected and reducing extraction from targeted groups. A narrower interpretation would reinforce the absolutist stance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the scope of historical exclusions allows for interpretive drift that can expand or contract the effective protection of speech."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'absolutist' reading of the First Amendment's speech protection, where 'no law' is interpreted as a categorical prohibition on government regulation of speech, with only a few narrow, historically recognized exceptions (e.g., incitement, true threats). This reading maximizes the scope of protected speech, often externalizing the costs of harmful speech onto targeted groups. It is a specific interpretation of a contested constitutional kernel, distinct from readings that would balance speech against harm or create new categories of unprotected speech.",
+    "logic_rationale": "The extractiveness (0.6) reflects the costs borne by those targeted by harmful speech that remains protected under this absolutist interpretation. Suppression (0.2) is low because the constraint actively prevents government suppression of speech, rather than enforcing it. Resistance (0.7) is high, primarily from groups advocating for greater protection against hate speech and other forms of harmful expression. Accessibility collapse (0.3) is moderate; while direct government censorship is collapsed, other forms of social or economic pressure on speech may still exist.",
+    "perspectival_gap": "Speakers (especially those expressing unpopular or controversial views) experience this as a robust protection of liberty, while targeted minorities experience it as a structural vulnerability that permits harm. The 'absolutist' interpretation prioritizes the speaker's right over the target's right to be free from harm, leading to a significant divergence in how the constraint is experienced.",
+    "directionality_logic": "Speakers (majority and dissidents) are primary beneficiaries, as their speech is maximally protected (low d). Targeted minorities and hate speech targets are victims, bearing the costs of unmitigated harmful speech (high d). The government, while nominally constrained, also benefits from avoiding the complex and politically charged task of speech regulation (moderate d).",
+    "kernel_context": "This constraint is the 'absolutist_reading' of the 'first_amendment_speech_protection' kernel. It interprets the First Amendment's 'no law' clause as a categorical prohibition on speech regulation, except for narrow historical exclusions. Sibling readings include the 'harm_limited_reading' (where protection yields to demonstrable unconsented-to harm) and the 'categorical_balancing_reading' (which creates protected/unprotected categories via case-by-case balancing)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "first_amendment_speech_protection__harm_limited_reading",
+      "first_amendment_speech_protection__categorical_balancing_reading",
+      "hate_speech_regulation_framework"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the First Amendment's speech protection kernel. Each reading has a different structural impact on beneficiaries, victims, and the scope of protected speech."
+  },
+  "stakeholders": [
+    {
+      "name": "speakers_majority",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from broad protection of their speech, including potentially offensive or controversial expressions, without significant government interference. They can express views freely across various platforms."
+    },
+    {
+      "name": "political_dissidents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Relies on the broad protection to voice opposition to established power, often engaging in speech that might be considered disruptive or offensive by the majority. Their ability to exit is constrained by the need for public platforms."
+    },
+    {
+      "name": "targeted_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bears the costs of speech that targets them with hate, harassment, or incitement, which remains protected under this absolutist reading. They have limited legal recourse and often face systemic harm, with no easy 'exit' from the public sphere."
+    },
+    {
+      "name": "hate_speech_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals or small groups directly subjected to hate speech, experiencing psychological distress, fear, and potential incitement to violence. Their identity is often the target, making 'exit' from the harm impossible without abandoning their identity."
+    },
+    {
+      "name": "government_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tasked with upholding the First Amendment, they are constrained from enacting broad speech regulations. They benefit from avoiding the political and legal complexities of drawing lines around harmful speech, but face pressure from victims of such speech."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor government actions to ensure speech protections are upheld, often siding with speakers against regulation. They analyze the impact of court decisions and advocate for interpretations that maximize free expression."
+    }
+  ],
+  "gain_flow": "speakers_majority",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a clear, broad zone of protected expression, reducing uncertainty for speakers about what speech is permissible and minimizing the chilling effect of potential government censorship.",
+    "transfer_function": "Transfers the burden of harmful speech from the government (which is constrained from regulating it) and speakers (who are protected) to individuals and groups targeted by such speech, who bear the social and psychological costs.",
+    "absent_voices": "Victims of systemic hate speech and those advocating for a more communitarian or harm-sensitive approach to free expression are often marginalized in the discourse, their concerns framed as threats to 'free speech' rather than legitimate claims for protection.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this absolutist reading vanished, the legal landscape for speech would fundamentally shift. Governments would likely move to regulate more categories of speech, leading to a period of intense legal and political contestation over new boundaries, and a significant reordering of power dynamics between speakers and targeted groups.",
+    "founding_problem": "The founding problem was to prevent government censorship and ensure a robust public discourse, drawing from historical experiences with state suppression of dissent.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and legal scholars outside the absolutist camp corroborate the historical intent to prevent government censorship. However, the 'live' status of the problem is contested by those who argue that the current interpretation has over-corrected, creating new harms while solving old ones. Civil liberties advocates generally attest to the problem's continued relevance, while targeted minorities highlight the new forms of harm that remain unaddressed."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "first_amendment_speech_protection__harm_limited_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "first_amendment_speech_protection__categorical_balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_law_means_no_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "historical_exclusions_are_exhaustive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "original_intent_anti_censorship",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

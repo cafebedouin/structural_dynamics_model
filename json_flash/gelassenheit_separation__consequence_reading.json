@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "gelassenheit_separation__consequence_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6e6395a7-0e72-4b00-a449-a9cd520515bb"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.3,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Gelassenheit Separation: Consequence-Based Technology Adoption",
+    "topic_domain": "religious_studies/technology_governance/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "amish_community_members"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine consequence-based reading of Gelassenheit separation, or is it primarily driven by other principles?",
+      "resolution_mechanism": "Analysis of community decisions on technology adoption over time, focusing on explicit justifications given for acceptance or rejection. If justifications consistently cite effects on community practices (visiting, mutual aid, rootedness), it supports the consequence reading. If justifications cite visible distinction or entanglement, it points to other readings.",
+      "impact": "If this is a genuine consequence reading, the constraint is a Rope, effectively coordinating community values. If it's a cover for artifact-based or principle-based separation, its true extractiveness and suppression might be higher, reclassifying it as a Tangled Rope or Snare for those who do not share the underlying principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'gelassenheit_separation' kernel, specifically the 'consequence_reading'. Sibling readings include 'principle_reading' and 'artifact_reading'. This omega addresses the ambiguity of whether the observed practices genuinely stem from a consequence-based evaluation or are rationalizations for other underlying principles."
+    },
+    {
+      "id": "consequence_measurement_ambiguity",
+      "question": "How are 'visiting', 'mutual aid', and 'geographic rootedness' objectively measured and weighed when evaluating technology?",
+      "resolution_mechanism": "Ethnographic study of community decision-making processes, identifying implicit or explicit metrics used by elders and community leaders. Documentation of specific cases where technology was permitted or forbidden based on these criteria.",
+      "impact": "If these consequences are subjectively or inconsistently applied, the constraint's enforcement may appear arbitrary, increasing perceived suppression for those who disagree with the interpretation. If clear, consistent metrics exist, it reinforces the coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The consequence-based reading relies on evaluating technology by its effect on community practices. This omega addresses the inherent ambiguity in measuring and weighing these effects, which could lead to inconsistent application."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a 'consequence-based' reading of Gelassenheit (yielding/letting be) within certain Amish communities, where technology is evaluated primarily by its effects on core community practices such as visiting, mutual aid, and geographic rootedness. For example, a telephone might be permitted in a barn (to facilitate business and maintain rootedness) but forbidden in the home (to prevent erosion of visiting). A tractor might be allowed for belt power (to support mutual aid in farming) but not for field work (to avoid dependence on external systems and maintain community labor practices). This reading prioritizes the functional impact on community life over the mere appearance of technology or its structural entanglement with the 'English' world.",
+    "key_agents": [
+      "amish_community_members: Primary beneficiaries (moderate/constrained) – benefit from preserved community practices.",
+      "ordnung_elders: Agenda-setters (institutional/constrained) – interpret and enforce the rules based on community consequences.",
+      "younger_generation: Payers (moderate/constrained) – bear the costs of restricted technology access but benefit from community cohesion."
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the rules are tailored to preserve community benefits, not to extract from members. Suppression is moderate (0.3) as there is active enforcement and social pressure, but the rules are generally accepted as serving a collective good. Theater ratio is low (0.05) because the evaluation is genuinely functional, not performative. Accessibility collapse is low (0.2) as alternatives (English society) are always present, but choosing them means leaving the community. Resistance is low (0.1) due to strong internal cohesion and shared values.",
+    "perspectival_gap": "From the perspective of Amish community members, the constraint is a genuine Rope, coordinating their values and preserving their way of life. From an external, secular perspective, it might appear more extractive or suppressive due to the restrictions on technology, but within the community, the benefits of preserved practices are highly valued.",
+    "directionality_logic": "Amish community members are the primary beneficiaries, as the rules are designed to preserve their way of life and social fabric. Ordnung elders act as agenda-setters, interpreting and enforcing the rules in service of these community goals. Younger generations are payers, bearing the direct costs of technology restrictions, but also benefiting from the strong community bonds and mutual aid that these restrictions help maintain. There are no clear 'victims' in this reading, as the intent is collective benefit, and exit options (joining English society) are available, albeit with high social cost.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by continuously re-evaluating technology based on its current and projected impact on community practices. The 'founding problem' of preserving a distinct way of life is still live, and the constraint adapts to new technologies by assessing their consequences, rather than adhering to rigid, outdated prohibitions. This dynamic assessment prevents the constraint from becoming a Piton or Snare by ensuring its function remains aligned with its mandate."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'gelassenheit_separation' kernel. Sibling readings include 'gelassenheit_separation__principle_reading' and 'gelassenheit_separation__artifact_reading', which focus on structural entanglement and visible distinction, respectively. All readings are linked by their common origin in the concept of Gelassenheit."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gelassenheit_separation__principle_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gelassenheit_separation__artifact_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_evaluated_by_community_consequences",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "preservation_of_visiting_mutual_aid_rootedness_is_paramount",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "community_practices_intact",
+    "drift_state": {
+      "moment": "contemporary_technological_advancement",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

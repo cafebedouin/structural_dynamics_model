@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "tenure_contract__academic_freedom_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c30b2c34-2544-48f7-9282-65d0bebd5bff"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Academic Freedom via Tenure Contract",
+    "topic_domain": "higher_education_governance/labor_economics/institutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tenured_faculty",
+      "students",
+      "public_discourse"
+    ],
+    "victims": [
+      "political_actors_seeking_control",
+      "institutional_administrators_seeking_conformity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine instantiation of academic freedom, or is it primarily a mechanism for institutional extraction or demographic reproduction?",
+      "resolution_mechanism": "Empirical analysis of tenure review outcomes (e.g., correlation between tenure denial and research critical of institutional interests, or demographic patterns in tenure awards vs. research output).",
+      "impact": "If primarily academic freedom, the classification as Rope holds. If found to be primarily extraction or reproduction, the classification would shift to Snare or Tangled Rope, respectively, for those readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'academic_freedom_reading' of the 'tenure_contract' kernel. Sibling readings ('institutional_extraction_reading', 'demographic_reproduction_reading') offer alternative structural interpretations."
+    },
+    {
+      "id": "truth_seeking_efficacy",
+      "question": "To what extent does tenure actually enable high-risk, truth-seeking inquiry, versus merely protecting established academics?",
+      "resolution_mechanism": "Longitudinal studies tracking research topics and outcomes of tenured vs. non-tenured faculty, particularly in politically sensitive or institutionally challenging areas.",
+      "impact": "If tenure's effect on truth-seeking is weak, the 'academic_freedom_reading' loses empirical grounding, potentially shifting its classification towards a more inertial 'Piton' or a less effective 'Rope'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the empirical effectiveness of tenure in fostering academic freedom."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the tenure contract in higher education as a mechanism for protecting academic freedom. From this reading, tenure decouples a researcher's survival from institutional or political pressures, thereby enabling high-risk, critical, and truth-seeking inquiry. It is presented as a coordination mechanism that benefits society by ensuring robust intellectual discourse and knowledge production, even when inconvenient to powerful actors. The metrics reflect this ideal-type operation, with low extraction and suppression, primarily targeting external pressures.",
+    "logic_rationale": "The low extractiveness (0.2) and suppression (0.1) reflect the ideal function of tenure: it extracts minimal direct cost from faculty (beyond the initial probationary period) and primarily suppresses external pressures on research, not internal dissent. The theater ratio is low (0.05) because, in this reading, the mechanism is genuinely functional for its stated purpose. Accessibility collapse is high (0.8) because, once tenure is granted, the protection against arbitrary dismissal is substantial. Resistance is low (0.05) from within the academic community, as the system is largely accepted as beneficial for academic freedom, though external political actors may resist its effects.",
+    "perspectival_gap": "From the perspective of tenured faculty, this constraint is a pure Rope, providing essential protection for their work. From the perspective of external political actors or institutional administrators seeking conformity, it is a barrier to control, experienced as a low-level Snare or Tangled Rope due to its resistance to their influence. Students and the public are indirect beneficiaries, gaining from the quality and independence of research.",
+    "directionality_logic": "Tenured faculty are primary beneficiaries (d=0.0-0.1) due to the protection and stability tenure provides. Students and the public are also beneficiaries (d=0.1-0.2) through access to independent research. Political actors and institutional administrators seeking to control research agendas are the targets/victims (d=0.8-0.9), as tenure limits their ability to exert direct influence or impose conformity. The constraint subsidizes academic independence by extracting from those who would suppress it.",
+    "mandatrophy_analysis": "This reading prevents mislabeling academic freedom as pure extraction by focusing on the protective function of tenure. It acknowledges that the mandate (protecting truth-seeking) is still live and actively served by the constraint, rather than having atrophied into mere inertia or rent-seeking. The low theater ratio and extractiveness support this view, distinguishing it from a Piton or Snare where the original mandate is lost."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_research_funding_allocation",
+      "university_governance_structures"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'tenure_contract' kernel, focusing on its role in academic freedom. Other readings (institutional_extraction_reading, demographic_reproduction_reading) exist and are modeled as separate constraints."
+  },
+  "directionality_overrides": [],
+  "six_questions": {
+    "coordination_function": "Coordinates the pursuit of knowledge by protecting researchers from external pressures, ensuring that inquiry can proceed without fear of reprisal, thereby fostering intellectual independence and robust critical discourse.",
+    "transfer_function": "Transfers job security and intellectual autonomy to tenured faculty, in exchange for their commitment to truth-seeking and high-quality research, while transferring a degree of control away from external political and internal administrative actors.",
+    "absent_voices": "Political actors seeking to control academic narratives, and institutional administrators prioritizing conformity over critical inquiry, are structurally resisted by tenure. They would argue for greater accountability and responsiveness to immediate societal or institutional needs, but their influence is curtailed by the protections tenure affords.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure vanished overnight, academic institutions would quickly become more susceptible to political and financial pressures. Research agendas would likely shift towards safer, more fundable, or politically palatable topics. Faculty would face increased precarity, potentially chilling controversial or critical inquiry. The quality and independence of public discourse would degrade as a result.",
+    "founding_problem": "The problem of ensuring intellectual independence and protecting scholars from arbitrary dismissal or political interference, particularly in fields of inquiry that challenge established norms or powerful interests.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic associations, civil liberties organizations, and historical analyses of academic freedom cases consistently corroborate that the threat to intellectual independence remains live. While the specific forms of pressure may evolve, the fundamental problem of protecting high-risk inquiry persists, as attested by ongoing debates and legal challenges from outside the immediate beneficiary group of tenured faculty."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "tenure_contract__institutional_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tenure_contract__demographic_reproduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intellectual_independence_is_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "truth_seeking_requires_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_1940_aaup_statement_of_principles",
+    "drift_state": {
+      "moment": "contemporary_political_polarization",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

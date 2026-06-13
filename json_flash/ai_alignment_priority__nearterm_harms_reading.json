@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__nearterm_harms_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b8d179e5-edc4-4902-a1c1-9533be8d6e88"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Alignment: Prioritizing Near-Term Harms and Justice",
+    "topic_domain": "ai_governance/technology_ethics/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marginalized_populations",
+      "human_rights_advocates"
+    ],
+    "victims": [
+      "ai_system_developers",
+      "deploying_organizations"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine focus on near-term harms, or a rhetorical framing to divert resources from other alignment priorities?",
+      "resolution_mechanism": "Resource allocation audits: track funding and personnel deployment to near-term bias mitigation vs. long-term safety research. If resources disproportionately flow to rhetorical rather than practical mitigation, reclassify as a form of performative compliance.",
+      "impact": "If primarily rhetorical, the effective extractiveness from marginalized populations is higher due to unaddressed harms, and the constraint's classification shifts towards Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'nearterm_harms_reading' of the 'ai_alignment_priority' kernel. Sibling readings ('existential_risk_reading', 'integrated_reading') would shift the victim/beneficiary sets and the primary focus of enforcement."
+    },
+    {
+      "id": "sociotechnical_audit_efficacy",
+      "question": "Are current sociotechnical audit methodologies sufficiently robust to detect and mitigate all forms of discriminatory and extractive harms from deployed AI systems?",
+      "resolution_mechanism": "Empirical validation of audit outcomes: track the long-term impact of audited systems on marginalized populations. If harms persist or new ones emerge post-audit, the efficacy is low.",
+      "impact": "If audit efficacy is low, the constraint's actual suppression of harms is lower than intended, and the 'theater_ratio' might be higher, indicating performative rather than functional mitigation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the effectiveness of current tools to achieve the stated goal of harm prevention."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines AI alignment as primarily focused on preventing present discriminatory and extractive harms from deployed AI systems, with a specific priority on justice for marginalized populations. It mandates sociotechnical audits and bias mitigation, shifting resources towards these efforts. The constraint is framed as a 'tangled_rope' because it genuinely coordinates efforts to address real harms (benefiting marginalized groups) but also extracts resources and imposes compliance burdens on AI developers and deploying organizations, often through active enforcement and regulatory pressure.",
+    "logic_rationale": "The extractiveness (0.65) reflects the significant costs imposed on AI developers and deploying organizations for audits, redesigns, and compliance, which are often passed on. Suppression (0.70) is high due to the active enforcement mechanisms (e.g., regulatory fines, public shaming, legal action) required to ensure compliance and prevent the deployment of harmful systems. The theater ratio (0.20) is relatively low, indicating that while some performative compliance exists, there's a genuine effort towards mitigation, driven by the explicit justice priority. Accessibility collapse (0.40) is moderate, as developers still have options but face significant hurdles, and resistance (0.55) is present from those bearing the compliance costs.",
+    "perspectival_gap": "From the perspective of marginalized populations and human rights advocates, this constraint is a necessary 'rope' for justice, coordinating efforts to protect vulnerable groups. From the perspective of AI system developers and deploying organizations, it can feel like a 'snare' due to the high compliance costs, potential for reputational damage, and the perceived burden of addressing complex societal issues through technical means.",
+    "directionality_logic": "Marginalized populations are the primary beneficiaries (d=0.0-0.1) as the constraint aims to prevent harms directly affecting them. Human rights advocates also benefit by seeing their advocacy translated into policy (d=0.1-0.2). AI system developers and deploying organizations are the primary targets (d=0.8-1.0) as they bear the direct costs of compliance, audits, and potential penalties. Regulatory bodies act as agenda-setters, enforcing the constraint (d=0.4-0.5).",
+    "mandatrophy_analysis": "This constraint prevents mislabeling genuine efforts to address social harms as pure extraction by acknowledging the real coordination function of protecting vulnerable groups. However, it also guards against 'virtue signaling' by requiring active enforcement and measurable outcomes, preventing it from becoming a 'piton' of performative ethics without real impact. The 'tangled_rope' classification captures the dual nature of coordination and extraction inherent in regulating complex sociotechnical systems for justice.",
+    "kernel_context": "This constraint, 'ai_alignment_priority__nearterm_harms_reading', is one reading of the 'ai_alignment_priority' kernel. It instantiates the view that AI alignment's primary focus should be on preventing present discriminatory and extractive harms, with justice for marginalized populations as the top priority. Sibling readings include 'existential_risk_reading' (prioritizing catastrophic risk) and 'integrated_reading' (seeking to balance both near-term and existential risks)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_ethics_guidelines_enforcement",
+      "ai_bias_auditing_standards"
+    ],
+    "dual_formulation_note": "This constraint is part of the 'ai_alignment_priority' constraint family, representing the 'nearterm_harms_reading'. It is linked to other readings of the same kernel, which focus on different aspects of AI alignment."
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are the primary intended beneficiaries, as the constraint aims to prevent and mitigate harms (e.g., discrimination, exploitation) from AI systems that disproportionately affect them. Their 'exit' from these harms is often structural and difficult."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for the rights of marginalized groups and benefit from policies that prioritize justice and harm prevention in AI. They contribute to shaping the constraint and monitor its enforcement."
+    },
+    {
+      "name": "ai_system_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of implementing bias mitigation, conducting sociotechnical audits, and redesigning systems to comply with harm prevention mandates. Their ability to deploy systems is constrained by adherence to these principles."
+    },
+    {
+      "name": "deploying_organizations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are responsible for ensuring that AI systems they deploy do not cause discriminatory or extractive harms. They face legal, reputational, and financial risks for non-compliance, incurring significant costs for due diligence and oversight."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Are tasked with developing, implementing, and enforcing policies that operationalize this alignment priority. They set standards, conduct investigations, and impose penalties for non-compliance, acting as the primary enforcers of the constraint."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Focus on preventing catastrophic risks from advanced AI and argue that prioritizing near-term harms diverts critical resources from existential safety. They are often excluded from the primary discourse and resource allocation for this specific reading of alignment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates efforts across AI developers, deploying organizations, and regulatory bodies to identify, prevent, and mitigate discriminatory and extractive harms from AI systems, ensuring a more just and equitable deployment of AI.",
+    "transfer_function": "Transfers resources (time, money, personnel) from AI developers and deploying organizations towards sociotechnical audits, bias mitigation research, and compliance efforts, ultimately aiming to transfer safety and justice to marginalized populations.",
+    "absent_voices": "Researchers and advocates primarily focused on existential AI risks are often marginalized in this discourse, arguing that an exclusive focus on near-term harms neglects potentially catastrophic long-term threats. Their perspective is often not fully integrated into the policy-making and resource allocation for this specific alignment priority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, AI systems would likely be deployed with less scrutiny for bias and harm, leading to an increase in discriminatory and extractive outcomes for marginalized populations. The current efforts towards ethical AI development would significantly diminish, and the landscape of AI governance would shift dramatically towards unchecked deployment.",
+    "founding_problem": "The widespread deployment of AI systems was observed to perpetuate and amplify existing societal biases and inequalities, leading to discriminatory outcomes in areas like hiring, lending, and criminal justice, disproportionately harming marginalized populations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Numerous academic studies, investigative journalism reports, and testimonies from affected communities and human rights organizations consistently corroborate the ongoing nature of AI-driven harms. Regulatory bodies and international organizations also acknowledge the problem, providing corroboration from outside the immediate beneficiaries of the constraint."
+  },
+  "gain_flow": "marginalized_populations",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ai_alignment_priority__existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ai_alignment_priority__integrated_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "justice_as_primary_ai_alignment_goal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "present_harms_as_tractable_and_urgent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "human_centered_ai_ethics",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

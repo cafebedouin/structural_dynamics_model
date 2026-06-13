@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "humane_treatment_standard__contextual_necessity",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "ff35384e-0686-4782-afdd-78fdb4c5c9d5"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Humane Treatment Standard (Contextual Necessity Reading)",
+    "topic_domain": "international_humanitarian_law/state_security/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_agencies",
+      "national_security_decision_makers"
+    ],
+    "victims": [
+      "detainees_of_national_security_interest",
+      "human_rights_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine interpretation of Common Article 3, or a re-framing to permit otherwise prohibited actions?",
+      "resolution_mechanism": "Analysis of international jurisprudence and state practice over time, particularly in non-belligerent contexts.",
+      "impact": "If a genuine interpretation, it highlights the flexibility of IHL; if a re-framing, it exposes a snare operating under the guise of legal interpretation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'contextual_necessity' reading of the 'humane_treatment_standard' kernel."
+    },
+    {
+      "id": "victim_set_definition",
+      "question": "Does the 'contextual necessity' reading genuinely narrow the victim set, or does it merely provide cover for broader application of enhanced interrogation?",
+      "resolution_mechanism": "Empirical review of interrogation practices and outcomes, comparing cases where 'necessity' was invoked versus those where it was not.",
+      "impact": "If the victim set is genuinely narrowed, the constraint is less extractive than it appears; if not, its extractiveness is higher and more widespread.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The 'contextual_necessity' reading shrinks the victim set to exclude high-value targets in necessity scenarios, making detainee protections conditional."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal/institutional barriers) or internalized (detainees' belief in the legitimacy of their treatment)?",
+      "resolution_mechanism": "Post-release psychological assessment and legal aid access: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in detainee treatment."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'contextual necessity' reading of Common Article 3 of the Geneva Conventions, which posits that while a baseline of humane treatment is required, national security imperatives can override certain aspects, making humane treatment context-dependent and permitting 'enhanced interrogation' techniques. This reading grants discretion to state security agencies, making detainee protections conditional and effectively shrinking the victim set to exclude 'high-value targets' in perceived necessity scenarios.",
+    "key_agents": [
+      "state_security_agencies: Agenda setter (institutional/arbitrage) — defines and applies 'necessity'",
+      "national_security_decision_makers: Beneficiary (institutional/arbitrage) — benefits from expanded operational latitude",
+      "detainees_of_national_security_interest: Payer (powerless/trapped) — bears the costs of conditional treatment",
+      "human_rights_advocates: Payer (organized/constrained) — bears the cost of defending the absolute standard",
+      "international_legal_bodies: Observer (institutional/analytical) — adjudicates compliance and legitimacy"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is substantial because this reading permits actions that would otherwise be prohibited, extracting dignity and rights from detainees. Suppression (0.75) is high due to the state's coercive power and the secrecy surrounding 'enhanced interrogation' practices. Theater ratio (0.4) reflects the ongoing rhetorical efforts to frame these practices as compliant with international law, despite their deviation from an absolute standard. Resistance (0.5) is moderate, coming primarily from human rights organizations and some international bodies, but often overridden by state claims of necessity. Accessibility collapse (0.6) is significant for detainees, as their legal and physical options are severely curtailed once designated a 'national security interest'.",
+    "perspectival_gap": "State security agencies and national security decision-makers experience this as a necessary flexibility (beneficiary seat), allowing them to protect national interests. Detainees and human rights advocates (payer seats) experience it as a dangerous erosion of fundamental rights, leading to abuse. The engine will compute these divergent classifications from the structural data.",
+    "directionality_logic": "State security agencies and national security decision-makers are clear beneficiaries (d near 0.0) as they gain operational discretion and avoid accountability for certain actions. Detainees are direct targets (d near 1.0) as they bear the full cost of conditional treatment. Human rights advocates are also targets (d near 0.7) as their mission is undermined and they expend resources to resist this interpretation. International legal bodies are analytical observers (d near 0.5).",
+    "mandatrophy_analysis": "This reading prevents mislabeling pure extraction as coordination by highlighting the conditional nature of 'humane treatment'. It exposes how a coordination problem (managing conflict) is leveraged to extract from a specific group (detainees) under the guise of 'necessity'. The constraint's mandate (national security) is used to justify practices that erode the very standards it purports to uphold, indicating a drift towards extraction.",
+    "kernel_context": "This constraint is the 'contextual_necessity' reading of the 'humane_treatment_standard' kernel, which is Common Article 3 of the Geneva Conventions. This reading asserts that humane treatment is context-dependent, allowing for 'enhanced interrogation' when national security imperatives override. Sibling readings include 'absolute_prohibition' (no circumstances permit torture) and 'proportionality_balancing' (dignity vs. security needs)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolute_prohibition",
+      "proportionality_balancing",
+      "state_secrecy_doctrine",
+      "military_justice_system"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'humane_treatment_standard' kernel (Common Article 3). Its extractiveness and suppression metrics differ significantly from the 'absolute_prohibition' reading, which would show negligible extraction and high suppression of prohibited acts."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "humane_treatment_standard__absolute_prohibition",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "humane_treatment_standard__proportionality_balancing",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_security_overrides_absolute_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "humane_treatment_is_context_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "state_sovereignty_and_security_priority",
+    "drift_state": {
+      "moment": "post_9_11_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

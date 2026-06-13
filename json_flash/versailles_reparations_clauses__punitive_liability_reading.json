@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "versailles_reparations_clauses__punitive_liability_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c1ea83d4-8263-4a1a-bf8f-afaffc7d6fce"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.9,
+    "claimed_type": "snare",
+    "human_readable": "Versailles Reparations: Punitive Liability Reading",
+    "topic_domain": "international_relations/legal_history/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "allied_creditor_states"
+    ],
+    "victims": [
+      "german_workers_taxpayers",
+      "german_fiscal_sovereignty"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine reflection of international law or a punitive interpretation of the Versailles Treaty?",
+      "resolution_mechanism": "Analysis of alternative readings of Article 231 and subsequent international legal developments regarding war guilt and reparations.",
+      "impact": "If a punitive interpretation, the constraint's legitimacy is weakened, and its classification shifts from a 'rope' (coordination) to a 'snare' (extraction) from the German perspective. This story instantiates the punitive_liability_reading of the versailles_reparations_clauses kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as the punitive_liability_reading of the versailles_reparations_clauses kernel."
+    },
+    {
+      "id": "reparations_economic_capacity_ambiguity",
+      "question": "To what extent were the reparations claims truly quasi-unlimited, or were they implicitly bounded by Germany's economic capacity?",
+      "resolution_mechanism": "Historical economic analysis of Germany's actual payment capacity versus the demands, and the impact of the Dawes and Young Plans.",
+      "impact": "If implicitly bounded by capacity, the 'limited_responsibility_reading' gains strength, reducing the perceived extractiveness and suppression of this 'punitive_liability_reading'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the true limits of reparations claims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 1919,
+    "end": 1939
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'punitive liability' reading of the Versailles Treaty's reparations clauses, particularly Article 231 (the 'War Guilt Clause'). Under this reading, Germany bore unique moral and financial responsibility for the total costs of World War I, justifying quasi-unlimited reparations claims by the Allied creditor states. This interpretation led to significant economic extraction from Germany and substantial suppression of its fiscal sovereignty, contributing to political instability. The constraint is claimed as a 'snare' due to its highly extractive nature and the suppression of German alternatives.",
+    "logic_rationale": "The extractiveness (0.85) is high because the reparations demands were immense, far exceeding Germany's immediate capacity and diverting significant national wealth. Suppression (0.75) is high due to the threat of Allied occupation (e.g., the Ruhr Crisis) and the lack of viable alternatives for Germany to avoid payment without severe consequences. The theater ratio (0.1) is low, as the enforcement was very real and directly impacted the German economy. Resistance (0.9) was extremely high, manifesting in political opposition, economic crises, and ultimately, repudiation.",
+    "perspectival_gap": "From the perspective of Allied creditor states, this was a legitimate claim for damages and a just consequence of war. From the German perspective (workers, taxpayers, and the government), it was an unjust, punitive, and economically crippling burden. The engine's classification will reflect this divergence based on the declared beneficiaries and victims.",
+    "directionality_logic": "Allied creditor states are clear beneficiaries (d=0.0-0.1) as they received payments and sought to rebuild their economies. German workers and taxpayers are the primary victims (d=0.9-1.0), bearing the direct costs through taxation and economic hardship. German fiscal sovereignty is also a victim, as external claims dictated national economic policy. The enforcement mechanisms (e.g., occupation threats) ensured high directionality towards Germany.",
+    "mandatrophy_analysis": "The constraint's mandate was to compensate for war damages and assign responsibility. However, the punitive interpretation led to an overextension of this mandate, transforming it into a mechanism for severe extraction. The high extractiveness and suppression, coupled with the high resistance, indicate that the coordination function (rebuilding Europe) was overshadowed by the extractive function, preventing it from being a 'rope' or 'tangled_rope'. The 'snare' classification accurately captures this dynamic, where the coordination story (justice, rebuilding) served as cover for punitive extraction.",
+    "kernel_context": "This constraint is the 'punitive_liability_reading' of the 'versailles_reparations_clauses' kernel. Sibling readings include the 'limited_responsibility_reading' (reparations bounded by German economic capacity) and the 'repudiation_reading' (treaty illegitimate due to duress)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "versailles_reparations_clauses__limited_responsibility_reading",
+      "versailles_reparations_clauses__repudiation_reading",
+      "german_hyperinflation_of_1923",
+      "rise_of_nazism"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'versailles_reparations_clauses' kernel, focusing on the punitive interpretation of German liability. Its high extractiveness and suppression contrast with the 'limited_responsibility_reading' and are directly challenged by the 'repudiation_reading'."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "versailles_reparations_clauses__limited_responsibility_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "versailles_reparations_clauses__repudiation_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "german_sole_war_guilt",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "unlimited_reparations_justified",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_war_punitive_justice",
+    "drift_state": {
+      "moment": "interwar_economic_realities",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "lausanne_minority_protections__restrictive_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "72b91f44-9c06-4ee0-862c-fc52ce5f4df8"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Lausanne Treaty Restrictive Reading of Minority Protections",
+    "topic_domain": "international_law/religious_governance/minority_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turkish_state_apparatus"
+    ],
+    "victims": [
+      "non_muslim_minority_foundations",
+      "minority_religious_communities",
+      "minority_educational_institutions"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine interpretation of the Lausanne Treaty, or a strategic misreading to enable extraction?",
+      "resolution_mechanism": "Comparative legal analysis of treaty drafting history, subsequent state practice, and international legal scholarship; rulings by international courts on similar treaty language.",
+      "impact": "If a genuine interpretation, the constraint is a 'tangled_rope' reflecting a harsh but legally defensible coordination. If a strategic misreading, it is a 'snare' where the coordination story is cover for extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'restrictive_reading' of the 'lausanne_minority_protections' kernel. Sibling readings ('expansive_reading', 'guarantor_reading') would lead to different classifications."
+    },
+    {
+      "id": "institutional_autonomy_status",
+      "question": "Are the institutional autonomy, property ownership, and theological education of non-Muslim minorities genuinely 'domestic matters' under general Turkish law, or are they implicitly protected by the spirit of the Lausanne Treaty's minority provisions?",
+      "resolution_mechanism": "Judicial review by the European Court of Human Rights on specific cases of property confiscation or denial of legal personality, assessing the 'effective protection' of minority rights.",
+      "impact": "If implicitly protected, the current application of general law becomes a violation, shifting the constraint towards a 'snare' with higher suppression and extractiveness due to international illegitimacy. If genuinely domestic, the 'snare' classification remains, but with less international legal leverage for victims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the scope of 'domestic matters' versus international treaty obligations."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'restrictive_reading' of the Lausanne Treaty's minority protections, specifically as applied in Turkey. Under this interpretation, the treaty's guarantees are limited to individual worship rights, while the institutional aspects of minority religious life—such as property ownership, legal personality of foundations, and the right to establish and operate theological schools—are considered purely domestic matters subject to general Turkish law. This reading has historically enabled the Turkish state to exert significant control over non-Muslim minority institutions, leading to property confiscations, closure of educational facilities, and denial of legal autonomy.",
+    "key_agents": [
+      "turkish_state_apparatus: Agenda setter (institutional/arbitrage) — benefits from control",
+      "non_muslim_minority_foundations: Payer (organized/trapped) — bears property loss, legal challenges",
+      "minority_religious_communities: Payer (organized/identity_locked) — bears loss of institutional capacity, cultural erosion",
+      "minority_educational_institutions: Payer (organized/trapped) — bears closure, inability to train clergy",
+      "european_court_of_human_rights: Observer (institutional/analytical) — potential arbiter, but limited by state sovereignty claims"
+    ],
+    "logic_rationale": "The extractiveness (0.85) is high because this reading allows for the systematic transfer of assets (property) and capabilities (education, autonomy) from minority institutions to the state or its proxies. Suppression (0.90) is also very high, as the state actively enforces this interpretation through legal and administrative means, leaving minorities with severely constrained or no exit options for their institutional life. The theater ratio (0.10) is low, indicating that the constraint is genuinely functional in achieving its extractive and suppressive goals, with little performative maintenance. Resistance (0.70) is high, reflecting ongoing legal challenges and international advocacy by minority groups, despite the severe suppression.",
+    "perspectival_gap": "The Turkish state apparatus views this as a legitimate exercise of national sovereignty and domestic legal authority, consistent with its interpretation of the Lausanne Treaty. From the perspective of non-Muslim minority communities and their institutions, it is a highly extractive and suppressive regime that undermines their collective existence and cultural continuity, despite nominal individual worship rights. The engine will compute a Snare classification for the victims and a Beneficiary classification for the state.",
+    "directionality_logic": "The Turkish state apparatus is the primary beneficiary (d=0.0-0.1) as it consolidates control and potentially assets, with high power and arbitrage-grade exit (it can unilaterally alter its interpretation within its domestic sphere). Non-Muslim minority foundations, religious communities, and educational institutions are the primary targets (d=0.9-1.0), facing property confiscation, denial of legal personality, and educational foreclosure. Their exit options are 'trapped' or 'identity_locked' due to their historical ties to the land and their communities, and the lack of alternative legal frameworks within the state.",
+    "mandatrophy_analysis": "This constraint is a snare. The coordination story (national sovereignty, domestic legal order) is a cover for the systematic extraction of institutional autonomy and assets from minority groups. The persistence of this constraint is due to active enforcement and suppression of alternatives, not a genuine collective action problem it solves for all parties. The classification prevents mislabeling this as a 'rope' or 'tangled_rope' by highlighting the clear victims and the coercive nature of its persistence."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'lausanne_minority_protections' kernel. Other readings ('expansive_reading', 'guarantor_reading') exist as separate constraints, each with distinct structural properties and classifications."
+  },
+  "stakeholders": [
+    {
+      "name": "turkish_state_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Interprets and enforces the Lausanne Treaty's minority provisions restrictively, asserting full domestic sovereignty over minority institutional matters. Benefits from consolidating control and potentially assets."
+    },
+    {
+      "name": "non_muslim_minority_foundations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Legally recognized entities representing minority communities (e.g., Greek, Armenian, Jewish foundations). They face property confiscation, legal challenges to their autonomy, and bureaucratic hurdles under this restrictive interpretation. Their existence is tied to historical presence and community identity."
+    },
+    {
+      "name": "minority_religious_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The collective bodies of non-Muslim minorities whose cultural and religious continuity depends on the institutional capacity denied by this reading. They bear the costs of cultural erosion, loss of heritage, and inability to self-govern their religious affairs. Exit means abandoning their identity and historical ties."
+    },
+    {
+      "name": "minority_educational_institutions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Schools and seminaries serving minority communities, particularly for training clergy. They face closure, denial of legal personality, and restrictions on curriculum, making it difficult to sustain religious leadership and cultural transmission. Their function is directly targeted by the restrictive reading."
+    },
+    {
+      "name": "european_court_of_human_rights",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "An international judicial body that hears cases related to human rights violations, including those affecting minorities. While it can issue rulings, their enforcement depends on state compliance, and the Turkish state often asserts its domestic interpretation of Lausanne against such rulings."
+    },
+    {
+      "name": "guarantor_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Signatories to the Lausanne Treaty (e.g., UK, France, Italy) who could theoretically intervene diplomatically to ensure its full implementation. However, their political will to challenge Turkey's interpretation is often constrained by broader geopolitical interests, making them effectively excluded from active enforcement of a broader reading."
+    }
+  ],
+  "gain_flow": "turkish_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "From the state's perspective, it coordinates national sovereignty and legal uniformity by asserting domestic jurisdiction over all institutional matters, preventing external interference in internal affairs.",
+    "transfer_function": "Transfers institutional autonomy, property rights, and educational control from non-Muslim minority communities to the Turkish state apparatus, consolidating state power and national identity.",
+    "absent_voices": "The 'expansive_reading' and 'guarantor_reading' proponents (minority advocates, international legal scholars, human rights organizations, and potentially other Lausanne signatory states) are effectively absent from the domestic interpretive process. They would argue for a broader interpretation of treaty obligations and international oversight.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this restrictive reading vanished, minority institutions would immediately seek to reclaim confiscated properties, re-establish theological schools, and assert legal personality, leading to significant legal and administrative reorganization. The state's control over these domains would diminish, and international legal challenges would likely intensify, fundamentally altering the landscape of minority rights in Turkey.",
+    "founding_problem": "The problem of establishing a new Turkish Republic with clear national sovereignty and a unified legal system after the collapse of the Ottoman Empire, while also addressing the status of non-Muslim minorities inherited from the imperial era.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Turkish state maintains that the founding problem of national sovereignty and legal unity remains live, justifying the restrictive reading. Minority communities and international human rights bodies argue that the original problem has evolved, and the current interpretation serves to suppress minority rights rather than genuinely solve a national security or legal unity issue. Historical records and international legal opinions from outside the benefiting parties corroborate the shift in function."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lausanne_minority_protections__expansive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "lausanne_minority_protections__guarantor_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_worship_only_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "institutional_matters_domestic_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "national_sovereignty_post_ottoman",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

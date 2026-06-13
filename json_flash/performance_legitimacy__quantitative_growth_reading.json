@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "performance_legitimacy__quantitative_growth_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "5397668a-11f2-4874-879c-e15a21395cf0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Performance Legitimacy: Quantitative Growth Reading",
+    "topic_domain": "political_economy/development_planning/state_capitalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_export_complex",
+      "local_government_officials"
+    ],
+    "victims": [
+      "environmental_advocates",
+      "labor_migrants",
+      "small_and_medium_enterprises"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint primarily driven by the 'quantitative_growth_reading' of performance legitimacy, or are other readings (e.g., 'livelihood_security_reading') also significantly shaping policy?",
+      "resolution_mechanism": "Analysis of policy documents, budget allocations, and official rhetoric for explicit prioritization of GDP growth over other development metrics. If other metrics consistently override growth targets, reclassify as a different reading.",
+      "impact": "If other readings are dominant, the constraint's true beneficiaries and victims may shift, potentially altering its classification from Tangled Rope to a different type, or revealing a more complex, multi-layered constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the dominant reading of performance legitimacy."
+    },
+    {
+      "id": "growth_vs_sustainability_tradeoff",
+      "question": "To what extent is the pursuit of high GDP growth rates inherently in conflict with environmental sustainability and social equity?",
+      "resolution_mechanism": "Empirical studies correlating GDP growth with environmental degradation and Gini coefficient changes over time. Policy analysis of 'green GDP' initiatives and their implementation success.",
+      "impact": "If the conflict is inherent and severe, the 'quantitative_growth_reading' is fundamentally extractive from the environment and future generations, reinforcing its Tangled Rope nature. If trade-offs are manageable, it might lean more towards a Rope with externalized costs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Trade-off between quantitative growth and other development goals."
+    },
+    {
+      "id": "legitimacy_source_shift",
+      "question": "Is the state's legitimacy genuinely derived from quantitative growth, or is this a convenient narrative to maintain an existing power structure that benefits from this growth?",
+      "resolution_mechanism": "Public opinion surveys on sources of state legitimacy, analysis of social unrest triggers, and historical comparison with periods of low growth. If legitimacy persists despite low growth, the grounding is not purely quantitative.",
+      "impact": "If growth is merely a cover, the constraint is more Snare-like, with the coordination story (stability through growth) serving as a justification for extraction. If it's a genuine, albeit contested, source of legitimacy, the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the true source of state legitimacy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes a political-economic system where the legitimacy of the ruling authority is primarily derived from its ability to deliver high GDP growth rates. This 'quantitative growth reading' prioritizes economic expansion and job creation, often through investment-driven models, even if it entails costs like export dependency, industrial overcapacity, or environmental degradation. The constraint is actively enforced through policy directives, performance evaluations for officials, and suppression of dissenting views that challenge the growth-first paradigm.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates economic activity and provides jobs (a coordination function), but it does so with significant asymmetric extraction. The extraction comes from externalizing costs onto the environment, future generations, and often labor, while concentrating benefits on specific industrial sectors and officials whose careers depend on meeting growth targets. The high suppression (0.75) reflects the active enforcement of policies that prioritize growth and the suppression of alternative development models or critical voices. The rising extractiveness and suppression over time indicate an intensification of this growth-first approach, with increasing costs borne by victims.",
+    "perspectival_gap": "From the perspective of the industrial-export complex and local government officials, this is a necessary and effective coordination mechanism for national development and stability. From the perspective of environmental advocates or marginalized labor, it is a highly extractive system that sacrifices long-term well-being for short-term, unevenly distributed gains. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "The industrial-export complex and local government officials are clear beneficiaries (d near 0.0) as their power and resources are directly tied to the growth model. Environmental advocates and labor migrants are victims (d near 1.0) as they bear the costs of pollution, resource depletion, and exploitative labor practices. SMEs are also victims, often struggling to compete with state-backed giants in a growth-driven economy. The general populace is a mixed bag, benefiting from job creation and rising living standards, but also bearing diffuse costs.",
+    "mandatrophy_analysis": "The constraint's mandate (delivering prosperity and stability) is still 'live' in the sense that growth is still desired, but its 'quantitative' interpretation has arguably outlived its optimal function. The persistence of this specific reading, despite calls for 'high-quality development' or 'livelihood security,' suggests a form of mandatrophy where the means (raw GDP growth) have become an end, sustained by the beneficiaries of the existing model. The classification as Tangled Rope, rather than Snare, acknowledges the genuine coordination function (jobs, economic activity) while highlighting the significant, actively enforced extraction that prevents a shift to less extractive development models."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "livelihood_security_reading",
+      "qualitative_development_reading",
+      "techno_nationalist_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'performance_legitimacy' kernel. Its focus on quantitative growth rates structurally influences and often competes with other readings like 'livelihood_security_reading' and 'qualitative_development_reading' by allocating resources and political capital preferentially."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "livelihood_security_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "qualitative_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "techno_nationalist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gdp_growth_is_primary_legitimacy_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "economic_stability_requires_continuous_expansion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_reform_era_growth_consensus",
+    "drift_state": {
+      "moment": "contemporary_era_of_sustainability_calls",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

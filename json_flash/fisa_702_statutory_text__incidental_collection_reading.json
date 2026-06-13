@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__incidental_collection_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f4ce6ddf-4086-43a4-b41d-3ee0f968caa1"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FISA Section 702 Incidental Collection and Warrantless Query",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_security_agencies",
+      "fbi_domestic_investigators"
+    ],
+    "victims": [
+      "us_persons_incidentally_collected",
+      "civil_liberties_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "fisa_702_kernel_reading_identification",
+      "question": "Is this constraint a genuine interpretation of FISA Section 702, or an overreach of statutory authority?",
+      "resolution_mechanism": "Supreme Court ruling on the constitutionality of warrantless U.S. person queries under Section 702, or legislative amendment explicitly prohibiting such queries.",
+      "impact": "If ruled an overreach, the constraint would be reclassified as a Snare; if upheld, it would remain a Tangled Rope, but with a stronger claim to legitimacy within the current legal framework.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'incidental_collection_reading' of the 'fisa_702_statutory_text' kernel. It permits retention and warrantless query of incidentally collected U.S. person communications for foreign intelligence purposes, a reading contested by other interpretations."
+    },
+    {
+      "id": "foreign_intelligence_purpose_ambiguity",
+      "question": "How broadly can 'foreign intelligence purpose' be interpreted to justify querying incidentally collected U.S. person data?",
+      "resolution_mechanism": "Clearer statutory definition of 'foreign intelligence purpose' or judicial precedent establishing strict limits on its application to U.S. person data.",
+      "impact": "A narrow interpretation would reduce extractiveness and suppression for U.S. persons; a broad interpretation would maintain or increase them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The scope of 'foreign intelligence purpose' is critical to the constraint's operation and its impact on U.S. persons."
+    },
+    {
+      "id": "fourth_amendment_displacement",
+      "question": "To what extent does this reading displace traditional Fourth Amendment warrant requirements for U.S. person data?",
+      "resolution_mechanism": "Judicial review explicitly affirming or denying the applicability of the Fourth Amendment's warrant clause to queries of incidentally collected U.S. person data under Section 702.",
+      "impact": "If the Fourth Amendment is deemed fully applicable, the constraint's legal basis for warrantless queries would collapse, leading to reclassification as a Snare or its dissolution. If deemed inapplicable, the current extractive structure would be legally entrenched.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This reading's core premise is that administrative minimization procedures suffice, displacing the Fourth Amendment's warrant requirement for incidentally collected U.S. person data."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'incidental collection' reading of FISA Section 702, which permits U.S. intelligence agencies to retain and query communications of U.S. persons collected without a warrant, so long as the initial collection targeted a non-U.S. person abroad for foreign intelligence purposes. This interpretation allows for 'backdoor searches' where FBI domestic investigators can access this database without a warrant, effectively circumventing Fourth Amendment protections for U.S. persons. The constraint is actively enforced by intelligence agencies and the FISA Court, but faces significant resistance from civil liberties advocates and some members of Congress.",
+    "logic_rationale": "The extractiveness (0.45) is substantial because it permits warrantless access to sensitive U.S. person data, infringing on privacy rights. Suppression (0.7) is high due to the classified nature of the collection and querying processes, making it difficult for affected U.S. persons to know they are being surveilled or to challenge it. Theater ratio (0.2) is low, as the collection and querying are genuinely functional for intelligence purposes, though the 'incidental' justification is often seen as a legal fiction. Accessibility collapse (0.6) is moderate, as legal challenges and legislative efforts exist, but are often unsuccessful. Resistance (0.4) is present from civil liberties groups and some legislators, but has not yet fundamentally altered the practice.",
+    "perspectival_gap": "National security agencies and FBI domestic investigators experience this as a vital tool for protecting national security, enabling efficient intelligence gathering and domestic threat detection. U.S. persons and civil liberties advocates experience it as a significant erosion of Fourth Amendment rights, an unchecked expansion of government surveillance, and a violation of privacy. The FISA Court and Congress occupy an intermediate position, attempting to balance these competing interests, but often deferring to executive branch claims of necessity.",
+    "directionality_logic": "National security agencies and FBI domestic investigators are clear beneficiaries (d=0.0-0.1) as they gain access to vast amounts of data without the burden of warrants. U.S. persons whose communications are incidentally collected are clear victims (d=0.9-1.0) as their data is retained and queried without their knowledge or consent, and with no practical exit. Civil liberties advocates are also victims (d=0.8-0.9) as their mission to protect constitutional rights is undermined. The FISA Court and Congress are agenda-setters/observers (d=0.4-0.6), tasked with oversight but often constrained by classified information and political pressures.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it purports to solve a genuine coordination problem (gathering foreign intelligence) but does so with significant asymmetric extraction (warrantless surveillance of U.S. persons). The coordination story (national security) is used to justify the extraction. If the 'foreign intelligence purpose' justification were to atrophy, or if the incidental collection became the primary target, it would shift towards a Snare. The ongoing debate and legal challenges prevent it from being a Piton, as there are still concentrated beneficiaries actively maintaining it.",
+    "kernel_context": "This constraint, 'fisa_702_statutory_text__incidental_collection_reading', is one interpretation of the 'fisa_702_statutory_text' kernel. It asserts that FISA Section 702 permits the retention and warrantless querying of incidentally collected U.S. person communications for foreign intelligence purposes. This reading is contested by the 'foreign_target_strict_reading', which argues for strict minimization of U.S. person data, and the 'constitutional_floor_reading', which asserts that the Fourth Amendment requires a warrant for any search of U.S. person communications, regardless of the initial collection authority."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fourth_amendment_warrant_requirement",
+      "fisa_court_oversight_authority",
+      "fisa_702_statutory_text__foreign_target_strict_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "national_security_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate the surveillance programs under FISA Section 702, collect foreign intelligence, and justify the retention and querying of incidentally collected U.S. person data as essential for national security. They set the internal minimization procedures and interpret the scope of 'foreign intelligence purpose'."
+    },
+    {
+      "name": "fbi_domestic_investigators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Access the database of incidentally collected U.S. person communications for domestic investigations without needing a probable cause warrant, leveraging the foreign intelligence authority. They benefit from this 'backdoor search' capability."
+    },
+    {
+      "name": "us_persons_incidentally_collected",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Have their communications retained and queried by intelligence agencies without their knowledge or a warrant, simply because they communicated with a foreign target. They bear the cost of privacy erosion and potential misuse of their data, with no practical means of opting out or challenging the collection."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Actively challenge the legality and constitutionality of this interpretation of Section 702 through litigation, public advocacy, and lobbying Congress. They bear the cost of sustained effort against a powerful, secretive apparatus, with limited success in altering the core practice."
+    },
+    {
+      "name": "fisa_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Reviews and approves the government's Section 702 targeting and minimization procedures, but does not issue warrants for individual U.S. person queries. Its oversight is limited by the classified nature of the programs and its institutional role."
+    },
+    {
+      "name": "congress",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacted FISA Section 702 and periodically reauthorizes it. Members are divided on the 'incidental collection' reading, with some seeking reforms to protect U.S. person privacy and others prioritizing intelligence capabilities. They have the power to amend the statute but face political and national security pressures."
+    }
+  ],
+  "gain_flow": "national_security_agencies",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "fisa_702_statutory_text__constitutional_floor_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "foreign_intelligence_purpose_justifies_warrantless_query",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "incidental_collection_does_not_trigger_fourth_amendment_warrant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_9_11_executive_authority",
+    "drift_state": {
+      "moment": "contemporary_privacy_advocacy_era",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

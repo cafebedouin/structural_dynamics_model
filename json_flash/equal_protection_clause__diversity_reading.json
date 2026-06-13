@@ -1,0 +1,252 @@
+{
+  "header": {
+    "constraint_id": "equal_protection_clause__diversity_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "60b6ad90-74e0-4006-9685-28ec5402fcc0"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Equal Protection Clause: Diversity Interest Reading",
+    "topic_domain": "constitutional_law/education_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_students",
+      "educational_institutions"
+    ],
+    "victims": [
+      "non_minority_applicants_denied_admission",
+      "minority_applicants_instrumentalized"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "diversity_interest_compelling_ambiguity",
+      "question": "Is the educational diversity interest truly 'compelling' and does it genuinely benefit all students, or is this a post-hoc rationalization for other goals?",
+      "resolution_mechanism": "Empirical studies on the long-term educational and societal outcomes for students from diverse vs. non-diverse institutions, controlling for other factors. Judicial review of 'narrow tailoring' requirements.",
+      "impact": "If the interest is not compelling or benefits are not universal, the constraint shifts towards a Snare, as the coordination story (universal benefit) collapses, revealing pure extraction from those denied admission.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the 'compelling' nature and universal benefit of diversity interests."
+    },
+    {
+      "id": "instrumentalization_of_minority_students",
+      "question": "Does the diversity reading of the Equal Protection Clause instrumentalize minority students as means to an end (benefiting the majority), rather than treating them as ends in themselves?",
+      "resolution_mechanism": "Analysis of institutional practices and outcomes: do institutions invest equally in the success of all students, or are minority students disproportionately burdened with 'diversity work' or tokenism?",
+      "impact": "If instrumentalization is pervasive, the constraint's extractiveness from minority students is higher than currently measured, and the 'beneficiary' status of 'all students' becomes more tenuous, pushing the constraint towards a Snare for minority students.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether minority students are instrumentalized under the diversity rationale."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the 'diversity_reading' of the 'equal_protection_clause' kernel. How would the classification change if a 'colorblind_reading' or 'remedial_reading' were adopted?",
+      "resolution_mechanism": "Conceptual analysis of the alternative legal frameworks and their implications for race-conscious policies.",
+      "impact": "A 'colorblind_reading' would likely classify any race-conscious policy as a Snare due to its inherent extraction from individuals based on race. A 'remedial_reading' would classify policies aimed at historical redress as a Rope or Scaffold, with different beneficiaries and a potential sunset clause.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the Equal Protection Clause kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'diversity reading' of the Equal Protection Clause, which permits race-conscious policies in higher education when narrowly tailored to serve a compelling interest in obtaining the educational benefits that flow from a diverse student body. This reading frames diversity as benefiting all students, including non-minorities, and views minority students as instrumental to achieving this broader educational goal. It is a contested interpretation within constitutional law.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely aims to coordinate educational benefits (diversity for all students) but does so through a mechanism (race-conscious admissions) that imposes costs on identifiable groups (non-minority applicants denied admission, minority applicants potentially instrumentalized). The 'compelling interest' and 'narrow tailoring' requirements introduce complexity and enforcement overhead. Extractiveness is moderate (0.45) due to the denial of admission to some applicants based on race, while suppression (0.30) reflects the active judicial and institutional enforcement required to maintain these policies against legal challenges and public resistance. Theater ratio is low (0.10) as the policies are genuinely implemented, though their justification is often debated.",
+    "perspectival_gap": "From the perspective of educational institutions and 'all students' (as beneficiaries of diversity), this constraint functions as a Rope, coordinating a valuable educational outcome. However, from the perspective of non-minority applicants denied admission, it operates as a Snare, extracting opportunities based on race. Minority applicants may experience it as a complex Tangled Rope, benefiting from admission but potentially bearing the cost of instrumentalization.",
+    "directionality_logic": "Educational institutions and 'all students' are beneficiaries (d near 0.0-0.2) as they gain from the diverse environment. Non-minority applicants denied admission are clear victims (d near 0.8-1.0). Minority applicants are complex: beneficiaries of admission but potential victims of instrumentalization (d near 0.5-0.7). The Supreme Court and lower courts act as agenda-setters and enforcers, mediating the tension.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (ignoring the extraction from denied applicants) or a pure Snare (ignoring the genuine coordination function of educational diversity). The 'diversity interest' is presented as an ongoing, permanent educational value, not a temporary remedial measure, thus avoiding a Scaffold classification. The ongoing contestation and active enforcement prevent it from becoming a Piton.",
+    "kernel_context": "This constraint is the 'diversity_reading' of the 'equal_protection_clause' kernel. This reading emphasizes the educational benefits of diversity for all students, in contrast to the 'colorblind_reading' which forbids all racial classifications, and the 'remedial_reading' which focuses on redressing historical group subordination."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "equal_protection_clause__colorblind_reading",
+      "equal_protection_clause__remedial_reading",
+      "affirmative_action_policies__higher_education"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Equal Protection Clause kernel, each with different structural properties and classifications. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "educational_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implement race-conscious admissions policies to achieve educational diversity, navigating legal challenges and public opinion. They benefit from the perceived educational quality and social legitimacy that diversity brings, but bear the costs of litigation and administrative complexity."
+    },
+    {
+      "name": "all_students",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Are theorized to benefit from a richer learning environment, broader perspectives, and better preparation for a diverse workforce and society. This benefit is diffuse and often indirect."
+    },
+    {
+      "name": "non_minority_applicants_denied_admission",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are denied admission to preferred institutions where they might otherwise have been admitted, due to race-conscious policies. They bear a direct, concentrated cost in lost opportunity."
+    },
+    {
+      "name": "minority_applicants_instrumentalized",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Gain admission to institutions they might not otherwise have, but may experience the cost of being viewed primarily as a means to achieve institutional diversity goals, rather than as individuals. This can lead to feelings of tokenism or pressure to represent their racial group."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Interprets the Equal Protection Clause, setting the legal boundaries for race-conscious policies. Its rulings shape the constraint's operation and legitimacy, acting as the ultimate enforcer and arbiter of its scope."
+    },
+    {
+      "name": "civil_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Support race-conscious policies as a means to achieve greater equity and opportunity, aligning with the diversity rationale. They benefit from the continued legal viability of such policies."
+    },
+    {
+      "name": "colorblind_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Oppose any governmental racial classifications, arguing they violate the principle of individual equality. They are structurally excluded from the diversity reading's framework, as their core premise directly contradicts it."
+    }
+  ],
+  "gain_flow": "educational_institutions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To enable educational institutions to assemble diverse student bodies, which is believed to enhance the learning environment and prepare students for a diverse society, by permitting limited consideration of race in admissions.",
+    "transfer_function": "Transfers educational opportunities (admission slots) from some non-minority applicants to some minority applicants, in service of the broader goal of educational diversity. It also transfers the 'benefit' of a diverse learning environment to all students.",
+    "absent_voices": "Advocates for a strictly 'colorblind' interpretation of the Equal Protection Clause are structurally absent from the diversity reading's internal logic, as their premise (no racial classifications) directly forecloses the diversity rationale. They would argue that any race-conscious policy is inherently discriminatory.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Equal Protection Clause disappeared, educational institutions would likely cease race-conscious admissions policies, leading to less diverse student bodies. This would alter the educational experience for many students and shift the demographics of higher education, particularly at elite institutions.",
+    "founding_problem": "The problem of achieving educational benefits from a diverse student body in a society with persistent racial stratification, while adhering to constitutional principles of equal protection.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Educational institutions and many social scientists attest that the problem of achieving educational diversity and its benefits remains live. Critics (e.g., colorblind advocates) contest the necessity of race-conscious means, but generally acknowledge the value of diversity itself, corroborating the problem's existence, if not the solution's constitutionality."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "equal_protection_clause__colorblind_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "equal_protection_clause__remedial_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "diversity_is_compelling_educational_interest",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "race_can_be_one_factor_among_many",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "grutter_v_bollinger_precedent",
+    "drift_state": {
+      "moment": "sfafa_v_harvard_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

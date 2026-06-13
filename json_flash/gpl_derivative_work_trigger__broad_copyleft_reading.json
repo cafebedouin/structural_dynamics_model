@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4d582e13-95c3-40ac-bb64-ffa43553eb23"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "GPL Derivative Work Trigger (Broad Copyleft Reading)",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "downstream_users",
+      "open_source_community"
+    ],
+    "victims": [
+      "proprietary_software_vendors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "derivative_work_definition_ambiguity",
+      "question": "Is 'derivative work' under copyright law broad enough to encompass dynamic linking without direct modification, as this reading asserts?",
+      "resolution_mechanism": "Binding legal precedent from a high court specifically addressing dynamic linking and GPL compliance, or legislative clarification of copyright scope.",
+      "impact": "If resolved narrowly, this constraint would be reclassified as a Snare (pure extraction) for proprietary vendors, as its legal basis would be weak. If resolved broadly, it would solidify as a Rope, with its coordination function legally affirmed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the legal definition of 'derivative work' as applied to software linking."
+    },
+    {
+      "id": "gpl_kernel_reading_divergence",
+      "question": "This constraint is the 'broad_copyleft_reading' of the 'gpl_derivative_work_trigger' kernel. How would its classification change under the 'narrow_linking_permissive_reading' or 'interface_boundary_reading'?",
+      "resolution_mechanism": "Analysis of the alternative readings' structural properties (beneficiaries, victims, enforcement) and their respective legal interpretations.",
+      "impact": "The 'narrow_linking_permissive_reading' would likely classify as a Rope with lower extractiveness and suppression, as it would impose fewer obligations. The 'interface_boundary_reading' would also be a Rope, but with a different boundary for derivative work, shifting the burden of compliance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the GPL derivative work kernel on constraint classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'broad copyleft' interpretation of the GNU General Public License (GPL), asserting that any software linking to GPL-licensed code, even dynamically, creates a 'derivative work' and thus triggers the GPL's source code disclosure obligations. This reading aims to maximize the 'viral' effect of copyleft, pulling dependent code into the open-source commons. It is a contested interpretation within copyright law and the open-source community.",
+    "key_agents": [
+      "open_source_community: Primary beneficiary (organized/analytical) — gains source access and ensures software freedom.",
+      "downstream_users: Secondary beneficiary (moderate/biographical) — gains access to source code and the right to modify.",
+      "proprietary_software_vendors: Primary victim (institutional/biographical) — faces compliance costs or avoidance strategies.",
+      "gpl_enforcers: Agenda setter (organized/institutional) — actively enforces the license terms through legal action or community pressure.",
+      "software_developers: Payer/Beneficiary (moderate/biographical) — may pay compliance costs or benefit from open ecosystem."
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because its primary function is coordination (ensuring software freedom and shared development) with a clear benefit to the open-source community and users. However, it has a non-trivial extractiveness (0.3) and suppression (0.4) for proprietary vendors, who must either comply with source disclosure or re-architect their software to avoid linking. The 'derivative work' definition is the core of the contest. The theater ratio is low (0.1) as enforcement is genuine, not performative.",
+    "perspectival_gap": "From the perspective of the open-source community and downstream users, this is a beneficial coordination mechanism that ensures software freedom. From the perspective of proprietary software vendors, it is a coercive mechanism that extracts their intellectual property or forces costly re-engineering. The engine will compute different classifications for these seats based on their declared roles and exit options.",
+    "directionality_logic": "The open_source_community and downstream_users are clear beneficiaries (d near 0.0) as they gain access to source code. Proprietary_software_vendors are targets (d near 1.0) as they bear the cost of compliance or avoidance. Software_developers can be both, depending on their business model (open-source vs. proprietary development). GPL_enforcers are agenda setters, actively maintaining the constraint for the benefit of the open-source ecosystem.",
+    "mandatrophy_analysis": "This constraint's mandate (ensuring software freedom) is still live and actively pursued by its beneficiaries. The classification as a Rope, despite its extractive elements, prevents mislabeling it as a pure Snare, acknowledging its genuine coordination function for the open-source commons. The contestation around 'derivative work' is central to its operation, not a sign of atrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'gpl_derivative_work_trigger' kernel. Other readings include 'narrow_linking_permissive_reading' and 'interface_boundary_reading', which interpret 'derivative work' differently, leading to different compliance obligations and classifications."
+  },
+  "stakeholders": [
+    {
+      "name": "open_source_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefits from the expansion of the open-source commons, gaining access to more source code and ensuring the 'freedom' of software. Actively advocates for this broad interpretation of copyleft."
+    },
+    {
+      "name": "downstream_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from the availability of source code, allowing them to inspect, modify, and redistribute software. They are often unaware of the legal intricacies but benefit from the outcomes of this interpretation."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Faces significant compliance costs if they link to GPL code, as it would require them to release their proprietary source code. They often seek to avoid GPL-licensed components or use alternative, more permissive licenses."
+    },
+    {
+      "name": "gpl_enforcers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Organizations and individuals (e.g., Free Software Foundation, Software Freedom Conservancy) that actively monitor, educate, and enforce GPL compliance, including pursuing legal action against alleged infringers."
+    },
+    {
+      "name": "software_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depending on their project, they may be beneficiaries (if contributing to open source) or payers (if developing proprietary software that links to GPL code). They navigate the complexities of licensing to avoid legal issues."
+    },
+    {
+      "name": "copyright_lawyers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Advise clients on GPL compliance, interpret case law, and litigate disputes. They are key interpreters of the 'derivative work' definition and its application to software linking."
+    }
+  ],
+  "gain_flow": "open_source_community",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the development and distribution of software under a shared legal framework that ensures all derivative works remain open source, fostering a collaborative commons.",
+    "transfer_function": "Transfers the right to use, modify, and distribute source code from proprietary developers to the public domain (or other GPL-licensed projects) when their code links to GPL-licensed components.",
+    "absent_voices": "Proprietary software advocates who argue for a narrower interpretation of copyright law to protect their intellectual property, and developers who prefer more permissive licenses to avoid 'viral' copyleft effects. Their arguments are often heard in legal forums but are not part of the GPL's internal logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation vanished, proprietary vendors would freely link to GPL code without disclosure, fragmenting the open-source commons and undermining the 'software freedom' mandate of the GPL. The open-source ecosystem would fundamentally change, with less code flowing into the public domain.",
+    "founding_problem": "The problem of proprietary software developers taking open-source code, modifying it, and then distributing the modified version as closed-source, thereby privatizing communal effort and hindering software freedom.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Free Software Foundation and other open-source advocacy groups consistently attest that the problem of 'privatizing' open-source contributions remains live. Independent legal scholars and software historians corroborate the historical context and ongoing relevance of this concern, noting that without strong copyleft, the open-source movement's goals would be significantly undermined."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linking_creates_derivative_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "software_freedom_requires_viral_copyleft",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "maximal_copyleft_interpretation",
+    "drift_state": {
+      "moment": "contemporary_legal_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

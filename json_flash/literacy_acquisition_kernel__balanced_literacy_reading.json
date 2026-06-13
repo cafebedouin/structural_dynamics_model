@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "literacy_acquisition_kernel__balanced_literacy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0f03304f-3a01-49e4-b018-659defa040ff"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.6,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Balanced Literacy Reading Instruction",
+    "topic_domain": "educational_psychology/literacy_pedagogy/cognitive_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "education_schools",
+      "educational_publishers"
+    ],
+    "victims": [
+      "struggling_readers",
+      "classroom_teachers"
+    ]
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.6
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'balanced literacy' approach to reading instruction, which attempts to synthesize systematic phonics with meaningful text engagement. It is one reading of the broader 'literacy_acquisition_kernel' which is highly contested. This reading claims complementarity but is often criticized for being a rebranding of whole language with minimal phonics, leading to moderate extraction from struggling readers and teachers, while benefiting education schools and publishers who profit from the continuous churn of methods and materials.",
+    "logic_rationale": "The extractiveness (0.55) stems from the ambiguity of 'balance,' which often leads to insufficient explicit phonics for many learners, requiring additional interventions. Suppression (0.4) is present through institutional inertia and the difficulty for teachers to deviate from prescribed curricula. The high theater ratio (0.6) reflects that the 'balance' often serves more as a rhetorical compromise than a genuinely integrated, empirically optimal instructional method, with much activity focused on maintaining the appearance of synthesis rather than achieving consistent reading outcomes.",
+    "directionality_logic": "Education schools and educational publishers are beneficiaries, as they control the discourse and curriculum market. Classroom teachers and struggling readers are payers/victims, bearing the costs of implementation and potential instructional inadequacy. Cognitive scientists act as observers, providing critical analysis from outside the direct pedagogical system.",
+    "perspectival_gap": "From the perspective of education schools and publishers, balanced literacy is a necessary, evolving synthesis that coordinates diverse pedagogical needs. From the perspective of struggling readers and their advocates, it can be an extractive framework that fails to deliver foundational skills, masking instructional deficits under the guise of 'balance.'",
+    "kernel_context": "This constraint, 'balanced_literacy_reading,' is one interpretation of the 'literacy_acquisition_kernel.' It posits that reading acquisition requires a blend of systematic phonics and meaningful text engagement, aiming for a middle ground between 'phonics_reading' and 'whole_language_reading.' It is often seen as a response to the 'reading wars' but is contested by 'structured_literacy_reading' advocates who argue for a more explicit and comprehensive approach."
+  },
+  "omegas": [
+    {
+      "id": "genuine_synthesis_vs_rebranding",
+      "question": "Is balanced literacy a genuine synthesis of effective instructional methods, or a rebranding of whole language with superficial phonics integration?",
+      "resolution_mechanism": "Longitudinal studies comparing reading outcomes of balanced literacy programs with structured literacy programs, particularly for at-risk learners, focusing on the fidelity of phonics implementation.",
+      "impact": "If a rebranding, its extractiveness and theater ratio would be reclassified higher, and its coordination function would be seen as a cover for maintaining a flawed pedagogical paradigm. If a genuine synthesis, its extractiveness would be lower, and its coordination function more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the true nature of balanced literacy's instructional integration."
+    },
+    {
+      "id": "victim_identity_ambiguity",
+      "question": "Are struggling readers victims of this approach, or are they simply not benefiting from a system designed for the 'average' learner?",
+      "resolution_mechanism": "Analysis of instructional time allocation: if explicit phonics instruction is consistently below empirically established thresholds for struggling readers, they are victims of systemic neglect within the 'balance.'",
+      "impact": "If victims, the constraint's effective extraction on them is higher, and the classification leans more towards Snare. If merely not benefiting, the extraction is lower, and the constraint is a less severe Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Clarifies the structural relationship of struggling readers to the 'balanced' approach."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "literacy_acquisition_kernel__phonics_reading",
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__structured_literacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'literacy_acquisition_kernel,' which encompasses multiple, often conflicting, pedagogical approaches to reading instruction. This specific reading attempts to synthesize phonics and whole language."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "literacy_acquisition_kernel__phonics_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "literacy_acquisition_kernel__whole_language_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "literacy_acquisition_kernel__structured_literacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "phonics_and_meaning_are_complementary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "instructional_balance_is_key",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_reading_wars_synthesis",
+    "drift_state": {
+      "moment": "contemporary_science_of_reading_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

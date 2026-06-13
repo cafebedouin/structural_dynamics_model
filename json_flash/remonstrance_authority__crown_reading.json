@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__crown_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "ca46cbd3-8195-4d0b-a6ea-89f7de306749"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "Remonstrance Right as Illegitimate Minoritarian Veto (Crown Reading)",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "particularist_privilege_holders",
+      "local_magistrates"
+    ],
+    "victims": [
+      "royal_fiscal_authority",
+      "national_interest"
+    ]
+  },
+  "interval": {
+    "start": 1600,
+    "end": 1789
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1700,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1700,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.2
+    }
+  ],
+  "omegas": [
+    {
+      "id": "remonstrance_legitimacy_ambiguity",
+      "question": "Is the remonstrance right a legitimate constitutional check on royal power, or an illegitimate obstruction of national governance?",
+      "resolution_mechanism": "Analysis of historical outcomes: if it consistently protected fundamental rights against genuine tyranny, it leans legitimate; if it consistently protected particularist interests against necessary national reforms, it leans illegitimate.",
+      "impact": "If legitimate, the Crown's extraction is justified as the cost of constitutional balance; if illegitimate, the extraction by local magistrates is a snare on national authority.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity over the constitutional legitimacy of the remonstrance right."
+    },
+    {
+      "id": "kernel_reading_difference",
+      "question": "This constraint is the 'crown_reading' of the 'remonstrance_authority' kernel. How would the classification change under the 'magistrate_reading'?",
+      "resolution_mechanism": "The 'magistrate_reading' would likely classify the constraint as a 'rope' or 'scaffold', with local magistrates as beneficiaries and the Crown as a payer, and significantly lower extractiveness and suppression, reflecting its role as a legitimate check on power.",
+      "impact": "A shift in reading would invert the beneficiary/victim structure and drastically alter the computed classification, highlighting the perspectival nature of constitutional interpretation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The classification is highly dependent on the chosen reading of the remonstrance authority kernel."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story analyzes the remonstrance right from the perspective of the Crown and its supporters, who viewed it as an illegitimate minoritarian veto that protected particularist privileges at the expense of national unity and fiscal stability. The constraint is framed as a snare, extracting resources and authority from the central government to benefit local elites and magistrates. This is one reading of the 'remonstrance_authority' kernel, contrasting with a 'magistrate_reading' that would frame it as a legitimate constitutional mechanism.",
+    "key_agents": [
+      "royal_fiscal_authority: Primary target (institutional/constrained) — bears extraction",
+      "particularist_privilege_holders: Primary beneficiary (organized/identity_locked) — benefits from constraint",
+      "local_magistrates: Agenda setter (powerful/constrained) — administers the veto",
+      "national_interest: Victim (analytical/analytical) — abstract concept harmed by fragmentation",
+      "loyalist_parliamentarians: Excluded (organized/constrained) — voices for central authority"
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the remonstrance directly diverts significant fiscal resources and administrative power from the Crown. Suppression (0.7) is also high, as the Crown's attempts to bypass or abolish the remonstrance were met with strong, often violent, resistance, requiring active enforcement to maintain the local veto. Theater ratio is low (0.2) because the remonstrance, from this perspective, is a direct and effective tool for obstruction, not a performative one. Resistance is high (0.8) from the Crown's side, reflecting its continuous struggle against the remonstrance.",
+    "perspectival_gap": "From the Crown's perspective, the remonstrance is a snare, actively extracting from its authority. From the local magistrates' perspective (the 'magistrate_reading'), it is a legitimate rope or scaffold, coordinating the defense of ancient liberties. The engine's classification will reflect this divergence based on the declared beneficiary/victim structure and metrics.",
+    "directionality_logic": "The royal_fiscal_authority is a clear target (payer), bearing the costs of blocked edicts and lost revenue. Particularist_privilege_holders and local_magistrates are beneficiaries, gaining local autonomy and fiscal exemptions. The national_interest is an abstract victim, suffering from the fragmentation. Loyalist_parliamentarians are excluded, unable to influence the local veto process.",
+    "mandatrophy_analysis": "The Crown's reading asserts that the original mandate of the remonstrance (protecting against arbitrary royal power) is 'dead' and that the mechanism now serves purely extractive ends for local elites. This prevents mislabeling it as a legitimate coordination mechanism (rope) when its function has atrophied into a tool for particularist obstruction (snare). The 'dead' founding problem status combined with 'world_rearranges' disappearance verdict signals a zombie constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "remonstrance_authority__magistrate_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "royal_sovereignty_is_indivisible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "local_privileges_subordinate_to_national_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unified_royal_sovereignty",
+    "drift_state": {
+      "moment": "late_ancien_regime",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

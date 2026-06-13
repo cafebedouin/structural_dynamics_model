@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "dsm_taxonomy_kernel__biomedical_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6c73d7bf-ff5a-417a-b532-881e09caa274"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "DSM Taxonomy as Biomedical Disease Entities (Biomedical Reading)",
+    "topic_domain": "medical_epistemology/psychiatric_taxonomy/social_construction_of_illness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "psychiatric_establishment",
+      "pharmaceutical_industry",
+      "institutions_requiring_conformity"
+    ],
+    "victims": [
+      "diagnosed_individuals",
+      "families_of_diagnosed"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "biomedical_vs_social_construction",
+      "question": "Is this constraint a reflection of objective neurobiological reality, or a social construct that benefits identifiable actors?",
+      "resolution_mechanism": "Longitudinal empirical research demonstrating consistent, specific neurobiological markers for each DSM category, independent of cultural context or pharmaceutical intervention.",
+      "impact": "If objective, the constraint moves towards a Mountain; if socially constructed, it remains a Snare, with higher effective extraction due to the false naturalization.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Ambiguity between natural law and social construct for DSM categories."
+    },
+    {
+      "id": "dsm_reading_identification",
+      "question": "This constraint is the 'biomedical_reading' of the 'dsm_taxonomy_kernel'. What would change if the 'neurodiversity_reading' or 'critical_psychiatry_reading' were adopted?",
+      "resolution_mechanism": "Analysis of policy and clinical practice shifts in jurisdictions adopting alternative frameworks.",
+      "impact": "The neurodiversity reading would shift the victim set from 'diagnosed_individuals' to 'individuals_experiencing_distress_due_to_mismatch_with_norms', and reduce extractiveness by reframing 'treatment' as 'support'. The critical psychiatry reading would expose the pharmaceutical industry as the primary agenda_setter and increase measured extractiveness by revealing the market-creation function.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the DSM taxonomy kernel."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (involuntary treatment, legal capacity loss) or internalized (self-pathologization, belief in inherent defect)?",
+      "resolution_mechanism": "Post-diagnosis trajectory of individuals in supportive, non-coercive environments: if self-pathologization persists after structural coercion is removed, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the diagnosed individual carries the suppression with them after formal exit or remission.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in psychiatric diagnosis."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'biomedical reading' of the DSM (Diagnostic and Statistical Manual of Mental Disorders) taxonomy, which asserts that its categories correspond to objective neurobiological disease entities discoverable through empirical research. This reading underpins the medical model of mental illness, justifying pharmaceutical and other biological interventions. It is a Snare because it extracts from diagnosed individuals (through involuntary treatment, loss of autonomy, and financial burden) while benefiting the psychiatric establishment and pharmaceutical industry, with alternatives suppressed by the authority of medical science.",
+    "key_agents": [
+      "psychiatric_establishment: Agenda setter (institutional/arbitrage) — defines categories, legitimizes interventions.",
+      "pharmaceutical_industry: Beneficiary (institutional/arbitrage) — profits from treatments aligned with categories.",
+      "institutions_requiring_conformity: Beneficiary (institutional/constrained) — uses diagnoses to manage non-conforming behavior.",
+      "diagnosed_individuals: Payer (powerless/trapped) — bears the direct costs of diagnosis and treatment, loss of autonomy.",
+      "families_of_diagnosed: Payer (moderate/constrained) — bears caregiving burden, financial costs, and social stigma.",
+      "neurodiversity_advocates: Excluded (organized/constrained) — challenge the pathologizing framework, advocate for alternative models.",
+      "critical_psychiatrists: Observer (analytical/analytical) — analyze the social and economic functions of the DSM, often from an external perspective."
+    ],
+    "logic_rationale": "The high extractiveness (0.85) reflects the significant costs borne by diagnosed individuals, including financial, social, and autonomy costs, often without clear evidence of 'cure'. Suppression (0.90) is severe due to the power of medical authority, involuntary commitment laws, and the lack of recognized alternatives within the dominant paradigm. The low theater ratio (0.20) indicates that while there is some performative aspect to maintaining the 'disease' narrative, the core function of diagnosis and treatment is actively pursued and enforced, rather than merely theatrical. The rising extractiveness and suppression over time reflect the increasing medicalization of distress and the expansion of diagnostic categories.",
+    "perspectival_gap": "From the perspective of the psychiatric establishment and pharmaceutical industry, this constraint is a necessary framework for treating illness and improving public health (a claimed Rope or even Mountain). From the perspective of diagnosed individuals and their advocates, it is a system that pathologizes normal human variation, limits autonomy, and extracts resources (a Snare). The engine's classification as Snare reflects the structural reality of asymmetric extraction and suppression, regardless of the claimed coordination function.",
+    "directionality_logic": "The psychiatric establishment and pharmaceutical industry are clear beneficiaries (d=0.0-0.1) as they define the categories and profit from the interventions. Institutions requiring conformity also benefit from a framework that labels non-conforming behavior as 'illness'. Diagnosed individuals are the primary targets (d=0.9-1.0) due to the direct impact on their lives, often with limited exit options (trapped/identity_locked). Families bear secondary costs. Neurodiversity advocates and critical psychiatrists are excluded or analytical observers, with high d values reflecting their opposition to the constraint.",
+    "mandatrophy_analysis": "This constraint is a Snare because its primary function has shifted from genuinely coordinating care for severe mental illness to pathologizing a broader range of human experiences, creating markets for interventions, and enforcing social conformity. The 'coordination' story of providing a common language for clinicians serves as cover for the extractive and suppressive functions. The classification prevents mislabeling this as a Rope by highlighting the asymmetric costs and suppressed alternatives.",
+    "kernel_context": "This constraint, 'DSM Taxonomy as Biomedical Disease Entities', is the 'biomedical_reading' of the 'dsm_taxonomy_kernel'. This reading posits that psychiatric diagnoses are objective disease entities. Sibling readings include the 'neurodiversity_reading', which views many diagnoses as natural human variation, and the 'critical_psychiatry_reading', which sees diagnoses as market-creation tools for the pharmaceutical industry. The core disagreement lies in the ontological status of mental illness categories."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "mental_health_insurance_coverage",
+      "pharmaceutical_research_funding",
+      "involuntary_commitment_laws"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'dsm_taxonomy_kernel'. Its extractiveness differs significantly from the 'neurodiversity_reading' and 'critical_psychiatry_reading' due to differing views on the ontological status and function of diagnostic categories."
+  },
+  "directionality_overrides": [],
+  "six_questions": {
+    "coordination_function": "Provides a standardized nomenclature and diagnostic criteria for mental health professionals, facilitating communication, research, and treatment planning across different clinical settings.",
+    "transfer_function": "Transfers authority over defining and treating mental distress from individuals and communities to medical professionals, and financial resources from healthcare systems and individuals to the pharmaceutical industry and psychiatric services.",
+    "absent_voices": "Individuals with lived experience of psychiatric diagnosis who reject the biomedical model, indigenous healing traditions, and alternative therapeutic approaches are largely excluded from the DSM's revision process; they would argue for de-medicalization and culturally sensitive, non-pathologizing frameworks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the DSM taxonomy vanished overnight, the entire structure of psychiatric care, pharmaceutical development, insurance coverage for mental health, and legal frameworks for mental illness would collapse and reorganize. There would be immense confusion initially, followed by a proliferation of alternative diagnostic and therapeutic models, and a fundamental shift in how societies understand and respond to mental distress.",
+    "founding_problem": "The founding problem was the lack of a consistent, shared language for describing and classifying mental disorders, leading to diagnostic chaos and hindering research and effective treatment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The psychiatric establishment attests the problem is still live, citing ongoing diagnostic challenges and the need for scientific rigor. Neurodiversity advocates and critical psychiatrists attest that while a common language is useful, the current taxonomy's biomedical framing has created new problems (pathologization, over-medicalization) that overshadow the original coordination benefit; independent sociological and historical analyses corroborate the shift in function."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dsm_taxonomy_kernel__neurodiversity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dsm_taxonomy_kernel__critical_psychiatry_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mental_disorders_are_brain_diseases",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "dsm_categories_reflect_objective_reality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "scientific_medical_model",
+    "drift_state": {
+      "moment": "contemporary_empirical_challenges",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

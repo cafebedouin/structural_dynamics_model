@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "335d9884-1605-438d-9c01-eac568e204ae"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Primary Vaccine Mandate",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vulnerable_populations",
+      "healthcare_systems",
+      "general_public"
+    ],
+    "victims": [
+      "unvaccinated_individuals_coerced",
+      "immunocompromised_exposed_without_mandates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a reading of the 'vaccine_mandate_balance' kernel, specifically 'public_health_primary'?",
+      "resolution_mechanism": "Analysis of the foundational axioms and their alignment with the 'public_health_primary' position, contrasting with 'bodily_autonomy_primary' and 'proportionality_reading'.",
+      "impact": "If misidentified, the classification of extraction and suppression for affected agents would be inverted or misattributed, leading to incorrect policy recommendations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'vaccine_mandate_balance' kernel, instantiating the 'public_health_primary' position."
+    },
+    {
+      "id": "vulnerable_populations_victim_status",
+      "question": "Are immunocompromised and other vulnerable populations victims of the absence of mandates, or beneficiaries of their presence?",
+      "resolution_mechanism": "Empirical data on infection rates, hospitalization, and mortality in vulnerable groups during periods of high and low vaccine uptake, with and without mandates.",
+      "impact": "If mandates are absent, vulnerable populations become victims of exposure risk, increasing the effective extraction of the 'bodily_autonomy_primary' reading. Under this 'public_health_primary' reading, they are beneficiaries of the mandate's protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Clarifies the victim/beneficiary status of vulnerable populations depending on mandate presence."
+    },
+    {
+      "id": "consent_subordination_justification",
+      "question": "To what extent is the subordination of individual consent to collective protection justified by the severity of the public health threat and the efficacy of the intervention?",
+      "resolution_mechanism": "Ongoing ethical and epidemiological review, public discourse, and legal challenges that test the limits of state power versus individual rights in public health crises.",
+      "impact": "If the justification weakens, the 'public_health_primary' reading's legitimacy erodes, increasing the perceived extraction on unvaccinated individuals and potentially shifting the classification towards a Snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Examines the ethical justification for overriding individual consent for collective health."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'public_health_primary' reading of vaccine mandates, where collective protection is prioritized over individual consent when voluntary compliance fails to achieve herd immunity and vulnerable populations face lethal exposure risk. It posits that the state has a legitimate interest, and even a duty, to compel vaccination to protect the most vulnerable and ensure the functioning of public health infrastructure. The constraint's operation involves active enforcement mechanisms to ensure compliance, leading to a high degree of extraction from those whose consent is overridden.",
+    "logic_rationale": "The high extractiveness (0.7) reflects the direct imposition on individual autonomy and the costs associated with compliance (e.g., lost employment, restricted access). Suppression (0.8) is high due to the coercive nature of mandates, which often involve legal penalties, employment termination, or exclusion from public spaces. The theater ratio is low (0.1) because the enforcement is direct and functional, not performative; the mandates genuinely aim to achieve public health outcomes. Resistance is high (0.75) due to strong opposition from individuals asserting bodily autonomy.",
+    "perspectival_gap": "From the perspective of public health authorities and vulnerable populations, this constraint is a necessary coordination mechanism to prevent widespread harm. From the perspective of unvaccinated individuals whose consent is overridden, it is a coercive imposition. The engine's classification will reflect this divergence, likely showing a Rope for beneficiaries and a Snare for victims.",
+    "directionality_logic": "Vulnerable populations and healthcare systems are primary beneficiaries (d near 0.0) as they are protected from lethal exposure and collapse. The general public also benefits from herd immunity. Unvaccinated individuals who are coerced into compliance are victims (d near 1.0) as their bodily autonomy is directly overridden. Immunocompromised individuals who would be exposed without mandates are also considered victims in the absence of this constraint, highlighting the trade-off.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its mandate is tied to ongoing public health threats. However, if the underlying public health risk diminishes significantly, the justification for the mandate would erode, and its persistence would then be a candidate for mandatrophy, potentially reclassifying it as a Piton or Snare if enforcement continued without a live problem. The 'founding_problem_status' being 'live' is critical to its current classification.",
+    "kernel_context": "This constraint is the 'public_health_primary' reading of the 'vaccine_mandate_balance' kernel. It prioritizes collective well-being over individual consent in specific public health emergencies. Sibling readings include 'bodily_autonomy_primary' (individual consent is inviolable) and 'proportionality_reading' (mandates require strict thresholds for disease severity, transmission, and vaccine safety)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_balance__bodily_autonomy_primary",
+      "vaccine_mandate_balance__proportionality_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'vaccine_mandate_balance' kernel. Each reading represents a distinct structural claim about the balance between individual rights and public health imperatives."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "vaccine_mandate_balance__bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "vaccine_mandate_balance__proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "collective_protection_supersedes_individual_consent_in_crisis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_has_duty_to_protect_public_health",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "public_health_emergency_response_framework",
+    "drift_state": {
+      "moment": "contemporary_political_polarization",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

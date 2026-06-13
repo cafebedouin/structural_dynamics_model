@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__behavioral_competence",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e4447f32-f160-4f65-8361-a4599615fdfd"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Stone Land-Use Rule (Behavioral Competence Reading)",
+    "topic_domain": "disaster_anthropology/land_use_governance",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "coastal_community_residents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "coastal_community_residents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Residents of the coastal community who live outside the prohibited zone. They benefit from the safety provided by the rule, which prevents construction in areas vulnerable to tsunamis. Their daily spatial practices reinforce the rule, and their identity is tied to the community's survival through adherence to this memory."
+    },
+    {
+      "name": "local_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The local administrative body responsible for land-use planning and disaster preparedness. While they formally uphold the rule, its primary enforcement comes from community practice and memory, not active policing. They benefit from the community's self-regulation and reduced disaster risk."
+    },
+    {
+      "name": "potential_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "External or internal actors who might seek to develop land within the prohibited zone. They face social pressure and formal rejection of permits, incurring opportunity costs by being unable to utilize prime coastal real estate. Their attempts to challenge the rule are met with community solidarity."
+    },
+    {
+      "name": "disaster_memory_keepers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Elders and community leaders who actively transmit the memory of past disasters and the rationale behind the stone markers. They ensure the rule's persistence through oral tradition, education, and social reinforcement, acting as the primary enforcers of behavioral competence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates land-use behavior to prevent construction in areas historically vulnerable to tsunamis, ensuring community safety and long-term survival.",
+    "transfer_function": "Transfers the right to develop certain coastal land from potential developers to the collective safety and memory of the community. It also transfers the burden of remembering and enforcing the rule to community members.",
+    "absent_voices": "Those who prioritize short-term economic gain from coastal development over long-term disaster resilience are effectively silenced by the community's strong social norms and the local government's adherence to the rule. Their voices are not absent due to coercion, but due to a lack of social legitimacy within the community.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rule vanished, construction would likely resume in vulnerable areas, increasing the community's risk profile. The social fabric built around collective memory and resilience would erode, leading to potential future disaster and loss of life.",
+    "founding_problem": "The community faced recurrent devastating tsunamis, leading to significant loss of life and property due to settlement in vulnerable coastal areas.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical records, oral traditions, and geological evidence corroborate the past disasters and the ongoing threat. Disaster preparedness experts and anthropologists studying the community attest to the continued relevance of the rule for safety, independent of the local government or community leaders."
+  },
+  "interval": {
+    "start": 1946,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1946,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1946,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1946,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'Stone Land-Use Rule' as a live, behaviorally enforced prohibition against building in tsunami-vulnerable zones, grounded in the community's collective memory of past disasters. The stone markers are not merely commemorative; they actively shape daily spatial practice. This reading emphasizes the rule's persistence through sustained community competence and the acceptance of economic costs (e.g., foregoing development of prime coastal land) for safety. The constraint is claimed as a Mountain due to its deep integration into the community's survival strategy and its near-natural persistence through social transmission, despite having identifiable beneficiaries.",
+    "logic_rationale": "Extractiveness is low (0.15) because the primary 'cost' is foregone economic opportunity, which the community willingly accepts for safety. Suppression is also low (0.25) as compliance is driven by internalized norms and social pressure, not external coercion. Theater ratio is negligible (0.05) because the rule is genuinely functional and actively shapes behavior, not merely performed. Accessibility collapse is high (0.8) because the community's shared understanding of the risk makes alternative land-use patterns unthinkable. Resistance is low (0.08) due to strong community consensus.",
+    "perspectival_gap": "From the perspective of coastal community residents and disaster memory keepers, the rule is a natural, self-evident truth for survival. From the perspective of potential developers, it represents a 'cost' or 'restriction' on economic activity. The engine's classification will reflect the community's internal framing as a Mountain, while acknowledging the external economic friction.",
+    "directionality_logic": "Coastal community residents are beneficiaries (d near 0.0) as they gain safety and long-term viability. Local government also benefits from reduced disaster risk and community stability. Potential developers are payers (d near 1.0) as they bear the cost of foregone development opportunities. Disaster memory keepers are agenda-setters, actively maintaining the constraint for the community's benefit.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the rule as a 'commemorative husk' (a Piton) by emphasizing its active behavioral enforcement and the live nature of the founding problem. The low theater ratio and high accessibility collapse indicate it is far from an atrophied constraint. The presence of beneficiaries on a claimed Mountain triggers False Summit Mountain detection, which is appropriate given the rule's constructed nature, even if it functions like a natural law for the community.",
+    "kernel_context": "This constraint is the 'behavioral_competence' reading of the 'stone_land_use_rule' kernel. It emphasizes the rule's active role in shaping daily spatial practice and ensuring community safety, in contrast to the 'commemorative_husk' reading, which views the stone markers as mere symbolic gestures without behavioral force."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_social_construct",
+      "question": "Is the 'Stone Land-Use Rule' a genuine natural law (a Mountain) for this community, or a highly effective social construct that functions like one?",
+      "resolution_mechanism": "Comparative analysis with other disaster-prone communities lacking such a rule: if similar natural hazards lead to different land-use patterns without the rule, it suggests a social construct. If the rule's behavioral force diminishes over generations without direct disaster experience, it points to a social construct.",
+      "impact": "If a pure social construct, its classification as a Mountain might be re-evaluated to a highly stable Rope or even a Tangled Rope if subtle extraction is identified, despite its current low extractiveness. The FSM trigger is designed to flag this ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between a genuine natural law and a deeply internalized social construct."
+    },
+    {
+      "id": "commemorative_husk_vs_behavioral_competence",
+      "question": "To what extent do the stone markers function as active behavioral prohibitions versus mere commemorative artifacts?",
+      "resolution_mechanism": "Ethnographic observation of daily land-use decisions, interviews with younger generations regarding their understanding of the markers, and analysis of permit applications for construction in prohibited zones. If permits are routinely denied and community members actively self-regulate, the behavioral competence reading is strong.",
+      "impact": "If the markers are found to be primarily commemorative, the constraint would shift towards a Piton (commemorative_husk reading), with higher theater ratio and lower effective suppression, as its behavioral force would have atrophied.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing between active behavioral enforcement and symbolic commemoration."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "stone_land_use_rule__commemorative_husk"
+    ],
+    "dual_formulation_note": "This constraint is the 'behavioral_competence' reading of the 'stone_land_use_rule' kernel, emphasizing its active role in shaping land-use. The 'commemorative_husk' reading (a separate constraint) views the markers as symbolic without behavioral force. Their ε values differ significantly."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "stone_land_use_rule__commemorative_husk",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "disaster_memory_requires_behavioral_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "collective_safety_outweighs_individual_economic_gain",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_tsunami_collective_memory_enforcement",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b15edaf6-dd82-4106-8088-27f3556be808"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected Value Dominant Energy Risk Assessment",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_energy_advocates",
+      "renewable_energy_advocates",
+      "public_health_agencies"
+    ],
+    "victims": [
+      "fossil_fuel_industries",
+      "coal_mining_communities",
+      "energy_consumers_in_transition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine, universally applicable risk assessment principle, or one reading of the 'acceptable_risk_energy' kernel?",
+      "resolution_mechanism": "Analysis of policy debates and expert testimony: if alternative, structurally distinct principles are actively advocated and applied, it is a reading.",
+      "impact": "If a reading, its classification is contingent on the acceptance of its underlying axioms, and its persistence is subject to contestation from sibling readings. If a universal principle, its classification is more robust.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'expected_value_dominant' reading of the 'acceptable_risk_energy' kernel."
+    },
+    {
+      "id": "catastrophic_tail_delta",
+      "question": "How would the victim set and suppression mechanisms change if the 'catastrophic_tail_dominant' reading were adopted?",
+      "resolution_mechanism": "Simulate policy outcomes under the sibling reading: identify which energy pathways would be suppressed and which populations would bear the costs of that suppression.",
+      "impact": "The victim set would shift to include populations reliant on energy sources with low-probability, high-impact risks (e.g., nuclear power), and suppression would target those pathways.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The 'catastrophic_tail_dominant' reading would re-weight risks, potentially shifting the victim set and suppression targets."
+    },
+    {
+      "id": "option_value_delta",
+      "question": "How would the beneficiary structure and policy flexibility change if the 'option_value_preserving' reading were adopted?",
+      "resolution_mechanism": "Analyze policy frameworks designed for deep uncertainty: identify which actors benefit from maintaining diverse energy portfolios and which constraints are relaxed to enable this flexibility.",
+      "impact": "The beneficiary set would expand to include actors advocating for diverse energy portfolios, and the constraint would shift to prioritize flexibility over immediate cost minimization, potentially reducing suppression on some pathways.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The 'option_value_preserving' reading would prioritize flexibility, altering beneficiary structures and potentially reducing suppression."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines acceptable risk in energy policy as minimizing aggregate expected harm, primarily using mortality-per-TWh metrics. It is a specific reading of the broader 'acceptable_risk_energy' kernel, emphasizing statistical averages over catastrophic tails or option value. This reading leads to policies that favor energy sources with low average mortality (e.g., nuclear, renewables) and disfavor those with high average mortality (e.g., fossil fuels due to air pollution), even if the latter have no catastrophic tail risk. The fossil fuel industry and communities reliant on it are the primary victims, bearing the costs of transition and suppression.",
+    "logic_rationale": "The extractiveness (0.6) reflects the costs imposed on industries and communities whose energy pathways are deemed 'unacceptable' by this metric. Suppression (0.7) is high because this principle requires active policy enforcement (regulations, subsidies, carbon pricing) to shift energy portfolios away from high-mortality-per-TWh sources. Theater ratio is low (0.1) as the principle is genuinely applied in policy decisions, not merely for show. Accessibility collapse is moderate (0.6) as alternatives are not completely foreclosed but are heavily disincentivized. Resistance is moderate (0.4) from affected industries and communities.",
+    "perspectival_gap": "Advocates of this reading (e.g., public health agencies, some environmental groups) experience it as a rational, beneficial coordination mechanism for public good. Fossil fuel industries and related communities experience it as an extractive snare, as their livelihoods are directly targeted by policies derived from this principle. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Public health agencies and advocates for nuclear/renewable energy are beneficiaries (d near 0.0) as their policy preferences are codified and their goals advanced. Fossil fuel industries and coal mining communities are targets (d near 1.0) as their operations are directly curtailed and costs imposed. Energy consumers in transition are also targets, bearing the costs of shifting infrastructure and potentially higher energy prices during the transition.",
+    "kernel_context": "This constraint, 'expected_value_dominant', is one reading of the 'acceptable_risk_energy' kernel. It prioritizes minimizing aggregate expected harm. Sibling readings include 'catastrophic_tail_dominant' (prioritizing avoidance of low-probability, high-impact events) and 'option_value_preserving' (maintaining flexibility under deep uncertainty)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving",
+      "carbon_pricing_mechanisms",
+      "renewable_energy_subsidies"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'acceptable_risk_energy' kernel. Its ε value differs significantly from sibling readings due to different risk prioritization and victim sets."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for policies that reduce aggregate mortality from energy production, using mortality-per-TWh as a key metric. They shape regulations and public discourse based on this principle."
+    },
+    {
+      "name": "fossil_fuel_industries",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of regulations, carbon taxes, and public disfavor driven by this risk assessment principle. Their business model is directly challenged, leading to reduced investment and market share."
+    },
+    {
+      "name": "coal_mining_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience job losses, economic decline, and social disruption as policies based on this principle accelerate the phase-out of coal. Their options for economic transition are limited."
+    },
+    {
+      "name": "nuclear_energy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from this principle as nuclear power typically has very low mortality-per-TWh, making it a favored option despite its catastrophic tail risks. They gain political and financial support."
+    },
+    {
+      "name": "renewable_energy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from this principle as renewable energy sources (solar, wind) also have very low mortality-per-TWh, driving policy support and investment towards their sector."
+    },
+    {
+      "name": "energy_consumers_in_transition",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "May face higher energy prices or reduced reliability during the transition away from fossil fuels, as new infrastructure is built and old systems are retired. Their choices are limited by available energy options."
+    },
+    {
+      "name": "catastrophic_risk_theorists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Argue that expected value calculations fail to adequately account for low-probability, high-impact events (e.g., nuclear meltdowns, climate tipping points). Their perspective is marginalized by this principle's focus on aggregate expected harm."
+    }
+  ],
+  "gain_flow": "public_health_agencies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a standardized, quantitative framework for comparing the health impacts of different energy technologies, enabling coordinated policy decisions to minimize public health burdens.",
+    "transfer_function": "Transfers societal costs associated with air pollution and occupational hazards from fossil fuel production (borne by the public) to the fossil fuel industries and their consumers, by disincentivizing those energy pathways.",
+    "absent_voices": "Catastrophic risk theorists and advocates for energy system resilience (option value) are largely absent from the core decision-making process when this principle is dominant; they would argue for different risk metrics and policy priorities.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this principle vanished, energy policy would lose a primary quantitative justification for phasing out fossil fuels. Investment would shift, regulatory pressure would ease, and the energy transition would slow or reverse, leading to a reorganization of energy markets and public health outcomes.",
+    "founding_problem": "The problem of comparing disparate health and environmental risks across a complex energy portfolio to make rational policy decisions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health organizations and international bodies (e.g., WHO, IPCC) corroborate the ongoing need for such a framework to address the health impacts of energy. While the specific methodology is contested, the underlying problem of comparative risk assessment remains live."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "acceptable_risk_energy__option_value_preserving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "risk_is_aggregate_expected_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "mortality_is_primary_risk_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rational_decision_theory_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

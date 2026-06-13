@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "tenure_contract__demographic_reproduction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "197ad66e-7595-4f50-b3ac-d5bb556e3cf9"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Tenure Peer Review as Demographic Gatekeeping",
+    "topic_domain": "higher_education_governance/labor_economics/institutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "demographically_dominant_faculty",
+      "university_administration"
+    ],
+    "victims": [
+      "underrepresented_faculty_candidates",
+      "junior_faculty_of_color",
+      "female_junior_faculty"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_fit_vs_structural_bias",
+      "question": "Are 'fit' and 'collegiality' criteria genuinely meritocratic assessments of academic contribution, or are they proxies for demographic and cultural similarity?",
+      "resolution_mechanism": "Longitudinal studies correlating 'fit' evaluations with demographic characteristics and subsequent research productivity, controlling for objective metrics. Disaggregated data on tenure success rates by demographic group.",
+      "impact": "If proxies, the constraint's extractiveness and suppression are higher than acknowledged, and its claimed coordination function (ensuring quality) is largely theatrical. This would shift the classification further towards Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity of 'fit' and 'collegiality' criteria in tenure review."
+    },
+    {
+      "id": "tenure_kernel_reading_divergence",
+      "question": "This constraint is a 'demographic_reproduction_reading' of the 'tenure_contract' kernel. How would the classification change under the 'academic_freedom_reading' or 'institutional_extraction_reading'?",
+      "resolution_mechanism": "Analyzing the same structural data through the lens of each sibling reading, focusing on beneficiaries, victims, and the primary function served. The engine's multi-reading analysis will compute this.",
+      "impact": "The 'academic_freedom_reading' would likely classify as a Rope or Scaffold, emphasizing coordination and temporary support for inquiry. The 'institutional_extraction_reading' would likely classify as a Snare, but with different beneficiaries (early winners) and victims (contingent labor). This reading highlights demographic exclusion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the tenure contract kernel."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression primarily structural (lack of alternative career paths, institutional power dynamics) or internalized (self-censorship, identity-lock from professional socialization)?",
+      "resolution_mechanism": "Post-exit career trajectories and qualitative interviews with faculty who left academia due to tenure denial. If suppression persists as self-limiting beliefs or career path dependence after institutional barriers are removed, it indicates internalized suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as targets carry the suppression with them. This would amplify the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in tenure gatekeeping."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the operation of tenure peer review within higher education as a mechanism for demographic gatekeeping. While ostensibly designed to ensure academic quality and freedom, this reading argues that the criteria of 'fit' and 'collegiality' are applied in ways that reproduce the existing demographic composition of faculty, particularly benefiting demographically dominant groups and disadvantaging underrepresented candidates. The constraint is claimed as a Snare due to its high extraction from victims and active suppression of alternative career paths or challenges to the status quo.",
+    "key_agents": [
+      "demographically_dominant_faculty: Primary beneficiary (institutional/arbitrage) — benefits from preferential evaluation and reduced competition.",
+      "underrepresented_faculty_candidates: Primary victim (powerless/identity_locked) — bears the cost of structural exclusion and biased evaluation.",
+      "university_administration: Agenda setter (institutional/constrained) — administers the tenure process, balancing institutional reputation with internal political pressures.",
+      "junior_faculty_of_color: Victim (moderate/identity_locked) — faces higher scrutiny and subjective criteria during the tenure track.",
+      "female_junior_faculty: Victim (moderate/identity_locked) — experiences similar subjective biases and often higher service loads.",
+      "academic_job_market_entrants: Excluded (powerless/trapped) — would challenge the system but lack leverage or voice within the process.",
+      "diversity_equity_inclusion_advocates: Observer (organized/constrained) — analyze and critique the system, pushing for reform but facing institutional inertia."
+    ],
+    "logic_rationale": "The high extractiveness (0.78) reflects the career costs (lost opportunities, emotional labor, delayed advancement) borne by underrepresented faculty who are denied tenure or face biased evaluation. Suppression (0.85) is high due to the limited number of tenure-track positions, the subjective nature of 'fit' criteria, and the professional identity-lock that makes leaving academia a high-cost exit. The theater ratio (0.45) indicates that a significant portion of the peer review process, while framed as meritocratic, serves to maintain existing power structures rather than purely evaluate research productivity. The increasing trend in extractiveness and suppression over the interval reflects the hardening of these gatekeeping mechanisms and the rising stakes in a competitive academic environment.",
+    "perspectival_gap": "Demographically dominant faculty perceive the tenure system as a legitimate mechanism for quality control and academic freedom (closer to a Rope or even Mountain from their seat). Underrepresented faculty, however, experience it as a highly extractive and suppressive Snare, where subjective criteria are weaponized for demographic reproduction. University administration may view it as a necessary, albeit imperfect, governance tool. The engine's per-seat classification will capture these divergences.",
+    "directionality_logic": "Demographically dominant faculty are beneficiaries (d near 0.0) as the system implicitly favors their reproduction, reducing competition and solidifying their positions. Underrepresented faculty candidates, junior faculty of color, and female junior faculty are victims (d near 1.0) as they bear the direct costs of exclusion and biased evaluation. University administration, while administering the system, also benefits from a stable, predictable faculty composition, even if it's demographically skewed. Academic job market entrants are excluded, facing a system they cannot influence. Diversity, Equity, and Inclusion advocates are analytical observers, attempting to shift the system from the outside.",
+    "mandatrophy_analysis": "This reading argues that the original mandate of tenure (protecting academic freedom and ensuring quality) has atrophied, and the system now primarily serves a latent function of demographic reproduction. The classification as a Snare prevents mislabeling this as a legitimate coordination mechanism (Rope) or a natural outcome (Mountain), highlighting the active extraction and suppression involved. The 'contested' status of the founding problem corroborates this mandatrophy, as the original problem of academic freedom is now secondary to the problem of gatekeeping.",
+    "kernel_context": "This constraint is the 'demographic_reproduction_reading' of the 'tenure_contract' kernel. This reading focuses on how tenure peer review, through subjective criteria like 'fit' and 'collegiality,' perpetuates existing demographic imbalances within academia. Sibling readings include the 'academic_freedom_reading,' which emphasizes tenure's role in protecting scholarly inquiry, and the 'institutional_extraction_reading,' which views tenure as a mechanism for resource hoarding by established faculty at the expense of contingent labor."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_freedom_reading",
+      "institutional_extraction_reading",
+      "university_hiring_practices",
+      "academic_publishing_metrics"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'tenure_contract' kernel. Each reading highlights a different structural function and has a different ε value. They are linked to capture their interdependencies and the contested nature of tenure."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "tenure_contract__academic_freedom_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "tenure_contract__institutional_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "demographic_homogeneity_as_collegiality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "subjective_fit_as_merit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "homogeneous_collegial_academy",
+    "drift_state": {
+      "moment": "contemporary_dei_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "westphalian_sovereignty__absolute_sovereignty",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4cbab4de-8874-49a2-a483-fd25282cbc02"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Absolute State Sovereignty (Westphalian Reading)",
+    "topic_domain": "international_law/political_philosophy/global_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "authoritarian_regimes",
+      "states_seeking_autonomy"
+    ],
+    "victims": [
+      "domestic_populations_under_repression",
+      "human_rights_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine principle of international order, or a constructed interpretation of Westphalian sovereignty that benefits specific state actors?",
+      "resolution_mechanism": "Analysis of historical state practice and legal scholarship on the evolution of sovereignty concepts, particularly post-WWII and post-Cold War.",
+      "impact": "If a constructed interpretation, the constraint's extractiveness and suppression are higher than if it were a universally accepted principle. This reading (absolute_sovereignty) is one interpretation of the 'westphalian_sovereignty' kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as a specific reading of the Westphalian sovereignty kernel."
+    },
+    {
+      "id": "impact_of_conditional_sovereignty",
+      "question": "How would the adoption of a 'conditional_sovereignty' reading alter the structural position of authoritarian regimes and domestic populations?",
+      "resolution_mechanism": "Empirical observation of state behavior and international legal enforcement in contexts where conditional sovereignty principles are invoked (e.g., R2P interventions).",
+      "impact": "A conditional_sovereignty reading would shift the directionality for authoritarian regimes towards 'target' and for domestic populations towards 'beneficiary', potentially reclassifying this constraint as a snare for regimes and a rope for populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Analyzes the impact of the 'conditional_sovereignty' sibling reading."
+    },
+    {
+      "id": "impact_of_graduated_sovereignty",
+      "question": "How would the adoption of a 'graduated_sovereignty' reading alter the structural position of states with varying capacities and governance legitimacy?",
+      "resolution_mechanism": "Analysis of international aid, capacity-building programs, and differentiated responsibilities in international law, particularly for fragile states.",
+      "impact": "A graduated_sovereignty reading would introduce a spectrum of directionality for states based on their capacity and legitimacy, making the 'absolute_sovereignty' claim less universally applicable and potentially exposing weaker states to more external influence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Analyzes the impact of the 'graduated_sovereignty' sibling reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'absolute sovereignty' reading of the Westphalian principle, asserting that states possess unconditional authority over their domestic affairs and are immune to external interference. It is a foundational claim in traditional international law, providing a shield for states against intervention, but often at the cost of domestic populations under repressive regimes. The constraint is actively enforced by states that benefit from this interpretation, particularly those with authoritarian tendencies or those prioritizing state autonomy above all else.",
+    "logic_rationale": "The extractiveness (0.55) is moderate-to-high, as it allows states to maintain control and potentially repress their populations without external accountability. Suppression (0.7) is high because it actively suppresses any legitimate grounds for external intervention, requiring states to actively defend this principle against evolving norms like R2P. Theater ratio is low (0.1) as the principle is genuinely invoked and defended, not merely performed. Accessibility collapse is moderate (0.4) as alternative interpretations and norms (like human rights law) exist but are actively resisted by proponents of absolute sovereignty. Resistance is high (0.6) from human rights organizations and liberal states.",
+    "perspectival_gap": "Authoritarian regimes experience this as a beneficial coordination mechanism, protecting their internal control. Domestic populations under these regimes experience it as a snare, trapping them without external recourse. Liberal states and human rights advocates view it as a barrier to justice and a legitimizer of repression.",
+    "directionality_logic": "Authoritarian regimes and states prioritizing autonomy are primary beneficiaries (d near 0.0) as the constraint shields them from external accountability. Domestic populations under repression and human rights advocates are victims (d near 1.0) as it denies them external avenues for relief. Other states may fall in between, depending on their own domestic governance and foreign policy objectives.",
+    "mandatrophy_analysis": "The constraint's mandate, originally to prevent endless religious wars and establish state order, has arguably outlived its original function in a globalized world with evolving human rights norms. Its persistence in its 'absolute' form now serves to protect state power, often at the expense of human rights, rather than solely ensuring international stability. This suggests a potential drift towards a Snare for populations, even if it remains a Rope for states.",
+    "kernel_context": "This constraint is the 'absolute_sovereignty' reading of the 'westphalian_sovereignty' kernel. It asserts unconditional state authority over domestic affairs, categorically rejecting external interference. Sibling readings include 'conditional_sovereignty' (sovereignty entails responsibility, allowing intervention for human rights violations) and 'graduated_sovereignty' (sovereignty exists on a spectrum based on state capacity and legitimacy)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "westphalian_sovereignty__conditional_sovereignty",
+      "westphalian_sovereignty__graduated_sovereignty",
+      "responsibility_to_protect_doctrine"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'westphalian_sovereignty' kernel. Its structural properties differ significantly from the 'conditional_sovereignty' and 'graduated_sovereignty' readings, which are modeled as separate constraints."
+  },
+  "directionality_overrides": [],
+  "six_questions": {
+    "coordination_function": "Establishes a clear boundary of non-interference between states, preventing external powers from meddling in internal affairs and thereby promoting international stability and state autonomy.",
+    "transfer_function": "Transfers the right to absolute internal governance from the international community (or potential interveners) to the individual state, in exchange for non-interference from other states.",
+    "absent_voices": "Domestic populations under repressive regimes are largely absent from the international discourse that upholds this absolute reading of sovereignty. They would argue for a right to external protection when their own state fails to protect them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the principle of absolute state sovereignty vanished overnight, the international system would undergo a profound rearrangement. Intervention in domestic affairs would become far more common, potentially leading to increased conflict or, conversely, a more robust international human rights enforcement regime. State behavior would fundamentally shift.",
+    "founding_problem": "The founding problem was to end the perpetual religious wars and external interventions that plagued Europe, establishing a stable international order based on the recognition of sovereign states as the primary actors.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents of absolute sovereignty (e.g., many non-Western states, some realist international relations scholars) argue the problem of external interference and instability is still live. Human rights organizations and liberal interventionists (e.g., some Western states, international legal scholars) argue the original problem is largely solved, and the principle now serves to shield human rights abuses, as evidenced by numerous UN reports and academic analyses."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "westphalian_sovereignty__conditional_sovereignty",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "westphalian_sovereignty__graduated_sovereignty",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_internal_affairs_are_exclusive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "non_interference_is_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_westphalian_order",
+    "drift_state": {
+      "moment": "post_cold_war_human_rights_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

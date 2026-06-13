@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__deletionist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a5e5c977-2441-4159-b3a4-df3932386bd6"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Wikipedia Notability Guidelines (Deletionist Reading)",
+    "topic_domain": "digital_commons/knowledge_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wikipedia_readership",
+      "deletionist_editors"
+    ],
+    "vindicated_propositions": [
+      "epistemic_quality_principle",
+      "information_signal_to_noise_ratio"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine epistemic quality filter (deletionist reading), or a gatekeeping mechanism (inclusionist reading), or an evolving social process (deliberative reading)?",
+      "resolution_mechanism": "Analysis of article deletion patterns over time, focusing on whether deleted content consistently lacks verifiable sources or if deletion correlates with topic marginalization. Longitudinal study of AfD outcomes and editor demographics.",
+      "impact": "If the inclusionist reading is correct, the constraint's extractiveness and suppression are significantly higher, reclassifying it as a Snare. If the deliberative reading is correct, the constraint is a Tangled Rope, reflecting ongoing negotiation and power dynamics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'notability_guidelines' kernel. This 'deletionist_reading' emphasizes quality; sibling readings ('inclusionist_reading', 'deliberative_reading') emphasize gatekeeping or process."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (lack of verifiable sources for certain topics) or internalized (editors self-censor due to fear of deletion)?",
+      "resolution_mechanism": "Survey of editors who have had articles deleted or nominated for deletion, combined with content analysis of topics that consistently fail notability criteria. If editors avoid certain topics due to perceived deletion risk even when sources exist, internalized suppression is present.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as it shapes editor behavior beyond explicit rule enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for content creation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'deletionist reading' of Wikipedia's Notability Guidelines (WP:N), which frames them as an essential epistemic quality filter. From this perspective, WP:N prevents the degradation of the digital commons by ensuring that only topics with significant coverage in reliable, independent sources are included. Content that fails WP:N is seen as 'spam' or 'vanity' that would dilute the encyclopedia's quality and verifiability. The constraint is claimed as a Rope because it is understood to coordinate editors towards a shared goal of quality, with minimal extraction from legitimate contributions.",
+    "key_agents": [
+      "wikipedia_readership: Primary beneficiary (quality preservation)",
+      "deletionist_editors: Agenda-setter/beneficiary (enforce quality standards)",
+      "inclusionist_editors: Payer/excluded (bear costs of deletion, advocate for broader inclusion)",
+      "new_content_creators: Payer (face barriers to entry for non-notable topics)",
+      "marginalized_knowledge_advocates: Excluded (their topics often fail notability criteria)"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the guidelines primarily exclude content lacking verifiable sources, not to extract value from legitimate contributions. Suppression is moderate (0.25) as it requires active enforcement (deletion debates) to maintain standards, but alternatives for truly notable topics are not suppressed. Theater ratio is low (0.1) as the guidelines are genuinely applied to maintain quality, with little performative maintenance. Accessibility collapse is high (0.7) for non-notable topics, as the guidelines effectively close off that avenue for inclusion. Resistance is low (0.1) from the deletionist perspective, as resistance is seen as attempts to insert non-encyclopedic content.",
+    "perspectival_gap": "Deletionist editors experience this as a Rope, a necessary tool for quality. Inclusionist editors, however, may experience it as a Snare, as it systematically excludes certain types of knowledge or communities, imposing a cost on their contributions. New content creators may find it a significant barrier, feeling their contributions are 'extracted' by the effort required to meet standards or the frustration of deletion.",
+    "directionality_logic": "The Wikipedia readership benefits from higher quality content (low d). Deletionist editors benefit from maintaining the encyclopedia's integrity (low d). New content creators and inclusionist editors bear the costs of content removal or exclusion (higher d). Marginalized knowledge advocates are structurally excluded, facing high d due to systemic barriers.",
+    "mandatrophy_analysis": "From the deletionist perspective, the mandate of WP:N (quality control) is very much live. The classification as a Rope reflects this. However, alternative readings (inclusionist, deliberative) suggest potential mandatrophy where the guidelines' function has shifted from pure quality control to a mechanism for gatekeeping or power negotiation. The omegas address this divergence, preventing mislabeling by acknowledging the contested nature of the constraint's function."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "wikipedia_verifiability_policy",
+      "wikipedia_neutral_point_of_view"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'notability_guidelines' kernel, alongside 'inclusionist_reading' and 'deliberative_reading'. Each reading represents a distinct structural constraint."
+  },
+  "stakeholders": [
+    {
+      "name": "wikipedia_readership",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from a high-quality, verifiable, and relevant encyclopedia. Their continued engagement is predicated on the perceived quality and trustworthiness of the content, which WP:N aims to ensure."
+    },
+    {
+      "name": "deletionist_editors",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Actively enforce WP:N, participating in Articles for Deletion (AfD) discussions and nominating articles for removal. They see themselves as guardians of Wikipedia's quality and scope, ensuring adherence to core policies. Their influence is tied to their activity and persuasive power within the community."
+    },
+    {
+      "name": "inclusionist_editors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Often advocate for broader inclusion criteria, arguing that WP:N can exclude legitimate topics, especially those from marginalized communities or non-traditional sources. They bear the cost of having their contributions or favored topics deleted, and the effort of defending them in AfD."
+    },
+    {
+      "name": "new_content_creators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals attempting to add new articles, particularly on niche or emerging topics. They often struggle to understand and meet WP:N, leading to frustration, deletion of their work, or abandonment of their contributions. Their 'exit' is to stop contributing to Wikipedia."
+    },
+    {
+      "name": "marginalized_knowledge_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Groups or individuals seeking to document knowledge, histories, or perspectives that may not meet traditional notability criteria (e.g., oral histories, local community figures, non-Western scholarship). They are often excluded from the conversation about notability and find their contributions systematically rejected, leading to a feeling of systemic bias."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates editors and content creators towards a shared understanding of what constitutes an encyclopedic topic, ensuring a consistent scope and quality standard for Wikipedia's content.",
+    "transfer_function": "Transfers editorial effort from defending low-quality or non-notable content to focusing on improving notable articles. It also transfers the burden of proof for notability onto content creators.",
+    "absent_voices": "Advocates for topics that consistently fail WP:N due to systemic biases in source availability (e.g., indigenous knowledge, local histories without mainstream media coverage). They are often not present in the AfD discussions that shape the interpretation of WP:N, or their arguments are dismissed as not meeting 'reliable source' criteria.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If WP:N vanished, Wikipedia would rapidly fill with self-promotional, trivial, or unverified content, leading to a severe degradation of its quality and trustworthiness. The signal-to-noise ratio would collapse, and the encyclopedia's utility as a reliable information source would diminish, causing readers and editors to abandon it.",
+    "founding_problem": "The problem of maintaining encyclopedic quality and scope in an open-editing environment, preventing the inclusion of trivial, unverifiable, or promotional content that would dilute the project's mission.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Wikipedia Foundation and a large segment of the editor community (including deletionist editors) attest that the problem of maintaining quality and preventing spam is still live and ongoing. Independent academic studies on information quality in crowdsourced projects also corroborate the need for such filters, though they may critique the specific implementation or its biases."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "notability_guidelines__inclusionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "notability_guidelines__deliberative_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "verifiability_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "encyclopedic_scope_is_finite",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "wikipedia_as_reliable_encyclopedia",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

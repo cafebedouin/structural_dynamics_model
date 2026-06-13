@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_arms_right__civic_republican_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "00468e6e-257d-42d0-8fd5-31530509d5d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Second Amendment Arms Right (Civic Republican Reading)",
+    "topic_domain": "constitutional_law/political_philosophy/legal_interpretation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "citizen_militia_members",
+      "republican_polity"
+    ],
+    "victims": [
+      "unqualified_citizens",
+      "overreaching_state_power"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine civic republican reading of the Second Amendment, or is it a hybrid of individual and collective rights framings?",
+      "resolution_mechanism": "Analysis of judicial opinions and legislative history that explicitly articulate the 'armed citizenship for self-governance' principle, distinct from purely individual or state-centered interpretations.",
+      "impact": "If a hybrid, the classification would shift to reflect the dominant underlying framing (e.g., more individual-right-like if individual liberty is prioritized over civic duty, or more collective-right-like if state control is emphasized).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the precise boundaries of the civic republican reading."
+    },
+    {
+      "id": "regulatory_scope_ambiguity",
+      "question": "What specific types of arms regulations are permissible under this civic republican reading, and how do they balance public safety with the right/duty of armed citizenship?",
+      "resolution_mechanism": "Further judicial clarification or legislative action that defines the scope of 'well-regulated' in the context of civic republicanism, particularly regarding training, storage, and types of arms.",
+      "impact": "If regulations are found to be overly restrictive, the constraint's suppression and extractiveness would increase for citizen-militia members; if too permissive, the 'well-regulated' aspect would atrophy, potentially shifting the constraint towards a more individualistic interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the practical limits of state regulatory authority."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the civic republican reading of the Second Amendment, which interprets the right to keep and bear arms as intrinsically linked to the duty of citizens to participate in a well-regulated militia for the security of a free state. It is neither a purely individual right (as in the individual_right_reading) nor solely a state prerogative (as in the collective_right_reading). This reading emphasizes the collective good of self-governance through an armed citizenry, implying both rights and responsibilities for citizen-militia members, and allowing for moderate regulation that supports civic participation rather than suppressing it.",
+    "key_agents": [
+      "citizen_militia_members: Primary beneficiary (right + duty) / moderate exit",
+      "republican_polity: Primary beneficiary (security) / institutional exit",
+      "state_legislatures: Agenda setter (regulation) / institutional exit",
+      "unqualified_citizens: Payer (bears exclusion) / constrained exit",
+      "overreaching_state_power: Victim (constrained) / institutional exit",
+      "individual_rights_advocates: Excluded (framing) / organized exit",
+      "collective_rights_advocates: Excluded (framing) / organized exit"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.35) as there are costs associated with training and qualification for armed citizenship, but these are framed as duties for the common good. Suppression is low (0.20) because the constraint aims to enable, not suppress, armed citizenship, albeit within a 'well-regulated' framework. Theater ratio is low (0.10) as the civic republican ideal is actively pursued through policy and discourse, not merely performed. Accessibility collapse is moderate (0.60) because while the right is broadly accessible, it is not absolute and requires adherence to civic duties. Resistance is moderate (0.40) due to ongoing debates about the precise scope of 'well-regulated' and the balance between individual liberty and collective security.",
+    "perspectival_gap": "Citizen-militia members experience this as a beneficial framework that grants rights while imposing reasonable duties. Unqualified citizens, however, experience it as a barrier to arms ownership. State legislatures, while empowered to regulate, are also constrained by the underlying civic republican principle, preventing arbitrary disarmament. The engine's per-seat classification will reflect these divergences.",
+    "directionality_logic": "Citizen-militia members are beneficiaries (d near 0.0) as they gain the right to bear arms and participate in self-governance, even with associated duties. The republican polity is also a beneficiary (d near 0.0) as it gains security and popular sovereignty. Unqualified citizens are payers (d near 1.0) as they are excluded from armed citizenship due to lack of qualification. Overreaching state power is a victim (d near 1.0) as its ability to disarm the populace is constrained. State legislatures are agenda-setters, balancing regulation with the civic right.",
+    "mandatrophy_analysis": "This reading prevents mislabeling by explicitly linking the right to a civic duty and a collective purpose. If the 'well-regulated' aspect atrophied or the civic duty became purely performative, it would drift towards an individual_right_reading (more extractive for the state, less for individuals) or a piton (if the civic purpose became entirely theatrical). The current framing, with its moderate extractiveness and low suppression, suggests a functional, albeit contested, constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_arms_right__individual_right_reading",
+      "second_amendment_arms_right__collective_right_reading",
+      "state_militia_funding",
+      "firearms_training_standards"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Second Amendment arms right kernel. Each reading has a unique structural profile and is modeled as a separate constraint, linked here for network analysis."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "second_amendment_arms_right__individual_right_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "second_amendment_arms_right__collective_right_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "armed_citizenry_for_republican_self_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "well_regulated_militia_is_civic_duty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_era_civic_republicanism",
+    "drift_state": {
+      "moment": "contemporary_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "historical_treaty_substrate__extinguishment_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e2541b6d-5a16-4062-9819-3da6cdb9c667"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Historical Treaty Substrate (Extinguishment Reading)",
+    "topic_domain": "legal_anthropology/indigenous_law/constitutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "settler_state_governments",
+      "settler_landowners",
+      "resource_extraction_industries"
+    ],
+    "victims": [
+      "indigenous_nations",
+      "indigenous_citizens"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "extinguishment_vs_stewardship_reading",
+      "question": "Is this constraint a completed property transaction (extinguishment reading) or a relational pact for shared stewardship (stewardship reading)?",
+      "resolution_mechanism": "Judicial re-interpretation of historical intent, or legislative action recognizing ongoing Indigenous sovereignty and co-management responsibilities.",
+      "impact": "If reclassified as a stewardship reading, Indigenous nations would exit the victim set for territorial jurisdiction and enter the beneficiary set for co-management, significantly reducing the constraint's extractiveness and suppression.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Contested interpretation of treaty intent regarding land and sovereignty."
+    },
+    {
+      "id": "extinguishment_vs_nation_to_nation_reading",
+      "question": "Is this constraint a completed property transaction (extinguishment reading) or an international agreement between sovereign equals (nation-to-nation reading)?",
+      "resolution_mechanism": "International legal arbitration or domestic constitutional amendment affirming Indigenous nations' inherent sovereignty and treaty-making capacity.",
+      "impact": "If reclassified as a nation-to-nation reading, the settler state would lose its claim to sole legitimate authority over ceded territory, and Indigenous nations would gain full recognition of their self-determination, fundamentally altering the power dynamics and reducing extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Contested interpretation of Indigenous sovereignty and treaty status."
+    },
+    {
+      "id": "natural_law_vs_constructed_ambiguity",
+      "question": "Is the 'extinguishment' of Indigenous title a natural consequence of historical events, or a legal construct benefiting identifiable agents?",
+      "resolution_mechanism": "Critical legal history and decolonial analysis demonstrating the active construction and enforcement of extinguishment doctrines by settler legal systems.",
+      "impact": "If shown to be a legal construct, the constraint's claim to naturalness would collapse, exposing its extractive function and strengthening arguments for reparations and restitution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between natural historical outcome and legal construction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'extinguishment reading' of historical treaties between Indigenous nations and settler states. Under this reading, treaties are interpreted as completed property transactions where Indigenous parties irrevocably ceded territorial sovereignty in exchange for defined reserves and payments. This interpretation establishes the settler state as the sole legitimate authority over vast territories, enabling resource extraction and settlement, while Indigenous nations are relegated to a beneficiary role for limited, defined rights. The high extractiveness and suppression reflect the ongoing dispossession and denial of Indigenous self-determination inherent in this legal framework.",
+    "key_agents": [
+      "settler_state_governments: Agenda-setter (institutional/generational) — interprets and enforces treaties as extinguishment, benefits from territorial control.",
+      "settler_landowners: Beneficiary (powerful/biographical) — holds title to lands based on extinguished Indigenous claims.",
+      "resource_extraction_industries: Beneficiary (institutional/generational) — operates on lands deemed 'ceded' by treaties, benefiting from clear title.",
+      "indigenous_nations: Payer (organized/generational) — bears the cost of lost sovereignty and jurisdiction, constrained exit.",
+      "indigenous_citizens: Payer (powerless/biographical) — experiences the direct impact of dispossession and limited rights, identity_locked exit.",
+      "legal_scholars_indigenous_law: Observer (analytical/generational) — critically analyzes the historical and ongoing impacts of this reading, proposes alternative interpretations."
+    ],
+    "logic_rationale": "The extractiveness is high (0.85) because this reading enables the settler state and its beneficiaries to control and profit from vast territories and resources without ongoing Indigenous consent. Suppression is also very high (0.90) as the legal and political systems actively enforce this interpretation, suppressing Indigenous claims to sovereignty and self-determination. The theater ratio is low (0.20) because while there is performative adherence to 'treaty obligations,' the core function of the constraint is active extraction and control, not mere inertial maintenance. The historical measurements show a trend of increasing extractiveness and suppression as settler states consolidated power and Indigenous resistance was met with legal and physical force.",
+    "perspectival_gap": "From the perspective of settler state governments and beneficiaries, this reading provides legal certainty and a clear basis for governance and economic activity. From the perspective of Indigenous nations and citizens, it is a mechanism of ongoing dispossession and cultural erosion. The engine's per-seat classification will reflect this divergence, with settler actors computing as beneficiaries of a 'rope' (coordination for land title) and Indigenous actors computing as victims of a 'snare' (coercive extraction of sovereignty).",
+    "directionality_logic": "Settler state governments, landowners, and resource industries are clear beneficiaries (d near 0.0) as they gain territorial control and economic opportunity. Indigenous nations and citizens are clear targets (d near 1.0) as they lose sovereignty, land, and self-determination. Their exit options are severely constrained, often identity_locked, due to the profound cultural and spiritual connection to land and the lack of viable alternatives for self-governance outside the settler legal framework.",
+    "mandatrophy_analysis": "This constraint is a snare, not a rope or mountain. Its persistence is not due to natural law or mutual benefit, but to active enforcement and the suppression of alternative interpretations. The 'mandate' of establishing clear title for settlement and resource extraction remains 'live' for the settler state, but the original 'problem' of peaceful coexistence and mutual respect, as understood by Indigenous parties, has been subverted. The classification prevents mislabeling this as a legitimate coordination mechanism by highlighting the coercive and extractive nature of the extinguishment doctrine.",
+    "kernel_context": "This constraint is the 'extinguishment reading' of the 'historical_treaty_substrate' kernel. This reading interprets treaties as completed property transactions, contrasting with the 'nation_to_nation_reading' (treaties as international agreements between sovereign equals) and the 'stewardship_reading' (treaties as relational pacts for shared territorial stewardship)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "settler_property_law",
+      "resource_licensing_regimes",
+      "indigenous_self_governance_limitations"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'historical_treaty_substrate' kernel. Its ε value is high, reflecting its extractive nature, in contrast to the lower ε values of the 'stewardship_reading' and 'nation_to_nation_reading'."
+  },
+  "stakeholders": [
+    {
+      "name": "settler_state_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Interprets and enforces historical treaties as instruments of land cession and extinguishment of Indigenous title, thereby asserting and maintaining jurisdiction over vast territories. Benefits from the legal certainty this interpretation provides for governance and resource development."
+    },
+    {
+      "name": "settler_landowners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Holds private property titles to lands that were historically Indigenous territories, with their ownership legally secured by the extinguishment reading of treaties. Benefits from the stability and marketability of these titles."
+    },
+    {
+      "name": "resource_extraction_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates on lands deemed 'ceded' by treaties, benefiting from the legal clarity and perceived lack of Indigenous proprietary claims under the extinguishment reading. This enables large-scale mining, forestry, and energy projects."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bears the cost of lost territorial sovereignty, jurisdiction, and resource control. Their self-governance is limited to reserves, and their traditional laws are often unrecognized. They are forced to operate within the settler legal framework to assert their rights."
+    },
+    {
+      "name": "indigenous_citizens",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experiences the direct impacts of dispossession, including limited access to traditional lands and resources, cultural disruption, and socio-economic marginalization. Their identity is deeply tied to their ancestral territories, making 'exit' from the relationship with the land unthinkable."
+    },
+    {
+      "name": "legal_scholars_indigenous_law",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Critically analyzes the historical and ongoing impacts of the extinguishment reading, documenting its legal and social consequences. They propose alternative interpretations and legal frameworks that recognize Indigenous sovereignty and treaty rights."
+    }
+  ],
+  "gain_flow": "settler_state_governments",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides legal certainty for settler governance and economic development by defining Indigenous rights as limited and territorial claims as extinguished, thereby 'coordinating' the allocation of land and resources to the settler society.",
+    "transfer_function": "Transfers vast territorial sovereignty and resource control from Indigenous nations to settler state governments and their beneficiaries, in exchange for limited reserve lands and financial payments to Indigenous parties.",
+    "absent_voices": "Indigenous legal traditions and governance systems, which would assert inherent and unceded sovereignty, are systematically excluded from the dominant legal discourse that upholds the extinguishment reading. Their voices are present in Indigenous communities but largely absent from settler state legislative and judicial processes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the extinguishment reading vanished overnight, the legal basis for settler land titles and resource development would collapse, leading to widespread challenges to property ownership and a fundamental re-evaluation of state sovereignty. The entire legal and economic structure of settler states would need to be renegotiated with Indigenous nations.",
+    "founding_problem": "The founding problem, from the settler perspective, was to acquire land for settlement and resource exploitation while managing relations with Indigenous peoples, often under the guise of 'civilizing' them. From the Indigenous perspective, it was to establish peaceful coexistence and shared stewardship.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Settler state governments maintain that the problem of clear land title and national development is 'live' and that the extinguishment reading provides the necessary framework. Indigenous nations, supported by international legal bodies and critical legal scholars, contend that the original problem of peaceful coexistence and mutual respect was never genuinely solved by the extinguishment reading, and that the current arrangement perpetuates colonial injustice. Historical records, Indigenous oral histories, and international human rights reports corroborate the Indigenous perspective."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "historical_treaty_substrate__nation_to_nation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "historical_treaty_substrate__stewardship_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "indigenous_sovereignty_extinguished_by_treaty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "treaties_as_real_property_transactions",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "terra_nullius_derived_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_indigenous_rights_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

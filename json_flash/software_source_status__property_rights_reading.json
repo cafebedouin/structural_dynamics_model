@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "bc1870a2-54e7-4671-8b15-e21bf38731f1"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software as Intellectual Property: Creator Rights Reading",
+    "topic_domain": "software_engineering/political_economy_of_technology/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_companies",
+      "individual_software_creators"
+    ],
+    "victims": [
+      "software_users",
+      "independent_developers",
+      "academic_researchers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a fundamental property right, or a constructed legal framework that could be otherwise?",
+      "resolution_mechanism": "Analysis of alternative legal frameworks (e.g., open-source licenses, public domain software) and their economic viability.",
+      "impact": "If constructed, the extraction and suppression are policy choices, not inherent; if fundamental, they are unavoidable costs of creation. This constraint is the 'property_rights_reading' of the 'software_source_status' kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between fundamental right and legal construct for software IP."
+    },
+    {
+      "id": "freedom_imperative_conflict",
+      "question": "How would the classification change if the 'freedom_imperative_reading' of the software_source_status kernel were adopted?",
+      "resolution_mechanism": "Re-evaluate the constraint from the perspective that software freedom is a fundamental ethical requirement, where proprietary software is an injustice.",
+      "impact": "This reading would likely be reclassified as a Snare, as it would be seen as actively suppressing a fundamental right, with high extraction from users and developers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conflict with the freedom imperative reading of software source status."
+    },
+    {
+      "id": "pragmatic_development_conflict",
+      "question": "How would the classification change if the 'pragmatic_development_reading' of the software_source_status kernel were adopted?",
+      "resolution_mechanism": "Re-evaluate the constraint from the perspective that open source is a superior development methodology, where freedom is instrumental to quality.",
+      "impact": "This reading would likely be reclassified as a Tangled Rope or Snare, as it would be seen as hindering development quality and innovation through artificial restrictions, with extraction from the broader software ecosystem.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conflict with the pragmatic development reading of software source status."
+    },
+    {
+      "id": "utilitarian_hybrid_conflict",
+      "question": "How would the classification change if the 'utilitarian_hybrid_reading' of the software_source_status kernel were adopted?",
+      "resolution_mechanism": "Re-evaluate the constraint from the perspective that software licensing should maximize aggregate welfare, with both proprietary and open models serving different contexts.",
+      "impact": "This reading would likely be reclassified as a Tangled Rope or Rope, depending on the balance of welfare maximization. If the current proprietary model is found to not maximize welfare, its extractive elements would be highlighted.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conflict with the utilitarian hybrid reading of software source status."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'property_rights_reading' of the 'software_source_status' kernel, asserting that software is intellectual property and creators have a legitimate right to restrict access and modification. This reading views source code as a proprietary asset, licensing restrictions as legitimate exercises of ownership, and users as consumers with contractual rights only. It is a dominant legal and economic framework for software distribution.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a coordination function (incentivizing creation and investment by protecting intellectual property) but also involves significant asymmetric extraction (creators benefit from restricted access, while users and other developers pay through licensing fees and limited modification rights). Active enforcement through copyright law, DRM, and legal action is required to maintain these restrictions. The extractiveness (0.65) and suppression (0.75) reflect the substantial costs borne by users and the active measures taken to prevent unauthorized access or modification.",
+    "perspectival_gap": "Proprietary software companies and individual creators experience this as a legitimate framework that protects their work and incentivizes innovation. Software users and independent developers, however, experience it as a restrictive and extractive system that limits their ability to understand, modify, and share software, often leading to vendor lock-in and reduced innovation in the broader ecosystem.",
+    "directionality_logic": "Proprietary software companies and individual creators are primary beneficiaries (d near 0.0) as they directly profit from restricting access and modification. Software users, independent developers, and academic researchers are targets (d near 1.0) as they bear the costs of licensing, lack of access to source code, and inability to freely modify or distribute software. Legal systems and enforcement bodies act as agenda-setters, maintaining the framework.",
+    "mandatrophy_analysis": "The constraint's mandate to incentivize creation and protect investment remains live, but its application has expanded to create significant market power and extraction. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring the coordination function of IP protection for creators). The ongoing debate with other readings of the 'software_source_status' kernel highlights the contested nature of its 'mandate'."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'software_source_status' kernel. Other readings include 'freedom_imperative_reading', 'pragmatic_development_reading', and 'utilitarian_hybrid_reading'."
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_companies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and distribute software under proprietary licenses, benefiting from exclusive control over their source code and the ability to charge licensing fees. They actively enforce their intellectual property rights through legal means."
+    },
+    {
+      "name": "individual_software_creators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Create software and rely on intellectual property rights to protect their work, enabling them to monetize their creations through licensing or sales. They benefit from the legal framework that grants them control over their software."
+    },
+    {
+      "name": "software_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase or license proprietary software, accepting restrictions on access to source code, modification, and redistribution. They pay licensing fees and are subject to vendor lock-in, with limited recourse for customization or repair."
+    },
+    {
+      "name": "independent_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are restricted from building upon or modifying proprietary software without explicit permission or licensing. They face legal barriers to interoperability and innovation, often having to work around existing proprietary systems."
+    },
+    {
+      "name": "academic_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are often limited in their ability to study, verify, or extend proprietary software due to lack of source code access. This hinders scientific progress and reproducibility in fields reliant on software."
+    },
+    {
+      "name": "legal_systems_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interpret and enforce intellectual property laws, adjudicating disputes over copyright, patents, and licensing agreements. They are the ultimate arbiters of the 'property rights' reading, shaping its application and boundaries."
+    }
+  ],
+  "gain_flow": "proprietary_software_companies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a legal framework that incentivizes software creation and investment by granting creators exclusive rights, thereby coordinating the efforts of developers and investors by protecting their returns.",
+    "transfer_function": "Transfers economic value from software users and other developers (through licensing fees, restricted access, and limited modification rights) to proprietary software companies and individual creators.",
+    "absent_voices": "Advocates for software freedom and open-source principles are often marginalized in policy discussions dominated by intellectual property lobbies. They would argue for a more equitable distribution of software rights and benefits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legal framework for software as intellectual property vanished overnight, the software industry as currently structured would collapse. Companies relying on proprietary models would lose their core business, leading to a massive reorganization of software development, distribution, and monetization models, likely shifting towards open-source or service-based models.",
+    "founding_problem": "The problem of incentivizing investment and creative effort in software development, ensuring creators could reap rewards from their innovations, and preventing unauthorized copying and free-riding.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Proprietary software companies and legal scholars attest that the problem of incentivizing creation and preventing free-riding remains live. Critics (e.g., open-source advocates, some economists) argue that while the problem was real, the current solution has overshot, creating monopolies and hindering innovation, making the 'live' status contested in its current form."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_has_exclusive_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "software_is_private_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "exclusive_ownership_paradigm",
+    "drift_state": {
+      "moment": "contemporary_open_source_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

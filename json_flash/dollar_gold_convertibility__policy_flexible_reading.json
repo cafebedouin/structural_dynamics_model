@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "dollar_gold_convertibility__policy_flexible_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "eaaf171f-530b-4757-861b-415b41f7bcdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dollar Gold Convertibility (Policy Flexible Reading)",
+    "topic_domain": "international_political_economy/monetary_history/international_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_monetary_authorities",
+      "us_domestic_economy"
+    ],
+    "victims": [
+      "foreign_central_banks",
+      "international_investors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is dollar convertibility a strict legal obligation or a policy-flexible instrument?",
+      "resolution_mechanism": "Historical analysis of U.S. policy decisions during periods of balance of payments pressure, and legal interpretations of Article IV of the Bretton Woods Agreement by international courts or arbitration panels.",
+      "impact": "If convertibility is a strict obligation (strict_convertibility_reading), the U.S. monetary authorities would be a victim, not a beneficiary, and the constraint would be a Rope or Mountain for them. If it's an inherent design flaw (triffin_structural_reading), the entire system is a Snare for all participants, requiring systemic re-design.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'policy_flexible_reading' of the 'dollar_gold_convertibility' kernel. Sibling readings include 'strict_convertibility_reading' and 'triffin_structural_reading'. This reading asserts that convertibility is subordinate to domestic stability, allowing for unilateral suspension or devaluation."
+    },
+    {
+      "id": "devaluation_impact_distribution",
+      "question": "How are the costs of dollar devaluation distributed among foreign central banks and international investors?",
+      "resolution_mechanism": "Empirical studies of capital flight, reserve asset rebalancing, and inflation rates in countries holding significant dollar reserves during periods of U.S. monetary policy shifts.",
+      "impact": "If costs are concentrated on a few key actors, it strengthens the Snare-like aspects for those specific victims. If diffuse, it points to a more general systemic risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the precise distribution of losses from dollar devaluation among external creditors."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1944,
+    "end": 1971
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the dollar's gold convertibility under the Bretton Woods system, interpreted through a 'policy-flexible' lens. In this reading, the U.S. obligation to convert dollars to gold is conditional and subordinate to its domestic economic stability, allowing for unilateral suspension or devaluation if domestic policy goals conflict with external convertibility demands. This perspective views the U.S. as having significant monetary autonomy, with foreign central banks and international investors bearing the risk of dollar devaluation.",
+    "key_agents": [
+      "us_monetary_authorities: Primary beneficiary (institutional/arbitrage) — retains policy flexibility",
+      "us_domestic_economy: Primary beneficiary (global/arbitrage) — shielded from external constraints",
+      "foreign_central_banks: Primary target (institutional/constrained) — bears devaluation risk",
+      "international_investors: Primary target (powerful/constrained) — bears devaluation risk",
+      "international_monetary_fund: Agenda setter (institutional/analytical) — administers the system but lacks enforcement over U.S. policy"
+    ],
+    "logic_rationale": "Extractiveness is high because the U.S. can effectively transfer the costs of its domestic policy (e.g., inflation from Vietnam War spending) to foreign dollar holders through devaluation or suspension of convertibility. Suppression is high because foreign central banks have limited alternatives to holding dollars as a reserve currency, making them captive to U.S. policy. Theater ratio is moderate, as the 'obligation' of convertibility is maintained rhetorically while being undermined by policy flexibility. The metrics reflect the period leading up to the Nixon Shock in 1971.",
+    "perspectival_gap": "From the perspective of U.S. monetary authorities, this arrangement is a necessary flexibility to manage domestic economic stability, a form of coordination. From the perspective of foreign central banks, it is an extractive mechanism where they bear the costs of U.S. policy without recourse. The engine's classification will highlight this divergence.",
+    "directionality_logic": "U.S. monetary authorities and the U.S. domestic economy are beneficiaries (d near 0.0) as they gain policy autonomy and are shielded from external constraints. Foreign central banks and international investors are victims (d near 1.0) as they bear the risk of dollar devaluation and have constrained exit options from the dollar standard. The IMF is an agenda-setter, administering the system but with limited power to enforce strict convertibility against U.S. interests.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the convertibility as a pure coordination mechanism (Rope) by highlighting the asymmetric extraction. It also avoids the Piton classification by showing active enforcement and clear beneficiaries, rather than mere inertial persistence. The 'policy-flexible' interpretation itself is a mechanism to avoid mandatrophy by adapting the constraint's function to evolving U.S. interests, rather than letting it atrophy.",
+    "kernel_context": "This constraint is the 'policy_flexible_reading' of the 'dollar_gold_convertibility' kernel. This reading asserts that the U.S. obligation to convert dollars to gold is conditional and subordinate to domestic economic stability. Sibling readings include the 'strict_convertibility_reading' (which views convertibility as a binding legal obligation) and the 'triffin_structural_reading' (which sees convertibility as an inherently unsustainable design flaw)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dollar_gold_convertibility__strict_convertibility_reading",
+      "dollar_gold_convertibility__triffin_structural_reading",
+      "international_reserve_currency_status"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'dollar_gold_convertibility' kernel. This 'policy_flexible_reading' emphasizes U.S. monetary autonomy, contrasting with the 'strict_convertibility_reading' (binding obligation) and the 'triffin_structural_reading' (inherent unsustainability). Each reading has distinct beneficiaries, victims, and extractiveness profiles."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dollar_gold_convertibility__strict_convertibility_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "dollar_gold_convertibility__triffin_structural_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "domestic_stability_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "unilateral_policy_flexibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_war_us_hegemony",
+    "drift_state": {
+      "moment": "pre_nixon_shock_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

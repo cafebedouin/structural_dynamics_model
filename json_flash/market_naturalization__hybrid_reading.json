@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "market_naturalization__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "334e1782-7b26-40c4-9711-d320e3a26b75"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Naturalization (Hybrid Reading)",
+    "topic_domain": "political_economy/economic_history/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_firms",
+      "capital_holders"
+    ],
+    "victims": [
+      "new_entrants",
+      "consumers",
+      "labor"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is market dominance primarily a result of actively maintained structures, or the inertia of lapsed alternatives, or a hybrid of both?",
+      "resolution_mechanism": "Empirical analysis of specific market interventions and their impact on market structure over time. If interventions are consistently required to maintain dominance, it leans towards 'beneficiary_maintained_reading'. If dominance persists without active defense after initial closures, it leans towards 'lapsed_alternative_reading'.",
+      "impact": "If 'beneficiary_maintained_reading' is correct, the constraint is more extractive and requires more active enforcement than currently measured. If 'lapsed_alternative_reading' is correct, the constraint is closer to a Piton, with lower active extraction and suppression. This 'hybrid_reading' suggests a mix of both, leading to a Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between active maintenance, lapsed alternatives, and hybrid explanations for market dominance."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of new entrants structural (e.g., regulatory barriers, network effects) or internalized (e.g., perceived futility of competition)?",
+      "resolution_mechanism": "Surveys of potential new entrants regarding perceived barriers, and analysis of regulatory changes. If perceived barriers persist after structural changes, it suggests internalized suppression.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as potential competitors self-censor. If purely structural, policy interventions can more directly address the barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for new market entrants."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes market dominance as a hybrid phenomenon: initially established through active suppression of alternatives (e.g., mergers, predatory pricing, regulatory capture), which then becomes partially self-sustaining due to network effects, brand loyalty, and the atrophy of potential competitors' capabilities. However, some active maintenance (lobbying, legal defense, strategic acquisitions) is still required to prevent erosion, making it a Tangled Rope. This is one reading of the 'market_naturalization' kernel, which explores how market structures come to be seen as inevitable or 'natural'.",
+    "key_agents": [
+      "incumbent_firms: Primary beneficiary (institutional/arbitrage) — benefit from market position, actively maintain some elements.",
+      "capital_holders: Secondary beneficiary (powerful/arbitrage) — profit from incumbent firm success, support maintenance efforts.",
+      "new_entrants: Primary victim (powerless/constrained) — face high barriers, suppressed alternatives.",
+      "consumers: Victim/Beneficiary (organized/constrained) — benefit from some market efficiencies, but pay higher prices due to lack of competition.",
+      "labor: Victim (powerless/constrained) — faces reduced bargaining power due to concentrated employers.",
+      "regulators: Agenda setter/Observer (institutional/analytical) — tasked with ensuring competition, but often subject to capture or resource limitations."
+    ],
+    "logic_rationale": "The extractiveness (0.6) reflects the ability of dominant firms to set prices above competitive levels and capture a larger share of value. Suppression (0.7) is high due to a combination of active anti-competitive practices and the structural barriers that have accumulated over time. The theater ratio (0.4) indicates that while some activities genuinely contribute to market function (e.g., innovation, service quality), a significant portion is performative maintenance of dominance (e.g., 'innovation' that primarily serves to lock in customers, lobbying efforts framed as 'industry advocacy'). The accessibility collapse (0.65) is moderate, as some alternatives have genuinely atrophied, but others are actively suppressed. Resistance (0.4) is present but fragmented, coming from new entrants, consumer groups, and labor unions, but often insufficient to challenge entrenched power.",
+    "perspectival_gap": "Incumbent firms and capital holders perceive the market structure as a natural outcome of competition and efficiency, justifying their returns. New entrants, consumers, and labor experience it as an extractive and suppressive force. Regulators often navigate between these perspectives, attempting to balance efficiency with fairness, but are influenced by the powerful incumbent lobby.",
+    "directionality_logic": "Incumbent firms and capital holders are clear beneficiaries (d=0.0-0.2) due to their market position and ability to influence policy. New entrants, consumers, and labor are victims (d=0.8-1.0) as they bear the costs of reduced competition and limited alternatives. Regulators, while nominally neutral, can lean towards beneficiaries if captured or under-resourced, or towards victims if actively enforcing anti-trust laws.",
+    "mandatrophy_analysis": "This hybrid reading prevents mislabeling the constraint as a pure Snare (which would imply only active extraction) or a pure Piton (which would imply only inertial, lapsed function). By recognizing both active maintenance and lapsed alternatives, it correctly identifies the ongoing, albeit mixed, nature of extraction and the need for targeted interventions rather than assuming either full naturalness or complete atrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_naturalization__beneficiary_maintained_reading",
+      "market_naturalization__lapsed_alternative_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'market_naturalization' kernel. It represents a hybrid view where market dominance is sustained by both active maintenance and the inertia of lapsed alternatives. It influences and is influenced by the 'beneficiary_maintained_reading' (more active) and 'lapsed_alternative_reading' (more inertial) siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_firms",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "These are the dominant players in the market. They benefit from reduced competition, higher profit margins, and the ability to shape market rules. They actively engage in lobbying, strategic acquisitions, and legal defense to maintain their position, while also benefiting from the structural inertia of the market."
+    },
+    {
+      "name": "capital_holders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Investors and shareholders in incumbent firms. They benefit from the sustained profitability and market value derived from market dominance. They support the firms' efforts to maintain their position and often influence corporate strategy."
+    },
+    {
+      "name": "new_entrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Start-up companies or smaller firms attempting to enter the market. They face significant barriers to entry, including high capital requirements, network effects, regulatory hurdles, and the threat of predatory behavior from incumbents. Their alternatives are limited, often leading to failure or acquisition."
+    },
+    {
+      "name": "consumers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who purchase goods and services in the market. They benefit from some efficiencies and product stability offered by dominant firms, but also pay higher prices and have fewer choices due to reduced competition. Their collective power is often diffuse and difficult to mobilize."
+    },
+    {
+      "name": "labor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers employed by incumbent firms or seeking employment in the market. Concentrated market power can lead to reduced wage growth, fewer job opportunities, and less bargaining power for labor. Their mobility is often limited by specialized skills or geographic constraints."
+    },
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies responsible for enforcing competition law and regulating markets. They have the power to investigate anti-competitive practices, block mergers, and impose remedies, but are often constrained by political pressures, lobbying efforts, and resource limitations. Their actions can significantly alter the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The constraint coordinates resource allocation and production within the market, providing a stable (albeit concentrated) environment for economic activity and investment, and offering a predictable supply of goods and services to consumers.",
+    "transfer_function": "Transfers economic surplus (profits, rents) from consumers and new entrants to incumbent firms and their capital holders, through mechanisms like price markups, suppressed wages, and acquisition of potential competitors.",
+    "absent_voices": "Potential innovators and entrepreneurs who never enter the market due to perceived insurmountable barriers; consumer groups whose advocacy is outmatched by corporate lobbying; and labor organizations whose power is diminished by concentrated employers. These voices would advocate for more open markets, lower prices, and fairer labor practices.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mechanisms sustaining market dominance (both active and inertial) vanished, the market would rapidly reconfigure. New entrants would emerge, prices would likely fall, and the distribution of profits would become more dispersed. Incumbent firms would face intense competition, potentially leading to breakups or significant restructuring. The entire economic landscape would shift.",
+    "founding_problem": "The founding problem was often framed as achieving efficiency and scale in production and distribution, or protecting intellectual property to incentivize innovation, leading to initial consolidations or regulatory frameworks that favored large players.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Incumbent firms and their advocates claim the founding problems (e.g., efficiency, innovation incentives) are still live, justifying their dominance. However, new entrants, consumer advocates, and some economists (outside the benefiting parties) argue that these problems are largely solved, and the current structure primarily serves to extract rents, making the founding problem 'dead' or significantly transformed."
+  },
+  "gain_flow": "incumbent_firms",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "market_naturalization__lapsed_alternative_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "market_naturalization__beneficiary_maintained_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_dominance_is_partially_earned_partially_inherited",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "active_maintenance_and_inertial_effects_coexist",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "dynamic_equilibrium_with_friction",
+    "drift_state": {
+      "moment": "contemporary_regulatory_environment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

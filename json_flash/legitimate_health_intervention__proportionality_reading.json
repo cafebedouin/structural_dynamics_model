@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "56e25dfb-0684-4edc-bbda-7b697e3d5d84",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Proportionality Principle for Public Health Interventions",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "general_public",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "individuals_subject_to_mild_interventions"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "proportionality_weighting_ambiguity",
+      "question": "How are 'population harm' and 'individual autonomy' precisely weighted against each other for different disease characteristics?",
+      "resolution_mechanism": "Development of a standardized, empirically-informed risk-benefit calculus for public health interventions, subject to judicial review.",
+      "impact": "Clearer weighting would reduce contestation and improve consistency in policy application; ambiguity allows for arbitrary or politically motivated interpretations, potentially increasing extraction or suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in weighting population harm vs. individual autonomy."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine application of proportionality, or is it a cover for prioritizing public health or individual autonomy?",
+      "resolution_mechanism": "Analysis of policy outcomes: if interventions consistently align with a balanced weighting across diverse disease contexts, it supports the proportionality reading. If outcomes consistently favor one pole (e.g., always prioritizing public health regardless of individual burden), it suggests a different underlying reading.",
+      "impact": "If it's a genuine proportionality reading, the constraint functions as a Rope. If it's a disguised 'public_health_primary' or 'bodily_autonomy_primary' reading, the classification would shift to a Tangled Rope or Snare, respectively, with different beneficiary/victim structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'proportionality_reading' of the 'legitimate_health_intervention' kernel. Sibling readings are 'public_health_primary' and 'bodily_autonomy_primary'."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint embodies the principle that public health interventions must be proportional to the threat level posed by a disease, balancing population harm and individual autonomy. The severity of intervention (e.g., mandatory vaccination vs. mask mandates) is scaled by disease characteristics like transmissibility and case-fatality rate. For highly transmissible and severe diseases (e.g., measles), more restrictive measures are deemed legitimate, impacting individual autonomy more. For less severe threats (e.g., seasonal flu), interventions are expected to be milder, with greater deference to individual choice. This reading introduces a conditional structure to public health policy.",
+    "logic_rationale": "Extractiveness (0.45) is moderate, reflecting the burden placed on individuals by necessary, but sometimes intrusive, interventions. Suppression (0.30) is also moderate, as enforcement is required for compliance, but it's not absolute, allowing for some resistance or legal challenge. Theater ratio is low (0.10) because the principle aims for genuine, evidence-based justification. Accessibility collapse (0.40) is moderate, as alternatives to interventions exist (e.g., personal precautions) but are constrained by the collective good. Resistance (0.25) is present but not overwhelming, as the proportionality argument often garners broad, if not universal, acceptance.",
+    "directionality_logic": "The general public benefits from effective disease control, while public health authorities benefit from a clear framework for action (d near beneficiary end). Individuals subject to interventions, particularly for less severe threats, bear the costs of autonomy infringement (d near target end). The proportionality principle aims to keep these costs within a justifiable range, preventing the constraint from becoming purely extractive.",
+    "perspectival_gap": "Public health authorities may perceive this as a clear, justifiable Rope, enabling effective disease management. Individuals whose autonomy is curtailed, even proportionally, may experience it as more extractive, especially if they disagree with the threat assessment or the weighting of values. The engine's per-seat classification will reflect this divergence.",
+    "kernel_context": "This constraint is the 'proportionality_reading' of the 'legitimate_health_intervention' kernel. It seeks a balance between population health and individual autonomy, adjusting the balance based on disease characteristics. Sibling readings include 'public_health_primary' (prioritizing population health) and 'bodily_autonomy_primary' (prioritizing individual consent)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'legitimate_health_intervention' kernel, focusing on proportionality. It is distinct from 'public_health_primary' and 'bodily_autonomy_primary' readings, which emphasize different foundational principles."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for implementing public health measures, they interpret and apply the proportionality principle to justify interventions. They benefit from a framework that legitimizes their actions but are constrained by legal and ethical challenges to proportionality."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from reduced disease transmission and severity due to effective, proportionally applied public health measures. They bear some costs in terms of individual liberty but generally accept these for collective safety."
+    },
+    {
+      "name": "individuals_subject_to_mild_interventions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Experience a curtailment of autonomy (e.g., mask mandates, contact tracing) for diseases with lower threat levels. They bear the direct cost of compliance, which may feel disproportionate to their perceived risk."
+    },
+    {
+      "name": "individuals_subject_to_severe_interventions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Face significant restrictions (e.g., mandatory vaccination, quarantine) for highly threatening diseases. While the proportionality principle justifies these, the impact on their autonomy and daily life is substantial, and their options for non-compliance are severely limited."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor public health policies to ensure interventions remain proportional and do not unduly infringe on individual rights. They challenge policies they deem disproportionate, acting as a check on the agenda-setter."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public health responses by providing a framework to balance collective safety with individual rights, ensuring interventions are justified by the specific disease threat.",
+    "transfer_function": "Transfers a degree of individual autonomy to public health authorities in exchange for collective protection from disease, with the extent of transfer determined by the disease's characteristics.",
+    "absent_voices": "Those who reject any state intervention in health matters, regardless of proportionality, are often marginalized in policy discussions. Their voices would argue for absolute bodily autonomy, which this reading explicitly balances against collective harm.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the proportionality principle, public health interventions would either become overly coercive (if public health is primary) or ineffective (if individual autonomy is absolute), leading to chaotic and inconsistent responses to disease outbreaks. The legal and ethical landscape of public health would be fundamentally altered.",
+    "founding_problem": "The challenge of legitimizing state interventions in individual health during epidemics, avoiding both tyranny and anarchy, by finding a principled balance between collective good and individual rights.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, ethicists, and international human rights organizations consistently affirm the ongoing relevance of proportionality in public health law and policy, providing corroboration from outside the immediate public health authority beneficiaries."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intervention_severity_must_scale_with_threat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "individual_autonomy_is_a_conditional_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "balanced_ethical_framework",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

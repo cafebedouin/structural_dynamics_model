@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "press_reformation_causation__mutual_shaping",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b0caff5e-d427-44e7-83cb-f6adf638821f"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.15,
+    "claimed_type": "scaffold",
+    "human_readable": "Mutual Shaping of Printing Press and Reformation",
+    "topic_domain": "history_of_technology/religious_history/media_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "reformation_reformers",
+      "printing_industry"
+    ],
+    "vindicated_propositions": [
+      "sociotechnical_coevolution_theory",
+      "actor_network_theory"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "causal_direction_ambiguity",
+      "question": "Is the relationship between the printing press and the Reformation primarily one of mutual shaping, or does one factor exert dominant causal influence?",
+      "resolution_mechanism": "Detailed historical counterfactual analysis, examining periods where one factor was present without the other, or where interventions on one factor did not produce expected changes in the other.",
+      "impact": "If a dominant causal factor is identified (e.g., technology as primary driver), the constraint would shift towards a more deterministic framing (e.g., 'technological_determinism' reading), altering its classification from scaffold to a more fixed type like mountain or rope, depending on the nature of the determinism. If agency is found to be dominant, it would shift towards 'strategic_deployment', potentially a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the primary causal direction between technology and social change."
+    },
+    {
+      "id": "kernel_reading_distinction",
+      "question": "This constraint is one reading ('mutual_shaping') of the 'press_reformation_causation' kernel. What specific structural elements would change if a sibling reading (e.g., 'technological_determinism' or 'strategic_deployment') were adopted?",
+      "resolution_mechanism": "Comparative historical analysis of the evidence cited by proponents of each reading, focusing on how each reading frames the agency of reformers, the autonomy of technology, and the nature of historical contingency.",
+      "impact": "Adopting 'technological_determinism' would increase the 'emerges_naturally' metric and reduce 'resistance', shifting the constraint towards a mountain. Adopting 'strategic_deployment' would increase 'resistance' and 'extractiveness' (as agency becomes more central to rent-seeking), shifting it towards a rope or tangled_rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing between different interpretations of the press-Reformation causal kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 1450,
+    "end": 1550
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the co-evolutionary relationship between the printing press and the Protestant Reformation. It posits that the printing press, initially a technological innovation, created new affordances (e.g., rapid dissemination of texts, vernacular literacy) that were actively exploited by Reformation reformers. In turn, the demands and innovations of the reformers (e.g., need for mass-produced pamphlets, new typefaces for vernacular languages) further shaped the development and adoption of printing technology. This is a 'mutual shaping' perspective, distinct from purely deterministic or purely agentic views.",
+    "key_agents": [
+      "reformation_reformers: Primary beneficiary (moderate/constrained) — exploited the press's capabilities and shaped its development.",
+      "printing_industry: Primary beneficiary (organized/mobile) — adapted technology to meet reformer demands, expanding markets.",
+      "catholic_church: Payer (institutional/constrained) — initially resisted the spread of vernacular texts, but eventually adapted to print culture.",
+      "literate_public: Beneficiary (moderate/mobile) — gained access to new ideas and texts, fostering new forms of agency."
+    ],
+    "logic_rationale": "The constraint is classified as a Scaffold because the printing press provided a temporary, enabling structure that facilitated the Reformation, but its specific form and impact were not predetermined. It was a support that was built upon and modified by the agents using it. Extractiveness is low (0.2) because the primary function was enabling, not extracting. Suppression is low (0.1) as the technology itself did not inherently suppress alternatives, but rather created new ones. Theater ratio is low (0.05) as the press's function was genuinely transformative, not performative. Accessibility collapse is moderate (0.3) because while the press opened new avenues, it also created new barriers (e.g., literacy requirements, access to printing presses). Resistance is low (0.15) because the technology itself was not the object of resistance, but rather its content and implications.",
+    "perspectival_gap": "From the perspective of the reformers, the press was a tool that amplified their message and enabled their agency. From the perspective of the printing industry, it was a market opportunity shaped by demand. The Catholic Church initially experienced it as a disruptive force, but later adapted to its realities. The 'mutual shaping' perspective attempts to integrate these views, seeing the press as an emergent property of their interaction.",
+    "directionality_logic": "Reformation reformers and the printing industry are beneficiaries (d near 0.0-0.2) as they directly gained from the co-evolution. The Catholic Church is a payer (d near 0.8) as it bore the costs of adapting to a new media landscape that challenged its authority. The literate public is a beneficiary (d near 0.1) through increased access to information.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as it describes a historical causal relationship rather than an ongoing institutional arrangement. However, mislabeling it as purely deterministic (mountain) or purely agentic (rope) would obscure the dynamic interplay and the emergent properties of the system, leading to an incomplete understanding of historical change. The scaffold classification correctly captures its temporary, enabling, and co-constructed nature."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "press_reformation_causation__technological_determinism",
+      "press_reformation_causation__strategic_deployment"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'press_reformation_causation' kernel, emphasizing mutual shaping. Sibling readings include 'technological_determinism' and 'strategic_deployment', which offer alternative causal framings."
+  },
+  "stakeholders": [
+    {
+      "name": "reformation_reformers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Exploited the printing press for rapid dissemination of their theological arguments, pamphlets, and vernacular Bibles. Their demands for specific texts and formats influenced the development of the printing industry. Their agency was amplified by the press, but they were also constrained by its technical limitations and the need for capital."
+    },
+    {
+      "name": "printing_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Adapted printing technology and business models to meet the demands of reformers, expanding their markets and developing new techniques (e.g., mass production of small, cheap pamphlets). They profited from the increased demand for printed materials, but also faced risks from censorship and religious conflict."
+    },
+    {
+      "name": "catholic_church",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Initially resisted the spread of vernacular texts and dissenting ideas facilitated by the press, attempting censorship and control. They bore the cost of losing their monopoly on information and eventually had to adapt their own communication strategies to the new print culture."
+    },
+    {
+      "name": "literate_public",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Gained unprecedented access to religious texts, political pamphlets, and new ideas, fostering individual interpretation and critical thought. This increased literacy and engagement, but also exposed them to new forms of propaganda and religious conflict."
+    },
+    {
+      "name": "historical_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the complex interplay between technology and society in the Reformation era, debating the causal weight of each factor. Their role is to interpret the historical record and construct explanatory models."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Facilitated the rapid and widespread dissemination of ideas and texts, coordinating the intellectual and religious discourse across Europe during a period of profound change. It enabled a shared, if contested, information environment.",
+    "transfer_function": "Transferred information, theological arguments, and cultural influence from authors and printers to a broader public, and in turn, transferred demand and innovation from reformers to the printing industry.",
+    "absent_voices": "Those who were illiterate or lacked access to printed materials were excluded from direct participation in the print-mediated discourse, their perspectives shaped by oral traditions or mediated interpretations. Their voices would highlight the uneven distribution of the press's benefits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mutual shaping between the press and Reformation had not occurred, the Reformation itself would have unfolded very differently, likely slower and more localized, or perhaps not at all in its historical form. The development of printing technology would also have taken a different trajectory, lacking the specific demands and innovations driven by religious conflict.",
+    "founding_problem": "The problem of disseminating complex theological arguments and vernacular scripture rapidly and widely to challenge established religious authority and foster new forms of religious practice.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The specific problem of disseminating Reformation ideas via early modern print technology is historically resolved. While the broader problem of information dissemination remains, the historical context and technological constraints that defined the 'founding problem' are no longer live. Historical scholars, independent of religious institutions, corroborate that the specific conditions of the 16th century are no longer present."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "press_reformation_causation__technological_determinism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "press_reformation_causation__strategic_deployment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_and_agency_interdependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "affordances_shape_but_do_not_determine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "sociotechnical_coevolution_paradigm",
+    "drift_state": {
+      "moment": "contemporary_historical_scholarship",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "header": {
+    "constraint_id": "tenure_contract__institutional_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "5a1d3485-c39b-46ce-ae60-7740de4e8153"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Tenure Contract (Institutional Extraction Reading)",
+    "topic_domain": "higher_education_governance/labor_economics/institutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tenured_faculty"
+    ],
+    "victims": [
+      "contingent_faculty",
+      "students",
+      "university_administrators"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the tenure contract primarily a mechanism for institutional extraction, or for academic freedom, or for demographic reproduction?",
+      "resolution_mechanism": "Empirical analysis of resource flows, employment rigidity, and demographic patterns over time, compared against stated academic freedom protections and diversity goals.",
+      "impact": "If primarily extraction, the constraint is a Snare; if academic freedom, it's a Rope; if demographic reproduction, it's a Tangled Rope with specific victim groups.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the primary function of the tenure contract."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of contingent faculty structural (lack of alternative employment, legal barriers) or internalized (professional identity, fear of reprisal)?",
+      "resolution_mechanism": "Post-exit employment trajectory and survey data from former contingent faculty: if suppression persists after leaving academia, it suggests internalized components.",
+      "impact": "If internalized, the effective suppression is higher than structural measures suggest, as contingent faculty carry the suppression with them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for contingent faculty."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the tenure contract as a mechanism for institutional extraction, where tenured faculty (early winners) secure permanent claims on university resources, leading to employment rigidity. This rigidity prevents efficient resource reallocation and shifts the burden of flexibility onto contingent faculty and students. This is one reading of the 'tenure_contract' kernel, focusing on its economic and labor market effects rather than its academic freedom or demographic reproduction aspects.",
+    "key_agents": [
+      "tenured_faculty: Primary beneficiary (institutional/arbitrage) — permanent claim on resources",
+      "contingent_faculty: Primary victim (powerless/trapped) — bears employment precarity and resource scarcity",
+      "students: Secondary victim (moderate/constrained) — bears costs through tuition and reduced instructional quality",
+      "university_administrators: Secondary victim (institutional/constrained) — constrained in resource reallocation by tenure rigidity",
+      "academic_freedom_advocates: Excluded (organized/analytical) — their framing of tenure is sidelined by the extraction dynamics"
+    ],
+    "logic_rationale": "The high extractiveness (0.85) reflects the permanent claim on resources by tenured faculty, which is decoupled from current productivity or market demand. Suppression (0.75) is high due to the limited entry points into tenure-track positions and the precariousness of contingent labor, which discourages dissent. Theater ratio (0.4) indicates that while some academic freedom functions are maintained, a significant portion of the system's activity is performative maintenance of the status quo. Accessibility collapse (0.6) is moderate, as alternative academic careers are limited, but non-academic options exist. Resistance (0.7) is substantial, primarily from contingent faculty and student groups advocating for reform.",
+    "perspectival_gap": "Tenured faculty experience this as a legitimate reward for past achievement and a guarantor of intellectual independence (a Rope or even Mountain from their seat). Contingent faculty and students experience it as a Snare, extracting resources and opportunity. University administrators, while benefiting from a stable core faculty, are also victims of the rigidity that prevents strategic resource allocation.",
+    "directionality_logic": "Tenured faculty are clear beneficiaries (d=0.0-0.1) due to their permanent positions and resource claims. Contingent faculty are clear targets (d=0.9-1.0) due to precarity and exploitation. Students are targets (d=0.7-0.8) through tuition and reduced educational quality. University administrators are complex victims (d=0.6-0.7), as the system constrains their ability to manage resources effectively, despite their institutional power. The system itself, as an institutional structure, is the agenda-setter, perpetuating its own logic.",
+    "mandatrophy_analysis": "This reading classifies tenure as a Snare, indicating that its primary function has drifted from its stated purpose (academic freedom) to one of rent extraction. The persistence of the constraint is due to the concentrated benefits for tenured faculty and the diffuse costs borne by others, rather than a genuine coordination problem. The high extractiveness and suppression, coupled with the contested founding problem status, point to a mandatrophic state where the original mandate has atrophied, but the structure persists due to its extractive function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_labor_market_precarity",
+      "university_tuition_inflation"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'tenure_contract' kernel, focusing on its institutional extraction dynamics. It is linked to the 'academic_freedom_reading' and 'demographic_reproduction_reading' through the shared kernel."
+  },
+  "stakeholders": [
+    {
+      "name": "tenured_faculty",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Hold permanent positions, often with higher salaries and fewer teaching obligations, securing a stable claim on university resources. They benefit from job security and academic freedom, which this reading argues is a cover for resource capture."
+    },
+    {
+      "name": "contingent_faculty",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Comprise the majority of instructional staff, working on short-term contracts with low pay, no benefits, and no job security. They bear the costs of employment flexibility that tenured faculty avoid, often with limited career progression options within academia."
+    },
+    {
+      "name": "students",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Pay high tuition fees, which this reading argues subsidize the rigid cost structure created by tenure. They may experience reduced instructional quality due to the reliance on precarious contingent faculty and limited investment in innovative teaching methods."
+    },
+    {
+      "name": "university_administrators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are responsible for managing university budgets and strategic planning. They are constrained by the fixed costs of tenured faculty, limiting their ability to reallocate resources to new programs, research areas, or address changing student demands."
+    },
+    {
+      "name": "academic_freedom_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue that tenure is essential for protecting intellectual inquiry and dissent. In this reading, their arguments are used to legitimize a system that has become primarily extractive, and their concerns about academic freedom are often sidelined by the economic realities of the system."
+    }
+  ],
+  "gain_flow": "tenured_faculty",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a stable core faculty for universities, ensuring continuity in research and teaching, and theoretically protecting intellectual independence.",
+    "transfer_function": "Transfers a permanent claim on university resources (salary, benefits, reduced workload) from the general university budget (ultimately students and taxpayers) to tenured faculty, in exchange for a one-time grant of 'academic freedom'.",
+    "absent_voices": "Prospective faculty and early-career researchers who are effectively locked out of stable academic careers, and taxpayers who subsidize the system without direct representation in its governance. They would advocate for a more flexible and equitable academic labor market.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure disappeared overnight, universities would immediately gain significant flexibility in resource allocation and hiring. The academic labor market would undergo a massive restructuring, likely leading to more short-term contracts but potentially also more merit-based hiring and resource shifts to high-demand areas. The power dynamics within universities would fundamentally change.",
+    "founding_problem": "To protect scholars from institutional or political interference, ensuring intellectual independence and the pursuit of knowledge without fear of reprisal, and to attract and retain top talent by offering long-term security.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Academic freedom advocates and tenured faculty assert the problem is live, citing ongoing threats to intellectual inquiry. Contingent faculty, students, and some university administrators argue the problem is largely solved or that tenure no longer effectively addresses it, and that its current function is primarily to protect entrenched interests. Economic analyses from outside the benefiting parties corroborate the shift towards extraction and rigidity."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "tenure_contract__academic_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tenure_contract__demographic_reproduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_allocation_must_be_flexible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "permanent_claims_create_deadweight_loss",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "efficient_resource_allocation_framework",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_university",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

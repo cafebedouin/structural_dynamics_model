@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "hagia_sophia_substrate__islamic_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6c6b4d34-7a7e-4916-8a80-bf0bf99a918a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hagia Sophia: Islamic Sovereignty Reading",
+    "topic_domain": "cultural_heritage/sovereignty/religious_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "akp_political_coalition",
+      "turkish_islamic_constituency",
+      "sunni_ummah_symbolically"
+    ],
+    "victims": [
+      "non_muslim_visitors",
+      "unesco_regime",
+      "secularist_turks"
+    ]
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'Islamic Sovereignty' reading of the Hagia Sophia's status, asserting its legitimacy from the 1453 Ottoman conquest and continuous Islamic endowment (waqf), making it sovereign Islamic worship space under Turkish state authority. This reading was formally re-established by executive decree in 2020, reversing its 1934 museum status. It is a Tangled Rope because it coordinates a national-religious identity while extracting costs from non-Muslim visitors, international heritage bodies, and secularist Turks through active enforcement.",
+    "logic_rationale": "The extractiveness (0.68) is moderate-high, reflecting the political consolidation and religious identity signal gained by the Turkish state and its constituency, balanced against the diplomatic friction and cultural costs imposed. Suppression (0.75) is high due to the active legal and political enforcement required to maintain this status against international and internal opposition. The theater ratio (0.20) is low, as the conversion is a genuinely functional act of religious and political reassertion, not merely performative maintenance. The metrics reflect the post-2020 reality.",
+    "directionality_logic": "The AKP political coalition and the Turkish Islamic constituency are clear beneficiaries, gaining political and religious affirmation (low directionality). The broader Sunni Ummah benefits symbolically. Non-Muslim visitors, UNESCO, and secularist Turks are targets, bearing costs of access restrictions, denied jurisdiction, and ideological defeat (high directionality). The constraint subsidizes the beneficiaries while extracting from the targets.",
+    "perspectival_gap": "From the perspective of the AKP and its supporters, this is a legitimate act of national and religious self-determination, a restoration of historical rights. From the perspective of non-Muslim visitors, UNESCO, and secularist Turks, it is an act of exclusion and a violation of universal heritage principles. The engine's classification will reflect this divergence based on the declared structural relationships.",
+    "kernel_context": "This constraint is the 'Islamic Sovereignty' reading of the Hagia Sophia's status (kernel_id: hagia_sophia_substrate). It asserts the site's legitimacy from the 1453 Ottoman conquest and continuous Islamic endowment, making it sovereign Islamic worship space under Turkish state authority. This reading directly competes with the 'Universal Heritage' reading (emphasizing shared human cultural value) and the 'Orthodox Restitution' reading (advocating for its return to Christian ecclesiastical control)."
+  },
+  "omegas": [
+    {
+      "id": "waqf_legitimacy_ambiguity",
+      "question": "Is the 1453 waqf (Islamic endowment) a perpetually binding legal instrument that overrides subsequent national and international legal frameworks, or is its authority subject to modern legal and heritage norms?",
+      "resolution_mechanism": "International legal arbitration or a definitive ruling by a globally recognized court on the precedence of historical religious endowments versus contemporary national and international law.",
+      "impact": "If perpetually binding, the Islamic sovereignty reading gains stronger legal grounding, potentially reclassifying aspects of its enforcement as Mountain-like. If subject to modern norms, its legal basis weakens, reinforcing its classification as a constructed, actively enforced constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity of historical waqf legitimacy in modern legal context."
+    },
+    {
+      "id": "political_vs_religious_motivation",
+      "question": "To what extent was the 2020 conversion primarily a political act to consolidate domestic support, versus a genuine religious imperative to restore worship space?",
+      "resolution_mechanism": "Analysis of internal government communications, electoral outcomes post-conversion, and independent sociological studies of religious sentiment versus political opportunism.",
+      "impact": "If primarily political, the extractiveness metric is more accurately attributed to political rent-seeking. If primarily religious, the coordination function for the Islamic constituency is stronger, potentially shifting the balance within the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing political from religious drivers of the conversion."
+    },
+    {
+      "id": "international_law_enforceability",
+      "question": "What is the actual enforceability of UNESCO's 'universal heritage' claims against a sovereign nation's assertion of religious and national sovereignty over a site within its borders?",
+      "resolution_mechanism": "Precedent from other cases where UNESCO status conflicted with national sovereignty, or a test case brought before an international court with enforcement powers.",
+      "impact": "If UNESCO's claims are largely unenforceable, the 'excluded' status of the UNESCO regime is reinforced, and the Turkish state's suppression of these claims is more effective. If enforceable, the constraint faces greater external resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of international heritage law against national sovereignty."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hagia_sophia_substrate__universal_heritage_reading",
+      "hagia_sophia_substrate__orthodox_restitution_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'hagia_sophia_substrate' kernel. Its Islamic sovereignty claim directly impacts the viability and legitimacy of the universal heritage and orthodox restitution readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hagia_sophia_substrate__universal_heritage_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "hagia_sophia_substrate__orthodox_restitution_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "conquest_establishes_perpetual_waqf_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "national_sovereignty_overrides_international_heritage_claims",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "ottoman_conquest_waqf_status",
+    "drift_state": {
+      "moment": "contemporary_international_heritage_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

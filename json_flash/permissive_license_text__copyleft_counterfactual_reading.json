@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__copyleft_counterfactual_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f68b17c2-61b5-431e-9512-6daf48d7989a"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permissive License Text (Copyleft Counterfactual Reading)",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "copyleft_advocates",
+      "open_source_community"
+    ],
+    "victims": [
+      "proprietary_software_developers",
+      "corporate_integrators"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'copyleft counterfactual' reading of permissive license text, or is it better understood as a different reading?",
+      "resolution_mechanism": "Analysis of developer intent and community discourse around specific permissive licenses, focusing on whether the 'exploitation' narrative is dominant.",
+      "impact": "If this reading is not dominant, the constraint's extractiveness and suppression might be lower, potentially reclassifying it as a Rope or even a Mountain (if the 'commons coordination' reading prevails).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'copyleft counterfactual' reading of the 'permissive_license_text' kernel. Sibling readings include 'commons_coordination_reading' and 'corporate_moat_reading'."
+    },
+    {
+      "id": "exploitation_definition_ambiguity",
+      "question": "What constitutes 'exploitation' in the context of permissive licensing, and is the lack of reciprocity inherently exploitative?",
+      "resolution_mechanism": "Empirical studies on value capture in permissive vs. copyleft ecosystems, and philosophical analysis of 'fairness' in software reuse.",
+      "impact": "If 'exploitation' is narrowly defined or reciprocity is not deemed essential for fairness, the extractiveness metric would decrease, potentially shifting the classification towards a Rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Ambiguity in defining exploitation and the necessity of reciprocity in software licensing."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'copyleft counterfactual' reading of permissive license texts, arguing that without a reciprocity requirement, such licenses structurally enable exploitation. It posits that viral reciprocity (like the GPL) is a necessary alternative to prevent proprietary developers from taking open-source contributions without giving back. This reading views permissive licenses as a 'tangled rope' where initial coordination (sharing code) is undermined by asymmetric extraction (proprietary enclosure).",
+    "key_agents": [
+      "copyleft_advocates: Primary beneficiary (institutional/arbitrage) — benefit from the enforcement of reciprocity.",
+      "open_source_community: Secondary beneficiary (organized/mobile) — benefits from the continued 'freeness' of derivative works.",
+      "proprietary_software_developers: Primary victim (powerful/constrained) — bear the cost of having to reciprocate or avoid permissive code.",
+      "corporate_integrators: Secondary victim (institutional/constrained) — face legal obligations to open-source their modifications.",
+      "permissive_license_authors: Agenda setter (moderate/mobile) — set the initial terms, but their intent is reinterpreted by this reading.",
+      "legal_scholars: Observer (analytical/analytical) — analyze the implications of different licensing models."
+    ],
+    "logic_rationale": "The extractiveness (0.7) is high because proprietary developers can leverage permissively licensed code to build closed-source products, capturing value without contributing back to the commons. Suppression (0.6) is present because the 'freedom' offered by permissive licenses can suppress the development of truly reciprocal open-source alternatives by making it easier to 'take' without 'giving'. The theater ratio is low (0.1) as the constraint's function is genuinely about enabling or preventing specific forms of software reuse, not mere performance. Resistance (0.75) is high, reflecting the ongoing ideological and legal battles between copyleft and permissive licensing camps.",
+    "perspectival_gap": "Copyleft advocates experience this as a necessary constraint to ensure fairness and prevent enclosure, thus a beneficial 'tangled rope' that protects the commons. Proprietary developers, however, experience it as an extractive 'snare' that limits their ability to innovate and profit from open-source components without legal encumbrance. The engine's classification will reflect this divergence based on their declared roles and exit options.",
+    "directionality_logic": "Copyleft advocates and the broader open-source community are beneficiaries (d near 0.0) as this reading champions their core principles of reciprocity and prevents enclosure. Proprietary software developers and corporate integrators are victims (d near 1.0) as they are forced to either reciprocate or avoid permissively licensed code, incurring costs or limiting their options. Permissive license authors are agenda-setters, but their original intent is reinterpreted through this counterfactual lens.",
+    "mandatrophy_analysis": "This classification prevents mislabeling permissive licenses as a simple 'rope' (pure coordination) by highlighting the asymmetric extraction inherent in their lack of reciprocity, as argued by copyleft proponents. It acknowledges the coordination function (initial sharing) but emphasizes the extractive outcome for the open-source commons when reciprocity is absent. The 'mandatrophy resolved' flag is not set because the debate over the 'mandate' of permissive licenses (pure freedom vs. anti-exploitation) is still very much alive."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__corporate_moat_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'permissive_license_text' kernel, focusing on the counterfactual argument for copyleft's necessity. It highlights the extractive potential of permissive licenses without reciprocity, contrasting with readings that emphasize pure coordination or corporate advantage."
+  },
+  "stakeholders": [
+    {
+      "name": "copyleft_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Actively promote and defend copyleft licensing models (e.g., GPL) as a necessary countermeasure to the perceived exploitation enabled by permissive licenses. They benefit from the structural pressure this reading exerts on proprietary developers to reciprocate."
+    },
+    {
+      "name": "open_source_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Comprises developers and users who contribute to and rely on open-source software. They benefit from the 'viral' nature of copyleft, which ensures that derivative works remain open, preventing the enclosure of the digital commons."
+    },
+    {
+      "name": "proprietary_software_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop and sell closed-source software. They are 'victims' in this reading because they are either forced to avoid permissively licensed code (to prevent copyleft 'infection') or to open-source their modifications, which they view as a cost to their business model."
+    },
+    {
+      "name": "corporate_integrators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrate various software components, including open-source, into larger commercial products. They face legal and strategic challenges in managing licenses, particularly when permissive and copyleft components interact, leading to costs or limitations on their product development."
+    },
+    {
+      "name": "permissive_license_authors",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Draft and publish permissive licenses (e.g., MIT, Apache) with the intent of maximizing freedom of use. In this counterfactual reading, their original intent is seen as inadvertently enabling exploitation, making them the 'setters' of the initial conditions that lead to the problem."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the legal and economic implications of different software licenses. They provide the theoretical framework for understanding the 'exploitation' argument and the necessity of copyleft as an alternative."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Facilitates the initial sharing and reuse of software code by minimizing legal friction, allowing developers to build upon existing work without extensive negotiation.",
+    "transfer_function": "Transfers the right to use, modify, and distribute software code from authors to users. In this reading, it also implicitly transfers the potential for proprietary enclosure from the open-source commons to proprietary developers.",
+    "absent_voices": "Developers who would prefer a purely public domain approach (no copyright at all) are absent, as this debate is framed within the existing copyright system. Also, users who are indifferent to the licensing model, only caring about functionality, are not actively represented in this ideological conflict.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If permissive licenses vanished, the software ecosystem would fundamentally change. Proprietary developers would lose a major source of reusable components, forcing them to either develop everything in-house or rely solely on copyleft, which would require them to open-source their own work. The open-source community would see a shift towards more copyleft, but also potentially less initial sharing due to increased friction.",
+    "founding_problem": "The problem of enabling widespread software reuse and collaboration while respecting authorial rights, without creating excessive legal burdens.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Permissive license authors and some developers argue the problem is live, as maximizing freedom of use remains a goal. Copyleft advocates and some legal scholars argue that the original problem has been superseded by the problem of proprietary enclosure, and that permissive licenses now exacerbate this new problem; their arguments are supported by economic analyses of value capture in software ecosystems."
+  },
+  "gain_flow": "copyleft_advocates",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "permissive_license_text__corporate_moat_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocity_is_essential_for_fairness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unrestricted_reuse_enables_exploitation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "copyleft_as_necessary_alternative",
+    "drift_state": {
+      "moment": "contemporary_licensing_landscape",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

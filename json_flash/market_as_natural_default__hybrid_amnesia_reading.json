@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "market_as_natural_default__hybrid_amnesia_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "27fd31b5-1724-46f2-a489-142e9b37bcf2"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market as Natural Default (Hybrid Amnesia Reading)",
+    "topic_domain": "political_economy/ideology_studies/economic_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_owners",
+      "corporate_executives"
+    ],
+    "victims": [
+      "labor_unions",
+      "social_democratic_parties",
+      "public_sector_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "amnesia_vs_active_suppression",
+      "question": "To what extent is the 'naturalness' of the market a result of genuine historical amnesia versus active, ongoing suppression of alternatives by beneficiaries?",
+      "resolution_mechanism": "Historical analysis of policy debates and public discourse: quantify the proportion of arguments for market default based on 'no alternative' (amnesia) versus 'alternatives are bad' (active suppression).",
+      "impact": "If primarily amnesia, the constraint is more 'piton-like' in its persistence; if primarily active suppression, it is more 'snare-like' and requires more direct intervention to dismantle.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between historical forgetting and active suppression in maintaining market default."
+    },
+    {
+      "id": "kernel_reading_difference",
+      "question": "This constraint is the 'hybrid_amnesia_reading' of the 'market_as_natural_default' kernel. How would the classification change under the 'lapsed_alternative_reading' or 'beneficiary_maintained_reading'?",
+      "resolution_mechanism": "Analyzing the counterfactuals: the 'lapsed_alternative_reading' would likely yield a lower extractiveness and suppression, leaning towards a Piton or even a degraded Rope, as it emphasizes passive forgetting. The 'beneficiary_maintained_reading' would likely yield higher extractiveness and suppression, leaning more strongly towards a Snare, as it emphasizes active, conscious defense of the status quo.",
+      "impact": "The 'hybrid_amnesia_reading' captures the transition from passive forgetting to active maintenance, resulting in a Tangled Rope classification. Other readings would shift the balance of extraction and suppression, altering the classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the 'market_as_natural_default' kernel on constraint classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'market as natural default' as a two-stage process: an initial period (roughly 1930s-1970s) where alternatives to market-based solutions were genuinely forgotten or lapsed due to historical contingencies (e.g., post-war consensus, Cold War ideological framing), followed by a period (1980s-present) where identifiable beneficiaries actively maintained and weaponized this pre-existing amnesia to extract rents. The constraint is claimed as a Tangled Rope because it combines a genuine (if historically contingent) coordination function (efficient allocation) with asymmetric extraction enabled by the suppression of alternatives.",
+    "logic_rationale": "Extractiveness (0.45) is moderate but rising, reflecting the increasing rent-seeking behavior by beneficiaries over time. Suppression (0.6) is significant, as the 'naturalness' narrative actively discourages and delegitimizes alternative economic models. Theater ratio (0.2) is low, indicating that while there's some performative defense of the market's 'naturalness,' the underlying mechanisms are genuinely functional for resource allocation, even if skewed. The increasing extractiveness and suppression over time, as shown in the measurements, reflect the transition from passive amnesia to active beneficiary capture.",
+    "perspectival_gap": "From the perspective of capital owners and corporate executives, the market's default status is a natural, efficient, and beneficial arrangement. From the perspective of labor unions and public sector advocates, it is a constructed constraint that systematically disadvantages them, maintained through ideological and political means. The engine's classification will highlight this divergence.",
+    "directionality_logic": "Capital owners and corporate executives are clear beneficiaries (d near 0.0) as they profit directly from the market's default status and the suppression of alternatives. Labor unions, social democratic parties, and public sector advocates are victims (d near 1.0) as their policy goals and power are systematically undermined by this default. The general public is a mixed bag, experiencing some coordination benefits but also bearing the costs of extraction.",
+    "mandatrophy_analysis": "The constraint's mandate (efficient resource allocation) has been increasingly co-opted by the beneficiaries. The initial 'lapsed closure' phase might have been closer to a Piton or even a Rope, but the subsequent 'beneficiary capture' phase has shifted it to a Tangled Rope. The classification prevents mislabeling the current extractive state as merely 'natural' or 'efficient coordination' by highlighting the active enforcement and identifiable victims."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_as_natural_default__lapsed_alternative_reading",
+      "market_as_natural_default__beneficiary_maintained_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'market_as_natural_default' kernel. It emphasizes a hybrid process of initial historical amnesia followed by active beneficiary capture. Other readings focus on passive forgetting or active, post-hoc defense."
+  },
+  "stakeholders": [
+    {
+      "name": "capital_owners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the default status of market mechanisms, which favors capital accumulation and limits state intervention. They actively lobby for policies that reinforce this default and suppress alternatives."
+    },
+    {
+      "name": "corporate_executives",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Their careers and compensation are tied to the success of market-driven enterprises. They benefit from the ideological framing that presents market solutions as inevitable and superior, reducing pressure for alternative models."
+    },
+    {
+      "name": "labor_unions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of market liberalization, deregulation, and the erosion of collective bargaining power. They struggle to advocate for non-market solutions or stronger social safety nets against the 'market as natural' narrative."
+    },
+    {
+      "name": "social_democratic_parties",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Their policy platforms, which often involve significant state intervention and public provision, are delegitimized by the 'market as natural' default. They face an uphill battle in advocating for alternatives."
+    },
+    {
+      "name": "public_sector_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Advocate for public services and non-market solutions to social problems. They find their proposals consistently framed as inefficient or unnatural compared to market-based approaches, limiting their influence and resource access."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the historical development of economic systems and the contingency of market dominance. They provide critical analysis of the 'naturalness' claim but have limited direct power to alter the constraint."
+    }
+  ],
+  "gain_flow": "capital_owners",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates resource allocation and production through price signals and competition, providing a decentralized mechanism for economic activity.",
+    "transfer_function": "Transfers wealth and power from labor and the public sector to capital owners and corporate entities, by framing market-based solutions as the default and suppressing alternatives.",
+    "absent_voices": "Advocates for planned economies, cooperative models, and robust public provisioning are marginalized or dismissed as 'unrealistic' or 'ideological,' preventing a full public debate on economic alternatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 'market as natural default' narrative and its associated enforcement mechanisms vanished, there would be a rapid re-evaluation of economic policy, a surge in proposals for alternative systems, and a significant shift in power dynamics, leading to a fundamental reorganization of economic and political structures.",
+    "founding_problem": "The problem of efficient resource allocation and wealth creation in complex societies, particularly after the perceived failures of centrally planned economies and the need for post-war reconstruction.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Capital owners and corporate executives claim the problem is still live, requiring market dominance for prosperity. Economic historians and critical theorists, from outside the benefiting parties, argue that while resource allocation remains a problem, the 'natural default' framing has outlived its utility and now serves primarily extractive ends, with viable alternatives being suppressed."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "market_as_natural_default__lapsed_alternative_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "market_as_natural_default__beneficiary_maintained_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_dominance_from_historical_amnesia",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "amnesia_enables_beneficiary_capture",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_consensus_market_efficiency",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

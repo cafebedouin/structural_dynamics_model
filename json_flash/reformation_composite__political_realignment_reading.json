@@ -1,0 +1,256 @@
+{
+  "header": {
+    "constraint_id": "reformation_composite__political_realignment_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0ce317e2-c35c-4ef8-acef-b490aa908c39"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reformation as Political Realignment: State Sovereignty via Religious Differentiation",
+    "topic_domain": "historical_epistemology/religious_history/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "territorial_rulers",
+      "emerging_nation_states"
+    ],
+    "victims": [
+      "holy_roman_empire",
+      "papal_authority",
+      "local_religious_minorities"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "political_vs_theological_primacy",
+      "question": "Is the political realignment the primary driver of the Reformation, or a consequence of deeper theological fragmentation?",
+      "resolution_mechanism": "Comparative historical analysis of regions where political and theological shifts diverged, or where political actors adopted religious differentiation without genuine theological conviction.",
+      "impact": "If political realignment is primary, the constraint is a Tangled Rope of state-building; if theological fragmentation is primary, the political dimension is a secondary effect, and the core constraint is a Mountain of irreconcilable doctrinal differences (theological_fragmentation_reading).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the causal primacy of political versus theological factors in the Reformation."
+    },
+    {
+      "id": "role_of_printing_press",
+      "question": "To what extent was the political realignment enabled or accelerated by the printing press, rather than being solely a political choice?",
+      "resolution_mechanism": "Counterfactual historical analysis: how would the political landscape have evolved without the rapid dissemination of religious texts and polemics enabled by print technology?",
+      "impact": "If the printing press was a necessary condition, the political realignment is influenced by a technological constraint (technological_mediation_reading) that lowered the cost of religious differentiation; if not, the political actors' agency is more central.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The influence of technological mediation (printing press) on political realignment."
+    },
+    {
+      "id": "naturalness_of_cuius_regio",
+      "question": "Was 'Cuius regio, eius religio' a natural outcome of state formation, or an imposed solution to manage religious conflict that itself became extractive?",
+      "resolution_mechanism": "Analysis of alternative models of religious coexistence or toleration that were suppressed or failed to emerge in the period.",
+      "impact": "If natural, the constraint is closer to a Mountain of political necessity; if imposed and extractive, it reinforces the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The 'naturalness' vs. constructedness of the principle of state-controlled religion."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1517,
+    "end": 1648
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the Reformation as a political event, where emerging nation-states leveraged religious differentiation (e.g., Protestantism vs. Catholicism) to assert sovereignty against the universalizing claims of the Holy Roman Empire and the Papacy. The principle of 'Cuius regio, eius religio' (whose realm, his religion) is the primary observable, demonstrating how territorial rulers gained control over religious affairs within their domains, thereby consolidating political power. This reading emphasizes the instrumental use of religious identity for state-building and the resulting extraction from previously universal authorities and local religious minorities.",
+    "logic_rationale": "The extractiveness (0.85) is high because territorial rulers extracted significant power and resources from imperial and papal authorities, as well as from their subjects who were forced to conform. Suppression (0.7) is substantial, as religious conformity was enforced, and dissenters faced persecution or exile. The theater ratio (0.2) is relatively low, as the political function of religious differentiation was quite direct and effective, though often cloaked in theological justifications. Accessibility collapse (0.6) reflects the narrowing of religious choice for subjects, while resistance (0.8) was high from both imperial/papal forces and persecuted religious minorities.",
+    "perspectival_gap": "Territorial rulers experienced this as a beneficial coordination mechanism for state consolidation, while imperial/papal authorities and religious minorities experienced it as a highly extractive and suppressive snare. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Territorial rulers and emerging nation-states are clear beneficiaries (d=0.0-0.2), gaining sovereignty and control. The Holy Roman Empire and Papal authority are primary targets (d=0.8-1.0), losing political and religious jurisdiction. Local religious minorities are also targets (d=0.7-0.9), as their religious freedom was curtailed. The constraint subsidizes state power by extracting from universal religious and political claims.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the political consolidation as purely theological or as a benign coordination. By identifying the beneficiaries (territorial rulers) and victims (imperial/papal authority, religious minorities), it highlights the extractive nature of the political realignment, even if it also 'coordinated' the formation of nation-states. The mandate was to assert sovereignty, which was achieved through this extractive mechanism, making it a Tangled Rope rather than a pure Rope or Snare.",
+    "kernel_context": "This constraint is the 'political_realignment_reading' of the 'reformation_composite' kernel. It focuses on the Reformation as a process of state-building and assertion of sovereignty. Sibling readings include the 'theological_fragmentation_reading' (emphasizing doctrinal differences) and the 'technological_mediation_reading' (highlighting the role of the printing press)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "reformation_composite__theological_fragmentation_reading",
+      "reformation_composite__technological_mediation_reading",
+      "westphalian_sovereignty"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'reformation_composite' kernel, focusing on the political dimension. Its structural influence on state formation and the principle of 'Cuius regio, eius religio' affects both the theological fragmentation and technological mediation aspects by providing the political framework within which they operated."
+  },
+  "stakeholders": [
+    {
+      "name": "territorial_rulers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Princes and monarchs who adopted Protestantism or asserted control over religious institutions within their domains. They actively enforced 'Cuius regio, eius religio' to consolidate their power and reduce external interference from the Empire or Papacy. They directly benefited from the transfer of authority and resources."
+    },
+    {
+      "name": "emerging_nation_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The abstract entities that gained coherence and power through the political realignments of the Reformation. Their long-term stability and sovereignty were enhanced by the religious differentiation, providing a basis for modern statehood."
+    },
+    {
+      "name": "holy_roman_empire",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "The overarching imperial authority that sought to maintain religious and political unity across its diverse territories. It suffered a significant loss of power, legitimacy, and territorial control as princes asserted religious independence. Its options were to fight costly wars or concede sovereignty."
+    },
+    {
+      "name": "papal_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The spiritual and temporal head of the Catholic Church, which lost significant religious jurisdiction, political influence, and revenue streams (e.g., tithes) in Protestant territories. Its options were counter-reformation efforts or diplomatic concessions."
+    },
+    {
+      "name": "local_religious_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals and communities whose religious beliefs differed from that of their territorial ruler. They faced persecution, forced conversion, or exile, bearing the direct costs of the 'Cuius regio, eius religio' principle. Their options were conformity, flight, or martyrdom."
+    },
+    {
+      "name": "theologians_and_reformers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Intellectuals and religious leaders who provided the theological justifications for religious differentiation. While often driven by genuine conviction, their work also served to legitimize the political ambitions of rulers, gaining patronage and influence in the process."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "It coordinated the consolidation of political power within emerging states by providing a clear, enforceable mechanism ('Cuius regio, eius religio') for rulers to assert religious and thus political autonomy from universal imperial and papal claims.",
+    "transfer_function": "It transferred political sovereignty, control over religious institutions, and associated resources (e.g., church lands, tithes) from the Holy Roman Empire and Papal authority to territorial rulers and emerging nation-states. It also transferred the burden of religious conformity onto local populations.",
+    "absent_voices": "Advocates for religious pluralism or universal Christian unity (e.g., Erasmus, some Anabaptist groups) were largely marginalized or suppressed. They would have argued against the instrumentalization of religion for state power and for individual conscience or broader ecumenical reconciliation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this political realignment had not occurred, the trajectory of European state formation would have been fundamentally different. Universal imperial and papal authority would have retained more power, and the modern nation-state system, as we know it, would likely not have emerged in the same form or at the same time.",
+    "founding_problem": "The problem was the tension between universal imperial/papal authority and the desire of local rulers for greater autonomy and control over their territories, exacerbated by existing religious dissent.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians widely corroborate that the problem of universal vs. territorial authority was a central conflict of the era, and that the Reformation provided a critical pathway for its resolution in favor of territorial rulers. The problem of universal imperial/papal authority in its pre-Reformation form is largely 'dead' as a live political issue, though its legacy persists. Corroboration comes from political historians and legal scholars outside the direct beneficiaries."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "reformation_composite__theological_fragmentation_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "reformation_composite__technological_mediation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_sovereignty_over_religion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "religious_differentiation_as_political_tool",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "universal_imperial_papal_authority",
+    "drift_state": {
+      "moment": "post_westphalian_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  }
+}

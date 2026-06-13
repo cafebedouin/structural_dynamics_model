@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "udhr_article_3__procedural_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9010a375-d347-4f2d-843a-4802cc4d8a7d",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "UDHR Article 3: Procedural Hybrid Reading (Due Process Protections)",
+    "topic_domain": "constitutional_law/human_rights/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "citizens_under_rule_of_law",
+      "human_rights_advocates"
+    ],
+    "victims": [
+      "detained_individuals_without_due_process",
+      "victims_of_torture"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine procedural safeguard, or does its narrow focus implicitly legitimize substantive deprivations?",
+      "resolution_mechanism": "Analysis of judicial review outcomes: if procedural challenges consistently fail to address underlying substantive injustices, the reading's scope is implicitly extractive.",
+      "impact": "If implicitly extractive, the constraint's effective extraction is higher, potentially reclassifying it as a Tangled Rope for those whose substantive rights are ignored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'procedural_hybrid_reading' of the 'udhr_article_3' kernel. Sibling readings ('negative_liberty_reading', 'positive_entitlement_reading') would expand or shift the scope of Article 3's guarantees. This reading's focus on process might be seen as a limitation by advocates of broader substantive rights."
+    },
+    {
+      "id": "substantive_gap_legitimation",
+      "question": "Does the explicit non-resolution of substantive liberty/welfare contests within this reading inadvertently legitimate state actions that violate those substantive rights, so long as due process is observed?",
+      "resolution_mechanism": "Comparative legal analysis of states adopting this reading: track whether states with strong procedural guarantees but weak substantive rights protections exhibit higher rates of 'legal' deprivation of life/liberty/security.",
+      "impact": "If the procedural focus enables substantive rights violations, the constraint's 'suppression' metric would be higher for those affected by such violations, and its 'extractiveness' would increase due to the unaddressed costs borne by victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The disagreement is located in the scope of 'life, liberty and security of person' – whether it implies only procedural safeguards or also substantive entitlements. This reading explicitly limits it to procedural safeguards."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'procedural hybrid reading' of Article 3 of the Universal Declaration of Human Rights (UDHR), which guarantees due process protections such as habeas corpus and prohibition of torture, without explicitly resolving broader substantive debates about liberty or welfare entitlements. It aims to prevent arbitrary state action but does not mandate positive state provision of resources. This reading is often adopted by states seeking to uphold human rights while maintaining flexibility in social and economic policy.",
+    "key_agents": [
+      "state_judiciaries: Agenda setter (institutional/generational) — interpret and enforce procedural guarantees.",
+      "human_rights_advocates: Beneficiary (organized/biographical) — leverage procedural guarantees to protect individuals.",
+      "detained_individuals_without_due_process: Victim (powerless/immediate) — directly suffer when procedural guarantees are violated.",
+      "victims_of_torture: Victim (powerless/immediate) — directly suffer when torture prohibition is violated.",
+      "states_with_limited_resources: Payer (institutional/generational) — bear the cost of establishing and maintaining robust due process mechanisms.",
+      "political_philosophers: Observer (analytical/civilizational) — analyze the implications of this reading for human rights theory."
+    ],
+    "logic_rationale": "The extractiveness (0.35) is moderate, reflecting the costs of maintaining due process systems and the potential for procedural compliance to mask substantive deprivations. Suppression (0.45) is also moderate, as states must actively enforce these protections against their own coercive apparatus, but violations still occur. The theater ratio (0.20) is relatively low, indicating that the procedural mechanisms are largely functional, though some performative adherence may exist. The constraint is claimed as a Rope because it genuinely coordinates state action to prevent arbitrary harm, with identifiable beneficiaries and victims, but without the high extraction or suppression of a Snare.",
+    "perspectival_gap": "From the perspective of state judiciaries and human rights advocates, this reading provides essential safeguards. However, from the perspective of those whose substantive rights (e.g., to adequate living standards) are not addressed by this reading, it may appear as an incomplete or even complicit framework. The engine's per-seat classification will reflect these divergences based on the declared roles and positional atoms.",
+    "directionality_logic": "State judiciaries, as enforcers of due process, are agenda-setters and beneficiaries (low d). Human rights advocates, who use these protections, are also beneficiaries. Detained individuals and victims of torture are clear targets (high d) as the constraint's protections are meant to shield them from state overreach. States with limited resources are payers, bearing the cost of implementation. Political philosophers are analytical observers.",
+    "mandatrophy_analysis": "This reading prevents mislabeling genuine procedural safeguards as pure extraction by acknowledging the real coordination function of preventing arbitrary state violence. However, it also avoids mislabeling a limited procedural guarantee as a comprehensive human rights framework, which would obscure the unmet needs addressed by the 'positive_entitlement_reading' and 'negative_liberty_reading' siblings. The moderate extractiveness and suppression reflect the ongoing struggle to uphold these protections.",
+    "kernel_context": "This constraint is the 'procedural_hybrid_reading' of the 'udhr_article_3' kernel. It focuses on due process protections like habeas corpus and the prohibition of torture, without explicitly resolving the broader contest over substantive liberty or welfare entitlements. Sibling readings include the 'negative_liberty_reading' (emphasizing freedom from state interference) and the 'positive_entitlement_reading' (emphasizing state provision of welfare). This reading aims for a middle ground, ensuring basic procedural fairness while leaving other debates open."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the UDHR Article 3 kernel, each representing a distinct interpretation of 'life, liberty and security of person'."
+  },
+  "stakeholders": [
+    {
+      "name": "state_judiciaries",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for interpreting and enforcing the procedural guarantees of Article 3 within their national legal systems, ensuring fair trials, habeas corpus, and prohibiting torture. They face political pressure but are structurally insulated to uphold these principles."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Utilize the procedural guarantees of Article 3 in their work to protect individuals from arbitrary detention and ill-treatment. They benefit from the existence of these clear, enforceable standards, even if their scope is limited."
+    },
+    {
+      "name": "detained_individuals_without_due_process",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Directly bear the costs when procedural guarantees are violated, suffering arbitrary detention, lack of legal representation, or unfair trials. Their 'security of person' is directly compromised by such violations."
+    },
+    {
+      "name": "victims_of_torture",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Directly bear the costs of the most severe violations of Article 3, suffering physical and psychological harm. The prohibition of torture is a core procedural protection meant to prevent this, but its violation represents a complete failure of the constraint for them."
+    },
+    {
+      "name": "states_with_limited_resources",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face the challenge of allocating resources to establish and maintain robust judicial systems, independent oversight bodies, and training for law enforcement to ensure compliance with due process and torture prohibition. The cost of these systems can be substantial."
+    },
+    {
+      "name": "political_philosophers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the theoretical underpinnings and practical implications of this reading of Article 3, debating its strengths and limitations in achieving comprehensive human rights protection. They are outside the direct operation of the constraint."
+    }
+  ],
+  "gain_flow": "state_judiciaries",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To establish a common international standard for minimum procedural safeguards against arbitrary state deprivation of life, liberty, and security, ensuring that states adhere to principles of due process, fair trial, and prohibition of torture.",
+    "transfer_function": "Transfers the burden of proof and the right to challenge detention from the state to the individual, and transfers the right to be free from cruel, inhuman, or degrading treatment to all persons, imposing a corresponding duty on states.",
+    "absent_voices": "Advocates for a more expansive 'positive entitlement' reading (e.g., guaranteeing access to healthcare, housing, or education as part of 'security of person') are not directly addressed by this procedural focus. They would argue that procedural justice alone is insufficient without substantive guarantees.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If these procedural guarantees vanished, states would lose a fundamental international legal and moral benchmark for legitimate use of force and detention. Arbitrary detention, torture, and unfair trials would become more prevalent, leading to widespread human rights abuses and a breakdown of international legal norms.",
+    "founding_problem": "The problem of arbitrary state power, including detention without cause, denial of fair trial, and the use of torture, which was starkly evident in the atrocities of World War II and prior authoritarian regimes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Human rights organizations, international legal bodies, and numerous state reports consistently document ongoing violations of due process and prohibitions against torture, confirming that the founding problem remains live. While progress has been made, the threat of arbitrary state action persists globally."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "udhr_article_3__negative_liberty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "udhr_article_3__positive_entitlement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "procedural_justice_is_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "substantive_entitlements_are_context_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_wwii_procedural_consensus",
+    "drift_state": {
+      "moment": "contemporary_counter_terrorism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

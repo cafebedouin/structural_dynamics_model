@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Absolutist Reading of Speech Harm Boundary",
+    "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speakers_with_controversial_views",
+      "public_discourse"
+    ],
+    "victims": [
+      "targets_of_harmful_speech",
+      "vulnerable_groups"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine absolutist reading of speech protection, or is it a rhetorical cover for other interests?",
+      "resolution_mechanism": "Analysis of judicial decisions and legislative actions: if the unprotected categories expand or the harm threshold lowers in practice, it indicates a shift away from absolutism.",
+      "impact": "If genuinely absolutist, it prioritizes speaker autonomy at high cost to targets. If rhetorical, it's a snare for targets and a rope for powerful speakers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'absolutist_reading' of the 'speech_harm_boundary' kernel."
+    },
+    {
+      "id": "harm_threshold_objectivity",
+      "question": "Is the 'extremely high' harm override threshold an objective standard, or is its application subject to interpretive bias favoring certain types of speech or speakers?",
+      "resolution_mechanism": "Empirical study of how the threshold is applied across different contexts and against different speakers/targets; analysis of judicial reasoning for consistency.",
+      "impact": "If biased, the effective extraction from vulnerable groups is higher than the stated threshold implies, making the constraint more Snare-like for them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the application of the harm override threshold."
+    },
+    {
+      "id": "sibling_reading_impact_dignity",
+      "question": "How would adopting the 'dignity_reading' (speech protection subordinate to human dignity) structurally alter this constraint?",
+      "resolution_mechanism": "Hypothetical legal analysis: if dignity were paramount, personhood-denying speech would be unprotected, significantly lowering the harm override threshold and expanding victim categories.",
+      "impact": "The 'dignity_reading' would transform this constraint from a Tangled Rope (high speaker autonomy, high harm cost) into a more balanced Rope or even a Mountain for dignity itself, by re-prioritizing the victim's experience.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of the 'dignity_reading' sibling on this constraint."
+    },
+    {
+      "id": "sibling_reading_impact_harm_balancing",
+      "question": "How would adopting the 'harm_balancing_reading' (speech protection yields to demonstrated harm) structurally alter this constraint?",
+      "resolution_mechanism": "Comparative legal analysis: jurisdictions employing harm balancing typically have lower thresholds for intervention and a broader range of unprotected speech, based on proportionality.",
+      "impact": "The 'harm_balancing_reading' would reduce the extractiveness from targets by allowing more frequent overrides, shifting the constraint closer to a Rope or Scaffold, depending on the specific balancing test.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of the 'harm_balancing_reading' sibling on this constraint."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents an 'absolutist' reading of free speech, where protection for expression is near-absolute and the threshold for overriding it due to harm is extremely high. This reading prioritizes speaker autonomy and robust public discourse, even at the cost of significant harm to individuals or groups. It is one reading of the broader 'speech_harm_boundary' kernel, which is contested by 'harm_balancing_reading' and 'dignity_reading' siblings.",
+    "key_agents": [
+      "speakers_with_controversial_views: Primary beneficiary (powerful/mobile) — benefits from broad protection",
+      "targets_of_harmful_speech: Primary victim (powerless/trapped) — bears the cost of high harm threshold",
+      "vulnerable_groups: Secondary victim (powerless/identity_locked) — disproportionately affected by harmful speech",
+      "judicial_authorities: Agenda setter (institutional/analytical) — interprets and enforces the harm boundary",
+      "public_discourse: Beneficiary (diffuse/civilizational) — benefits from robust, unconstrained speech"
+    ],
+    "logic_rationale": "The extractiveness is high (0.85) because the constraint imposes significant costs (unmitigated harm) on targets for the benefit of speakers. Suppression is low (0.1) because the constraint's core function is to *prevent* suppression of speech, not to enforce it, except for the very narrow categories of unprotected speech. Theater ratio is low (0.05) as the constraint is actively and genuinely enforced according to its stated principles. Accessibility collapse is high (0.9) because, once the absolutist principle is accepted, alternatives for restricting speech are almost entirely foreclosed. Resistance is high (0.7) from those who bear the harms, leading to ongoing legal and social challenges.",
+    "perspectival_gap": "Speakers with controversial views experience this as a Rope or even a Mountain, as their speech is largely unconstrained. Targets of harmful speech, however, experience it as a Snare or Tangled Rope, as they bear significant costs with little recourse. Judicial authorities, acting as agenda setters, navigate this tension by upholding the high harm threshold, which benefits the abstract ideal of 'public discourse' but extracts from specific victims.",
+    "directionality_logic": "Speakers with controversial views are full beneficiaries (d=0.0) as the constraint subsidizes their expression by externalizing harm costs. Targets of harmful speech are full targets (d=1.0) as they bear the direct and unmitigated costs. Vulnerable groups are also targets, often identity-locked, amplifying their effective extraction. Judicial authorities are agenda setters, balancing the abstract benefit of free speech with the concrete costs, but their enforcement of the high harm threshold structurally benefits speakers.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its 'mandate' (protecting speech) is still considered live. However, the *balance* of its mandate is contested: whether its original intent was to protect speech so absolutely that it imposes such high costs on targets, or if the high extractiveness is an unintended consequence of an absolutist interpretation. The 'founding_problem_status' being 'contested' reflects this ongoing debate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_harm_boundary__harm_balancing_reading",
+      "speech_harm_boundary__dignity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'speech_harm_boundary' kernel. Each reading has a different structural extractiveness and beneficiary/victim profile, necessitating separate constraint stories. This 'absolutist_reading' prioritizes speaker autonomy, while 'harm_balancing_reading' and 'dignity_reading' offer alternative frameworks for balancing speech with harm or dignity."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_harm_boundary__harm_balancing_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_harm_boundary__dignity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speech_autonomy_maximization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "harm_as_secondary_consideration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "marketplace_of_ideas_ideal",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "kami_buddha_ontology__domain_partition",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "29a5d76e-d40e-4757-9d72-807070b74277"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Kami and Buddha Ontological Domain Partition",
+    "topic_domain": "religious_studies/philosophy_of_religion/japanese_cultural_history",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "shinto_priesthood",
+      "buddhist_clergy"
+    ],
+    "vindicated_propositions": [
+      "functional_complementarity_doctrine",
+      "ontological_pluralism"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_cultural_construct",
+      "question": "Is the domain partition between kami and buddhas a genuine ontological distinction (natural law) or a culturally constructed and maintained framework that benefits specific religious institutions?",
+      "resolution_mechanism": "Comparative analysis with other polytheistic/syncretic traditions lacking such a clear partition; historical analysis of the partition's emergence and enforcement mechanisms.",
+      "impact": "If a cultural construct, the constraint's 'emerges_naturally' claim is false, reclassifying it from Mountain to a form of Rope or Tangled Rope, with higher effective extraction for the benefiting clergy.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural ontological distinction and cultural construction."
+    },
+    {
+      "id": "kami_buddha_ontology_kernel_reading",
+      "question": "This constraint is one reading of the 'kami_buddha_ontology' kernel. What would change if a sibling reading were adopted?",
+      "resolution_mechanism": "Analysis of historical shifts in dominant interpretations and their institutional consequences.",
+      "impact": "If 'honji_suijaku_monism' were adopted, the ontological distinction would collapse into a hierarchical monism, fundamentally altering the relationship between Shinto and Buddhist institutions. If 'incoherent_bundle' were adopted, the coherence of the entire framework would be challenged, leading to potential reclassification as a Piton or Snare due to lack of genuine coordination.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the kami-buddha ontology kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes a specific reading within Japanese religious history where Kami (Shinto deities) and Buddhas are understood as ontologically distinct entities, each governing separate functional domains: Shinto for matters of life, purity, and the living world, and Buddhism for death, impurity, and the deceased. This 'domain partition' reading emphasizes complementarity without fusion, allowing for peaceful coexistence and functional specialization of religious institutions without requiring a unified theological framework.",
+    "logic_rationale": "The constraint is claimed as a Mountain because, within this reading, the distinction is treated as an inherent feature of reality, not a human construct. Extractiveness is low (0.15) as the primary function is coordination of religious practice, not rent-seeking. Suppression is low (0.25) because adherence is largely cultural and self-enforcing, with minimal active coercion. Theater ratio is low (0.1) as the distinction genuinely guides practice. Accessibility collapse is high (0.8) because, within this framework, alternatives to this partitioned understanding are largely unthinkable or considered incoherent. Resistance is low (0.05) as this reading is widely accepted in certain historical and contemporary contexts.",
+    "perspectival_gap": "From the perspective of Shinto priests and Buddhist clergy, this partition is a natural and beneficial arrangement that clarifies their respective roles and reduces inter-institutional conflict. For an analytical observer, the 'naturalness' of this partition is contestable, potentially revealing it as a culturally constructed framework that, while functional, also serves to maintain institutional boundaries and authority.",
+    "directionality_logic": "Shinto priests and Buddhist clergy are beneficiaries (d near 0.0) as this reading provides a clear mandate for their respective practices and institutional domains, reducing competition. The general populace (practitioners) are also beneficiaries, gaining a coherent framework for navigating life and death rituals. There are no direct 'victims' in this reading, as the partition is presented as a harmonious, functional division of labor.",
+    "mandatrophy_analysis": "The classification as a Mountain, even with beneficiaries, prevents mislabeling a functional, culturally embedded distinction as pure extraction. The low extractiveness and suppression metrics, combined with the 'emerges_naturally' flag, indicate that its persistence is not primarily due to coercive enforcement or rent-seeking, but rather its perceived ontological truth and functional utility within this specific reading. The FSM trigger (Mountain + beneficiaries) correctly flags the need for an omega variable to probe the 'naturalness' claim."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "shinto_ritual_purity_norms",
+      "buddhist_funeral_practices"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "shinto_priesthood",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Benefits from a clear domain of authority over life, purity, and local kami worship, distinct from Buddhist practices. Their professional identity is deeply tied to maintaining this distinction."
+    },
+    {
+      "name": "buddhist_clergy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Benefits from a clear domain of authority over death, impurity, and ancestral rites, distinct from Shinto practices. Their institutional role is defined by this functional specialization."
+    },
+    {
+      "name": "general_populace",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefits from a coherent and complementary system for religious practice, providing clear guidance for rituals related to life events (Shinto) and death (Buddhism). Adherence is largely cultural and habitual."
+    },
+    {
+      "name": "analytical_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the historical and philosophical development of these distinctions, questioning their 'naturalness' and analyzing their social and institutional functions. They are not bound by the ontological claims."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates religious practice by assigning distinct, complementary functional domains to Shinto (life, purity) and Buddhism (death, impurity), preventing overlap and conflict between religious institutions.",
+    "transfer_function": "Transfers clarity of ritual responsibility and institutional authority to Shinto priests for life-related events and to Buddhist clergy for death-related events, from the general populace seeking religious services.",
+    "absent_voices": "Proponents of a unified, monistic kami-buddha ontology (e.g., historical 'honji suijaku' theorists) or those who view the entire system as an 'incoherent bundle' of contradictory practices would object, arguing for a different theological or analytical framework. Their voices are often marginalized in contexts where this domain partition is dominant.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this clear domain partition vanished, there would be significant confusion and potential conflict over ritual responsibilities, institutional authority, and theological coherence. Religious practices would need to be re-negotiated, and the distinct identities of Shinto and Buddhist institutions would be challenged, leading to a substantial reorganization of Japanese religious life.",
+    "founding_problem": "The need to integrate or differentiate indigenous Japanese kami worship with the newly introduced Buddhist traditions, avoiding conflict and establishing clear roles for each within society.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ongoing existence of distinct Shinto shrines and Buddhist temples, each serving specific ritual functions, corroborates the continued relevance of managing the relationship between these traditions. While the specific 'domain partition' reading is contested by some scholars, the underlying need for functional coordination remains live, attested by the continued institutional separation and complementary ritual services observed by anthropologists and historians."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "kami_buddha_ontology__honji_suijaku_monism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "kami_buddha_ontology__incoherent_bundle",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "kami_buddha_ontological_distinction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "functional_domain_complementarity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "harmonious_functional_differentiation",
+    "drift_state": {
+      "moment": "contemporary_academic_discourse",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

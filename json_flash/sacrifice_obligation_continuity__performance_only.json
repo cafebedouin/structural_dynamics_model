@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_continuity__performance_only",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3029afb0-a319-41ff-b69f-c30704660fca"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.1,
+    "claimed_type": "snare",
+    "human_readable": "Sacrifice Obligation: Performance Only Reading",
+    "topic_domain": "religious_law/ritual_studies/textual_tradition",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "future_priesthood",
+      "messianic_tradition"
+    ],
+    "victims": [
+      "current_generation_adherents",
+      "pious_individuals"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "current_generation_adherents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Adherents who believe in the binding nature of the sacrifice obligation but are unable to perform it due to the absence of the Temple. They experience a constant state of unfulfilled duty and spiritual debt, with no current means of direct atonement through sacrifice. Their study of the laws is seen as preparation, not fulfillment."
+    },
+    {
+      "name": "pious_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals deeply committed to the religious tradition who feel the weight of the unfulfilled obligation most acutely. They invest significant time and emotional energy in studying the laws of sacrifice, but this only reinforces the impossibility of actual performance, leading to spiritual frustration and a sense of inadequacy."
+    },
+    {
+      "name": "future_priesthood",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The theoretical future priestly class that would administer sacrifices upon the Temple's restoration. This reading preserves their future role and the sanctity of their lineage, ensuring the continuity of the ritual system even in its current dormant state. They benefit from the preservation of the performance-only doctrine."
+    },
+    {
+      "name": "messianic_tradition",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The theological framework that anticipates a future messianic era and the restoration of the Temple and its sacrificial cult. This reading reinforces the necessity of messianic redemption for the full practice of religious law, thereby strengthening the messianic narrative and its importance within the tradition."
+    },
+    {
+      "name": "rabbinic_authorities_performance_only",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The rabbinic scholars and leaders who uphold and teach this specific interpretation of the sacrifice obligation. They maintain the strict requirement for physical performance and emphasize study as a preparatory act, guiding adherents in navigating the spiritual implications of unfulfilled commandments. Their authority is tied to the preservation of this doctrine."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the spiritual and intellectual efforts of adherents towards a future state of ritual fulfillment, maintaining the integrity of the sacrificial system's requirements even in its absence.",
+    "transfer_function": "Transfers a sense of unfulfilled obligation and spiritual longing from current adherents to the messianic future, while transferring authority and interpretive power to those who maintain the strict performance-only doctrine.",
+    "absent_voices": "Adherents of the 'study as performance' reading, who would argue that their current textual engagement fully satisfies the obligation, are absent from the interpretive authority of this reading. They would challenge the notion of unfulfilled duty.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the spiritual landscape for many adherents would fundamentally shift. The burden of unfulfilled obligation would lift, potentially leading to new forms of religious practice or a reinterpretation of atonement. The messianic tradition's role in ritual restoration would be diminished, and rabbinic authority tied to this reading would be challenged.",
+    "founding_problem": "The destruction of the Temple and the cessation of physical sacrifices, creating a crisis of how to fulfill divine commandments that require a physical cult.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is live as long as the Temple remains unbuilt and sacrifices cannot be performed. Corroboration comes from historical texts documenting the immediate spiritual crisis post-destruction, and from ongoing theological discourse across various traditions that grapple with the implications of the Temple's absence, not just from the beneficiaries of this specific reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'performance only' reading of the sacrifice obligation within a religious tradition, where physical performance of sacrifices is deemed essential for fulfillment. Study of the laws is considered preparation for a future restoration, not a substitute for actual performance. This reading places the current generation of adherents in a state of unfulfillable obligation, generating high spiritual extractiveness and suppression due to the lack of a present remedy. The constraint is claimed as a Snare because it traps adherents in a cycle of unfulfilled duty without a current means of resolution, while benefiting future institutions and traditions.",
+    "key_agents": [
+      "current_generation_adherents: Primary target (powerless/identity_locked) — bears unfulfillable obligation",
+      "pious_individuals: Secondary target (powerless/identity_locked) — bears spiritual frustration",
+      "future_priesthood: Primary beneficiary (institutional/analytical) — benefits from preserved role",
+      "messianic_tradition: Secondary beneficiary (institutional/analytical) — benefits from reinforced narrative",
+      "rabbinic_authorities_performance_only: Agenda setter (institutional/constrained) — administers and teaches this reading"
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because adherents are subject to a binding obligation they cannot fulfill, leading to spiritual guilt and a sense of inadequacy without a present remedy. Suppression is also high (0.9) as the theological framework and communal norms strongly enforce this interpretation, leaving no legitimate alternative for fulfilling the obligation in the present. Accessibility collapse is near total (0.95) because the physical conditions for performance (Temple, priesthood) are absent. Resistance is low (0.1) because the constraint is deeply internalized and framed as a divine decree, making direct resistance difficult within the tradition. Theater ratio is low (0.1) as the constraint's primary function is to maintain the strict performance requirement, not to create a performative substitute.",
+    "perspectival_gap": "From the perspective of current adherents, this constraint is a Snare, trapping them in an unfulfillable duty. From the perspective of the future priesthood and messianic tradition, it is a necessary Rope or even a Mountain, preserving the integrity of the ritual system and the future redemption. The rabbinic authorities, as agenda setters, experience it as a foundational principle they must uphold, despite its current costs to adherents.",
+    "directionality_logic": "Current generation adherents and pious individuals are full targets (d=1.0) as they bear the full weight of the unfulfillable obligation. The future priesthood and messianic tradition are beneficiaries (d=0.0) as this reading ensures their future relevance and theological coherence. Rabbinic authorities are agenda setters, benefiting from the preservation of their interpretive authority while also bearing the responsibility of guiding adherents through this difficult doctrine.",
+    "mandatrophy_analysis": "This constraint is a Snare because its primary function has shifted from facilitating ritual performance to maintaining a state of unfulfilled obligation, which benefits specific future-oriented institutions and interpretive authorities. The 'coordination' of preparing for future restoration serves as a cover for the ongoing extraction of spiritual debt from current adherents. The classification prevents mislabeling this as a Rope (genuine coordination) or a Mountain (natural law) by highlighting the identifiable victims and the active maintenance of an unfulfillable duty.",
+    "kernel_context": "This constraint is the 'performance_only' reading of the 'sacrifice_obligation_continuity' kernel. This reading asserts that the divine commandment for sacrifice requires physical performance, and that current study of the laws is merely preparation for a future restoration, not a substitute for fulfillment. Sibling readings include 'study_as_performance' (study is fulfillment), 'messianic_suspension' (obligation is suspended, not violated), and 'archival_preservation' (sacrifice law is no longer binding, only cultural memory)."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_interpretive_choice",
+      "question": "Is the 'performance only' requirement an irreducible feature of divine law (Mountain), or an interpretive choice by rabbinic authorities (Snare)?",
+      "resolution_mechanism": "Comparative theological analysis across different religious traditions facing similar ritual cessation, examining whether alternative interpretations (e.g., symbolic fulfillment, suspension) are considered equally valid within their respective frameworks. If other traditions successfully adopt alternative fulfillments, it suggests interpretive choice.",
+      "impact": "If a Mountain, the extractiveness is an inherent feature of reality. If an interpretive choice (Snare), the extractiveness is a consequence of a specific, enforceable doctrine that could be otherwise.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between divine decree and human interpretation."
+    },
+    {
+      "id": "spiritual_debt_vs_motivation",
+      "question": "Does the unfulfillable obligation primarily generate spiritual debt and guilt (extraction), or does it primarily serve as a powerful motivator for messianic hope and study (coordination)?",
+      "resolution_mechanism": "Sociological and psychological studies of adherent communities: surveys on reported spiritual well-being, levels of guilt, and motivations for study. Longitudinal studies tracking adherence rates and engagement with messianic themes.",
+      "impact": "If primarily debt/guilt, the extractiveness is confirmed. If primarily motivation, the constraint might have a stronger coordination function than currently assessed, potentially shifting it towards a Tangled Rope or even a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the primary effect of the unfulfillable obligation."
+    },
+    {
+      "id": "suppression_internalized_vs_structural",
+      "question": "Is the high suppression primarily structural (absence of Temple, lack of legitimate alternatives) or internalized (adherents' self-concept fused with the unfulfilled duty)?",
+      "resolution_mechanism": "Post-restoration trajectory: if the sense of unfulfilled duty persists or re-emerges even after the Temple is rebuilt and sacrifices are possible, it suggests a strong internalized component. If it immediately resolves, it was primarily structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit (even if the structural barrier is removed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_continuity__study_as_performance",
+      "sacrifice_obligation_continuity__messianic_suspension",
+      "sacrifice_obligation_continuity__archival_preservation"
+    ],
+    "dual_formulation_note": "This constraint is one of four readings of the 'sacrifice_obligation_continuity' kernel. Each reading offers a distinct structural interpretation of the obligation in the absence of the Temple, leading to different classifications and stakeholder impacts. This 'performance_only' reading emphasizes unfulfillable duty."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sacrifice_obligation_continuity__study_as_performance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "sacrifice_obligation_continuity__messianic_suspension",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sacrifice_obligation_continuity__archival_preservation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_performance_is_sine_qua_non",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_is_preparation_not_fulfillment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pre_destruction_temple_cult",
+    "drift_state": {
+      "moment": "post_destruction_diaspora",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

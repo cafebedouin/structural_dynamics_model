@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "gendered_category_membership__social_role_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9c7ad99b-e06d-4dfc-a609-e451152ce5be"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gendered Category Membership (Social Role Reading)",
+    "topic_domain": "social_ontology/political_philosophy/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cis_women_who_conform",
+      "social_institutions"
+    ],
+    "victims": [
+      "trans_women",
+      "gender_non_conforming_individuals",
+      "cis_women_who_deviate"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine reflection of social reality, or a constructed norm that benefits specific groups by enforcing a particular reading of gendered category membership?",
+      "resolution_mechanism": "Analysis of historical and cross-cultural variations in gender roles and recognition, and the power dynamics involved in enforcing these roles.",
+      "impact": "If constructed, the constraint's extractiveness and suppression are higher than perceived, and its classification shifts towards Snare. This reading (social_role_reading) is one of three competing interpretations of the 'gendered_category_membership' kernel, alongside 'biological_sex_reading' and 'gender_identity_reading'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between social construction and natural emergence of gendered categories."
+    },
+    {
+      "id": "victim_identity_ambiguity",
+      "question": "Who is the primary victim of this constraint: trans women (due to exclusion/conditional inclusion) or cis women who deviate from social roles (due to enforcement of conformity)?",
+      "resolution_mechanism": "Empirical studies on the differential impact of social role enforcement on various gendered populations, including intersectional analysis.",
+      "impact": "Clarifying the primary victim group would refine the directionality and effective extraction for specific stakeholders, potentially shifting the overall classification if one group's suffering is significantly more pronounced and systematically extracted from.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in identifying the primary victim group due to overlapping harms."
+    },
+    {
+      "id": "performance_cost_vs_benefit",
+      "question": "Are the costs of sustained social performance (e.g., emotional labor, self-monitoring) for individuals seeking recognition balanced by the benefits of category membership?",
+      "resolution_mechanism": "Qualitative and quantitative studies on the lived experiences of individuals navigating gendered social roles, assessing psychological, social, and economic costs and benefits.",
+      "impact": "If costs consistently outweigh benefits for a significant portion of those performing, the constraint's extractiveness is higher than currently estimated, indicating a more coercive dynamic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance of costs and benefits for individuals performing gendered social roles."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes gendered category membership as grounded in sustained social performance and recognition by others. It is one reading of the 'gendered_category_membership' kernel, which is also interpreted through biological sex and gender identity. Under this social role reading, individuals are recognized as members of a gender category (e.g., 'woman') if they consistently perform the social roles associated with that gender and are recognized as such by others. This creates a dynamic where trans women may be conditionally included based on 'passing' and social acceptance, while gatekeeping is distributed across everyday social interactions. The constraint imposes performance costs and risks of exclusion for those who do not conform, affecting both trans individuals and cis women who deviate from prescribed roles.",
+    "key_agents": [
+      "trans_women: Primary target (powerless/identity_locked) — bears performance costs and exclusion risk.",
+      "cis_women_who_conform: Primary beneficiary (moderate/constrained) — benefits from category stability, but also bears costs of conformity.",
+      "social_institutions: Agenda setter (institutional/mobile) — implicitly or explicitly reinforces gendered social roles.",
+      "gender_non_conforming_individuals: Victim (powerless/identity_locked) — bears costs of non-conformity and exclusion.",
+      "cis_women_who_deviate: Victim (moderate/constrained) — faces social penalties for non-conformity."
+    ],
+    "logic_rationale": "The extractiveness (0.45) reflects the significant, ongoing performance costs and emotional labor required to maintain social recognition, as well as the costs of exclusion for those who fail to conform. Suppression (0.6) is high because the enforcement is diffuse and pervasive, occurring through social sanction, microaggressions, and institutional gatekeeping, making alternatives difficult to access. Theater ratio (0.2) is relatively low, as the social performance is genuinely functional for maintaining the category, though some aspects may be performative. The metrics reflect the dynamic where recognition is conditional and requires active maintenance, creating a system of both coordination (for those who conform) and extraction (from those who must perform or are excluded).",
+    "perspectival_gap": "From the perspective of cis women who conform, the constraint may appear as a natural, stable social order (closer to Rope/Mountain), providing clear social roles and expectations. From the perspective of trans women or gender non-conforming individuals, it is a highly extractive and suppressive system (closer to Snare) that demands constant performance and offers conditional, precarious membership. Social institutions may view it as a necessary mechanism for social cohesion. The engine's per-seat classification will highlight these divergences.",
+    "directionality_logic": "Trans women and gender non-conforming individuals are targets (high d) due to the performance demands and risk of exclusion. Cis women who conform are beneficiaries (low d) as they benefit from the stability and recognition of the category, though they also bear costs of conformity. Social institutions are agenda setters (low d) as they implicitly or explicitly reinforce these roles and benefit from the social order they maintain. Cis women who deviate from roles are also victims (high d) as they face social penalties.",
+    "mandatrophy_analysis": "This classification as a Tangled Rope prevents mislabeling it as a pure Rope (which would ignore the significant extraction and suppression) or a pure Snare (which would ignore the genuine, albeit conditional, coordination function of social recognition). It highlights the hybrid nature where social cohesion and recognition are achieved through mechanisms that simultaneously impose substantial costs and enforce conformity, with identifiable beneficiaries and victims. The constraint's mandate is to maintain a legible social order, but its operation has accumulated extractive and suppressive elements."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "gendered_category_membership__biological_sex_reading",
+      "gendered_category_membership__gender_identity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three competing readings of the 'gendered_category_membership' kernel. Each reading defines category membership differently, leading to distinct structural constraints and classifications. This social_role_reading focuses on performance and recognition, influencing and being influenced by the biological_sex_reading and gender_identity_reading."
+  },
+  "stakeholders": [
+    {
+      "name": "trans_women",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Seek recognition as women but face conditional inclusion based on 'passing' and social acceptance. They bear significant emotional labor and performance costs, and risk exclusion or misgendering if they do not conform to social expectations of womanhood. Their identity is deeply tied to this recognition."
+    },
+    {
+      "name": "cis_women_who_conform",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from the stability and legibility of gendered social roles, which provide a clear framework for their identity and social interactions. However, they also bear the costs of conforming to these roles and may face social penalties if they deviate too much."
+    },
+    {
+      "name": "social_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Implicitly or explicitly reinforce gendered social roles through policies, cultural norms, and media representation. They benefit from the social order and predictability that these roles provide, and actively (though often unconsciously) gatekeep access to gendered spaces and resources based on perceived conformity."
+    },
+    {
+      "name": "gender_non_conforming_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Do not conform to traditional gender roles and face social sanctions, exclusion, and misrecognition. They bear the costs of defying expectations and often struggle to find a legible place within existing gender categories. Their identity is often in tension with the constraint."
+    },
+    {
+      "name": "cis_women_who_deviate",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are biologically female but do not perform traditional feminine roles (e.g., 'butch' women, women in traditionally masculine professions). They may face social penalties, misrecognition, or questions about their 'true' womanhood, bearing costs for non-conformity despite their biological sex."
+    },
+    {
+      "name": "gender_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the social construction of gender, the mechanisms of recognition, and the power dynamics embedded in gendered categories. They seek to understand the constraint's operation without being directly subject to its enforcement in their analytical role."
+    }
+  ],
+  "gain_flow": "social_institutions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a framework for social interaction and identity formation by establishing legible gender categories and associated roles, enabling individuals to navigate social spaces with shared expectations.",
+    "transfer_function": "Transfers social recognition, access to gendered spaces/resources, and a sense of belonging to those who successfully perform gendered roles, while extracting emotional labor, conformity, and potential exclusion from those who do not or cannot perform adequately.",
+    "absent_voices": "Those who advocate for a complete dismantling of gender as a social category are largely excluded from mainstream discourse, as their perspective challenges the foundational premise of the constraint itself. They would argue that the entire system of gendered category membership is inherently extractive and suppressive.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint of gendered category membership based on social role and recognition vanished overnight, social interactions, identity formation, and institutional structures would undergo a profound and chaotic reorganization. Gendered spaces, language, and expectations would lose their meaning, leading to a period of intense social renegotiation and uncertainty.",
+    "founding_problem": "The need for social legibility and order, allowing for predictable interactions and the assignment of social roles and responsibilities based on perceived gender.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Anthropological and sociological studies attest to the historical and cross-cultural prevalence of gendered social roles for maintaining social order. While the specific roles evolve, the underlying problem of social legibility through gender persists. Gender theorists, while critical of its effects, acknowledge its functional role in social organization."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gendered_category_membership__biological_sex_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gendered_category_membership__gender_identity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gender_is_socially_performed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "recognition_is_constitutive_of_gender",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "stable_gender_roles_and_recognition",
+    "drift_state": {
+      "moment": "contemporary_gender_discourse",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

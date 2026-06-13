@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "living_language_status__liturgical_preservation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Living Language Status: Liturgical Preservation Reading",
+    "topic_domain": "sociolinguistics/religious_studies/nationalism_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rabbinical_authority",
+      "religious_scholars"
+    ],
+    "victims": [
+      "secular_speech_community"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine reflection of language vitality, or a specific reading of the 'living language status' kernel that serves particular institutional interests?",
+      "resolution_mechanism": "Comparative analysis of language revitalization efforts across different traditions, assessing outcomes where liturgical use is the primary or sole mode of transmission versus those with native generation or literary production.",
+      "impact": "If primarily an institutional reading, the constraint's classification shifts from Rope (coordination around a shared sacred practice) to Tangled Rope (coordination for some, extraction for others, by legitimizing a specific form of language use while delegitimizing others).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'liturgical_preservation_reading' of the 'living_language_status' kernel. Sibling readings ('native_generation_reading', 'literary_continuity_reading') would shift the beneficiary/victim structure and extractiveness."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (lack of resources for secular use) or internalized (belief that secular use desecrates the language)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if secular communities continue to avoid using the language for daily speech even after resources for such use become available, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the secular community carries the suppression with them after exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism regarding secular use of the language."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines a language as 'living' if its sacred texts are continuously recited, studied, and used in ritual, asserting that liturgical transmission alone suffices for vitality. This is a specific reading of the broader 'living language status' kernel, emphasizing continuity of sacred practice over native generational transmission or new literary production. It coordinates a community around a fixed, sacred corpus, benefiting religious authorities who interpret and transmit these texts, while potentially marginalizing secular uses or communities.",
+    "logic_rationale": "The extractiveness (0.2) is low because the primary function is coordination around a shared sacred practice, which benefits the community by preserving a cultural and religious heritage. Suppression (0.3) is moderate, as it implicitly discourages or delegitimizes alternative forms of language 'life' (e.g., secular daily speech) without direct coercion. Theater ratio (0.1) is low, as the rituals and study are genuinely performed for their stated purpose. The metrics reflect a system that primarily coordinates, with some implicit costs for those whose definition of 'living' differs.",
+    "perspectival_gap": "From the perspective of rabbinical authority and religious scholars, this constraint is a pure Rope, ensuring the continuity of a sacred tradition. From the perspective of a secular speech community, it might be seen as a Tangled Rope, as it coordinates the preservation of the language but at the cost of delegitimizing its use in daily, non-sacred contexts, thereby extracting the potential for broader linguistic flourishing.",
+    "directionality_logic": "Rabbinical authority and religious scholars are primary beneficiaries (d=0.0-0.1) as their interpretive monopoly and social role are preserved and reinforced by this definition. The secular speech community is a victim (d=0.6-0.7) as their potential for broader, non-liturgical use of the language is implicitly suppressed or deemed 'not living.' The constraint subsidizes the religious institutions by validating their mode of transmission as the sole criterion for vitality.",
+    "mandatrophy_analysis": "This classification prevents mislabeling a coordination mechanism (preserving sacred texts) as pure extraction, while still acknowledging the implicit costs and potential for delegitimization for those outside the liturgical framework. The low extractiveness and suppression suggest it's not a Snare, but the presence of victims and the potential for perspectival divergence indicate it's not a pure Mountain either. It functions as a Rope for its core beneficiaries, but with a subtle extractive component for others."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'living_language_status' kernel. Other readings, such as 'native_generation_reading' and 'literary_continuity_reading', represent alternative definitions of language vitality with different structural properties and stakeholder impacts."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "native_generation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "literary_continuity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sacred_text_transmission_is_life",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "daily_speech_is_not_necessary_for_vitality",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "ancient_liturgical_tradition",
+    "drift_state": {
+      "moment": "contemporary_sociolinguistics_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

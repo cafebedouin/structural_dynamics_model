@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "woman_female_category__hybrid_contextual_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "67256707-24fb-48be-9bc8-2f7867fa7460"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Contextual Reading of Woman/Female Category",
+    "topic_domain": "political_philosophy/bioethics/gender_studies/law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_actors_seeking_conflict_minimization"
+    ],
+    "victims": [
+      "transgender_women_in_sex_segregated_spaces",
+      "cisgender_women_in_gender_identity_contexts"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "context_boundary_ambiguity",
+      "question": "Where are the precise boundaries between 'medical/sports/safety' contexts and 'social/legal recognition' contexts, and who adjudicates these boundaries?",
+      "resolution_mechanism": "Case law establishing precedents for specific contexts, or legislative action defining contextual applicability.",
+      "impact": "Ambiguity allows for arbitrary application, increasing extraction for whichever group is subordinated in a given context. Clear boundaries would reduce this ambiguity and stabilize the victim set.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in contextual boundaries for category application."
+    },
+    {
+      "id": "natural_vs_constructed_context",
+      "question": "Are the distinctions between 'medical/sports/safety' and 'social/legal' contexts inherent and natural, or are they socially constructed and thus revisable?",
+      "resolution_mechanism": "Philosophical analysis of the nature of categories and empirical study of the impact of different categorizations across cultures and legal systems.",
+      "impact": "If natural, the hybrid reading is a more robust coordination mechanism. If constructed, the specific contextual assignments are open to challenge and re-negotiation, potentially shifting the beneficiary/victim structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether contextual distinctions are natural or constructed."
+    },
+    {
+      "id": "reading_as_conflict_minimization",
+      "question": "Is this hybrid reading a genuine attempt at equitable coordination, or primarily a mechanism for institutional actors to minimize conflict and avoid taking a definitive stance?",
+      "resolution_mechanism": "Analysis of institutional decision-making processes, stakeholder engagement, and the distribution of costs/benefits over time. If the primary outcome is reduced institutional friction rather than equitable outcomes for affected groups, it suggests conflict minimization as the driving force.",
+      "impact": "If primarily conflict minimization, the constraint's coordination function is weaker, and its extractive component (from both victim groups) is higher, reclassifying it closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Motivation for the hybrid reading: genuine coordination vs. conflict minimization."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a 'hybrid contextual' reading of the categories 'woman' and 'female', where biological sex is prioritized in contexts like medicine, sports, and safety, while gender identity is prioritized for social and legal recognition. This reading attempts to navigate the conflict between the 'sex_biology_reading' and 'gender_identity_reading' by assigning different criteria based on the perceived salience of biological sex versus social identity in specific domains. It is a contested approach, often leading to different groups feeling subordinated depending on the context.",
+    "key_agents": [
+      "institutional_actors_seeking_conflict_minimization: Primary beneficiary (institutional/arbitrage) — benefits from reduced direct conflict, but bears costs of ongoing ambiguity.",
+      "transgender_women_in_sex_segregated_spaces: Primary victim (powerless/constrained) — bears exclusion in contexts where sex is prioritized.",
+      "cisgender_women_in_gender_identity_contexts: Primary victim (powerless/constrained) — bears subordination in contexts where gender identity is prioritized.",
+      "legal_scholars_and_ethicists: Analytical observer (analytical/analytical) — analyzes the coherence and ethical implications of the hybrid approach."
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate because while it attempts to coordinate, it does so by subordinating one group's claims in certain contexts, leading to real costs for those affected. Suppression (0.6) is significant as it requires active enforcement of contextual boundaries and often silences dissenting voices from both sides when their preferred categorization is not applied. Theater ratio (0.2) is low, as the contextual distinctions are genuinely applied, though the underlying justification for the boundaries is often debated. Accessibility collapse (0.4) is moderate, as alternatives (pure sex-based or pure gender-identity-based categorization) are well-understood but actively suppressed in favor of the hybrid approach. Resistance (0.5) is also moderate, as both cisgender and transgender women's advocacy groups resist aspects of this hybrid approach.",
+    "perspectival_gap": "Institutional actors view this as a pragmatic solution to an intractable conflict, minimizing their own exposure to legal and social backlash. However, both transgender women and cisgender women experience this as a constraint that selectively invalidates their claims depending on the context, leading to feelings of being victimized or having their identity subordinated. The engine will compute different classifications for the institutional beneficiaries (closer to Rope/Scaffold) versus the victim groups (closer to Snare/Tangled Rope).",
+    "directionality_logic": "Institutional actors seeking conflict minimization are beneficiaries (d=0.0-0.2) as this reading reduces direct, high-stakes conflict for them, even if it creates diffuse costs. Transgender women in sex-segregated spaces are victims (d=0.8-1.0) when their gender identity is not recognized in contexts they deem relevant. Cisgender women in gender identity contexts are also victims (d=0.8-1.0) when their sex-based claims are subordinated in contexts they deem relevant. The directionality shifts for these victim groups depending on the specific context being analyzed, but overall, they bear the costs of the compromise.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely attempts to coordinate conflicting claims (providing a framework for different contexts) but does so with significant asymmetric extraction, where both groups of women are victims in different contexts. It requires active enforcement to maintain the contextual boundaries and manage the ongoing resistance. It avoids being a Snare because there is a genuine, albeit imperfect, coordination function in attempting to provide a workable framework for diverse social and legal situations. It avoids being a Rope because of the significant and contested extraction from both victim groups.",
+    "kernel_context": "This constraint is the 'hybrid_contextual_reading' of the 'woman_female_category' kernel. It attempts to resolve the conflict between the 'sex_biology_reading' (category based purely on biological sex) and the 'gender_identity_reading' (category based purely on gender identity) by applying different criteria in different contexts. This reading is often adopted by institutions seeking a middle ground, but it remains highly contested by proponents of both sibling readings."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "woman_female_category__sex_biology_reading",
+      "woman_female_category__gender_identity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'woman_female_category' kernel, each representing a distinct structural claim about category membership. This hybrid reading attempts to mediate between the 'sex_biology_reading' and 'gender_identity_reading' by applying different criteria in different contexts."
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_actors_seeking_conflict_minimization",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "These actors (e.g., government agencies, sports federations, medical bodies) adopt the hybrid reading to reduce direct legal and social conflict, aiming for a 'workable compromise.' They benefit from avoiding definitive stances that would alienate large constituencies, but bear the cost of ongoing ambiguity and criticism from both sides."
+    },
+    {
+      "name": "transgender_women_in_sex_segregated_spaces",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals experience exclusion or conditional inclusion in contexts (e.g., sports, some medical settings, certain safety spaces) where biological sex is prioritized over their gender identity. They bear the cost of not having their identity fully recognized across all domains."
+    },
+    {
+      "name": "cisgender_women_in_gender_identity_contexts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals experience their sex-based claims (e.g., for single-sex spaces, data collection) being subordinated in contexts where gender identity is prioritized (e.g., some legal recognition, social spaces). They bear the cost of not having their sex-based category fully recognized across all domains."
+    },
+    {
+      "name": "legal_scholars_and_ethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These experts analyze the coherence, ethical implications, and practical effects of the hybrid contextual reading. They contribute to the discourse but do not directly enforce or suffer from the constraint's operation."
+    },
+    {
+      "name": "advocacy_groups_for_transgender_rights",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These groups advocate for full recognition of gender identity across all contexts, viewing the hybrid approach as a partial and insufficient compromise that still marginalizes transgender individuals in certain domains. They are often excluded from the final decision-making on contextual boundaries."
+    },
+    {
+      "name": "advocacy_groups_for_sex_based_rights",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These groups advocate for the primacy of biological sex in all contexts, viewing the hybrid approach as undermining the rights and protections of cisgender women in domains where gender identity is prioritized. They are often excluded from the final decision-making on contextual boundaries."
+    }
+  ],
+  "gain_flow": "institutional_actors_seeking_conflict_minimization",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To provide a framework for categorizing individuals as 'woman' or 'female' that attempts to accommodate both biological sex and gender identity, by assigning different criteria based on the specific context (e.g., medical, sports, social, legal).",
+    "transfer_function": "Transfers the burden of navigating conflicting categorical claims from institutional decision-makers to individuals, who must accept different categorizations depending on the context. It also transfers social and legal recognition in some contexts, while withholding it in others.",
+    "absent_voices": "Advocacy groups from both the 'sex_biology_reading' and 'gender_identity_reading' perspectives are often excluded from the final adjudication of contextual boundaries, as their maximalist positions are seen as undermining the 'compromise' of the hybrid approach. They would argue for a consistent application of their preferred criteria across all contexts.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid contextual reading vanished, institutions would be forced to adopt either a purely sex-based or purely gender-identity-based categorization, or to create entirely new frameworks. This would lead to significant legal challenges, social upheaval, and a complete reorganization of policies related to gender and sex across various domains.",
+    "founding_problem": "The problem of reconciling conflicting claims regarding the definition of 'woman' and 'female' in an increasingly diverse and rights-conscious society, particularly where biological sex and gender identity diverge, leading to social and legal disputes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, ethicists, and institutional policy-makers (outside of those directly benefiting from the specific compromise) corroborate that the underlying conflict remains live, even if the hybrid reading attempts to manage it. The ongoing debates and legal challenges from both sides attest to the persistence of the problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "woman_female_category__sex_biology_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "woman_female_category__gender_identity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "contextual_salience_determines_category",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "conflict_minimization_is_primary_goal",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "pragmatic_social_coexistence",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

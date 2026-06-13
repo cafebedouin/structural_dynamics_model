@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "treaty_authority_cession__rangatiratanga_retention_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "111cb3be-1e75-4695-ba08-1c6a01c5df35"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.7,
+    "claimed_type": "rope",
+    "human_readable": "Treaty of Waitangi: Rangatiratanga Retention Reading",
+    "topic_domain": "constitutional_law/indigenous_rights/colonial_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hapu_iwi",
+      "crown_as_partner"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a valid reading of the Treaty of Waitangi kernel, or is it an aspirational interpretation not fully grounded in historical practice?",
+      "resolution_mechanism": "Further historical and linguistic analysis of 19th-century Māori legal concepts and their application, as well as judicial precedent from the Waitangi Tribunal and higher courts.",
+      "impact": "If confirmed as a valid reading, it strengthens the legal basis for Māori self-determination and partnership claims. If deemed aspirational, its legal force is diminished, potentially reclassifying it as a Piton or even a Snare if its partnership claims are used to mask ongoing extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the historical and legal grounding of the rangatiratanga retention reading."
+    },
+    {
+      "id": "crown_compliance_ambiguity",
+      "question": "To what extent does the Crown genuinely adhere to the partnership and consent requirements implied by this reading, versus merely acknowledging them rhetorically?",
+      "resolution_mechanism": "Empirical observation of Crown-hapū/iwi negotiations, legislative processes, and resource management decisions, specifically tracking instances of genuine co-governance and veto power exercised by Māori partners.",
+      "impact": "If Crown compliance is largely rhetorical, the constraint's effective extractiveness for hapū/iwi is higher, and its classification shifts towards a Tangled Rope or Snare, as the coordination function becomes cover for continued Crown dominance. If compliance is genuine, the Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The gap between the Crown's stated commitment to partnership and its actual practice."
+    },
+    {
+      "id": "translation_asymmetry_impact",
+      "question": "How does the inherent translation asymmetry between the Māori and English texts of the Treaty affect the practical implementation of this reading, particularly regarding land and resource management?",
+      "resolution_mechanism": "Detailed case studies of specific land claims and resource allocation decisions, analyzing how the differing textual interpretations have been reconciled or exacerbated in practice, and the resulting distribution of benefits and costs.",
+      "impact": "If the translation asymmetry consistently leads to outcomes where Māori interests are undermined despite the 'rangatiratanga retention' principle, the constraint operates as a Snare, extracting resources under the guise of a partnership agreement. This would align it more closely with the 'retrospective_snare_exposure' sibling reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The impact of textual divergence on the practical operation of the Treaty."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'rangatiratanga retention' reading of the Treaty of Waitangi, which asserts that the Māori text of the Treaty, particularly the retention of 'tino rangatiratanga' (full chieftainship/sovereignty) by hapū and iwi, is paramount. Under this reading, 'kāwanatanga' (governance) ceded to the Crown is limited to the right to govern its own subjects, not to exercise full sovereignty over Māori. The Treaty thus establishes a partnership requiring ongoing consent and negotiation for legitimate Crown action affecting Māori interests. This reading has gained significant traction through the Waitangi Tribunal and subsequent legal developments, shifting the constraint from a more extractive historical operation towards a genuine (though still contested) coordination mechanism.",
+    "key_agents": [
+      "hapu_iwi: Primary beneficiary (organized/constrained) – retains authority, requires consent",
+      "crown_as_partner: Agenda setter (institutional/constrained) – exercises governance, requires consent",
+      "new_zealand_judiciary: Observer (institutional/analytical) – interprets the Treaty, influences application",
+      "settler_population: Payer (organized/constrained) – may bear costs of land returns or co-governance"
+    ],
+    "logic_rationale": "The extractiveness (0.35) is moderate, reflecting the ongoing struggle for full implementation of this reading, but significantly lower than historical periods where the Crown asserted full sovereignty. Suppression (0.20) is relatively low, as Māori resistance and advocacy have been effective in challenging unilateral Crown action. Theater ratio (0.10) is low, as the partnership claims, while not perfectly realized, are increasingly backed by substantive legal and political processes. The metrics reflect the period from 1980 to 2020, during which the Waitangi Tribunal's influence grew and this reading gained legal and political weight.",
+    "perspectival_gap": "From the perspective of hapū/iwi, this reading represents a hard-won recognition of their inherent rights and a pathway to genuine partnership, making it a Rope. From the perspective of some settler populations, it may be perceived as an imposition or a form of reverse discrimination, potentially leading to a perception of extraction. The Crown's perspective is complex, balancing its historical claims with evolving legal obligations.",
+    "directionality_logic": "Hapū/iwi are beneficiaries (d near 0.0) as this reading affirms their authority and requires their consent. The Crown, when acting as a genuine partner, also benefits from the legitimacy and stability derived from a consensual relationship (d near 0.2-0.3). The broader settler population may experience some costs (e.g., land returns, co-governance arrangements) but also benefits from a more just and stable society (d near 0.5-0.6).",
+    "mandatrophy_analysis": "This reading actively combats mandatrophy by reasserting the original intent of the Māori text and challenging the historical drift towards unilateral Crown sovereignty. It seeks to revive the Treaty's function as a living constitutional document for partnership, rather than allowing it to become a Piton of colonial inertia or a Snare of ongoing extraction under a false premise of cession. The ongoing resistance and legal challenges prevent the partnership aspect from atrophying into mere performance.",
+    "kernel_context": "This constraint is the 'rangatiratanga retention' reading of the Treaty of Waitangi kernel. It emphasizes the Māori text, where 'kāwanatanga' is limited to governance and 'tino rangatiratanga' is retained by hapū/iwi, establishing a partnership requiring ongoing consent. This contrasts with the 'crown_cession_reading' (English text implies full sovereignty cession) and the 'retrospective_snare_exposure' (the textual divergence itself is the extraction mechanism)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "treaty_authority_cession__crown_cession_reading",
+      "treaty_authority_cession__retrospective_snare_exposure",
+      "maori_land_rights_framework",
+      "resource_management_act_application"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'treaty_authority_cession' kernel, focusing on the Māori text and the retention of rangatiratanga. It directly influences and is influenced by the other readings, particularly in legal and political discourse."
+  },
+  "stakeholders": [
+    {
+      "name": "hapu_iwi",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "As the collective Māori tribal groups, they are affirmed in their 'tino rangatiratanga' (full chieftainship) over their lands, resources, and people. They benefit from the requirement for Crown consultation and consent, and from the recognition of their self-determination. Their exit options are constrained by their inherent connection to their ancestral lands and identity, but they can resist or litigate."
+    },
+    {
+      "name": "crown_as_partner",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The New Zealand government, operating under the principle of partnership. It exercises 'kāwanatanga' (governance) but is bound to seek consent and engage in good faith with hapū/iwi on matters affecting Māori. It benefits from the legitimacy derived from upholding the Treaty, but its actions are constrained by the partnership requirements. Its exit options are constrained by international and domestic legal obligations."
+    },
+    {
+      "name": "new_zealand_judiciary",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the Treaty and its implications for law and policy, particularly through the Waitangi Tribunal and higher courts. Its role is to adjudicate disputes and clarify the legal force of the Treaty, including the rangatiratanga retention reading. It does not directly benefit or pay, but its interpretations shape the constraint's operation."
+    },
+    {
+      "name": "settler_population",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The non-Māori population of New Zealand. While not directly paying a 'fee', they may experience the 'costs' of this reading through land returns, co-governance arrangements, or shifts in resource allocation. They also benefit from a more just and equitable society, but some may resist changes to the status quo. Their exit options are generally mobile within the national context."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To establish a framework for shared governance and partnership between Māori (hapū/iwi) and the Crown, ensuring that Māori retain authority over their affairs while the Crown exercises legitimate governance.",
+    "transfer_function": "This reading aims to transfer authority and control over Māori lands, resources, and cultural practices back to hapū/iwi, while transferring the Crown's unilateral power to a shared, consensual model of governance.",
+    "absent_voices": "Those who advocate for a strict 'crown_cession_reading' (English text paramount, full sovereignty ceded) are often marginalized in discussions centered on this reading. They would argue that the Treaty granted full sovereignty to the Crown and that partnership claims undermine national unity and legal certainty.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Treaty vanished, the legal and political landscape of New Zealand would fundamentally shift. Māori claims to self-determination and resource rights would be severely undermined, leading to widespread social unrest, legal challenges, and a breakdown of the current framework for Crown-Māori relations. The entire constitutional order would need to be re-evaluated.",
+    "founding_problem": "The founding problem was to establish a basis for British settlement and governance in New Zealand while protecting Māori authority and land rights, preventing uncontrolled land acquisition and inter-tribal conflict, and ensuring a peaceful coexistence between Māori and settlers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Hapū/iwi and the Waitangi Tribunal consistently attest that the core problem of ensuring Māori self-determination and protecting their rights within a bicultural nation remains live. While the Crown acknowledges the Treaty's importance, its full commitment to the partnership model is often contested by Māori, who point to ongoing disparities and unresolved claims. Independent historians and legal scholars corroborate the ongoing nature of these challenges."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "treaty_authority_cession__crown_cession_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "treaty_authority_cession__retrospective_snare_exposure",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "maori_text_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "tino_rangatiratanga_retained",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "original_maori_intent",
+    "drift_state": {
+      "moment": "contemporary_legal_discourse",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

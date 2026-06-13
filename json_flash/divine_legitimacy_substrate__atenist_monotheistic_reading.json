@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "divine_legitimacy_substrate__atenist_monotheistic_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "ba8ec305-b0e9-4575-bad2-07b1ef1fa72b"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.95,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Atenist Monotheistic Divine Legitimacy",
+    "topic_domain": "ancient_history/religious_studies/political_economy_of_belief_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharaoh_akhenaten",
+      "royal_family",
+      "atenist_priesthood"
+    ],
+    "victims": [
+      "amun_priesthood",
+      "traditional_temple_economies",
+      "general_populace",
+      "local_cults"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine, stable monotheistic system, or a temporary, enforced reading of a polytheistic kernel?",
+      "resolution_mechanism": "Historical analysis of post-Akhenaten religious practice: if polytheism rapidly reasserts itself, it indicates the monotheistic reading was an enforced deviation, not a stable shift in the kernel.",
+      "impact": "If a temporary reading, the constraint's true extractiveness and suppression are higher, as its persistence relies entirely on coercion against a deeply embedded alternative. If a stable shift, it would be closer to a Mountain for its beneficiaries.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "This constraint is the 'atenist_monotheistic_reading' of the 'divine_legitimacy_substrate' kernel. Sibling readings include 'amun_polytheistic_reading' and 'folk_syncretistic_reading'. This reading structurally forecloses the others by declaring all other gods false."
+    },
+    {
+      "id": "pharaonic_interpretive_monopoly",
+      "question": "To what extent was the pharaoh's interpretive monopoly over Aten's nature genuinely accepted by the populace versus merely enforced?",
+      "resolution_mechanism": "Archaeological evidence of private religious practice, non-Atenist iconography in homes, or resistance narratives from non-royal sources.",
+      "impact": "If acceptance was low, the suppression metric is an underestimate of the actual coercive force required, and the constraint's stability was even more precarious.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the depth of popular acceptance of the pharaoh's exclusive interpretive role."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.95
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the radical religious and political system imposed by Pharaoh Akhenaten, where divine legitimacy flowed exclusively through his revelation of Aten as the sole, universal deity. All other gods, particularly Amun-Ra, were declared false, their temples dismantled, and their priesthoods dispossessed. This created a centralized interpretive monopoly for the pharaoh and a new, royal-centric religious economy. This is one reading of the 'divine_legitimacy_substrate' kernel, specifically the 'atenist_monotheistic_reading'.",
+    "key_agents": [
+      "pharaoh_akhenaten: Agenda setter (institutional/arbitrage) — sole interpreter and enforcer of the new cult.",
+      "royal_family: Beneficiary (powerful/constrained) — elevated status and new religious authority.",
+      "atenist_priesthood: Beneficiary (organized/constrained) — new elite religious class, dependent on pharaoh.",
+      "amun_priesthood: Payer (institutional/trapped) — dispossessed, suppressed, and persecuted.",
+      "traditional_temple_economies: Payer (institutional/trapped) — dismantled and expropriated.",
+      "general_populace: Payer (powerless/identity_locked) — forced to abandon traditional worship, pay taxes to new cult.",
+      "local_cults: Payer (moderate/constrained) — suppressed and absorbed into the Atenist framework."
+    ],
+    "logic_rationale": "The constraint is a Snare due to its high extractiveness (0.85) and extreme suppression (0.95). The pharaoh and his new priesthood extracted immense wealth and power by dismantling the old religious infrastructure and centralizing all divine authority. Suppression was total, involving the erasure of names, destruction of images, and persecution of dissenters. Theater ratio is low (0.1) because the enforcement was brutally direct and functional, not merely performative. The rapid increase in extractiveness and suppression over the interval reflects the escalating intensity of Akhenaten's reforms.",
+    "perspectival_gap": "From the pharaoh's perspective, this was a necessary, divinely ordained reform to establish true worship. From the perspective of the dispossessed Amun priesthood and the general populace, it was a coercive imposition that extracted their spiritual and material resources. The engine's classification will reflect the latter, more extractive view, driven by the high suppression and victim declarations.",
+    "directionality_logic": "Pharaoh Akhenaten and the royal family are clear beneficiaries (d=0.0-0.1) as they gain absolute religious and political power. The Atenist priesthood also benefits (d=0.1-0.2) from their new elite status. The Amun priesthood, traditional temple economies, and local cults are direct targets (d=0.9-1.0) as they are dispossessed and suppressed. The general populace is also a target (d=0.8-0.9), forced to abandon ancestral practices and contribute to the new cult.",
+    "mandatrophy_analysis": "The constraint's mandate was to establish Aten as the sole deity and Akhenaten as his sole interpreter. This mandate was 'live' during Akhenaten's reign but was highly contested and ultimately failed, leading to a rapid reversal after his death. The classification as a Snare prevents mislabeling this as a genuine coordination (Rope) or natural law (Mountain), accurately reflecting its coercive and extractive nature. The short interval reflects the constraint's brief, intense, and ultimately unsustainable imposition."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "amun_polytheistic_reading",
+      "folk_syncretistic_reading"
+    ],
+    "dual_formulation_note": "This constraint is the 'atenist_monotheistic_reading' of the 'divine_legitimacy_substrate' kernel. It structurally forecloses the 'amun_polytheistic_reading' and 'folk_syncretistic_reading' by declaring all other gods false and dismantling their infrastructure."
+  },
+  "stakeholders": [
+    {
+      "name": "pharaoh_akhenaten",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The sole authority and interpreter of Aten's will, initiating and enforcing the monotheistic reforms. He benefits from absolute religious and political power, consolidating all divine legitimacy in his person."
+    },
+    {
+      "name": "royal_family",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elevated to a unique position as intermediaries between Aten and the people, sharing in the pharaoh's divine authority and benefiting from the new religious economy."
+    },
+    {
+      "name": "atenist_priesthood",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "A newly established priestly class, loyal to Akhenaten and Aten, who administer the new cult and benefit from its resources, replacing the traditional priesthoods."
+    },
+    {
+      "name": "amun_priesthood",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The formerly powerful priesthood of Amun-Ra, dispossessed, persecuted, and stripped of their wealth, influence, and religious authority. Their very existence is a threat to the new order."
+    },
+    {
+      "name": "traditional_temple_economies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The vast economic networks centered around the traditional temples, which were dismantled, their assets confiscated, and their labor redirected to the Aten cult. This caused widespread economic disruption."
+    },
+    {
+      "name": "general_populace",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Forced to abandon centuries of polytheistic worship and adopt the new, abstract Aten cult, which was less accessible and less integrated into daily life. They bore the spiritual and social costs of this upheaval."
+    },
+    {
+      "name": "local_cults",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Smaller, regional cults and household deities that were suppressed or absorbed into the Atenist framework, losing their distinct identities and practices. Their local autonomy was eradicated."
+    },
+    {
+      "name": "scribes_and_artists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Commissioned to create new Atenist iconography and texts, benefiting from royal patronage and the demand for new artistic and literary forms, but constrained by the pharaoh's strict ideological control."
+    }
+  ],
+  "gain_flow": "pharaoh_akhenaten",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Aimed to coordinate religious belief and practice around a single, universal deity, thereby centralizing political and spiritual authority under the pharaoh and eliminating competing power centers.",
+    "transfer_function": "Transferred immense wealth, land, and labor from the traditional temple estates to the royal treasury and the new Aten cult. It also transferred spiritual authority and interpretive power from diverse priesthoods to the pharaoh alone.",
+    "absent_voices": "The voices of the dispossessed Amun priesthood, the traditional nobility, and the general populace who clung to their ancestral gods were actively suppressed. Their objections were met with persecution, not dialogue, and their practices were forcibly eradicated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished overnight, the entire religious, political, and economic structure of Egypt would immediately revert to its traditional polytheistic forms. The Amun priesthood would reclaim its power, temples would be rebuilt, and the pharaoh's absolute authority would be challenged, leading to widespread societal reorganization.",
+    "founding_problem": "The perceived problem was the excessive power and wealth of the Amun priesthood, which rivaled that of the pharaoh, and a desire to establish a more universal and abstract form of worship centered on the sun disk, Aten.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical records and archaeological evidence from outside the Atenist royal court (e.g., later Egyptian historians, the rapid post-Akhenaten restoration of polytheism) corroborate that the Amun priesthood's power was indeed a challenge, but also that the monotheistic solution was an imposed, short-lived deviation, not a widely accepted resolution to a 'live' problem for the populace."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "amun_polytheistic_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "folk_syncretistic_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aten_is_sole_creator_god",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "pharaoh_is_sole_interpreter_of_aten",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "pharaonic_divine_monopoly",
+    "drift_state": {
+      "moment": "post_akhenaten_restoration",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

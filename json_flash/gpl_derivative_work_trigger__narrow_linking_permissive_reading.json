@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6c1eff13-4a32-4bff-915d-45db21bdafe3"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "GPL Derivative Work Trigger: Narrow Linking Permissive Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "proprietary_software_developers",
+      "commercial_users_of_gpl_software"
+    ],
+    "victims": [
+      "free_software_foundation",
+      "gpl_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "derivative_work_definition_ambiguity",
+      "question": "Is 'linking' (especially dynamic linking) a form of 'derivation' under copyright law, or merely 'aggregation'?",
+      "resolution_mechanism": "Definitive court rulings on specific linking scenarios, or legislative clarification of 'derivative work' in the context of software.",
+      "impact": "If linking is derivation, this reading is overridden, and the GPL's copyleft effect is significantly broadened, increasing obligations for proprietary developers. If linking is aggregation, this reading is reinforced, limiting GPL's scope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in copyright law's definition of 'derivative work' as applied to software linking."
+    },
+    {
+      "id": "gpl_kernel_reading_divergence",
+      "question": "This constraint is one reading of the 'gpl_derivative_work_trigger' kernel. What would change if the 'broad_copyleft_reading' or 'interface_boundary_reading' were adopted?",
+      "resolution_mechanism": "Legal precedent or widespread industry adoption of a different interpretation.",
+      "impact": "The 'broad_copyleft_reading' would increase obligations for proprietary developers and expand the scope of GPL. The 'interface_boundary_reading' would create a different set of conditions for non-derivation, potentially allowing more proprietary integration than this reading, but with stricter API separation requirements. This reading protects proprietary modules and frustrates the FSF's propagation goal.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The 'gpl_derivative_work_trigger' kernel has multiple contested readings, each with different implications for software licensing and proprietary integration."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a permissive interpretation of the GNU General Public License (GPL) regarding derivative works. Under this reading, merely linking to GPL-licensed code (especially dynamically) is considered aggregation, not derivation, and therefore does not trigger the GPL's copyleft obligations for the linking proprietary code. Only direct modification of the GPL code itself creates a derivative work. This interpretation is favored by proprietary software developers seeking to integrate open-source components without open-sourcing their entire codebase.",
+    "logic_rationale": "Extractiveness is moderate (0.45) as it allows proprietary developers to leverage GPL code without fully reciprocating, effectively 'extracting' value from the open-source ecosystem without contributing back under the same terms. Suppression is low (0.30) because this reading is a legal interpretation, not an actively enforced coercive mechanism; its persistence relies on legal arguments and the absence of definitive counter-rulings. Theater ratio is low (0.10) as there's little performative maintenance; the constraint is upheld through legal interpretation rather than theatrical displays.",
+    "directionality_logic": "Proprietary software developers and commercial users of GPL software are beneficiaries (d near 0.0) as this reading allows them to protect their proprietary code while using GPL components. The Free Software Foundation (FSF) and GPL advocates are victims (d near 1.0) as this reading frustrates their goal of maximizing the propagation of free software. The legal system acts as an agenda-setter, adjudicating disputes and shaping the interpretation.",
+    "perspectival_gap": "From the perspective of proprietary developers, this is a reasonable interpretation that balances open-source use with commercial interests. From the FSF's perspective, it's a loophole that undermines the core intent of the GPL. The engine will compute different classifications for these seats based on their declared structural relationships.",
+    "kernel_context": "This constraint is the 'narrow_linking_permissive_reading' of the 'gpl_derivative_work_trigger' kernel. This reading asserts that linking is aggregation, not derivation, and only direct modifications to GPL code trigger copyleft obligations. Sibling readings include the 'broad_copyleft_reading' (linking always triggers obligations) and the 'interface_boundary_reading' (clean API boundaries allow non-derivative aggregation)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'gpl_derivative_work_trigger' kernel, each representing a different interpretation of what constitutes a 'derivative work' under the GPL. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_developers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "These developers benefit by being able to use GPL-licensed libraries and components in their proprietary software without being forced to open-source their entire product. They actively advocate for this permissive interpretation."
+    },
+    {
+      "name": "commercial_users_of_gpl_software",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies that use GPL software in their products or services, but wish to keep their value-added layers proprietary. This reading reduces their legal risk and compliance burden."
+    },
+    {
+      "name": "free_software_foundation",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The primary advocate for the GPL and its strong copyleft provisions. This reading undermines their goal of ensuring that all software built upon GPL code remains free, as it creates a 'wall' for proprietary modules. They actively litigate against this interpretation."
+    },
+    {
+      "name": "gpl_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual developers and organizations who believe in the strong copyleft principles of the GPL. They see this permissive reading as a weakening of the license's intent and a threat to the free software ecosystem."
+    },
+    {
+      "name": "legal_system",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and legal bodies that interpret copyright law and specific license terms. Their rulings determine which interpretation of 'derivative work' prevails, thereby shaping the practical effect of the GPL."
+    }
+  ],
+  "gain_flow": "proprietary_software_developers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a framework for proprietary and open-source software to coexist and interoperate, allowing proprietary developers to utilize open-source components without fully adopting copyleft obligations.",
+    "transfer_function": "Transfers the benefit of using GPL-licensed code to proprietary developers without requiring them to contribute their own code back under GPL terms, effectively transferring potential 'free' status from derivative works to proprietary status.",
+    "absent_voices": "The original authors of GPL-licensed code who intended a broader copyleft effect, and the broader free software community who rely on strong copyleft for the growth of the free software ecosystem, are often not directly represented in the legal interpretations that favor this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this permissive interpretation vanished, proprietary software developers would face significantly higher legal risks and compliance costs when using GPL components, potentially leading to a reduction in GPL adoption in commercial products or a shift towards more permissive licenses. The software industry's integration patterns would fundamentally change.",
+    "founding_problem": "The challenge of integrating open-source software into proprietary products without triggering unwanted license obligations, balancing the benefits of open source with the need to protect intellectual property.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Proprietary software companies and their legal counsel consistently attest to this problem in industry forums and legal discussions. The FSF acknowledges the existence of this tension, though they dispute the legitimacy of this particular 'solution'."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linking_is_aggregation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "modification_triggers_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "copyright_law_traditional_aggregation",
+    "drift_state": {
+      "moment": "contemporary_software_development",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

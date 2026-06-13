@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__constitutional_subordination",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "eefd0b0c-7675-4448-ac8e-6501f2d9bc05"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutional Subordination of Provinces",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_government",
+      "national_unity_advocates"
+    ],
+    "victims": [
+      "provincial_governments_seeking_autonomy",
+      "separatist_movements"
+    ]
+  },
+  "interval": {
+    "start": 1867,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1867,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1867,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1867,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the constitutional principle that provinces are creations of the federal constitution, possessing no inherent sovereignty, and that any provincial exit from the federation requires federal consent. This reading asserts federal supremacy in key areas like national unity, equalization, and climate policy, and views separatist movements as constitutionally invalid. It is one reading of the broader 'provincial_sovereignty_boundary' kernel.",
+    "logic_rationale": "The constraint is a Tangled Rope because it provides a genuine coordination function (national unity, consistent federal policy) but also involves asymmetric extraction from provinces seeking greater autonomy. Extractiveness is moderate (0.3) as provinces do retain significant powers, but suppression is higher (0.6) due to the federal government's ultimate constitutional authority and the Supreme Court's role in enforcing this interpretation. The theater ratio is low (0.1), indicating that the constitutional framework is actively and genuinely enforced, not merely performed.",
+    "directionality_logic": "The federal government and national unity advocates are beneficiaries, as the constraint empowers federal authority and maintains national cohesion. Provincial governments seeking autonomy and separatist movements are victims, as their aspirations for greater sovereignty or independence are directly curtailed by this constitutional reading. The Supreme Court acts as an agenda-setter, interpreting and enforcing the constraint.",
+    "perspectival_gap": "From the federal government's perspective, this is a necessary Rope for national governance. From the perspective of autonomy-seeking provinces, it is a Snare that limits their self-determination. The engine's classification will reflect this divergence based on the declared roles and attributes.",
+    "kernel_context": "This constraint instantiates the 'constitutional_subordination' reading of the 'provincial_sovereignty_boundary' kernel. This reading asserts that provinces are creatures of the federal constitution, lacking inherent sovereignty, and that any exit requires federal consent. Sibling readings include 'compact_federalism' (confederation as a compact among sovereigns) and 'resource_sovereignty_primacy' (resource control as absolute territorial sovereignty)."
+  },
+  "omegas": [
+    {
+      "id": "constitutional_interpretation_stability",
+      "question": "To what extent is the 'constitutional subordination' reading of provincial sovereignty stable, or is it subject to ongoing reinterpretation by the Supreme Court or political pressure?",
+      "resolution_mechanism": "Analysis of future Supreme Court rulings on federal-provincial jurisdiction and the outcomes of major federal-provincial disputes over policy areas like climate or resources.",
+      "impact": "If the reading proves unstable and shifts towards greater provincial autonomy, the constraint's extractiveness and suppression would decrease, potentially reclassifying it towards a Rope or even a Scaffold (if temporary). If it hardens, it moves closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of constitutional interpretation regarding provincial sovereignty."
+    },
+    {
+      "id": "federal_consent_legitimacy",
+      "question": "Is federal consent for provincial exit a legitimate constitutional requirement, or is it a political assertion that could be challenged by a sufficiently strong provincial mandate?",
+      "resolution_mechanism": "A hypothetical provincial referendum on secession followed by a federal refusal to negotiate, leading to a constitutional crisis and potential international legal challenges.",
+      "impact": "If federal consent is deemed a political assertion rather than an absolute constitutional bar, the 'trapped' exit option for separatist movements becomes 'constrained', reducing the constraint's effective suppression and extractiveness from that seat.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Legitimacy of federal consent as a barrier to provincial exit."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_equalization_formula",
+      "national_climate_policy_framework"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'provincial_sovereignty_boundary' kernel. It emphasizes federal supremacy and constitutional subordination of provinces, contrasting with 'compact_federalism' and 'resource_sovereignty_primacy' readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "provincial_sovereignty_boundary__compact_federalism",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "federal_constitution_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "provinces_derive_power_from_federal_act",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "original_confederation_act_intent",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

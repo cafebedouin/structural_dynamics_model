@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_decision_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "875083bb-072f-4de7-87ef-b5ff526ce4d8"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "End-of-Life Decision Authority (Autonomy Reading)",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competent_patients",
+      "healthcare_professionals_facilitating"
+    ],
+    "victims": [
+      "suffering_prolonged_patients"
+    ]
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'autonomy reading' of end-of-life decision authority, asserting that competent individuals have sovereign control over their own death. It is a 'rope' because it facilitates coordination between patients, families, and healthcare providers around patient wishes, with relatively low extraction. However, it carries a low but increasing extractiveness from those whose suffering is prolonged by denial of access, and a low suppression from those who would oppose it on other grounds. This reading is one of several competing interpretations of the broader 'end_of_life_decision_authority' kernel.",
+    "logic_rationale": "The extractiveness (0.3) is low because the primary function is to empower individuals, but it is non-zero due to the costs borne by families and the 'victims' who are denied access despite their autonomous wishes. Suppression (0.2) is low as the constraint is generally accepted in many jurisdictions, but active enforcement is required to overcome resistance from those who hold alternative moral frameworks. Theater ratio (0.05) is very low, indicating that the constraint's stated purpose (autonomy) aligns closely with its actual operation. Accessibility collapse (0.6) is moderate, as alternatives (e.g., palliative care, natural death) still exist, but the specific alternative of autonomous control over death is collapsed if the constraint is not present. Resistance (0.15) is low but persistent, primarily from religious and vulnerability-focused groups.",
+    "perspectival_gap": "Competent patients experience this as a liberating rope, while families may experience it as a difficult coordination. Healthcare professionals navigate a complex ethical landscape, acting as facilitators. Patients denied access experience it as a snare. The engine's per-seat classification will reflect these divergences.",
+    "directionality_logic": "Competent patients are clear beneficiaries (d=0.0-0.1). Healthcare professionals facilitating these decisions are also beneficiaries, as it clarifies their ethical obligations (d=0.1-0.2). Families are payers, bearing emotional costs (d=0.6-0.7). Suffering-prolonged patients denied access are victims (d=0.9-1.0). Religious institutions are excluded, their views suppressed by the legal framework (d=0.8-0.9). Vulnerable populations advocates are observers (d=0.5).",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as the underlying problem of patient autonomy in end-of-life care remains live. The challenge is not obsolescence but the ongoing contestation of its ethical and social implications, particularly regarding the 'slippery slope' argument. The classification as a rope reflects its genuine coordination function, preventing mislabeling as pure extraction, while acknowledging the costs and suppressed alternatives.",
+    "kernel_context": "This constraint, 'end_of_life_decision_authority__autonomy_reading', is one interpretation of the broader 'end_of_life_decision_authority' kernel. It emphasizes individual self-determination. Sibling readings include 'sanctity_reading' (prioritizing the intrinsic value of life) and 'vulnerability_protection_reading' (emphasizing safeguards against coercion)."
+  },
+  "omegas": [
+    {
+      "id": "slippery_slope_risk",
+      "question": "Does the expansion of end-of-life autonomy lead to a 'slippery slope' where vulnerable individuals are subtly coerced or pressured into choosing death?",
+      "resolution_mechanism": "Longitudinal epidemiological studies tracking rates of assisted dying across different demographic groups, coupled with qualitative research on patient decision-making processes in jurisdictions with liberalized laws.",
+      "impact": "If a 'slippery slope' is empirically demonstrated, the constraint's effective extractiveness and suppression would be significantly higher for vulnerable populations, potentially reclassifying it as a tangled_rope or snare for those groups. If not, the autonomy reading is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The risk that expanded autonomy leads to coercion for vulnerable groups."
+    },
+    {
+      "id": "moral_status_of_autonomy",
+      "question": "Is individual autonomy an absolute moral principle in end-of-life decisions, or is it one value among others (e.g., sanctity of life, community welfare) that must be balanced?",
+      "resolution_mechanism": "Philosophical and theological debate, and societal consensus-building through democratic processes and evolving ethical norms. No purely empirical resolution.",
+      "impact": "If autonomy is not absolute, the constraint's justification as a pure rope is weakened, and its interaction with other values (as embodied in sibling readings) becomes more central to its classification. This would shift the conceptual framing of the constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The foundational moral weight of individual autonomy in end-of-life contexts."
+    },
+    {
+      "id": "denial_of_access_extraction",
+      "question": "What is the true extent of suffering prolonged by denial of access to end-of-life options, and how does this 'extraction' weigh against the benefits of autonomy for those who can access it?",
+      "resolution_mechanism": "Systematic collection of data on patient requests for end-of-life options, reasons for denial, and subsequent patient outcomes (e.g., prolonged suffering, clandestine actions).",
+      "impact": "If the 'extraction' from denied access is found to be substantial and widespread, the overall extractiveness of the constraint (as implemented) would be higher, pushing it closer to a tangled_rope or even snare for the 'suffering_prolonged_patients' seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the harm from denial of autonomous end-of-life choices."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_decision_authority__sanctity_reading",
+      "end_of_life_decision_authority__vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'end_of_life_decision_authority' kernel. Its ε value differs significantly from the 'sanctity_reading' (lower extraction) and 'vulnerability_protection_reading' (different suppression mechanisms), necessitating separate constraint stories."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_decision_authority__sanctity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_decision_authority__vulnerability_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_self_determination_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "relief_of_suffering_paramount",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "patient_rights_movement_era",
+    "drift_state": {
+      "moment": "contemporary_policy_debates",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_text__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1b7db0ed-a9c7-4fa4-9f67-cc555cd42e27"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment: Individual Right to Bear Arms for Self-Defense",
+    "topic_domain": "constitutional_law/political_theory/firearms_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_gun_owners",
+      "firearms_industry"
+    ],
+    "victims": [
+      "disarmed_populations",
+      "public_safety_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine individual right, or is it a reading of the Second Amendment that prioritizes individual ownership over collective security?",
+      "resolution_mechanism": "Historical and legal scholarship on original intent, and judicial rulings that explicitly reconcile or reject competing interpretations.",
+      "impact": "If primarily a reading, its classification shifts from a fundamental right (closer to Mountain) to a constructed constraint (Tangled Rope or Snare) whose beneficiaries are identifiable and whose persistence depends on active enforcement and suppression of alternative readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'second_amendment_text' kernel, specifically the 'individual_right_reading'. Sibling readings ('collective_security_reading', 'originalist_civic_virtue_reading') would shift the beneficiary/victim structure and the perceived extractiveness."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of gun control efforts structural (legal precedent, legislative gridlock) or internalized (ideological commitment to gun ownership as a core liberty)?",
+      "resolution_mechanism": "Analysis of public opinion shifts after major gun violence events vs. legislative outcomes; if legislative outcomes remain static despite public opinion shifts, structural suppression is dominant.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as it operates through self-reinforcing ideological commitment. If structural, legal and political reforms could more readily alter the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for gun control."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'individual right' reading of the Second Amendment, where the operative clause guarantees an individual's right to possess firearms for personal self-defense, independent of militia service. This reading has gained prominence in recent decades, shaping firearms policy and legal challenges. It is a reading of a contested kernel, where other interpretations (collective security, civic virtue) offer different structural implications.",
+    "logic_rationale": "Extractiveness is high (0.65) because this reading prioritizes individual gun ownership, leading to a high societal cost in terms of gun violence and public safety concerns, which are borne by the general public and specific victim groups. Suppression is also high (0.75) due to the active legal and political efforts required to resist gun control measures and maintain broad access to firearms. The 'individual right' reading actively suppresses alternative interpretations and legislative efforts to restrict gun ownership. Theater ratio is low (0.20) as the constraint is actively enforced and defended, with real consequences, rather than being merely performative.",
+    "perspectival_gap": "Individual gun owners experience this as a fundamental protection of liberty, while public safety advocates and disarmed populations experience it as a source of insecurity and a barrier to effective public policy. The legal system, particularly the judiciary, acts as the agenda-setter, mediating these conflicting perspectives through interpretation and precedent.",
+    "directionality_logic": "Individual gun owners and the firearms industry are primary beneficiaries (d near 0.0) as the constraint protects their right to own and sell firearms, respectively. Disarmed populations (e.g., felons, domestic abusers) and public safety advocates are victims (d near 1.0) as they bear the costs of increased gun violence and the inability to enact stricter gun control. The general public is a mixed beneficiary/victim, benefiting from the theoretical right to self-defense but bearing the costs of widespread firearm access.",
+    "mandatrophy_analysis": "The constraint's mandate, under this reading, is to protect individual self-defense. However, the high extractiveness and suppression suggest that this mandate has been leveraged to create a system that disproportionately benefits specific groups while imposing significant costs on others. It prevents mislabeling by highlighting the active enforcement and suppression required to maintain this specific interpretation, rather than treating it as a natural or universally beneficial right."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gun_control_legislation",
+      "self_defense_laws"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'second_amendment_text' kernel. It focuses on the individual right to bear arms for self-defense, distinct from the 'collective_security_reading' and 'originalist_civic_virtue_reading'."
+  },
+  "stakeholders": [
+    {
+      "name": "individual_gun_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individuals who own firearms for self-defense, recreation, or collection. They benefit from the broad protection of gun ownership rights and actively resist any attempts to restrict these rights. Their identity is often tied to gun ownership as a fundamental liberty."
+    },
+    {
+      "name": "firearms_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Manufacturers, distributors, and retailers of firearms and ammunition. They benefit directly from the expansive interpretation of gun rights, which drives demand for their products. They actively lobby against gun control measures."
+    },
+    {
+      "name": "disarmed_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals legally prohibited from owning firearms (e.g., convicted felons, those with domestic violence restraining orders) or those who choose not to own them but are exposed to increased gun violence. They bear the costs of the broad availability of firearms without the means of self-defense, and their voices are often excluded from policy debates."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who advocate for stricter gun control measures to reduce gun violence. They bear the costs of legislative inaction and the societal impact of widespread firearm access, constantly working against the prevailing interpretation of the Second Amendment."
+    },
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The courts, particularly the Supreme Court, interpret the Second Amendment and establish legal precedents that define the scope of gun rights. They are the primary arbiters of this constraint's meaning and enforcement, shaping its impact on all other stakeholders."
+    },
+    {
+      "name": "legislature",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elected representatives tasked with creating laws. Their ability to enact gun control legislation is severely constrained by judicial interpretations of the Second Amendment, often leading to legislative gridlock on firearms policy."
+    }
+  ],
+  "gain_flow": "firearms_industry",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a legal framework for individual self-defense and ensures access to firearms for this purpose, theoretically coordinating individual security against threats.",
+    "transfer_function": "Transfers the right to bear arms to individuals, and implicitly transfers the burden of managing gun violence and its consequences to the broader public and public safety institutions.",
+    "absent_voices": "Victims of gun violence and their families, as well as those who advocate for a more restrictive interpretation of gun rights, are often marginalized in policy debates, their concerns overridden by the dominant individual rights framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Second Amendment vanished, the legal landscape for firearms would fundamentally shift. Gun control legislation would likely become much more expansive, the firearms industry would face severe restrictions, and the societal approach to gun violence would be radically altered.",
+    "founding_problem": "The founding problem was to ensure the security of a free state, including the right of the people to keep and bear arms, often understood in the context of a citizen militia.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Individual gun owners and the firearms industry argue the problem of individual self-defense remains live. Public safety advocates and many legal scholars argue the original problem of militia service is largely obsolete in its founding context, and the current interpretation has expanded beyond its original intent, leading to new problems. Historical analysis and legal scholarship from outside the benefiting parties corroborate the shift in interpretation and the contested status of the founding problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "second_amendment_text__collective_security_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "second_amendment_text__originalist_civic_virtue_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_self_defense_is_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "militia_clause_is_prefatory_not_limiting",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_heller_jurisprudence",
+    "drift_state": {
+      "moment": "contemporary_mass_shooting_era",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

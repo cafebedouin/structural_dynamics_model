@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "ihl_distinction_proportionality__outcomes_based_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0a2e66c6-decc-4a86-b50b-cd64b27557b5"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IHL Outcomes-Based Compliance for Autonomous Weapons",
+    "topic_domain": "international_humanitarian_law/military_ethics/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_efficiency_advocates",
+      "defense_contractors"
+    ],
+    "victims": [
+      "ihl_custodians_interpretive_authority",
+      "civilian_populations"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a valid interpretation of the IHL distinction/proportionality kernel, or does it fundamentally misrepresent IHL's underlying principles?",
+      "resolution_mechanism": "International legal consensus building, ICJ advisory opinions, or state practice evolution.",
+      "impact": "If deemed a valid reading, it legitimizes the development and deployment of autonomous weapons under certain performance criteria. If deemed a misrepresentation, it would be rejected as a basis for IHL compliance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'outcomes_based_reading' of the 'ihl_distinction_proportionality' kernel. Sibling readings ('human_agency_reading', 'categorical_prohibition_reading') would reject this interpretation, arguing for irreducible human judgment or outright prohibition."
+    },
+    {
+      "id": "metric_reliability_and_bias",
+      "question": "Can 'distinction' and 'proportionality' be reliably and unbiasedly quantified by technical metrics, especially in complex, dynamic combat environments?",
+      "resolution_mechanism": "Extensive empirical testing, independent validation of AI performance metrics, and review by interdisciplinary ethics committees.",
+      "impact": "If metrics are unreliable or biased, the constraint's claim of IHL compliance is undermined, potentially leading to increased civilian harm and legal challenges. If reliable, it strengthens the case for autonomous systems in IHL compliance.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The effectiveness of this reading hinges on the ability to objectively measure complex ethical concepts with technology."
+    },
+    {
+      "id": "civilian_population_risk_assessment",
+      "question": "Does the 'outcomes_based_reading' adequately protect civilian populations, or does it introduce new, unquantifiable risks by delegating lethal decision-making to machines?",
+      "resolution_mechanism": "Long-term observational studies of autonomous weapon system deployment, independent humanitarian impact assessments, and public consultation.",
+      "impact": "If new risks are identified, the reading's legitimacy would be severely challenged, potentially leading to its rejection or significant modification. If risks are demonstrably managed, it would bolster its acceptance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the real-world impact on civilian populations is crucial for the ethical validity of this reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'outcomes_based_reading' of International Humanitarian Law (IHL) obligations regarding autonomous weapon systems. It posits that IHL's requirements for distinction and proportionality are met if autonomous systems can demonstrably achieve performance equal to or exceeding human operators, emphasizing a technology-neutral approach where the law governs outcomes, not the means. This reading is contested by those who advocate for irreducible human agency or categorical prohibition of such systems.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it offers a coordination function (allowing military innovation and efficiency) but also involves asymmetric extraction. Beneficiaries (military efficiency advocates, defense contractors) gain from the flexibility and potential cost savings of autonomous systems. Victims (IHL custodians' interpretive authority, civilian populations if metrics fail) bear the risk of reduced human control and the potential erosion of IHL principles. Active enforcement is required to establish and maintain the technical standards and legal interpretations that permit this approach. Extractiveness is moderate (0.55) as it enables significant military advantages, while suppression (0.4) reflects the ongoing debate and resistance from other IHL interpretations. Theater ratio is low (0.2) as there's a genuine effort to define and measure performance, though some aspects might be performative.",
+    "perspectival_gap": "Military efficiency advocates and defense contractors would experience this as a Rope, enabling innovation and operational effectiveness. IHL custodians and civilian populations, particularly those advocating for human agency or categorical prohibition, would experience it as a Snare, perceiving it as an erosion of fundamental protections and a dangerous delegation of moral responsibility. The engine's per-seat classification will capture this divergence.",
+    "directionality_logic": "Military efficiency advocates and defense contractors are beneficiaries (d near 0.0) as this reading enables their objectives and market. IHL custodians' interpretive authority and civilian populations are victims (d near 1.0) as their concerns about human control and potential harm are sidelined or made contingent on technical performance. States adopting this reading are agenda-setters, balancing military needs with legal compliance. Human rights organizations and ethicists are observers, critically evaluating the implications.",
+    "mandatrophy_analysis": "This constraint is not currently experiencing mandatrophy, as the debate around autonomous weapons and IHL compliance is very much 'live'. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring the extraction from IHL principles and civilian populations) or a pure Snare (ignoring the genuine coordination function for military innovation and the attempt to define compliance metrics)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ihl_distinction_proportionality__human_agency_reading",
+      "ihl_distinction_proportionality__categorical_prohibition_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'ihl_distinction_proportionality' kernel. Its structural delta permits autonomous weapons if technical metrics pass compliance thresholds, benefiting military efficiency and defense contractors, while potentially victimizing IHL interpretive authority and civilian populations. This contrasts with sibling readings that emphasize human agency or categorical prohibition."
+  },
+  "stakeholders": [
+    {
+      "name": "military_efficiency_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for the use of autonomous systems to enhance military effectiveness, reduce human risk, and achieve precision in combat. This reading provides a legal pathway for their objectives."
+    },
+    {
+      "name": "defense_contractors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and supply autonomous weapon systems. This reading creates a market for their products by providing a framework for legal compliance."
+    },
+    {
+      "name": "ihl_custodians_interpretive_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "International legal bodies, academics, and NGOs responsible for interpreting and upholding IHL. This reading challenges their traditional interpretations emphasizing human judgment and risks diluting the 'spirit' of the law."
+    },
+    {
+      "name": "civilian_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the ultimate risk of harm if autonomous systems fail to meet distinction and proportionality standards, or if the metrics themselves are insufficient to capture ethical nuances. Their safety is contingent on the performance and oversight of these systems."
+    },
+    {
+      "name": "states_adopting_outcomes_based_approach",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These states actively develop and promote this interpretation of IHL to justify their investment in autonomous weapon systems. They set the technical standards and legal arguments for compliance."
+    },
+    {
+      "name": "human_rights_organizations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for stronger protections for civilians and often for a ban on autonomous weapons. They are excluded from the direct decision-making process of states adopting this reading, but exert pressure through advocacy and public opinion."
+    },
+    {
+      "name": "ethicists_and_ai_safety_researchers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the ethical implications and technical feasibility of autonomous weapon systems. They provide critical assessments of the 'outcomes-based' approach, often highlighting risks and limitations."
+    }
+  ],
+  "gain_flow": "military_efficiency_advocates",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a framework for states to develop and deploy autonomous weapon systems while claiming compliance with International Humanitarian Law, coordinating military innovation with legal obligations.",
+    "transfer_function": "Transfers the burden of ethical decision-making from human operators to technical systems, and potentially transfers risk from military personnel to civilian populations if systems fail. It also transfers interpretive authority over IHL from traditional custodians to technical experts and military strategists.",
+    "absent_voices": "Advocates for a categorical ban on autonomous weapons, and those who insist on irreducible human moral judgment in lethal force decisions, are largely absent from the framing of this 'outcomes-based' approach. They would argue that the very premise of delegating such decisions to machines violates fundamental principles of humanity and public conscience.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this outcomes-based reading of IHL vanished, states developing autonomous weapons would face significant legal uncertainty and pressure to halt or severely restrict their programs. The debate would shift back towards human agency or categorical prohibition, fundamentally altering military R&D and international legal discourse.",
+    "founding_problem": "The challenge of integrating rapidly advancing autonomous weapon technologies with existing International Humanitarian Law, which was primarily designed for human-operated systems, without stifling military innovation or compromising legal compliance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Military legal advisors and defense ministries corroborate that the problem of technology integration with IHL is live and pressing. Human rights organizations and ethicists, while disagreeing with the proposed solution, also corroborate the existence of the underlying problem of regulating autonomous weapons, though they frame it as a need for stronger prohibitions rather than flexible compliance pathways."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ihl_distinction_proportionality__human_agency_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ihl_distinction_proportionality__categorical_prohibition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_neutrality_of_ihl",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "measurable_performance_equals_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "ihl_as_outcome_governor",
+    "drift_state": {
+      "moment": "contemporary_ai_development_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

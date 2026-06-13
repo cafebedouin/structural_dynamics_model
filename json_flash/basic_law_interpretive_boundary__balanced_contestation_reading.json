@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__balanced_contestation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a9464063-fbd4-4358-93ba-84a4771c8ed8"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Basic Law Interpretive Boundary: Balanced Contestation Reading",
+    "topic_domain": "constitutional_law/comparative_constitutionalism/judicial_review_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "constitutional_stability",
+      "public_trust_in_institutions"
+    ],
+    "victims": [
+      "legislative_efficiency",
+      "judicial_finality"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'balanced contestation' reading of the Basic Law interpretive boundary, or does it lean towards judicial supremacy or parliamentary sovereignty in practice?",
+      "resolution_mechanism": "Empirical analysis of legislative responses to judicial review, judicial deference rates, and public opinion on institutional legitimacy over time. If one institution consistently overrides the other, reclassify.",
+      "impact": "If it leans towards judicial supremacy, the constraint becomes more extractive for the legislature; if towards parliamentary sovereignty, it becomes more extractive for the judiciary and potentially citizens seeking constitutional protection. This reading's classification as a Tangled Rope depends on the balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the practical balance of power between institutions in interpreting Basic Laws."
+    },
+    {
+      "id": "policy_domain_variability",
+      "question": "Does the 'balanced contestation' hold across all policy domains, or does one institution exert more influence in specific areas (e.g., security vs. economic policy)?",
+      "resolution_mechanism": "Comparative case studies of judicial review outcomes and legislative responses across different policy sectors. If significant domain-specific asymmetry is found, decompose into multiple constraints.",
+      "impact": "If the balance varies significantly by domain, the overall extractiveness and suppression metrics for this single constraint are an average that obscures localized snares or ropes. Decomposition would yield more precise classifications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Variability of institutional balance across different policy domains."
+    },
+    {
+      "id": "sibling_reading_impact_judicial_supremacy",
+      "question": "How would the constraint's structure change if the 'judicial_supremacy_reading' were adopted?",
+      "resolution_mechanism": "Conceptual analysis of legal precedent and constitutional theory. The judicial_supremacy_reading would shift the constraint's extractiveness and suppression significantly towards the legislature, making it a Snare for legislative power.",
+      "impact": "The constraint would become a Snare for the legislature, with higher extractiveness and suppression, and the judiciary would become a clear beneficiary with near-arbitrage exit options.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of adopting the judicial supremacy reading."
+    },
+    {
+      "id": "sibling_reading_impact_parliamentary_sovereignty",
+      "question": "How would the constraint's structure change if the 'parliamentary_sovereignty_reading' were adopted?",
+      "resolution_mechanism": "Conceptual analysis of legal precedent and constitutional theory. The parliamentary_sovereignty_reading would shift the constraint's extractiveness and suppression significantly towards the judiciary, making it a Snare for judicial independence.",
+      "impact": "The constraint would become a Snare for the judiciary, with higher extractiveness and suppression, and the legislature would become a clear beneficiary with near-arbitrage exit options.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of adopting the parliamentary sovereignty reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'balanced contestation' reading of the interpretive boundary for Basic Laws in a constitutional system where both the judiciary and the legislature hold legitimate but bounded authority. Courts interpret within their jurisdictional domain, while the legislature retains ultimate sovereign power, constrained by international obligations and norms of judicial independence. This reading emphasizes institutional dialogue and negotiation, where neither institution is fully dominant, and the effective extraction varies by policy domain. This is one reading of the 'basic_law_interpretive_boundary' kernel, distinct from 'judicial_supremacy_reading' and 'parliamentary_sovereignty_reading'.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates the exercise of power between two powerful institutions, preventing either from unilaterally dominating the constitutional interpretation. However, it also involves asymmetric extraction: the ongoing negotiation and potential for judicial review impose costs on legislative efficiency, while legislative responses and potential overrides impose costs on judicial finality. Active enforcement is required to maintain this balance, as both institutions constantly test the boundaries. The relatively low extractiveness (0.45) and suppression (0.30) reflect the 'balanced' nature of the contestation, where neither side can fully suppress the other, leading to a dynamic equilibrium rather than outright capture. Theater ratio is low (0.10) as the contestation is genuine, not merely performative.",
+    "perspectival_gap": "From the perspective of the legislature, the constraint imposes a cost on its ability to enact policy without judicial interference, leading to a higher effective extraction. From the judiciary's perspective, the constraint provides a legitimate basis for review but also limits its finality, as legislative responses or constitutional amendments are possible. Both institutions experience a degree of extraction, but the balance prevents one from becoming a pure victim or beneficiary, consistent with a Tangled Rope.",
+    "directionality_logic": "The 'constitutional_stability' and 'public_trust_in_institutions' are beneficiaries, as the constraint's operation prevents constitutional crises. 'Legislative_efficiency' and 'judicial_finality' are victims, as their respective goals are constrained by the ongoing institutional dialogue. The legislature and judiciary, as institutional actors, have 'constrained' exit options; they cannot simply opt out of the constitutional framework. Their directionality is thus modulated by their specific roles as both beneficiaries of constitutional order and targets of the interpretive contestation.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the ongoing institutional dialogue as either pure coordination (Rope) or pure extraction (Snare). If it were a Rope, it would imply a frictionless, mutually beneficial arrangement, which ignores the real costs and power struggles. If it were a Snare, it would imply one institution is purely extracting from the other, which contradicts the 'balanced contestation' premise. The Tangled Rope accurately captures the hybrid nature of genuine coordination with inherent, asymmetric costs that require active maintenance.",
+    "kernel_context": "This constraint is the 'balanced_contestation_reading' of the 'basic_law_interpretive_boundary' kernel. This reading posits a dynamic equilibrium between the judiciary and the legislature in interpreting Basic Laws, where neither holds absolute authority. It stands in contrast to the 'judicial_supremacy_reading' (where courts have final say) and the 'parliamentary_sovereignty_reading' (where the legislature can override judicial decisions)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "basic_law_interpretive_boundary__judicial_supremacy_reading",
+      "basic_law_interpretive_boundary__parliamentary_sovereignty_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'basic_law_interpretive_boundary' kernel. Each reading represents a distinct structural claim about the balance of power in constitutional interpretation, with different extractiveness profiles. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacts laws and holds ultimate sovereign power, but its legislative output is subject to judicial review. Engages in dialogue with the judiciary over constitutional interpretation and can initiate amendments to Basic Laws."
+    },
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets Basic Laws and reviews legislation for constitutionality. Its rulings are authoritative within its jurisdictional domain but can be challenged by legislative responses or constitutional amendments."
+    },
+    {
+      "name": "public_citizens",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rely on both institutions for stable governance and constitutional protection. Bear the costs of institutional conflict (e.g., policy uncertainty, delays) but also benefit from checks and balances."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the dynamics of constitutional interpretation and the balance of power between institutions. Their work informs public discourse and legal arguments but does not directly enforce the constraint."
+    },
+    {
+      "name": "international_legal_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Influence the domestic constitutional framework through international obligations and norms of judicial independence. While not directly part of the domestic interpretive process, their views constrain the legislature's sovereign power and support judicial independence."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the exercise of constitutional authority between the legislative and judicial branches, ensuring neither branch unilaterally defines the constitutional order and maintaining a system of checks and balances.",
+    "transfer_function": "Transfers interpretive authority and policy finality between the legislature and judiciary, depending on the specific issue and institutional dynamics. It also transfers the burden of constitutional justification between them.",
+    "absent_voices": "While international legal bodies influence the framework, they are not direct participants in the domestic interpretive dialogue. Their direct participation might shift the balance, particularly regarding human rights and judicial independence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this 'balanced contestation' disappeared, the system would likely collapse into either judicial supremacy or parliamentary sovereignty, fundamentally altering the constitutional structure, the nature of governance, and the rights of citizens. The current institutional dialogue would cease, leading to a new, likely more extractive, constitutional order.",
+    "founding_problem": "The founding problem was to establish a stable constitutional order that balanced democratic accountability (legislature) with the protection of fundamental rights and the rule of law (judiciary), preventing the concentration of absolute power in any single branch.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional scholars, legal practitioners, and public discourse consistently attest that the problem of balancing democratic will with constitutional limits remains live. While the specific manifestations evolve, the fundamental tension persists, corroborated by ongoing debates and institutional conflicts, not just by the benefiting institutions themselves."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "basic_law_interpretive_boundary__judicial_supremacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "institutional_dialogue_is_constitutional_norm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "neither_branch_holds_absolute_interpretive_finality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_founding_constitutional_consensus",
+    "drift_state": {
+      "moment": "contemporary_political_polarization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

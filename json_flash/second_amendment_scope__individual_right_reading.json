@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2d449084-d748-4ff6-b36e-d754d3eafd62"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment: Individual Right to Firearms Ownership",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_gun_owners",
+      "firearms_manufacturers",
+      "gun_rights_advocacy_groups"
+    ],
+    "victims": [
+      "state_legislatures",
+      "local_governments",
+      "gun_violence_victims_and_families"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "militia_connection_ambiguity",
+      "question": "Is the individual right to bear arms truly unconnected to militia service, or does the 'well regulated Militia' clause still impose a structural condition?",
+      "resolution_mechanism": "Further Supreme Court rulings clarifying the 'well regulated Militia' clause's contemporary relevance, or a constitutional amendment explicitly severing or re-establishing the connection.",
+      "impact": "If a connection is re-established, the scope of the individual right would narrow, potentially shifting the constraint's classification towards a collective or civic right reading, reducing its extractiveness on state regulatory power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the militia clause's impact on individual rights."
+    },
+    {
+      "id": "regulatory_burden_justification",
+      "question": "Are the burdens placed on state and local governments by this reading (e.g., inability to enact certain gun control measures) a necessary cost of individual liberty, or an undue extraction of regulatory capacity?",
+      "resolution_mechanism": "Empirical studies on the effectiveness of various gun control measures and their impact on public safety, alongside judicial re-evaluation of the 'strict scrutiny' standard applied to gun laws.",
+      "impact": "If the burdens are deemed undue extraction, the constraint's effective extractiveness on state regulatory power would be re-evaluated upward, potentially strengthening the case for a Snare classification from the perspective of state governments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Justification of regulatory burdens on state governments."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the 'individual_right_reading' of the 'second_amendment_scope' kernel. What would change if the 'collective_right_reading' or 'civic_right_reading' were adopted?",
+      "resolution_mechanism": "A shift in judicial precedent or a constitutional amendment explicitly adopting one of the sibling readings.",
+      "impact": "The 'collective_right_reading' would shift beneficiaries from individuals to state entities, drastically reducing extractiveness on state regulatory power. The 'civic_right_reading' would condition individual rights on militia participation, narrowing the beneficiary set and increasing regulatory leeway for states. Both would fundamentally alter the constraint's structure and classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the Second Amendment kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'individual right' reading of the Second Amendment, which interprets the right to bear arms as belonging to individuals for self-defense, largely unconnected to militia service. This reading, solidified by Supreme Court decisions like Heller (2008) and McDonald (2010), significantly constrains the ability of state and local governments to regulate firearms. It is a contested interpretation of a constitutional kernel, with other readings (collective right, civic right) offering alternative structural implications.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a coordination function (ensuring individual access to firearms for self-defense, as interpreted) but also involves significant asymmetric extraction. Extractiveness is high (0.65) due to the broad scope of individual rights and the strict scrutiny applied to gun control laws, which effectively extracts regulatory capacity from state and local governments. Suppression (0.40) is moderate, reflecting the active legal and political enforcement required to maintain this interpretation against legislative efforts to impose stricter controls. Theater ratio is low (0.10) as the enforcement is direct and functional, not performative. The increasing extractiveness over time reflects the expansion of this reading's scope and the corresponding reduction in state regulatory power.",
+    "perspectival_gap": "Individual gun owners and gun rights advocacy groups experience this as a protective Rope, safeguarding a fundamental right. State and local governments, along with gun violence victims and their families, experience it as a Snare or highly extractive Tangled Rope, as it severely limits their ability to enact public safety measures and imposes significant social costs.",
+    "directionality_logic": "Individual gun owners and firearms manufacturers are primary beneficiaries (d near 0.0) as the constraint protects their access and market. Gun rights advocacy groups are also beneficiaries, as their mandate is advanced. State and local governments are primary targets (d near 1.0) as their regulatory authority is curtailed. Gun violence victims and their families are also targets, bearing the social costs of reduced regulation. The constraint subsidizes the beneficiaries by extracting regulatory power from the victims.",
+    "mandatrophy_analysis": "The constraint's mandate, from this reading's perspective, is to protect individual liberty. However, the high extractiveness on state regulatory power and the social costs associated with gun violence suggest a potential for mandatrophy, where the original coordination (individual self-defense) is overshadowed by the extraction of regulatory capacity. The 'contested' status of the founding problem further highlights this tension, indicating that the constraint's function may have shifted from its original intent.",
+    "kernel_context": "This constraint instantiates the 'individual_right_reading' of the 'second_amendment_scope' kernel. This reading asserts that the Second Amendment protects an individual's right to own firearms for self-defense, independent of militia service. Sibling readings include the 'collective_right_reading' (protects state militias, not individual rights) and the 'civic_right_reading' (individual right conditioned on militia participation)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "gun_control_legislation_scope",
+      "public_safety_policy_scope"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'second_amendment_scope' kernel. The other readings are 'collective_right_reading' and 'civic_right_reading', each with distinct structural implications and classifications."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "second_amendment_scope__collective_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "second_amendment_scope__civic_right_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_right_unconnected_to_militia",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "self_defense_is_fundamental_right",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_heller_jurisprudence",
+    "drift_state": {
+      "moment": "contemporary_public_discourse",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

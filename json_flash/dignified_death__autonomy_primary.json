@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "fd560053-04c3-49fb-97a0-db533bef201d"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dignified Death: Autonomy Primary Reading",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "autonomous_suffering_individual"
+    ],
+    "victims": [
+      "suffering_individual_denied_exit",
+      "medical_professionals_constrained_by_law"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine expression of individual autonomy, or is it a specific reading of the 'dignified_death' kernel that prioritizes self-determination above other values?",
+      "resolution_mechanism": "Analysis of legal and ethical frameworks that explicitly balance or subordinate individual autonomy to other principles (e.g., sanctity of life, community welfare, medical ethics).",
+      "impact": "If it is merely one reading, its classification as a 'tangled_rope' highlights the contestability of its underlying principles and the potential for alternative, less extractive, or more coordinative framings. If it were a universal principle, it would approach a 'mountain' for the individual.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'autonomy_primary' reading of the 'dignified_death' kernel. Sibling readings ('sanctity_primary', 'relational_autonomy') would shift the victim/beneficiary sets and the claimed type."
+    },
+    {
+      "id": "medical_gatekeeping_necessity",
+      "question": "To what extent is medical gatekeeping (e.g., eligibility criteria, psychological evaluation) a necessary coordination function for ensuring 'dignified' death, versus an extractive mechanism that prolongs suffering or denies self-determination?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with varying levels of medical gatekeeping for assisted dying, assessing patient outcomes, perceived dignity, and rates of denied requests.",
+      "impact": "If gatekeeping is primarily extractive, the constraint's extractiveness and suppression are higher than currently measured. If it's a necessary coordination, the 'tangled_rope' classification is more robust, reflecting genuine coordination costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the role of medical gatekeeping in assisted dying: coordination vs. extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'autonomy primary' reading of dignified death, asserting that an individual's self-determination, especially in the face of suffering, grants them final authority over the timing and method of their death. It is a contested principle within bioethics and medical law, often clashing with other values like the sanctity of life or the relational aspects of autonomy. The constraint operates as a tangled rope because while it aims to coordinate the individual's will with medical practice, it often involves significant gatekeeping and legal restrictions that can become extractive for those seeking to exercise this autonomy.",
+    "key_agents": [
+      "autonomous_suffering_individual: Primary beneficiary (powerful/constrained) — seeks to exercise final authority",
+      "suffering_individual_denied_exit: Primary victim (powerless/trapped) — bears prolonged suffering against will",
+      "medical_professionals_constrained_by_law: Payer (institutional/constrained) — navigate legal and ethical boundaries, may be compelled to prolong life or deny requests",
+      "state_legislatures_and_courts: Agenda setter (institutional/arbitrage) — define legal boundaries, eligibility criteria, and safeguards for assisted dying",
+      "advocacy_groups_for_autonomy: Beneficiary (organized/mobile) — promote and defend the right to self-determination in end-of-life decisions",
+      "advocacy_groups_for_sanctity_of_life: Excluded (organized/mobile) — oppose the principle of self-determination in end-of-life decisions, advocating for life preservation"
+    ],
+    "logic_rationale": "The extractiveness (0.55) stems from the costs imposed on individuals whose requests for assisted dying are denied or delayed by legal and medical gatekeeping, prolonging suffering against their will. Suppression (0.7) is high due to legal prohibitions, medical ethical codes, and institutional resistance that limit access to assisted dying, effectively suppressing the exercise of self-determination. Theater ratio (0.1) is low, as the mechanisms (laws, medical protocols) are genuinely functional in either enabling or restricting access, not merely performative. The 'tangled_rope' classification reflects the dual nature: a genuine coordination function (aligning medical care with patient wishes) entangled with significant extraction (denial of autonomy, prolonged suffering) and active enforcement (legal penalties for non-compliance).",
+    "perspectival_gap": "The autonomous suffering individual experiences this as a fundamental right, often denied, leading to high perceived extraction. Medical professionals, while potentially sympathetic, experience it as a constraint on their practice, balancing patient autonomy with legal and ethical obligations. State legislatures and courts, as agenda setters, view it as a complex policy challenge requiring careful balancing of competing values, where their decisions define the boundaries of both coordination and extraction.",
+    "directionality_logic": "The 'autonomous_suffering_individual' is the intended beneficiary, aiming for full control over their end-of-life. However, when denied, they become a victim. 'Suffering_individual_denied_exit' are clear victims, bearing the full cost of prolonged suffering. 'Medical_professionals_constrained_by_law' are payers, as they must navigate complex legal frameworks and ethical dilemmas, sometimes against their personal convictions or patient wishes. 'State_legislatures_and_courts' are agenda setters, defining the scope of this autonomy. 'Advocacy_groups_for_autonomy' are beneficiaries as they champion the principle. 'Advocacy_groups_for_sanctity_of_life' are excluded, as their core tenet is often directly opposed to this reading.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as the underlying 'problem' (suffering and the desire for self-determination in death) remains live. However, the 'tangled_rope' classification prevents mislabeling it as a 'rope' (pure coordination) by highlighting the significant extraction and suppression inherent in its current implementation, particularly for those denied access. It also prevents mislabeling as a 'snare' by acknowledging the genuine coordination function of aligning end-of-life care with patient wishes, even if imperfectly realized.",
+    "kernel_context": "This constraint is the 'autonomy_primary' reading of the 'dignified_death' kernel. This reading asserts that dignity is rooted in individual self-determination, granting the suffering individual final authority over their death. It stands in contrast to the 'sanctity_primary' reading, which grounds dignity in life's intrinsic value, and the 'relational_autonomy' reading, which views dignity and decision-making as emerging from a patient-family-clinician triad."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_ethics_codes",
+      "palliative_care_access",
+      "sanctity_primary",
+      "relational_autonomy"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'dignified_death' kernel. Its ε value (0.55) is distinct from the 'sanctity_primary' reading (which would have lower extractiveness for the state, higher for the individual seeking exit) and the 'relational_autonomy' reading (which would distribute extraction differently across the triad)."
+  },
+  "stakeholders": [
+    {
+      "name": "autonomous_suffering_individual",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "A person experiencing unbearable suffering who wishes to exercise their right to self-determination regarding the timing and method of their death. They are the primary subject of this constraint's intended benefit, but their ability to realize it is often constrained by external factors."
+    },
+    {
+      "name": "suffering_individual_denied_exit",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "A person experiencing unbearable suffering whose request for assisted dying is denied due to legal restrictions, medical gatekeeping, or lack of access. They are forced to prolong their suffering against their will, bearing the full cost of the constraint's limitations."
+    },
+    {
+      "name": "medical_professionals_constrained_by_law",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians, nurses, and other healthcare providers who must navigate complex legal frameworks and ethical guidelines regarding end-of-life care. They may be compelled to prolong life against a patient's wishes or deny requests for assisted dying due to legal prohibitions, even if they personally support the patient's autonomy."
+    },
+    {
+      "name": "state_legislatures_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The governmental bodies responsible for enacting and interpreting laws related to end-of-life care, including assisted dying. They define the legal boundaries, eligibility criteria, and safeguards, thereby shaping the extent to which individual autonomy can be exercised."
+    },
+    {
+      "name": "advocacy_groups_for_autonomy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations and movements that actively campaign for the recognition and expansion of individual rights to self-determination in end-of-life decisions. They benefit from the legal and ethical advancements that align with the autonomy-primary principle."
+    },
+    {
+      "name": "advocacy_groups_for_sanctity_of_life",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations and movements that oppose assisted dying on the grounds of the intrinsic value of life. They are structurally excluded from the direct implementation of this constraint, as their core principles are often in direct opposition to the autonomy-primary reading."
+    }
+  ],
+  "gain_flow": "autonomous_suffering_individual",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To align medical practice and legal frameworks with the expressed will of a suffering individual regarding their end-of-life decisions, ensuring that their final wishes are respected and facilitated.",
+    "transfer_function": "Transfers the ultimate decision-making authority over the timing and method of death from medical or state authorities to the suffering individual. When denied, it transfers prolonged suffering and loss of control to the individual.",
+    "absent_voices": "Advocacy groups for the sanctity of life and some religious institutions are often excluded from the direct legislative and medical implementation of this constraint, as their core tenets fundamentally oppose the principle of self-determination in ending life. They would argue for the preservation of life regardless of suffering or consent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the principle of autonomy as primary in end-of-life decisions vanished, medical practice would revert to a default of life preservation, potentially prolonging suffering. Legal frameworks for assisted dying would dissolve, and individuals would lose a recognized right, leading to a significant reorganization of ethical and legal landscapes around death.",
+    "founding_problem": "The problem of individuals experiencing unbearable suffering with no legal or medical recourse to end their lives with dignity, leading to prolonged agony and loss of control over their final moments.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem remains live, attested by ongoing patient suffering, legal challenges, and public discourse in jurisdictions where assisted dying is restricted or illegal. Medical ethicists and patient advocacy groups, outside the direct beneficiaries of the current legal frameworks, corroborate the persistence of this problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "relational_autonomy",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_self_determination_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unbearable_suffering_justifies_exit",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "enlightenment_individual_rights",
+    "drift_state": {
+      "moment": "contemporary_bioethics_discourse",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

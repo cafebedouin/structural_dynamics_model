@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__compact_federalism",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "22670c76-1e74-4da1-ac14-436dd5b24713"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Provincial Sovereignty Boundary (Compact Federalism Reading)",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "provinces_asserting_autonomy",
+      "federal_government_seeking_consensus"
+    ],
+    "victims": [
+      "federal_government_seeking_unilateral_action",
+      "provinces_seeking_equalization"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "compact_vs_constitutional_origin",
+      "question": "Is the Canadian Confederation fundamentally a compact among sovereign provinces, or a constitutional act creating subordinate provinces?",
+      "resolution_mechanism": "Supreme Court ruling explicitly affirming one origin theory over the other, or a constitutional amendment clarifying provincial status.",
+      "impact": "If affirmed as a compact, provincial autonomy and exit options are strengthened; if affirmed as constitutional subordination, federal authority is enhanced, and provincial exit is foreclosed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the foundational nature of Canadian federalism."
+    },
+    {
+      "id": "resource_sovereignty_scope",
+      "question": "Does provincial ownership of natural resources (s.92A) imply absolute territorial sovereignty, or is it limited by federal powers?",
+      "resolution_mechanism": "Supreme Court clarification on the scope of s.92A in relation to federal environmental or economic powers.",
+      "impact": "If absolute, provinces gain significant leverage over federal policy; if limited, federal authority can override provincial resource decisions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which resource ownership translates to broader provincial sovereignty."
+    },
+    {
+      "id": "exit_negotiability_under_duress",
+      "question": "Is provincial exit from Confederation genuinely negotiable under duress, or does it require federal consent and constitutional amendment?",
+      "resolution_mechanism": "A clear legal framework for secession, or a precedent-setting negotiation that establishes the terms of exit.",
+      "impact": "If negotiable, provinces have a credible threat for leverage; if requiring federal consent, their bargaining power is significantly reduced.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The legal and political feasibility of provincial secession."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the 'compact federalism' reading of provincial sovereignty within a confederation, where provinces are seen as retaining residual sovereignty and federal authority is conditional on provincial consent. This reading emphasizes the negotiable nature of federal-provincial relations, including the possibility of provincial exit under duress. It is one reading of the broader 'provincial_sovereignty_boundary' kernel, which is highly contested.",
+    "key_agents": [
+      "provinces_asserting_autonomy: Primary beneficiary (institutional/constrained) — benefits from conditional federal authority.",
+      "federal_government_seeking_consensus: Secondary beneficiary (institutional/constrained) — benefits from stable, if negotiated, federalism.",
+      "federal_government_seeking_unilateral_action: Primary victim (institutional/constrained) — constrained by provincial consent requirements.",
+      "provinces_seeking_equalization: Secondary victim (institutional/constrained) — may be disadvantaged by 'compact' approach to resource sharing.",
+      "supreme_court_of_canada: Agenda setter (institutional/analytical) — adjudicates constitutional disputes, shaping the boundary."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates federal-provincial relations (beneficiaries: provinces asserting autonomy, federal government seeking consensus) but also involves asymmetric extraction (victims: federal government seeking unilateral action, provinces seeking equalization) and requires active enforcement (e.g., through constitutional challenges and political negotiation) to maintain its specific balance. Extractiveness is moderate (0.45) as provinces concede some federal authority but retain significant leverage. Suppression is low (0.3) because provinces have strong political and legal avenues to resist federal overreach, and the threat of exit, while not easy, is not entirely suppressed. Theater ratio is low (0.1) as the negotiations and disputes are genuine contests over power, not mere performance.",
+    "perspectival_gap": "From the perspective of provinces asserting autonomy, this is a legitimate coordination mechanism that preserves their foundational status. From the perspective of the federal government seeking to implement national policies, it can be seen as an extractive constraint that forces concessions and limits effective governance. Provinces seeking equalization may view it as extractive if it prioritizes resource-rich provinces' autonomy over national wealth redistribution.",
+    "directionality_logic": "Provinces asserting autonomy are beneficiaries (d=0.15) as the constraint grants them significant leverage. The federal government seeking consensus is also a beneficiary (d=0.3) as it provides a framework for stable governance, even if negotiated. The federal government seeking unilateral action is a victim (d=0.8) as its power is curtailed. Provinces seeking equalization are victims (d=0.7) if the compact federalism reading allows resource-rich provinces to retain more wealth. The Supreme Court is an analytical observer/agenda setter (d=0.5) as it interprets the rules.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (ignoring the extraction from federal unilateralism and some provinces) or a pure Snare (ignoring the genuine coordination function and benefits to autonomous provinces). The 'compact federalism' reading, while contested, serves a live function in mediating federal-provincial power dynamics, preventing mandatrophy by actively shaping ongoing political and legal contests."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_subordination",
+      "resource_sovereignty_primacy"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'provincial_sovereignty_boundary' kernel. Its structural delta (federal authority conditional on provincial consent, equalization negotiable, climate policy subject to provincial override, exit requires negotiation not permission) differentiates it from sibling readings like 'constitutional_subordination' and 'resource_sovereignty_primacy', which assert different power balances and exit conditions."
+  },
+  "stakeholders": [
+    {
+      "name": "provinces_asserting_autonomy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These provinces interpret Confederation as a voluntary compact, asserting their right to residual sovereignty and conditional consent to federal initiatives. They benefit from the leverage this interpretation provides in negotiations over policy and resources, including the perceived right to negotiate exit under duress."
+    },
+    {
+      "name": "federal_government_seeking_consensus",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "This aspect of the federal government seeks to maintain national unity and stability through negotiation and compromise with provinces, accepting that federal authority is often conditional on provincial consent. It benefits from the legitimacy and reduced conflict that this consensual approach can bring, even if it limits unilateral action."
+    },
+    {
+      "name": "federal_government_seeking_unilateral_action",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "This aspect of the federal government aims to implement national policies (e.g., climate change, social programs) uniformly across the country, often preferring to act without requiring explicit provincial consent. It 'pays' by having its authority constrained by provincial demands for consultation, negotiation, and potential override, leading to delays or diluted policies."
+    },
+    {
+      "name": "provinces_seeking_equalization",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These provinces rely on federal equalization payments to provide comparable public services. Under a 'compact federalism' reading that emphasizes provincial resource sovereignty and conditional federal authority, their ability to demand greater equalization or federal intervention in resource-rich provinces' affairs may be limited, effectively 'paying' by receiving less redistribution."
+    },
+    {
+      "name": "supreme_court_of_canada",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The highest judicial authority, responsible for interpreting the Constitution and adjudicating disputes between federal and provincial governments. Its rulings shape the legal boundaries of sovereignty, influencing the balance of power and the interpretation of federalism. It sets the agenda for constitutional discourse."
+    }
+  ],
+  "gain_flow": "provinces_asserting_autonomy",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the division of powers and responsibilities between federal and provincial governments, providing a framework for intergovernmental relations, policy implementation, and dispute resolution within a multi-level governance system.",
+    "transfer_function": "Transfers political leverage and policy autonomy to provinces, allowing them to assert control over areas like resources and social policy, while requiring the federal government to negotiate and seek consent for national initiatives.",
+    "absent_voices": "A unified 'Canadian people' as a single sovereign entity is often absent from the compact federalism discourse, which prioritizes provincial interests. Such a voice would argue for stronger federal powers to ensure national standards and collective action, potentially viewing provincial autonomy as an impediment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the compact federalism reading vanished, the entire structure of federal-provincial relations would collapse. Provinces would either assert absolute sovereignty (leading to potential secession or a much looser confederation) or be fully subordinated to federal authority, fundamentally altering the Canadian political landscape.",
+    "founding_problem": "The original problem was how to unite diverse colonial entities into a single nation while preserving their distinct identities and local governance, balancing central authority with regional autonomy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and political scientists widely corroborate that balancing central and regional powers remains a live and ongoing challenge in Canadian federalism. Provincial premiers, federal leaders, and constitutional scholars consistently engage in debates and negotiations that reflect this foundational tension, confirming its persistence from outside the immediate beneficiaries of any single reading."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_subordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "resource_sovereignty_primacy",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "confederation_as_voluntary_compact",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "provinces_retain_residual_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "original_compact_intent",
+    "drift_state": {
+      "moment": "contemporary_federal_centralization_pressure",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

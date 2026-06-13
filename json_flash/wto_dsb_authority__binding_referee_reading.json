@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "wto_dsb_authority__binding_referee_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "7caa6d60-c76e-4b49-b06e-edd792648b5b"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "WTO DSB Binding Referee Authority",
+    "topic_domain": "international_law/trade_governance/institutional_legitimacy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wto_member_states_seeking_enforcement",
+      "global_trading_system"
+    ],
+    "victims": [
+      "wto_member_states_found_in_violation",
+      "domestic_policy_autonomy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the WTO DSB's authority truly binding and referee-like, or is it primarily advisory and coordination-focused?",
+      "resolution_mechanism": "Analysis of compliance rates without authorized retaliation, and the frequency of negotiated settlements versus imposed remedies.",
+      "impact": "If primarily advisory, the constraint's effective extraction and suppression are lower, reclassifying it closer to a Rope. If binding, the current classification as Tangled Rope holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'binding_referee_reading' of the 'wto_dsb_authority' kernel. Sibling readings ('advisory_coordination_reading', 'judicial_activism_reading') would alter the perceived binding nature and legitimacy of DSB rulings."
+    },
+    {
+      "id": "sovereignty_tradeoff_legitimacy",
+      "question": "To what extent did member states genuinely consent to surrender policy discretion in exchange for market access, versus being coerced by the structure of global trade?",
+      "resolution_mechanism": "Historical analysis of treaty negotiations, state declarations, and the presence of viable exit options for states from the WTO system.",
+      "impact": "If consent was genuinely free, the extraction is a legitimate cost of coordination. If coerced, the extraction is more akin to a Snare, as the 'benefit' of market access is effectively unavoidable.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Assesses the normative grounding of the trade-off between sovereignty and market access."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the authority of the WTO Dispute Settlement Body (DSB) as a binding referee, where its panel rulings create compliance obligations for member states, grounded in treaty law. From this 'binding referee' perspective, member states have explicitly surrendered a degree of policy discretion within WTO-covered domains in exchange for the benefits of a stable, rules-based global trading system. Non-compliance is viewed as a treaty violation, potentially leading to authorized retaliation, rather than a mere policy choice.",
+    "key_agents": [
+      "wto_member_states_seeking_enforcement: Beneficiary (institutional/mobile) — benefits from enforcement of rules",
+      "wto_member_states_found_in_violation: Payer (institutional/constrained) — bears costs of compliance or retaliation",
+      "wto_secretariat_and_panels: Agenda Setter (institutional/analytical) — administers and interprets treaty law",
+      "domestic_policy_autonomy: Victim (non-agent/trapped) — the policy space constrained by rulings",
+      "global_trading_system: Beneficiary (non-agent/universal) — benefits from stability and predictability"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is substantial because states must alter domestic policies or face trade sanctions, representing a direct cost. Suppression (0.75) is high due to the binding nature of rulings and the threat of authorized retaliation, which limits policy alternatives. Theater ratio (0.1) is low, as the DSB's function is largely effective and not performative; its rulings have real-world consequences. Accessibility collapse (0.7) is high because once a ruling is made, the policy space for the violating state is significantly narrowed. Resistance (0.3) is moderate, as states often challenge rulings but ultimately face strong pressure to comply.",
+    "perspectival_gap": "From the perspective of states seeking enforcement, the DSB is a crucial mechanism for fair trade, ensuring compliance and predictability. For states found in violation, it is an external imposition that curtails sovereign policy space. The WTO Secretariat and panels view it as upholding the rules-based international order. These divergent views are captured by the different roles and exit options.",
+    "directionality_logic": "WTO member states seeking enforcement are beneficiaries (d=0.0-0.2) as the system works to their advantage. WTO member states found in violation are targets (d=0.8-1.0) as they bear the direct costs of compliance or retaliation. The WTO Secretariat and panels are agenda setters (d=0.4-0.6), administering the system. Domestic policy autonomy is a victim (d=1.0) as it is directly curtailed. The global trading system is a diffuse beneficiary (d=0.0).",
+    "mandatrophy_analysis": "This classification as a Tangled Rope prevents mislabeling the DSB as a pure Snare, acknowledging its genuine coordination function in providing a stable, rules-based trading environment. However, it also highlights the asymmetric extraction from states found in violation, which is sustained by active enforcement and the suppression of alternative policy choices. The 'binding referee' reading emphasizes the enforcement aspect, which is critical for the Tangled Rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_dsb_authority__advisory_coordination_reading",
+      "wto_dsb_authority__judicial_activism_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'wto_dsb_authority' kernel. It emphasizes the binding nature of DSB rulings, contrasting with the 'advisory_coordination_reading' (which sees DSB as facilitating negotiation) and the 'judicial_activism_reading' (which views DSB as overstepping its mandate)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "wto_dsb_authority__advisory_coordination_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "wto_dsb_authority__judicial_activism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "treaty_law_is_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sovereignty_can_be_pooled_for_mutual_gain",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "rules_based_multilateralism",
+    "drift_state": {
+      "moment": "contemporary_era_of_nationalism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_1787__originalist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "bfb27098-6e8e-4959-a00f-e6349d0f5d2e"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Constitution: Originalist Reading",
+    "topic_domain": "constitutional_law/legal_theory/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "originalist_legal_scholars",
+      "conservative_judicial_activists"
+    ],
+    "victims": [
+      "social_rights_advocates",
+      "legislative_bodies_seeking_flexibility"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "framers_intent_epistemic_access",
+      "question": "Is it epistemically possible to reliably ascertain the 'original intent' of the framers, given historical distance and diverse individual motivations?",
+      "resolution_mechanism": "Consensus among historians and legal methodologists on the reliability and completeness of historical sources for inferring collective intent.",
+      "impact": "If unreliable, the constraint's claimed 'mountain' status collapses, revealing it as a constructed interpretive choice; if reliable, it strengthens the claim of fixed meaning.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The epistemic challenge of determining original intent."
+    },
+    {
+      "id": "originalism_vs_living_constitution",
+      "question": "Is the originalist reading of the US Constitution a genuine interpretation of a fixed text, or a political strategy to limit judicial discretion and legislative power?",
+      "resolution_mechanism": "Analysis of judicial outcomes: if originalist rulings consistently align with pre-1787 practices even when socially detrimental, it supports genuine interpretation; if they align with contemporary conservative policy goals, it suggests political strategy.",
+      "impact": "If a political strategy, the constraint's extractiveness and suppression are higher, as its 'fixed meaning' claim serves to legitimize specific power distributions; if genuine, it is a more benign (though still potentially extractive) interpretive framework.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between genuine interpretation and political strategy."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'originalist_reading' of the 'us_constitution_1787' kernel. What structural elements would change if a 'living_reading' or 'positivist_reading' were adopted?",
+      "resolution_mechanism": "Comparative legal analysis of hypothetical judicial outcomes under alternative interpretive regimes.",
+      "impact": "A 'living_reading' would expand the set of legitimate social rights claims and increase legislative flexibility, reducing extraction from social_rights_advocates. A 'positivist_reading' would constrain judicial interpretation more strictly to the text, potentially reducing judicial activism but not necessarily altering the scope of rights in the same way.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identification of this constraint as one reading of the US Constitution kernel, and the structural implications of sibling readings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'originalist' reading of the US Constitution, which posits that the meaning of the Constitution is fixed at the time of its ratification (1787) and should be interpreted according to the original intent of the framers or the original public meaning of the text. This reading aims to constrain judicial interpretation and legislative action to a narrow, historically defined set of legitimate practices and rights, often excluding modern social rights claims. It is a contested interpretive framework within constitutional law.",
+    "key_agents": [
+      "originalist_legal_scholars: Agenda setter (institutional/analytical) — define and propagate the interpretive methodology.",
+      "conservative_judicial_activists: Beneficiary (institutional/powerful) — use this reading to justify specific judicial outcomes.",
+      "social_rights_advocates: Payer (organized/powerless) — bear the costs of a constrained interpretation that limits the recognition of evolving rights.",
+      "legislative_bodies_seeking_flexibility: Payer (institutional/powerful) — find their policy options limited by a fixed constitutional meaning.",
+      "living_constitutionalists: Excluded (institutional/analytical) — advocate for an evolving constitutional meaning, but are structurally excluded from the originalist interpretive framework.",
+      "positivist_legal_theorists: Observer (analytical) — analyze the originalist framework from a textualist perspective, often critiquing its reliance on intent."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it offers a coordination function (providing a stable, predictable framework for legal interpretation) but also involves significant asymmetric extraction. The extractiveness (0.6) stems from the limitation of rights and legislative flexibility, benefiting those who prefer a static interpretation. Suppression (0.7) is high due to the active enforcement of this interpretive methodology in courts and legal discourse, often marginalizing alternative readings. The theater ratio (0.2) is relatively low, as the interpretive work is genuinely aimed at historical reconstruction, though some performativity exists in selectively emphasizing certain historical evidence.",
+    "perspectival_gap": "From the perspective of originalist legal scholars and conservative judicial activists, this framework provides a necessary, objective constraint on judicial power, ensuring fidelity to the founding document. From the perspective of social rights advocates and legislative bodies, it is an extractive mechanism that prevents adaptation to modern societal needs and entrenches historical power imbalances. The engine's per-seat classification will reflect these divergent experiences.",
+    "directionality_logic": "Originalist legal scholars and conservative judicial activists are beneficiaries (d near 0.0) as they gain intellectual authority and policy outcomes from this reading. Social rights advocates and legislative bodies are victims (d near 1.0) as their goals are constrained. Living constitutionalists are excluded, their interpretive framework actively suppressed by the originalist one. Positivist legal theorists are analytical observers, not directly impacted by the constraint's operation.",
+    "mandatrophy_analysis": "The originalist reading prevents mislabeling a politically motivated interpretive choice as a 'natural law' (Mountain) of constitutional meaning. By classifying it as a Tangled Rope, the framework highlights that its persistence depends on active enforcement and the suppression of alternatives, rather than inherent, unchangeable truth. The 'founding problem' of judicial overreach is still 'contested,' indicating that the constraint's mandate is not fully resolved and its function is debated.",
+    "kernel_context": "This constraint is the 'originalist_reading' of the 'us_constitution_1787' kernel. Sibling readings include the 'living_reading' (meaning evolves with society) and the 'positivist_reading' (meaning is strictly textual plus amendments). This originalist reading emphasizes a fixed meaning at ratification, binding framers' intent, and high epistemic demands on historical evidence, leading to a narrow constraint set and often excluding modern social rights claims."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_constitution_1787__living_reading",
+      "us_constitution_1787__positivist_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the US Constitution (us_constitution_1787) kernel. Each reading is modeled as a separate constraint due to differing epsilon values and structural properties."
+  },
+  "stakeholders": [
+    {
+      "name": "originalist_legal_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Develop, articulate, and propagate the originalist interpretive methodology. Their careers and intellectual authority are often tied to the acceptance and application of this reading. They actively shape legal discourse and judicial appointments."
+    },
+    {
+      "name": "conservative_judicial_activists",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Apply the originalist reading in judicial decisions, often leading to outcomes that align with conservative political goals. Their power and legitimacy within the legal system are enhanced by the perceived objectivity and historical fidelity of originalism."
+    },
+    {
+      "name": "social_rights_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek to expand constitutional protections for evolving social rights (e.g., LGBTQ+ rights, environmental rights). They find their claims often rejected or limited by the originalist framework, which restricts the scope of constitutional meaning to historical understandings."
+    },
+    {
+      "name": "legislative_bodies_seeking_flexibility",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt to enact legislation addressing contemporary social and economic issues, but face challenges from originalist interpretations that deem such laws unconstitutional if they deviate from historical norms or framers' intent. Their policy options are constrained."
+    },
+    {
+      "name": "living_constitutionalists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Advocate for a 'living Constitution' whose meaning evolves with societal values and needs. Their interpretive framework is often dismissed or actively opposed by originalists, limiting their influence in judicial appointments and legal education, making their 'exit' from the debate difficult due to professional identity."
+    },
+    {
+      "name": "positivist_legal_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze constitutional interpretation from a perspective focused on the text and formal legal processes, often critiquing both originalism's reliance on intent and living constitutionalism's flexibility. They are not directly subject to the constraint's enforcement but provide critical commentary."
+    }
+  ],
+  "gain_flow": "originalist_legal_scholars",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a stable, historically grounded framework for constitutional interpretation, aiming to limit judicial discretion and ensure fidelity to the original document, thereby coordinating legal expectations across different branches of government and over time.",
+    "transfer_function": "Transfers interpretive authority from contemporary judges and legislators to historical figures (the framers), and from evolving societal norms to fixed historical understandings. This limits the scope of rights and legislative power, benefiting those who prefer a static constitutional order.",
+    "absent_voices": "Living constitutionalists and proponents of evolving social rights are often marginalized in originalist discourse, their arguments dismissed as lacking historical grounding. They would argue for a more adaptable Constitution responsive to modern challenges.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the originalist reading vanished, constitutional interpretation would immediately shift towards more flexible or purely textualist approaches. Judicial decisions would likely expand the scope of rights and legislative power, leading to a significant rearrangement of legal and political landscapes.",
+    "founding_problem": "The originalist reading was developed to address concerns about judicial activism and the perceived erosion of democratic self-governance through unelected judges imposing their own policy preferences under the guise of constitutional interpretation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist scholars and conservative politicians attest that judicial activism remains a live problem, necessitating a fixed interpretive method. Critics (including many legal historians and other constitutional scholars) argue that the problem of judicial overreach is often overstated or selectively applied, and that originalism itself can be a form of judicial activism, making the status of the founding problem highly contested by sources outside the benefiting parties."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "us_constitution_1787__living_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "us_constitution_1787__positivist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_meaning_fixed_at_ratification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "framers_intent_is_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "original_public_meaning_1787",
+    "drift_state": {
+      "moment": "contemporary_judicial_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

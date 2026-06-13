@@ -1,0 +1,298 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__deterrence_instrument",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "7178e4ce-b1c5-43ba-9a62-693821e1971f"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.9,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Punishment as Deterrence Instrument",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_future_victims",
+      "state_prosecutors",
+      "political_incumbents"
+    ],
+    "victims": [
+      "condemned_individuals",
+      "defense_attorneys",
+      "families_of_condemned"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact and maintain laws authorizing capital punishment, often in response to public demand for 'tough on crime' policies. They frame capital punishment as a necessary tool for public safety and crime prevention."
+    },
+    {
+      "name": "state_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets and applies capital punishment statutes, overseeing trials and appeals. While bound by law, judicial decisions can shape the practical application and perceived efficacy of deterrence."
+    },
+    {
+      "name": "potential_future_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the theoretical beneficiaries of capital punishment if it genuinely deters future murders. Their lives are hypothetically saved, but they have no agency in the constraint's operation."
+    },
+    {
+      "name": "condemned_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the direct targets of the constraint, losing their lives as an instrumental cost for the alleged deterrence benefit. Their agency is entirely suppressed by the state's power."
+    },
+    {
+      "name": "defense_attorneys",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the professional and emotional costs of defending individuals facing execution. They challenge the efficacy and constitutionality of capital punishment, often citing lack of deterrence evidence."
+    },
+    {
+      "name": "families_of_condemned",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience profound loss and trauma, often becoming advocates against capital punishment. They bear the social and emotional costs without any perceived benefit."
+    },
+    {
+      "name": "criminologists_and_statisticians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct empirical studies on the deterrent effect of capital punishment. Their findings, largely inconclusive or negative regarding deterrence, directly challenge the foundational premise of this reading."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue against capital punishment on moral and ethical grounds, regardless of its deterrent effect. While they can influence public opinion and international law, their arguments are often dismissed by deterrence proponents as irrelevant to the instrumental goal."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate societal behavior by establishing a severe consequence for murder, thereby deterring potential offenders and ensuring public safety.",
+    "transfer_function": "Transfers the life of a condemned individual from their person to the state, in exchange for the alleged benefit of preventing an unknown number of future murders for potential victims.",
+    "absent_voices": "The condemned, whose voices are silenced by execution, and human rights advocates, whose categorical objections are deemed irrelevant by the instrumental logic of deterrence, are excluded from the core justification framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the authority to execute for deterrence vanished, the criminal justice system would need to fundamentally re-evaluate its sentencing structures, public safety strategies, and moral justifications for punishment. The political discourse around crime would also shift significantly.",
+    "founding_problem": "The problem of preventing heinous crimes, specifically murder, and ensuring public safety through the most severe available punishment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents (state legislatures, some prosecutors) attest the problem is live and capital punishment is a necessary deterrent. Criminologists, defense attorneys, and human rights groups, from outside the benefiting parties, widely contest the deterrence claim, citing empirical evidence that it does not significantly reduce murder rates beyond life imprisonment."
+  },
+  "interval": {
+    "start": 1976,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models capital punishment as justified solely by its capacity to deter future murders at an acceptable cost. It is one reading of the broader 'state killing authority' kernel. The core claim is instrumental: the state's authority to execute is contingent on its efficacy as a crime prevention tool. This reading places the lives of potential future victims as the primary beneficiaries, while the condemned individual is treated as an instrumental cost. The empirical evidence for deterrence is highly contested, leading to a significant gap between the claimed justification and its actual operation.",
+    "key_agents": [
+      "state_legislatures: Agenda setter (institutional/constrained)",
+      "state_judiciary: Agenda setter (institutional/constrained)",
+      "potential_future_victims: Primary beneficiary (powerless/trapped)",
+      "condemned_individuals: Primary target/payer (powerless/trapped)",
+      "defense_attorneys: Payer (moderate/constrained)",
+      "families_of_condemned: Payer (powerless/trapped)",
+      "criminologists_and_statisticians: Observer (analytical/analytical)",
+      "human_rights_advocates: Excluded (organized/mobile)"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is high because it involves the ultimate cost (life) for a benefit (deterrence) that is empirically unproven. Suppression (0.90) is very high due to the state's monopoly on legitimate force and the complete lack of exit for the condemned. The theater ratio (0.40) reflects the gap between the stated deterrence goal and the actual, often symbolic, function of executions, especially as empirical evidence for deterrence weakens. Resistance (0.70) is high due to active legal and advocacy challenges. Accessibility collapse (0.80) is high because once the state asserts this authority, alternatives for the condemned are almost entirely foreclosed.",
+    "perspectival_gap": "From the perspective of state legislatures and some prosecutors, this is a legitimate, albeit severe, tool for public safety. From the perspective of the condemned, their families, and defense attorneys, it is an unjust and irreversible extraction based on a dubious premise. Criminologists observe a lack of empirical support, further widening this gap.",
+    "directionality_logic": "The state (legislatures, judiciary) and political incumbents are beneficiaries (d near 0.0) as they gain perceived public safety and political capital. Potential future victims are also beneficiaries (d near 0.0) if deterrence is real. Condemned individuals, defense attorneys, and their families are clear targets/victims (d near 1.0). Criminologists and human rights advocates are observers or excluded, with analytical or mobile exit options.",
+    "mandatrophy_analysis": "The constraint's mandate (deterrence) is increasingly contested. If the deterrence function is proven 'dead' (as many criminologists argue), but the practice persists, it would indicate mandatrophy, where the constraint continues due to inertia, political symbolism, or other unstated functions, rather than its original purpose. This would shift its classification closer to a Snare or Piton, as the coordination story (deterring crime) becomes a cover for pure extraction or theatrical maintenance."
+  },
+  "omegas": [
+    {
+      "id": "deterrence_efficacy_empirical",
+      "question": "Does capital punishment actually deter future murders more effectively than life imprisonment?",
+      "resolution_mechanism": "Longitudinal, controlled empirical studies comparing murder rates in jurisdictions with and without capital punishment, controlling for socioeconomic factors.",
+      "impact": "If deterrence is disproven, the instrumental justification for this reading collapses, shifting its classification towards a Snare (pure extraction) or Piton (theatrical maintenance). If proven, it would strengthen the Rope or Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical evidence for the deterrence effect of capital punishment."
+    },
+    {
+      "id": "cost_benefit_acceptability",
+      "question": "What constitutes an 'acceptable cost' for the alleged deterrence benefit, particularly when that cost is a human life?",
+      "resolution_mechanism": "Societal consensus through deliberative democracy, or judicial rulings establishing constitutional limits on 'acceptable cost' in terms of human rights and due process.",
+      "impact": "If the cost is deemed unacceptable, even with proven deterrence, the constraint's legitimacy would collapse, pushing it towards a Snare. If a societal consensus on acceptability emerges, it would reinforce the claimed type.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Societal definition of 'acceptable cost' for deterrence."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine deterrence instrument, or is the deterrence claim a cover for retributive impulses or political signaling?",
+      "resolution_mechanism": "Analysis of legislative intent, judicial opinions, and public discourse: if the primary justification consistently shifts to retribution or political expediency when deterrence evidence is challenged, it suggests a different underlying reading.",
+      "impact": "If the deterrence claim is primarily a cover, the constraint is better classified as the 'retributive_desert' reading, or a Snare if the cover is purely extractive.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing deterrence as a genuine instrument from a cover story."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__retributive_desert",
+      "state_killing_authority__categorical_abolition"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'state_killing_authority' kernel, focusing on deterrence. It is linked to sibling readings (retributive_desert, categorical_abolition) which offer alternative justifications or rejections of state killing."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "state_killing_authority__retributive_desert",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "state_killing_authority__categorical_abolition",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "punishment_as_crime_prevention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "state_monopoly_on_violence_for_public_good",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "utilitarian_crime_prevention_framework",
+    "drift_state": {
+      "moment": "contemporary_empirical_challenge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

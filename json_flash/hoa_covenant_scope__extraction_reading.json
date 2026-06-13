@@ -1,0 +1,256 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__extraction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "5640d351-1387-4abf-98bd-20d869d2e370"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "HOA Covenant as Extraction Mechanism (Extraction Reading)",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hoa_board_members",
+      "property_management_firms",
+      "hoa_legal_counsel"
+    ],
+    "victims": [
+      "financially_vulnerable_homeowners",
+      "renters_via_pass_through"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint primarily an extraction mechanism, or does it genuinely serve coordination or behavioral control functions?",
+      "resolution_mechanism": "Analysis of fine revenue allocation, enforcement patterns (e.g., targeting high-fine violations vs. genuine nuisances), and board member financial interests. If revenue primarily funds management/legal fees and board members benefit from increased property values without direct contribution, the extraction reading is strengthened.",
+      "impact": "If the extraction reading is confirmed, the constraint is a Snare; if coordination or behavioral control functions are dominant, it would be a Rope or Tangled Rope with lower extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "This constraint is the 'extraction_reading' of the 'hoa_covenant_scope' kernel. Sibling readings ('coordination_reading', 'behavioral_control_reading') offer alternative interpretations of the covenant's primary function."
+    },
+    {
+      "id": "fine_revenue_allocation_ambiguity",
+      "question": "To what extent does fine revenue genuinely fund community improvements or shared amenities, versus primarily covering administrative and legal costs?",
+      "resolution_mechanism": "Detailed audit of HOA financial records, comparing fine income to expenditures on common area maintenance, amenity upgrades, and legal/management fees.",
+      "impact": "If fine revenue disproportionately funds administrative overhead and legal fees, it strengthens the extraction reading. If it primarily funds community benefits, it would weaken the extraction claim and shift towards a coordination or behavioral control reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in how fine revenue is utilized by the HOA."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the operation of Homeowners Association (HOA) covenants primarily as a mechanism for revenue generation and power consolidation by the HOA board and associated firms, rather than for genuine community coordination or property value maintenance. Enforcement is characterized by a proliferation of fines, selective application of rules, and expedited lien processes, often leading to significant attorney fees. This is the 'extraction_reading' of the 'hoa_covenant_scope' kernel, focusing on the rent-seeking aspects.",
+    "logic_rationale": "Extractiveness is high (0.68) due to the substantial financial transfers from homeowners to the HOA, property management, and legal counsel through fines and associated fees. Suppression (0.75) is significant because homeowners have limited exit options and face legal and financial penalties for non-compliance, with enforcement often targeting minor infractions to generate revenue. The theater ratio (0.40) reflects that while some covenant enforcement genuinely maintains community standards, a substantial portion is performative or pretextual, serving primarily to justify fines and assert board authority. The increasing trend in extractiveness and suppression over time reflects a drift towards more aggressive fine proliferation and enforcement.",
+    "perspectival_gap": "HOA board members and property management firms perceive the covenant as a necessary tool for maintaining community standards and financial stability, justifying their fees. Financially vulnerable homeowners, however, experience it as an arbitrary and punitive system designed to extract wealth, with little recourse. This divergence is central to the extraction reading.",
+    "directionality_logic": "HOA board members, property management firms, and legal counsel are clear beneficiaries (d near 0.0) as they directly profit from fine revenue and associated fees. Financially vulnerable homeowners and renters (via pass-through costs) are the primary victims (d near 1.0), bearing the brunt of fines and enforcement. Other homeowners may experience a mix of benefits (e.g., perceived property value maintenance) and costs (e.g., risk of fines), placing them closer to symmetric.",
+    "mandatrophy_analysis": "The constraint's original mandate might have been genuine coordination (e.g., maintaining common areas). However, in this extraction reading, the mandate has atrophied into a cover for rent-seeking. The classification as Tangled Rope (rather than Snare) acknowledges the *claimed* coordination function, but the high extractiveness and active enforcement reveal its true nature as a mechanism for asymmetric wealth transfer. Resolving mandatrophy would require restructuring governance to align incentives, ensuring fine revenue directly benefits the community, and limiting the discretion of enforcement to prevent rent-seeking.",
+    "kernel_context": "This constraint, 'hoa_covenant_scope__extraction_reading', is one interpretation of the 'hoa_covenant_scope' kernel. It posits that HOA covenants primarily function as a revenue generation and power consolidation tool. Sibling readings include 'coordination_reading' (covenants as genuine collective action solutions) and 'behavioral_control_reading' (covenants as aesthetic and behavioral conformity mechanisms for property value maximization)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'hoa_covenant_scope' kernel, focusing on its extractive function. It is linked to 'hoa_covenant_scope__coordination_reading' and 'hoa_covenant_scope__behavioral_control_reading' as sibling interpretations."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "hoa_board_members",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Elected or appointed individuals who set and enforce covenant rules, often with significant discretion. They benefit from increased property values (if they own property in the HOA) and can consolidate power through control over enforcement and financial resources. They approve contracts with property management and legal counsel."
+    },
+    {
+      "name": "property_management_firms",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Contracted by the HOA board to administer covenants, collect fees, and manage enforcement. They profit directly from management fees and often from additional charges for fine processing, lien filings, and other administrative tasks, incentivizing fine proliferation."
+    },
+    {
+      "name": "hoa_legal_counsel",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Law firms retained by the HOA to pursue covenant violations, collect unpaid fines, and handle litigation. They generate substantial revenue from attorney fees, which are often passed directly to homeowners, creating a strong incentive for aggressive enforcement and legal action."
+    },
+    {
+      "name": "financially_vulnerable_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Homeowners with limited financial resources who are disproportionately impacted by fines, late fees, and legal costs. They face the risk of liens, foreclosure, and significant financial distress, with few options to contest enforcement or exit the HOA without losing their home."
+    },
+    {
+      "name": "renters_via_pass_through",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Renters in HOA-governed properties who indirectly bear the costs of fines and fees through increased rent or reduced property maintenance by landlords. They have no direct voice in HOA governance and limited recourse against covenant enforcement."
+    },
+    {
+      "name": "other_homeowners",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Homeowners who may benefit from perceived property value maintenance or amenities, but also face the risk of fines and contribute to HOA fees. Their position is ambiguous, as they are both subject to the extractive mechanisms and potential beneficiaries of the overall HOA structure."
+    },
+    {
+      "name": "local_government_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Local authorities responsible for consumer protection or property rights who may receive complaints about HOA practices. They have the power to investigate and potentially intervene, but often face legal limitations in regulating private HOA covenants."
+    }
+  ],
+  "gain_flow": "property_management_firms",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "The claimed coordination function is to maintain property values and shared amenities through uniform standards and enforcement, ensuring a desirable living environment for all residents.",
+    "transfer_function": "Transfers financial resources (fines, fees, legal costs) from homeowners (especially financially vulnerable ones) to the HOA's administrative and legal apparatus, primarily benefiting property management firms and legal counsel, and indirectly consolidating power for HOA board members.",
+    "absent_voices": "Homeowners who have lost their homes due to HOA liens or foreclosures are permanently excluded. Potential residents who avoid HOA communities due to their reputation for aggressive enforcement are also absent, representing a suppressed market for alternative governance models.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the covenant's extractive enforcement vanished, the revenue streams for property management and legal counsel would collapse, HOA boards would lose a primary tool for power consolidation, and homeowners would regain autonomy over their property. The market for community governance would likely reorganize, with a shift towards more genuinely cooperative models or direct municipal services.",
+    "founding_problem": "HOA covenants were originally established to ensure maintenance of common areas, resolve genuine externalities (e.g., noise, waste), and protect property values in planned communities where shared responsibilities were necessary.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "HOA boards and property management firms assert the founding problems (e.g., maintaining property values, ensuring community standards) are still live. However, financially vulnerable homeowners, housing advocates, and some legal scholars argue that while some problems persist, the enforcement mechanism has drifted to primarily serve extractive interests, with the original coordination function largely superseded by rent-seeking. Independent studies on HOA foreclosures and fine revenue allocation corroborate the shift."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hoa_covenant_scope__coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hoa_covenant_scope__behavioral_control_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "covenant_as_revenue_source",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "board_discretion_as_power_tool",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unfettered_board_discretion",
+    "drift_state": {
+      "moment": "contemporary_consumer_protection_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

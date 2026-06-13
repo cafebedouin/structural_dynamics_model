@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_prioritization__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "eb402296-82fd-4bc0-b1fb-3c4516bee650"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Risk Prioritization: Existential Risk Reading",
+    "topic_domain": "ai_safety/technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "x_risk_research_institutions",
+      "longtermist_funders"
+    ],
+    "victims": [
+      "near_term_ai_harms_researchers",
+      "future_humanity"
+    ]
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2050
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'existential risk' reading of AI risk prioritization, where the primary concern is misaligned AGI leading to human extinction, and alignment research is paramount. This reading frames near-term harms as secondary or distractions. It is a reading of the 'ai_risk_prioritization' kernel, which also includes the 'near_term_harms_reading' sibling.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates a significant research effort (alignment research) but also involves asymmetric extraction. Resources (funding, attention, talent) are extracted from areas focused on near-term AI harms and directed towards existential risk. Active enforcement is present through funding mechanisms, academic prestige, and public advocacy that marginalizes alternative framings. Extractiveness is moderate (0.6) due to the significant redirection of resources. Suppression is high (0.7) because alternative risk framings are actively downplayed or dismissed as less important. Theater ratio is low (0.2) as the core research is genuine, but some advocacy may overstate the immediacy or certainty of the threat to maintain prioritization.",
+    "perspectival_gap": "From the perspective of x-risk research institutions and longtermist funders, this is a crucial coordination mechanism for humanity's survival. From the perspective of near-term AI harms researchers, it is an extractive mechanism that diverts resources from urgent, observable problems to speculative, distant ones. Future humanity, as the ultimate victim, has no direct perspective but is represented by the x-risk community.",
+    "directionality_logic": "X-risk research institutions and longtermist funders are clear beneficiaries (d=0.0-0.2) as their agendas and funding priorities are amplified. Near-term AI harms researchers are payers (d=0.8-1.0) as their work is deprioritized and underfunded. Future humanity is a victim (d=1.0) as their very existence is at stake, and their interests are unilaterally defined by the beneficiaries. Policy makers and AI developers are complex, often acting as both beneficiaries (of a clear, albeit narrow, agenda) and payers (of resources or attention diverted from other areas).",
+    "mandatrophy_analysis": "The constraint's mandate (preventing existential risk) is still considered 'live' by its proponents. However, the 'contested' status of the founding problem (is it truly the *primary* problem?) suggests a potential for mandatrophy if the existential threat is later deemed less immediate or if near-term harms become undeniably catastrophic. The classification as Tangled Rope, rather than a pure Rope, acknowledges the extractive and suppressive elements inherent in this prioritization, preventing it from being mislabeled as purely beneficial coordination.",
+    "kernel_context": "This constraint is the 'existential_risk_reading' of the 'ai_risk_prioritization' kernel. It posits that AI risk is primarily existential, focusing on misaligned AGI and the paramount importance of alignment research. Its sibling reading, 'near_term_harms_reading', emphasizes immediate, measurable harms of deployed AI systems."
+  },
+  "omegas": [
+    {
+      "id": "immediacy_of_threat",
+      "question": "Is the existential threat from AGI imminent (within 10-20 years) or a more distant, speculative risk (50+ years)?",
+      "resolution_mechanism": "Empirical progress in AGI capabilities, expert consensus shifts, and the emergence of concrete, uncontained AGI prototypes.",
+      "impact": "If the threat is more distant, the urgency of this prioritization framework diminishes, potentially reallocating resources to near-term harms. If imminent, it reinforces the current prioritization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The timescale and certainty of AGI existential risk."
+    },
+    {
+      "id": "resource_allocation_efficiency",
+      "question": "Is the current allocation of resources to existential risk research the most effective way to mitigate *all* AI-related risks, or does it create blind spots for other critical issues?",
+      "resolution_mechanism": "Comparative analysis of risk mitigation outcomes across different funding models and research prioritization frameworks, including those focused on near-term harms.",
+      "impact": "If inefficient, it would suggest the extractive component is higher than measured, as resources are not optimally deployed for overall risk reduction. If efficient, it would strengthen the coordination claim.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Efficiency of resource allocation for overall AI risk mitigation."
+    },
+    {
+      "id": "framing_under_determination",
+      "question": "Is the 'existential risk' framing the only defensible way to conceptualize the primary threat of AI, or is it a choice that serves specific institutional interests?",
+      "resolution_mechanism": "Analysis of the historical development of AI risk discourse, the funding landscape, and the sociological dynamics of the AI safety community.",
+      "impact": "If it's primarily a choice serving interests, the constraint's 'coordination' function is weaker, and its 'extraction' function is stronger, potentially reclassifying it closer to a Snare. If it's the only defensible framing, the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The conceptual framing of AI risk and its potential for bias."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_governance_frameworks",
+      "ai_ethics_research_funding"
+    ],
+    "dual_formulation_note": "This constraint is the 'existential_risk_reading' of the 'ai_risk_prioritization' kernel. Its sibling, 'near_term_harms_reading', focuses on immediate, observable harms of AI systems."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ai_risk_prioritization__near_term_harms_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "agi_poses_extinction_threat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "alignment_research_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "humanity_at_risk_from_agi",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

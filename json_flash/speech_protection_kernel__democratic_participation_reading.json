@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__democratic_participation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0ed65edf-5955-40fd-b00c-d8b6d4d47c17"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Speech Protection for Democratic Participation",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "citizens",
+      "political_candidates",
+      "advocacy_groups"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "self_governance_principle",
+      "informed_electorate_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'democratic participation' reading of the speech protection kernel, or is it a different reading in disguise?",
+      "resolution_mechanism": "Analysis of judicial opinions and legislative intent: if restrictions on non-political speech are consistently upheld with lower scrutiny, it corroborates this reading. If political speech is restricted on non-democratic grounds (e.g., 'dignity'), it suggests a different reading is operative.",
+      "impact": "If confirmed as the democratic participation reading, the classification holds. If found to be a different reading, the constraint's classification (and its beneficiaries/victims) would shift to reflect that underlying structural reality.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as the 'democratic participation' reading of the 'speech protection' kernel, distinguishing it from 'absolutist', 'harm threshold', 'marketplace', and 'dignity' readings."
+    },
+    {
+      "id": "scope_of_political_speech",
+      "question": "What constitutes 'political expression necessary for self-governance' in practice, and how does this definition affect the scope of protected speech?",
+      "resolution_mechanism": "Empirical analysis of court decisions: track the types of speech consistently granted highest protection and those deemed 'non-political' and thus more readily restricted. Examine how new forms of communication (e.g., social media, AI-generated content) are categorized.",
+      "impact": "A narrow definition of 'political speech' would reduce the scope of highly protected expression, potentially increasing effective suppression for other forms of speech. A broad definition would expand protection, potentially increasing the 'cost' of the constraint for those seeking to regulate non-political harms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining 'political expression' and its impact on speech protection."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a specific reading of the 'speech protection' kernel, where the highest degree of protection is afforded to political expression deemed necessary for a functioning democracy and self-governance. Other forms of speech (e.g., commercial, artistic, private) receive lesser protection and are more susceptible to regulation. This reading establishes a hierarchy within protected speech, with political discourse at the apex.",
+    "key_agents": [
+      "citizens: Primary beneficiaries (moderate/constrained) – benefit from robust political discourse.",
+      "political_candidates: Beneficiaries (powerful/mobile) – rely on broad protection for campaign speech.",
+      "advocacy_groups: Beneficiaries (organized/mobile) – benefit from ability to engage in political advocacy.",
+      "judicial_system: Agenda-setter (institutional/analytical) – interprets and enforces the scope of speech protection.",
+      "legislature: Agenda-setter (institutional/mobile) – passes laws that may regulate speech, subject to judicial review.",
+      "general_public: Beneficiary (organized/constrained) – benefits from an informed public sphere, but may bear costs of harmful non-political speech.",
+      "victims_of_non_political_harmful_speech: Payer (powerless/trapped) – bear the costs of speech not deemed 'political' enough for high protection, but still causing harm."
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely coordinates a vital public good (democratic discourse) with broad benefits. Extractiveness is low (0.25) as it primarily facilitates, rather than extracts from, political speech. Suppression is low (0.15) for political speech, but higher for other categories. Theater ratio is low (0.05) as the system genuinely aims to protect speech, even if its application is contested. The metrics reflect the *intended* and *largely achieved* function for political speech, while acknowledging the lower protection for other categories.",
+    "perspectival_gap": "Citizens and political actors experience this constraint as a strong protection for their core activities, enabling participation. However, individuals or groups whose speech is deemed 'non-political' or harmful, but not directly impacting self-governance, may experience it as a limitation, with their interests subordinated to the higher value placed on political discourse. The judicial system, as agenda-setter, balances these competing interests, often prioritizing the democratic function.",
+    "directionality_logic": "Citizens, political candidates, and advocacy groups are beneficiaries (low d) as the constraint directly enables their participation in self-governance. The judicial system and legislature are agenda-setters (d near symmetric) as they administer the constraint, balancing protection with other societal interests. Victims of non-political harmful speech are payers (high d) as their interests are subordinated when speech is protected on democratic grounds, even if it causes them harm.",
+    "mandatrophy_analysis": "This classification prevents mislabeling a genuine coordination mechanism (facilitating democracy) as pure extraction. While there are costs to other forms of speech, the core mandate of protecting political expression for self-governance remains live and actively defended. The constraint's persistence is tied to the ongoing need for democratic discourse, not merely institutional inertia."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__marketplace_reading",
+      "speech_protection_kernel__dignity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of several readings of the 'speech protection' kernel, each with distinct structural properties and classifications. This reading prioritizes speech essential for democratic self-governance."
+  },
+  "stakeholders": [
+    {
+      "name": "citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a robust public sphere where political ideas can be freely debated, enabling informed participation in self-governance. Their ability to exit is constrained by the nature of citizenship itself."
+    },
+    {
+      "name": "political_candidates",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from broad protection for their campaign speech and political advocacy, allowing them to reach voters and articulate platforms without undue restriction. They have mobility within the political system."
+    },
+    {
+      "name": "advocacy_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the ability to engage in political discourse, protest, and lobbying to influence public policy and elections. They can shift their advocacy strategies and targets."
+    },
+    {
+      "name": "judicial_system",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets and enforces the scope of speech protection, particularly in cases involving political expression. Its role is to balance free speech with other constitutional values. Its exit is analytical, through re-interpretation."
+    },
+    {
+      "name": "legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Passes laws that may regulate speech, but these laws are subject to judicial review under the framework of speech protection. It can revise laws, offering a form of mobility."
+    },
+    {
+      "name": "victims_of_non_political_harmful_speech",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the costs of speech that causes harm (e.g., defamation, harassment, incitement to non-political violence) but is not deemed 'political expression necessary for self-governance,' and thus receives less protection. Their ability to exit the harm is limited."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from an informed public sphere and the ability to participate in democratic processes. However, they may also bear the diffuse costs of speech that, while not 'political,' is harmful or offensive, and receives some protection due to the difficulty of drawing clear lines."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the public sphere to prioritize and protect speech essential for democratic self-governance, ensuring citizens can make informed decisions and hold leaders accountable.",
+    "transfer_function": "Transfers a high degree of protection to political speech, effectively subordinating other interests (e.g., protection from non-political harm, commercial regulation) when they conflict with the needs of democratic discourse.",
+    "absent_voices": "Those advocating for stronger protection against non-political harms (e.g., privacy advocates, victims' rights groups) often find their concerns secondary to the imperative of protecting political speech. Their voices are present but often outranked by the democratic participation rationale.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the hierarchy of speech protection would collapse. Political speech would lose its privileged status, leading to a chaotic and potentially less informed public discourse, and a significant reordering of how speech is regulated across all domains.",
+    "founding_problem": "The problem of ensuring a robust and uninhibited exchange of ideas necessary for a self-governing populace, particularly in the face of potential government overreach or suppression of dissent.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional scholars, political scientists, and civil liberties organizations (outside the direct beneficiaries of specific political campaigns) consistently attest to the ongoing necessity of protecting political speech for democratic health, citing historical and contemporary threats to free expression."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_protection_kernel__absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__harm_threshold_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__marketplace_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__dignity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "political_speech_is_core_to_self_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "hierarchy_of_speech_values_is_necessary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "uninhibited_robust_open_debate",
+    "drift_state": {
+      "moment": "contemporary_disinformation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

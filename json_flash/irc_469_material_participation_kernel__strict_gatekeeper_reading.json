@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3a33b6bd-f4ab-4daf-81cd-172079508baf"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IRC 469 Material Participation: Strict Gatekeeper Reading",
+    "topic_domain": "tax_law/real_estate_investment/regulatory_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "irs",
+      "ordinary_income_taxpayers"
+    ],
+    "victims": [
+      "real_estate_investors",
+      "high_net_worth_individuals"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a strict gatekeeper, or is it a permissive threshold for strategic tax shelters?",
+      "resolution_mechanism": "Judicial precedent consistently upholding strict IRS interpretations, or legislative clarification explicitly codifying high documentation standards.",
+      "impact": "If the strategic_shelter_reading were adopted, the constraint would become a Rope or even a Piton, with lower extractiveness and suppression, as passive losses would be more easily deductible. This strict_gatekeeper_reading ensures higher extraction and suppression.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the IRC 469 material participation kernel, specifically the strict_gatekeeper_reading, which emphasizes verifiable, substantial personal labor and high documentation to limit passive loss deductions. The alternative is the strategic_shelter_reading, which views material participation as a permissive threshold achievable through aggressive hour-counting and grouping elections."
+    },
+    {
+      "id": "documentation_burden_vs_substance",
+      "question": "Does the high documentation bar genuinely reflect substantial personal labor, or does it primarily serve as a compliance burden that disproportionately excludes legitimate participants?",
+      "resolution_mechanism": "Empirical study correlating documented hours with actual time commitment and business outcomes, or a regulatory review simplifying documentation requirements without compromising the 'substantial' labor requirement.",
+      "impact": "If the documentation burden is found to be disproportionate, the suppression metric would be re-evaluated as higher, and the constraint's legitimacy as a 'gatekeeper' would be undermined, potentially shifting it towards a Snare for those genuinely active but poorly documented.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding whether the high documentation requirement for material participation is a necessary component of verifying 'substantial' labor or an excessive barrier to entry."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'strict gatekeeper' interpretation of IRC Section 469, which governs material participation in passive activities for tax purposes. Under this reading, investors must demonstrate verifiable, substantial personal labor in their real estate activities, backed by rigorous documentation, to deduct passive losses against ordinary income. This interpretation aims to prevent tax shelters and ensure that only genuinely active participants receive favorable tax treatment. It is one reading of the broader 'irc_469_material_participation_kernel', which is contested by a 'strategic_shelter_reading' that seeks more permissive thresholds.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it serves a genuine coordination function (preventing tax avoidance and ensuring fairness in tax burden) but also involves significant asymmetric extraction. The high documentation bar and strict interpretation lead to substantial extractiveness (0.65) by disallowing deductions, and high suppression (0.75) by creating significant compliance friction and effectively 'trapping' investors who cannot meet the bar. Theater ratio is low (0.20) as the IRS actively enforces these rules, and the documentation requirements are not merely performative but directly impact deductibility. The increasing extractiveness and suppression over time reflect a hardening of enforcement and interpretation.",
+    "perspectival_gap": "From the IRS's perspective, this is a necessary gatekeeper to maintain tax fairness and prevent abuse. From the perspective of real estate investors, particularly high-net-worth individuals, it is an overly burdensome and extractive rule that unfairly limits legitimate business deductions. Ordinary income taxpayers, as beneficiaries of reduced tax sheltering, would see it as a fair and necessary constraint.",
+    "directionality_logic": "The IRS is a primary beneficiary (d=0.0-0.1) as it collects more tax revenue and maintains the integrity of the tax system. Ordinary income taxpayers are also beneficiaries (d=0.1-0.2) as their tax burden is not disproportionately shifted to cover sheltered income. Real estate investors and high-net-worth individuals are targets (d=0.8-1.0) as they bear the direct costs of disallowed deductions and compliance burdens. Their exit options are constrained by the desire to remain in the real estate market and the high cost of non-compliance.",
+    "mandatrophy_analysis": "The constraint's mandate (preventing tax shelters) is still live, but its application through a strict gatekeeper reading ensures that it continues to extract from a broad base of investors. If the founding problem (tax sheltering) were to disappear, the constraint would likely become a Piton, persisting due to inertia but with no active function. However, as long as tax sheltering remains a concern, the strict interpretation ensures the constraint remains a Tangled Rope, actively enforced and extractive. The classification prevents mislabeling it as a pure Snare by acknowledging its genuine coordination function in maintaining tax equity, while still highlighting its extractive nature."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is the 'strict gatekeeper' reading of the IRC 469 material participation kernel. It is structurally distinct from the 'strategic shelter' reading, which would have different extractiveness and suppression metrics due to a more permissive interpretation of participation requirements."
+  },
+  "stakeholders": [
+    {
+      "name": "irs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces IRC Section 469, interpreting 'material participation' strictly to limit passive loss deductions. Benefits from increased tax revenue and maintaining tax system integrity."
+    },
+    {
+      "name": "real_estate_investors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engage in real estate activities and seek to deduct losses. Bear the burden of high documentation requirements and disallowed passive losses, leading to higher tax liabilities. Their options are to comply, litigate, or exit the market."
+    },
+    {
+      "name": "high_net_worth_individuals",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Often invest in complex real estate ventures and are primary targets for passive loss limitations. Face significant compliance costs and potential disallowance of substantial deductions, increasing their effective tax rate."
+    },
+    {
+      "name": "ordinary_income_taxpayers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit indirectly from the constraint by preventing wealthy individuals from sheltering ordinary income, which helps maintain a fairer distribution of the tax burden and potentially reduces the need for higher taxes on other income sources."
+    },
+    {
+      "name": "tax_preparers_and_advisors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Provide services to investors navigating the complex material participation rules. Benefit from the high demand for their expertise due to the strict documentation and interpretation requirements."
+    }
+  ],
+  "gain_flow": "irs",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To distinguish between active business income and passive investment income for tax purposes, ensuring that tax benefits (like loss deductions) are appropriately allocated to genuinely active participants and preventing the use of passive activities as tax shelters.",
+    "transfer_function": "Transfers potential tax deductions (passive losses) from real estate investors and high-net-worth individuals to the IRS (as increased tax revenue) and indirectly to ordinary income taxpayers (by maintaining a broader tax base).",
+    "absent_voices": "Advocates for small-scale, genuinely active real estate investors who may struggle with the high documentation burden despite substantial personal labor. They would argue for more flexible or proportional documentation requirements.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the material participation rules vanished, there would be a massive shift in tax planning, with widespread creation of passive loss tax shelters. This would significantly reduce government tax revenue, shift the tax burden, and fundamentally alter investment strategies in real estate and other passive activities.",
+    "founding_problem": "The proliferation of tax shelters in the 1970s and early 1980s, where wealthy individuals used passive investments to generate artificial losses to offset ordinary income, eroding the tax base and creating perceived unfairness.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IRS and tax policy experts consistently attest that the problem of tax sheltering remains live, citing ongoing efforts by taxpayers to minimize liabilities through passive activities. Independent economic analyses and legislative debates corroborate the continued relevance of preventing tax avoidance, even if the specific mechanisms evolve."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "irc_469_material_participation_kernel__strategic_shelter_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tax_equity_requires_active_participation_verification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "documentation_is_primary_evidence_of_participation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "anti_shelter_tax_integrity",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

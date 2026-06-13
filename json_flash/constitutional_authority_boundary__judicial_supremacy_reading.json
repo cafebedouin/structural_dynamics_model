@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "constitutional_authority_boundary__judicial_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4d8469d2-8c9e-49a3-afbc-a657fc6ba836"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Supremacy over Constitutional Interpretation",
+    "topic_domain": "constitutional_law/political_philosophy/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supreme_court_justices",
+      "federal_judiciary"
+    ],
+    "victims": [
+      "legislative_branch",
+      "executive_branch",
+      "electorate"
+    ]
+  },
+  "interval": {
+    "start": 1789,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1803,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1865,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1937,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1803,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1937,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1803,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1937,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'judicial supremacy' reading of the constitutional authority boundary, where courts are the final, unchallengeable arbiters of constitutional questions. This reading grants the judiciary the power to invalidate legislative and executive acts without direct remedy, effectively establishing a counter-majoritarian veto. The constraint is framed as a Tangled Rope because it provides a coordination function (finality in constitutional interpretation) but also involves significant asymmetric extraction (interpretive monopoly rents for the judiciary, constrained policy space for elected branches).",
+    "logic_rationale": "The extractiveness (0.68) is high due to the judiciary's counter-majoritarian power to overturn democratically enacted laws, effectively extracting policy space from the legislative and executive branches. Suppression (0.75) is also high, as the other branches are structurally compelled to accept judicial rulings, with limited and high-friction avenues for challenge (e.g., constitutional amendment). The theater ratio (0.15) is low, indicating that the judiciary's interpretive function is largely genuine, though its application may be contested. The historical measurements show a clear increase in both extractiveness and suppression over time, reflecting the consolidation of judicial power since Marbury v. Madison (1803).",
+    "directionality_logic": "The Supreme Court Justices and the federal judiciary are clear beneficiaries (d near 0.0) as they gain interpretive monopoly and institutional prestige. The legislative and executive branches, along with the electorate, are targets (d near 1.0) as their policy-making and democratic accountability are constrained. The 'identity_locked' exit option for judges reflects that their professional identity and power are intrinsically tied to this interpretive role.",
+    "perspectival_gap": "From the judiciary's perspective, this constraint is a necessary Rope, ensuring constitutional fidelity and stability. From the perspective of the legislative and executive branches, it often functions as a Snare, limiting their ability to respond to public will. The engine's computation of per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'judicial supremacy' reading of the 'constitutional authority boundary' kernel. Sibling readings include 'coordinate construction' (where all branches interpret the constitution co-equally) and 'parliamentary primacy' (where the legislature holds final constitutional authority). This reading emphasizes the judiciary's unique and final role."
+  },
+  "omegas": [
+    {
+      "id": "interpretive_monopoly_legitimacy",
+      "question": "Is the judiciary's interpretive monopoly a legitimate exercise of constitutional power, or an institutional accretion that has exceeded its original mandate?",
+      "resolution_mechanism": "Historical analysis of founding intent, comparative constitutional studies, and ongoing public debate regarding democratic accountability versus judicial independence.",
+      "impact": "If deemed an accretion, it would support reclassifying the constraint closer to a Snare for the elected branches; if legitimate, it reinforces the Tangled Rope classification by emphasizing the coordination function.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Legitimacy of judicial interpretive monopoly."
+    },
+    {
+      "id": "counter_majoritarian_difficulty_resolution",
+      "question": "How effectively does the system provide remedies for judicial overreach, balancing judicial finality with democratic accountability?",
+      "resolution_mechanism": "Analysis of the frequency and success rate of constitutional amendments, impeachment proceedings, and judicial appointments as mechanisms to check judicial power.",
+      "impact": "If remedies are largely ineffective, the suppression metric for elected branches is higher than currently measured; if effective, it suggests a more balanced (though still extractive) system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of checks on judicial power."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'constitutional_authority_boundary' kernel. It is linked to other readings (coordinate_construction_reading, parliamentary_primacy_reading) via the cs_structure.reading_relations field, which describes the structural relationships between these interpretive frameworks."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_authority_boundary__coordinate_construction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_authority_boundary__parliamentary_primacy_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "judicial_interpretive_finality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "constitutional_supremacy_over_ordinary_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "marbury_v_madison_precedent",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

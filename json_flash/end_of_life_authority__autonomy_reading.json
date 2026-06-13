@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1daa50bc-775c-4960-8259-294fbe50820c"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "End-of-Life Authority: Autonomy Reading",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patients_with_unbearable_suffering",
+      "advocacy_groups_for_patient_rights"
+    ],
+    "victims": [
+      "patients_denied_choice_due_to_paternalism"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine expression of individual autonomy, or is it a step towards broader, less constrained end-of-life options?",
+      "resolution_mechanism": "Longitudinal study of policy evolution in jurisdictions adopting autonomy-based end-of-life frameworks, specifically tracking changes in eligibility criteria and scope of application.",
+      "impact": "If it remains stable within its stated scope, it reinforces the 'rope' classification. If it consistently expands beyond its initial intent, it would suggest a 'tangled_rope' or 'snare' dynamic, where the initial coordination story serves as a cover for broader extraction or control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "This constraint is the 'autonomy_reading' of the 'end_of_life_authority' kernel. Sibling readings include 'sanctity_reading' (intrinsic value of life) and 'slippery_slope_mechanism' (empirical expansion beyond initial scope). The core disagreement is on the moral permissibility and practical consequences of intentional life-ending based on patient choice."
+    },
+    {
+      "id": "suffering_definition_ambiguity",
+      "question": "How is 'unbearable suffering' objectively defined and measured, and who holds the ultimate authority in this determination?",
+      "resolution_mechanism": "Development of standardized, multi-disciplinary assessment protocols for suffering, coupled with clear legal and ethical guidelines on patient vs. physician authority in final determination.",
+      "impact": "If the definition remains subjective and physician-centric, it introduces a paternalistic element, potentially increasing suppression for patients whose suffering is not 'recognized'. If patient self-determination is paramount, it reinforces autonomy and reduces suppression.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining 'unbearable suffering' can lead to inconsistent application and potential for paternalistic override of patient autonomy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint asserts that individual autonomy is the primary moral ground for a patient's right to control the circumstances and timing of their death when facing unbearable suffering. It aims to empower patients and reduce paternalistic restrictions. The 'autonomy_reading' is one interpretation of the broader 'end_of_life_authority' kernel, which is contested by 'sanctity_reading' (emphasizing the intrinsic value of life) and 'slippery_slope_mechanism' (warning of unintended consequences of expanding end-of-life options). This reading's structural delta is the inclusion of suffering-prolonged patients in the victim set and a high suppression of paternalistic restrictions.",
+    "logic_rationale": "The constraint is claimed as a Rope because it primarily facilitates coordination around patient choice, with relatively low extraction (0.3) and suppression (0.2) for those who align with its principles. The extraction arises from the administrative and legal overhead of establishing and verifying eligibility, and the emotional burden on healthcare providers. Suppression is low as it aims to remove existing paternalistic barriers, rather than impose new ones. Theater ratio is low (0.05) as the stated purpose (patient autonomy) is largely aligned with its operation. The temporal measurements show a slight increase in extractiveness as implementation complexities arise, but a decrease in suppression as the framework becomes more established.",
+    "perspectival_gap": "For patients seeking to exercise this right, it is a pure coordination mechanism. For healthcare providers who morally object, it can feel like a coercive imposition. For those who hold the 'sanctity_reading', this constraint is seen as a fundamental violation, not a coordination. The engine will compute these divergences based on the declared roles and exit options.",
+    "directionality_logic": "Patients with unbearable suffering are primary beneficiaries (d near 0.0) as the constraint empowers their choice. Advocacy groups also benefit by seeing their principles codified. Patients denied choice due to paternalism are victims (d near 1.0) as the constraint aims to remove the extraction of their autonomy. Healthcare providers are agenda-setters, balancing patient requests with ethical guidelines (d near 0.5).",
+    "mandatrophy_analysis": "This constraint addresses a persistent problem of patient disempowerment at the end of life. Its mandate is live, and its function is to provide a framework for autonomous decision-making. It prevents mislabeling genuine patient empowerment as extraction by focusing on the removal of existing barriers rather than the imposition of new ones. The 'slippery_slope_mechanism' sibling reading, however, raises a mandatrophy concern about potential future drift."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__slippery_slope_mechanism",
+      "medical_paternalism_norms"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'end_of_life_authority' kernel, focusing on individual autonomy. It is linked to the 'sanctity_reading' (which emphasizes the intrinsic value of life) and the 'slippery_slope_mechanism' (which models the empirical expansion of end-of-life options)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_authority__sanctity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_authority__slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_self_determination_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unbearable_suffering_justifies_relief",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "patient_centered_care_paradigm",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

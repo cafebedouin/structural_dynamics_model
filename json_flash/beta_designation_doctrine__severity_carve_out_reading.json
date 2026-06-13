@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "63e265da-fcd5-47b8-be13-e7c987d1d40b"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Beta Designation Unavailable for Critical Systems (Severity Carve-Out Reading)",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "critical_system_users",
+      "public_safety_regulators"
+    ],
+    "vindicated_propositions": [
+      "safety_first_principle",
+      "duty_of_care_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_policy_choice",
+      "question": "Is the unavailability of beta designation for critical systems a natural consequence of harm severity (a Mountain), or a policy choice enforced by legal precedent (a Snare/Tangled Rope)?",
+      "resolution_mechanism": "Analysis of legal systems across jurisdictions: if the carve-out is universally recognized regardless of specific legal frameworks, it leans towards natural law; if it varies significantly, it suggests policy choice.",
+      "impact": "If a policy choice, the constraint's extractiveness and suppression would be higher, reflecting the active enforcement and potential for rent-seeking by those who benefit from the carve-out (e.g., established vendors).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between inherent safety requirements and legal policy."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is one reading of the 'beta_designation_doctrine' kernel. How would the classification change if the 'expansive_shield_reading' or 'narrow_warning_reading' were adopted?",
+      "resolution_mechanism": "Adoption of a different reading by a court or regulatory body.",
+      "impact": "If 'expansive_shield_reading' were adopted, beta designation would become a Snare for users, allowing developers to disclaim liability for critical systems. If 'narrow_warning_reading' were adopted, it would be a Rope, providing clear disclosure without absolving core liability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative kernel readings on constraint classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint asserts that software designated as 'beta' cannot be used to disclaim liability for systems where failure poses a risk to life, financial stability, or other critical functions. This is the 'severity carve-out' reading of the broader 'beta designation doctrine' kernel. It posits that the inherent risks of certain applications override any contractual attempt to label them as experimental for liability purposes. The constraint is treated as a Mountain because the severity of potential harm creates an irreducible limit on liability waivers, regardless of explicit enforcement.",
+    "key_agents": [
+      "critical_system_users: Primary beneficiary (powerless/immediate) — protected from harm",
+      "software_developers: Primary target (powerful/biographical) — cannot disclaim liability",
+      "public_safety_regulators: Agenda setter/Beneficiary (institutional/generational) — enforce and benefit from safety standards",
+      "legal_scholars: Observer (analytical/generational) — analyze the doctrine's scope and implications"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the constraint primarily prevents harm rather than extracting rents; it imposes a cost on developers but for a clear public good. Suppression is low (0.05) as the constraint is largely self-enforcing due to the catastrophic consequences of failure, rather than requiring active coercion. Theater ratio is zero as there's no performative aspect; the constraint is a direct reflection of the underlying risk. Accessibility collapse is high (0.9) because for critical systems, there are no legitimate alternatives to robust liability and safety standards. Resistance is low (0.05) because the principle of protecting life and critical infrastructure is widely accepted, even by developers who bear the cost.",
+    "perspectival_gap": "From the perspective of critical system users and public safety regulators, this constraint is a fundamental protection (Mountain). From the perspective of some software developers, it might be seen as an onerous burden (Tangled Rope), limiting their ability to innovate or test in production environments. However, the inherent severity of potential harm means that this 'burden' is an irreducible feature of the domain, not an arbitrary extraction.",
+    "directionality_logic": "Critical system users are full beneficiaries (d=0.0) as they are directly protected from harm. Public safety regulators are also beneficiaries (d=0.1) as the constraint aligns with their mandate. Software developers are targets (d=0.9) as they bear the cost of increased liability and development rigor. The constraint subsidizes safety for users by extracting higher development costs and liability from developers.",
+    "kernel_context": "This constraint is the 'severity carve-out' reading of the 'beta_designation_doctrine' kernel. This reading posits that the nature of the system (life-safety, financial, etc.) inherently limits the applicability of 'beta' as a liability shield. Sibling readings include the 'expansive_shield_reading' (beta designation as a comprehensive liability waiver) and the 'narrow_warning_reading' (beta as a time-bounded testing disclosure, preserving base product liability)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_product_liability_standards",
+      "critical_infrastructure_cybersecurity_regulations"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'beta_designation_doctrine' kernel. The other readings are 'expansive_shield_reading' and 'narrow_warning_reading', each with distinct structural properties and classifications."
+  },
+  "stakeholders": [
+    {
+      "name": "critical_system_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals or organizations whose lives, health, or financial stability depend on the reliable operation of critical software systems. They are protected from developers attempting to disclaim liability for failures in these systems."
+    },
+    {
+      "name": "software_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop software for critical systems (e.g., medical devices, financial trading platforms, industrial control systems). They cannot use 'beta' designations to avoid full liability for defects, requiring more rigorous testing and compliance processes."
+    },
+    {
+      "name": "public_safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies responsible for setting and enforcing safety standards for critical infrastructure and consumer protection. They uphold the principle that certain systems cannot be treated as experimental for liability purposes."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze the evolution of software liability law, including the interpretation and application of beta designation doctrines. They provide commentary and influence judicial and legislative thinking."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a clear, non-negotiable baseline for safety and reliability in critical software domains, preventing a race to the bottom in liability standards that would undermine public trust and safety.",
+    "transfer_function": "Transfers the burden of ensuring safety and reliability from potential victims (users) to the developers of critical systems, by preventing liability disclaimers.",
+    "absent_voices": "Developers who wish to apply 'beta' disclaimers to critical systems to reduce their liability or accelerate deployment would object. Their voices are largely marginalized by the societal consensus on safety in these domains.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, developers could label critical systems as 'beta' to avoid liability, leading to a rapid degradation of safety standards, increased incidents, and a collapse of public trust in essential software infrastructure. The legal and regulatory landscape would have to fundamentally reorganize to address the resulting chaos.",
+    "founding_problem": "The potential for catastrophic harm from software failures in life-safety, financial, and critical infrastructure systems, coupled with developers' desire to limit liability for experimental software.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public safety regulators, consumer advocacy groups, and independent engineering bodies consistently attest that the problem of ensuring safety in critical systems is ongoing and that attempts to circumvent liability remain a threat. This corroboration comes from outside the direct beneficiaries (users) and payers (developers)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_overrides_contractual_intent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "duty_of_care_in_critical_domains",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "inherent_safety_imperative",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

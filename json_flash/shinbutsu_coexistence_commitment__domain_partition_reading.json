@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "shinbutsu_coexistence_commitment__domain_partition_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "84b94283-139e-4daa-ad84-018dde2e2386"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Shinbutsu Coexistence: Domain Partition Reading",
+    "topic_domain": "religious_studies/japanese_history",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "local_communities",
+      "buddhist_temples",
+      "shinto_shrines"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "functional_pluralism",
+      "cultural_continuity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "domain_partition_vs_fusion_ambiguity",
+      "question": "Is the relationship between Kami and Buddhist deities truly a domain partition, or is it better understood as an ontological fusion (honji suijaku) or an incoherent bundle?",
+      "resolution_mechanism": "Analysis of primary theological texts and popular religious practices across different historical periods, focusing on explicit statements of ontological status versus functional separation.",
+      "impact": "If fusion is dominant, the constraint shifts towards a more unified, potentially more extractive (if fusion is imposed) or more robust (if fusion is genuinely accepted) structure. If incoherent, the constraint's stability is lower than this reading suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between domain partition, syncretic fusion, and incoherent bundling as the primary mode of Shinbutsu coexistence."
+    },
+    {
+      "id": "popular_practice_as_authority_ambiguity",
+      "question": "To what extent does popular religious practice genuinely constitute the authority for this domain partition, versus being a consequence of elite theological or political imposition?",
+      "resolution_mechanism": "Sociological and historical research into the agency of common practitioners in shaping religious norms, as opposed to top-down directives from religious institutions or state powers.",
+      "impact": "If practice is genuinely authoritative, the constraint is more resilient and less extractive. If imposed, the constraint is more fragile and potentially more extractive, relying on suppression of alternative framings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The true source of authority for the domain partition: popular practice vs. elite imposition."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'domain partition' reading of Shinbutsu coexistence, where Kami (associated with life, purity, harvest, local protection) and Buddhist deities (associated with death, salvation, afterlife, universal truth) govern separate, complementary existential domains without requiring deep ontological unification. This reading emphasizes functional coexistence and boundary maintenance, with popular religious practice often serving as the de facto authority for this arrangement. It contrasts with readings that emphasize ontological fusion (honji suijaku) or view the entire system as an incoherent bundle.",
+    "logic_rationale": "The constraint is classified as a Rope because it facilitates coordination between distinct religious traditions, allowing them to coexist and serve different societal functions without significant conflict or doctrinal extraction. Extractiveness is low (0.2) as no single party systematically extracts rents from this partition; rather, it enables both traditions to thrive. Suppression is low (0.1) because the partition is largely maintained by cultural practice and mutual recognition, not active coercion. Theater ratio is low (0.05) as the functional separation is generally accepted and enacted in practice. Accessibility collapse is high (0.8) because, within this framework, the idea of a single, unified religious system that fully integrates both domains is largely foreclosed by the established functional division.",
+    "directionality_logic": "Local communities, Buddhist temples, and Shinto shrines are all beneficiaries (d near 0.0-0.1). Local communities benefit from a comprehensive religious system that addresses both worldly and otherworldly concerns. Temples and shrines benefit from clearly defined roles and a lack of direct competition over core functions. There are no clear victims, as the system is designed for mutual benefit and functional specialization.",
+    "perspectival_gap": "From the perspective of practitioners, this domain partition is a natural and beneficial arrangement, allowing for a rich religious life. From a purely theological perspective, the lack of ontological unification might be seen as a conceptual challenge, but within this reading, practical coexistence takes precedence over strict doctrinal consistency.",
+    "kernel_context": "This constraint instantiates the 'domain partition' reading of the 'shinbutsu_coexistence_commitment' kernel. It posits that Kami and Buddhist deities govern distinct, complementary domains without requiring ontological fusion. This contrasts with the 'syncretic_fusion_reading' (which emphasizes honji suijaku, where Kami are manifestations of Buddhas) and the 'incoherent_bundle_reading' (which views the entire system as lacking internal coherence and maintained by power)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "shinbutsu_coexistence_commitment__syncretic_fusion_reading",
+      "shinbutsu_coexistence_commitment__incoherent_bundle_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'shinbutsu_coexistence_commitment' kernel, focusing on the functional domain partition. It is linked to sibling readings that emphasize ontological fusion or an incoherent bundle."
+  },
+  "stakeholders": [
+    {
+      "name": "local_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Benefit from a comprehensive religious system that addresses both daily life (Kami) and death/afterlife (Buddhas), providing cultural continuity and spiritual comfort. Their identity is deeply intertwined with these practices."
+    },
+    {
+      "name": "buddhist_temples",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a clear role in funerary rites, ancestor veneration, and salvation, without direct competition with Shinto shrines over life-cycle events. They maintain their institutional identity and receive patronage for these services."
+    },
+    {
+      "name": "shinto_shrines",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a clear role in agricultural rites, purification, and local protection, without direct competition with Buddhist temples over death-related practices. They maintain their institutional identity and receive patronage for these services."
+    },
+    {
+      "name": "theologians_and_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze and interpret the historical and doctrinal relationships between Shinto and Buddhism. They may debate the coherence or historical accuracy of the domain partition but do not directly participate in its maintenance or enforcement."
+    },
+    {
+      "name": "meiji_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Historically attempted to enforce a strict separation (Shinbutsu Bunri) to elevate Shinto as a national religion, thereby disrupting the traditional domain partition. Their actions highlight the constructed nature of the partition but are external to its internal logic."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the religious life of Japanese society by assigning distinct, complementary roles to Shinto (life, purity, local) and Buddhism (death, salvation, universal), allowing both traditions to flourish without requiring deep theological synthesis.",
+    "transfer_function": "Transfers spiritual services and cultural meaning related to life events (Shinto) and death/afterlife (Buddhism) to local communities, ensuring comprehensive religious coverage without overlap or conflict.",
+    "absent_voices": "Strict monotheistic or exclusivist religious traditions would object to the pluralistic and functionally divided nature of this arrangement, arguing for a single, ontologically unified truth. However, such voices are largely absent from the historical Japanese religious landscape that shaped this constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the domain partition vanished, the clear functional roles of Shinto shrines and Buddhist temples would collapse, leading to confusion, competition, and a loss of cultural continuity in how life and death events are ritually managed. Religious identity and practice would undergo significant reorganization.",
+    "founding_problem": "The need to integrate a newly introduced universalist religion (Buddhism) with indigenous animistic beliefs (Shinto) in a way that maintained social harmony and provided comprehensive spiritual services for all aspects of life and death.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and religious scholars widely corroborate the historical problem of integrating new and indigenous religious systems. The continued functional specialization of shrines and temples in contemporary Japan, despite periods of forced separation, attests to the enduring 'liveness' of the need for such coordination, even if the specific mechanisms evolve."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "shinbutsu_coexistence_commitment__syncretic_fusion_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shinbutsu_coexistence_commitment__incoherent_bundle_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "functional_differentiation_is_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "ontological_unification_is_not_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "pre_meiji_functional_coexistence",
+    "drift_state": {
+      "moment": "contemporary_religious_landscape",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

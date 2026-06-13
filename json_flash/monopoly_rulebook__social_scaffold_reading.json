@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__social_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9d55a69b-6980-4600-901b-d4f9a2a365f5"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.15,
+    "claimed_type": "scaffold",
+    "human_readable": "Monopoly Rulebook (Social Scaffold Reading)",
+    "topic_domain": "game_theory/social_coordination/institutional_design",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "social_group_cohesion",
+      "casual_players"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine social scaffold, or is it an extraction mechanism (extraction_demo_reading) or a rigid competitive framework (tournament_orthodoxy_reading)?",
+      "resolution_mechanism": "Empirical observation of game sessions: frequency of house rule application, player sentiment regarding elimination, and actual game duration. If house rules are rarely applied and elimination is frequent, it leans towards extraction_demo or tournament_orthodoxy. If house rules are consistently applied to prolong play and maintain social cohesion, this reading is corroborated.",
+      "impact": "If resolved as extraction_demo, the constraint's extractiveness is higher, and it reclassifies as a Snare. If resolved as tournament_orthodoxy, the constraint's suppression is higher, and it reclassifies as a Rope (for competitive coordination) or even a Mountain (for immutable rules).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between social scaffold, extraction demonstration, and competitive orthodoxy readings of the Monopoly rulebook."
+    },
+    {
+      "id": "sunset_clause_enforcement",
+      "question": "Is the 'sunset clause' (the implicit agreement to end the game before total elimination) genuinely enforced by social pressure, or does it often fail, leading to harsh outcomes?",
+      "resolution_mechanism": "Survey of player groups and observation of game endings: frequency of games ending by mutual agreement vs. total elimination, and player satisfaction with game length and outcome.",
+      "impact": "If the sunset clause is frequently ignored, the scaffold function is weaker, and the constraint leans towards a more extractive or less coordinative type, as the social support mechanism fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of the implicit social sunset clause in Monopoly games."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the Monopoly rulebook as a social scaffold, where house rules and implicit social agreements (like ending the game before total elimination) are crucial for maintaining group cohesion and playability. The official rules, if followed strictly, often lead to harsh, socially unpalatable outcomes. This reading emphasizes the role of community correction in injecting 'liquidity' (e.g., free parking money) and slowing elimination to preserve coordination and enjoyment among casual players. This is one reading of the 'monopoly_rulebook' kernel, distinct from readings that emphasize pure extraction or competitive orthodoxy.",
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the inherent zero-sum nature of Monopoly, but mitigated by house rules that redistribute wealth and prolong play. Suppression (0.20) is low because adherence to strict rules is often voluntary and easily overridden by social consensus. Theater ratio (0.10) is low as the house rules are genuinely functional in achieving social playability, not merely performative. The 'scaffold' classification is based on the idea that the house rules provide temporary support to make the game socially viable, with an implicit 'sunset clause' (ending the game before total elimination) to preserve relationships.",
+    "directionality_logic": "Social group cohesion and casual players are the primary beneficiaries, as the house rules prevent the game from becoming too harsh or ending too quickly, thus preserving the social activity. The 'official_rulebook' itself, if considered an agent, would be a target, as its strictures are softened. Competitive players might be considered payers, as the 'social scaffold' dilutes the strict competitive challenge.",
+    "perspectival_gap": "From the perspective of casual players and social groups, the house rules are essential for the game's function as a social activity. From the perspective of a strict rules-adherent or a competitive player, these house rules might be seen as undermining the game's integrity or competitive balance. The engine's classification will reflect the structural reality of the social scaffold, which prioritizes group cohesion over strict adherence to the text.",
+    "kernel_context": "This constraint is the 'social_scaffold_reading' of the 'monopoly_rulebook' kernel. It posits that the game's official rules, when played strictly, lead to socially undesirable outcomes, and that house rules function as a necessary social scaffold to maintain group cohesion and playability. Sibling readings include the 'extraction_demo_reading' (Monopoly as a pure extraction mechanism) and the 'tournament_orthodoxy_reading' (Monopoly as a strict competitive framework)."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_rulebook__extraction_demo_reading",
+      "monopoly_rulebook__tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'monopoly_rulebook' kernel. This 'social_scaffold_reading' emphasizes the role of house rules in maintaining social cohesion and game playability, contrasting with readings focused on pure extraction or competitive fidelity."
+  },
+  "stakeholders": [
+    {
+      "name": "casual_players",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Seek an enjoyable social experience from Monopoly, prioritizing fun and interaction over strict adherence to rules or competitive victory. They benefit from house rules that prolong the game and mitigate harsh eliminations."
+    },
+    {
+      "name": "social_group_cohesion",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "The overall health and stability of the social group playing the game. This 'agent' benefits from rules that prevent conflict and maintain positive relationships, even if it means bending the official rules."
+    },
+    {
+      "name": "official_rulebook",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The literal text of the Monopoly rulebook, which mandates strict adherence to its rules, often leading to player elimination and wealth concentration. Its 'authority' is diminished by the widespread adoption of house rules."
+    },
+    {
+      "name": "competitive_players",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Prefer to play by the strict official rules, viewing house rules as diluting the strategic challenge and competitive integrity of the game. They 'pay' by having their preferred mode of play undermined by social pressure."
+    },
+    {
+      "name": "game_designers",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observe how players actually interact with the game, noting the prevalence and function of house rules. Their analytical seat allows them to understand the gap between intended design and actual social play."
+    }
+  ],
+  "gain_flow": "social_group_cohesion",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Coordinates social interaction and enjoyment among players by mitigating the harsh, eliminative aspects of the official Monopoly rules, ensuring games last longer and remain fun for more participants.",
+    "transfer_function": "Transfers 'liquidity' (e.g., money from Free Parking) and 'time' (by slowing elimination) from the strict, zero-sum logic of the official rules to the social experience of the players, preserving group harmony.",
+    "absent_voices": "Strict rule-followers and competitive players, who would argue for fidelity to the official text, are often socially pressured into accepting house rules to maintain group harmony. Their 'voice' is present but often overridden by the social scaffold.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the social scaffold (house rules, implicit agreements) disappeared, Monopoly games would become significantly shorter, harsher, and less enjoyable for casual players, leading to a decline in its use as a social activity and potentially fracturing social groups that rely on it for casual interaction.",
+    "founding_problem": "The original Monopoly rules, while designed to demonstrate the evils of monopolies, often led to player elimination and social friction, making the game unplayable or unenjoyable for many social groups.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Numerous sociological studies of board game play, anecdotal evidence from player communities, and observations by game designers (outside the direct beneficiaries of the house rules) corroborate that the strict rules often create social problems that house rules mitigate, indicating the founding problem is still live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "monopoly_rulebook__extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "social_cohesion_over_textual_fidelity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "game_duration_for_enjoyment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "socially_playable_game",
+    "drift_state": {
+      "moment": "contemporary_casual_play",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

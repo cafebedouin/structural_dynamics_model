@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "climate_response_imperative__degrowth_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b5e613dc-779b-49f8-9b85-ca6352eebbc6"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.85,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Response Imperative: Degrowth Reading",
+    "topic_domain": "climate_policy/political_economy/intergenerational_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "future_generations",
+      "global_south_populations",
+      "ecosystems"
+    ],
+    "victims": [
+      "global_north_consumers",
+      "fossil_fuel_industries",
+      "growth_dependent_economies"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "degrowth_feasibility",
+      "question": "Is a degrowth transition politically and economically feasible within democratic frameworks, or does it require authoritarian enforcement?",
+      "resolution_mechanism": "Empirical observation of degrowth policy implementation in high-income nations and analysis of public acceptance and economic stability.",
+      "impact": "If feasible, the suppression metric might be lower than currently estimated, reflecting voluntary participation. If not, the true suppression required would be higher, pushing the constraint closer to a Snare for Global North populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of degrowth without authoritarian measures."
+    },
+    {
+      "id": "degrowth_vs_other_readings",
+      "question": "This constraint is the 'degrowth_reading' of the 'climate_response_imperative' kernel. How would the classification change if a 'mitigation_priority_reading' or 'adaptation_priority_reading' were adopted?",
+      "resolution_mechanism": "Analysis of policy outcomes under alternative framings: 'mitigation_priority' would likely shift extraction towards carbon-intensive industries and rely more on technological solutions, potentially reducing extraction from general consumption. 'adaptation_priority' would shift resources to resilience-building, potentially increasing extraction from all populations for infrastructure, but with different beneficiaries.",
+      "impact": "The 'mitigation_priority_reading' would likely be a Tangled Rope with different victims (carbon-intensive industries) and potentially lower overall extraction from general populations. The 'adaptation_priority_reading' might be a Scaffold or Rope, focusing on collective action for resilience, with diffuse beneficiaries and victims.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the climate response imperative."
+    },
+    {
+      "id": "cdr_reliance_ambiguity",
+      "question": "Does the degrowth reading truly eliminate reliance on unproven Carbon Dioxide Removal (CDR) technologies, or does it merely reduce the scale of reliance?",
+      "resolution_mechanism": "Detailed energy and material flow analysis of degrowth scenarios, including residual emissions and the need for negative emissions technologies.",
+      "impact": "If some CDR reliance remains, the degrowth reading's claim of 'eliminating reliance' is partially theatrical, potentially increasing its theater_ratio and reducing its perceived efficacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which degrowth eliminates reliance on unproven CDR technologies."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'degrowth' reading of the climate response imperative, asserting that structural economic transformation in the Global North—including reduced consumption, redistribution, and post-growth institutions—is essential for both climate change mitigation and adaptation. It posits that current growth-oriented models are incompatible with ecological limits and intergenerational equity. This reading places present-day Global North populations in a victim role due to required consumption reductions, while future generations and Global South populations are primary beneficiaries. It explicitly rejects reliance on unproven carbon dioxide removal (CDR) technologies as a primary solution.",
+    "key_agents": [
+      "global_north_consumers: Primary target (powerful/constrained) — bears reduced consumption",
+      "future_generations: Primary beneficiary (powerless/trapped) — benefits from ecological stability",
+      "global_south_populations: Primary beneficiary (organized/constrained) — benefits from reduced climate impacts and resource redistribution",
+      "fossil_fuel_industries: Primary target (institutional/constrained) — bears economic contraction and stranded assets",
+      "growth_dependent_economies: Primary target (institutional/constrained) — bears systemic transformation costs",
+      "degrowth_advocates: Agenda setter (organized/mobile) — promotes and designs degrowth policies",
+      "mainstream_economists: Excluded (institutional/analytical) — would object to post-growth models",
+      "climate_scientists: Observer (analytical/analytical) — provide empirical grounding for ecological limits"
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely aims to coordinate a global response to climate change (benefiting future generations and the Global South) but requires significant, actively enforced extraction from Global North populations and growth-dependent industries. Extractiveness is high (0.65) due to the scale of economic restructuring and consumption reduction demanded. Suppression (0.70) is also high, reflecting the political and social resistance expected from such a radical shift, requiring active enforcement to overcome. The theater_ratio is low (0.20) as the degrowth agenda is direct and explicit about its goals, with little performative cover for other functions. Resistance is very high (0.85) due to the direct challenge to established economic paradigms and lifestyles.",
+    "perspectival_gap": "Global North consumers and growth-dependent economies would experience this as a highly extractive and suppressive Snare, as it directly targets their current economic models and consumption patterns. Future generations and Global South populations, however, would perceive it as a necessary Rope or even a Mountain, as it secures their long-term well-being and ecological stability. Degrowth advocates view it as a necessary, albeit challenging, coordination mechanism.",
+    "directionality_logic": "Global North consumers and growth-dependent economies are clear targets (high d) due to mandated consumption reduction and economic restructuring. Fossil fuel industries are also targets (high d) as their business model is directly undermined. Future generations and Global South populations are beneficiaries (low d) as they gain from a stable climate and resource redistribution. Degrowth advocates act as agenda-setters, pushing for the constraint's implementation (low d).",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its mandate (climate response) is perceived as increasingly urgent and 'live.' The challenge is not obsolescence but rather the political will and capacity to implement such a transformative agenda against entrenched interests. The classification as Tangled Rope prevents mislabeling it as a pure Snare (ignoring the coordination for future generations) or a pure Rope (ignoring the extraction from current populations).",
+    "kernel_context": "This constraint, 'climate_response_imperative__degrowth_reading', is one interpretation of the broader 'climate_response_imperative' kernel. It posits that a fundamental economic transformation, including degrowth in the Global North, is necessary. This contrasts with the 'mitigation_priority_reading' which emphasizes technological solutions and market mechanisms, and the 'adaptation_priority_reading' which focuses on resilience-building."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_imperative__mitigation_priority_reading",
+      "climate_response_imperative__adaptation_priority_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'climate_response_imperative' kernel, focusing on degrowth. It is linked to sibling readings that prioritize mitigation via technology or adaptation via resilience, as these represent competing approaches to the same overarching problem."
+  },
+  "stakeholders": [
+    {
+      "name": "global_north_consumers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Required to reduce consumption and accept changes to lifestyle and working time, directly bearing the costs of economic transformation. Their political power makes direct suppression difficult, but structural changes would limit their options."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Benefit from a stable climate, preserved ecosystems, and a more equitable distribution of resources. They have no voice in current policy decisions and are entirely dependent on present-day actions."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from reduced climate impacts, climate justice, and potential resource redistribution from the Global North. They bear the brunt of climate change impacts but have limited power to enforce the degrowth agenda on the Global North."
+    },
+    {
+      "name": "fossil_fuel_industries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face existential threats from reduced energy demand, stranded assets, and policy-driven phase-outs. They actively resist degrowth policies through lobbying and political influence."
+    },
+    {
+      "name": "growth_dependent_economies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must undergo fundamental restructuring away from GDP growth as a primary metric and goal, impacting employment, investment, and social welfare systems built around growth. This is a systemic cost."
+    },
+    {
+      "name": "degrowth_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Propose, research, and advocate for degrowth policies and institutions. They actively work to shift public discourse and policy frameworks towards post-growth models."
+    },
+    {
+      "name": "mainstream_economists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Operate within a paradigm that assumes continuous economic growth is necessary and desirable. They would largely reject the foundational premises of degrowth and are often excluded from policy discussions framed by degrowth advocates."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Provide the scientific evidence for ecological limits and climate change impacts, which underpins the degrowth imperative. They observe the policy debate but do not directly set or pay for the constraint."
+    },
+    {
+      "name": "ecosystems",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Benefit from reduced resource extraction, pollution, and habitat destruction. They are non-agent entities that are direct beneficiaries of the degrowth agenda."
+    }
+  ],
+  "gain_flow": "future_generations",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate a global, equitable response to climate change by aligning human economic activity with planetary ecological boundaries, ensuring long-term well-being for all.",
+    "transfer_function": "Transfers ecological space, resource availability, and a stable climate from present-day Global North over-consumers and extractive industries to future generations and Global South populations. It also transfers economic activity and investment from growth-oriented sectors to regenerative and care sectors.",
+    "absent_voices": "Mainstream economists and proponents of 'green growth' or techno-optimistic solutions are largely excluded from the core degrowth discourse. They would argue that degrowth is unnecessary, economically damaging, or politically unfeasible, advocating for alternative pathways to climate stability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the degrowth imperative (as a policy and social movement) vanished, the world would likely revert to business-as-usual growth patterns, accelerating climate change, exacerbating ecological crises, and deepening intergenerational and global inequalities. The trajectory of human civilization would fundamentally shift.",
+    "founding_problem": "The foundational problem is the inherent conflict between infinite economic growth on a finite planet, leading to ecological overshoot, climate breakdown, and unsustainable resource depletion, disproportionately impacting vulnerable populations and future generations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Climate scientists, ecologists, and intergovernmental bodies (e.g., IPCC reports) corroborate the live status of the ecological overshoot and climate crisis, providing empirical evidence that growth-as-usual is unsustainable. Indigenous communities and Global South activists corroborate the disproportionate impacts and the need for systemic change, from outside the direct beneficiaries of the degrowth agenda."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "diffuse_epistemic",
+    "reading_relations": [
+      {
+        "sibling_id": "climate_response_imperative__mitigation_priority_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "climate_response_imperative__adaptation_priority_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "infinite_growth_on_finite_planet_impossible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ecological_justice_requires_degrowth",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "planetary_boundaries_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

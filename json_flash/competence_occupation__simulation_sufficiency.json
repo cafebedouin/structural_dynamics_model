@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0b41c583-52b8-492f-a55a-1ec0ec5e9ef7"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Based Competence Sufficiency",
+    "topic_domain": "high_reliability_organizations/safety_training/competence_maintenance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_industry",
+      "training_departments"
+    ],
+    "victims": [
+      "frontline_operators",
+      "organizational_safety_culture"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_vs_realism",
+      "question": "Does the fidelity of simulation-based drills genuinely occupy the competence kernel as effectively as real-world experience, or is there a critical gap?",
+      "resolution_mechanism": "Longitudinal studies comparing performance outcomes of simulation-trained vs. real-incident-experienced operators, particularly under novel or high-stress conditions not easily simulated.",
+      "impact": "If a critical gap exists, the constraint is more extractive (false sense of security, misallocated resources) and less coordinative than claimed, shifting it towards a Snare. If fidelity is sufficient, it reinforces the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the empirical claim of simulation sufficiency against actual competence occupation."
+    },
+    {
+      "id": "kernel_reading_simulation_sufficiency",
+      "question": "Is this constraint a genuine reflection of competence maintenance, or a reading of the 'competence_occupation' kernel that prioritizes measurable training compliance and benefits the simulation industry?",
+      "resolution_mechanism": "Analysis of resource allocation: if investment in simulation significantly outweighs investment in other competence maintenance mechanisms (e.g., real-world operational experience, continuous procedural reinforcement), it suggests a preference-driven reading.",
+      "impact": "If it's a preference-driven reading, the constraint's 'naturalness' is reduced, and its extractive component (benefiting the simulation industry) is amplified, pushing it closer to a Snare. This reading (simulation_sufficiency) forecloses the 'real_incident_necessity' reading within a single operational framework, as one asserts sufficiency and the other necessity of real events.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'simulation_sufficiency' reading of the 'competence_occupation' kernel. It treats simulation as sufficient, contrasting with 'real_incident_necessity' (which it forecloses) and 'hybrid_occupation' (with which it coexists but influences by diverting resources)."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint asserts that simulation-based drills are sufficient for maintaining operational competence in high-reliability organizations. It is a specific reading of the broader 'competence_occupation' kernel, which is contested. This reading emphasizes measurable training compliance and the scalability of simulation, leading to a significant industry built around providing these solutions. While it offers a coordination function (standardized training, reduced risk of real-world incidents), it also extracts resources and attention from alternative competence maintenance strategies, potentially creating a false sense of security.",
+    "key_agents": [
+      "simulation_industry: Primary beneficiary (institutional/arbitrage) — profits from the mandate for simulation.",
+      "training_departments: Agenda setter/beneficiary (organized/constrained) — administers compliance, benefits from clear metrics.",
+      "frontline_operators: Payer/victim (moderate/identity_locked) — bears the risk of potential competence gaps, constrained by training mandates.",
+      "organizational_safety_culture: Victim (institutional/constrained) — suffers from potential over-reliance on simulation.",
+      "regulators: Agenda setter/observer (institutional/analytical) — mandates training, observes outcomes, can alter the constraint."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates (standardized training, perceived risk reduction) but also extracts (resources flow to the simulation industry, potential for competence gaps for operators). Extractiveness is high (0.6) due to the significant investment in simulation and the potential for misallocated resources if sufficiency is overstated. Suppression (0.7) is high because alternative views on competence occupation are often marginalized in favor of auditable training metrics. Theater ratio (0.4) is moderate, reflecting that while simulations have real value, a portion of their function is performative compliance. The increasing trend in extractiveness and suppression over time reflects the growing institutionalization and commercialization of this approach.",
+    "perspectival_gap": "The simulation industry and training departments experience this as a beneficial coordination mechanism, providing clear metrics and a scalable solution. Frontline operators and the broader safety culture, however, may experience it as an extractive force, diverting resources from more effective, but less measurable, competence maintenance strategies, and potentially leaving them underprepared for novel real-world challenges. Regulators sit in an analytical seat, evaluating the effectiveness and potential for regulatory capture.",
+    "directionality_logic": "The simulation industry is a clear beneficiary (d=0.0-0.1) as the constraint directly drives demand for their products. Training departments also benefit (d=0.1-0.2) from having a clear, auditable framework for competence. Frontline operators are targets (d=0.7-0.8) as they must comply with training, potentially at the expense of other forms of skill development, and bear the ultimate risk of competence gaps. Organizational safety culture is also a target (d=0.8-0.9) if the focus on simulation leads to a diluted understanding of true operational readiness. Regulators are analytical (d=0.5).",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (overstating its coordination function) or a pure Snare (ignoring its genuine, albeit potentially overstated, coordination benefits). The 'contested' status of the founding problem (is fragmented/unsafe training still the primary problem, or has the solution itself become a problem?) highlights the potential for mandatrophy, where the initial coordination function is overshadowed by extraction. The omegas address the core ambiguities of whether the claimed sufficiency is empirically valid and whether the constraint is a genuine solution or a preference-driven reading of the competence kernel.",
+    "kernel_context": "This constraint, 'Simulation-Based Competence Sufficiency', is one reading of the 'competence_occupation' kernel. It asserts that simulation-based drills are sufficient for maintaining operational competence. This reading stands in contrast to 'real_incident_necessity', which argues only actual incidents provide true competence occupation, and 'hybrid_occupation', which advocates for a multi-faceted approach without a single dominant mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation",
+      "safety_compliance_auditing"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_occupation' kernel. Its structural properties and beneficiaries differ significantly from sibling readings like 'real_incident_necessity' and 'hybrid_occupation', which are modeled as separate constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_occupation__real_incident_necessity",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_occupation__hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_is_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "measurable_compliance_equals_competence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "simulation_driven_competence_assurance",
+    "drift_state": {
+      "moment": "contemporary_operational_context",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

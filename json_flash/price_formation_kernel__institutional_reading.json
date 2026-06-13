@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__institutional_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "65008d28-d791-4764-bcdb-46c6c572bf1e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Housing Price Formation (Institutional Reading)",
+    "topic_domain": "political_economy/housing_markets/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_homeowners",
+      "mortgage_lenders",
+      "real_estate_brokers",
+      "property_developers"
+    ],
+    "victims": [
+      "first_time_homebuyers",
+      "renters",
+      "low_income_households"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_institutional_vs_naturalist",
+      "question": "Is housing price formation a constructed outcome of institutional rules, or a natural equilibrium reflecting objective scarcity and preference?",
+      "resolution_mechanism": "Comparative analysis of housing markets with radically different institutional structures (e.g., Vienna vs. San Francisco): if price patterns diverge systematically, it supports the institutional reading; if they converge despite different rules, it supports the naturalist reading.",
+      "impact": "If the institutional reading is correct, policy interventions (zoning reform, tax changes) can directly alter price outcomes. If the naturalist reading is correct, such interventions are largely futile or counterproductive, and price is a 'mountain'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishes institutional construction from natural market forces in price formation."
+    },
+    {
+      "id": "kernel_reading_institutional_vs_financialization",
+      "question": "To what extent is housing price formation primarily driven by institutional factors (zoning, lending, tax) versus financialization dynamics (credit expansion, asset-price feedback loops)?",
+      "resolution_mechanism": "Econometric modeling disentangling the relative contributions of regulatory changes, credit supply shocks, and investor demand to price movements over time.",
+      "impact": "If institutional factors dominate, policy levers are primarily regulatory. If financialization dominates, macro-prudential and monetary policy are the primary levers. This reading emphasizes the former, while the financialization reading emphasizes the latter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Clarifies the primary drivers of housing price formation between institutional and financialization perspectives."
+    },
+    {
+      "id": "kernel_reading_institutional_vs_georgist",
+      "question": "Does the institutional framework primarily construct land value (unearned rent) or improvement value (earned capital/labor)?",
+      "resolution_mechanism": "Detailed property tax assessments that disaggregate land value from improvement value across different zoning and tax regimes. If institutional rules disproportionately inflate land value, it supports the Georgist distinction.",
+      "impact": "If land value is primarily constructed, a land value tax (Georgist solution) becomes a more potent and equitable policy tool. This reading acknowledges the distinction but focuses on the institutional construction of both.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Examines whether institutional factors primarily construct land value or improvement value."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes housing price formation as a constructed outcome of institutional rules, including zoning regulations, mortgage lending standards, property tax policies, and the structure of real estate intermediary platforms. It is one reading of the 'price_formation_kernel', emphasizing that prices are not purely natural or financial, but are shaped by human-designed systems. This reading identifies clear beneficiaries (incumbent owners, lenders) and victims (renters, first-time buyers) of these institutional arrangements.",
+    "logic_rationale": "The extractiveness (0.68) is high because these institutional arrangements create artificial scarcity and confer advantages to existing property owners and financial intermediaries, allowing them to capture a significant portion of housing value. Suppression (0.75) is also high, as these rules are actively enforced through legal and financial systems, limiting alternatives for those seeking affordable housing. The theater ratio (0.20) is relatively low, as the institutions generally perform their stated functions, even if those functions have extractive outcomes. Accessibility collapse (0.60) is moderate, as alternatives (e.g., building more housing, alternative financing) are constrained but not entirely absent. Resistance (0.55) is also moderate, reflecting ongoing political and social movements for housing reform.",
+    "perspectival_gap": "Incumbent homeowners and mortgage lenders perceive these institutional arrangements as stable, legitimate mechanisms for wealth creation and market function. First-time homebuyers and renters, however, experience them as barriers to access and sources of escalating costs. The agenda-setters (local governments, financial regulators) often frame these rules as necessary for stability and public welfare, while their effects are demonstrably extractive for others.",
+    "directionality_logic": "Incumbent homeowners, mortgage lenders, and real estate brokers are beneficiaries (d near 0.0) as they directly profit from rising property values and transaction volumes enabled by these rules. First-time homebuyers, renters, and low-income households are victims (d near 1.0) as they bear the costs of inflated prices and limited supply. Local governments and financial regulators act as agenda-setters, enforcing the rules that create this structure.",
+    "mandatrophy_analysis": "The constraint's mandate (e.g., 'preserving neighborhood character' via zoning, 'ensuring financial stability' via lending standards) often masks its extractive function. The classification as a Tangled Rope prevents mislabeling it as a pure coordination mechanism (Rope) or a natural market outcome (Mountain). The persistence of these rules, despite their clear costs to victims, indicates that the coordination story serves as cover for the extraction benefiting powerful stakeholders. Mandatrophy is not fully resolved, as the original problems (e.g., orderly development, financial stability) are still cited, but the mechanisms have drifted to become primarily extractive.",
+    "kernel_context": "This constraint, 'price_formation_kernel__institutional_reading', is one interpretation of the broader 'price_formation_kernel'. It posits that housing prices are fundamentally constructed by human-designed institutional frameworks. This contrasts with the 'naturalist_reading' (prices as objective scarcity), the 'georgist_reading' (prices as separable land rent), and the 'financialization_reading' (prices as credit-driven asset bubbles)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'price_formation_kernel', focusing on institutional construction. Other readings (naturalist, georgist, financialization) are distinct constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_homeowners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from rising property values due to restricted supply and favorable tax treatment. They often advocate for maintaining restrictive zoning and other policies that protect their asset values."
+    },
+    {
+      "name": "mortgage_lenders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Profit from the volume and value of mortgage debt, which is inflated by high housing prices. They influence lending standards and benefit from a stable, appreciating asset class."
+    },
+    {
+      "name": "real_estate_brokers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from high transaction volumes and values, as their commissions are a percentage of sale price. They often lobby against policies that would reduce housing prices or transaction costs."
+    },
+    {
+      "name": "property_developers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefit from the scarcity created by zoning, which drives up the value of developable land and new construction. They navigate complex regulatory environments to maximize profits."
+    },
+    {
+      "name": "first_time_homebuyers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the burden of high housing prices and stringent lending standards, making homeownership increasingly inaccessible. Their options are limited to saving for longer, taking on more debt, or relocating."
+    },
+    {
+      "name": "renters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Face rising rents driven by overall housing market dynamics and limited supply. They have few options for stable, affordable housing and are often at the mercy of landlords and market fluctuations."
+    },
+    {
+      "name": "local_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Set zoning laws, approve development projects, and collect property taxes. They balance revenue needs with resident demands, often prioritizing existing homeowners' interests and maintaining property values."
+    },
+    {
+      "name": "financial_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establish and enforce mortgage lending standards, which influence credit availability and housing demand. They aim to ensure financial stability but can inadvertently contribute to housing affordability crises."
+    },
+    {
+      "name": "low_income_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are most severely impacted by high housing costs, often facing displacement, homelessness, or living in substandard conditions. Their options are extremely limited by income and systemic barriers."
+    }
+  ],
+  "gain_flow": "incumbent_homeowners",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "price_formation_kernel__naturalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "price_formation_kernel__georgist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "price_formation_kernel__financialization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "housing_prices_are_institutionally_constructed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_rules_create_distributive_outcomes",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_regulatory_state",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

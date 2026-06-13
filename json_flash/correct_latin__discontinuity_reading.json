@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "correct_latin__discontinuity_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "649d92f8-57a9-450b-b720-9103d0cc5697"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Correct Latin: Discontinuity Reading (Classical as Preserved Text)",
+    "topic_domain": "historical_linguistics/philology/intellectual_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "classical_philologists",
+      "renaissance_humanists"
+    ],
+    "victims": [
+      "medieval_latin_scholars",
+      "medieval_scribes",
+      "contemporary_latin_speakers"
+    ]
+  },
+  "interval": {
+    "start": 1400,
+    "end": 2020
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1400,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1400,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1400,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'discontinuity reading' of Correct Latin, which asserts a fundamental rupture between Classical Latin (the 'correct' form preserved in ancient texts) and Medieval Latin (a 'corrupt deviation' requiring reconstruction). This reading, largely driven by Renaissance humanism and later philology, established a prescriptive standard that devalued the living, evolving tradition of Latin. The constraint operates as a Tangled Rope: it coordinates academic standards and pedagogical practices (benefiting philologists) but extracts conformity and devalues the work of those studying or practicing later forms of Latin (victims).",
+    "logic_rationale": "Extractiveness is high because the constraint imposes a significant cost on anyone working with or valuing medieval Latin, forcing them to operate within a framework that labels their subject as 'corrupt.' Suppression is also high, as the academic and cultural authority of this reading actively suppresses alternative views of Latin's historical continuity. Theater ratio is moderate, reflecting that while genuine philological work occurs, a portion of the effort is performative maintenance of the 'purity' narrative. The metrics show a rise in extractiveness and suppression as the discontinuity reading became entrenched, with a slight decline in recent decades due to increased scholarship on medieval Latin.",
+    "directionality_logic": "Classical philologists and Renaissance humanists are clear beneficiaries, as their authority and intellectual projects are grounded in this reading. Medieval Latin scholars, scribes, and contemporary Latin speakers are victims, as their linguistic practices or subjects of study are devalued or policed by this standard. The 'agenda_setter' role for classical_philologists reflects their active role in defining and enforcing this standard.",
+    "perspectival_gap": "From the perspective of classical philologists, this constraint is a necessary 'Rope' for preserving linguistic purity and intellectual rigor. From the perspective of medieval Latin scholars and practitioners, it functions as a 'Snare' or 'Tangled Rope,' imposing an artificial standard that devalues a rich, continuous linguistic tradition. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'discontinuity reading' of the 'correct_latin' kernel. It posits a sharp break between Classical and Medieval Latin, viewing the latter as a corruption. Sibling readings include the 'continuity_reading' (Medieval Latin as legitimate evolution) and the 'hybrid_reading' (Classical as transmitted through Medieval practice, but correctable)."
+  },
+  "omegas": [
+    {
+      "id": "linguistic_rupture_ambiguity",
+      "question": "Is the perceived discontinuity between Classical and Medieval Latin a genuine linguistic rupture, or a prescriptive judgment imposed by later scholars?",
+      "resolution_mechanism": "Detailed diachronic linguistic analysis tracing phonological, morphological, and syntactic changes across the Classical-Medieval divide, comparing them to other instances of language evolution.",
+      "impact": "If a genuine rupture, the constraint's 'emerges_naturally' component would increase, pushing it towards a Mountain. If a prescriptive judgment, its extractiveness and suppression would be further highlighted, reinforcing its Tangled Rope nature.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the discontinuity is a linguistic fact or a scholarly construct."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of medieval Latin forms structural (academic gatekeeping, publishing norms) or internalized (scholars self-censor their usage to conform)?",
+      "resolution_mechanism": "Surveys of Latin scholars on their perceived freedom to use or teach non-Classical forms, combined with analysis of academic hiring and publication trends in medieval Latin studies.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as the target carries the suppression with them after exit. If purely structural, removing gatekeeping would quickly change practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for non-Classical Latin."
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "Where is the core disagreement between the discontinuity reading and its siblings located structurally?",
+      "resolution_mechanism": "Comparative analysis of the axioms and reference frames of the 'discontinuity_reading', 'continuity_reading', and 'hybrid_reading' constraints.",
+      "impact": "The disagreement is located in the 'legitimate_usage_set' and 'transmission_mechanism' axioms. The discontinuity reading forecloses the 'continuous_living_practice' axiom of the continuity reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The core structural point of contention between this reading and its siblings."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "correct_latin__continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "correct_latin__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "classical_latin_is_the_sole_correct_form",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "medieval_latin_is_corrupt_deviation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "classical_textual_purity",
+    "drift_state": {
+      "moment": "contemporary_linguistic_scholarship",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

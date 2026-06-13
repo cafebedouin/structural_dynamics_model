@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b032a294-c13f-410d-a6d3-9a95d9af0eef"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Monopoly Rulebook: Tournament Orthodoxy Reading",
+    "topic_domain": "game_theory/social_coordination/institutional_design",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "competitive_monopoly_community",
+      "tournament_organizers"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine coordination mechanism, or is its low extraction merely a 'reading' that masks underlying extractive or socially corrective functions?",
+      "resolution_mechanism": "Observe player behavior and community discourse in contexts where 'house rules' are explicitly forbidden. If competitive play thrives and satisfaction remains high, this reading is robust. If players consistently seek to reintroduce house rules or abandon play, the reading is fragile.",
+      "impact": "If robust, the constraint remains a Rope. If fragile, it may be a Snare (extraction_demo_reading) or Tangled Rope (social_scaffold_reading) where this reading serves as a cover story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'tournament orthodoxy' reading of the 'monopoly_rulebook' kernel. Sibling readings include 'extraction_demo_reading' (high extraction) and 'social_scaffold_reading' (community correction)."
+    },
+    {
+      "id": "house_rules_as_noise_or_feature",
+      "question": "Are 'house rules' truly noise obscuring competitive depth, or do they serve a legitimate social coordination function for casual play that this reading suppresses?",
+      "resolution_mechanism": "Survey casual player communities on their satisfaction with house rules versus strict rulebook adherence. Analyze player retention and engagement in both contexts. If house rules correlate with higher engagement for casual players, this reading's 'noise' claim is empirically challenged.",
+      "impact": "If house rules are a legitimate feature, this reading's suppression of them would increase its effective extractiveness for casual players, potentially shifting it towards a Tangled Rope for that segment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the function of 'house rules' in Monopoly."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'tournament orthodoxy' reading of the Monopoly rulebook. In this reading, the rulebook is seen as the definitive, immutable framework for competitive play, where strategic skill is paramount. 'House rules' are considered deviations that obscure the game's true competitive depth and are to be rejected for any serious comparison or ranking. The constraint functions as a coordination mechanism for a specific competitive community, ensuring a consistent standard for play.",
+    "logic_rationale": "Extractiveness is very low (0.08) because participation is voluntary, and the 'cost' is adherence to a shared standard for competitive integrity, which is self-imposed by the community. Suppression is low (0.15) as it primarily relies on social norms and community consensus rather than active enforcement. Theater ratio is negligible (0.05) as the constraint's function is direct and transparent: to provide a consistent competitive framework. Accessibility collapse is high (0.80) because once the 'correct' way to play for competitive purposes is understood, alternatives (house rules) are largely dismissed by this community. Resistance is low (0.10) within the competitive community, as adherence to the rulebook is a core tenet.",
+    "perspectival_gap": "From the perspective of the competitive community and tournament organizers, this constraint is a pure Rope, enabling fair comparison and skill demonstration. From the perspective of casual players or those holding the 'social scaffold' reading, the strict adherence might be seen as overly rigid or even extractive of social enjoyment, but this reading explicitly rejects those framings as irrelevant to competitive play.",
+    "directionality_logic": "The competitive Monopoly community and tournament organizers are the primary beneficiaries (d near 0.0), as the constraint directly enables their desired mode of play and event organization. There are no direct 'victims' in this reading, as participation is voluntary and the 'cost' is simply adherence to the agreed-upon standard for competitive integrity. Those who prefer house rules are not 'victims' but simply outside the scope of this particular competitive framework.",
+    "mandatrophy_analysis": "This classification prevents mislabeling a genuine coordination mechanism (for a specific competitive purpose) as extractive. The low extractiveness and suppression, coupled with voluntary participation and clear benefits for the target community, align with a Rope. The constraint's mandate (to provide a consistent competitive framework) is live and actively desired by its beneficiaries, preventing mandatrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'monopoly_rulebook' kernel. It focuses on the competitive, skill-based interpretation, distinct from readings emphasizing extraction or social correction."
+  },
+  "stakeholders": [
+    {
+      "name": "competitive_monopoly_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Players who value strategic depth and fair comparison in Monopoly. They benefit from a standardized rulebook that ensures consistent competitive conditions across games and tournaments. They voluntarily adhere to the rulebook to maintain the integrity of their competitive ecosystem."
+    },
+    {
+      "name": "tournament_organizers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Entities responsible for setting up and running competitive Monopoly events. They enforce the strict rulebook interpretation to ensure fairness, comparability of results, and the legitimacy of their rankings. They benefit from the clarity and widely accepted standard the rulebook provides."
+    },
+    {
+      "name": "casual_players",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Players who prioritize social interaction and fun over strict competitive integrity, often using 'house rules' to mitigate harsh outcomes. They are not directly targeted by this constraint but are implicitly excluded from its competitive framework, as their preferred mode of play is deemed 'noise'."
+    },
+    {
+      "name": "game_design_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academics and researchers who study game mechanics, player psychology, and the social dynamics of rule systems. They analyze how different rule interpretations shape player behavior and game outcomes, providing an external, analytical perspective on the constraint."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Provides a universally understood and accepted standard for competitive Monopoly play, enabling fair comparison of skill and consistent tournament conditions.",
+    "transfer_function": "Transfers the 'cost' of adhering to a strict, immutable rule set from the individual player to the collective competitive community, in exchange for a shared, high-integrity competitive framework.",
+    "absent_voices": "Casual players and proponents of 'house rules' are absent from the discourse of tournament orthodoxy. They would argue that strict adherence to the rulebook creates overly harsh, socially unplayable outcomes, and that house rules serve a vital social function. Their voices are excluded by the very definition of 'competitive integrity' this reading upholds.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 'tournament orthodoxy' reading of the Monopoly rulebook vanished, competitive play would fragment. There would be no consistent standard for ranking players or comparing skill, leading to a collapse of organized tournaments and a loss of competitive integrity. The competitive community would either dissolve or reorganize around a new, agreed-upon standard.",
+    "founding_problem": "The problem of inconsistent play experiences and subjective outcomes in Monopoly, making fair competitive comparison and skill assessment impossible.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Tournament organizers and the competitive community consistently attest that the problem of inconsistent play and the need for a clear competitive standard remains live. Game design theorists, from an external analytical seat, corroborate the structural need for clear rules in competitive environments, even if they might critique the specific outcomes of Monopoly's rules."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "monopoly_rulebook__extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "monopoly_rulebook__social_scaffold_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rulebook_text_is_immutable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "strategic_skill_determines_outcome",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pure_competitive_framework",
+    "drift_state": {
+      "moment": "contemporary_casual_play_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

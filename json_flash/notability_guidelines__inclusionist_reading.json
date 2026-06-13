@@ -1,0 +1,283 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__inclusionist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "20026c55-155b-46cf-8809-f43dfeeb6899"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Wikipedia Notability Guidelines (Inclusionist Reading)",
+    "topic_domain": "digital_commons_governance/knowledge_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_knowledge_producers",
+      "established_academics",
+      "mainstream_media"
+    ],
+    "victims": [
+      "marginalized_communities",
+      "indigenous_knowledge_holders",
+      "activist_scholars"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a necessary epistemic quality filter (deletionist reading), a perpetually negotiated process (deliberative reading), or a structural gatekeeping apparatus (inclusionist reading)?",
+      "resolution_mechanism": "Analysis of AfD outcomes over time, focusing on the success rate of articles about marginalized topics versus mainstream topics, and the types of sources accepted/rejected.",
+      "impact": "If the deletionist reading is correct, the constraint is a Rope; if the deliberative reading is correct, it's a Tangled Rope; if the inclusionist reading is correct, it's a Snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between different readings of Wikipedia's Notability Guidelines."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (lack of 'reliable sources' for marginalized knowledge) or internalized (marginalized communities self-censor due to repeated exclusion)?",
+      "resolution_mechanism": "Post-exclusion content creation trajectory: if marginalized communities continue to produce and cite their own knowledge outside Wikipedia, it suggests structural suppression; if they cease, it suggests internalized suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for marginalized knowledge."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the Wikipedia Notability Guidelines (WP:N) as a structural gatekeeping mechanism, interpreted from an inclusionist perspective. It systematically excludes knowledge from marginalized communities by privileging sources from established institutions (academics, mainstream media) that often do not cover such topics. The constraint is actively enforced through deletion processes, leading to high extraction from and suppression of alternative knowledge forms.",
+    "key_agents": [
+      "wikipedia_editors: Agenda setter (institutional/constrained) — enforce WP:N, often from a mainstream epistemic background.",
+      "institutional_knowledge_producers: Beneficiary (organized/arbitrage) — their work is privileged by WP:N, reinforcing their authority.",
+      "marginalized_communities: Victim (powerless/identity_locked) — their knowledge is systematically excluded, leading to epistemic injustice.",
+      "deletionist_editors: Payer (organized/constrained) — actively enforce WP:N, bearing the social cost of conflict but upholding the perceived quality.",
+      "inclusionist_editors: Payer (organized/constrained) — advocate for broader inclusion, often facing resistance and burnout.",
+      "analytical_observers: Observer (analytical/analytical) — study the systemic effects of WP:N on knowledge representation."
+    ],
+    "logic_rationale": "The high extractiveness (0.85) reflects the epistemic cost borne by marginalized communities whose knowledge is deemed 'not notable' and thus excluded, effectively extracting their contributions from the global knowledge commons. Suppression (0.90) is severe due to the rigid enforcement of source requirements and the power imbalance in content disputes. Theater ratio (0.20) is low because the enforcement is genuinely aimed at maintaining the 'quality' as defined by the guidelines, even if that definition is biased. Accessibility collapse is high (0.75) because for many marginalized topics, 'reliable sources' as defined by WP:N simply do not exist in the mainstream, effectively collapsing any alternative path to inclusion. Resistance (0.70) is substantial, manifested in ongoing debates, edit wars, and attempts to reform WP:N.",
+    "perspectival_gap": "From the perspective of institutional knowledge producers, WP:N is a necessary quality filter (a Rope or even Mountain). From the perspective of marginalized communities, it is a Snare that systematically excludes their voices. Wikipedia editors, as agenda-setters, experience it as a complex, often contentious, but necessary tool for maintaining the project's integrity. The engine's classification will highlight this divergence.",
+    "directionality_logic": "Institutional knowledge producers are beneficiaries (d=0.0-0.1) as their work is amplified and validated. Marginalized communities are victims (d=0.9-1.0) as their knowledge is suppressed. Wikipedia editors, particularly deletionists, act as enforcers, bearing the cost of conflict but upholding the system (d=0.5-0.7). Inclusionist editors, while part of the system, are also targets of its rigidity (d=0.7-0.8).",
+    "mandatrophy_analysis": "The constraint's mandate (ensuring verifiability and quality) is still 'live' in a general sense, but its application has drifted to systematically exclude certain forms of knowledge. The classification as a Snare prevents mislabeling this as a neutral coordination mechanism or a natural epistemic limit. It highlights that the 'coordination' of knowledge is achieved through asymmetric extraction and suppression, rather than genuine collective benefit for all potential contributors."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "deletionist_reading",
+      "deliberative_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'notability_guidelines' kernel. Other readings include 'deletionist_reading' and 'deliberative_reading', which offer different interpretations of WP:N's function and impact."
+  },
+  "stakeholders": [
+    {
+      "name": "wikipedia_editors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Volunteer editors who interpret and enforce WP:N, often acting as gatekeepers. They invest significant time and effort in content review and deletion processes, believing they uphold Wikipedia's quality standards. Their power is derived from community consensus and policy interpretation."
+    },
+    {
+      "name": "institutional_knowledge_producers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Academics, journalists, and mainstream media whose work is considered 'reliable sources' by WP:N. Their publications are privileged, reinforcing their epistemic authority and ensuring their topics are well-represented on Wikipedia. They benefit from the amplification and validation of their knowledge."
+    },
+    {
+      "name": "marginalized_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities whose knowledge, histories, and perspectives are often documented in non-mainstream or oral traditions, which WP:N deems 'unreliable' or 'not notable'. They bear the cost of epistemic exclusion, seeing their contributions rejected and their narratives erased from a major global knowledge platform. Their identity is often tied to their knowledge systems, making 'exit' from the desire to be represented difficult."
+    },
+    {
+      "name": "deletionist_editors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A subset of Wikipedia editors who rigorously apply WP:N to remove articles lacking 'sufficient' sourcing. They see themselves as defending Wikipedia's integrity and quality, but their actions often contribute to the exclusion of marginalized knowledge. They pay in terms of conflict and potential community backlash."
+    },
+    {
+      "name": "inclusionist_editors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A subset of Wikipedia editors who advocate for broader interpretation of WP:N or for alternative guidelines to include more diverse topics and sources. They often face an uphill battle against established norms and deletionist tendencies, paying in terms of effort and frustration."
+    },
+    {
+      "name": "established_academics",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Scholars whose peer-reviewed publications are the gold standard for 'reliable sources' under WP:N. They benefit from the system's reliance on their output, which reinforces the academic publishing ecosystem and their authority within it."
+    },
+    {
+      "name": "mainstream_media",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Major news outlets and publications whose reporting is widely accepted as 'reliable sources'. They benefit from their content being used to establish notability, further cementing their role as authoritative information providers."
+    },
+    {
+      "name": "indigenous_knowledge_holders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bear the brunt of WP:N's Eurocentric bias, as their oral traditions and community-specific knowledge systems are rarely recognized as 'reliable sources'. They experience epistemic violence through the erasure of their heritage from a globally accessible platform."
+    },
+    {
+      "name": "activist_scholars",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Academics who work with marginalized communities and produce scholarship that challenges mainstream narratives. Their work, while rigorous, may struggle to meet WP:N's criteria if it relies on non-traditional sources or is deemed 'advocacy', placing them in a constrained position."
+    }
+  ],
+  "gain_flow": "institutional_knowledge_producers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To provide a consistent standard for determining which topics merit an encyclopedia article, aiming to ensure verifiability and prevent the inclusion of trivial or unverifiable information.",
+    "transfer_function": "Transfers epistemic authority and visibility from marginalized knowledge systems to established, institutionally-backed knowledge systems, by privileging sources from the latter and excluding those from the former.",
+    "absent_voices": "Many marginalized communities and indigenous knowledge holders are absent from the deliberation process, as their epistemic frameworks are not recognized as legitimate within the current system. They would advocate for a broader definition of 'notability' and 'reliable sources' that includes their own forms of knowledge production.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If WP:N vanished overnight, Wikipedia's content landscape would drastically change. There would be an influx of articles on previously excluded topics, a shift in the types of sources cited, and a significant redistribution of epistemic authority. The current structure of knowledge on Wikipedia would be fundamentally reorganized.",
+    "founding_problem": "To prevent Wikipedia from becoming a repository of trivial, unverifiable, or self-promotional content, ensuring that articles are based on established knowledge and verifiable facts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Wikipedia's founders and many long-term editors attest that the problem of content quality and verifiability is still live. However, marginalized communities and critical scholars (outside the direct beneficiaries) argue that while the original problem was valid, WP:N's current application has overshot, creating a new problem of systemic exclusion, and that the original problem is largely solved for mainstream topics but weaponized against others."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "notability_guidelines__deletionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "notability_guidelines__deliberative_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "knowledge_is_socially_constructed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "epistemic_justice_is_a_foundational_good",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_knowledge_commons",
+    "drift_state": {
+      "moment": "contemporary_wikipedia_practice",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

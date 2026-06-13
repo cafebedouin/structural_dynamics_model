@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "border_legitimacy__humanitarian_obligation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0ca05a48-9f5d-4b4f-b4e4-320459c7ce0c"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Humanitarian Obligation in Border Legitimacy",
+    "topic_domain": "political_philosophy/migration_studies/international_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "states_maintaining_sovereignty",
+      "citizens_of_receiving_states"
+    ],
+    "victims": [
+      "economic_migrants",
+      "asylum_seekers_with_weak_claims"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine humanitarian obligation, or a cover for selective exclusion?",
+      "resolution_mechanism": "Analysis of state practice: if states consistently admit genuine refugees and process claims fairly, it supports the humanitarian framing. If claims are systematically denied or processes are designed to deter, it suggests a cover for exclusion.",
+      "impact": "If a genuine obligation, the constraint functions as a Rope for refugees and a Snare for economic migrants. If a cover, it is a Snare for all excluded parties.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'humanitarian_obligation_reading' of the 'border_legitimacy' kernel. Sibling readings include 'sovereignty_reading' (states have a right to exclude) and 'freedom_of_movement_reading' (borders are illegitimate). This reading creates a bifurcated victim set and allows for moderate extraction on categorical exclusion."
+    },
+    {
+      "id": "economic_migrant_definition_ambiguity",
+      "question": "How is 'economic migrant' defined, and does this definition genuinely exclude those with legitimate, albeit non-persecution-based, needs?",
+      "resolution_mechanism": "Legal review of national asylum and migration laws, and empirical analysis of how 'economic migrant' status is applied in practice, particularly for those fleeing climate disaster or generalized violence not meeting refugee criteria.",
+      "impact": "A narrow, rigid definition of 'economic migrant' that excludes those with genuine needs would increase the effective extraction and suppression for a broader class of individuals, pushing the constraint closer to a Snare. A more flexible definition would reduce it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining 'economic migrant' vs. those fleeing other forms of hardship."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'humanitarian obligation' reading of border legitimacy, asserting that states have a moral and legal duty to admit those fleeing persecution or disaster, but retain the right to exclude general economic migrants. This creates a bifurcated system where some migrants are protected, while others face exclusion. The constraint is actively enforced through border controls and asylum processing, leading to a tangled rope classification due to its dual function of coordination (for humanitarian protection) and extraction (from economic migrants).",
+    "logic_rationale": "The extractiveness (0.45) is moderate because while genuine refugees are theoretically admitted, the distinction between 'refugee' and 'economic migrant' is often contested and used to justify exclusion. Suppression (0.7) is high due to robust border enforcement and legal mechanisms designed to deter unauthorized entry. Theater ratio (0.2) is low, as the humanitarian function is genuinely performed for some, but the distinction-making process itself can be performative to justify exclusion. The metrics reflect a system that, while claiming a humanitarian purpose, also actively manages and restricts migration flows.",
+    "directionality_logic": "States maintaining sovereignty and their citizens are beneficiaries (d near 0.0-0.2), as they control who enters and preserve national resources. Economic migrants and asylum seekers with weak claims are victims (d near 0.8-1.0), facing exclusion and hardship. Genuine refugees are intended beneficiaries, but their actual experience can vary widely depending on the rigor and fairness of the asylum process, placing them closer to a constrained position (d around 0.5-0.7) due to the high stakes and often difficult process.",
+    "perspectival_gap": "From the perspective of states, this constraint is a necessary balance between sovereignty and humanitarian duty. From the perspective of economic migrants, it is a Snare that denies fundamental human mobility. Genuine refugees experience it as a Rope, albeit one with significant friction and uncertainty. The engine's per-seat classification will reflect these divergences.",
+    "kernel_context": "This constraint is the 'humanitarian_obligation_reading' of the 'border_legitimacy' kernel. It posits a moral and legal duty for states to admit those fleeing persecution or disaster, while maintaining the right to exclude economic migrants. Sibling readings include the 'sovereignty_reading' (emphasizing state's right to control borders) and the 'freedom_of_movement_reading' (positing a human right to free movement)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_legitimacy__sovereignty_reading",
+      "border_legitimacy__freedom_of_movement_reading"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "states_maintaining_sovereignty",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "These states define and enforce border policies, balancing national interests with international obligations. They benefit from controlling who enters their territory and from the perceived legitimacy of their humanitarian efforts, while managing the costs of asylum processing and integration."
+    },
+    {
+      "name": "citizens_of_receiving_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "These citizens benefit from the perceived order and security of controlled borders, and from the moral satisfaction of their state fulfilling humanitarian duties. They may also bear some costs through taxes for migrant support, but generally support the distinction between refugees and economic migrants."
+    },
+    {
+      "name": "genuine_refugees",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals fleeing persecution or disaster who, in principle, should be admitted. Their lives depend on this obligation, but they face significant barriers in proving their claims and navigating complex legal systems, making their 'beneficiary' status highly conditional and precarious."
+    },
+    {
+      "name": "economic_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals seeking better economic opportunities who are explicitly excluded by this reading. They face border walls, detention, and deportation, bearing the full cost of the constraint's exclusionary function. Their options are to attempt illegal entry, return to their home country, or seek legal pathways that are often non-existent."
+    },
+    {
+      "name": "asylum_seekers_with_weak_claims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals who claim asylum but whose cases do not meet the strict legal definitions of 'refugee' under this reading. They are caught in a lengthy, often dehumanizing process, facing high legal costs, uncertainty, and eventual deportation, bearing significant personal and financial burdens."
+    },
+    {
+      "name": "international_human_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These organizations monitor state compliance with international law and advocate for broader protections for all migrants. They challenge the narrow definitions of 'refugee' and the enforcement practices that lead to human rights violations, often litigating on behalf of migrants."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To coordinate international efforts to protect those genuinely fleeing persecution or disaster, while allowing states to manage their borders and populations according to national interests.",
+    "transfer_function": "Transfers security and stability to receiving states and their citizens by controlling entry, while transferring the burden of displacement and exclusion onto economic migrants and those whose claims are deemed 'weak'.",
+    "absent_voices": "Those advocating for a universal right to freedom of movement are largely excluded from the policy-making discourse, as are the voices of economic migrants themselves, who would challenge the legitimacy of their categorical exclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this distinction vanished, states would either face an uncontrolled influx of all migrants (leading to significant social and economic reorganization) or would default to a purely exclusionary 'sovereignty' model, abandoning humanitarian obligations. The current system's balance, however imperfect, structures global migration.",
+    "founding_problem": "The problem of managing large-scale human displacement due to conflict and disaster, while preserving state sovereignty and national identity, particularly in the post-WWII era with the rise of international refugee law.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International legal bodies (UNHCR), human rights organizations, and many states attest that the problem of managing forced displacement remains live and complex. However, critics (e.g., freedom of movement advocates) argue that the 'solution' has become a tool for exclusion rather than genuine humanitarian aid."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "border_legitimacy__sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "border_legitimacy__freedom_of_movement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_has_humanitarian_duty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_retains_right_to_exclude_economic_migrants",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_wwii_refugee_convention_framework",
+    "drift_state": {
+      "moment": "contemporary_climate_migration_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "exercise_as_competence_maintenance__hybrid_decay_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "cd47f665-aa52-4cd7-a5c3-17d2e7432364"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Decay Reading: Simulation for Procedural Competence, Decay for Judgment Under Stakes",
+    "topic_domain": "safety_engineering/organizational_learning/crisis_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organizational_leadership",
+      "training_providers"
+    ],
+    "victims": [
+      "frontline_operators",
+      "affected_public"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'hybrid decay' reading of competence maintenance, or is it better described by 'simulation sufficiency' or 'lived catastrophe necessity'?",
+      "resolution_mechanism": "Empirical studies on crisis response outcomes correlating with simulation frequency vs. real-world incident exposure, specifically measuring procedural vs. improvisational success.",
+      "impact": "If 'simulation sufficiency' is true, the constraint is less extractive than currently assessed; if 'lived catastrophe necessity' is true, the constraint is more extractive and the current simulation regime is largely theatrical.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the true nature of competence maintenance exercise."
+    },
+    {
+      "id": "procedural_vs_judgment_decay_rate",
+      "question": "What is the precise decay rate for procedural competence vs. judgment-under-stakes, and how does simulation impact each?",
+      "resolution_mechanism": "Longitudinal studies tracking performance metrics in high-stakes environments, comparing teams with varying simulation exposure and real-world incident rates.",
+      "impact": "More rapid decay of judgment-under-stakes would increase the effective extractiveness of the current regime, as it leaves a critical competence gap unaddressed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in the differential decay rates of competence components."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'hybrid decay' reading of competence maintenance, where simulation exercises procedural competence (e.g., muscle memory, checklist adherence) but fails to exercise or maintain judgment-under-stakes and improvisational capacity. The kernel of 'competence' is thus split into two components with different exercise requirements and decay rates. The constraint is framed as a Tangled Rope because it provides a genuine coordination function (procedural training) but extracts from those who rely on it for full competence by allowing the judgment component to decay, leading to potential failures in real crises. The victim set includes those harmed by these failures.",
+    "logic_rationale": "The extractiveness (0.6) stems from the gap between claimed competence (from simulation) and actual competence (lacking judgment-under-stakes). Organizations invest in simulations, believing they fully maintain readiness, but this reading suggests a critical component atrophies. Suppression (0.7) is high because the organizational culture often suppresses dissent about simulation efficacy, and frontline operators have limited options to demand more realistic or comprehensive training. The theater ratio (0.4) reflects that while simulations have real value, a significant portion of their perceived utility is performative, masking the unaddressed decay of judgment. Accessibility collapse is moderate (0.3) as some alternatives (e.g., more frequent real-world drills, higher-fidelity simulations for judgment) exist but are costly or resisted. Resistance is low (0.2) because the perceived benefits of simulation often outweigh the diffuse costs of unexercised judgment until a crisis hits.",
+    "directionality_logic": "Organizational leadership and training providers are beneficiaries (d near 0.0) as they fulfill regulatory requirements, demonstrate 'readiness,' and generate revenue/budgets through simulation programs. Frontline operators are payers (d near 1.0) because they bear the risk of unexercised judgment in real crises, despite participating in simulations. The affected public are also payers/victims (d near 1.0) as they suffer the consequences of organizational failures stemming from decayed judgment. Regulators are observers (d near 0.5) as they oversee compliance but may not fully grasp the nuance of competence decay.",
+    "perspectival_gap": "Organizational leadership perceives the constraint as a Rope, effectively maintaining competence through simulation. Frontline operators, however, experience it as a Tangled Rope or even a Snare, as they are coordinated into a training regime that leaves them vulnerable in high-stakes situations where judgment is paramount. The engine's classification will highlight this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate is to ensure competence. This reading suggests a partial mandatrophy: the procedural competence mandate is met, but the judgment-under-stakes mandate is not. The classification as Tangled Rope prevents mislabeling it as a pure Rope (which would ignore the unaddressed decay and victim set) or a pure Snare (which would ignore the genuine procedural coordination function).",
+    "kernel_context": "This constraint is the 'hybrid_decay_reading' of the 'exercise_as_competence_maintenance' kernel. This reading posits that simulation exercises procedural competence but not judgment-under-stakes, leading to a decay in the latter. Sibling readings include 'simulation_sufficiency_reading' (which claims simulation fully exercises competence) and 'lived_catastrophe_necessity_reading' (which claims only real catastrophe exercises competence)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "exercise_as_competence_maintenance__simulation_sufficiency_reading",
+      "exercise_as_competence_maintenance__lived_catastrophe_necessity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'exercise_as_competence_maintenance' kernel. This 'hybrid decay' reading posits that simulation maintains procedural competence but not judgment-under-stakes, leading to a decay in the latter. The other readings offer different views on simulation's efficacy."
+  },
+  "stakeholders": [
+    {
+      "name": "organizational_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets training policies and budgets, relying on simulation to demonstrate compliance and readiness. Benefits from perceived competence without bearing the full cost of judgment decay in crises."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Participate in simulations, maintaining procedural skills. However, their judgment-under-stakes and improvisational capacity decay due to lack of real-stakes exercise, leaving them vulnerable in actual crises. Their professional identity is tied to organizational readiness."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Develop and deliver simulation programs, generating revenue and expertise. Their business model is supported by the current understanding of simulation's role in competence maintenance."
+    },
+    {
+      "name": "regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversee compliance with training requirements, often accepting simulation as sufficient. They have the power to mandate changes but may lack the deep understanding of competence decay to do so proactively."
+    },
+    {
+      "name": "affected_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the ultimate victims of organizational failures in crises, which can be exacerbated by decayed judgment-under-stakes among operators. They have no direct control over training regimes."
+    }
+  ],
+  "gain_flow": "organizational_leadership",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the maintenance of procedural competence across an organization through standardized simulation exercises, ensuring a baseline level of operational readiness.",
+    "transfer_function": "Transfers resources (time, budget, personnel) from operational departments to training programs, and transfers the risk of unexercised judgment from organizational leadership to frontline operators and the affected public.",
+    "absent_voices": "Future victims of crises (the affected public) are absent from the design of training regimes, as are those who would advocate for more costly, high-fidelity, or real-stakes training to maintain judgment capacity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished, organizations would likely cease or drastically reduce simulation exercises, leading to a rapid decay in both procedural competence and judgment-under-stakes, increasing the likelihood and severity of failures in real crises. The entire safety and preparedness ecosystem would need to be rethought.",
+    "founding_problem": "The problem of maintaining complex operational competence in high-stakes environments where real-world incidents are rare but catastrophic, requiring a method to practice skills without incurring real-world risks.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Organizational leadership and training providers attest the problem is live, citing the ongoing need for skill maintenance. Frontline operators and safety researchers, while acknowledging the problem, corroborate that the current solution only partially addresses it, leaving the judgment component vulnerable."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "exercise_as_competence_maintenance__simulation_sufficiency_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "exercise_as_competence_maintenance__lived_catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_multicomponent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_exercises_only_procedural_component",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "dual_component_competence_model",
+    "drift_state": {
+      "moment": "contemporary_organizational_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

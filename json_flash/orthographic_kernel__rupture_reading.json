@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "orthographic_kernel__rupture_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0e22c4a2-81c2-438b-80bf-018f73912f7d"
+  },
+  "base_properties": {
+    "extractiveness": 0.95,
+    "suppression": 0.98,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.99,
+    "resistance": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "Turkish Script Reform (Rupture Reading)",
+    "topic_domain": "political_linguistics/state_formation/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "republican_state_apparatus",
+      "new_national_identity_proponents"
+    ],
+    "victims": [
+      "ottoman_literate_population",
+      "islamic_scholars",
+      "traditional_elites"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the Turkish script reform primarily a rupture from the past, a modernization effort, or a continuity of Turkish identity?",
+      "resolution_mechanism": "Historical analysis of state archives, public discourse, and educational curricula from the reform era, focusing on explicit policy goals and public reception.",
+      "impact": "If primarily a rupture, the constraint is a snare for cultural continuity. If modernization, it's a tangled rope for technological adoption. If continuity, it's a rope for linguistic identity. This story instantiates the 'rupture' reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the primary intent and effect of the script reform."
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "To what extent has the suppression of the Ottoman script been internalized by subsequent generations, making alternatives unthinkable?",
+      "resolution_mechanism": "Sociolinguistic studies on script preference, literacy rates in Ottoman Turkish, and attitudes towards historical texts among contemporary Turkish citizens.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as the 'trapped' exit option becomes 'identity_locked' for many, reinforcing the snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for script change."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.98
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 1928,
+    "end": 1938
+  },
+  "commentary": {
+    "narrative_context": "The Turkish script reform of 1928, replacing the Ottoman Turkish alphabet (based on Arabic script) with a new Latin-based alphabet, was a foundational act of the Turkish Republic. This 'rupture reading' frames the reform as a deliberate and highly extractive constraint designed to sever the new nation's ties to its Ottoman and Islamic past, thereby forging a new, secular national identity. It rendered the entire pre-reform literate population functionally illiterate in official contexts overnight, creating a profound cultural and historical discontinuity.",
+    "key_agents": [
+      "republican_state_apparatus: Agenda setter (institutional/generational) — enforced the change",
+      "ottoman_literate_population: Primary target (powerless/biographical) — bore the extraction",
+      "islamic_scholars: Payer (moderate/biographical) — lost authority and access to texts",
+      "new_national_identity_proponents: Beneficiary (organized/generational) — gained a new cultural foundation",
+      "traditional_elites: Payer (powerful/biographical) — lost status and influence"
+    ],
+    "logic_rationale": "Extractiveness is extremely high (0.95) because the reform effectively 'extracted' literacy and access to historical texts from an entire generation, creating a chasm between past and present. Suppression is near total (0.98) due to the immediate and comprehensive legal enforcement, including banning the old script in public and education. Theater ratio is very low (0.05) as the reform was a direct, functional act of state-building with minimal performative pretense; its intent was to achieve a real, if brutal, outcome. Accessibility collapse is near total (0.99) as the old script became unusable in official and public life. Resistance was high (0.85) but ultimately ineffective due to the state's coercive power.",
+    "perspectival_gap": "From the perspective of the republican state apparatus and proponents of the new national identity, the reform was a necessary, even liberating, act of modernization and nation-building. From the perspective of the Ottoman literate population, Islamic scholars, and traditional elites, it was a devastating act of cultural destruction and disenfranchisement. The engine's classification will highlight this divergence.",
+    "directionality_logic": "The republican state apparatus and new national identity proponents are clear beneficiaries (d near 0.0) as the constraint directly served their nation-building agenda. The Ottoman literate population, Islamic scholars, and traditional elites are clear victims (d near 1.0) as they bore the direct costs of illiteracy, loss of cultural capital, and diminished social standing. The constraint was designed to extract from the old order to benefit the new.",
+    "mandatrophy_analysis": "The 'rupture reading' classifies this as a snare because its primary function was not coordination but the deliberate, coercive extraction of cultural continuity to achieve a political goal. The mandate was to create a new identity by severing the old; this mandate was actively pursued and enforced, not atrophied. The high extractiveness and suppression, coupled with active enforcement, prevent mislabeling it as a rope or scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "turkish_education_system_reform",
+      "secularization_laws"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'orthographic_kernel' alongside 'continuity_reading' and 'modernization_reading'. Each reading represents a distinct structural claim about the script reform's primary function and impact."
+  },
+  "stakeholders": [
+    {
+      "name": "republican_state_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The newly formed Turkish Republic, led by Mustafa Kemal Atatürk, which conceived, legislated, and rigorously enforced the script reform. Its goal was to create a modern, secular nation-state distinct from the Ottoman Empire."
+    },
+    {
+      "name": "ottoman_literate_population",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The entire population literate in the Ottoman Arabic script before 1928. They were rendered functionally illiterate in the new official script overnight, losing access to public life, official documents, and their own written heritage."
+    },
+    {
+      "name": "islamic_scholars",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Custodians of religious and classical Ottoman texts written in Arabic script. The reform severely curtailed their authority, influence, and the accessibility of their knowledge base, as new generations could not read the old texts."
+    },
+    {
+      "name": "new_national_identity_proponents",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Intellectuals, politicians, and segments of the populace who actively supported the creation of a new, secular, Western-oriented Turkish national identity. The script reform was a key tool in achieving this cultural break."
+    },
+    {
+      "name": "traditional_elites",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Landowners, bureaucrats, and religious leaders whose power and status were tied to the Ottoman system and its cultural forms. The script reform undermined their social standing and cultural capital."
+    },
+    {
+      "name": "future_generations_of_turks",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Born into a system where the Latin script is the sole means of literacy, they are effectively severed from direct access to pre-reform history and literature, thus embodying the new national identity without the 'burden' of the old. Their identity is shaped by this rupture."
+    }
+  ],
+  "gain_flow": "republican_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate the creation of a new, unified national identity by establishing a clear break from the Ottoman past and aligning with Western orthographic standards.",
+    "transfer_function": "Transfers cultural capital, historical access, and social authority from the Ottoman/Islamic literate population and traditional elites to the republican state apparatus and proponents of the new national identity.",
+    "absent_voices": "Any organized resistance from the Ottoman literate population was swiftly suppressed. Voices advocating for gradual reform, bilingualism, or preservation of the Arabic script were effectively silenced by state coercion and the rapid implementation of the new law.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the script reform had not occurred, or if its effects were reversed, the cultural, political, and educational landscape of Turkey would be fundamentally different. The connection to the Ottoman past would be direct, the national identity would be less secular and Western-oriented, and the state's legitimacy claims would rest on different foundations.",
+    "founding_problem": "The Ottoman script was seen as a barrier to mass literacy, technological modernization, and the formation of a distinct Turkish national identity, being too complex and too closely associated with the multi-ethnic, religious Ottoman Empire.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "While the republican state apparatus claimed the problem was live (modernization, literacy), independent historians and sociolinguists (outside the benefiting parties) largely corroborate that the primary problem solved by the 'rupture reading' was the political goal of severing ties with the past, which was achieved. The literacy and modernization problems could have been addressed by less extractive means, making the 'founding problem' as stated by the state largely a cover story for the deeper political rupture."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "orthographic_kernel__continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "orthographic_kernel__modernization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ottoman_past_is_burden",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "new_identity_requires_clean_break",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ottoman_cultural_hegemony",
+    "drift_state": {
+      "moment": "post_reform_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

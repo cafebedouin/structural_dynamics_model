@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__inherent_executive_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3fb37811-7dc6-4b81-9d92-0374f6679382"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Inherent Executive War Powers (Commander-in-Chief Reading)",
+    "topic_domain": "constitutional_law/separation_of_powers/war_powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "the_president",
+      "executive_branch_agencies"
+    ],
+    "victims": [
+      "congress",
+      "the_judiciary",
+      "public_discourse"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "inherent_vs_delegated_authority",
+      "question": "Is the President's authority to deploy force truly inherent, or is it a delegated power from Congress that has been expanded through practice?",
+      "resolution_mechanism": "Supreme Court ruling explicitly defining the scope of inherent executive power in war-making, or a constitutional amendment clarifying war powers allocation.",
+      "impact": "If delegated, the constraint's legitimacy would shift from constitutional interpretation to legislative intent, potentially increasing congressional leverage and reducing executive unilateralism.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between inherent and delegated executive authority."
+    },
+    {
+      "id": "congressional_acquiescence_vs_consent",
+      "question": "Does Congressional funding of military operations imply consent or merely acquiescence to executive action?",
+      "resolution_mechanism": "Clear legislative action (e.g., War Powers Resolution enforcement, explicit non-funding of unauthorized operations) that distinguishes between funding and authorization.",
+      "impact": "If acquiescence, the constraint's extractive nature from Congress is clearer; if consent, Congress is a more active participant, and the constraint leans more towards coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity of Congressional role in funding unauthorized military actions."
+    },
+    {
+      "id": "reading_of_war_powers_allocation",
+      "question": "This constraint is the 'inherent_executive_reading' of the 'war_powers_allocation' kernel. What would change if the 'congressional_primacy_reading' were adopted?",
+      "resolution_mechanism": "A shift in judicial precedent or political practice to prioritize explicit congressional authorization for military force beyond immediate defense.",
+      "impact": "The 'congressional_primacy_reading' would significantly increase the power of Congress (moving it from victim to agenda_setter), reduce executive unilateralism, and likely decrease the overall extractiveness of the war powers allocation by requiring broader consensus.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of adopting the 'congressional_primacy_reading' of war powers."
+    },
+    {
+      "id": "reading_of_war_powers_allocation_functional_accommodation",
+      "question": "This constraint is the 'inherent_executive_reading' of the 'war_powers_allocation' kernel. What would change if the 'functional_accommodation_reading' were adopted?",
+      "resolution_mechanism": "A shift in political practice and judicial interpretation to explicitly differentiate between types of military deployments, with varying authorization requirements.",
+      "impact": "The 'functional_accommodation_reading' would introduce more nuance, potentially reducing executive unilateralism for prolonged campaigns while preserving flexibility for immediate threats. This would make the constraint less consistently extractive from Congress, depending on the specific operational context.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of adopting the 'functional_accommodation_reading' of war powers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'inherent executive' reading of war powers allocation, where the President, as Commander-in-Chief, possesses inherent authority to deploy military force in defense of national interests without prior Congressional authorization. Congressional authorization is treated as a courtesy or a post-hoc ratification through appropriations, rather than a constitutional prerequisite. This reading has gained prominence through executive branch legal interpretations and historical practice, particularly since the mid-20th century.",
+    "logic_rationale": "The extractiveness (0.65) is substantial because this reading allows the executive to commit national resources and lives without direct legislative consent, imposing costs on Congress (loss of war-making authority) and the public (unilateral military engagements). Suppression (0.75) is high due to the executive's ability to act quickly and present Congress with a fait accompli, limiting legislative options to defunding (politically difficult) or post-hoc condemnation. The theater ratio (0.4) reflects that while some executive actions genuinely require speed and secrecy, a significant portion of the 'national interest' justification serves to bypass legislative checks.",
+    "perspectival_gap": "The President and executive branch agencies experience this as a necessary flexibility for national security, enabling decisive action. Congress, however, experiences it as an erosion of its constitutional war-making authority, reducing its role to oversight and funding rather than initiation. The judiciary is often reluctant to intervene, further entrenching executive power.",
+    "directionality_logic": "The President and executive branch agencies are clear beneficiaries (d=0.0-0.1) as they gain significant unilateral power. Congress is a primary victim (d=0.9-1.0) as its constitutional role is diminished. The judiciary is also a victim (d=0.7-0.8) due to its limited ability to check executive action. Public discourse is a victim (d=0.8-0.9) as it loses a critical forum for debate on military interventions.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it purports to coordinate national defense (a genuine collective action problem) but does so through asymmetric extraction, concentrating power in the executive at the expense of legislative checks. The 'inherent authority' claim serves as cover for this extraction. Mandatrophy is present in the sense that the original constitutional intent for war powers (requiring Congressional declaration) has atrophied in practice, replaced by executive assertion of inherent authority. Resolving this would require reasserting Congressional primacy or a clear constitutional re-allocation of powers.",
+    "kernel_context": "This constraint is the 'inherent_executive_reading' of the 'war_powers_allocation' kernel. Sibling readings include the 'congressional_primacy_reading' (emphasizing explicit legislative authorization) and the 'functional_accommodation_reading' (differentiating authorization requirements based on operational context)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__congressional_primacy_reading",
+      "war_powers_allocation__functional_accommodation_reading",
+      "executive_order_authority",
+      "national_security_classification"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'war_powers_allocation' kernel. Each reading represents a distinct structural claim about the allocation of war powers, with different beneficiaries, victims, and levels of extraction. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "the_president",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "As Commander-in-Chief, the President asserts and exercises inherent authority to deploy military force, interpreting 'national interests' broadly. This position allows for rapid, unilateral action, bypassing legislative checks and consolidating power."
+    },
+    {
+      "name": "executive_branch_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Agencies like the Department of Defense and State Department benefit from the President's inherent authority, gaining flexibility and speed in implementing foreign policy and military operations without constant legislative interference. They provide the operational capacity for executive action."
+    },
+    {
+      "name": "congress",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Congress bears the cost of diminished constitutional authority over war-making. Its options are limited to post-hoc funding decisions, non-binding resolutions, or politically costly impeachment proceedings, rather than pre-emptive authorization. This reduces its ability to shape foreign policy and military engagements."
+    },
+    {
+      "name": "the_judiciary",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The judiciary is often reluctant to rule on war powers disputes, citing political question doctrine or lack of standing. This effectively cedes ground to the executive, making it a passive enabler of executive unilateralism and a victim of its own institutional self-restraint."
+    },
+    {
+      "name": "public_discourse",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The public loses a robust democratic debate on military interventions when decisions are made unilaterally by the executive. This reduces accountability and can lead to prolonged engagements without broad societal consensus, bearing the costs in lives and resources."
+    },
+    {
+      "name": "international_allies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Allies can benefit from the speed and decisiveness of US executive action in crises, as it allows for rapid response to shared threats. However, they also bear the risk of being drawn into conflicts initiated without broad domestic consensus."
+    }
+  ],
+  "gain_flow": "the_president",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To enable rapid, decisive military action in defense of perceived national interests, particularly in situations requiring speed and secrecy, thereby coordinating national security responses.",
+    "transfer_function": "Transfers the authority to initiate military force from Congress to the President, along with the associated political capital, resources, and accountability burdens.",
+    "absent_voices": "Constitutional scholars advocating for strict adherence to Congressional war powers, and segments of the public who demand greater democratic accountability for military interventions, are often marginalized in the executive's framing of 'inherent authority'.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the inherent executive war powers vanished overnight, the President would be severely constrained in deploying force, requiring explicit and timely Congressional authorization for most military actions. This would fundamentally alter the balance of power, slow down responses, and force a re-negotiation of foreign policy decision-making.",
+    "founding_problem": "The need for a unified, decisive command structure to respond to immediate threats and protect national security, particularly in a world with rapidly evolving geopolitical challenges.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Executive branch legal opinions and national security advisors consistently attest to the live nature of this problem, citing ongoing threats and the need for agility. While some in Congress and academia contest the *solution* (unilateral executive power), the underlying problem of national security threats is widely acknowledged as live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "war_powers_allocation__congressional_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "war_powers_allocation__functional_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "executive_unity_in_foreign_affairs",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "commander_in_chief_as_sole_initiator",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unitary_executive_national_security",
+    "drift_state": {
+      "moment": "post_cold_war_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

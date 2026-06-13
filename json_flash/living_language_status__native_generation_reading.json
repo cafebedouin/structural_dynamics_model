@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "living_language_status__native_generation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "308e7f62-431b-498b-a758-e7b69c3a1e1c"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Living Language Status: Native Generational Transmission Reading",
+    "topic_domain": "sociolinguistics/religious_studies/nationalism_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "secular_nationalist_movements",
+      "linguistic_revitalization_programs"
+    ],
+    "victims": [
+      "liturgical_only_communities",
+      "diaspora_communities_without_territory"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine, universally applicable definition of a 'living language', or one specific reading of a contested kernel?",
+      "resolution_mechanism": "Analysis of competing definitions and their social/political functions; identification of alternative readings with different beneficiary/victim structures.",
+      "impact": "If a specific reading, its classification as a Tangled Rope is strengthened by revealing its constructed nature and the interests it serves. If a universal definition, its classification might shift towards Mountain, but the presence of beneficiaries would trigger False Summit detection.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'native generational transmission' reading of the 'living_language_status' kernel."
+    },
+    {
+      "id": "impact_of_sibling_readings",
+      "question": "How would the structural classification of this 'native generational transmission' reading change if the 'liturgical preservation' or 'literary continuity' readings were adopted?",
+      "resolution_mechanism": "Constructing separate constraint stories for each sibling reading and comparing their computed classifications and beneficiary/victim structures.",
+      "impact": "The 'liturgical preservation' reading would likely classify as a Rope or Mountain for its communities, while the 'literary continuity' reading might be a Rope or Tangled Rope for intellectual elites. This highlights the extractive nature of the 'native generation' reading for non-native speakers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Examines the classification delta if sibling readings of the 'living_language_status' kernel were adopted."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (lack of state support for non-native transmission) or internalized (communities internalizing the 'dead language' label)?",
+      "resolution_mechanism": "Post-intervention linguistic vitality: if communities thrive after state support for non-native transmission, suppression was structural. If decline persists, internalized suppression is at play.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as communities carry the suppression with them. If structural, policy changes can more directly address the issue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for non-native language communities."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines a 'living language' exclusively by native, generational transmission as a mother tongue in daily life. It frames liturgical recitation or literary production as insufficient for vitality, often serving to legitimize secular nationalist movements seeking linguistic sovereignty and to marginalize communities whose language use does not fit this narrow definition. It is a reading of the 'living_language_status' kernel, which has competing definitions.",
+    "key_agents": [
+      "secular_nationalist_movements: Primary beneficiary (institutional/arbitrage) — gains legitimacy and political power.",
+      "linguistic_revitalization_programs: Secondary beneficiary (organized/constrained) — receives funding and mandates based on this definition.",
+      "liturgical_only_communities: Primary victim (powerless/identity_locked) — their language is delegitimized, often leading to cultural marginalization.",
+      "diaspora_communities_without_territory: Secondary victim (powerless/constrained) — struggle to meet the criteria without a contiguous native-speaking territory.",
+      "sociolinguists: Observer (analytical/analytical) — study the effects of this definition and its alternatives."
+    ],
+    "logic_rationale": "The extractiveness (0.6) stems from the resources and legitimacy diverted to languages meeting this criterion, and the cultural capital denied to those that don't. Suppression (0.7) is high due to institutional policies (e.g., state funding for education, media) that privilege native-transmitted languages and implicitly or explicitly devalue others. Theater ratio is low (0.1) as the definition is actively enforced and shapes real-world policy, not merely performative. Accessibility collapse is moderate (0.4) as alternative definitions exist but are often suppressed in public discourse. Resistance is moderate (0.6) from communities challenging this narrow definition.",
+    "perspectival_gap": "Secular nationalist movements experience this as a Rope, providing a clear, objective criterion for national identity and linguistic policy. Liturgical-only communities experience it as a Snare, as their deeply held cultural practices are delegitimized and their language declared 'dead' despite continuous use. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Secular nationalist movements are full beneficiaries (d=0.0) as this definition provides a powerful tool for nation-building and cultural homogenization. Liturgical-only communities and diaspora communities are targets (d=1.0) as their forms of language vitality are explicitly excluded and devalued. Linguistic revitalization programs are beneficiaries (d=0.2) as they gain a clear mandate and resources, but also bear some cost of enforcing the narrow definition. Sociolinguists are analytical observers (d=0.5).",
+    "mandatrophy_analysis": "This constraint prevents mislabeling a politically constructed definition as a natural linguistic fact. By identifying beneficiaries and victims, it highlights how a seemingly objective linguistic criterion can function as an extractive mechanism, channeling resources and legitimacy towards certain groups while marginalizing others. The 'corpse' metaphor is a key part of the extraction, framing non-native transmission as inherently inferior."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "living_language_status__liturgical_preservation_reading",
+      "living_language_status__literary_continuity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'living_language_status' kernel. Each reading defines 'living language' differently, leading to distinct beneficiary/victim structures and classifications. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "living_language_status__liturgical_preservation_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "living_language_status__literary_continuity_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "generational_transmission_is_sole_vitality_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "liturgical_use_is_preservation_not_life",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "ideal_native_speaker_community",
+    "drift_state": {
+      "moment": "contemporary_globalized_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

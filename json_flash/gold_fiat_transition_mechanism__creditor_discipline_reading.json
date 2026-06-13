@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "gold_fiat_transition_mechanism__creditor_discipline_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Post-Gold Standard Creditor Discipline Constraint (Creditor Discipline Reading)",
+    "topic_domain": "monetary_economics/political_economy/history_of_economic_thought",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "debtor_nations",
+      "reserve_currency_issuer"
+    ],
+    "victims": [
+      "creditor_nations",
+      "non_reserve_currency_issuers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint primarily about the elimination of creditor discipline, or is it better understood as an automatic physical constraint or a composite overdetermined event?",
+      "resolution_mechanism": "Historical analysis of policy debates and diplomatic records focusing on the explicit motivations and perceived impacts of the gold standard's abandonment on international power dynamics.",
+      "impact": "If this 'creditor discipline' reading is primary, the constraint is a Snare for creditor nations. If the 'automatic constraint' reading is primary, it's a Mountain. If 'composite overdetermination' is primary, the constraint itself is a complex network of smaller constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'gold_fiat_transition_mechanism' kernel, specifically the 'creditor_discipline_reading'."
+    },
+    {
+      "id": "creditor_leverage_mechanism",
+      "question": "To what extent did the threat of gold redemption genuinely constrain debtor nations' fiscal policy, versus serving as a symbolic justification for existing power imbalances?",
+      "resolution_mechanism": "Counterfactual historical analysis comparing fiscal policy outcomes in periods of high vs. low gold redemption threat, controlling for other geopolitical factors.",
+      "impact": "If the threat was a strong causal mechanism, the extractiveness and suppression metrics are accurate. If it was largely symbolic, the constraint's true extractiveness might be lower, and its 'snare' classification less robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the actual leverage of creditor nations under the gold standard."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 1944,
+    "end": 1974
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the shift in international monetary power dynamics following the abandonment of the gold standard, specifically from the perspective of creditor nations losing their disciplinary leverage. Under the gold standard, creditor nations could demand gold redemption for balance-of-payments surpluses, effectively vetoing debtor nations' expansionary fiscal policies. The transition to a fiat, reserve-currency-dominated system eliminated this veto power, transferring fiscal flexibility to debtor nations (especially the reserve currency issuer) and imposing a new form of discipline on non-reserve holders.",
+    "key_agents": [
+      "creditor_nations: Primary victim (institutional/constrained) — lost leverage",
+      "debtor_nations: Primary beneficiary (institutional/mobile) — gained fiscal flexibility",
+      "reserve_currency_issuer: Primary beneficiary (institutional/arbitrage) — gained seigniorage and policy autonomy",
+      "non_reserve_currency_issuers: Secondary victim (institutional/constrained) — faced new forms of discipline",
+      "international_monetary_fund: Agenda setter (institutional/analytical) — administered the Bretton Woods system and its transition"
+    ],
+    "logic_rationale": "The extractiveness is high because creditor nations lost a significant tool for influencing international economic policy, effectively subsidizing debtor nations' fiscal autonomy. Suppression is high because the new system structurally prevents creditor nations from reasserting their former leverage; there is no 'exit' back to gold-backed discipline. Theater ratio is low as the constraint's operation is direct and functional, not performative. The increasing extractiveness and suppression over the interval reflect the gradual erosion of gold's influence and the hardening of the fiat system's disciplinary mechanisms.",
+    "perspectival_gap": "From the perspective of creditor nations, this constraint is a Snare, as they lost a powerful mechanism for enforcing fiscal discipline. From the perspective of debtor nations, it is a Rope, as it enabled greater fiscal flexibility and autonomy. The reserve currency issuer experiences it as an arbitrage opportunity, gaining significant seigniorage and policy space.",
+    "directionality_logic": "The reserve_currency_issuer and debtor_nations are beneficiaries (d near 0.0-0.2) as they gained fiscal flexibility and seigniorage. Creditor_nations and non_reserve_currency_issuers are victims (d near 0.8-1.0) as they lost leverage and faced new forms of discipline. The international_monetary_fund, as an agenda setter, sits closer to symmetric (d around 0.5), administering the system for all members, albeit with an inherent bias towards the dominant powers.",
+    "mandatrophy_analysis": "This constraint is not about mandatrophy; rather, it describes a fundamental shift in the underlying mechanism of international monetary discipline. The 'mandate' of international monetary stability persisted, but the means of achieving it, and the distribution of power within that system, fundamentally changed. The classification as a Snare for creditor nations prevents mislabeling this power shift as a neutral 'coordination' mechanism.",
+    "kernel_context": "This constraint is the 'creditor_discipline_reading' of the 'gold_fiat_transition_mechanism' kernel. This reading emphasizes the geopolitical power shift from creditor nations (who lost their gold redemption leverage) to debtor nations and the reserve currency issuer (who gained fiscal flexibility). Sibling readings include the 'automatic_constraint_reading' (focusing on the shift from physical gold limits to central bank discretion) and the 'composite_overdetermination_reading' (viewing the transition as a confluence of multiple independent factors)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gold_fiat_transition_mechanism__automatic_constraint_reading",
+      "gold_fiat_transition_mechanism__composite_overdetermination_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'gold_fiat_transition_mechanism' kernel. Each reading offers a distinct structural interpretation of the transition's primary mechanism and impact, leading to different classifications and stakeholder dynamics. They are linked as a constraint family."
+  },
+  "directionality_overrides": [],
+  "six_questions": {
+    "coordination_function": "To provide a stable international monetary system that facilitates trade and investment, replacing the gold standard's inherent deflationary bias and susceptibility to speculative attacks.",
+    "transfer_function": "Transfers the power to create international liquidity and manage balance-of-payments adjustments from creditor nations (via gold redemption) to the reserve currency issuer and debtor nations (via fiscal and monetary policy).",
+    "absent_voices": "Advocates for a return to a gold-backed standard or a truly neutral international reserve asset (e.g., a global central bank currency) are largely excluded from mainstream policy debates, as their proposals challenge the fundamental structure of the current fiat system.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the post-gold standard creditor discipline vanished overnight (e.g., if gold suddenly became the sole international reserve again), the global financial system would undergo a massive, disruptive reorganization. Debtor nations would face immediate fiscal constraints, and the reserve currency issuer would lose its seigniorage benefits, leading to a complete reordering of international power dynamics.",
+    "founding_problem": "The gold standard imposed rigid constraints on domestic monetary policy, exacerbated economic downturns, and created an unstable international system prone to balance-of-payments crises and speculative attacks.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economists and central bankers widely corroborate the problems of the gold standard, citing historical evidence of its deflationary bias and crisis proneness. However, the 'live' status of the problem is contested by some who argue that the current fiat system has introduced new forms of instability and moral hazard, suggesting the 'solution' created new problems."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gold_fiat_transition_mechanism__automatic_constraint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gold_fiat_transition_mechanism__composite_overdetermination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creditor_leverage_is_discipline",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "fiscal_flexibility_is_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "gold_standard_creditor_hegemony",
+    "drift_state": {
+      "moment": "post_bretton_woods_collapse",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  }
+}

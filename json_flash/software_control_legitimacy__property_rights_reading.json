@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f68be570-a177-452b-8222-0e89bc85f37d"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Control as Property Right",
+    "topic_domain": "software_engineering/political_economy_of_technology/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_vendors",
+      "investors"
+    ],
+    "victims": [
+      "users",
+      "independent_developers",
+      "foss_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine property right, or a constructed mechanism for rent extraction?",
+      "resolution_mechanism": "Analysis of economic returns relative to investment and risk; comparison with other intellectual property regimes.",
+      "impact": "If primarily rent extraction, the classification shifts towards Snare; if a genuine property right, it remains Tangled Rope with a stronger coordination justification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'property_rights_reading' of the 'software_control_legitimacy' kernel."
+    },
+    {
+      "id": "freedom_imperative_conflict",
+      "question": "How would the 'freedom_imperative_reading' alter the structural properties of this constraint?",
+      "resolution_mechanism": "If the 'freedom_imperative_reading' were adopted, it would fundamentally challenge the legitimacy of proprietary software, likely leading to a reclassification of this constraint as a Snare due to its denial of user control.",
+      "impact": "A shift to the 'freedom_imperative_reading' would increase perceived extractiveness and suppression from the user's perspective, potentially reclassifying this constraint as a Snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Conflict with the 'freedom_imperative_reading' of the software_control_legitimacy kernel."
+    },
+    {
+      "id": "commons_reading_implications",
+      "question": "What would be the structural implications if the 'commons_reading' of software control were adopted?",
+      "resolution_mechanism": "The 'commons_reading' would likely lead to a re-evaluation of default licensing, favoring more permissive models and potentially reducing the scope and enforcement of proprietary restrictions, shifting this constraint towards a Rope or Scaffold.",
+      "impact": "Adoption of the 'commons_reading' would reduce extractiveness and suppression, potentially reclassifying this constraint as a Rope or Scaffold, emphasizing collective management over individual property rights.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Implications of the 'commons_reading' of the software_control_legitimacy kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the view that software control is a legitimate property right, granting creators authority to restrict use, modification, and distribution. This perspective emphasizes protecting investment and enabling commercial sustainability. It is one reading of the broader 'software_control_legitimacy' kernel, which is contested by alternative views emphasizing user freedom, pragmatic openness, or a commons approach. This reading positions software vendors and investors as beneficiaries, while users, independent developers, and FOSS advocates bear the costs of restricted access and modification.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a genuine coordination function (enabling commercial software development and investment) but also involves asymmetric extraction. Software vendors benefit from protected revenue streams, while users and developers face restrictions on use and modification. The extractiveness (0.45) reflects the cost of licensing and restricted freedoms. Suppression (0.6) is moderate, as legal frameworks and technical measures actively enforce these rights, limiting alternatives like unauthorized copying or modification. Theater ratio is low (0.1) as the enforcement is genuinely functional in protecting commercial interests.",
+    "perspectival_gap": "Software vendors and investors (agenda_setters/beneficiaries) experience this as a necessary framework for innovation and commercial viability. Users and independent developers (payers/victims) experience it as a restriction on their ability to use, modify, and share software, leading to higher costs and reduced flexibility. FOSS advocates view it as fundamentally unjust, denying the collaborative nature of software development.",
+    "directionality_logic": "Software vendors and investors are clear beneficiaries (low d) as the constraint directly protects their commercial models. Users and independent developers are targets (high d) as they bear the costs of licensing and restrictions. FOSS advocates are also targets, as their core principles are directly opposed by this property-rights framework. The constraint subsidizes commercial development by extracting from users' and developers' freedoms.",
+    "mandatrophy_analysis": "The constraint's mandate (protecting investment, enabling commercial sustainability) is still live, but its status is contested. Critics argue that the problem of 'unfettered copying' has been over-solved, and the current regime primarily serves rent extraction rather than genuine innovation protection. The classification as Tangled Rope acknowledges both the coordination function and the extractive asymmetry, preventing mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination).",
+    "kernel_context": "This constraint is the 'property_rights_reading' of the 'software_control_legitimacy' kernel. Sibling readings include the 'freedom_imperative_reading' (software as fundamental user freedom), the 'pragmatic_openness_reading' (open source as a superior development methodology), and the 'commons_reading' (software as shared digital infrastructure)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__commons_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of four readings of the 'software_control_legitimacy' kernel, each representing a distinct structural claim about software control. They are linked to capture their interdependencies and contestation."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "software_control_legitimacy__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_is_intellectual_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "exclusive_rights_incentivize_innovation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "classical_intellectual_property_regime",
+    "drift_state": {
+      "moment": "contemporary_digital_commons_discourse",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__harm_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "8ceda879-7c3b-4308-88f6-fd5230e04da7"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Harm Boundary: Proportionality Balancing Reading",
+    "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_victims_of_harmful_speech",
+      "social_cohesion"
+    ],
+    "victims": [
+      "speakers_of_harmful_speech",
+      "advocates_for_unrestricted_speech"
+    ]
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'harm balancing' reading of the speech harm boundary kernel. It posits that speech is presumptively protected but can be restricted when it causes demonstrated harm, subject to a proportionality test. This reading acknowledges a genuine coordination problem (balancing rights) but involves active enforcement and identifiable payers (speakers whose speech is restricted) and beneficiaries (those protected from harm). The metrics reflect a moderate level of extraction and suppression, as the balancing act inherently involves some restriction on speech, but it is not absolute.",
+    "logic_rationale": "The extractiveness (0.45) is moderate because while speakers bear costs, the restrictions are not arbitrary but tied to a demonstrable harm. Suppression (0.30) is also moderate, as enforcement is active but aims for precision rather than blanket bans. The accessibility collapse (0.60) indicates that while alternatives to harmful speech exist, the legal framework significantly narrows the scope of permissible expression. Resistance (0.40) is present from free speech advocates who contest the boundaries of 'harm'. The claimed type is 'tangled_rope' because it genuinely coordinates the conflicting interests of speakers and potential victims, but does so with asymmetric extraction (speakers pay for restrictions) and requires active enforcement by the judicial system.",
+    "perspectival_gap": "From the perspective of potential victims, this constraint is a necessary 'rope' providing protection and fostering a safe environment. From the perspective of speakers whose speech is restricted, it can feel like a 'snare' due to the costs and limitations imposed. The judicial system, as the agenda-setter, views it as a 'tangled_rope' due to the complex balancing act and the need for continuous enforcement.",
+    "directionality_logic": "Potential victims of harmful speech are clear beneficiaries (d=0.0-0.2) as the constraint directly protects them. Speakers of harmful speech are targets (d=0.8-1.0) as they bear the costs of restriction. Advocates for unrestricted speech are also targets, bearing the costs of challenging the system. Social cohesion is a diffuse beneficiary. The judicial and legislative systems are agenda-setters, balancing coordination and enforcement.",
+    "mandatrophy_analysis": "This reading prevents mislabeling by acknowledging both the coordination function (balancing rights, protecting from harm) and the extractive component (restricting speech, imposing costs). It avoids the 'snare' label by emphasizing the proportionality and demonstrated harm requirements, which aim to prevent arbitrary extraction. It avoids the 'rope' label by recognizing the active enforcement and costs borne by speakers. The founding problem remains live, indicating no mandatrophy."
+  },
+  "omegas": [
+    {
+      "id": "demonstrated_harm_threshold",
+      "question": "What is the precise, empirically verifiable threshold for 'demonstrated harm' that justifies speech restriction, and how consistently is it applied across different contexts and types of speech?",
+      "resolution_mechanism": "Empirical legal studies analyzing judicial decisions and their outcomes, coupled with interdisciplinary research on the causal links between speech and harm.",
+      "impact": "A clear, consistently applied threshold would reduce extractiveness for speakers and increase the 'rope' aspect of coordination. An inconsistent or vague threshold would increase extractiveness and suppression, pushing the classification closer to a 'snare' for speakers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the 'demonstrated harm' standard and its application."
+    },
+    {
+      "id": "proportionality_test_objectivity",
+      "question": "To what extent is the proportionality balancing test an objective, rule-bound application of principles, versus a subjective, outcome-oriented exercise influenced by judicial or societal biases?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions and time, examining the consistency of outcomes for similar cases, and critical legal studies analyzing the underlying assumptions of the balancing test.",
+      "impact": "If the test is largely subjective, the constraint's legitimacy as a fair balancing mechanism is undermined, increasing its perceived extractiveness and suppression for speakers. If objective, its coordination function is strengthened.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Objectivity of the proportionality balancing test."
+    },
+    {
+      "id": "kernel_reading_distinction",
+      "question": "Is this 'harm balancing' reading sufficiently distinct from the 'dignity' reading, or do they converge in practice when addressing certain categories of speech (e.g., hate speech)?",
+      "resolution_mechanism": "Detailed comparative case law analysis, examining whether the legal reasoning and outcomes differ significantly when applying a harm balancing test versus a dignity-based test to similar factual scenarios.",
+      "impact": "If they converge, the conceptual distinction between the readings is weakened, suggesting a single underlying constraint with different justifications. If they diverge, the distinct structural implications of each reading are reinforced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Distinction between harm balancing and dignity readings in practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'speech_harm_boundary' kernel. It is structurally distinct from the 'absolutist_reading' (speech protection near-absolute) and the 'dignity_reading' (speech protection subordinate to human dignity), which are modeled as separate constraints due to differing epsilon values and stakeholder structures."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_harm_boundary__absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_harm_boundary__dignity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speech_presumptively_protected",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "demonstrated_harm_justifies_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_wwii_liberal_democracy_framework",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

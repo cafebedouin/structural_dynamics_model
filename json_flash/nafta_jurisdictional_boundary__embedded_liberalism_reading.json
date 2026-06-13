@@ -1,0 +1,244 @@
+{
+  "header": {
+    "constraint_id": "nafta_jurisdictional_boundary__embedded_liberalism_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "cc78860a-d8c9-43f2-aedd-081d0f3a7b2d"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NAFTA Jurisdictional Boundary (Embedded Liberalism Reading)",
+    "topic_domain": "international_trade_law/political_economy/regulatory_federalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exporting_industries",
+      "domestic_regulatory_agencies"
+    ],
+    "victims": [
+      "domestic_industries_facing_imports",
+      "environmental_advocacy_groups"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint truly an 'embedded liberalism' reading of NAFTA's jurisdictional boundary, or is it a 'capital supremacy' reading in disguise?",
+      "resolution_mechanism": "Analysis of dispute settlement panel rulings over time: if rulings consistently prioritize market access over legitimate domestic policy objectives, reclassify towards capital_supremacy_reading.",
+      "impact": "If reclassified as capital_supremacy_reading, extractiveness and suppression would be higher, and the constraint would likely shift towards a Snare, as the coordination function (balancing trade with domestic policy) would be revealed as cover for pure extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between embedded liberalism and capital supremacy readings of NAFTA's jurisdictional boundary."
+    },
+    {
+      "id": "legitimate_objective_definition",
+      "question": "What constitutes a 'legitimate domestic policy objective' in practice, and how consistently is this standard applied by dispute settlement bodies?",
+      "resolution_mechanism": "Empirical study of all cases where domestic regulations were challenged under NAFTA's investment or goods chapters, categorizing outcomes based on the stated objective and the panel's deference to domestic policy.",
+      "impact": "A narrow or inconsistent definition of 'legitimate objective' would increase the effective suppression on domestic regulatory agencies, pushing the constraint towards a Snare by eroding the policy space it claims to protect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The practical scope and consistency of 'legitimate domestic policy objective' interpretation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'embedded liberalism' reading of NAFTA's jurisdictional boundary, where the trade agreement is understood as a framework that facilitates market access while explicitly preserving legitimate domestic policy space for environmental, labor, and health standards, provided they are non-discriminatory. This reading acknowledges a partial jurisdictional overlap, where regulatory agencies retain defensive authority, but also recognizes the moderate extraction imposed through the costs of litigation and the chilling effect of potential trade challenges.",
+    "key_agents": [
+      "exporting_industries: Primary beneficiary (institutional/arbitrage) — gain market access",
+      "domestic_regulatory_agencies: Primary beneficiary (institutional/constrained) — retain policy space",
+      "domestic_industries_facing_imports: Primary payer (organized/constrained) — face increased competition",
+      "environmental_advocacy_groups: Primary payer (organized/constrained) — face challenges to standards",
+      "trade_dispute_panels: Agenda setter (institutional/analytical) — adjudicate disputes",
+      "capital_supremacy_advocates: Excluded (institutional/analytical) — argue for trade primacy"
+    ],
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the costs of compliance, potential litigation, and the chilling effect on domestic regulation, but it is balanced by the preservation of policy space. Suppression (0.35) is also moderate, as domestic regulations can be defended, but the burden of proof and the threat of trade sanctions exert pressure. The theater ratio (0.20) is low, indicating that the stated coordination function (balancing trade with domestic policy) is largely genuine, though some performative defense of domestic policy may occur to avoid challenges. The metrics reflect a system that genuinely attempts to balance competing objectives, characteristic of a Tangled Rope.",
+    "perspectival_gap": "Exporting industries and domestic regulatory agencies experience this as a beneficial framework, enabling trade while protecting sovereignty. Domestic industries facing imports and environmental advocacy groups experience it as a cost, as it introduces new competitive pressures and legal challenges to their standards. Trade dispute panels, as agenda setters, navigate these competing claims, shaping the effective balance.",
+    "directionality_logic": "Exporting industries benefit from expanded market access (low d). Domestic regulatory agencies benefit from the explicit recognition of their policy space (low d). Domestic industries facing imports bear costs from increased competition (high d). Environmental advocacy groups bear costs from the need to defend standards against trade challenges (high d). The trade dispute panels, while administering the system, are structurally positioned to balance these interests, making their directionality closer to symmetric, though their rulings can shift the balance.",
+    "mandatrophy_analysis": "This 'embedded liberalism' reading prevents mislabeling the constraint as a pure Snare by acknowledging the genuine coordination function of balancing market access with domestic policy autonomy. It also prevents mislabeling it as a pure Rope by recognizing the inherent extraction through litigation costs and the pressure on domestic regulatory space. The classification as Tangled Rope accurately captures this hybrid nature, where coordination and extraction are intertwined."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nafta_jurisdictional_boundary__capital_supremacy_reading",
+      "nafta_jurisdictional_boundary__sovereignty_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the NAFTA jurisdictional boundary kernel. Each reading has a different structural interpretation of the balance between trade obligations and domestic policy space, leading to different extractiveness and suppression profiles."
+  },
+  "stakeholders": [
+    {
+      "name": "exporting_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from reduced trade barriers and expanded market access in partner countries, leading to increased sales and profits. They actively lobby for interpretations that favor trade liberalization."
+    },
+    {
+      "name": "domestic_regulatory_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain the authority to set and enforce environmental, labor, and health standards, provided they are non-discriminatory and pursue legitimate policy objectives. They must, however, be prepared to defend these regulations in trade disputes."
+    },
+    {
+      "name": "domestic_industries_facing_imports",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face increased competition from imported goods and services due to reduced tariffs and non-tariff barriers. They may need to adapt their business models or lobby for protection, bearing the costs of market adjustment."
+    },
+    {
+      "name": "environmental_advocacy_groups",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work to strengthen domestic environmental standards but face the risk of these standards being challenged as trade barriers. They bear the costs of legal defense and public advocacy to preserve policy space."
+    },
+    {
+      "name": "trade_dispute_panels",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Adjudicate disputes between member states regarding trade obligations and domestic regulations. Their rulings interpret the balance between market access and policy space, effectively enforcing the constraint."
+    },
+    {
+      "name": "capital_supremacy_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Argue for the primacy of trade and investment liberalization over domestic regulatory autonomy, viewing environmental and labor standards as potential protectionist measures. While influential in policy debates, their more extreme positions are not fully accommodated by this 'embedded liberalism' reading."
+    }
+  ],
+  "gain_flow": "exporting_industries",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate market access for goods and services across national borders while simultaneously preserving the ability of sovereign states to enact and enforce legitimate domestic environmental, labor, and health regulations.",
+    "transfer_function": "Transfers market access opportunities to exporting industries and regulatory stability to domestic agencies, while transferring litigation costs and competitive pressure to domestic industries and advocacy groups.",
+    "absent_voices": "Advocates for a 'capital supremacy' reading, who would argue for the complete subordination of domestic regulation to trade liberalization, are structurally marginalized in this 'embedded liberalism' interpretation. Their arguments are heard in other forums but do not define the operating logic of this specific constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the NAFTA jurisdictional boundary vanished, the balance between trade and domestic policy would collapse. Either trade barriers would rise significantly as states reasserted unconstrained sovereignty, or domestic regulations would be systematically challenged and dismantled in favor of pure market access, leading to a fundamental reorganization of international economic relations and domestic regulatory environments.",
+    "founding_problem": "The challenge of integrating national economies through trade agreements without completely eroding national sovereignty and the ability to pursue domestic social and environmental objectives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International legal scholars and political economists, independent of specific industry or government interests, corroborate that the tension between trade liberalization and domestic policy space remains a live and complex problem in international relations, requiring ongoing negotiation and interpretation."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "nafta_jurisdictional_boundary__capital_supremacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "nafta_jurisdictional_boundary__sovereignty_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "trade_liberalization_conditional_on_domestic_policy_space",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_discriminatory_standards_are_legitimate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_bretton_woods_compromise",
+    "drift_state": {
+      "moment": "contemporary_globalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

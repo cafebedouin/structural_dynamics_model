@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "article_27_veto_power__oligopoly_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "8892d970-eaba-4a91-b67d-f861765c44e2"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "UNSC Article 27 Veto Power (Oligopoly Reading)",
+    "topic_domain": "international_relations/institutional_design/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "permanent_five_members"
+    ],
+    "victims": [
+      "non_p5_member_states",
+      "global_majority_coalition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "veto_function_ambiguity",
+      "question": "Is the P5 veto primarily a coordination mechanism to prevent great-power conflict, or a tool for geopolitical oligopoly and rent extraction?",
+      "resolution_mechanism": "Analysis of veto usage patterns: if vetoes consistently block resolutions that would redistribute power or challenge P5 interests, rather than preventing direct military confrontation among P5, the oligopoly reading is strengthened.",
+      "impact": "If primarily coordination, the constraint would reclassify as a Tangled Rope or Rope; if primarily oligopoly, it remains a Snare with high extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between coordination and extraction functions of the veto."
+    },
+    {
+      "id": "charter_immutability_vs_evolution",
+      "question": "Is the UN Charter's immutability a necessary feature for global stability, or a structural barrier to institutional evolution that reflects changed geopolitical realities?",
+      "resolution_mechanism": "Historical analysis of proposed reforms and their impact on global stability, counterfactual modeling of alternative institutional designs, and assessment of the costs of non-reform (e.g., Security Council irrelevance).",
+      "impact": "If immutability is necessary, the constraint's suppression of reform is a Mountain-like feature; if a barrier, it reinforces the Snare classification by highlighting suppressed alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Charter immutability is a feature or a bug for global governance."
+    },
+    {
+      "id": "oligopoly_reading_of_article_27",
+      "question": "This constraint is the 'oligopoly_reading' of the 'article_27_veto_power' kernel. What would change if a 'coordination_reading' or 'sovereignty_reading' were adopted?",
+      "resolution_mechanism": "Adopting the 'coordination_reading' would emphasize the veto's role in preventing great-power war, likely reducing perceived extractiveness and suppression, potentially reclassifying it as a Tangled Rope. Adopting the 'sovereignty_reading' would frame the veto as an extension of state consent, reducing perceived extraction for P5 members but not for non-P5 states.",
+      "impact": "The classification would shift from Snare to Tangled Rope or Rope under the coordination reading, and remain Snare but with a different justification under the sovereignty reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings of the P5 veto power."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the P5 veto power in the UN Security Council as a mechanism for geopolitical oligopoly, where the permanent members (P5) leverage the immutability of the UN Charter to maintain their disproportionate authority and block institutional reforms that would redistribute power. This reading emphasizes the extractive nature of the veto, sustained by the suppression of alternatives for the non-P5 majority, rather than its claimed function as a guarantor of great-power coordination or national sovereignty. The constraint is classified as a Snare due to its high extraction, active suppression, and identifiable victims.",
+    "key_agents": [
+      "permanent_five_members: Primary beneficiary (institutional/arbitrage) — extracts authority rents",
+      "non_p5_member_states: Primary target (institutional/trapped) — victims of blocked reform",
+      "global_majority_coalition: Secondary target (organized/constrained) — collective victim of structural entrenchment",
+      "un_secretariat: Agenda setter (institutional/constrained) — administers the system but cannot alter the veto",
+      "international_law_scholars: Observer (analytical/analytical) — analyze the structural effects of the veto"
+    ],
+    "logic_rationale": "The extractiveness (0.85) is high because the P5 members derive significant, ongoing authority rents from their ability to unilaterally block resolutions and reforms, effectively maintaining a global status quo that benefits them. Suppression (0.90) is also very high, as the Charter's immutability and the P5's power make any meaningful reform or exit for non-P5 states virtually impossible. The theater ratio (0.10) is low because the veto is actively and functionally used to protect P5 interests, not merely for performative maintenance. Resistance (0.75) is high, reflecting persistent calls for reform from the non-P5 majority. Accessibility collapse (0.95) is near total, as there are no viable alternative global security architectures that could bypass the P5's entrenched power.",
+    "perspectival_gap": "The P5 members experience the veto as a legitimate exercise of their sovereign power and a necessary tool for global stability (a Mountain or Rope from their perspective). The non-P5 member states, however, experience it as an arbitrary and extractive mechanism that denies them agency and blocks necessary institutional evolution (a Snare from their perspective). The engine's per-seat classification will reflect this divergence based on the declared roles and attributes.",
+    "directionality_logic": "The Permanent Five members are the clear beneficiaries (d=0.0-0.1) as the veto directly grants them disproportionate power and protects their interests. Non-P5 member states and the global majority coalition are the victims (d=0.9-1.0) as they are subject to the P5's decisions without recourse to reform. The UN Secretariat, while administering the system, is constrained by the veto's existence and cannot alter its fundamental structure (d=0.5-0.6).",
+    "mandatrophy_analysis": "The constraint's mandate (preventing great-power war) is often cited, but this reading argues that its function has drifted to structural entrenchment of an oligopoly. The high extractiveness and suppression, coupled with the 'contested' status of the founding problem, indicate that the original coordination function has been superseded by an extractive one. This prevents mislabeling it as a Rope or Mountain, which would ignore the active harm and suppressed alternatives for the majority of states.",
+    "kernel_context": "This constraint is the 'oligopoly_reading' of the 'article_27_veto_power' kernel. It views the P5 veto as a mechanism for geopolitical oligopoly, contrasting with the 'coordination_reading' (veto as a necessary mechanism to prevent great-power war) and the 'sovereignty_reading' (veto as an instantiation of Westphalian sovereignty for great powers)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "unsc_reform_process",
+      "international_criminal_court_jurisdiction",
+      "global_governance_legitimacy"
+    ],
+    "dual_formulation_note": "The P5 veto power is a contested kernel with multiple readings. This 'oligopoly_reading' focuses on its extractive and entrenching function, while 'coordination_reading' and 'sovereignty_reading' offer alternative interpretations. All three are distinct constraints linked by their common origin in Article 27 of the UN Charter."
+  },
+  "stakeholders": [
+    {
+      "name": "permanent_five_members",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five permanent members of the UN Security Council (China, France, Russia, United Kingdom, United States) who possess the veto power. They use this power to protect their national interests, block resolutions they oppose, and prevent any reform of the Security Council that would dilute their authority. They benefit from the structural entrenchment of their position."
+    },
+    {
+      "name": "non_p5_member_states",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The vast majority of UN member states who do not have veto power. They are subject to the P5's decisions and vetoes, often finding their initiatives blocked and their collective will overridden. They bear the cost of an unreformed, oligarchical security architecture and have no effective means to exit or reform the system."
+    },
+    {
+      "name": "global_majority_coalition",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Various blocs of non-P5 states (e.g., G77, African Union, Non-Aligned Movement) that collectively advocate for Security Council reform, including limitations on the veto or expansion of permanent membership. Their efforts are consistently suppressed by the P5's ability to veto any such reform."
+    },
+    {
+      "name": "un_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The administrative body of the UN, led by the Secretary-General. While responsible for implementing Security Council resolutions and facilitating diplomatic efforts, the Secretariat operates within the structural constraints imposed by the P5 veto and cannot independently challenge or alter its existence."
+    },
+    {
+      "name": "international_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze the structure, function, and impact of the P5 veto on international law and global governance. They provide critical analysis but have no direct power to alter the constraint."
+    }
+  ],
+  "gain_flow": "permanent_five_members",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "The veto was originally conceived to ensure that no great power would be compelled by the Security Council into military action against its vital interests, thereby preventing a direct conflict among nuclear-armed states and maintaining a fragile global peace.",
+    "transfer_function": "Transfers ultimate decision-making authority and the power to block collective action from the broader UN membership to the five permanent members of the Security Council, effectively granting them a structural veto over global security governance.",
+    "absent_voices": "The voices of states that existed outside the post-WWII power structure, particularly those from the Global South and newly independent nations, were absent during the Charter's drafting. Today, their collective voice, advocating for a more equitable and representative Security Council, is consistently overridden by the P5's veto power.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the P5 veto power vanished overnight, the UN Security Council would immediately become a more democratic and potentially more active body. Resolutions on critical global issues, currently blocked by a single veto, would pass. This would fundamentally alter the balance of power in international relations, leading to a significant rearrangement of global governance structures and diplomatic alignments.",
+    "founding_problem": "The founding problem was to create a global security organization that could prevent future world wars, while simultaneously accommodating the sovereign interests and military capabilities of the victorious great powers of World War II, particularly their ability to avoid being bound by resolutions they opposed.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The P5 members and their allies often argue that the founding problem (preventing great-power conflict) remains live, citing ongoing geopolitical tensions. However, the vast majority of non-P5 member states, supported by numerous international law scholars and UN reform advocates, contend that the problem has evolved, and the veto now primarily serves to entrench an outdated power structure, blocking effective responses to new global challenges. This is corroborated by decades of blocked resolutions on humanitarian crises and conflicts where P5 interests diverged from the global consensus."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "article_27_veto_power__coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "article_27_veto_power__sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "geopolitical_oligopoly_is_structural",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "charter_immutability_blocks_reform",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_wwii_great_power_consensus",
+    "drift_state": {
+      "moment": "contemporary_multipolar_world",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

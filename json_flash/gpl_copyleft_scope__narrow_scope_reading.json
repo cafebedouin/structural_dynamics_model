@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__narrow_scope_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "abb6fd1b-1772-41b8-8fdf-3bf053fe39e3"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "GPL Copyleft Scope (Narrow Interpretation)",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_software_firms",
+      "hybrid_software_developers"
+    ],
+    "victims": [
+      "strong_copyleft_advocates"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'narrow scope' reading of GPL Section 2(b), or is it merely a strategic interpretation by commercial interests?",
+      "resolution_mechanism": "Judicial precedent or widespread adoption of this interpretation by non-commercial, FSF-aligned projects.",
+      "impact": "If a genuine reading, it solidifies the 'rope' classification by demonstrating broad acceptance of its coordination function. If strategic, it leans towards 'tangled_rope' due to unacknowledged extraction from the copyleft commons.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'gpl_copyleft_scope' kernel, specifically the 'narrow_scope_reading'. Sibling readings ('strong_copyleft_reading', 'enforcement_vacuum_reading') would alter the derivative work boundary and the perceived obligations of integrators."
+    },
+    {
+      "id": "derivative_work_boundary_ambiguity",
+      "question": "Does 'traditional copyright doctrine' provide a sufficiently clear and stable boundary for derivative works in the context of modern software architectures (e.g., microservices, cloud functions)?",
+      "resolution_mechanism": "New case law specifically addressing software derivative works in contemporary architectures, or industry-wide consensus on best practices for linking and aggregation under copyright.",
+      "impact": "If the boundary is unclear, the constraint's predictability and coordination function are weakened, increasing legal risk for all parties and potentially shifting it towards a 'tangled_rope' due to asymmetric enforcement capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The core disagreement between readings is located in the definition and application of 'derivative work' to software, particularly concerning linking and aggregation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a 'narrow scope' interpretation of GPL Section 2(b), asserting that copyleft obligations extend only to direct derivative works, excluding mere aggregation, plugin architectures, and certain dynamic linking forms. This reading aligns with traditional copyright doctrine's emphasis on substantial similarity and direct derivation. It facilitates the integration of GPL-licensed components into larger, often proprietary, software systems, providing a coordination mechanism for mixed codebases. However, it weakens the expectations of strong copyleft advocates for universal code-sharing and makes enforcement against more subtle forms of code coupling rare.",
+    "key_agents": [
+      "commercial_software_firms: Primary beneficiary (powerful/mobile) — retains flexibility for proprietary layers.",
+      "hybrid_software_developers: Beneficiary (moderate/mobile) — can mix licenses with less friction.",
+      "strong_copyleft_advocates: Primary victim (organized/constrained) — sees copyleft weakened.",
+      "open_source_foundations: Agenda setter (institutional/constrained) — administers GPL, but interpretation is contested.",
+      "software_users: Beneficiary (moderate/mobile) — benefits from broader software availability."
+    ],
+    "logic_rationale": "The extractiveness (0.35) is moderate, reflecting the 'cost' to strong copyleft advocates who see less code returned to the commons, but it's not a pure extraction as it enables broader adoption of GPL components. Suppression (0.25) is low because this reading offers clear pathways for compliance without outright coercion, and alternatives (other licenses, different linking strategies) exist. Theater ratio is low (0.1) as the interpretation is genuinely applied, not merely performed. The 'rope' classification reflects its function as a coordination mechanism for mixed-license development, despite the asymmetric impact on different ideological camps.",
+    "perspectival_gap": "Commercial firms and hybrid developers experience this as a beneficial coordination mechanism, allowing them to leverage open-source components without fully 'viral' copyleft obligations. Strong copyleft advocates, however, perceive it as an erosion of the GPL's intended purpose, leading to a 'leakage' of value from the commons. The engine's classification as 'rope' from the perspective of integrators, but potentially 'tangled_rope' or 'snare' from the perspective of strong copyleft advocates, captures this divergence.",
+    "directionality_logic": "Commercial software firms and hybrid developers are beneficiaries (d=0.0-0.2) as this reading grants them flexibility and reduces their obligations. Strong copyleft advocates are victims (d=0.8-1.0) as their goal of maximizing shared code is undermined. Open source foundations, as agenda setters, are closer to symmetric (d=0.4-0.6) as they administer the license but must navigate competing interpretations. Software users are diffuse beneficiaries (d=0.1-0.3) due to increased software availability.",
+    "mandatrophy_analysis": "This reading prevents mislabeling a flexible coordination mechanism as pure extraction. While it does extract 'value' (in the form of proprietary code) from the copyleft commons, it simultaneously enables a broader ecosystem of mixed-license software, which is a form of coordination. The contest is over the *terms* of coordination, not its existence. If the founding problem of enabling software collaboration were dead, and this interpretation merely served to funnel value to commercial entities without any reciprocal benefit, it would lean towards a 'snare'. As it stands, it's a contested rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__strong_copyleft_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'gpl_copyleft_scope' kernel. This 'narrow_scope_reading' emphasizes traditional copyright doctrine, allowing more flexibility for proprietary integration, in contrast to the 'strong_copyleft_reading' which seeks to maximize code sharing, and the 'enforcement_vacuum_reading' which highlights the lack of definitive judicial resolution."
+  },
+  "stakeholders": [
+    {
+      "name": "commercial_software_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "These firms integrate GPL-licensed components into their proprietary products, benefiting from the narrow interpretation that allows them to maintain proprietary layers without triggering full copyleft obligations. They actively advocate for this interpretation."
+    },
+    {
+      "name": "hybrid_software_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Individual developers or small teams who create software that combines GPL and proprietary code. This reading provides them with legal clarity and flexibility, reducing the friction of mixed-license development."
+    },
+    {
+      "name": "strong_copyleft_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations and individuals who believe the GPL's intent is to maximize the amount of code returned to the free software commons. They view this narrow interpretation as undermining the 'viral' nature of copyleft and reducing the pool of freely available software."
+    },
+    {
+      "name": "open_source_foundations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Entities like the Free Software Foundation (FSF) that publish and defend the GPL. While they advocate for strong copyleft, they must also acknowledge and navigate the legal realities and diverse interpretations that emerge in practice, making their role complex."
+    },
+    {
+      "name": "software_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users of software that incorporates GPL components. They benefit from the broader availability of software that results from easier integration of open-source and proprietary elements, even if it means less code is fully open-source."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze copyright law and its application to software licensing. They study the implications of different GPL interpretations for intellectual property, innovation, and the open-source ecosystem."
+    }
+  ],
+  "gain_flow": "commercial_software_firms",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a legal framework that allows commercial and open-source software components to be combined in a single product, reducing legal uncertainty and facilitating hybrid development models.",
+    "transfer_function": "Transfers the flexibility to integrate GPL components with proprietary code to commercial entities, at the 'cost' of reducing the scope of code that must be shared under copyleft to the open-source commons.",
+    "absent_voices": "Developers and projects committed to a 'strong copyleft' interpretation, who would argue for a broader definition of 'derivative work' to ensure more code remains free, are often marginalized in industry-driven legal interpretations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this narrow interpretation vanished, commercial firms would face significantly higher legal risks and compliance costs for using GPL components, potentially leading to reduced adoption of open-source software in proprietary products or a complete restructuring of their licensing strategies. The hybrid software ecosystem would be profoundly altered.",
+    "founding_problem": "The original GPL aimed to ensure that software built upon free software remained free, preventing proprietary enclosure. The 'derivative work' boundary was intended to define the scope of this obligation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Strong copyleft advocates and the FSF attest that the problem of proprietary enclosure remains live, and this narrow reading undermines the GPL's solution. Commercial firms and many hybrid developers argue that the problem is sufficiently addressed by the GPL's core, and this reading provides necessary flexibility for innovation, with legal scholars often providing analysis supporting both sides of the contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_copyleft_scope__strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "derivative_work_follows_traditional_copyright",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "mere_aggregation_is_not_derivation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "traditional_copyright_framework",
+    "drift_state": {
+      "moment": "contemporary_software_architectures",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "manifesto_revolutionary_method__council_communist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b014141b-d8b7-4371-82f0-98acc4548781"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.85,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.9,
+    "claimed_type": "rope",
+    "human_readable": "Workers' Councils as Direct Democratic Organs (Council Communist Reading)",
+    "topic_domain": "political_philosophy/revolutionary_theory/historical_materialism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "autonomous_worker_collectives",
+      "local_communities"
+    ],
+    "victims": [
+      "state_bureaucrats",
+      "vanguard_party_officials",
+      "capitalist_class"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "council_communist_vs_vanguard_party",
+      "question": "Is the direct democratic authority of federated workers' councils compatible with the centralized authority of a vanguard party?",
+      "resolution_mechanism": "Historical analysis of revolutionary movements where both forms emerged; theoretical reconciliation of direct democracy with centralized revolutionary leadership.",
+      "impact": "If incompatible, this reading forecloses the vanguard_rupture_reading, highlighting a fundamental structural conflict in revolutionary method. If compatible, it suggests a potential for hybrid forms or a sequential transition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the council_communist_reading of the manifesto_revolutionary_method kernel. It posits direct worker control, which fundamentally conflicts with the vanguard party's claim to lead the revolution."
+    },
+    {
+      "id": "council_communist_vs_democratic_gradualism",
+      "question": "Can the direct democratic power of workers' councils be achieved through gradual, parliamentary means, or does it require a revolutionary rupture?",
+      "resolution_mechanism": "Empirical observation of attempts to implement council-style democracy within existing parliamentary systems; theoretical analysis of the state's capacity for self-transformation.",
+      "impact": "If a revolutionary rupture is necessary, this reading forecloses the democratic_gradualism_reading, asserting the impossibility of achieving council power through existing state structures. If gradualism is possible, it suggests a less confrontational path.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the council_communist_reading of the manifesto_revolutionary_method kernel. It emphasizes direct, extra-parliamentary power, contrasting with the democratic gradualism approach."
+    },
+    {
+      "id": "internal_coordination_efficiency",
+      "question": "Can federated workplace assemblies effectively coordinate complex economic and social functions at scale without developing new forms of bureaucracy or hierarchy?",
+      "resolution_mechanism": "Empirical study of large-scale federated direct democratic systems; theoretical modeling of information flow and decision-making in such structures.",
+      "impact": "If new hierarchies inevitably emerge, the internal extractiveness of the council system would rise, potentially reclassifying it as a tangled_rope or even a snare from the perspective of individual workers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assesses the practical viability and internal purity of the council system itself."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'council communist' reading of revolutionary method, where workers' councils (soviets) serve as the primary organs of direct democracy, replacing both the capitalist state and the vanguard party. Power is decentralized and held by federated workplace assemblies. This reading emphasizes self-management and anti-authoritarianism, contrasting sharply with state-centric or party-led revolutionary models. The internal extractiveness within the council structure is low, reflecting its ideal of direct worker control, but it faces extremely high external suppression from both existing state power and rival revolutionary factions.",
+    "key_agents": [
+      "autonomous_worker_collectives: Primary beneficiary (organized/arbitrage) — exercise direct power",
+      "local_communities: Secondary beneficiary (organized/mobile) — benefit from decentralized control",
+      "state_bureaucrats: Primary victim (institutional/trapped) — lose power and function",
+      "vanguard_party_officials: Primary victim (institutional/trapped) — lose claim to leadership",
+      "capitalist_class: Primary victim (institutional/trapped) — expropriated and disempowered",
+      "democratic_gradualists: Excluded (organized/constrained) — their method is rejected",
+      "vanguard_party_adherents: Excluded (organized/constrained) — their method is rejected",
+      "council_communist_theorists: Observer (analytical/analytical) — analyze and advocate for this model"
+    ],
+    "logic_rationale": "The constraint is claimed as a Rope because, internally, it aims for genuine coordination and self-management with minimal extraction from its participants (autonomous worker collectives). The low extractiveness (0.25) reflects this ideal. However, its implementation faces immense suppression (0.85) from entrenched state power and competing revolutionary ideologies (vanguard parties, democratic gradualists). This external suppression is what makes its realization so difficult and contested. The theater ratio is low (0.1) because the model is fundamentally about direct action and genuine transformation, not performative maintenance of an atrophied function.",
+    "perspectival_gap": "From the perspective of autonomous worker collectives, the council system is a pure coordination mechanism, empowering them directly. From the perspective of state bureaucrats and vanguard party officials, it is a direct threat to their power and legitimacy, requiring active suppression. The engine's per-seat classification will reflect this divergence, with beneficiaries experiencing a Rope-like structure and victims experiencing a Snare-like structure due to high effective extraction.",
+    "directionality_logic": "Autonomous worker collectives and local communities are direct beneficiaries (d=0.0-0.1) as they gain direct control and self-management. State bureaucrats, vanguard party officials, and the capitalist class are direct targets/victims (d=0.9-1.0) as the system aims to dismantle their power and expropriate their assets. The high external suppression ensures that these victims experience the constraint as highly extractive. Democratic gradualists and vanguard party adherents are excluded, as their methods are incompatible with the council communist approach, making them indirect targets of the constraint's ideological enforcement.",
+    "mandatrophy_analysis": "This constraint is a proposed revolutionary method, so mandatrophy is not yet applicable in the traditional sense of an existing constraint losing its function. However, if a council system were established and then ossified into a new bureaucracy, it would signal mandatrophy, where the original mandate of direct democracy had atrophied into a new form of extraction. The low theater ratio and high resistance indicate it is far from such a state, being an actively contested and revolutionary proposal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "manifesto_revolutionary_method__vanguard_rupture_reading",
+      "manifesto_revolutionary_method__democratic_gradualism_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'manifesto_revolutionary_method' kernel, focusing on workers' councils as direct democratic organs. It is structurally distinct from the vanguard_rupture_reading (party-led state power) and the democratic_gradualism_reading (parliamentary reform), which are modeled as separate constraints due to their differing structural claims and extractiveness profiles."
+  },
+  "stakeholders": [
+    {
+      "name": "autonomous_worker_collectives",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "These are the primary agents of the council communist system, exercising direct democratic control over their workplaces and federating upwards. They benefit from self-management, direct allocation of resources, and the absence of external exploitation. Their exit options are high within the system, as they are the system."
+    },
+    {
+      "name": "local_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from decentralized decision-making, direct provision of social services, and democratic control over local resources. They are closely integrated with the worker collectives and participate in local council structures. Their benefits are direct and tangible."
+    },
+    {
+      "name": "state_bureaucrats",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "These agents represent the administrative and coercive apparatus of the capitalist state. The council communist reading aims to dismantle their power and render their roles obsolete. They face existential threat and loss of status, power, and livelihood. Their exit options are extremely limited, as their entire identity and function are tied to the state."
+    },
+    {
+      "name": "vanguard_party_officials",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "These agents represent the leadership of a centralized revolutionary party. The council communist reading rejects their claim to lead the revolution and replace the state with a party-state. They face loss of their ideological project, power, and organizational structure. Their exit options are limited, as their identity is fused with the party's role."
+    },
+    {
+      "name": "capitalist_class",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The owners of capital and means of production. The council communist reading advocates for their expropriation and the abolition of private property. They face total loss of their economic base, power, and social position. Their exit options are effectively zero within the proposed system."
+    },
+    {
+      "name": "democratic_gradualists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for achieving socialism through parliamentary means and gradual reforms within existing democratic structures. Their approach is fundamentally rejected by the council communist reading, which sees the state as an instrument of class rule to be overthrown, not reformed. They are excluded from the council communist's vision of revolutionary transformation."
+    },
+    {
+      "name": "vanguard_party_adherents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Believe that a disciplined, centralized vanguard party is necessary to lead the working class to revolution and establish a dictatorship of the proletariat. Their top-down, party-centric approach is explicitly rejected by the council communist reading, which prioritizes direct worker self-management. They are excluded from the council communist's vision of revolutionary organization."
+    }
+  ],
+  "gain_flow": "autonomous_worker_collectives",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To enable direct democratic control and self-management of production and social life by federated workplace and community assemblies, replacing hierarchical state and capitalist structures with decentralized, horizontal coordination.",
+    "transfer_function": "Transfers decision-making power and control over resources from state bureaucracies, vanguard parties, and the capitalist class directly to autonomous worker collectives and local communities. It also transfers surplus value from capital to labor.",
+    "absent_voices": "State bureaucrats, vanguard party officials, and the capitalist class are actively disempowered and excluded from the new political and economic order. Democratic gradualists and vanguard party adherents are excluded ideologically, as their methods are deemed incompatible with direct council democracy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the vision of workers' councils as direct democratic organs vanished, the entire revolutionary project it represents would collapse. Power would remain with the capitalist state or be seized by a vanguard party, and the fundamental structure of society would not be transformed in the way envisioned. The world would revert to, or remain in, a state of hierarchical control.",
+    "founding_problem": "The problem of alienated labor, capitalist exploitation, and the authoritarian nature of both the capitalist state and centralized vanguard parties, which prevent genuine working-class self-emancipation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Council communist theorists and historical accounts of workers' struggles (e.g., Kronstadt, Hungarian Revolution of 1956) corroborate the persistence of these problems and the recurring impulse for direct worker control, independent of state or party structures. Critics from both capitalist and vanguard party perspectives acknowledge the historical existence of these problems, though they dispute the council communist solution."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "manifesto_revolutionary_method__vanguard_rupture_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "manifesto_revolutionary_method__democratic_gradualism_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "direct_worker_self_management_is_the_goal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_and_party_are_instruments_of_class_rule",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "federated_council_democracy",
+    "drift_state": {
+      "moment": "contemporary_political_discourse",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

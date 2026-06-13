@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_boundary__militia_conditioned_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "960e9ba8-361d-4e09-bc2d-0da74b36fd70"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "Second Amendment: Militia-Conditioned Right to Bear Arms",
+    "topic_domain": "constitutional_law/political_theory/firearms_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_legislatures",
+      "public_safety_advocates",
+      "general_public"
+    ],
+    "victims": [
+      "gun_owners_in_high_regulation_jurisdictions",
+      "firearms_collectors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "militia_definition_ambiguity",
+      "question": "What constitutes a 'well regulated Militia' in the contemporary context, and does it include all able-bodied citizens or only organized state-controlled forces?",
+      "resolution_mechanism": "Further judicial clarification or legislative definition of 'militia' in modern terms.",
+      "impact": "A broad definition could expand the scope of who is considered part of the 'militia,' potentially shifting the balance of regulatory power. A narrow definition reinforces state control.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition of 'militia' affects the scope of the right."
+    },
+    {
+      "id": "reading_impact_on_individual_right",
+      "question": "To what extent does this militia-conditioned reading foreclose or merely constrain the individual_right_reading?",
+      "resolution_mechanism": "Judicial precedent explicitly stating the relationship between the prefatory and operative clauses, or a constitutional amendment clarifying the right's scope.",
+      "impact": "If it forecloses, the individual right is nullified; if it merely constrains, the individual right exists but is subject to significant state regulation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The degree to which this reading negates or limits the individual right interpretation."
+    },
+    {
+      "id": "natural_law_vs_constructed_right",
+      "question": "Is the right to bear arms a natural, pre-existing right, or a constructed right granted and conditioned by the state?",
+      "resolution_mechanism": "Philosophical consensus on the origin of rights, or a clear statement within the constitutional text itself.",
+      "impact": "If natural, state regulation is inherently suspect; if constructed, state regulation is a legitimate exercise of democratic power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The fundamental nature of the right to bear arms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'militia-conditioned' reading of the Second Amendment, where the prefatory clause ('A well regulated Militia, being necessary to the security of a free State') defines the scope of the operative clause ('the right of the people to keep and bear Arms'). Under this reading, the right to bear arms is primarily tied to the collective defense function of a militia, allowing for substantial state regulation of private firearm possession. It presumes legitimate state authority to regulate firearms for public safety.",
+    "logic_rationale": "The extractiveness (0.3) is moderate, as it restricts certain types of firearm ownership or use, but does not prohibit all possession. Suppression (0.4) is also moderate, reflecting the active enforcement of state-level regulations (e.g., licensing, bans on certain weapons). Theater ratio (0.1) is low, as the regulatory actions are genuinely aimed at public safety, not merely performative. Accessibility collapse (0.6) is moderate, as alternatives (e.g., non-firearm self-defense, participation in state-regulated militias) exist but are not always preferred. Resistance (0.5) is moderate, reflecting ongoing legal and political challenges from gun rights advocates.",
+    "directionality_logic": "State legislatures and public safety advocates are primary beneficiaries (d near 0.0), as this reading empowers them to enact and enforce regulations for collective safety. The general public also benefits from perceived increased safety. Gun owners in high-regulation jurisdictions and firearms collectors are victims (d near 1.0), as their ability to acquire and possess certain firearms is restricted. Their exit options are constrained by legal frameworks and the high cost of non-compliance.",
+    "perspectival_gap": "From the perspective of state legislatures and public safety advocates, this reading is a legitimate and necessary coordination mechanism for public safety. From the perspective of gun owners whose rights are restricted, it is an extractive constraint that infringes on a fundamental right. The engine's per-seat classification will reflect this divergence based on the declared roles and exit options.",
+    "mandatrophy_analysis": "This reading prevents mislabeling legitimate public safety regulation as pure extraction by grounding the right in a collective purpose. It acknowledges that while some individuals bear costs, the overall structure aims to coordinate collective security. The ongoing contestation with other readings, however, means its mandate is constantly re-evaluated.",
+    "kernel_context": "This constraint is the 'militia-conditioned' reading of the Second Amendment, which interprets the right to bear arms as primarily tied to the collective defense function of a well-regulated militia. It stands in contrast to the 'individual_right_reading' (which emphasizes an unconditioned individual right) and the 'insurrectionist_reading' (which frames the right as a check against tyrannical government)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_boundary__individual_right_reading",
+      "second_amendment_boundary__insurrectionist_reading",
+      "firearms_market_regulation",
+      "public_safety_legislation"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Second Amendment boundary kernel. Each reading has a different structural impact on regulatory authority and individual rights, leading to different extraction profiles and classifications. They are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Empowered to enact comprehensive firearms regulations based on this reading, balancing public safety with the collective defense purpose of a militia. They benefit from the flexibility to address local public safety concerns."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the legal framework that supports stricter gun control measures, aligning with their goals of reducing gun violence. They actively lobby for and defend such regulations."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the perceived and actual reduction in gun violence and enhanced public safety due to regulations. However, individual members may also be subject to restrictions on firearm ownership."
+    },
+    {
+      "name": "gun_owners_in_high_regulation_jurisdictions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the direct costs of compliance with strict firearm laws, including restrictions on types of weapons, magazine capacity, and licensing requirements. Their ability to own firearms for self-defense or sport is significantly curtailed."
+    },
+    {
+      "name": "firearms_collectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face restrictions on acquiring and possessing certain historical or rare firearms, as regulations often focus on functional characteristics rather than historical value. This impacts their hobby and investment."
+    },
+    {
+      "name": "firearms_manufacturers_and_retailers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience reduced market access and sales for certain products due to bans or restrictions. They must adapt their product lines and distribution strategies to comply with diverse state laws, increasing operational costs."
+    },
+    {
+      "name": "gun_rights_advocacy_groups",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Actively challenge this reading in courts and legislatures, advocating for an individual right interpretation. While they participate in the political process, their preferred interpretation is largely excluded from the legal framework this reading establishes."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the historical context, textual meaning, and legal implications of this reading, contributing to the ongoing academic and public debate without directly benefiting or paying from its operation."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates public safety by enabling state governments to regulate firearms, ensuring that the right to bear arms serves the collective purpose of a 'well regulated Militia' rather than unrestricted individual possession.",
+    "transfer_function": "Transfers regulatory authority over firearms from individuals to state governments, and potentially transfers a sense of security to the general public at the cost of restricted firearm access for some gun owners.",
+    "absent_voices": "Advocates for an unconditioned individual right to bear arms are present in the political discourse but are structurally excluded from the legal framework established by this reading. They would argue that the right is fundamental and not subject to the militia clause's conditioning.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading disappeared, state governments would lose a primary legal basis for firearms regulation, leading to a rapid deregulation of gun ownership. This would likely result in a significant increase in firearm availability and potentially gun violence, fundamentally altering public safety and the balance of power between individuals and the state.",
+    "founding_problem": "The founding problem was how to balance the need for a citizen militia for collective defense with concerns about individual liberty and potential misuse of arms, particularly in a post-revolutionary context with a nascent federal government.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional scholars and historians attest to the historical context of the militia's importance for state security. Public safety advocates and state legislatures corroborate that the problem of balancing collective security with individual arms possession remains live, citing ongoing gun violence and the need for regulatory flexibility. Gun rights groups contest the 'live' status, arguing the original intent was broader individual liberty."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "second_amendment_boundary__individual_right_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "second_amendment_boundary__insurrectionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "militia_clause_defines_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "collective_defense_primary_purpose",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "original_collective_right_framing",
+    "drift_state": {
+      "moment": "contemporary_judicial_interpretations",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

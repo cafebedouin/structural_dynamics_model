@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_continuity__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "32ee0c4d-9469-4634-8c54-8a9a171ee2f4"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Sacrifice Obligation Continuity: Study as Performance",
+    "topic_domain": "religious_law/ritual_studies/textual_tradition",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "religious_scholars",
+      "devout_adherents"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine fulfillment of the sacrifice commandment through study, or is it a reinterpretation that avoids the practical difficulties of physical sacrifice?",
+      "resolution_mechanism": "Theological consensus shift or the re-establishment of a central sacrificial cult.",
+      "impact": "If reinterpretation, the constraint's 'fulfillment' aspect is performative, potentially shifting its classification towards Piton or Tangled Rope if it extracts from those who genuinely seek physical performance. If genuine fulfillment, it remains a Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'study_as_performance' reading of the 'sacrifice_obligation_continuity' kernel. Sibling readings include 'performance_only' (which this reading influences by offering an alternative fulfillment), 'messianic_suspension' (which this reading coexists with by offering an active form of observance during suspension), and 'archival_preservation' (which this reading forecloses by asserting normative force)."
+    },
+    {
+      "id": "study_accessibility_ambiguity",
+      "question": "Is the 'study' required for fulfillment genuinely accessible to all adherents, or does it implicitly create an elite class of scholars whose engagement counts more?",
+      "resolution_mechanism": "Empirical study of access to religious education and textual literacy across the adherent population.",
+      "impact": "If study is not broadly accessible, the constraint's low extractiveness is misleading, as it implicitly extracts from those unable to perform the 'fulfillment' through study, potentially shifting it towards a Snare for the less educated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the practical accessibility of the 'study' required for fulfillment."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.0
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint posits that the study of sacrifice law itself constitutes fulfillment of the commandment, thereby ensuring the continuity of the obligation through textual engagement rather than physical ritual. This reading emerged in contexts where physical sacrifice was impossible or impractical, allowing adherents to maintain active observance. It is framed as a Rope because it provides a coordination mechanism for ongoing religious practice without significant extraction, benefiting those who engage in study.",
+    "logic_rationale": "Extractiveness is low (0.15) because engaging in study is generally accessible and does not impose significant material costs. Suppression is minimal (0.05) as there are no coercive mechanisms to enforce study, and alternatives (other forms of religious observance or non-observance) are not suppressed. Theater ratio is zero as the act of study is considered genuinely functional fulfillment within this reading. Accessibility collapse is high (0.8) because once this interpretation is accepted, the 'alternative' of physical sacrifice is no longer seen as the only valid path to fulfillment, making the study path the primary and most accessible option. Resistance is low (0.05) as this reading is widely accepted within its tradition as a legitimate mode of observance.",
+    "directionality_logic": "Religious scholars and devout adherents are the primary beneficiaries (d near 0.0) as they gain a path to fulfilling a core religious obligation through an accessible and intellectually enriching activity. There are no identifiable victims, as the constraint provides a means of fulfillment rather than imposing a burden. The constraint subsidizes these agents by providing a viable and accessible path to religious observance.",
+    "perspectival_gap": "From the perspective of those who adhere to this reading, the constraint is a clear Rope, providing a beneficial and accessible path to religious observance. From the perspective of those who might hold a 'performance_only' reading, this constraint might be seen as a reinterpretation that diminishes the original intent, but it does not directly extract from them. The engine's classification as Rope aligns with the structural benefits and low costs.",
+    "kernel_context": "This constraint is the 'study_as_performance' reading of the 'sacrifice_obligation_continuity' kernel. This reading asserts that the commandment for sacrifice can be fulfilled through intellectual engagement with its laws, ensuring the obligation's continuity even in the absence of a physical temple or sacrificial cult. Sibling readings include 'performance_only' (which insists on physical ritual), 'messianic_suspension' (which holds the obligation in abeyance), and 'archival_preservation' (which views the laws as historical texts without current normative force)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of several readings of the 'sacrifice_obligation_continuity' kernel, each representing a distinct structural claim about the nature of religious obligation in the absence of a temple. Each reading has a distinct epsilon and stakeholder structure."
+  },
+  "stakeholders": [
+    {
+      "name": "religious_scholars",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "These individuals dedicate their lives to the study and interpretation of religious texts, including sacrifice law. This reading validates their intellectual pursuit as a direct fulfillment of religious commandment, granting their work profound spiritual significance and maintaining their professional identity."
+    },
+    {
+      "name": "devout_adherents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals who seek to fulfill religious obligations but lack the means or context for physical sacrifice. This reading provides them with an accessible and meaningful path to observance through personal or communal study, alleviating the burden of an unfulfillable commandment."
+    },
+    {
+      "name": "messianic_restorationists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Groups who believe that sacrifice can only be fulfilled through physical ritual, to be restored in a messianic era. While not directly harmed, this reading offers an alternative that they view as a compromise, potentially diluting the urgency of their own agenda for physical restoration."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "It coordinates the ongoing religious observance of a core commandment (sacrifice) for a dispersed community lacking a central temple, by re-framing textual study as a valid form of ritual performance.",
+    "transfer_function": "It transfers the spiritual burden of an unfulfillable physical commandment into an accessible intellectual and devotional practice, from the community to the individual adherent and scholar.",
+    "absent_voices": "Those who insist on the literal, physical performance of sacrifice (e.g., 'performance_only' adherents or messianic restorationists) are implicitly sidelined by this reading, as it offers an alternative fulfillment. They would argue that study is preparation, not performance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation vanished, devout adherents would face a profound crisis of religious observance, as a central commandment would become unfulfillable. The entire structure of religious education and scholarly engagement with sacrifice law would lose its direct spiritual valence, forcing a re-evaluation of religious identity and practice.",
+    "founding_problem": "The destruction of the central temple and the subsequent inability to perform physical sacrifices, leaving a core religious commandment unfulfillable for generations of adherents.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Religious texts and historical accounts from the period following the temple's destruction corroborate the problem of unfulfillable sacrifice. Contemporary theological discourse and the continued absence of a central temple confirm the problem remains live. This is attested by a broad range of religious authorities and historians, not just the beneficiaries of this reading."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sacrifice_obligation_continuity__performance_only",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "sacrifice_obligation_continuity__messianic_suspension",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sacrifice_obligation_continuity__archival_preservation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "textual_engagement_is_ritual_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "obligation_persists_through_study",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_temple_destruction_observance",
+    "drift_state": {
+      "moment": "contemporary_diaspora",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

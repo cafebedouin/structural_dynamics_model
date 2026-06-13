@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "25b98e05-d8f6-4635-95a5-9e9a499e534f"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Latin Correctness: Hybrid Reading (Classical for Literary, Medieval for Technical)",
+    "topic_domain": "historical_linguistics/intellectual_history/philology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "classical_philologists",
+      "humanist_scholars"
+    ],
+    "victims": [
+      "technical_latin_writers",
+      "medieval_latin_scholars"
+    ]
+  },
+  "interval": {
+    "start": 1450,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1450,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1550,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1450,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1550,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1450,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1550,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint, the 'hybrid reading' of Latin correctness, posits that classical Latin norms apply to literary and rhetorical domains, while medieval forms remain legitimate for technical and practical domains. It emerged as a compromise between the strict classicism of the Renaissance and the historical reality of Latin's continuous evolution. The constraint is claimed as a 'tangled_rope' because it offers a coordination function (domain-specific clarity) but also involves asymmetric extraction (status hierarchy and stylistic burdens).",
+    "logic_rationale": "Extractiveness is moderate (0.45) due to the implicit devaluation of medieval forms in prestigious literary contexts and the unnecessary stylistic pressure on technical writers. Suppression is low (0.3) because medieval forms are not actively forbidden, but rather implicitly discouraged in certain domains through academic prestige and pedagogical emphasis. Theater ratio is low (0.2) as the distinction serves a genuine, if contested, coordination function. The time series reflects the rise of this hybrid approach during the Renaissance, its peak, and a slight decline as descriptive linguistics gained ground.",
+    "directionality_logic": "Classical philologists and humanist scholars are beneficiaries, gaining prestige and authority from the elevation of classical norms. Technical Latin writers and medieval Latin scholars are victims, facing pressure and implicit devaluation. Latin educators act as agenda-setters, perpetuating the norms through teaching. The bifurcated standard creates a status hierarchy that benefits those aligned with classical literary ideals.",
+    "perspectival_gap": "From the perspective of classical philologists, this is a reasonable and necessary coordination mechanism that preserves the purity of literary Latin while accommodating practical needs. From the perspective of medieval Latin scholars, it's a subtle form of extraction that devalues their field and imposes an artificial hierarchy on a living language. The engine will compute different classifications for these seats based on their declared structural positions.",
+    "kernel_context": "This constraint is the 'hybrid_reading' of the 'latin_correctness' kernel. It stands in contrast to the 'continuity_reading' (medieval Latin as legitimate continuation) and the 'rupture_reading' (classical Latin as a fixed standard, medieval as corruption). This reading attempts to bridge the gap by assigning different standards to different domains."
+  },
+  "omegas": [
+    {
+      "id": "domain_boundary_permeability",
+      "question": "How permeable is the boundary between 'literary/rhetorical' and 'technical/practical' domains in Latin usage, and how is this permeability enforced?",
+      "resolution_mechanism": "Analysis of historical texts and pedagogical materials to identify instances of 'classical' style in technical writing or 'medieval' forms in literary contexts, and the reception of such instances.",
+      "impact": "If the boundary is highly permeable and enforcement is weak, the constraint's effective suppression and extractiveness are lower than measured, as writers can navigate the norms more freely. If the boundary is rigid, the measured values are accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The practical enforceability and rigidity of the domain-specific Latin correctness norms."
+    },
+    {
+      "id": "status_hierarchy_justification",
+      "question": "Is the perceived higher status of classical Latin in literary domains a natural consequence of its aesthetic qualities, or a constructed hierarchy maintained by academic institutions?",
+      "resolution_mechanism": "Comparative analysis of aesthetic judgments across different linguistic traditions and historical periods, alongside a sociological study of academic prestige in philology.",
+      "impact": "If the hierarchy is primarily constructed, the constraint's extractiveness is higher, as it leverages institutional power for status transfer. If it's a 'natural' aesthetic preference, the extractiveness is lower, reflecting a coordination around shared taste.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The origin and justification of the status hierarchy between classical and medieval Latin."
+    },
+    {
+      "id": "hybrid_reading_vs_rupture_coexistence",
+      "question": "To what extent does the 'hybrid_reading' implicitly reinforce the 'rupture_reading' by accepting a fundamental distinction between classical and medieval Latin, rather than promoting a unified historical view?",
+      "resolution_mechanism": "Content analysis of pedagogical texts and scholarly debates to identify how the 'hybrid_reading' frames the relationship between classical and medieval forms, and whether it explicitly or implicitly validates the 'corruption' narrative of the rupture_reading.",
+      "impact": "If the hybrid reading implicitly validates the rupture, its effective extractiveness on medieval Latin scholars is higher, as it contributes to the devaluation it purports to mitigate. If it genuinely creates a separate, legitimate space for medieval forms, the extractiveness is lower.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The subtle influence of the hybrid reading on the rupture reading's legitimacy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__continuity_reading",
+      "latin_correctness__rupture_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'latin_correctness' kernel, each representing a distinct structural claim about Latin usage and its legitimacy. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "latin_correctness__continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "latin_correctness__rupture_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "domain_specific_stylistic_appropriateness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "classical_latin_as_literary_ideal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "renaissance_humanist_bifurcation",
+    "drift_state": {
+      "moment": "contemporary_descriptive_linguistics_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

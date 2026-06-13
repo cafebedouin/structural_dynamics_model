@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence__incumbent_preservation_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2ccf30c9-71cf-474f-9706-3c4d9e75f313"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Keyboard Layout Persistence (Incumbent Preservation Reading)",
+    "topic_domain": "technology_history/industrial_standards/path_dependence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qwerty_keyboard_manufacturers",
+      "trained_typists",
+      "typing_training_institutions"
+    ],
+    "victims": [
+      "alternative_keyboard_manufacturers",
+      "efficiency_seeking_users",
+      "ergonomics_researchers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is QWERTY's persistence primarily due to incumbent defense (this reading) or the natural lapse of alternatives (lapsed_alternatives_reading)?",
+      "resolution_mechanism": "Historical analysis of lobbying efforts, patent defense, and marketing spend by QWERTY incumbents versus independent assessment of alternative layout adoption barriers (e.g., network effects without active suppression).",
+      "impact": "If incumbent defense is primary, the constraint is a Tangled Rope with higher extraction and suppression. If alternative lapse is primary, it's closer to a Rope or even a Mountain of coordination, with lower extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between incumbent preservation and natural lapse as drivers of QWERTY persistence."
+    },
+    {
+      "id": "defensive_suppression_cost",
+      "question": "What proportion of 'coordination costs' are actually defensive suppression costs incurred by incumbents to maintain QWERTY's dominance?",
+      "resolution_mechanism": "Detailed accounting of R&D, marketing, and legal expenditures by QWERTY manufacturers specifically aimed at discrediting or blocking alternative layouts, compared to genuine standardization costs.",
+      "impact": "A higher proportion of defensive suppression costs would increase the effective extractiveness and suppression metrics, reinforcing the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing genuine coordination costs from defensive suppression costs."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1873,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1873,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1873,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1873,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the persistence of the QWERTY keyboard layout, specifically from the perspective that its dominance is actively preserved by incumbent beneficiaries to protect their capital investments and established market positions. It is one reading of the broader 'QWERTY persistence' kernel. The constraint functions as a Tangled Rope, providing a coordination function (universal layout) while simultaneously extracting costs from those who would prefer or benefit from alternatives, through active suppression and defense by incumbents.",
+    "key_agents": [
+      "qwerty_keyboard_manufacturers: Primary beneficiary (institutional/arbitrage) — actively defends the standard.",
+      "trained_typists: Beneficiary (moderate/identity_locked) — benefits from existing skill, resists change.",
+      "typing_training_institutions: Beneficiary (organized/constrained) — benefits from stable curriculum.",
+      "alternative_keyboard_manufacturers: Victim (powerful/constrained) — suppressed by QWERTY's dominance.",
+      "efficiency_seeking_users: Victim (moderate/constrained) — bears costs of suboptimal layout.",
+      "ergonomics_researchers: Victim (analytical/analytical) — provides evidence of QWERTY's suboptimality, but their findings are suppressed.",
+      "competition_authorities: Observer (institutional/analytical) — investigates market dominance and anti-competitive practices."
+    ],
+    "logic_rationale": "The extractiveness (0.65) reflects the ongoing costs borne by users and alternative manufacturers due to QWERTY's suboptimal design and the active suppression of alternatives. Suppression (0.7) is high because incumbents actively lobby, market, and sometimes litigate to maintain QWERTY's position, making it difficult for alternatives to gain traction. The theater ratio (0.2) is relatively low, as the coordination function (a universal standard) is real, but a significant portion of the 'maintenance' is defensive rather than purely functional. The increasing extractiveness and suppression over time reflect the hardening of QWERTY's dominance as capital investments in its production and training deepened.",
+    "perspectival_gap": "QWERTY manufacturers and trained typists perceive the layout as a beneficial, stable standard (closer to a Rope or even a Mountain of coordination). In contrast, alternative manufacturers and efficiency-seeking users experience it as an extractive and suppressive force, actively maintained against their interests (a Snare or Tangled Rope). The engine's per-seat classification will reflect this divergence based on the declared roles and exit options.",
+    "directionality_logic": "QWERTY keyboard manufacturers, trained typists, and typing training institutions are beneficiaries (low d) as they profit from or are locked into the existing standard. Alternative keyboard manufacturers, efficiency-seeking users, and ergonomics researchers are victims (high d) as they bear the costs of QWERTY's persistence and the suppression of superior alternatives. Competition authorities are observers (d=0.5).",
+    "mandatrophy_analysis": "This classification prevents mislabeling QWERTY's persistence as purely 'natural' network effects (a Rope or Mountain) by highlighting the active role of incumbent defense. It distinguishes between genuine coordination benefits and the extractive costs imposed by the active preservation of a suboptimal standard, which is a key aspect of mandatrophy where the original 'mandate' (standardization) is co-opted for rent-seeking."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence__lapsed_alternatives_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'QWERTY persistence' kernel, focusing on incumbent defense. The 'lapsed_alternatives_reading' focuses on network effects and the natural failure of alternatives to reach critical mass."
+  },
+  "stakeholders": [
+    {
+      "name": "qwerty_keyboard_manufacturers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies that produce QWERTY keyboards and related hardware. They have significant capital investments in QWERTY-specific tooling and supply chains. They actively defend the standard through lobbying, marketing, and sometimes legal action against alternatives, benefiting from the stability of the market."
+    },
+    {
+      "name": "trained_typists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals who have invested time and effort in learning the QWERTY layout. Their existing skill set makes them resistant to adopting new layouts, as the switching cost (re-learning) is high. They benefit from the ubiquity of QWERTY, which ensures their skills are always applicable."
+    },
+    {
+      "name": "typing_training_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Schools and programs that teach typing. Their curriculum is built around QWERTY, and a shift to an alternative layout would require significant investment in new materials, teacher training, and a justification for the change to students and parents. They benefit from the stability of the QWERTY standard."
+    },
+    {
+      "name": "alternative_keyboard_manufacturers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies that design and produce alternative keyboard layouts (e.g., Dvorak, Colemak) claiming ergonomic or efficiency benefits. They face immense barriers to market entry and adoption due to QWERTY's entrenched position and active defense by incumbents. They bear the cost of suppressed innovation and limited market access."
+    },
+    {
+      "name": "efficiency_seeking_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users who are aware of and desire more efficient or ergonomic keyboard layouts but are constrained by the ubiquity of QWERTY hardware, software support, and the social cost of using a non-standard layout. They bear the cost of suboptimal typing speed, increased strain, or the high switching cost to alternatives."
+    },
+    {
+      "name": "ergonomics_researchers",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and scientists who study human-computer interaction and ergonomics, often publishing research demonstrating the inefficiencies and health drawbacks of the QWERTY layout. Their findings are often downplayed or ignored by incumbents, and their proposed solutions struggle to gain adoption despite scientific merit."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies tasked with ensuring fair competition. They may investigate QWERTY's dominance if evidence of anti-competitive practices by incumbents emerges, but the diffuse nature of the 'standard' makes direct intervention challenging."
+    }
+  ],
+  "gain_flow": "qwerty_keyboard_manufacturers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a universal, predictable keyboard layout that allows anyone to use any keyboard without retraining, facilitating communication and data entry across diverse hardware and software platforms.",
+    "transfer_function": "Transfers market dominance and sustained revenue to QWERTY keyboard manufacturers and related industries, while imposing costs (suboptimal efficiency, ergonomic strain, suppressed innovation) on users and alternative manufacturers.",
+    "absent_voices": "Alternative keyboard designers and manufacturers, as well as ergonomics researchers, are largely excluded from the 'standard-setting' conversation, which is dominated by incumbents. They would advocate for open standards and evidence-based design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If QWERTY vanished overnight, the immediate chaos would be immense, but over time, the market would likely converge on more efficient or ergonomic layouts, driven by user demand and technological innovation. The entire keyboard manufacturing, software interface, and typing education industries would undergo a massive, disruptive reorganization.",
+    "founding_problem": "The original problem was to create a mechanical typewriter layout that prevented key jams and allowed for rapid typing, given the technological constraints of the late 19th century.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The original mechanical problem is long dead due to advances in technology. Ergonomics researchers and alternative manufacturers widely corroborate that QWERTY is suboptimal for modern typing. QWERTY manufacturers, however, contest this, citing user familiarity and the cost of switching as ongoing 'problems' that QWERTY 'solves' by maintaining stability."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence__lapsed_alternatives_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incumbent_investment_protection_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "market_dominance_justifies_status_quo",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "qwerty_as_unquestioned_standard",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

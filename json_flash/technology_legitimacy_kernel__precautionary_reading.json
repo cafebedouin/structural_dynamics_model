@@ -1,0 +1,306 @@
+{
+  "header": {
+    "constraint_id": "technology_legitimacy_kernel__precautionary_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1755c95a-3e32-41be-8ff3-0363786f5453"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Precautionary Principle for Climate Technology Legitimacy",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_advocates",
+      "future_generations_unburdened"
+    ],
+    "victims": [
+      "nuclear_industry",
+      "carbon_capture_industry",
+      "geoengineering_proponents",
+      "future_generations_burdened"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine application of the precautionary principle, or a strategic framing to exclude specific technologies?",
+      "resolution_mechanism": "Analysis of policy outcomes: if the principle is applied consistently across all technologies, it is genuine; if selectively, it is strategic.",
+      "impact": "If strategic, the constraint's extractiveness is higher, as it serves to protect specific industry interests rather than universal safety.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'precautionary_reading' of the 'technology_legitimacy_kernel'."
+    },
+    {
+      "id": "reversibility_definition_ambiguity",
+      "question": "What constitutes 'reversible within a generation' for complex technological systems and their environmental impacts?",
+      "resolution_mechanism": "Establishment of clear, measurable, and independently verifiable criteria for reversibility and generational timeframes.",
+      "impact": "A loose definition allows technologies with long-term risks to be deemed legitimate, reducing the constraint's effective suppression; a strict definition increases it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining 'reversible within a generation'."
+    },
+    {
+      "id": "sibling_reading_impact_reliability_primacy",
+      "question": "How would the 'reliability_primacy_reading' alter the beneficiary/victim structure of this 'precautionary_reading'?",
+      "resolution_mechanism": "Comparative analysis of policy outcomes under both readings.",
+      "impact": "The 'reliability_primacy_reading' would likely shift nuclear and potentially fossil fuel technologies into the beneficiary set, and renewables into the victim set due to intermittency concerns, fundamentally altering the extraction flow.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of the 'reliability_primacy_reading' on this constraint."
+    },
+    {
+      "id": "sibling_reading_impact_velocity_primacy",
+      "question": "How would the 'velocity_primacy_reading' alter the beneficiary/victim structure of this 'precautionary_reading'?",
+      "resolution_mechanism": "Comparative analysis of policy outcomes under both readings.",
+      "impact": "The 'velocity_primacy_reading' would prioritize rapid deployment, potentially benefiting technologies like carbon capture and geoengineering, which this reading currently victimizes due to their uncertain long-term impacts, thus inverting the extraction flow for those technologies.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of the 'velocity_primacy_reading' on this constraint."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint defines the legitimacy of climate mitigation technologies through a precautionary lens: only those with bounded and reversible worst-case failure modes and legacy costs within a generation are deemed acceptable. This 'precautionary_reading' of the 'technology_legitimacy_kernel' prioritizes long-term safety and intergenerational equity, effectively favoring renewable energy sources while excluding technologies like nuclear power (due to waste legacy and accident risk), carbon capture, and geoengineering (due to uncertain long-term impacts and reversibility). It is a contested framing within the broader climate policy debate.",
+    "key_agents": [
+      "renewable_energy_advocates: Primary beneficiary (institutional/arbitrage) — benefits from the exclusion of rival technologies.",
+      "future_generations_unburdened: Primary beneficiary (powerless/trapped) — theoretically benefits from reduced legacy costs.",
+      "nuclear_industry: Primary victim (institutional/constrained) — bears exclusion and increased regulatory hurdles.",
+      "carbon_capture_industry: Primary victim (organized/constrained) — faces legitimacy challenges and reduced investment.",
+      "geoengineering_proponents: Primary victim (organized/constrained) — their technologies are deemed illegitimate.",
+      "future_generations_burdened: Primary victim (powerless/trapped) — bears the costs of technologies that fail this test.",
+      "climate_policy_makers: Agenda setter (institutional/constrained) — responsible for implementing and enforcing this legitimacy framework.",
+      "scientific_advisors: Observer (analytical/analytical) — provide assessments of technology risks and reversibility."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates (by providing a framework for 'safe' technology development) but also extracts (by imposing significant costs and exclusions on certain industries). Extractiveness is high (0.6) because it effectively blocks entire technological pathways, redirecting investment and innovation. Suppression is also high (0.7) as it actively suppresses alternatives that do not meet its criteria, requiring enforcement through policy, funding, and regulatory mechanisms. Resistance is high (0.8) from the excluded industries. Theater ratio is low (0.2) as the precautionary principle is genuinely applied, though its interpretation is contested. The metrics show a trend of increasing extractiveness and suppression over time as the reading gains traction and its enforcement mechanisms harden.",
+    "perspectival_gap": "From the perspective of renewable energy advocates and future generations, this constraint is a beneficial Rope, ensuring safety and sustainability. However, from the perspective of the nuclear, carbon capture, and geoengineering industries, it operates as a Snare, actively excluding their technologies and imposing significant economic and reputational costs. Climate policy makers, as agenda setters, experience it as a Tangled Rope, balancing the coordination function of risk management with the political and economic extraction from excluded sectors.",
+    "directionality_logic": "Renewable energy advocates and future generations (unburdened) are beneficiaries (d=0.0-0.2) as the constraint favors their interests. The nuclear, carbon capture, and geoengineering industries, along with future generations (burdened by excluded technologies), are victims (d=0.8-1.0) as they bear the costs of exclusion and unaddressed climate risks. Climate policy makers are agenda setters (d=0.4-0.6), balancing competing interests.",
+    "mandatrophy_analysis": "This constraint is designed to prevent mandatrophy by explicitly linking technological legitimacy to bounded and reversible risks. If the 'founding problem' of unbounded legacy costs were to be resolved (e.g., through new technologies that genuinely neutralize nuclear waste or fully reverse geoengineering impacts), the constraint's mandate would shift, potentially reclassifying it. However, the high resistance from victim groups suggests the problem is far from resolved, and the constraint's persistence is actively contested, not merely inertial."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is the 'precautionary_reading' of the 'technology_legitimacy_kernel'. It is one of three sibling readings, alongside 'reliability_primacy_reading' and 'velocity_primacy_reading', each defining technological legitimacy differently."
+  },
+  "stakeholders": [
+    {
+      "name": "renewable_energy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Actively promote renewable energy technologies (solar, wind, hydro) which generally meet the criteria of bounded and reversible risks. They benefit from policies and funding streams that prioritize these technologies and exclude competitors."
+    },
+    {
+      "name": "future_generations_unburdened",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Are the theoretical beneficiaries of this constraint, as it aims to prevent the imposition of irreversible environmental or social costs on them. Their 'benefit' is the absence of harm, which is difficult to measure directly."
+    },
+    {
+      "name": "nuclear_industry",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Faces significant challenges under this constraint due to the long-term legacy of radioactive waste and the potential for catastrophic accidents, which are not considered reversible within a generation. They bear the cost of exclusion from climate mitigation portfolios and reduced investment."
+    },
+    {
+      "name": "carbon_capture_industry",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develops technologies for capturing and storing CO2. They face scrutiny regarding the long-term integrity of geological storage and the energy penalty of the process, which may not be 'reversible' in the sense of this constraint. They bear the cost of skepticism and reduced policy support."
+    },
+    {
+      "name": "geoengineering_proponents",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for large-scale interventions like solar radiation management or carbon cycle modification. These technologies carry significant uncertainties regarding unintended side effects and reversibility, making them largely illegitimate under this framework. They bear the cost of being marginalized in policy discussions."
+    },
+    {
+      "name": "future_generations_burdened",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Are the theoretical victims if technologies that fail this precautionary test are deployed, as they would inherit the irreversible costs and risks. Their 'cost' is the imposition of harm, which is difficult to measure directly."
+    },
+    {
+      "name": "climate_policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are responsible for designing and implementing climate policies that incorporate this precautionary principle. They navigate the political pressure from various industry groups while attempting to uphold the principle's integrity."
+    },
+    {
+      "name": "scientific_advisors",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide expert assessments on the risks, reversibility, and legacy costs of different climate technologies. Their analyses inform the policy makers' decisions and are crucial for the enforcement of this constraint."
+    }
+  ],
+  "gain_flow": "renewable_energy_advocates",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To establish a common, intergenerationally responsible framework for evaluating and selecting climate mitigation technologies, ensuring that deployed solutions do not create new, irreversible problems for future generations.",
+    "transfer_function": "Transfers legitimacy, funding, and policy support away from technologies with unbounded or irreversible risks (e.g., nuclear, geoengineering) towards those deemed safe and reversible (e.g., most renewables). It also transfers the burden of long-term environmental liabilities away from future generations.",
+    "absent_voices": "Proponents of 'all-of-the-above' climate solutions, who prioritize speed and reliability over strict precautionary criteria, are often marginalized in discussions dominated by this reading. They would argue that the constraint unnecessarily limits options and slows down urgent climate action.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this precautionary principle vanished, the landscape of climate technology policy would immediately shift. Technologies currently excluded would gain legitimacy, potentially attracting significant investment. The debate would reorient around speed and reliability, and the burden of long-term risks would be re-evaluated, likely shifting more towards future generations.",
+    "founding_problem": "The problem of deploying climate mitigation technologies that, while solving one problem (emissions), create new, potentially catastrophic, and irreversible long-term environmental or social burdens (e.g., nuclear waste, geoengineering side effects) for future generations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Environmental ethicists, intergenerational equity advocates, and independent scientific bodies (e.g., IPCC working groups on risk assessment) corroborate that the problem of irreversible legacy costs from technology remains live and unaddressed by many proposed solutions. The nuclear and geoengineering industries, however, contest the severity and irreversibility of their respective risks."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "technology_legitimacy_kernel__reliability_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "technology_legitimacy_kernel__velocity_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intergenerational_equity_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "irreversible_risks_unacceptable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "bounded_risk_intergenerational_justice",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

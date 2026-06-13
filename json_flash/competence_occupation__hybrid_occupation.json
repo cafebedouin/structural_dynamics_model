@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "68734842-0524-489f-a361-9974eb6a0061"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Occupation Model",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "training_providers",
+      "safety_regulators"
+    ],
+    "victims": [
+      "frontline_operators",
+      "organizational_budgets"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "optimal_configuration_ambiguity",
+      "question": "What is the optimal configuration of multi-mechanism competence exercise (simulation, refresher, procedural reinforcement, line audits) for a given operational context?",
+      "resolution_mechanism": "Longitudinal empirical studies correlating different training mixes with incident rates and skill decay curves in specific high-reliability domains.",
+      "impact": "Resolving this would allow for more efficient and effective training, potentially reducing costs for operators and organizations, and shifting the constraint towards a more 'rope-like' coordination function by reducing unnecessary overhead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Lack of consensus on optimal training mix for competence occupation."
+    },
+    {
+      "id": "kernel_reading_hybrid_vs_siblings",
+      "question": "Is this 'hybrid occupation' reading of the competence kernel genuinely superior to 'simulation sufficiency' or 'real incident necessity' readings, or is it a compromise driven by institutional inertia?",
+      "resolution_mechanism": "Comparative analysis of safety outcomes and cost-effectiveness across organizations adopting different primary readings of the competence_occupation kernel.",
+      "impact": "If 'simulation sufficiency' were proven adequate, the constraint would become less extractive for operators. If 'real incident necessity' were proven, the entire training paradigm would shift, potentially making the current constraint obsolete or a 'piton'. This reading's persistence depends on the perceived inadequacy of simpler alternatives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'hybrid_occupation' reading of the 'competence_occupation' kernel. Sibling readings ('simulation_sufficiency', 'real_incident_necessity') propose alternative, potentially less complex, means of achieving competence. The disagreement is located in the necessary conditions for 'occupying' the competence kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In high-reliability organizations (HROs), maintaining operator competence is critical for safety. This constraint describes the prevailing model where competence is 'occupied' through a continuous, multi-faceted regimen including simulations, refreshers, procedural reinforcement, and line audits. There is no consensus on the optimal mix or frequency, leading to a complex and often costly system. This constraint is a reading of the 'competence_occupation' kernel, emphasizing a hybrid approach over simpler alternatives.",
+    "key_agents": [
+      "frontline_operators: Primary target (moderate/constrained) — bears the direct burden of continuous training.",
+      "organizational_budgets: Primary target (institutional/constrained) — bears the financial cost of extensive training programs.",
+      "training_providers: Primary beneficiary (organized/arbitrage) — profits from the demand for diverse training mechanisms.",
+      "safety_regulators: Primary beneficiary (institutional/analytical) — benefits from a robust (if complex) safety regime, avoids liability.",
+      "hro_management: Agenda setter (institutional/constrained) — implements and enforces the training regimen, balancing cost and safety."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.6) due to the significant time, effort, and financial resources required for continuous, multi-mechanism training, often without clear evidence of optimal configuration. Suppression is high (0.7) because operators have little choice but to comply with mandated training to maintain their 'competence occupation' and employment. Theater ratio is low (0.2) as most activities are genuinely aimed at competence, but some elements may be maintained due to regulatory compliance rather than proven efficacy. Accessibility collapse is moderate (0.4) as alternatives (simpler training, less frequent refreshers) are often suppressed by regulatory or organizational inertia. Resistance is moderate (0.3) from operators and budget holders who question the efficiency but cannot easily opt out.",
+    "perspectival_gap": "Frontline operators experience this as a demanding, often inefficient, and mandatory burden. Training providers and safety regulators, however, view it as a necessary and robust system for maintaining safety and compliance. HRO management attempts to balance these perspectives, often defaulting to the most comprehensive (and costly) approach due to liability concerns.",
+    "directionality_logic": "Training providers and safety regulators are beneficiaries, as the system creates demand for their services and reduces their liability exposure, respectively. Frontline operators and organizational budgets are victims, bearing the direct costs and time commitments. HRO management acts as the agenda setter, enforcing the system while also being subject to its costs and regulatory pressures.",
+    "mandatrophy_analysis": "The constraint's mandate (maintaining competence for safety) is still live. However, the lack of consensus on optimal configuration means the 'how' of the mandate is inefficient. If a simpler, equally effective method were found (e.g., simulation_sufficiency), the current hybrid model would be revealed as a tangled rope with unnecessary extraction. The current complexity prevents it from being a pure rope, as the 'coordination' of multiple mechanisms is not necessarily efficient or optimal.",
+    "kernel_context": "This constraint, 'hybrid_occupation', is one reading of the 'competence_occupation' kernel. It posits that competence requires a continuous, multi-mechanism approach (simulation, refreshers, procedural reinforcement, line audits). This reading contrasts with 'simulation_sufficiency' (which argues simulations alone are enough) and 'real_incident_necessity' (which claims only actual incidents truly occupy competence). The core disagreement lies in the necessary and sufficient conditions for maintaining operational competence in high-stakes environments."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_occupation' kernel, focusing on a hybrid, multi-mechanism approach. It is linked to sibling readings 'simulation_sufficiency' and 'real_incident_necessity' which propose alternative, simpler, or more extreme conditions for competence occupation."
+  },
+  "stakeholders": [
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals directly performing high-reliability tasks. They must continuously engage in all mandated training activities to maintain their 'competence occupation' status and employment. They bear the direct time and mental load of the training regimen."
+    },
+    {
+      "name": "organizational_budgets",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The financial resources allocated by the High-Reliability Organization (HRO) for training, equipment, and personnel. This budget is significantly impacted by the extensive, multi-mechanism training requirements, leading to pressure for efficiency."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Companies and internal departments that design, deliver, and certify the various training components (simulations, refreshers, procedural reinforcement, line audits). They benefit from the continuous demand for their services due to the hybrid occupation model."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governmental or industry bodies responsible for setting and enforcing safety standards in HROs. They benefit from the comprehensive training approach as it provides a clear framework for compliance and reduces their liability, even if the optimal configuration is unclear."
+    },
+    {
+      "name": "hro_management",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The leadership and executive teams of the High-Reliability Organization. They are responsible for implementing and overseeing the competence occupation programs, balancing regulatory compliance, operational costs, and safety outcomes. They set the internal agenda for training within the external regulatory framework."
+    },
+    {
+      "name": "training_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and industry experts who study training efficacy, skill decay, and optimal learning strategies in HROs. They analyze the effectiveness of current hybrid models and propose improvements, often highlighting the lack of empirical consensus on optimal configuration."
+    }
+  ],
+  "gain_flow": "training_providers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the continuous maintenance of operator competence across multiple dimensions (cognitive, procedural, behavioral) to ensure safe and reliable operation in high-stakes environments, preventing skill decay and ensuring readiness for rare events.",
+    "transfer_function": "Transfers significant financial resources from organizational budgets and time/effort from frontline operators to training providers and regulatory compliance efforts, in exchange for certified competence and reduced safety risk.",
+    "absent_voices": "Operators who have developed highly efficient, personalized training methods that deviate from the mandated hybrid model are excluded; their innovations are not easily integrated into the standardized, multi-mechanism system. Also, alternative, potentially more cost-effective training methodologies that challenge the 'more is better' assumption are often marginalized in favor of comprehensive, regulator-approved programs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement for continuous, multi-mechanism competence occupation vanished, HROs would face immediate regulatory non-compliance, potential loss of operating licenses, and a rapid decline in perceived (and likely actual) safety. Training budgets would be reallocated, and operators would lose a structured path for skill maintenance, leading to a chaotic and dangerous operational environment.",
+    "founding_problem": "The problem of maintaining high-level operator competence in complex, dynamic, and high-consequence environments, where skill decay is a constant threat and real-world incidents are too rare and costly to serve as primary training events.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety regulators, HRO management, and training researchers (outside the direct beneficiaries) consistently attest that the core problem of competence maintenance is live and ongoing, citing evolving threats, technological changes, and the inherent challenge of human performance in extreme conditions. While the 'how' is debated, the 'what' (the need for competence) is universally acknowledged."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_multi_modal_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "no_single_mechanism_is_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "comprehensive_safety_regime",
+    "drift_state": {
+      "moment": "contemporary_cost_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

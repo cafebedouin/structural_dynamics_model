@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__wage_subsidy_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "fc08c6f9-1c4a-4e8c-952c-f533bdefee93"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Employer Wage Subsidy",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_wage_employers",
+      "government_agencies"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "taxpayers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine employer subsidy, or does it primarily function as a freedom floor or dependency trap?",
+      "resolution_mechanism": "Empirical studies on wage elasticity and labor supply responses to unconditional income, disaggregated by employer size and sector. Analysis of worker exit rates from low-wage jobs.",
+      "impact": "If primarily an employer subsidy, the classification as Tangled Rope is robust. If it functions more as a freedom floor, it would shift towards Rope; if a dependency trap, towards Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing the wage subsidy reading from other interpretations of unconditional income support."
+    },
+    {
+      "id": "subsidy_capture_mechanism",
+      "question": "To what extent is the income support captured by employers through wage suppression versus directly benefiting workers?",
+      "resolution_mechanism": "Econometric analysis of wage trends in sectors with high UBI uptake compared to control groups, controlling for productivity and market conditions. Worker surveys on perceived bargaining power.",
+      "impact": "Higher capture by employers strengthens the Tangled Rope classification; higher direct worker benefit would weaken the extractive component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the degree of employer capture of income support."
+    },
+    {
+      "id": "policy_intent_vs_outcome",
+      "question": "Is the observed wage suppression an unintended consequence of a policy designed for worker welfare, or an implicit goal of maintaining a low-wage labor pool?",
+      "resolution_mechanism": "Analysis of policy documents, legislative debates, and lobbying efforts by employer groups. Interviews with policymakers and labor economists.",
+      "impact": "If unintended, it suggests a design flaw in a Rope-like policy; if implicit, it reinforces the Snare-like aspects of the Tangled Rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Distinguishing between policy intent and actual structural outcome."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes unconditional income support (e.g., Universal Basic Income) as functioning primarily as an employer subsidy, rather than a worker freedom floor. In this reading, the income support allows employers to pay wages below subsistence levels, knowing that the state will cover the difference, thereby suppressing overall wage growth and maintaining a cheap labor pool. The coordination function is to ensure basic subsistence for workers, but this is coupled with an extractive transfer to employers.",
+    "logic_rationale": "The extractiveness (0.65) is substantial because employers benefit from reduced wage pressure, effectively externalizing a portion of their labor costs onto the state/taxpayers. Suppression (0.7) is high as workers, despite receiving income support, remain constrained by the low-wage labor market and the need to supplement their basic income, limiting their ability to demand higher wages or exit exploitative jobs. The theater ratio (0.2) is low, as the income support genuinely provides subsistence, but its 'freedom-enhancing' narrative masks its wage-suppressing effect.",
+    "perspectival_gap": "From the perspective of low-wage employers, the income support is a beneficial policy that stabilizes the labor market and reduces business costs. From the perspective of low-wage workers, while providing a safety net, it also entrenches them in precarious employment by removing the pressure for employers to offer living wages. Taxpayers experience it as a cost, part of which subsidizes private enterprise.",
+    "directionality_logic": "Low-wage employers are primary beneficiaries (d=0.0-0.1) as they can maintain lower wages. Government agencies administering the program are also beneficiaries (d=0.1-0.2) as it stabilizes social welfare without directly challenging the existing labor market structure. Low-wage workers are victims (d=0.7-0.8) as their wages are suppressed, even if their basic needs are met. Taxpayers are also victims (d=0.6-0.7) as they fund the subsidy.",
+    "mandatrophy_analysis": "This reading suggests that while the original mandate might have been to provide a safety net or increase worker autonomy, the constraint has drifted to primarily serve as an employer subsidy. The classification as Tangled Rope captures this dual function: it coordinates basic subsistence but extracts value by suppressing wages. Resolving this mandatrophy would require policies that prevent wage suppression, such as minimum wage increases or stronger labor protections, to ensure the income support genuinely empowers workers rather than subsidizing employers.",
+    "kernel_context": "This constraint, 'Unconditional Income Support as Employer Wage Subsidy,' is one reading of the broader 'income_support_conditionality' kernel. It posits that the primary effect of such policies is to subsidize employers by enabling wage suppression. Sibling readings include 'freedom_floor_reading' (which emphasizes worker empowerment and decommodification of labor) and 'dependency_trap_reading' (which focuses on disincentives to work and long-term dependency)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'income_support_conditionality' kernel, focusing on its function as an employer wage subsidy. It is linked to the 'freedom_floor_reading' and 'dependency_trap_reading' as alternative interpretations of the same policy mechanism."
+  },
+  "stakeholders": [
+    {
+      "name": "low_wage_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from a stable supply of labor willing to accept lower wages, as the state covers basic subsistence. This reduces their labor costs and increases profit margins, without needing to innovate or improve working conditions significantly."
+    },
+    {
+      "name": "low_wage_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Receive basic income support, which prevents destitution but also reduces their bargaining power. They are still compelled to work low-wage jobs to supplement their income, effectively subsidizing their employers through suppressed wages."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Fund the unconditional income support through taxes, part of which effectively flows to low-wage employers as a subsidy. They bear the cost without directly receiving the benefits of either worker freedom or employer profit."
+    },
+    {
+      "name": "government_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer the income support program, ensuring social stability and preventing extreme poverty. They benefit from a simplified welfare system and reduced social unrest, even if the policy's secondary effects include wage suppression."
+    },
+    {
+      "name": "labor_unions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would advocate for policies that genuinely empower workers and increase wages, rather than subsidizing employers. Their influence is often marginalized in policy debates where income support is framed solely as a welfare measure."
+    }
+  ],
+  "gain_flow": "low_wage_employers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a basic income floor to ensure subsistence for all citizens, simplifying welfare administration and stabilizing social conditions by reducing poverty and precarity.",
+    "transfer_function": "Transfers public funds (from taxpayers) to individuals, which then indirectly transfers a portion of potential wage gains from low-wage workers to low-wage employers by reducing pressure for higher wages.",
+    "absent_voices": "Labor unions and worker advocacy groups, who would argue that the policy, in its current form, undermines collective bargaining and wage growth, are often sidelined in discussions that frame UBI solely as a poverty reduction tool.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, low-wage employers would face immediate pressure to raise wages to subsistence levels, or risk severe labor shortages. Social welfare systems would revert to more complex, conditional forms, and poverty rates would likely increase sharply, leading to significant social and economic reorganization.",
+    "founding_problem": "The problem of widespread poverty, increasing precarity in the labor market, and the administrative complexity of traditional welfare systems.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Proponents of unconditional income support (e.g., some academics, social policy advocates) attest that the founding problems of poverty and precarity remain live. Critics (e.g., some labor economists, union representatives) corroborate the existence of these problems but dispute whether unconditional income support, without other labor market interventions, effectively solves them or merely shifts the burden."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_conditionality__freedom_floor_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "income_support_conditionality__dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_market_power_asymmetry",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "income_support_externalizes_labor_costs",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "neoclassical_labor_market_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_policy_discourse",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

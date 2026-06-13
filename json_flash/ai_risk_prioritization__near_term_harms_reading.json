@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_prioritization__near_term_harms_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "188256af-4fbb-4ff9-9bbe-e209d178f2c5"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Risk Prioritization: Near-Term Harms Focus",
+    "topic_domain": "ai_safety/technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marginalized_communities",
+      "fairness_accountability_researchers",
+      "social_justice_advocates"
+    ],
+    "victims": [
+      "ai_developers_deployers",
+      "long_term_ai_safety_researchers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine prioritization of urgent harms, or a rhetorical framing to redirect resources from other risk areas?",
+      "resolution_mechanism": "Analysis of resource allocation patterns over time: if resources consistently flow to near-term interventions without evidence of genuine harm reduction, it suggests a rhetorical redirection.",
+      "impact": "If a rhetorical redirection, the constraint's extractiveness from other risk areas (e.g., long-term safety research) is higher, and its coordination function is weaker.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'near_term_harms_reading' of the 'ai_risk_prioritization' kernel. A sibling reading, 'existential_risk_reading', would prioritize long-term, extinction-level threats. The disagreement is located in the primary victim set and resource allocation priorities."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of long-term risk discourse structural (e.g., funding mechanisms) or internalized (e.g., social pressure within academic fields)?",
+      "resolution_mechanism": "Post-intervention discourse trajectory: if long-term risk concerns persist or re-emerge after near-term interventions are implemented, it suggests structural suppression; if they remain marginalized, it suggests internalized suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as the target carries the suppression with them after exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism regarding alternative AI risk framings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'near-term harms' reading of AI risk prioritization, asserting that deployed AI systems currently cause measurable discrimination, displacement, and surveillance, and therefore justice-oriented interventions are paramount. This framing directs resources and attention towards bias audits, worker protections, and surveillance regulation, often at the expense of long-term, speculative AI safety concerns. It is actively enforced through funding priorities, academic discourse, and policy advocacy.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates efforts to address real, present harms (beneficiaries: marginalized communities, fairness researchers) while simultaneously extracting resources and attention from alternative risk framings (victims: AI developers, long-term AI safety researchers). Extractiveness (0.65) is moderate-high due to the redirection of significant funding and career opportunities. Suppression (0.7) is high, as alternative framings (e.g., existential risk) are often dismissed as speculative or distracting. Theater ratio (0.2) is low, indicating that the focus on near-term harms is largely genuine, though some performative aspects may exist in policy debates. Resistance (0.8) is high from those whose work is de-prioritized or whose systems are targeted for regulation.",
+    "perspectival_gap": "Marginalized communities and social justice advocates experience this as a necessary coordination mechanism to address urgent injustices. AI developers and long-term AI safety researchers, however, experience it as an extractive and suppressive force that diverts resources from what they perceive as more critical or foundational problems. The engine will compute these divergent classifications based on their structural positions.",
+    "directionality_logic": "Marginalized communities and fairness/accountability researchers are primary beneficiaries (d near 0.0) as the constraint directly addresses their concerns and provides funding/career opportunities. AI developers/deployers are victims (d near 1.0) as they face increased regulation and scrutiny. Long-term AI safety researchers are also victims (d near 1.0) due to the redirection of funding and academic prestige. Social justice advocates are beneficiaries (d near 0.0) as their agenda is prioritized. Policy makers are agenda-setters, balancing competing priorities.",
+    "mandatrophy_analysis": "This constraint is not experiencing mandatrophy; its mandate is actively contested and evolving. The classification as Tangled Rope prevents mislabeling it as a pure Snare (ignoring the genuine coordination function for addressing present harms) or a pure Rope (ignoring the asymmetric extraction from other risk framings). The ongoing debate about its founding problem status ('contested') reflects this active, rather than atrophied, state."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'ai_risk_prioritization' kernel, focusing on near-term harms. It is structurally distinct from the 'existential_risk_reading' which prioritizes long-term threats, as their victim sets, resource allocations, and timescales differ significantly."
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Directly benefit from interventions addressing algorithmic bias, surveillance, and job displacement. Their lived experiences are centered in the risk discourse, leading to policy and research efforts aimed at their protection and empowerment. However, their ability to fully exit the impacts of AI systems remains constrained."
+    },
+    {
+      "name": "fairness_accountability_researchers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive increased funding, academic recognition, and policy influence for their work on identifying and mitigating near-term AI harms. Their research agenda is prioritized, and they are seen as essential experts in the field. They have mobility within academia and policy circles."
+    },
+    {
+      "name": "social_justice_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Their advocacy for justice-oriented AI governance is amplified and integrated into policy discussions. They gain leverage in shaping regulatory frameworks and corporate practices. Their exit options are constrained by the systemic nature of the issues they address."
+    },
+    {
+      "name": "ai_developers_deployers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of increased regulation, compliance, bias audits, and potential legal liabilities related to near-term harms. Their development cycles and deployment strategies are influenced by these priorities, potentially slowing innovation or increasing operational costs. Exiting the AI development space is difficult due to sunk costs and market position."
+    },
+    {
+      "name": "long_term_ai_safety_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Experience a redirection of funding, academic attention, and public discourse away from their focus on existential or catastrophic AI risks. Their work is often framed as speculative or less urgent, making it harder to secure grants, publish, or attract talent. Their exit options are constrained by their specialized expertise and career path dependence."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Are responsible for translating risk assessments into actionable policy. They navigate competing priorities and allocate resources based on prevailing risk framings. This constraint empowers them to enact regulations focused on present-day harms, aligning with public demand for immediate solutions. They have mobility across policy areas."
+    }
+  ],
+  "gain_flow": "fairness_accountability_researchers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates diverse stakeholders (activists, researchers, policymakers) to identify, measure, and mitigate tangible, present-day harms caused by deployed AI systems, ensuring that ethical considerations are integrated into development and deployment.",
+    "transfer_function": "Transfers resources (funding, academic prestige, policy influence) from speculative, long-term AI risk research and unrestricted AI development towards research, advocacy, and regulatory efforts focused on immediate social justice and equity concerns in AI.",
+    "absent_voices": "Proponents of an exclusive focus on existential AI risk are often marginalized in this discourse, their concerns framed as distractions from urgent present-day injustices. They would argue for a re-prioritization of resources towards foundational alignment research.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this prioritization vanished, the focus on immediate AI harms would dissipate, leading to a significant reduction in funding for bias audits, fairness research, and regulatory efforts. AI development would likely proceed with less scrutiny regarding social impacts, and marginalized communities would lose a key advocacy framework, leading to a reorganization of the AI ethics and governance landscape.",
+    "founding_problem": "The initial problem was the rapid deployment of AI systems without adequate consideration for their social impacts, leading to documented cases of algorithmic discrimination, privacy violations, and job displacement, disproportionately affecting vulnerable populations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Marginalized communities, social justice organizations, and independent investigative journalists consistently attest that the problems of algorithmic bias, surveillance, and displacement are not only live but intensifying. Their reports and lived experiences provide corroboration from outside the direct beneficiaries of this prioritization."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ai_risk_prioritization__existential_risk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_suffering_demands_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "speculative_risk_is_distraction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "justice_first_ai_governance",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

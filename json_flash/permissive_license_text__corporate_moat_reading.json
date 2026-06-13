@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__corporate_moat_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c8b2d658-9735-4e24-bb54-c6c235e9a9f0"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Permissive License Text as Corporate Moat",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enterprise_corporations"
+    ],
+    "victims": [
+      "individual_maintainers",
+      "open_source_community"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine 'commons coordination' mechanism, or does it primarily function as a 'corporate moat' for uncompensated extraction?",
+      "resolution_mechanism": "Empirical analysis of derivative product revenue streams vs. contributions back to upstream projects; legal analysis of license enforcement patterns.",
+      "impact": "If primarily a corporate moat, the classification shifts from Rope to Snare, highlighting the extractive nature. If genuine commons coordination, extractiveness is lower.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between commons coordination and corporate moat readings of permissive licenses."
+    },
+    {
+      "id": "copyleft_counterfactual_impact",
+      "question": "What would be the structural impact on uncompensated extraction if permissive licenses were replaced by copyleft licenses requiring reciprocity?",
+      "resolution_mechanism": "Comparative case studies of ecosystems governed by permissive vs. copyleft licenses, analyzing economic flows and contribution patterns.",
+      "impact": "If copyleft significantly reduces uncompensated extraction, it suggests the permissive license's 'corporate moat' function is a structural choice, not an inevitability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of copyleft counterfactual on uncompensated extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the operation of permissive open-source licenses (e.g., MIT, Apache 2.0) as a mechanism for enterprise corporations to build proprietary derivative products without contributing back to the upstream open-source projects. While presented as fostering innovation and collaboration (the 'commons coordination' reading), this 'corporate moat' reading highlights the uncompensated extraction from individual maintainers and the broader open-source community. The constraint's persistence relies on the legal enforceability of the permissive terms, which allow for proprietary re-licensing without reciprocity.",
+    "key_agents": [
+      "enterprise_corporations: Primary beneficiary (institutional/arbitrage) — extracts value without obligation.",
+      "individual_maintainers: Primary victim (moderate/constrained) — provides uncompensated labor, loses control over derivatives.",
+      "open_source_community: Secondary victim (organized/constrained) — collective loss of commons, reduced reciprocity.",
+      "legal_departments: Agenda setter (institutional/analytical) — enforces license terms to protect corporate interests."
+    ],
+    "logic_rationale": "Extractiveness is high (0.65) because significant value is derived from the open-source code without equivalent compensation or contribution back. Suppression is high (0.70) because the legal framework of copyright and contract law actively prevents individual maintainers from demanding compensation or enforcing reciprocity, effectively suppressing their ability to capture value from their work. Theater ratio is low (0.20) as the licenses are genuinely functional in enabling software distribution, but the 'coordination' narrative often masks the extractive reality. Accessibility collapse is moderate (0.40) as alternatives (e.g., copyleft licenses) exist but are often less adopted due to corporate preference for permissive terms. Resistance is moderate (0.55) from parts of the open-source community advocating for stronger reciprocity.",
+    "perspectival_gap": "From the perspective of enterprise corporations, permissive licenses are a 'rope' that facilitates innovation and reduces legal friction, enabling them to build products efficiently. From the perspective of individual maintainers and the open-source community, the same licenses function as a 'snare,' enabling uncompensated extraction and the enclosure of what was once a commons. The engine's classification will reflect the structural asymmetry of benefits and costs.",
+    "directionality_logic": "Enterprise corporations are clear beneficiaries (d=0.0-0.1) as they gain access to high-quality, free-to-use software without reciprocal obligations. Individual maintainers and the open-source community are victims (d=0.9-1.0) as their labor is leveraged for proprietary gain without direct compensation or enforced reciprocity. Legal departments act as agenda setters, enforcing the permissive terms that enable this flow.",
+    "mandatrophy_analysis": "The constraint's mandate (to foster widespread adoption and innovation by reducing friction) is still 'live' in a narrow sense, but its function has drifted. It now primarily serves to enable corporate product development at the expense of the original creators, rather than solely fostering a shared commons. This is not a case of mandatrophy where the problem is gone, but rather where the solution has been co-opted for asymmetric gain, making it a snare rather than a rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'permissive_license_text' kernel. It focuses on the extractive function for corporations, contrasting with the 'commons_coordination_reading' (which emphasizes shared benefit) and the 'copyleft_counterfactual_reading' (which highlights the need for reciprocity)."
+  },
+  "stakeholders": [
+    {
+      "name": "enterprise_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Utilize open-source software under permissive licenses to build proprietary products, avoiding licensing fees and development costs. They benefit from the 'free rider' aspect, leveraging community-developed code without obligation to contribute back or share their derivative works."
+    },
+    {
+      "name": "individual_maintainers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop and maintain open-source projects under permissive licenses, often without direct compensation. They bear the cost of uncompensated labor and the loss of control over how their work is used in proprietary contexts, seeing their contributions enclosed by corporations."
+    },
+    {
+      "name": "open_source_community",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The collective body of developers and users who contribute to and rely on open-source software. They experience a dilution of the 'commons' ethos when permissive licenses enable one-way value extraction, leading to reduced reciprocity and potential burnout among maintainers."
+    },
+    {
+      "name": "legal_departments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Within enterprise corporations, these departments interpret and enforce permissive licenses to maximize corporate advantage, ensuring compliance with minimal obligations while protecting proprietary derivative works. They actively suppress attempts to impose reciprocal terms."
+    },
+    {
+      "name": "copyleft_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for licenses that require derivative works to also be open source (e.g., GPL). They are structurally excluded from the 'permissive license' framework, as their core principle of reciprocity is directly undermined by the permissive approach, leading to a constant struggle for influence."
+    }
+  ],
+  "gain_flow": "enterprise_corporations",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Facilitates widespread adoption and integration of software components by minimizing legal friction and allowing diverse licensing of derivative works.",
+    "transfer_function": "Transfers the value of open-source development effort from individual maintainers and the open-source community to enterprise corporations, who then monetize proprietary derivative products without reciprocal obligations.",
+    "absent_voices": "Copyleft advocates and those who prioritize a strong, reciprocal commons are often marginalized in discussions about permissive licensing, as their arguments for enforced sharing directly challenge the 'corporate moat' function. Their absence allows the narrative of 'unfettered innovation' to dominate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If permissive licenses vanished overnight, the landscape of software development would drastically change. Corporations would face significant new licensing costs or be forced to adopt copyleft models, fundamentally altering their business models and the flow of value in the software ecosystem.",
+    "founding_problem": "Early software development faced friction from restrictive copyright, hindering collaboration and reuse. Permissive licenses aimed to reduce this friction, enabling broader adoption and innovation by allowing maximum freedom for derivative works.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Enterprise corporations and some developers argue the problem is still live, citing the need for frictionless integration. However, individual maintainers and copyleft advocates, supported by economic analyses of value capture, argue that while friction was reduced, the problem of uncompensated extraction has emerged, making the original 'solution' a new problem for the commons."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "uncompensated_extraction_is_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "proprietary_enclosure_maximizes_innovation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unfettered_commercial_reuse",
+    "drift_state": {
+      "moment": "contemporary_open_source_economy",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

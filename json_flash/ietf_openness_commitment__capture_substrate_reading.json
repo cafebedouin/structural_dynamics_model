@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__capture_substrate_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f1e3a5dc-1c85-403e-b4d2-124b3a43a590"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Openness Commitment (Capture Substrate Reading)",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_operators",
+      "incumbent_vendors"
+    ],
+    "victims": [
+      "small_implementers",
+      "end_users",
+      "new_entrants"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the IETF's 'rough consensus and running code' commitment primarily a commons stewardship mechanism, a substrate for capture, or an eroding legitimacy claim?",
+      "resolution_mechanism": "Empirical analysis of standard adoption patterns, market concentration trends, and the success rate of proprietary extensions versus truly open implementations over time.",
+      "impact": "If resolved as commons stewardship, the constraint would classify closer to a Rope; if as legitimacy erosion, closer to a Piton. This reading (capture substrate) implies a Tangled Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the core function of the IETF's openness commitment."
+    },
+    {
+      "id": "proprietary_extension_detection",
+      "question": "To what extent are 'open standards' being extended with proprietary features that create de facto vendor lock-in, and how much does this contribute to extraction?",
+      "resolution_mechanism": "Technical audits of implementations, analysis of API usage, and market share data for proprietary extensions versus base standards.",
+      "impact": "Higher incidence of proprietary extensions would increase measured extractiveness and suppression, pushing the classification further towards Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying proprietary extensions as a mechanism of capture."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the IETF's commitment to open standards, viewed through the lens of 'capture substrate.' While ostensibly promoting interoperability and a level playing field, the process, due to its reliance on 'running code' and resource-intensive participation, inadvertently creates a substrate where large platform operators and incumbent vendors can encode their proprietary advantages into 'open' standards. This leads to moderate extraction from smaller implementers and end-users, who face de facto lock-in to dominant platforms that can afford to shape the standards and implement them first.",
+    "key_agents": [
+      "large_platform_operators: Primary beneficiary (institutional/arbitrage) — shapes standards to its advantage",
+      "incumbent_vendors: Secondary beneficiary (organized/mobile) — leverages existing market position to influence standards",
+      "small_implementers: Primary victim (moderate/constrained) — forced to adopt standards that favor incumbents",
+      "end_users: Diffuse victim (powerless/constrained) — experiences lock-in and reduced choice",
+      "new_entrants: Excluded (powerless/trapped) — faces high barriers to entry due to incumbent-favored standards",
+      "ietf_working_groups: Agenda setter (institutional/analytical) — administers the standards process, often influenced by well-resourced participants"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is moderate because the standards are technically 'open,' but their practical implementation and evolution are heavily influenced by resource-rich actors. Suppression (0.45) is present through the high cost of participation and the 'running code' requirement, which favors those with existing infrastructure. Theater ratio (0.30) reflects the performative aspect of 'openness' that masks underlying capture. Accessibility collapse (0.40) is moderate; alternatives are not completely foreclosed but are made significantly harder to pursue. Resistance (0.55) comes from smaller players and advocates pushing for more genuinely open processes.",
+    "perspectival_gap": "From the perspective of large platform operators, the IETF process is a legitimate coordination mechanism for technical interoperability. From the perspective of small implementers and new entrants, it functions as a gatekeeping mechanism that entrenches incumbents. The engine's per-seat classification will reflect this divergence based on their declared power, exit options, and beneficiary/victim status.",
+    "directionality_logic": "Large platform operators and incumbent vendors are beneficiaries (low d) as they can leverage their resources to shape standards to their advantage, effectively encoding their market power. Small implementers, end-users, and new entrants are victims (high d) as they bear the costs of adopting standards that favor incumbents, leading to lock-in or exclusion. The IETF working groups, while ostensibly neutral, act as agenda setters whose process can be influenced by well-resourced participants.",
+    "mandatrophy_analysis": "This reading suggests the IETF's openness commitment is a 'tangled rope' rather than a 'rope' or 'mountain.' It still provides a coordination function (interoperability), but this function is intertwined with asymmetric extraction. The 'mandate' of open standards has not atrophied, but its *function* has drifted from pure commons stewardship to a substrate for capture. Recognizing this prevents mislabeling it as a purely benign coordination mechanism or a natural outcome of technical evolution."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__legitimacy_erosion_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'IETF openness commitment' kernel. It focuses on how resource advantages translate into encoded gatekeeping within the standards process, leading to a Tangled Rope classification. Sibling readings explore the commons stewardship and legitimacy erosion aspects."
+  },
+  "six_questions": {
+    "coordination_function": "Coordinates the development and adoption of technical standards for the internet, ensuring interoperability and a common technical foundation for diverse systems and applications.",
+    "transfer_function": "Transfers market advantage and de facto control over internet infrastructure from smaller, less resourced implementers and new entrants to large platform operators and incumbent vendors, through the encoding of their preferred technical approaches into 'open' standards.",
+    "absent_voices": "New entrants and truly independent developers who lack the resources to participate consistently in IETF working groups are effectively absent. They would advocate for processes that genuinely level the playing field and prevent proprietary capture, but their voices are diluted by the well-resourced participants.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the IETF's openness commitment and its associated standards process vanished, the internet's interoperability would rapidly degrade. Dominant platforms would likely diverge with proprietary protocols, creating walled gardens and fragmenting the global network, forcing a reorganization of how digital services are built and accessed.",
+    "founding_problem": "The internet needed common, interoperable technical standards to function as a global network, preventing fragmentation and vendor lock-in, and enabling innovation from diverse participants.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IETF and large platform operators assert the problem is still live, citing the ongoing need for coordination. However, small implementers, new entrants, and some academic observers argue that while the *need* for standards is live, the *process* has been captured, and the original problem of preventing vendor lock-in is now exacerbated by the very mechanism meant to solve it. Independent research on market concentration and implementation divergence supports this contested status."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ietf_openness_commitment__commons_stewardship_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_advantage_shapes_standards",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "proprietary_extensions_create_lockin",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "open_process_with_resource_asymmetry",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

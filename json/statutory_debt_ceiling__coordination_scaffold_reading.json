@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "statutory_debt_ceiling__coordination_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "77ad343e-df4b-46dc-958b-effaccd3b8aa"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.15,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.1,
+    "claimed_type": "scaffold",
+    "human_readable": "Statutory Debt Ceiling (Coordination Scaffold Reading)",
+    "topic_domain": "constitutional_law/political_economy/fiscal_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "treasury_department",
+      "congressional_majority"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "fiscal_responsibility_principle",
+      "separation_of_powers_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "debt_ceiling_kernel_reading",
+      "question": "Is the statutory debt ceiling primarily a coordination scaffold, an extraction snare, or a constitutional nullity?",
+      "resolution_mechanism": "Empirical observation of legislative practice over time: frequency of routine adjustments vs. default threats; judicial rulings on 14th Amendment challenges.",
+      "impact": "If primarily an extraction snare, the constraint's extractiveness and suppression are significantly higher, reclassifying it to a Snare. If a constitutional nullity, the constraint is effectively a Mountain (of constitutional law) from the Treasury's perspective, with zero extractiveness.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'statutory_debt_ceiling' kernel, specifically the 'coordination_scaffold_reading'. Sibling readings include 'extraction_snare_reading' and 'constitutional_nullity_reading'."
+    },
+    {
+      "id": "sunset_clause_enforcement_ambiguity",
+      "question": "Is the 'sunset clause' (routine adjustment) genuinely enforced, or is it merely a procedural formality that can be weaponized?",
+      "resolution_mechanism": "Analysis of historical legislative behavior: frequency of clean debt ceiling increases versus attached riders or brinkmanship tactics.",
+      "impact": "If the routine adjustment mechanism is consistently subverted for political leverage, the 'has_sunset_clause' property becomes performative, increasing the theater_ratio and potentially reclassifying to a Tangled Rope or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the effective enforcement of the debt ceiling's intended sunset (routine adjustment)."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the statutory debt ceiling as a procedural coordination mechanism. In this reading, its primary function is to facilitate the Treasury Department's routine operations by setting an aggregate borrowing limit, avoiding repeated congressional micromanagement of individual debt issuances. It is intended to be adjusted periodically and without controversy, acting as a scaffold for efficient fiscal management rather than a tool for political leverage. The low extractiveness and suppression reflect this intended function.",
+    "key_agents": [
+      "treasury_department: Primary beneficiary (institutional/analytical) — gains operational efficiency",
+      "congressional_majority: Beneficiary (institutional/mobile) — avoids micromanagement, maintains fiscal oversight",
+      "congressional_minority: Payer (institutional/constrained) — bears the procedural burden of routine adjustments, but does not weaponize it in this reading",
+      "financial_markets: Observer (organized/analytical) — react to stability or instability"
+    ],
+    "logic_rationale": "The low extractiveness (0.2) reflects that, in this reading, the debt ceiling imposes minimal direct costs beyond administrative overhead, primarily serving a procedural function. Suppression (0.15) is low because compliance is largely voluntary due to the shared benefit of efficient governance, and alternatives (like micromanaging every bond issuance) are genuinely less efficient. Theater ratio (0.1) is low, indicating that the stated purpose of facilitating Treasury operations is largely aligned with its actual function. The 'has_sunset_clause: true' reflects the expectation of routine, non-controversial adjustments.",
+    "perspectival_gap": "From the Treasury Department's perspective, the debt ceiling, when functioning as a scaffold, is a net benefit, streamlining operations. From a congressional majority's perspective, it provides a necessary, if sometimes cumbersome, oversight mechanism. A congressional minority, while participating in the process, would not experience it as highly extractive in this reading, as it is not used for hostage-taking.",
+    "directionality_logic": "The Treasury Department is a clear beneficiary (d=0.0-0.1) as the constraint simplifies its borrowing process. The congressional majority also benefits (d=0.1-0.2) by delegating routine debt management while retaining aggregate control. The congressional minority, in this reading, is a minor payer (d=0.4-0.5) of procedural costs, but not a victim of extraction. Financial markets are observers (d=0.5) whose primary concern is the stability the mechanism provides.",
+    "mandatrophy_analysis": "This reading prevents mislabeling a genuine coordination mechanism as extraction. By framing the debt ceiling as a scaffold, it highlights its intended, temporary support function for efficient governance. If the constraint were to persist without its coordination function, or if the 'sunset clause' of routine adjustment failed, it would drift towards a Piton or Snare, indicating mandatrophy. The low extractiveness and high accessibility collapse (of alternatives to this coordination) are key to this classification.",
+    "kernel_context": "This constraint is the 'coordination_scaffold_reading' of the 'statutory_debt_ceiling' kernel. This reading emphasizes the debt ceiling's role in facilitating Treasury operations and congressional oversight through routine, non-controversial adjustments. Sibling readings include the 'extraction_snare_reading' (where the ceiling is weaponized for political gain) and the 'constitutional_nullity_reading' (where it is considered unconstitutional)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_budget_process",
+      "treasury_bond_market_stability"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'statutory_debt_ceiling' kernel, each representing a distinct structural claim about its function and impact. This 'coordination_scaffold_reading' focuses on its intended role in fiscal governance."
+  },
+  "stakeholders": [
+    {
+      "name": "treasury_department",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the streamlined process of managing federal debt within an aggregate limit, avoiding the need for constant, granular congressional approval for each bond issuance. Its operational efficiency is enhanced by this procedural coordination."
+    },
+    {
+      "name": "congressional_majority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from a mechanism that provides aggregate fiscal oversight without requiring micromanagement of daily Treasury operations. It can routinely adjust the ceiling to reflect spending decisions without political brinkmanship."
+    },
+    {
+      "name": "congressional_minority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Participates in the routine process of adjusting the debt ceiling. In this reading, it bears the procedural costs of this oversight function but does not weaponize the ceiling for political extraction or default threats."
+    },
+    {
+      "name": "financial_markets",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observe the debt ceiling process for signs of fiscal stability or instability. They benefit from the predictability and routine nature of adjustments in this reading, which reduces sovereign risk premiums."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate the Treasury Department's operational need for continuous borrowing with Congress's constitutional power of the purse, by setting an aggregate limit that is routinely adjusted.",
+    "transfer_function": "Primarily transfers operational efficiency and predictability to the Treasury Department and congressional oversight to Congress, rather than direct financial transfers. It prevents the transfer of political leverage in this reading.",
+    "absent_voices": "Advocates for a 'clean' repeal of the debt ceiling, arguing it is an unnecessary and dangerous procedural relic, are present in academic and policy debates but are not currently able to shift the legislative process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the debt ceiling vanished, Congress would either need to approve every bond issuance (creating immense micromanagement) or delegate unlimited borrowing authority (ceding fiscal control), fundamentally altering the balance of power and operational procedures for federal debt.",
+    "founding_problem": "The problem of managing federal debt efficiently while maintaining congressional oversight, avoiding the impracticality of individual legislative approvals for every borrowing action.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Treasury Department and congressional leadership (across parties) consistently attest to the ongoing need for a mechanism to manage federal debt efficiently, even if they disagree on the debt ceiling's current form. Independent fiscal policy experts corroborate the administrative burden that would arise without such a mechanism."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_snare_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_nullity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "procedural_efficiency_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "aggregate_oversight_is_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "routine_fiscal_management",
+    "drift_state": {
+      "moment": "contemporary_political_polarization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

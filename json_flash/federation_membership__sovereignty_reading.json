@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "federation_membership__sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3bf1a749-aef3-47a1-8332-845487928731"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federation Membership (Sovereignty Reading)",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_governments",
+      "local_labor_markets"
+    ],
+    "victims": [
+      "mobile_citizens",
+      "migrant_workers"
+    ]
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "omegas": [
+    {
+      "id": "sovereignty_vs_integration_ambiguity",
+      "question": "Is federation membership primarily a conditional treaty between sovereign states, or an irreversible step towards supranational integration?",
+      "resolution_mechanism": "Judicial rulings on the supremacy of national vs. supranational law, or a formal treaty amendment clarifying the nature of membership and exit rights.",
+      "impact": "If resolved towards integration, the constraint's extractiveness from mobile citizens would be reclassified as illegitimate, and border controls would be seen as a violation of rights. If resolved towards sovereignty, current extractiveness would be seen as a legitimate exercise of national power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity over the fundamental nature of federation membership."
+    },
+    {
+      "id": "border_legitimacy_scope",
+      "question": "To what extent does national authority over borders legitimately extend to citizens of other member states within the federation?",
+      "resolution_mechanism": "A clear legal framework defining the scope of national border control within the federation, or a political consensus on the limits of free movement policy.",
+      "impact": "If national authority is deemed to legitimately restrict free movement, the suppression metric would be seen as a necessary component of policy. If not, it would be reclassified as excessive coercion.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Scope of national border legitimacy within a federation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'sovereignty reading' of federation membership, where national authority over borders and migration policy is retained, and free movement is a negotiable policy rather than an inherent right. It views federation membership as a conditional treaty, allowing national governments to impose restrictions on movement and labor market access for citizens of other member states. This leads to higher extractiveness from mobile citizens and migrant workers, and active enforcement of border legitimacy.",
+    "logic_rationale": "The extractiveness (0.65) is high due to the ability of national governments to impose conditions and restrictions on free movement, leading to costs for mobile citizens and migrant workers. Suppression (0.7) is also high, reflecting the active enforcement of national border controls and migration policies. The theater ratio (0.2) is relatively low, as the stated function of national border control is largely aligned with its actual operation under this reading. Accessibility collapse (0.4) is moderate, as alternatives for mobile citizens are constrained but not entirely eliminated, and resistance (0.55) is present from those advocating for greater free movement.",
+    "perspectival_gap": "National governments and local labor markets experience this as a legitimate exercise of sovereignty and a tool for managing domestic economic conditions. Mobile citizens and migrant workers, however, experience it as a significant barrier to opportunity and a source of extraction, as their mobility is restricted and their labor market access is conditional.",
+    "directionality_logic": "National governments are primary beneficiaries (d=0.0-0.2) as they retain control over borders and migration policy, allowing them to manage national interests. Local labor markets also benefit (d=0.1-0.3) from the ability to regulate labor supply and demand. Mobile citizens and migrant workers are victims (d=0.7-1.0) as they face restrictions on movement, employment, and social benefits, leading to higher costs and reduced opportunities. Supranational institutions are agenda-setters (d=0.4-0.6) in the sense that they administer the treaty, but their authority is limited by national sovereignty under this reading.",
+    "mandatrophy_analysis": "This classification as a Tangled Rope prevents mislabeling it as a pure Snare by acknowledging the coordination function of federation membership (e.g., shared security, economic cooperation). However, it highlights the asymmetric extraction arising from the national retention of border legitimacy and the conditional nature of free movement, which benefits national governments at the expense of mobile citizens. The 'sovereignty reading' itself is a mechanism for maintaining this asymmetry.",
+    "kernel_context": "This constraint, 'federation_membership__sovereignty_reading', is one interpretation of the 'federation_membership' kernel. It posits that federation membership is a conditional treaty, emphasizing national sovereignty and negotiable free movement. This contrasts with the 'integration_reading', which views membership as irreversible integration with supranational authority and constitutional free movement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership__integration_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'federation_membership' kernel. Its sibling, 'federation_membership__integration_reading', presents an alternative interpretation where free movement is a constitutional right and supranational authority is legitimate."
+  },
+  "stakeholders": [
+    {
+      "name": "national_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain primary authority over national borders and migration policy, viewing federation membership as a conditional treaty. They negotiate terms of free movement and can impose restrictions to protect national interests or labor markets. They benefit from this retained sovereignty."
+    },
+    {
+      "name": "mobile_citizens",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Citizens of member states who wish to live or work in another member state. They face conditional access to labor markets, social benefits, and residency, incurring costs and restrictions due to national border legitimacy and negotiable free movement policies."
+    },
+    {
+      "name": "migrant_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Workers from other member states who are subject to specific national labor market regulations and often face precarious employment conditions. Their ability to move and work is highly conditional, making them particularly vulnerable to extraction."
+    },
+    {
+      "name": "local_labor_markets",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from the ability of national governments to regulate the influx of labor, protecting domestic wages and employment. They can lobby national governments for policies that restrict free movement to their advantage."
+    },
+    {
+      "name": "supranational_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Administer the federation's treaties and policies, but under the sovereignty reading, their authority is limited by the retained powers of national governments. They facilitate coordination but have less power to enforce free movement as an absolute right."
+    },
+    {
+      "name": "pro_integration_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Advocate for deeper integration and stronger supranational authority, including unconditional free movement as a fundamental right. Their arguments are often sidelined or outvoted by national interests under the sovereignty reading."
+    }
+  ],
+  "gain_flow": "national_governments",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates inter-state relations within a federation, allowing for cooperation on shared challenges (e.g., trade, security) while preserving national sovereignty and the ability to manage domestic affairs, including migration.",
+    "transfer_function": "Transfers the right to control borders and migration policy from a potential supranational authority back to national governments. It transfers costs (e.g., restricted mobility, conditional access to benefits) to mobile citizens and migrant workers.",
+    "absent_voices": "Advocates for full integration and unconditional free movement are often marginalized in policy debates dominated by national sovereignty concerns. Mobile citizens and migrant workers, despite being directly affected, often lack collective political power to effectively voice their objections.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of federation membership vanished, national governments would lose their perceived legitimate right to control borders and migration policy within the federation. This would lead to a rapid shift towards more open borders, significant changes in labor markets, and a re-evaluation of supranational authority, fundamentally altering the political and economic landscape.",
+    "founding_problem": "The founding problem was how to achieve inter-state cooperation and stability while preserving the sovereignty and distinct national interests of member states, particularly regarding control over borders and domestic policy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National governments and conservative political parties consistently attest that the problem of balancing national sovereignty with federation membership is live and ongoing, citing concerns over national identity, security, and economic stability. This is corroborated by ongoing political debates and policy adjustments within the federation, even if other parties contest the specific solutions."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "federation_membership__integration_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_sovereignty_is_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "free_movement_is_negotiable_policy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "westphalian_state_system",
+    "drift_state": {
+      "moment": "contemporary_globalization_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

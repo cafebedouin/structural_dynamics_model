@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "paris_article_4_ndc__sovereigntist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "70033a75-3555-460b-9c34-db11042fa025"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.1,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Paris Agreement Article 4 NDCs (Sovereigntist Reading)",
+    "topic_domain": "international_climate_governance/treaty_law/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nation_states",
+      "fossil_fuel_dependent_economies"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "sovereignty_vs_collective_action",
+      "question": "Is the emphasis on national sovereignty in NDC interpretation a necessary condition for global participation, or a structural barrier to effective climate action?",
+      "resolution_mechanism": "Empirical analysis of NDC ambition trajectories in states with strong sovereigntist interpretations versus those with more cooperative interpretations; assessment of whether 'voluntary' pledges are sufficient to meet 1.5C/2C targets.",
+      "impact": "If a barrier, the constraint's effective extractiveness (from the planet/future generations) is higher than measured, as it enables free-riding. If necessary, it's a coordination cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity of national sovereignty's role in climate governance."
+    },
+    {
+      "id": "reading_impact_on_enforcement",
+      "question": "How does the sovereigntist reading of NDCs affect the development and efficacy of international accountability mechanisms?",
+      "resolution_mechanism": "Analysis of UN climate conference outcomes, treaty enforcement mechanisms, and international court rulings regarding NDC compliance.",
+      "impact": "This reading actively dampens the emergence of enforcement mechanisms, potentially shifting the constraint towards a Piton if the coordination function atrophies without effective accountability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of sovereigntist reading on global enforcement."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'sovereigntist_reading' of the 'paris_article_4_ndc' kernel. How would the classification change under the 'supranational_reading' or 'equity_reading'?",
+      "resolution_mechanism": "Separate constraint stories for each reading, with distinct metrics and stakeholder analyses.",
+      "impact": "The 'supranational_reading' would likely yield a higher extractiveness (from states) and suppression (of national autonomy), potentially classifying as a Tangled Rope. The 'equity_reading' would shift beneficiaries/victims based on historical responsibility and development status.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identification of this constraint as one reading of a contested kernel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'sovereigntist' interpretation of Nationally Determined Contributions (NDCs) under Article 4 of the Paris Agreement. In this reading, NDCs are voluntary pledges, determined by each nation, with a primary goal of preserving national energy sovereignty and allowing fossil-dependent economies to pursue their development pathways without external coercion. Global enforcement mechanisms are seen as infringing on sovereignty and are thus resisted or allowed to atrophy. This reading emphasizes national autonomy over collective, binding climate action.",
+    "logic_rationale": "The extractiveness is low (0.15) because this reading minimizes external obligations and costs on nation-states, particularly those reliant on fossil fuels. Suppression is very low (0.05) as there is little to no coercive enforcement of NDCs in this interpretation; states retain full freedom to set and revise their pledges. Theater ratio is moderate (0.2) as some performative reporting and diplomatic engagement occurs, but the core function of binding emissions reductions is not actively pursued. Accessibility collapse is low (0.1) and resistance is low (0.08) because states have ample alternatives (e.g., continuing current development paths) and face minimal pressure to change.",
+    "directionality_logic": "Nation-states, especially fossil-fuel-dependent economies, are the primary beneficiaries (d near 0.0) as they retain full control over their energy policies and development. There are no direct 'victims' in this reading, as the constraint is designed to minimize extraction from states. The 'victim' in other readings (e.g., future generations, vulnerable ecosystems) is externalized or not recognized as a direct party to this specific constraint's operation.",
+    "perspectival_gap": "From the perspective of nation-states, particularly those prioritizing economic development and sovereignty, this reading functions as a Rope, facilitating participation without undue burden. From a global climate action perspective (e.g., the 'supranational_reading'), this same structure would be seen as a Snare or Tangled Rope, extracting from the global commons and future generations by enabling insufficient action. The engine's classification will reflect the low extraction from the perspective of the nation-state, which is the intended measurement of this specific reading.",
+    "kernel_context": "This constraint is the 'sovereigntist_reading' of the 'paris_article_4_ndc' kernel. This reading emphasizes national autonomy and voluntary pledges. Sibling readings include the 'supranational_reading' (NDCs as binding commitments with international accountability) and the 'equity_reading' (NDCs interpreted through Common But Differentiated Responsibilities)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'paris_article_4_ndc' kernel, each with different structural properties and classifications. This reading emphasizes national sovereignty and voluntary action, leading to low extraction from states."
+  },
+  "stakeholders": [
+    {
+      "name": "nation_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Determine their own NDCs, retain full control over national energy policy, and resist international enforcement mechanisms. They are the primary architects and beneficiaries of this interpretation."
+    },
+    {
+      "name": "fossil_fuel_dependent_economies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the flexibility to continue using fossil fuels for economic development without significant international pressure or penalties. Their development pathways are preserved under this reading."
+    },
+    {
+      "name": "international_climate_negotiators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the burden of negotiating and reporting on NDCs that, under this reading, lack strong enforcement or ambition. They must balance national interests with global climate goals, often leading to compromises that reflect sovereigntist priorities."
+    },
+    {
+      "name": "global_civil_society_organizations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for stronger, more binding climate commitments and international accountability. Their calls for greater ambition and enforcement are largely unheeded or actively resisted by the sovereigntist interpretation."
+    },
+    {
+      "name": "future_generations",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Bear the long-term costs of insufficient climate action enabled by this reading's emphasis on national sovereignty. They have no voice in the current negotiation framework."
+    }
+  ],
+  "gain_flow": "nation_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To provide a framework for all nations to participate in climate action by allowing them to define their own contributions, thereby overcoming sovereignty concerns that might prevent participation in a more binding regime.",
+    "transfer_function": "Transfers the burden of climate action from individual nation-states (especially those with high emissions or development needs) to the global commons and future generations, by minimizing immediate, binding obligations.",
+    "absent_voices": "Global civil society organizations and future generations are largely absent from the decision-making process that entrenches this sovereigntist reading; they would advocate for stronger, more binding commitments and greater accountability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this sovereigntist reading disappeared, the international climate regime would likely shift towards more binding commitments, potentially leading to new enforcement mechanisms, different allocation of responsibilities, and significant changes in national energy policies, especially for fossil-fuel-dependent economies.",
+    "founding_problem": "The challenge of achieving universal participation in a global climate agreement while respecting national sovereignty and diverse development priorities, particularly after the failure of top-down approaches like the Kyoto Protocol.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem of balancing sovereignty with collective action remains live, as attested by ongoing debates in international climate negotiations and the continued resistance of some states to binding targets. Developing nations and some developed nations corroborate the need for national determination to ensure equitable participation."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "paris_article_4_ndc__supranational_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "paris_article_4_ndc__equity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_sovereignty_is_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "voluntary_pledges_are_sufficient_for_participation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "westphalian_state_system",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

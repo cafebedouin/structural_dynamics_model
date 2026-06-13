@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "waitangi_sovereignty_allocation__crown_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "96270c4c-d7dd-4db1-b562-34b29ca339b4"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Waitangi Sovereignty Allocation (Crown Sovereignty Reading)",
+    "topic_domain": "constitutional_law/indigenous_rights/post_colonial_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "new_zealand_crown",
+      "parliament_of_new_zealand",
+      "non_maori_settlers"
+    ],
+    "victims": [
+      "maori_iwi_hapu",
+      "maori_rangatira"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the Treaty of Waitangi a cession of full sovereignty to the Crown, or a grant of governorship with retained Māori authority?",
+      "resolution_mechanism": "Judicial re-interpretation by a supreme court or constitutional amendment recognizing the Māori text's primacy, or a political settlement acknowledging co-sovereignty.",
+      "impact": "If resolved towards the rangatiratanga reading, this constraint would be reclassified from Snare to a contested Tangled Rope or even a Mountain (if co-sovereignty is recognized as an inherent right), with significantly reduced extraction and suppression from Māori. If resolved towards partnership, it would become a Tangled Rope with mandated consultation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the Waitangi sovereignty kernel; other readings (partnership, rangatiratanga) would yield different classifications."
+    },
+    {
+      "id": "legitimacy_of_unilateral_power",
+      "question": "Is the Crown's exercise of plenary legislative power without Māori consent legitimate, given the contested interpretations of the Treaty?",
+      "resolution_mechanism": "A national referendum on constitutional principles, or a sustained period of successful co-governance models demonstrating viability and equity.",
+      "impact": "If deemed illegitimate, the constraint's suppression and extractiveness would be seen as unjust, increasing resistance and potentially leading to international condemnation or internal political instability.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The legitimacy of unilateral Crown power is a core point of contention."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1840,
+    "end": 1880
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'Crown Sovereignty' reading of the Treaty of Waitangi, where English Article I is interpreted as a full cession of Māori sovereignty to the British Crown. This reading establishes Westminster parliamentary supremacy in New Zealand, granting the Crown plenary legislative power without requiring Māori consent and allowing unilateral resource allocation. Māori interests are subordinated to the will of Parliament. This interpretation has historically served as the legal basis for land confiscation and the marginalization of Māori self-governance.",
+    "key_agents": [
+      "new_zealand_crown: Agenda setter (institutional/generational) — exercises ultimate authority.",
+      "parliament_of_new_zealand: Agenda setter (institutional/generational) — enacts laws based on plenary power.",
+      "maori_iwi_hapu: Payer (organized/generational) — bears the costs of lost sovereignty and resources.",
+      "maori_rangatira: Payer (powerful/generational) — traditional leaders whose authority is undermined.",
+      "non_maori_settlers: Beneficiary (moderate/generational) — benefit from land acquisition and resource access.",
+      "international_law_scholars: Observer (analytical/civilizational) — analyze the legality and ethics of the interpretation."
+    ],
+    "logic_rationale": "The constraint is classified as a Snare due to its high extractiveness (0.85) and suppression (0.75) from Māori, coupled with active enforcement of Crown authority. The coordination story (establishing a unified legal system) serves as cover for the unilateral transfer of power and resources. Theater ratio (0.4) reflects the performative aspects of 'consultation' or 'recognition' that often mask the underlying power imbalance. The rising extractiveness and suppression over time reflect the increasing consolidation of Crown power and the systematic marginalization of Māori authority post-Treaty.",
+    "perspectival_gap": "From the perspective of the Crown and non-Māori settlers, this reading establishes a legitimate, stable governance structure (a claimed Rope or even Mountain). From the perspective of Māori iwi and rangatira, it is a coercive mechanism that dispossessed them of their inherent rights and resources (a clear Snare). The engine's classification will reflect the latter due to the declared victims and high extraction/suppression.",
+    "directionality_logic": "The New Zealand Crown and Parliament are full beneficiaries (d=0.0) as they gain plenary power and control. Non-Māori settlers are also beneficiaries (d=0.1-0.2) through access to land and resources. Māori iwi and rangatira are full targets (d=1.0) as they lose sovereignty, land, and self-determination. The constraint directly subsidizes the Crown and settlers by enabling resource acquisition and governance without consent.",
+    "mandatrophy_analysis": "This constraint prevents mislabeling a coercive power transfer as legitimate coordination. The 'founding problem' of establishing a unified legal system is used to justify an arrangement that actively dispossesses one party. The persistence of this reading, despite ongoing Māori resistance and alternative interpretations, indicates that its primary function has shifted from initial coordination (if any) to pure extraction, maintained by active suppression."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "waitangi_sovereignty_allocation__partnership_reading",
+      "waitangi_sovereignty_allocation__rangatiratanga_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'Waitangi sovereignty allocation' kernel. This 'Crown Sovereignty' reading asserts plenary Crown power, while the 'Partnership' reading posits a co-governance model, and the 'Rangatiratanga' reading asserts retained Māori authority. Each reading constitutes a distinct constraint with different structural properties and classifications."
+  },
+  "stakeholders": [
+    {
+      "name": "new_zealand_crown",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The ultimate authority that claims and exercises plenary sovereignty over New Zealand, deriving its power from the English text of the Treaty of Waitangi. Benefits from unfettered legislative and resource control."
+    },
+    {
+      "name": "parliament_of_new_zealand",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The legislative body that enacts laws based on the asserted plenary sovereignty of the Crown. Its authority is directly enabled by this reading of the Treaty, allowing it to make decisions without requiring Māori consent."
+    },
+    {
+      "name": "maori_iwi_hapu",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The collective Māori tribes and sub-tribes who bear the costs of lost sovereignty, land, resources, and cultural autonomy. Their identity is deeply tied to their ancestral lands and self-governance, making 'exit' from the relationship with the Crown a form of cultural dissolution."
+    },
+    {
+      "name": "maori_rangatira",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Traditional Māori chiefs and leaders whose authority (tino rangatiratanga) over their people and lands is undermined by the Crown sovereignty reading. They are compelled to operate within a system that denies their inherent rights, making their position one of constrained resistance."
+    },
+    {
+      "name": "non_maori_settlers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Individuals and groups of European descent who benefited from the Crown's asserted sovereignty, gaining access to land and resources for settlement and economic development. They generally support the Crown sovereignty reading as it underpins their historical claims and current societal structure."
+    },
+    {
+      "name": "international_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze the Treaty of Waitangi and its interpretations from a global perspective, often highlighting discrepancies between the English and Māori texts and the implications for indigenous rights under international law. They do not directly participate in the constraint but provide critical analysis."
+    }
+  ],
+  "gain_flow": "new_zealand_crown",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To establish a single, unified system of governance and law over all inhabitants of New Zealand, facilitating British settlement and economic development.",
+    "transfer_function": "Transfers ultimate legislative and resource control from Māori iwi and hapu to the British Crown and its subsequent parliamentary institutions, enabling unilateral land acquisition and resource exploitation.",
+    "absent_voices": "The voices of Māori who understood the Treaty as retaining their full authority (tino rangatiratanga) were effectively silenced or dismissed in the early colonial period, and their descendants continue to challenge this interpretation. Their perspective, if fully integrated, would fundamentally alter the constraint's structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Treaty vanished overnight, the entire constitutional and legal framework of New Zealand would collapse. Land titles, resource management, and parliamentary authority would be immediately contested, leading to a fundamental re-negotiation of power between Māori and the Crown.",
+    "founding_problem": "The problem of establishing British colonial authority and a stable legal framework for settlement in New Zealand, while managing relations with the indigenous Māori population.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Crown and its institutions maintain that the need for a unified, stable governance system is still live. However, Māori and many legal scholars outside the benefiting parties argue that the 'problem' of establishing unilateral Crown authority was solved at the expense of Māori rights, and the current 'live' status is a perpetuation of an extractive arrangement, not a genuine coordination need."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "waitangi_sovereignty_allocation__partnership_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "waitangi_sovereignty_allocation__rangatiratanga_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "parliamentary_supremacy_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "full_sovereignty_cession_by_treaty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "westminster_parliamentary_supremacy",
+    "drift_state": {
+      "moment": "contemporary_indigenous_rights_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

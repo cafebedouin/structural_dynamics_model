@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__commons_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c1be788a-1e87-4fa4-8809-6640fb141b42"
+  },
+  "base_properties": {
+    "extractiveness": 0.1,
+    "suppression": 0.05,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.02,
+    "claimed_type": "rope",
+    "human_readable": "Permissive License Text: Commons Coordination Reading",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "universal_implementers",
+      "open_source_ecosystem"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine coordination mechanism for universal implementation, or does it primarily enable corporate enclosure (corporate_moat_reading) or fail to prevent exploitation (copyleft_counterfactual_reading)?",
+      "resolution_mechanism": "Empirical analysis of derivative works: track the proportion of permissive-licensed code integrated into proprietary vs. open-source projects, and the extent of reciprocal contributions.",
+      "impact": "If the corporate_moat_reading is dominant, the constraint reclassifies as a Snare for independent developers. If the copyleft_counterfactual_reading is dominant, it reclassifies as a Piton or Tangled Rope, failing to achieve its stated coordination goal.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between commons coordination, corporate enclosure, and exploitation enablement."
+    },
+    {
+      "id": "exploitation_prevention_efficacy",
+      "question": "Does the 'minimizing legal friction' axiom inadvertently facilitate uncompensated extraction by proprietary entities, as argued by the copyleft_counterfactual_reading?",
+      "resolution_mechanism": "Longitudinal study of project sustainability and contributor compensation in permissive vs. copyleft ecosystems.",
+      "impact": "If permissive licenses consistently lead to uncompensated extraction for original contributors, the 'universal implementation freedom' claim is undermined, and the constraint's extractiveness for original creators would be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minimizing legal friction leads to exploitation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'commons coordination' reading of permissive software licenses (e.g., MIT, Apache 2.0). In this reading, the primary function of such licenses is to maximize the freedom of all parties to use, modify, and distribute software by minimizing legal friction and complexity. This fosters a broad ecosystem of innovation and collaboration, with the benefits accruing to a universal pool of implementers. The constraint is seen as a pure coordination mechanism, reducing transaction costs and legal overhead for integrating and building upon existing code. It is a reading that emphasizes the positive-sum game of open collaboration.",
+    "logic_rationale": "The low extractiveness (0.1) reflects the core tenet of this reading: the license aims to give away rights, not to capture value. Suppression (0.05) is minimal, as the constraint's power comes from its widespread adoption and ease of use, not from coercion. Theater ratio is zero, as the license text directly performs its stated function. Accessibility collapse is high (0.9) because once adopted, the license effectively removes legal barriers, making the code universally accessible for integration. Resistance is low (0.02) because, from this perspective, the license is widely accepted as beneficial for fostering open development.",
+    "directionality_logic": "Universal implementers and the broader open-source ecosystem are the primary beneficiaries, as they gain maximum freedom to use and integrate code without legal encumbrances. There are no identifiable victims in this reading, as the 'cost' of giving up exclusive rights is seen as a voluntary contribution to the commons, yielding greater collective benefit. The license text itself acts as a coordination mechanism, not an extractor.",
+    "perspectival_gap": "From this 'commons coordination' perspective, the constraint is a clear Rope, facilitating widespread collaboration. However, other readings (corporate_moat_reading, copyleft_counterfactual_reading) would assign significantly higher extractiveness or suppression, arguing that the 'freedom' granted by permissive licenses is asymmetric or enables exploitation. The engine's per-seat classification would highlight this divergence if stakeholders from those other readings were included.",
+    "kernel_context": "This constraint is the 'commons coordination' reading of the 'permissive_license_text' kernel. This reading emphasizes the positive-sum benefits of minimal legal friction for universal implementation. Sibling readings include the 'corporate_moat_reading' (where permissive licenses enable proprietary enclosure) and the 'copyleft_counterfactual_reading' (where they fail to prevent exploitation, necessitating viral reciprocity)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__corporate_moat_reading",
+      "permissive_license_text__copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'permissive_license_text' kernel. Its structural properties differ significantly from sibling readings, which are modeled as separate constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "universal_implementers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Individuals and organizations who use, modify, and distribute software. They benefit from the low legal friction and high interoperability enabled by permissive licenses, allowing them to integrate code into diverse projects, both open and proprietary, with minimal overhead."
+    },
+    {
+      "name": "open_source_ecosystem",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The collective body of open-source projects, communities, and foundations. It benefits from the rapid adoption and integration of permissively licensed components, which accelerates innovation and expands the reach of open-source principles by making code easy to reuse."
+    },
+    {
+      "name": "original_authors",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The creators of the software who choose to apply a permissive license. From this reading, they voluntarily contribute their work to the commons, accepting the trade-off of no reciprocal obligations for maximum adoption and impact. They set the initial terms of the constraint."
+    },
+    {
+      "name": "proprietary_integrators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Commercial entities that integrate permissively licensed open-source components into their proprietary products. They benefit from the freedom to use and adapt the code without having to open-source their own derivative works, accelerating their development cycles and reducing costs."
+    },
+    {
+      "name": "legal_departments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Corporate and organizational legal teams responsible for license compliance. They benefit from the simplicity and clarity of permissive licenses, which reduce the complexity and risk associated with managing intellectual property in software development."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "To enable maximum interoperability and reuse of software components by minimizing legal barriers and complexity, fostering a broad and diverse ecosystem of innovation.",
+    "transfer_function": "Transfers legal permissions (rights to use, modify, distribute) from the original author to any subsequent user, with minimal reciprocal obligations, effectively transferring 'frictionless' access to code.",
+    "absent_voices": "Strict copyleft advocates would argue that the absence of a reciprocity requirement allows for exploitation, turning a 'commons' into a resource for proprietary enclosure. They are present in the broader licensing debate but are 'absent' from the internal logic of this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If permissive licenses vanished, the software development landscape would fundamentally change. Integration of components would become legally complex, requiring individual agreements or leading to widespread copyright infringement. The rapid pace of innovation driven by open reuse would slow significantly, and the open-source ecosystem would fragment.",
+    "founding_problem": "The problem of legal friction and complexity hindering the widespread adoption and reuse of software, leading to duplicated effort and stifled innovation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem of legal friction in software development remains live, as attested by ongoing efforts to simplify licensing and promote open standards. Industry reports on developer productivity and legal compliance costs, from outside the immediate open-source community, corroborate the continued relevance of minimizing legal overhead."
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__corporate_moat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__copyleft_counterfactual_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "universal_implementation_freedom_maximizes_innovation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "minimal_legal_friction_is_optimal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "frictionless_open_collaboration",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}
