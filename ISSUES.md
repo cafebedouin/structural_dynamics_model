@@ -5807,6 +5807,92 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 
 ---
 
+## OQ-122 — Control inversion: `type_1_false_summit` RED-caps on the type-CLAIM alone, independent of extraction magnitude — does RED track concealment or tax every authored hypothesis?
+
+**Ω-type:** Ω_E (the discriminating test is a measurable single-field intervention) + Ω_C (whether
+claim-only RED-capping is the intended semantics is a design ruling).
+
+**Status:** open — filed 2026-06-13 from the Przybylski's-star stress run
+(`agent/analysis/originals/przybylskis_star.md`; testsets `actinide_replenishment_mechanism_*`,
+`neutron_star_bombardment_reading`, `radiative_levitation_stratification`, `superheavy_decay_reading`,
+`performance_legitimacy_flat_control`; reports in `outputs/constraint_reports/`). Surfaced by a
+web-Claude read of the five reports; structural claims independently witnessed against code/reports
+below.
+
+**The witnessed inversion (two calibration controls land backwards):**
+- `actinide_replenishment_mechanism_flat_control` — purity **0.996** (pristine), independent,
+  Boltzmann-compliant, the *clean* baseline — comes back **RED**.
+- `performance_legitimacy_flat_control` — purity **0.354** (contaminated), coupling 1.0,
+  Boltzmann non-compliant, the *dirty* baseline — comes back **YELLOW**.
+  (Caveat: the two controls ran in **different frames** — actinide family on the 57-constraint
+  corpus, performance_legitimacy on a **13**-constraint corpus; report headers `CORPUS CONTEXT:`.
+  Cross-control comparison inherits this. The ledger is scoped to the 57-run, so its omission of
+  performance_legitimacy is correct, not a gap.)
+
+**The mechanism (verified at code level, drl_core.pl:614):**
+`dr_claim_mismatch(C, Context, type_1_false_summit, severe) :- narrative_ontology:constraint_claim(C, mountain), standard_context(Context), dr_type(C,Context,Actual), Actual \= mountain.`
+The severe alert caps BASE: YELLOW → RED. It fires **only** on a constraint that *claims* mountain
+yet whose authoritative `dr_type` departs from mountain. Three of the four reds in the 57-run
+(`actinide_…_control`, `radiative_levitation`, `neutron_star`) are `BASE: YELLOW … CAPPED TO RED`
+on this one alert (report verdict boxes). The dirty control claims `tangled_rope`
+(`constraint_claim(performance_legitimacy_flat_control, tangled_rope)`), so the rule is
+**structurally unable to fire on it** and nothing caps it → YELLOW. So RED here is tracking
+*naturalization-concealment* (claiming law-of-nature status while having named beneficiaries), **not
+extraction magnitude.** Only `superheavy_decay_reading` is **base-RED on its own metrics** — it
+claims `rope`, not mountain, so the false-summit rule cannot fire; its RED is uncapped (verdict box
+has no `CAPPED TO RED` line). "All four red" is one artifact firing three times + one genuine signal.
+
+**The open question (two readings; commit via the pre-registered control, do not hold open):**
+- *Charitable (intended):* concealment is more dangerous than honest-but-dirty coordination, so a
+  low-extraction thing masquerading as physics SHOULD outrank a high-extraction thing that admits
+  what it is. RED-capping on claim is the design working.
+- *Uncharitable (artifact):* "has named beneficiaries" is a condition **every real scientific
+  hypothesis** satisfies (it has researchers/funders), so the rule red-flags physics for *existing*.
+
+**Pre-registered discriminating control (cheapest falsifier in the set — run before trusting any
+red/yellow ranking):** hand-edit `radiative_levitation_stratification.pl` `constraint_claim` from
+`mountain` → `rope` (or `tangled_rope`), **holding every metric fixed**, and re-run the pipeline.
+This is a **deterministic single-field intervention on the committed `.pl`, NOT a stochastic
+regeneration** — it is legitimate under the determinism-frontier ruling (committed JSON/PL onward is
+deterministic) and a future agent must not dismiss it as a re-draw. **Pre-registered outcomes:**
+verdict drops off RED ⇒ the RED was a function of the type-CLAIM, not the physics or the extraction
+(artifact reading gains support, and claim-only capping is over-broad); verdict stays RED ⇒ the cap
+is metric-driven and the claim is incidental (charitable reading). The base-YELLOW metrics should
+not move; only the cap should.
+
+**Relation to existing OQs (this is not a duplicate):** OQ-50 repaired the false-summit *detector*
+(it now negates `dr_type`, not the vacuous `is_mountain(_,_,fail)`) and OQ-50 OPEN-1 asks the
+design-intent question "what false summit explains *against*" — neither raises the empirical
+control-inversion or the claim-vs-extraction discrimination. OQ-43/OQ-44 are the **inverse** failure
+(a natural-law gate passing because the beneficiary table is *empty* — authored-zero vs absent);
+here the gate *fires* on a populated beneficiary list. OQ-70 (FNL bait-confound) is adjacent but is
+about `claimed_natural/2` source-2 reading any mountain perspective as a naturality claim, not about
+the YELLOW→RED severe cap.
+
+**Secondary observation (operator to rule; not yet its own OQ):** the cross-constraint *convergence*
+block reports `neutron_star` and `superheavy` as sharing the `false_ci_rope` signature
+("coordination-washed"), but flattens a real magnitude gap — `neutron_star` is `confidence: low`
+with a barely-over-floor Boltzmann failure (`excess_above_floor` ≈ 0.10) while `superheavy` carries
+coupling 0.75. The convergence aggregate (enhanced_report.py) does not carry confidence/magnitude to
+the read site, so a 0.10-vs-0.75 gap renders as an equivalence. Report-presentation, not engine
+classification — fold into a report-layer refinement OQ if the operator wants it tracked.
+
+**NOT in scope here (already tracked):** the vacuous temporal/structural-gradient layer ("grid diet:
+authored 0/32", INTENT `OPEN(no_gradient_data)`) and the "12/12 subsystems" base count that includes
+OPEN subsystems — that is OQ-93 (grid vacuity); the reports are scrupulous (mark OPEN, not passed).
+
+**Provenance caveat (cannot be settled from reports alone):** whether the engine *found* the
+recognizable sociological shape (mainstream radiative-levitation penalized only for being dressed as
+settled physics; exotic superheavy-decay carrying genuine foreclosure-plus-rising-investment) or the
+stories were *authored* to have it is not separable at report level — the pre-registered control
+above is the first thing that bears on it.
+
+**Origin:** 2026-06-13, Przybylski's-star engine stress test + web-Claude report read; structural
+claims re-witnessed against drl_core.pl:614, the five testsets' `constraint_claim/2`, and the report
+verdict boxes (this session).
+
+---
+
 *Last updated: 2026-06-13. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
