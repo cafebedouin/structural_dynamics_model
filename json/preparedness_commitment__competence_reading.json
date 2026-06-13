@@ -1,0 +1,385 @@
+{
+  "header": {
+    "constraint_id": "preparedness_commitment__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "1d28cf9b-4e41-4f41-a438-fd8387f34528"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Exercised Competence",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "operational_organization",
+      "protected_population"
+    ],
+    "vindicated_propositions": [
+      "organizational_memory_is_embodied_practice",
+      "competence_requires_continuous_exercise",
+      "generational_knowledge_transfer_through_participation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operational_organization",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Maintains the routine structure of drills, training cycles, and real-world deployment. Designs and executes exercises that test decision-making under pressure. Carries the institutional memory through assigned personnel, documented procedures, and embedded practices. Bears the ongoing cost of maintaining competence: staff time, equipment maintenance, disruption to normal operations during exercises. Benefits from operational credibility and organizational resilience."
+    },
+    {
+      "name": "trained_personnel",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Participate in drills and training as core professional identity. Internalize procedures, decision patterns, and judgment heuristics through repeated exercise. Develop tacit competence that cannot be transmitted through documents alone. Pay through time and attention cost (opportunity cost of deployment-preparation vs. other institutional work). Exit would constitute professional dereliction and identity dissolution—competence is inseparable from how they understand themselves."
+    },
+    {
+      "name": "protected_population",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Depend on the organization's maintained competence during actual disasters. Cannot opt out or exit; their survival may depend on whether the organization's drills translated into real decision-making capacity or remained theater. They receive the constraint's benefit only when the crisis arrives—until then, the competence is invisible to them."
+    },
+    {
+      "name": "senior_experienced_cohort",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear the burden of knowledge transfer: mentoring, demonstrating, correcting, explaining decision logic. This transmission work compresses their own operational availability. They are the embodied library—without their active teaching during exercises, the competence decays. Retirement or turnover without effective transmission creates a drop in organizational capacity."
+    },
+    {
+      "name": "junior_incoming_cohort",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Must absorb the competence through participation in drills and real operations before they are ready to lead. Cannot obtain this knowledge from documents or classrooms alone—it requires supervised decision-making under time pressure. They are identity-locked through professional requirement and cultural expectation: competence is what makes them part of the organization."
+    },
+    {
+      "name": "oversight_body",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Monitors whether drills are testing real competence or performing compliance. Audits after-action reviews and deployment outcomes. Can recommend retraining, procedure revision, or equipment changes. Takes no direct action but influences the organization's drill design and learning agenda."
+    },
+    {
+      "name": "neighboring_agencies",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "May be coordinated INTO the organization's drills or may be excluded from them. If excluded, they cannot develop compatible competence or test inter-agency coordination. Their operational capacity depends partly on whether they are treated as part of the preparedness commitment or isolated from it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains organizational capacity to respond effectively to crises by embedding decision-making competence in personnel through supervised practice. Solves the problem of generational knowledge transfer: how does expertise survive retirements and transitions? Answer: through continuous exercise that recreates the decision environment and allows judgment to be transmitted through performance, not documents.",
+    "transfer_function": "Moves personnel time and attention from other organizational work into drills, training cycles, and knowledge-transmission activity. The exercise environment moves decision responsibility from senior mentors (who would normally handle it alone) to junior personnel (who must learn to handle it). This creates a cost in terms of operational efficiency during normal periods but generates a benefit in capacity when crises arrive.",
+    "absent_voices": "Personnel in agencies excluded from the preparedness commitment—they would object that their isolation prevents them from developing compatible competence or understanding the organization's decision logic. Retirees and departed cohorts who could validate whether their successors actually acquired competence or merely memorized the form. The protected population does not object because they cannot perceive the constraint until it fails; if competence is only theater, their objections come too late.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drills and training cycles vanished overnight, competence would begin to decay immediately. Judgment heuristics maintained through practice would become stale. Incoming personnel would lack supervised experience in the decision environments that actually matter. The next major crisis would likely reveal gaps—decisions made incorrectly, procedures forgotten, inter-agency coordination broken. The protected population would suffer higher casualty or damage rates. Over a generational cycle, the organization would essentially reset to the competence level of an untrained new hire.",
+    "founding_problem": "Organizations responsible for disaster response (emergency management, military command, medical emergency services) face a generational knowledge transfer problem: expertise accumulated by experienced personnel must transfer to their successors, but crisis decision-making cannot be learned from textbooks alone. The founding problem is how to maintain operational competence across generational turnover.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "After-action reports from major disaster responses consistently identify competence loss and coordination failures traceable to inadequate training or knowledge gaps among deployed personnel. Academic literature on organizational learning and high-reliability organizations documents that competence decays if drills and practice are suspended (Weick & Sutcliffe, Reason). Personnel from neighboring agencies that WERE integrated into the preparedness commitment report higher confidence in coordination during actual events compared to agencies that were excluded (inter-agency debriefs). This corroboration comes from outside the organization's own benefit structure—it comes from entities whose interests would be served equally if the organization had not maintained competence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.115,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models preparedness as LIVE EXERCISED COMPETENCE—the reading in which drills genuinely test decision-making, generational knowledge transfer actually happens through supervised practice, and organizational capacity is maintained adaptively across personnel turnover. This is ONE reading of the contested 'preparedness commitment' kernel. Alternative readings include the 'husk_reading' (drills perform compliance but competence is hollow) and the 'hybrid_reading' (memorial elements stabilize commitment while competence elements maintain function). The three readings have different ε values because they measure fundamentally different constraint structures: this reading's high accessibility_collapse (0.92) and low resistance (0.08) reflect that once the competence mechanism is understood, alternatives collapse (competence cannot be delegated or postponed) and active resistance is minimal (no party structurally opposes real competence, though some may cut corners). The claim/metric gap is intentional: the constraint is CLAIMED as rope (genuine coordination with participation benefits) while the authored metrics place it at the lower-extractiveness end of rope and the measurement series shows extraction rising very slightly over a generational cycle (as knowledge-transmission costs accumulate and the organization faces mounting pressure to reduce drill time).",
+    "key_agents": [
+      "Operational Organization: Maintains drills and training infrastructure; bears the cost of exercise disruption",
+      "Trained Personnel: Core to the constraint—embodied knowledge and identity-locked participation",
+      "Protected Population: Benefits only when crisis arrives; cannot perceive the constraint until competence is tested",
+      "Senior Cohort: Pays through knowledge-transmission work; embodies the tacit judgment that must be transmitted",
+      "Junior Cohort: Pays through learning pressure; must develop competence before they can lead",
+      "Oversight Body: Monitors whether drills test competence or perform theater; can reorient the commitment",
+      "Neighboring Agencies: Excluded from or included in the preparedness commitment; their competence depends on integration"
+    ],
+    "logic_rationale": "Extractiveness is LOW (0.28 at interval end) because the constraint benefits all involved seats: the organization maintains its core capacity, personnel internalize professional identity and judgment, and the protected population gains safety. The measurement series shows a slight rise from 0.18 to 0.28 over the 40-year interval, reflecting the mounting opportunity cost of maintaining drills as budget pressures increase and competing operational demands grow. Suppression is VERY LOW (0.12) because the constraint works by voluntary participation and alignment, not coercion—personnel are identity-locked by professional culture, not forced by external threats. Theater is LOW (0.15) and stable because in this reading, drills genuinely test decision-making and failure in a drill is treated as a learning event, not a cover-up. The slight upward drift in both extractiveness and theater reflects budget constraints nudging the organization toward shorter, more-scripted drills and less real-time decision pressure—a slow drift toward the husk_reading, but not yet there. Accessibility_collapse is HIGH (0.92) because once you understand that organizational competence cannot exist without continuous supervised practice, the alternative of 'skip drills, read the manual when crisis comes' collapses as an option. Resistance is VERY LOW (0.08) because no internal seat opposes genuine competence—the constraint's persistence depends on alignment, not on coercion or suppression of dissent.",
+    "perspectival_gap": "The senior cohort and the junior cohort should compute different directionalities from the same constraint, even though both are identity-locked and trained. The senior cohort pays a high direct cost (knowledge-transmission work, opportunity cost of mentoring) and receives the benefit indirectly (organizational resilience, professional reputation). The junior cohort pays through learning pressure and time cost but receives direct identity benefit (becoming competent is how they become part of the organization). The measurement series tracks the aggregate organization, but a per-cohort measurement would show different extraction profiles—seniors bearing more of the transmission burden, juniors absorbing the learning cost earlier in their trajectory. The oversight body sits outside this cost structure and experiences the constraint as pure coordination (no cost to them, clear benefit from maintained capacity). The engine computes these per-seat differences from the stakeholder situation descriptions; the commentary surfaces the structural asymmetry.",
+    "directionality_logic": "The organization and protected population are structural beneficiaries (d near 0.0-0.2): they collect the core benefit of maintained competence without bearing the primary cost of knowledge transfer. Trained personnel—especially the senior cohort—are partial targets and partial beneficiaries (d near 0.4-0.6): they pay through time and attention cost but benefit through professional identity and organizational resilience. The junior cohort is shifted toward the target end (d near 0.5-0.7) because they absorb the learning pressure and cannot opt out without identity dissolution. Neighboring agencies are either excluded (d undefined) or included (d shifts them toward beneficiary if they gain compatible competence). No directionality override is needed—the structural derivation captures the asymmetry from beneficiary/victim declarations and exit_options.",
+    "mandatrophy_analysis": "This reading is explicitly ANTI-mandatrophy: the founding problem (generational knowledge transfer in high-reliability organizations) remains live, the constraint solves it actively, and the organization maintains it because it is essential to its core function. There is no zombie state here—if drills stopped, competence would decay measurably within a single deployment cycle. The slight upward drift in extractiveness reflects NOT mandatrophy but rather budget pressure introducing small compromises (shorter drills, more scripting, less real-time pressure). The constraint would cross into mandatrophy territory only if the organization began maintaining drills DESPITE competence decay—if after-action reviews showed failures but the drills continued unchanged. That shift would be the husk_reading. The competence_reading explicitly assumes competence is maintained and drills remain genuinely corrective.",
+    "kernel_context": "This constraint instantiates the 'competence_reading' of the 'preparedness_commitment' kernel. The kernel is the institutionalized practice of routine exercises meant to maintain disaster-response capacity. The reading declares: preparedness consists of LIVE EXERCISED KNOWLEDGE—drills genuinely test decision-making, competence is embodied in personnel through supervised practice, and generational turnover is absorbed through effective training. Sibling readings: (1) husk_reading—preparedness as memorial performance, drills feel like retention but lack operational competence; (2) hybrid_reading—preparedness as layered system, memorial elements stabilize commitment while competence elements maintain function. The three readings differ structurally: competence_reading has low extraction and high adaptive capacity; husk_reading has similar or higher extraction but zero adaptive capacity; hybrid_reading has moderate extraction and variable adaptive capacity depending on which layer is active. The competence_reading's core premise is that DRILLS TEST REAL DECISION-MAKING. If that premise is false (drills are scripted, failures are hidden, learning does not happen), the reading collapses into the husk_reading. The husk_reading's core premise is that COMPETENCE IS THEATER. The two premises are contradictory—they cannot coexist in a single organization at the same time for the same drills. This is a foreclosure relationship (not coexistence), but it is foreclosure AT THE ORGANIZATIONAL LEVEL, not at the kernel level. Different organizations can instantiate different readings simultaneously; within a single organization, a single set of drills embodies one reading or the other. The hybrid_reading coexists with both: it claims the organization holds BOTH memorial commitment (which the husk_reading emphasizes) AND genuine competence maintenance (which the competence_reading emphasizes), with memorial elements doing the stabilization work and competence elements doing the adaptive work."
+  },
+  "omegas": [
+    {
+      "id": "competence_transmission_mechanism",
+      "question": "Is the embodied tacit competence in senior personnel actually transmitting to juniors through drill participation, or are juniors learning to follow procedures without developing the judgment that matters in novel situations?",
+      "resolution_mechanism": "Compare performance data from junior personnel in actual crisis deployments before and after they have participated in a full drill cycle. If drill participation predicts better decision-making under pressure, transmission is happening; if drill participation predicts procedure compliance without adaptive judgment, transmission is failing.",
+      "impact": "If transmission is failing, the constraint is drifting toward the husk_reading despite apparent adherence to drill routines. The organization would need to restructure drills to create higher-stakes decision pressure and real-time error correction, not compliance checking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drills actually transmit judgment or only procedure."
+    },
+    {
+      "id": "generational_cohort_alignment",
+      "question": "As generations replace one another, do incoming cohorts share the same implicit understanding of WHY drills matter and HOW they connect to real operational competence, or do new cohorts inherit only the FORM of the drills without the epistemological commitment?",
+      "resolution_mechanism": "Interview and cognitive task data from personnel at multiple career stages about their understanding of drill purpose and their confidence in their own decision-making capability. Structural interviews asking senior, mid-career, and junior personnel to explain drill design rationale and failure modes.",
+      "impact": "If generational alignment is breaking, the constraint is drifting toward husk_reading through a failure of cultural transmission, not formal procedure. The organization would need to invest in explicit teaching about drill purpose and decision rationale, not just procedure rehearsal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the competence commitment survives generational turnover."
+    },
+    {
+      "id": "crisis_pressure_versus_drill_pressure",
+      "question": "Are drills creating sufficient decision pressure to maintain judgment competence, or is real crisis pressure so much higher that personnel trained only in lower-pressure drills collapse under actual deployment conditions?",
+      "resolution_mechanism": "Comparison of performance on decision tasks under simulated-crisis pressure (high time pressure, incomplete information, consequence awareness) versus routine drill pressure. Stress physiology and cognitive function data during high-pressure simulation drills versus routine drills.",
+      "impact": "If drill pressure is insufficient, the constraint is failing at its core function: competence is not being maintained. The organization would need to escalate the realism and pressure in drills to authentic crisis levels, risking equipment damage and personnel stress but gaining genuine competence validation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether drill conditions adequately test crisis-response competence."
+    },
+    {
+      "id": "readings_as_competing_framings",
+      "question": "Are the competence_reading and husk_reading fundamentally incompatible readings of the same kernel, or are they describing different PHASES of a single constraint's evolution (i.e., does every preparedness commitment start as competence_reading and gradually decay into husk_reading under budget pressure)?",
+      "resolution_mechanism": "Longitudinal case study of a single organization's drills over multiple generational cycles. Track whether competence metrics (decision-making quality, after-action learning, personnel confidence) decline over time while drill infrastructure remains formally constant. Track whether theater_ratio rises while base_extractiveness remains low (the drift signature).",
+      "impact": "If the readings describe phases of decay, the boundary between them is not a logical foreclosure but a temporal threshold. Mandatrophy would be the husk_reading entering a terminal phase where theater persists despite zero competence. Policy interventions would aim to detect and arrest the decay before the threshold, not to prevent transition between readings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether readings are incompatible structures or phases of constraint evolution."
+    },
+    {
+      "id": "neighboring_agency_integration",
+      "question": "Does integrating neighboring agencies into the preparedness commitment improve inter-agency competence and coordination, or does it create an implicit hierarchy where one organization's drills dominate and others become followers rather than full participants?",
+      "resolution_mechanism": "Compare inter-agency coordination performance in disaster response between agencies that have jointly trained and exercised versus agencies that have trained separately. Measure whether excluded agencies report confidence in their ability to coordinate with the lead organization.",
+      "impact": "If integration improves coordination, the constraint's scope should be expanded to include neighboring agencies explicitly. If integration creates hierarchy, the constraint splits into multiple readings per organization (some agencies experience rope, others experience snare). The excluded status of neighboring agencies is a stability risk: their autonomy is constrained but their competence is not guaranteed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preparedness commitment can be shared across organizational boundaries."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_commitment__husk_reading",
+      "preparedness_commitment__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_commitment kernel has three structurally distinct readings. The competence_reading treats preparedness as live exercised knowledge—drills genuinely test decision-making and competence is maintained adaptively. The husk_reading treats preparedness as memorial performance—drills persist in form while competence decays. The hybrid_reading treats preparedness as layered—memorial elements stabilize the institutional commitment while competence elements maintain operational function. All three readings share the same foundational kernel (routine exercises meant to maintain capacity) but instantiate different structural relationships between form and function, ritual and competence, stability and adaptation. The three readings have different ε values: competence_reading has low extractiveness (0.28) because the constraint solves the actual founding problem; husk_reading has high extractiveness (approaching 0.6+) because the constraint persists as theater while competence fails; hybrid_reading has moderate extractiveness (0.35-0.45) because memorial and competence functions coexist but create friction. Each reading is a separate constraint story with its own beneficiary/victim structure, measurements, and omegas. The network links all three stories together so that cross-reading analysis can track institutional drift and reading transitions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_commitment__husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_commitment__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drills_test_real_decision_making",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_embodied_in_personnel",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "practice_based_knowledge_transmission",
+    "drift_state": {
+      "moment": "contemporary_budget_constrained",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "operational_organization",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

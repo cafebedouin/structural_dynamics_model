@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "substance_control_legitimacy__prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_substance_control_legitimacy__prohibition_reading",
+    "measurement_id_prefix": "substance_prohibition",
+    "story_uid": "b36c32ef-67a6-4f44-b6ab-5e9f9acdc70d"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.88,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.69,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substance Prohibition via Criminalization (Duty to Prevent Harm Reading)",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_public_health_apparatus",
+      "enforcement_agencies",
+      "abstinence_norm_maintainers"
+    ],
+    "victims": [
+      "substance_users",
+      "low_income_communities",
+      "families_of_incarcerated"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "inherent_harm_doctrine_empirical_status",
+      "question": "Is substance use inherently and universally harmful, or does harm depend on set, setting, dose, and regulatory context?",
+      "resolution_mechanism": "Comparative public health analysis across decriminalized/medicalized jurisdictions (Portugal, Switzerland, Canada) versus criminalized ones, controlling for socioeconomic factors. Epidemiological data on substance-use outcomes under harm reduction versus criminalization.",
+      "impact": "If harm is context-dependent and criminalization amplifies it (via black-market violence, delayed treatment-seeking, incarceration health burden), the axiom 'inherent harm doctrine' loses epistemic grounding and the reading's legitimacy claim weakens. If harm is inherent regardless of context, the prohibition framing gains support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether harm is an intrinsic property of substance use or contingent on policy environment."
+    },
+    {
+      "id": "carceral_extraction_vs_coordination_function",
+      "question": "To what extent is the measured extraction (0.81) the necessary cost of coordination (preventing disorder), versus excess rent-seeking by enforcement institutions?",
+      "resolution_mechanism": "Cost-benefit analysis comparing criminalization regime's total social cost (incarceration, healthcare, violence, family disruption, lost productivity) against harm-reduction regime's costs in comparable jurisdictions. Audits of enforcement agency budgets and allocation patterns (drug enforcement versus violent crime).",
+      "impact": "A low cost-benefit ratio for criminalization would establish the constraint as primarily extractive (victims include the drug-using population itself). A high ratio would support the coordination framing. Current evidence from public health literature suggests the ratio is highly negative (criminalization costs exceed benefits), but the framing suppresses this analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carceral burden is justified coordination cost or institutional rent-seeking."
+    },
+    {
+      "id": "identity_lock_mechanism_substance_users",
+      "question": "For substance users with identity_locked exit, is the lock driven by physiological dependence, psychological identity fusion, social exclusion preventing reintegration, or some combination?",
+      "resolution_mechanism": "Longitudinal tracking of users post-decriminalization/treatment access to observe whether identity-lock persists after structural barriers are removed. Qualitative interviews with users on self-concept and reintegration pathways.",
+      "impact": "If lock is primarily structural (criminal records, social exclusion, lack of treatment access), opening those barriers should enable exit and reclassify the constraint's seat-wise impact. If lock is primarily psychological identity fusion cultivated by years of exclusion, exit remains blocked even after structural barriers shift — suggesting the constraint's suppression effect is internalized.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Suppression mechanism for substance users: structural, internalized, or both."
+    },
+    {
+      "id": "reading_contingency_state_moral_authority",
+      "question": "Does state authority to criminalize substance use derive legitimately from 'moral duty to prevent harm,' or is that framing a post-hoc justification for state monopoly on supply and enforcement budget capture?",
+      "resolution_mechanism": "Historical analysis of prohibition origins (1930s US context: alcohol prohibition preceded drug prohibition; both driven by institutional interests in enforcement power, not purely health reasoning). Comparative institutional analysis: which jurisdictions frame drug policy as health issue versus enforcement issue, and what outcomes result?",
+      "impact": "If the moral-duty framing is secondary to institutional interests, the reading loses axiom grounding; the constraint becomes pure institutional extraction wearing a health-protection costume. This reading would shift classification or trigger false-summit detection if beneficiaries are named (which they are).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether prohibition reading's legitimacy claim is primary or secondary to enforcement institution interests."
+    },
+    {
+      "id": "sibling_reading_foreclosure_test",
+      "question": "Can a single institutional framework hold BOTH the prohibition reading (inherent harm justifies criminalization) and the harm-reduction reading (state duty is to minimize harm, not criminalize)?",
+      "resolution_mechanism": "Policy analysis of jurisdictions attempting hybrid approaches (decriminalized possession + criminalized trafficking). Doctrinal analysis of legal theory: does accepting 'duty to minimize harm' logically require rejecting 'duty to prevent through criminalization'?",
+      "impact": "If the two readings logically foreclose each other (one framework cannot hold both as live options), the relationship should be 'forecloses.' If different parties can legitimately hold each within their own institutional commitments (e.g., conservative law-and-order frameworks versus progressive health frameworks), the relationship is 'coexists_with.' Current evidence suggests institutional coexistence with deep conflict over which reading governs policy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between prohibition reading and harm-reduction reading in policy space."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the prohibition reading of the substance-control-legitimacy kernel: the claim that substance use is inherently harmful and state authority derives from moral duty to prevent harm through criminalization. This is ONE reading of a three-way contested kernel. The sibling readings are harm_reduction_reading (substance use is a health issue; state duty is to minimize harm without criminalization) and legalization_reading (competent adults have autonomy; state limited to third-party harm prevention). The structural difference is sharp: prohibition reading places users in the victim set via criminalization and generates high carceral extractiveness; harm-reduction reading places users in a beneficiary set (through access to treatment and health services) with lower extraction; legalization reading places users in a beneficiary set (through autonomy) with extraction limited to third-party harm. This story focuses ONLY on the prohibition reading's structure, metrics, and axioms. The other readings are separate constraint stories.",
+    "key_agents": [
+      "state_enforcement_apparatus (institutional, arbitrage exit) — sets criminalization policy, administers courts and prisons, benefits from enforcement legitimacy and budget",
+      "substance_users (powerless, identity_locked exit) — subject to criminal penalties, criminalization creates barriers to treatment, identity fusion from years of exclusion",
+      "low_income_communities (powerless, trapped exit) — bear concentrated policing and incarceration burden, limited access to private treatment alternatives",
+      "law_enforcement_organizations (organized, arbitrage exit) — receive enforcement budget and authority from drug criminalization, measure success via arrest/incarceration counts",
+      "private_treatment_industry (powerful, arbitrage exit) — high-cost treatment models thrive under criminalization as mandatory punishment pathway",
+      "harm_reduction_advocates (excluded, powerful) — would argue for decriminalization and health-first approaches but are systematically barred from policy-making",
+      "public_health_researchers (observer, analytical) — document that criminalization amplifies harms (disease, delayed treatment, violence) beyond the use itself"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.58 to 0.81 over the interval, tracking the intensification of carceral infrastructure (three-strikes laws, mandatory minimums, expanded enforcement budgets). Suppression requirement rises from 0.72 to 0.88, indicating that persistence of the constraint increasingly depends on active enforcement (rising policing budget, expanded surveillance, stricter penalties) rather than on voluntary compliance or perceived legitimacy. Theater ratio rises from 0.24 to 0.42, tracking the growing share of enforcement activity devoted to possession and low-level offenses (performative enforcement maintaining the prohibition frame) versus violent crime response. These rising trajectories indicate a constraint whose initial coordination function (preventing disorder) has degraded and whose persistence now depends heavily on institutional rent-seeking and identity-lock suppression rather than genuine coordination benefit. The shared time grid ensures every metric is authored at each time point for consistency.",
+    "perspectival_gap": "The state apparatus seat (agenda_setter, institutional power, arbitrage exit) experiences the constraint as legitimate coordination protecting public health; from this seat the extraction appears justified by the social order maintained. The substance-user seat (powerless, identity_locked exit) experiences the same constraint as criminal victimization in which the 'inherent harm' framing obscures institutional extraction and black-market violence externality; criminalization creates barriers to health treatment and social reintegration. Low-income communities sit in a structural trap: enforcement is concentrated in their neighborhoods, outcomes are worse (longer sentences, lower treatment access), and they lack resources to challenge or exit the constraint. The engine computes this divergence from directionality data: agenda_setter with arbitrage exit sits near d=0.0 (beneficiary); powerless with identity_locked exit sits near d=1.0 (full target). This asymmetry is the seat-divergence the six-questions interview captures.",
+    "directionality_logic": "Beneficiaries are the state apparatus (receives enforcement authority and legitimacy), law enforcement organizations (receive enforcement budget and measurable success metrics), and abstinence-advocacy organizations (receive institutional platform and funding). All three are named in base_properties.beneficiaries[]. Victims are substance users (criminalization creates barriers to health, generates incarceration trauma, triggers identity fusion), low-income communities (concentrated enforcement burden), and families of incarcerated (income/childcare/housing loss). The black-market organizations are technically payers (they pay enforcement costs and violence costs to maintain the constraint) but are themselves creatures of the constraint — they would not exist in their current form without criminalization creating supply scarcity. The directionality chain flows from these beneficiary/victim declarations: beneficiaries derive d near 0.0 (low effective extraction), victims derive d near 1.0 (high effective extraction). The engine scales this per-scope (national scope makes enforcement harder to verify, scaling extraction modestly upward). Identity_locked exit is the critical suppression mechanism for substance users: they cannot simply choose to leave the constraint's jurisdiction; they must undergo identity transformation (ceasing use entirely) or carry the criminal record through exit.",
+    "mandatrophy_analysis": "The constraint is classified as tangled_rope (not snare) because it carries a genuine coordination function — the founding problem (preventing social disorder from unregulated substance use) was real at the founding moment. The tangled_rope classification captures that the constraint solves a real coordination problem (unified moral/legal standard across institutions) while simultaneously extracting from those it criminalizes. The high suppression and rising theater_ratio suggest the coordination function has degraded (enforcement is increasingly performative, low-level), but the classification stands because the coordinating infrastructure (criminal law, courts, enforcement agencies) was genuinely built for the coordination function and still serves it partially. If the founding_problem_status is contested (which it is: enforcement agencies say it's live, public health says it's been solved or was misdiagnosed), the constraint becomes a mandatrophy candidate — the founding problem is no longer widely believed to justify the arrangement, yet the arrangement persists due to institutional inertia and rent-seeking. The measurement series showing rising extraction and suppression supports the mandatrophy hypothesis: the arrangement persists not because the founding coordination problem requires it, but because institutions built around it now extract rents and defend their own legitimacy. However, the classification remains tangled_rope because the coordination machinery itself is still operational and partially justified by some stakeholders (enforcement apparatus, abstinence organizations).",
+    "kernel_context": "This constraint is a kernel reading. The kernel is 'substance_control_legitimacy' — the fundamental question of what justifies state authority over substance use. Three readings are in contest: (1) PROHIBITION READING (this story): substance use is inherently harmful; state authority derives from moral duty to prevent harm through criminalization. (2) HARM_REDUCTION_READING: substance use is a public health issue; state authority derives from duty to minimize harm without criminalization. (3) LEGALIZATION_READING: competent adults have autonomy over substance use; state authority is limited to preventing third-party harm. The prohibition reading generates high carceral extractiveness (users enter victim set); the harm-reduction reading generates lower extractiveness (users enter beneficiary set through treatment access); the legalization reading generates lowest extractiveness (users in beneficiary set through autonomy, state action limited to externalities). Each reading instantiates a different constraint with different beneficiary/victim structures and ε values. This story isolates the prohibition reading's structure and axioms."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_legitimacy__harm_reduction_reading",
+      "substance_control_legitimacy__legalization_reading",
+      "black_market_violence_externality",
+      "incarceration_health_burden"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the substance_control_legitimacy kernel. The harm_reduction_reading and legalization_reading are sibling constraints in the same kernel family. The prohibition reading foreecloses or coexists with siblings depending on institutional framework. The black_market_violence_externality and incarceration_health_burden constraints are downstream consequences of this reading's instantiation — if prohibition reading dominates policy, those downstream constraints become active. The three kernel readings form a constraint family where each reading produces different downstream effects and different ε values for the same nominal phenomenon."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "moral_prohibition_duty",
+    "drift_state": {
+      "moment": "contemporary_public_health_contestation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "substance_control_legitimacy__harm_reduction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "substance_control_legitimacy__legalization_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "inherent_harm_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_moral_duty_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

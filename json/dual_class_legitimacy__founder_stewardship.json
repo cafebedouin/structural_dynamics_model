@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__founder_stewardship",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "44aa9eda-93e0-4277-aa58-d70765e5e2de"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.31,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.67,
+    "claimed_type": "rope",
+    "human_readable": "Dual-Class Share Structure as Founder Stewardship Coordination",
+    "topic_domain": "corporate_governance/securities_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founder_group",
+      "minority_shareholders_via_mission"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A founder retains concentrated voting control through dual-class shares while minority shareholders hold economic interest proportional to capital deployed. The founder's reading frames this structure as fiduciary stewardship: concentrated control enables long-horizon mission execution insulated from quarterly pressure and activist campaigns. Minority shareholders are said to benefit via superior long-term returns and mission preservation that capital-proportional governance would erode. This constraint instantiates ONE READING of the contested dual-class legitimacy kernel; sibling readings (minority_extraction and disclosure_consent) assert different structural claims about the same control arrangement. This story models the founder stewardship reading independently, with its own ε, its own stakeholder structure, and its own classification.",
+    "key_agents": [
+      "founder_group: Agenda-setter (controls voting). Identity-locked to the mission; exit from control is exit from enterprise.",
+      "minority_shareholders_via_mission: Organized beneficiaries (benefit from mission fidelity). Mobile exit (can sell, cannot vote). Benefit is contingent on founder's stewardship performance.",
+      "institutional_investors: Powerful payers (hold significant Class B, press for governance rights). Can exit through secondary markets or proxy contestation.",
+      "public_debt_holders: Moderate payers (bear credit risk from founder agency decisions). Constrained exit (duration of debt term).",
+      "competing_activist_shareholders: Excluded (barred by control structure). Would contest if power were proportional to capital.",
+      "securities_regulators: Analytical observers. Oversee disclosure; defer to state law on control; can enforce fiduciary duty after the fact."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end, rising from 0.25) because the founder retains exclusive voting control while Class B shareholders bear capital risk without governance voice. This is extraction in the sense that control allocation diverges from capital allocation, yet it is moderated by (1) the founder's identity lock to the mission (alignment through reputation risk), (2) minority shareholders' ability to exit via secondary markets if stewardship fails, and (3) documented cases where founder stewardship delivers superior long-term returns. The measurement series show rising extractiveness as time progresses — as activist pressure mounts and founder must suppress alternative governance proposals — and rising theater ratio as the founder emphasizes mission rhetoric to justify control. Suppression remains lower than extraction because the constraint's persistence depends less on coercion than on founder's actual mission performance and minority shareholders' voluntary continuation of the investment. The shared time grid ensures every metric is authored at every examined time point.",
+    "perspectival_gap": "The founder and the minority-shareholder seats should compute differently. From the founder's seat, control is a coordination mechanism protecting mission execution — the constraint serves all shareholders by insulating strategy from short-term pressure. From the minority-shareholder seat, the same structure is a control premium they pay, whose justification depends entirely on founder delivering the promised returns. From the activist-investor seat (excluded), dual-class is a governance barrier extracting value from capital without voice. The engine computes these seat-specific types from the structural data; the authored claim does not adjudicate which reading is correct.",
+    "directionality_logic": "The founder is the primary beneficiary (controls the rules, sets strategy, retains upside from mission success — d near 0.0). Minority shareholders sit near symmetric (benefit from mission execution, bear capital risk, lack voting voice — d near 0.5, with a pull toward 1.0 due to the voting exclusion). Institutional investors are constrained payers (press for governance rights they cannot obtain — d near 0.65). Debt holders are moderate payers (bear agency risk from founder decisions — d near 0.55). Activist shareholders are excluded targets (barred from contesting — d near 0.9). These directionalities derive from the declared beneficiary/victim structure and exit options; no overrides are needed.",
+    "mandatrophy_analysis": "The founding problem (founder protection against hostile takeover and activist pressure on mission) was real and live at inception. The constraint's persistence depends on whether the founding problem remains live or has been substantially solved. The founder and board claim it remains live; competing shareholders claim it is substantially dead (markets are more patient, indexed investing dominates, founder control persists as private benefit extraction). The measurement series on rising extractiveness coupled with rising theater ratio suggests the constraint's justification is drifting — if founder performance were clearly superior, rising activism would be less visible. This is the classic mandatrophy signature: founding problem status contested, constraint persists, rhetoric amplifies.",
+    "kernel_context": "This constraint is ONE READING of the contested dual_class_legitimacy kernel. The kernel is the persisting control arrangement (concentrated founder voting through dual-class shares). This reading (founder_stewardship) instantiates the founder's legitimacy claim: control serves all shareholders via long-horizon mission execution. Sibling readings: minority_extraction (minority shareholders entitled to proportional governance voice) and disclosure_consent (legitimacy rests on Securities Act disclosure, not on control structure itself). These are NOT variations of one claim; they are structurally distinct claims about the SAME control arrangement, held by different parties, with different ε values and different beneficiary/victim structures. Each is compiled as a separate constraint story, linked by network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "founder_stewardship_performance_vindication",
+      "question": "Does founder stewardship empirically deliver superior long-term returns relative to peer companies with capital-proportional governance?",
+      "resolution_mechanism": "Long-horizon return analysis comparing dual-class founder-controlled firms to single-class and conventional institutional-governed peers, adjusted for risk, sector, and scale. Require 15+ year time horizons to capture long-term mission execution.",
+      "impact": "If founder-controlled firms significantly outperform, stewardship justification is vindicated and extractiveness may be reclassified as justified coordination cost. If performance is equivalent or worse, stewardship claim is revealed as false summit and constraint reclassifies toward snare (control without demonstrated benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical vindication of the founder stewardship performance claim."
+    },
+    {
+      "id": "mission_drift_vs_mission_fidelity",
+      "question": "Does concentrated founder control actually protect the declared mission, or does it enable mission drift according to the founder's personal preferences?",
+      "resolution_mechanism": "Longitudinal analysis of strategic decisions against founding mission statement; comparison of mission-aligned investment vs. personal-preference-aligned investment; post-succession analysis of whether successor founders maintain or diverge from original mission.",
+      "impact": "If mission fidelity is demonstrably high, the coordination function is real and extractiveness is justified. If mission drift is substantial (founder interprets mission according to personal preference, not stakeholder preference), control is revealed as private benefit extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founder control actually protects stated mission or enables personal drift."
+    },
+    {
+      "id": "identity_lock_permanence_and_succession",
+      "question": "Is founder identity-lock to the mission permanent, or does it dissolve upon founder succession? If successor is a non-founder manager or second-generation heir, do they retain the stewardship justification?",
+      "resolution_mechanism": "Analysis of post-succession control structure and performance. Observation of whether successor founders/managers receive the same deference or face shareholder pressure to convert to single-class structure.",
+      "impact": "If identity-lock is permanent (successors retain control under stewardship claim), the reading is sustainable and stewardship is a durable justification. If identity-lock is revealed as personally keyed to the founder (successors face activist pressure), stewardship is shown as a cover story for founder personal control, not a structural claim.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether identity-lock to mission persists beyond the founding generation."
+    },
+    {
+      "id": "reading_foreclosure_vs_coexistence",
+      "question": "Can the founder stewardship reading and the minority extraction reading coexist within the same commitment framework, or does one logically foreclose the other?",
+      "resolution_mechanism": "Legal and fiduciary analysis of whether founder fiduciary duties admit both interpretations (stewardship of mission AND accountability to minority shareholders for fair treatment), or whether the readings assert incompatible premises about the source and scope of founder obligation.",
+      "impact": "If readings coexist, the constraint is genuinely contested and both readings remain live. If one forecloses the other, the foreclosed reading is resolved and the commitment framework clarifies.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the founder stewardship and minority extraction readings are logically compatible within a single fiduciary framework."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__minority_extraction",
+      "dual_class_legitimacy__disclosure_consent"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested dual-class legitimacy kernel. The kernel persists across three structurally distinct readings: founder_stewardship (this constraint), minority_extraction, and disclosure_consent. Each reading has its own ε, its own beneficiary/victim structure, and its own classification. The three stories are linked by network edges showing causal/legitimacy dependence. The upstream reading (founder_stewardship) is most often cited as justification for the control structure; downstream readings contest the justification. Sibling readings instantiate different ε values because they measure different constraints — what gets extracted (mission control vs. governance voice vs. informational parity) differs across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.68
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dual_class_legitimacy__minority_extraction",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dual_class_legitimacy__disclosure_consent",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "founder_fiduciary_duty_override",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "mission_coherence_requires_control_stability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "founder_mission_protected_through_control",
+    "drift_state": {
+      "moment": "contemporary_activist_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "91ef6cdf-7f9d-4409-80b5-edce7d9d3676"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.78,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-of-Life Autonomy Right (Individual Control Reading)",
+    "topic_domain": "medical_ethics/bioethics/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patients_facing_unbearable_suffering"
+    ],
+    "victims": [
+      "patients_denied_choice",
+      "physicians_under_legal_liability"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_vs_capacity_asymmetry",
+      "question": "Does the autonomy reading's reliance on patient competence and informed consent legitimately protect vulnerable populations, or does it exclude patients with cognitive impairment, communication barriers, or diminished decision-making capacity from the very choice it claims to honor?",
+      "resolution_mechanism": "Empirical study of denied-access cases and criteria-setting over time; ethical analysis of competence thresholds and who sets them; follow-up data on whether capacity-exclusion becomes a de facto limitation of the autonomy right to privileged patients.",
+      "impact": "If competence thresholds become overly restrictive or applied unequally, the autonomy reading may be extractive toward vulnerable populations — physicians and regulators gain gatekeeping authority while claiming to serve autonomy. If thresholds remain permissive with strong support structures, the coordination function is genuine.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether autonomy criteria exclude or include the most vulnerable."
+    },
+    {
+      "id": "suffering_definition_drift",
+      "question": "What counts as unbearable suffering eligible for autonomy-based choice? Does the definition remain stable (terminal diagnosis + intractable pain + patient request) or drift to include chronic suffering, psychiatric suffering, or loss of meaning without terminal diagnosis?",
+      "resolution_mechanism": "Longitudinal data on criteria changes in permitting jurisdictions; analysis of case law and regulatory guidance expansion; study of actual vs. stated eligibility over time; comparison across jurisdictions.",
+      "impact": "If suffering definition expands empirically while the constraint claims to remain limited, the slippery-slope reading gains evidence and the autonomy reading becomes a Trojan horse for broader extraction. If definition remains stable, the autonomy reading is a genuine bounded coordination. The slippery_slope_mechanism constraint should register this drift.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The scope creep question: does unbearable suffering expand beyond original boundaries?"
+    },
+    {
+      "id": "disability_coercion_ambiguity",
+      "question": "When a disabled person declines the autonomy right and chooses to live with their condition, does the socially-available autonomy to die (even if rejected) change their felt agency — making continued life feel like a burden rather than a choice?",
+      "resolution_mechanism": "Qualitative research with disabled populations; longitudinal study of disability-death attitudes before and after autonomy legalization; survey of social pressure and internalized ableism in jurisdictions with and without autonomy rights.",
+      "impact": "If the autonomy right becomes socially normalized as the way to escape disability, disabled people may experience internalized suppression even while formally choosing life. This would make the constraint extractive toward disability while claiming to serve autonomy. If disabled people report no change in felt coercion, the constraint's autonomy promise holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the autonomy right creates or reduces coercive pressure on disabled populations."
+    },
+    {
+      "id": "physician_role_fusion",
+      "question": "Can physicians simultaneously be healers (preserving and extending life) and facilitators of patient-chosen death without role conflict, or does the autonomy reading require a fusion of contradictory missions that physicians absorb as moral distress?",
+      "resolution_mechanism": "Study of physician moral distress, burnout, and professional identity in jurisdictions with and without autonomy rights; interview data on how physicians reconcile healing and death-facilitation; tracking of physician exits from end-of-life care.",
+      "impact": "If physicians experience deep role conflict, the extraction (moral cost) falls on them even though they are structural agenda-setters. If physicians integrate both roles coherently, the coordination function is genuine. High distress would suggest the autonomy reading is tangled rope with physician extraction as the hidden cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the physician role can absorb both healing and death-facilitation without pathological distress."
+    },
+    {
+      "id": "autonomy_sanctity_foreclosure",
+      "question": "Is the autonomy reading (individual choice controls timing of death) logically compatible with the sanctity reading (life has intrinsic value beyond individual preference) within the same legal and ethical framework, or does recognizing autonomy-based choice foreclose the sanctity claim at the level of binding policy?",
+      "resolution_mechanism": "Analysis of jurisdictions that attempt to hold both readings (e.g., permitting autonomy while maintaining symbolic/rhetorical commitment to sanctity); examination of whether sanctity can remain binding at the individual level once autonomy is permitted; philosophical analysis of the logical structure.",
+      "impact": "If the readings foreclose each other, the autonomy reading's adoption structurally defeats sanctity-based objections — sanctity becomes a voice excluded from binding decisions (confirming the exclusion slot). If they coexist (sanctity informs conscientious objection, autonomy informs choice), both readings remain live. The relation type for the cs_structure should reflect this.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether autonomy and sanctity readings can coexist in the same framework."
+    },
+    {
+      "id": "slippery_slope_inevitability",
+      "question": "Does the autonomy reading's legitimacy mechanically require expansion to non-terminal suffering and incompetent populations (slippery slope), or can it remain bounded to competent terminal patients indefinitely?",
+      "resolution_mechanism": "Long-term longitudinal data on criteria expansion in permitting jurisdictions; comparative analysis of jurisdictions that expanded vs. remained stable; causal analysis of what drives expansion (patient demand, physician advocacy, bureaucratic drift, or something else); modeling of the constraint's terminal state.",
+      "impact": "If expansion is inevitable, the slippery_slope_mechanism reading is empirically vindicated and the autonomy reading is a way-station. If expansion is optional and stable boundaries are maintained, the autonomy reading is a genuine stable constraint. This is the core divergence between the two readings' predictions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the autonomy reading tends toward expansion or remains bounded."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The autonomy reading of the end-of-life-authority kernel asserts that individual autonomy grounds the right to control the timing and circumstances of death when facing unbearable suffering. This reading conflicts with the sanctity reading (intrinsic value of life prohibits intentional ending) and is empirically threatened by the slippery-slope reading (autonomy frameworks empirically expand beyond competent terminal cases to incompetent and non-terminal populations). The autonomy reading instantiates a tangled rope: it provides genuine coordination (patient choice, transparent process, reduced covert unmedical dying, physician guidance on suffering management) but also extracts cost. Patients denied choice suffer prolonged dying. Physicians navigate legal liability and moral role conflict. Regulatory bodies gain gatekeeping authority while claiming to serve autonomy. Disability advocates argue the autonomy right conflates disability with unbearable suffering and may coerce disabled people. The constraint's persistence depends on active enforcement: legal prohibition of non-compliant practices, medical licensure tied to guideline adherence, and institutional oversight. The claimed type (tangled rope) and the metrics (moderate-high extraction, high suppression, moderate theater) track together because the coordination function is real (patient agency, suffering reduction) but asymmetric (physicians and regulators decide who is competent and what suffering justifies choice).",
+    "key_agents": [
+      "patients_facing_unbearable_suffering: beneficiary of autonomy right, trapped without it",
+      "patients_denied_choice: victim of suppression, in jurisdictions where autonomy is not recognized",
+      "physicians_administering_end_of_life_care: dual role (beneficiary of coordination, payer of legal/moral liability)",
+      "regulatory_bodies_and_legal_authorities: agenda-setter, administering competence assessment and eligibility criteria",
+      "medical_professional_societies: agenda-setter, gatekeeping through guidelines and competency standards",
+      "religious_and_sanctity_advocates: excluded from veto but actively contesting through legislation",
+      "disability_advocates_and_critics: excluded from clinical decisions but arguing autonomy conflates disability with suffering",
+      "family_members_of_dying_patients: dual role (beneficiary of choice availability, payer of relational costs)"
+    ],
+    "logic_rationale": "Extractiveness climbs from 0.45 to 0.62 over the interval, reflecting the observed expansion of criteria beyond strict terminal diagnosis (captured in the slippery_slope_mechanism constraint). At t0, the constraint is relatively bounded (early implementation, narrow criteria); at t40, data shows expansion toward chronic suffering, psychiatric cases, and non-terminal requests, increasing the extraction cost to those whose suffering does not fit the expanded criteria — the suppression barrier rises to prevent even broader expansion. Suppression remains high (0.78–0.82) throughout because the autonomy reading requires active legal enforcement against sanctity-based prohibition and unmedical alternatives. Theater is low-to-moderate (0.12–0.29) because the functional component (patient choice, suffering assessment, informed consent) is real, but performative elements grow as the constraint expands: more elaborate safeguards, more documentation, more regulation of borderline cases. The measurement series shares a single time grid so every metric can be compared at each point.",
+    "perspectival_gap": "The payer seat (physicians, patients denied choice) and the agenda-setter seat (regulators, professional societies) should compute different types. From the payer view, the constraint operates as enforced suppression and extraction (snare-flavored). From the agenda-setter view, it is genuine coordination they steward and defend (rope-flavored). The engine's per-seat classification computation should reveal this divergence.",
+    "directionality_logic": "Patients facing unbearable suffering benefit most clearly from the autonomy right (d approaches 0.0, beneficiary end). Patients denied choice and facing suppression of the right sit at d approaching 1.0 (victims). Physicians absorb moderate extraction (legal liability, role conflict, moral distress) while also coordinating patients through difficult decisions — their d sits roughly 0.55–0.65 (neither full target nor full beneficiary; the role is dual). Regulatory bodies sit near 0.4 (they benefit from the coordination function and from gatekeeping authority, but also bear oversight burden). Disability advocates sit in a peculiar position: they have no direct agency in the constraint but experience it as coercive pressure — their d would be high (1.0, target) if they were included, but they are explicitly excluded from the autonomy framework, which makes them victims of the constraint's operation even as they have no formal seat. Family members split: they benefit from choice availability (low d) but pay relational costs (elevated d). The directionality_overrides array is not needed because the structural derivation from beneficiary/victim + exit options + power level captures the asymmetry.",
+    "mandatrophy_analysis": "The autonomy reading's founding problem was real: patients facing unbearable suffering lacked transparent, safe pathways for choice. Empirical data from permitting jurisdictions shows the founding problem is substantially addressed — patient choice is now available, covert dying is reduced, and physician guidance is structured. However, the constraint's persistence depends on whether the founding problem remains 'live' or has become 'dead' — and here the committer structure becomes salient. The autonomy reading claims the problem is live (patients still face unbearable suffering) and therefore the constraint remains necessary. The slippery-slope reading argues the problem is now dead in the terminal-competent-patient case (solved through the constraint) but the constraint persists and expands to non-terminal and incompetent populations — this is mandatrophy: the constraint outlives its function and becomes a vehicle for broader extraction (or coercion, from the disability view). The sanctity reading denies the founding problem was legitimate from the start (suffering, even unbearable, does not override life's intrinsic value). These three readings correspond to three different mandatrophy verdicts on the same kernel. The autonomy reading predicts its own constraint is non-mandarophied (problem is live, constraint is necessary); the slippery-slope reading predicts the autonomy reading will undergo mandatrophy (function dies, extraction expands); the sanctity reading predicts the autonomy reading was always illegitimate (foundational problem was misdefined). This triadic structure should be captured in the omegas and cs_structure.reading_relations.",
+    "kernel_context": "This constraint is one reading of the contested kernel end_of_life_authority. The reading instantiates: individual autonomy grounds the right to control circumstances and timing of death when facing unbearable suffering. Sibling readings are sanctity_reading (intrinsic value of human life prohibits intentional life-ending) and slippery_slope_mechanism (autonomy frameworks empirically expand beyond terminal competent cases). The three readings have mutually exclusive core premises: autonomy reading centers the individual's choice; sanctity reading centers life's intrinsic value; slippery-slope reading centers empirical outcomes (expansion beyond stated boundaries). The autonomy reading forecloses the sanctity reading at the level of binding policy (if autonomy is recognized, sanctity objections cannot veto individual choice — though they may inform conscientious objection). The autonomy reading coexists with the slippery-slope reading in the sense that both can be held as predictions about the same constraint (one optimistic, one pessimistic). The slippery-slope reading influences the autonomy reading by creating institutional pressure to expand criteria (if the problem is unbearable suffering generally, why limit to terminal diagnosis?). The authority structure that grounds this kernel is lineage (rooted in Enlightenment autonomy ethics and modern bioethics) with extraction undercurrents (institutional actors benefit from gatekeeping while claiming to serve autonomy). The reference frame is the dignity and self-determination of competent patients facing terminal suffering; the drift state is the observed expansion toward non-terminal and non-competent cases, which the sanctity reading interprets as foreclosure and the slippery-slope reading predicts will accelerate."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__slippery_slope_mechanism"
+    ],
+    "dual_formulation_note": "The end_of_life_authority kernel decomposes into three structurally distinct constraints, each instantiating a different reading with different epsilon values and victim sets. The autonomy_reading centers individual choice and faces expansion pressure (victim set grows over time as criteria drift). The sanctity_reading centers intrinsic life-value and resists autonomy recognition (victims are patients whose autonomy claims are denied). The slippery_slope_mechanism readings traces the empirical fate: does autonomy expand beyond stated boundaries? All three readings must be authored as separate constraints linked by network.affects_constraints because their epsilon values and beneficiary/victim structures differ. The autonomy reading influences both siblings: it creates the institutional framework that the sanctity reading opposes and that the slippery-slope mechanism predicts will expand."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "autonomy_and_dignity_of_competent_terminal_patients",
+    "drift_state": {
+      "moment": "contemporary_expanded_criteria_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_authority__sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "end_of_life_authority__slippery_slope_mechanism",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_autonomy_overrides_life_preservation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "competence_determines_eligibility",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

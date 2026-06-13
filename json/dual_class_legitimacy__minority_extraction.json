@@ -1,0 +1,257 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__minority_extraction",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e3a3f97b-bf60-49c3-81bb-dd00be663cf0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual-Class Share Structure: Minority Governance Extraction",
+    "topic_domain": "corporate_governance/securities_law/organizational_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founder_control_group"
+    ],
+    "victims": [
+      "minority_public_shareholders",
+      "institutional_investors"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Dual-class share structures with super-voting founder shares create a constitutional asymmetry: minority public shareholders contribute capital and bear economic risk proportional to their investment, but hold zero governance control over how that capital is deployed and how strategic risk is managed. This constraint story instantiates the MINORITY EXTRACTION READING of the dual-class legitimacy kernel — the claim that governance voice should be proportional to capital and risk contribution, and that dual-class structures systematically violate this proportionality in order to extract governance rents to the founder. This reading competes with two siblings: the founder_stewardship reading (concentrated control serves all shareholders by enabling long-horizon execution) and the disclosure_consent reading (legitimacy rests on informed consent, not control parity). The minority_extraction reading asserts that the transfer of governance value is structurally extractive regardless of disclosure adequacy or founder intention.",
+    "key_agents": [
+      "founder_control_group: institutional power, agenda-setter, collects governance rents and holds unilateral decision authority.",
+      "minority_public_shareholders: organized power, payers, bear full economic risk with zero governance voice.",
+      "institutional_investors: powerful, payers, structurally barred from effective oversight and locked into passive capital provision.",
+      "stock_exchange_operators: institutional, agenda-setters, benefit from listing fees and dual-class structures that attract founder-led IPOs.",
+      "securities_regulators: institutional, observers, maintain permissive disclosure-based legitimation framework."
+    ],
+    "logic_rationale": "Extractiveness is measured as governance-value transfer per unit capital at risk. At IPO (t=0), the dual-class structure transfers 48% of potential governance value from public shareholders to founder; this proportion grows as the company matures and strategic decisions accumulate (the founder exercises control on acquisitions, divestitures, compensation policy, related-party transactions). By t=25, extractiveness reaches 68% — the governance value transfer has deepened and solidified. Suppression is high (0.72) because the constraint's persistence depends on actively suppressing governance alternatives: minority shareholders cannot force conversion to one-share-one-vote, cannot remove the founder, cannot demand related-party transaction approval. They can only exit by selling their shares, which exits them from the constraint entirely (mobile, not trapped, because the exit is always available). Theater_ratio rises from 22% to 41% as independent board oversight mechanisms (audit committees, governance committees) are formalized but their actual constraining power over founder decisions remains minimal — the theater of governance grows while substantive minority voice shrinks. Accessibility_collapse (0.58) reflects that once the dual-class structure is disclosed and understood, minority shareholders' alternatives collapse: they can hold the shares, sell them, or exit the public market entirely, but they cannot access governance voice within the framework. Resistance (0.64) is moderate-high because institutional investors have begun filing shareholder proposals and governance activists periodically challenge dual-class structures, but the resistance is non-binding (advisory votes, regulatory pressure without mandatory rules) and founders routinely ignore it.",
+    "perspectival_gap": "The founder and the minority shareholders compute radically different constraint types from the same structural facts. From the founder's seat, dual-class is rope — genuine coordination on long-term strategy, disclosure-compliant, and value-creating for all shareholders (the founder's perception is that minority shareholders benefit from long-horizon execution). From the minority-shareholder seat, it is snare — governance extraction dressed as mission protection, with no exit except abandonment of the investment. The engine computes per-seat: from the founder's institutional power and arbitrage exit, directionality approaches full beneficiary (d near 0.0, negative extraction). From the minority-shareholder organized power with constrained exit (cannot exit without exiting the investment entirely), directionality approaches target (d near 0.8–0.9, high effective extraction). The single authored claim (tangled_rope) and metrics sit between: it is genuinely extractive (snare-adjacent), but it possesses a real coordination function (founder-stewardship is not a pure fiction), hence tangled.",
+    "directionality_logic": "Founder control group: beneficiary seat, directionality d ≈ 0.1 (full beneficiary). They set the rules, collect the governance value, and face no downside for bad decisions (founder reputational damage is real but weaker than the governance upside). Power=institutional, exit=arbitrage, beneficiary status all drive d toward 0.0. Minority public shareholders: target seat, directionality d ≈ 0.82 (near-full target). They contribute capital, bear risk proportional to investment, exercise zero governance voice, and cannot opt out without exiting the investment entirely. Power=organized (collective action is possible but constrained by collective-action problems), exit=constrained (can sell but not to a better governance frame), victim status (governance value extracted) all drive d toward 1.0. Institutional investors: target-adjacent, directionality d ≈ 0.75. They are institutionally powerful but identity-locked to passive capital provision (fiduciary duty to their own beneficiaries constrains active governance intervention). They can exit more easily than retail shareholders but face portfolio-level pressure to hold winners even under dual-class. The identity_locked exit_options modulates d downward from pure target, but not by much because they are still structurally barred from effective voice. Stock exchange operators: beneficiary-adjacent, directionality d ≈ 0.25. They benefit from founder-led IPOs (trading volume, prestige) and face competitive pressure from permissive exchanges. They are not victims (they collect listing fees), but they are not full beneficiaries either (they do not control whether companies adopt dual-class, only whether they list; the founder controls the actual adoption). No overrides are needed — the derivation chain produces defensible per-seat d values from the structural data.",
+    "mandatrophy_analysis": "This constraint appears to suffer from mandatrophy: the founding problem (protection from short-termist pressure during critical execution) was historically live (1990s–2010s when activist pressure on tech founders was rising) but is increasingly contested. The founding_problem_status is CONTESTED because: (1) empirical research does not show that dual-class structures systematically outperform one-share-one-vote structures long-term (Gompers et al., Tobin & others find mixed-to-negative effects on return on equity and ROA); (2) activist pressure on tech founders is not the primary failure mode observed (related-party transactions and founder entrenchment produce more losses than activist intervention prevents); (3) the problem statement itself ('founders need protection from short-termism') is no longer widely accepted outside founder and board circles — it is a proposition vindicated by founder assertion, not by corroboration from institutional investors or governance researchers. Yet the constraint persists with rising theater_ratio (independent governance structures, shareholder advisory votes, ESG criteria on dual-class) that maintain the appearance of governance without transferring voice. The persistence despite mandatrophy is sustained by: (1) extractiveness accumulation — as companies mature, strategic decisions compound (related-party transactions, strategic pivots) and founder extraction increases; (2) suppression intensification — rules restricting dual-class adoption (SEC proposals, NYSE/NASDAQ tightening on new listings) have been weakened or blocked, so the enforcement machinery to maintain dual-class has hardened; (3) theater expansion — governance theater (independent committees, advisory votes) creates the appearance of accountability without substance, masking the extraction beneath procedural legitimacy. The mismatch between founding problem (status=contested, disappearance_verdict=world_rearranges) signals mandatrophy: if the problem disappeared, the constraint should also disappear, but it is persisting and intensifying despite the problem's obsolescence. This is the classic Piton-adjacent pattern, except the constraint is classified as Tangled Rope because extraction is not yet fully theatricalized — there is still real founder stewardship and real coordination value, so it is not purely inertial. As the founding problem dies, the constraint may migrate toward Piton.",
+    "kernel_context": "This constraint instantiates the MINORITY EXTRACTION reading of the dual-class legitimacy kernel. The kernel is the persistent commitment that some entities (typically founders or controlling families) have the right to retain unilateral control despite public capital contribution. Three readings contest how to legitimate this commitment: (1) DISCLOSURE_CONSENT: Legitimacy rests on Securities Act disclosure and investor consent (informed choice to invest despite governance asymmetry); (2) FOUNDER_STEWARDSHIP: Concentrated founder control is legitimate because it serves all shareholders by enabling long-horizon mission execution and protecting from short-termist interference; (3) MINORITY_EXTRACTION (this reading): Governance voice should be proportional to capital and risk contribution, and dual-class structures systematically violate this proportionality in order to transfer governance rents to the founder. The three readings generate different structurally-distinct constraints because they instantiate different measurement bases for legitimacy and different ε values: disclosure_consent produces a constraint with lower ε (informed consent is treated as adequate legitimation regardless of governance asymmetry) while founder_stewardship produces an even lower ε (founder control is a net positive for all seats). This reading, minority_extraction, produces a higher ε (governance asymmetry is treated as extractive by design) because legitimacy is grounded in proportionality, not disclosure or stewardship mission."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_empirical_status",
+      "question": "Do companies with dual-class structures systematically outperform one-share-one-vote peers long-term, controlling for founder quality and market conditions? Is activist pressure (the founding problem) the primary failure mode dual-class prevents, or is founder entrenchment the primary cost?",
+      "resolution_mechanism": "Multi-cohort panel regression on long-term stock performance, acquisition success rates, and executive compensation ratios, comparing dual-class and one-vote-one-share matched pairs over 15+ year periods. Meta-analysis of existing empirical research (Gompers et al., Tobin, ISS studies).",
+      "impact": "If dual-class significantly outperforms, the founding problem is still live and the tangled-rope classification holds. If dual-class underperforms or shows no significant difference, the founding problem is dead and the constraint approaches piton (performance no better than alternatives, persisted by theater and founder capture). If founder entrenchment costs exceed activist-pressure benefits, the constraint is snare-tilted rather than tangled.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the founding problem is empirically live or dead."
+    },
+    {
+      "id": "governance_proportionality_foundational",
+      "question": "Is the axiom 'governance voice should be proportional to capital and risk contribution' a coherent normative principle applicable across all shareholding structures, or is it a contestable principle that founders legitimately reject?",
+      "resolution_mechanism": "Jurisprudence analysis of corporate law doctrine (does law treat proportionality as foundational or permissive?), shareholder theory literature (do governance theorists treat proportionality as first-order or derivative?), comparable commitment systems (do constitutions, cooperatives, or other stakeholder organizations treat proportionality similarly?).",
+      "impact": "If proportionality is treated as foundational in competing commitment systems (constitutions, democratic governance, cooperatives), this reading's axiom is universalizable and the constraint is snare-tilted (violating foundational commitments elsewhere). If proportionality is treated as contestable and founder discretion is permissible, the constraint remains tangled (genuine disagreement on legitimacy). If law explicitly permits dual-class as a valid exception to proportionality, the constraint is rope-tilted (founder stewardship framing dominates).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether proportionality is a foundational principle or a contestable design choice."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.72) structural (minority shareholders cannot force conversion or governance inclusion because of lock-in and legal barriers) or partly internalized (minority shareholders have internalized the founder-stewardship narrative and believe governance asymmetry is legitimate)?",
+      "resolution_mechanism": "Post-conversion / post-liquidity trajectory: when dual-class constraints are removed (company goes private, converts to one-share-one-vote, or founders exit), does minority-shareholder governance participation or demand change? If participation increases sharply, suppression was partly internalized; if participation remains low, suppression is primarily structural.",
+      "impact": "If partly internalized, the constraint's effective suppression is higher than the structural measure (minority shareholders carry the suppression forward even after removal of the mechanism). If primarily structural, removal would immediately enable governance voice. Either way, the constraint persists through some mix of lock-in and belief.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is primarily structural barriers or internalized belief in founder legitimacy."
+    },
+    {
+      "id": "controlled_company_exemptions_extraction_channel",
+      "question": "Do controlled-company exemptions from mandatory governance protections (e.g., NYSE Rule 303A.00 exemptions that allow founder-controlled boards to skip independent committees) materially increase extraction, or are they a side effect of dual-class adoption with limited independent impact?",
+      "resolution_mechanism": "Comparative analysis of controlled-company exemption usage (which companies claim which exemptions, at what cost) and outcomes (do exemption-heavy companies show higher related-party transaction volumes, worse M&A outcomes, higher executive compensation multiples?). Difference-in-differences analysis comparing controlled companies that claim exemptions vs. those that voluntarily comply.",
+      "impact": "If exemptions materially enable extraction (related-party transactions increase, governance outcomes worsen), they are an independent extraction channel and the constraint's extractiveness is partially attributable to exemption design. If exemptions show minimal independent effect, the constraint's extractiveness is primarily from dual-class structure alone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether governance exemptions are a separate extraction mechanism or a side effect."
+    },
+    {
+      "id": "sibling_reading_foreclusion_test",
+      "question": "Can all three readings of the dual-class legitimacy kernel (disclosure_consent, founder_stewardship, minority_extraction) coexist in a single institutional framework, or does the minority_extraction reading logically foreclose one or both siblings?",
+      "resolution_mechanism": "Legal/institutional logic test: can a jurisdiction simultaneously (1) permit informed-consent-based dual-class, (2) treat founder stewardship as a legitimate governance value, AND (3) require governance proportionality to capital/risk? If yes, they coexist. If a jurisdiction has enacted law that explicitly rejects one reading in favor of another, the foreclosure relation holds.",
+      "impact": "If all three coexist, the readings are properly modeled as coexists_with edges. If minority_extraction forecloses founder_stewardship (because proportionality requirement is incompatible with unilateral stewardship), the relation is forecloses. If disclosure_consent forecloses both others (by treating informed consent as sufficient regardless of proportionality), the architecture differs.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical relationship between the three contested readings of dual-class legitimacy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__disclosure_consent",
+      "dual_class_legitimacy__founder_stewardship"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the dual-class legitimacy kernel. All three generate distinct ε-invariant constraints because they instantiate different measurement bases for legitimacy: disclosure_consent treats informed consent as adequate (lower ε), founder_stewardship treats founder long-horizon execution as value-creating for all (lower ε), minority_extraction treats governance asymmetry as extraction by design (higher ε). They are linked by network.affects_constraints because the empirical status of the founding problem (activist pressure harm vs. founder entrenchment harm) influences the plausibility of all three readings simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dual_class_legitimacy__founder_stewardship",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dual_class_legitimacy__disclosure_consent",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "governance_proportionality_to_capital_and_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "control_extraction_is_legitimate_cost_of_public_shareholding",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "proportional_governance_parity",
+    "drift_state": {
+      "moment": "contemporary_dual_class_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "dual_class_legitimacy__founder_stewardship",
+      "dual_class_legitimacy__disclosure_consent"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

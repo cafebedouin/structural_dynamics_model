@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "gold_fiat_transition_mechanism__automatic_constraint_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gold_fiat_automatic",
+    "story_uid": "41dbac45-5df1-40a9-97cd-2a135c143dcf"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gold-to-Fiat Monetary Transition: Automatic Constraint Elimination",
+    "topic_domain": "economic/political/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monetary_authorities"
+    ],
+    "victims": [
+      "creditor_class",
+      "currency_reserve_holders"
+    ]
+  },
+  "interval": {
+    "start": 1944,
+    "end": 1980
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1944,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1944,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1944,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causal_primacy_automatic_vs_multiple",
+      "question": "Does this constraint represent the elimination of a SINGLE automatic physical discipline, or did multiple independent structural factors (telecommunications, labor shifts, legal tender maturation, geopolitical realignment) converge such that the gold standard would have collapsed regardless?",
+      "resolution_mechanism": "Counterfactual historical analysis: what would have happened to the gold standard without post-WWII telecommunications, labor bargaining power growth, and US geopolitical dominance? Did the automatic constraint become unenforceable before it was formally abandoned?",
+      "impact": "If the constraint was genuinely automatic and sufficient to discipline monetary expansion, then the reading's claim of high extractiveness (authorities gained discretion over a binding constraint) holds. If multiple factors made the constraint inoperable first, then the transition was less a swap of constraints and more a formalization of already-eroded discipline.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the automatic constraint was the primary causal driver of the transition or one factor among several converging structural changes"
+    },
+    {
+      "id": "creditor_discipline_residual",
+      "question": "Did the elimination of automatic gold discipline completely eliminate creditor veto power, or did creditors retain discipline through capital flight threat, credit rationing, and political influence?",
+      "resolution_mechanism": "Empirical study of central bank decision-making: how much weight did feedback from creditor markets and actual capital flight episodes play in constraining monetary expansion? If capital flight and credit spreads were binding ex-post constraints, the discretion was always contingent.",
+      "impact": "If creditor discipline remained substantial through market mechanisms, the constraint did not fully shift from automatic to institutional—institutional constraints remain present, just less automatic. The extraction value (epsilon) would be lower, and the constraint would be more Rope than Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional creditor discipline replaced automatic gold discipline or whether both coexisted"
+    },
+    {
+      "id": "discretion_abuse_vs_necessary_flexibility",
+      "question": "Is the extractiveness measured here (0.71) a feature of the constraint itself, or a measure of how authorities have USED the discretion gained? Would a normative ideal-type 'responsible discretion' constrained by explicit inflation targets and credible commitment devices lower extractiveness?",
+      "resolution_mechanism": "Comparative institutional analysis: do central banks with explicit inflation mandates and operational independence show lower extractiveness than those without? Has the Taylor rule, inflation targeting, and forward guidance made discretion more disciplined?",
+      "impact": "If extractiveness is usage-dependent rather than structural, the constraint's type and severity depend on the regime within which discretion operates. The same institutional freedom could support Rope (if disciplined by credibility) or Snare (if abused). The baseline reading treats discretion as extractive by default; evidence of effective self-discipline would lower epsilon.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether discretionary monetary authority is inherently extractive or whether contemporary frameworks have constrained it sufficiently"
+    },
+    {
+      "id": "reading_specificity_automatic_vs_composite",
+      "question": "This reading claims the transition eliminated ONE automatic constraint. The sibling 'composite_overdetermination_reading' claims multiple independent structural factors converged. Are these readings genuinely incompatible accounts of the same transition, or do they address different aspects of a single multifactorial event?",
+      "resolution_mechanism": "Definitional clarity: if 'automatic constraint' is narrowly defined as 'physical enforcement mechanism independent of institutional will,' then the gold standard is one such constraint. But if the reading is actually claiming 'the primary causal driver of the transition was the automatic constraint becoming unmanageable,' then composite factors become relevant to the truth of the claim.",
+      "impact": "If the readings are claims about causal primacy, they forecloses one another: only one mechanism can be primary. If they address different aspects (one reading explains the institutional mechanism change, the other explains what made the change necessary), they coexist. The resolution determines whether the reading_relations edge is forecloses or coexists_with.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the automatic constraint reading and the composite overdetermination reading are logically incompatible or address complementary aspects of the same event"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The gold standard constrained monetary expansion automatically: central banks could not create money faster than gold reserves allowed, or they would face reserve depletion and be forced to contract. This reading claims the transition to fiat currency (formalized by the Nixon Shock in 1971 and the Jamaica Accord in 1976) eliminated this automatic constraint, replacing it with discretionary central bank authority. Monetary authorities gained the power to expand the money supply without reserve discipline. Creditors and currency holders lost the automatic protection that redemption threat provided. The transition enabled counter-cyclical monetary policy but also enabled sustained inflation and seigniorage capture—making it a Tangled Rope: genuine coordination function (flexibility to manage crises) bundled with asymmetric extraction (authority gains discretion, creditors lose automatic discipline). The claim and metrics are authored independently: the constraint is CLAIMED as Tangled Rope (real coordination, real extraction) while metrics describe moderate suppression (discipline mechanisms persisted through capital markets) and moderate theater (some of the authority's noise around 'flexibility' masks rent collection). The engine measures this fit independently.",
+    "key_agents": [
+      "monetary_authorities: The agenda-setter that gained discretion; benefits from the ability to expand money supply without reserve constraint.",
+      "creditor_class: The primary victim; lost automatic veto power through gold redemption threat and must rely on institutional discipline.",
+      "reserve_currency_issuers: Secondary beneficiary; the US and other major economies gained seigniorage through reserve-currency privilege without reserve depletion discipline.",
+      "debtor_nations: Secondary beneficiary; can run deficits and monetize debt without immediate reserve pressure.",
+      "labor_and_wage_earners: Distributed payer; absorb inflation risk through real wage erosion if monetary expansion outpaces wage indexation.",
+      "gold_producing_nations: Excluded; lost monetary demand for their primary commodity and were not seated in the transition decision.",
+      "academic_economists: Observer seat; measure the causal structure and outcomes."
+    ],
+    "logic_rationale": "Extractiveness rises from 0.15 (early Bretton Woods, 1944) to 0.71 (post-1973 fiat regime) as the constraint's binding power shifts from automatic (gold reserves) to institutional (central bank discretion). The 1973 acceleration (0.68) marks the Nixon Shock and the formalization of the shift. Theater ratio rises to a peak in the 1970s (0.31 at 1973) when inflation acceleration forced authorities to articulate policy rationales, then stabilizes lower (0.28 at 1980) as inflation fighting became the stated focus—the noise around 'flexibility' recedes when discipline becomes the public narrative. Suppression requirement peaks at 0.44 (1973) when capital controls and wage-price interventions were deployed to manage the transition shock, then moderates slightly (0.42 at 1980) as markets adjusted and capital mobility rebalanced. The one shared measurement grid ensures every metric is authored at every time point, preventing misalignment. The metrics describe a constraint that operated as automatic (low suppression at outset) then required increasing institutional enforcement as authorities took discretion and creditors resisted through capital flight threat.",
+    "directionality_logic": "Monetary authorities sit at the beneficiary end (d near 0.0): they gained unrestricted discretion and collect seigniorage. Creditor class sits at the target end (d near 1.0): they lost automatic protection and must accept discretionary authority's decisions. Reserve-currency issuers are institutional beneficiaries (d = 0.1–0.2) with low exit cost (can always print their own currency). Labor and wage earners are organized payers (d = 0.7–0.8) with identity-locked exit (nominal wages are culturally and contractually sticky; they cannot easily exit into alternative compensation forms). Gold-producing nations are trapped victims (d = 0.9) with no recourse but to accept the loss of monetary demand. Academic economists are analytical observers (d = 0.5) with analytical exit—they can study the constraint without bearing its costs or collecting its benefits.",
+    "perspectival_gap": "The monetary authority (agenda_setter, institutional power) sees the transition as solving a real problem (rigid adjustment under gold) and enabling necessary flexibility for crisis management. From their seat, the constraint is Rope—genuine coordination benefit (crises can be managed counter-cyclically), low extractiveness relative to coordination value. The creditor (payer, powerful but powerful in a different domain—finance rather than monetary policy) sees the transition as an institutional shift that eliminated their automatic veto. From their seat, the constraint is Snare—pure extraction, with the 'flexibility' narrative serving as cover. The engine computes per-seat classifications from the same structural data; the divergence IS the measurement the corpus takes. One reading cannot be 'right'—the point is that the constraint produces different type experiences depending on which seat the agent occupies.",
+    "mandatrophy_analysis": "The founding problem (rigid adjustment under gold prevented counter-cyclical policy) remains contested. Authorities claim it is live: crisis episodes (2008, 2020) demonstrate need for emergency expansion. Critics argue it is dead: the problem was solved by mid-century mechanisms (automatic stabilizers, Bretton Woods). The disappearance verdict is world_rearranges: if this institutional discretion system disappeared, capital flows and fiscal policy would reorganize around a new discipline mechanism (commodity backing, supranational standard, regional blocs). The mismatch (founding_problem_status=contested, disappearance_verdict=world_rearranges) suggests the constraint is not a natural law—it is institutional and contestable. Theater ratio rising through the 1970s then stabilizing suggests the transition from automatic to discretionary discipline was itself a source of performative activity (authorities had to justify flexibility against inflation concerns), but the performance quieted once inflation-fighting became the salient narrative. The constraint remains Tangled Rope, not degraded to Piton, because the coordination function (counter-cyclical flexibility) remains live even as the extraction (discretionary seigniorage) persists.",
+    "kernel_context": "This constraint instantiates the 'automatic_constraint_reading' of the contested kernel 'gold_fiat_transition_mechanism'. The reading claims that the transition eliminated ONE automatic physical constraint (gold reserves) and replaced it with ONE discretionary institutional constraint (central bank authority). The sibling readings—'creditor_discipline_reading' (which emphasizes geopolitical power shifts and creditor veto loss) and 'composite_overdetermination_reading' (which argues multiple independent factors converged, not a single constraint swap)—address different aspects of the same historical transition. This reading is the most mechanistic: it focuses on the material-to-institutional shift as the causal node. The creditor_discipline reading emphasizes power redistribution. The composite reading emphasizes the historical inevitability of multiple concurrent factors. Each reading instantiates a different ε value and different beneficiary/victim structure because each identifies a different mechanism as primary."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "fiat_currency_credibility",
+      "reserve_currency_privilege",
+      "inflation_tax_distribution"
+    ],
+    "dual_formulation_note": "Part of the gold_fiat_transition_mechanism kernel family (three readings: automatic_constraint_reading, creditor_discipline_reading, composite_overdetermination_reading). Each reading has a different ε value and different beneficiary/victim structure because each identifies a different primary causal mechanism. The automatic_constraint_reading is mechanistic (focus on the swap of constraint types). The creditor_discipline_reading is geopolitical (focus on power redistribution). The composite_overdetermination_reading is historical-sociological (focus on multiple convergent factors). All three address the same event but from structurally distinct analytical frames."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "gold_standard_automatic_discipline",
+    "drift_state": {
+      "moment": "post_nixon_shock_fiat_regime",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "creditor_discipline_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_overdetermination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "automatic_constraint_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "discretion_enables_debasement_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

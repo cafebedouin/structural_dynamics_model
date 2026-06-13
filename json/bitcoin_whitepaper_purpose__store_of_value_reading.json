@@ -1,0 +1,371 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2024-12-19",
+    "status": "ACTIVE",
+    "story_uid": "f0d17e35-eb67-4f0c-84da-c11c46d2a37d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Store-of-Value Governance Reading: Decentralization Priority",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "node_operators"
+    ],
+    "victims": [
+      "low_value_transaction_users",
+      "merchants_requiring_immediate_settlement"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold Bitcoin as a store of value, benefiting from scarcity enforcement and decentralization guarantees. Low on-chain transaction frequency means they bear no fee burden; the retained 1MB block limit protects the scarcity narrative and maintains valuation arguments. Can exit to other assets but retain holdings specifically for the store-of-value thesis."
+    },
+    {
+      "name": "node_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run full nodes that validate transactions and enforce consensus rules. The 1MB block limit keeps node operation computationally lightweight, enabling broad geographic distribution and defending decentralization. Node operators collectively govern through consensus rule enforcement and resist changes that would increase validation burden (large blocks). They benefit from the prestige and governance voice of validation."
+    },
+    {
+      "name": "low_value_transaction_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users attempting small transactions (micropayments, remittances, frequent payments) face rising fees as block space becomes scarce. The 1MB limit creates artificial scarcity in transaction capacity, pricing them off the base layer. They are directed toward Lightning Network (off-chain) or alternative chains but retain no meaningful option to change the base-layer constraint itself."
+    },
+    {
+      "name": "merchants_requiring_immediate_settlement",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Merchants and payment processors requiring immediate on-chain settlement face block-space scarcity and variable fees. The store-of-value reading deprioritizes their use case in favor of decentralization; they must either absorb volatility in fee markets, adopt off-chain solutions, or migrate to competing systems with higher transaction throughput."
+    },
+    {
+      "name": "core_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain the Bitcoin protocol and enforce consensus rules through implementation. In the store-of-value reading, core developers are gatekeepers of the 1MB block limit and defenders of decentralization doctrine. They operate with significant technical authority but face community contention over capacity and fee levels."
+    },
+    {
+      "name": "mining_pool_operators",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate mining pools that select transactions for inclusion in blocks. In the store-of-value reading, they enforce the capacity constraint and compete for fees in a restricted block space. They benefit from fee scarcity (fee-rate competition) and defend block-size limits as economically rational, but can also fork or exit to alternative consensus rules if base-layer demand shifts."
+    },
+    {
+      "name": "electronic_cash_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Community members and developers who read Bitcoin's founding problem as enabling peer-to-peer electronic cash for everyday use. The store-of-value reading structurally forecloses their interpretation by subordinating on-chain capacity to decentralization. They are excluded from setting protocol direction and have no mechanism to override the 1MB limit without forking the network."
+    },
+    {
+      "name": "payment_network_developers",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers of Layer 2 scaling solutions (Lightning Network, sidechains, state channels) benefit from on-chain capacity constraints that force demand upward into their products. The store-of-value reading's retained 1MB limit sustains their market and use case. They participate in governance as observers but benefit from the constraint persisting."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor Bitcoin as a financial system and potential monetary asset. They observe the constraint structure from outside, noting that reduced on-chain transaction throughput decreases regulatory visibility into low-value payment flows while concentrating visibility on high-value transfers and node operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a globally distributed ledger where any participant can validate the full transaction history without trusting a central authority. Decentralization—enabled by low validation burden (1MB blocks)—is the coordination problem being solved: how to achieve consensus on monetary state without centralizing trust.",
+    "transfer_function": "Moves transaction fee revenue from low-value users and payment processors to miners, and allocates network security budget (block subsidy + fees) to mining pool operators. The 1MB capacity limit enforces scarcity in block space, raising fees for all transactions and effectively transferring users below a fee threshold to off-chain systems.",
+    "absent_voices": "Users and merchants who require low-cost on-chain transactions are excluded from governance mechanisms. They can fork the protocol but cannot change the base-layer rules without defecting. Electronic cash advocates and payment protocol designers working outside the store-of-value framework are also structurally excluded from steering capacity decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the store-of-value reading and its 1MB block-size constraint disappeared overnight (replaced by higher capacity), on-chain transaction throughput would rise dramatically, fee markets would compress, low-value users would return to the base layer, the justification for Layer 2 networks would shift, and the scarcity narrative supporting valuation would erode. The entire ecosystem's economic configuration would reorganize.",
+    "founding_problem": "Satoshi Nakamoto's Bitcoin whitepaper presented a system for peer-to-peer electronic cash without trusted intermediaries. The founding problem is interpreted in the store-of-value reading as: how can decentralized consensus be achieved and maintained such that full-node validators remain accessible to ordinary participants?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Long-term holders and node operators attest the founding problem remains live and requires the 1MB limit to preserve decentralization. Electronic cash advocates and payment processors attest the founding problem has shifted to encompassing transactional throughput. Independent empirical analysis (blockchain research, network simulation studies) supports the hypothesis that larger blocks increase validation computational burden and node concentration risk, though contested on the magnitude and remedial options. Satoshi Nakamoto's 2011 disappearance left no authoritative voice to resolve which reading the original author intended."
+  },
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper ('A Peer-to-Peer Electronic Cash System') is a contested kernel grounding its legitimacy in Satoshi Nakamoto's text. This constraint story instantiates ONE reading: the store-of-value reading interprets decentralization and full-node verifiability as the binding constraints, subordinating on-chain transaction capacity to these goals. The 1MB block-size limit is the operational artifact that enforces this reading. Beneficiaries are long-term holders (who gain scarcity and decentralization guarantees) and node operators (who gain validation accessibility). Victims are low-value transaction users and merchants priced off the base layer by artificial scarcity. The constraint is CLAIMED as tangled_rope because it genuinely coordinates distributed consensus (coordination function) while asymmetrically extracting from users unable to afford on-chain fees (extraction component).",
+    "key_agents": [
+      "long_term_holders (beneficiary): gain scarcity enforcement and decentralization narrative; low on-chain fee exposure",
+      "node_operators (beneficiary + agenda_setter): enforce consensus, govern through rule implementation, benefit from accessibility to participation",
+      "low_value_transaction_users (victim): priced off base layer by block-space scarcity, directed to Layer 2 or alternative systems",
+      "merchants_requiring_immediate_settlement (victim): face variable high fees or forced adoption of off-chain solutions",
+      "core_developers (agenda_setter): gate-keep the 1MB limit, defend decentralization doctrine, face community contention",
+      "mining_pool_operators (agenda_setter): benefit from fee scarcity, enforce capacity constraint",
+      "electronic_cash_advocates (excluded): read the founding problem as enabling everyday transactions; structurally foreclosed by this reading",
+      "payment_network_developers (beneficiary observer): benefit from on-chain scarcity driving Layer 2 demand"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68 (end of interval) because the 1MB limit produces artificial scarcity in block space, raising transaction fees systematically and pricing users below a fee threshold off the base layer. This is extraction: a coordination mechanism (consensus ledger) is coupled with a capacity restriction that transfers users to secondary markets. Suppression is 0.71 because the constraint is enforced through consensus-rule validation (node operators reject blocks exceeding 1MB) and social enforcement (developer gatekeeping, mining pool coordination). The measurement series shows extraction rising from 0.42 to 0.68 over the interval as Bitcoin adoption grew and block-space became genuinely scarce, and theater rising from 0.25 to 0.42 as the decentralization justification became increasingly performative relative to the actual fee-extraction mechanism. Theater plateaus at 0.42 by interval end because the store-of-value narrative has stabilized as institutional orthodoxy. All metrics share one time grid; no metric is measured at different time points than others.",
+    "perspectival_gap": "The agenda-setter seats (node operators, core developers, mining pools) compute the constraint as essential coordination—decentralization cannot be maintained without the 1MB limit, and this is a genuine collective-action problem. From the victim seats (low-value users, merchants), the same structure computes as extractive gatekeeping: the capacity limit exists not to solve a coordination problem but to enforce scarcity and transfer fees. The payer seats (merchants) may also compute it as snare if they believe the decentralization justification is post-hoc cover. The engine computes these divergences from the structural data—beneficiary/victim positions, power asymmetry, exit options. The authored claim (tangled_rope) reflects the structure as seen from an analytical seat: genuine coordination coupled with asymmetric extraction.",
+    "directionality_logic": "Long-term holders have low directionality (d near beneficiary end, ~0.15-0.25) because they benefit from the scarcity constraint and bear minimal fee burden—their exit is high (arbitrage: can hold any asset, but retain Bitcoin for the specific store-of-value thesis). Node operators sit higher (d ~0.35-0.45) because they govern through validation but their exit is constrained—running a node is their primary commitment, and large-block forks would fork their validation role. Low-value transaction users have high directionality (d near target end, ~0.75-0.85) because they are systematically priced off the base layer with no governance voice (powerless, immediate time horizon, trapped exit—they cannot change the rules and must absorb the fee or leave). Merchants have moderate-high directionality (d ~0.60-0.70) because they bear costs but retain exit options (arbitrage to alternative systems, adoption of Layer 2). Mining pool operators have moderate directionality (d ~0.50-0.60) despite institutional power because their benefit is conditional on the fee market persisting—if the constraint dissolved (large blocks, lower fees), their strategic position would shift. Core developers occupy an analytically complex seat: they have high power and formal gatekeeping authority, but their benefit is ideological (defending the store-of-value reading) rather than material, which partially offsets directionality toward the beneficiary end.",
+    "mandatrophy_analysis": "This constraint exhibits a nascent mandatrophy signature: the founding problem (how to achieve decentralized consensus) was solved by ~2012—the network demonstrably achieved consensus without centralization. The store-of-value reading's mandate is now to *preserve* that achievement, not to solve an outstanding technical problem. The 1MB block limit was originally a temporary anti-spam measure; its continued defense is now justified ex-post through the store-of-value thesis rather than ex-ante through technical necessity. The rising theater_ratio (0.25 to 0.42) is diagnostic of this shift: early enforcement (t=0) was coupled to actual spam risk; contemporary enforcement is increasingly defensive against alternative readings (electronic cash, capacity expansion) rather than against genuine technical problems. The constraint does not yet meet full piton criteria (no party would meaningfully profit from removing it; the alternative is reorganization, not removal) but shows the early mandatrophy trajectory: a coordination function that has succeeded, coupled with an extraction mechanism that persists by institutional inertia and ideological commitment rather than continuous problem-solving.",
+    "kernel_context": "This constraint instantiates the STORE_OF_VALUE_READING of the bitcoin_whitepaper_purpose kernel. The kernel is the contested text: 'A Peer-to-Peer Electronic Cash System' (Satoshi Nakamoto, 2008). The reading I am instantiating interprets 'binding constraints' to mean decentralization and full-node verifiability (not transaction throughput). The sibling reading, electronic_cash_reading, interprets 'cash' and 'electronic' to prioritize transactional throughput and low-fee access. A third reading, nakamoto_oracle_opacity, notes that Satoshi's 2011 disappearance eliminated authoritative voice for the kernel's interpretation. Under the store-of-value reading, the 1MB block limit is binding; under the electronic cash reading, the limit is a temporary bottleneck to be removed. These readings coexist across different parties (long-term holders vs. merchants, node operators vs. payment processors) and neither logically rules out the other—they are hermeneutically distinct frameworks reading the same text."
+  },
+  "omegas": [
+    {
+      "id": "decentralization_measurement_ambiguity",
+      "question": "What constitutes 'decentralization' precisely, and is a 1MB block limit the only mechanism to achieve it?",
+      "resolution_mechanism": "Network simulations varying block size and examining node geographic distribution and computational barriers to participation. Empirical studies of full-node operator demographics and hardware requirements across different block sizes.",
+      "impact": "If larger blocks (e.g., 2MB or adaptive) could maintain decentralization below a measured threshold, the 1MB limit loses its justifying binding constraint. If decentralization requires sub-megabyte blocks, the store-of-value reading's core axiom holds. The classification could remain tangled_rope but the extraction magnitude would shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 1MB limit is the minimal-sufficient condition for decentralization or an arbitrary upper bound."
+    },
+    {
+      "id": "founding_problem_interpretation",
+      "question": "What did Satoshi Nakamoto intend as the primary problem Bitcoin solves: decentralized consensus, or everyday electronic cash transactions?",
+      "resolution_mechanism": "Textual analysis of the whitepaper (title, abstract, introduction, conclusion) and Nakamoto's forum posts and emails (if any additional artifacts emerge). Linguistic comparison with Nakamoto's description of motivation across sources.",
+      "impact": "If the primary intent was electronic cash throughput, the electronic_cash_reading gains legitimacy and the store-of-value reading becomes a post-hoc reinterpretation—the constraint's mandate would be challenged as not foundational. If decentralization was primary, the store-of-value reading's authority strengthens. This is a hermeneutic resolution, not a metric change.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The kernel interpretation ambiguity: which reading corresponds to the author's foundational intent?"
+    },
+    {
+      "id": "scarcity_narrative_sustainability",
+      "question": "Is the 'digital scarcity' narrative that justifies store-of-value positioning endogenous to Bitcoin's technical design or dependent on external belief adoption?",
+      "resolution_mechanism": "If the scarcity narrative is purely endogenous (e.g., mathematically guaranteed supply cap independent of adoption), it requires no active enforcement. If it is exogenous (e.g., value depends on consensus that the 1MB limit must be preserved), the narrative becomes a self-fulfilling prophecy vulnerable to defection.",
+      "impact": "If exogenous, the constraint's extraction mechanism is partially dependent on theater—maintaining belief that the limit is binding. Rising theater_ratio (0.25 to 0.42) would indicate increasing narrative-dependence. If the narrative collapses (e.g., alternative forks prove viable), the store-of-value reading's legitimacy would erode and reclassification toward snare would follow.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether store-of-value scarcity is a technical fact or a maintained narrative."
+    },
+    {
+      "id": "layer_two_displacement_victims",
+      "question": "Do users displaced from on-chain transactions by the 1MB limit achieve acceptable service on Layer 2 (Lightning Network, sidechains) or are they genuinely victimized by reduced on-chain access?",
+      "resolution_mechanism": "Measurement of Lightning Network adoption, fee structures, failure rates, and user satisfaction. Comparison of transaction costs and settlement speed on Layer 2 vs. hypothetical higher-capacity base layer.",
+      "impact": "If Layer 2 solutions are cost-competitive and reliable, the constraint's extraction severity may be lower than authored—victims are inconvenienced but not locked out. If Layer 2 adoption rates remain low and fees remain high, victimization is confirmed and the constraint's classification as tangled_rope (vs. snare) depends on whether the coordination benefit (decentralization) is perceived as offsetting the extraction cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether off-chain scaling genuinely substitutes for base-layer capacity or perpetuates victim status."
+    },
+    {
+      "id": "reading_kernel_oracle_gap",
+      "question": "In the absence of Satoshi Nakamoto's authorial voice since 2011, is the distinction between readings a genuine hermeneutic contest over the text, or a community power struggle using the text as rhetorical cover?",
+      "resolution_mechanism": "Discourse analysis of Bitcoin community debate: are arguments grounded in textual interpretation, or do they reduce to power dynamics (miners vs. developers vs. users, nodes vs. pools, hodlers vs. merchants)?",
+      "impact": "If hermeneutic contest: the readings are incommensurable but legitimate, and classification is frame-dependent (the analytical seat computes tangled_rope; each reading's seat computes from its own values). If power struggle: the store-of-value reading may be a legitimacy claim masking extraction, shifting classification toward snare. The omega does not resolve this; it flags that the classification itself is contingent on whether the kernel has genuine interpretive authority or is post-hoc rationalization.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the reading contest is hermeneutic or political."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading",
+      "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper_purpose is a contested kernel with multiple readings. This constraint (store_of_value_reading) instantiates one coherent interpretation: decentralization and full-node verifiability are binding constraints, subordinating on-chain capacity. The sibling electronic_cash_reading prioritizes transactional throughput as binding. Both readings draw authority from the same whitepaper; neither logically forecloses the other (they coexist as competing frameworks held by different factions). The nakamoto_oracle_opacity reading notes that Satoshi Nakamoto's 2011 disappearance left no authoritative arbiter between these readings. The three constraints form a constraint family: store_of_value_reading influences the others by establishing capacity scarcity and forcing merchants toward Layer 2, which affects the feasibility and legitimacy of the electronic_cash_reading. All three inherit their ε-ambiguity from the kernel interpretation problem."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "mining_pool_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decentralization_binding_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "node_accessibility_prerequisite_for_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "accessible_full_node_participation",
+    "drift_state": {
+      "moment": "contemporary_scaled_adoption",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading",
+      "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

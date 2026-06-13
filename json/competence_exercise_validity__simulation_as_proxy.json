@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "146dcb5e-928c-4c7c-bca9-099287295969"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.67,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation Validity as Proxy-Catastrophe Exercise",
+    "topic_domain": "safety/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulatory_authority",
+      "organization_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "safety_critical_personnel"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simulation_fidelity_validity",
+      "question": "Does drill performance under simulation conditions predict actual competence under real catastrophic stress, with the same stressors (fatigue, real danger, institutional pressure, cascading failures)?",
+      "resolution_mechanism": "Post-incident analysis of personnel who were competence-certified via simulation, comparing their actual response performance to their simulation metrics. Longitudinal data from organizations comparing drill-certified cohorts to cohorts trained under alternative models.",
+      "impact": "If simulation predicts well, the constraint's core assumption (proxy-catastrophe is valid) holds and the model is defensible. If prediction is poor or diverges systematically by stress condition, the competence model is invalid and the constraint extracts from operators by transferring unquantified risk to them.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether simulation metrics predict real-catastrophe competence."
+    },
+    {
+      "id": "epistemic_authority_of_model",
+      "question": "Who decides what counts as adequate fidelity in simulation, and on what grounds? Is the model validated against empirical data, or is it validated against regulatory compliance and organizational convenience?",
+      "resolution_mechanism": "Audit of the technical decisions embedded in simulation design: which stressors are included/excluded, how are metrics weighted, what is the evidentiary basis for the fidelity choices? Compare to post-incident analysis of what actually determined performance.",
+      "impact": "If model validation is empirical and robust, the extraction is justifiable as the cost of coordination. If validation is regulatory/organizational (chosen for feasibility rather than accuracy), the constraint extracts by substituting administrative convenience for safety assurance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What epistemic standard the simulation model is held to."
+    },
+    {
+      "id": "identity_fusion_in_competence_narrative",
+      "question": "Does the constraint create identity fusion where operators internalize the competence model (their professional identity is 'someone who passes drills') in a way that obscures the gap between simulation and reality?",
+      "resolution_mechanism": "Ethnographic study of operators' own assessment of their competence; do they believe their drill certification reflects real catastrophe preparedness, or do they maintain separate models? Interview data from post-incident responses: what did operators know about the gap?",
+      "impact": "If fusion is high, operators are suppressed not only externally (the rule) but internalized (they believe the rule is valid). The measured suppression of 0.62 would be substantially internalized identity-lock rather than structural barriers. If fusion is low, suppression is purely structural enforcement and operators actively contest the model.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalization of the competence proxy model by operators."
+    },
+    {
+      "id": "dual_kernel_reading_constraint_frontier",
+      "question": "Is the contestation between 'simulation_as_proxy' and 'real_catastrophe_only' logically a single kernel under dispute, or are they two genuinely distinct constraints with different epsilon values?",
+      "resolution_mechanism": "Structural analysis: do the two readings converge on the SAME institutional commitment (competence validation framework), just with different fidelity criteria? Or do they diverge on what counts as competence entirely (one is training-based, the other is incident-based)? If they're the same kernel with different readings, ε is stable (the fidelity disagreement is parameter-level). If they're different constraints, the real_catastrophe_only framing has a different ε (much higher extraction because it demands continuous incident exposure) and should be authored as a separate file.",
+      "impact": "If single kernel: reading_relations and axioms correctly decompose the dispute. If different constraints: the sibling_reading declarations are mislabeled and should be network links instead.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel contest is a single commitment with multiple readings or multiple constraints."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the suppression (0.62) maintained by external enforcement (the regulatory rule, penalties for non-compliance) or by internalized acceptance of the competence model (operators believe drills are adequate)?",
+      "resolution_mechanism": "Comparative analysis: in jurisdictions where regulatory enforcement of simulation-only competence is strict, do operators resist and demand alternatives (structural suppression)? In jurisdictions with lax enforcement, do operators voluntarily drill to the higher standard (internalized acceptance)?",
+      "impact": "If structural: the constraint could be lifted by regulatory change, though operators might resist losing the convenience of drills. If internalized: removing the rule would not change practice; the constraint carries post-exit suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural enforcement or internalized model acceptance."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In safety-critical industries, competence must be maintained for catastrophic scenarios that rarely occur in practice. The regulatory constraint 'simulation counts as valid exercise that keeps competence occupied' solves a coordination problem: how to validate competence without waiting for catastrophes? The rule standardizes drill metrics as the competence proxy. This is claimed as genuine coordination (benefits operators by obviating real-catastrophe risk, benefits organizations by allowing planned training). The constraint also extracts: it transfers the risk that simulation-validated competence does not predict real-competence onto operators, and it extracts from frontline personnel by validating their capability via a model they do not design. The theater-ratio measurement (0.67 at interval end) reflects the reality that drill performance is increasingly a proxy for regulatory compliance rather than actual safety capability — the function has drifted from 'prove competence' to 'demonstrate administrative participation.' This story is one reading of the contested kernel competence_exercise_validity; it instantiates the simulation_as_proxy reading, which claims drills are adequate proxies for catastrophe. Sibling readings (real_catastrophe_only, continuous_refresh_hybrid) are separate constraint stories with different epsilon values and different stakeholder structures.",
+    "key_agents": [
+      "Regulatory authority: sets and enforces the rule; benefits from predictable, scheduled competence validation",
+      "Organization management: coordinates training schedules; benefits from the rule's administrativeibility; pays by accepting simulation-reality divergence",
+      "Frontline operators: carry the existential risk that drill competence does not predict real competence",
+      "Safety-critical personnel (powerless): trapped in the certification model; cannot demand alternative validation",
+      "Actual incident victims (excluded): bear the ground-truth test of the model; have no seat in its design"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 to 0.58 over the interval (t=0 to t=40), plateauing around t=20. The rise reflects an accumulation of incident post-mortems showing competence-certified personnel failing in real catastrophe in ways their drill performance would not predict. As the model's predictive validity comes into question, the extraction becomes more visible: organizations are still certifying competence via drill metrics, but the regulatory value of those metrics has degraded. Theater ratio rises from 0.48 to 0.67 and plateaus, indicating that drills increasingly serve administrative (demonstrate compliance, maintain budget, satisfy audits) rather than functional (certify real competence) purposes. Suppression remains stable at 0.62 because the constraint continues to be enforced via regulatory requirement, audit penalties, and professional licensing — the external enforcement machinery does not weaken even as the model's validity becomes contested. Accessibility collapse at 0.71 reflects that operators have no realistic alternative to accepting the simulation model: they cannot refuse drills (competence violation), cannot demand real-catastrophe testing (unethical), cannot request alternative validation (outside regulatory framework). They are constrained not by lack of exit physically, but by institutional entrapment: the rule is the ONLY legitimate path to competence certification.",
+    "perspectival_gap": "The regulatory authority sees the constraint as a coordination solution: 'We cannot wait for rare catastrophes; drills let us validate competence on schedule.' The organization sees it as administratively efficient: 'Drills are cheaper and more predictable than incident-based validation.' Frontline operators increasingly see it as a mismatch: 'Drills don't prepare me for the stress, cascade failures, and real uncertainty of actual catastrophe.' Safety researchers and incident investigators see it as model degradation: 'The metrics are validated against regulatory compliance, not against actual competence.' The payer seats (operators, safety-critical personnel) compute a higher directionality toward target (d near 0.85+) because they bear the risk transfer. The agenda-setter (regulatory authority) computes lower d (near 0.2) because it designed the rule. The beneficiary (organization management) sits between, paying some costs (must run drills) while collecting the convenience benefit. The engine will compute per-seat types from this structural divergence.",
+    "directionality_logic": "Regulatory authority: d = 0.1–0.2. Sets the rule, derives authority and predictability from it, faces minimal enforcement burden, experiences no real catastrophe risk (that sits with operators). Full beneficiary position. Frontline operators: d = 0.80–0.90. Required to participate in drills, certified on a model they do not control, carry the risk that the model is invalid, cannot refuse or demand alternatives without professional penalty. Trapped in the certification system. Organization management: d = 0.35–0.45. Pays the cost of running drills (time, resources), benefits from administrative certainty and avoided real-catastrophe litigation (if competence is certified and catastrophe occurs, they have paper). Asymmetric but moderate. Safety-critical personnel (powerless): d = 0.85–0.95. Identical to operators structurally but amplified: they are powerless, so even if they recognize the model is inadequate they cannot organize objection or seek alternative validation. The rule extracts by their entrapment.",
+    "mandatrophy_analysis": "The constraint was built to solve: 'How do we validate catastrophe competence without waiting for catastrophes?' (founding problem, status=contested). The rule persists because regulatory compliance and organization administration depend on it. But the founding problem's status has shifted: operators and safety researchers increasingly attest that simulation-validated competence DOES NOT predict real competence in the necessary ways. The constraint extracts by continuing to certify competence via a model whose predictive validity is now contested. The theater ratio (0.67) reflects this mandatrophy: drills are increasingly maintained as ritual (satisfy audits, license requirements) rather than function (ensure actual safety capability). The constraint meets the mandatrophy test: (1) founding problem is contested/degraded; (2) constraint persists not because it solves the problem but because regulatory and organizational machinery depend on it; (3) the beneficiaries (regulatory authority, organization management) collect enough convenience/authority to resist reform; (4) the payers (operators, safety personnel) are dispersed enough and identity-locked enough that coalition resistance is difficult. This is not a pure piton (some beneficiaries do collect, unlike a piton's diffuse cost + no beneficiary pattern) — it is a tangled_rope with degraded function: coordination (schedule competence validation) is genuine, but extraction (transfer of unquantified risk to operators) is now visible.",
+    "kernel_context": "This constraint is one reading of the contested kernel competence_exercise_validity. This file instantiates the simulation_as_proxy reading: 'Simulation counts as valid exercise that keeps competence occupied; drills are proxy-catastrophe.' Sibling readings are real_catastrophe_only ('only real catastrophe validates competence; simulation is insufficient') and continuous_refresh_hybrid ('simulation is necessary but not sufficient; competence requires continuous drill cycles integrated with real-world operations'). The readings differ structurally on what counts as VALID evidence of competence: simulation_as_proxy accepts single-snapshot drill metrics; real_catastrophe_only requires observed incident response; continuous_refresh_hybrid requires periodic revalidation integrated with operational experience. Each reading will have a different epsilon value and different victim/beneficiary structure when authored as separate constraint stories."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__real_catastrophe_only",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the kernel competence_exercise_validity. The sibling readings (real_catastrophe_only, continuous_refresh_hybrid) are separate constraint stories in the same family. The readings converge on the same institutional commitment (competence validation framework) but diverge on what counts as valid evidence: simulation metrics only vs. incident-based vs. continuous refresher cycles. The epsilon values differ across readings because the fidelity criteria and victim/beneficiary structures differ. simulation_as_proxy claims simulation is adequate and extracts by risk transfer to operators. real_catastrophe_only claims only real incident response validates competence and would extract from organizations (demand incident exposure). continuous_refresh_hybrid claims both simulation and periodic real-world revalidation are needed and would extract from both organizations (continuous cost) and operators (ongoing validation burden). All three readings are live positions held by different stakeholder coalitions (regulatory authority + organization management support simulation_as_proxy; safety researchers + operators increasingly support real_catastrophe_only or continuous_refresh_hybrid)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__real_catastrophe_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__continuous_refresh_hybrid",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_metrics_predict_real_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "administrative_feasibility_justifies_model_choice",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "simulation_adequacy_for_competence_validation",
+    "drift_state": {
+      "moment": "contemporary_incident_analysis_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

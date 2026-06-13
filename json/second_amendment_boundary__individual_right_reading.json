@@ -1,0 +1,411 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_boundary__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_second_amendment_boundary__individual_right_reading",
+    "story_uid": "8fe68795-9545-414f-884f-316fe2e6b09c",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Individual Right Reading — Operative Clause Doctrine",
+    "topic_domain": "constitutional_law/political_theory/firearms_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gun_manufacturers_and_distributors",
+      "private_firearm_owners",
+      "constitutional_originalists"
+    ],
+    "victims": [
+      "mass_shooting_victims",
+      "domestic_violence_survivors",
+      "suicide_completers_by_firearm",
+      "communities_bearing_firearm_injury_burden"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court_originalist_coalition",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the Second Amendment text to establish an individual right to bear arms for lawful purposes, independent of militia participation. Sets constitutional doctrine through judicial decisions (principally DC v. Heller, McDonald v. Chicago, NYSRPA v. Bruen). Treats state regulation as presumptively infringing a pre-existing right. Administers the constraint through appellate review of firearms statutes, blocking many regulatory measures."
+    },
+    {
+      "name": "gun_manufacturers_and_distributors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Access a market shielded from comprehensive regulation by constitutional doctrine that treats firearms as protected consumer goods. Sell across state lines within the constraint of this reading; face reduced liability risk from certain regulatory approaches (assault weapon bans, magazine capacity limits struck down under this doctrine). Benefit from the originalist interpretation that expands the domain of permissible possession."
+    },
+    {
+      "name": "private_firearm_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Possess firearms with constitutional protection claimed to extend beyond historical militia contexts to self-defense and lawful sport. Experience reduced regulatory barriers to acquisition, retention, and carry. Organized through advocacy groups and political mobilization that defend this reading's permanence. Can relocate to more permissive jurisdictions if state-level regulation tightens."
+    },
+    {
+      "name": "mass_shooting_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Killed or wounded in mass-shooting events. Bear the constraint through injury, death, and trauma. Their absence from the policymaking table (they are deceased or recover outside the political process) is structural — they cannot advocate for their own survival. The constraint's durability partly depends on this structural invisibility."
+    },
+    {
+      "name": "domestic_violence_survivors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face elevated lethality risk from intimate partners with firearm access. Are harmed by the constraint's operation — the individual-right reading impedes comprehensive domestic violence firearm restrictions (red-flag laws, temporary removal orders) by raising constitutional barriers. Can exit relationships, but exit itself carries risk when firearms are present."
+    },
+    {
+      "name": "suicide_completers_by_firearm",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals who died by firearm suicide. Bear the constraint through completed suicide; the constraint's operation (permissive access reducing friction to rapid, high-lethality means) directly contributes to completed suicide risk. Represented through proxy epidemiological data; their absence from political voice is absolute."
+    },
+    {
+      "name": "communities_bearing_firearm_injury_burden",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear collective harm from firearm injury prevalence: emergency department capacity strain, trauma-surgeon burnout, public health infrastructure dedicated to firearm injury (ballistic wound management, trauma registries, rehabilitation). Experience this burden diffusely; organizing to change the constraint faces constitutional barriers now codified."
+    },
+    {
+      "name": "gun_regulation_advocates",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Seek comprehensive firearm regulation (universal background checks, permit requirements, licensing, safe-storage mandates, assault-weapon restrictions). Face constitutional barriers created by this reading's doctrine: regulations they propose are vulnerable to strike-down under heightened constitutional scrutiny. Operate within a constraint that has redefined the policy space."
+    },
+    {
+      "name": "militia_and_collective_defense_reading_proponents",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold an alternative constitutional reading (militia-conditioned, collective-defense framing). Are locked out of Supreme Court doctrine as operative law, despite their textual and historical arguments (prefatory clause as limiting). Their absence from the Court's majority coalition means their reading is excluded from constitutional doctrine, even though it remains intellectually and politically contested."
+    },
+    {
+      "name": "public_health_researchers",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Study firearm injury epidemiology, access patterns, and regulatory effectiveness. Operate in a constraint that has politically and legally narrowed the policy options they can study (certain regulations become unconstitutional under this reading). Their empirical findings about harm are framed as constraining evidence within a constitutional boundary they did not set."
+    },
+    {
+      "name": "originalist_legal_scholars",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Build jurisprudential careers on originalist constitutional interpretation. This reading's success vindicates their methodological commitment (reading the Constitution according to its original public meaning rather than evolving standards). Their institutional authority and influence are heightened by the constraint's operative status."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a stable, judicially administrable boundary between protected and regulable firearm ownership by fixing the Second Amendment's meaning: the operative clause grants an individual right; the prefatory militia clause expresses a purpose but does not limit scope. This resolves interpretive ambiguity and provides predictability for litigation.",
+    "transfer_function": "Transfers constitutional legitimacy from regulation-permissive readings to an ownership-protective reading. Moves regulatory authority from legislatures (which can enact comprehensive gun laws) to courts (which apply heightened constitutional scrutiny). Channels injury burden (mass shootings, domestic violence, suicide) to those harmed by unrestricted access while channeling market protection and constitutional status to manufacturers and owners.",
+    "absent_voices": "Mass shooting victims are deceased. Domestic violence survivors and suicide-attempt survivors are underrepresented in constitutional policymaking. Communities bearing the injury burden (emergency departments, trauma services, public health) are not seated at constitutional interpretation. Militia-reading proponents are excluded from Supreme Court doctrine despite remaining intellectually and legislatively represented. These absent and excluded seats would argue for prefatory-clause limiting power and comprehensive regulation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading's doctrine disappeared, legislatures would reinstate comprehensive firearm regulation (universal background checks, permit systems, assault-weapon restrictions, magazine limits, red-flag laws, safe-storage requirements) within months to years. The firearms market would contract under regulatory pressure. Constitutional protection for private ownership would evaporate, replaced by the militia-reading's collective-defense framing or prohibition-permissive doctrine. Manufacturers' market position and owners' constitutional status would fundamentally alter.",
+    "founding_problem": "The Second Amendment's text contains an apparent tension between the prefatory militia clause and the operative clause protecting bear arms. Early jurisprudence (19th-20th centuries) read the prefatory clause as limiting; later originalist scholarship (1970s onward) argued the operative clause establishes a pre-existing, militia-independent right. The founding problem was interpretive: which reading captures the original public meaning?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist legal scholars (Sanford Levinson, Eugene Volokh, Brannon Denning) and the DC v. Heller majority opinion attest the interpretive problem was genuine and the individual-right reading is the correct historical account. Non-originalist scholars (Cass Sunstein, Erwin Chemerinsky, Saul Cornell) and dissenting opinions (Justice Breyer, Justice Sotomayor) attest the militia reading is textually and historically defensible and the individual-right reading misreads the founding context. The disagreement persists among legal historians and constitutional scholars; no independent authority external to the legal profession has adjudicated the interpretive contest."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Second Amendment's text reads: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' This constraint story instantiates ONE reading of this contested kernel: the individual-right reading, under which the operative clause ('the right of the people to keep and bear Arms, shall not be infringed') establishes a pre-existing individual right to own firearms for lawful purposes (self-defense, sport, deterrence against tyranny), and the prefatory clause ('A well regulated Militia, being necessary to the security of a free State') states a purpose or context but does not limit the right's scope. This reading was elevated to constitutional doctrine by DC v. Heller (2008) and McDonald v. Chicago (2010). It generates a distinctive beneficiary/victim structure: manufacturers and owners benefit from market protection and constitutional status; those harmed by unrestricted firearm access (mass shooting victims, domestic violence survivors, suicide completers) bear extraction. This reading COEXISTS with sibling readings (militia-conditioned, insurrectionist) rather than foreclosing them — all three remain live intellectual and political positions. The constraint is classified as TANGLED ROPE because it coordinates (resolves interpretive ambiguity about the amendment's meaning) AND extracts asymmetrically (protects one reading's preferred policy outcome while harming those who would prefer alternative regulations).",
+    "key_agents": [
+      "supreme_court_originalist_coalition: Sets the constitutional boundary through judicial interpretation and appellate review; administers the constraint through heightened scrutiny of firearm regulation; institutional power; analytical exit.",
+      "gun_manufacturers_and_distributors: Beneficiary; powerful institutional actor; benefits from market shielding and reduced regulatory vulnerability; arbitrage-capable exit.",
+      "private_firearm_owners: Beneficiary; organized collective; experience constitutional protection and reduced regulatory barriers; mobile exit.",
+      "mass_shooting_victims: Payer; powerless; harmed through death and injury; trapped (deceased parties cannot exit).",
+      "domestic_violence_survivors: Payer; moderate organized power; harmed through elevated lethality risk; constrained exit (fleeing requires safety the constraint threatens).",
+      "communities_bearing_firearm_injury_burden: Payer; moderate power (public health institutions); bear diffuse injury burden; constrained by constitutional barriers to preventive regulation.",
+      "gun_regulation_advocates: Payer/observer dual role; organized; face constitutional barriers to proposed regulations; mobile but strategically constrained by doctrine.",
+      "militia_reading_proponents: Excluded; intellectual and political representation persists despite Supreme Court rejection; trapped in minority doctrine."
+    ],
+    "logic_rationale": "The extractiveness score (0.68 at interval end) reflects the asymmetric distribution of gains and harms: manufacturers gain market protection and reduced liability risk; owners gain constitutional status and reduced regulatory burden; those harmed by unrestricted access bear injury and death without compensation or political voice. Suppression (0.72) reflects the constraint's operation through judicial power: regulations proposed to reduce firearm injury (background checks, permit systems, red-flag laws, safe-storage mandates) are blocked or vulnerable to constitutional challenge under this reading. Theater ratio (0.44) reflects that public and political discourse frames the constraint as fidelity to original constitutional meaning (a neutral interpretive project) while the actual operation redistributes risk and protects industry. Accessibility collapse (0.48) is moderate-low because alternative readings and regulatory proposals remain intellectually and legislatively active — the constraint does not collapse alternatives, it elevates one reading to constitutional authority while leaving others contestable. Resistance (0.71) is high because the constraint meets sustained opposition from public-health advocates, gun-regulation movements, and competing constitutional readings. The measurement trajectory shows extractiveness and suppression rising from t0 to t3 (post-Heller, doctrine crystallizes and regulatory challenge increases) and plateauing from t12 onward (doctrine stabilizes; secondary expansion via New York State Rifle Association v. Bruen extends it but does not substantially increase extraction or suppression magnitudes). Theater ratio rises throughout (increasingly, enforcement focuses on defending the reading's legitimacy rather than administering straightforward coordination) but remains below 0.5 (the constraint's coordination function is not purely theatrical — interpretive consensus remains valued).",
+    "perspectival_gap": "The originalist-coalition seat and the gun-owner beneficiary seats experience this as genuine coordination: resolving textual ambiguity, establishing a stable legal boundary, protecting a pre-existing right. The payer seats (families of mass shooting victims, domestic violence survivors, public health institutions) experience the same structural mechanism as enforced extraction: the constraint blocks regulations they believe would reduce preventable harm, justified by a constitutional reading they contest. The regulation-advocate seats experience a paradoxical position: they operate within the constraint's boundaries (using legislative advocacy, state-level subterfuge, litigation seeking reinterpretation) while resisting the constraint itself. The militia-reading-proponent seat is locked out: intellectually and legislatively represented but Supreme Court doctrine forecloses their reading from constitutional authority. Per-seat classifications should diverge: originalists compute mountain-to-rope (natural law anchored in text); manufacturers compute rope (coordination with stable market benefit); victims compute snare (pure extraction under color of constitutional authority); regulation advocates compute snare (extraction blocking preferred policy).",
+    "directionality_logic": "Beneficiaries (manufacturers, owners, originalists) have low directionality (d near 0.0–0.3): the constraint protects them, provides market access and constitutional status, and requires no exit. Payers (victims, survivors, public health, regulation advocates) have high directionality (d near 0.7–1.0): the constraint extracts from them (blocks protective regulation, protects the reading that allows harm to persist), and exit is trapped or identity-locked (mass shooting survivors are deceased; domestic violence survivors are bound to the risk through relational status; public health is institutionally bound to caring for injury consequences). The originalist coalition sits near the beneficiary end (d ~0.2) despite being the agenda-setter because the constraint protects their interpretive authority; exit is analytical (they could lose cases and reinterpret, but institutional incentives favor the current reading). Directionality overrides are unnecessary — the derived values from beneficiary/victim + exit options capture the structural relationships.",
+    "mandatrophy_analysis": "The constraint prevents false lumping of coordination and extraction. A naive reading might classify the entire mechanism as pure coordination (interpreting the Constitution is coordination, establishing legal certainty is coordination) or pure extraction (protecting industry interests is extraction, blocking regulation is extraction). The tangled-rope classification captures both: the constraint genuinely solves an interpretive coordination problem (which reading is the law?) AND asymmetrically extracts (protects one policy outcome, harms alternative regulatory visions and those who would benefit from them). Mandatrophy appears in the founding-problem analysis: the founding problem (interpretive ambiguity) is live in the intellectual community but legally dead in Supreme Court doctrine — the constraint perpetuates itself not because the founding problem remains unresolved but because institutional actors benefit from the current resolution. The measured theater ratio (rising to 0.44) suggests increasing reliance on legitimacy narrative (fidelity to original meaning) to defend the reading against empirical harm data (mass shooting epidemiology, suicide lethality risk).",
+    "kernel_context": "This constraint instantiates the individual_right_reading of the second_amendment_boundary kernel. The kernel is the Second Amendment text: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' Three readings are live: (1) individual_right_reading (this constraint): the operative clause establishes a pre-existing individual right, militia clause is non-limiting. (2) militia_conditioned_reading (sibling): the prefatory clause defines scope; militia participation is the boundary. (3) insurrectionist_reading (sibling): the right protects armed resistance capacity against tyrannical government. This reading was elevated to constitutional doctrine by DC v. Heller (2008) and has expanded through subsequent cases (NYSRPA v. Bruen, 2022). The sibling readings remain intellectually and legislatively contested but are excluded from Supreme Court operative doctrine. The disagreement is located in the relationship between the prefatory and operative clauses: does the prefatory clause limit scope or merely express purpose?"
+  },
+  "omegas": [
+    {
+      "id": "original_public_meaning_determinacy",
+      "question": "What was the original public meaning of the Second Amendment at ratification (1791), and does it unambiguously support the individual-right reading or the militia-conditioned reading?",
+      "resolution_mechanism": "Historical analysis of 18th-century usage, founding-era state constitutions and court decisions, contemporaneous political discourse, and the intentions of the framers and ratifiers. Expert historical consensus (or persistent disagreement) from non-partisan sources.",
+      "impact": "If historical analysis confirms the individual-right reading, the constraint is grounded in genuine constitutional meaning and the originalist interpretation is vindicated. If historical analysis favors the militia reading or shows genuine ambiguity, the individual-right reading is shown to be a selective reading imposed by modern jurisprudence, moving the constraint from mountain-like (textually grounded) to snare-like (invented tradition masking extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the individual-right reading accurately recovers the Second Amendment's original public meaning or imposes modern policy preferences onto the text."
+    },
+    {
+      "id": "causality_of_firearm_access_to_harm",
+      "question": "To what extent does permissive firearm access directly cause elevated rates of mass shooting, domestic violence lethality, and suicide completion (as opposed to other social, economic, or psychological factors)?",
+      "resolution_mechanism": "Epidemiological studies comparing harm rates across jurisdictions with different access regimes, controlling for confounders. Meta-analysis of causal inference evidence. International comparison of similar populations with different regulatory regimes.",
+      "impact": "If causality is strong and specific to access/permissiveness, the harm born by victims is directly traceable to the constraint's operation, solidifying the snare classification. If causality is weak or confounded by other factors, the constraint's role is more attenuated, potentially weakening the victim claim and moving the classification toward rope or even mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the measured harm to victims is causally driven by the constraint's operation or is attributable to other factors."
+    },
+    {
+      "id": "constitutional_reading_incommensurability",
+      "question": "Are the individual-right reading and the militia-conditioned reading genuinely incommensurable (logically incompatible), or can they be reconciled as emphasizing different aspects of a coherent constitutional principle?",
+      "resolution_mechanism": "Constitutional legal theory: analysis of whether the readings rest on incompatible premises about the prefatory clause's function, the scope of 'the right of the people,' and the relationship between constitutional text and constitutional purpose.",
+      "impact": "If the readings are incommensurable, the constraint is a choice between competing visions, not the discovery of a single truth — the originalist framing of the constraint as neutral interpretation is undermined. If reconcilable, the constraint may be reframed as one defensible emphasis within a broader constitutional settlement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the individual-right and militia-conditioned readings are logically incompatible or represent different emphases within a coherent constitution."
+    },
+    {
+      "id": "identity_lock_of_originalist_authority",
+      "question": "To what extent is originalist constitutional interpretation (as a method) institutionally locked into defending the individual-right reading because the reading's success vindicates originalism as a methodology?",
+      "resolution_mechanism": "Institutional analysis of originalist jurisprudence: cases where originalist method would support non-individual-right conclusions; analysis of whether originalist scholars and judges defend the individual-right reading on methodological grounds or on independent policy grounds disguised as methodology.",
+      "impact": "If originalist authority is identity-locked to defending the individual-right reading, the constraint's persistence is reinforced by methodological institutional identity, not neutral textual analysis — the constraint becomes more snare-like (extraction protected by institutional authority that benefits from defending it). If originalism is methodologically capable of reaching other conclusions, the reading is less locked in.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether originalist constitutional methodology is independent of the individual-right reading or is institutionally bound to defending it."
+    },
+    {
+      "id": "suppression_mechanism_legal_vs_epistemic",
+      "question": "Is the measured suppression (0.72) primarily structural (legal barriers to regulation, heightened scrutiny making some laws unconstitutional) or internalized/epistemic (gun-regulation advocates internalize the reading as legitimate constitutional law even when they disagree with its policy consequences)?",
+      "resolution_mechanism": "Behavioral analysis: do regulation advocates cease proposing regulations because legal barriers make passage impossible, or because they have internalized the constitutional boundary as legitimate? Counterfactual: if the Supreme Court reversed the reading tomorrow, would the same advocates suddenly propose regulations they had abandoned, or would they require epistemic deprogramming?",
+      "impact": "If suppression is primarily structural, exit from the constraint requires only legal reversal or jurisdiction-shopping. If suppression is internalized, the constraint persists even after legal barriers are removed — targets carry the suppression with them and may not reconstruct regulatory options even when legally permitted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of gun-regulation advocacy is structural (legal barriers) or internalized (epistemic acceptance of the constitutional boundary)."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_boundary__militia_conditioned_reading",
+      "second_amendment_boundary__insurrectionist_reading",
+      "firearm_injury_epidemiology_constraint",
+      "state_level_firearms_regulation_constraint"
+    ],
+    "dual_formulation_note": "The second_amendment_boundary kernel decomposes into three structurally distinct constraints corresponding to three live readings of the same text. Each reading instantiates different beneficiary/victim structures, different extractiveness profiles, and different regulatory consequences. The individual_right_reading (this constraint) coexists with the militia_conditioned_reading and insurrectionist_reading; all three readings remain live intellectual and political positions despite Supreme Court elevation of the individual_right_reading to operative doctrine. This constraint affects downstream constraints that depend on how the Second Amendment is read (state regulation feasibility, epidemiological research capacity, etc.)."
+  },
+  "gain_flow": "gun_manufacturers_and_distributors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "operative_clause_individual_right_primacy",
+    "drift_state": {
+      "moment": "contemporary_public_health_challenge",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "second_amendment_boundary__militia_conditioned_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "second_amendment_boundary__insurrectionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "operative_clause_establishes_individual_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "prefatory_clause_expresses_purpose_not_limit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "second_amendment_boundary__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

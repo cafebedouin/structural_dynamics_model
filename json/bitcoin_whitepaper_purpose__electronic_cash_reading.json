@@ -1,0 +1,553 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "1913a331-2233-428b-9281-8b3e2ca1d730"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Whitepaper Cash Telos Reading — Everyday Payment Function",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "low_value_transactors",
+      "merchant_adoption_advocates"
+    ],
+    "victims": [
+      "full_node_operators",
+      "network_validators",
+      "decentralization_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "payment_processors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from expanded on-chain capacity enabling higher transaction throughput. Lower per-transaction fees reduce operational costs and improve margins. Prioritize merchant adoption and payment-rail use cases. Their business models depend on Bitcoin functioning as a settlement system for everyday commerce. Can exit to other blockchains (Litecoin, Doge, altcoins) or build on sidechains/payment channels if Bitcoin capacity is constrained."
+    },
+    {
+      "name": "low_value_transactors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from low transaction fees, which make small payments economically viable on-chain. Without fee reduction, payments under 1 USD become uneconomical. Depend on the system maintaining everyday usability rather than being optimized for high-value settlement only. Exit options are limited: can use layer-2 solutions (Lightning) but those are less decentralized and require more technical knowledge; can move to altcoins but fragmentation reduces network value."
+    },
+    {
+      "name": "merchant_adoption_advocates",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Drive narratives that Bitcoin should function as point-of-sale cash substitute. Believe widespread merchant acceptance depends on transaction speed and cost parity with legacy payment systems. Frame the whitepaper's 'electronic cash' title as a binding mandate. Control substantial capital and marketing resources. Can exit to alternate blockchains or payment systems but have invested in Bitcoin narrative and community relationships."
+    },
+    {
+      "name": "full_node_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Bear increasing storage and bandwidth costs as block size expands. Running a full validating node becomes more expensive and technically demanding. They perceive expanded capacity as imposing costs they did not choose and receive no compensation for. Can migrate to other chains, stop running nodes entirely, or run pruned/light-client variants that reduce security guarantees. Their voice in protocol governance is weak compared to developers and merchants."
+    },
+    {
+      "name": "network_validators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Miners and staking operators face expanded validation and propagation workloads with larger blocks. While they benefit from transaction fees, the enforcement of higher capacity creates technical pressure (larger blocks require investment in infrastructure). Their ability to exit is constrained by the sunk capital in mining hardware or staking positions. However, they can collectively pressure protocol governance through their collective hashing power (via signaling in block headers) or by mining alternate chains."
+    },
+    {
+      "name": "decentralization_advocates",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue that expanded capacity directly undermines the whitepaper's actual core claim: decentralization and individual verifiability. Large blocks raise the bar for running full nodes, reducing the number of independent validators and concentrating power in high-capacity operations. They see this as a betrayal of the whitepaper's true mandate. Control substantial technical credibility and can exit to alternate implementations, forks, or other chains that prioritize their reading of the constraints."
+    },
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enforce the constraint through code. Implement block size limits, fee structures, and capacity parameters. Different factions of developers are split: cash-reading advocates push for larger limits; store-of-value advocates maintain smaller limits. The constraint's persistence depends on which faction's code becomes canonical. Control the technical roadmap but are subject to pressure from mining coalitions (hashing power) and community discourse."
+    },
+    {
+      "name": "exchanges_and_custody",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from both readings but have agnostic technical positions. Lower transaction fees benefit their operational efficiency; higher capacity also benefits their operational efficiency. Their primary interest is network utility and price stability, not ideological commitment to either reading. Can operate on any blockchain variant or transition to alternate assets if Bitcoin governance becomes too contentious."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables peer-to-peer electronic cash transactions without trusted intermediaries, with low-cost settlement suitable for everyday commerce. Solves the coordination problem of how to route payment information, verify transaction validity, and update account balances without a centralized processor charging fees and extracting data.",
+    "transfer_function": "Moves computing and storage costs (node operation, validation, propagation) from payment processors and transactors onto the distributed network of full node operators and validators. Expanded block capacity increases the per-transaction cost borne by the network infrastructure, while transaction processors and merchants capture the benefit of higher throughput and lower per-transaction fees.",
+    "absent_voices": "Satoshi Nakamoto (disappeared 2011) cannot arbitrate the reading contest. The store-of-value reading camp is present but systematically marginalized in discourse forums and development meetings dominated by cash-reading advocates and merchants. Medium-sized node operators historically had less organized voice until network growth and cost pressure organized them into resistance coalitions. Early Bitcoin users who see expanded capacity as abandoning the cypherpunk principles of individual sovereignty have largely exited to alternate communities or forks.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Removal of the cash-mandate framing and enforcement (reverting to small-block, high-fee architecture) would cause merchants and payment processors to migrate to alternate blockchains or payment systems; low-value transactors would lose on-chain access and move to layer-2 solutions or fiat systems. However, the store-of-value reading camp would claim this is a RETURN to the true purpose, not a removal of function. The dispute itself makes the verdict contested: one faction sees disappearance as system failure, the other as restoration.",
+    "founding_problem": "The whitepaper identifies the need for 'a purely peer-to-peer electronic cash system' that allows 'small casual transactions' without requiring a trusted third party. The system must support everyday transaction use with low fees sufficient to make small payments economically viable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Cash-reading advocates cite the whitepaper title, abstract, and early statements by Nakamoto (2008) on efficiency and speed. Payment processors and merchant groups corroborate this reading based on their operational needs. However, the store-of-value reading camp (decentralization advocates, many developers) cites Nakamoto's later 2010 statements prioritizing node decentralization over transaction throughput ('long-term, it would be better if the network was designed so that each node did as little work as possible'). Academic analysis and peer-review from protocol designers outside the Bitcoin community finds the whitepaper text ambiguous on the relationship between cash functionality and decentralization — both are stated as goals, but their priority relationship is not specified. No external neutral arbiter has been designated or accepted."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 11,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 20,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.2
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.15
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.08
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.2
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.7
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.68
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested kernel 'bitcoin_whitepaper_purpose.' It asserts that the whitepaper's title ('A Peer-to-Peer Electronic Cash System') and stated goal of enabling low-cost everyday transactions are BINDING on the protocol's design and governance. This reading mandates expanded on-chain capacity (8MB+ blocks), lower transaction fees, and prioritization of merchant payment adoption. The sibling reading ('store_of_value_reading') contests this interpretation, claiming the true binding constraints are decentralization and individual full-node verifiability, to which on-chain capacity must be subordinated. The two readings coexist in the same discourse community but with fundamentally different cost distributions and beneficiary structures — they cannot both be fully instantiated in a single protocol simultaneously.",
+    "key_agents": [
+      "Payment processors: organized beneficiaries, prioritize transaction throughput and merchant adoption",
+      "Low-value transactors: powerless beneficiaries, depend on sub-USD transaction economics",
+      "Full node operators: moderate-power payers, bear expanding storage and bandwidth costs",
+      "Network validators (miners): organized payers, face validation and propagation workload increases",
+      "Decentralization advocates: powerful payers, argue the cash telos undermines the actual binding constraint (decentralization)",
+      "Nakamoto oracle: absent analytical agenda setter, the whitepaper text is the kernel, disappearance created interpretive contest",
+      "Protocol developers: organized agenda setters, enforce the reading through code; split between cash and store-of-value factions"
+    ],
+    "logic_rationale": "Extractiveness climbs from 0.35 to 0.68 over the interval because the cash-reading mandate shifts costs onto node operators while concentrating benefits (transaction throughput, low fees) in the hands of payment processors and merchants. Early in the interval (t=0–7), the reading is aspirational and extraction is lower because the protocol has capacity headroom and the cost redistribution is not yet acute. By t=15–20, expanded blocks are the operational reality, node costs are rising, and full nodes are becoming less common — extraction is visible and mounting. Theater ratio rises from 0.15 to 0.42: early defense of the cash telos is genuine advocacy for a use case (theater low); by t=20, continued assertions of the cash mandate serve to deflect criticism of rising node costs and to maintain protocol legitimacy despite the cost shift (theater higher). Suppression requirement (enforcement cost) rises from 0.25 to 0.55 because the store-of-value reading camp must be managed — protocol governance becomes contentious as the cost-benefit tradeoff becomes visible. The enforcement is ideological and technical (which code forks become canonical) rather than overt coercion, but the suppression of the dissenting reading is active. On the coercion grid: structural suppression of the store-of-value reading rises sharply (0.20 → 0.52) as the cash-reading faction consolidates protocol governance. Organizational resistance from decentralization advocates rises (0.68 → 0.75), showing active pushback. Individual-level accessibility collapse is high and stable (~0.70–0.72) — a small user cannot meaningfully run a node or join the protocol design conversation; their choice set is simply 'use the protocol as dictated or exit.' Individual-level resistance falls slightly (0.75 → 0.68) — individual actors gradually accept the protocol as defined rather than organizing resistance.",
+    "perspectival_gap": "The cash-reading beneficiaries (payment processors, merchant advocates) experience this as genuine coordination necessity: without expanded capacity, Bitcoin cannot fulfill its stated purpose. From their seat, the constraint is legitimate, even if costly to implement. The payer seats (full node operators, decentralization advocates) experience it as a false mandate imposed on the protocol by a faction that controls narrative and code merge authority. A payment processor and a full node operator see the same protocol rule — larger block size — and experience entirely opposite extraction profiles: one sees capacity enabling their business, the other sees cost rising without compensation. The engine computes per-seat type from the structural data; this reading is authored as tangled_rope (genuine coordination function + asymmetric extraction), and the payer seats should resolve as snare-adjacent or tangled_rope-with-burden while beneficiary seats resolve as rope or coordination. The divergence is structural, not a measurement error.",
+    "directionality_logic": "Payment processors and low-value transactors are beneficiaries (d near 0.0–0.25) because the constraint expands capacity and reduces fees they depend on. Full node operators and network validators are payers (d near 0.75–1.0) because costs rise with block expansion and they receive no direct compensation. Decentralization advocates are payers (d near 0.7–0.9) because they bear the burden of their reading being suppressed and the protocol diverging from what they see as its true purpose. Protocol developers are the agenda-setter (power=organized, d in 0.3–0.5 range) — they enforce the reading through code, so they steer beneficiary direction, but they are not capturing the rents, only executing the coordination choice. Exchanges and custody are observers with low directionality (d near 0.5) because they benefit from both readings and are agnostic to the technical choice.",
+    "mandatrophy_analysis": "This reading avoids the mandatrophy trap by virtue of its founding problem remaining contested. The cash-reading advocates maintain that the founding problem (everyday transaction use) is still live and the constraint still necessary. The store-of-value reading camp contests that claim, but the contest itself keeps both readings from atrophying — neither can assert the founding problem is dead without losing coherence. However, the coercion grid shows structural-level suppression rising (0.20 → 0.52), which is consistent with mandatrophy in progress: if the store-of-value reading were fully suppressed and the contest resolved in favor of the cash reading, the theatrical component would fall again as the constraint became normal operation, not a defended position. Currently the theater ratio is climbing (0.15 → 0.42), indicating increasing performative defense — a pre-mandatrophy signal. The constraint risks becoming a piton: the founding problem becomes increasingly contested, extraction is visible, but neither side can fully exit or fully win, so the constraint persists through organizational inertia and narrative defense rather than genuine coordination or even extractive clarity.",
+    "kernel_context": "This constraint is one reading of the kernel 'bitcoin_whitepaper_purpose' — the interpretation that the whitepaper's title and abstract mandate electronic cash functionality with low fees, necessitating expanded on-chain capacity. The sibling reading 'store_of_value_reading' asserts the true binding constraints are decentralization and full-node verifiability, subordinating on-chain capacity. A third contextual reading ('nakamoto_oracle_opacity') notes that Satoshi Nakamoto's 2011 disappearance left the kernel text uninterpreted by its author, making the contest insoluble by authoritative fiat — both readings claim textual support and neither can be ruled out by appeal to Satoshi's original intent. The contest is not empirical (both parties can cite evidence) or logical (no logical contradiction forces a choice) — it is a choice about which design constraint is foundational, which is inherently preference-laden and community-determined. This story is the electronic-cash reading; the store-of-value reading is a separate constraint story."
+  },
+  "omegas": [
+    {
+      "id": "whitepaper_text_ambiguity",
+      "question": "Is the whitepaper's emphasis on 'electronic cash' and 'everyday transaction use' a binding architectural mandate, or is it a use-case vision for a decentralization primitive that serves many purposes?",
+      "resolution_mechanism": "Textual analysis of the whitepaper and Nakamoto's 2008–2010 statements compared with technical design choices (proof-of-work, finite supply, no rollback mechanism). Analysis of sibling blockchain designs (Litecoin, Dogecoin, etc.) and their stated purposes relative to their technical capacity choices.",
+      "impact": "If the cash mandate is binding, expanded capacity is necessary and node operator costs are justified as coordination expenses. If cash is a use case not a mandate, the constraint is extractive and its persistence is contestable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the cash telos is architecturally binding or aspirational."
+    },
+    {
+      "id": "node_cost_internalization",
+      "question": "Should full node operators bear the cost of expanded on-chain capacity as an implicit subsidy to transaction processors and merchants, or should capacity expansion be gated on compensation mechanisms for node operators?",
+      "resolution_mechanism": "Empirical: measurement of node running costs over the interval (storage, bandwidth, CPU); analysis of whether any mechanism transfers revenue from beneficiaries to node operators proportional to cost increase. Structural: examination of whether protocol governance includes seats for node operators or whether it is weighted toward developer and merchant interests.",
+      "impact": "If node costs are uncompensated, the constraint is extractive and arguably coercive (node operators have no choice to adopt expanded capacity without bearing the cost). If mechanisms exist or are implemented, the constraint shifts toward tangled_rope with higher coordination cost rather than pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether node operator costs are structurally internalized or externalized."
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Does the store-of-value reading logically foreclose the cash reading, or are they coexisting architectural choices held by different coalition members?",
+      "resolution_mechanism": "Logical analysis: examine whether a protocol with strong decentralization (small blocks, high node count) can still serve cash use cases at scale (via payment channels, sidechains, or other layer-2 solutions). If yes, the readings coexist (different paths to fulfilling different priorities). If no, one reading forecloses the other.",
+      "impact": "If coexistent: both readings remain live and the constraint is mandatrophy-vulnerable (neither can win, both must be performatively defended). If one forecloses the other: the winner's reading legitimacy is strengthened and mandatrophy pressure relaxes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two readings are logically or merely strategically incompatible."
+    },
+    {
+      "id": "satoshi_disappearance_oracle_silence",
+      "question": "Would explicit authorial interpretation by Nakamoto resolve the reading contest, or has the protocol governance evolved to the point where authorial intent is no longer dispositive?",
+      "resolution_mechanism": "Hypothetical: if Nakamoto's private writings were discovered clarifying the original intent, would the Bitcoin community accept that resolution? Evidence from other open-source projects with deceased founders (Linux kernel, etc.) on whether community governance overrides authorial intent.",
+      "impact": "If authorial intent would be dispositive: the absence is the core structuring problem and the constraint will remain contested until one reading captures majority governance. If community governance is already normative: Nakamoto's absence is less consequential than the power distribution among current developers and stakeholders.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the kernel's interpretive authority lives in the author or in the community."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading",
+      "bitcoin_mining_incentive_alignment",
+      "bitcoin_full_node_verifiability",
+      "bitcoin_transaction_fee_market"
+    ],
+    "dual_formulation_note": "This story and 'bitcoin_whitepaper_purpose__store_of_value_reading' are sibling readings of the same kernel (bitcoin_whitepaper_purpose). They have conflicting beneficiary/victim structures, different ε values, and incompatible architectural mandates. The electronic-cash reading prioritizes transaction throughput and merchant adoption; the store-of-value reading prioritizes decentralization and individual verifiability. Each story is ε-invariant within its own reading; the divergence between readings is captured in the cs_structure.reading_relations and the network edges. Do NOT attempt to merge these stories or reconcile their metrics — the divergence IS the measurement the corpus exists to take."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "payment_processors",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading",
+      "bitcoin_mining_incentive_alignment"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "cash_functionality_is_binding_architectural_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "low_fees_enable_everyday_transaction_volume",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "electronic_cash_design_posture",
+    "drift_state": {
+      "moment": "contemporary_post_2017_scaling_wars",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

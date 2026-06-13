@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__real_catastrophe_only",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ba9ec4de-d316-4c6d-9b52-62603e29bc4b"
+  },
+  "base_properties": {
+    "extractiveness": 0.67,
+    "suppression": 0.71,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Real Catastrophe Competence Exercise Validity",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "victims": [
+      "simulation_investment_holders",
+      "training_program_operators",
+      "organization_leadership"
+    ],
+    "beneficiaries": [
+      "risk_denial_advocates"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'real_catastrophe_only' reading of the competence_exercise_validity kernel. The reading asserts that only real catastrophe truly exercises competence; simulation is an insufficient substitute. Organizations adopt the frame that simulation validates competence because admitting that validation requires actual crisis would expose them to liability and operational risk. This constraint models the extraction mechanism through which that frame persists despite growing evidence from post-incident analysis that simulation masked competence gaps. Field operators bear the untested-competence risk while institutional actors collect legitimacy.",
+    "key_agents": [
+      "risk_denial_advocates (institutional beneficiary, identity-locked): benefit from treating simulation as sufficient; identity as competent stewards depends on the frame",
+      "simulation_investment_holders (trapped payer): invested careers in simulation systems; walking back that investment damages standing",
+      "training_program_operators (constrained payer): resource-constrained; shifting to live-fire training or admitting inadequacy both carry high cost",
+      "organization_leadership (powerful payer/beneficiary): benefits from competence narrative; constrained because alternatives carry higher institutional cost",
+      "field_operators (excluded, powerless): face actual competence gap risk; not in frame-setting conversation",
+      "external_auditors (observer, organized): position to assess competence-reality gap but power limited by organization's control of simulation data",
+      "past_incident_analysts (observer, analytical): review post-incident data showing simulation gaps; findings archived rather than operationalized"
+    ],
+    "logic_rationale": "Extractiveness rises over the interval (0.48 → 0.67) because simulation programs accumulate, the institutional commitment to treating them as validation deepens, and evidence that they mask competence gaps must be increasingly suppressed. Theater rises (0.35 → 0.58) because as the evidence gap grows, more of the simulation activity becomes performative validation rather than genuine testing—drills pass reliably not because competence is exercised but because scenarios are designed to succeed. Suppression rises (0.55 → 0.71) because as external doubters (auditors, analysts, workers aware of past incidents) accumulate evidence, maintaining the frame requires more aggressive control of discourse: incident analysis is restricted, near-miss data is not fed back, alternative competence frameworks are delegitimized. The constraint is extractive because it transfers institutional legitimacy (claimed readiness) and risk (actual untested competence) asymmetrically—beneficiaries collect legitimacy, payers and excluded operators collect risk. Suppression is high because the frame's persistence depends on preventing field-level knowledge (where competence gaps are most visible) from bubbling up into frame-setting conversation.",
+    "perspectival_gap": "The risk_denial_advocates seat and the field_operators seat compute entirely differently. From the advocate's seat, the constraint is genuine coordination: 'We need a credible way to say we are prepared without running catastrophes.' From the field operator's seat (excluded, so not formally computing), the constraint is pure extraction: 'The organization has shifted all risk to us while collecting legitimacy from simulation they know is incomplete.' The engine computes the advocate seat's type from the beneficiary/victim structure and their high directionality (d near 0.0, full beneficiary); field operators are structurally excluded, so their type is not formally computed, but their situation establishes that the constraint operates as snare for those who would bear real consequences.",
+    "directionality_logic": "Risk_denial_advocates are structural beneficiaries: they collect the institutional legitimacy the frame generates and bear none of the competence-gap risk (d ≈ 0.0–0.15, beneficiary end). Simulation_investment_holders are targets: their careers depend on the simulation system's sufficiency, but the rising theater_ratio shows that investment is increasingly indefensible; they are trapped because exit (publicly walking back competence claims) damages them worse than staying (d ≈ 0.75–0.85, target end, identity-locked exit). Organization_leadership sits asymmetrically: they benefit from the legitimacy narrative but also bear liability risk if untested competence fails catastrophically (d ≈ 0.4–0.5, near-symmetric but tilted toward beneficiary because they control the frame). Training_program_operators are targets with constrained exit: they cannot leave the organization without credential-specific employment cost; they cannot change the frame without institutional cost (d ≈ 0.70–0.80, target end). Field operators are maximally extracted from but structurally excluded, so no formal seat computes their type—this is a design feature that allows the constraint to persist by keeping the highest-risk population outside the frame-setting conversation.",
+    "mandatrophy_analysis": "The 'real_catastrophe_only' reading creates a mandatrophy detection signal: the founding problem was 'how do we assess competence without running crises' and the founding solution was 'simulation as proxy.' The founding_problem_status is 'contested' because simulation operators claim the problem remains live (crises are rare, we need simulation) while post-incident analysts claim the problem has shifted (the real problem is now 'competence decay masked by theater,' not 'lack of assessment method'). The measurement series shows mandatrophy directly: as theater_ratio rises from 0.35 to 0.58, the constraint's capacity to solve the founding problem degrades—simulation becomes less about competence exercise and more about organizational legitimacy theater. At the interval end, the constraint persists not because it solves the original problem but because removing it would expose the organization to liability and field-level unease. This is a classic zombie constraint: the original coordination problem (assessment without catastrophe) has been solved by the advent of sophisticated simulation platforms, but the constraint persists because removing it would require admitting that competence validation is incomplete.",
+    "kernel_context": "This constraint instantiates the 'real_catastrophe_only' reading of the competence_exercise_validity kernel. The kernel asks: 'What counts as valid exercise of competence in high-stakes domains?' This reading's core claim is that only real catastrophe—with its unpredictability, cascading failures, and human-behavioral stress—truly exercises the full repertoire of competence; simulation inevitably narrows scenario space and coaching effects. The sibling readings (simulation_as_proxy, continuous_refresh_hybrid) assert different definitions of validity: simulation-as-proxy treats simulation as sufficient proxy exercise; continuous_refresh_hybrid treats simulation as necessary but insufficient and adds continuous drill cycles. This reading FORECLOSES the simulation_as_proxy reading in any single organizational framework: if you hold that only real catastrophe exercises competence, you cannot coherently claim that simulation counts as adequate exercise within the same framework (a simulation either exercises competence or it does not). This reading INFLUENCES (but does not foreclose) the continuous_refresh_hybrid reading: accepting that real catastrophe alone exercises competence creates pressure toward hybrid approaches (continuous drilling to approximate real-event stress), but the hybrid reading might also arise from a different epistemic premise (simulation is necessary but insufficient for practical reasons, not for structural competence reasons)."
+  },
+  "omegas": [
+    {
+      "id": "competence_decay_trajectory",
+      "question": "What is the actual decay rate of untested competence in high-stakes domains? Does simulation materially slow decay, or does it merely postpone observable failure?",
+      "resolution_mechanism": "Controlled study of organizations forced to adopt live-fire training vs. simulation-only cohorts, tracking incident rates over 10+ years; or analysis of post-incident competence data from organizations that experienced genuine crises after years of simulation-only validation.",
+      "impact": "If decay is rapid and simulation does not slow it, the constraint extracts heavily by shifting liability to field operators. If decay is slow even without simulation, the constraint may genuinely solve a coordination problem. If simulation materially slows decay but does not prevent competence gaps, the reading partially transfers from 'snare' toward 'tangled_rope' (mixing coordination with extraction).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether untested competence decays faster than the constraint acknowledges."
+    },
+    {
+      "id": "simulation_scenario_closure",
+      "question": "What proportion of real-catastrophe scenarios fall outside the design space of organizational simulation programs?",
+      "resolution_mechanism": "Post-incident analysis: for incidents in organizations with active simulation programs, what fraction of actual cascades, decision points, or failure modes were not covered in drills? Comparative analysis across industries (aviation, nuclear, healthcare, emergency response).",
+      "impact": "High closure (simulation covers most real scenarios) supports the 'continuous_refresh_hybrid' reading and weakens pure 'real_catastrophe_only' framing. Low closure (many real scenarios are novel to the organization) supports this reading's core claim that simulation masks competence gaps.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which simulation covers the actual scenario space organizations encounter."
+    },
+    {
+      "id": "institutional_identity_lock_depth",
+      "question": "For simulation_investment_holders and organization_leadership, how much of the identity-lock and institutional commitment is based on genuine epistemic belief in simulation sufficiency vs. sunk-cost rationalization and reputational capture?",
+      "resolution_mechanism": "Structural interview or revealed-preference experiment: would actors agree to independent competence validation (real scenarios, blind assessment) if they could preserve organizational legitimacy? How much friction appears when competence-assessment methods are decoupled from internal validation?",
+      "impact": "If identity-lock is primarily epistemic (actors genuinely believe simulation works), the constraint might be addressed through new evidence. If identity-lock is primarily reputational (actors believe the opposite but cannot change course without damage), the constraint operates as a snare and remediation requires institutional redesign, not just evidence.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether institutional commitment to simulation is epistemic or reputation-driven."
+    },
+    {
+      "id": "near_miss_feedback_suppression",
+      "question": "Is the rise in theater_ratio driven by genuine competence decay that simulation fails to catch, or by organizational suppression of near-miss and incident data that would otherwise feed back into simulation design?",
+      "resolution_mechanism": "Comparison of simulation evolution in organizations with open incident-reporting culture vs. restricted reporting; analysis of whether near-miss data systematically disappears from competence-assessment conversation.",
+      "impact": "If suppression is the driver, the extraction mechanism is primarily information control rather than competence decay. The constraint might be addressable through transparency without changing simulation methodology. If decay is the driver, structural change (live-fire training) is required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether theater rise reflects competence decay or information suppression."
+    },
+    {
+      "id": "alternative_reading_lived_experience",
+      "question": "Do field operators and workers experienced with real crises actually endorse the 'real_catastrophe_only' reading, or do they operate under a different epistemic frame about what counts as competence?",
+      "resolution_mechanism": "Structured interview or ethnographic study of workers in organizations that have experienced genuine catastrophes, comparing their assessment of simulation-readiness to their actual-event performance and hindsight view of competence exercise.",
+      "impact": "If field operators endorse 'real_catastrophe_only' based on lived experience, this reading gains corroboration from excluded voices. If they report that simulation provided meaningful preparation despite gaps, the reading's framing shifts toward acknowledging partial validity of simulation rather than categorical rejection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether excluded field operators' lived experience corroborates this reading's claims about simulation inadequacy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the competence_exercise_validity kernel. The kernel asks: 'What counts as valid competence exercise in high-stakes domains?' This reading asserts that only real catastrophe truly exercises competence; simulation is an insufficient substitute. Sibling readings (simulation_as_proxy, continuous_refresh_hybrid) assert different definitions of validity. All three readings are linked via network.affects_constraints because they share the same kernel and compete for institutional adoption. The 'real_catastrophe_only' reading structurally forecloses 'simulation_as_proxy' (if only real catastrophe counts, simulation cannot count as adequate), but influences 'continuous_refresh_hybrid' (accepting real-catastrophe-only as foundational creates pressure toward approximation methods like continuous drill cycles). All three stories have different ε values and different beneficiary/victim structures because they instantiate different epistemic premises about competence exercise."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__simulation_as_proxy",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__continuous_refresh_hybrid",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_exercise_requires_authentic_stress",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_masks_competence_decay",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competence_requires_real_stress",
+    "drift_state": {
+      "moment": "contemporary_expanded_simulation_investment",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

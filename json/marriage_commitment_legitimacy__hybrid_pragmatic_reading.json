@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "marriage_commitment_legitimacy__hybrid_pragmatic_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_marriage_commitment_legitimacy_hybrid_pragmatic",
+    "story_uid": "0aa771a8-d669-4eb0-9568-77424977ccb9"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.64,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Manifesto Marriage Doctrine: Hybrid Pragmatic Reading",
+    "topic_domain": "religious/political/institutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "institutional_leadership"
+    ],
+    "victims": [
+      "rank_and_file_membership",
+      "doctrinal_traditionalists"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.64
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A religious institution facing federal legal pressure to reverse a core doctrinal commitment publishes the Manifesto as a prophetic revelation from authoritative religious leadership. The reversal is framed as divinely commanded rather than institutionally pragmatic, permitting the leadership to claim compliance with both federal law and theological continuity. This reading instantiates ONE of three structurally distinct interpretations of the Manifesto's legitimacy: (1) endogenous_reinterpretation_reading: the reversal is authentic divine revelation; (2) exogenous_override_reading: the reversal is federal coercion forcing pure pragmatic capitulation with no theological justification; (3) hybrid_pragmatic_reading (this constraint): the reversal deploys prophetic authority strategically to manage the contradiction between federal pressure and doctrinal preservation, preserving institutional leadership's interpretive authority while leaving the membership bearing interpretive ambiguity. The three readings have the same Manifesto as their object but different ε values, different beneficiary/victim structures, and different classifications. Each is generated as a separate constraint story linked by network.affects_constraints.",
+    "key_agents": [
+      "institutional_leadership: Agenda-setter (interprets, publishes, controls the framing of the Manifesto). Primary beneficiary—gains both federal compliance and doctrinal flexibility. High power, arbitrage-grade exit (can shift interpretation framework).",
+      "rank_and_file_membership: Payer through identity-lock (must accept the reversal or leave their faith community; exit costs are social, relational, and identity-constituting). Moderate power, trapped exit through identity fusion.",
+      "doctrinal_traditionalists: Victims (their theological reading is suppressed by the leadership's prophetic framing; dissent appears as rejection of revelation). Powerful locally but constrained by institutional hierarchy.",
+      "federal_authorities: Excluded (created the crisis through legal pressure but do not participate in the theological reading; structurally necessary but not seated).",
+      "prophetic_authority_doctrine: Non-agent beneficiary (the hybrid reading instantiates and vindicates the doctrine that prophetic revelation is live authority, regardless of pragmatic motivation)."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) because institutional leadership benefits from both-and positioning (federal compliance + doctrinal preservation) while membership bears either-or burden (authentic revelation OR betrayal). Suppression is elevated (0.64) because the constraint's persistence depends on suppressing the traditionalist reading and the rank-and-file's interpretive uncertainty. Theater ratio is elevated at midpoint (0.50+) because the prophetic framing performs a function: it permits institutional unity despite underlying contradiction. The measurement series show extraction and theater rising slightly during crisis (0-15) and plateauing as the new interpretation stabilizes (15-40). Suppression_requirement tracks similarly—initial effort to establish the framing, then maintenance suppression to prevent dissent from surfacing. The shared time grid ensures every metric is authored at every examined point.",
+    "perspectival_gap": "From institutional leadership's perspective, the Manifesto is successful crisis management preserving both federal compliance and theological authority—a genuine coordination achievement. From rank-and-file perspective, the Manifesto is ambiguous: it could be authentic revelation or pragmatic cover story, and they cannot definitively tell which. From doctrinal traditionalist perspective, the Manifesto is institutional betrayal dressed in prophetic language—extraction of their interpretive authority through suppression of dissent. The engine computes these divergences from the structural data: beneficiary (leadership) vs. victims (membership and traditionalists) sit on opposite ends of directionality; their computed types diverge directly from the asymmetry.",
+    "directionality_logic": "Institutional leadership: beneficiary of both-and positioning, arbitrage-grade exit (can shift interpretive frames without losing institutional seat), high power → low d, subsidy-ward. Rank-and-file membership: pay through identity-lock (must accept or leave community), moderate power, trapped exit → high d, extraction-ward. Doctrinal traditionalists: victims of interpretive suppression, powerful but constrained by hierarchy, dissent suppressed → high d, extraction-ward. The leadership's d is derived beneficiary status (they collects the benefit of both federal compliance and doctrinal preservation, which is the extraction mechanism's gain structure), while the membership's d is derived from victim status (they bear the interpretive uncertainty cost).",
+    "mandatrophy_analysis": "The Manifesto appears as tangled_rope from leadership's seat (genuine coordination of crisis management + asymmetric benefit), but appears as snare from victim seats (extraction of interpretive authority through suppression of dissent, no coordination benefit to rank-and-file). The classification prevents the mistake of reading this as pure rope (genuine coordination from all seats) or pure snare (extraction from all seats). It is hybrid: coordination function exists (crisis response, institutional survival) AND extraction function exists (interpretive authority redistribution, suppression of traditionalist reading). Active enforcement is required: the leadership must continuously defend the prophetic framing against the counter-narrative that it was pragmatic capitulation. The constraint persists because institutional authority is invested in maintaining the framing, not because the membership would independently accept it.",
+    "kernel_context": "This constraint is the hybrid_pragmatic_reading of the marriage_commitment_legitimacy kernel. The contested question is: what does the Manifesto represent? Sibling readings: (1) endogenous_reinterpretation_reading claims the reversal is authentic divine revelation; (2) exogenous_override_reading claims the reversal is federal coercion forcing pragmatic capitulation with no theological justification. This reading (hybrid_pragmatic) claims the reversal deploys prophetic authority strategically to manage the contradiction, preserving institutional leadership's interpretive authority while leaving the membership bearing interpretive uncertainty. The structural deltas between readings are captured in the cs_structure block (reading_relations, axioms, drift_state)."
+  },
+  "omegas": [
+    {
+      "id": "prophetic_revelation_vs_pragmatic_framing",
+      "question": "Was the Manifesto an authentic prophetic revelation from religious authority, or a strategic deployment of prophetic framing to manage pragmatic institutional needs?",
+      "resolution_mechanism": "Post-institutional disclosure (memoirs, leaked deliberations, or historical investigation of leadership's decision-making process before the Manifesto was published); theological analysis of whether the Manifesto's theological content is consistent with prior prophetic claims in the tradition.",
+      "impact": "If revelation: the constraint reclassifies toward genuine coordination (the reversal is theologically justified and not extraction). If pragmatic framing: the constraint remains extractive and the suppression of the traditionalist reading is itself evidence of extraction. This is the irreducible uncertainty under the hybrid reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the prophetic authority claim is authentic or strategic framing."
+    },
+    {
+      "id": "identity_locked_suppression_persistence",
+      "question": "Is the measured suppression structural (external coercion preventing dissent from surfacing) or internalized (the membership has absorbed the framing and would defend it even after coercive authority breaks)?",
+      "resolution_mechanism": "Post-defection trajectory: if members who leave the institution continue to defend the Manifesto's prophetic authority, suppression is partly internalized; if they revert to the traditionalist reading after leaving, suppression was mostly structural.",
+      "impact": "If internalized: the constraint's effective suppression is higher than the authored scalar suggests; the membership carries the suppression with them after exit, and the identity-lock is deeper. If structural: exit would enable rapid reinterpretation, and the constraint depends on active enforcement more heavily.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in identity-locked context."
+    },
+    {
+      "id": "federated_relief_vs_doctrinal_survival",
+      "question": "Did the institution's leadership view the Manifesto primarily as a relief mechanism against federal pressure, or primarily as a doctrinal preservation mechanism that happened to satisfy federal demands?",
+      "resolution_mechanism": "Counterfactual institutional decision-making: if federal pressure had not existed, would leadership have published the Manifesto anyway? Leadership testimony (if reliable) on what prompted the decision.",
+      "impact": "If relief-primary: the constraint is more extractive and less coordinating (federal pressure is the real beneficiary of the arrangement). If doctrinal-survival-primary: the constraint is more of a genuine institutional adaptation (preserving the core function at cost of doctrinal ambiguity). This maps to directionality: leadership's true d value depends on which motivation was primary.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the Manifesto was primarily crisis response to exogenous pressure or primarily institutional self-preservation."
+    },
+    {
+      "id": "alternative_framings_foreclosed",
+      "question": "Is the hybrid reading the only coherent framing under which institutional authority can be maintained, or could leadership have sustained authority through the endogenous (revelation) or exogenous (coercion) readings instead?",
+      "resolution_mechanism": "Comparative institutional analysis: did other religious institutions facing similar federal pressure adopt different readings and maintain authority? What happened to institutions that explicitly rejected the pragmatic reading?",
+      "impact": "If the hybrid reading is unique in permitting authority preservation: it is genuinely adaptive and somewhat coordinating. If alternative framings were viable but suppressed: the constraint is more purely extractive (leadership chose the hybrid reading to maximize their benefit, not because it was the only option).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid reading was structurally necessary or strategically chosen among alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_commitment_legitimacy__endogenous_reinterpretation_reading",
+      "marriage_commitment_legitimacy__exogenous_override_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the marriage_commitment_legitimacy kernel. The ε-invariance principle (DP-001) requires separate constraint stories for structurally distinct readings because their ε values, beneficiary/victim structures, and classifications differ materially. The endogenous reading frames the reversal as authentic revelation (low ε, coordination-primary); the exogenous reading frames it as federal coercion (high ε, extraction-pure); this hybrid reading frames it as strategic institutional adaptation deploying prophetic authority (moderate ε, tangled_rope). The three stories are linked via network.affects_constraints so the system can model the constraint family: they share a kernel (the Manifesto text), but each story measures a different reading's structural claim. The family relationship is: exogenous_override → hybrid_pragmatic ← endogenous_reinterpretation (the hybrid reading influences both siblings by establishing a middle ground that allows institutional authority to claim both-and rather than either-or)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "prophetic_authority_preserving_institutional_unity",
+    "drift_state": {
+      "moment": "contemporary_post_federal_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "marriage_commitment_legitimacy__endogenous_reinterpretation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "marriage_commitment_legitimacy__exogenous_override_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prophetic_authority_deployed_strategically",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "institutional_preservation_justifies_scope_ambiguity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "marriage_commitment_legitimacy__exogenous_override_reading",
+      "marriage_commitment_legitimacy__endogenous_reinterpretation_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

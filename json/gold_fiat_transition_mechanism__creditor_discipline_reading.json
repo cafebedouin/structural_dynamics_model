@@ -1,0 +1,539 @@
+{
+  "header": {
+    "constraint_id": "gold_fiat_transition_mechanism__creditor_discipline_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "1ccda6ab-bce3-42ee-8bb3-ccf13403c048"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.73,
+    "claimed_type": "snare",
+    "human_readable": "Gold-Fiat Transition: Creditor Discipline Elimination (Reserve Issuer Reading)",
+    "topic_domain": "monetary_economics/political_economy/history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reserve_currency_issuer",
+      "debtor_nations"
+    ],
+    "victims": [
+      "creditor_nations",
+      "non_reserve_currency_holders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "reserve_currency_issuer",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The United States, the dominant reserve-currency issuer post-WWII. Under gold standard, faced balance-of-payments discipline: deficits drained gold reserves, forcing contraction. Transition to fiat eliminated this external constraint, enabling persistent deficits and monetary expansion without redemption risk. Sets the value and terms of reserve currency; enforces its acceptance through network effects, military power, institutional arrangements, and denomination of global commodity prices."
+    },
+    {
+      "name": "debtor_nations",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Nations running persistent payment deficits (UK post-WWII, US increasingly from 1960s, many developing nations). Under gold standard, faced hard budget constraints: deficits triggered reserve drain and forced austerity. Fiat transition, linked to dollar reserve status, enabled deficit financing through currency issuance. Gained fiscal flexibility at the cost of inflation risk and currency depreciation pressure."
+    },
+    {
+      "name": "creditor_nations",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Nations running trade surpluses (Germany post-reconstruction, Japan, later China). Under gold standard, creditor status conferred veto power: debtor nations' deficits translated to creditor reserve accumulation backed by redemption. Transition eliminated redemption option; creditor reserves became trapped paper. Forced choice: accept currency depreciation of reserves through inflation, revalue currency (losing export competitiveness), or continue accumulation (asset concentration). Bear the cost of financing debtor deficits."
+    },
+    {
+      "name": "non_reserve_currency_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Nations, central banks, corporations, individuals holding non-reserve currencies (sterling, DM, yen, euros). Under gold standard, all currencies had parity; value was anchored. Fiat transition subjected non-reserve holders to the monetary policy of the reserve issuer: if reserve currency inflates, non-reserve holdings lose value. Must hold some foreign reserves for trade settlement; exit options limited by network effects and transaction costs."
+    },
+    {
+      "name": "working_class_savers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual wage-earners and savers. Benefited initially from fiscal expansion and employment gains. Long-term payers: inflation erodes real wages, purchasing power, and savings denominated in fiat currency. Cannot exit into alternatives (most do not hold gold, equities, or foreign assets); forced to hold nominal wages and savings in depreciating medium. Identity-locked: economic identity constituted through fiat-wage employment."
+    },
+    {
+      "name": "financial_creditors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Institutional investors, banks, wealthy individuals. Benefited substantially from fiat regime: enabled asset price inflation (equities, real estate, bonds), which concentrated wealth upward. Could arbitrage between currencies, assets, and jurisdictions; could hedge inflation through real asset ownership. Gained substantially relative to non-sophisticated savers."
+    },
+    {
+      "name": "central_banks_non_reserve",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Central banks of non-reserve nations (Germany, Japan, etc.). Gained nominal monetary autonomy (no longer constrained by gold redemption). In practice, became trapped: managing national currency value against reserve currency became perpetual discipline (inflation targeting, reserve adequacy ratios, capital-flow management) replacing one constraint with another. Unable to fully escape the constraint without economic isolation."
+    },
+    {
+      "name": "fiscal_authorities_reserve_issuer",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Government finance ministries and legislatures of reserve-currency nations (primarily US). Eliminated the external balance-of-payments discipline on fiscal deficits. Gained policy space for sustained deficits, counter-cyclical spending, and entitlements without immediate currency crisis. Constraint shifted from external (reserve exhaustion) to internal (inflation, debt-to-GDP) and market-based (interest-rate expectations)."
+    },
+    {
+      "name": "bretton_woods_architects",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Institutional designers of mid-20th-century monetary order (IMF, World Bank, fixed-rate system). Attempted to maintain gold discipline while enabling monetary flexibility through institutional mechanisms. Observed the system's failure: the attempted compromise proved structurally unsustainable once capital mobility increased and deficits accumulated."
+    },
+    {
+      "name": "global_labor_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Unions, worker organizations, labor advocates globally. Would argue fiat regime enabled capital mobility and wage arbitrage: deficit spending allowed corporations to offshore production while maintaining demand through devaluation, but real wages stagnated as inflation eroded gains. Excluded from constraint-setting; their interests (full employment, real-wage growth) diverge from reserve issuer and financial creditor interests."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The gold-standard system theoretically coordinates global monetary settlement and price stability by enforcing discipline: a creditor nation's threat of redemption forces debtors to adjust, and all participants are anchored to a common physical reserve. The system prevents monetary excess and maintains exchange-rate stability through the redemption mechanism. The creditor-discipline reading emphasizes that this coordination worked through asymmetric power: creditors had veto (redemption threat), debtors faced automatic pressure (reserve drain).",
+    "transfer_function": "Moves seigniorage gains and geopolitical leverage from creditor nations and non-reserve-currency holders to the reserve-currency issuer and debtor nations. Creditor reserves are transferred to debtors (through reserve inflation erosion and currency depreciation) and to the reserve issuer (through seigniorage — the ability to create currency at zero cost and spend it). Non-reserve-currency savers transfer real purchasing power to holders of real assets and reserve currency.",
+    "absent_voices": "Global labor movements and small-nation central banks would contest the constraint's elimination: they would argue fiat regime enabled capital flight from poor nations, wage arbitrage, and monetary instability that harmed workers and developing-nation policymakers. Developing-nation central banks excluded from Bretton Woods design had limited voice in constraint modification. Alternative monetary visions (multi-reserve systems, gold-backed currencies, regional integration) were suppressed by the constraint's institutional enforcement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fiat transition reversed and gold redemption were restored, the entire post-1971 international monetary architecture would collapse. Debtor-nation fiscal expansion would be reversed through automatic reserve-drain discipline. Creditor nations would regain veto power and enforce adjustment through redemption threats. The decades of deficit-spending by reserve issuers and some debtors would be unwound through austerity; central-bank autonomy would be constrained by gold holdings. Global power distribution would shift back from reserve-currency issuer toward creditor nations. The constraint's disappearance would reorganize the entire geopolitical economy.",
+    "founding_problem": "The Bretton Woods compromise attempted to maintain gold discipline on debtors while enabling greater monetary flexibility through institutional mechanisms (IMF loans, fixed-rate targets, capital controls). It failed when US deficits accumulated faster than the system could absorb, capital became more mobile, and the constraint became structurally unsustainable. The founding problem: how to maintain price stability and fiscal discipline while allowing sufficient monetary expansion for growth and full employment?",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Economists across the political spectrum (Milton Friedman, post-Keynesian economists, development economists, economic historians including Barry Eichengreen, Benn Steil, and Niall Ferguson) corroborate that the gold standard created real deflationary discipline and constrained growth. The Triffin dilemma (identified by Robert Triffin in 1960, widely corroborated by subsequent analysis) documented the structural incompatibility of a national currency serving as global reserve while being redeemable in gold. Academic consensus: Bretton Woods failed not because the founding problem persisted but because the compromise was unsustainable. The problem — disciplining deficits — was genuinely solved by abandoning gold and moving to fiat plus institutional cooperation. Yet the constraint (fiat regime with concentrated reserve power) persists, not because the founding problem requires it, but because institutional and power arrangements maintain it."
+  },
+  "interval": {
+    "start": 1944,
+    "end": 2000
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1944,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1944,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1944,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1944,
+    "tn": 2000,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1944,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2000,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1944,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2000,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1944,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2000,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1944,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2000,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1944,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2000,
+        "value": 0.78
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1944,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2000,
+        "value": 0.81
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1944,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2000,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1944,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2000,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1944,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2000,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1944,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2000,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1944,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2000,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1944,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2000,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1944,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2000,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1944,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2000,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1944,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2000,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1944,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2000,
+        "value": 0.65
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "creditor_discipline_intensity",
+      "question": "Under the gold standard, how binding was the creditor discipline mechanism? Did balance-of-payments deficits force adjustment through automatic reserve drain (gold loss), or could governments maintain deficits through institutional cooperation, capital controls, and forward purchases?",
+      "resolution_mechanism": "Historical analysis of pre-1971 balance-of-payments crises (Suez 1956, pound devaluation 1967, etc.): Did they stem from automatic reserve exhaustion or from political choices and institutional failures to manage cooperation?",
+      "impact": "If discipline was automatic and binding, the transition is a major power redistribution. If discipline was often bypassed through cooperation, the transition represents a shift in the TERMS of cooperation rather than elimination of constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which gold-standard discipline was automatic versus avoidable through institutional cooperation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The gold-fiat transition (1944 Bretton Woods → 1971 Nixon Shock → ~1980 stabilization in fiat regime) is read here as primarily a shift in creditor discipline: under the gold standard and Bretton Woods, nations running balance-of-payments deficits faced automatic pressure (reserve drain) forcing adjustment; creditor nations' accumulation of foreign exchange was backed by the threat of redemption. The transition to fiat eliminated redemption, eliminating the veto power creditors held through the threat of running out of gold. Reserve-currency issuer (primarily US) and deficit-running nations (debtors) gained fiscal flexibility; creditors (Germany, Japan, eventually China) found their reserve accumulation was no longer redeemable and their currency discipline replaced by inflation pressure. This is one of three competing readings of the same kernel transition.",
+    "key_agents": [
+      "reserve_currency_issuer (US): gains seigniorage and fiscal autonomy, eliminates external discipline",
+      "debtor_nations (UK, France, developing countries): gain fiscal flexibility, constrained by inflation instead of reserve exhaustion",
+      "creditor_nations (Germany, Japan, China): lose redemption veto, trapped by forced reserve accumulation and currency appreciation pressure",
+      "working_class_savers (global): benefit from employment gains initially, harmed long-term by inflation erosion of real wages and purchasing power",
+      "financial_creditors (institutional investors, wealthy individuals): benefit from asset price inflation enabled by fiat regime"
+    ],
+    "logic_rationale": "Extractiveness is high (0.82 by 2000) because the transition fundamentally redistributes wealth from creditor nations and non-reserve-currency savers to the reserve issuer and financial assets holders. The constraint is actively enforced (suppression = 0.71): maintaining fiat's legitimacy requires suppressing alternative stores of value, capital controls preventing reserve flight, and institutional arrangements keeping reserve currency in demand. Theater ratio is moderate (0.28): the IMF and central bank frameworks maintain the appearance of monetary cooperation and discipline, but the primary mechanism (creditor veto elimination) is the reality underneath. Accessibility collapse is moderate (0.48) because alternatives exist at each level — countries can dollarize away, savers can hold gold or commodities, central banks can cooperate on currency baskets — but these alternatives face high institutional barriers and network-effects costs. Resistance is substantial (0.73): creditor nations resist the arrangement through mercantilist policies, capital controls, and demands for reserve-diversification; savers resist through inflation hedging; this resistance has shaped the entire post-1971 institutional debate.",
+    "perspectival_gap": "The reserve-issuer and debtor-nation seats should compute this constraint as enabling beneficial coordination and fiscal flexibility — a Rope or Scaffold, not a Snare. The beneficiaries experience escape from external discipline. From the creditor and non-reserve-holder seats, the same structure operates as extraction without alternatives — forced reserve accumulation, currency depreciation, suppression of wage growth. The engine computes per-seat classification from structural data: reserve issuer has arbitrage-grade exit (can choose to lose reserve status but at enormous cost), high power, generational time horizon → low directionality → low/negative extraction. Creditors have trapped exit (cannot avoid accumulating reserves if running surpluses), high power but constrained by currency markets, generational time horizon → high directionality → high extraction. Working-class savers are powerless, identity-locked into holding fiat wages, biographical time horizon → maximum directionality → maximum extraction.",
+    "directionality_logic": "Reserve issuer: Full beneficiary (d ≈ 0.05). Controls the constraint, gains seigniorage, escapes discipline, sets terms for others. Exit is arbitrage-grade: could lose reserve status by mismanaging, but that exit is so costly and slow that it is not a real constraint on behavior. Debtor nations: Beneficiary (d ≈ 0.35). Gain fiscal flexibility but remain constrained by inflation and currency depreciation. Exit options are constrained: could attempt to dollarize or peg to alternative reserve, but network effects and institutional barriers make this costly. Creditor nations: Full target (d ≈ 0.95). Forced to accumulate reserves, cannot redeem them, forced to choose between reserve loss (revaluation), or reserve inflation-erosion (holding). Exit is trapped: cannot avoid surplus accumulation without trade contraction, cannot exit reserves without losing competitive advantage. Non-reserve-currency holders: Target (d ≈ 0.85). Forced to hold or transact in reserve currency, subject to its inflation. Exit is constrained: could try alternative reserves or commodities, but barriers are high. Working-class savers: Target (d ≈ 1.0). Powerless, identity-locked into fiat-wage earnings, no real exit except into real estate (requiring capital). Subject to inflation erosion of real purchasing power without compensation.",
+    "mandatrophy_analysis": "This constraint's founding problem (how to maintain gold discipline while enabling monetary expansion) is demonstrably dead: no serious economist or policymaker believes the gold standard as redesigned in Bretton Woods could be restored, and the IMF's entire institutional structure is predicated on fiat. Yet the constraint persists: decades after the founding problem died, the fiat system remains. This is classic mandatrophy: the founding problem is gone (solved by fiat transition), but the constraint (fiat regime itself, with its concentration of seigniorage and power) persists because beneficiaries (reserve issuer, financial creditors) maintain it and because alternatives (return to gold, global multi-reserve system) face enormous coordination barriers. The theater ratio is low-to-moderate because central banks and the IMF maintain the appearance of monetary cooperation and stability, performing the function of 'discipline' even though the real discipline is gone. This reading deliberately skips the claim-metric reconciliation: it claims Snare while noting that reserve issuers and some debtors might genuinely experience it as Rope (beneficial coordination). That divergence is what per-seat classification measures.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel gold_fiat_transition_mechanism. The reading instantiates the creditor_discipline_reading: the transition is interpreted as the elimination of creditor veto power (redemption threat as balance-of-payments discipline), enabling debtor-nation fiscal flexibility and shifting geopolitical power from creditor to reserve-currency issuer. Sibling readings are: (1) automatic_constraint_reading — the transition is from automatic physical constraint (gold reserves limit money creation) to discretionary institutional authority (central bank sets monetary aggregate at will); (2) composite_overdetermination_reading — the transition was not driven by a single mechanism but by convergence of multiple independent structural changes (telecommunications, labor bargaining, capital mobility). The creditor_discipline_reading forecloses neither sibling — all three can coexist as different framings of the same historical event — but it emphasizes the power-distribution mechanism: who lost the ability to enforce discipline (creditors), who gained fiscal autonomy (debtors and reserve issuer), and how that shift persists because beneficiaries maintain it (mandatrophy)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gold_fiat_transition_mechanism__automatic_constraint_reading",
+      "gold_fiat_transition_mechanism__composite_overdetermination_reading",
+      "bretton_woods_institutional_design",
+      "reserve_currency_seigniorage_extraction",
+      "creditor_nation_trap_mechanism"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a triadic kernel (gold_fiat_transition_mechanism). The automatic_constraint_reading frames the transition as a shift from material to institutional constraint; the composite_overdetermination_reading emphasizes multiple independent drivers (technology, labor, geopolitics) converging. This reading emphasizes power redistribution through elimination of creditor veto. All three affect downstream constraints: reserve-currency seigniorage extraction, creditor-nation trap dynamics, institutional legitimacy of fiat, and contemporary debates over multi-reserve systems. The three readings do not foreclose each other; they coexist as different interpretations held by different analytical communities (monetary economists, historians, political economists)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.02
+    }
+  ],
+  "gain_flow": "reserve_currency_issuer",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "gold_redeemable_discipline_framework",
+    "drift_state": {
+      "moment": "post_1971_fiat_regime",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gold_fiat_transition_mechanism__automatic_constraint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gold_fiat_transition_mechanism__composite_overdetermination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creditor_redemption_veto_enforces_discipline",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "reserve_issuer_fiscal_autonomy_contingent_on_fiat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

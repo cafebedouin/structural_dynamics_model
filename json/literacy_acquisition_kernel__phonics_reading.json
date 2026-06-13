@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "literacy_acquisition_kernel__phonics_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_literacy_acquisition_kernel__phonics_reading",
+    "story_uid": "3b4a033a-a6db-4089-8160-cb584d0f3d0e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Phoneme-Grapheme Decoding Priority (Phonics Reading Kernel)",
+    "topic_domain": "educational_psychology/literacy_pedagogy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "students_with_phonological_weakness",
+      "struggling_early_readers"
+    ],
+    "victims": [
+      "classroom_teachers",
+      "emergent_readers_in_low_print_environments"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the phonics-reading kernel: the claim that phoneme-grapheme decoding must be taught explicitly and systematically BEFORE students encounter connected text, and that decoding skill precedes and enables comprehension. This is ONE reading of the contested literacy-acquisition kernel. Sibling readings include whole-language (phonological skills emerge from meaningful text), balanced-literacy (phonics and connected-text engagement are complementary), and structured-literacy (decoding is one of five essential components, designed for dyslexia but universal). The phonics-reading frame has been enacted into state standards and curriculum mandates in most US jurisdictions, making it structurally powerful. However, the constraint's persistence depends on actively suppressing alternative instructional frameworks (whole-language, balanced-literacy) and constraining teacher professional judgment. The constraint benefits students with weak phonological awareness (the founding target) by providing systematic scaffolding they would not acquire incidentally. It extracts from teachers (autonomy over pacing and text selection) and from students in low-print environments (who acquire phonological awareness naturally and experience the constraint as motivation-damping drill). This is tangled-rope: genuine coordination function (systematic decoding instruction reduces failure for at-risk students) coupled with asymmetric extraction (teacher autonomy, student choice in text engagement).",
+    "key_agents": [
+      "Classroom teachers: payer seat; constrained exit; bear the labor cost of scripted phoneme-grapheme sequences and loss of instructional judgment",
+      "Students with phonological weakness: beneficiary seat; trapped exit; receive systematic scaffolding that prevents decoding failure",
+      "Emergent readers in low-print environments: victim seat; trapped exit; experience phoneme-grapheme drills as decontextualized before meaningful text, reducing motivation",
+      "Reading researchers: agenda-setter seat; arbitrage exit; conducted meta-analyses establishing phoneme-grapheme instruction, shaped standards, benefit from validation",
+      "Curriculum publishers: beneficiary seat; arbitrage exit; profit from market for scripted phonics curricula",
+      "Balanced-literacy and whole-language advocates: excluded seat; constrained exit; objections treated as ideological, not seated in policy authority"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-high (0.68 at interval end) because the constraint constrains teacher discretion on pacing and text selection, and because curriculum publishers profit from the scripted-phonics market. Suppression is higher (0.72) because the constraint's persistence requires active enforcement through state standards, textbook adoption processes, and teacher training programs that discourage alternative frameworks. Theater ratio is moderate (0.41): the phoneme-grapheme sequencing has a genuine pedagogical rationale (systematic instruction does improve decoding outcomes for at-risk students), but an increasing share of the constraint's enforcement infrastructure defends the priority against whole-language and balanced-literacy challenges, which is partly ideological theater rather than functional necessity. Accessibility collapse is moderate (0.65): alternatives (whole-language, balanced-literacy, teacher-directed pacing) exist and have empirical defenders, but the enacted standards make them harder to access in practice. Resistance is substantial (0.58): many educators and parents resist phoneme-grapheme-first sequencing as demotivating for strong readers and as reducing instructional flexibility. The measurement series track extractiveness rising over time as curriculum mandates harden and the constraint becomes increasingly institutionalized, and suppression rising as state standards and teacher training become more tightly aligned to the phoneme-grapheme priority.",
+    "directionality_logic": "Teachers occupy the payer seat (d near 1.0, full target): they lose autonomy and must implement scripted sequences. Students with phonological weakness occupy the beneficiary seat (d near 0.0, full beneficiary): they receive systematic scaffolding that prevents decoding failure, which is precisely the function the constraint exists to deliver. Emergent readers in low-print environments occupy a victim seat (d elevated from baseline due to constrained exit and demotivation from decontextualized drill). Curriculum publishers and reading researchers benefit but do not administer the constraint directly; they are co-beneficiaries with moderate positive directionality. The constraint's structural asymmetry is stable: the coordination benefit (systematic decoding instruction) concentrates on students with phonological weakness, while the extraction (teacher autonomy loss) disperses across all teachers regardless of their students' baseline phonological awareness. This is the signature structure of tangled rope: one group (at-risk students) is genuinely coordinated and protected; another group (teachers) pays through autonomy loss.",
+    "perspectival_gap": "From the reading-researcher and curriculum-publisher seats, the constraint appears as a successful translation of evidence into practice—a coordination mechanism that solved the early-reading-failure problem. From the classroom-teacher seat, the same constraint appears as loss of professional judgment and scripted delivery. From the whole-language-advocate seat, the constraint appears as enforcement of one research paradigm over another, despite competing empirical evidence on student engagement. From the student-motivation perspective, the constraint's early impact (0.28 theater ratio at t=0) was genuine functionality (students with weak phonological awareness do benefit), but over time (theater ratio rises to 0.41 by t=25) an increasing share of enforcement effort has gone into suppressing alternative frameworks in policy and teacher training, which is partly theater (ideological defense) rather than functional coordination. The engine should compute a divergence here: the reading-researcher and curriculum-publisher seats compute toward rope (genuine coordination for a target population); the teacher and whole-language-advocate seats compute toward snare (enforced choice with suppressed alternatives); the student-motivation seat computes toward extracted labor (motivation cost to non-target students).",
+    "mandatrophy_analysis": "The constraint does NOT show mandatrophy: the founding problem remains live and contested (early reading failure still occurs for students with weak phonological awareness; the question is whether phoneme-grapheme-first sequencing is the necessary solution or whether balanced approaches produce comparable outcomes). The constraint is actively maintained and enforced, not atrophied through inertia. However, the constraint does show signs of extraction creep: it began as a targeted intervention for struggling readers and has been universalized into a one-size-fits-all approach, which extracts motivation costs from students who acquire phonological awareness incidentally. This is NOT mandatrophy (the founding function is still served for the target population); it is drift from targeted to universal application without corresponding adjustment to implementation. The theater-ratio rise from 0.28 to 0.41 reflects this: the functional (targeted) component shrinks as a proportion of total enforcement effort, while ideological suppression of alternative frameworks rises.",
+    "kernel_context": "This constraint is the phonics-reading reading of the contested literacy-acquisition kernel. The kernel is: 'What is the causal sequence and relative priority of phonological awareness, phoneme-grapheme decoding, and comprehension in reading acquisition?' The phonics-reading reading asserts: phoneme-grapheme decoding must be taught FIRST, explicitly and systematically, BEFORE students encounter connected text; decoding precedes and enables comprehension. This reading forecloses the whole-language reading (which asserts phonological skills emerge FROM meaningful text engagement, not before) and influences the balanced-literacy reading (which asserts both are necessary but does not require phoneme-grapheme-first sequencing). The sibling readings—whole-language, balanced-literacy, structured-literacy—each instantiate different causal and priority claims about the same kernel. The phonics-reading reading grounds itself in cognitive science evidence about phoneme-grapheme correspondence and phonological awareness; the whole-language reading grounds itself in motivation and engagement evidence; the balanced-literacy reading attempts to reconcile both. The policy enactment of the phonics-reading reading into state standards has made it institutionally powerful, which gives it structural leverage in curriculum adoption, teacher training, and research funding. However, that institutional power is increasingly used to suppress the sibling readings rather than merely to implement the phonics approach, which indicates extraction is rising (theater ratio rises) even as the founding problem remains contested."
+  },
+  "omegas": [
+    {
+      "id": "phonological_awareness_prerequisite",
+      "question": "Is explicit, systematic phoneme-grapheme instruction a necessary PREREQUISITE for students to acquire decoding skill, or is it one effective PATHWAY among others?",
+      "resolution_mechanism": "Longitudinal comparison of students taught via phoneme-grapheme-first vs. balanced (simultaneous phonics + connected-text) vs. whole-language pathways, controlling for baseline phonological awareness and home literacy environment. Outcome measures: decoding automaticity, comprehension, intrinsic reading motivation.",
+      "impact": "If phoneme-grapheme instruction is necessary (only pathway), the constraint's universalization is justified and extraction is coordination cost. If phoneme-grapheme instruction is one pathway (one among several effective methods), the constraint's universal enforcement is unnecessary extraction, and alternative frameworks should not be suppressed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether explicit phoneme-grapheme instruction is a necessary prerequisite or one of several effective pathways for decoding acquisition."
+    },
+    {
+      "id": "causality_vs_correlation_decoding_comprehension",
+      "question": "Does decoding skill CAUSE comprehension, or do both decoding and comprehension emerge from a shared underlying phonological awareness base?",
+      "resolution_mechanism": "Intervention studies manipulating decoding fluency while controlling for vocabulary, comprehension strategy, and phonological awareness; measurement of comprehension gains and cost-benefit ratio for decoding automation vs. meaning-focused instruction.",
+      "impact": "If decoding causes comprehension, the phoneme-grapheme-first sequencing is well-founded: build decoding automaticity first, then layer comprehension. If comprehension develops in parallel with decoding (shared foundation), the sequencing priority is weaker, and balanced or meaning-first approaches may be equally effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decoding skill causally enables comprehension or whether both emerge from shared phonological processes."
+    },
+    {
+      "id": "extraction_from_teacher_autonomy",
+      "question": "Is the suppression of teacher professional judgment (via scripted phoneme-grapheme sequences) necessary to ensure systematic instruction, or is it an extraction that degrades teacher effectiveness and motivation?",
+      "resolution_mechanism": "Comparison of student outcomes and teacher retention in schools with scripted phonics vs. schools with teacher-guided phonics within the same phoneme-grapheme framework. Measurement: decoding outcomes, comprehension, student engagement, teacher attrition, teacher sense of efficacy.",
+      "impact": "If scripting is necessary for systematic instruction (teachers deviate without it), the extraction is coordination cost. If teachers can deliver systematic phoneme-grapheme instruction without scripting, and scripting reduces teacher effectiveness, the extraction is unjustified and should be removed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether teacher autonomy loss through scripting is necessary for systematic instruction or an unjustified extraction."
+    },
+    {
+      "id": "student_motivation_cost_hidden",
+      "question": "What is the cumulative cost in intrinsic reading motivation and engagement from universal application of phoneme-grapheme-first sequencing to students who do not have phonological weakness?",
+      "resolution_mechanism": "Longitudinal measurement of reading motivation, voluntary reading engagement, and reading identity (self-perception as reader) for students with varying baseline phonological awareness, comparing those in phoneme-grapheme-first vs. balanced vs. meaning-first classrooms.",
+      "impact": "High motivation costs for strong readers would indicate the constraint is overextended (should target weak readers only, not universal). If motivation costs exist but are offset by decoding gains, that trade-off should be explicit in policy rather than hidden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The intrinsic reading motivation and engagement cost from universal phoneme-grapheme-first sequencing for students without phonological weakness."
+    },
+    {
+      "id": "kernel_reading_authority_enactment",
+      "question": "How did the phonics-reading reading become institutionally dominant (state standards, textbook adoption, teacher training) relative to competing readings, and was that enactment based on evidence strength or institutional power?",
+      "resolution_mechanism": "Historical analysis of state standard adoption timelines, funding patterns for phonics research vs. balanced/whole-language research, curriculum publisher market concentration, and teacher training shifts. Comparison to evidence meta-analysis timelines.",
+      "impact": "If enactment was driven by evidence strength (research consensus preceded policy adoption), the institutional power is justified. If enactment was driven by institutional actors (publishers, foundations, policy makers) prior to or independent of evidence consensus, the suppression of alternative readings is extraction, and alternatives should be re-seated in policy discourse.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the phonics-reading institutional dominance reflects evidence strength or institutional power accumulation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__balanced_literacy_reading",
+      "literacy_acquisition_kernel__structured_literacy_reading"
+    ],
+    "dual_formulation_note": "The literacy-acquisition kernel decomposes into four constraint readings, each instantiating a different causal model of decoding acquisition. The phonics-reading (this file) asserts phoneme-grapheme decoding PRECEDES and ENABLES comprehension. Whole-language asserts phonological skills EMERGE FROM meaningful text engagement. Balanced-literacy asserts phoneme-grapheme AND meaningful engagement are COMPLEMENTARY. Structured-literacy asserts decoding is ONE OF FIVE essential components (phonological awareness, phonics, fluency, vocabulary, comprehension), designed for dyslexia but universal. These are not views of a single constraint; they are DIFFERENT constraints with different epsilon values (extractiveness), different beneficiary/victim structures, and different kernel interpretations. The phonics-reading reading (this file) has ε=0.68 (moderate-high extraction via teacher autonomy loss). The whole-language reading would have low ε (no scripted suppression) but different victims (students with dyslexia lacking systematic phonological scaffolding). The balanced-literacy reading would have ε between phonics and whole-language, with different extraction targets (teacher judgment constrained but not eliminated). The structured-literacy reading would decompose further into five separate constraint stories (phonological-awareness priority, phonics priority, fluency priority, vocabulary priority, comprehension priority), each with its own epsilon. This file author chose to instantiate the phonics-reading reading as a single kernel reading because that is what the manifest requested; siblings are separate JSON files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "literacy_acquisition_kernel__whole_language_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "literacy_acquisition_kernel__balanced_literacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "literacy_acquisition_kernel__structured_literacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decoding_precedes_comprehension",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "explicit_phonemic_instruction_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "phoneme_grapheme_primacy",
+    "drift_state": {
+      "moment": "contemporary_pedagogical_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__balanced_literacy_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

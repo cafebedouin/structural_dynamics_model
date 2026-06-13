@@ -1,0 +1,587 @@
+{
+  "header": {
+    "constraint_id": "wto_treaty_framework__market_access_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3d556679-e2ef-4186-aa29-5424b8fde59d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "WTO Market Access Reading: Symmetric Tariff Reduction and Non-Discrimination Obligation",
+    "topic_domain": "international_trade/development_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "multinational_corporations",
+      "efficient_exporters_in_developed_economies"
+    ],
+    "victims": [
+      "infant_industries_in_developing_economies",
+      "agricultural_producers_in_least_developed_countries",
+      "domestic_import_substitution_industries"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "multinational_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Access to foreign markets with reduced tariff and non-tariff barriers. Can site production in lowest-cost jurisdictions and move goods globally with minimal duties. Supply chains are optimized across sovereign borders without the friction of local content requirements or infant-industry protection. Collects rents from market access others cannot negotiate symmetrically."
+    },
+    {
+      "name": "efficient_exporters_in_developed_economies",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Their home markets provide existing technological advantage and economies of scale. Trade rules that lock in non-discrimination favor their competitive position. Export markets open to their products at tariff rates fixed by treaty obligation, eliminating the unilateral tariff autonomy their competitors in developing economies retain (formally, until S&D sunset)."
+    },
+    {
+      "name": "infant_industries_in_developing_economies",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Cannot protect themselves with tariffs or local content rules beyond the margin S&D permits — and the reading frames S&D as temporary exception, not permanent right. Compete against entrenched global firms already at optimal scale. Their only exit is accepting technology transfer from multinationals as a junior partner in their supply chain, not as an independent producer."
+    },
+    {
+      "name": "agricultural_producers_in_least_developed_countries",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Export agricultural goods into markets still heavily protected in developed economies (agricultural exemptions persist despite the reading's universalism claim). Cannot protect their domestic markets from dumped surplus production from subsidized farms in developed countries. Tariff reduction symmetry favors the trade direction already powerful."
+    },
+    {
+      "name": "developing_country_governments",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Formally agenda-setters (they ratify the treaty) but structurally constrained: exit costs (market access loss, capital flight, IMF conditionality) make non-compliance expensive. Binding tariff rates limit industrial policy tools. The reading interprets their S&D provisions as temporary, so policy space erodes as transition periods expire. They execute trade policy within a framework they did not draft and would not write the same way."
+    },
+    {
+      "name": "developed_country_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the treaty's foundational frame: non-discrimination, tariff binding, dispute settlement. Their industries benefit most from the reading's interpretation of S&D as temporary. They maintain selective protections (agricultural subsidies, trade remedies) while demanding symmetry from others. Can invoke dispute settlement with credible enforcement (developed-country enforcement capacity); smaller countries' complaints face longer litigation and retaliation risk."
+    },
+    {
+      "name": "multinational_trade_law_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Trade disputes enriched by the constraint's complexity and enforcement costs. Represent multinational clients in WTO and investor-state disputes. Benefit from the reading's legal rigidity (narrow S&D carve-outs, high burden of proof for policy space exceptions)."
+    },
+    {
+      "name": "wto_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the treaty and manages dispute settlement. Interprets the treaty's rules and panels apply them. The reading's frame (non-discrimination, symmetry, S&D temporality) aligns with institutional expertise and jurisdiction expansion. Litigation growth follows from narrow policy-space carve-outs."
+    },
+    {
+      "name": "technology_transfer_claimants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Developing countries and domestic firms seeking technology transfer as part of development rights. This reading excludes technology transfer from the treaty's core commitments (unlike the developmental reading). Their exclusion from agenda-setting is a structural feature: the market-access reading privileges market mechanisms over mandatory transfer, so they would contest the framing but have no seat in its authorship."
+    },
+    {
+      "name": "subsistence_agricultural_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Vulnerable to import surges from subsidized agriculture in developed countries and loss of domestic policy autonomy to protect livelihoods. Have no formal representation in trade negotiations. Would argue for permanent policy space to protect food security and rural employment, but are structurally excluded from agenda-setting."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a global rule-set for tariff bindings, non-discrimination, and market access: reduces transaction costs of bilateral negotiation by fixing commitments multilaterally. Provides dispute settlement machinery to enforce agreements. Solves the collective-action problem of unilateral tariff escalation (tariff wars).",
+    "transfer_function": "Moves market access from developing countries' protected domestic markets to multinational corporations and efficient developed-economy exporters. Transfers policy autonomy from national governments to treaty obligations and WTO panels. Transfers wealth from infant-industry workers and small farmers to multinational supply chains and large-scale exporters.",
+    "absent_voices": "Technology transfer advocates (excluded from core commitments); subsistence agricultural communities and small farmers (structurally absent from negotiations); developing-country industrial strategists whose preferred policy tools (local content, infant-industry protection, sectoral subsidies) are out of scope; the next generation bearing the constraint's long-term effects on policy space and development capacity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the market-access reading and its enforcement disappeared, developing countries would immediately restore tariff and subsidy tools; multinational supply chains would retrench to home-country or regional production; trade flows would re-segment by region and development level; developed-country exporters would face barriers their firms have optimized around; global market-access rents would collapse. The world's trade topology would reorganize within months.",
+    "founding_problem": "Post-WWII: reduce tariff barriers and unilateral trade wars; create rules-based trade system preventing 1930s-style protectionist collapse. Establish non-discrimination so all parties gain from opening.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Developed-country trade ministries and multinational business associations attest the founding problem (tariff wars, unpredictability) is still live and the reading is the solution. Developing-country governments and development economists attest the founding problem was solved by the 1990s and the reading now persists as asymmetric extraction dressed as universal obligation. Independent development research (UNCTAD, World Bank studies on policy space, academic economics literature on infant-industry protection) documents that the founding tariff-war problem is not the constraint most developing countries face; the constraint they face is compressed policy space. The problem cited by beneficiaries and the problem the constraint actually creates are not the same."
+  },
+  "interval": {
+    "start": 1995,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The WTO treaty framework contains a contested kernel: what is the treaty's primary obligation, and what is the status of policy space for development? The MARKET ACCESS READING instantiates one reading: the treaty's core commitment is symmetric tariff reduction and non-discrimination; developing countries' Special and Differential (S&D) provisions are temporary exceptions meant to sunset as transition periods expire. Under this reading, tariffs, subsidies, and local content rules are violations of the core obligation, and infant-industry protection is a temporary indulgence, not a permanent right. This reading privileges multinational market access and efficient exporters; it compresses policy space for industrial development. The sibling DEVELOPMENTAL READING (separate constraint file) reads the same text differently: policy space for development is an equal-status commitment; S&D provisions are permanent structural accommodations recognizing asymmetric starting conditions; technology transfer is core. The two readings coexist in lived practice — developed countries and multinationals read market access; developing countries and development economists read developmental space. The readings are not logically contradictory (both derive from treaty text), but they are structurally incompatible: a government cannot simultaneously treat S&D as temporary exception and permanent right.",
+    "key_agents": [
+      "Multinational corporations: primary beneficiary of market access symmetry; operate across tariff bindings; optimize supply chains globally.",
+      "Efficient exporters in developed economies: secondary beneficiaries; already at scale; non-discrimination favors their competitive position.",
+      "Infant industries in developing economies: primary victim; cannot protect themselves beyond S&D margins; compete against entrenched global firms.",
+      "Agricultural producers in LDCs: secondary victim; face tariff reduction asymmetry (developed-country agricultural protection persists despite reading's universalism); trapped in subsistence production.",
+      "Developing-country governments: formally agenda-setters but structurally payers; ratify the treaty but face exit costs (market access loss, capital flight) that constrain their choices.",
+      "Developed-country governments: actual agenda-setters; set the reading's frame; maintain selective protections while demanding symmetry.",
+      "WTO secretariat: administrator and interpreter; benefits from dispute-settlement growth driven by narrow policy-space carve-outs.",
+      "Technology transfer claimants: excluded from core commitments; this reading privileges market mechanisms over mandatory transfer, so they have no seat in the reading's authorship."
+    ],
+    "logic_rationale": "Extractiveness runs 0.68 because the constraint extracts market access from developing countries and domestic policy autonomy from their governments, transferring both to multinational corporations and developed-country exporters. The extraction is not coercive in form (all governments formally consent by ratifying) but structural in operation: the cost of non-compliance (market exclusion, capital flight, IMF conditionality for debt relief) makes consent non-voluntary for many payers. Suppression is high (0.71) because the reading's enforcement mechanisms are costly and asymmetrically applied: developed-country trade remedies and safeguards are tolerated; developing-country infant-industry and food-security protections trigger dispute challenges. Theater is moderate-high (0.42) because the founding justification (preventing tariff wars) is no longer the live problem most developing countries face; enforcement now defends the reading itself rather than the original coordination problem. Measurements show extractiveness and suppression rising from 1995–2020 and plateauing: this reflects both the deepening integration of supply chains into the constraint and the stabilization of enforcement machinery after major disputes (Agriculture Agreement, TRIPS, DSU remedies).",
+    "perspectival_gap": "The developed-country-government and multinational seats compute this as rope or mild tangled rope: genuine coordination function (tariff bindings reduce uncertainty for exporters) with negotiated asymmetry that developed countries justify as temporary transition support. The developing-country-government seat and infant-industry seat compute this as tangled rope or snare: the coordination story (preventing tariff wars) is cover; the persistent function is extraction of market access and policy space. The WTO secretariat seat computes it as rope with enforcement complexities: the treaty's language is symmetric; disputes arise because parties read it differently. The engine should compute per-seat divergence from the structural data: multinationals and developed exporters have high beneficiary positions (d near 0.0); developing governments and infant industries have high victim positions (d near 1.0); the WTO secretariat has moderate position (moderate power, analytical exit, global scope — derives to d around 0.5 with a beneficiary lean from dispute-processing growth).",
+    "directionality_logic": "Multinational corporations derive d ≈ 0.1–0.2 (institutional power, arbitrage exit, global scope, beneficiary role, no-cost compliance): the constraint subsidizes their market access; they can forum-shop across jurisdictions if one tightens. Efficient exporters in developed economies derive d ≈ 0.15–0.25 (powerful power, arbitrage exit, global scope, beneficiary role): their existing scale and home-market advantage interact with non-discrimination to lock in competitive dominance. Infant industries derive d ≈ 0.85–0.95 (moderate power, constrained exit, regional scope, victim role): they are trapped by tariff bindings and cannot protect themselves; exiting means abandoning the domestic market entirely. Agricultural producers in LDCs derive d ≈ 0.90–0.98 (powerless, trapped exit, local scope, victim role): they face dumped imports and cannot even maintain subsistence protection. Developing-country governments derive d ≈ 0.70–0.80 (organized power, constrained exit, global scope, mixed payer/agenda-setter role): they are formally agenda-setters but face exit costs that constrain choice; the 'constraint' from a developing-government seat is a binding obligation they cannot unilaterally exit, placing them in the target position. Developed-country governments derive d ≈ 0.25–0.35 (institutional power, arbitrage exit — they can defect and face trade war costs but not capital flight; global scope, agenda-setter role with beneficiary lean): they set the reading's frame and can revise it if it goes against their interest; their exit cost is trade retaliation, not market exclusion. No override needed if the base derivation captures the asymmetry; overrides may be warranted if a developed-country government's agenda-setter role overstates their power relative to domestic constituency pressure to maintain protection.",
+    "mandatrophy_analysis": "This constraint's founding problem — preventing 1930s-style tariff escalation and establishing rules-based trade — was solved by the early 1990s. The GATT/WTO system stabilized tariff rates multilaterally and created dispute settlement. By 2000, the founding problem had substantially resolved: tariff wars were not the problem developing countries faced; compressed policy space was. The reading persists as a treaty obligation, its enforcement machinery hardened through DSU jurisprudence (narrow carve-outs for food security, infant-industry protection, public health), and its beneficiaries (multinationals, developed exporters) consolidate gains. Theater rises from 2005–2015 as developing countries invoke S&D exceptions and developed countries litigate them: the reading's frame (symmetry, temporary exceptions) requires enforcement to hold, and that enforcement increasingly looks theatrical — defending the reading itself rather than the founding coordination problem. No mandate has formally been declared obsolete (no GATT/WTO amendment process has succeeded), but mandatrophy is the structural reality: the reading persists by institutional inertia and beneficiary capture, not by problem-solving. An analyst observing that the treaty's founding justification no longer applies to its primary operation would declare the mandate dead and the constraint's persistence mandatrophic.",
+    "kernel_context": "This constraint is the MARKET ACCESS READING of the contested WTO treaty framework kernel. The kernel is the text of the GATT 1994 and WTO Agreements; the reading is the interpretation that non-discrimination, symmetric tariff reduction, and market access are the primary treaty commitments; Special and Differential (S&D) provisions are temporary transitional exceptions, not permanent structural rights. The sibling reading is the DEVELOPMENTAL READING (separate constraint, constraint_id: wto_treaty_framework__developmental_reading), which reads the same kernel as placing policy space for development as an equal-status commitment and S&D provisions as permanent accommodations for asymmetric starting conditions. These readings coexist in international trade law and practice: developed-country and multinational interpretations favor market access; developing-country and development-economist interpretations favor developmental space. No single framework can hold both simultaneously — a government cannot coherently treat S&D both as temporary exception (expiring on schedule) and permanent structural right (inherent to the treaty). The divergence is not a matter of opinion but of structural interpretation: the readings produce different victim sets (the market-access reading victimizes infant industries; the developmental reading victimizes advanced-economy farmers facing technology transfer), different beneficiary sets, and different enforcement priorities."
+  },
+  "omegas": [
+    {
+      "id": "s_and_d_temporality_ambiguity",
+      "question": "Are S&D provisions genuinely temporary exceptions meant to sunset, or permanent structural accommodations for asymmetric development levels?",
+      "resolution_mechanism": "The resolution mechanism is treaty practice and negotiating history. The question can be empirically addressed via: (1) textual analysis of S&D sunset clauses (some are time-limited, some are open-ended and re-negotiated); (2) GATT/WTO committee records and negotiating notes on S&D intent; (3) panel and Appellate Body rulings interpreting S&D scope; (4) the behavior of developing countries treating S&D as permanent vs. temporary in their own policy decisions.",
+      "impact": "If S&D is genuinely temporary, the reading's temporal frame holds and extractiveness is front-loaded into a transition period, after which equilibrium is established. If S&D is genuinely permanent, the constraint's extraction is sustained indefinitely and the reading's claim of universalism is false — the treaty is structurally asymmetric. The computational consequence: a temporary reading reduces extractiveness over the long run (transition period ends, extraction stops); a permanent reading shows sustained extraction regardless of elapsed time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether S&D is temporary or permanent."
+    },
+    {
+      "id": "policy_space_vs_tariff_binding_necessity",
+      "question": "Is the compression of policy space (industrial policy, food security, infant-industry protection) a necessary side effect of solving the founding problem (preventing tariff wars), or an incidental extraction enabled by the treaty's form?",
+      "resolution_mechanism": "Counterfactual institutional design: could a treaty system prevent tariff escalation without binding tariff rates so tightly that industrial policy becomes impossible? Comparative analysis of regional trade agreements (ASEAN, MERCOSUR, AU) that contain tariff provisions but preserve more policy space; analysis of whether tariff-war risk would recur if tariff bindings were raised or made more flexible.",
+      "impact": "If policy space compression is necessary, extractiveness is the price of coordination (analogous to the cost of any market infrastructure). If incidental, the constraint carries a separable extractive component beyond what the founding problem requires. A finding of incidentality would support decomposing the constraint into two: a rope (tariff escalation prevention) and a snare (policy space appropriation).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether policy space compression is structurally coupled to tariff-war prevention or an independent extraction."
+    },
+    {
+      "id": "developed_country_agricultural_protection_inconsistency",
+      "question": "Why do developed countries maintain substantial agricultural subsidies and tariffs while demanding that developing countries remove infant-industry protection? Is this asymmetry the reading's feature or a violation of its universalism?",
+      "resolution_mechanism": "Systematic audit of tariff and subsidy rates by sector and country: compare effective protection rates for agriculture in developed vs. developing countries; trace WTO disputes over agricultural measures and the outcomes; analyze negotiating positions in the Doha Round on agriculture; examine the language of the Agriculture Agreement and how exceptions are crafted to accommodate developed-country protection.",
+      "impact": "If the asymmetry is deliberate — the reading's operationalization — then extractiveness is even higher than the base metrics show: the reading claims universalism but practices selectivity. If the asymmetry is inconsistency — developed countries have not lived up to their own reading — then the reading's enforcement is selective (enforcement burden falls on developing countries), which raises suppression asymmetrically. Either way, the ambiguity reveals the reading's structural instability: it cannot simultaneously enforce symmetry and permit the selectivity observed in practice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether developed-country agricultural protection violates the market-access reading or is consistent with its operationalization."
+    },
+    {
+      "id": "technology_transfer_exclusion_justification",
+      "question": "The market-access reading does not include technology transfer as a core commitment (unlike the developmental reading). Why is market access obligatory but technology transfer left to voluntary corporate contracts?",
+      "resolution_mechanism": "Genealogical analysis: trace how technology transfer was debated in GATT/WTO texts and why it was excluded from binding commitments; compare with other international regimes (UN conferences on technology transfer, regional trade agreements with TT provisions). Examine whether the exclusion reflects genuine negotiating symmetry or structural imbalance (did developing countries lack leverage to secure TT commitments?).",
+      "impact": "If technology transfer was excluded because both parties genuinely preferred market-based mechanisms, the reading's shape reflects a coherent trade-off. If excluded because developed countries blocked it (imbalance of bargaining power), the reading is asymmetrically enforced: market access is mandatory; development capacity remains discretionary. The computational consequence: a power-imbalanced exclusion is an additional extraction layer — not just compression of policy space, but exclusion of capacity-building commitments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology transfer exclusion reflects negotiating symmetry or power imbalance."
+    },
+    {
+      "id": "contested_kernel_committer_framing",
+      "question": "This reading is one instantiation of a contested kernel (WTO treaty framework). The sibling developmental reading instantiates the same text but derives different structural consequences. Is the market-access reading the correct interpretation, or is it a reading imposed by those with power to enforce it?",
+      "resolution_mechanism": "The question cannot be resolved empirically because both readings derive from the same treaty text and both are formally defensible. The resolution mechanism is political: whose reading becomes operative (enforced by dispute settlement, internalized by governments, taught in law schools, built into institutional practice). The question surfaces via: (1) historical analysis of negotiating intent (whose conception prevailed?); (2) institutional analysis of who enforces the reading (developed-country governments and multinationals can credibly enforce market access; developing countries cannot credibly enforce developmental space); (3) drift tracking — do the actual operations of the treaty system consistently favor one reading's consequences?",
+      "impact": "If the market-access reading prevails structurally (enforcement machinery favors it, institutional practice operationalizes it), the constraint's persistence depends on beneficiary power, not on the reading's intrinsic legitimacy. If the developmental reading were operationalized instead, the same treaty text would yield a different constraint entirely (policy space preserved, technology transfer obligatory, infant-industry protection permanent). The computational consequence: the reading's stability is parasitic on the power distribution, not on the text's meaning.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the market-access reading is the treaty's correct interpretation or a reading imposed by beneficiary power."
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1995,
+    "tn": 2024,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1995,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1995,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1995,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1995,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1995,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1995,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1995,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1995,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.82
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1995,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1995,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1995,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1995,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1995,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1995,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1995,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1995,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.58
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_treaty_framework__developmental_reading"
+    ],
+    "dual_formulation_note": "The WTO treaty framework kernel has two structurally distinct readings: (1) MARKET ACCESS READING (this file): trade liberalization as symmetric universal obligation; S&D provisions as temporary exceptions; non-discrimination as primary purpose. High extractiveness from developing countries' policy space; multinational corporations primary beneficiaries. (2) DEVELOPMENTAL READING (separate constraint): policy space for development as equal-status commitment; S&D provisions as permanent structural accommodations; technology transfer as core commitment. Different victim sets, different enforcement patterns, different beneficiary structures. Both readings derive from the same WTO text; neither is logically foreclosed by the other, but they are operationally incompatible. The two readings coexist in lived practice as competing international law interpretations. Link them via affects_constraints to enable contamination analysis and to surface the kernel contest in corpus-level analysis."
+  },
+  "gain_flow": "multinational_corporations",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "wto_treaty_framework__developmental_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "trade_liberalization_symmetric_universal_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "s_and_d_provisions_temporary_exceptions",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_discrimination_primary_treaty_purpose",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "symmetric_tariff_binding_framework",
+    "drift_state": {
+      "moment": "contemporary_post_doha_impasse",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

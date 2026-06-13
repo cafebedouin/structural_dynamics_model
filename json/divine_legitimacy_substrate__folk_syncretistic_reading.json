@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "divine_legitimacy_substrate__folk_syncretistic_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "92a79e14-7833-4507-b58d-729e4848060f"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.28,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.56,
+    "claimed_type": "rope",
+    "human_readable": "Divine Legitimacy via Folk Syncretistic Household/Village Ritual",
+    "topic_domain": "religious/political/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "household_ritual_practitioners",
+      "village_ceremonial_leaders"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In ancient Egypt, divine legitimacy was contested across three reading frames. This story captures the FOLK SYNCRETISTIC READING: the view that legitimate access to divine agency flows through household and village ritual practice, with pragmatic polytheism (invoking multiple deities based on immediate needs rather than hierarchical cosmology) and distributed authority (local ritual specialists and household heads rather than centralized priesthood or pharaonic mediation). This reading coexists with the priestly Amun-polytheistic reading (which claims legitimacy flows through established temple priesthood and their interpretation of cosmic order) and the pharaonic Atenist reading (which asserts divine legitimacy flows only through pharaonic revelation of the one true deity). The three readings are structurally distinct constraints with different beneficiaries, different authority structures, and different ε values. Folk syncretism is substantially non-extractive (low suppression, low theater) and genuinely coordinates household and village cohesion; the priestly and pharaonic readings are more extractive and more enforced. This story captures only the folk reading, as a clean ε-invariant constraint.",
+    "key_agents": [
+      "household_heads: moderate power, ritual decision-makers at household scale, treat central priesthood as distant",
+      "village_ceremonial_leaders: organized power, coordinate village rituals, gain prestige and resource claims from ritual leadership",
+      "central_priesthood: institutional power, excluded from household practice, claims interpretive authority that is structurally not invoked",
+      "pharaonic_authority: institutional power, claims cosmic mediation, treated by folk as distant and not binding on local practice",
+      "folk_practitioners: powerless, participate in rituals, gain spiritual security and social cohesion",
+      "competing_cosmological_frameworks: analytical observer seat for comparing the three readings"
+    ],
+    "logic_rationale": "Extractiveness is low (0.31 at interval end) because the constraint coordinates genuine benefits (spiritual security, life-cycle marking, village cohesion) without substantial coercive overhead or confiscatory transfer. The beneficiaries (household heads, village leaders) collect prestige and modest offerings, but the flows emerge through reciprocal gift-exchange and community obligation, not through coercive exaction or legal title. Suppression is low (0.28) because folk practice requires minimal active enforcement—it persists through cultural transmission, immediate practical benefit, and social integration rather than through prohibition of alternatives. Theater is minimal (0.18) because ritual practice is functionally embedded in subsistence, life-cycle events, and seasonal coordination; the performative component is inseparable from the practical function. Accessibility collapse is moderate (0.42) because alternatives exist (central priesthood, pharaonic ritual, or no ritual) but are experienced as inadequate, distant, or spiritually ineffective rather than legally or practically unavailable. Resistance is moderate-high (0.56) because folk practitioners resist centralized reform attempts (particularly visible under Akhenaten's Atenist imposition) and reassert their practical polytheism once top-down pressure relaxes. The measurement series show flat profiles: folk practice is stable across the interval, neither rising nor decaying in its fundamental extractiveness or suppression. This stability is a sign of genuine coordination without extraction layering.",
+    "perspectival_gap": "The folk-practitioner seat and the central-priesthood seat should compute very differently. From the household/village perspective, the folk syncretistic reading is non-extractive coordination with distributed legitimacy—legitimate because it works, because ancestors practiced it, because community consents to it. From the central priesthood's perspective, folk practice is heretical deviation from correct cosmic order, and the priesthood treats itself as the site of true legitimacy. The engine computes these divergences from the structural data: household heads and village leaders have moderate power and gain modest prestige; central priesthood has institutional power but is excluded from the actual decision-making that matters at household and village scale. The measurement series shows that folk practice generates low effective extraction from folk practitioners themselves (the benefits and costs are roughly aligned within the folk frame). By contrast, the priestly reading (if authored separately) would show the priesthood claiming authority it does not exercise over folk practice, generating extractive tension between the priestly claim and folk autonomy.",
+    "directionality_logic": "Household heads are agenda-setters with moderate power; they benefit from ritual leadership prestige and are not extracted from—their directionality is low (near beneficiary). Village ceremonial leaders similarly benefit and are not substantially extracted from—they are beneficiaries with modest transfer inflows. Folk practitioners (powerless) participate in ritual with genuine benefit (spiritual security, social cohesion) and modest contribution (offerings, labor service at village scale); their directionality is near symmetric (around 0.5) because coordination benefits and reciprocal costs roughly balance. Central priesthood and pharaonic authority are excluded: they have institutional power but structurally no leverage over folk practice. The folk syncretistic reading treats them as present but irrelevant, not as beneficiaries or extractors—they are the 'excluded' stakeholder role because their authority claims are not invoked by folk practitioners. If this story were authored from the priestly perspective (as a separate constraint story under the amun_polytheistic_reading), the priesthood would be the agenda-setter and the folk would be targets whose extraction funds priestly authority; the ε and suppression would be substantially higher, and the constraint would compute as snare or tangled_rope rather than rope. The divergence is the point of the constraint family: the same kernel (divine legitimacy substrate) instantiates different constraints depending on which reading—which authority frame—is active.",
+    "mandatrophy_analysis": "The founding problem (households and villages needing spiritual security, life-cycle marking, and community coordination) is live and unsolved by any alternative the folk frame considers adequate. Central priesthood claims the founding problem is now solved by their authority and that folk practice is obsolete superstition; this claim is not corroborated by archaeological evidence or by the persistence of folk practice across multiple dynasties even under pharaonic reform pressure. The constraint shows no mandatrophy—the founding problem remains the motivation for the arrangement. Pharaonic attempts to impose the Atenist reading (a single exclusive deity replacing practical polytheism) temporarily suppress folk practice but do not eliminate it; after pharaonic pressure relaxes, folk syncretism reasserts itself. This resilience against top-down reform is evidence that folk practice solves a real problem and is not a zombie constraint.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'divine_legitimacy_substrate'. The three readings are: (1) folk_syncretistic_reading (this story): legitimacy flows through household/village pragmatic polytheism and distributed ritual authority; (2) amun_polytheistic_reading: legitimacy flows through established priesthood and their interpretation of Amun-Ra-centered cosmology; (3) atenist_monotheistic_reading: legitimacy flows solely through pharaonic revelation of Aten as the exclusive true deity. Each reading instantiates a different constraint with different authority structures, different beneficiaries, different ε values. The folk reading treats household and village authority as primary, priesthood as distant and uncompelling, pharaonic authority as cosmically important but not binding on local practice. The priestly reading treats the priesthood as the legitimate interpreter of cosmos and households as needing priestly guidance. The Atenist reading treats pharaonic revelation as the sole source of legitimate religious understanding. These are not the same constraint viewed from different angles—they have different ε-invariant structures, different victim/beneficiary sets, and different functions. The kernel is the persistent commitment to the importance of divine legitimacy for political and social order; the contest is over WHERE that legitimacy resides and WHO has authority to interpret and enforce it."
+  },
+  "omegas": [
+    {
+      "id": "folk_syncretism_vs_priestly_suppression",
+      "question": "To what extent does folk syncretistic practice persist because it is genuinely non-extractive and beneficial, versus persisting despite active priestly suppression efforts that have limited enforcement reach at household and village scales?",
+      "resolution_mechanism": "Historical textual analysis of priestly injunctions against folk practice combined with archaeological evidence of household shrine practice continuity across periods of priestly reform pressure. Comparative ethnography of contemporary non-centralized societies to test whether pragmatic polytheism is resilient under pressure from formal religious authority.",
+      "impact": "If folk practice persists mainly due to genuine benefit and community preference, the constraint is robustly a rope (low suppression, non-extractive). If priestly suppression is substantial but ineffective at the household level, the constraint might shift toward tangled_rope (suppression present despite low extractiveness). The measurement profile (low suppression, flat trajectory) currently supports the former interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether folk practice's stability reflects genuine coordination or resilience against suppression."
+    },
+    {
+      "id": "authority_distributed_or_diffuse",
+      "question": "Is the folk syncretistic reading's authority structure genuinely 'distributed' (intentionally delegated to multiple local agents with clear decision authority) or merely 'diffuse' (authority is unclear and emerges from practice without intentional design)?",
+      "resolution_mechanism": "Ethnographic observation of actual household and village decision-making processes around ritual choices. Analysis of household shrine practices to determine whether families make deliberate choices based on understood legitimating principles, or whether practice is habitual and unreflective.",
+      "impact": "If distributed, the folk reading's coordination function is more robust—households understand the legitimacy frame and consciously participate. If merely diffuse, the coordination is fragile and vulnerable to top-down revision if enforcement improves. This affects whether the constraint would compute as rope (intentional coordination) or scaffold (emergent but impermanent arrangement).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether authority is intentionally distributed or emerges unreflectively from practice."
+    },
+    {
+      "id": "kernel_reading_contest_live_or_historical",
+      "question": "Is the contest between these three readings (folk, priestly, Atenist) a live, unresolved dispute in the actual historical moment this constraint story describes, or is it a retrospective reading imposed by modern analysis on what was experienced by ancient actors as simpler domination?",
+      "resolution_mechanism": "Close reading of period texts (administrative records, mortuary texts, graffiti) for evidence of explicit awareness of the three readings as competing frameworks. Absence of meta-commentary on the contest does not resolve it—the ancient actors may have experienced the tension without naming it. Presence of reform rhetoric (as in Akhenaten) provides evidence of explicit challenge to existing frameworks.",
+      "impact": "If the contest is live (ancient actors experienced it as a real dispute over legitimate authority), the three-reading decomposition is faithful to actual structure and the omega itself is methodological. If the contest is retrospective, the stories should be authored with different time horizons or with omegas documenting the anachronism. The prompt's kernel context assumes the contest is live at some historical period (likely New Kingdom, with Atenist reform as the explicit challenge phase).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three-reading contest is an ancient dispute or a modern analytical imposition."
+    },
+    {
+      "id": "folk_beneficiary_clarity",
+      "question": "Who exactly benefits from the folk syncretistic arrangement, and how much? Are household heads and village leaders collecting genuine economic rents (extracted from folk practitioners), or is the transfer primarily social prestige with minimal material value?",
+      "resolution_mechanism": "Quantitative study of offerings and labor service flows in household and village contexts. Analysis of whether ritual leaders can convert prestige into material goods or political leverage. Comparison with priestly and pharaonic extracted value to establish relative scales.",
+      "impact": "If leaders collect substantial material rents, the constraint might compute as snare or tangled_rope (extraction masked as coordination). If transfers are primarily prestige with minimal material value, the constraint is robustly rope (genuinely reciprocal coordination). The low extractiveness metric (0.31) currently assumes prestige-dominant transfer, but this should be verified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether folk ritual leadership generates material extraction or primarily social prestige."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "divine_legitimacy_substrate__amun_polytheistic_reading",
+      "divine_legitimacy_substrate__atenist_monotheistic_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kernel 'divine_legitimacy_substrate'. All three readings share a kernel (the importance of divine legitimacy for political and social order in ancient Egypt) but differ in the authority structure, beneficiary configuration, and ε-value. The folk syncretistic reading presents legitimacy as distributed through household/village practice; the Amun polytheistic reading presents it as centralized through temple priesthood; the Atenist reading presents it as flowing solely from pharaonic revelation. Each reading instantiates a different constraint because the ε-invariance test shows that measuring legitimacy via folk practice yields a different extraction profile than measuring it via priestly interpretation or pharaonic revelation. Sibling constraint stories are linked here via network.affects_constraints. This reading influences both siblings by providing the substrate against which priestly and pharaonic authority claims must assert themselves—folk practice must be actively suppressed or incorporated for either alternative reading to gain dominance."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "divine_legitimacy_substrate__amun_polytheistic_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "divine_legitimacy_substrate__atenist_monotheistic_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "pragmatic_polytheism_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "distributed_authority_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "distributed_household_village_ritual_autonomy",
+    "drift_state": {
+      "moment": "atenist_reform_period",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

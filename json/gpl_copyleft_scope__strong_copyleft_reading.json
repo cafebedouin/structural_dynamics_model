@@ -1,0 +1,409 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__strong_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "105f6c75-db03-462e-a778-3ee1a0d04bbd"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "GPL Section 2(b) Strong Copyleft Scope — Proprietary Integration Barrier",
+    "topic_domain": "intellectual_property/software_licensing/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_software_communities",
+      "gpl_licensed_projects"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "hybrid_licensing_models"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "free_software_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit structurally from GPL Section 2(b)'s scope: any vendor or developer integrating GPL-licensed components must release derived works under GPL, guaranteeing source code availability and preventing proprietary capture of community efforts. The scope extends to dynamic linking, plugin architectures, and combined works, creating a credible enforcement perimeter around the copyleft promise. Communities can contribute code without fear that vendors will capture and proprietary-fork their work."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Structurally excluded from integrating GPL components into proprietary codebases without releasing the entire product under GPL — an unacceptable cost given business model depends on source code secrecy. Can use GPL code only by open-sourcing their own work or avoiding GPL dependencies entirely, both of which reduce technical optionality. Must monitor license compliance for GPL scope ambiguities and operate under legal-uncertainty risk given absence of binding precedent on dynamic linking."
+    },
+    {
+      "name": "hybrid_licensing_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Developers offering dual-licensed software (proprietary + GPL) or using GPL code under commercial exceptions face the constraint's full force: Section 2(b)'s broad scope on dynamic linking and combined works means they cannot freely distribute proprietary code that uses GPL libraries, even through plugin or service architectures. Licensing revenue model depends on selling proprietary variants; the constraint narrows the use cases where dual licensing works."
+    },
+    {
+      "name": "gpl_licensed_projects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Gain defensive power from Section 2(b)'s broad interpretation: incorporating their code into any combined or dynamically linked work triggers GPL propagation obligations on the integrator, preventing proprietary forks or proprietary overlay architectures. The strong reading of 'combined work' and 'dynamic linking' maximizes the scope of this defensive mechanism and reduces proprietary vendors' architectural options."
+    },
+    {
+      "name": "open_source_maintainers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Individual and small-team maintainers of GPL projects benefit from the broad scope: they lack the resources to police proprietary uses of their code directly, but Section 2(b)'s interpretation means proprietary vendors cannot easily create closed derivatives or proprietary integrations. The threat of copyleft obligation is the primary enforcement mechanism they can rely on without litigation cost."
+    },
+    {
+      "name": "legal_interpreters_fsf_aligned",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The Free Software Foundation and allied lawyers author and promulgate the strong reading of Section 2(b), interpreting 'combined work' and 'dynamic linking' expansively to include plugin architectures, service-oriented interactions, and loader-based coupling. Enforce the interpretation through public licensing guidance, compliance letters, and litigation threat. Control the institutional narrative around GPL scope; benefit from scope expansion that maximizes leverage against proprietary vendors."
+    },
+    {
+      "name": "legal_interpreters_narrow_scope",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Copyright scholars, industry counsel, and some judicial voices argue GPL Section 2(b) applies only to direct derivative works following traditional copyright doctrine, not to aggregations, plugin systems, or certain dynamic linking scenarios. Structurally suppressed by absence of controlling judicial precedent: no court has definitively settled the boundary, so the strong reading persists through institutional assertion and threat rather than clear legal authority. Their interpretation is a live alternative but lacks the institutional voice of FSF."
+    },
+    {
+      "name": "proprietary_plugin_ecosystems",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Software architectures built on plugin systems (e.g., game modding frameworks, browser extension platforms, IDE plugin ecosystems) face structural threat from the strong copyleft reading: if the base application incorporates GPL code and uses a dynamic loader for plugins, all plugins become subject to copyleft obligation under the 'combined work' interpretation. Largely excluded from free-software participation and would object to the scope but have no seat in GPL governance conversation."
+    },
+    {
+      "name": "commercial_embedding_users",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Companies evaluating whether to embed GPL libraries (e.g., FFmpeg, OpenSSL, zlib) in their products observe the constraint and assess legal and business risk. Monitor FSF enforcement actions, court decisions, and licensing guidance to calibrate copyleft exposure. Purchasing and architectural decisions shaped by scope of Section 2(b) as interpreted. Risk-aversion often leads to vendor products (commercial variants of GPL libraries) or non-GPL alternatives."
+    },
+    {
+      "name": "judicial_system",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Courts have not authoritatively resolved the scope of GPL Section 2(b) in binding precedent. The strong reading persists through institutional assertion (FSF guidance, enforcement letters, compliance-tool design) and threat of litigation, but no controlling court decision has validated or narrowed the scope. This ambiguity is the structural condition enabling competing readings to coexist and allowing FSF institutional authority to stand in for legal clarity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures source code availability across a supply chain of software components: when copyleft obligation extends to all combined and dynamically linked works, any vendor integrating GPL code is incentivized to participate in (or at least respect) the free-software development model rather than capture derivatives. The coordination problem is preventing proprietary forking of community infrastructure.",
+    "transfer_function": "Transfers the structural right to modify, redistribute, and proprietary-fork GPL-licensed code away from proprietary vendors and toward GPL-licensed community projects. Under the strong reading, vendors who integrate GPL components must either accept GPL propagation (releasing their entire product as GPL) or accept the architectural constraint of avoiding GPL dependencies — a de facto transfer of control to free-software maintainers.",
+    "absent_voices": "Proprietary plugin ecosystem developers, closed-source commercial frameworks that might benefit from GPL components, and vendors pursuing hybrid licensing models all would contest the scope of Section 2(b) if they had a seat in GPL governance — but they are excluded by the nature of the constraint itself. Additionally, copyright scholars advocating for narrow scope and plugin-architecture protection are suppressed by the absence of controlling judicial precedent and the institutional authority of FSF guidance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strong copyleft scope of Section 2(b) disappeared — if vendors could integrate GPL code into proprietary software without GPL propagation — the free-software ecosystem would restructure immediately: GPL maintainers would lose the primary mechanism preventing proprietary capture, would face dramatic increases in proprietary forks, and the copyleft guarantee would collapse. Proprietary vendors would readily incorporate GPL components, and the incentive structure that sustains free-software commons contribution would degrade substantially.",
+    "founding_problem": "Early GPL drafting (1989) aimed to prevent proprietary vendors from capturing community-developed software by creating derived proprietary versions — a bait-and-switch against contributor community. Section 2(b) was designed to extend copyleft beyond direct source-code copying to combined and derivative forms, to close loopholes in traditional copyright doctrine that proprietary vendors could exploit.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The FSF attests the founding problem is live: proprietary vendors continue to seek ways to integrate GPL components while avoiding copyleft obligations, creating pressure to expand the scope of Section 2(b). Proprietary vendors attest the problem is over-solved: they argue modern modular architectures (plugins, microservices, dynamic linking) were not contemplated in 1989 and should not trigger copyleft obligation. Copyright scholars and industry counsel document that no controlling court decision has validated the broad scope, meaning the constraint persists through institutional assertion and threat rather than established law."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.76,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.76,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "GPL Section 2(b) is a contested provision. The strong copyleft reading interprets 'combined or dynamically linked work' expansively to include plugin architectures, service-oriented interactions, and loader-based code coupling, requiring any integrator to GPL-license the entire combined work. This reading benefits free-software communities by preventing proprietary capture of GPL-licensed components, but it extracts a structural cost from proprietary vendors by foreclosing them from integrating GPL code without source-code release. The constraint is claimed as a snare: proprietary vendors are victims of an asymmetric extraction enforced through legal threat and compliance pressure, while free-software communities are the beneficiaries. The strong reading is NOT the only reading of Section 2(b); it coexists with a narrow-scope reading (copyleft applies only to direct derivative works) and an enforcement-vacuum reading (absence of judicial precedent allows institutional assertion to dominate). This story instantiates the strong reading only — the other readings are separate constraint stories in the family, linked via network.affects_constraints.",
+    "kernel_context": "This constraint is the strong copyleft reading of the GPL Section 2(b) kernel. The kernel itself is GPL's derivative-work boundary claim: what counts as a 'combined or dynamically linked work' triggering copyleft obligation. The strong_copyleft_reading (this story) interprets the boundary expansively to protect free-software communities; the narrow_scope_reading interprets it narrowly to preserve proprietary embedding options; the enforcement_vacuum_reading notes the absence of binding precedent allows institutional actors to assert readings without judicial settlement. The three readings coexist in practice because vendors and free-software communities operate under different interpretive authority (vendors defer to counsel; FSF-aligned projects defer to FSF guidance) and no controlling court has unified the scope. The strong reading forecloses neither sibling logically — both remain plausible under traditional copyright doctrine — but it influences both by setting the institutional default and enforcement threat.",
+    "key_agents": [
+      "free_software_communities (beneficiary, organized, mobile) — gain structural guarantee of source availability through expanded copyleft scope",
+      "proprietary_software_vendors (payer, institutional, constrained) — structurally excluded from integrating GPL code without full source release",
+      "legal_interpreters_fsf_aligned (agenda_setter, institutional, arbitrage) — author and promulgate the strong reading; enforce through licensing guidance and litigation threat",
+      "legal_interpreters_narrow_reading (payer, institutional, constrained) — argue GPL Section 2(b) applies narrowly; suppressed by absence of binding precedent",
+      "hybrid_licensing_models (payer, powerful, constrained) — dual-licensed vendors whose business model depends on proprietary variants; excluded from integrating GPL code freely"
+    ],
+    "logic_rationale": "Extractiveness is high (0.76 at interval end) because the strong copyleft scope structurally forecloses proprietary vendors from one of their primary architectural options: integrating battle-tested GPL libraries into closed-source products. The constraint is extractive relative to the payer seats because it transfers control of copyleft scope interpretation from vendors (who would prefer narrow scope) to free-software institutions (who enforce broad scope). Suppression is substantial (0.71) because vendors comply primarily through legal threat and compliance risk, not through shared belief in copyleft norms — the narrow-reading advocates are suppressed by lack of judicial authority, not by fair-minded debate. Theater is moderate (0.28): the coordination function (preventing proprietary capture) is real and was the founding intent, but increasingly the constraint functions to extract control over software architecture from proprietary vendors. The extractiveness series shows gradual increase (0.62 to 0.76) over the interval, indicating accumulating pressure as software architecture evolves toward more dynamic and modular forms (microservices, plugin systems, containers) that the broad copyleft scope catches more expansively. Suppression also increases (0.58 to 0.71) as FSF and free-software institutions have built more aggressive enforcement and compliance-detection infrastructure (license scanning, GitHub compliance automation). Theater ratio increases slightly (0.18 to 0.28), indicating that as the constraint's extractive function becomes clearer, more institutional energy goes into legitimation theater (copyleft-as-commons-protection narrative) rather than enforcement mechanics.",
+    "perspectival_gap": "From the free-software community's seat, the strong copyleft scope is a legitimate coordination mechanism that defends collective contribution against proprietary capture. From the proprietary vendor's seat, the same scope is arbitrary exclusion from useful components, enforced through legal threat and institutional power rather than judicial clarity. The agenda-setter seat (FSF-aligned interpreters) benefits from the scope ambiguity: they can issue guidance as if the scope were settled law while vendors bear the compliance risk of the interpretation. The narrow-reading interpreters are suppressed not by logical refutation but by institutional asymmetry: they lack the authority of the Free Software Foundation and depend on legal precedent that does not yet exist. The engine computes these seat divergences from the structural data: beneficiary/victim declarations feed directionality (free-software communities d ≈ 0.1, proprietary vendors d ≈ 0.85), exit options (proprietary vendors: constrained; free-software: mobile) feed effective extraction, and power atoms (proprietary: institutional; free-software: organized) modulate the asymmetry.",
+    "directionality_logic": "Free-software communities are beneficiaries (d near 0.1): they gain control over their code's use and prevent proprietary capture without bearing the cost of enforcement — FSF institutions bear that cost. Proprietary vendors are victims (d near 0.85): they face legal and compliance cost to integrate GPL code, have constrained exit (they can avoid GPL dependencies, but at substantial architectural cost), and gain no benefit from the constraint. The narrow-reading interpreters are structurally payers (d ≈ 0.6–0.7): their interpretation is suppressed by institutional asymmetry and legal-precedent absence, not because their reading is weaker on intellectual merit. Hybrid-licensing vendors occupy a particularly extractive position (d ≈ 0.8): their business model depends on proprietary variants, and the broad scope directly forecloses them from integrating GPL code. The directionality here tracks the extraction asymmetry: the constraint's persistence requires continued institutional assertion by FSF-aligned actors and legal threat against vendors; if vendors achieved parity of institutional voice and judicial clarity favored narrow scope, the constraint would collapse.",
+    "mandatrophy_analysis": "The strong copyleft scope has a live founding problem (preventing proprietary capture of community code) and a contested current status (is the founding problem still the primary function, or has scope-expansion become an institutional rent-seek?). Proprietaries argue the founding problem was solved decades ago (proprietary vendors now respect copyleft boundaries); free-software advocates argue it is live (proprietary vendors still seek workarounds). The constraint shows signs of institutional drift toward rent-extraction: the theater ratio is rising, indicating more legitimation theater; the suppresssion requirement is increasing, indicating vendors are pushing back harder and FSF is escalating compliance enforcement. The absence of controlling judicial precedent is a structural red flag — the constraint persists through institutional assertion and threat, not through settled law, which means it is vulnerable to precedent-setting litigation. If a court were to adopt the narrow-scope reading, the constraint would collapse overnight; if a court were to validate the strong reading, it would stabilize and shed the theater ratio (litigation risk would drop, compliance would be more transparent). The mandate (prevent proprietary capture) and the mechanism (copyleft scope expansion) are increasingly separable — the mandate could be satisfied with narrower scope and clearer judicial settlement, but institutional interests in FSF-aligned communities depend on the broad scope for maximum leverage."
+  },
+  "omegas": [
+    {
+      "id": "dynamic_linking_scope_ambiguity",
+      "question": "Does 'dynamically linked work' under GPL Section 2(b) include plugin architectures, service-oriented interactions, and loader-based coupling, or only traditional runtime linking (shared libraries, DLLs)?",
+      "resolution_mechanism": "Binding judicial precedent. A U.S. court ruling on whether a plugin architecture or microservice-based system that loads GPL code triggers copyleft obligation on the loading container. Current state: no controlling precedent; FSF asserts broad scope; proprietary vendors argue narrow scope; industry counsel operates under litigation risk without clarity.",
+      "impact": "A narrow-scope ruling would reclassify the constraint from snare to rope (coordination function re-emphasized, extraction diminished); broad-scope judicial validation would stabilize the constraint and reduce theater_ratio as compliance becomes transparent legal obligation rather than institutional threat.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The boundary of 'dynamically linked work' that triggers copyleft propagation remains judicially unsettled."
+    },
+    {
+      "id": "combined_work_derivative_boundary",
+      "question": "Is a combined work that merely aggregates GPL and proprietary components (without source-code modification) itself a 'derivative work' under copyright law, or is aggregation structurally distinct from derivation?",
+      "resolution_mechanism": "Copyright doctrine analysis and judicial clarification. A binding ruling on whether aggregation alone (without modification) triggers derivative-work status and thus copyleft obligation.",
+      "impact": "If aggregation alone creates derivative status, extractiveness increases (more systems fall under copyleft scope). If derivative status requires modification, extractiveness decreases and the constraint narrows toward traditional copyright norms. This would distinguish the strong reading from the narrow reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mere aggregation of GPL and proprietary code creates a derivative work under copyright law."
+    },
+    {
+      "id": "institutional_authority_vs_precedent_asymmetry",
+      "question": "Does the absence of controlling judicial precedent mean the FSF's institutional interpretation of Section 2(b) is legally binding, or is it merely one plausible reading competing with narrow-scope interpretations on equal footing?",
+      "resolution_mechanism": "Judicial settlement or consensus-building among copyright scholars and industry counsel. Current state: FSF asserts its interpretation as normative through public guidance and enforcement letters; proprietary vendors treat the interpretation as one contested reading among others, reducing compliance pressure from legal uncertainty to business-model evaluation.",
+      "impact": "If FSF interpretation achieves binding status (through precedent or regulatory acceptance), suppression decreases and the constraint stabilizes as transparent copyleft obligation; if narrow-scope interpretation gains parity, suppression persists (vendors continue to operate under legal-uncertainty risk) or extractiveness decreases (constraint scope narrows).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional assertion of copyleft scope carries the weight of binding legal authority or remains one contested reading."
+    },
+    {
+      "id": "modern_architecture_scope_drift",
+      "question": "As software architecture evolves (microservices, containers, serverless computing, modular AI systems), does the scope of 'combined work' under the strong copyleft reading expand to catch more architectural patterns, or do new architectural paradigms create genuine separation that the broad reading never intended to capture?",
+      "resolution_mechanism": "Technological and legal analysis of emerging architectures. As codebases become more modular and loosely coupled, does the constraint's extractiveness increase (broad scope catches more systems) or decrease (new architectures create boundaries the strong reading did not contemplate)? Measurement of FSF enforcement activity against new patterns and vendor responses.",
+      "impact": "Increasing extractiveness would suggest the constraint is drifting toward institutional rent-seek (scope-expansion following technological change). Stable extractiveness would suggest the scope is stable relative to architecture. Decreasing extractiveness would suggest new architectures escape the constraint or force scope recalibration.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the strong copyleft scope expands, stabilizes, or recedes relative to evolving software architecture."
+    },
+    {
+      "id": "suppression_mechanism_institutional_vs_internalized",
+      "question": "Is the measured suppression (0.71) a structural property of legal-uncertainty risk (vendors must operate under compliance uncertainty with no clear precedent), or have proprietary developers internalized copyleft norms and adjusted their architectures willingly?",
+      "resolution_mechanism": "Post-precedent analysis: if a binding judicial ruling establishes the scope clearly (either broad or narrow), does vendor compliance change because the legal uncertainty is resolved, or because they accept the normative claim of copyleft? Empirical tracking: vendor behavior post-ruling, voluntary vs. grudging compliance, architectural innovation around the constraint.",
+      "impact": "If suppression is structural (legal-uncertainty risk), a binding ruling would reduce suppression regardless of scope. If suppression is internalized (normative acceptance), suppression would persist even post-precedent in narrow-scope outcome. This distinction affects whether the constraint's extractiveness is genuinely snare-like (coercive) or has shifted toward cultural norm.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the measured suppression is structural legal-uncertainty risk or internalized normative acceptance of copyleft principle."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__narrow_scope_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "GPL Section 2(b) kernel decomposes into three constraint stories corresponding to three readings: strong_copyleft_reading (this story, high-epsilon snare structure) interprets derivative work broadly and extends copyleft to dynamic linking and combined works; narrow_scope_reading interprets copyleft narrowly to traditional copyright derivative-work doctrine; enforcement_vacuum_reading notes absence of binding precedent allows institutional assertion to dominate and readings to coexist. Each reading instantiates a different epsilon (strong reading: 0.76 extractive; narrow reading: lower extractiveness, less institutional asymmetry; vacuum reading: extractiveness depends on which institutional voice dominates in a given context). The three readings coexist because no controlling court has unified the scope under one interpretation. See commentary.kernel_context and cs_structure.reading_relations for the contested-kernel structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_copyleft_scope__narrow_scope_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "copyleft_propagation_to_combined_forms",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "derivative_boundary_extends_beyond_copyright_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "maximalist_copyleft_scope_prevents_proprietary_capture",
+    "drift_state": {
+      "moment": "contemporary_microservices_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "legal_interpreters_fsf_aligned",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

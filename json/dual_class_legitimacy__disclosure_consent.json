@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__disclosure_consent",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "bdc6c8bd-44c8-41c6-9da9-89c991cb74c8"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.48,
+    "claimed_type": "rope",
+    "human_readable": "Dual-Class Legitimacy via Disclosure and Informed Consent",
+    "topic_domain": "corporate/securities/governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "founder_controller"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "founder_controller",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Issues dual-class stock structure (Class A super-voting, Class B standard) before or at IPO. Founder retains Class A shares and maintains voting supermajority, enabling unilateral control of board composition, major strategic decisions (M&A, capital allocation, dividend policy), and long-term mission execution. Founder is fully disclosed in S-1 and proxy filings; investors purchasing Class B do so with full knowledge of governance disparity. Founder's exit options are trapped because meaningful exit would require surrendering the super-voting shares or accepting a change-of-control event."
+    },
+    {
+      "name": "public_shareholders_class_b",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Purchase Class B shares in the open market post-IPO or in the IPO itself. They have access to the full S-1 prospectus, governance disclosures, proxy statements, and analyst research documenting the dual-class structure and voting disparity. They accept reduced governance voice in exchange for exposure to founder-led long-horizon strategy and the valuation premium attached to founder stability. Their exit is liquid—they can sell Class B shares at any time on public exchanges without penalty. The equity price reflects the governance discount."
+    },
+    {
+      "name": "institutional_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Institutional asset managers and large shareholders hold Class B shares as part of diversified portfolios. They can exit positions individually at low cost via secondary sales or rebalancing. They price the governance structure into investment decisions; many institutional investors publish governance policies that specify acceptance or rejection of dual-class based on disclosure quality, founder track record, and sunset provisions. Their options include negotiating with founders on governance reforms, voting against board slate re-election, or reducing position size. Arbitrage options enable them to avoid or reduce exposure to dual-class structures they reject."
+    },
+    {
+      "name": "securities_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The SEC and securities commissions enforce disclosure requirements and review IPO filings (S-1 registration statements) for completeness and accuracy. Under the disclosure-consent reading, regulators' mandate is to ensure that all material facts about governance structure, voting mechanics, founder biography, and governance risks are disclosed in accessible, understandable language. Regulators do NOT mandate governance form (one-share-one-vote vs. dual-class) but ensure that investors have complete information to price and consent to whatever structure is disclosed. Regulators also enforce proxy disclosure rules requiring ongoing transparency about governance and strategic implications."
+    },
+    {
+      "name": "minority_governance_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Shareholder activists, some institutional asset managers (CalPERS, others), corporate governance researchers, and proxy advisory firms publish governance principles and standards asserting that voting power should be proportional to capital contribution. They advocate for sunset provisions on dual-class shares (mandatory conversion after a fixed period, e.g., 10 years) or one-share-one-vote conversion. They are excluded from the disclosure-consent reading's core legitimacy frame because their position is treated as a governance preference (how corporations *should* be governed) rather than as evidence that disclosed governance is illegitimate. Their activism shapes institutional investor policies and may create market pressure, but under the disclosure-consent reading, they do not establish that the disclosed structure lacks legitimacy."
+    },
+    {
+      "name": "regulators_uk_eu",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "UK Financial Conduct Authority (FCA) and EU regulators mandate governance parity (one-share-one-vote) for listed companies or impose strict sunset provisions requiring conversion to single-vote after 7–10 years (UK Corporate Governance Code, Euronext rules). These regulators have rejected the disclosure-consent reading and adopted a mandatory-parity framework. Under the disclosure-consent reading, this regulatory choice is legitimate but reflects a different normative stance—these regulators prioritize governance proportionality as a matter of regulatory requirement rather than resting legitimacy on investor consent. They are excluded from this story because their regulatory regime implements an alternative reading (stewardship via enforced parity) rather than accepting the disclosure-consent frame."
+    },
+    {
+      "name": "pre_ipo_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Venture capital firms, private equity sponsors, and early-stage angels who fund the company prior to IPO. They negotiate terms with founders knowing dual-class structure will persist post-IPO and that founder control will limit post-IPO shareholder influence. They have arbitrage exit options: secondary sales, preferred-stock conversion terms, liquidation preferences, and negotiated redemption rights. Their acceptance of dual-class structure reflects informed institutional choice and bargaining power. If pre-IPO investors consistently demand valuation adjustments, governance rights, or sunset clauses, their choice reveals information about the market price of governance disparity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables founder-led long-horizon strategic investment and mission continuity. Publicly traded companies face pressure to maximize near-term earnings and return capital to shareholders quarterly. Dual-class structure with founder control allows the founder to commit to multi-year R&D, brand-building, sustainability initiatives, and strategic pivots that public shareholders voting quarterly might block. The coordination problem is aligning shareholder capital (which prefers liquidity and near-term return) with founder vision (which requires patient capital and strategic autonomy). Dual-class coordinates this alignment by giving the founder unilateral control while allowing public shareholders to benefit from founder-driven upside.",
+    "transfer_function": "Transfers strategic control and major decision-making authority from public shareholders to founder/controller. Public shareholders receive equity upside and benefit from founder mission-driven growth, but transfer governance voice and veto power. The founder retains Class A shares with 10 votes per share (or higher), ensuring voting supermajority even if public shareholders own >50% of economic interest. Major decisions (board election, M&A, capital structure, dividend policy) are made by founder unilaterally or with founder approval. Public shareholders cannot force strategic changes through voting.",
+    "absent_voices": "Minority governance advocates (shareholder activists, CalPERS, proxy advisors) would argue that voting power should be proportional to capital and risk borne. They do not participate in the IPO decision or S-1 negotiation; their objection emerges post-hoc during shareholder activism campaigns. They argue that disclosure alone is insufficient legitimacy because shareholders cannot opt out of the governance disparity—it is bundled with the equity. Also absent: regulators in jurisdictions (UK, EU) that have chosen mandatory governance parity; their regulatory preference is not consulted in US IPO decisions and their governance frameworks are incompatible with dual-class.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-class structure and disclosure regime vanished overnight, founder-led companies would face a strategic choice: convert to one-share-one-vote (removing founder control and enabling activist intervention), go private (exit public markets), or remain public with founder influence dependent on ongoing shareholder support rather than structural voting rights. Many founder-led companies (tech, media, entertainment) would likely delist or reorganize governance. Valuations would shift as the founder control premium disappeared. Long-horizon capital investments would face new activist pressure and potentially shift to shorter payoff horizons. The public equity market composition would change—fewer founder-led, long-horizon companies would list.",
+    "founding_problem": "Early-stage founders build companies with a specific long-term vision and brand identity tied to the founder personally. As companies grow, founders seek access to public capital to scale (fund R&D, acquire companies, expand geographically). Public capital markets require governance structures that protect minority shareholders from founder/controlling shareholder abuse. The founding problem is: How can founders access massive public capital while retaining strategic autonomy and long-horizon mission focus, and how can regulators protect public shareholders from governance abuse without mandating a particular governance form? The disclosure-consent reading's answer: disclose fully what the dual-class structure implies, let investors price it, and allow investors to consent to or reject the governance disparity as a condition of investment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Founders and venture investors (pre-IPO insiders) attest that founder control enables long-horizon strategy and that loss of control post-IPO would force sub-optimal short-term decisions. Institutional investors publish research showing that they price governance structure into investment decisions and knowingly accept dual-class when founder track record and transparency warrant it. Securities regulators (SEC) in regulatory guidance confirm that disclosure of dual-class structure satisfies materiality standards. Academic research (Deng et al., survey studies) documents that institutional investors do pay attention to governance structure and make investment decisions reflecting the governance discount or premium. However, minority governance advocates counter that this 'consent' is illusory because shareholders cannot opt out—they must either accept dual-class or forgo investment in the company. This contention is the core dispute with the minority_extraction reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the disclosure-consent reading of dual-class legitimacy, the governance disparity is legitimate if and only if it is fully disclosed and investors knowingly accept it. Founder-controllers issue two share classes—super-voting (Class A) and standard-voting (Class B)—before or at IPO. All material facts about governance structure, founder voting power, strategic implications, and governance risks are disclosed in the S-1 registration statement, prospectus, and ongoing proxy filings. Public shareholders who purchase Class B shares do so with full knowledge of the control disparity and price that knowledge into valuation. The constraint's legitimacy derives from the transparency and voluntary-purchase conditions, not from governance parity or control alignment. This reading directly opposes the minority_extraction reading (which asserts shareholders are owed proportional voice) and coexists with but structurally differs from founder_stewardship (which justifies concentrated control by mission value, not consent mechanism).",
+    "key_agents": [
+      "founder_controller: issues dual-class structure, retains super-voting Class A, controls strategic decisions unilaterally",
+      "public_shareholders_class_b: purchase Class B knowing governance disparity is priced in, benefit from founder stability, accept reduced voice",
+      "institutional_investors: hold Class B, can exit anytime, price governance structure into investment thesis",
+      "securities_regulators: enforce disclosure completeness, validate informed consent condition, do NOT mandate governance form",
+      "minority_governance_advocates: excluded from the disclosure-consent logic; their objection is treated as preference for alternative model, not evidence of illegitimacy",
+      "regulators_uk_eu: excluded; use mandatory-parity frameworks instead of consent-based legitimacy"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38) because the founder extracts governance control and strategic unilateralism in exchange for a real coordination benefit (long-horizon mission stability that compensates public shareholders via valuation premium and mission-driven upside). Suppression is low (0.22) because the constraint persists through market choice and disclosure, not coercion—public shareholders can refuse to buy, exit by selling, or vote with their capital allocation. Theater_ratio is low (0.18) because the governance structure is real and functional; proxy statements and governance disclosures are substantive, not theatrical (unlike a piton where function has atrophied). Accessibility_collapse is moderate (0.45) because public shareholders retain arbitrage—they can buy or sell Class B in liquid markets; alternatives (non-dual-class firms, private equity, direct founder investment) are available and priced. Resistance is moderate (0.48) because minority advocates and some institutional investors actively object to the structure, even while accepting it as priced in. The measurement series show stability across the interval—extractiveness, suppression, and theater_ratio are flat because the disclosure-consent mechanism is stable; no ratcheting of extraction or rise in theatrical maintenance is documented.",
+    "perspectival_gap": "The founder's seat and the public shareholder seat compute differently. From the founder's position, the dual-class structure is legitimate coordination: it solves the problem of maintaining long-horizon strategy against short-term capital markets pressure. From the public shareholder's seat (especially minority advocates), it is a governance disparity they are forced to accept because the alternative is exclusion from the company entirely. The disclosure-consent reading acknowledges this gap but locates legitimacy in the PROCESS (full disclosure, voluntary purchase) rather than in the outcome (parity). The engine will compute per-seat types from the structural data: founder likely computes as rope (coordination with real benefit), public shareholders likely compute as tangled_rope or snare depending on their actual exit options (if truly mobile and priced, rope; if constrained by network effects and cannot exit, snare). The claim here is rope across both seats, but the metrics should enable the engine to detect divergence.",
+    "directionality_logic": "Founder_controller: d near 0.0 (full beneficiary). Controls unilaterally, sets strategic agenda, retains voting supermajority. Benefits from mission lock-in and from governance premium (public shareholders willing to pay for founder stability). Suppression is low because the benefit is real and priced. Public_shareholders_class_b: d near 0.5 (symmetric, or slightly toward target depending on exit liquidity). They receive equity upside and benefit from founder focus, but accept governance voice loss and strategic lock-in. If exit is truly liquid and costless (can sell at any time), d stays near 0.5. If network effects or lock-in (ecosystem dependence, brand identification) make exit costly, d drifts toward 0.6–0.7 (partial target status). Institutional_investors: similar to public shareholders, but with arbitrage options (ability to negotiate terms, exit via secondary sale, avoid sector entirely); d may sit closer to 0.3–0.4. No directionality override is authored here because the structural derivation should track the facts: the constraint's extractiveness depends on whether public shareholders can genuinely exit, which is an empirical question about market liquidity and alternative investment options.",
+    "mandatrophy_analysis": "The disclosure-consent reading avoids mandatrophy by locating legitimacy in process (disclosure and informed choice) rather than in a static governance mandate. If regulators insisted on one-share-one-vote (a mandated parity form), the founding problem (founder long-horizon mission vs. public capital access) would persist unsolved, but the regulatory mandate would foreclose the dual-class answer. Under the disclosure-consent reading, the mandate is not 'dual-class is required' but 'dual-class must be fully disclosed and investors must knowingly accept it.' This process-based mandate can adapt: if market conditions change, if disclosure standards evolve, if investor preferences shift, the legitimacy condition (informed consent) can be re-established through updated disclosure and renewed purchase decisions. The constraint persists because investors continue to consent to the structure at the disclosed terms; if consent were withdrawn (activist pressure, major shareholders voting against re-election of founder's board slate), the structure could change without the mandate becoming incoherent.",
+    "kernel_context": "This constraint instantiates the disclosure_consent reading of the dual_class_legitimacy kernel. The kernel is the contested claim: 'What makes a governance structure in which voting power is decoupled from capital contribution legitimate?' Three readings compete: (1) disclosure_consent (this story): legitimacy rests on transparent disclosure and investors' voluntary, informed purchase (priced acceptance); (2) founder_stewardship (sibling): legitimacy rests on founder's track record and long-horizon mission execution that benefits all shareholders; (3) minority_extraction (sibling): legitimacy is absent—minority shareholders are owed governance proportional to capital and risk and dual-class is inherent extraction. The readings differ in what entity or mechanism grounds the legitimacy: process (disclosure), outcomes (mission value), or rights (proportionality). The disclosure_consent reading is the most procedurally grounded and the least paternalistic about which governance form is 'correct'; it asserts legitimacy follows from process, not from a particular structural outcome."
+  },
+  "omegas": [
+    {
+      "id": "informed_consent_asymmetry",
+      "question": "Do public shareholders who purchase after S-1 disclosure truly consent, or do they face a binary choice (accept the governance disparity or exclude themselves entirely from the company)?",
+      "resolution_mechanism": "Structural comparison: if equivalent companies with one-share-one-vote governance exist in the same sector and trade at comparable valuations, alternatives are available and consent is real. If dual-class founders have no equivalent alternative to access public capital, the constraint may be unique and exclusion may force apparent consent. If pre-IPO investors consistently negotiate down the founder's Class A premium or demand sunset clauses, consent is contested even among those with bargaining power.",
+      "impact": "If consent is real (alternatives available, genuine choice set), the reading holds; if consent is binary and forced, the distinction between disclosure-consent and minority-extraction collapses—the disclosure becomes a form of legitimacy theater masking structural extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the choice to accept dual-class governance is voluntary or structurally forced."
+    },
+    {
+      "id": "founder_mission_value_attribution",
+      "question": "Does the governance premium (price increase attributable to founder control) represent investor willingness-to-pay for founder mission stability, or does it represent market consensus that founders happen to be effective (independent of dual-class structure)?",
+      "resolution_mechanism": "Event studies: if dual-class stock underperforms after founder departures, mission premium is real and founder-specific. If underperformance is minimal or if successor-led companies perform comparably, the mission premium may be attributed to business fundamentals rather than governance structure. Comparative analysis: do founder-led single-share-one-vote companies and founder-led dual-class companies have similar excess returns? If single-vote founder-led companies perform similarly, dual-class premium is a structure effect; if dual-class premium is larger, founder mission focus (enabled by control) adds measurable value.",
+      "impact": "If mission premium is real and attributable to dual-class structure, the coordination function is genuine and extractiveness is moderate (founder captures some surplus, but investors benefit from mission upside). If premium is independent of structure (founders are just better at picking business), dual-class is pure extraction with a coordination cover story.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the valuation premium for dual-class companies is attributable to founder control or to founder competence independent of structure."
+    },
+    {
+      "id": "disclosure_adequacy_boundary",
+      "question": "What level of disclosure converts a governance disparity from a disclosed risk into legitimate structure? Is current S-1 and proxy disclosure sufficient, or are materiality and risk-narrative standards unmet?",
+      "resolution_mechanism": "Regulatory standard audit: SEC staff review of dual-class disclosures in recent IPO filings (S-1, prospectuses, proxy statements) to assess whether governance risks and performance implications are clearly stated. Investor litigation or regulatory enforcement: if minority shareholders sue claiming inadequate disclosure, courts assess whether the information provided was complete and clear enough for informed decision-making. Institutional investor governance policies: major asset managers publish minimum disclosure standards for governance; if their standards are met, disclosure-based legitimacy is credible.",
+      "impact": "If disclosure standards are currently met and audited, the disclosure-consent reading is structurally sound. If disclosure gaps are found, the legitimacy condition fails—shareholders cannot consent to a structure they were not adequately informed about, and legitimacy reverts to the minority_extraction or founder_stewardship frames.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether current securities disclosure practices satisfy the informational requirement for informed consent."
+    },
+    {
+      "id": "regulatory_regime_variation_ambiguity",
+      "question": "If US regulators (SEC) permit dual-class and EU regulators prohibit it, which reading's legitimacy framework is correct, or do the readings reflect different regulatory choices rather than different truths?",
+      "resolution_mechanism": "Comparative outcomes: study EU-listed companies (mandatory one-share-one-vote) and US-listed founder-led companies (dual-class permitted) for long-horizon capital investment, innovation rate, and shareholder returns. If EU outcomes are superior, mandatory parity may be the legitimacy-grounding choice. If US outcomes are comparable or superior, both regulatory frameworks may be defensible, suggesting legitimacy is relative to regulatory regime choice rather than absolute. Policy coherence: assess whether US regulators have consistently applied disclosure-based legitimacy vs. mandating parity in other contexts (public interest, consumer protection, data governance), suggesting a stable regulatory philosophy or an inconsistent patchwork.",
+      "impact": "If regulators' choices converge on one framework, that framework is likely legitimacy-grounding. If regulatory regimes reflect genuine policy choices without empirical difference in outcomes, legitimacy may be regulatory-regime-relative rather than universal, and the disclosure-consent reading holds only within a permissive regulatory environment.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the disclosure-consent reading reflects a universal legitimacy principle or a US-specific regulatory choice."
+    },
+    {
+      "id": "committer_frame_alternative_reading",
+      "question": "This constraint instantiates the disclosure-consent reading; what structural features would change if the founder_stewardship or minority_extraction readings were instantiated instead?",
+      "resolution_mechanism": "Conceptual comparison: under founder_stewardship, the constraint's extractiveness would remain low but the legitimacy ground would shift from process (disclosure) to outcomes (mission value, track record). Under minority_extraction, extractiveness would rise and suppression would increase because the structure would be framed as coercive rather than contractual. The metrics would remain empirically similar (the company operates the same way), but the interpretation would differ.",
+      "impact": "The choice of reading affects how the constraint is classified (rope vs. tangled_rope vs. snare) without changing underlying structural facts. This omega documents that the constraint's identity is kernel-dependent: the same dual-class structure instantiates different constraints depending on which reading of legitimacy is adopted.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The constraint's identity is reading-dependent; alternative readings would produce different classifications from the same structural facts."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__founder_stewardship",
+      "dual_class_legitimacy__minority_extraction"
+    ],
+    "dual_formulation_note": "The dual_class_legitimacy kernel decomposes into three distinct constraint stories, each instantiating a different reading of what legitimizes governance disparity. disclosure_consent (this story) grounds legitimacy in transparent disclosure and informed voluntary choice. founder_stewardship grounds legitimacy in founder track record and mission value. minority_extraction denies legitimacy and asserts extraction. The three readings coexist in public and corporate governance discourse; this story is one complete, ε-invariant formulation of one reading. All three are networked because they compete to explain the same governance phenomenon."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "disclosure_consent_legitimacy",
+    "drift_state": {
+      "moment": "contemporary_governance_activism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dual_class_legitimacy__founder_stewardship",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dual_class_legitimacy__minority_extraction",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "disclosure_enables_informed_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legitimacy_rests_on_process_not_outcome",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "dual_class_legitimacy__founder_stewardship",
+      "dual_class_legitimacy__minority_extraction"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

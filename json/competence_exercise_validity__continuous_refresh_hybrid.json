@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f10b4d1f-e328-46c6-8f51-56dbf9378c46"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Retention via Continuous Drill Cycles",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "training_administration",
+      "certification_bodies",
+      "safety_oversight"
+    ],
+    "victims": [
+      "field_practitioners",
+      "budget_constrained_organizations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "training_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the mandate for continuous drill cycles, determines frequency and modality of competence-renewal exercises, and adjudicates what counts as valid training. Controls the certification pipeline and the interpretation of 'competence' itself. Benefits from sustained demand for training services and regulatory compliance infrastructure."
+    },
+    {
+      "name": "certification_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Issue and renew certifications contingent on continuous drill participation. Generate revenue from re-certification fees and maintain authority over competence adjudication. Have institutional interest in the continuous-refresh model because it sustains their gatekeeping function."
+    },
+    {
+      "name": "safety_oversight",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce the continuous-drill mandate as the operational expression of safety policy. Cite drill compliance rates and training uptake as proof of safety vigilance, even when the causal link between drill frequency and real-world competence retention is contested. Benefit from the constraint's visibility and auditability."
+    },
+    {
+      "name": "field_practitioners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the direct cost of continuous drill cycles: time away from productive work, participation fees, and mandatory attendance even when personal competence assessment differs from institutional judgment. Identity-locked: abandoning the profession means losing certification and professional standing. Exit is theoretically available but career-costly."
+    },
+    {
+      "name": "budget_constrained_organizations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must fund continuous training cycles for their workforce or face non-compliance penalties and loss of operating licenses. Small and resource-limited organizations bear higher per-capita training costs relative to large operators. Cannot exit without losing the right to operate in regulated sectors."
+    },
+    {
+      "name": "field_evidence",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Empirical data on whether continuous drill cycles actually correlate with superior performance in real-world high-stress scenarios. Would contest the assumption that drill frequency is the driver of competence retention rather than proficiency-based assessment or competence-decay modeling. Structurally excluded from the mandate-setting conversation."
+    },
+    {
+      "name": "alternate_competence_models",
+      "role": "excluded",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Proficiency-based mastery models, spaced-repetition learning, or decay-curve monitoring could in principle replace frequency-based mandates. These approaches are not admitted to the policy design space because their adoption would redistribute authority from training administration to individual practitioners or algorithmic systems."
+    },
+    {
+      "name": "real_world_test_environment",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Actual high-stress scenarios where competence must execute under pressure. Provides the ground truth against which the constraint's design is measured. Evidence comes from incident reports, close calls, post-incident reviews, and comparative outcomes across organizations with different drill schedules."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared metric for competence readiness across decentralized practitioners and organizations: continuous drill participation and re-certification create a standardized, auditable proof that practitioners maintain baseline safety readiness. Solves the problem of how to distribute confidence in human readiness when centralized oversight cannot directly monitor each actor's current capability.",
+    "transfer_function": "Moves time, funding, and governance authority from field practitioners and budget-constrained organizations to training administration and certification bodies. Practitioners surrender discretion over their own competence assessment and must participate in externally-set drill cycles. Organizations redirect operational budget to training overhead. The transfer is structured as a condition of authorization to operate.",
+    "absent_voices": "Real-world performance data and practitioners' self-assessments of competence decay are structurally excluded from the mandate-setting process. A practitioner who believes they have retained competence through spaced experience and targeted review cannot override the frequency mandate. Organizations experimenting with alternative competence models cannot report back into policy design without formal regulatory approval. The empirical ground truth (what actually predicts performance in real catastrophe) is not admitted as an equal voice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuous-drill mandate and re-certification gate vanished overnight, organizations would rapidly adopt alternative competence-validation models (proficiency-based assessment, spaced-repetition schedules, personal skill portfolios). Training administration would lose the revenue from mandatory cycles and re-certifications. Practitioners would have discretion to design their own competence maintenance. The safety outcomes would depend on whether the continuous-drill model is actually the causal driver of safety or merely a proxy that correlates with other factors (organizational investment, demographic stability, risk culture). Without the mandate, that causality would be testable.",
+    "founding_problem": "High-stress professionals (pilots, surgeons, emergency responders, nuclear operators) degrade in real-world decision-making when years pass without exposure to peak-stress scenarios. One-time certification does not capture competence retention; practitioners who passed certification three years ago may have atrophied in ways not visible without re-exercise. Continuous practice maintains muscle memory, decision-making patterns, and psychological readiness.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Training administration and safety oversight cite incident reports and near-misses as evidence the problem is live. Practitioners and organizations report that proficiency-based mastery and targeted review (not frequency-based drills) maintain their readiness. Independent research in cognitive science and expertise shows both patterns: some high-stress competencies degrade rapidly (procedural memory, pattern recognition under pressure), while others degrade slowly or not at all (domain knowledge, strategic reasoning). The founding problem is partially true for some competencies and some individuals, not universally true. No corroborating voice outside the benefiting parties treats continuous drill as the ONLY solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Safety-critical organizations maintain that practitioner competence requires continuous exercise through drill cycles, not one-time certification. This reading instantiates a hybrid model: simulation and drills ARE necessary to maintain competence, but the continuous-refresh mandate functions as both a genuine safety mechanism and an extraction mechanism that benefits training administration and certification bodies. The constraint coordinates on a real problem (competence decay) while simultaneously extracting governance authority and revenue from field practitioners. The founding problem is partially true — some competencies degrade; others do not. The policy's universality and continuous nature extract value beyond what the partial truth justifies.",
+    "key_agents": [
+      "training_administration: institutional agenda-setter, controls what counts as valid competence exercise",
+      "certification_bodies: beneficiaries, issue renewals contingent on continuous participation",
+      "safety_oversight: beneficiary, enforces compliance as expression of safety vigilance",
+      "field_practitioners: payers bearing time, fee, and identity costs; identity-locked to profession",
+      "budget_constrained_organizations: payers bearing per-capita training overhead",
+      "real_world_test_environment: observer, provides ground truth on whether drill frequency predicts real-world performance"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-high (0.62 at interval end) because the continuous mandate extracts ongoing governance authority, re-certification revenue, and time allocation from practitioners and organizations beyond what the founding problem structurally requires. Suppression is substantial (0.71) because the constraint is actively enforced through licensing and authorization gates — practitioners cannot simply exit the drill cycle without forfeiting professional status. Theater is moderate-high (0.48 and rising) because the mandate emphasizes compliance rates and participation audits more than actual competence outcomes; the metric that gets tracked is 'did you show up?' not 'did you retain the competence we claim to be testing?' The measurement trajectory shows extractiveness and theater both rising as the system matures — the initial phase focused on safety, the mature phase on compliance theater and revenue stability.",
+    "perspectival_gap": "From the training-administration seat, the constraint is genuine coordination with beneficial side-effects: practitioners need exercise, organizations need assurance, and continuous cycles provide both. From the field-practitioner seat identity-locked to certification, the constraint is enforced extraction: participation is mandatory regardless of self-assessed competence, fees are non-negotiable, and the burden falls on the individual. The engine should compute these seats divergently: the beneficiary seat at low/negative χ (benefits, low directionality), the payer seat at high χ (bears costs, high directionality toward 1.0). The divided verdict is the constraint's true structure.",
+    "directionality_logic": "Training administration and certification bodies: d near 0.0 (full beneficiary — they control the mandate, collect revenue, maintain gatekeeping authority). Safety oversight: d near 0.1-0.15 (benefits from the visibility and auditability of compliance, though their primary commitment is genuine safety). Field practitioners: d near 0.85-0.95 (identity-locked target: abandoning the profession costs everything, so exit is theoretically available but practically foreclosed; they bear mandatory participation costs with limited ability to exit or negotiate). Budget-constrained organizations: d near 0.75-0.80 (constrained payers: they cannot operate without compliance, so they absorb costs or reduce other safety investments). Real-world test environment: d = 0.5 analytical (observes but does not participate in the extraction). No directionality_overrides needed; the structural data should derive these automatically.",
+    "mandatrophy_analysis": "This constraint is NOT mandatrophic in the classical sense — the founding problem is real, and the mechanism (continuous exercise) is partially justified. However, the constraint's persistence does NOT depend on the founding problem remaining 'live'. Even if empirical research proved that spaced-repetition learning or proficiency-based mastery retained competence equally well (or better) at lower cost, the continuous-drill mandate would persist because training administration and certification bodies have institutional interest in its continuation. The true mandate — 'competence retention requires exercise' — has bifurcated: the narrower, justified mandate ('some competencies decay and require periodic re-exercise') is true; the broader, extractive mandate ('continuous drill cycles of uniform frequency and duration are the only valid form of exercise') is maintained by institutional capture, not by the evidence. Mandatrophy detection should flag this as a constraint whose founding problem is partially superseded but whose extraction mechanism persists.",
+    "kernel_context": "This constraint is the 'continuous_refresh_hybrid' reading of the contested kernel 'competence_exercise_validity'. The kernel is: what exercise regimen keeps practitioners safe and ready? Three readings coexist: (1) 'continuous_refresh_hybrid' (this file): simulation and drills ARE necessary, but the mandate's continuity extracts authority beyond what the founding problem requires. (2) 'simulation_as_proxy': simulation counts as valid exercise that keeps competence occupied; frequency-based drills are an interchangeable proxy for catastrophe-readiness, and continuous participation in simulations IS the solution. (3) 'real_catastrophe_only': only real catastrophe truly exercises competence; simulation is an insufficient substitute, and any system relying on simulation alone will degrade in real events. Each reading has a different ε (different measurements of what the constraint actually extracts) and a different beneficiary/victim structure. The readings coexist because different safety communities hold them: aviation and medical training emphasize simulation-as-proxy; some emergency-response and military communities hold that drills are theater and real events are the only teacher. This reading (continuous_refresh_hybrid) occupies the middle: both simulation and reality matter, but the CONTINUOUS mandate is partially extractive."
+  },
+  "omegas": [
+    {
+      "id": "competence_decay_heterogeneity",
+      "question": "Do all competencies in high-stress domains decay at the same rate, or do some competencies retain for years while others decay within weeks?",
+      "resolution_mechanism": "Empirical study: track competence in multiple sub-domains (procedural memory, strategic reasoning, pattern recognition) over time in practitioners with varying drill frequency. Measure retention curves per competency type.",
+      "impact": "If decay is heterogeneous, a one-size-fits-all continuous mandate extracts governance authority that should be distributed per competency type. If decay is uniform, the mandate's universality is justified. Different impact: mandates should calibrate to competency class, not to uniform frequency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competence-decay rates are uniform or heterogeneous across sub-domains."
+    },
+    {
+      "id": "simulation_vs_spaced_learning_equivalence",
+      "question": "Is continuous simulation-based drill the ONLY effective way to retain competence, or do proficiency-based mastery, spaced-repetition review, and targeted scenario practice retain competence equally at lower cost?",
+      "resolution_mechanism": "Randomized trial: split practitioners into continuous-drill cohort and proficiency-based / spaced-repetition cohort. Measure real-world performance (incident rates, near-miss handling, decision quality under pressure) over 2-3 years.",
+      "impact": "If proficiency-based mastery is equivalent or superior, the continuous mandate is extractive overhead disguised as safety necessity. If continuous drill is demonstrably superior, the mandate is justified. If the difference is small and context-dependent, the mandate should be optional or organization-calibrated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether continuous drill cycles are the only effective competence-retention mechanism or whether alternative models are equivalent."
+    },
+    {
+      "id": "identity_lock_measurement_in_field_practitioners",
+      "question": "Is the measured suppression (0.71) primarily structural (licensing gates, legal barriers) or internalized (practitioners have fused their identity with continuous certification, perceive exit as unthinkable even if legally available)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: interview practitioners who left the regulated field and measure whether suppression persists in their self-reported experience after the structural gate is removed. If suppression persists or converts to shame/regret, it is internalized; if it vanishes, it was structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the measured 0.71 — the target carries the suppression with them after exit. Reclassify the exit_options from 'identity_locked' to a deeper category if one exists. If structural, suppression is correctly measured and exit is genuinely available to those who can absorb the identity cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression in field practitioners is structural or internalized."
+    },
+    {
+      "id": "theater_ratio_rising_mechanism",
+      "question": "Is the rising theater_ratio (0.38 to 0.48) driven by increasing compliance-audit focus, or by genuinely improved confidence in simulation's ability to proxy real competence?",
+      "resolution_mechanism": "Policy document analysis and interview: compare early-phase policy rationale (focused on actual competence retention) with current-phase rationale (focused on auditable compliance, training uptake rates, re-certification revenue). Trace which metrics are reported upward and how they frame safety.",
+      "impact": "If theater is rising because the focus has shifted to auditability and revenue, the constraint is converting from coordination to extraction. If theater is rising because the system is discovering simulation is MORE predictive of real competence than initially thought, theater reflects refinement, not drift. The measurement trajectory supports the extraction reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rising theater ratio reflects conversion from safety focus to compliance theater, or genuine refinement."
+    },
+    {
+      "id": "reading_contest_framing",
+      "question": "The three readings of this kernel disagree on what counts as valid competence exercise. How would empirical evidence force a reclassification among the three readings?",
+      "resolution_mechanism": "Design a high-fidelity real-world prediction test: practitioners from all three reading communities (continuous-drill, simulation-as-proxy, real-catastrophe-only) complete a standardized high-stress scenario after varying intervals without practice. Measure who performs best under pressure. This is the ground truth the readings contest.",
+      "impact": "Results would reclassify the readings themselves: if continuous-drill cohort dominates, this reading's claim is vindicated and simulation-as-proxy is overridden; if real-catastrophe-only cohort dominates, this reading is overridden; if all perform equally, a fourth reading (competence is robust and does not decay) emerges and may foreclose all three current readings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which reading's core premise is vindicated by real-world performance prediction tests."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__real_catastrophe_only"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel: 'competence_exercise_validity'. The three readings are: (1) continuous_refresh_hybrid (this file): both simulation and reality matter; the continuous mandate extracts authority beyond what the founding problem structurally requires. (2) simulation_as_proxy: simulation IS valid exercise; continuous participation in simulations solves the competence problem. (3) real_catastrophe_only: only real catastrophe exercises competence; simulation is theater. Each reading has its own ε, beneficiary/victim structure, and stakeholder positions. They are linked here not because they agree but because they contest the same kernel. The ε-invariance principle requires decomposition: one kernel, three readings, three files, three structural stories. The readings compete in the policy space; this file documents the continuous_refresh_hybrid reading as a pure constraint model."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "competence_requires_periodic_reexercise",
+    "drift_state": {
+      "moment": "contemporary_audit_focused_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__simulation_as_proxy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_exercises_necessary_not_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "continuous_mandate_extracts_beyond_safety_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "training_administration",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

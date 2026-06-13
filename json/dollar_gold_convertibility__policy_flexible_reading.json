@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "dollar_gold_convertibility__policy_flexible_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "b2d56b05-8ef8-4f27-abf3-a5346e93b8f0"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dollar-Gold Convertibility as Conditional Obligation (Policy Flexible Reading)",
+    "topic_domain": "international_political_economy/monetary_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_government",
+      "dollar_privileged_users"
+    ],
+    "victims": [
+      "foreign_central_banks",
+      "dollar_reserve_holders",
+      "non_reserve_currency_economies"
+    ]
+  },
+  "interval": {
+    "start": 1944,
+    "end": 1973
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1944,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1958,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1944,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1958,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1944,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1958,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.48
+    }
+  ],
+  "omegas": [
+    {
+      "id": "policy_autonomy_vs_credibility",
+      "question": "Is the convertibility commitment genuinely subordinate to domestic economic stability, or does the existence of the commitment constrain U.S. policy choices to the point of becoming binding?",
+      "resolution_mechanism": "Examine counterfactual: what would U.S. monetary policy have been absent the convertibility obligation? Comparison with Federal Reserve decisions 1964–1971 against stated policy preferences reveals whether the constraint was treated as optional or as an external limit.",
+      "impact": "If the constraint was genuinely perceived as subordinate (optional, breakable at will), the U.S. was extracting benefits with low suppression (option-value asymmetry). If the constraint was binding despite formal reserve power, the U.S. was a victim of its own commitment — extractiveness reverses, and the reading mis-categorizes the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the policy-flexibility framing describes actual U.S. behavior or is retrospective rationalization."
+    },
+    {
+      "id": "reading_contest_asymmetry",
+      "question": "Is this reading (policy flexibility) distinguishable from the strict_convertibility_reading by genuine structural difference, or are they competing narratives of identical facts?",
+      "resolution_mechanism": "Examine whether the two readings predict different policy trajectories or different agent behaviors under stress. If both readings describe the same historical path (Nixon's 1971 decision) identically, they are narrative frames over one constraint, not structurally different constraints.",
+      "impact": "If readings are truly distinct ε-values (one treats the commitment as binding, one as conditional), this story stands; if readings are identical structures with different rhetoric, the decomposition is premature and the stories should be merged into one constraint with an omega about interpretive contestation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether kernel decomposition reflects genuine structural difference or rhetorical framing difference."
+    },
+    {
+      "id": "victim_vs_beneficiary_measurement",
+      "question": "Are foreign dollar holders genuinely victims of this constraint, or are they compensated (through interest, seigniorage-sharing, or other mechanisms) such that their net position is beneficiary?",
+      "resolution_mechanism": "Measure real returns on dollar reserves held by foreign central banks, including interest income, against the counterfactual: what would they have earned in gold, sterling, or a diversified portfolio? Accounting for the devaluation event (1971–1973).",
+      "impact": "If foreign holders received below-counterfactual returns, they are victims (victim set correct, extractiveness confirmed). If they received above-counterfactual returns, they are disguised beneficiaries (victim set misspecified, extractiveness inflated, constraint may be rope not tangled_rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether foreign central banks were extractively targeted or compensated participants."
+    },
+    {
+      "id": "kernel_reading_alternative_framing",
+      "question": "Could this constraint be read under a DIFFERENT kernel (not dollar_gold_convertibility) that would produce different ε?",
+      "resolution_mechanism": "Test alternative kernels: (1) international monetary authority and its legitimacy; (2) U.S. monetary hegemony and its constraints; (3) the gold standard itself as a kernel. Do any alternative kernels produce materially different readings with different ε values?",
+      "impact": "If an alternative kernel yields a cleaner reading with lower ambiguity, the current kernel decomposition may be mis-identified. The constraint might be better understood through a different theoretical frame, invalidating the sibling set.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether dollar_gold_convertibility is the correct kernel or whether a different kernel better decomposes the constraint family."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the Bretton Woods system (1944–1973), the U.S. Treasury committed to convert dollars into gold at a fixed parity of 35 dollars per fine ounce, and all other signatories pegged their currencies to the dollar. This reading frames convertibility as a CONDITIONAL commitment subordinate to U.S. domestic economic needs: the U.S. claims the right to suspend or redefine convertibility if domestic inflation, unemployment, or balance-of-payments stress demands it. This differs from the strict_convertibility_reading (which treats convertibility as an absolute legal constraint on U.S. monetary policy) and from the triffin_structural_reading (which treats convertibility as an inherently unsustainable design). Under the policy-flexible reading, the U.S. gains monetary autonomy (beneficiary seat) while foreign dollar holders lose the certainty of redemption (victim seat); extraction is asymmetric and enforced through the U.S. government's control of gold supplies and convertibility suspension.",
+    "key_agents": [
+      "united_states_government: primary agenda-setter; controls the convertibility definition and can suspend it unilaterally",
+      "foreign_central_banks: institutional payers; hold dollar reserves and bear devaluation risk",
+      "dollar_privileged_users: beneficiaries of dollar stability and transaction advantages; can adjust faster than central banks if devaluation occurs",
+      "non_reserve_currency_economies: powerless payers; trapped in a dollar-denominated system without voice in U.S. policy decisions",
+      "bretton_woods_institution_architects: excluded; designed the system but lack enforcement power over the dominant issuer"
+    ],
+    "logic_rationale": "Extractiveness climbs from 0.35 (1944, fresh commitment, low suspicion of U.S. flexibility) to 0.62 (1973, after Nixon shock). This trajectory reflects growing evidence that the U.S. was treating convertibility as optional — using monetary expansion (1960s) that violated the commitment's spirit, ultimately forced into explicit suspension. Suppression rises from 0.40 to 0.71 because maintaining the appearance of convertibility (while printing dollars that couldn't be backed) required active enforcement: capital controls, gold sales management, informal pressure on central banks not to redeem. Theater ratio climbs from 0.20 to 0.48 because by the late 1960s, the constraint's main function was performative — defending the fiction of convertibility rather than enabling it. The coercion grid shows suppression rising fastest at the STRUCTURAL level (0.42→0.78) — the Bretton Woods institution itself had to suppress the logical consequences of dual mandates (maintain parity AND expand money supply). Resistance rises at every level but fastest at the structural level (0.15→0.72), driven by Triffin's analysis, French gold accumulation, and run-on-the-bank dynamics (London Gold Pool pressure, late-1960s). The grid shows a DIVERGING multi-level picture: suppression increases fastest at structural/organizational levels (the international system must maintain theater); resistance increases fastest at structural/organizational levels too (central banks and economists mount pressure). Individual-level resistance and suppression lag because average citizens in foreign economies did not directly perceive the devaluation risk — it was an institutional artifact.",
+    "perspectival_gap": "From the U.S. government's seat, this constraint is a tool for preserving monetary autonomy while gaining seigniorage benefits (printing money other nations hold as reserves). From foreign central banks' seats, it is a trap: they are obligated to hold dollars by the international system, but those dollars may be devalued unilaterally. From non-reserve economies' seats, it is pure exclusion — they depend on dollar-denominated export revenues but have no vote on the dollar's fate. The engine should compute markedly different d values: U.S. government near d=0.0 (beneficiary), foreign central banks near d=0.85+ (target), non-reserve economies near d=0.9+ (trapped target). The perspectival gap is structural: the same constraint has opposite directionalities depending on where you stand.",
+    "directionality_logic": "U.S. government benefits from the arrangement (collects seigniorage, retains monetary autonomy despite formal commitment) — d near 0.1 → negative or minimal extraction in χ. Foreign central banks are the primary targets: they hold a depreciating asset (dollars redeemable in a fixed gold quantity when the U.S. is printing above the gold stock's ability to back) — d near 0.85 → high extraction in χ. Dollar-privileged users have mixed directionality (~0.4): they benefit from the dollar's stability and prevalence, but face exchange-rate losses if devaluation occurs. They have better exit options (can hedge, diversify, adjust faster) so their d is lower than central banks'. Non-reserve economies are trapped (d near 0.95): their exports are priced in dollars, they cannot influence the convertibility decision, and they absorb inflation losses if the U.S. devalues. No directionality overrides are necessary; the structural derivation from beneficiary/victim + exit options produces the correct d values.",
+    "mandatrophy_analysis": "The founding problem (post-WWII need for stable exchange rates and rules-based order) was LIVE in 1944–1958. By 1960, the Triffin dilemma made the founding problem CONTESTED: was the problem the lack of rules, or was the problem the incompatible demands placed on the U.S. (maintain gold parity while serving as world banker)? By 1971, the problem was DEAD: the U.S. had decided (unilaterally, despite the formal commitment) that domestic stability took precedence, and the commitment was abandoned. This MISMATCH (founding_problem_status=dead, disappearance_verdict=world_rearranges) is a MANDATROPHY signal: the arrangement persists as a zombie constraint (1971–1973, the 'Smithsonian interval') even after its mandate has expired and its founding problem is resolved by U.S. abandonment of the commitment. The constraint should not be classified as PITON because it does not persist from institutional inertia — it is explicitly abandoned by design. However, it fits TANGLED_ROPE because it coordinates (fixed-rate system enables predictable trade) AND extracts (U.S. collects seigniorage, foreign holders lose optionality), and the extraction persists through ACTIVE ENFORCEMENT (capital controls, gold management, institutional pressure) until the moment the U.S. chooses to exit.",
+    "kernel_context": "This constraint instantiates the POLICY_FLEXIBLE_READING of the dollar_gold_convertibility KERNEL. The kernel is the formalized commitment in Article IV of the IMF Articles of Agreement: the U.S. Treasury shall convert dollars into gold at the parity of 35 dollars per fine ounce. The policy_flexible_reading asserts: Convertibility is a CONDITIONAL obligation, subordinate to domestic U.S. economic stability; the U.S. retains the right to suspend, redefine, or abandon convertibility if domestic inflation, unemployment, or balance-of-payments pressures demand it. SIBLING READINGS: (1) strict_convertibility_reading claims the commitment is UNCONDITIONAL, binding in law, constraining U.S. monetary policy to the gold stock; (2) triffin_structural_reading claims the commitment is UNSUSTAINABLE BY DESIGN, a structural flaw that requires systemic revision (IMF reform, SDR substitution, or floating rates), not merely policy adjustment. The policy_flexible_reading differs from strict_convertibility in that it places the locus of authority in U.S. DOMESTIC POLITICAL CHOICE (what is 'necessary' for domestic stability is decided by U.S. policymakers), not in international legal obligation. It differs from triffin_structural in that it does NOT claim the system is unsustainable — it asserts the U.S. can sustain it indefinitely IF it chooses, but need not if domestic costs are high enough."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "dollar_gold_convertibility__strict_convertibility_reading",
+      "dollar_gold_convertibility__triffin_structural_reading"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the dollar_gold_convertibility kernel. The policy_flexible_reading treats the commitment as conditional on domestic U.S. economic needs; the strict_convertibility_reading treats it as binding law; the triffin_structural_reading treats it as structurally unsustainable. Ε values differ across the readings: policy_flexible (this story) has moderate-high extractiveness (0.62) because the U.S. can abandon convertibility at will, making foreign holders victims. Strict_convertibility would have lower U.S. extractiveness (the commitment constrains U.S. monetary policy) and shift victim status to U.S. domestic constituencies hurt by monetary constraint. Triffin_structural would have even higher structural extractiveness (the system is rigged to fail, extracting from whoever absorbs the adjustment when it collapses). All three readings describe the same historical period (1944–1973) but predict different agent situations and different policy trajectories. They form a constraint family linked by affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dollar_gold_convertibility__strict_convertibility_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dollar_gold_convertibility__triffin_structural_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "domestic_stability_hierarchy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "unilateral_us_policy_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "dollar_gold_parity_maintained",
+    "drift_state": {
+      "moment": "post_1970_systemic_pressure",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "dollar_gold_convertibility__strict_convertibility_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

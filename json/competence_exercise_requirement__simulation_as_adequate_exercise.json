@@ -1,0 +1,594 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__simulation_as_adequate_exercise",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a0f1c916-24fb-46b6-a655-924429bd2ce3"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "High-Fidelity Simulation Competence Exercise Standard",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulatory_agencies",
+      "training_simulator_manufacturers",
+      "airline_management_efficiency_interests"
+    ],
+    "victims": [
+      "flight_crews",
+      "safety_culture_advocates",
+      "accident_investigation_community"
+    ],
+    "vindicated_propositions": [
+      "simulation_fidelity_sufficient_for_competence_maintenance",
+      "catastrophe_unnecessary_for_skill_validation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Establishes and enforces the standard that simulation-only training satisfies competence requirements. Sets minimum simulator hours, approves facilities, and issues certifications. Avoids mandating operational line flying (liability, disruption costs) and resists pressure from safety researchers to require real-world anchoring. Justifies the standard through advisory circulars, research citations (filtered and selective), and regulatory guidance. Changes the standard slowly, in response to major incidents."
+    },
+    {
+      "name": "training_simulator_manufacturers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Supply high-fidelity simulators and training systems. Business model depends on regulatory mandates for simulation-based training: as standards rise, they sell upgrades (motion platforms, visual systems, instructor stations). Influence regulatory working groups through industry associations, participate in standard-setting, and fund research that supports simulation adequacy. Capture significant revenue from simulator leases and facility contracts."
+    },
+    {
+      "name": "airline_management_efficiency_interests",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from simulation-only training: no operational line training means no aircraft downtime, no disruption to revenue flying, no liability exposure during line retraining. Schedule simulators predictably; simulators are controllable and safe. Pay for simulator facility leases and operations; these costs are predictable and spreadsheet-friendly. Resist regulatory changes that would impose operational training (union negotiations, scheduling complexity, aircraft availability competition)."
+    },
+    {
+      "name": "flight_crews",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Must complete simulator training cycles per regulatory requirement; no choice in whether simulation is adequate. Skeptical of simulation-only training: they experience gaps (physics fidelity varies, weather is canned, human factors under real jeopardy cannot be simulated, Crew Resource Management under genuine stakes differs from simulator exercises). Career and professional identity are locked to aviation; exit from the profession is available but carries identity/economic costs. Union negotiations provide some voice but do not extend to standards-setting. Accumulate judgment through years of operations, but cannot advocate for required operational currency without challenging the regulatory standard."
+    },
+    {
+      "name": "safety_culture_advocates",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that competence maintenance requires periodic real-world operational exposure and that simulation-only training degrades safety culture over generations. Produce research and case studies; excluded from regulatory working groups where industry and regulator voices dominate. Their position is evidence-informed but institutionally marginal. Constrained exit: they cannot opt out of the aviation system; they work within it and push for reform, but slowly and with limited influence."
+    },
+    {
+      "name": "accident_investigation_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Investigates accidents and serious incidents; produces findings about crew performance, training adequacy, judgment gaps, and systemic factors. Their evidence is foundational to understanding whether simulation-only training is adequate. However, they enter the conversation post-incident; they have no veto over pre-incident standards. Analytical seat: they observe the system, report findings, and influence future standards, but do not extract or pay directly."
+    },
+    {
+      "name": "catastrophe_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that only genuine catastrophic events or survivable near-misses provide the irreducible exercise of competence under real stakes. Institutionally excluded: no regulator can mandate or expect catastrophes as training. Their position is unpopular and politically impossible; they are heard only in post-accident inquiries, not in standard-setting. Constrained exit: they work within the aviation system (as researchers, safety advocates, incident investigators) and produce evidence, but cannot change the fundamental commitment to avoid mandating jeopardy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of how to maintain flight crew competence in safety-critical procedures without exposing crews to operational jeopardy during training. Provides a systematic, repeatable, scalable mechanism for competence validation and certification that keeps crews safe during training and allows airlines to schedule sessions predictably.",
+    "transfer_function": "Transfers costs from airlines (operational disruption, liability, line-training logistics) to crews (simulator time commitment, fatigue, risk of skill atrophy from lack of real-world variety) and to the training system (simulator operations, facility leasing). Benefits flow to simulator manufacturers (mandate-driven demand), regulatory agencies (authority over standards, alignment with industry), and airline management (operational efficiency).",
+    "absent_voices": "Safety researchers who argue for real-world anchoring are largely absent from regulatory working groups where industry and regulator consensus is strong. Flight crews themselves have constrained institutional voice: unions negotiate seat counts and scheduling but not standards for training adequacy. Accident investigation boards contribute evidence post-incident but have no standard-setting veto. Catastrophe-advocates (those who believe only real events teach irreducible competence) are institutionally excluded because their position is politically and operationally unacceptable — no regulator can mandate catastrophes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the standard vanished and simulation-alone were deemed insufficient, regulators would mandate periodic line operations, real-world refresher cycles, and operational currency requirements. This would restructure crew scheduling, disrupt revenue flying, and require airline standdowns. Simulator manufacturers would lose mandate-driven demand for upgrades. Crews would spend time in operational retraining instead of home rest. The entire modern crew-training infrastructure would reorganize around operational anchoring requirements.",
+    "founding_problem": "1970s–1980s: high-accident-rate aviation industry sought methods to improve crew competence in safety-critical procedures without continuous exposure to jeopardy. Simulators existed but with poor fidelity. The problem was: how to scale training as fleets grew, how to reduce exposure to accidents during the learning phase, and how to make competence-maintenance cost-effective and repeatable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulators and simulator vendors attest the founding problem is solved: accident rates have declined steeply despite fleet growth and global scaling. They cite simulation improvements and standardized training. Safety researchers and accident investigation boards attest the founding problem is partially solved but the adequacy claim is unvalidated: they argue the observed accident decline is confounded by aircraft automation, material reliability, and air-traffic-control modernization — not training methodology. They note that high-consequence low-frequency accidents (loss-of-control, terrain, unstabilized approaches) often involve crews trained primarily via simulation, suggesting gaps in judgment under genuine stakes. No independent peer-reviewed evidence outside regulator/vendor circles has systematically validated that simulation-only training maintains competence over multi-decade careers."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.76
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.82
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.52
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The regulatory standard that high-fidelity simulation with systematic debriefing constitutes adequate exercise of the flight-crew competence kernel is a contested constraint at the center of modern aviation safety governance. This story instantiates the reading that simulation-only training (without real-world operational anchoring) is sufficient for maintaining competence over decades. The reading is vindicated by observed low accident rates in the modern era and sustained by regulatory bodies and simulator manufacturers. It is challenged by safety researchers and accident investigation communities who argue that the decline in accidents is confounded by aircraft automation and that simulation-alone leaves gaps in judgment under genuine stakes. The founding problem — how to train crews safely and scalably without jeopardy — is partly solved but the solution's adequacy for competence maintenance remains contested.",
+    "key_agents": [
+      "Regulatory agencies: set the standard, approve simulators, certify crew training",
+      "Training simulator manufacturers: profit from mandated fidelity upgrades and simulation-based training",
+      "Airlines: benefit from predictable, scheduled training that does not disrupt revenue flying",
+      "Flight crews: must comply with simulation-only training; skeptical of its adequacy",
+      "Safety researchers and accident investigators: produce evidence questioning sufficiency; largely excluded from standard-setting",
+      "Catastrophe-advocates: argue only real events teach real competence; institutionally excluded"
+    ],
+    "logic_rationale": "Extractiveness is 0.68 at interval end: the standard extracts from crews (enforces simulation-only participation, blocks alternative training models), airlines (mandates costly simulator facility upgrades), and safety researchers (imposes a canonical standard that marginalizes their findings). The constraint coordinates training delivery and certification, but asymmetrically: crews and researchers bear the cost of the standard (simulation-only adequacy), while regulators and simulator vendors capture institutional authority and profit. Suppression is high (0.71) because the standard persists despite credible challenges: the enforcement mechanism is regulatory gatekeeping (you cannot operate unless you comply), and alternative voices (safety researchers, catastrophe advocates, crews) have constrained exit. Theater ratio climbs from 0.35 to 0.52 over 40 years, indicating growing performative maintenance: debriefing protocols become more elaborate and documented, but evidence that simulator-only training maintains competence remains unseen. The coercion grid shows leveled pressure: structural suppression (regulatory mandates) is high throughout; individual-level suppression (crew skepticism, local safety concerns) is lower but rises over time as the gap between simulation and operational reality becomes visible through incidents. Measurement series are aligned on a single grid (every metric at every time point) so drift analysis can track the constraint's operation over decades. The measurement basis field indicates where each value came from: 'observed' for points derived from actual training records and accident investigation findings, 'projected' for the t0 starting state (estimated from the reading's foundational assumptions).",
+    "perspectival_gap": "The regulatory-setter and simulator-vendor seats compute toward snare or tangled-rope (they enforce the standard, extract benefits from it, have exit options via policy changes). The flight-crew seat computes toward snare (constrained exit, bears suppression, no control over the standard). The safety-researcher seat is an observer with analytical exit, so the constraint does not extract from them directly — but their voice is suppressed (excluded from standard-setting), creating a structural asymmetry. The 'coexists_with' relation to sibling readings (below) captures this perspectival gap: different institutional seats hold different readings of the kernel, and the regulatory standard embodies one reading while marginalizing others.",
+    "directionality_logic": "Regulatory agencies benefit (authority over standard-setting, alignment with simulator vendors, public-facing narrative of science-based training). Simulator manufacturers benefit (mandate-driven demand, fidelity upgrades, long-term contracts). Airlines benefit (operational efficiency, predictable scheduling). Flight crews pay (constrained training options, skepticism unrewarded, judgment gaps over time). Safety researchers pay (their evidence marginalizes, their voice is excluded, their institutional prestige is undermined). Crews are identity-locked to aviation (professional identity and career path are constituted through the industry's norms); they cannot simply exit to alternative training. Researchers are constrained by institutional gatekeeping (their findings are heard post-incident, not pre-standard). The override directionality_logic applies: a safety researcher (moderate power, institutional exit options) appears to have lower d by the derivation, but the suppression of their voice and marginalizing of their evidence in standard-setting raises their effective d toward the target end.",
+    "mandatrophy_analysis": "The founding problem (how to train crews safely and affordably without jeopardy exposure) is partially solved by the standard. But the mandate has grown beyond its original scope: simulation-adequacy is now asserted for all competence maintenance, not just initial training. The constraint persists partly because regulators, simulator vendors, and airline efficiency interests benefit, and partly because no party has a strong incentive to unmake it — regulators avoid the political cost of mandating real incidents, airlines avoid operational disruption, vendors avoid demand loss. The catastrophe-advocates and safety researchers have incentive to challenge it, but lack institutional power. This is the classic piton signature: the administration could change the standard (it is not natural law), the constraint imposes diffuse costs (safety culture degradation, judgment gaps), but no single powerful party benefits enough to maintain it AND no powerful party is hurt enough to fix it. However, the theater-ratio rise (0.35 to 0.52) and ongoing suppression of challenger voices indicate the standard persists increasingly as performance: elaborate debriefing protocols are documented and certified, but their causal link to competence maintenance is asserted, not proven. The measurement series show extractiveness stabilizing (plateaus at 0.68 after t=30), suggesting the constraint has reached an equilibrium: it extracts what it is going to extract, enforcement intensity no longer rises, and resistance adapts or normalizes.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'competence_exercise_requirement' — the stable commitment that flight crews must exercise and maintain competence in safety-critical skills. The kernel is coded in federal regulations (FAA Part 121, EASA OPS 1) as an abstract requirement; the reading question is: what counts as adequate exercise? This reading ('simulation_as_adequate_exercise') holds that high-fidelity simulation with systematic debriefing satisfies the requirement. Sibling readings are 'catastrophe_as_necessary_anchor' (only real events provide irreducible exercise) and 'hybrid_dependency' (simulation is necessary but insufficient; real-world anchoring required). The readings coexist across different institutional seats: regulators and vendors defend this reading, safety researchers advocate the hybrid reading, catastrophe advocates hold the catastrophe reading. The dispute is not resolvable by evidence alone; the readings are grounded in different normative commitments about what 'competence' means and whether its maintenance requires jeopardy."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_sufficiency",
+      "question": "Does high-fidelity simulator training, regardless of physical or psychological realism, adequately maintain competence in judgment and resource management under genuine operational stakes?",
+      "resolution_mechanism": "Post-incident analysis of accidents and serious incidents: examine whether crews trained exclusively via simulation show deficiency in judgment or crew resource management when facing real cascading failures. Compare against crews with periodic operational line exposure. Prospective study of judgment markers in simulator-trained vs. operationally-anchored crews facing novel hazards.",
+      "impact": "If simulation is sufficient, the current standard is sound and the constraint type is coordination (rope). If insufficient, the standard is extractive cover (snare or tangled_rope) and should mandate periodic real-world anchoring. The terminal classification (mountain, rope, snare) depends on this resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether high-fidelity simulation alone maintains competence or leaves judgment gaps."
+    },
+    {
+      "id": "catastrophe_necessity_axiom",
+      "question": "Is there a category of knowledge or judgment that can ONLY be acquired through genuine jeopardy or near-miss experience, and not through simulation of those events?",
+      "resolution_mechanism": "Cognitive psychology and organizational learning research: identify irreducible dimensions of competence (fear response, time-pressure judgment, multi-system failure reasoning) and test whether simulation training produces equivalent neural/behavioral markers as operational experience. Examine learning science on embodied cognition and the role of genuine stakes in skill consolidation.",
+      "impact": "If jeopardy-specific knowledge exists and is irreducible, the catastrophe reading is validated and simulation-only training is fundamentally incomplete. If all dimensions can be simulated (with sufficient fidelity and debriefing), the simulation reading holds. This addresses the conceptual boundary between readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether genuine jeopardy teaches a category of competence that simulation cannot."
+    },
+    {
+      "id": "measurement_confounding_accident_decline",
+      "question": "What fraction of the observed decline in aviation accident rates over 40 years is attributable to improved training (simulation-based) vs. aircraft automation, material reliability, air-traffic-control modernization, and fleet age reduction?",
+      "resolution_mechanism": "Causal inference analysis: isolate training methodology changes from confounding factors using historical accident data, fleet composition, technology introduction timelines, and training regime changes. Control for aircraft type, route, and operational environment. Synthetic control or difference-in-differences analysis comparing carrier pairs with different training regimes.",
+      "impact": "If simulation-based training is the primary causal factor in accident reduction, the adequacy claim is supported. If automation/ATC/aircraft reliability dominate, the accident decline does not validate simulation-only competence maintenance, and the reading's empirical grounding is weakened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed safety improvement validates simulation training or is confounded by other factors."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression of alternative training voices (safety researchers, catastrophe advocates) primarily structural (regulatory gatekeeping, institutional power asymmetry) or internalized (the research community has accepted the adequacy claim and no longer actively challenges)?",
+      "resolution_mechanism": "Survey of safety research community: measure prevalence of belief in simulation-only adequacy vs. belief in need for operational anchoring. Analyze publication patterns: are critiques of simulation-only training increasing, decreasing, or suppressed in indexed journals? Interview regulatory working group participants about their role and constraints.",
+      "impact": "If structural, the suppression is enforced externally and would persist if challenged. If internalized, the community has been persuaded and would regenerate the constraint's advocacy. This informs whether the constraint is fragile (structural suppression, vulnerable to rule change) or robust (internalized acceptance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of challenger voices is external gatekeeping or internalized consensus."
+    },
+    {
+      "id": "piton_vs_tangled_rope_classification",
+      "question": "Does the constraint persist because a powerful beneficiary (simulator manufacturers, regulators collecting authority) actively maintains it, or because the cost to fix it exceeds the diffuse cost to bear it?",
+      "resolution_mechanism": "Historical analysis: document regulatory working group voting patterns, industry input on standard-setting, and pressure for revision. If simulator vendors and regulators have actively opposed relaxation of simulation standards, it is snare/tangled_rope. If the standard persists quietly without active defense, it is piton. Interviews with regulatory officials about whether they would change the standard if pressure mounted.",
+      "impact": "If tangled_rope, targeted advocacy to change the standard might succeed if concentrated interests (crews, researchers, airlines seeking cost reduction) organize. If piton, the constraint is weakly held by no single party and might be reformed by coalition pressure or incident-driven urgency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint is actively defended by powerful interests or passively persists due to inertia."
+    },
+    {
+      "id": "reading_kernel_boundary",
+      "question": "When this reading is challenged (by accident investigation or regulatory review), is the challenge directed at the adequacy of simulation-only training (this reading's core) or at the broader kernel (competence maintenance itself)?",
+      "resolution_mechanism": "Discourse analysis: examine accident investigation reports, regulatory notices, and safety recommendations. Code whether challenges are to simulation fidelity (tactical, this reading) or to the kernel's validity (strategic, the kernel itself). Track regulatory responses: do they adjust simulation standards, or do they defend the kernel?",
+      "impact": "If challenges stay within-reading (more fidelity, better debriefing), the kernel is uncontested. If challenges escalate to the kernel (competence may require non-simulation), then the sibling readings are gaining ground. This measures whether the coexist_with relation is stable or sliding toward foreclosure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether challenges to this reading aim at simulation adequacy or at the competence kernel itself."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+      "competence_exercise_requirement__hybrid_dependency",
+      "airline_training_cost_control",
+      "simulator_manufacturer_business_model",
+      "regulatory_authority_scope"
+    ],
+    "dual_formulation_note": "This constraint instantiates one reading of the contested kernel 'competence_exercise_requirement'. Sibling stories generate alternative readings: 'catastrophe_as_necessary_anchor' (only real events exercise competence), 'hybrid_dependency' (simulation necessary but insufficient). The three readings coexist across different institutional seats and represent genuinely irreconcilable commitments about what 'competence' means and how it is maintained. Each reading has distinct ε and structural beneficiaries. The network links enable the corpus to model the kernel as a stable commitment with multiple readings, rather than as a unified constraint. The parent kernel story (if authored) would record only the kernel itself and the reading set; each reading story (including this one) records the structural detail of one interpretation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ],
+  "gain_flow": "regulatory_agencies",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+      "competence_exercise_requirement__hybrid_dependency"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_exercise_requirement__hybrid_dependency",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_maintains_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_exercisable_without_jeopardy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "regulatory_simulation_adequacy_standard",
+    "drift_state": {
+      "moment": "contemporary_post_incident_review_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
