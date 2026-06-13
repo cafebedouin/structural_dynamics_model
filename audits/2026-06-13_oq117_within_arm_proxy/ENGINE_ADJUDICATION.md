@@ -20,6 +20,21 @@
 > line: same phenomenon, mountain from the ground, rope from the station — the engine shows which
 > seat, it does not rule the phenomenon. Wording below that says "rejects / caught / isn't fooled"
 > is the old register; the substance (0/30, both arms identical) stands, re-couched as seat-showing.
+>
+> **But "shows the seat" is NOT "makes no claim" — guard against the relativism over-rotation.**
+> The engine commits: it rules the claim's **concealment**, not a seat-free type. The liveness flags
+> are non-relative facts — free_market's coupling topology scored **1.0 across four coupled pairs**,
+> and that is true from *every* seat, including the institutional one that reads χ=−0.029. That seat
+> is not "an equally-valid opinion that it's a mountain"; it is the gauge-fixed frame the
+> `epistemic_trap` omega fires on — the seat that *cannot see* the coupling it is embedded in. So the
+> verdict is real and committal: there is demonstrable seat-constituting structure (maintained
+> extraction, a beneficiary, coupling) and a claim ("natural default state") that asserts no seat —
+> the gap between them is the concealment, and ruling that gap is Corollary 2a. The maintained
+> structure is the fact; the mountain claim is the concealment; the seat is what makes both true at
+> once. The engine declines to rule a seat-free fact of mountain-hood (there is none); it does **not**
+> decline to rule that the claim conceals a seat. *(Gravity: the maintained artificial gravity on the
+> station is the fact, calling it a ground-frame mountain is the concealment — the engine rules the
+> concealment, not whether it is "really" a mountain.)*
 
 
 **The redirect:** the spends (within-arm proxy, Spend A/B) measured authored `claimed_type` + ε by
