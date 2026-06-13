@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "marriage_sacrament__hierarchical_indissolubility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "210afee3-2603-42e5-b42e-3b718028c7fa"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Marriage Sacrament: Hierarchical Indissolubility Reading",
+    "topic_domain": "religious/institutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_magisterium"
+    ],
+    "victims": [
+      "divorced_catholics_seeking_remarriage"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Roman Catholic Church's sacramental teaching on marriage holds that a valid marriage is an ontological reality — a reality in being, not a linguistic or legal construct — and that this reality cannot be dissolved by any human power, not even by the Church itself. Under the hierarchical indissolubility reading, a divorced Catholic who remarries without an annulment of the first marriage commits adultery by the act of remarriage, and is excluded from Eucharist and other sacraments until the first marriage is declared null. This reading treats indissolubility as a constitutive fact about marriage itself, not as an aspirational ideal subject to pastoral mercy in individual cases. The constraint operates through a tribunal system that adjudicates whether prior marriages were 'validly' contracted, a process that often produces verdicts at odds with the lived experience of the divorced person. The hierarchical reading is ONE reading of the contested kernel 'marriage_sacrament'; the sibling reading 'civic_pastoral_reading' treats marriage as a pastoral relationship subject to human failure and permits sacramental inclusion of divorced Catholics through a process of discernment rather than tribunal judgment.",
+    "key_agents": [
+      "institutional_magisterium: Hierarchical authority setting and enforcing the indissolubility doctrine; d near 0.0 (full beneficiary, controls the rules)",
+      "divorced_catholics_seeking_remarriage: Primary victims (excluded from sacraments, trapped in tribunal apparatus); d near 1.0 (full target)",
+      "parish_clergy: Agenda-setters enforcing sacramental denial; identity-locked to institutional role; d near 0.3 (partially captured by the institution they serve)",
+      "tribunal_personnel: Adjudicate validity; caught between doctrine and doubt; d near 0.4 (execute the constraint but question its coherence)",
+      "validly_married_catholics: Incidental beneficiaries (institutional reinforcement of their marriage); d near 0.1 (low extraction, high benefit)",
+      "progressive_theologians: Excluded voices advocating pastoral alternative; d=0.5 (analytical, outside the mechanism)"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because the constraint systematically denies sacramental access to a named victim class (divorced Catholics) and conditions reinstatement on navigation of a costly, time-consuming, often-futile tribunal process. The extraction is not incidental to coordination — it is the enforcement mechanism itself. Suppression is similarly high (0.72) because the constraint operates by denying access to fundamental goods (sacraments) that are constitutive of Catholic ritual life, and by treating the divorced person's own account of their marriage ('it ended') as ontologically false ('it never validly existed'). The suppression is internalized through doctrinal claim (the reading asserts an ontological fact divorced Catholics are supposed to accept) and structural (sacramental exclusion is the material enforcement). Theater ratio is moderate (0.41) because the tribunal process appears to engage in adjudication (decision-making, weighing grounds, issuing judgments) but increasingly serves to ratify the constraint rather than to discover truth about marriage validity. The rising theater ratio over the interval (0.28 → 0.41) reflects the growing awareness that annulment procedures bear little relationship to why marriages actually end, and that the constraint persists more through institutional inertia and identity investment than through genuine sacramental coherence. The accessibility_collapse metric (0.58) reflects that alternatives do exist (civil divorce is legally recognized; other Christian traditions permit remarriage; leaving the faith is possible) but are all costly: they require abandoning a religious identity, community, and spiritual framework that may have been lifelong. The resistance metric (0.71) reflects substantial active resistance from progressive theologians, remarried Catholics, and even sympathetic clergy, plus the structural pressure of civil law and ecumenical practice — the constraint persists not because resistance is absent but because institutional authority overrides it.",
+    "perspectival_gap": "The payer seats (divorced Catholics, identity-locked clergy) and the agenda-setter seat (magisterium) should compute dramatically differently. From the magisterium's institutional position, the reading constitutes a genuine coordination function: it defends the permanence of the marital covenant and provides a coherent framework for sacramental practice. From the divorced Catholic's position, the same structure operates as institutional extraction: the denial of sacraments is experienced as punishment for a life-circumstance (divorce) framed as sin, and the tribunal apparatus is experienced as a gatekeeping mechanism whose verdicts bear little relationship to lived reality. The identity-locked clergy sit in a liminal position: they are partially captured by institutional role (their identity is constituted through priesthood) and partially sympathetic to the payer position (they witness the pastoral harm of sacramental exclusion). These structural differences should produce different classifications when computed per-seat. The engine's job is to detect this divergence from the structural data — the hierarchical reading's claim of coordination conceals extraction that becomes visible when directionality is computed from the victim set and exit options.",
+    "directionality_logic": "Directionality derivation from structural data: (1) The institutional magisterium is the declared beneficiary (controls the definition, sets the agenda, collects institutional loyalty and authority); it has institutional power, civilizational time horizon, and analytical exit (it is not trapped — it can change the doctrine at any time and did so incrementally through Vatican II and Pope Francis reforms). Its d should derive to the beneficiary end (0.0–0.2). (2) Divorced Catholics are the declared victims (explicitly excluded from sacraments, bear tribunal costs, trapped by identity-lock to Catholic faith and community); they have powerless power, biographical time horizon, and trapped exit (leaving the faith means abandoning spiritual identity and community). Their d should derive to the target end (0.8–1.0). (3) Parish clergy have secondary role as both agenda-setters (they enforce) and payers (they are bound by doctrine they often doubt); they have organized power, biographical time horizon, and identity-locked exit (priesthood is their professional and spiritual identity). Their d should derive to 0.3–0.5 (partially captured, partially sympathetic to victims). (4) Tribunal personnel have moderate power, biographical horizon, constrained exit (they work within the system but can exit; their identity is professional rather than ontologically bound). Their d should derive to 0.4–0.5. No directionality overrides are needed — the derivation chain produces structurally coherent values.",
+    "mandatrophy_analysis": "Mandatrophy is present and structurally clear. The founding problem (preserve marital permanence and provide authoritative adjudication) was originally live and meaningful: when civil divorce laws were emerging and local pastoral variation was creating confusion, a coherent hierarchical doctrine served a genuine coordination function. The founding problem is now dead or substantially transformed. (1) Marital permanence is not threatened by anyone except the person in the marriage — civil law has solved the coordination problem by recognizing divorce as a legal fact and requiring adjudication by civil courts; hierarchical insistence that ontologically the marriage persists is no longer required to protect the permanence-ideal because civil permanence is not the goal. (2) Authoritative adjudication is undermined by the fact that the tribunal apparatus's verdicts (declarations that marriages 'never validly existed') are increasingly recognized as metaphysical claims disconnected from the actual reasons marriages end — the founding problem of settling local pastoral confusion is solved better by pastoral guidelines than by tribunal metaphysics. (3) The constraint persists despite the founding problem's death because it serves extractive functions the original mandate did not: it maintains clerical authority over the sacramental boundary, preserves institutional control over marital status, extracts institutional loyalty from the divorced by conditioning sacramental access on compliance with annulment, and vindicates the proposition that only hierarchical authority can adjudicate marriage validity. The theater ratio's rise (0.28 → 0.41) is evidence of mandatrophy: as the coordination function atrophies, the constraint's persistence relies increasingly on performative maintenance (tribunal procedure) rather than genuine function. The measurement series shows base_extractiveness and suppression_requirement both rising while the founding problem atrophies — classic mandatrophy signature.",
+    "kernel_context": "This constraint instantiates the hierarchical_indissolubility_reading of the contested kernel marriage_sacrament. The kernel is the Catholic Church's sacramental teaching on marriage — what makes a marriage real, binding, and permanent. Two readings coexist: (1) hierarchical_indissolubility_reading (THIS story): Marriage is an ontological reality that cannot be dissolved; indissolubility is constitutive, not aspirational; only the hierarchical magisterium can adjudicate validity through tribunal process. (2) civic_pastoral_reading (sibling story): Marriage is a pastoral relationship subject to human failure; indissolubility is an ideal requiring compassionate individual discernment; sacramental inclusion should not depend on tribunal judgment. The readings share a commitment to the sanctity and importance of marital fidelity but differ fundamentally on whether indissolubility is a metaphysical claim the hierarchy enforces or a spiritual ideal the church supports pastorally. The hierarchical reading produces higher extraction because it gatekeeps sacraments through tribunal; the pastoral reading permits direct sacramental inclusion. The readings coexist in live institutional tension — they are both held by sincere Catholics, neither rules out the other within a single framework (they are not logically foreclosing), but they do create incompatible pastoral practices and institutional policies. The fact that Pope Francis initiated reforms moving incrementally toward the pastoral reading (faster annulment processes, expanded grounds, explicit invitation to mercy) shows the hierarchy recognizing the hierarchical reading's costs; the reforms do not abandon the constraint but modify its enforcement."
+  },
+  "omegas": [
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.72) primarily structural (sacramental exclusion as external barrier) or internalized (divorced Catholics accepting the teaching that they are living in sin)?",
+      "resolution_mechanism": "Post-exit observation: track divorced Catholics who leave the church and remarry — if suppression lifts structurally but persists internally, the component is internalized; study of testimony from divorced Catholics weighing remarriage vs. sacramental life reveals the proportion each component weighs in the decision.",
+      "impact": "If suppression is substantially internalized, the effective suppression is higher than the structural measure suggests — the target carries the constraint with them after exit, limiting the exit option's real value. This would support reclassification from tangled_rope toward snare. If primarily structural, the trap is the sacramental exclusion itself; leaving eliminates the suppression cleanly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of divorced Catholics is structural exclusion or internalized doctrinal acceptance."
+    },
+    {
+      "id": "ontological_vs_pastoral_incommensurability",
+      "question": "Is the hierarchical reading's claim that marriage is an ontological reality a different claim from the pastoral reading's claim that indissolubility is an ideal, or are they the same claim framed differently?",
+      "resolution_mechanism": "Formal logical analysis: if the readings entail incompatible practical conclusions about the same marriage (one says the marriage persists ontologically, the other says it may be pastorally released), they are incommensurable readings. If they entail the same practical conclusion (sacraments are withheld until annulment or pastoral release) through different metaphysical grounds, they are coherent variations.",
+      "impact": "If incommensurable, the readings genuinely foreclose each other — a framework cannot hold both (change relation from coexists_with to forecloses). If they are coherent variations, they coexist and influence but do not foreclose each other. The incommensurability is fundamental: the hierarchical reading treats indissolubility as a property of the marriage itself (real, objective, unchosen); the pastoral reading treats it as an aspiration the church encourages (ideal, subjective, chosen).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether ontological and pastoral framings of indissolubility are logically incommensurable or coherent variations."
+    },
+    {
+      "id": "founding_problem_death_vs_transformation",
+      "question": "Has the founding problem (establish marital permanence and provide authoritative adjudication) died, or has it been transformed into a different problem (pastoral inclusion without tribunal)?",
+      "resolution_mechanism": "Compare the original problem (18th–19th century: divorce laws emerging, local pastoral variation causing confusion) with contemporary problem (21st century: remarriage is a lived reality for ~50% of Catholics who divorce; tribunal apparatus is experienced as bureaucratic obstacle rather than sacramental protection). If the original problem is replaced rather than solved, the constraint is mandatrophic (persist despite founding problem death).",
+      "impact": "If the founding problem is dead, the constraint is clearly mandatrophic and the extracted extraction should be reclassified as pure rent-seeking. If transformed, the constraint might retain a weaker coordination function (pastoral guidance rather than tribunal metaphysics) and would be less clearly mandatrophic. The measurement series (base_extractiveness and suppression rising while theater rises) suggests the founding problem is dead, not transformed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the founding problem persists, has died, or has been transformed into a different problem."
+    },
+    {
+      "id": "tribunal_verdicts_and_truth",
+      "question": "Do tribunal verdicts declaring marriages 'null' track the actual reasons marriages end, or do they ratify a predetermined conclusion that no valid marriage existed?",
+      "resolution_mechanism": "Audit of tribunal decisions and the grounds cited: if most null verdicts rest on grounds (e.g., 'lack of due discretion,' 'excluded indissolubility') that bear no relationship to the stated reason for dissolution (infidelity, incompatibility, abandonment), the tribunal is a ratification apparatus rather than an adjudicative one. If grounds track the reason, the tribunal is genuinely evaluating validity.",
+      "impact": "If the tribunal is ratification apparatus, the verdicts are performative (theater) rather than truth-seeking. This supports both the theater_ratio assessment and the mandatrophy analysis: the constraint persists through procedure without genuine function. If grounds track reasons, the tribunal might have a genuine adjudicative role (though still extractive through costs and delays).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tribunal verdicts discover marriage validity or ratify a predetermined institutional position."
+    },
+    {
+      "id": "committer_frame__hierarchical_vs_pastoral_readings",
+      "question": "This constraint is one reading of a contested kernel. How do the hierarchical and pastoral readings of marriage_sacrament differ structurally in their ε values, victim sets, and enforcement mechanisms?",
+      "resolution_mechanism": "Comparison of this story (hierarchical_indissolubility_reading, ε=0.68, victims=divorced_catholics, enforcement=sacramental exclusion) with sibling story (civic_pastoral_reading, expected ε=0.2–0.3, victims=none or minimal, enforcement=pastoral guidance). The structural delta is precisely what the kernel contest turns on.",
+      "impact": "The high ε of the hierarchical reading vs. the low ε of the pastoral reading demonstrates that the readings are not equivalent framings — they have fundamentally different extractiveness profiles. The choice between readings is not neutral; it determines whether divorced Catholics are victims.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel contest: hierarchical reading is extractive (ε=0.68, victims, enforcement); pastoral reading is coordinative (ε~0.2–0.3, no victims, guidance). The readings are not empirically equivalent."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_sacrament__civic_pastoral_reading"
+    ],
+    "dual_formulation_note": "marriage_sacrament kernel has two readings: hierarchical_indissolubility_reading (this story, ε=0.68, tangled_rope) and civic_pastoral_reading (sibling story, ε~0.2–0.3, rope/scaffold). The readings coexist in institutional tension. The hierarchical reading frames indissolubility as ontological and enforces it through tribunal gatekeeping; the pastoral reading frames it as an ideal requiring mercy and permits sacramental inclusion through pastoral discernment. They influence each other: papal reforms moving toward the pastoral reading constrain how strictly the hierarchical reading can be enforced, and the hierarchical reading's costs drive demand for the pastoral alternative."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "marriage_sacrament__civic_pastoral_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "marriage_ontological_indissolubility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "hierarchical_adjudication_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "immutable_sacramental_indissolubility",
+    "drift_state": {
+      "moment": "contemporary_reformed_catholicism",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "marriage_sacrament__civic_pastoral_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

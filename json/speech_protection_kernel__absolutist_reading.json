@@ -1,0 +1,256 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "418cea3e-ed53-4cbe-bc6d-a16377e76fc9"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Absolutist Speech Protection (Kernel Reading)",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speakers_without_demographic_power",
+      "dissidents_and_marginalized_voices",
+      "institutional_speech_producers"
+    ],
+    "victims": [
+      "targets_of_hate_speech",
+      "harassment_victims",
+      "subordinated_groups"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the absolutist reading of the speech-protection kernel: the First Amendment protects speech near-categorically, and listener harm—even severe, group-targeted harm—is not a valid ground for legal restriction. Speech can only be restricted if it meets narrow categorical exclusions (incitement to imminent lawless action, true threats, defamation, etc.). The reading emerged from the Enlightenment principle of speaker autonomy and was crystallized in 20th-century American constitutional doctrine (Brandenburg v. Ohio, New York Times v. Sullivan). Under this reading, speaker autonomy is maximized; victim harm claims about hate speech, harassment, and group subordination are rejected as sufficient grounds for restriction. The constraint is CLAIMED as tangled_rope (it coordinates a rule-set while extracting from victims) and the authored metrics support that: extractiveness rises modestly over the interval as digital platforms amplify hate speech reach; suppression is high because the boundary's persistence requires actively resisting pressure from harm-threshold and dignity readings; theater is moderate-low because the doctrine maintains real coordination function (preventing majoritarian censorship) alongside the extraction.",
+    "key_agents": [
+      "absolutist_doctrine_adherents (institutional, agenda-setter): maintain the reading through judicial interpretation",
+      "speakers_without_demographic_power (powerless, beneficiary): dissidents and marginalized voices shielded from majoritarian silencing",
+      "institutional_speech_producers (institutional, beneficiary): media, platforms, publishers benefiting from expansive immunity",
+      "targets_of_hate_speech (powerless, payer, identity-locked): members of stigmatized groups bearing psychic and social costs",
+      "harassment_and_threat_victims (moderate, payer, constrained): individuals in sustained abuse campaigns",
+      "subordinated_groups (organized, payer, constrained): women, racial minorities, LGBTQ+ people arguing for equality-based restrictions",
+      "first_amendment_judiciary (institutional, agenda-setter): courts authoritatively interpreting and applying the doctrine",
+      "harm_threshold_advocates (organized, excluded, trapped): legal scholars and advocates arguing for wider harm-based grounds, excluded from doctrinal authority"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-high (0.62 at interval end) because the constraint imposes asymmetric costs: targets of hate speech, harassment victims, and subordinated groups bear measurable harm (psychological distress, employment discrimination, epistemic subordination, threat of violence) without legal recourse, while institutional speakers collect immunity. The asymmetry is structural: being a member of a stigmatized group is not a choice (identity-locked), so targets cannot exit. Suppression is high (0.71) because the absolutist reading is judicially entrenched and actively defended against pressure from alternative readings; courts must continuously rule against harm-based restrictions and resist statutory narrowing. The measurement series tracks the constraint's tightening: extractiveness rises as digital platforms amplify hate speech reach and as harm-accumulation accelerates; suppression rises as pressure from harm-threshold and dignity readings intensifies (legislative campaigns, amicus briefs, academic critique) and doctrine must work harder to hold the boundary. Theater is moderate-low (0.28) because the coordination function is real: the reading does prevent majoritarian censorship and protects dissident voices, but an increasing share of the effort goes to defending the boundary against alternative readings rather than to the original coordination problem.",
+    "perspectival_gap": "The agenda-setter seats (absolutist scholars, First Amendment judiciary) compute the constraint as a rope or mountain—a necessary coordination against majoritarian suppression. The payer seats (hate speech targets, harassment victims, subordinated groups) compute it as a snare—extraction disguised as freedom principle. The beneficiary seats split: speakers-without-demographic-power benefit genuinely from the protection; institutional speech-producers benefit from immunity but also from the doctrine's prestige and from being positioned as defenders of freedom. The engine should compute a divergence between the agenda-setter reading (higher beneficiary weight, lower victim weight from their structural position) and the victim-seat reading (high extraction, high identity-lock, high subordination cost). This divergence is the measurement the constraint story exists to take.",
+    "directionality_logic": "Beneficiary directionality: speakers-without-power (d=0.1-0.25, near beneficiary end) are structurally protected by the boundary; institutional producers (d=0.15-0.35) benefit from liability immunity and from doctrine prestige. Victim directionality: targets of hate speech (d=0.85-1.0, near full-target end) are identity-locked, cannot exit, bear accumulating harm with no legal recourse; harassment victims (d=0.75-0.90) are constrained, cannot avoid platforms where abuse occurs; subordinated groups (d=0.70-0.85) are organized (slightly lower d than atomized targets) but structurally disempowered in the doctrine's authority structure. Agenda-setters (d=0.5, symmetric) maintain the doctrine and experience costs (pressure, critique) and benefits (prestige, theoretical coherence) roughly equally. No directionality overrides needed: the structural derivation from beneficiary/victim + exit options produces the right d values.",
+    "mandatrophy_analysis": "The absolutist reading's founding problem was real: majoritarian governments and powerful groups used censorship laws to suppress dissent. That problem was historically true and explains the doctrine's emergence. The problem's contemporary status is contested: absolutist adherents argue it remains live (governments still attempt censorship, dissidents still face suppression risk). Critics argue the founding problem has been substantially solved—modern democracies have stable speech protections—but the doctrine persists as rent extraction for institutional speakers and structural subordination of targeted groups. The constraint does NOT exhibit classic mandatrophy (where the function has atrophied entirely and only performance remains). Instead, it exhibits FUNCTION DRIFT: the original coordination problem (preventing majoritarian suppression) is still real and important, but the boundary has become decoupled from that problem's solution. The boundary protects speakers-without-power (which it should), but it also protects hate speech, harassment, and group subordination (which the original problem did not address). This is tangled_rope territory, not piton: real coordination function + asymmetric extraction + active enforcement = coordination that has been contaminated by extraction, not coordination replaced by performance.",
+    "kernel_context": "This constraint is the ABSOLUTIST READING of the speech-protection kernel. The kernel itself is the commitment to First Amendment protection; this reading instantiates it as near-categorical protection for speech except narrow exclusions (incitement, true threats, etc.). SIBLING READINGS: (1) democratic-participation reading—speech protection strongest for political expression necessary to self-governance; other speech receives narrower protection. (2) dignity reading—speech protection conditional on not functioning as structural subordination; hate speech and group-based slurs can be restricted. (3) harm-threshold reading—speech protection conditional on absence of demonstrable harm; harassment, hate speech causing measurable injury can be restricted. (4) marketplace reading—speech protection serves truth-discovery; false and harmful speech are countered by more speech, not by law. The absolutist reading FORECLOSES none of these (they are all live in different jurisdictions and institutional contexts), but INFLUENCES all of them: by maintaining maximal protection for all speech types, the absolutist reading creates the pressure that the other readings react against. The other readings exist partly because the absolutist boundary leaves victims and subordinated groups unprotected from harm."
+  },
+  "omegas": [
+    {
+      "id": "speaker_autonomy_vs_victim_equality",
+      "question": "Are speaker autonomy and victim equality from speech-based harm fundamentally irreconcilable, or can a narrower speech-protection boundary serve both?",
+      "resolution_mechanism": "Comparative constitutional analysis: jurisdictions with narrower hate-speech and harassment restrictions (Canada, Germany, UK) show whether speech protection and victim protection can coexist. Structural analysis of how the absolute boundary affects speakers-without-power: do marginalized speakers benefit from absolute protection, or do they benefit more from a boundary that excludes hate speech and subordination?",
+      "impact": "If fundamentally irreconcilable, the constraint is a genuine structural choice (tragedy: you cannot have both maximum speaker autonomy AND victim protection from group harm). If separable, the absolute boundary is a false necessity—the reading has chosen speaker autonomy over victim equality, making it a values choice, not a logical imperative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the absolutist boundary's beneficiaries (speaker autonomy) and its harms (victim vulnerability) are structurally inseparable or a contingent policy choice."
+    },
+    {
+      "id": "hate_speech_amplification_feedback",
+      "question": "Does digital platform amplification of hate speech change the structural relationship between the absolutist reading and its victims, such that the same boundary produces different harms in a networked-speech environment than in a pre-digital context?",
+      "resolution_mechanism": "Temporal analysis: measure hate-speech targeting, doxing, and harassment-campaign severity before and after digital-platform scaling. Compare jurisdictions with different speech restrictions and identical platform saturation to isolate the reading's effect. Structural analysis: does the networked-feedback loop (slur → algorithmic amplification → coordinated pile-on → harassment campaign) constitute a category difference from individual hate speech in the pre-digital era?",
+      "impact": "If yes: the absolutist reading's extraction has increased as a side effect of technological change—the boundary is the same but the harms accumulate faster. The reading may be sustainable in low-amplification contexts but extractive in high-amplification contexts (suggests conditional validity). If no: the boundary produces harm independently of amplification mechanism—the reading's extraction is structural to the doctrine itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital amplification changes the harm-accumulation properties of the absolutist boundary."
+    },
+    {
+      "id": "identity_locked_exit_ambiguity",
+      "question": "How much of the suppression experienced by hate-speech targets (identity-locked exit_options) is due to the absolutist boundary itself, and how much is due to the underlying group subordination that the boundary merely fails to address?",
+      "resolution_mechanism": "Counterfactual analysis: in jurisdictions with harm-threshold or dignity-based restrictions on hate speech, do targets of hate speech exit the public sphere less, or does exit remain high because the underlying group subordination is unchanged? Structural analysis: is the identity-lock itself (being visibly a member of a stigmatized group) the primary suppression mechanism, with the speech protection boundary as a secondary factor?",
+      "impact": "If the boundary is the primary suppression mechanism: restricting hate speech would materially increase targets' public participation (the constraint is actively extractive). If the underlying subordination is primary: targets would remain suppressed even with speech restrictions because their group subordination persists through non-speech channels (the constraint is a symptom, not the cause, of their subordination, and extraction attribution is partly misplaced).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution ambiguity: how much of targets' suppression and exit is caused by the speech-protection reading versus the structural subordination it exists alongside."
+    },
+    {
+      "id": "categorical_exclusion_drift",
+      "question": "Over time, have the judicial interpretations of the narrow categorical exclusions (incitement, true threats, defamation) been narrowed or maintained, and what role does the absolutist reading play in that drift?",
+      "resolution_mechanism": "Doctrinal history: analyze landmark cases (Brandenburg, New York Times v. Sullivan, Virginia v. Black) and their application trajectory. Measure: (1) how courts have applied the incitement standard (raising the bar for what counts as incitement); (2) how defamation doctrine evolved (New York Times standard raising bar for liability); (3) how threat doctrine changed (requiring specificity and imminence). Determine whether the absolutist reading drives the narrowing or merely rationalizes it.",
+      "impact": "If the absolutist reading actively drives narrowing: the doctrine continuously tightens the exclusions, making the protection increasingly absolute (extraction increases over time, theater increases as enforcement effort rises). If the reading is neutral to doctrinal drift: the narrowing is driven by courts' deference to speech and institutional speakers, and the reading is a post-hoc justification. In either case, understanding the drift direction helps predict the constraint's trajectory.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the absolutist reading drives or rationalizes the historical narrowing of categorical exclusions."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__dignity_reading",
+      "speech_protection_kernel__democratic_participation_reading",
+      "speech_protection_kernel__marketplace_reading"
+    ],
+    "dual_formulation_note": "The speech-protection kernel comprises five structurally distinct constraint stories, each instantiating a different reading of the same contested kernel. The absolutist reading defines the widest protection boundary (speech near-categorical, listener harm not grounds for restriction). This reading INFLUENCES the harm-threshold, dignity, democratic-participation, and marketplace readings by establishing the maximal protection position that other readings react against and narrow. All five stories are linked via network.affects_constraints; each should include a parallel dual_formulation_note naming its siblings. The ε values differ substantially across readings: absolutist and marketplace readings have moderate-to-high extraction (speaker/institutional benefits, victim costs); harm-threshold, dignity, and democratic-participation readings have lower extraction (narrower protection, victim protection incorporated). These are NOT readings of the same constraint with different metrics; they are different constraints with different ε values rooted in different boundary definitions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_protection_kernel__harm_threshold_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__dignity_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__democratic_participation_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__marketplace_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speaker_autonomy_trumps_listener_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "categorical_exclusions_exhaustive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "speaker_autonomy_constitution",
+    "drift_state": {
+      "moment": "contemporary_digital_harm_accumulation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

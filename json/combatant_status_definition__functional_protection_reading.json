@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__functional_protection_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_combatant_status_definition__functional_protection_reading",
+    "story_uid": "1d2355f2-a293-4b45-ab32-2a6dbd931a87"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Common Article 3 Minimum Protections Regardless of Combatant Status",
+    "topic_domain": "international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "detained_persons_universal",
+      "international_humanitarian_legal_system"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "human_dignity_universal",
+      "protection_precedes_classification"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "status_determination_precondition_ambiguity",
+      "question": "Can a detention authority invoke status uncertainty as justification for withholding Article 3 protections pending classification, or does the functional reading require minimum protections to apply immediately upon detention regardless of status clarity?",
+      "resolution_mechanism": "International Criminal Court jurisprudence on temporal scope of Article 3 obligations; state practice in conflict zones regarding immediate protection protocols at point of capture; treaty body general comments clarifying Article 3 applicability thresholds.",
+      "impact": "If immediate application is required, the functional reading forecloses postponement-pending-classification and converts status ambiguity into a structural obligation to protect first. If status determination can precede protection, the readings coexist with different state practice. This omega directly determines whether the functional reading's core premise (status-independent baseline) actually constrains state action or merely restates aspirational language.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Temporal sequence: does status determination precede or follow minimum protection obligation?"
+    },
+    {
+      "id": "state_centric_authority_persistence",
+      "question": "Does the state-centric reading retain legitimacy authority in jurisdictions that ratified Additional Protocol II (AP II, extending protections to non-international armed conflicts) and later the Rome Statute (establishing universal jurisdiction), or has the functional reading's axiom of universal human dignity overridden the foundational state-monopoly premise?",
+      "resolution_mechanism": "Analysis of treaty succession and interpretation: did states that adopted AP II and Rome Statute formally abandon the state-monopoly premise, or merely layered non-state protections alongside it? Comparative constitutional jurisprudence from national courts interpreting IHL domestically.",
+      "impact": "If the state-centric axiom remains overridden (not just supplemented), the functional reading has foreclosed the state-centric reading within the legal system that adopted AP II/Rome Statute. If both premises coexist (states retain combatant-status gatekeeping while non-state fighters get parallel protections), the readings truly coexist rather than the functional reading foreclosing. The classification matters for understanding whether the kernel genuinely permits multiple readings or whether formal law has settled to functional dominance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Has the state-monopoly premise been overridden by treaty succession or merely supplemented?"
+    },
+    {
+      "id": "national_liberation_boundary_case",
+      "question": "Does the functional reading's logic (minimum protections apply to detained persons regardless of formal status) extend to non-state armed groups fighting colonial, occupation, or racist regimes under AP I Article 1(4), or does the functional reading remain neutral on whether combatant status is granted to non-state fighters at all?",
+      "resolution_mechanism": "Close reading of the functional reading's foundational axioms: if 'universal dignity + immediate protection' is the core, it says nothing about WHETHER non-state actors can BE combatants (that is the state-centric / national-liberation distinction). If the functional reading is only about BASELINE protections for whoever is detained, it coexists with both the national-liberation and state-centric readings on the status question itself.",
+      "impact": "This omega clarifies scope: the functional reading may not actually resolve the status question but only the protection question. If so, the functional reading does not foreclose the national-liberation reading — it merely requires that even if national-liberation combatant status is granted, minimum protections apply. This omega determines whether the functional reading is genuinely a third way or a narrower constraint focused only on protection floors.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Does the functional reading's axiom address status eligibility (who can be combatants) or only protection floors (what minimum applies once detained)?"
+    },
+    {
+      "id": "enforcement_mechanism_authority_ambiguity",
+      "question": "Who enforces the functional reading's baseline protections — the detaining authority itself (self-regulation), International Committee of the Red Cross (ICRC) oversight), state peer review (reciprocity machinery), or International Criminal Court prosecution (accountability after the fact)? Does the reading specify an enforcement posture, or is enforcement authority contestable between readings?",
+      "resolution_mechanism": "Historical practice in armed conflicts: which enforcement mechanism has been most effective at securing Article 3 compliance? Comparative analysis of enforcement under the state-centric reading (state reciprocity + ICRC access) versus functional reading (immediate duty + independent oversight). Empirical data on detention conditions before and after Rome Statute conferral of ICC jurisdiction.",
+      "impact": "If the functional reading requires real-time independent verification (ICRC access, neutral inspectors), it creates higher enforcement costs than the state-centric reading's reciprocity model. This cost asymmetry may determine whether the functional reading's universality is durable or becomes theater (high theater_ratio). The enforcement mechanism choice reshapes the constraint's extractiveness profile: self-reporting compliance is cheaper but unreliable; independent monitoring is more costly but more effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which enforcement mechanism realizes the functional reading's protections?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "International humanitarian law governing armed conflicts recognizes three distinct readings of how combatant status determines detention protections. This constraint story instantiates the FUNCTIONAL PROTECTION READING: a reading that decouples minimum humane treatment from formal combatant classification. Under this reading, all detained persons receive Common Article 3 baseline protections (prohibition of torture, cruel treatment, humiliation, and arbitrary killing; access to medical care; fair trial guarantees) IMMEDIATELY UPON DETENTION, regardless of whether their combatant status has been determined, established, or contested. The functional reading prioritizes protection floors over status gates. This reading does NOT answer whether non-state armed groups can BE combatants (the state-centric reading says no; the national-liberation reading says yes under specific conditions). It answers only whether detention authority can postpone minimum protections pending status determination — the functional reading says no. Status ambiguity does not suspend Article 3. Extractiveness is low (0.18) because the constraint creates no asymmetric transfer — it mandates equal baseline treatment, not distribution of goods. Suppression is low (0.22) because the constraint's enforcement depends on state compliance with obligations they have voluntarily undertaken in treaties; there is minimal active coercion required to hold it. Theater is very low (0.08) because the constraint's function is transparent and verifiable (either humane treatment occurs or it does not). Measurement drift is minimal over the 40-year interval, indicating the constraint's function is stable; slight uptick in suppression reflects increasing ICC monitoring and state-practice pressure around detention protocols.",
+    "key_agents": [
+      "detained_persons_universal (beneficiary, trappped exit): all persons deprived of liberty in armed conflict, regardless of classification; receive immediate Article 3 protections without precondition",
+      "detaining_states (payer/agenda-setter, institutional power): maintain obligation to provide baseline protections but lose discretionary power to classify first and protect based on status; must invest in immediate-protection protocols",
+      "international_humanitarian_legal_system (beneficiary, institutional): gains coherence and predictability from universal baseline; reduces status litigation and classification delays",
+      "national_military_command (agenda-setter, institutional): implements Article 3 protocols and faces operational cost of classifying/identifying combatants AFTER extending protections rather than conditioning protection on classification",
+      "international_committee_red_cross_icrc (observer/monitor, institutional): gains access rights to all detained persons under Article 3; monitors implementation; provides independent verification",
+      "state_centric_reading_adherents (excluded): would argue status determination is prerequisite for protection level; are excluded from the functional reading's mandate-setting process"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.18) because the functional reading removes a gate (status-conditional protection) rather than imposing a transfer. No party 'collects' from the universal baseline; instead, the reading redistributes authority: status-determination power moves from detaining authority (who could use status ambiguity to justify harsh treatment) to the humanitarian system (which mandates treatment regardless). Suppression is low (0.22) — article 3 protections are voluntary treaty commitments, not externally imposed coercion. The suppression value reflects the effort required to enforce baseline standards against actors who defect, not the effort to impose an unwanted condition. Theater is very low (0.08) because compliance with 'no torture,' 'access to medical care,' and 'fair trial' is objectively verifiable by ICRC monitors and post-conflict tribunals; there is minimal scope for performative compliance. The measurement series shows stability because the functional reading's core claim (universal baseline) has been relatively durable internationally since the 1949 Geneva Conventions and reinforced by Rome Statute. Slight uptick in suppression after year 32 reflects post-ICC era state practice, where the threat of prosecution has created higher compliance burden. The readings DO coexist with the state-centric and national-liberation readings — this story makes no claim about WHO can be a combatant, only about what BASELINE protections apply to detained persons. The three readings form a constraint family related through the combatant_status_definition kernel: state-centric reading answers 'who qualifies as combatant' via formal criteria; national-liberation reading answers the same question via command-and-control criteria; functional reading answers 'what minimum applies to detained persons' independently of status clarity.",
+    "perspectival_gap": "State military commanders experience this reading as imposing a compliance cost — they must allocate resources to verify detention conditions and manage status classification in parallel with protection delivery, rather than sequentially (classify, then protect per tier). They may compute the constraint as moderately extractive due to operational overhead. Detained persons and the humanitarian community experience it as protective, non-extractive. The ICRC experiences it as enabling its access mandate — Article 3 automatically triggers ICRC monitoring rights. This perspectival gap should resolve in the engine's per-seat computation: a state institutional seat with constrained exit (cannot withdraw from Geneva Conventions without reputational cost) will show higher d (~0.4–0.5) than a detained-persons seat (d near 0.0, pure beneficiary), reflecting their opposed structural positions on the same constraint.",
+    "directionality_logic": "The functional reading's beneficiary set is universal detained persons (all power levels, trapped or identity-locked exit) — they receive baseline protections without paying for them. The reading also vindicates the proposition 'human_dignity_universal' (a doctrine, not an agent, compiled to vindicated_propositions, not beneficiaries). Detaining states are the payers — they bear the compliance cost of ensuring Article 3 standards. No 'victims' are declared because the reading does not impose asymmetric harm; it removes a harm-enabling gate (status-conditional protection). Status ambiguity no longer suspends protections, so states cannot use classification delays as cover for abuse. The reading has no identified victims because all parties either benefit (detained persons) or bear legitimate compliance costs (states), not exploitation. Directionality should derive automatically: beneficiaries (detained persons, all power levels) → d near 0.0; payer (detaining states, institutional power) → d around 0.4–0.5 (cost imposed but no asymmetric extraction, legitimate duty). No overrides needed.",
+    "mandatrophy_analysis": "The functional reading avoids false Rope/Tangled Rope collapse by distinguishing protection (what the reading guarantees) from status (what the reading does not address). The founding problem — arbitrary classification used to justify torture — is LIVE: contemporary armed conflicts (Yemen, Syria, Ukraine, Ethiopia) show detaining authorities still invoking status ambiguity to justify coercive interrogation and harsh detention. The functional reading persists because the mandate it addresses has not been solved. However, there is a secondary mandatrophy risk: if status ambiguity becomes actually clarified quickly via modern biometric / intelligence systems, the functional reading's main utility (protecting against classification delays) diminishes. This risk is captured in omega status_determination_precondition_ambiguity: if states develop reliable instant-classification protocols, the functional reading may devolve from genuine coordination (baseline protection is necessary because status delays are inevitable) to theater (baseline protection is symbolic, classification is instant). Measurement data would show rising theater_ratio if this occurred. The 40-year interval shows no such rise, indicating the founding problem (classification delays exploited for abuse) remains live.",
+    "kernel_context": "This constraint is the FUNCTIONAL_PROTECTION_READING of the combatant_status_definition kernel. The kernel is the question: how does formal legal status (combatant vs. civilian vs. unlawful combatant) determine what protections detained persons receive? Three readings coexist in contemporary international law, each instantiating a different constraint: (1) STATE_CENTRIC_READING: Combatant status requires formal state military organization (Article 4, Hague Regulations); non-state actors are categorically excluded from POW protections and receive lesser protections pending status determination. (2) NATIONAL_LIBERATION_READING: Combatant status extends to organized non-state armed groups fighting colonial, occupation, or racist regimes under Additional Protocol I Article 1(4); command-controlled non-state fighters qualify for POW protections. (3) FUNCTIONAL_PROTECTION_READING (this constraint): Minimum protections (Common Article 3) apply immediately upon detention REGARDLESS of status clarity; the baseline is status-independent. The readings do not reduce to different value judgments about the same facts — they represent fundamentally different structural answers to what 'combatant status' means in the legal system. The functional reading decouples protection from status determination; the other two readings use status as a protection gate (though they disagree on what status qualifications exist). These are three different constraints, not one constraint viewed from three angles."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__national_liberation_reading"
+    ],
+    "dual_formulation_note": "The combatant_status_definition kernel family comprises three constraint stories: state_centric_reading (combatant status requires state military organization), national_liberation_reading (status extends to non-state fighters meeting command-control criteria), and functional_protection_reading (minimum protections apply regardless of status clarity). Each story has distinct ε, beneficiary/victim structure, and claimed type. They are linked by network.affects_constraints because the legal system holds all three readings simultaneously in tension; the functional reading's adoption in Rome Statute influences how states interpret the state-centric and national-liberation readings' scope. The readings form a constraint family because their core dispute (what combatant status is, and what it determines) is a single kernel, but their structural answers are incompatible within a single constraint story — hence three separate stories with ε-invariant metrics specific to each reading's functional claim."
+  },
+  "stakeholders": [
+    {
+      "name": "detained_persons_universal",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "All persons deprived of liberty in armed conflict (captured combatants, suspected combatants, civilians mistaken for combatants, unclassified detainees). Under the functional reading, they receive immediate access to medical care, prohibition on torture, humane treatment, and fair trial rights — without waiting for status determination. Trapped by the fact of detention; their only exit is release or status clarification, neither of which the functional reading controls. Their power is minimal; they depend on humanitarian protections for survival. Time horizon is biographical — their situation is acute during armed conflict, often years or decades in unresolved cases."
+    },
+    {
+      "name": "detaining_states",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States that conduct detentions in armed conflict. They set and enforce detention policy; they voluntarily undertake Geneva Convention obligations, including Article 3. The functional reading requires them to implement Article 3 protections immediately, regardless of status determination timelines. They bear the compliance cost: training personnel, monitoring conditions, allowing ICRC access, documenting detention decisions. They cannot exit the functional reading's obligations without violating treaty commitments and facing ICC prosecution for command responsibility. Their power is institutional (they write the rules), but constrained by international law's formal structure and ICC jurisdiction."
+    },
+    {
+      "name": "international_committee_red_cross_icrc",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The ICRC monitors detention conditions and verifies Article 3 compliance. The functional reading automatically triggers ICRC access rights — the ICRC gains leverage to enter detention facilities and interview detainees because the functional reading makes baseline protections a universal obligation, not a status-contingent one. The ICRC observes state compliance and reports violations to the humanitarian system and ICC. Mobile exit: the ICRC's mandate is self-imposed, and it could theoretically withdraw from monitoring specific conflicts, though reputational cost makes this rare."
+    },
+    {
+      "name": "international_humanitarian_legal_system",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The corpus of treaty law, case law, and customary international law governing armed conflict protections. The functional reading strengthens this system's internal coherence by removing a major source of litigation: whether detained persons can be denied Article 3 protections pending status determination. The system benefits from the clarity and predictability the functional reading provides. As a doctrine rather than an agent, it collects rents (legitimacy, institutional authority) from the functional reading's adoption, which is why it appears in beneficiaries and vindicated_propositions."
+    },
+    {
+      "name": "state_centric_reading_adherents",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States and military authorities that hold the state-centric reading (combatant status requires formal state military organization; non-state actors are not entitled to combatant status). These actors would argue that the functional reading's baseline protections apply to all detainees, they lose the leverage to condition stronger protections on formal status recognition. They are excluded from the functional reading's mandate-setting process — they would object that immediate, unconditional Article 3 protections for non-state actors blur the status distinction and reduce incentives to organize formal state militaries. Their exclusion is structural: the functional reading's adoption means the legal system has chosen the functional frame over the state-centric frame for detention protections, at least at the baseline level."
+    },
+    {
+      "name": "national_military_command",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Military commanders implementing detention policy at the operational level. They must classify combatants and manage detention facilities. The functional reading requires them to provide Article 3 protections at point of capture, before classification is complete. This changes operational procedure: they must allocate resources to immediate-protection protocols (medical care access, interrogation safeguards, documentation) in parallel with classification, rather than sequentially. They are constrained by the functional reading's mandate and by threatened ICC prosecution for command responsibility if violations occur. Their power is operational but institutionally mediated through state policy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a universal baseline of humane treatment and basic procedural rights for all detained persons in armed conflict, preventing status ambiguity from being used as justification for torture, summary killing, or denial of medical care. Solves the coordination problem: without the baseline, detaining states have incentive to delay status determination to avoid triggering higher protections; the functional reading removes that incentive by applying the floor immediately. Also coordinates the international humanitarian system around a common standard that eliminates status-shopping (forum selection to avoid protections).",
+    "transfer_function": "Transfers compliance costs from detained persons (who would otherwise bear torture, humiliation, denial of medical care pending status determination) to detaining states (which bear the cost of implementing Article 3 protections immediately). The transfer is not a zero-sum extraction — it redistributes authority such that detaining states lose the discretionary power to deny baseline standards, but gain clarity on their obligations. Humanitarian actors (ICRC) gain access and monitoring rights.",
+    "absent_voices": "State military commands in ongoing conflicts often resist immediate protection mandates, arguing they slow operations and complicate classification. Their resistance is structural (excluded from the mandate-setting table once the functional reading is adopted by the international legal system) rather than voiced and incorporated. Detained persons themselves are trapped and cannot voice counterarguments; humanitarian advocates speak for their interests. Non-state armed groups that want combatant status (national-liberation reading adherents) are also excluded from the functional reading's mandate-setting, though the functional reading does not foreclose their status claim — it only mandates baseline protections regardless of status outcome.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the functional reading disappeared — if the international legal system reverted to the state-centric reading where status determination is a precondition for Article 3 protections — detention practices would shift dramatically. Detaining states would delay status decisions to avoid triggering higher protections; torture and coercive interrogation would increase; ICRC access would become conditional on status determination; humanitarian advocacy would lose its normative anchor. Detained persons would face immediate risk of torture pending classification. The functional reading's disappearance would rearrange the incentive structure such that status ambiguity becomes an asset (for states avoiding higher protections) rather than a problem (under the functional reading, a violation of the baseline).",
+    "founding_problem": "Armed conflicts create situations where combatant status is genuinely ambiguous at the moment of detention: fighters captured in civilian areas, persons with dual roles (part-time militias), individuals whose allegiances are unclear. Historically, detaining authorities exploited this ambiguity, denying protections to detainees under the guise that status was not yet determined. Torture, coercive interrogation, and summary execution were justified as preconditioned on status determination. The functional reading was developed to block this justification: status ambiguity cannot suspend baseline humanity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Amnesty International, Human Rights Watch, and UN fact-finding missions in Syria (2016–2020), Yemen (ongoing), and Ethiopia (2021–2023) document that detaining authorities regularly invoke status ambiguity as justification for torture, denial of medical care, and coercive interrogation. ICRC field reports and International Criminal Court case law (Kunarac, Akayesu, Al-Mahdi) establish that detaining states continue to exploit status ambiguity to avoid baseline protections. These sources are external to the beneficiaries of the functional reading (ICRC and the humanitarian system); they represent empirical observation from independent monitors and prosecutors. The founding problem is corroborated as live — status ambiguity is still used to justify abuse."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "combatant_status_definition__state_centric_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "combatant_status_definition__national_liberation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_dignity_precedes_status_classification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "detention_protection_status_independence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_baseline_protection_framework",
+    "drift_state": {
+      "moment": "post_rome_statute_enforcement_era",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

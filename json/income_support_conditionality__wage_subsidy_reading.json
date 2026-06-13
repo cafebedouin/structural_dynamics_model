@@ -1,0 +1,598 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__wage_subsidy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "76e72980-e846-4a5a-b832-a2be0d3f5018"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Employer Wage Subsidy",
+    "topic_domain": "political_economy/labor/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_wage_employers",
+      "capital_intensive_firms"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "precariat_labor_force"
+    ],
+    "vindicated_propositions": [
+      "labor_market_clearing_through_subsidy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "low_wage_employers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Firms in retail, food service, hospitality, care, and agriculture that employ workers at wages below subsistence levels (defined as the amount needed for autonomous living without public assistance). The unconditional income support allows them to pay below this threshold, knowing that public funds will bridge the gap to subsistence. They advocate for generous unconditional support while resisting wage regulation or sectoral minimum wages. They control employment thresholds, scheduling, and compensation within their labor markets and have the institutional resources to lobby for support policy expansion. The subsidy capture is material and quantifiable: the difference between what workers would require in autonomous wages and what they accept with income support is the captured share."
+    },
+    {
+      "name": "low_wage_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Workers in low-wage employment (retail, food service, care, hospitality, agriculture, gig work) whose earned wages fall below subsistence even at full-time hours. They receive unconditional income support that prevents immediate destitution but does not increase their bargaining power relative to employers. They cannot easily exit to higher-wage sectors (lack credentials, face geographic immobility, or confront discrimination barriers). They are trapped between accepting low wages supplemented by public income, or earning nothing at all. The income support is available to them, but only conditional on remaining in low-wage employment; if they refuse work, support is typically terminated or reduced. Their wage options are constrained by the knowledge that employers can pay less because the subsidy is available."
+    },
+    {
+      "name": "high_productivity_firms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Firms in high-wage sectors (technology, finance, specialized manufacturing, professional services) that pay productivity-linked wages above subsistence and do not employ workers who depend on income support. They bear the tax burden funding the support program while not capturing its subsidy (their labor markets are not affected by income support and their wage-setting is driven by productivity and skill scarcity). They have the resources and market position to relocate operations if the tax burden becomes excessive, and their labor costs are constrained by competitive skill markets rather than by subsistence income. They experience the program as a transfer from them to low-wage employers, not as a coordination benefit."
+    },
+    {
+      "name": "state_fiscal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The government agency responsible for setting the income support level, defining eligibility, administering distribution, and funding the program through taxation or reallocation of other spending. It sets the rules and can unilaterally change them. It does not itself collect the extracted value (that accrues to employers) but bears the program cost and manages the fiscal consequences of reduced tax revenue if wage suppression accumulates. It is positioned to make the support conditional (tie it to work requirements, wage growth, or sector-specific supplements) but faces political pressure from both employers (who benefit from unconditional support) and workers (who may fear conditions). Its choices about program design determine whether the support functions primarily as coordination, primarily as subsidy capture, or as a mix of both."
+    },
+    {
+      "name": "labor_bargaining_coalitions",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Unions, worker-organizing bodies, and labor-left political movements. They see unconditional income support as a double-edged tool: it can provide a floor that enables worker refusal of coercive work (freedom_floor reading), but it can equally serve as cover for wage suppression if employers are permitted to capture the subsidy. They advocate for support being paired with wage floors, sector-specific supplements, and conditionality on wage growth or union recognition. They are trapped between supporting a policy that could liberate workers and opposing a policy mechanism that is being used to suppress wages. Their exit options are constrained because their members work in the low-wage and precariat sectors most affected, and they face declining membership power as wages stagnate despite support."
+    },
+    {
+      "name": "policy_economists_freedom_reading",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers, economists, and intellectuals who analyze and advocate for unconditional income support from a freedom-focused perspective (left-libertarian, de-commodification, capabilities approach). They argue that unconditional income support enables workers to exercise positive freedom (to refuse coercive work, to negotiate better terms, to pursue non-market activities). They produce econometric evidence, philosophical frameworks, and policy proposals supporting this reading. They engage with the wage_subsidy_reading as a design problem (how to prevent capture) rather than as a fundamental critique of the policy idea. Their analytical position sits at the intersection of theory (what the support should enable) and evidence (what it actually enables in implementation)."
+    },
+    {
+      "name": "excluded_precariat",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Workers who fall outside income support program eligibility due to immigration status, lack of formal documentation, or administrative exclusion (street-involved persons, people with criminal records, others deemed ineligible by policy design). They experience wage suppression without access to the compensating income support, because employers can threaten them with additional wage cuts, deportation, or job termination. Their exclusion from the nominal program paradoxically intensifies the wage-suppression dynamic for all workers: they anchor the floor toward which other workers' wages are driven downward, because employers can credibly threaten to replace higher-wage workers with excluded workers willing to accept even lower wages. Their absence from policy conversations and their structural exclusion from the beneficiary frame are not incidental to how the constraint operates; they are central to it. If they were included in income support, the structure of low-wage labor markets would shift (employers could not credibly threaten replacement with non-supported workers), and the subsidy-capture mechanism would be partially interrupted."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides minimal income floor that enables labor-market participation in sectors where necessary work (care, sanitation, retail, basic services) would otherwise attract workers only through threat of destitution or complete market failure. Solves the coordination problem: matching workers with undesirable but socially necessary jobs at wages that are individually unsustainable but collectively acceptable with supplementary income.",
+    "transfer_function": "Moves public funds (from taxation, primarily of high-productivity firms) to income-poor workers, with a structural portion captured by low-wage employers as suppressed wage costs. A worker receiving $1,000 in monthly income support who would have required $1,200 in autonomous wages represents a $200 monthly capture by the employer as reduced wage bills. Aggregated across all low-wage workers and all low-wage employers in a jurisdiction, this captured transfer can be substantial (5-15% of total program spending in high-employment sectors).",
+    "absent_voices": "Precariat and undocumented workers are structurally excluded from income support programs and do not participate in policy deliberation, yet their exclusion and the threat of replacement they represent to other workers is central to how the constraint operates. They would argue that the policy's real effect is to subsidize their own exclusion and to anchor the wage floor downward for all other workers. Subsistence-wage workers in jurisdictions without or with lower levels of income support are also absent from policy conversations, yet their labor-market competition with subsidized low-wage workers in support-heavy jurisdictions creates downward pressure on their wages. High-productivity-firm workers whose tax burden funds the program without receiving benefits are partially represented (through their firms' political advocacy) but their individual voices on the program's fairness are typically absent from deliberation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support disappeared overnight, low-wage workers would face immediate destitution unless wages rose to fill the gap. Employers in low-wage sectors would either raise wages to attract and retain workers (reducing their subsidy-derived profit margin), or reduce workforce and hours (shrinking the supply of low-wage labor). Low-wage sectors would reorganize: some would offer higher wages and reduced hours, some would shrink or relocate, some would accelerate automation (invest in technology rather than pay higher wages). The fiscal shock would cascade to tax-dependent public services and the social safety net. The historical record in jurisdictions that reduced or eliminated income support shows precisely this pattern: either wages rise, employment shrinks, or both. The arrangement demonstrably persists because the subsidy flow to employers is material and they have institutional power to defend it; without the subsidy mechanism, that arrangement would visibly break and wages in low-wage sectors would move closer to what autonomous workers would require.",
+    "founding_problem": "Late-stage capitalist labor markets, particularly in developed economies with deindustrialization and shift to service sectors, produce large numbers of jobs that at competitive market equilibrium pay below subsistence. These jobs (care work, sanitation, retail, hospitality, food service, agriculture) are socially necessary and cannot be outsourced or automated away, but they attract workers only through coercion (threat of destitution) or structural traps (immobility, credential barriers, discrimination). Income support was introduced to provide a floor that enables workers to survive and participate in the labor market while reducing the pure coercive mechanism of threat of starvation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Employers and pro-market economists argue the founding problem is live: without income support, care and service sectors would face acute labor shortages and quality degradation because workers would not accept subsistence-level wages, leading to either wage inflation (which erodes employer margins) or market collapse in essential services. Labor economists and worker organizations argue the founding problem was real in early welfare-state formation (1960s-1990s, before gig economy and precarity expansion) but has been substantially outpaced by the discovered subsidy-capture function: workers are now kept in low-wage sectors not by need for the support but by precarity (zero-hours contracts, gig shifting, task-based hiring) that keeps them from accumulating bargaining power even with the support. The shift from unconditional to conditional support in some jurisdictions (tied to work requirements), and the empirical lack of wage growth in support-heavy sectors despite program expansion, evidences that the founding coordination problem has been either solved or superseded by the extraction function. Data corroboration: OECD studies on wage growth in low-wage sectors, sector-specific labor-market analysis showing wage stagnation despite income support program increases, comparative cross-national studies showing low-wage sectors in high-support jurisdictions do not show higher wages than comparable low-support jurisdictions (suggesting capture rather than pass-through to workers)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.15
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.5
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.52
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the wage_subsidy_reading of the income_support_conditionality kernel: unconditional income support (UBI or basic income) enables low-wage employers to pay below-subsistence wages by knowing the public subsidy fills the gap. Workers receive support that keeps them from destitution but lose the bargaining leverage they would have if employers could not capture the subsidy as suppressed wages. The arrangement is tangled: a genuine coordination function (matching workers to necessary low-wage work without coercion) coexists with asymmetric extraction (employers capture part of the public transfer as lower wage costs). This reading contests the freedom_floor_reading (which holds that income support decommodifies labor and enables worker exit) and the dependency_trap_reading (which holds that support undermines work incentives). The wage_subsidy_reading asserts that support persists precisely because it subsidizes low-wage labor, not because it liberates workers or degrades their motivation.",
+    "key_agents": [
+      "low_wage_employers: institutional agenda-setter and primary beneficiary; capture subsidy as suppressed wage costs",
+      "low_wage_workers: powerless victims; trapped between subsistence wages and precarious employment; receive support that does not increase bargaining power",
+      "high_productivity_firms: powerful payers; bear tax burden without capturing subsidy",
+      "state_fiscal_authority: institutional agenda-setter; sets support level and program rules",
+      "labor_bargaining_coalitions: organized payers and observers; contest whether support enables exit or institutionalizes low-wage labor",
+      "excluded_precariat: structurally absent; experience wage suppression without compensating subsidy; anchor floor downward"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.68) because the constraint captures a measurable share of public transfer (estimated 20-40% depending on sector and labor elasticity) as suppressed wages. Suppression is moderate (0.52) because the trap is not coercive in the classical sense — workers are not physically forced to accept low wages — but structural: the income support removes the binding constraint (immediate destitution) that would force wage negotiation upward. Theater is moderate (0.41) because the arrangement is defended both as genuine coordination (matching workers to necessary jobs) and as support for worker autonomy, even as empirical evidence accumulates that wages in sectors with high income support coverage have grown more slowly than in comparable high-productivity sectors. The measurement series shows extractiveness and theater rising over the interval (t=0 to t=40, years 0-40 of policy implementation), reflecting the discovered and elaborated subsidy-capture function: as the policy matures, employers learn to rely on income support and systematically adjust wage-setting downward, increasing the captured share. Accessibility collapse is measured at four levels: structural level shows highest collapse (0.62→0.65) because the policy framework makes public income support institutional fact; organizational level (0.55→0.58) shows employer-side institutionalization of the subsidy; class level (0.48→0.52) shows worker-class constraint developing as wages fail to rise; individual level (0.35→0.42) shows individual workers retaining some ability to shift between employers within the constrained set, but declining as sector-wide wage suppression converges. Stakes inflation shows inverse pattern at organizational level (0.32→0.28) because low-wage employers face declining stakes as their subsidy capture increases and becomes reliable; but stakes rise for workers (individual 0.58→0.62, class 0.61→0.65) as the gap between income support and autonomous wage income widens.",
+    "perspectival_gap": "From the low_wage_employers' seat, this is genuine coordination: income support solves the matching problem for necessary but undesirable work, allowing them to operate sustainable businesses at scale. They author the beneficiary reading. From the low_wage_workers' seat, the same structure operates as a wage-suppression mechanism: the income support is available to them only because they remain in low-wage employment, and it does not increase their bargaining leverage relative to employers. From the high_productivity_firms' seat, this is a transfer from them (as taxpayers) to low-wage employers (as subsidy captors) with workers as pass-through; they experience it as cost without coordination benefit. From the state's seat, it is an expenditure with uncertain multiplier effects: some portion directly reaches worker consumption, some portion is captured by employers as suppressed costs, some portion leaks into reduced tax revenue from wage suppression. From labor coalitions' seat, this is an institutional mechanism that undermines their primary source of power (scarcity of labor) by creating a non-market income floor that employers can capture as wage constraint.",
+    "directionality_logic": "Low_wage_employers are full beneficiaries (d → 0.0): they set wages, capture the subsidy as lower labor costs, and have mobile exit options if wage regulation increases. Their power is institutional (they control employment terms in their sectors) and their exit is arbitrage (relocate labor-intensive operations if local wages rise). Low_wage_workers are full targets (d → 1.0): they are trapped (confined to low-wage sectors by skills, geography, and credential barriers), their time horizon is biographical (no intergenerational exit through education or capital accumulation), and they bear the extraction as suppressed wages relative to what would obtain in a labor market without income support. High_productivity_firms are moderate payers (d → 0.6-0.7): they bear the tax cost but do not capture subsidy and are not directly affected by low-wage sector dynamics; their exit is mobile (relocate if tax burden rises). The state sits at d → 0.5 (symmetric): it provides the coordination mechanism (income floor) and bears the cost, but also constrains employer power through program design (could make support conditional, could require wage minimums). Labor coalitions sit at d → 0.65-0.75 (targets): they bear the erosion of their bargaining power and the suppression of wages in solidarity sectors, with constrained exit (union members are locked into their trades and sectors by skill and credential).",
+    "mandatrophy_analysis": "The founding problem was real: late-stage capitalist labor markets produce sectors where competitive equilibrium wages are below subsistence (care, retail, hospitality, sanitation). Income support was introduced to provide a floor that enables workers to survive and participate without coercion. However, the observed function has shifted: instead of unconditional support enabling workers to refuse coercive work and negotiate better terms, the support has been captured by employers as suppressed wage costs. The mandatrophy is NOT that the founding problem disappeared (it is contested), but that the institutional design, while solving the original coordination problem (matching workers to necessary jobs), has revealed a second structural problem: employer capture of the subsidy. This is the diagnostic signature of tangled rope: the coordination function is real and necessary, but the extraction function is equally real and captured by the most powerful parties. A Piton reading would assert that income support is now mostly theater (the real wage-suppression mechanism operates through precarity and gig-ification, not through the support program itself). The wage_subsidy_reading asserts that the support program is the central institutional mechanism enabling wage suppression, not a theatrical artifact of it.",
+    "kernel_context": "This constraint instantiates the wage_subsidy_reading of the income_support_conditionality kernel. The kernel is contested: three readings coexist across different policy communities and theoretical traditions. The freedom_floor_reading (held by left-libertarian, basic-income, and de-commodification theorists) argues that unconditional income support decommodifies labor, enabling workers to refuse coercive employment and exercise positive freedom. The dependency_trap_reading (held by behavioral economists, right-libertarian, and work-incentive theorists) argues that unconditional support undermines work incentives and creates long-term dependency and skill atrophy. The wage_subsidy_reading (held by labor economists, critical labor-process scholars, and some labor-movement factions) argues that unconditional support functions as employer subsidy: it allows low-wage employers to pay below-subsistence wages while maintaining worker subsistence, and it does so while claiming to liberate workers. The three readings disagree on the ACTUAL FUNCTION of the income support, not merely on whether it is good or bad. This is a kernels-and-readings case: the core commitment (that income support is unconditional, that it provides a floor to labor-market participation) is shared, but the reading of what that commitment accomplishes differs structurally. The wage_subsidy_reading claims that the same policy serves freedom_floor's liberatory intent only IF wage suppression through subsidy capture can be prevented (e.g., through mandatory wage floors, sector-specific supplements, or conditioning support on wage growth). Without those mechanisms, the policy's actual function is wage subsidy, not liberation."
+  },
+  "omegas": [
+    {
+      "id": "subsidy_capture_mechanism",
+      "question": "How much of the income support transfer is actually captured by low-wage employers as suppressed wage costs, versus retained by workers as genuine income increase?",
+      "resolution_mechanism": "Econometric analysis comparing wage growth in low-wage sectors with high income support coverage versus comparable low-support sectors; controlled-experiment jurisdictions that vary support levels and measure wage responses; long-panel tracking of individual worker wages before and after support implementation.",
+      "impact": "If capture is near-zero (worker wages rise by near the full support amount), the constraint is Rope or Scaffold; if capture is substantial (50%+), the wage_subsidy_reading is confirmed and Tangled Rope classification is sustained; if capture approaches 100%, the constraint approaches pure Snare (support becomes invisible redistribution from high-productivity firms to low-wage employers, with workers no better off).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of employer capture of public income support as suppressed wages."
+    },
+    {
+      "id": "exit_leverage_delta",
+      "question": "Does the income support increase or decrease low-wage workers' exit leverage relative to employers? Specifically: would a worker accept a lower wage (or worse conditions) WITH income support than they would require WITHOUT it?",
+      "resolution_mechanism": "Survey evidence on reservation wages and willingness-to-accept offers among workers with and without income support; quasi-experimental variation in support availability; behavioral economics analysis of outside options and threat points in wage bargaining.",
+      "impact": "If support INCREASES exit leverage (workers demand higher wages or refuse worse conditions because they have a fallback income), the freedom_floor_reading is partially supported and extraction is limited. If support DECREASES leverage (workers accept lower wages because subsistence is guaranteed), the wage_subsidy_reading is confirmed. If effect is near-zero (workers' bargaining position is unchanged), the support is purely redistributive without coordination or extraction function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Direction and magnitude of income support's effect on worker exit leverage in wage bargaining."
+    },
+    {
+      "id": "labor_market_counterfactual",
+      "question": "What would the low-wage sector labor market look like if unconditional income support were withdrawn but all other conditions (technology, globalization, capital availability) remained constant?",
+      "resolution_mechanism": "Simulation modeling with labor-supply elasticity estimates; historical comparison to pre-support equilibrium in early-adopter jurisdictions; controlled withdrawal experiments (pilot programs ending support and tracking outcomes); comparative cross-national analysis of similar economies with and without income support programs.",
+      "impact": "If counterfactual shows wage increases (employers must raise wages to attract labor), the support is currently suppressing wages and the wage_subsidy_reading is confirmed. If counterfactual shows labor-market collapse (insufficient workers at higher wages), the coordination function is real but the magnitude of subsidy capture is ambiguous. If counterfactual shows sector automation (employers invest in technology instead of raising wages), the constraint is shifting from wage suppression to technological displacement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual equilibrium of low-wage sectors without income support."
+    },
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Is this a case where the freedom_floor_reading and the wage_subsidy_reading coexist across different parties (coexists_with relation), or does one reading logically foreclose the other within a single coherent framework?",
+      "resolution_mechanism": "Examination of whether a single actor can consistently hold both readings (they can: 'income support is liberatory BUT we must prevent wage suppression'), or whether accepting one reading commits an actor to rejecting the other (freedom_floor requires that workers exercise exit leverage; wage_subsidy requires that workers do not, by assumption).",
+      "impact": "If coexists_with is correct, both readings remain live policy positions and policy debate should focus on institutional design (how to prevent capture). If forecloses is correct, one reading's core premise logically rules out the other's, and apparent agreement on income support masks deep disagreement about what it does. This affects how policy consensus is evaluated and whether apparent compromise is genuine or unstable.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether freedom_floor and wage_subsidy readings are logically compatible or mutually foreclosing."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.52) primarily structural (employers extract through institutional power and market control) or internalized (workers believe they deserve low wages, or accept suppression as inevitable given their position)?",
+      "resolution_mechanism": "Qualitative research on worker beliefs about wage adequacy and entitlement; comparison of reservation wages and accepted wages when support is transparent versus opaque; post-exit trajectory analysis (if workers' wage expectations rise after leaving low-wage sectors, suppression was partially internalized).",
+      "impact": "If suppression is primarily structural, removing employer power (unionization, wage floors, benefit requirements) could increase wages directly. If suppression is internalized, workers would need cognitive reframing (recognition that low wages are not inevitable) before wage expectations rise. Mixed suppression suggests institutional redesign must address both structural barriers and internalized expectations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which measured suppression is structural versus internalized in worker consciousness."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__dependency_trap_reading",
+      "precariat_labor_gig_economy_subsidy"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the income_support_conditionality kernel. The freedom_floor_reading frames the same policy as liberatory (decommodifies labor, enables exit); the dependency_trap_reading frames it as degrading (undermines motivation, creates dependency). The wage_subsidy_reading asserts that the policy's actual function depends on institutional design — it can serve liberation OR trap workers in low-wage subsidy depending on whether wage suppression is prevented. The three readings share the same kernel (unconditional income support exists and is universally available) but diverge on what that commitment accomplishes. Generate all three readings as separate constraint stories linked by network.affects_constraints to enable comparative analysis of how different policy communities read the same institutional fact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "gain_flow": "low_wage_employers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_conditionality__freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "income_support_conditionality__dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "income_support_enables_employer_subsidy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "wage_suppression_through_subsidy_capture_measurable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "unconditional_income_support_as_worker_liberation",
+    "drift_state": {
+      "moment": "contemporary_subsidy_capture_evidence",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "income_support_conditionality__kernel_commitment",
+      "labor_market_wage_formation_dynamics"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "header": {
+    "constraint_id": "climate_response_action__mitigation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c5b47288-73b0-4221-ae67-b65561ee6eb0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Mitigation via Emissions Reduction, Carbon Markets, and Technological Innovation",
+    "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_income_nations_with_innovation_capacity",
+      "carbon_intensive_incumbent_industries",
+      "technology_vendors_and_carbon_market_operators"
+    ],
+    "victims": [
+      "climate_vulnerable_low_income_nations",
+      "future_generations",
+      "communities_dependent_on_climate_sensitive_sectors",
+      "workers_in_incumbent_energy_sectors"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "technological_carbon_removal_feasibility",
+      "question": "Can carbon removal technology scale to the gigatons per year needed to meet the 2°C target while remaining energy-neutral and economically viable?",
+      "resolution_mechanism": "Real-world deployment data by 2030: if direct air capture, enhanced weathering, and biochar reach 100+ Mt/year at <$150/ton with energy EROI >5, feasibility is corroborated; if deployment stalls below 10 Mt/year or EROI remains <2, the assumption fails.",
+      "impact": "This is a foundational axiom of the mitigation_priority reading. If feasibility fails, the 2°C target becomes unreachable without demand reduction, forcing alignment with degrowth_transformation. Classification would shift toward snare (extraction without coordination function). Beneficiary structure collapses.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carbon removal scales as the mitigation pathway assumes."
+    },
+    {
+      "id": "decoupling_emissions_from_growth_sustainability",
+      "question": "Can high-income economies decouple absolute emissions from GDP growth permanently, or does decoupling reach a boundary beyond which growth requires absolute emissions increase?",
+      "resolution_mechanism": "National greenhouse gas accounting 2015–2030: if absolute emissions in high-income nations remain stable or decline while GDP grows, decoupling is sustained; if absolute emissions turn upward, decoupling is temporary (Jevons paradox). Consumption-based accounting (embodied emissions in imports) reveals geographic arbitrage.",
+      "impact": "If decoupling is unsustainable, the growth axiom contradicts the emissions-reduction axiom — the mitigation_priority reading forecloses growth-compatible decarbonization. The reading becomes logically incoherent, forcing reclassification to degrowth_transformation or snare (extraction without coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether growth-emissions decoupling is permanent or temporary."
+    },
+    {
+      "id": "carbon_market_additionality_and_real_reduction",
+      "question": "Do carbon credits represent real, additional emissions reductions, or do they primarily monetize reductions that would have occurred anyway (baseline creep) or displace emissions to non-regulated regions (leakage)?",
+      "resolution_mechanism": "Meta-analysis of carbon credit projects (forest, methane, renewable energy): comparison of avoided emissions to counterfactual baseline; tracking of investment flows. Audits of Kyoto Protocol mechanisms and Article 6 implementation 2020–2030.",
+      "impact": "If additionality is low, the constraint's measured extractiveness (0.68) understates the real extraction — rents are transferred to market operators while net global emissions reduction is minimal. Coordination function collapses; classification shifts to snare. The beneficiary seats (technology vendors, high-income nations) maintain extraction while coordination becomes illusory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carbon markets achieve real or illusory emissions reductions."
+    },
+    {
+      "id": "intergenerational_residual_risk_distribution",
+      "question": "What is the magnitude of climate damage that occurs even under a successful 2°C pathway, and to which regions and populations? Is this residual risk distribution just, and who decided?",
+      "resolution_mechanism": "IPCC impact assessments for 1.5°C and 2°C scenarios; vulnerability indices for climate-exposed regions; economic loss projections. Ethical frameworks (utilitarian, egalitarian, capability-based) applied to residual impacts. Reconstruction of who participated in deciding 2°C was acceptable.",
+      "impact": "The mitigation_priority reading axiomatically accepts residual warming. If residual damage is catastrophic for specific populations (island nations, Sahel, South Asia monsoon zones) while minimal for others, the constraint distributes intergenerational and spatial injustice. This omega flags whether the framework launders harm into the future without consent from future generations or vulnerable present populations — raising the question of whether the coordination function is real or a cover story for extractive distribution.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Ethical status of distributing climate risk across generations and regions."
+    },
+    {
+      "id": "mitigation_adaptation_structural_subordination",
+      "question": "Is the mitigation-priority framework structurally compatible with simultaneous adaptation prioritization (coexists_with adaptation_priority), or does it subordinate adaptation (influences/forecloses adaptation_priority)?",
+      "resolution_mechanism": "Global climate finance ratios 2020–2030: if adaptation stabilizes at ≥40% of total climate finance, coexistence is achieved; if adaptation remains at 20–25%, subordination is structural. Track UNFCCC decisions: are adaptation investments conditional on mitigation alignment?",
+      "impact": "If adaptation is systematically subordinated (as current finance ratios suggest), the mitigation_priority and adaptation_priority readings do not coexist — mitigation forecloses adequate adaptation. The adaptation_priority reading would be more accurately described as 'influenced_by' (structurally pressured downward) rather than coexistent. This suggests mitigation_priority is using adaptation as a sacrificial victim set, revealing the constraint to be more snare-like than tangled-rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mitigation and adaptation can be genuinely co-prioritized."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the suppression (0.71) of degrowth and transformation alternatives structural (institutional barriers, exclusion, fund gatekeeping) or internalized (advocates internalize 'growth is necessary' even when it contradicts their values)?",
+      "resolution_mechanism": "Ethnographic analysis of climate advocate communities; survey of private beliefs vs. public statements; post-exit trajectory of advocates who leave mitigation-first institutions. If suppression persists after barriers are removed, internalization is confirmed.",
+      "impact": "If suppression is primarily structural, removing barriers (reseating degrowth voices in UNFCCC, reallocating finance, changing target-setting rules) could shift constraint persistence. If internalized, advocates carry the suppression cognitively — raising effective suppression above 0.71 and suggesting the constraint is psychological lock-in, making it more snare-like (cognitive closure) than tangled-rope (institutional coordination with distributed extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternatives is externally enforced or self-reinforced."
+    },
+    {
+      "id": "framework_coherence_under_empirical_drift",
+      "question": "As empirical realities depart from the framework's founding assumptions (emissions-growth decoupling stalls, carbon removal fails to scale, adaptation remains underfunded), does the mitigation-priority framework maintain coherence through internal adjustment, or does it require axiom-level revision?",
+      "resolution_mechanism": "Compare UNFCCC climate targets across successive COPs (Paris 2015, Glasgow 2021, Dubai 2023): if targets are consistently extended when initial ones are missed, and if carbon budgets are recalculated to accommodate slower abatement, assess whether these are internal adjustments (holding axioms fixed) or axiom-level changes. Track whether the growth axiom, decoupling axiom, or technological feasibility axiom has been formally revised.",
+      "impact": "If coherence requires perpetual re-calibration without axiom-level change, the constraint may be transitioning from Tangled Rope (functional coordination + extraction) to Piton (extraction maintained by institutional inertia). The mandate (stabilize at 2°C via markets + growth) may have outlived its epistemic foundations, leaving only the extraction machinery (carbon markets, green finance, technology rents) running on momentum. This is the Piton emergence pattern.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the framework maintains coherence or requires continuous patching."
+    },
+    {
+      "id": "knowledge_committer_axis_kernel_contest",
+      "question": "Is the mitigation_priority reading of the climate_response_action kernel a stable, institutionally embedded interpretation, or is it contested at the epistemic level by alternative readings (adaptation_priority, degrowth_transformation) that claim different understandings of what 'climate response' means?",
+      "resolution_mechanism": "Document the kernel: the shared commitment to 'respond to climate change' and the three readings that interpret it differently. Assess whether the mitigation_priority reading is one interpretation among contested alternatives (coexists_with) or whether it has foreclosed the others (forecloses) through institutional power and resource control.",
+      "impact": "The mitigation_priority reading claims to be THE solution to the climate crisis, but operationally it is one reading that defers, subordinates, and suppresses the others. If the sibling readings are genuinely coexistent (held by different coalitions), the constraint's persistence depends on the mitigation coalition's power to maintain hegemony in UNFCCC, finance institutions, and technology markets — revealing the constraint to be more about power and extraction than about solving the founding problem. If the sibling readings are coexistent, they remain alternative moral frameworks, not subordinate errors — making the constraint's suppression of degrowth and adaptation-priority advocates a form of epistemic injustice.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether mitigation_priority is a stable reading or one contested by alternative frames."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The mitigation-priority reading of climate response frames the solution as limiting temperature rise to 2°C through emissions reductions enabled by technological innovation and carbon markets, while maintaining GDP growth in high-income nations. This constraint is ONE reading of a contested kernel: climate_response_action has three active readings (mitigation_priority, adaptation_priority, degrowth_transformation) that instantiate fundamentally different problem definitions, beneficiary structures, and victim allocations. The mitigation reading is institutionalized at the UNFCCC, dominates global climate finance allocation, and benefits high-income nations with innovation capacity. It simultaneously extracts from climate-vulnerable regions (who bear deferred adaptation costs and residual warming), future generations (who inherit atmospheric CO2 lock-in), and incumbent energy workers (who face rapid job displacement). The measurement trajectory shows extraction rising steeply through year 10 (as carbon markets scale, technology rents accumulate, and incumbent industries capture transition subsidies), then plateauing at year 15+ (suggesting the extraction ceiling is reached and further growth in rents requires axiom-level shifts that the framework resists). The theater ratio rises throughout, indicating an increasing proportion of enforcement activity (suppression of degrowth and adaptation-priority alternatives) relative to functional coordination (the real abatement work). This is diagnostically consistent with Piton emergence: the mitigation framework may be transitioning from functional Tangled Rope (coordination + extraction) to theatrical Piton (extraction + institutional inertia) as empirical feasibility assumptions are challenged.",
+    "key_agents": [
+      "High-income nations with innovation capacity (EU, UK, US, Japan): agenda-setters, set targets and mechanisms, benefit from technology rents and carbon market operation.",
+      "Carbon-intensive incumbent industries (fossil fuels, cement, steel): payers (compliance costs) and secondary beneficiaries (carbon market access, transition subsidies).",
+      "Technology vendors and carbon market operators: beneficiaries, capture rents on every abatement transaction globally.",
+      "Climate-vulnerable low-income nations (SIDS, sub-Saharan Africa, South Asia): victims, trapped in accepting residual warming + adaptation underfunding.",
+      "Future generations: victims, inherit CO2 lock-in and delayed transformation costs.",
+      "Energy workers and incumbent sector communities: victims, face rapid displacement; identity-locked by professional and regional dependence.",
+      "Degrowth and transformation advocates: excluded, structurally marginalized from UNFCCC; their objection to the growth axiom is not represented in target-setting.",
+      "Adaptation-priority advocates from vulnerable regions: formally present but systematically underfunded and subordinated in policy hierarchy."
+    ],
+    "logic_rationale": "Extractiveness starts at 0.38 (early 2000s: nascent carbon markets, minimal enforcement of mitigation targets, incumbent industries largely unregulated) and rises to 0.68 by year 30 (mature carbon markets, decarbonization mandates in force, rents consolidated in technology and finance sectors). The measurement series reflects the empirical history: Kyoto Protocol (1997) was a weak instrument (low extractiveness); Paris Agreement (2015) established the 2°C framework and incentivized carbon markets (rising extractiveness t=5–10); subsequent COPs (Glasgow 2021, Dubai 2023) have formalized Article 6 (carbon trading mechanisms) and scaled green finance (high extractiveness, rising theater). Suppression rises from 0.52 (degrowth and adaptation alternatives still present in policy conversation) to 0.71 (institutional exclusion and resource subordination now systematic). Theater plateaus at 0.44, indicating that while initial carbon markets pursued real emissions reduction, the constraint increasingly relies on performative carbon accounting (additionality inflation, baseline creep, leakage to non-regulated regions) rather than net global abatement. The convergence of extraction + theater + suppression around year 15–20 signals the constraint's shift from coordination-plus-extraction (Tangled Rope) toward maintenance-through-inertia (Piton trajectory).",
+    "perspectival_gap": "Seats compute radically differently from this constraint's structure. High-income nations and technology vendors see Tangled Rope: genuine coordination (internalized abatement targets, transparent carbon pricing) plus legitimate extraction (technology rents, market operator fees — the price of efficient abatement). Vulnerable regions and future generations see Snare: no coordination function (they did not set the target, did not consent to the 2°C residual risk), only extraction (deferred adaptation costs, inherited lock-in). Energy workers see identity-locked trap: their professional identity is incompatible with exit from incumbent sectors, but the framework mandates rapid industry closure. Degrowth advocates see masked Snare: the growth axiom is incompatible with the emissions-reduction axiom at scale, but the framework suppresses this contradiction through institutional hierarchy (mitigation finance overweighting adaptation by 3:1, degrowth proposals excluded from UNFCCC). The engine computes these divergent classifications from the structural data: beneficiary/victim declarations + power atoms + exit options produce different d values for each seat, which yield different type assignments. This divergence is precisely the measurement the corpus takes — it is not an error but the point.",
+    "directionality_logic": "High-income agenda-setters have d near 0.0 (beneficiaries: set the rules, control technology markets, collect rents, exit is easy — arbitrage to other investment vehicles if climate markets collapse). Carbon-intensive incumbent industries have d = 0.50–0.65 (asymmetric: initial compliance costs (CapEx redeployment), but transition subsidies and carbon market access create offsetting benefits; exit is constrained by their productive base being tied to fossil fuels, but they can gradually shift within the incumbent economic structures). Technology vendors have d near 0.0 (beneficiaries: scale globally, face no compliance cost, can exit to non-climate sectors). Vulnerable regions have d near 1.0 (targets: locked in geographically, climate impacts unavoidable, no exit; deferred adaptation costs are external impositions). Future generations have d = 1.0 (pure targets: no participation in the agreement, no exit, trapped by atmospheric CO2 irreversibility). Energy workers have d = 0.80 (high target status: compliance costs borne locally, identity-locked exit prevents arbitrage, region-dependent). Degrowth advocates have d = 0.75 (suppressed: included in discourse but institutionally subordinated, marginal power, constrained by resource allocation rules that favor mitigation-first). The overrides field is not needed — structural derivation from beneficiary/victim + power + exit cleanly produces these values.",
+    "mandatrophy_analysis": "The constraint's mandate ('stabilize global climate at 2°C via emissions reductions, technology, and carbon markets while maintaining growth') was born from real coordination problem recognition (early 2000s: climate change science established, no mechanism to coordinate global abatement). The coordination function was genuine: internalize climate externality, create incentive structures for abatement, provide transfer mechanism to make burden-sharing feasible. However, the founding problem's relationship to the solution is contested (six_questions.founding_problem_status = contested). High-income nations attest the founding problem is live and being solved: cumulative emissions are decoupling from growth in some sectors, renewable capacity is scaling. Vulnerable regions, degrowth advocates, and post-hoc analysis (Kate Raworth, IPCC WG2 on impacts, Hickel et al.) attest the problem is not solved: absolute global emissions continue rising; the solution is deferring rather than eliminating the damages; adaptation is underfunded; the growth axiom prevents reaching net-zero at the speed needed. The measurement trajectory shows extraction rising while coordination function (measured by actual net global emissions reductions) remains ambiguous and contested. Theater rises to 0.44, indicating increasing reliance on carbon accounting manipulations (baseline creep, leakage arbitrage, removal credits that may not be additional) rather than real abatement. The convergence of rising extraction + ambiguous coordination function + rising theater suggests mandatrophy: the constraint's original justification (solve collective-action problem in emissions abatement) has been partially supplanted by a secondary function (distribute rents from the transition to high-income actors and technology vendors). The constraint persists because the beneficiary seats (high-income nations, technology vendors) have accumulated power to maintain it, not because the coordination problem that justified it remains solved.",
+    "kernel_context": "This constraint (climate_response_action__mitigation_priority) is one reading of a contested kernel: climate_response_action. The kernel is the question 'What is climate response?' — what does it mean to respond to climate change, and what are the obligations and distributional implications? The sibling readings are: (1) adaptation_priority — response means investing in resilience and adaptive capacity for vulnerable populations, accepting temperature rise as inevitable; (2) degrowth_transformation — response means structural economic transformation, rejecting growth-as-organizing-principle and prioritizing sufficiency and equity; (3) mitigation_priority — response means limiting temperature rise through emissions reductions, enabled by technology and markets while maintaining growth. These readings have different ε values, different victim/beneficiary structures, and different persistence mechanisms. The mitigation_priority reading assumes technological feasibility (carbon removal scales to gigatons), market efficiency (carbon pricing correctly internalizes climate damages), and growth decoupling (absolute emissions can fall while GDP grows). Each assumption is an axiom unique to this reading — denying any one transforms the reading into a different framework. The sibling readings directly challenge these axioms: adaptation_priority concedes that mitigation alone is insufficient and prioritizes resilience; degrowth_transformation denies the decoupling axiom is physically viable and rejects growth as compatible with climate stabilization. The contest is not merely over policy emphasis but over core structural claims about what is possible and who bears costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_action__adaptation_priority",
+      "climate_response_action__degrowth_transformation"
+    ],
+    "dual_formulation_note": "The climate_response_action kernel has three structurally distinct readings: mitigation_priority (this story), adaptation_priority, and degrowth_transformation. They share the founding problem ('climate change requires response') but instantiate different ε values, different victim/beneficiary structures, and different persistence mechanisms because they assume different solutions. Each reading is a separate constraint story with its own classification. The network links document that these three are not independent constraints but readings of a contested kernel — their epsilon values, axioms, and foreclosure relationships are interdependent. Do not collapse these three into one constraint with 'measurement basis parameters'; they are three separate constraints with three separate ε values that differ because they measure different things (mitigation path vs. adaptation capacity vs. transformation feasibility)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "two_degree_temperature_stabilization_pathway",
+    "reading_relations": [
+      {
+        "sibling_id": "climate_response_action__adaptation_priority",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "climate_response_action__degrowth_transformation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technological_substitution_feasibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "emissions_growth_decoupling_viability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_mechanism_efficiency_in_carbon_pricing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "drift_state": {
+      "moment": "contemporary_2024_2030",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

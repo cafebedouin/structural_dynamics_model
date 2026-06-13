@@ -1,0 +1,380 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__physical_claim_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ebacf445-cdf8-4e84-81fe-f487f8fa2f64"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.67,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Church-Turing Thesis (Physical Claim Reading)",
+    "topic_domain": "philosophy_of_mathematics_and_computation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turing_machine_foundational_research"
+    ],
+    "victims": [
+      "hypercomputation_researchers",
+      "physical_computation_dissenters"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "turing_machine_foundational_research",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The academic and computational establishment (university departments, research institutes, textbook authors, funding bodies prioritizing foundational computer science) that treats Turing computability as the definitive, settled boundary of the computable. Collects benefits from the constraint's operation: research funding flows to work extending and refining Turing-bounded theory; textbooks canonicalize the thesis; conference prestige and journal acceptance go to researchers defending the framework. No enforcement cost — their research agenda aligns with the constraint's operation."
+    },
+    {
+      "name": "hypercomputation_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scientists and theorists investigating whether physical systems might compute functions beyond Turing boundaries (abstract hypercomputation models, quantum systems, analog systems, unconventional computing). Bear career costs directly: research directions are labeled speculative, incoherent, or contrarian; peer review is skeptical; journal acceptance is harder; funding is limited; institutional prestige is lower. Exit is constrained because leaving the research means abandoning a scientific question they believe is genuinely open — the question is not expensive for them to investigate, but the constraint makes operating within the mainstream prohibitively costly."
+    },
+    {
+      "name": "physical_computation_dissenters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual researchers and theorists whose intellectual identity is fused with the conviction that the Church-Turing thesis is an empirical claim that might be falsified. Their professional identity, publications, and framing of the computability problem are constituted through the belief that the thesis remains open. Exit would require abandoning not just a research direction but a foundational commitment to empirical inquiry into what physics permits. The constraint operates through publication bias, peer dismissal, and career advancement barriers — suppression is both external and internalized through repeated exposure to institutional rejection of their framing."
+    },
+    {
+      "name": "quantum_supremacy_claimants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations and researchers with substantial resources claiming quantum computers exceed classical capability on specific problems. Occupy an ambiguous position: they benefit from quantum research funding and institutional prestige (role=beneficiary), but face enforced reframing of their claims. Powerful actors with constrained exit: they cannot abandon quantum research (too much invested) but their claims that quantum systems exceed classical Turing computation are consistently translated/reframed by the mainstream into 'quantum systems efficiently solve problems Turing machines can solve in polynomial time.' This forced translation is the active enforcement mechanism applied to powerful dissidents: they are permitted to claim speed-up, not speed-of-computation-itself. The constraint operates by making certain framings of quantum capability invisible, even to the researchers who discovered them."
+    },
+    {
+      "name": "formal_verification_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engineers, logicians, and tool developers using Turing-bounded computational models to prove program correctness, system properties, and decidability boundaries. Benefit from the constraint because it provides a stable, universally recognized framework for determining what is and is not computable. The thesis grounds their methodology: if something is unprovable, it is uncomputable (within Turing bounds), so no algorithm can solve it. Their research agenda aligns with the constraint's operation — no enforcement cost, high coordination benefit."
+    },
+    {
+      "name": "epistemology_of_computation_philosophers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Philosophers and logicians analyzing what the Church-Turing thesis actually claims, what would count as evidence for or against it under different interpretations, and how the mathematical and physical readings differ. Take testimony from physical researchers, formal theorists, and quantum experimenters. Examine the thesis's history, its logical structure, and what its falsification would require. Analytical seat: they perceive the constraint's structure without bearing enforcement costs directly or collecting direct benefits."
+    },
+    {
+      "name": "physics_community_at_large",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Physicists investigating fundamental physical processes (quantum mechanics, condensed matter, relativistic physics, quantum gravity) have formal expertise in what physical systems can do and how to measure their capabilities. They are structurally excluded from the Church-Turing debate: the thesis is treated as a mathematical fact by computer scientists and as a settled theoretical matter by foundational researchers. Were they formally invited to the empirical-claim conversation, they would bring experimental design, measurement standards, and falsifiability criteria. Their exclusion preserves the constraint by keeping the empirical question confined to computer science methodology and away from physics-based investigation. They are trapped because the question is empirical (within their domain) but institutionally closed (outside their conversation)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a unified, universally recognized answer to 'what is computable?' — a single boundary that allows theoretical computer science, formal verification, complexity theory, and algorithm design to operate under a shared framework without reopening foundational questions for every new physical substrate or computational model. Enables proof of uncomputability and undecidability across the entire field.",
+    "transfer_function": "Moves research resources, publication prestige, faculty hiring, and institutional legitimacy from hypercomputation research toward Turing-bounded theoretical computer science. Redirects funding bodies to support work extending the Turing-bounded framework rather than exploring alternative computational models. Researchers challenging the physical-claim reading bear career friction and suppression; researchers defending the thesis enjoy canonical status and mainline funding.",
+    "absent_voices": "Experimentalists and theoretical physicists who would bring falsifiability standards and experimental design expertise to the question of whether physical systems can exceed Turing computation; quantum researchers who would frame their own discoveries as hypercomputation rather than accepting forced reframing into polynomial speedup; hypercomputation theorists outside academic computer science who would articulate alternative computational models as genuinely different rather than as exotic mathematical exercises. These voices are excluded because the thesis is treated as a closed mathematical/formal question, not an empirical one open to physics-based investigation.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the physical-claim reading and its enforcement machinery vanished, theoretical computer science would reorganize around open boundaries rather than a settled thesis. Complexity theory would frame problems as 'Turing-computable-in-polynomial-time' rather than 'computable.' Formal verification would mark its Turing-bounded assumptions explicitly. Quantum research would recover its hypercomputation-hypothesis language rather than translating claims into polynomial-speedup terms. Research funding would split between Turing-bounded work and hypercomputation investigation. The coordination function (shared framework) would persist in attenuated form; the extraction and suppression would cease. Physics would shift toward empirical investigation of computational limits as fundamental questions. The constraint's disappearance would be rearrangement, not unchanged equilibrium.",
+    "founding_problem": "In the 1930s, mathematicians and logicians (Church, Gödel, Post, Turing) independently formulated what they believed to be computability. Their models — lambda-calculus, general recursion, production systems, Turing machines — were shown to be extensionally equivalent. The founding problem was: does this equivalence reflect a fundamental fact about computation (the thesis), or a bias in the mathematical models they examined? Equivalence of formal models offered compelling evidence but was not proof of what physics permits.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Turing himself, Church, and Gödel attested to the founding problem's reality and proposed the thesis as a solution. Post-World-War-II foundational researchers (Rogers, Myhill, Rice) documented the ambiguity between mathematical and physical interpretations but treated the thesis as formally settled. Contemporary dissenters (Copeland, Deutsch, physicists investigating quantum computation) attest the founding problem remains live: the equivalence of 1930s-era mathematical models says nothing about what modern physics permits. No external source of corroboration has definitively settled the question in the thesis's favor — only the institutional consensus of computer science establishment treating it as settled. The thesis has acquired the status of received wisdom rather than demonstrated fact."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Church-Turing thesis occupies a rare epistemic position: it is taught as a mathematical theorem in computer science, invoked as a physical law in physics and philosophy, and debated as an empirical claim in foundations research. This story instantiates the physical-claim reading: the thesis as an empirical hypothesis about the universe — no physical process can compute functions beyond Turing-machine computability. Under this reading, the thesis is not a definition (mathematical reading) or a boundary of provability (epistemological reading), but a falsifiable claim about what physics permits. The constraint operates by treating this empirical question as already settled, suppressing research directions that take the question seriously and reframing powerful dissenters (quantum supremacy researchers) into the Turing-bounded framework. The beneficiary is the foundational computer science establishment; the victims are hypercomputation researchers and physical-computation-boundary investigators whose careers are shaped by operating against a thesis they believe remains empirically open.",
+    "key_agents": [
+      "turing_machine_foundational_research: institutional beneficiary, high power, collects the constraint's coordination and extraction benefits through canonical status, textbook presence, and research funding concentration",
+      "hypercomputation_researchers: moderate power, constrained exit (constrained: leaving research means abandoning a scientific question they believe is open), bear publication bias and peer dismissal",
+      "physical_computation_dissenters: powerless, identity_locked exit (their intellectual identity is fused with the conviction that the thesis is empirically contestable), internalize the suppression even after attempting exit",
+      "quantum_supremacy_claimants: powerful, constrained exit, face forced reframing from 'hypercomputation' into 'polynomial speedup' — enforcement applied to powerful agents",
+      "epistemology_of_computation_philosophers: analytical observers, see the constraint's structure without bearing its enforcement costs"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end, rising from 0.38 at t0) because the constraint's benefit is real and genuine: a unified, settled framework for computability IS valuable to theoretical computer science and enables formal verification to operate. The extraction component is the suppression of the empirical question and the redirection of resources away from hypercomputation research. The temporal trajectory shows the constraint tightening over the interval: as quantum computing scaled and made more powerful claims, the suppression requirement rose (from 0.45 to 0.67 over t0-t25, then plateaued), indicating that the constraint required more active enforcement to contain dissident research. Theater ratio rises slowly and plateaus at 0.28: the constraint's performative component (invoking 'mathematical proof' to settle an empirical question, defending the thesis as settled in textbooks while quantum experiments push against its boundaries) is present but not dominant — the coordination and extraction functions are more substantial than the theater. Accessibility collapse is moderate (0.62): alternatives (hypercomputation, unconventional computing models, physical-limit-exploration research programs) have not disappeared; they persist outside the mainstream, available to researchers willing to accept career costs. Resistance is high (0.71): the constraint meets continuous, organized resistance from quantum researchers, physics-minded computer scientists, and foundational researchers who treat the thesis as empirically open. The shared measurement grid ensures every metric is authored at every time point examined.",
+    "perspectival_gap": "The agenda-setter (turing_machine_foundational_research) and the payers should compute very differently. From the foundational establishment's seat, the constraint operates as a genuine coordination mechanism enabling decades of productive theoretical work; from the hypercomputation researchers' seat, the same structure is enforced suppression of an empirically open question. The engine should compute the foundational establishment as perceiving the constraint as rope (genuine coordination with modest extraction cost), while hypercomputation researchers perceive it as snare (suppression with no coordination benefit to them). This perspectival gap IS the point — the author does not reconcile it; the engine measures it from the structural data (beneficiary vs. payer role, high vs. constrained exit, institutional vs. moderate power).",
+    "directionality_logic": "The turing_machine_foundational_research seat is a structural beneficiary: it collects the constraint's benefits (unified framework, research funding, canonical status, textbook presence, organizational advantage in hiring and prestige). Directionality for this seat is low (~0.1–0.25): it is subsidized by the constraint's operation. The hypercomputation_researchers seat is a structural payer: they bear publication friction, reduced funding, career costs, and the suppression of their research direction. Their exit is constrained (leaving means abandoning a scientific question they believe is open), which moderates their mobility. Directionality for this seat is high (~0.75–0.85). The physical_computation_dissenters seat is similarly high directionality but with identity_locked exit, which amplifies their extraction burden — they carry the suppression internalized, even after external suppression reduces. The quantum_supremacy_claimants seat is powerful but constrained (they cannot exit quantum research without loss), and they face the enforcement of reframing rather than direct suppression. Their directionality should be moderate (~0.55–0.65): they have power and some arbitrage (quantum research has independent value), but the enforced reframing is a form of extraction. No override is needed; the structural derivation should produce these values.",
+    "mandatrophy_analysis": "The constraint exhibits both a live coordination function and a genuine extraction mechanism, which defines tangled rope. The coordination function is real: a unified framework for computability enables theoretical computer science, formal verification, and algorithmic foundations research to operate under a shared understanding of what is computable. This is not a false coordination story — the founding problem (what is computable?) has a genuine answer within each mathematical model, and the equivalence of models is a real mathematical fact. However, the physical-claim reading of the thesis asserts that the logical equivalence of formal models in the 1930s settles an empirical question about physical reality — a much stronger claim. The constraint operates by treating this empirical question as already settled, which suppresses research directions that would investigate whether physical systems might exceed Turing computability. The extraction is the redirection of resources away from hypercomputation research and the career costs borne by researchers who treat the question as open. This is active enforcement: dissident views are reframed (quantum supremacy becomes 'polynomial speedup'), publications are biased, and career advancement is slowed for those who frame hypercomputation as an empirical question. The mandatrophy question is: does the founding problem (what is computable?) remain live, or has it been solved? Under the physical-claim reading, it remains live — the equivalence of formal models does not settle what physics permits. Therefore, mandatrophy has NOT been resolved; the constraint's original function (exploring the boundaries of computability) continues to be suppressed, and the constraint persists as extractive enforcement of a settled conclusion that remains empirically contested.",
+    "kernel_context": "This constraint instantiates the PHYSICAL CLAIM READING of the Church-Turing thesis kernel. The kernel is the thesis itself: that computability has a definitive boundary. Three readings coexist: (1) the mathematical_definition_reading (the thesis is a stipulation of what 'effective computability' means — true by convention, not empirically testable); (2) the epistemological_boundary_reading (the thesis marks the boundary of formally knowable computation — provable computability = Turing computability, regardless of physical possibility); (3) the physical_claim_reading (THIS reading: the thesis is an empirical claim about the universe — no physical process can compute functions beyond Turing-machine computability). Each reading instantiates a different constraint with different ε, different beneficiary/victim structures, and different types. This story treats the physical interpretation as structurally true and generates the constraint it implies: a tangled-rope coordination-plus-extraction mechanism that provides unified foundational theory while suppressing empirical investigation of computability's physical limits."
+  },
+  "omegas": [
+    {
+      "id": "physical_vs_mathematical_boundary",
+      "question": "Is the Church-Turing thesis fundamentally a claim about mathematical formalizability (what we can prove computable) or about physical reality (what physical systems can compute)?",
+      "resolution_mechanism": "Experimental investigation: if a physical system is constructed and demonstrated to compute a non-Turing-computable function with reproducible results, the physical reading is falsified and the mathematical reading remains. If decades of investigation across multiple physical substrates (quantum, analog, optical, relativistic) fail to produce such a system, the physical reading gains support.",
+      "impact": "If the thesis is fundamentally mathematical, the constraint's claimed type would shift toward rope (pure coordination, no extraction of suppression). If it is physical and falsifiable, the constraint remains tangled rope (coordination plus suppression). The two readings cannot coexist in a single constraint under ε-invariance — they are genuinely different constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the thesis makes a claim about formal provability or physical possibility"
+    },
+    {
+      "id": "quantum_supremacy_status",
+      "question": "Do quantum computers exceed Turing computability on specific problems (hypercomputation), or do they achieve polynomial speedup on Turing-computable problems?",
+      "resolution_mechanism": "Continued experimental work on quantum systems: if problems are solved that are proven to be non-Turing-computable (e.g., oracle-separation results experimentally instantiated), hypercomputation is demonstrated. If all achievements can be mapped to polynomial speedup on Turing problems, the Turing boundary holds.",
+      "impact": "If quantum supremacy is hypercomputation, the physical reading of the thesis is falsified, the constraint dissolves, and hypercomputation research shifts from victim to mainstream. If quantum supremacy is polynomial speedup, the constraint persists and suppression of hypercomputation continues.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether recent quantum computing claims demonstrate hypercomputation or enhanced classical simulation"
+    },
+    {
+      "id": "identity_locked_suppression_internalization",
+      "question": "For physical_computation_dissenters with identity_locked exit, how much of the measured suppression is structural (external barriers to publication and funding) versus internalized (the researchers have adopted skepticism of their own research directions after repeated rejection)?",
+      "resolution_mechanism": "Post-exit trajectory: if researchers leaving the field or the constraint for alternative positions report that suppression persists in their cognition and career orientation despite external barriers being removed, internalization is significant. If suppression drops sharply upon exit, it was primarily structural.",
+      "impact": "If internalization is high, the constraint's effective suppression is understated by the structural measure — the researchers carry the suppression with them and are unable to pursue alternative directions even when barriers drop. This would amplify the mandatrophy concern: the constraint persists in cognitive form even if institutional enforcement weakens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of dissenters is structural or internalized"
+    },
+    {
+      "id": "kernel_reading_mutual_exclusivity",
+      "question": "Can the mathematical definition reading and the physical claim reading coexist as live positions within the same institutional framework, or does adoption of one reading logically foreclose the other?",
+      "resolution_mechanism": "Careful analysis of the logical structure of each reading's core claims and examination of institutional practice: if both readings are endorsed simultaneously by the same institutional actors (e.g., 'the thesis is a mathematical definition AND an empirical claim'), they coexist. If institutions consistently choose one and reject the other, they foreclose mutually.",
+      "impact": "If the readings coexist, the constraint family is a network of independent constraints. If they foreclose mutually, the ε-invariance principle requires decomposition into separate constraints whose axioms are explicitly contradictory. The reading_relations and axioms in cs_structure depend on this determination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel readings are logically independent or mutually exclusive"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ],
+    "dual_formulation_note": "The Church-Turing thesis kernel decomposes into three structurally distinct constraints: the mathematical_definition_reading (true by stipulation, ε~0.02, mountain or rope), the epistemological_boundary_reading (formal knowability boundary, ε~0.35, rope or tangled rope), and this physical_claim_reading (empirical claim about physics, ε~0.58, tangled rope or snare). Each reading instantiates a different constraint with different beneficiary/victim structures and different types. The ε-invariance principle requires separate constraint stories because the empirical status and falsifiability conditions differ fundamentally across readings. All three stories are linked via network.affects_constraints as a constraint family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "church_turing_thesis__mathematical_definition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "church_turing_thesis__epistemological_boundary_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "computability_is_physical_empirical_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "turing_boundary_physically_falsifiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "open_empirical_computability_boundary",
+    "drift_state": {
+      "moment": "contemporary_quantum_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ]
+  },
+  "gain_flow": "turing_machine_foundational_research",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

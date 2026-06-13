@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__mathematical_definition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a1bbbab8-f153-4929-8878-269f6aa8c4f3"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "Church-Turing Thesis as Mathematical Definition of Effective Computability",
+    "topic_domain": "philosophy_of_mathematics/foundations_of_computer_science",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "mathematical_logic_community",
+      "computer_science_foundations",
+      "proof_theory"
+    ],
+    "vindicated_propositions": [
+      "formalist_ontology_of_computation",
+      "church_thesis_as_definitional_equivalence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "mathematical_logic_community",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Uses the Church-Turing thesis as a settled definition of computability in proofs, publications, and pedagogy. The definition allows uniform treatment of diverse computational models (lambda calculus, Turing machines, Post systems, recursive functions) as equivalent formulations of the same concept. Benefits from the stability this provides for discourse and proof construction."
+    },
+    {
+      "name": "computer_science_foundations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Builds theoretical results on the assumption that 'computable' means 'Turing-computable by definition.' This unified terminology allows results to port across different computational models without qualification. The definition is a coordination device that prevents fragmentation of foundational theory."
+    },
+    {
+      "name": "proof_theory",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depends on the thesis to separate decidable from undecidable problems. The definition anchors what 'algorithmic solvability' means in formal systems, enabling precise theorems about the limits of proof and computation."
+    },
+    {
+      "name": "quantum_computing_researchers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Would argue that the definition's scope should extend to quantum models of computation, or that quantum advantage demands a reconceptualization of what 'effective computability' covers. They are outside the foundational consensus that treats the thesis as definitional rather than empirical."
+    },
+    {
+      "name": "hypercomputation_researchers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Investigate mathematical models that purport to compute beyond Turing limits (oracle machines, infinite-time Turing machines, blum-shub-smale machines). From this reading of the definition, their results are not about 'computability' but about formal properties of non-computable models — their objection would be that the definition is too narrow."
+    },
+    {
+      "name": "empirical_physicists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measure what physical systems can compute and whether physical limits constrain computation. They take no position on whether the thesis is a definition or an empirical claim; they report what happens in nature."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a unified definition of 'effective computability' across multiple independent mathematical formalisms (lambda calculus, Turing machines, recursive functions, Post systems, Markov algorithms). Solves the coordination problem of whether these models compute the same class of functions, and if so, what that class is called.",
+    "transfer_function": "No net transfer — the constraint is constitutive. What flows is clarification: the thesis transfers the burden of proof from 'show that your model is computable' to 'show that your model is not equivalent to Turing machines.' This shifts where the definitional authority sits (with Turing machines as the canonical model) rather than moving resources.",
+    "absent_voices": "Researchers in hypercomputation and quantum computing whose models produce results outside classical Turing bounds are structurally excluded from the definitional consensus. They dispute whether the thesis captures the right domain and argue for extended or alternative definitions of computability. Their objection — that the definition is too narrow for physical or mathematical phenomena — is not heard in foundational texts that treat the thesis as settled.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the Church-Turing thesis as a definition disappeared, mathematical logic would retain the fact that lambda calculus, Turing machines, and recursive functions are equivalent in their expressive power. Logicians would introduce that equivalence by pointing to the models themselves rather than invoking a named thesis. The coordination problem is solved by the models' mathematical relationship, not by the social consensus around the thesis name. The thesis vanishing would not change what mathematicians can prove about computability — it would only force them to refer to the equivalence more explicitly each time they need it.",
+    "founding_problem": "In the 1930s, 'effective computability' had no precise mathematical definition, despite being central to Gödel's incompleteness results and Church's work on decidability. Different researchers proposed different formalizations (Church's lambda calculus, Turing's machines, Gödel-Herbrand recursive functions, Post's canonical systems). The founding problem was: are these formalizations equivalent, and if so, which one defines 'effective computability'?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Mathematical logic and recursion theory textbooks (Rogers, Sipser, Soare, Enderton) from outside the original thesis-authoring community confirm that the equivalence of these models remains mathematically important and the thesis remains the standard way to name the unified concept. The original founders (Church, Turing, Gödel, Post) all attested to needing a precise definition; contemporary foundations scholars attest it is still useful."
+  },
+  "interval": {
+    "start": 1936,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.0,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.0,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1936,
+      "value": 0.0,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.01,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.015,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.018,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.02,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "definition_vs_empirical_reading_boundary",
+      "question": "Is the Church-Turing thesis genuinely a mathematical definition (true by convention, making the reading's core premise sound), or does it make a hidden empirical claim about what is physically computable (supporting the physical_claim_reading)?",
+      "resolution_mechanism": "Examine the foundational texts (Church 1936, Turing 1937) and contemporary foundational logic textbooks for whether they treat the thesis as a stipulation of terminology or as an assertion about nature. If contemporary physics discovers a physical process that computes beyond Turing limits, the empirical reading would be falsified while the definition-reading would remain unchanged (the definition would simply not describe physical computation).",
+      "impact": "If the thesis is genuinely definitional, the mathematical_definition_reading is sound and the constraint is low-extractiveness coordination. If empirical claims are hidden in the definition, the physical_claim_reading forecloses this reading — they cannot coexist in the same framework.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the thesis is definitional or makes a hidden physical/empirical commitment"
+    },
+    {
+      "id": "hypercomputation_as_definitional_extension",
+      "question": "Do hypercomputation models (oracle machines, infinite-time Turing machines, blum-shub-smale machines) represent genuine extensions of the concept of 'effective computability' or merely formal models that compute non-computable functions?",
+      "resolution_mechanism": "The definition-reading entails that these models compute functions that are not computable by the definition; researchers in hypercomputation argue the definition should be extended to cover these models. This is a meta-mathematical question: should we expand the *definition* of effective computability to include these models, or keep the definition fixed and treat hypercomputation as a separate formal concept?",
+      "impact": "If hypercomputation models represent a legitimate extension of computability, then the definition-reading of the thesis is incomplete or parochial, and the epistemological_boundary_reading might better capture the foundational role of the thesis. If the definition is rightly restricted to classical Turing computability, then hypercomputation models are interesting but definitionally outside the scope of 'effective computability.'",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the definition of effective computability should be extended to cover hypercomputational models"
+    },
+    {
+      "id": "quantum_advantage_and_definitional_scope",
+      "question": "Do quantum computers compute 'effectively' in the sense captured by the Church-Turing thesis, or does quantum advantage demonstrate that the definition needs revision?",
+      "resolution_mechanism": "Quantum computers can factor and solve certain problems faster than known classical algorithms, but all quantum-computable functions are Turing-computable (they compute the same set of yes/no answers, just faster). This is consistent with the definition-reading: quantum machines are *more efficient* but not more *expressive*. The question is whether 'effective computability' should include efficiency classes, which would require redefining the concept.",
+      "impact": "If 'effective' remains means 'computable in principle (regardless of time/space cost),' the definition-reading holds unchanged. If 'effective' is reinterpreted to include efficiency, the definition itself requires revision and the thesis becomes a historical artifact rather than the binding definition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether quantum computational advantage requires redefining effective computability"
+    },
+    {
+      "id": "internalized_suppression_of_alternative_definitions",
+      "question": "To what extent does the thesis's status as a 'definition' rest on active philosophical enforcement (textbooks, curricula, peer review) versus being a self-evident formalization that needs no defense?",
+      "resolution_mechanism": "Survey foundational mathematics and computer science curricula to measure how the thesis is presented (as a definitional stipulation vs. as an empirical-seeming claim). Examine refusal patterns in peer review: are alternative definitions of computability rejected as incoherent, or as non-standard?",
+      "impact": "If the definition is self-evident, suppression measures are minimal and the constraint is genuinely low-extractiveness coordination. If the definition requires active pedagogical and editorial enforcement to exclude alternatives, then suppression is higher and the reading is less a pure definition and more a defended claim.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the thesis's status as definition requires active suppression of alternatives"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Church-Turing thesis asserts that the mathematical models of effective computability proposed by Church (lambda calculus), Turing (machines), Gödel and Herbrand (recursive functions), and Post (canonical systems) are equivalent — they compute exactly the same set of functions. This story interprets the thesis as a *mathematical definition* stipulating what we shall *mean* by 'effective computability,' true by convention rather than empirically testable. Under this reading, the thesis is not an assertion about nature (whether physical processes can exceed Turing bounds) nor a boundary claim (whether formal proof and computation have the same scope), but simply a linguistic convention: we use 'effectively computable' to mean 'computable by a Turing machine (or any of the equivalent models).' This is a low-extractiveness coordination constraint — it serves mathematical clarity without creating victims or suppressing genuine alternatives (alternatives would be semantic choices about terminology, not mathematical facts being hidden). The constraint type is Rope: genuine coordination of mathematical terminology across independent formalisms, with minimal asymmetry or coercion.",
+    "key_agents": [
+      "Mathematical logic community: uses the definition in proofs and textbooks; benefits from unified terminology",
+      "Computer science foundations: grounds complexity theory and decidability results on the definition",
+      "Proof theory: depends on the definition to separate algorithmically decidable from undecidable problems",
+      "Quantum computing researchers: excluded from consensus, argue the definition should extend to quantum models",
+      "Hypercomputation researchers: excluded from consensus, develop models beyond the definition's scope",
+      "Empirical physicists: analytical observers, measure what physical systems can compute"
+    ],
+    "logic_rationale": "Extractiveness is very low (0.08 by 2026) because the constraint is constitutive — it does not extract resources or asymmetrically benefit one party over another. All participants (logic, CS, proof theory) gain equal benefit from the unified definition. Suppression is minimal (0.02) because the definition is not maintained by coercion or the exclusion of competitors — it is maintained by consensus and pedagogy. Theater ratio is negligible (0.05) because the constraint's function (alignment on terminology) is its actual operation — there is no significant gap between what the constraint claims to do and what it does. Accessibility_collapse is low (0.15) because alternatives remain formally available: researchers could use different definitions, call lambda-computable functions by a different name, treat Turing machines and recursive functions as separate concepts. The alternatives are not chosen because the consensus definition is more useful, not because they are impossible. Resistance is low (0.12) because the definition faces no real opposition — even those who dispute the reading (quantum researchers, hypercomputation researchers) do not argue that the definition itself is wrong, only that it may be too narrow or miss important phenomena. The measurements show a slight rise over the 90-year interval as the definition became more embedded in curricula and textbooks (theater and suppression rising from near-zero to minimal levels), but the constraint never becomes substantially extractive because its fundamentally coordinative nature is stable.",
+    "directionality_logic": "All stakeholders are near the symmetric end of directionality (d ≈ 0.5) because all benefit equally from the coordination without being targeted by extraction. The mathematical logic community, computer science foundations, and proof theory are listed as beneficiaries because they depend on and use the definition — they collect clarity and utility without paying a cost. There are no victims because a mathematical definition cannot be violated, and the constraint produces no concentrated gains that are subtracted from anyone's allocation. Quantum computing and hypercomputation researchers are excluded (not victimized) — they are outside the consensus, not harmed by it. The definition simply does not describe their models, which is a feature of the definition, not an injustice done to them. This is why there is no victim set: a definitional constraint has no victims, only exclusions and inclusions.",
+    "perspectival_gap": "From the mathematical logic community's perspective, the constraint is pure coordination — a settled naming convention that lets them work efficiently. From the quantum computing researcher's perspective, the constraint is exclusionary — their models and results are named 'non-computable,' which marginalizes them from the central discourse. From the empirical physicist's perspective (analytical observer), the constraint is a piece of mathematical culture with no bearing on what physical systems can do. The engine computes each seat's perception of the constraint from the stakeholder data, power, and exit options — the mathematical logic community's high institutional power and global scope, combined with beneficiary status and mobile exit, produces one classification; the quantum researcher's organized power, biographical horizon, and excluded status produces another. The divergence is the signal the corpus measures.",
+    "mandatrophy_analysis": "The constraint does not suffer mandatrophy because its founding problem (establishing a unified definition of computability) remains live and the constraint directly solves it. The thesis is not an atrophied function maintained theatrically — it is actively used in every introduction to the theory of computation, every recursion theory course, every complexity theory paper that needs to define 'decidable' or 'computable.' There is no gap between the constraint's founding purpose and its current operation. If anything, the constraint has strengthened over time as foundational computer science became more formalized and the need for a unified definition more pressing. The measurement series shows stable operation, not drift toward theater.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'church_turing_thesis.' The kernel is the claim that various mathematical models of computation are equivalent. This reading (mathematical_definition_reading) interprets the kernel as a definitional stipulation about the meaning of 'effective computability' — true by convention, not empirically testable. Sibling readings reinterpret the same kernel differently: the physical_claim_reading treats the equivalence of models as evidence for a claim about physical reality (no physical process can exceed Turing limits); the epistemological_boundary_reading treats the equivalence as marking the boundary of formal provability (what we can prove computable is exactly the Turing-computable functions, regardless of physical possibility). The readings share the mathematical fact (the equivalence of models) but disagree on what that fact *means* — what it is a fact *about*. The definition-reading's claim is that it is a fact about how we choose to define a term, not about nature or epistemology. This reading makes no empirical claims and produces no victims, in contrast to the physical_claim_reading (which makes a testable claim about nature and could be falsified) and the epistemological_boundary_reading (which makes a claim about the scope of formal knowledge and is contestable in philosophical debate)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.04
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__physical_claim_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ],
+    "dual_formulation_note": "The Church-Turing thesis is a contested kernel admitting multiple readings, each instantiating a structurally distinct constraint. This story (mathematical_definition_reading) treats the thesis as a mathematical definition — coordination with negligible extraction. The physical_claim_reading interprets the same kernel as an empirical claim about nature — higher extractiveness and contested legitimacy. The epistemological_boundary_reading interprets the kernel as a boundary-marking claim about formal provability — intermediate extractiveness and different victim structure. Each reading is a separate constraint story with its own ε, beneficiary structure, and type. They are linked via network.affects_constraints to enable the corpus to track how the same contested kernel produces different constraint instantiations depending on how the parties interpret it."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "church_turing_thesis__physical_claim_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "church_turing_thesis__epistemological_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effective_computability_is_definitional",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "equivalence_of_models_is_mathematical_fact",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "church_turing_definition_as_stipulation",
+    "drift_state": {
+      "moment": "contemporary_quantum_hypercomputation_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

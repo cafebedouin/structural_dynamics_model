@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "paris_article_4_ndc__supranational_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5b3ec006-b1ab-4e78-bfdd-bb08729e8ee8"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.63,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NDC Binding Commitments on Ratcheting Trajectory Toward Net-Zero with International Accountability (Supranational Reading)",
+    "topic_domain": "international/climate/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "climate_vulnerable_states",
+      "renewable_energy_industries",
+      "global_carbon_accountability_system"
+    ],
+    "victims": [
+      "carbon_intensive_industries",
+      "incumbent_fossil_fuel_states",
+      "energy_poor_developing_states"
+    ]
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2035
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2035,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.31
+    }
+  ],
+  "omegas": [
+    {
+      "id": "binding_vs_voluntary_semantics",
+      "question": "Are NDCs legally binding commitments or politically binding pledges? Does 'binding' mean enforceability through sanctions or merely reputational cost?",
+      "resolution_mechanism": "Legal interpretation by the International Court of Justice or subsequent UNFCCC decisions that clarify Article 4 compliance mechanisms and consequences for non-compliance. Case law from states that have formally withdrawn or violated NDCs.",
+      "impact": "If binding = legally enforceable with material sanctions, the supranational reading holds and extraction rises to 0.85+. If binding = reputational only, the reading shifts toward rope or piton; extraction drops to 0.55–0.65. The measurement series assumes binding = legally enforceable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The core semantic distinction underlying the supranational vs. sovereigntist readings."
+    },
+    {
+      "id": "ratcheting_mechanism_credibility",
+      "question": "Can the ratcheting trajectory (each NDC more ambitious than the last) be sustained against state defection and fossil fuel state alliance-building?",
+      "resolution_mechanism": "Observation of NDC submissions in 2025, 2030, and 2035 rounds. If successive NDCs show declining ambition or explicit weakenings, ratcheting has failed; if they accelerate, it holds. COP outcomes and UNFCCC synthesis reports on collective progress.",
+      "impact": "If ratcheting fails, the supranational reading collapses into sovereignism—NDCs revert to voluntary self-determined pledges. Extraction would fall to 0.45–0.55 and claimed type would shift from tangled_rope to rope or piton. If ratcheting holds, the 0.81 supranational extraction is conservative.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the institutional machinery can sustain escalating decarbonization demands."
+    },
+    {
+      "id": "climate_finance_adequacy_and_conditionality",
+      "question": "Will developed states transfer sufficient capital to developing states for NDC compliance, or will finance become a control mechanism that subordinates energy-poor states to Northern carbon preferences?",
+      "resolution_mechanism": "Tracking climate finance flows (promised vs. delivered), interest rates and conditionality on climate finance loans, and developing-state outcomes in energy access and NDC achievement. Comparative analysis of states with strong NDCs but weak financing vs. weak NDCs with preferential access.",
+      "impact": "If finance is adequate and non-coercive, the tangled_rope coordinating function is strengthened and energy-poor states shift from payers to beneficiaries. If finance is inadequate or coercive, the constraint becomes a snare for developing states; extraction on that seat rises to 0.88+ while extraction on climate-vulnerable seats falls. The measurement series assumes mixed finance (sufficient in aggregate, coercive at margins).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether climate finance is a genuine transfer mechanism or a control apparatus."
+    },
+    {
+      "id": "reading_contest_and_contestation_closure",
+      "question": "Will the supranational reading consolidate as the dominant UNFCCC interpretation, or will sovereigntist and equity readings continue to compete and fragment compliance?",
+      "resolution_mechanism": "COP decisions and UNFCCC secretariat guidance: do successive COPs reaffirm the supranational reading or weaken it? Do fossil fuel states and climate skeptics achieve dilution of enforcement? Do equity-focused states secure structural changes that embed differentiation? Political economy of UNFCCC governance and coalition dynamics.",
+      "impact": "If supranational reading consolidates, this constraint story is descriptively true and extractiveness rises toward 0.90+ by 2035. If sovereigntist reading advances, the constraint fragments into seat-specific types: supranational for climate-vulnerable seats, sovereigntist (rope) for high-emission states. If equity reading dominates, the beneficiary/victim structure inverts and extraction on energy-poor states falls while extraction on unequal-emission states rises. The measurement series assumes supranational consolidation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The constitutional meta-question: which reading of the Paris kernel will the UNFCCC institutionalize?"
+    },
+    {
+      "id": "indigenous_land_rights_and_ndc_conflicts",
+      "question": "How will the tension between NDC land-use targets and indigenous sovereignty be resolved? Will conservation become indigenous-led or state-controlled carbon sequestration?",
+      "resolution_mechanism": "Empirical tracking of land-use NDC implementation: which territories are subject to conservation easements, who controls those territories, and what happens to indigenous communities living there. Legal cases and precedents on indigenous rights vs. state climate policy.",
+      "impact": "If indigenous communities retain control and benefit from land-based NDCs, they shift from excluded to beneficiary and the constraint's equity profile improves. If states colonize territories for carbon credits, suppression on indigenous communities rises to 0.88+ and the constraint becomes a snare for that seat. The base measurement assumes state-led conservation with indigenous suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether NDC implementation preserves or erodes indigenous land sovereignty."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Paris Agreement's Article 4 requires all signatory states to submit Nationally Determined Contributions (NDCs) outlining their climate action and targets. The supranational reading interprets NDCs as legally binding commitments on a mandatory ratcheting trajectory toward net-zero, with international accountability mechanisms that create material consequences for insufficient ambition. Under this reading, successive NDCs must become progressively more stringent, carbon-intensive industries face regulatory extinction, and wealth flows from high-emission states to climate-vulnerable ones through climate finance conditionality. This reading is contested by sovereigntist interpretations (NDCs as voluntary self-determined pledges) and equity readings (NDCs must embed Common But Differentiated Responsibilities distinguishing developed from developing states). This constraint story instantiates ONLY the supranational reading as a clean, ε-invariant constraint—the other readings are separate constraint stories linked through network.affects_constraints.",
+    "key_agents": [
+      "UNFCCC Secretariat and Compliance Bodies: institutional agenda-setter, defines binding interpretation and transparency requirements",
+      "Climate-Vulnerable States (Small Island Developing States, LDCs): organized beneficiaries, face existential risk mitigation through binding NDC commitments",
+      "Carbon-Intensive Industries (fossil fuels, cement, steel, aviation): powerful payers, face regulatory extinction through ratcheting decarbonization",
+      "Incumbent Fossil Fuel States (Saudi Arabia, Russia, Australia): institutional payers, face revenue contraction and diplomatic pressure",
+      "Renewable Energy Industries: powerful beneficiaries, capture mandated decarbonization market expansion without bearing transition costs",
+      "Energy-Poor Developing States: powerless payers, trapped between binding NDCs and lack of capital for transition",
+      "Indigenous Communities: excluded payers, face land conscription for carbon sequestration without sovereignty recognition",
+      "Climate Finance Gatekeepers (World Bank, MDBs): institutional agenda-setters and beneficiaries, wield conditionality and grow mandates"
+    ],
+    "logic_rationale": "Extractiveness is high and rising (0.52→0.87 over the interval) because the supranational reading encodes binding decarbonization obligations that create asymmetric costs: carbon-intensive industries and fossil fuel states bear steep transition expenses while renewable energy and climate-vulnerable actors collect benefits. The ratcheting mechanism amplifies extraction over time—each successive NDC round increases decarbonization stringency, raising the cost of compliance for payers and the value of compliance for beneficiaries. Suppression is substantial (0.48→0.78) because the constraint's persistence depends on UNFCCC enforcement of transparency and accountability mechanisms that prevent states from submitting weak NDCs; suppression is most intense against energy-poor developing states, who are trapped between binding commitments and lack of finance, and against indigenous communities, whose land is conscripted for carbon credits without consent. Theater is low-moderate (0.15→0.31) because the NDC process involves genuine technical work (emissions inventories, reduction pathways) but an increasing share of institutional activity defends the binding interpretation against sovereigntist challenge—performative consensus-building becomes more necessary as political resistance rises. Accessibility collapse is high across all levels (0.48→0.71 individual; 0.62→0.84 structural) because once the supranational reading consolidates as UNFCCC doctrine, alternatives (market-driven decarbonization, state-led energy sovereignty) are foreclosed by the binding framework. Resistance is moderate and declining (0.58→0.52 structural; 0.72→0.68 individual) because fossil fuel state and skeptical coalitions have fewer exit options as capital markets price in carbon liabilities, and because climate impacts make denial increasingly costly politically. The coercion grid shows that suppression intensifies most at the structural and organizational levels (state and industry enforcement) while individual resistance remains highest—a classic pattern of high-level coordination suppressing low-level exit.",
+    "perspectival_gap": "The UNFCCC and climate-vulnerable states perceive the constraint as rope-plus-justice: coordination that solves emissions tragedy plus a mechanism for wealth transfer from North to South (tangled_rope, genuine coordination with asymmetric distribution of benefits). Fossil fuel states and skeptical coalitions perceive it as snare: binding commitments imposed without their consent, enforced through financial and diplomatic pressure, from which they cannot exit without cost. Energy-poor developing states experience it as a complex dual trap: tangled_rope at the beneficiary end (binding emission reductions by wealthy states benefit them) and snare at their own seat (binding NDCs on themselves despite lacking transition capital). The coercion grid shows this: suppression is lowest at the individual level (people still have informal exit through migration, black markets, energy theft) and highest at the organizational and structural levels (states and industries face institutional enforcement). Resistance mirrors this: individuals mount the most resistance (climate strikes, fossil fuel divestment campaigns), while states and industries have fewer defection options.",
+    "directionality_logic": "Directionality derives from beneficiary/victim declarations and differential exit options. Climate-vulnerable states benefit from binding NDCs (low d, ~0.15) because the constraint reduces warming risk without requiring them to decarbonize themselves; their exit option is 'constrained'—they can participate in future UNFCCC rounds but cannot leave without losing negotiating power and climate finance. Renewable energy industries benefit (low d, ~0.20) and have mobile exit—they can shift to other markets if NDCs fail, but ratcheting guarantees expanding demand. Carbon-intensive industries are victims (high d, ~0.85) with constrained exit: they must transition or face regulatory exclusion, and relocating to less-regulated jurisdictions invites capital flight and reputational risk. Energy-poor developing states are victims (high d, ~0.88) with trapped exit: they cannot refuse binding NDCs (no state exits Paris without diplomatic cost), cannot fund compliance without climate finance (which is conditioned on NDC stringency), and cannot maintain coal-powered development without violating their pledges. Indigenous communities are victims (high d, ~0.82) with trapped exit: their land is conscripted for NDC carbon credits without consent, and they have no formal veto in UNFCCC processes. Fossil fuel states have high d (~0.80) and constrained exit: they face binding decarbonization obligations they view as unilateral impositions but cannot leave the framework without economic sanctions. The supranational reading assigns highest directionality toward victimhood (most constrained exit + highest extraction burden) to powerless developing states and indigenous communities, moderate directionality to powerful carbon-intensive actors (who have arbitrage options through capital relocation), and lowest directionality to beneficiary seats (which face no extraction and have mobile or analytical exit).",
+    "mandatrophy_analysis": "The founding problem is real: global carbon emissions must decline and no single state will decarbonize without assurance others will follow (tragedy of the commons). The supranational reading solves this by making NDCs binding and ratcheting—each state has incentive to exceed its peers' targets (to avoid appearing insufficient) and to enforce peers' compliance (to avoid being undercut). However, mandatrophy risk exists: as carbon-intensive industries lobby for weaker targets and fossil fuel states threaten exit, the ratcheting mechanism comes under pressure. If the UNFCCC relaxes the binding interpretation or allows successive NDCs to weaken, the constraint would become a piton—institutionally maintained theater of commitment without real decarbonization. The measurement series assumes ratcheting holds through 2035, but the omega variable 'ratcheting_mechanism_credibility' flags this as the constraint's critical stress point. A snare/mandatrophy hybrid is possible: the supranational reading persists as official UNFCCC doctrine (theater of binding commitment) while actual state behavior shows non-compliance and weaker NDCs (degraded coordination function). The three-way reading contest (supranational vs. sovereigntist vs. equity) itself performs mandatrophy: as the readings compete, the institutional energy invested in the contest increases even if the coordination function declines. An omega on 'reading_contest_and_contestation_closure' documents this risk.",
+    "kernel_context": "This constraint instantiates the SUPRANATIONAL READING of the paris_article_4_ndc kernel. The kernel is the Paris Agreement Article 4 commitment on NDCs—a formally written but semantically contested provision that different parties read as binding legal obligation, voluntary self-determined pledge, or equity-embedded differentiated responsibility. The supranational reading interprets Article 4 as codifying legally binding commitments on a mandatory ratcheting trajectory toward net-zero with international accountability mechanisms. Sibling readings include the sovereigntist reading (NDCs as voluntary self-determined pledges preserving national energy sovereignty—constraint story paris_article_4_ndc__sovereigntist_reading) and the equity reading (NDCs must embed Common But Differentiated Responsibilities distinguishing developed from developing states—constraint story paris_article_4_ndc__equity_reading). The structural delta between readings is large: supranational yields high epsilon (0.81), binding enforcement, and wealth transfers institutionalized through climate finance; sovereigntist yields low epsilon (0.35–0.45), voluntary participation, and market-driven decarbonization; equity yields moderate epsilon (0.60–0.68) with asymmetric obligations and differentiated targets. All three readings share the same kernel text but produce different constraint types, beneficiary structures, and exit options for each seat. This story is the supranational reading as a clean, ε-invariant constraint—the sibling readings are other stories, other files, linked through network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "paris_article_4_ndc__sovereigntist_reading",
+      "paris_article_4_ndc__equity_reading",
+      "carbon_markets_article_6",
+      "climate_finance_conditionality",
+      "indigenous_land_carbon_sequestration"
+    ],
+    "dual_formulation_note": "The paris_article_4_ndc kernel has three structurally distinct readings: supranational (this story, binding commitments with ratcheting), sovereigntist (voluntary pledges preserving national sovereignty), and equity (differentiated obligations per CBDR-RC). Each reading produces different epsilon values, different beneficiary/victim structures, and different terminal constraint types. They are NOT the same constraint viewed from different angles—their ε values differ by >0.35 and their failure modes are distinct. They are linked through network.affects_constraints to enable the engine to compute cross-reading contamination and reading-contest dynamics. Each story is authored with zero reference to its siblings' claims; the readings are brought into relationship only through the network layer and through the omega variables documenting the reading contest."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "paris_article_4_ndc__sovereigntist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "paris_article_4_ndc__equity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ndc_legal_bindingness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ratcheting_trajectory_institutional_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "legally_binding_international_decarbonization_framework",
+    "drift_state": {
+      "moment": "id_2026_onward_contested_reading_consolidation",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

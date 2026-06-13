@@ -1,0 +1,406 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__marketplace_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_protection_kernel__marketplace_reading",
+    "story_uid": "2295e31e-a84e-433c-ade3-47078825ef9e"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.73,
+    "claimed_type": "rope",
+    "human_readable": "Speech Protection as Truth-Discovery Coordination (Marketplace Reading)",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "truth_seeking_public",
+      "institutional_science",
+      "competing_truth_claimants"
+    ],
+    "victims": [
+      "targets_of_false_damaging_speech"
+    ],
+    "vindicated_propositions": [
+      "epistemic_market_self_correction",
+      "listener_rationality_assumption"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "truth_seeking_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gains access to a wide range of claims and counter-claims without prior state curation; expected to evaluate, test, and settle truth through discourse. Benefits from the coordination function (no speech licensing authority blocks access to information) but bears the cost of exposure to false and harmful claims until correction emerges."
+    },
+    {
+      "name": "targets_of_false_damaging_speech",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Suffer reputational, professional, or psychological harm from false or damaging claims about them. The marketplace reading denies them proactive removal of damaging speech, instead requiring them to mount counter-speech to correct the record. Their recourse is limited to speech-in-response or eventual legal remedy under narrow categories (defamation, incitement) that the marketplace reading treats as exceptions."
+    },
+    {
+      "name": "institutional_science",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from freedom to publish findings, conduct open peer debate, and correct errors through additional evidence and counter-argument. The constraint protects the institutional conditions for hypothesis testing and error correction. Relies on the assumption that false or misleading claims in the scientific marketplace will be defeated by evidence and superior argument rather than regulatory suppression."
+    },
+    {
+      "name": "competing_truth_claimants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Can advance claims, hypotheses, and frameworks without pre-clearance; expected to defend them through argument and evidence. Benefit from the constraint's protection against content-based filtering, but depend on the marketplace assumption that superior claims will eventually prevail. Face the cost of reputational contest and the burden of continuous demonstration."
+    },
+    {
+      "name": "state_licensing_authorities",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are structurally excluded from adjudicating which claims may be published. The marketplace reading rejects speech licensing, prior restraint, and content-based filtering by state authorities as distorting the truth-discovery process itself. They retain authority only in narrow post-hoc categories (incitement, defamation) rather than prospective gatekeeping. Their exclusion is built into the constraint's definition."
+    },
+    {
+      "name": "disinformation_operators",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Can disseminate false claims without prior censorship but face correction through counter-speech and, if sufficiently coordinated and damaging, potential legal liability under narrow harm-based exceptions. The marketplace reading does NOT exclude them by design; rather, it tolerates their speech as the cost of protecting the truth-discovery process, betting that counter-speech and evidence will defeat them."
+    },
+    {
+      "name": "civil_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate post-hoc harm claims (defamation, incitement, false advertising) but are barred from pre-publication content review. They monitor whether the marketplace assumption holds — whether truth-discovery and correction occur fast enough to prevent irreparable harm. Their decisions shape the boundaries of the exceptions that carve into the otherwise-absolute protection."
+    },
+    {
+      "name": "epistemic_commons_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Depend on the marketplace to sort true from false claims but lack the institutional resources, education, or time to evaluate competing claims independently. They are structural beneficiaries of the coordination (access to unsuppressed speech) but vulnerable to being flooded with false information that exploits their information asymmetry. Their identity as epistemic participants is locked into the marketplace assumption — they cannot opt out of having to evaluate claims."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of allocating scarce truth-discovery resources: rather than empowering a central licensing authority to pre-judge which claims are publishable, distributes the burden of evaluation and correction across all speech participants. Assumes that truth emerges from open competition of claims, that listeners are rational enough to prefer true over false claims when evidence is available, and that institutional science and counter-speech will outrun deception over time.",
+    "transfer_function": "Transfers the cost of evaluating speech from a gatekeeper (state authority, institutional monopoly) to the distributed population of listeners and competing speakers. Also transfers the burden of harm-remediation from prevention (restricting false speech in advance) to correction (mounting counter-speech, accumulating evidence, and mounting legal action after the fact).",
+    "absent_voices": "State licensing authorities are excluded from the conversation about what counts as publishable; they would argue that certain false claims (medical misinformation, incitement to violence, election interference) do measurable harm fast enough that counter-speech cannot correct them in time. Targets of false speech campaigns would argue that the marketplace assumption breaks down when false claims overwhelm correction capacity and exploit information asymmetries. Epistemic commons users (those without institutional resources to evaluate competing claims) are not absent but under-resourced in the marketplace frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If speech protection under the marketplace reading disappeared overnight, the institutional landscape would reorganize: state licensing authorities would erect pre-publication gates; institutional science would face content review; competing truth-claimants would require approval before publication. The epistemic commons would shift from one in which false claims circulate and are corrected to one in which a gatekeeper decides what reaches the public. The assumption that distributed correction is faster and less distorting than centralized prevention would cease to structure legal doctrine.",
+    "founding_problem": "Prior restraint by state authorities and religious/political licensing created an epistemic commons where truth could not emerge because competing claims were suppressed before reaching the public. The founding problem is the recognition that gatekeeping by authorities corrupts the truth-discovery process itself — a state censor will always suppress claims that threaten the ruling regime, regardless of their truth value.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The marketplace reading's proponents (First Amendment scholars, institutional science, press organizations) attest the founding problem remains live — any centralized authority over publication will bias what counts as truth. Critics from outside this reading (harm-threshold advocates, dignity theorists, democratic-participation scholars) attest the founding problem has been partially solved by technology and institutional maturation, and that the costs of the marketplace assumption (unchecked disinformation, harassment of targets) now exceed the benefits. No external consensus exists; the contest is between established readings of the kernel."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.57,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The marketplace reading justifies speech protection as a mechanism for truth-discovery: false and harmful claims should be countered by more speech, evidence, and argument rather than suppressed by state authority or platform gatekeeping. This reading assumes listener rationality, institutional science's self-correction, and the superiority of distributed correction over centralized prevention. It has dominated First Amendment doctrine but faces mounting pressure from harm-threshold, dignity, and democratic-participation readings that argue the marketplace assumption breaks down when false claims spread faster than correction, exploit information asymmetries, or subordinate target groups. The constraint story treats the marketplace reading as ONE interpretation of the contested speech-protection kernel, distinct from but structurally related to its sibling readings.",
+    "key_agents": [
+      "truth_seeking_public: Coordinate beneficiary; gains access to uncensored information; depends on the marketplace assumption that rationality and counter-speech will settle truth.",
+      "targets_of_false_damaging_speech: Payer; must endure false claims and mount counter-speech rather than seek prior removal; their recourse is limited to narrow exceptions (defamation, incitement).",
+      "institutional_science: Beneficiary; protects freedom to publish, test hypotheses, and correct errors through evidence; relies on open peer debate and error correction rather than preemptive suppression.",
+      "state_licensing_authorities: Excluded; the reading rejects their gatekeeping function as distorting truth-discovery; they are barred from pre-publication content review except in narrow post-hoc harm categories.",
+      "epistemic_commons_users: Powerless beneficiary/payer; depend on the marketplace for information access but lack resources to evaluate competing claims; structurally locked into the marketplace assumption by their identity as speech participants."
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.58) because the constraint imposes costs on targets of false speech and on epistemic commons users who bear the risk of information floods. The measurement trajectory shows rising extractiveness over time: as digital platforms amplify false claims and coordination of disinformation improves, the gap between false-claim spread and correction-speech accumulation widens, revealing the constraint's extractive edge. Suppression is higher (0.62) than extractiveness because the constraint requires active enforcement against alternative readings — legal doctrine must suppress harm-threshold reasoning, dignity-based restrictions, and licensing authorities' gatekeeping impulses to maintain the marketplace frame. Theater ratio is moderate (0.41) because the constraint legitimizes itself through an epistemic narrative (truth emerges from open competition) while performing an institutional function (protecting specific truth-claimants and power structures that benefit from unsuppressed speech). The three metrics sit on one shared time grid; all are authored at every examined time point. The trajectory plateaus after t=25, reflecting the assumption that the marketplace reading has stabilized in doctrine even as its costs accumulate.",
+    "perspectival_gap": "The beneficiary seats (truth-seeking public, institutional science) experience the constraint as genuine coordination — the conditions necessary for truth-discovery. The payer seats (targets, epistemic commons users) experience it as enforced asymmetry: they are forbidden from seeking removal of damaging claims and must instead shoulder the burden of continuous correction. State authorities experience themselves as excluded from a function they believe they perform better (gatekeeping harmful content). The engine computes these perspectival gaps from the power atoms, exit options, and beneficiary/victim declarations — a moderate-power payer with constrained exit (targets of false speech) will compute a higher d than an organized beneficiary with mobile exit (truth-seeking public). The divergence is structural, not a measurement error.",
+    "directionality_logic": "The truth-seeking public and institutional science are directional beneficiaries: they gain the coordination benefit (unsuppressed speech, distributed truth-discovery) without bearing extraction. Targets of false speech are directional payers: they bear the cost of exposure to uncorrected claims and have constrained exit (they cannot avoid being discussed or defamed). Epistemic commons users are dual-positioned: they benefit from access to unsuppressed information but pay the cost of information asymmetry; their identity as speakers/listeners is locked into the marketplace frame (identity_locked exit). State authorities are not payers or beneficiaries; they are excluded from the coordination function itself — their exclusion is built into the constraint's structural definition. This directionality derives from the beneficiary/victim declarations and the exit-options spectrum, not from authored directionality scores.",
+    "mandatrophy_analysis": "The marketplace reading avoids mandatrophy detection through two mechanisms: (1) its founding problem (prior restraint by state authorities distorts truth-discovery) remains contested, so it has not yet crossed into deadness; (2) institutional science, press organizations, and First Amendment scholars continue to defend the marketplace assumption as live and necessary. However, the omega variables documenting marketplace-assumption breakdown and correction-lag effects capture the risk zone. A future corpus measurement showing suppression_requirement converging to 1.0 while theater_ratio stays flat (enforcement hardening while the epistemic narrative grows perfunctory) would signal mandatrophy development. The story is not yet mandatrophic, but the rising extractiveness trajectory (0.35 → 0.58 over the interval) marks a warning trajectory.",
+    "kernel_context": "This constraint is the MARKETPLACE READING of the contested speech_protection_kernel. The reading instantiates protection justified by collective epistemic benefit (truth-discovery through distributed correction) rather than individual autonomy (which the absolutist reading emphasizes) or democratic self-governance (which the democratic_participation reading emphasizes) or relational dignity (which the dignity reading emphasizes) or harm-prevention (which the harm_threshold reading emphasizes). The marketplace reading sits in structural relation to four sibling readings: it forecloses the harm_threshold reading's core premise (that preventive suppression of harmful speech is justified) while coexisting with the absolutist reading (both reject content-based restrictions, but for different reasons) and influencing the democratic_participation and dignity readings (reshaping what counts as a legitimate speech interest by centering epistemic function). The foundational axioms are: (1) listener_rationality_sufficiency (listeners can and will prefer true over false claims when evidence accumulates), and (2) decentralized_correction_superiority (distributed truth-seeking and counter-speech are more epistemically reliable than centralized gatekeeping)."
+  },
+  "omegas": [
+    {
+      "id": "marketplace_assumption_breakdown",
+      "question": "Does the marketplace assumption hold — that truth emerges from open competition of claims and that counter-speech and evidence will defeat false claims faster than false claims spread?",
+      "resolution_mechanism": "Empirical measurement of spread-to-correction lag in digital communication; modeling of disinformation cascades; historical analysis of cases where false claims persisted despite abundant counter-evidence (QAnon, flat earth, vaccine hesitancy); institutional audit of whether institutional science's correction mechanisms keep pace with false claims in high-volume domains.",
+      "impact": "If the assumption breaks (correction lag exceeds spread speed consistently), the reading's justification for rejecting content-based restrictions collapses, and harm-threshold and dignity readings become structurally more defensible. If the assumption holds, the marketplace frame is reinforced. The empirical status of this axiom (listener_rationality_sufficiency + decentralized_correction_superiority) gates whether the reading remains live or becomes functionally obsolete.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Core epistemic premise of the marketplace reading: whether distributed truth-discovery outperforms centralized prevention in practice."
+    },
+    {
+      "id": "listener_rationality_distribution",
+      "question": "What proportion of the public has access to the information, time, and cognitive resources necessary to evaluate competing truth-claims as the marketplace reading assumes?",
+      "resolution_mechanism": "Population survey of epistemic literacy; measurement of information access and evaluation capacity; demographic breakdown of who benefits from and who is harmed by the marketplace assumption.",
+      "impact": "If listener rationality is rare or unequally distributed, the reading's justification shifts: it becomes a protection for credentialed speakers and institutional science at the expense of epistemic commons users (those without resources to evaluate claims). The reading would then be revealed as imposing extractive costs on the information-poor. If rationality is broadly distributed, the reading's coordination narrative holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the marketplace reading's assumption about listener rationality and evaluation capacity is descriptively accurate."
+    },
+    {
+      "id": "harm_threshold_boundary",
+      "question": "Where should the boundary between marketplace protection and harm-based restriction be drawn? Is demonstrable harm to identifiable targets grounds for preventive speech restriction, or only post-hoc remedy?",
+      "resolution_mechanism": "Comparative law analysis of jurisdictions that have moved toward harm-threshold restrictions (Australia, Canada, UK) and measured outcomes; case study of specific categories (incitement, defamation, harassment, medical misinformation) where courts have grappled with the boundary; empirical measurement of harm accumulation rate versus correction rate in high-damage domains.",
+      "impact": "If the boundary moves toward harm-based restrictions, the marketplace reading forecloses and the harm_threshold reading becomes dominant. If the boundary holds at post-hoc remedy only, the marketplace reading maintains dominance. This omega documents the highest-stakes structural contest between this reading and its harm_threshold sibling.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The empirically contested boundary between marketplace protection and harm-prevention exception."
+    },
+    {
+      "id": "reading_kernel_vs_sibling_readings",
+      "question": "Which reading of the speech_protection_kernel is structurally true — marketplace, absolutist, harm_threshold, dignity, or democratic_participation?",
+      "resolution_mechanism": "This omega cannot be resolved empirically because it is fundamentally a reading contest. The resolution mechanism is institutional drift: over time, one reading becomes dominant in case law, legislation, and doctrine. Currently (2026), the marketplace reading remains institutionally dominant in US doctrine but faces sustained pressure from harm_threshold (EU, UK, Australia) and dignity readings (feminist jurisprudence) and democratic_participation readings (newer scholarship). The reading will be settled not by empirical discovery but by which faction's institutional power increases or decreases.",
+      "impact": "If a sibling reading becomes dominant, this constraint's type classification would be superseded by the new reading's constraint story. The entire analytical frame (beneficiaries, victims, extraction mechanism) would shift. This is the deepest uncertainty: which kernel reading becomes hegemonic doctrine.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The irreducible contest between structurally incompatible readings of the speech-protection kernel."
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the suppression measured in this reading (0.62) structural (external barriers to content-based restriction, legal doctrine that blocks authorities from gatekeeping) or internalized (speakers and platforms self-censor to avoid reputational/legal risk, even when legal doctrine permits speech)?",
+      "resolution_mechanism": "Comparative analysis of self-censorship before and after formal speech-protection doctrine; interviews with speakers and platform operators about their decision-making; measurement of speech patterns in jurisdictions with and without formal protections.",
+      "impact": "If suppression is internalized, the constraint's effective suppression may be higher than the structural measure suggests — speakers carry the suppression with them even in formally protected spaces. This would raise the constraint's extractiveness: targets of false speech face suppression that occurs through distributed self-censorship rather than central authority, making the extraction harder to remedy. If suppression is structural, the count of 0.62 accurately reflects the force required to maintain the reading against alternative readings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternative readings is structural or internalized (or both)."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__dignity_reading",
+      "speech_protection_kernel__democratic_participation_reading"
+    ],
+    "dual_formulation_note": "The marketplace_reading is one of five structurally distinct readings of the contested speech_protection_kernel. All five constraint stories share the kernel (speech protection as a constitutional commitment) but differ in their ε values, beneficiary/victim structures, and classification. This reading justifies protection by collective epistemic benefit (truth-discovery); the absolutist reading justifies it by individual autonomy; the harm_threshold reading conditions it on demonstrable harm; the dignity reading conditions it on not functioning as subordination; the democratic_participation reading centers political speech for self-governance. The readings influence each other: the marketplace reading creates institutional pressure on harm_threshold and dignity readings by centering epistemic function, but the harm_threshold reading forecloses the marketplace reading's core premise if empirical breakdowns of the marketplace assumption accumulate. The five stories form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_protection_kernel__absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__harm_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__dignity_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "speech_protection_kernel__democratic_participation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "listener_rationality_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "decentralized_correction_superiority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "prior_restraint_rejection",
+    "drift_state": {
+      "moment": "digital_communication_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "institutional_science",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

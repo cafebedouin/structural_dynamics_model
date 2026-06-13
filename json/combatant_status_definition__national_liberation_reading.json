@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__national_liberation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "7d5211c4-dff9-49d2-bf09-d529bbcad5b2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.79,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Combatant Status for National Liberation Movements (AP I Article 1(4))",
+    "topic_domain": "international_law/humanitarian",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "liberation_movement_combatants",
+      "occupied_populations"
+    ],
+    "victims": [
+      "occupying_state_military",
+      "occupying_state_civilians"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "liberation_movement_combatants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Armed groups fighting colonial or occupying regimes gain conditional access to combatant immunity and POW protections if they satisfy Article 1(4) criteria: responsible command structure, fixed distinctive sign, carrying arms openly, conducting operations in accordance with laws of war. Their structural identity fuses with the liberation cause; exit is not feasible as a negotiated choice but only as political defeat or victory. The constraint extends to them the legal status that previously applied only to state armies, conditional on organizational and conduct criteria."
+    },
+    {
+      "name": "occupying_state_military",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears the obligation to treat captive insurgents as POWs (if Article 1(4) criteria are met) rather than as common criminals or unlawful combatants, triggering full Geneva Convention protections including humane treatment, fair trial, and repatriation. This obligation constrains interrogation methods, detention conditions, and judicial proceedings. The occupying power's operational advantage and legal discretion are curtailed by the constraint's extension of combatant status."
+    },
+    {
+      "name": "occupied_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Benefit from the legal framework that recognizes resistance movements as legitimate combatants rather than terrorists or criminals, which legitimizes their struggle for self-determination and provides humanitarian protections for their armed groups. They cannot exit the occupation or the conflict; the constraint defines the legal status of their representatives in armed struggle."
+    },
+    {
+      "name": "occupying_state_government",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Under this reading, must recognize and negotiate with organized liberation movements rather than unilaterally designate them as terrorist organizations. The constraint imposes legal obligations regarding POW status, fair trial, and humane treatment that the occupying power would prefer to avoid. However, the occupying power retains the role of agenda-setter insofar as it can contest the interpretation of Article 1(4) criteria and claim that particular groups do not meet the organizational and conduct standards."
+    },
+    {
+      "name": "icrc_humanitarian_protection_agencies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Monitor and certify whether combatant-status criteria are met, conduct prison inspections, and advocate for application of the constraint. They take no direct material benefit or cost but serve as neutral arbiters of whether organizational and conduct standards are satisfied, and they mediate between the occupying power and the liberation movement."
+    },
+    {
+      "name": "international_community_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are formally bound by AP I Article 1(4) but often do not enforce it, particularly powerful states supporting the occupying regime or fearing precedent for their own territory. Their exclusion from the constraint's application (in practice, though not in law) is a key dynamic: the constraint is formally universal but selectively enforced based on geopolitical alignment. They would contest the constraint's applicability to movements they label 'terrorist' rather than 'national liberation.'"
+    },
+    {
+      "name": "state_centric_reading_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Argue that combatant status must be limited to formal state militaries under Article 4 criteria, and that non-state armed groups cannot qualify regardless of their organizational or conduct compliance. This reading would deny POW status to liberation movement fighters and classify them as unlawful combatants. Their position is excluded from the constraint's framework but not extinguished; it remains an active competing interpretation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Extends uniform humanitarian protections and legal status to organized armed groups in legitimate anti-colonial and anti-occupation struggles, solving the problem of legal classification for non-state combatants who meet organizational and conduct standards. Without this extension, liberation movements operate in a legal vacuum where occupying powers can unilaterally deny them any protective status.",
+    "transfer_function": "Moves operational and legal advantage from the occupying state to the liberation movement: the occupying state must treat captured insurgents as POWs rather than criminals, provide humane conditions, conduct fair trials, and repatriate at war's end. The occupying state transfers discretionary power over classification and detention to international humanitarian law standards that it cannot unilaterally override.",
+    "absent_voices": "Occupying-power governments and their allies are formally obligated but practically excluded from the constraint's enforcement apparatus; they contest Article 1(4) interpretation at every application. State-centric legal traditions and scholars who argue combatant status is reserved for state militaries are excluded from authority over the constraint's interpretation, though they remain active in competing frameworks. Movements that do not meet the organizational and command-control criteria are excluded from the constraint's protection entirely—they receive no POW status, which is presented as a neutral technical requirement but functions as a gate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint disappeared and combatant status reverted to state-centric exclusivity, liberation movements would be universally classified as terrorists or unlawful combatants; captured fighters would lose POW protections; occupying powers would have unilateral discretion over detention conditions and trials; international humanitarian law would revert to a regime where non-state armed actors have no protected status. The entire architecture of protection for anti-colonial and anti-occupation struggles would collapse.",
+    "founding_problem": "Decolonization and national liberation movements in the mid-20th century produced armed struggles that were not state militaries but were organized, command-controlled, and fighting against colonial and racist occupation regimes. Existing IHL (particularly the Geneva Conventions) applied combatant status only to state militaries under Article 4, leaving liberation fighters without legal protection. The founding problem was how to extend humanitarian protections to non-state combatants engaged in legitimate struggles for self-determination without diluting the combatant status of state militaries.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The ICRC and humanitarian scholars attest the problem was real and justified the extension of Article 1(4) protections. However, occupying-power governments and state-centric legal traditions contest whether liberation movements genuinely constitute combatants rather than insurgents or terrorists. The International Court of Justice has recognized the constraint in principle, but enforcement remains contested and selective—powerful states support occupying regimes against liberation movements they label terrorist, contradicting the constraint's universal application."
+  },
+  "interval": {
+    "start": 1977,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "AP I Article 1(4) of the 1977 Additional Protocols extends combatant status to non-state armed groups fighting against colonial, occupation, and racist regimes if they meet criteria of organized structure, responsible command, distinctive marking, and conduct in accordance with the laws of war. This reading instantiates the constraint as a TANGLED ROPE: it coordinates humanitarian protection for liberation movements (the coordination function) while extracting from occupying powers the obligation to grant legal status and protections they would prefer to deny (the asymmetric extraction). The constraint's persistence depends on active enforcement by the ICRC and international pressure; without enforcement, occupying powers revert to unilateral denial of combatant status. The claiming reading (national_liberation_reading) is distinguished from the state_centric_reading (which denies non-state combatant status categorically) and the functional_protection_reading (which grants minimum protections without combatant status). This JSON generates only the national_liberation_reading constraint; the other readings are separate constraint stories linked via network.affects_constraints.",
+    "key_agents": [
+      "liberation_movement_combatants — organized insurgents fighting colonial/occupation regimes; benefit from combatant immunity and POW protections if Article 1(4) criteria met; identity-locked to the liberation cause.",
+      "occupying_state_military — institutional payer; bears obligation to treat insurgents as combatants (if criteria met) rather than criminals; loses interrogation and detention discretion.",
+      "occupied_populations — powerless beneficiaries; the constraint legitimizes their armed struggle and provides humanitarian framework for their resistance.",
+      "occupying_state_government — institutional agenda-setter and payer; can contest the interpretation of criteria but must abide by the constraint if criteria are satisfied.",
+      "ICRC and humanitarian agencies — observers; monitor and certify whether organizational and conduct criteria are met; enforce the constraint through prison inspections and advocacy.",
+      "State-centric reading advocates — excluded; argue combatant status is reserved for state militaries and non-state groups cannot qualify regardless of organization."
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the constraint moves significant operational and legal advantage from occupying powers to liberation movements: the occupying power loses unilateral discretion over detention, classification, and prosecution. Suppression is also high (0.72) because enforcement depends on active intervention by the ICRC and international pressure; without this enforcement machinery, occupying powers simply deny combatant status and treat insurgents as unlawful combatants. Theater ratio is moderate (0.28) because the constraint's functional content (humanitarian protection) is real, but a growing share of dispute centers on whether organizations actually meet the Article 1(4) criteria—occupying powers use technical objections about command structure and discipline as a way to deny status without formally rejecting the constraint. The measurement series shows a steady rise in suppression_requirement and a plateau in extractiveness after 2010, indicating that the constraint's operative extraction has stabilized even as enforcement demands have hardened (occupying powers resist more actively). The trajectory reflects the constraint's maturation: it is now firmly embedded in international law but faces increasing pressure from occupying states and powerful allies that support them.",
+    "perspectival_gap": "The occupying state and the liberation movement sit at opposite ends of directionality, producing fundamentally different experienced types. The occupying state's institutional power does not reduce its extraction exposure because the constraint's enforcement mechanism (international humanitarian law + ICRC + diplomatic pressure) operates outside its direct control. A more powerful institutional actor would need arbitrage-grade exit (ability to opt out of international legal systems) to escape; the occupying state has 'constrained' exit because opting out incurs international isolation costs. This structural gap is where the tangled-rope classification lives: genuine coordination (humanitarian protection) is layered with asymmetric extraction (operative obligation imposed on one side but not the other).",
+    "directionality_logic": "Liberation movement combatants and occupied populations are structural beneficiaries of the constraint: it extends to them legal status and protections they would not otherwise have. Their directionality is low (full beneficiary end). Occupying powers are structural targets: they bear the obligation to grant status and protections and lose discretionary power over detention and prosecution. Their directionality is high (full target end). The beneficiary/victim declarations reflect this asymmetry: beneficiaries are the liberation movements and occupied populations; victims (those bearing costs) are the occupying state's military and government. The occupying power's 'constrained' exit option (it cannot simply leave or renegotiate unilaterally without political consequence) and institutional power level place it in a position of high extraction exposure despite its formal strength.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by maintaining a live founding problem: occupying powers still contest whether liberation movements meet Article 1(4) criteria, and powerful states still selectively enforce the constraint. The theater ratio's gradual rise (from 0.12 to 0.28) indicates some drift toward performance (occupying powers perform compliance with the organizational-criteria gate while denying it on technical grounds), but the functional core remains: the constraint genuinely extends protections when organizational criteria are met. The constraint does not yet exhibit the characteristic piton signature (low or zero beneficiary capture, pure inertial persistence). If the theater ratio continued to rise above 0.5 while extractiveness plateaued, that would signal mandatrophy—the constraint becoming primarily a performance of deference to international law while occupying powers find de facto workarounds (designating movements as terrorist, denying recognition regardless of criteria satisfaction). The current trajectory suggests the constraint remains operatively contested rather than theatrically maintained.",
+    "kernel_context": "This constraint instantiates the NATIONAL_LIBERATION_READING of the contested kernel 'combatant_status_definition'. The kernel is the stabilized AP I Article 1(4) commitment: armed groups fighting colonial, occupation, and racist regimes may qualify for combatant status if they meet organizational and conduct criteria. This reading's core claim is that non-state armed groups CAN achieve combatant status and POW protections through organizational development and discipline—legitimizing liberation movements and extending humanitarian protections to them. The sibling readings are: (1) STATE_CENTRIC_READING: combatant status is reserved for state militaries under Article 4, non-state groups are categorically excluded (forecloses this reading—the two cannot coexist in one legal framework); (2) FUNCTIONAL_PROTECTION_READING: all detained persons receive minimum protections regardless of combatant status (coexists_with this reading—both can operate simultaneously, one framing status, the other framing protection independently). The substantive delta: this reading produces moderate ε for liberation movements (conditional protections if criteria met) and high ε for occupying powers (obligation to grant status to organized groups). The state-centric reading would produce low ε for liberation movements (no protections regardless of organization) and low ε for occupying powers (no obligation to grant combatant status, full discretion to treat as unlawful combatants)."
+  },
+  "omegas": [
+    {
+      "id": "article_1_4_criteria_contestation",
+      "question": "What constitutes sufficient 'organized structure' and 'responsible command' under Article 1(4), and who adjudicates when these criteria are met?",
+      "resolution_mechanism": "Case law from international tribunals and ICRC determinations; documented enforcement patterns showing which movements receive recognition and which are denied.",
+      "impact": "If criteria are interpreted narrowly, many liberation movements fail to qualify and the constraint's protective scope narrows to only the most hierarchically organized groups. If interpreted generously, nearly all organized insurgencies qualify and occupying powers face near-universal obligation to grant combatant status. The ε for occupying powers hinges on this: narrow interpretation → lower extraction (fewer groups qualify); generous interpretation → higher extraction (more groups must be recognized).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The operative definition of organizational sufficiency for Article 1(4) qualification."
+    },
+    {
+      "id": "selective_enforcement_geopolitical_bias",
+      "question": "Does the constraint operate uniformly across all occupation scenarios, or is enforcement selective based on geopolitical alignment and power asymmetries?",
+      "resolution_mechanism": "Comparative analysis of ICRC determinations, state recognition patterns, and international pressure across different occupation contexts (Palestinians, Kurds, Uyghurs, etc.)—mapping which movements receive combatant-status recognition and which are denied despite similar organizational profiles.",
+      "impact": "If enforcement is geopolitically biased (powerful states' allies deny combatant status even when criteria are met, while others grant it readily), the constraint's extractiveness is actually much higher for occupying powers aligned with powerful states (they escape obligation through political protection) and much lower for isolated occupying powers (they face full enforcement). This would reframe the constraint as selectively extractive—a structural cover story where formal equality masks actual power-based enforcement. Current measurement assumes uniform enforcement; evidence of bias would necessitate per-seat directionality overrides.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's enforcement mechanism is neutral across geopolitical contexts or biased toward powerful-state preferences."
+    },
+    {
+      "id": "reading_coexistence_vs_foreclosure",
+      "question": "Can the national_liberation_reading coexist with the state_centric_reading, or does one logically foreclose the other?",
+      "resolution_mechanism": "Theoretical analysis: the readings rest on different foundational premises about who can be a combatant (non-state groups can meet criteria vs. only states qualify by definition). Within a single legal framework, can both be true? Or must a state choose one and reject the other?",
+      "impact": "If foreclosure is correct, the two readings are incompatible and the constraint cannot simultaneously recognize national liberation movements as combatants while maintaining the state-centric position. If coexistence is correct, they can both be held across different parties and different time periods. The classification hinges on this: if the readings foreclose each other, the judicial and regulatory contestation over which reading applies is itself a high-extraction mechanism (occupying powers must fight to maintain the state-centric reading to deny combatant status). If they coexist, the constraint permits peaceful pluralism where different states apply different readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the national_liberation_reading and state_centric_reading are logically incompatible or can both be held as legitimate positions."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__functional_protection_reading"
+    ],
+    "dual_formulation_note": "The constraint family 'combatant_status_definition' decomposes into three structurally distinct readings of the AP I Article 1(4) kernel. Each reading instantiates a different constraint with a different ε and beneficiary/victim structure. The national_liberation_reading (this constraint) extends combatant status to non-state actors meeting organizational criteria (moderate ε for liberation movements, high ε for occupying powers). The state_centric_reading denies non-state combatant status categorically (low ε for liberation movements, low ε for occupying powers—no extraction because no obligation). The functional_protection_reading grants minimum humanitarian protections regardless of combatant status (low ε overall—the constraint operates as human dignity rather than extraction). The three readings are linked because they offer competing interpretations of the same legal kernel and parties invoke whichever reading serves their interests. The national_liberation_reading influences both siblings: if liberation movements are recognized as combatants (this reading), the state-centric reading becomes harder to defend, and the functional-protection reading becomes partially superseded (better protections available via combatant status than via minimum standards)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "combatant_status_universal_applicability",
+    "drift_state": {
+      "moment": "post_2001_security_framing",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "combatant_status_definition__state_centric_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "combatant_status_definition__functional_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "non_state_combatant_eligibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "self_determination_justifies_armed_struggle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "occupying_state_military",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

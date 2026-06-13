@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "reformation_composite__political_realignment_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "621e31bd-078f-4335-8be1-a71b457c7a1a",
+    "created_at": "2026-06-12T14:33:27Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Territorial Sovereignty via Religious Differentiation (Political Reading)",
+    "topic_domain": "political/historical/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "emerging_territorial_rulers"
+    ],
+    "victims": [
+      "imperial_papal_authority",
+      "transnational_catholic_church_apparatus"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.72
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causality_order_theological_vs_political",
+      "question": "Is the reformation fundamentally a theological event (theological innovation drives political realignment) or a political event (political realignment deploys theology as legitimacy cover)? Which came first causally—the reformation theology or the territorial rulers' consolidation agenda?",
+      "resolution_mechanism": "Chronological analysis of theological development (when did the key theological claims emerge—1450s or 1500s?) versus political realignment timing; examination of whether reformation theology was independently derived from scripture or strategically borrowed to justify rulers' pre-existing goals; counterfactual: would the same political realignment have occurred with different theology or no reformation theology at all?",
+      "impact": "If theology is primary, the constraint is better read as theological_fragmentation_reading with political consequences. If politics is primary, the political_realignment_reading is correct and theology is the coordination/extraction cover. The reading instantiated here asserts politics is primary; this omega documents the irreducible uncertainty.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reformation is fundamentally theological or fundamentally political; which structural element is explanatorily prior."
+    },
+    {
+      "id": "printing_press_enabling_condition",
+      "question": "Could the political realignment have occurred without the printing press's capacity to distribute reformation theology widely? Is the printing press a necessary enabling condition (mediating technology) or incidental to the political dynamic?",
+      "resolution_mechanism": "Examination of how reformation theology spread before mass printing (oral tradition, manuscript circulation); analysis of whether earlier reformation movements failed due to lack of technological reach or due to lack of political patronage; counterfactual: if the printing press existed but reformation theology was different (or papal opposition to printing had succeeded), would the political realignment still occur?",
+      "impact": "If printing press is necessary, the constraint is better read as technological_mediation_reading. If political realignment would occur regardless of print distribution (through other patronage and institutional mechanisms), the political reading is supported and printing is secondary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the printing press is a necessary enabling technology for the political realignment or incidental to it."
+    },
+    {
+      "id": "beneficiary_extraction_vs_coordination_function_balance",
+      "question": "What proportion of the extractiveness measured (0.68) is the necessary cost of coordinating a federated territorial-church system, and what proportion is excess extraction from the papal apparatus (tribute rent-seeking)?",
+      "resolution_mechanism": "Comparison of the actual territorial church revenue extraction rates with the revenue needed to fund comparable state ecclesiastical administration in a coordinate-but-not-extractive arrangement; analysis of whether territorial rulers could have achieved territorial ecclesiastical autonomy with lower extraction from Rome.",
+      "impact": "If the coordination cost is high (say, 0.40+), the constraint is closer to tangled_rope with genuine coordination benefits. If coordination cost is low (0.20 or below) and most extraction is above-cost rent, the constraint is closer to snare-like extraction wearing a coordination cover.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The balance between genuine coordination costs and extractive overhead."
+    },
+    {
+      "id": "sibling_reading_kernel_contest",
+      "question": "This constraint is one of three readings of the reformation_composite kernel. What is the structural relationship between this political_realignment_reading and the competing theological_fragmentation_reading and technological_mediation_reading?",
+      "resolution_mechanism": "This is a conceptual uncertainty about how to classify the relationships between incommensurable readings of the same kernel. The omega documents the choice made: this reading treats theological_fragmentation as coexisting (different parties hold both as live hypotheses) and technological_mediation as influences (the printing press creates structural conditions for political realignment but does not foreclose the political reading). An alternative framing might classify differently.",
+      "impact": "Different relation choices (forecloses vs. coexists_with vs. influences) produce different compression/contamination outcomes in the engine's cross-constraint analysis. This omega documents the authored choice and flags it as a reading-internal decision vulnerable to disagreement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The structural relationship classification between this reading and its sibling readings in the contested kernel."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Reformation (1517–1648, with long-tail effects) is read here as fundamentally a political event: emerging territorial rulers—Henry VIII in England, Frederick the Wise in Saxony, Gustavus Adolphus in Sweden, and others—use religious differentiation (reformed theology, break with Rome, state-controlled churches) to consolidate territorial sovereignty and escape tributary relationships to the papacy and Holy Roman Empire. The observable is cuius regio eius religio: each territorial ruler sets the religion for their realm, formalizing religious fragmentation as a consequence of political decentralization. Beneficiaries: territorial rulers and the state apparatus they build. Victims: papal and imperial transnational authority. This reading does NOT claim theology is false or secondary—it claims theology is the legitimacy FRAME that makes political realignment intelligible and durable. The theological claims may be sincere, but their structural function is to authorize political consolidation.",
+    "key_agents": [
+      "Emerging territorial rulers (England, Saxony, Scandinavia, France): agenda-setters breaking with Rome; consolidate sovereignty; establish state churches",
+      "Papal and imperial authority: victims losing tributary control, doctrinal reach, and transnational legitimacy; trapped because they cannot restore the medieval universal-church framework",
+      "Reforming theologians and clergy: beneficiaries of state patronage within reformed state churches; identity-locked to reformation theology; secondary to the rulers' political agenda",
+      "Merchant networks: beneficiaries of reformed territorial governance that removes ecclesiastical restrictions on capital accumulation",
+      "Peasantry: payers; trapped between papal extraction and reformed-state extraction; initially mobilized by reformation rhetoric but suppressed when their demands diverge from rulers' interests",
+      "Theological dissenters and radical reformers: excluded from the coordination frame because territorial sovereignty takes precedence over theological consistency"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because territorial rulers consolidate not only religious authority but also the revenue streams formerly controlled by the papacy—tithes, church lands, indulgences—and they exclude rival payment/authority systems (transnational Catholicism) from their territories. Suppression is correspondingly high (0.72) because maintaining the territorial-religious boundary requires active enforcement: enforcement of the break with Rome, suppression of radical reformation movements that challenge state authority, enforcement of religious conformity within the realm, and counter-reformation Catholic resistance that triggers religious wars. Theater ratio climbs over time (from 0.08 to 0.41): early reformation has substantial genuine religious and political content; by the late 16th and early 17th centuries, as territorial churches become established and the political realignment is locked in, more energy goes to ceremonial maintenance of the reformed churches and theological legitimation rather than active struggle against papal authority. The time-grid shows the constraint's maturation: early phase is high struggle/low theater, late phase is high enforcement/moderate theater. The temporal trajectory shows extractiveness plateauing by T=150 (post-Westphalia), indicating the constraint has stabilized into its final configuration.",
+    "perspectival_gap": "From a territorial ruler's seat, the reformation is a genuine solution to the problem of universal-church interference in territorial affairs—the coordination function is real, the extraction is the cost of that coordination, and the theological claims are sincere or at least instrumentally justified. From a papal/imperial seat, the same structure is pure extraction and heresy: the reformation theology is the cover for political theft, the extraction is not a coordination cost but a grabbing of what rightfully belongs to the Church, and the entire enterprise is an illegitimate revolt. From the theological dissenters' seat, both positions are inadequate: they see the reformation theology being corrupted by territorial power-seeking just as it was by papal corruption, and they articulate a third reading (theological_fragmentation_reading) where theological truth, not political consolidation, is the measure. The engine should compute divergent type classifications across these seats: agenda-setter seat sees coordination with incidental extraction; payer/victim seat sees enforced extraction wearing coordination cover; theological dissenter seat (excluded) sees a different constraint entirely.",
+    "directionality_logic": "Territorial rulers: beneficiary d-value near 0.1–0.2 (they collect the coordination benefit and the extraction; they set the rules and enforce them). Papal/imperial apparatus: victim d-value near 0.85–0.95 (they lose authority, revenue, and have no exit except capitulation or violent counter-reformation). Reforming theologians: moderate d-value near 0.3–0.4 (they gain institutional authority but lose autonomy; they are beneficiaries of state patronage but constrained by state interests; their exit is identity_locked, so they cannot leave without abandoning their professional identity). Merchant networks: low d-value near 0.15–0.25 (they benefit from removed restrictions; they have mobile exit so they could exit but choose arbitrage instead). Peasantry: victim d-value near 0.75–0.85 (they are trapped and bear costs; they have no meaningful exit and receive no beneficiary position). The directionality reflects the structural asymmetry: some parties use this constraint to consolidate power; others have it imposed on them.",
+    "mandatrophy_analysis": "The question is whether the founding problem (papal/imperial interference in territorial governance) remains live or has become dead, and whether the reformation constraint is still serving its founding function or has become inertial. At T=0–100 (through the Peace of Westphalia, 1648), the founding problem is live: territorial rulers actively consolidate sovereignty against papal claims, the reformation theology is actively deployed to justify that consolidation, and the constraint's entire structure is designed to solve the problem of transnational ecclesiastical authority. By T=150–200, the founding problem is substantially dead: the papacy has accepted territorial church fragmentation, the Peace of Westphalia has codified it into international law, and territorial rulers face no serious challenge to their religious authority from Rome. But the constraint persists—territorial religious authority remains enforced, reformed state churches persist, the theological differentiation remains vivid in social identity. The rising theater_ratio (0.08→0.41) is evidence of mandatrophy drift: as the original political struggle fades, more of the constraint's operation goes to ceremonial maintenance (religious ritual, theological apologetics, enforcement of conformity as tradition rather than emergency). The constraint is not yet a full piton (there is still real institutional investment in the territorial church apparatus), but it is showing piton symptoms: the original function (breaking with Rome, consolidating sovereignty against transnational authority) is solved, and the system now persists through institutional inertia and identity commitment rather than ongoing political necessity.",
+    "kernel_context": "This constraint instantiates the political_realignment_reading of the reformation_composite kernel. The kernel contest is three-way: (1) the theological_fragmentation_reading asserts the reformation is fundamentally about incompatible soteriological commitments and ecclesiological doctrine—theology drives the splits; (2) the technological_mediation_reading asserts the reformation is fundamentally about the printing press's capacity to distribute theological dissent to a mass audience—technology enables the continental spread; (3) the political_realignment_reading (this one) asserts the reformation is fundamentally about territorial rulers' consolidation of sovereignty against papal/imperial authority—politics drives the theological deployment. All three readings share the same historical events (Luther's 95 Theses, Henry VIII's break with Rome, the Thirty Years War, the Peace of Westphalia) but explain them through different primary structures. This reading treats the theological content and the technological distribution as necessary conditions (causal enablers) but not as the primary driver—the political realignment is what explains why the theological splits persisted, spread widely, and fragmented Christendom durably into territorial-sovereign units."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "reformation_composite__theological_fragmentation_reading",
+      "reformation_composite__technological_mediation_reading",
+      "westphalian_sovereignty_doctrine",
+      "cuius_regio_eius_religio_principle"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the reformation_composite kernel. It is linked to theological_fragmentation_reading and technological_mediation_reading, which instantiate competing structural claims about the same historical kernel. The three stories should be compared on (a) epsilon—do they have different extractiveness values?—and (b) beneficiary/victim structure—do they identify different extraction seats? Decomposition rationale: the ε-invariance principle requires that if measuring the Reformation through theological lenses versus political lenses produces different extractiveness values, they are different constraints. This reading measures extractiveness through political consolidation (what rulers gain/lose relative to papal authority = 0.68); the theological reading measures it through doctrinal incompatibility (how much extraction does theological pluralism itself create = different ε); the technological reading measures it through distribution-cost changes (how much extraction does the printing press's scalability create = different ε)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "reformation_composite__theological_fragmentation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "reformation_composite__technological_mediation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "territorial_sovereignty_over_transnational_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "reformation_theology_as_legitimacy_frame_not_prime_cause",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "medieval_universal_christendom_papacy",
+    "drift_state": {
+      "moment": "post_westphalian_settlement_1648",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "westphalian_sovereignty_doctrine"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

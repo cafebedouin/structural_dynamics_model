@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__democratic_participation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_protection_democratic_participation",
+    "story_uid": "abdc8321-ec6d-4cbd-ac0d-e3e64e85a45c"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.29,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Political Speech Protection (Democratic Participation Reading)",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "political_speakers",
+      "voting_public",
+      "democratic_institutions"
+    ],
+    "victims": []
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.29
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates one reading of a contested kernel: the speech protection doctrine grounded in democratic theory. Under this reading, political expression — speech about governance, public policy, official conduct, and constitutional meaning — receives maximal or categorical protection as a prerequisite for democratic self-governance. Non-political speech (commercial, artistic, intimate) receives graduated protection. This reading faces structural challenge from the dignity reading (which would constrain speech that functions as systematic subordination), the harm threshold reading (which would allow restriction of demonstrably harmful speech), and the marketplace reading (which treats speech protection as serving truth-discovery through competitive exchange, not as a prerequisite to voting). The constraint's beneficiaries are political speakers and the voting public; the victims are targets of political speech and marginalized groups whose exclusion from political standing is reinforced by political speech this reading protects. The constraint CLAIMS to be rope (genuine coordination on a necessary condition for democracy); the authored metrics show moderate extraction rising over time, suggesting that institutional power to define the political/non-political boundary creates extractive leverage.",
+    "key_agents": [
+      "political_speakers: Agents exercising speech about governance, receiving categorical protection — constitute the beneficiary constituency",
+      "voting_public: Citizens requiring access to political speech for informed participation — also beneficiary",
+      "democratic_institutions (courts, legislatures): Agenda-setters interpreting and policing the political/non-political boundary — define the constraint's operation",
+      "targets_of_political_speech: Government officials and public figures exposed to criticism — bear the cost of maximum speaker protection",
+      "non_political_speakers: Speakers in commercial, artistic, intimate domains — receive graduated protection, constrained exit",
+      "subordinated_groups: Historically excluded from political standing; experience political speech as weaponized exclusion — structural victims"
+    ],
+    "logic_rationale": "Extractiveness measures the asymmetry in protection: political speech gains categorical or near-categorical immunity; non-political speech and targets of political speech lose protection. The reading's extractiveness is not as high as a snare (0.74) because the coordination function is real — democratic self-governance does require protection for political expression — but it rises over the interval (0.22 to 0.38) as institutional power to define the boundary accumulates. Suppression measures the institutional effort required to police the political/non-political boundary and exclude challenge to that boundary itself. Theater ratio measures the performative element: courtroom discussion of 'political importance' as the criterion for protection can substitute for actual analysis of whether the particular speech functions in governance. The measurement series track a story of initial tight constraint (early 20th-century clarity about what counts as political) degrading into increasingly contested boundary-setting, with institutional authority filling the gap — the extractiveness rise from 0.22 to 0.38 and theater rise from 0.08 to 0.18 describe this degradation. At time=80, the metrics stabilize slightly as litigation settles some boundaries.",
+    "perspectival_gap": "The agenda-setter (courts/institutions) and the beneficiary (political speakers) should see this as coordination; the payers (targets of speech, non-political speakers, subordinated groups) should see it as enforced asymmetry. Institutional seat: 'We maintain the political/non-political boundary to protect democracy itself.' Target seat: 'You use the boundary to shield government from criticism and shield yourselves (a powerful institutional cohort) from defamation claims.' Non-political speaker seat: 'Our expression is restricted while theirs is protected based on a classification you control.' Subordinated-group seat: 'The reading protects speech that excludes us from political standing and weaponizes our exclusion — calling it political expression insulates it from restriction.' The engine computes per-seat types from the power/exit/directionality data; these seat gaps are the structural data the computation reads.",
+    "directionality_logic": "Political speakers (moderate power, mobile exit) benefit from the constraint and get low d → low/negative χ. Voting public (organized, mobile) also benefit → low d. Democratic institutions (institutional power, analytical exit) set the rule and collect the institutional authority it grants → near-zero to beneficiary-end d. Targets of political speech (powerful but constrained exit, bear the cost) get high d → high χ. Non-political speakers (moderate, constrained exit by the boundary classification) get moderate-to-high d. Subordinated groups (powerless, trapped exit, structurally victimized) get highest d → highest effective extraction. No directionality override is needed; the derivation chain from beneficiary/victim declarations plus exit options should produce the right directionality for each seat.",
+    "mandatrophy_analysis": "The founding problem (democracies need political speech protection against government suppression) remains live. This reading's mandate (political speech receives highest protection) has not outlived its function; courts continue to resolve hard cases by invoking it. However, there is a subordinate mandatrophy risk: the distinction between political and non-political speech, once relatively clear (political = speech about government / candidates / policy), has become increasingly ambiguous and subject to institutional discretion. Speech about race, gender, immigration, and economics can be framed as political (governance, constitutional meaning) or non-political (private grievance, artistic expression, commercial interest). The boundary-policing function has expanded and the institutional leverage it grants has grown. A mandatrophy signal would be if courts began invoking the reading's institutional authority to restrict speech without reference to the founding problem (democracy needs this protection). Currently, mandatrophy is not complete — the founding problem is still articulated — but the constraint is showing early signs: suppression_requirement and theater_ratio both rise over the interval, suggesting institutional effort to maintain the boundary is increasing and the performance of democracy-serving justification is becoming more frequent than actual analysis of whether removal of the constraint would harm self-governance.",
+    "kernel_context": "This constraint instantiates the democratic_participation_reading of speech_protection_kernel. The kernel is the doctrine that speech receives legal protection; the contest is what KIND of protection and for which expressions. The democratic_participation_reading holds that political expression — speech necessary for citizens to participate in self-governance — receives maximum or categorical protection as a prerequisite to democracy. Sibling readings coexist: absolutist_reading (near-categorical protection for all speech, not just political); marketplace_reading (protection serves truth-discovery, not democracy per se); harm_threshold_reading (protection is conditional on absence of demonstrable harm); dignity_reading (protection is conditional on not functioning as systematic subordination). This reading forecloses the dignity reading in the sense that it refuses to make speech protection conditional on dignity interests — political speech can demean, humiliate, and subordinate; that is accepted cost of maximum political protection. It coexists with the other readings across different judicial and jurisdictional frameworks. It influences the harm_threshold reading: this reading says harm is not grounds for restriction of political speech, which pressures harm-threshold theorists to either narrow 'political' or accept that harm must be extreme before overriding political speech interest. The boundary between political and non-political is internal to this reading and is the site of institutional discretion and extraction leverage."
+  },
+  "omegas": [
+    {
+      "id": "political_non_political_boundary",
+      "question": "Is the boundary between political and non-political speech stable, clear, and principled, or does it depend on institutional discretion and contestation?",
+      "resolution_mechanism": "Comparative analysis of how courts and institutions draw the boundary across cases: do they apply consistent criteria or do they resolve ambiguous cases based on outcome preferences? Do dissidents appeal the boundary classification itself?",
+      "impact": "If the boundary is stable and principled, the reading's internal hierarchy is coherent and the extraction is coordinate cost. If the boundary is unstable and discretionary, institutional power to classify speech is the true constraint, and the extraction is substantially higher than metrics suggest — classifying speech as non-political becomes a tool to suppress dissent while maintaining the appearance of democratic protection.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the political/non-political boundary is a stable classification or a site of institutional discretion."
+    },
+    {
+      "id": "democratic_self_governance_necessity",
+      "question": "Is maximum protection for political speech empirically necessary for democratic self-governance, or is it one defensible approach among alternatives?",
+      "resolution_mechanism": "Comparative study of democracies with different speech protection regimes: do democracies with graduated protection for political speech (where political speech is protected but can be restricted on other grounds like dignity or order) suffer greater democratic collapse or dissent suppression than those with categorical protection? Do majorities in democratic polities actually support categorical political speech protection or do they prefer graduated protection?",
+      "impact": "If categorical protection is empirically necessary, the constraint serves an irreducible democratic function and the extraction is a necessary coordination cost. If graduated protection is compatible with functional democracy, the reading's claim to necessity is disputed and the constraint appears more extractive than coordinate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether categorical political speech protection is empirically necessary for democratic self-governance."
+    },
+    {
+      "id": "dignity_versus_political_priority",
+      "question": "When political speech functions as systematic subordination of a group (e.g., denial of membership, dehumanization), should dignity protection override or modulate the priority given to political speech protection?",
+      "resolution_mechanism": "Normative contestation between democratic theorists (self-governance reading vs. dignity reading) and empirical study of whether subordinated groups' exclusion from political standing is reinforced by unconstrained political speech in this reading's regime.",
+      "impact": "If dignity should override, the reading's hierarchy is unjust and should be revised — political speech would be constrained when it systemically demeans a group's standing. If political speech protection should remain paramount, the reading is defensible but acknowledges a cost: subordinated groups experience the reading's protection of political speech as weaponized against their political inclusion. This is an irreducible normative divergence between readings, not an empirical question that resolution would settle.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether dignity interests should modulate political speech protection."
+    },
+    {
+      "id": "institutional_boundary_drift",
+      "question": "Over time, does the institutional power to classify speech as political or non-political accumulate, and does this accumulation change the constraint's function from coordination to institutional rent-seeking?",
+      "resolution_mechanism": "Historical analysis of boundary classifications: have courts expanded or contracted what counts as political over the interval? Have institutional classifications become more frequent and discretionary? Does the theater_ratio rise suggest performative justification replacing substantive analysis?",
+      "impact": "Rising institutional accumulation would support a mandatrophy signal: the constraint begins as coordinate (protecting speech necessary for democracy) and gradually becomes extractive (institutional power to classify speech). This would explain why extractiveness and theater_ratio both rise in the measurements while suppression_requirement rises: the constraint is being maintained theatrically while real institutional leverage over speech classification grows.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional power to classify speech is accumulating over time."
+    },
+    {
+      "id": "reading_identity_fusion",
+      "question": "Do institutional actors (judges, legislators) fuse their own identity with the reading such that questioning the reading becomes unthinkable, even when evidence suggests the boundary classification is unstable?",
+      "resolution_mechanism": "Observation of whether courts acknowledge boundary ambiguity or dismiss challenges as settled; whether alternative readings are engaged substantively or dismissed as incompatible with democracy; whether judges outside the U.S./Western framework can hold the reading without functional loss.",
+      "impact": "Identity fusion (this reading IS democracy, questioning it IS anti-democratic) would explain why institutional suppression_requirement rises: defending the reading requires not just enforcing the boundary but preventing the boundary itself from being questioned. If this is true, the constraint has become partly identity-locked for institutional actors and extraction is higher than metrics suggest.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional actors are identity-locked to this reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__marketplace_reading",
+      "speech_protection_kernel__dignity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of speech_protection_kernel. The kernel is the doctrine that speech receives legal protection; different readings instantiate different internal hierarchies and restrictions. The democratic_participation_reading gives highest protection to political expression necessary for self-governance. The absolutist_reading extends near-categorical protection to all speech. The dignity_reading makes protection conditional on not functioning as systematic subordination. The harm_threshold_reading makes protection conditional on absence of demonstrable harm. The marketplace_reading treats protection as serving truth-discovery. Each reading has different beneficiaries, victims, and extraction profiles. They coexist across jurisdictions and judicial coalitions; none logically forecloses all others, but they create structural pressure on each other. The democratic_participation reading influences the others by privileging one axis (self-governance / political necessity) and pressuring other readings to either adopt that axis or defend their alternative."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_threshold_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "marketplace_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "political_speech_prerequisite_to_self_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "internal_hierarchy_political_over_non_political",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "political_speech_maximal_protection_democracy_foundational",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__dignity_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

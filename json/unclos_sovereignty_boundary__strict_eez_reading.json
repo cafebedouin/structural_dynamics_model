@@ -1,0 +1,271 @@
+{
+  "header": {
+    "constraint_id": "unclos_sovereignty_boundary__strict_eez_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "d7753154-2f3b-4ad7-ba5b-6f44c96464f8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.79,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UNCLOS Article 57 Strict EEZ Boundary Reading",
+    "topic_domain": "geopolitical/maritime/international-law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coastal_state_governments",
+      "commercial_fishing_interests_flag_states",
+      "offshore_resource_extraction_operators"
+    ],
+    "victims": [
+      "overlapping_claimant_states",
+      "high_seas_fishing_fleets",
+      "non_ratifier_naval_powers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "historical_rights_vs_unclos_supremacy",
+      "question": "Do pre-UNCLOS historical occupation and resource use create sovereign rights that override the strict 200-nautical-mile EEZ boundary, or is UNCLOS Article 57 the final arbiter of maritime sovereignty?",
+      "resolution_mechanism": "ICJ/ITLOS rulings on specific boundary disputes (Philippine-China disputes, Arctic claims, South China Sea cases) that establish whether historical use is grandfathered or completely subordinated. State practice in bilateral negotiations (settlement patterns, concession outcomes).",
+      "impact": "If historical rights are held to survive UNCLOS, the strict reading's exclusivity is undermined; overlapping claimants regain legal grounds for their claims. If UNCLOS is absolute, the strict reading holds but faces delegitimation from states asserting historical rights.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether UNCLOS Article 57 is a comprehensive restatement of maritime sovereignty or a codification that leaves space for pre-existing rights."
+    },
+    {
+      "id": "customary_freedom_of_navigation_independence",
+      "question": "Is freedom of navigation through EEZs a customary international law principle independent of UNCLOS ratification status, or does the strict reading bind all states regardless of UNCLOS signature?",
+      "resolution_mechanism": "State practice by non-ratifiers (U.S. freedom-of-navigation operations, responses to interception); ICJ opinions on whether customary law survives UNCLOS; negotiation patterns between ratifiers and non-ratifiers (acquiescence vs. escalation).",
+      "impact": "If customary freedom of navigation survives independently, the strict reading's suppression of navigational rights is ineffective for major naval powers; if UNCLOS is binding even on non-ratifiers, the strict reading achieves universal suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-UNCLOS naval operations establish a persistent customary law alternative or are gradually overcome by state acceptance of EEZ boundaries."
+    },
+    {
+      "id": "resource_extraction_coordination_vs_rent_collection",
+      "question": "Is the exclusive EEZ boundary primarily a coordination mechanism for managing shared resources responsibly, or has it become a mechanism for coastal states to collect monopoly rents from resource extraction?",
+      "resolution_mechanism": "Comparative analysis of coastal-state licensing practices (fees relative to resource extraction cost), environmental outcomes (stock management vs. depletion), and revenue capture (licensing revenue per unit extracted vs. historical commons baselines). Time series of licensing fee escalation post-UNCLOS.",
+      "impact": "If primarily coordination, the measured extractiveness is coordination cost; if primarily rent-collection, the extractiveness is asymmetric transfer with suppressed alternatives. This distinction affects whether the constraint is correctly classified as tangled_rope (genuine coordination + asymmetric extraction) or drifting toward snare (extraction masquerading as coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the strict EEZ reading's operation has shifted from solving a commons problem to defending extraction monopolies."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) primarily structural (military enforcement, seizure risk, legal proceedings) or internalized (overlapping claimants have accepted the UNCLOS frame as legitimate and no longer seriously contest)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if overlapping claimants abandoned UNCLOS recognition, would they immediately reassert historical claims (structural suppression), or have they internalized the strict boundary as the legitimate order (internalized)? Archival evidence of protest claims vs. acquiescence over time.",
+      "impact": "Structural suppression can be removed by enforcement decay; internalized suppression persists after enforcement is withdrawn. If substantially internalized, the true suppression may be lower than authored, but the constraint's persistence would require less active enforcement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether UNCLOS EEZ suppression of alternative sovereignty frameworks is enforced or internalized by institutional legitimacy."
+    },
+    {
+      "id": "kernel_reading_contest_framing",
+      "question": "This constraint is ONE reading of the contested UNCLOS sovereignty kernel. The sibling readings (historical_rights_reading, non_ratifier_enforcement_reading) would classify the same maritime system very differently. Which reading is structurally correct?",
+      "resolution_mechanism": "This is a preference omega rooted in committer framing: the strict reading's ε is invariant (it defines the constraint being measured), but the EXISTENCE and PREVALENCE of alternative readings depend on which interpretive authority (state practice, ICJ precedent, treaty negotiators, regional powers) is treated as legitimate. The resolution is not empirical but normative: whose interpretation of UNCLOS governs?",
+      "impact": "If the historical-rights reading becomes dominant, this constraint's classification drops from tangled_rope toward snare (suppression of legitimate alternatives increases). If the non-ratifier reading gains strength, the suppression remains high but targets a more powerful adversary. The strict reading's classification is stable only if its interpretive frame is maintained as canonical.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the strict UNCLOS reading is the canonical interpretation or one contestable framing among others."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Exclusive Economic Zone (EEZ) boundary under UNCLOS Article 57 represents one reading of how sovereign maritime rights should be allocated. Under the strict reading instantiated here, coastal states claim exclusive resource control and navigation authority within 200 nautical miles of their baseline, with no overlay claims recognized. This reading emerged from the 1982 UNCLOS negotiation as a compromise: it unified maritime zones and provided clear demarcation, solving pre-treaty chaos. However, it simultaneously created new extraction monopolies and suppressed alternative frameworks (historical rights, customary freedom of navigation, indigenous maritime practices). The strict reading is actively enforced through naval patrols, vessel inspections, and seizures; it is buttressed by the ICJ/ITLOS institutional machinery; it benefits coastal states and resource extraction operators; and it imposes costs on overlapping claimants, non-ratifier naval powers, and high-seas fishing interests. The measurement series show rising extractiveness over the 50-year interval (0.45 → 0.68), indicating that licensing fees, resource rents, and suppression of alternatives have accumulated, while the theater ratio remains modest (0.28), suggesting the constraint's coordination function (solving maritime chaos) remains credible even as extraction accumulates. This is not the only reading of UNCLOS sovereignty — the sibling readings (historical rights, non-ratifier enforcement) instantiate structurally distinct constraints with different beneficiary/victim sets and different suppression mechanisms.",
+    "key_agents": [
+      "Coastal state governments (institutional power, arbitrage exit) — agenda setters, beneficiaries of exclusive control; set and enforce EEZ boundaries",
+      "Overlapping claimant states (institutional power, constrained exit) — victims; their historical claims are voided by the strict reading; high exit cost (litigating or rejecting UNCLOS)",
+      "High-seas fishing fleets (powerful, constrained exit) — victims; lose prime fishing grounds relocated to EEZ; can fish beyond 200nm but at higher cost",
+      "Non-ratifier naval powers (institutional power, trapped) — payers/observers; claim customary freedom of navigation but face interception; structurally trapped between asserting rights (costly brinkmanship) and surrendering them",
+      "Commercial fishing interests and offshore extractors (powerful, mobile) — beneficiaries; gain secure, exclusive resource access and licensing revenue; mobile exit but prefer secure frame",
+      "UNCLOS treaty administration (ICJ/ITLOS, institutional, analytical) — agenda setter; administers the strict reading by issuing boundary rulings; have analytical exit but adopted the reading as canonical",
+      "Indigenous maritime communities (powerless, trapped, identity-locked) — excluded; pre-UNCLOS subsistence practices subordinated to coastal licensing; structurally absent from rule-making; identity-locked loss (traditions encoded in place and practice)"
+    ],
+    "logic_rationale": "The extractiveness score (0.68) reflects that coastal states collect licensing revenue from foreign vessels, control resource extraction concessions, and exclude non-ratifiers from navigation — this is not free coordination, it is monetized control. The suppression score (0.71) is high because the constraint persists through active enforcement (naval patrols, seizure threats, legal proceedings) against overlapping claimants and because alternative sovereignty frameworks (historical rights doctrines, customary law, indigenous claims) are actively suppressed by the bright-line rule and institutional backing. The theater ratio (0.28) is moderate because the constraint DOES solve a real coordination problem (it replaced pre-UNCLOS maritime chaos with clear boundaries), but enforcement increasingly serves extraction rather than pure coordination — coastal states invest in EEZ enforcement not just to prevent tragedy-of-the-commons but to maximize licensing revenue. The measurement series show extractiveness rising from 0.45 to 0.68 over 50 years (coast states became more aggressive in licensing and enforcement), suppression rising from 0.55 to 0.71 (overlapping claims faced escalating pressure, non-ratifiers faced more interceptions), and theater ratio staying low (the coordination narrative remains credible because maritime chaos was real; but rent-collection increasingly dominates actual enforcement activity). All metrics are authored on a single time grid so comparability is maintained. The tangled_rope claim is correct: the constraint provides genuine coordination (the 200nm rule is better than pre-UNCLOS anarchy) AND imposes asymmetric extraction (coastal states collect rents, overlapping claimants lose claims, high-seas fleets lose grounds). This dual structure requires active enforcement (the suppression score validates this) and is accepted because the coordination benefit is substantial. The engine's per-seat computation will show coastal states as low d (beneficiaries, arbitrage exit) and overlapping claimants as high d (victims, constrained exit), confirming the asymmetry.",
+    "directionality_logic": "Coastal states occupy the beneficiary seat: they set the rules, collect licensing revenue, control resource exploration, and exit via arbitrage (switching from UNCLOS to asserting territorial claims). They have institutional power and generational time horizons — the EEZ arrangement is built into their governance models and naval doctrine. Their d is low (near 0.0) because the constraint subsidizes them. Overlapping claimant states are victims: they lose claimed waters under the strict reading, must litigate or acquiesce, and have constrained exit (abandoning UNCLOS means losing maritime legitimacy across other domains). Their d is high (near 0.8) because extraction is imposed on them. High-seas fishing fleets are payers: they lose fishing grounds, face seizure risks, and have constrained mobility (prime grounds are now EEZ, relocation is expensive). Their d is moderately high (0.65–0.75). Non-ratifier naval powers are structurally trapped: they claim customary law but face interception, creating a persistent cost (brinkmanship, diplomatic tension). Their d is high but the exit options are uniquely constrained — they cannot mobile-exit (they are global naval powers, not relocatable) and identity-locked (their naval role is constituted through global presence). A directionality override may be warranted here: the structural derivation might place them at d~0.70 (moderate payer), but their trapped and identity-locked nature suggests d~0.80 (target status). This is noted in the logic but not explicitly overridden in the JSON to preserve author intent visibility. Commercial interests and offshore extractors are dual-positioned beneficiaries/payers: they benefit (licensing access, secure exploitation rights) and pay for enforcement, but their mobile exit and powerful position mean they are net beneficiaries (d~0.25). They could exit (exploit elsewhere) but prefer the secure frame provided by EEZ enforcement.",
+    "perspectival_gap": "The perspective divergence is structural: from the coastal state seat, the EEZ is a hard-won, legitimate achievement that solved maritime chaos and provides rightful sovereignty. From the overlapping claimant seat, it is an imposed boundary that voided their legitimate historical claims. From the non-ratifier naval seat, it is an overreach by a treaty they did not ratify, constrained by customary law they hold to be superior. From the high-seas fishing seat, it is a sudden privatization of previously shared resources. All of these perspectives are consistent with the authored structural data — they are not contradictions, they are seat-dependent perceptions computed by the engine from power, exit options, and beneficiary/victim status. The authored metrics are invariant across these perspectives (extractiveness remains 0.68 regardless of whether a coastal state or overlapping claimant is asked); the engine's per-seat classification diverges because the structural data instantiates asymmetry. This divergence is the measurement the corpus exists to take.",
+    "mandatrophy_analysis": "The founding problem (pre-UNCLOS maritime chaos, resource commons collapse, naval brinkmanship) was acute and the strict EEZ reading was a successful coordination response: it established clear boundaries, enabled coastal-state resource stewardship, and reduced high-seas competition disasters. However, the founding problem's status is now contested (see six_questions.founding_problem_status = 'contested'). Coastal states maintain the problem is live (security threats, resource disputes); overlapping claimants and maritime scholars argue it is substantially solved and the mechanism has drifted into rent-collection. The theater ratio (0.28) and rising extractiveness (0.45 → 0.68) support the mandatrophy signal: if the founding problem were still the driver of enforcement, extractiveness should remain stable and theater ratio should drop (enforcement becomes purer coordination). Instead, extractiveness rose — coastal states escalated licensing fees and enforcement intensity — while theater remained moderate, suggesting the coordination justification persists but extraction has accumulated. A mandatrophy-resolution flag would be appropriate: the constraint is no longer primarily defending against maritime chaos; it is defending exclusive resource control. However, the coordination core remains genuine (the 200nm rule is better than alternatives), so the classification stays tangled_rope, not snare. The omega variable on resource-extraction-coordination-vs-rent-collection (above) directly addresses this ambiguity.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel: unclos_sovereignty_boundary. The kernel is the 1982 UNCLOS treaty and its foundational claim to establish uniform maritime boundaries. The reading instantiated here is strict_eez_reading: coastal states have exclusive economic rights within 200 nautical miles; overlay claims are void; the boundary is enforceable and admits no exceptions. The sibling readings are: (1) historical_rights_reading (historical occupation and use predate and override UNCLOS boundaries); (2) non_ratifier_enforcement_reading (customary international law freedom of navigation survives UNCLOS ratification status and is enforced by naval presence). These are NOT alternative metrics or framings of the same constraint — they are THREE STRUCTURALLY DISTINCT CONSTRAINTS with different ε values, different beneficiary/victim sets, and different classification types. Under the strict reading (this constraint), coastal states are beneficiaries and overlapping claimants are victims. Under the historical-rights reading, overlapping claimants regain legitimacy and extraction decreases (ε drops). Under the non-ratifier reading, naval powers' suppression decreases and the constraint's enforcement weakens. The kernel is the contested TEXT and AUTHORITY (UNCLOS Article 57 and its interpretation), not the empirical maritime situation (which is the same in all three readings). See the cs_structure block (reading_relations and axioms) for formal specification of how these readings relate to each other."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "unclos_sovereignty_boundary__historical_rights_reading",
+      "unclos_sovereignty_boundary__non_ratifier_enforcement_reading",
+      "international_maritime_fisheries_commons",
+      "continental_shelf_resource_exploitation"
+    ],
+    "dual_formulation_note": "This constraint is the strict_eez_reading of the contested unclos_sovereignty_boundary kernel. It forms a constraint family with historical_rights_reading and non_ratifier_enforcement_reading. The three readings instantiate THREE SEPARATE ε values and beneficiary/victim structures from the same treaty text, depending on which interpretive authority (coastal states, historical precedent, customary law) is treated as canonical. All three are linked via network.affects_constraints to enable contamination propagation analysis: if the strict reading's enforcement weakens, historical rights may be reasserted; if non-ratifier customary law gains acceptance, enforcement costs rise. The decomposition follows the ε-invariance principle: a single ε value and stable beneficiary/victim set per story, with network links to the siblings that would have different ε and structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.8
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "uniform_maritime_boundary_regime",
+    "drift_state": {
+      "moment": "contemporary_post_2000_enforcement_escalation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "unclos_sovereignty_boundary__historical_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unclos_sovereignty_boundary__non_ratifier_enforcement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unclos_article_57_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "bright_line_boundary_eliminates_overlap_claims",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
