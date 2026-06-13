@@ -1,0 +1,540 @@
+{
+  "stories_total": 5,
+  "stories_with_replicates": 1,
+  "min_population_for_sigma_seat_verdict": {
+    "stories": 3,
+    "draws_per_story": 2
+  },
+  "per_story": {
+    "organization_floor": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.38",
+            "0.38",
+            "0.38"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.22",
+            "0.22",
+            "0.22"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.78",
+            "0.78",
+            "0.78"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.31",
+            "0.31",
+            "0.31"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.42",
+            "0.42",
+            "0.42"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "False",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('advocacy_organizations', 'industry_coalitions', 'organized_labor_unions', 'professional_associations')",
+            "('industry_coalitions', 'organized_labor_unions', 'political_party_machines', 'professional_associations')",
+            "('industry_coalitions', 'organized_labor_unions', 'political_party_machines', 'professional_associations')"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('diffuse_consumer_interests', 'geographically_dispersed_groups', 'unorganized_mass_publics')",
+            "('diffuse_consumer_interests', 'geographically_dispersed_minorities', 'unorganized_mass_publics')",
+            "('diffuse_consumer_interests', 'geographically_dispersed_minorities', 'unorganized_mass_publics')"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "9",
+            "9",
+            "9"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('beneficiary', 4), ('excluded', 1), ('observer', 1), ('payer', 3))",
+            "(('agenda_setter', 1), ('beneficiary', 3), ('excluded', 1), ('observer', 1), ('payer', 3))",
+            "(('agenda_setter', 1), ('beneficiary', 3), ('excluded', 1), ('observer', 1), ('payer', 3))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('moderate', 1), ('organized', 3), ('powerful', 1), ('powerless', 3))",
+            "(('analytical', 1), ('institutional', 1), ('moderate', 1), ('organized', 2), ('powerful', 1), ('powerless', 3))",
+            "(('analytical', 1), ('institutional', 1), ('moderate', 1), ('organized', 2), ('powerful', 1), ('powerless', 3))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "(('biographical', 2), ('generational', 5), ('immediate', 2))",
+            "(('biographical', 2), ('generational', 5), ('immediate', 2))",
+            "(('biographical', 2), ('generational', 5), ('immediate', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 2), ('mobile', 2), ('trapped', 3))",
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 2), ('identity_locked', 1), ('mobile', 2), ('trapped', 2))",
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 2), ('mobile', 2), ('trapped', 3))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('continental', 1), ('global', 1), ('national', 7))",
+            "(('global', 1), ('national', 8))",
+            "(('global', 2), ('national', 7))"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "contested",
+            "contested",
+            "contested"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "live",
+            "contested",
+            "contested"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('alternative_warrantability_mechanisms', 'beneficiary_resistance_to_reform', 'natural_vs_constructed_floor_height')",
+            "('digital_infrastructure_floor_lowering', 'intensity_vs_organization_tradeoff', 'transaction_cost_vs_defensive_maintenance')",
+            "('efficiency_vs_distributional_pathology', 'natural_law_vs_institutional_artifact', 'transaction_cost_vs_institutional_defense')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "12",
+            "18",
+            "12"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('base_extractiveness', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(6, 6)",
+            "(6, 6, 6)",
+            "(6, 6)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "Organization Floor in Democratic Policy Markets",
+            "Organization Floor in Democratic Policy Markets",
+            "Organization Floor in Democratic Policy Markets"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "political_economy/democratic_theory/institutional_analysis",
+            "political_economy/democratic_theory/institutional_analysis",
+            "political_economy/democratic_theory/institutional_analysis"
+          ]
+        }
+      ]
+    }
+  },
+  "within_vs_between": {
+    "within_pairs": [
+      {
+        "story": "organization_floor",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.3870967741935484,
+        "n_comparable": 31,
+        "n_positive_agree": 19,
+        "n_absence_agree": 7
+      },
+      {
+        "story": "organization_floor",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.28125,
+        "n_comparable": 32,
+        "n_positive_agree": 23,
+        "n_absence_agree": 6
+      },
+      {
+        "story": "organization_floor",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.22580645161290322,
+        "n_comparable": 31,
+        "n_positive_agree": 24,
+        "n_absence_agree": 7
+      }
+    ],
+    "between_pairs": []
+  }
+}

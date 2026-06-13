@@ -1,0 +1,36 @@
+=== PARSE-CHECK: frozen prediction table (SIGMA_SEAT_PREDICTION.md) ===
+  [sigma]        base_properties.suppression
+  [sigma]        base_properties.theater_ratio
+  [sigma]        base_properties.accessibility_collapse
+  [sigma]        base_properties.resistance
+  [sigma] KNOWN  base_properties.extractiveness
+  [sigma]        base_properties.requires_active_enforcement
+  [sigma]        base_properties.emerges_naturally
+  [sigma]        base_properties.has_sunset_clause
+  [sigma]        base_properties.beneficiaries[] / victims[]
+  [sigma]        base_properties.vindicated_propositions[]
+  [seat ] KNOWN  base_properties.claimed_type
+  [sigma]        stakeholders[] roster + role (+ secondary_role, agent)
+  [sigma]        stakeholders[].power/time_horizon/exit_options/spatial_scope
+  [sigma]        six_questions.coordination_function / transfer_function
+  [sigma]        six_questions.absent_voices
+  [seat ]        six_questions.disappearance_verdict
+  [sigma]        six_questions.founding_problem
+  [seat ]        six_questions.founding_problem_status
+  [sigma]        six_questions.founding_problem_corroboration
+  [sigma]        gain_flow
+  [sigma]        fixing_cost
+  [seat ]        omegas[] (count + ids + type_class)
+  [seat ]        measurements[] (presence, metric selection, grid shape, point count)
+  [seat ]        interval
+  [seat ]        boltzmann / network / directionality_overrides / cs_structure / coercion_grid (presence)
+
+=== INSTRUMENT-vs-FROZEN drift check (cohort_stability.FIELDS) ===
+  PARSE-CHECK PASS — instrument buckets reproduce the frozen prediction
+
+=== POPULATION GATE (min: 3 stories x 2 draws) ===
+  replicate stories with >=2 draws: 1
+  *** NO TEST — gated. 1 < 3 stories. ***
+  The σ/seat partition test has no between-story denominator below minimum
+  population; emitting a verdict here would be a counterfeit witness. The σ/seat
+  line is OPEN (partial-with-named-residual) until the replicate spend lands.
