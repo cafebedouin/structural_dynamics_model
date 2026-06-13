@@ -1,0 +1,609 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__institutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "06db1040-d0c4-4a44-87b1-f1f6be38e5fb"
+  },
+  "base_properties": {
+    "extractiveness": 0.67,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Price Formation in Housing Markets",
+    "topic_domain": "political_economy/housing_markets/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_property_owners",
+      "institutional_lenders",
+      "real_estate_intermediaries"
+    ],
+    "victims": [
+      "first_time_buyers",
+      "renters",
+      "young_workers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_property_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from capital appreciation driven by regulatory scarcity (zoning restrictions that limit supply) and tax treatment (mortgage interest deduction, long-term capital gains rates). Can exit by selling at inflated prices but have strong incentive to maintain the system that preserves their asset values. Organize through neighborhood associations, homeowner lobbies, and conservation coalitions that lobby for restrictive zoning."
+    },
+    {
+      "name": "institutional_lenders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from high nominal prices by originating larger mortgages and collecting fees on origination, servicing, and refinancing. Set lending standards that require substantial down payments and income multiples, enforcing price expectations. Can exit the housing market entirely (and do, when portfolio composition shifts) but maintain leverage through regulatory capture and the subordination of borrower to collateral valuation."
+    },
+    {
+      "name": "real_estate_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Collect commissions (typically 6% on sale, plus origination and servicing fees) that rise proportionally with price. Have strong incentive to defend high prices and restrict supply (which tightens the market and increases per-transaction value). Organize through professional associations (NAR, local boards) that lobby for zoning preservation and campaign against price transparency."
+    },
+    {
+      "name": "zoning_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Set and enforce zoning codes that restrict supply by limiting building height, mandating large lot sizes, requiring parking, and excluding multifamily housing. Face political pressure from incumbent owners (the largest voting bloc in property-tax-dependent jurisdictions) and real estate intermediaries. Enforcement mechanisms include permitting delays, design review, and neighborhood opposition (NIMBY coalitions)."
+    },
+    {
+      "name": "first_time_buyers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face prices that reflect institutional construction (zoning scarcity, lending standards that assume high prices, tax incentives embedded in the price signal) rather than production cost or wage income. Must borrow at 3-4x the mortgage-to-income ratio that prevailed in prior generations. Exit options are: (1) accept prices, (2) rent indefinitely, (3) move to lower-cost jurisdictions (geographic exit, costly in job loss and social dislocation), or (4) cohabitate with family (delayed household formation). No collective voice in zoning; politically weak."
+    },
+    {
+      "name": "renters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Pay rising rents that track (with a lag) rising prices, reflecting landowner expectations of future price appreciation and the scarcity premium built by zoning. Locked into position by employment ties, family networks, school district enrollment, and insufficient savings to exit. Face eviction threats, unstable tenure, and limited legal recourse in many jurisdictions. Cannot organize across fragmented rental markets."
+    },
+    {
+      "name": "young_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face a choice between (1) accepting inflated house prices and household-debt ratios unprecedented in their cohort, (2) delaying or refusing household formation, or (3) moving to lower-cost regions (geographic exit with career and social costs). Organize through generational discourse (millennials, Gen Z) but lack institutional voice in housing policy. Income does not scale with price appreciation."
+    },
+    {
+      "name": "tax_policymakers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Maintain tax provisions (mortgage interest deduction, capital gains exclusion, 1031 exchanges) that are embedded in the price signal and in incumbent owners' expectation of future returns. Reduction or elimination of these provisions would trigger immediate property-value losses, creating political backlash from the largest voter bloc. Extraction depends on maintaining these provisions."
+    },
+    {
+      "name": "financial_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set lending standards and macroprudential policy that accept housing-as-collateral-for-credit expansion as normal. Have incrementally loosened lending standards since the 1990s (down-payment requirements falling from 20% to 3-5%, debt-to-income ratios rising). Face pressure from lenders to maintain loose standards and from housing advocates to tighten them. Fear asset-price instability more than household debt."
+    },
+    {
+      "name": "observer_housing_advocates",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Document the institutional construction of price (zoning scarcity, lending standards, tax treatment) and advocate for policy remedies (zoning deregulation, lending reform, tax changes). Have no enforcement power and limited electoral leverage; proposals are consistently blocked by incumbent-owner coalitions and real-estate lobbies. Present in the analytical conversation but excluded from the policy negotiation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Operates a centralized system for matching residential capital (mortgage lending) with demand (buyers and renters), standardizing underwriting criteria across markets, and managing neighborhood development through zoning predictability.",
+    "transfer_function": "Moves wealth from first-time buyers and renters (who pay prices that embed zoning scarcity and lending-standard expectations) to incumbent owners (whose assets appreciate by policy-maintained scarcity), institutional lenders (who originate and service larger mortgages and collect fees), and real-estate intermediaries (whose commissions scale with prices). Tax provisions directly transfer federal revenue to homeowners.",
+    "absent_voices": "Future residents who will inherit the constraint. Renters in unincorporated areas not represented in zoning boards. Immigrants and workers relocating to high-cost regions have no voice in communities where they seek housing. Landowners in downzoned areas are structurally positioned to lose negotiation outcomes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Removal of institutional construction (zoning deregulation, lending-standard reversion to historical norms, elimination of tax provisions) would cause prices to fall toward production cost within 3-5 years. Incumbent owners would incur substantial paper losses; renters and first-time buyers would access housing at affordability levels consistent with income. Financial institutions would recalibrate lending portfolios. The entire institutional chain sustaining current price levels would reorganize.",
+    "founding_problem": "Post-WWII housing shortage requiring mass construction and standardized financing; need for safe payment systems (mortgage products), neighborhoods with investment certainty (zoning predictability), and managed credit expansion.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Independent housing researchers (academic economists, federal housing-policy agencies) document that housing shortages ended in most developed economies by the 1980s. Construction has exceeded demographic growth for 40+ years. Vacancy rates are positive. The founding coordination problems are solved. Incumbent owners and intermediaries contest this verdict and argue shortages persist. Financial regulators split: they maintain loose lending standards to prevent asset-price collapse, treating the founding problem as latently live, but acknowledge in internal documents that supply is adequate to demand outside of severe-restriction jurisdictions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.62
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "institutional_construction_vs_market_equilibrium",
+      "question": "Does the price level reflect institutional choice (zoning restriction, lending standards, tax incentives) or equilibrium supply-demand balance? Can the equilibrium be meaningfully separated from the institutions that constrain both supply and demand perception?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions with different institutional arrangements but similar local conditions (climate, topography, employment patterns). Natural experiment when a jurisdiction deregulates zoning: if prices fall while demand persists, institutional restriction was the marginal constraint.",
+      "impact": "If institutional construction is dominant, price formation is a policy choice (Tangled Rope classification holds). If equilibrium persists across different institutional arrangements, the constraint is closer to natural (shifts classification toward Mountain or invalidates institutional reading). The naturalist and institutional readings differ fundamentally on this question.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether price reflects institutional construction or equilibrium scarcity"
+    },
+    {
+      "id": "beneficiary_capture_vs_coordination_benefit",
+      "question": "Do institutional actors (lenders, intermediaries, policymakers) maintain lending and zoning standards because the standards serve genuine coordination (stable supply, efficient matching of borrowers to credit), or because the standards generate capture rents from scarcity?",
+      "resolution_mechanism": "Decompose lending-standard drift: did standards tighten after housing crises (indicating risk management) or loosen when asset prices rose (indicating competitive loosening to maintain volume)? Historical analysis of zoning board minutes: do discussions focus on infrastructure capacity and neighborhood matching, or on preserving property values and preventing supply competition?",
+      "impact": "If coordination dominates, Tangled Rope classification is correct (coordination + asymmetric extraction). If capture dominates, classification should shift toward Snare (extraction wearing coordination cover). The distinction rides on beneficiary motivation, which is opaque.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional standards serve coordination or extract from scarcity"
+    },
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Which reading of the price-formation kernel is correct: institutional (this story), naturalist (equilibrium reflection), georgist (land-rent separation), or financialization (credit-expansion feedback)? These readings are incommensurable on the mechanism but could coexist for different market segments or time periods.",
+      "resolution_mechanism": "Kernel readings are distinguished by what drives marginal prices: institutional reading says policy choice and regulatory scarcity; naturalist says preference-and-endowment equilibrium; georgist says unearned land rent; financialization says credit conditions and asset-price expectations. Test each by historical analysis of policy changes (zoning deregulation, lending-standard shifts, tax changes) and their price impacts. If prices move with policy more than with income or population, institutional reading is supported. If prices decouple from institutional changes, sibling readings gain ground.",
+      "impact": "The kernel reading fundamentally shapes classification: institutional reading points to Tangled Rope (policy-constructed beneficiaries and victims); naturalist points to Mountain (equilibrium process, no extractiveness beyond scarcity); georgist points to Snare (land rent extraction masked as natural scarcity); financialization points to Snare (credit expansion as pure extraction). The four readings cannot coexist in a single constraint; they are alternative constraints.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which kernel reading (institutional, naturalist, georgist, financialization) is the correct framing of price formation"
+    },
+    {
+      "id": "suppression_internalization_ambiguity",
+      "question": "Is the measured suppression (0.71) structural (incumbent owners have legal and political power to maintain zoning, lenders have legal power to set standards, intermediaries have market power to resist transparency) or internalized (renters and first-time buyers have accepted scarcity as inevitable, believe prices reflect true value, have internalized the constraint's frame)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: if zoning deregulation or lending-standard loosening occurs, does suppression persist in the behavior and expectations of renters and buyers (indicating internalization)? Interview and survey evidence on belief in price inevitability and scarcity narratives. Willingness-to-pay analysis when alternatives become available (do people exit the constraint, or do they remain despite new options).",
+      "impact": "If suppression is primarily structural, the constraint's effective extractiveness is what the metric reports (0.67 base extractiveness x high directionality for targets = high effective extraction). If suppression is partially internalized, the targets carry the suppression with them after structural reform (limiting the benefit of institutional change), and the constraint's true reach is higher than the structural measure suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural institutional power or internalized belief in inevitability"
+    },
+    {
+      "id": "temporal_drift_interpretation",
+      "question": "Does the rising extractiveness (0.45→0.67 over 40 years) and rising theater ratio (0.25→0.42) indicate (A) legitimate institutional changes responding to real housing challenges (adding regulations to manage growth), or (B) institutional drift toward pure extraction (regulations layered to extract rents rather than solve coordination problems)?",
+      "resolution_mechanism": "Decompose regulatory additions: were they adopted in response to measurable coordination failures (affordability crises, default waves, supply instability)? Do the regulations address the stated coordination problem or create new extraction opportunities? Cost-benefit analysis of each major institutional change (e.g., loan-level pricing adjustments, zoning code modifications). Testimony from policymakers on intent and from affected parties on impact.",
+      "impact": "If interpretation (A) is correct, rising metrics reflect legitimate institutional response and the constraint remains Tangled Rope at elevated but defensible extraction levels. If interpretation (B) is correct, the drift indicates mission creep and the constraint is transitioning toward Snare. The theater ratio rising faster than extractiveness (0.25→0.42 vs 0.45→0.67) suggests some theater is being added, consistent with interpretation (B).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional drift reflects problem-solving or rent-extraction layering"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Housing price formation in developed economies is presented by policymakers and intermediaries as a natural equilibrium process (the naturalist reading). This story instantiates the institutional reading: prices are constructed by zoning (supply restriction), lending standards (demand expectation), tax treatment (return expectations), and intermediary fee structures (value capture). The institutional reading coexists with the naturalist reading in policy discourse — most policymakers hold elements of both. The constraint is CLAIMED as Tangled Rope: it serves a coordination function (matching capital to development, standardizing underwriting) AND extracts asymmetrically (incumbent owners and lenders benefit, first-time buyers and renters pay). The measurement series show extractiveness rising from 0.45 to 0.67 over 40 years, with theater ratio rising faster (0.25 to 0.42), suggesting institutional drift toward greater extraction and performative activity. Suppression is high (0.71 at endpoint) and rising, reflecting the political power of incumbent owners and intermediaries to maintain zoning and lending standards despite affordability crises.",
+    "key_agents": [
+      "incumbent_property_owners: Primary beneficiary (asset appreciation), organized through neighborhood associations and lobbies; sets agenda alongside policymakers",
+      "institutional_lenders: Primary beneficiary (higher nominal mortgages, fee capture), sets lending standards that enforce price expectations; institutional power",
+      "real_estate_intermediaries: Beneficiary (commissions scale with price), organized through professional associations (NAR, local boards), lobby against price transparency",
+      "first_time_buyers: Primary victim (trapped by lending standards requiring high down payments, debt-to-income ratios that presume high prices); powerless, no collective voice",
+      "renters: Primary victim (rents track prices, locked into position by employment and family), powerless; identity-locked by place ties",
+      "zoning_authorities: Agenda-setter (enforce scarcity); politically captured by incumbent owners (largest voter bloc in property-tax jurisdictions)",
+      "financial_regulators: Agenda-setter (maintain loose lending standards); face pressure from lenders and fear asset-price instability more than household debt",
+      "tax_policymakers: Agenda-setter (maintain provisions that embed prices); political cost of changing provisions is high due to incumbent-owner backlash"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.67 (high) because the constraint transfers wealth from payers (first-time buyers, renters, young workers) to beneficiaries (incumbent owners, lenders, intermediaries) through mechanisms that are not transparent to payers and are defended as natural or inevitable rather than as policy choice. The beneficiaries did not invent price scarcity but actively maintain it through zoning preservation, lending standards that presume high prices, and tax provisions that embed price expectations. Suppression is 0.71 (high) because enforcement depends on active political maintenance: incumbent owners lobby against zoning changes, intermediaries lobby against fee transparency and alternative credit products, lenders lobby against standard loosening. Theater ratio at 0.42 (moderate, rising) reflects the rhetorical cover: zoning is justified as neighborhood preservation and environmental protection; lending standards are justified as prudential risk management; tax provisions are justified as encouraging ownership. Each justification contains some truth, but a growing portion of the enforcement activity (particularly zoning and lending standards) defends extraction and scarcity, not coordination. The measurement series show extractiveness saturating at 0.67 after 35 years (suggesting the constraint reached a political equilibrium where further extraction faces increasing resistance), while theater ratio continues to rise (institutional maintenance becomes more performative as the coordination justification weakens). Accessibility collapse and stakes inflation both rise at the individual level (0.50→0.70 and 0.48→0.72) as first-time buyers and renters face narrowing options and rising cost-of-entry. Resistance is highest at the organizational level (homeowner and renter coalitions, housing advocates) and rises across the interval, indicating strengthening pushback on the institutional reading.",
+    "perspectival_gap": "The institutional reading (this constraint) and the naturalist reading (sibling constraint) are held by different parties and compute to different types. From the incumbent-owner and lender seat, price formation reflects equilibrium (naturalist): policy provides the frame, but prices clear markets reflecting genuine scarcity (limited buildable land, high construction costs, preference for ownership). From the first-time buyer and renter seat, price formation is institutional extraction: policy choices (zoning, lending standards, tax provisions) create artificial scarcity and extract rents. The institutional policymakers split the difference: they treat price formation as quasi-natural (equilibrium within policy constraints) while maintaining the constraints because they prevent perceived threats (neighborhood change, financial instability). The engine computes per-seat directionality from beneficiary/victim declarations: incumbents and lenders get low directionality (d ~0.1-0.3, beneficiary end), buyers and renters get high directionality (d ~0.7-0.9, target end). The agenda-setters (zoning authorities, regulators, tax policymakers) get moderate directionality (d ~0.4-0.6) because they actively maintain the system but do not collect the extraction. The perspectival gap surfaces because the institutional reading asserts beneficiaries and victims exist (enabling asymmetric directionality), while the naturalist reading does not (everyone is coordinated by equilibrium, directionality is symmetric). These are genuinely different constraints, not two measures of the same thing.",
+    "directionality_logic": "Incumbent owners: d~0.15 (beneficiary end). They set zoning policy alongside authorities, capture its benefits (asset appreciation), and have low exit friction (can sell at inflated prices if they choose). Power is high (organized, voting bloc), exit is mobile (can exit by selling), so derived directionality favors beneficiary. Institutional lenders: d~0.10 (beneficiary end). They set lending standards, originate larger mortgages at profitable terms, and face no enforcement cost (they simply refuse credit). Power is institutional, exit is arbitrage (can shift portfolio away from housing), directionality strongly favors beneficiary. Real estate intermediaries: d~0.12 (beneficiary end). Commissions scale with price, they lobby against transparency, power is organized (professional associations), exit is mobile (commissions exist in any market, just compressed in competitive ones). First-time buyers: d~0.82 (target end). Trapped by lending standards requiring high down payments and debt-to-income multiples presume high prices; they must accept the price signal as given or exit geographically at high cost. Power is powerless, exit is trapped (employment is local, moving is costly), directionality strongly favors target. Renters: d~0.88 (target end). Identity-locked into place by employment, family, school district; rents track prices; no voice in zoning; cannot organize across fragmented rental markets. Power is powerless, exit is identity-locked (moving breaks social ties), directionality maximally favors target. Zoning authorities: d~0.55 (near-symmetric). They enforce zoning (paying enforcement costs) but do not collect extraction; political pressure from incumbents (low enforcement cost) and housing advocates (high enforcement cost) creates symmetric exposure. Power is institutional, exit is constrained (elected office depends on political coalition), directionality stays near center. Regulators and tax policymakers: d~0.50 (symmetric). They maintain standards but face pressure from opposite sides; fear of asset-price collapse restrains tightening, fear of affordability crises restrains loosening. Directionality is symmetric because the extraction and enforcement are distributed across multiple institutional seats with conflicting pressures. No overrides are needed; the structural derivation produces the correct d-values from beneficiary/victim + exit_options.",
+    "mandatrophy_analysis": "Founding problem (post-WWII housing shortage) is STATUS=DEAD. Residential construction has met and exceeded demographic demand in most developed economies since the 1980s; vacancy rates are positive; no shortage persists in the aggregate. The constraint PERSISTS despite the dead founding problem, indicating mandate drift. The constraint is NOT a piton (performing without benefit) because beneficiaries (incumbent owners, lenders, intermediaries) collect substantial rents and actively maintain it. Instead, the constraint is a clear Tangled Rope: the coordination function (standardizing credit, matching capital to development) was real and necessary in the founding period, but the constraint now performs dual function — coordination + extraction. The extraction is the reason persistence is mandated. The theater ratio rising faster than extractiveness (0.25→0.42 vs 0.45→0.67) indicates growing rhetorical cover and declining real coordination function. If the founding problem were live (supply shortage, coordination failure), we would expect theater ratio to remain low and stable. Instead, theater ratio rises because the institutional frame (zoning scarcity, lending standards) must be justified increasingly through narrative (neighborhood preservation, prudential risk) rather than through demonstrable coordination benefit. This is the classic mandatrophy signature: the constraint survives its founding problem by layering extraction onto a weakened coordination function. Institutional reading captures this pattern; the naturalist reading (founding problem still live, equilibrium persists) misses it.",
+    "kernel_context": "This constraint is one reading of the contested kernel price_formation_kernel. The reading instantiates institutional_reading: price formation is constructed by policy choices (zoning, lending standards, tax treatment, intermediary fee structures) rather than by natural equilibrium (naturalist_reading) or by land-rent separation (georgist_reading) or by credit-expansion feedback (financialization_reading). The sibling readings are incommensurable — they disagree on what drives marginal prices and what mechanisms sustain the constraint. Institutional reading sees price as policy output; naturalist reading sees policy as frame around equilibrium; georgist reading sees land-rent as the core extraction mechanism; financialization reading sees credit-expansion as the driver. These are alternative structures for the same domain (housing prices), not refinements of one story. The institutional reading coexists with the naturalist reading in policy discourse (policymakers hold both, inconsistently) and forecloses the pure georgist reading in advanced economies (land-rent extraction is now mediated through institutions that obscure it, not collected openly as georgists propose). The institutional reading influences the financialization reading (credit standards set by the same institutions that enforce zoning, so financial and regulatory mechanisms are coupled)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__naturalist_reading",
+      "price_formation_kernel__georgist_reading",
+      "price_formation_kernel__financialization_reading",
+      "zoning_scarcity_maintenance",
+      "mortgage_lending_standards",
+      "housing_tax_provision_embedding"
+    ],
+    "dual_formulation_note": "The price_formation_kernel decomposes into four structurally distinct readings: institutional (this story), naturalist, georgist, financialization. The institutional reading claims price is constructed by policy choices; the naturalist reading claims price reflects equilibrium; the georgist reading isolates land-rent extraction; the financialization reading emphasizes credit dynamics. Sibling relationships: institutional_reading coexists_with naturalist_reading (held by different policy coalitions simultaneously), forecloses pure_georgist_reading (georgist mechanisms are now institutional-mediated, not direct land-rent collection), influences financialization_reading (credit standards are set by the same institutions that enforce zoning). The four readings cannot coexist in a single constraint; they are alternative ε-invariant constraints with different beneficiary/victim structures and different mechanisms. Each sibling reading's ε value is distinct. Institutional reading claims moderate-to-high extractiveness (0.67 at endpoint) because policy mechanisms actively construct beneficiaries and victims. Naturalist reading would claim lower extractiveness (pure equilibrium has no designed beneficiaries, only differential impact). Georgist reading would claim high extractiveness (land rent is extracted from everyone but concentrated on landowners). Financialization reading would claim high extractiveness (credit expansion extracts through debt service and asset-price volatility). All four stories must be authored separately and linked through this network block. The institutional reading is the entry point to the family; other readings feed into or diverge from it."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "zoning_as_coordination_mechanism",
+    "drift_state": {
+      "moment": "contemporary_affordability_crisis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "price_formation_kernel__naturalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "price_formation_kernel__georgist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "price_formation_kernel__financialization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "zoning_enables_supply_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "lending_standards_manage_default_risk",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "tax_treatment_implements_ownership_preference",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "price_formation_kernel__naturalist_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  },
+  "gain_flow": "incumbent_property_owners",
+  "fixing_cost": "prohibitive"
+}

@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__commemorative_husk",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e2d5147e-37a4-4e7d-a49d-68e7a18319e2"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.38,
+    "theater_ratio": 0.82,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.72,
+    "claimed_type": "piton",
+    "human_readable": "Stone Memorial Land-Use Rule (Commemorative Husk Reading)",
+    "topic_domain": "disaster_anthropology/institutional_memory/land_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "waterfront_development_interests",
+      "civic_memory_institutions"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 42,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 42,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A stone memorial marks a historical disaster zone. Originally, a formal land-use rule prohibited building within a designated perimeter to preserve the space as commemorative. Over decades, the rule has decayed into a symbolic gesture: it persists in zoning code and historical commission oversight, but development interests routinely obtain variances, the stone's authority is invoked as justification for exceptions rather than as an enforcer of restrictions, and the landscape has filled with buildings near the stone. This story instantiates the COMMEMORATIVE_HUSK reading of the contested kernel: the stone's function is now entirely performative — maintaining memory through ritual (annual ceremonies, historical society stewardship) rather than through spatial control. The behavioral_competence sibling reading treats the stone as a live land-use prohibition where daily spatial practice enforces compliance; this reading treats it as an atrophied enforcement mechanism maintained theatrically. These are structurally distinct constraints with different epsilon values and different stakeholder situations.",
+    "key_agents": [
+      "waterfront_development_interests: primary beneficiary; extracts deference via variances; nominally constrained but practically mobile",
+      "historical_commission: agenda setter; administers the rule and performs ceremonial upkeep; lacks enforcement capacity",
+      "descendants_and_remembrance_community: payer (loses quiet memorial space to development); beneficiary (the stone's existence vindicates their memory claims)",
+      "land_use_planners: payer (absorb friction from competing directives); moderate power",
+      "general_public: observer; unaware of the rule; experience stone as artifact only"
+    ],
+    "logic_rationale": "Theater ratio (0.82 at interval end) is very high: the rule's primary function is now ceremonial rather than spatial. Annual remembrance events, historical commission meeting minutes, and symbolic objections to development are the enacted performances; actual zoning decisions proceed with development near the stone. Extractiveness is high (0.71) and rising because the rule extracts deference (time, legitimacy, symbolic respect) from planners and remembrance communities while granting development interests arbitrage access (build via variance, cite the stone's commemorative value as justification, frame the waiver as respect for memory). Suppression is low (0.38) because there is no active suppressive machinery — the rule persists by inertia and administrative habit, not by enforcement. Accessibility_collapse is very low (0.25): alternatives are wholly accessible; developers exit whenever they choose via variance. Resistance is high (0.72) because remembrance communities and planners actively object to development, hold ceremonies, and maintain the stone — their resistance is structural rather than suppressed, which is diagnostic of a piton (the constraint persists despite active resistance, not because it overcomes resistance). The measurement series traces the decay: theater ratio rises as the performative fraction grows, extractiveness rises as development interests gain practiced arbitrage over the rule, and the regime stabilizes at a high-theater steady state by t=42. One shared time grid: every measurement point is authored for every metric at the same seven waypoints plus start and end.",
+    "perspectival_gap": "Development interests and the historical commission should compute very differently from this structure. Developers experience the stone rule as a nominal constraint that is routinely waived — high exit options, therefore low directionality toward extraction. The historical commission experiences it as their mandate and identity — constrained, performing the rule even as it erodes, therefore moderate directionality toward the extraction (they bear the cost of the rule's symbolic maintenance). Planners sit between: nominally administering the rule, practically accommodating development, absorbing friction from both sides. The engine computes each seat's type from power + exit + beneficiary/victim status; the authored claim (piton) reflects the structural fact that no seat is hurt enough or benefits enough to sustain the rule — the historical commission would preserve it, but lacks power; developers benefit from its decay, and have power; planners administer it, but are constrained by competing directives. A piton is exactly this: no concentrated beneficiary capturing the extraction; no concentrated victim suffering enough to fix it; maintenance is administrative inertia and performance rather than active interest.",
+    "directionality_logic": "Waterfront developers: structural beneficiary (gain arbitrage, development flexibility). Directionality low (beneficiary end). Historical commission: payer (expend effort maintaining a rule with no teeth) and nominal administrator (set the rule). Directionality moderate (carry the symbolic obligation). Remembrance community: payer (lose quiet memorial space) and secondary beneficiary (the stone's existence matters to them). Directionality mixed; moderate on average. Planners: payer (absorb friction, make judgment calls, face contradictions). Directionality moderate-high. General public: observer (no structural extraction). Directionality analytical. The beneficiary status of development interests (they extract arbitrage) and the victim status of remembrance communities and planners (they expend effort and bear friction) derive the directionality spread. Development interests are mobile (arbitrage exit), so their d is dampened toward the beneficiary end; remembrance communities are constrained (can only object, not override), so their d is amplified toward the payer end. Planners are constrained by administrative obligation, so their d sits at moderate-high.",
+    "mandatrophy_analysis": "Mandatrophy (mandate outliving function) is exactly the structure here. The founding mandate was to preserve a commemorative zone via land-use prohibition. The founding problem (disaster + need for memory) persists, but the rule's functional relationship to that problem has decayed. Memory is now maintained through ceremony and symbolic presence rather than through spatial control. The rule persists because (a) it costs little to maintain in code and (b) it extracts performative deference from planners and remembrance communities, and (c) no single party is motivated to formally abolish it (developers prefer it as-is, waivable; memory communities prefer it as a symbol even if unenforced). The mandatrophy classification prevents misreading this as either a live Snare (it lacks real extraction power) or a live Rope (it lacks genuine coordination function). It is a Piton: atrophied enforcement, persistent symbolic maintenance, no concentrated beneficiary or victim sufficient to change it.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'stone_land_use_rule', instantiating the COMMEMORATIVE_HUSK reading. The kernel is a single stabilized commitment: a stone memorial in a specific location and a formal land-use rule attached to it. The BEHAVIORAL_COMPETENCE reading (the sibling, not this story) treats the stone as a live land-use prohibition whose force persists through daily spatial practice — developers avoid the zone, planners enforce the rule, remembrance communities defend the boundary. This reading (COMMEMORATIVE_HUSK) treats the same stone and same rule as a memorial artifact whose force has decayed into symbolic gesture — the rule is waived routinely, development proceeds near the stone, the stone's authority now serves to justify exceptions rather than to enforce restrictions. The two readings have fundamentally different epsilon values: behavioral_competence reads high epsilon as suppression cost (developers must comply at cost to themselves); commemorative_husk reads high epsilon as extraction benefit (developers gain arbitrage by treating the rule as symbolic). The structural delta is ZERO land-use constraint in the commemorative_husk reading: the stone does not actually control building decisions. This is the core ambiguity the kernel does not resolve — whether the stone is a live enforcer or a performative symbol — and the engine will measure which reading fits the empirical record."
+  },
+  "omegas": [
+    {
+      "id": "rule_enforcement_vs_symbol",
+      "question": "Is the stone rule still a live land-use constraint that developers genuinely constrain themselves around, or has it become purely symbolic authority invoked to justify exceptions?",
+      "resolution_mechanism": "Zoning variance audit: compare the rate of variance applications for sites near the stone versus sites far from it; if variance rates are equal or nearly equal, the rule has no binding effect. Interviews with development interests: direct questions about whether the rule shapes their projects or whether they plan around it. Spatial analysis of completed buildings: measure actual compliance distance from the stone across time periods.",
+      "impact": "If live constraint: reclassify toward behavioral_competence reading and Snare type (extraction is suppression cost, not arbitrage). If symbolic: the commemorative_husk reading holds, and the constraint is a Piton (high theater, extractive arbitrage, no enforcement).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the stone rule functionally constrains land-use decisions or merely provides narrative cover for exceptions."
+    },
+    {
+      "id": "remembrance_community_exit",
+      "question": "If the stone rule were formally abolished, would the remembrance community relocate the stone, create an alternative memorial, or accept that memory is now maintained through non-spatial means?",
+      "resolution_mechanism": "Interviews with remembrance community leaders and descendants; historical precedent from other memorials; observation of their response if any jurisdiction formally removes or relaxes the rule.",
+      "impact": "If the community would fight to preserve the spatial rule, the rule extracts identity-based attachment and resistance becomes a structural feature. If the community would adapt to memorial forms other than spatial restriction, the rule extracts less and the theater fraction is higher. If the community is ambivalent, the suppression measured may be partly internalized identity-lock rather than structural coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the remembrance community's commitment to the rule is structural identity-lock or negotiable preference for one form of memory practice."
+    },
+    {
+      "id": "kernel_reading_stability",
+      "question": "As development pressure intensifies and more buildings cluster near the stone, at what point would observable land-use practice transition from the commemorative_husk reading (symbolic, waivable) to a behavioral_competence reading (live, enforced), or would it instead transition to a snare reading (symbolic cover for extraction by development interests)?",
+      "resolution_mechanism": "Longitudinal zoning audit over the next 10–20 years; observation of whether (a) planners and political pressure eventually restore enforcement (behavioral_competence emerges), (b) development interests formalize the rule's symbolic status in code and stop pretending to compliance (Snare emerges), or (c) the rule is formally abolished.",
+      "impact": "If the reading transitions, the constraint family gains a temporal ordering: commemorative_husk is the transient reading, a way-station between behavioral_competence (the founding state) and either renewed enforcement or formalized extraction. If it stabilizes, commemorative_husk is a durable equilibrium state.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the commemorative_husk reading is a stable endpoint or a transitional state in the kernel's evolution."
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the remembrance community's acceptance of the rule's decay (their continued ceremonies and symbolic objections despite lost spatial control) structural suppression (they are coerced by development power and legal powerlessness) or internalized commitment (they have accepted that memory can be maintained non-spatially and choose to do so)?",
+      "resolution_mechanism": "Post-exit measurement: if the rule were formally abolished, would the remembrance community's commemorative practice persist, shift forms, or dissolve? Longitudinal interviews tracking whether their framing of the rule shifts from 'constraint that protects the space' to 'symbol we perform'.",
+      "impact": "If structural: suppression is higher than the authored 0.38 (it persists because they lack exit options). If internalized: suppression is accurately measured (they choose performative memory). The distinction informs whether the constraint is trapping an unwilling community or accommodating their chosen memorial form.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the remembrance community's constraint acceptance is coerced or consensual."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "stone_land_use_rule__behavioral_competence"
+    ],
+    "dual_formulation_note": "The stone_land_use_rule kernel decomposes into two readings with structurally distinct epsilon values and stakeholder situations. The behavioral_competence reading treats the stone as a live land-use prohibition enforced through daily spatial practice and developer compliance costs; the commemorative_husk reading treats the same stone as an atrophied enforcement mechanism maintained theatrically. These are not the same constraint viewed from two angles — their epsilon values differ by a wide margin, their failure modes are opposite (one fails if development proceeds; one fails if development is somehow blocked despite variances), and their empirical statuses are contested. The two stories are linked via this network edge so the corpus can measure which reading fits the observed land-use pattern and constraint evolution."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "spatial_land_use_prohibition",
+    "drift_state": {
+      "moment": "contemporary_post_development_pressure",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "stone_land_use_rule__behavioral_competence",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "memory_maintenance_via_symbol_not_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "spatial_control_authority_dissolved_to_narrative_authority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

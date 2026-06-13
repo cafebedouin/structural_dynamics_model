@@ -1,0 +1,619 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e7317e89-3675-4bd4-bd05-731803fd7fd1"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.81,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "HOA Covenant Fine and Lien Extraction System",
+    "topic_domain": "property_law/collective_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "board_members",
+      "property_management_firms",
+      "legal_counsel_firms"
+    ],
+    "victims": [
+      "financially_vulnerable_homeowners",
+      "renters_via_pass_through",
+      "middle_income_homeowners"
+    ],
+    "vindicated_propositions": [
+      "board_fiduciary_discretion",
+      "property_value_protection_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "board_members",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Elected or self-perpetuating volunteers who set covenant enforcement priorities, approve enforcement budgets, and vote on fine schedules. They benefit from selective enforcement that targets high-fine violations while overlooking violations by board allies. Many are property investors whose own properties benefit from board-directed enforcement patterns. Can decline re-election or move to other communities."
+    },
+    {
+      "name": "property_management_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Hired to administer covenant enforcement. Collect management fees tied to collected fines, have discretion over which violations to report, and recommend fine schedules. Revenue grows with enforcement intensity. Operate across multiple HOAs and can reallocate resources to high-extraction communities."
+    },
+    {
+      "name": "legal_counsel_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Retained to draft covenant language, advise on enforcement procedures, and pursue lien and foreclosure actions. Bill hourly for enforcement work and receive contingent shares of lien proceeds. Benefit from aggressive enforcement generating litigation volume. Can shift to other practice areas or communities."
+    },
+    {
+      "name": "financially_vulnerable_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Own property in the HOA but lack resources to dispute fines or hire legal counsel. Face accelerating fine schedules, attorney fee additions, and lien processes that threaten foreclosure. Cannot afford legal representation. Exit is foreclosure or sale at distressed prices. Identity is locked to homeownership and community stability."
+    },
+    {
+      "name": "renters_via_pass_through",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Rent from HOA homeowners whose covenant violations or board assessments are passed through as rent increases. Bear extraction cost but have no governance seat. Exit is to rent elsewhere, but extraction is invisible to them until rent hike arrives."
+    },
+    {
+      "name": "middle_income_homeowners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Own property and can afford some legal counsel, but face the same fine structure and enforcement patterns as vulnerable neighbors. Have resources to resist some actions but lack power to change board or covenant. Exit via sale is costly because enforcement patterns depress property values."
+    },
+    {
+      "name": "homeowners_board_allies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Own property and have relationships with board members or political alignment sufficient to avoid selective enforcement. Their violations are overlooked or resolved informally while similar violations by non-allies trigger fines and liens. Benefit from selective exemption and targeted property value protection. Formally payers but factually beneficiaries."
+    },
+    {
+      "name": "homeowner_reform_advocates",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Non-profit organizations and legal reformers advocating for mandatory alternative dispute resolution, homeowner bill-of-rights protections, capped fine schedules, and enforcement transparency. Would redesign covenant enforcement to require neutral arbitration and mandatory homeowner voting on budgets. Excluded from HOA governance; influence is legislative and advocacy-based."
+    },
+    {
+      "name": "state_legislators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Observe covenant enforcement patterns through constituent complaints and reform advocates; have authority to pass laws requiring HOA transparency, capping fines, or mandating homeowner voting. Have not acted in most jurisdictions despite documented abuse. Structurally aligned with property rights framing and institutional deference."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a shared interest: preventing severe deterioration of properties that would reduce collective property values and create externalities (deferred maintenance, hazardous conditions). Genuine coordination problem: without some mechanism to enforce upkeep, free-riding homeowners could degrade the community.",
+    "transfer_function": "Moves money from homeowners (via fines, liens, attorney fees, and increased assessments) to board members (via selective enforcement exemptions and property value protection), property management firms (via management fees tied to fine collection), and legal counsel (via litigation volume and contingent shares). Renters pay via rent increases passed through by landlord-members. The transfer is contingent on selective enforcement patterns that exempt board allies.",
+    "absent_voices": "Renters subject to pass-through extraction are excluded from HOA governance. State legislatures and alternative dispute resolution advocates would argue for mandatory homeowner voting on enforcement budgets, capped fine schedules, and neutral arbitration of disputes. Financially vulnerable homeowners lack resources to organize collective challenges. Their absence is structural — renters have no legal seat; vulnerable owners are individually weak.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If covenant enforcement and selective fine structures vanished, property management fees would collapse, legal counsel would lose enforcement retainers, board members would lose selective exemption benefits, and property values would initially decline. The community would reorganize around looser, transparent enforcement or mandatory homeowner voting on enforcement budgets. Renters would see stable rent. The extraction mechanism would disappear but the coordination problem (shared maintenance need) would remain to be solved by a different structure.",
+    "founding_problem": "Early HOAs were built to solve genuine coordination problems: shared amenities (pools, clubhouses), common infrastructure (roads, landscaping), and property value protection against neighborhood deterioration. Without some enforcement mechanism, free-riding was a real risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Board members and property management firms attest the founding problem remains live — properties still deteriorate without enforcement, they argue. Homeowner advocates, alternative dispute resolution non-profits, and state regulatory analysts attest the problem is substantially solved in well-maintained communities and the apparatus now functions as pure extraction. Legal scholarship on HOA capture (outside the benefiting parties) documents the shift from maintenance coordination to fine proliferation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.81,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 35,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.41
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.74
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.79
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.56
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.81
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.85
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 35,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 35,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 35,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 35,
+        "value": 0.68
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "selective_enforcement_mechanism",
+      "question": "Is the selective enforcement of covenants a deliberate strategy by the board and management firms, or an artifact of inconsistent application?",
+      "resolution_mechanism": "Audit of enforcement records across properties: statistical analysis of violation reporting, fine amounts, and lien filing patterns by property address, owner demographics, and board member proximity. Testimony from property management staff about enforcement decision-making.",
+      "impact": "Deliberate strategy strengthens the extraction reading and supports mandatory transparency requirements; artifact-level inconsistency weakens the extraction reading and supports remediation training for management. The reading assumes deliberate strategy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether selective enforcement is intentional extraction or procedural inconsistency."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "What share of covenant enforcement activity is directed at genuine maintenance coordination (preventing deterioration that affects collective property values) versus rent extraction (fines, liens, fees on violations unrelated to collective harm)?",
+      "resolution_mechanism": "Classification of all active enforcement cases into genuine-coordination and rent-extraction categories by independent evaluators; analysis of fine schedules against estimated remediation costs; tracking of lien and foreclosure outcomes.",
+      "impact": "High genuine-coordination share (>60%) would support a coordination reading of the constraint and suggest the extraction is incidental; low share (<30%) would consolidate the extraction reading. The reading assumes low share (10-25%).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of enforcement targeting genuine shared externalities versus rent-seeking violations."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the measured suppression (0.81) structural (legal processes, lien threats, foreclosure risk) or internalized (homeowners have internalized the board's authority and fear social sanction more than legal process)?",
+      "resolution_mechanism": "Post-exit analysis: when homeowners exit the HOA (via sale or relocation), does suppression persist (belief in board legitimacy remains) or evaporate (suppression was structural)? Qualitative interviews with former homeowners and displaced renters about their lived experience of enforcement.",
+      "impact": "Structural suppression is more amenable to legal remedy (reform the lien process, cap fines); internalized suppression requires longer-term cultural change. If internalized, the constraint's effective suppression is higher than the structural measure suggests — the constraint travels with the person after exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural legal process or internalized belief in board authority."
+    },
+    {
+      "id": "board_composition_capture",
+      "question": "Is the board genuinely representative of the homeowner population, or has it been captured by property investors and management-firm allies who use board seats to maximize extraction?",
+      "resolution_mechanism": "Demographic and economic analysis of board members versus general homeowner population; tracking of board election patterns and incumbent re-election rates; analysis of board members' property portfolios and relationships to management firms and legal counsel.",
+      "impact": "Capture would consolidate the extraction reading and support mandatory homeowner voting on enforcement budgets and board composition requirements. Non-capture would suggest the board reflects community preferences (even if those preferences are extractive). The reading assumes capture.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the board is captured by investors and management-firm allies or representative of homeowners."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of a contested kernel (hoa_covenant_scope). Three readings instantiate different interpretations of the same underlying covenant mechanism: coordination_reading (covenants solve genuine externalities), behavioral_control_reading (covenants enforce aesthetic conformity), and extraction_reading (this one — covenants are revenue generation). Which reading best explains the observed enforcement patterns?",
+      "resolution_mechanism": "Empirical classification: does enforcement correlate with (a) maintenance impact on property values (coordination hypothesis), (b) visual/aesthetic conformity (behavioral control hypothesis), or (c) revenue/lien generation unrelated to property deterioration (extraction hypothesis)? Analysis of enforcement against these three independent variables.",
+      "impact": "The reading claims extraction dominates; strong correlation with revenue patterns and weak correlation with either maintenance or aesthetic factors would consolidate the reading. Competing empirical support would indicate the other readings capture different aspects of the same constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether covenant enforcement patterns match extraction, coordination, or behavioral-control hypotheses."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A homeowners association uses covenant enforcement as a revenue generation and board power consolidation mechanism. Covenants are written broadly and enforced selectively: board members and their allies see violations overlooked or resolved informally, while non-aligned homeowners face escalating fines, attorney fees, and lien processes. Property management firms and legal counsel benefit from enforcement volume and lien proceeds. Financially vulnerable homeowners and renters (who bear pass-through increases) face suppression from lien threats and foreclosure risk. The constraint is presented to homeowners as property value protection; this reading interprets it as rent extraction enabled by selective enforcement.",
+    "key_agents": [
+      "board_members: agenda-setter and beneficiary; power is organized, exit is mobile — they can decline re-election or move to other communities, but the power position attracts repeat volunteers.",
+      "property_management_firms: beneficiary; power is powerful, exit is arbitrage — they operate across many HOAs and can reallocate to high-extraction communities.",
+      "legal_counsel_firms: beneficiary; power is powerful, exit is arbitrage — they bill hourly and retain contingent shares of lien proceeds.",
+      "financially_vulnerable_homeowners: victim; power is powerless, exit is trapped — they cannot exit without catastrophic loss; identity is locked to homeownership.",
+      "middle_income_homeowners: payer; power is moderate, exit is constrained — they can resist some enforcement but cannot change the board or covenant structure; exit via sale is costly.",
+      "renters_via_pass_through: victim; power is powerless, exit is constrained — they have no HOA seat and bear extraction invisible to them until rent increases.",
+      "state_legislators: observer; power is institutional, exit is analytical — they have authority to pass HOA reform laws but have not acted in most jurisdictions."
+    ],
+    "logic_rationale": "Extraction is high (0.68) because the constraint moves money from homeowners to board members (via selective exemption), management firms (via management fees tied to fine collection), and legal counsel (via enforcement retainers and contingent shares). Suppression is very high (0.81) because the threat of liens and foreclosure prevents homeowners from challenging enforcement — the legal process itself is the suppression mechanism. Theater ratio rises over the interval (0.28 to 0.52) as enforcement activity increasingly targets revenue generation (fine proliferation) rather than genuine maintenance coordination. Accessibility collapse is moderate (0.48) because homeowners retain the option to sell or contest fines in court, but at prohibitive cost — the alternatives do not disappear, they become inaccessible. The measurement series trace the trajectory: extractiveness and suppression rise as the constraint matures; theater ratio rises as maintenance coordination work is displaced by fine machinery. All metrics are measured on a single shared time grid (every metric at every time point) so the lifecycle is coherent.",
+    "perspectival_gap": "Board members and management firms perceive the constraint as necessary property value protection and legitimate community governance. They author fines as corrective, not extractive. Financially vulnerable homeowners perceive the constraint as a legal threat that preys on honest mistakes or minor infractions and uses foreclosure as extortion to extract payment. State legislators perceive the constraint as a private governance issue requiring deference to property rights, not intervention. The engine computes this divergence from the structural data: board members' d is near the beneficiary end (they control the rule, see exemptions); vulnerable homeowners' d is near the target end (they are powerless and trapped). The authored claim is tangled_rope (genuine coordination function + asymmetric extraction); the metrics describe substantially extractive operation. This divergence is the measurement the corpus exists to take.",
+    "directionality_logic": "Board members are beneficiaries and agenda-setters: they set enforcement priorities, approve fine schedules, and benefit from selective enforcement that targets non-allies. Their directionality d is near 0.1-0.2 (far beneficiary end) because they control the constraint, see personal exemptions, and have mobile exit. Property management firms and legal counsel have d near 0.15-0.25 (beneficiary end) because they collect fees and have arbitrage exit. Financially vulnerable homeowners have d near 0.85-0.95 (far target end) because they are powerless, trapped, and subject to escalating enforcement. Middle-income homeowners have d near 0.65-0.75 (target end, but less extreme) because they can afford some legal defense and have partial exit via sale (costly but possible). Homeowners with board connections have d near 0.25-0.35 (beneficiary side, via selective exemption) despite being formally payers. Renters have d near 0.80-0.90 (far target end) because they bear extraction invisible to them and have constrained exit to other rentals in the same HOA or different communities. No directionality override is needed — the structural derivation from beneficiary/victim declarations and exit options produces the right d for each seat.",
+    "mandatrophy_analysis": "The founding problem (coordination of shared maintenance) is live, but the constraint's primary function has shifted to revenue generation. The measurement series show this: extractiveness rises from 0.38 to 0.68 while theater ratio rises from 0.28 to 0.52, indicating that enforcement work is increasingly devoted to revenue machinery (fine processing, lien filing) rather than property maintenance coordination. The constraint exhibits mandatrophy (mandate outlived function) without satisfying the piton definition — it is not mostly performance (theater at 0.52 suggests real extraction work, not theatrical maintenance). The distinction: a piton is abandoned by its builders and maintained by inertia; this constraint is actively rebuilt and expanded by beneficiaries who profit from extraction. It is tangled_rope (genuine coordination function + asymmetric extraction) that has evolved into extraction dominance, not a piton. The governance structure still claims coordination legitimacy ('property value protection') but deploys the machinery for extraction.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel hoa_covenant_scope. The kernel — the covenant mechanism itself — is claimed by three different readings: coordination_reading (covenants solve genuine externalities in shared property), behavioral_control_reading (covenants enforce aesthetic conformity to maximize desirability), and extraction_reading (this one — covenants are revenue generation via fine proliferation and selective enforcement). Each reading instantiates a different structural interpretation of the same underlying covenant text and enforcement apparatus. The three readings are distinguished by what they claim is the dominant function: coordination (first), behavior (second), extraction (third). They share the same kernel (the covenant text and enforcement process) but assign radically different purposes and beneficiary structures to it. No single framework can hold all three simultaneously — a covenant cannot be primarily for coordination AND primarily for extraction AND primarily for behavior (the purposes are logically distinct). However, the three readings coexist as live positions held by different parties: boards claim coordination, reformers claim extraction is the lived reality, and some scholars observe both coordination and behavioral-control elements operating in parallel. The empirical question is which reading best explains the observed enforcement patterns; this story commits to the extraction reading as the dominant structural truth."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__behavioral_control_reading"
+    ],
+    "dual_formulation_note": "The hoa_covenant_scope kernel has three constraint stories corresponding to three readings of the same underlying covenant mechanism. The extraction_reading (this constraint) claims covenants function primarily as revenue generation via fine proliferation and selective enforcement, with extractiveness ~0.68. The coordination_reading claims covenants solve genuine externalities (shared maintenance, property deterioration prevention) with lower extractiveness and genuine beneficiary-to-all structure. The behavioral_control_reading claims covenants enforce aesthetic conformity as property value maximization with moderate extractiveness concentrated on aesthetic targets. Each reading has its own ε, beneficiary/victim structure, and classification. The three stories are linked via network.affects_constraints to signal family kinship. Decomposition is justified by ε-invariance: the observable used to measure the constraint changes the resulting ε (maintenance coordination vs. fine proliferation vs. aesthetic conformity are three structurally distinct observables that produce three different ε values). The extraction_reading measures extractiveness under the observable 'fine generation and lien filing patterns'; the coordination_reading measures it under 'maintenance coordination and prevention of deterioration'; the behavioral_control_reading measures it under 'aesthetic enforcement targeting'. No single ε can satisfy all three observables — therefore three constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ],
+  "gain_flow": "board_members",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hoa_covenant_scope__coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hoa_covenant_scope__behavioral_control_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "covenant_enforces_revenue_collection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "selective_enforcement_maximizes_board_power",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "property_maintenance_coordination_framework",
+    "drift_state": {
+      "moment": "contemporary_fine_proliferation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "hoa_covenant_scope__coordination_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

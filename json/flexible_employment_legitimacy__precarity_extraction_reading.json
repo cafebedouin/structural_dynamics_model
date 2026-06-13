@@ -1,0 +1,546 @@
+{
+  "header": {
+    "constraint_id": "flexible_employment_legitimacy__precarity_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5f730cd4-3ef8-4fdc-978b-8fe86482384d"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.76,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.54,
+    "claimed_type": "snare",
+    "human_readable": "Flexible Employment as Precarity Extraction (Algorithmic Labor Discipline Reading)",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators"
+    ],
+    "victims": [
+      "flexible_workers",
+      "service_provision_communities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and enforce algorithmic assignment of work, set piece rates, control quality metrics, and terminate workers unilaterally. Frame flexibility as worker choice and opportunity. Externalize wage risk, unemployment insurance obligations, and benefits administration to workers and public systems. Capture wage spread between worker payment and customer billing. Technological lock-in (proprietary ratings, algorithm opacity) makes platform switching prohibitively costly for workers despite nominal freedom to exit."
+    },
+    {
+      "name": "flexible_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Accept algorithmic work assignment at algorithmically-determined rates, work under algorithmic performance monitoring and discipline, absorb all income volatility and unemployment risk, bear full cost of benefits, training, equipment, and tax compliance. Nominally free to exit but face reputational degradation (low rating), loss of algorithmic priority, and near-total loss of income on departure. Identity-locked through economic necessity (precarity makes staying despite exploitation the rational choice) and through internalized narratives of entrepreneurship and flexibility as personal liberation. Derive some genuine benefits from schedule flexibility and immediate income access, but at cost of perpetual precarity."
+    },
+    {
+      "name": "service_provision_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear costs of social safety net gaps and workers' insufficient contributions: unemployment insurance systems absorb workers unable to afford contributions, public health systems treat occupational injuries, child care subsidies compensate for low irregular incomes, housing assistance absorbs cost volatility. Absorb externalized risk as tax burden and uncompensated public provision. Geographic overlap with high flexible-work concentration amplifies concentrated cost burden on place-based communities."
+    },
+    {
+      "name": "traditional_employers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face wage pressure and recruitment difficulty as workers are allocated to platform work; compete for workers against the platform's guaranteed income access and lack of employment obligations. Would argue for labor-supply restoration and worker cost-shifting internalization but are structurally excluded from the algorithmic assignment system that allocates labor to the platform. Their exclusion from the work-allocation mechanism is what enforcement machinery exists to maintain."
+    },
+    {
+      "name": "consumer_facing_platforms",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Capture value from the wage spread between worker payment and customer billing. Pass through lower labor costs to customers, reinforcing network effects and competitive advantage. Benefit from algorithmic labor discipline without bearing risk or compliance cost. Participate in the ratcheting of precarity through cross-platform competition on labor cost and service speed."
+    },
+    {
+      "name": "labor_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigate whether flexible work structures satisfy labor-law thresholds for worker protection, benefit contribution, and termination notice. Encounter difficulty measuring extraction under the framework that treats workers as independent contractors. Can impose reclassification, mandated benefits, or algorithmic transparency requirements that would alter the constraint's enforcement."
+    },
+    {
+      "name": "worker_advocacy_organizations",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organize workers and demand wage floors, benefit access, and algorithmic transparency; are excluded from platform governance and compensation decisions. Would testify that precarity is coercive mechanism, not worker choice, and that identity-lock (low rating making exit costly) violates freedom of association. Structurally blocked from collective bargaining by independent-contractor classification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Matches labor supply with service demand in real time across geographic regions and customer demand variation, eliminating scheduling friction and allowing customers to access services at moments of need without platform commitment to always-available workforce.",
+    "transfer_function": "Moves wage surplus (the spread between what workers are paid per unit of service and what customers pay) to platform operators; transfers unemployment, disability, and income-volatility risk from platforms to workers and public safety nets; transfers benefits administration and employment-law compliance cost from platforms to workers, governments, and informal family structures.",
+    "absent_voices": "Traditional labor unions and collective-bargaining organizations are excluded from platform governance; worker-advocacy organizations cannot participate in algorithmic design or rate-setting; social safety-net systems bear costs but have no voice in labor classification decisions that externalize risk to them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the precarity structure and its enforcement machinery disappeared overnight, labor would shift back to traditional employment forms with sunk benefits and termination costs, customer service prices would rise to reflect true labor costs, platform margins would compress, public safety nets would see reduced caseloads (workers with stable employment contribute more and draw less), and wage volatility for service workers would decline measurably — the entire coordination architecture would reorganize around formal employment or cooperative labor structures.",
+    "founding_problem": "Traditional employment created costly overhead for platforms and inefficient labor allocation: workers had fixed schedules and termination costs, platforms bore benefits and training expenses, and supply could not scale instantly with demand spikes.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Platform operators attest the founding problem is live and solved by flexibility. Labor economists and worker-advocacy organizations corroborate that efficient allocation exists but attest the founding problem has been substantially transformed into a mechanism for cost-shifting; independent research on gig-work earnings volatility and public-benefit uptake supports the precarity reading. Regulatory testimony from labor departments confirms workers cannot negotiate or understand terms they accept, contradicting the autonomy-and-efficiency narrative."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 13,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.76,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates ONE READING of the contested kernel 'flexible employment legitimacy.' The kernel is a set of arrangements claiming justification as flexible-labor markets; this reading interprets the same arrangements as a mechanism for platform extraction of surplus value through wage-risk externalization and algorithmic labor discipline. The sibling readings (market_efficiency_reading, developmental_state_reading) frame the same kernel differently: efficiency-based legitimacy vs. transitional-state management. This story focuses on the extraction mechanism, making visible how nominal flexibility functions as coercive precarity at the point where identity-lock (economic necessity + internalized entrepreneurship narratives) prevents exit despite algorithmic assignment and unilateral rate-setting. Claim and metrics are intentionally independent: the reading CLAIMS snare (coercive extraction), and the metrics (high extractiveness, high suppression, rising theater ratio) support that claim — but the claim stands as the reading's assertion, not as a prediction of the engine's output.",
+    "key_agents": [
+      "platform_operators: institutional agenda-setters with global scope, arbitrage-grade exit options, and direct revenue capture from the wage spread",
+      "flexible_workers: powerless, identity-locked targets who bear all income volatility and unemployment risk while accepting algorithmic assignment at algorithmic rates",
+      "service_provision_communities: powerless, trapped payers bearing costs of safety-net gaps and worker insufficient contributions",
+      "traditional_employers: excluded powerful actors who would compete for labor but are structurally locked out of algorithmic allocation",
+      "labor_regulators: analytical observers who can reclassify workers and impose benefits/transparency requirements"
+    ],
+    "logic_rationale": "Extractiveness is high and rising (0.62→0.81 over interval) because the wage spread (difference between customer price and worker payment) is decoupled from platform marginal cost and grows as competition ratchets down labor cost. Suppression is high (0.76) and rising because the constraint's persistence depends on actively preventing worker exit through algorithmic priority/rating systems and on preventing traditional-employer competition by capturing labor supply. Theater ratio is moderate-to-high (0.38→0.58) because the narrative of 'worker flexibility' and 'entrepreneurship opportunity' performs the work of justifying precarity, and algorithmic speed/responsiveness documentation serves as cover for algorithmic labor discipline. Accessibility of alternatives collapses (0.62) because once inside the rating system, workers face reputation cost that makes exit rational only under severe duress. Resistance is moderate (0.54) because worker advocacy is real but organizationally constrained by independent-contractor classification and algorithmic atomization. Measurements share one time grid across all metrics at each point; the rising extractiveness and theater ratio over the interval track the compression of wage floors and the sophistication of algorithmic performance management (Goodhart drift: platform optimizes for metrics the algorithm can see, not for worker welfare).",
+    "perspectival_gap": "Platform operators perceive a genuine coordination solution they built and maintain at positive cost (infrastructure, fraud prevention, customer-facing reliability). Workers perceive algorithmic coercion with nominal freedom: they can exit but face reputational and financial catastrophe, which makes staying rational despite extraction. Labor regulators perceive a classification problem: the worker is formally independent, but the terms of work (assignment, rate, termination) are unilaterally set and enforced algorithmically — the structural attributes of employment without the legal protections. The engine computes these seats differently: platform as beneficiary (d→0, low extraction on their side), worker as target (d→1, high extraction), regulator as observer (d=0.5). The divergence is the point: the same structure experiences completely different extraction depending on where you sit.",
+    "directionality_logic": "Platform operators: institutional power, arbitrage exit (can switch to other revenue streams, geographic markets, or labor populations), declared as agenda-setter and beneficiary — derived d approaches 0.0 (subsidy/benefit) because they capture the extraction. Flexible workers: powerless, identity-locked (staying is rational despite extraction because leaving means rating death and income collapse; internalized narratives of entrepreneurship fuse identity with precarity), declared as payer — derived d approaches 1.0 (full target) because they absorb the extraction's weight without exit. Service communities: powerless, trapped (geographic concentration means they cannot exit the region, and cost-shifting happens at regional budget level), declared as payer — derived d approaches 1.0. Labor regulators: institutional, analytical (can observe but not directly alter without legislative action; exit is analytical distance, not concrete), declared as observer — derived d = 0.5 (symmetric position). The identity-locked exit for workers is the key structural difference from trapped-exit: trapped agents face external barriers; identity-locked agents have internalized the barrier, making exit feel like identity death rather than economic necessity. This distinction should modulate suppression upward for identity-locked agents — they suppress themselves more efficiently than external force could achieve.",
+    "mandatrophy_analysis": "The founding problem (scheduling friction, labor-cost overhead) was real and the flexible-employment coordination does solve it. But the founding problem's status has shifted: it is now contested whether the founding problem persists or whether what persists is a solutions-cum-extraction hybrid. This reading asserts the hybrid: the coordination function persists but has been layered with extraction (wage compression, risk externalization) such that the bundle no longer solves the founding problem in the way the name suggests. The theater ratio (0.58) indicates significant performative content: the 'flexibility,' 'opportunity,' and 'autonomous' narratives perform the work of justifying precarity while the algorithmic machinery performs labor discipline. A snare classified as mandatrophic would show theater_ratio > 0.65 and would derive at least one of its persistence mechanisms from inertia rather than active extraction. This constraint shows active extraction (wage spread growth, algorithmic rate compression) driving persistence, so mandatrophy is not the right frame — it is an active snare with theatrical cover, not a degraded coordination mechanism.",
+    "kernel_context": "This constraint instantiates the 'precarity_extraction_reading' of the 'flexible_employment_legitimacy' kernel. The kernel is the set of arrangements claiming to provide flexible labor markets; the reading interprets them as a coercive extraction mechanism. Sibling readings interpret the same kernel as market-efficiency mechanism (market_efficiency_reading) or as a transitional form requiring state management toward formalization (developmental_state_reading). This reading's core claim is that nominal flexibility functions as coercive precarity when identity-lock (economic necessity + internalized narratives) prevents exit despite algorithmic assignment and unilateral rate-setting. The sibling readings foreclose on different axes: market_efficiency denies the coercion (reads flexibility as worker choice); developmental_state denies the extraction (reads flexibility as necessary transition). This reading coexists with both: the three readings remain live positions held by different parties (platforms, regulators, worker advocates) with no single framework resolving them. The kernel's fixity is in the arrangement itself (algorithmic labor platforms); the readings diverge in how they justify, explain, or condemn the same physical structure."
+  },
+  "omegas": [
+    {
+      "id": "identity_lock_mechanism_internalization",
+      "question": "Is the measured suppression (0.76) primarily structural (external algorithmic barriers, rating mechanisms that impose financial cost on exit) or internalized (workers have accepted precarity as legitimate, fused their identity with entrepreneurship-framing, and suppress themselves)?",
+      "resolution_mechanism": "Comparative analysis of worker exit trajectories post-deactivation: do workers maintain suppression-level beliefs and constraints after platform removal (internalized), or do beliefs and constraints rapidly dissolve (structural)? Qualitative interviews about workers' self-perception of choice and autonomy before vs. after exit.",
+      "impact": "If primarily internalized, the constraint's effective suppression is higher than structural measurement suggests — workers carry suppression with them post-exit, enabling rapid re-platforming. If primarily structural, exit would show rapid norm-shift, suggesting suppression is artifact of the mechanism. The distinction affects remediation strategy: structural suppression can be relieved by removing barriers; internalized suppression requires identity re-fusion work.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in algorithmic labor discipline"
+    },
+    {
+      "id": "wage_spread_decoupling_from_cost",
+      "question": "What is the platform's actual marginal cost to match workers with customers, verify availability, process payment, and manage disputes, relative to the wage spread it extracts (difference between customer price and worker payment)?",
+      "resolution_mechanism": "Regulatory discovery compelling cost structure and transaction-volume disclosure; independent economic modeling of comparable matching and payment services; comparative analysis of worker earnings on competing platforms with different margin structures.",
+      "impact": "A wide cost-to-spread gap (e.g., 15% cost for 40% spread) establishes the wage spread as monopoly rent and supports mandated rate transparency or algorithmic auditing. A narrow gap would suggest the spread reflects genuine platform cost. A negative gap (cost exceeds spread) would be prima facie evidence of predatory pricing or loss-leader extraction from downstream service providers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage spread tracks platform marginal cost or market power"
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Is algorithmic labor matching (the coordination function) structurally inseparable from worker precarity (identity-lock, wage compression, risk externalization), or could matching occur with worker protections in place (guaranteed minimum hours, benefits, transparent algorithms)?",
+      "resolution_mechanism": "Natural experiment from jurisdictions that mandate worker protections, algorithmic transparency, or benefits access while preserving platform matching: do coordination benefits persist, degrade, or require cost pass-through to customers? Cross-platform comparison of matching efficiency under different labor-protection regimes.",
+      "impact": "If separable, worker protections can be mandated without sacrificing matching efficiency, making the precarity component pure extraction. If inseparable, some tradeoff exists between matching speed and worker stability — but the tradeoff point is an empirical question, not a natural law. Most likely: separability at reduced margin (slower matching, higher prices) — which means the current precarity level exceeds what coordination requires.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coordination and precarity are structurally separable or require tradeoff"
+    },
+    {
+      "id": "kernel_reading_contest_boundaries",
+      "question": "Are the three readings of the flexible_employment_legitimacy kernel genuinely coexistent, or does empirical evidence about extraction levels and worker-benefit gaps functionally foreclose the market_efficiency_reading?",
+      "resolution_mechanism": "Systematic comparison of earnings volatility, benefit access, and risk externalization against traditional employment baselines; analysis of whether platform labor outcomes match predicted efficiency distributions or diverge significantly; assessment of whether platforms' efficiency gains have been passed to customers or captured as operator margin.",
+      "impact": "If market_efficiency reading is empirically foreclosed (worker outcomes are worse, platforms pocket efficiency gains, risk is externalized), the contest narrows to developmental_state vs. precarity_extraction — a more tractable policy dispute. If efficiency gains do materialize in customer prices and worker earnings, the reading remains live. This distinction affects the status field in cs_structure.axioms: market_efficiency's empirical grounding is testable and potentially overridable by data.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the market_efficiency reading remains live given empirical evidence of wage compression and externalization"
+    },
+    {
+      "id": "precarity_reading_axiom_status_hold",
+      "question": "The foundational axiom of this reading (wage_compression_and_risk_externalization_enable_extraction) depends on the empirical claim that platforms are compressing wages below what competitive equilibrium would permit and externalizing risks that traditional employers would bear. If that empirical claim is overridden by evidence of genuine competitive wage floors and risk-sharing arrangements, does the axiom remain holdable?",
+      "resolution_mechanism": "Longitudinal wage analysis comparing gig workers to traditional employees in same-skill occupations, controlling for effort and hours; benefit-participation rates and subsidy uptake by gig workers; employer bearing of occupational-injury costs and unemployment contributions across sectors.",
+      "impact": "If evidence shows platforms ARE compressing wages and externalizing risk, the axiom remains holdable and the precarity_extraction reading stands. If evidence shows competitive wage-setting and risk-bearing equivalent to traditional employment, the axiom becomes overridden within this reading's own tradition — the reading would have to switch to a different distinguishing claim or collapse into the market_efficiency reading. This is an internal consistency test, not an external truth test.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the precarity reading's foundational axiom about wage compression remains empirically holdable"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "flexible_employment_legitimacy__market_efficiency_reading",
+      "flexible_employment_legitimacy__developmental_state_reading",
+      "algorithmic_labor_discipline_gate",
+      "wage_externalization_mechanism",
+      "public_safety_net_cost_shifting"
+    ],
+    "dual_formulation_note": "The flexible_employment_legitimacy kernel has three readings: market_efficiency_reading (flexibility as legitimate market mechanism), developmental_state_reading (flexibility as transition toward formalization), precarity_extraction_reading (this story — flexibility as coercive precarity mechanism). Each reading instantiates the same algorithmic labor platform arrangements differently, with different beneficiary/victim structures and different ε values. The readings coexist as live positions held by different parties (platforms, regulators, workers, economists) with no single framework resolving them. Empirical evidence about wage compression, risk externalization, and worker-benefit gaps may eventually foreclose the market_efficiency reading or override the precarity reading's axioms, but as of composition both remain live. The three-reading decomposition respects the ε-invariance principle: each reading has a distinct, internally consistent ε (extractiveness that follows from its structural assumptions) rather than one constraint measured via different observables."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 25,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.79
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.44
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.63
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.81
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.83
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.41
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.59
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.31
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.43
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.57
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.52
+      }
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "flexible_employment_legitimacy__market_efficiency_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "flexible_employment_legitimacy__developmental_state_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wage_compression_and_risk_externalization_enable_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "algorithmic_assignment_and_unilateral_rate_setting_constitute_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "employment_with_comprehensive_risk_bearing",
+    "drift_state": {
+      "moment": "contemporary_algorithmic_platform_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "platform_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

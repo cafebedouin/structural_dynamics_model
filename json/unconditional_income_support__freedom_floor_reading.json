@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "7ec8a2bd-87f2-457c-9c8d-db1c77c508d2"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "caregivers",
+      "artists",
+      "abuse_survivors",
+      "market_shock_vulnerable"
+    ],
+    "victims": []
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'freedom floor' reading of the unconditional income support kernel: UIS is a mechanism for removing coercion from labor markets by guaranteeing subsistence independent of employment. The reading presents UIS as enabling voluntary participation in labor and care work by decoupling survival from wage dependency. It contrasts structurally with the dependency-trap reading (UIS as incentive-distorting subsidy that rewards idleness) and the universality-paradox reading (UIS as politically ambiguous structure that masks incompatible implementation paths). This JSON models ONLY the freedom-floor reading: its beneficiaries are those constrained by labor market coercion; its claimed type is rope (coordination enabling voluntary participation); its epsilon is moderate because empirical data (Alaska, Kenya, Finland pilots) shows minimal labor supply substitution. The constraint is CLAIMED as rope by its advocates; measured metrics describe modest extractiveness and low suppression consistent with the coordination framing. The sibling readings are OTHER constraints with DIFFERENT epsilon values, beneficiary structures, and types; they are not alternative measurements of this one.",
+    "key_agents": [
+      "Precarious workers: labor-coerced population experiencing constant wage depression and exploitation. Exit from coercion is the direct benefit.",
+      "Caregivers (parents, elder-care providers, community organizers): identity-locked population performing essential unpaid work. Income floor formalizes care as legitimate economic contribution.",
+      "Artists: constrained-exit population producing cultural goods markets underprice. Income floor enables artistic labor without wage-labor cross-subsidy.",
+      "Abuse survivors: trapped population economically coerced into remaining in abusive relationships. Income floor enables exit and recovery.",
+      "Employers dependent on coercion: powerful population relying on labor market desperation to suppress wages. They pay through reduced control over labor supply.",
+      "Tax base (employed, asset-holding): organized population funding the floor through progressive taxation. Cost is distributed rather than concentrated.",
+      "Welfare bureaucracy: excluded from the freedom reading but structurally affected (administrative functions absorbed). Their exclusion is structural, not incidental.",
+      "Political theorists and empiricists: analytical observers testing whether labor supply elasticity supports or falsifies the autonomy mechanism."
+    ],
+    "logic_rationale": "Extractiveness is LOW (0.18 at interval end) because the freedom reading frames UIS as removing coercion rather than imposing it. The beneficiaries list is large and specific (precarious workers, caregivers, abuse survivors, artists) — these are real populations whose constraints the measure directly addresses. The victims list is EMPTY because the reading explicitly claims a Pareto improvement: no one is made worse off; the cost is distributed taxation absorbed by those with sufficient income to bear it. Suppression is LOW (0.12) because enforcement is voluntary (participants opt in; no one is forced onto the income floor) and resistance is expected to come from those whose labor market power depends on coercion (employers in coerced sectors, those defending means-testing bureaucracy). Theater ratio is very low (0.08) because the mechanism is straightforward: unconditional transfer removes coercion, enabling voluntary participation. The slight rise in suppression and extractiveness over the interval reflects increasing political pressure from coercion-dependent employers and bureaucratic interests defending current targeting, not a change in the constraint's function. All measurements are authored on a shared time grid: every metric has a value at every time point (0, 5, 10, 20, 30, 40), satisfying the alignment rule.",
+    "directionality_logic": "The freedom-floor reading generates a clean directionality map: precarious workers, caregivers, artists, and abuse survivors are BENEFICIARIES (d near 0.0) — the constraint subsidizes their position by removing coercion. Employers dependent on labor market coercion and the tax base funding the transfer are PAYERS (d near 1.0 for coercion-dependent employers; d near 0.5 for distributed tax base). Labor market participants generally are near-symmetric: they fund through tax but benefit from improved wages and working conditions as coerced labor supply tightens. The welfare bureaucracy is structurally EXCLUDED — they have no authored stakeholder role because the freedom reading does not address the distributional question of whether they are harmed or redeployed. Each power atom operates at its home directionality: powerless precarious workers get maximum subsidy (d→0); powerful coercion-dependent employers get maximum extraction (d→1); organized employed population gets symmetric treatment (d≈0.5). No overrides are needed because the structural data (beneficiary/victim declarations + exit options + power atoms) derives the correct directionality through standard chain.",
+    "perspectival_gap": "The agenda-setting institutional seat (a UIS-implementing government) would experience this constraint as coordination: it solves a genuine labor market failure (coercion compressing wages) and enables voluntary participation, making the arrangement self-sustaining once established. The coercion-dependent employer seat experiences it as extraction: their labor cost structure rises, their workforce negotiating power falls, and the constraint actively prevents them from using starvation as leverage. The precarious worker seat experiences it as liberation: survival is decoupled from wage dependency, enabling genuine choice. The welfare bureaucracy seat (excluded from this reading but affected) would experience it as institutional displacement. These divergent experiences all follow from the same constraint because the directionality differs by seat — the freedom reading does not erase the distributional conflict; it names the beneficiaries and specifies the mechanism. The engine computes each seat's type from the directionality and structural data; the freedom reading's claim (rope) should compute as rope for beneficiary seats and as tangled rope or snare for coercion-dependent seats. That divergence is the measurement the corpus takes.",
+    "mandatrophy_analysis": "The founding problem (labor market coercion preventing voluntary participation) maps cleanly to the mechanism (removing coercion by decoupling survival from wage dependency). The problem is LIVE in all labor markets where worker desperation exceeds alternative options. The constraint's function persists as long as coercion persists — there is no mandate-function decay unless labor market conditions fundamentally shift (universal voluntary employment, no scarcity). Mandatrophy does NOT apply to this reading because the founding problem has not been solved; the constraint remains functionally justified by the problem's persistence. The freedom reading explicitly avoids the mandatrophy trap by refusing to claim that UIS is a temporary measure or that the founding problem is nearly solved. Where mandatrophy arises is in the dependency-trap reading, which must claim that UIS solves the problem of idleness or undeserving poverty — those are philosophically prior claims that the evidence directly challenges, creating the mandatrophy dynamic. The freedom reading's empirical grounding (labor supply elasticity data from Alaska, Kenya, Finland) protects it from mandatrophy by tying the mechanism to measurable, observable outcomes rather than normative judgments about deservingness.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'unconditional_income_support'. The kernel is the commitment to unconditional transfer of purchasing power without labor-market conditions. This reading (freedom_floor_reading) interprets UIS as a mechanism for removing labor market coercion and enabling voluntary participation. The sibling readings are: (1) dependency_trap_reading: UIS as incentive-distorting subsidy rewarding idleness and crowding out targeted aid; (2) universality_paradox_reading: UIS as politically ambiguous structure masking incompatible fiscal and distributive outcomes. Each reading instantiates a DIFFERENT constraint with DIFFERENT epsilon values, beneficiary structures, and types. The freedom-floor reading has moderate epsilon (~0.18) because labor supply effects are minimal per empirical data. The dependency-trap reading would have higher epsilon because it claims UIS extracts from workers through disincentivization and from taxpayers through inefficient redistribution. The universality-paradox reading would have higher epsilon because it claims the mechanism masks incompatible commitments and slides into de facto targeting or inadequacy. The three readings compete within a single policy space: different coalitions advance each reading, interpret the kernel through different epistemic and normative lenses, and cite different evidence. This JSON instantiates ONLY the freedom-floor reading."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_elasticity_counterfactual",
+      "question": "Does unconditional income support actually remove coercion from labor markets, or does it merely substitute government income for market coercion while preserving work-for-survival pressure?",
+      "resolution_mechanism": "Comparative analysis of labor market participation, wage composition, and work-choice satisfaction across UIS and non-UIS populations with equivalent income levels. Alaska Permanent Fund, Kenya GiveDirectly trials, Finland 2017-2018 pilot provide preliminary evidence; a multi-cohort longitudinal study with matched controls would resolve.",
+      "impact": "If labor supply is inelastic (workers maintain participation and wage composition despite UIS), the freedom reading holds: coercion is removed and voluntary participation is enabled. If labor supply exhibits substantial substitution (significant exit from degrading work, concentrated in specific sectors), the freedom reading is partially confirmed but must specify which sectors face coercion-driven participation. If labor supply collapse occurs in specific regions or demographic groups, the dependency-trap reading gains empirical support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UIS removes labor market coercion or merely shifts its form."
+    },
+    {
+      "id": "coercion_dependent_employer_adaptation",
+      "question": "How do employers dependent on labor market desperation adapt when the income floor rises? Do they improve wages and conditions (supporting the autonomy reading), exit the market, automate, or capture policy implementation to undermine the floor?",
+      "resolution_mechanism": "Historical analysis of wage and condition changes in previously coercion-dependent sectors (agriculture, domestic service, garment manufacturing) in jurisdictions implementing UIS. Employer lobbying intensity and policy capture attempts. Substitution patterns (automation, offshoring, service reduction).",
+      "impact": "If adaptation is wage/condition improvement with sector persistence, the freedom reading is supported — markets adjust via price, not coercion. If adaptation is capture and floor-undermining, the snare reading's warning about enforcement escalation is confirmed. If adaptation is exit/automation, the universality-paradox reading gains support: the floor is real but employment structure collapses, forcing different UIS levels and creating de facto targeting.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coercion-dependent employers can adapt or whether they trigger political opposition that undermines the floor."
+    },
+    {
+      "id": "care_work_formalization_reversibility",
+      "question": "Does declaring care work legitimate via income floor stabilize care participation, or does it create a separate (lower-status, lower-paid) tier of 'care work' distinct from employment?",
+      "resolution_mechanism": "Comparative analysis of care-work participation, wage premium/discount relative to market wages, and social status across jurisdictions with different UIS framing (care-as-legitimate vs. care-as-welfare). Caregiver self-identification and care-work sustainability over 10+ year intervals.",
+      "impact": "If care work stabilizes at parity with market work in status and income, the freedom reading's formalization claim holds. If care work becomes a separate, lower-status category despite UIS, the universality-paradox reading is partially confirmed: the floor is real but reproduces gendered hierarchies. If care participation declines despite UIS, the dependency-trap reading gains support.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether unconditional income support genuinely legitimizes care work or reproduces care-as-welfare stigma under different framing."
+    },
+    {
+      "id": "coercion_versus_dependency_distinction",
+      "question": "Is the freedom reading's distinction between removing coercion (autonomy-enabling) and creating dependency (welfare-expanding-dependency) a genuine empirical dividing line, or a philosophical assertion that collapses under implementation?",
+      "resolution_mechanism": "Longitudinal measurement of: (1) subjective autonomy (workers' self-reported ability to refuse degrading work); (2) objective exit (actual sector/employment change); (3) dependency indicators (reliance on transfer as primary income source, permanence of transfer receipt). Test whether autonomy increases precede or follow exit behavior; whether permanent transfer receipt indicates dependency or choice.",
+      "impact": "If autonomy increases accompany exit behavior and transfers enable exit to preferred work (lower-wage but less degrading), the freedom reading holds. If transfers become permanent and serve as income floor rather than autonomy-enabling supplement, the dependency-trap reading's concern about long-term effects is validated. If the distinction collapses (autonomy increases for some while dependency deepens for others, segmented by prior income), the universality-paradox reading's warning about incompatible implementation paths is supported.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether autonomy and dependency are meaningfully distinct empirical phenomena or philosophical reframings of the same material condition."
+    },
+    {
+      "id": "reading_contention_axis",
+      "question": "Which empirical outcomes would falsify this reading (freedom-floor) and support one of its siblings?",
+      "resolution_mechanism": "Pre-registered hypothesis testing against pilot outcomes and quasi-experimental data. Specify the effect sizes, sector participation patterns, wage trajectories, and subjective autonomy measures that would trigger reading revision.",
+      "impact": "If labor supply substantially contracts in coercion-dependent sectors and dependence on UIS becomes permanent for large populations, the dependency-trap reading becomes more empirically grounded. If regional UIS implementation produces divergent outcomes (universality fails; different effective floors emerge by jurisdiction), the universality-paradox reading is confirmed. If coercion-dependent employers successfully lobby to lower the floor or implement means-testing, the snare reading becomes plausible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Specification of conditions under which this reading would be superseded by one of its siblings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading",
+      "labor_market_coercion_wage_suppression",
+      "care_work_undercompensation",
+      "welfare_bureaucracy_targeting_extraction"
+    ],
+    "dual_formulation_note": "The 'unconditional_income_support' kernel admits three structurally distinct readings: freedom_floor_reading (this constraint, Rope), dependency_trap_reading (Snare or Tangled Rope), and universality_paradox_reading (Tangled Rope). The freedom reading models UIS as enabling voluntary labor participation by removing coercion; epsilon is moderate (~0.18) because empirical data shows minimal labor-supply substitution and the mechanism directly addresses a genuine coordination problem (coercion-driven wage suppression). The dependency-trap reading models UIS as incentive-distorting subsidy rewarding idleness; epsilon would be higher (~0.55+) because it claims the mechanism extracts from active workers to subsidize non-participation. The universality-paradox reading models UIS as politically ambiguous commitment masking incompatible fiscal and distributive outcomes; epsilon would reflect the hidden extraction from workers whose jobs vanish as employers automate or exit coercion-dependent sectors. Each reading has different beneficiary/victim structures, directionality maps, and stakeholder configurations. They are NOT alternative measurements of the same constraint; they are three separate constraints instantiated from one contested kernel. The freedom reading influences both siblings: if empirical labor-supply data supports autonomy-enabling effects, it creates pressure to accept the freedom reading's framing and makes the dependency-trap reading's claims about idleness less empirically grounded. Conversely, if sector-specific employment collapse occurs (universality-paradox scenario), both the freedom and trap readings must account for uneven effects."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "unconditional_income_support__dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unconditional_income_support__universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_market_coercion_is_real",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unconditional_transfer_removes_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "voluntary_participation_improves_social_coordination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "labor_market_coercion_wage_suppression",
+      "care_work_undercompensation"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

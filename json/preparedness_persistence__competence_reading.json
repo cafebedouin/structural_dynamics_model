@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "2ce1570c-19ba-4e09-b2d3-102811d90b27"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.06,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness Persistence via Live Drill Practice (Competence Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "population_at_risk",
+      "emergency_responders",
+      "institutional_leadership"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_competence_vs_performance",
+      "question": "Is preparedness maintained through live exercise of competence (knowledge embedded in repeated practice), or through memorial performance that mimics the form of readiness while competence atrophies?",
+      "resolution_mechanism": "Post-event assessment: when a prepared-for disaster occurs, do the practiced procedures activate the learned competencies or expose decay? Compare pre-event drill performance (formal pass/fail metrics) against actual-event execution speed, decision quality, and improvisation success.",
+      "impact": "If competence is live, drills are coordination costs and the constraint remains Rope. If performance masks atrophy, drills are theater and the constraint migrates toward Piton. The other readings (husk_reading, hybrid_reading) capture alternative framings of this core ambiguity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drill participation transmits and maintains real competence or performative form without substance."
+    },
+    {
+      "id": "competence_decay_detection",
+      "question": "What signals distinguish live competence from degraded performance? How long can drills sustain readiness without actual operational pressure?",
+      "resolution_mechanism": "Longitudinal study of drill-participation effects on actual response performance; comparison of jurisdictions with different drill cadences; post-event debriefs documenting whether personnel reverted to trained procedures or abandoned them under stress.",
+      "impact": "If signals show competence can be maintained indefinitely through regular drills, the Rope classification holds across time horizons. If competence decay accelerates over intervals between major events, the constraint requires higher maintenance frequency and the Rope-to-Piton drift risk rises.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Temporal dynamics of competence decay in preparedness systems."
+    },
+    {
+      "id": "institutional_identity_lock_in_preparedness",
+      "question": "To what degree does institutional self-concept depend on demonstrable preparedness? Is exit from the preparedness commitment available to organizations that choose to abandon it?",
+      "resolution_mechanism": "Examine jurisdictions/organizations that have dissolved preparedness programs: what was the cost of exit (legal, reputational, operational) versus the cost of continued maintenance? Are there exit-available actors who choose to leave?",
+      "impact": "If exit is structurally available (a municipality can decide disaster preparedness is not its role), participants are identity_locked only by choice, and the constraint remains Rope-like. If exit is impossible (national framework mandates preparedness), identity fusion is structural and the constraint may function more like internalized Tangled Rope than pure Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preparedness lock-in is structural mandate or chosen identity commitment."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Under the competence reading, disaster preparedness — drills, inspections, equipment maintenance, scenario training — constitutes live exercise of knowledge essential to operational readiness. This reading asserts that repeated practice embeds competence in personnel, procedures, and organizational muscle memory. When a prepared-for hazard occurs, the trained response activates because readiness was maintained through continuous live exercise. The constraint is a Rope: genuine coordination problem (how to maintain readiness across long periods without actual events to test it), solved through scheduled practice, net benefit to those who participate (population, responders, institutional leadership all benefit from reduced disaster impact). Minimal extraction, no active suppression, low theater — the arrangement is what it claims to be. This reading contests the husk_reading (drills as memorial performance masking atrophy) and the hybrid_reading (stratification: some competence live, others ritualized). The competence reading's core commitment is that practice transmits competence.",
+    "key_agents": [
+      "population_at_risk: Beneficiary of reduced disaster impact from maintained readiness; participates in some drills (evacuation scenarios); identity somewhat locked by residence.",
+      "emergency_responders: Beneficiary of maintained procedural readiness; primary agents of live exercise (regular training, equipment checks, scenario practice); identity locked by profession.",
+      "institutional_leadership: Agenda-setter for preparedness cadence and curriculum; benefits from institutional legitimacy of disaster preparedness; bears opportunity cost of resource allocation to drills versus other priorities.",
+      "regulatory/standards bodies: Observer/weak agenda-setter; establish minimum preparedness standards; provide external accountability that helps sustain the commitment when in-cycle disasters are rare.",
+      "vulnerable populations: Beneficiary class but with differential access to preparedness information; less frequently involved in drills; exit options constrained by geography."
+    ],
+    "logic_rationale": "Extractiveness is low (0.08) because no party systematically collects rents or uncompensated transfers from the arrangement; the coordination benefit (maintained readiness) accrues diffusely to all participants. Suppression is minimal (0.12) because the constraint's persistence does not depend on preventing exits or alternatives — jurisdictions can choose to de-emphasize preparedness, though few do once a major disaster has occurred. Theater ratio is modest (0.18) because some preparedness activity is ceremonial (annual parade of equipment, budget-cycle demonstrations) but the majority is functionally directed toward maintaining actual competence — drills are repetitive and often unglamorous, which suggests they serve the competence function rather than publicity. Accessibility collapse is high (0.88) because once a disaster occurs, the alternatives to having maintained readiness vanish completely — the collapse is not suppression but physical reality: a hurricane arrives and options resolve to 'we trained for this' or 'we did not.' Resistance is negligible (0.06) because there is no organized opposition to preparedness itself, only occasional friction around specific drill scenarios or resource allocation. The measurement series show extraordinary stability: extractiveness and theater slightly increase as institutional bureaucracy accumulates around preparedness, but within the Rope range. Theater does not rise sharply, which is consistent with the competence reading — if the constraint were degrading into pure performance (husk reading), we would expect theater_ratio to rise toward 0.5+ and extractiveness to remain flat or decline. Neither happens here.",
+    "perspectival_gap": "From the population's and emergency responders' seats, preparedness drills are straightforward collective action: we all benefit from being ready, we all participate in maintaining readiness through drills, no party extracts and no one is locked in against their will (residence and profession are not preparedness-created). From institutional leadership's seat, drills are an allocation choice: time and budget devoted to preparedness cycles come at the cost of other projects, and the benefit (disaster avoided) is often invisible or attributed to luck rather than preparation. This perspectival gap should compute as low divergence in seat type — both payer and beneficiary are Rope seats — because the asymmetry is one of visibility, not structural extraction.",
+    "directionality_logic": "Beneficiaries (population, responders, leadership) have low d: they benefit from maintained readiness and bear the coordination cost (training time, attention, resource allocation) proportionally. The beneficiary role is structural, not earned — you benefit from preparedness by occupying a location or profession that makes you vulnerable to a disaster. No seat is trapped or identity-locked into paying extraction; identity-locked exits (responders staying in the profession) carry no extraction premium — responders choose the profession knowing its preparedness demands. The arrangement does not suppress alternatives or exit; it simply coordinates a genuine collective action problem. Directionality overrides are not needed because the structural derivation from beneficiary declarations + moderate/powerful power levels + mobile-to-constrained exit options yields correct d values across seats.",
+    "mandatrophy_analysis": "The founding problem — how to maintain operational readiness for low-frequency, high-impact events — remains live. The competence reading claims the founding problem is continuously re-solved through the constraint's operation: each drill re-certifies that personnel remember procedures, equipment is functional, and organizational memory is intact. If the founding problem were dead (we no longer face hazards requiring preparedness) or the constraint had become decoupled from solving it (drills no longer transmit competence), mandatrophy would be in play. The measurement data show theater_ratio staying below 0.25, which suggests the constraint has not yet degraded into Piton-like performance. The competence reading explicitly rejects the mandatrophy condition: the founding problem is live because hazards persist and competence decay is a real cost if drills stop.",
+    "kernel_context": "This constraint instantiates the competence_reading of the preparedness_persistence kernel. The kernel is a contested commitment: all three readings agree that disaster preparedness and drills exist and persist, but disagree on WHAT they are functioning to do. The competence_reading claims drills and inspections ARE live exercise that maintains real competence. The husk_reading claims they are memorial performance whose form persists while competence atrophies. The hybrid_reading claims some preparedness components are competence-maintaining (structural engineering inspections) while others are ritual (evacuation drills). These readings differ in their core normative claim: does practice transmit competence? The competence reading commits to 'yes, and the constraint's persistence depends on this transmission being real.' This distinction matters because it changes the constraint's type, beneficiary structure, and temporal dynamics. The readings coexist as live positions: different emergency management cultures and scholars defend each. No single framework ruled out the others; rather, they represent different interpretations of what counts as evidence for readiness (one reading trusts drill performance metrics; another trusts post-event outcome data; a third trusts only structural engineering and distrusts social-practice claims)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__husk_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_persistence kernel has three constraint stories corresponding to three readings of what drills and inspections do. This story (competence_reading) instantiates the reading where practice transmits and maintains real competence; the other readings claim different functional stories (memorial performance, or stratified competence). All three stories have the same named phenomenon (drills, inspections, preparedness programs) but different ε values and structural interpretations because they answer the foundational question differently: is competence live or performance? Readers should examine all three stories and their omegas to understand the kernel contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_persistence__husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_persistence__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "practice_transmits_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "preparedness_maintenance_requires_continuous_practice",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competence_through_live_practice",
+    "drift_state": {
+      "moment": "contemporary_post_major_disaster_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

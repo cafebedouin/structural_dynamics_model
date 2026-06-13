@@ -1,0 +1,382 @@
+% ============================================================================
+% CONSTRAINT STORY: common_article_3_scope__expansive_human_rights_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_common_article_3_scope__expansive_human_rights_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: common_article_3_scope__expansive_human_rights_reading
+ *   human_readable: CA3 Expansive Human Rights Reading: Universal Floor on Armed Violence
+ *   domain: international_law/humanitarian
+ *
+ * SUMMARY:
+ *   Common Article 3 of the Geneva Conventions establishes minimum
+ *   humanitarian standards for armed conflict. The expansive human rights
+ *   reading interprets CA3 as applying to ANY organized armed violence —
+ *   regardless of whether states or parties classify it as war,
+ *   counterinsurgency, law enforcement, or counterterrorism. This reading is
+ *   one instantiation of a contested kernel: the CA3 text itself remains
+ *   fixed, but its scope is fundamentally contested across three distinct
+ *   readings (expansive human rights, state-centric, and ICRC customary).
+ *   Under this expansive reading, all detainees and affected populations
+ *   become protected victims; state security forces and non-state armed
+ *   groups become payers; international human rights bodies become monitoring
+ *   agenda-setters. The constraint is substantially extractive because it
+ *   compels state investment in compliance infrastructure and surrenders
+ *   classification authority to external bodies; it is tangled_rope because
+ *   the coordination function (humanitarian floor) is genuine while the
+ *   extraction of operational autonomy from states is also substantial.
+ *
+ * KEY AGENTS:
+ *   - Affected civilian populations: gain protection standards but cannot exit violence
+ *   - State security forces: bear compliance costs and prosecution exposure
+ *   - Non-state armed groups: bound by CA3 status without treaty voice
+ *   - International human rights bodies: gain investigative jurisdiction
+ *   - State governments: lose classification discretion and sovereignty claims
+ *   - Legal traditionalists (excluded): dispute the reading but are bound by it
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(common_article_3_scope__expansive_human_rights_reading, 0.68).
+domain_priors:suppression_score(common_article_3_scope__expansive_human_rights_reading, 0.62).
+domain_priors:theater_ratio(common_article_3_scope__expansive_human_rights_reading, 0.28).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(common_article_3_scope__expansive_human_rights_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(common_article_3_scope__expansive_human_rights_reading, theater_ratio, 0.28).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(common_article_3_scope__expansive_human_rights_reading, accessibility_collapse, 0.72).
+narrative_ontology:constraint_metric(common_article_3_scope__expansive_human_rights_reading, resistance, 0.71).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(common_article_3_scope__expansive_human_rights_reading, tangled_rope).
+narrative_ontology:human_readable(common_article_3_scope__expansive_human_rights_reading, "CA3 Expansive Human Rights Reading: Universal Floor on Armed Violence").
+narrative_ontology:topic_domain(common_article_3_scope__expansive_human_rights_reading, "international_law/humanitarian").
+
+domain_priors:requires_active_enforcement(common_article_3_scope__expansive_human_rights_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(common_article_3_scope__expansive_human_rights_reading, '54af369f-d77c-4d4b-9294-e102a7cc0293').
+narrative_ontology:cs_kernel_codification('54af369f-d77c-4d4b-9294-e102a7cc0293', fixed_text).
+narrative_ontology:cs_authority_grounding('54af369f-d77c-4d4b-9294-e102a7cc0293', extraction).
+narrative_ontology:cs_interpretation_layer_present('54af369f-d77c-4d4b-9294-e102a7cc0293').
+narrative_ontology:cs_reading_relation('54af369f-d77c-4d4b-9294-e102a7cc0293', common_article_3_scope__state_centric_reading, forecloses).
+narrative_ontology:cs_reading_relation('54af369f-d77c-4d4b-9294-e102a7cc0293', common_article_3_scope__icrc_customary_reading, coexists_with).
+narrative_ontology:cs_axiom('54af369f-d77c-4d4b-9294-e102a7cc0293', foundational, humanitarian_protection_universal_floor).
+narrative_ontology:cs_axiom_status(humanitarian_protection_universal_floor, holdable).
+narrative_ontology:cs_axiom_grounding('54af369f-d77c-4d4b-9294-e102a7cc0293', humanitarian_protection_universal_floor, deontological).
+narrative_ontology:cs_axiom('54af369f-d77c-4d4b-9294-e102a7cc0293', foundational, classification_authority_external_to_belligerent).
+narrative_ontology:cs_axiom_status(classification_authority_external_to_belligerent, holdable).
+narrative_ontology:cs_axiom_grounding('54af369f-d77c-4d4b-9294-e102a7cc0293', classification_authority_external_to_belligerent, instrumental).
+narrative_ontology:cs_reference_frame('54af369f-d77c-4d4b-9294-e102a7cc0293', universal_humanitarian_protection_doctrine).
+narrative_ontology:cs_drift_state('54af369f-d77c-4d4b-9294-e102a7cc0293', contemporary_post_2001, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('54af369f-d77c-4d4b-9294-e102a7cc0293', '').
+narrative_ontology:cs_kernel_id(common_article_3_scope__expansive_human_rights_reading, common_article_3_scope).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(common_article_3_scope__expansive_human_rights_reading, affected_civilian_populations).
+narrative_ontology:constraint_beneficiary(common_article_3_scope__expansive_human_rights_reading, international_human_rights_bodies).
+narrative_ontology:constraint_victim(common_article_3_scope__expansive_human_rights_reading, state_security_forces).
+narrative_ontology:constraint_victim(common_article_3_scope__expansive_human_rights_reading, non_state_armed_groups).
+narrative_ontology:constraint_victim(common_article_3_scope__expansive_human_rights_reading, state_governments_claiming_exemption).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(common_article_3_scope__expansive_human_rights_reading, state_parties_to_geneva_conventions).
+narrative_ontology:constraint_vindicates(common_article_3_scope__expansive_human_rights_reading, universal_human_dignity_principle).
+narrative_ontology:constraint_vindicates(common_article_3_scope__expansive_human_rights_reading, humanitarian_floor_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Gain minimum protection standards (prohibition on torture, summary execution, arbitrary detention) in any armed violence context under this reading. Cannot exit the violence but receive formal legal protections that, under state-centric readings, would not apply. Depend on external monitors and international bodies to enforce the standards.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, affected_civilian_populations, beneficiary,
+    powerless, biographical, trapped, global).
+
+% Subject to CA3 obligations in counterinsurgency, counterterrorism, and law enforcement operations classified as 'organized armed violence' under this reading. Bear the compliance costs of investigation, detention standards, and medical care for detainees even in operations they classify as pure law enforcement. Face international prosecution exposure if CA3 violations occur.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, state_security_forces, payer,
+    institutional, generational, constrained, national).
+
+% Bound by CA3 minimum standards by virtue of the expansive reading, which treats them as parties to armed conflict once 'organized' and causing violence, without requiring formal war declaration or state recognition. Must maintain detention standards and avoid torture even when their armed status is contested by incumbent governments.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, non_state_armed_groups, payer,
+    organized, biographical, constrained, regional).
+
+% Face external legal constraints on classification authority: cannot unilaterally declare violence below CA3 threshold; their categorization (law enforcement vs. armed conflict) is subject to international scrutiny. Lose discretion over which operations fall within humanitarian law; the expansive reading centralizes that classification power in treaty interpretation and human rights monitoring bodies.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, state_governments_claiming_exemption, payer,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(common_article_3_scope__expansive_human_rights_reading, state_governments_claiming_exemption, agenda_setter).
+
+% Gain expanded investigative jurisdiction and monitoring authority under the expansive reading: any organized violence becomes a CA3 event, triggering reporting obligations, fact-finding missions, and potential accountability processes. Authority expands over how violence is classified and what remedies apply.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, international_human_rights_bodies, beneficiary,
+    institutional, generational, analytical, global).
+narrative_ontology:stakeholder_secondary_role(common_article_3_scope__expansive_human_rights_reading, international_human_rights_bodies, agenda_setter).
+
+% Tasked with monitoring CA3 compliance across all contexts classified as 'organized armed violence' under this reading. Gain access rights to detainees and armed groups but carry responsibility for certifying compliance and reporting violations, creating tension with maintaining operational access in ongoing conflicts.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, icrc_and_humanitarian_monitors, observer,
+    organized, generational, analytical, global).
+
+% Collectively bound by this expansive interpretation of CA3 through treaty ratification; signatories cannot unilaterally narrow the scope even if they dispute the human rights reading. Obligation to ensure compliance extends to all armed violence within borders, not just interstate or formally declared conflicts.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, state_parties_to_geneva_conventions, payer,
+    institutional, generational, constrained, global).
+
+% Would argue for state-centric reading emphasizing intensity/organization thresholds and state discretion in classification; are structurally excluded from the core compliance machinery of the expansive reading even though their jurisdictions are subject to it. Their contestation occurs in treaty bodies and litigation rather than in determining operative scope.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__expansive_human_rights_reading, legal_traditionalists_and_state_sovereigntists, excluded,
+    institutional, generational, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(common_article_3_scope__expansive_human_rights_reading, international_human_rights_bodies).
+narrative_ontology:fixing_cost_class(common_article_3_scope__expansive_human_rights_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a uniform minimum humanitarian floor below which no actor (state or non-state) operating under armed violence can fall, solving the coordination problem of protecting vulnerable populations when the status of armed conflict is contested or ambiguous. Creates a bright-line rule that applies regardless of classification disputes.
+% TRANSFER_FUNCTION: Moves compliance burden (investigation, detention infrastructure, medical standards, potential criminal liability) from states and armed groups to their security and armed operations; transfers monitoring and enforcement authority from individual states to international human rights bodies and treaty mechanisms.
+% ABSENT_VOICES: State military strategists and legal advisors who argue the expansive reading undermines operational security and legitimate counterinsurgency doctrine; legal scholars in state-sovereignty traditions who contest whether humanitarian law should override state classification authority; armed groups' representatives who would argue the reading criminalizes legitimate self-defense without their consent to be treaty parties.
+% DISAPPEARANCE_RATIONALE: If this expansive reading and its enforcement apparatus vanished, states would revert to narrower self-interested classifications of violence (law enforcement vs. war), protections for affected populations would depend entirely on bilateral agreements or customary practice varying by context, and international human rights bodies would lose their primary mechanism for intervening in internal security operations. The landscape of armed conflict accountability would reorganize around state-controlled definitions.
+% FOUNDING_PROBLEM: Ambiguity over CA3 scope allowed states to exclude internal conflicts and law enforcement operations from humanitarian protections by asserting they fell below war threshold; affected populations received no minimum standards when violence was organized but officially denied conflict status.
+% FOUNDING_PROBLEM_CORROBORATION: International human rights organizations, ICRC practice evolution, and UN fact-finding missions document ongoing state attempts to evade CA3 by classification narrowing; testimonies from survivors in counterinsurgency and counterterrorism contexts confirm vulnerability to torture and arbitrary detention when states classify operations outside CA3 scope. Non-state actors confirm the problem from the opposite direction: they are treated as brigands without any legal status rather than combatants entitled to minimum protections.
+narrative_ontology:disappearance_verdict(common_article_3_scope__expansive_human_rights_reading, world_rearranges).
+narrative_ontology:founding_problem_status(common_article_3_scope__expansive_human_rights_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(common_article_3_scope__expansive_human_rights_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
+    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
+    'no_scope_rebuild', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_seed(common_article_3_scope__expansive_human_rights_reading, 'none', 1).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(common_article_3_scope__expansive_human_rights_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(common_article_3_scope__expansive_human_rights_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(common_article_3_scope__expansive_human_rights_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness rises from 0.38 (1977: limited enforcement) to 0.68 (2024: established practice) as international bodies consolidate authority over conflict classification and states absorb compliance infrastructure costs. The theater ratio remains moderate (0.28): humanitarian monitoring is functionally real, but a substantial share of enforcement activity is defensive — states invest heavily in classification arguments, reporting compliance theater, and challenging investigative mandates. Suppression requirement rises (0.35 to 0.62) because the constraint persists through active enforcement: states contest it continuously in treaty bodies, challenge investigative processes, restrict monitor access, and resist individual accountability. All measurements on one shared time grid (1977, 1990, 2001, 2011, 2018, 2024) capture the constraint's maturation from a minority interpretation to established practice.
+ *
+ * PERSPECTIVAL GAP:
+ *   State seats experience the expansive reading as sovereignty erosion; they perceive the constraint as a snare (extraction masquerading as coordination). Human rights seats experience it as coordination protection for vulnerable populations; they perceive it as rope (genuine humanitarian solution). The engine computes this divergence from directionality and power atoms. It is the central structural fact the expansive reading instantiates: maximum perspectival gap between state-centric seats and human-rights seats, housed within a single constraint kernel.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   State governments and security forces are structural targets: they must comply with externally-determined standards, face investigation exposure, and lose classification authority (d=0.85–0.95). Affected civilian populations are structural beneficiaries: they gain protections without bearing compliance costs, though they remain trapped by violence (d=0.10–0.25). International human rights bodies sit near symmetric: they gain jurisdiction and authority but bear the accountability burden of monitoring and reporting (d=0.45–0.55). Non-state armed groups are targets by the reading's logic (bound without consent to treaty mechanisms) but moderate their directionality through exit options (constrained but not trapped like civilian populations; d=0.70–0.80).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (classification ambiguity enabling state evasion of protections) remains live and structurally distinct from the constraint's persistence. The expansive reading does NOT show mandatrophy: the constraint is actively contested (high resistance, suppression requirement), continuously defended by human rights bodies and civil society, and functionally tied to the prevention of torture and summary execution. Unlike a degraded piton, this tangled_rope constraint is actively negotiated and enforced; its theater component (compliance arguments, reporting theater) is a symptom of genuine contestation, not inertia.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    threshold_naturalness_vs_constructed,
+    'Is the ''organized armed violence'' threshold a natural boundary that constrains interpretation, or a constructed legal category that this reading simply defines expansively?',
+    'Analyze the genesis of CA3''s text (negotiation records, delegate intent); assess whether alternative thresholds (intensity, duration, effectivité) are more deeply grounded in the text or in political history.',
+    'If the threshold is natural/textual, the expansive reading pushes CA3 beyond its intentional scope and risks legal overreach. If constructed, the reading is a legitimate exercise of living-law interpretation within the treaty''s flexibility.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(threshold_naturalness_vs_constructed, conceptual, 'Whether the constraint''s threshold is textually given or interpretively chosen.').
+
+omega_variable(
+    enforcement_capacity_vs_aspiration,
+    'To what extent does the measured suppression requirement (0.62) reflect states'' structural resistance to the reading versus states'' practical inability to comply with the monitoring and infrastructure demands?',
+    'Distinguish enforcement resistance (states arguing CA3 does not apply) from capacity resistance (states unable to implement detention standards or investigation procedures). Analyze compliance audit results and state objections separately.',
+    'If suppression is primarily structural resistance to the reading''s authority, the constraint is an active snare wearing tangled-rope framing. If capacity resistance, investment in infrastructure could stabilize compliance and shift the constraint toward genuine rope.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(enforcement_capacity_vs_aspiration, empirical, 'Whether measured suppression reflects principled resistance or implementation capacity gaps.').
+
+omega_variable(
+    universalism_vs_imperialism,
+    'To what extent does the expansive reading instantiate universal humanitarian principle versus imposition of human rights doctrine developed by Global North institutions on Global South conflicts?',
+    'Examine agreement/dissent on CA3 expansive reading by region, governance tradition, and armed-group representation. Assess whether the reading reflects consensus or reflects power asymmetry in treaty institutions.',
+    'If the reading is imposed, it carries a colonialism omega: the constraint extracts sovereignty from weaker states in service of doctrines they did not author. If consensus, it represents legitimate human rights progress.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(universalism_vs_imperialism, preference, 'Whether the reading represents universal principle or institutional imperialism.').
+
+omega_variable(
+    kernel_reading_identity,
+    'Does the expansive reading instantiate a genuine alternative interpretation of CA3, or does it smuggle in a new legal regime (human rights treaty law) under the CA3 label?',
+    'Compare the expansive reading''s operative commitments to the ICRC''s historical interpretation and state practice at CA3''s adoption (1949). If the reading overrides both, it is not interpretation but replacement.',
+    'If the reading is interpretation, states remained bound by CA3 and only the scope changed. If replacement, the reading requires new treaty authority (not present), making the constraint''s persistence depend on extra-legal enforcement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'Whether the reading is CA3 interpretation or a new regime''s imposition under CA3 language.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(common_article_3_scope__expansive_human_rights_reading, 1977, 2024).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(comm_tr_t1977, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 1977, 0.12).
+narrative_ontology:measurement_basis(comm_tr_t1977, observed).
+narrative_ontology:measurement(comm_tr_t1990, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 1990, 0.15).
+narrative_ontology:measurement_basis(comm_tr_t1990, observed).
+narrative_ontology:measurement(comm_tr_t2001, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 2001, 0.22).
+narrative_ontology:measurement_basis(comm_tr_t2001, observed).
+narrative_ontology:measurement(comm_tr_t2011, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 2011, 0.26).
+narrative_ontology:measurement_basis(comm_tr_t2011, observed).
+narrative_ontology:measurement(comm_tr_t2018, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 2018, 0.27).
+narrative_ontology:measurement_basis(comm_tr_t2018, observed).
+narrative_ontology:measurement(comm_tr_t2024, common_article_3_scope__expansive_human_rights_reading, theater_ratio, 2024, 0.28).
+narrative_ontology:measurement_basis(comm_tr_t2024, observed).
+
+% Extraction over time
+narrative_ontology:measurement(comm_be_t1977, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 1977, 0.38).
+narrative_ontology:measurement_basis(comm_be_t1977, observed).
+narrative_ontology:measurement(comm_be_t1990, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 1990, 0.48).
+narrative_ontology:measurement_basis(comm_be_t1990, observed).
+narrative_ontology:measurement(comm_be_t2001, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 2001, 0.62).
+narrative_ontology:measurement_basis(comm_be_t2001, observed).
+narrative_ontology:measurement(comm_be_t2011, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 2011, 0.66).
+narrative_ontology:measurement_basis(comm_be_t2011, observed).
+narrative_ontology:measurement(comm_be_t2018, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 2018, 0.67).
+narrative_ontology:measurement_basis(comm_be_t2018, observed).
+narrative_ontology:measurement(comm_be_t2024, common_article_3_scope__expansive_human_rights_reading, base_extractiveness, 2024, 0.68).
+narrative_ontology:measurement_basis(comm_be_t2024, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(comm_su_t1977, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 1977, 0.35).
+narrative_ontology:measurement_basis(comm_su_t1977, observed).
+narrative_ontology:measurement(comm_su_t1990, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 1990, 0.45).
+narrative_ontology:measurement_basis(comm_su_t1990, observed).
+narrative_ontology:measurement(comm_su_t2001, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 2001, 0.58).
+narrative_ontology:measurement_basis(comm_su_t2001, observed).
+narrative_ontology:measurement(comm_su_t2011, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 2011, 0.62).
+narrative_ontology:measurement_basis(comm_su_t2011, observed).
+narrative_ontology:measurement(comm_su_t2018, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 2018, 0.61).
+narrative_ontology:measurement_basis(comm_su_t2018, observed).
+narrative_ontology:measurement(comm_su_t2024, common_article_3_scope__expansive_human_rights_reading, suppression_requirement, 2024, 0.62).
+narrative_ontology:measurement_basis(comm_su_t2024, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(common_article_3_scope__expansive_human_rights_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(common_article_3_scope__expansive_human_rights_reading, 0.18).
+narrative_ontology:affects_constraint(common_article_3_scope__expansive_human_rights_reading, common_article_3_scope__state_centric_reading).
+narrative_ontology:affects_constraint(common_article_3_scope__expansive_human_rights_reading, common_article_3_scope__icrc_customary_reading).
+narrative_ontology:affects_constraint(common_article_3_scope__expansive_human_rights_reading, icc_jurisdiction_over_armed_conflict).
+narrative_ontology:affects_constraint(common_article_3_scope__expansive_human_rights_reading, state_classification_authority_in_counterinsurgency).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one reading of the contested kernel 'common_article_3_scope'. Two sibling readings are authored as separate constraint stories: state_centric_reading (narrow CA3 scope, state discretion) and icrc_customary_reading (scope via customary practice evolution). All three readings share the same fixed treaty text but differ in how broadly CA3 applies. The network edges declare this family relationship; each reading's omegas address the kernel contest. Constraint family decomposition follows ε-invariance principle: each reading instantiates a different constraint with different ε, different victim sets, different affected institutions.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(common_article_3_scope__expansive_human_rights_reading, institutional, 0.88).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

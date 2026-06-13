@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "statutory_debt_ceiling__constitutional_nullity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_statutory_debt_ceiling__constitutional_nullity_reading",
+    "story_uid": "edb120b4-882b-4f7f-b2d4-3e8bebd40260"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.95,
+    "accessibility_collapse": 0.98,
+    "resistance": 0.72,
+    "claimed_type": "mountain",
+    "human_readable": "Statutory Debt Ceiling as Constitutionally Void (14th Amendment Section 4)",
+    "topic_domain": "constitutional_law/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "treasury_department",
+      "constitutional_supremacy_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.92
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.93
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.94
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.95
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.95
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.0
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the constitutional_nullity_reading of the statutory debt ceiling kernel. Under this reading, the debt ceiling is not a coordination mechanism, extraction tool, or temporary scaffold — it is a void statute in conflict with the 14th Amendment Section 4's self-executing guarantee of the public debt's validity. The reading asserts that any statutory limit on borrowing required to pay appropriated obligations is unconstitutional, making the ceiling legally inoperative. The theater_ratio is very high (0.95) because what Congress calls 'debt ceiling votes' are performative: they create the appearance of fiscal discipline while having no legal force under the Constitution. The extractiveness and suppression are zero because, on this reading, the constraint does not actually constrain anyone — it is theatrically maintained but legally void.",
+    "key_agents": [
+      "treasury_department: executes borrowing as appropriations require, unconstrained by the (void) ceiling",
+      "congress: nominally sets the ceiling but is bound by the Constitution to fund its appropriations",
+      "federal_courts: would enforce the constitutional nullity by striking down ceiling enforcement",
+      "legislative_minority: would use the ceiling as leverage but is excluded by the reading's assertion of constitutional preemption",
+      "financial_markets: benefit from Treasury's unfettered borrowing authority to service debts"
+    ],
+    "logic_rationale": "Extractiveness is zero because the reading asserts the statute is legally inoperative — there is nothing to extract from and no party is constrained by a void rule. Suppression is zero for the same reason: a constitutionally null statute cannot suppress anyone; the apparent 'suppression' is the ceremonial performance of enforcing a dead law. Theater_ratio is very high (0.95) because the mechanism persists entirely as theater — Congress holds votes, Treasury manages the ceiling in administrative practice, and political actors invoke it rhetorically, but all of this activity occurs in the space of constitutional nullity. The ceiling is maintained in the ceremonial sense (repeating the vote, managing day-to-day compliance with an inoperant rule) but has no constitutional force. Accessibility_collapse is very high (0.98) because, if the reading is true, there is literally no alternative to appropriated borrowing — the Constitution does not permit a statute to block it. Resistance is high (0.72) because legislative minorities, fiscal hawks, and those who believe in legislative discipline actively resist this reading and defend the ceiling's legitimacy.",
+    "perspectival_gap": "The agenda-setter seat (federal courts) and the ceremonial-performer seats (Congress, Treasury) experience this constraint radically differently. From the courts' analytical position, the constraint is a nullity that courts should declare void. From Congress and Treasury's operational position, the constraint exists as a ceremonial/administrative fact — they manage it as if it were operative while knowing it is contested. The engine computes each seat's type from the structural data; the divided perspective is built into the stakeholder situation declarations.",
+    "directionality_logic": "Treasury and financial markets sit near the full-beneficiary end (d near 0.0): they benefit from the constitutional nullity reading because it makes borrowing authority unambiguous. The legislative minority sits near the full-target end (d near 1.0) under this reading because they are structurally foreclosed from using the ceiling as leverage — the reading asserts they have no such authority. Congress as a whole is near symmetric (d near 0.5) because Congress is bound by the same constitutional constraint it nominally created the statute under. Federal courts occupy the analytical seat (d = 0.5 by default for observers). No directionality overrides are needed; the structural data derives cleanly.",
+    "mandatrophy_analysis": "The founding problem (procedural inefficiency of per-bond votes) is dead. The founding problem was solved by administrative procedures, not by the ceiling's continued operation. Under this reading, the ceiling persists as pure theater — ceremonial votes and administrative compliance with a constitutionally null statute. The reading PREVENTS the misclassification that would occur if the constraint were classified as rope or scaffold based on its nominal coordination role; the nullity reading clarifies that the coordination was never actually achieved by the ceiling itself, only by procedural modernization independent of it.",
+    "kernel_context": "This constraint is one reading of the statutory_debt_ceiling kernel. The reading instantiated here is constitutional_nullity_reading: the debt ceiling is void as applied to borrowing required to pay appropriations, preempted by the 14th Amendment Section 4. The sibling readings are: (1) coordination_scaffold_reading (the ceiling as procedural coordination, likely temporary but legitimate), and (2) extraction_snare_reading (the ceiling as weaponized leverage enabling legislative minority extraction). This reading forecloses the scaffold reading's legitimacy claim (if the ceiling is constitutionally void, it cannot be a legitimate coordinating mechanism) and coexists with the snare reading (both accept that the ceiling functions as legislative leverage, but disagree on whether that function is constitutionally permissible)."
+  },
+  "omegas": [
+    {
+      "id": "fourteenth_amendment_self_execution",
+      "question": "Is 14th Amendment Section 4 ('The validity of the public debt of the United States... shall not be questioned') a self-executing constitutional bar on debt-ceiling enforcement, or does it require Congressional implementing legislation?",
+      "resolution_mechanism": "Federal court ruling on the constitutionality of debt ceiling enforcement; originalist and living-constitution interpretive traditions diverge on whether the clause is self-executing or requires activation.",
+      "impact": "If self-executing: the ceiling is unconstitutional on its face as applied to appropriations-backed borrowing, making this reading's claimed type (mountain) correct. If requiring legislation: the reading collapses toward snare or scaffold, depending on what Congress does legislatively.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether 14th Amendment Section 4 operates as self-executing constitutional bar or requires Congressional implementation."
+    },
+    {
+      "id": "natural_law_vs_judicial_declaration",
+      "question": "Is the constitutional nullity a natural fact (the statute is void ab initio, prior to any court ruling) or does it require judicial declaration to become operative?",
+      "resolution_mechanism": "Federal court ruling and constitutional scholar consensus on whether the clause's supremacy is self-evidently operative or requires courts to enforce it.",
+      "impact": "If natural fact: Treasury could unilaterally ignore the ceiling and courts would enforce the Constitution. If requiring declaration: the nullity is contested until adjudicated, and Treasury operates under legal uncertainty. This feeds the theater_ratio and resistance metrics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether constitutional void is self-evident or requires judicial enforcement."
+    },
+    {
+      "id": "constitutional_necessity_doctrine",
+      "question": "Does the Constitution establish that some debt is necessary to execute lawful appropriations (making the ceiling void as applied to such debt), or is the Constitution silent on whether Congress can appropriate without guaranteeing borrowing authority?",
+      "resolution_mechanism": "Originalist and living-constitution textual analysis; review of Framers' intent on federal borrowing authority; analysis of Article I Section 8 (borrowing power) in relation to Section 9 (payment of debts) and the 14th Amendment.",
+      "impact": "If necessity is constitutional: the reading holds. If the Constitution is silent and Congress could appropriate without guaranteeing borrowing: the reading collapses and a snare or scaffold reading becomes tenable.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the Constitution establishes constitutional necessity for debt incurred by appropriations."
+    },
+    {
+      "id": "false_summit_beneficiary_ambiguity",
+      "question": "Treasury and the 'constitutional_supremacy_doctrine' are listed as beneficiaries. Is Treasury a real actor that 'benefits' from the ceiling's nullity, or is the beneficiary actually just the doctrine itself? Does naming a doctrine as beneficiary obscure real institutional power dynamics?",
+      "resolution_mechanism": "Audit whether Treasury actually experiences the nullity as a benefit (operational freedom to borrow) or whether only the abstract doctrine does. If only the doctrine benefits, remove Treasury as beneficiary and keep only the vindicated_proposition.",
+      "impact": "If the beneficiary should be removed: this reading is a cleaner mountain, with no FSM trigger. If Treasury genuinely benefits operationally: the reading becomes candidate for false-summit reclassification, because a mountain that benefits identifiable institutional actors may be a constructed constraint masquerading as natural law.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional beneficiaries exist or only the abstract constitutional doctrine benefits."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.0
+  },
+  "network": {
+    "affects_constraints": [
+      "statutory_debt_ceiling__coordination_scaffold_reading",
+      "statutory_debt_ceiling__extraction_snare_reading"
+    ],
+    "dual_formulation_note": "The statutory debt ceiling kernel admits three structurally distinct constraint readings: (1) constitutional_nullity_reading (this file) — the ceiling is void under the 14th Amendment, zero extractiveness, mountain type; (2) coordination_scaffold_reading — the ceiling is a legitimate procedural coordination mechanism, likely transitory, with genuine beneficiaries; (3) extraction_snare_reading — the ceiling is weaponized leverage enabling legislative minority extraction. These three readings are NOT different measurements of the same constraint — they instantiate different ε values and different beneficiary/victim structures from the same contested constitutional kernel. Each reading has its own constraint_story.json file. All three are linked via network.affects_constraints so the corpus records the constitutional contest as a family of three structurally distinct constraints, each with a different ε, arising from one kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "constitutional_supremacy_of_appropriations_authorization",
+    "reading_relations": [
+      {
+        "sibling_id": "statutory_debt_ceiling__coordination_scaffold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "statutory_debt_ceiling__extraction_snare_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fourteenth_amendment_section_four_self_executes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "statutory_ceiling_void_as_applied_to_appropriated_obligations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "drift_state": {
+      "moment": "contemporary_political_standoff_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [],
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

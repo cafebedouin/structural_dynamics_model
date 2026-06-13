@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "19f049c2-8712-476e-8a31-6392e7e82480"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.71,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.42,
+    "claimed_type": "piton",
+    "human_readable": "Preparedness Husk: Ritualized Drills and Inspections as Memorial Performance",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "administrative_hierarchy"
+    ],
+    "victims": [
+      "flood_exposed_population"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "atrophy_vs_natural_drift",
+      "question": "Is the measured decline in actual evacuation readiness the result of deliberate organizational non-investment in genuine competence, or a natural attrition of institutional knowledge over generational turnover?",
+      "resolution_mechanism": "Compare organizations where the founding problem (knowledge preservation after disaster) is actively resourced — mentorship programs, immersive training, simulation with real-scenario complexity — to those where drills are performed as scheduled ritual. If actively-resourced organizations maintain readiness while ritual-only organizations show uniform atrophy, atrophy is deliberate structure choice, not drift.",
+      "impact": "If deliberate: the constraint's victim and beneficiary roles are clear (hierarchy benefits from low-cost legitimacy theater; population bears the readiness risk). If natural drift: the constraint might be tragic accident rather than structural extraction, shifting the type toward Piton-of-institutional-inertia rather than Piton-of-maintenance-capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether atrophy is deliberate organizational choice or emergent knowledge loss."
+    },
+    {
+      "id": "competing_readings_empirical_test",
+      "question": "What would falsify each reading? If an actual flood event occurs and evacuation succeeds, does that support competence_reading? If it fails and reveals atrophy, does that support husk_reading?",
+      "resolution_mechanism": "Post-disaster assessment: measure actual evacuation outcomes against pre-disaster drill protocols and inspection certifications. Conduct forensic interviews with responders about their real-time knowledge, decision-making, and coordination under stress. Identify specific points where the drills did or did not prepare them.",
+      "impact": "A successful evacuation with revealed atrophy in non-critical subsystems would support hybrid_reading (stratified competence). A failed evacuation traceable to missing knowledge tested in no drill would support husk_reading. Successful evacuation with drill-to-reality correspondence would support competence_reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Empirical test distinguishing readings through actual disaster response outcomes."
+    },
+    {
+      "id": "kernel_reading_committer_ambiguity",
+      "question": "Is preparedness a single unified constraint (one kernel, three readings of the same thing) or three distinct constraints (competence, husk, hybrid are separate things evaluated under different observables)?",
+      "resolution_mechanism": "Test ε-invariance: does the measure of extractiveness change when the observable shifts from 'does the drill demonstrate current knowledge' to 'does the protocol match actual organizational capability' to 'are critical subsystems tested, others not'? If ε changes fundamentally with the observable choice, the readings instantiate different constraints, not different readings of one kernel.",
+      "impact": "If different constraints: decompose into three JSON files per the ε-invariance principle, linked via network.affects_constraints, not treated as readings of a single kernel. If one kernel: the reading-relations structure below is correct and the three readings coexist as competing legitimate frames of the same institutional commitment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether preparedness is one contested kernel or three distinct constraints."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A jurisdiction subject to recurring floods maintains a formal preparedness system: annual evacuation drills, annual structural inspections, compliance reports sent to supervisory authorities. The form persists: drills are conducted, inspections are completed, documents are filed. But institutional memory practitioners and independent emergency-response researchers have documented that actual evacuation coordination capability has atrophied over decades — the people conducting the drills lack hands-on experience with the coordination machinery, responders lack cross-training, critical information is no longer transmitted between senior and junior personnel during drill-time, and command structures exist in writing but not in muscle memory or real-time rehearsal. The constraint persists because the administrative hierarchy benefits from the appearance of preparedness (legitimacy with supervisory authority, public confidence, career advancement through visible compliance) while bearing none of the cost of failure. The flood-exposed population depends on evacuation capacity but has no seat in defining what preparedness means or evaluating whether it is real. This reading asserts the constraint is Piton: atrophied institutional function maintained theatrically because the cost of fixing it exceeds what any administrator bears alone, but the cost of not fixing it (population risk in a flood event) falls on the powerless and trapped.",
+    "key_agents": [
+      "administrative_hierarchy: agenda_setter with institutional power; defines and enforces the drill/inspection regime to satisfy upward accountability",
+      "emergency_management_personnel: moderate power, constrained exit; careers advance through ritual compliance, creating incentive alignment with the form over substance",
+      "flood_exposed_population: powerless, trapped; bear the ultimate cost if the constraint fails and evacuation is needed",
+      "supervisory_authority: institutional observer; accepts formal compliance reports without independent verification of actual readiness",
+      "institutional_memory_practitioners: excluded voices; would testify to atrophy but are not seated in preparedness evaluation"
+    ],
+    "logic_rationale": "Theater_ratio of 0.71 at interval end (rising from 0.48) captures the constraint's defining feature: the constraint persists increasingly as performance rather than function. Extractiveness is high (0.62) because the administrative hierarchy extracts institutional legitimacy and political safety from the appearance of preparedness without bearing the cost of actual readiness — the extracted value is purely positional (being seen as prepared by supervisory authority and public) not operational (having an evacuation system that works). Suppression is moderate (0.58) because the constraint is maintained not through external coercion but through the structural architecture of incentives: career advancement through compliance, supervisory authority's acceptance of formal reports, and public confidence built on visible drills and signed inspection forms. Resistance is low (0.42) because the powerless flood-exposed population has no organized counter-position and institutional memory practitioners are excluded from the deliberative space where alternatives would be voiced. The measurements span 40 years and track the trajectory: extractiveness rises as administrative overhead grows and real competence investment stalls; theater_ratio rises as the functional link between drills and actual readiness weakens.",
+    "perspectival_gap": "From the administrative hierarchy's seat, the constraint is coordination: maintain public order, ensure disaster readiness within budget constraints, satisfy regulatory compliance. From the flood-exposed population's seat, the constraint is pure extraction: they bear the risk (trapped in flood zone, relying on evacuation capacity) and receive theater (drills that don't prepare responders, inspections that don't verify actual capability). From supervisory authority's seat, the constraint appears as genuine coordination (they receive reports of compliance and certify preparedness). The engine computes this divergence from the structural data: the hierarchy's beneficiary status, the population's victim status, and their divergent power and exit options drive d-values toward opposite ends of the spectrum, yielding different type-classifications at each seat.",
+    "directionality_logic": "Administrative hierarchy: beneficiary role (collects legitimacy) + institutional power + arbitrage exit (can change the system at will) → d near 0.1 (full beneficiary end). Flood-exposed population: payer role (bears the readiness risk) + powerless + trapped exit (geographic and economic immobility) → d near 0.95 (full target end). Emergency management personnel: mixed (benefit from career advancement through compliance, pay by being bound to a non-functional framework) + moderate power + constrained exit → d near 0.55 (symmetric). Supervisory authority: observer role, analytical power, analytical exit → d not computed (external seat). Institutional memory practitioners: excluded role, would be targets if seated, powerless + trapped → d would be near 0.90 if they had formal standing (the exclusion itself is structural suppression).",
+    "mandatrophy_analysis": "The founding problem was genuine: after the prior flood, knowledge preservation through coordinated drills and training prevented generational loss of evacuation expertise. That problem is now dead — the current system no longer addresses knowledge preservation and instead addresses the problem of demonstrating compliance with a formalized schedule to supervisory authority. The constraint meets all Piton criteria: (1) it persists through inertia and theatrical maintenance rather than genuine coordination or extraction of rents by a capturer; (2) no party benefits enough to maintain it if challenged (the hierarchy only benefits from continuity, not from the system's actual function); (3) no party bears enough concentrated cost to fix it alone (the population bears the risk but has no power; the hierarchy bears only legitimacy cost, not operational cost); (4) the cost to alter the system (retraining, immersive drill design, mentorship infrastructure) exceeds what any single administrator will invest. The divergence between claimed founding problem (knowledge preservation) and actual institutional function (compliance demonstration) is the canonical Piton signature.",
+    "kernel_context": "This constraint is one reading of the contested kernel preparedness_persistence. The reading instantiated here is husk_reading: preparedness is memorial performance — form persists while operational competence atrophies. The sibling readings are competence_reading (drills and inspections are live exercised knowledge maintaining operational readiness) and hybrid_reading (preparedness is stratified: some components remain competent, others ritualized). The husk reading asserts that the current system has lost the functional coupling between form and capacity that originally justified the constraint; the drills are now memorial to prior competence rather than vehicles for maintaining it. The committer question is whether the kernel preparedness_persistence is legitimately understood as a single contested commitment (three readings of how to maintain knowledge over generations) or whether the readings instantiate structurally distinct constraints under different observables (see omega on ε-invariance test)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_disaster_knowledge_preservation",
+    "drift_state": {
+      "moment": "contemporary_generational_atrophy",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_persistence__competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_persistence__hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "atrophy_is_real_and_measurable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "form_decoupled_from_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_persistence kernel decomposes into three constraint stories representing three legitimate but contested readings of how to understand flood-disaster preparedness systems. Husk_reading asserts that form has decoupled from functional capacity and the system now persists as Piton (atrophied institutional function maintained theatrically). Competence_reading asserts that drills and inspections maintain real operational readiness (Rope or Tangled_Rope depending on how enforcement is measured). Hybrid_reading asserts that some subsystems remain genuinely competent while others have ritualized. Each reading instantiates a different constraint with potentially different ε, beneficiary/victim structures, and classifications. They are linked via network.affects_constraints to signal that they are readings of the same contested kernel, not independent constraints. The contest between them is not resolvable in a single constraint story; the corpus carries all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

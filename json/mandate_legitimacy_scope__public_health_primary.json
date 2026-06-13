@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "mandate_legitimacy_scope__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "51daf21b-3b2d-4c60-9cfa-c7be1a79a5e4"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Mandate Legitimacy (Collective Protection Reading)",
+    "topic_domain": "public_health/constitutional_law/medical_autonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "infants_and_elderly"
+    ],
+    "victims": [
+      "vaccine_hesitant_adults",
+      "individuals_with_contraindications"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies one reading of the contested kernel 'mandate_legitimacy_scope': the claim that state authority to compel vaccination derives its legitimacy from the duty to protect vulnerable populations who cannot protect themselves. Under this reading, the unvaccinated-by-choice bear a responsibility to protect the immunocompromised and the unvaccinated-unable. The founding problem—outbreaks harming vulnerable populations when coverage lapses—provides the justification. This reading COEXISTS WITH but competes against the bodily_autonomy_primary reading (medical intervention without consent violates fundamental rights) and the proportionality_reading (legitimacy depends on disease severity, vaccine safety, and availability of less restrictive alternatives). The constraint operates by transferring medical decision-making authority from individuals to public health institutions, justified by protection duties to the most vulnerable.",
+    "key_agents": [
+      "public_health_authority: sets mandate scope and enforces via institutional exclusion (schools, employment, facilities)",
+      "immunocompromised_populations: powerless beneficiaries; their protection is the mandate's structural justification",
+      "vaccine_hesitant_adults: moderate-power payers; face employment/education exclusion and social isolation if noncompliant",
+      "individuals_with_contraindications: moderate-power payers with identity lock; cannot vaccinate but must navigate exemption gatekeeping",
+      "employers_and_institutions: institutional agenda-setters (derivative authority); implement mandate enforcement",
+      "excluded_alternative_voices: advocacy groups, autonomy-focused philosophers, alternative practitioners systematically excluded from policy authority"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-high (0.62 at interval end) because the constraint transfers bodily decision-making to the state with no direct reciprocal agency for the payers (vaccine-hesitant individuals cannot vote the mandate out; individuals with contraindications face high proof burdens for exemptions). Suppression is high (0.71) because noncompliance carries severe institutional penalties (employment loss, educational exclusion, social restriction) with limited appeal mechanisms. Theater is moderate-low (0.28) initially, rising to moderate (0.28 plateau) as the constraint matures: the genuine disease-protection function remains real, but as vaccination becomes routine and outbreaks disappear, more enforcement activity defends mandate legitimacy itself rather than addressing immediate disease threat. The measurement series track extractiveness rising then plateauing (foundational mandate established, scope stable), suppression rising then plateauing (enforcement machinery scaled and normalized), and theater stable-to-rising (the constraint's public justification becomes less tied to current disease risk and more tied to institutional continuity and past harm). All metrics are authored on one shared time grid.",
+    "perspectival_gap": "The payer and beneficiary seats experience this constraint entirely differently. Immunocompromised populations and infants perceive it as protective coordination—a solution to their existential vulnerability. Vaccine-hesitant adults perceive it as coercive extraction of bodily autonomy with no seat in governance. Individuals with contraindications perceive it as a system that claims to protect them but gates their exemptions behind authority-defined medical criteria they don't control. The public health authority perceives it as legitimate collective-action problem solving grounded in duties to vulnerable populations. The engine should compute dramatically different types across these seats—protection vs. extraction vs. identity-lock—from the structural data alone.",
+    "directionality_logic": "Beneficiaries: immunocompromised (d → 0.0), infants/elderly (d → 0.0). Payers: vaccine-hesitant (d → 0.75, constrained exit, penalty-heavy), individuals with contraindications (d → 0.8, identity-locked, exemption gatekeeping). Agenda-setter: public_health_authority (d → 0.15, institutional power, no personal penalty). The constraint's extraction is amplified for trapped/identity-locked payers and damped for beneficiaries with zero alternatives—the very asymmetry this reading claims is justified.",
+    "mandatrophy_analysis": "This reading avoids mislabeling the constraint as pure rope (which would imply symmetric participant benefit and genuine voluntary entry). The tangled_rope classification captures the core structure: real coordination function (herd immunity protection) coupled with asymmetric extraction (bodily decision authority transferred with no reciprocal agency for payers). The classification prevents the constraint from passing as benign coordination when it is sustained by suppression (institutional penalties) and benefits flow structurally to those least able to object. The constraint requires active enforcement (institutional exclusion, exemption gatekeeping, employment verification) to persist; voluntary uptake alone is not sufficient. This is not a rope; it is a tangled_rope where coordination and extraction are structurally fused.",
+    "kernel_context": "This constraint instantiates the public_health_primary reading of the contested kernel 'mandate_legitimacy_scope'. The kernel is the foundational commitment claim: 'What is the legitimate basis for state authority to compel medical intervention on individuals?' The public_health_primary reading answers: state authority is legitimate when necessary to protect vulnerable populations from serious harm. The sibling readings contest this foundation: bodily_autonomy_primary asserts medical intervention without informed consent violates fundamental integrity regardless of collective benefit; proportionality_reading asserts legitimacy depends on disease severity, vaccine safety, and availability of less restrictive alternatives. This reading COEXISTS WITH those siblings but competes with them—different parties hold different readings, and no single framework incorporates all three simultaneously. The structural delta from other readings: under public_health_primary, the immunocompromised and unvaccinated-unable enter the beneficiary set (they are the existential justification); the vaccine-hesitant are reframed as bearing a duty to protect vulnerable others; the ε from mandate absence is high (vulnerable populations face uncontrolled exposure). Under bodily_autonomy_primary, that same duty claim would be contested as overriding fundamental rights; under proportionality_reading, the scope of compulsion would be narrowed to only those diseases meeting severity and vaccine-safety thresholds."
+  },
+  "omegas": [
+    {
+      "id": "coercion_vs_protection_boundary",
+      "question": "At what vaccination coverage rate does the constraint shift from solving a genuine collective-action problem (covering the unvaccinated-unable) to enforcing compliance beyond what herd immunity requires?",
+      "resolution_mechanism": "Epidemiological analysis establishing minimum herd-immunity thresholds for each disease, compared against actual mandate enforcement coverage levels over time. Natural experiments from jurisdictions with different coverage targets.",
+      "impact": "If enforcement exceeds epidemiological thresholds, the constraint contains a pure-extraction component beyond the stated protection function. If enforcement aligns with thresholds, the extraction is the unavoidable cost of the coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the mandate extracts beyond what protecting vulnerable populations requires."
+    },
+    {
+      "id": "contraindication_gatekeeping_symmetry",
+      "question": "Are exemptions for genuine medical contraindications granted symmetrically to medical judgment, or does the same authority that sets the mandate also determine contraindication standards in ways that minimize exemptions?",
+      "resolution_mechanism": "Comparative analysis of exemption approval rates across different medical conditions and jurisdictions; audit of appeal outcomes for denied exemptions; comparison of clinical contraindication prevalence against exemption rates.",
+      "impact": "If gatekeeping is authority-asymmetric (authority both mandates and sets narrow exemption criteria), individuals with contraindications face identity-lock extraction (cannot opt out without medical disqualification). If gatekeeping is clinically symmetric, some exit option opens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exemption gatekeeping is structurally fair or a mechanism of extraction."
+    },
+    {
+      "id": "vulnerable_population_agency",
+      "question": "Do immunocompromised and other vulnerable populations participate in setting mandate scope and enforcement terms, or are they structurally excluded from governance while remaining the stated beneficiaries?",
+      "resolution_mechanism": "Audit of policy-setting bodies: what seats do vulnerable populations hold? How are their preferences elicited and weighted? Analysis of prior mandates where vulnerable population voice shaped scope.",
+      "impact": "If vulnerable populations are excluded from governance while being the justification, their benefit is structurally asymmetric (they receive protection they did not choose). If included, they become co-agenda-setters and the structure is more genuinely coordinated.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's beneficiaries participate in its governance or remain subjects of authority."
+    },
+    {
+      "id": "reading_coexistence_stability",
+      "question": "Can this reading (public_health_primary) and the bodily_autonomy_primary reading coexist indefinitely in the same legal/institutional framework, or does one eventually foreclose the other as state capacity and disease burden change?",
+      "resolution_mechanism": "Historical analysis of constitutional interpretations and precedent: has the autonomy reading completely been abandoned, or does it resurface when disease threat recedes? Does legislative reauthorization of mandates imply ongoing contest?",
+      "impact": "If coexistence is genuine and stable, the readings are siblings in a lived pluralism. If one is gradually foreclosing the other, the framework is resolving the contest, not hosting it. This affects how mandate legitimacy is interpreted in low-threat scenarios.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the public_health and autonomy readings are genuinely coexisting or one is foreclosing the other."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "mandate_legitimacy_scope__bodily_autonomy_primary",
+      "mandate_legitimacy_scope__proportionality_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'mandate_legitimacy_scope'. The sibling readings—bodily_autonomy_primary and proportionality_reading—are separate constraint stories with different ε values, beneficiary/victim structures, and structural justifications. This reading (public_health_primary) achieves its coordination function by transferring medical decision authority to public health institutions; the bodily_autonomy_primary reading contests that transfer as a violation of fundamental rights; the proportionality_reading narrows the scope to only diseases meeting severity and safety thresholds. All three readings coexist as live political/legal positions held by different parties and jurisdictions. The network edges establish that this constraint's persistence is intertwined with the contested status of the kernel itself."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "mandate_legitimacy_scope__bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "mandate_legitimacy_scope__proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "duty_to_protect_vulnerable_overrides_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_medical_authority_legitimate_for_collective_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "vulnerable_population_protection_framework",
+    "drift_state": {
+      "moment": "post_endemic_disease_transition",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
