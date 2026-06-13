@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__corporate_moat_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "d3327e7b-deaa-47b0-a256-7247ecc71a23"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Permissive Open-Source License as Corporate Proprietary Moat",
+    "topic_domain": "intellectual_property/software_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enterprise_software_corporations"
+    ],
+    "victims": [
+      "individual_open_source_maintainers",
+      "alternative_open_source_projects"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Permissive open-source licenses (MIT, Apache 2.0, BSD) remove legal friction from code reuse, enabling rapid ecosystem innovation. This reading frames the license as a mechanism that ENABLES corporate extraction: enterprises incorporate volunteer-maintained code into proprietary products, capture market rents, and provide no reciprocal contribution or compensation. The maintainers are victimized not by malice but by the asymmetric structure the license creates—they chose to contribute to the commons believing in collective benefit, but the permissive terms allow corporations to defect from commons maintenance while retaining the value of the contributed code. The extraction is active (corporations enforce proprietary derivative secrecy) and structural (the license itself contains no reciprocity requirement).",
+    "key_agents": [
+      "enterprise_software_corporations: Primary beneficiary. Extract uncompensated value from permissively-licensed code by incorporating it into proprietary products, capturing market rents, and maintaining code secrecy. Institutional power, arbitrage-grade exit options.",
+      "individual_open_source_maintainers: Primary victims. Contribute code under the permissive license, then discover it incorporated into proprietary competitors without compensation or credit. Powerless individually; identity-locked to open-source values (cannot easily switch to copyleft without fragmenting their own user base). Biographical time horizon; constrained exit.",
+      "alternative_open_source_projects: Secondary victims. Compete with proprietary derivatives of permissively-licensed code. Corporations can undercut them by adding proprietary layers and enterprise support. Moderate power; constrained exit (switch to copyleft = break compatibility).",
+      "downstream_users: Beneficiary (low friction to integration) but also secondary payers (corporations pass along some proprietary-derivative costs). Organized power; mobile exit options.",
+      "open_source_stewardship_bodies: Agenda-setter. Chose permissive licensing over copyleft or other models. Constrained by need to maintain legitimacy with both volunteer and corporate communities. Their institutional choice shapes the extraction landscape.",
+      "venture_capital_backed_startups: Beneficiary-payer hybrid. Use permissive code as foundation, then go proprietary or get acquired. Powerful players with arbitrage-grade exit (can exit to acquisition).",
+      "academic_researchers: Observer seat. Study the extraction dynamics and document the sustainability crisis in volunteer-maintained projects."
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) and rising because the constraint enables asymmetric value capture: enterprises take decades of volunteer labor and market it proprietary without reciprocal obligation. Suppression is moderate (0.52) because the constraint is defended not by overt coercion but by corporations' ability to maintain source-code secrecy (a structural suppression mechanism) and by the maintainers' identity-lock to open-source ideals (internalized suppression—they believe contributing to the commons is virtuous even when exploited). Theater is moderate-rising (0.22→0.41) because as awareness of the extraction grows, more rhetorical energy goes to justifying why permissive licensing is 'good for innovation' (performative maintenance of the narrative that voluntary uncompensated work is freedom, not exploitation). The measurement series track both the rising awareness of extraction and the intensifying performance required to sustain the narrative.",
+    "perspectival_gap": "From the corporate beneficiary seat, the constraint is genuine coordination—permissive licensing solved reuse friction and enabled rapid innovation that benefits everyone (downstream users, alternative projects, new startups). From the maintainer seat, the same structure operates as enforced extraction: their work fuels corporate moats they cannot compete with, yet they remain unpaid and ideologically committed to the 'open' framing that justifies their own exploitation. The engine computes this divergence per-seat from the structural data (beneficiary vs. victim, power differential, exit options). The claim ASSERTS snare; the metrics support it; the disagreement is between seats, not between claim and metrics.",
+    "directionality_logic": "Enterprises (institutional power, arbitrage-grade exit via acquisition or proprietary fork) sit near d=0.0 (full beneficiary end). Maintainers (powerless, identity-locked exit, biographical time horizon) sit near d=1.0 (full target end). The asymmetry is structural: corporations have multiple paths to value extraction (incorporation, proprietary layers, resale/acquisition) while maintainers have only one path (open contribution) and see little return. Alternative open-source projects sit mid-to-high on d (d≈0.7) because they face competitive pressure from corporate derivatives but retain some exit options (copyleft migration, commercialization, shutdown). Downstream users sit near d=0.4 (moderate beneficiary: they gain reuse friction reduction but also carry some costs as proprietary derivatives inflate prices or reduce feature parity with open versions).",
+    "mandatrophy_analysis": "The constraint does NOT show mandatrophy. The founding problem (legal friction in reuse) remains real and is solved by permissive licensing. However, the reading reveals that solving the reuse problem enabled an extraction problem the founding mandate never intended. This is not mandatrophy (founding problem dead, constraint persists) but rather MISSION CREEP: the constraint's success at solving reuse friction enabled new structural asymmetries that now drive extraction independent of the founding mandate. A mandatrophy reading would require the original problem to be dead (it is not—reuse friction remains a real coordination problem). The extraction reading does NOT require mandatrophy; it requires structural asymmetry in who benefits from the solution (it is present).",
+    "kernel_context": "This constraint instantiates the CORPORATE_MOAT_READING of the contested kernel 'permissive_license_text'. The kernel is the permissive-license framework itself (MIT, Apache 2.0, BSD)—a stabilized commitment to maximizing reuse freedom by removing legal restrictions. This reading asserts that the license, as written and enforced, structurally enables corporate extraction: enterprises can incorporate code, maintain secrecy, and capture market rents without reciprocal obligation. Sibling readings frame the same kernel differently: the COMMONS_COORDINATION_READING views permissive licensing as maximizing universal freedom and ecosystem health (reuse friction is the enemy; permissive licensing is the solution). The COPYLEFT_COUNTERFACTUAL_READING views permissive licensing as ENABLING exploitation and argues viral reciprocity (GPL) is necessary to protect the commons. This reading (corporate-moat) asserts that permissive licensing creates a structural condition (uncompensated extraction) that benefits corporations and harms individual maintainers. The three readings do NOT coexist in a single party's framework: a corporation believes permissive licensing is good (commons_coordination framing); a copyleft advocate believes it enables exploitation (copyleft_counterfactual); a corporate strategist benefits from the extraction (corporate_moat). Each reading is true FROM A SEAT, and the kernel is the contested commitment that generates these different readings."
+  },
+  "omegas": [
+    {
+      "id": "suppression_mechanism_persistence",
+      "question": "Is the measured suppression of maintainer resistance structural (corporations' ability to maintain proprietary secrecy, legal barriers to tracking use) or internalized (maintainers' identity-fusion with open-source ideals, belief that extraction is fair exchange for 'freedom')?",
+      "resolution_mechanism": "Post-extraction-removal tracking: if permissive licensing were replaced with mandatory reciprocity, do maintainers' motivation and activism levels rise (indicating suppression was internalized), or do they persist at current levels (indicating suppression is structural to the market dynamics)? Secondary mechanism: ethnographic study of maintainer exit reasoning—are they leaving because of economic pressure (structural) or because they feel ideologically complicit (internalized)?",
+      "impact": "If suppression is internalized, removing the permissive constraint alone would not restore maintainer agency—the identity lock persists. If structural, restoring reciprocity rights would quickly restore resistance and renegotiation power. The difference shapes what remedy is needed (compensation/copyleft vs. therapy/identity work).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in open-source maintainer dynamics"
+    },
+    {
+      "id": "commons_vs_moat_frame_rivalry",
+      "question": "Is permissive licensing primarily a commons-coordination mechanism (maximizing collective benefit through legal simplicity) or a corporate-moat mechanism (enabling uncompensated extraction)? Can both readings coexist for the same constraint, or does one reading's truth preclude the other?",
+      "resolution_mechanism": "Comparative analysis: measure maintainer satisfaction and ecosystem sustainability under permissive vs. copyleft licensing in matched domains. If both model permissive as generative (commons reading) and permissive as extractive (moat reading) simultaneously, the readings coexist; if the data shows one model dominant, that reading forecloses the other's core claim.",
+      "impact": "If readings coexist, the kernel is genuinely contested and both constraints are valid. If one forecloses the other, the losing reading's core premise is unsustainable (empirically or logically). This shapes which reading the engine should weight for remediation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether commons-coordination and corporate-extraction readings can both describe the same permissive-license constraint"
+    },
+    {
+      "id": "volunteering_authenticity_and_exit",
+      "question": "When individual maintainers contribute code under permissive licenses, are they genuinely volunteering (informed consent to uncompensated work) or are they making a choice under constrained conditions (no institutional funding, no viable alternative for getting code used, identity-bound to open-source beliefs)?",
+      "resolution_mechanism": "Historical counterfactual: if maintainers had been offered compensation (via bounties, sponsorship, or GPL-enforced reciprocity) at the time of initial contribution, would the contribution patterns differ? Survey of maintainers: when they started, did they understand the permissive license enabled proprietary use, and did they consent to that outcome?",
+      "impact": "If contributions were made under constraint or with limited information, the framing shifts from 'free choice to volunteer' to 'structured coercion into volunteering.' This reframes the constraint from snare (victims aware, constrained exit) to something closer to structural coercion. If they were fully informed and chose voluntarily, the snare reading holds but the victim characterization weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source contributions are genuine volunteering or constrained choices"
+    },
+    {
+      "id": "alternative_kernel_reading_feasibility",
+      "question": "Could the permissive-license kernel be instantiated WITHOUT enabling corporate extraction (the commons-coordination reading)? Or is corporate-moat extraction a necessary structural consequence of removing legal friction from reuse?",
+      "resolution_mechanism": "Thought experiment: design a permissive-license framework that removes reuse friction BUT includes mechanisms to prevent uncompensated extraction (e.g., attribution requirements, mandatory contribution paths, tiered licensing). If such a framework is logically coherent and enables reuse, the moat reading is not foreclosed by the permissive premise; if such a framework collapses back into either copyleft (adds reciprocity) or extraction (loses reuse friction), the readings may be foreclosing competitors.",
+      "impact": "If a middle path exists, the readings coexist and both are structurally viable. If no middle path exists (remove friction → enable extraction, or prevent extraction → recreate friction), the readings may be logically in tension.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether permissive-license commons-coordination and corporate-moat extraction are logically separable"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__copyleft_counterfactual_reading",
+      "software_labor_market_compensation_crisis"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'permissive_license_text'. Sibling readings are 'commons_coordination_reading' (permissive licensing maximizes collective freedom and ecosystem health) and 'copyleft_counterfactual_reading' (permissive licensing enables exploitation; viral reciprocity is the necessary alternative). The three readings instantiate the same kernel (the permissive-license framework) but from different structural seats: corporate beneficiaries see commons coordination; individual maintainers see extraction; copyleft advocates see foreclosure of reciprocity. Each reading is valid from its seat; the constraint family tracks the kernel's contestation across these structural positions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "permissive_license_enables_uncompensated_corporate_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "maintainer_victimhood_through_structural_asymmetry",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "permissive_license_maximum_reuse_freedom",
+    "drift_state": {
+      "moment": "contemporary_corporate_capture_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

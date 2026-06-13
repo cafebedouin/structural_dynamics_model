@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "total_war_reachability_boundary__contraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ac9c8813-b987-4b71-9a94-722bb16769a5"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.03,
+    "claimed_type": "mountain",
+    "human_readable": "Total War Reachability Contraction (Nuclear Reading)",
+    "topic_domain": "international_relations/strategic_studies",
+    "emerges_naturally": true,
+    "beneficiaries": [],
+    "victims": [
+      "all_human_populations"
+    ]
+  },
+  "interval": {
+    "start": 1945,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.08
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mad_logical_stability",
+      "question": "Is Mutually Assured Destruction a logically stable equilibrium, or does it rest on brittle assumptions about rationality, command-and-control reliability, and absence of surprise attack vectors?",
+      "resolution_mechanism": "Game-theoretic analysis of incomplete information (incomplete detection, incomplete rationality, incomplete commitment); historical near-miss incidents analyzed for counterfactual branching; technical studies of command degradation under attack; empirical analysis of whether leaders have consistently acted as the MAD logic predicts.",
+      "impact": "If MAD is demonstrably fragile (e.g., surprise attack is possible, irrationality is systematic, command systems fail under stress), the constraint becomes a contingent rope, not a mountain — reachability is merely suppressed, not eliminated. If MAD is robust, the mountain classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's logical basis is ironclad or contingent on maintained rationality and technical assumptions."
+    },
+    {
+      "id": "natural_vs_constructed_ambiguity",
+      "question": "Is the contraction of total war a natural consequence of physics (thermonuclear weapons make certain escalation unwinnable by physical law), or is it a constructed constraint that depends on the existence, maintenance, and deployment posture of nuclear arsenals and could be undone by technological change?",
+      "resolution_mechanism": "If reachability is technology-dependent — if emerging technologies (perfect ABM, counterforce precision, AI-enabled autonomous targeting) could restore first-strike credibility or shield-feasibility — then the constraint is not natural, only currently binding. If reachability remains physics-bound (no technology can eliminate mutual destruction at scale), the mountain stands.",
+      "impact": "This omega decides the kernel contest between this reading (contraction as mountain) and the contingent_reachability_reading (contraction as piton subject to technological reversal). The axis of disagreement is precisely the naturalness question.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether total war's elimination from the feasible set is a natural law or a technological contingency."
+    },
+    {
+      "id": "beneficiary_absence_verification",
+      "question": "Does the constraint truly have no beneficiary, or are there hidden beneficiaries — military-industrial actors, nuclear strategists, deterrence institutions whose budgets and authority depend on the constraint's persistence?",
+      "resolution_mechanism": "Institutional analysis: who gains budget, status, and power from the continuation of nuclear deterrence doctrine and force maintenance? If actors can be identified who benefit structurally from the constraint's persistence and would actively defend it against change, then beneficiaries exist (even if masked by the physical inevitability narrative).",
+      "impact": "If beneficiaries exist, the constraint is not a mountain (natural law) but a tangled_rope (coordination + extraction), with the extraction riding on the manufactured necessity of deterrence. If no actor genuinely benefits (they all suffer the cost of permanent existential threat), the mountain classification stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's persistence is defended only by physics or also by organized actors with institutional stakes."
+    },
+    {
+      "id": "reading_contest_kernel",
+      "question": "This story instantiates ONE reading of the contested kernel 'total_war_reachability_boundary'. Is the contraction of total war an irreversible physical fact (this reading's core claim), a contingent technological state subject to reversal (contingent_reachability_reading), or merely a probabilistic shift in a reachable option (dropping_reading)?",
+      "resolution_mechanism": "The three readings differ structurally: this reading asserts the constraint is a mountain (total war eliminated from the feasible set by MAD physics). The contingent reading asserts it is a piton (currently atrophied but reversible with technology). The dropping reading asserts total war remains reachable but less likely (coordination as a rope-equilibrium). Empirical resolution depends on what actually happens in future nuclear crises, on whether technologies emerge that restore first-strike credibility, and on whether strategists and decision-makers continue to behave as the constraint's logic predicts.",
+      "impact": "If future crises reveal that escalation is reachable and rational actors sometimes cross thresholds, the dropping_reading's claim is supported. If technology (ABM, counterforce, autonomous targeting) makes first strikes credible again, the contingent_reachability_reading is supported. If escalation remains universally suicidal regardless of technology, this reading (contraction as mountain) stands.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which reading of the total_war_reachability_boundary kernel is structurally correct — contraction as mountain, piton, or probabilistic rope?"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Nuclear weapons eliminated total war from the feasible set of great-power strategy. Once both sides possessed arsenals capable of assured mutual destruction, winning a total war became logically impossible — escalation beyond a threshold guarantees mutual annihilation, which is not victory. This reading claims the constraint is a natural law (mountain): the reachability boundary is contracted by the laws of physics, not by agreement or enforcement. No actor benefits from the constraint; all bear the cost of living under existential threat. The constraint's victim set is universal (all humanity). This is one of three contested readings of the 'total_war_reachability_boundary' kernel. The contraction_reading argues the contraction is irreversible physics. The contingent_reachability_reading argues it is a reversible technological state (a piton that could flip if ABM or counterforce technologies advance). The dropping_reading argues total war remains reachable but is merely suppressed in probability by deterrence coordination. This story instantiates ONLY the contraction reading; the other readings are separate constraint stories linked by the kernel.",
+    "key_agents": [
+      "Nuclear weapons states: institutional actors with arsenals; they set strategic doctrine but cannot escape the constraint's logic — escalation is suicidal for them too.",
+      "Non-nuclear states: moderate power, trapped by dependence on nuclear patrons' rationality; they have no hand on the lever but are bound by the outcome.",
+      "Humanity as species: the ultimate victim set; not an agent but a collective outcome at risk if the constraint fails.",
+      "Strategists and theorists: analytical observers measuring reachability, debating stability, contesting whether MAD is fragile or robust."
+    ],
+    "logic_rationale": "Extractiveness is negligible (0.05) because no actor or coalition captures the constraint's operation for gain — the constraint is symmetrical suffering (all parties face mutual extinction if escalation occurs). Suppression is low (0.12 at end) because the constraint is self-enforcing through physics, not through active coercion — once the logic is understood, rational actors naturally refrain from escalation. Early suppression (0.25 in 1945) was higher because the implication that total war was no longer winnable had not yet propagated through doctrine, military planning, and political consciousness; as the Eisenhower era progressed and MAD became accepted doctrine, the need for active enforcement (political discourse to suppress interest in nuclear war planning, military doctrine to codify 'war is unwinnable') declined. Theater ratio is similarly low and declining: the constraint's function is not performed; it enforces itself. The measurements trace the constraint's maturation: from novel and contested (1945) to widely accepted (2000–2026) as the decades of strategic practice vindicated the logic repeatedly (Cuban Missile Crisis chose conventional confrontation despite nuclear risk; Kargil War stopped before escalation; multiple near-misses resolved without crossing the threshold).",
+    "perspectival_gap": "All seats experience this constraint identically: none can escalate to total war without mutual annihilation. There is no perspectival gap because the constraint is physically symmetric. Nuclear weapons states might claim strategic advantage through force posture, but the advantage cannot extend to winning total war — the upper bound is sealed. Non-nuclear states suffer the constraint's burden (vulnerability to any nuclear power) without any asymmetric advantage. The analytical observer seat sees the constraint's logical structure most clearly but has no stake in its outcome. The symmetry of extinction risk is the constraint's defining feature.",
+    "directionality_logic": "Directionality does not apply meaningfully to a mountain. All actors are full targets with respect to the species-extinction risk (d ~1.0 on the destruction axis), but mountains do not produce 'directed' extraction — they forbid action universally. The constraint is not extractive in the directional sense (no actor benefits at the expense of another); it is prohibitive. The universal victim set reflects that burden, not an asymmetry of directionality.",
+    "mandatrophy_analysis": "This constraint shows no sign of mandatrophy. Its founding function (eliminate total war from the feasible set of great-power strategy) remains its current function. The constraint continues to bind policy, force structure, and escalation avoidance across 81 years of strategic practice. There is no atrophy of function, no survival by inertia — the constraint is continuously vindicated by the behavior of nuclear-armed states who, despite multiple incentives and opportunities to escalate, consistently choose alternatives to nuclear war. This is a living mountain, not a degraded piton.",
+    "kernel_context": "This constraint is the 'contraction_reading' of the contested kernel 'total_war_reachability_boundary'. The kernel is the claim: what is the reachability status of total war after nuclear weapons? Three readings compete. This reading (contraction): total war is eliminated from the feasible set by MAD physics — a mountain. Contingent_reachability_reading: total war is currently unreachable but remains contingent on technology — a piton vulnerable to reversal. Dropping_reading: total war is reachable but suppressed in probability by deterrence coordination — a rope. The three readings have different beneficiary/victim structures, different claims about reversibility, and different implications for strategic stability. The contraction_reading claims no beneficiaries (universal victim set) and irreversible physics. This story instantiates only that reading; the other readings are separate files linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__contingent_reachability_reading",
+      "total_war_reachability_boundary__dropping_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the kernel 'total_war_reachability_boundary'. The contraction_reading claims total war is eliminated from the feasible set by MAD physics (mountain). The contingent_reachability_reading claims it is a reversible technological state (piton). The dropping_reading claims it is reachable but deterred probabilistically (rope). All three readings share the same empirical domain (post-1945 strategic dynamics) but differ fundamentally on reachability and reversibility. The ε values differ: contraction reading has near-zero extractiveness (no beneficiary, universal victim); contingent reading has small extractiveness (institutional actors benefit from deterrence infrastructure); dropping reading has moderate extractiveness (deterrence coordination with asymmetric burden). The three stories are linked as a kernel family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "physical_impossibility_of_total_war_under_mad",
+    "drift_state": {
+      "moment": "contemporary_strategic_practice_2026",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "total_war_reachability_boundary__contingent_reachability_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "total_war_reachability_boundary__dropping_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "thermonuclear_weapons_eliminate_winnability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "reachability_contraction_is_irreversible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

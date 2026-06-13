@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "d38ea962-f092-43d2-a2ca-6734896c2044"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Control as Property Right and Commercial Legitimacy",
+    "topic_domain": "political_economy/intellectual_property/software_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_software_vendors",
+      "venture_capital_investors"
+    ],
+    "victims": [
+      "foss_advocates",
+      "downstream_integrators",
+      "security_researchers_under_restriction"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested kernel 'software_control_legitimacy': the property-rights reading, which grounds software control in intellectual property doctrine and commercial legitimacy. Under this reading, creators have legitimate authority to restrict use, modification, and distribution to protect investment and enable commercial sustainability. The alternative readings (commons, freedom-imperative, pragmatic-openness) offer competing frames with different ε values and victim/beneficiary structures. This story models ONLY the property-rights reading as a structurally coherent constraint — generated independently per the ε-invariance principle, with its own metrics, stakeholders, and type classification. The sibling readings are other constraint stories, linked via network.affects_constraints.",
+    "key_agents": [
+      "commercial_software_vendors: institutional beneficiary and agenda-setter (set and enforce IP terms, collect license revenue; arbitrage exit options)",
+      "venture_capital_investors: institutional beneficiary (IP protection enables exit strategies and valuations; no direct enforcement role)",
+      "foss_advocates: moderate-power payer/excluded (denied return on investment they seek; restricted from setting legitimacy frame; constrained exit)",
+      "downstream_integrators: powerful-power payer (pay license fees, operate under restrictions; constrained exit)",
+      "security_researchers_under_restriction: moderate-power payer with identity-locked exit (professional identity in security research bound to vendor-controlled constraints)",
+      "end_users: organized-power beneficiary/payer (receive professional software + support; bear licensing costs and lock-in)",
+      "intellectual_property_regime: non-agent beneficiary (the legal/institutional doctrine this reading vindicates and depends on)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.62) because the constraint solves a genuine problem (funding professional development) but does so by restricting freedoms that have measurable social value (code reuse, security auditing, modification for local needs). The measurement series shows extractiveness rising from 0.45 to 0.62 across the interval, driven by: (1) software becoming essential infrastructure where lock-in costs rise, (2) patent thickets in software increasing barriers to derivative work, (3) subscription models replacing one-time purchases, making the revenue extraction continuous. Suppression is higher (0.71) because enforcement requires active restriction of code access, reverse-engineering, interoperability, and license-term alternatives — vendors must actively police boundaries to maintain property claims. Theater is low-moderate (0.28) because the security/quality justification is real but an increasing share of enforcement activity defends market position rather than software quality. Accessibility-collapse (0.58) reflects that alternatives (open-source, forking, reimplementation) remain available but require substantial effort, so most users are functionally locked in even if not legally trapped. Resistance (0.72) is high because open-source communities actively contest the legitimacy of proprietary software; the constraint persists not because resistance is absent but because institutional and financial power outweighs it.",
+    "perspectival_gap": "The vendor/investor seats and the FOSS/researcher seats compute radically different types from the same structural data. Vendors see coordination (funding professional development, enabling liability, paying for security) and modest extraction (license fees are the cost of access to professional expertise). FOSS advocates see pure extraction (restricting freedoms that should be universal, denying return to decentralized developers, locking in users). Downstream integrators see Tangled Rope (they coordinate on standards and library ecosystems but pay asymmetrically high license fees for dependent software). Security researchers see a snare (denied access to audit code, forced to accept vendor definitions of acceptable vulnerability research, trapped by identity fusion). The engine computes per-seat classifications from the power, exit, and beneficiary/victim declarations; the perspectival gap emerges naturally from these structural asymmetries.",
+    "directionality_logic": "Commercial vendors are structural beneficiaries (d ≈ 0.05-0.15: collect license revenue, control supply, arbitrage exit means they can move resources freely). Venture investors are beneficiaries (d ≈ 0.10: benefit from IP protection, arbitrage exit, but don't directly enforce). End-users are symmetric-to-slight-beneficiary (d ≈ 0.45-0.55: receive professional software and support, but also bear lock-in and licensing costs). FOSS advocates are targets (d ≈ 0.75-0.85: denied the return model they seek, restricted from modifying, constrained exit because the constraint controls industry legitimacy). Downstream integrators are targets (d ≈ 0.65-0.75: pay license fees, operate under restrictions, constrained exit because major software stacks are proprietary). Security researchers are near-full targets (d ≈ 0.85: denied access, identity-locked so they cannot simply leave the profession, constrained by legal restrictions on disclosure). These directionalities derive directly from the beneficiary/victim declarations: vendors and investors are beneficiaries, FOSS advocates and researchers are victims; exit options vary by seat's institutional position.",
+    "mandatrophy_analysis": "This constraint sits exactly at the boundary where mandatrophy becomes contestable. The founding problem (funding professional software development) is partially but not completely solved: open-source professionals exist and build enterprise-grade software (Linux, Kubernetes, Apache), but venture-capital-funded proprietary models remain the industry's default path and generate the most developer investment. The measurement series shows extractiveness plateauing around 0.62 after t=30, suggesting the constraint has reached equilibrium: license restrictions are not intensifying further, but neither are they declining despite decades of open-source alternatives proving viable. Theater is staying low (0.28), which argues AGAINST mandatrophy on the piton mechanism (theater would need to approach 0.5-0.7 to signal atrophied function maintained theatrically). The constraint persists because: (1) the funding coordination problem is real and vendors solve it, (2) venture capital and IP law are mutually reinforcing institutions, (3) institutional beneficiaries have power to maintain it. The constraint would satisfy a mandatrophy verdict only if extractiveness kept rising (rent-seeking) or if the founding problem became demonstrably solved (which it hasn't — professional software still requires large capital). Current state: live constraint with contested mandate, not mandatrophic.",
+    "kernel_context": "This constraint is the PROPERTY-RIGHTS READING of the contested kernel 'software_control_legitimacy'. The reading grounds legitimacy in intellectual property doctrine: software is property; creators/vendors have authority to restrict use, modification, and distribution to protect investment and enable commercial sustainability. The kernel itself is the persisting commitment to control software's use — the question is WHO has legitimate authority and on WHAT GROUNDS. The sibling readings instantiate the same kernel under different authority grounds: (1) COMMONS-READING: authority derives from collective governance of shared digital infrastructure, negotiated management model; (2) FREEDOM-IMPERATIVE READING: authority is denied entirely — proprietary software is ethically illegitimate because users deserve control over their computing; (3) PRAGMATIC-OPENNESS READING: authority is treated as a methodology choice — open source is better engineering, but proprietary models remain legitimate. This reading (property-rights) is distinct from the pragmatic reading (both defend proprietary software) because the property-rights reading grounds legitimacy in doctrine and investment protection, while the pragmatic reading grounds it in development efficiency. The property-rights and freedom-imperative readings FORECLOSE each other: one claims vendors have legitimate authority through property, the other denies the legitimacy of proprietary software entirely — no single framework can hold both. The property-rights and commons readings COEXIST: vendors maintain property claims in the proprietary sphere while commons-based projects operate under collective governance; neither rules the other out within separate spheres, though they compete for resources and legitimacy. The property-rights reading INFLUENCES the pragmatic reading: once the property-rights reading establishes that proprietary software is legitimate, the pragmatic reading debates method within that legitimacy frame (open source vs. proprietary as development choice, not legitimacy contest)."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_decomposition",
+      "question": "Is the software property-rights constraint primarily a solution to a genuine coordination problem (funding professional development) with extraction as a side-effect, or is the coordination function a cover story for extraction that would proceed regardless?",
+      "resolution_mechanism": "Empirical investigation: compare venture-funded proprietary software outcomes (R&D investment, support, security quality) with professional open-source outcomes (Linux kernel development, Apache ecosystem, Kubernetes) for equivalent functionality and market maturity. If open-source achieves equivalent or superior outcomes at lower extraction cost, the coordination function is separable from the extraction mechanism.",
+      "impact": "If coordination and extraction are entangled, the constraint is a genuine Tangled Rope (both functions necessary). If separable, the constraint transitions toward Snare (extraction mechanism riding on a solved coordination problem). This omega directly addresses whether the constraint persists because it solves a live problem or because institutional power maintains it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether IP-based coordination is necessary for professional software development or whether it is a contingent institutional choice."
+    },
+    {
+      "id": "property_concept_applicability_to_software",
+      "question": "Does the property-rights metaphor accurately describe software, or does software's copyability-without-loss and essential-infrastructure role require a different conceptual frame?",
+      "resolution_mechanism": "Philosophical and economic analysis: compare software to physical property (where scarcity is natural) and to information/knowledge (where scarcity is created and maintained). Examine whether patent doctrine (invented to describe physical mechanisms) adequately captures software's dynamics.",
+      "impact": "If software is categorically different from physical property (no natural scarcity, economies of scale in copying), the property-rights legitimacy claim rests on a category mistake, and the constraint's justification collapses into pure institutional choice (which grounds the constraint's contestation across all sibling readings). If property framing is adequate, the framework stands.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether property-rights doctrine is the appropriate conceptual frame for software control."
+    },
+    {
+      "id": "vendor_exit_options_and_alternatives",
+      "question": "If software vendors' property rights were removed or severely restricted, would software development funding mechanisms exist (open-source foundations, government research, cooperative models), and if so, would they sustain comparable or superior outcomes?",
+      "resolution_mechanism": "Natural experiments from jurisdictions with mandatory interoperability (EU), enforced right-to-repair (France), or reduced patent scope (Australia). Observe: do alternative funding models emerge; is development quality sustained; does innovation rate change; do users benefit or suffer.",
+      "impact": "Evidence of viable alternatives weakens the 'property rights are necessary' justification and suggests the constraint persists through institutional power rather than necessity. Evidence that alternatives produce inferior outcomes strengthens the coordination claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether software property rights are necessary for professional development or contingent on institutional choices."
+    },
+    {
+      "id": "security_researcher_suppression_mechanism",
+      "question": "Is the measured suppression (0.71) primarily structural (legal barriers like CFAA, license terms) or internalized (researchers accept vendor definitions of acceptable research as legitimate)?",
+      "resolution_mechanism": "Post-restriction analysis: if researchers adopt open-source security auditing after restrictive vendor regimes relax or are bypassed, suppression was primarily structural. If researchers continue to defer to vendors even after legal barriers are removed, suppression is partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — researchers carry the suppression with them even when barriers are removed. This would argue for higher suppression values and greater entrenchment of the constraint's power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of security research in proprietary software regimes."
+    },
+    {
+      "id": "kernel_reading_contention_locus",
+      "question": "Where exactly does the contention between property-rights and freedom-imperative readings reside? At the level of axioms (software IS/IS NOT property), at the level of authority (vendors DO/DO NOT have legitimate authority), or at the level of value (restricting software access is GOOD/BAD)?",
+      "resolution_mechanism": "Discourse analysis of debate between property-rights advocates and freedom-imperative advocates: locate points of claimed disagreement. Identify what would settle each: empirical evidence (software development outcomes), axiomatic premises (category membership), or value commitments (freedom weight).",
+      "impact": "If disagreement is primarily axiomatic (category membership), only a conceptual/philosophical resolution path exists. If primarily empirical, data can resolve it. If primarily value-based, disagreement is structural and persists regardless of evidence. This omega routes the kernel's contestation mechanics into visible structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The locus of contention between property-rights and freedom-imperative kernel readings."
+    },
+    {
+      "id": "downstream_integrator_exit_feasibility",
+      "question": "For downstream integrators (companies building on proprietary software stacks), are alternative platforms and libraries truly available as functional exit options, or is exit only theoretical due to network effects and user lock-in?",
+      "resolution_mechanism": "Case study analysis: pick downstream-integrator companies in mature vendor-dependent positions (e.g., companies built on Microsoft .NET, AWS, Salesforce platforms). Assess actual costs and barriers to migrating to alternative stacks or building proprietary reimplementations.",
+      "impact": "If exit is theoretical but practically blocked, integrators are trapped targets and directionality is high (d ≈ 0.75+), strengthening Snare classification. If exit is costly but feasible, directionality is moderate (d ≈ 0.55-0.65), supporting Tangled Rope. If exit is easy, the constraint's extraction is dampened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether downstream integrators have genuine exit options or are functionally trapped."
+    },
+    {
+      "id": "commons_reading_coexistence_stability",
+      "question": "Can property-rights and commons readings genuinely coexist long-term in separate institutional spheres, or does the dominance of proprietary software in venture capital and institutional procurement eventually exclude commons-based alternatives?",
+      "resolution_mechanism": "Longitudinal analysis: track market share, developer investment, and institutional legitimacy of proprietary vs. commons software over 20-30 year periods. Observe whether commons alternatives remain viable as primary development models or become relegated to niche or volunteer sectors.",
+      "impact": "If commons are structurally excluded from major investment flows and institutional procurement despite technical parity, the readings do not coexist — the property-rights reading dominates. This suggests a foreclosure dynamic rather than coexistence, requiring the cs_structure.reading_relations to shift from 'coexists_with' to 'influences' or 'forecloses'.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether property-rights and commons readings can sustainably coexist or whether one reading eventually dominates."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__commons_reading",
+      "software_control_legitimacy__pragmatic_openness_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel (software_control_legitimacy). The four sibling readings decompose the kernel's legitimacy grounds: property-rights (this story) grounds authority in IP doctrine; freedom-imperative denies proprietary software legitimacy; commons grounds authority in collective governance; pragmatic-openness treats control as a methodology choice. Each reading instantiates a distinct constraint with distinct ε, distinct victim/beneficiary structures, and distinct political positions. They are not perspectives on one constraint — they are separate constraints that share a kernel. The property-rights reading's ε is moderate (0.62) because it solves a coordination problem but does so through extraction. The freedom-imperative reading's ε would be higher (extracting user freedoms). The commons reading's ε would be lower (solving coordination through negotiated management with lower extraction). The pragmatic reading treats open-source as better engineering, not a legitimacy question, so its ε depends on empirical outcomes, not on grounds of authority. Sibling readings are linked via network.affects_constraints from each file."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "software_control_legitimacy__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__commons_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_is_intellectual_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "vendor_authority_legitimate_through_property_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "restriction_of_use_justified_by_investment_protection",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "intellectual_property_doctrine_software_as_property",
+    "drift_state": {
+      "moment": "contemporary_open_source_maturity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

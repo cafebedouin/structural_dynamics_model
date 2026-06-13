@@ -1,0 +1,422 @@
+% ============================================================================
+% CONSTRAINT STORY: ietf_openness_commitment__capture_substrate_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_ietf_openness_commitment__capture_substrate_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: ietf_openness_commitment__capture_substrate_reading
+ *   human_readable: IETF Standards Process as Capture Substrate (Resource-Advantage Reading)
+ *   domain: institutional_economics/technology_governance/internet_standards
+ *
+ * SUMMARY:
+ *   The Internet Engineering Task Force operates a consensus-based standards
+ *   process nominally open to all participants, without formal membership or
+ *   fees. The process has produced the shared protocol foundations of the
+ *   global Internet: TCP/IP, HTTP, DNS, TLS, and hundreds of
+ *   application-layer specifications. This reading instantiates the
+ *   constraint as a CAPTURE SUBSTRATE: the standards process's openness and
+ *   consensus norms, rather than preventing resource-asymmetric gatekeeping,
+ *   have become the mechanism through which resource advantage encodes into
+ *   standards. Large platform operators with sustained engineering capacity
+ *   shape protocol design toward extension points and ambiguities that lock
+ *   in their architectural choices, while small implementers and users face
+ *   higher costs to implement or interoperate. The nominal coordination
+ *   function (inclusive standardization) and the extraction mechanism
+ *   (resource-asymmetric design influence) operate through the same
+ *   procedural structure. This is one reading of a contested kernel: the
+ *   commons_stewardship_reading frames the same institution as preserving
+ *   public-good interoperability; the legitimacy_erosion_reading focuses on
+ *   the procedural capture of 'rough consensus' itself.
+ *
+ * KEY AGENTS:
+ *   - large_platform_operators: Large cloud and technology companies (Google, Amazon, Microsoft, Meta) with sustained IETF presence and implementation capacity, structurally positioned to shape consensus toward their architectural preferences.
+ *   - small_implementers: Startups, smaller software companies, and independent protocol designers who depend on standards but lack resources for continuous IETF participation, forced to implement what emerges from resource-asymmetric design.
+ *   - end_users_through_lock_in: Global Internet users who nominally benefit from interoperable standards but face vendor lock-in when standards encode proprietary extension hooks that small implementers cannot replicate.
+ *   - working_group_chairs: Volunteer consensus managers, typically from large companies or research institutions, who adjudicate 'rough consensus' despite resource imbalances among participants.
+ *   - ietf_leadership: The Internet Engineering Steering Group and Internet Architecture Board, who review standards after consensus but are downstream of the capture mechanism and rarely reject consensus outputs.
+ *   - public_interest_technologists: Civil society organizations and academics studying internet governance, nominally included but structurally excluded from resource-intensive consensus-building cycles.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(ietf_openness_commitment__capture_substrate_reading, 0.58).
+domain_priors:suppression_score(ietf_openness_commitment__capture_substrate_reading, 0.62).
+domain_priors:theater_ratio(ietf_openness_commitment__capture_substrate_reading, 0.48).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(ietf_openness_commitment__capture_substrate_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(ietf_openness_commitment__capture_substrate_reading, theater_ratio, 0.48).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(ietf_openness_commitment__capture_substrate_reading, accessibility_collapse, 0.51).
+narrative_ontology:constraint_metric(ietf_openness_commitment__capture_substrate_reading, resistance, 0.67).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(ietf_openness_commitment__capture_substrate_reading, tangled_rope).
+narrative_ontology:human_readable(ietf_openness_commitment__capture_substrate_reading, "IETF Standards Process as Capture Substrate (Resource-Advantage Reading)").
+narrative_ontology:topic_domain(ietf_openness_commitment__capture_substrate_reading, "institutional_economics/technology_governance/internet_standards").
+
+domain_priors:requires_active_enforcement(ietf_openness_commitment__capture_substrate_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(ietf_openness_commitment__capture_substrate_reading, 'a12d3786-572c-4233-bc00-de86be4c6e0a').
+narrative_ontology:cs_kernel_codification('a12d3786-572c-4233-bc00-de86be4c6e0a', distributed).
+narrative_ontology:cs_authority_grounding('a12d3786-572c-4233-bc00-de86be4c6e0a', practice).
+narrative_ontology:cs_interpretation_layer_present('a12d3786-572c-4233-bc00-de86be4c6e0a').
+narrative_ontology:cs_reading_relation('a12d3786-572c-4233-bc00-de86be4c6e0a', ietf_openness_commitment__commons_stewardship_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a12d3786-572c-4233-bc00-de86be4c6e0a', ietf_openness_commitment__legitimacy_erosion_reading, influences).
+narrative_ontology:cs_axiom('a12d3786-572c-4233-bc00-de86be4c6e0a', foundational, resource_asymmetry_encodes_design_authority).
+narrative_ontology:cs_axiom_status(resource_asymmetry_encodes_design_authority, holdable).
+narrative_ontology:cs_axiom_grounding('a12d3786-572c-4233-bc00-de86be4c6e0a', resource_asymmetry_encodes_design_authority, empirically_contingent).
+narrative_ontology:cs_axiom('a12d3786-572c-4233-bc00-de86be4c6e0a', secondary, openness_enables_rather_than_prevents_capture).
+narrative_ontology:cs_axiom_status(openness_enables_rather_than_prevents_capture, holdable).
+narrative_ontology:cs_axiom_grounding('a12d3786-572c-4233-bc00-de86be4c6e0a', openness_enables_rather_than_prevents_capture, instrumental).
+narrative_ontology:cs_reference_frame('a12d3786-572c-4233-bc00-de86be4c6e0a', inclusive_technical_consensus).
+narrative_ontology:cs_drift_state('a12d3786-572c-4233-bc00-de86be4c6e0a', post_cloud_consolidation_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('a12d3786-572c-4233-bc00-de86be4c6e0a', '').
+narrative_ontology:cs_kernel_id(ietf_openness_commitment__capture_substrate_reading, ietf_openness_commitment).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ietf_openness_commitment__capture_substrate_reading, large_platform_operators).
+narrative_ontology:constraint_beneficiary(ietf_openness_commitment__capture_substrate_reading, incumbent_protocol_designers).
+narrative_ontology:constraint_victim(ietf_openness_commitment__capture_substrate_reading, small_implementers).
+narrative_ontology:constraint_victim(ietf_openness_commitment__capture_substrate_reading, end_users_through_lock_in).
+narrative_ontology:constraint_victim(ietf_openness_commitment__capture_substrate_reading, emerging_protocol_competitors).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(ietf_openness_commitment__capture_substrate_reading, end_users_through_lock_in).
+narrative_ontology:constraint_vindicates(ietf_openness_commitment__capture_substrate_reading, rough_consensus_vulnerable_to_organized_asymmetry).
+narrative_ontology:constraint_vindicates(ietf_openness_commitment__capture_substrate_reading, resource_advantage_encodes_in_standards).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Large cloud and technology companies (Google, Amazon, Microsoft, Meta) deploy teams of standards engineers to IETF working groups, can sustain multi-year engagement on draft specifications, and have resources to implement experimental RFCs in parallel with standardization. They shape protocol design toward extension points that lock in their architectural choices and encode switching costs. Their participation is nominally 'open' but their resource position allows them to drive consensus toward proprietary-friendly baselines disguised as interoperable standards.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, large_platform_operators, agenda_setter,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(ietf_openness_commitment__capture_substrate_reading, large_platform_operators, beneficiary).
+
+% Small software companies, startups, and independent protocol implementers cannot sustain permanent IETF presence. They participate episodically when a standard touches their work, lack the resources to field comments on competing proposals during long review cycles, and must implement whatever emerges. Standards that contain undocumented extension hooks or ambiguous extension semantics benefit the large operators (who can extend in proprietary ways) and raise implementation costs for small implementers (who must reverse-engineer or ignore the ambiguities).
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, small_implementers, payer,
+    moderate, biographical, constrained, global).
+
+% Users benefit from interoperable standards in principle (they can use services from multiple providers). In practice, standards embedded with large-operator proprietary extensions lock users into the operator's ecosystem because alternative implementations lack the resources to implement the extensions identically. Users pay through reduced switching options and vendor lock-in, though they may not see the standards process as the mechanism.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, end_users_through_lock_in, payer,
+    powerless, immediate, trapped, global).
+narrative_ontology:stakeholder_secondary_role(ietf_openness_commitment__capture_substrate_reading, end_users_through_lock_in, beneficiary).
+
+% New protocol proposals from smaller organizations or developing-nation researchers face higher barriers to adoption when incumbent operators embed their proprietary extensions into 'open' standards ahead of the newcomers' proposals. The standards process becomes a substrate for encoding existing market positions into technical requirements, raising the cost for alternatives to compete.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, emerging_protocol_competitors, payer,
+    moderate, biographical, mobile, global).
+
+% Chairs volunteer to manage IETF working group consensus. They are often engineers from large companies (who have employer time to donate) or academics with small research groups. They lack formal authority to reject resource-asymmetric proposals but bear reputational cost if consensus appears captured. They are the main enforcement point of the ostensible 'rough consensus' norm, but their effectiveness is limited by the resource imbalance among participants.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, working_group_chairs, agenda_setter,
+    organized, biographical, constrained, global).
+
+% The IETF Internet Engineering Steering Group (IESG) and Internet Architecture Board (IAB) review standards before publication. They can theoretically reject a standard that encodes unfair advantages, but they are downstream of consensus; rejecting a consensus output is politically costly and rare. They observe but do not actively police the capture substrate.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, ietf_leadership, observer,
+    organized, generational, analytical, global).
+
+% Civil society organizations, academics studying internet governance, and public-interest technologists from the Global South have stakes in standards that affect user privacy, accessibility, and equitable access. They are nominally able to participate in IETF (it is open), but lack the sustained resource presence to influence multi-year standardization efforts or counter large-operator proposals in real time. Their interests are often discovered only after standards are published and the encoding is locked in.
+narrative_ontology:constraint_stakeholder(ietf_openness_commitment__capture_substrate_reading, public_interest_technologists, excluded,
+    moderate, biographical, mobile, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(ietf_openness_commitment__capture_substrate_reading, large_platform_operators).
+narrative_ontology:fixing_cost_class(ietf_openness_commitment__capture_substrate_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the multi-party coordination problem of building a global Internet on shared protocol specifications that all implementers can adopt identically. TCP/IP, HTTP, DNS, TLS, and application-layer protocols are public goods whose interoperability is lost if actors diverge unilaterally. The rough consensus process prevents fragmentation by requiring agreement before a protocol becomes recommended for universal deployment.
+% TRANSFER_FUNCTION: Transfers protocol design authority and the authority to define extension points (where implementers can add proprietary features without breaking compatibility) from the full participant set toward the subset with resources to sustain IETF engagement and implement experimental specifications in parallel. Large platform operators design extension hooks into standards; small implementers must implement them identically or face compatibility costs. Users pay through vendor lock-in: nominally interoperable standards that work best with large operators' implementations.
+% ABSENT_VOICES: Public interest technologists, civil society representatives focused on user privacy and accessibility, and researchers from the Global South who have stakes in standards affecting their users. They are nominally able to join IETF but lack the sustained resource presence to influence multi-year standardization efforts. They would object to standards that embed proprietary lock-in mechanisms disguised as optional extensions, but discover this only after publication.
+% DISAPPEARANCE_RATIONALE: If the IETF consensus-based standards process and its resource-asymmetric capture substrate vanished, the Internet would reorganize into one of several scenarios: (1) a smaller, more explicitly captured standards consortium controlled by large operators with explicit rather than hidden design authority; (2) fragmented competing protocol stacks for different economic zones or platform ecosystems; (3) de facto standards set by dominant implementations (the web browser, AWS infrastructure) rather than through consensus procedure. The global coordination function would degrade or shift to more explicit power structures. Small implementers would lose the nominal procedural voice they currently have, even if the voice is structurally suppressed.
+% FOUNDING_PROBLEM: In the 1980s–1990s, the Internet faced fragmentation from competing protocol proposals (OSI vs. TCP/IP, multiple email systems, incompatible naming schemes) and proprietary extensions that broke interoperability. IETF's rough consensus process was designed to include all stakeholders—without formal membership or fees, to prevent any single actor from imposing incompatible standards unilaterally, and to ground standards in technical merit rather than market power.
+% FOUNDING_PROBLEM_CORROBORATION: Large platform operators attest the founding problem is solved: the IETF has produced shared protocol specifications that the global Internet depends on, and these standards remain backward compatible and widely adopted. Small implementers and public-interest technologists attest the founding problem has been partially subverted: while global fragmentation is prevented, the standardization process has become a mechanism through which large operators consolidate control over the protocol stack. Academic research (Zittrain 'The Future of the Internet and How to Stop It,' DeNardis 'Opening Standards,' OReilly internet governance scholarship) and regulatory investigations (EU Digital Markets Act focus on interoperability, US DOJ concerns about platform control of standards) corroborate the subversion reading.
+narrative_ontology:disappearance_verdict(ietf_openness_commitment__capture_substrate_reading, world_rearranges).
+narrative_ontology:founding_problem_status(ietf_openness_commitment__capture_substrate_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(ietf_openness_commitment__capture_substrate_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
+    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
+    'no_scope_rebuild', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_seed(ietf_openness_commitment__capture_substrate_reading, 'none', 1).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ietf_openness_commitment__capture_substrate_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(ietf_openness_commitment__capture_substrate_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(ietf_openness_commitment__capture_substrate_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness rises from 0.15 (1995) to 0.58 (2026) as the Internet's economic centrality increased and large operators consolidated market power. Early IETF standards (TCP/IP, DNS, HTTP/1.0) were genuinely open-design with minimal vendor lock-in; as the Web and cloud computing centralized around few platforms, later standards (HTTP/2, TLS 1.3, QUIC) embedded extension mechanisms that benefit large implementers. Suppression requirement rises (0.20 to 0.62) because maintaining the facade of inclusive consensus requires more active enforcement as resource asymmetry grows: large operators must convince chair and leadership that proprietary-friendly designs are 'technically optimal,' and chairs must suppress objections from small implementers without appearing to override consensus. Theater ratio rises (0.08 to 0.48): the ritual of 'rough consensus' persists but increasingly serves to legitimize predetermined outcomes rather than discover genuine consensus. The coercion grid shows individual-level accessibility and suppression rising sharply (end-users and small implementers have fewer meaningful alternatives), while class-level resistance remains strong (the open-standards community still contests the capture narrative). Structural-level suppression stabilizes (the system-wide recognition that large operators shape standards is now explicit in scholarship and policy discussion), while structural-level resistance remains high (the procedural and cultural norm of inclusive standards is still defended).
+ *
+ * PERSPECTIVAL GAP:
+ *   The large_platform_operators seat experiences this as legitimate coordination: they fund standards development, implement experimental RFCs, and believe their design contributions reflect technical merit and efficiency. Small_implementers experience the same process as gatekeeping: they lack capacity to counter multi-year design proposals, cannot implement proprietary extensions, and are forced into compatibility roles. The IETF leadership seat experiences this as a tension between openness and practicality: they defend the consensus process as inclusive while knowing it structurally favors well-resourced participants. The end_users seat experiences this indirectly through vendor lock-in, often unaware the mechanism is standards-encoded. The engine computes per-seat classification from these structural positions: the agenda_setter (large_platform_operators) computes as beneficiary with moderate directionality (d ≈ 0.35), while the payer seats compute as targets (d ≈ 0.75–0.85). The divergence in computed types is the measurement of capture.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Large_platform_operators are the primary beneficiary: they set the working group agenda (through proposals and implementation choices), benefit from standards that embed their extension hooks, and collect the switching costs when users adopt their implementations to remain compatible. Directionality for this seat is low (near-beneficiary): d ≈ 0.30 (they bear minimal cost from the standards process itself; the process exists partly because of their market power). Small_implementers are the primary payer: they bear high compliance costs (implementing proprietary-friendly standards), have high exit friction (leaving the standards ecosystem means losing interoperability entirely), and cannot negotiate the design. Directionality for this seat is high (near-target): d ≈ 0.78 (they are structurally forced to implement and extract no rents from the design). End_users sit between: they benefit nominally (global interoperable Internet) but pay through lock-in (nominally interoperable standards that work best with large operators' implementations). Directionality for this seat is near-symmetric but skewed toward target: d ≈ 0.60 (the nominal benefit is real but offset by lock-in costs). Working_group_chairs are constrained: they enforce consensus norms that nominally include all voices but structurally favor well-resourced participants; their directionality is symmetric but toward the payer side: d ≈ 0.52 (they bear the burden of maintaining the fiction of inclusive consensus).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (preventing Internet fragmentation through shared protocols) is live in the charter sense but contested in scope. The commons_stewardship_reading says the founding problem is solved: global, interoperable standards exist. The capture_substrate_reading says the founding problem was partially solved but the solution has been captured: interoperability is nominal; large operators have encoded their architectural choices into standards to lock in their market positions. The legitimacy_erosion_reading says the procedural mechanism (rough consensus) has degraded: it no longer produces genuine consensus because resource asymmetry corrupts the decision-making. This reading (capture_substrate) avoids the pitfall of framing the IETF as purely extractive (it is not: standards coordination is real and valuable) or as purely coordinative (ignoring the resource asymmetry that shapes design). The tangled_rope classification captures the structure: BOTH coordination (protocols must be shared or the Internet fragments) AND extraction (the process of coordination transfers design authority to resource-rich operators) are real and inseparable in this constraint's operation.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    proprietary_extension_identification,
+    'How much of the measured extractiveness arises from standards that embed proprietary-friendly extension hooks, versus general vendor differentiation that occurs regardless of the standards process?',
+    'Systematic analysis of RFC specifications for extension points and optional features that require large-operator implementation experience to deploy identically. Compare implementation compatibility across large-operator and small-implementer implementations of standards containing such features.',
+    'If proprietary extensions account for >40% of extractiveness, the constraint is substantially a capture substrate. If <20%, the extractiveness is mostly unavoidable vendor differentiation, and the constraint skews more toward rope (coordination with side effects) than toward snare (extraction disguised as coordination).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(proprietary_extension_identification, empirical, 'Quantifying the extent to which standards encode proprietary design advantages.').
+
+omega_variable(
+    small_implementer_voice_absence,
+    'Is the absence of small implementers from consensus-building cycles a structural consequence of resource asymmetry, or a choice by small implementers to defer to large-operator expertise?',
+    'Post-facto interviews with small implementers about barriers to IETF participation. Analysis of which working groups have small-implementer engagement and which do not (correlated with technical domain and market importance).',
+    'If absence is structural (travel costs, time commitment, information asymmetry), suppression and extraction are both high. If absence is deference (small implementers believe large operators will implement specifications well), the constraint skews toward rope. The distinction informs whether fixing requires procedural reform (easier) or structural decentralization (harder).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(small_implementer_voice_absence, empirical, 'Whether small-implementer absence from standards process is structural or volitional.').
+
+omega_variable(
+    reading_foreclosure_ambiguity,
+    'Does the capture_substrate_reading logically foreclose the commons_stewardship_reading, or do both readings remain coherent descriptions of different aspects of IETF operation?',
+    'Test whether a party could coherently hold both: ''The IETF is successfully preserving interoperability AND large operators are encoding proprietary advantages into the standards.'' If both are simultaneously true (interoperability is real but asymmetrically easier for large operators to implement), the readings coexist. If one directly contradicts the other, the relation is forecloses.',
+    'This omega documents the committer-axis uncertainty about logical structure within the kernel. If readings coexist, multiple IETF success narratives are possible. If one forecloses, the kernel has a genuine factual dispute that data can resolve.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_foreclosure_ambiguity, conceptual, 'Logical relationship between the capture_substrate and commons_stewardship readings of IETF openness.').
+
+omega_variable(
+    extension_mechanism_necessity,
+    'Are extension points and optional features in standards structurally necessary for protocol evolution and vendor innovation, or are they encoding mechanisms that benefit large operators who can implement them at scale?',
+    'Comparative analysis: examine standards with minimal extension hooks (e.g., DNS, SMTP in their original forms) for their evolutionary success vs. later extensions. Contrast with standards with rich extension semantics (HTTP/2, TLS 1.3, QUIC) for the distribution of who implements extensions.',
+    'If extensions are necessary, part of the measured extractiveness is the cost of continued innovation, not pure gatekeeping (rope with side effects). If extensions are encoding mechanisms primarily used by large operators, the constraint is more purely extractive (snare or tangled_rope skewing snare).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extension_mechanism_necessity, empirical, 'Whether standards extension mechanisms serve genuine interoperability or encode proprietary design advantages.').
+
+omega_variable(
+    kernel_reading_sibling_grounding,
+    'This is one reading of a contested kernel. The sibling readings have different axioms and different relationships to the reference frame. Are these readings grounded in different empirical claims about IETF operation, or different normative commitments about what an ''open'' internet should mean?',
+    'Examine whether disagreement between readings could be resolved by data (empirical disagreement) or whether it requires a normative choice (different values about openness, equity, or innovation). Map the grounding types of the axioms across readings.',
+    'If empirical: data collection about standards capture could resolve the reading contest and reduce the kernel ambiguity. If normative: the contest is about values, not facts; both readings remain live simultaneously. The routing to grounding_type in the cs_structure.axioms is the formal marker of this distinction.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_sibling_grounding, conceptual, 'Whether the reading contest is empirically resolvable or reflects irreducible normative disagreement.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ietf_openness_commitment__capture_substrate_reading, 1995, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(ietf_tr_t1995, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 1995, 0.08).
+narrative_ontology:measurement_basis(ietf_tr_t1995, observed).
+narrative_ontology:measurement(ietf_tr_t2004, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 2004, 0.18).
+narrative_ontology:measurement_basis(ietf_tr_t2004, observed).
+narrative_ontology:measurement(ietf_tr_t2010, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 2010, 0.28).
+narrative_ontology:measurement_basis(ietf_tr_t2010, observed).
+narrative_ontology:measurement(ietf_tr_t2016, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 2016, 0.38).
+narrative_ontology:measurement_basis(ietf_tr_t2016, observed).
+narrative_ontology:measurement(ietf_tr_t2022, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 2022, 0.44).
+narrative_ontology:measurement_basis(ietf_tr_t2022, observed).
+narrative_ontology:measurement(ietf_tr_t2026, ietf_openness_commitment__capture_substrate_reading, theater_ratio, 2026, 0.48).
+narrative_ontology:measurement_basis(ietf_tr_t2026, observed).
+
+% Extraction over time
+narrative_ontology:measurement(ietf_be_t1995, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 1995, 0.15).
+narrative_ontology:measurement_basis(ietf_be_t1995, observed).
+narrative_ontology:measurement(ietf_be_t2004, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 2004, 0.28).
+narrative_ontology:measurement_basis(ietf_be_t2004, observed).
+narrative_ontology:measurement(ietf_be_t2010, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 2010, 0.39).
+narrative_ontology:measurement_basis(ietf_be_t2010, observed).
+narrative_ontology:measurement(ietf_be_t2016, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 2016, 0.48).
+narrative_ontology:measurement_basis(ietf_be_t2016, observed).
+narrative_ontology:measurement(ietf_be_t2022, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 2022, 0.55).
+narrative_ontology:measurement_basis(ietf_be_t2022, observed).
+narrative_ontology:measurement(ietf_be_t2026, ietf_openness_commitment__capture_substrate_reading, base_extractiveness, 2026, 0.58).
+narrative_ontology:measurement_basis(ietf_be_t2026, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(ietf_su_t1995, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 1995, 0.2).
+narrative_ontology:measurement_basis(ietf_su_t1995, observed).
+narrative_ontology:measurement(ietf_su_t2004, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 2004, 0.34).
+narrative_ontology:measurement_basis(ietf_su_t2004, observed).
+narrative_ontology:measurement(ietf_su_t2010, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 2010, 0.44).
+narrative_ontology:measurement_basis(ietf_su_t2010, observed).
+narrative_ontology:measurement(ietf_su_t2016, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 2016, 0.54).
+narrative_ontology:measurement_basis(ietf_su_t2016, observed).
+narrative_ontology:measurement(ietf_su_t2022, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 2022, 0.6).
+narrative_ontology:measurement_basis(ietf_su_t2022, observed).
+narrative_ontology:measurement(ietf_su_t2026, ietf_openness_commitment__capture_substrate_reading, suppression_requirement, 2026, 0.62).
+narrative_ontology:measurement_basis(ietf_su_t2026, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1995, tn=2026
+narrative_ontology:measurement(ietf_grid_01, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(class), 1995, 0.22).
+narrative_ontology:measurement(ietf_grid_02, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(class), 2026, 0.54).
+narrative_ontology:measurement(ietf_grid_03, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(individual), 1995, 0.25).
+narrative_ontology:measurement(ietf_grid_04, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(individual), 2026, 0.52).
+narrative_ontology:measurement(ietf_grid_05, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(organizational), 1995, 0.18).
+narrative_ontology:measurement(ietf_grid_06, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(organizational), 2026, 0.48).
+narrative_ontology:measurement(ietf_grid_07, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(structural), 1995, 0.15).
+narrative_ontology:measurement(ietf_grid_08, ietf_openness_commitment__capture_substrate_reading, accessibility_collapse(structural), 2026, 0.51).
+narrative_ontology:measurement(ietf_grid_09, ietf_openness_commitment__capture_substrate_reading, resistance(class), 1995, 0.68).
+narrative_ontology:measurement(ietf_grid_10, ietf_openness_commitment__capture_substrate_reading, resistance(class), 2026, 0.74).
+narrative_ontology:measurement(ietf_grid_11, ietf_openness_commitment__capture_substrate_reading, resistance(individual), 1995, 0.72).
+narrative_ontology:measurement(ietf_grid_12, ietf_openness_commitment__capture_substrate_reading, resistance(individual), 2026, 0.58).
+narrative_ontology:measurement(ietf_grid_13, ietf_openness_commitment__capture_substrate_reading, resistance(organizational), 1995, 0.65).
+narrative_ontology:measurement(ietf_grid_14, ietf_openness_commitment__capture_substrate_reading, resistance(organizational), 2026, 0.72).
+narrative_ontology:measurement(ietf_grid_15, ietf_openness_commitment__capture_substrate_reading, resistance(structural), 1995, 0.55).
+narrative_ontology:measurement(ietf_grid_16, ietf_openness_commitment__capture_substrate_reading, resistance(structural), 2026, 0.68).
+narrative_ontology:measurement(ietf_grid_17, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(class), 1995, 0.14).
+narrative_ontology:measurement(ietf_grid_18, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(class), 2026, 0.6).
+narrative_ontology:measurement(ietf_grid_19, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(individual), 1995, 0.12).
+narrative_ontology:measurement(ietf_grid_20, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(individual), 2026, 0.58).
+narrative_ontology:measurement(ietf_grid_21, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(organizational), 1995, 0.1).
+narrative_ontology:measurement(ietf_grid_22, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(organizational), 2026, 0.64).
+narrative_ontology:measurement(ietf_grid_23, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(structural), 1995, 0.08).
+narrative_ontology:measurement(ietf_grid_24, ietf_openness_commitment__capture_substrate_reading, stakes_inflation(structural), 2026, 0.56).
+narrative_ontology:measurement(ietf_grid_25, ietf_openness_commitment__capture_substrate_reading, suppression(class), 1995, 0.18).
+narrative_ontology:measurement(ietf_grid_26, ietf_openness_commitment__capture_substrate_reading, suppression(class), 2026, 0.62).
+narrative_ontology:measurement(ietf_grid_27, ietf_openness_commitment__capture_substrate_reading, suppression(individual), 1995, 0.1).
+narrative_ontology:measurement(ietf_grid_28, ietf_openness_commitment__capture_substrate_reading, suppression(individual), 2026, 0.58).
+narrative_ontology:measurement(ietf_grid_29, ietf_openness_commitment__capture_substrate_reading, suppression(organizational), 1995, 0.15).
+narrative_ontology:measurement(ietf_grid_30, ietf_openness_commitment__capture_substrate_reading, suppression(organizational), 2026, 0.66).
+narrative_ontology:measurement(ietf_grid_31, ietf_openness_commitment__capture_substrate_reading, suppression(structural), 1995, 0.32).
+narrative_ontology:measurement(ietf_grid_32, ietf_openness_commitment__capture_substrate_reading, suppression(structural), 2026, 0.62).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(ietf_openness_commitment__capture_substrate_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(ietf_openness_commitment__capture_substrate_reading, 0.12).
+narrative_ontology:affects_constraint(ietf_openness_commitment__capture_substrate_reading, ietf_openness_commitment__commons_stewardship_reading).
+narrative_ontology:affects_constraint(ietf_openness_commitment__capture_substrate_reading, ietf_openness_commitment__legitimacy_erosion_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three readings of the contested kernel ietf_openness_commitment. The kernel is the IETF's written commitment to open, consensus-based standardization. The sibling readings instantiate different structural interpretations: commons_stewardship_reading models the IETF as successfully preserving public-good interoperability despite market pressures (low extractiveness, genuine coordination); legitimacy_erosion_reading models rough consensus as procedurally vulnerable to organized capture, independent of outcomes (focuses on the mechanism rather than the substrate). The capture_substrate_reading (this story) models the standards process itself as the mechanism through which resource advantage encodes into standards (moderate extractiveness, tangled_rope: coordination + extraction inseparable). All three readings share the same kernel text and the same historical IETF institution but instantiate different ε values (low for stewardship, moderate for capture_substrate, moderate for legitimacy_erosion but focused on procedural capture rather than outcome capture). The three stories are linked via network.affects_constraints to enable cross-reading contamination analysis: if the capture substrate is confirmed (this reading's ε increases), the commons stewardship reading's ε must decrease proportionally.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(ietf_openness_commitment__capture_substrate_reading, organized, 0.52).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

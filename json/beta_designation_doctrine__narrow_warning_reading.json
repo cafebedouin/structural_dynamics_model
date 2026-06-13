@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__narrow_warning_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "ddd51539-37b4-45ed-8edd-01f09d6f3caa"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.21,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.52,
+    "claimed_type": "rope",
+    "human_readable": "Beta Designation as Time-Bounded Testing Disclosure (Narrow Warning Reading)",
+    "topic_domain": "legal/technological",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "software_developers_during_testing",
+      "testing_participants"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "software_developers_during_testing",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers explicitly label software as beta and disclose known limitations. They receive temporary relief from strict liability during a genuine, bounded testing phase—liability shield applies only to disclosed defects and expires when testing ends or a time limit is reached. They retain the duty to test in good faith and to transition to stable release within the declared testing window."
+    },
+    {
+      "name": "testing_participants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users who opt into beta testing receive clear disclosure of the beta status and known defects. They get early access to features and the ability to shape the product through feedback. They also bear the risk of encountering undisclosed bugs during the testing window. Their exit is straightforward: wait for the stable release or use an alternative product."
+    },
+    {
+      "name": "post_beta_release_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users who encounter the software only after the beta period ends. They expect standard product liability because the beta designation is no longer valid. If a defect persists from the testing phase, they cannot be told it was a 'known issue' from beta—the liability shield has expired and standard negligence and strict liability rules apply."
+    },
+    {
+      "name": "product_liability_system",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Evaluates whether the beta designation creates a legitimate time-bounded exception to product liability or an indefinite shield against accountability. This reading holds that a genuinely bounded testing phase (measured in months, not years) with good-faith disclosure preserves the base liability regime while permitting temporary relief for disclosed defects."
+    },
+    {
+      "name": "liability_claimants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users harmed by defects during or immediately after the testing phase. Under this reading, those harmed during the testing window by disclosed defects have limited recourse; those harmed post-beta have full recourse. Their voice is excluded from the beta designation itself—they are not consulted on what constitutes a 'genuine' testing phase."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the transition from development to market-ready software by creating a defined, time-bounded window where developers test under controlled conditions with informed participants, reducing the risk of catastrophic failures on release.",
+    "transfer_function": "Transfers liability risk from developers to testing participants during the testing window; the participant accepts the risk of undisclosed defects in exchange for early access and influence on the product. The transfer expires when the testing window ends.",
+    "absent_voices": "Post-beta users and liability claimants who do not opt into beta testing are excluded from the beta designation decision. They would argue that the liability shield should not persist beyond the genuine testing phase and that 'beta' is routinely abused as indefinite cover. Alternative software developers and competing products are also absent—they would challenge whether a single vendor's unilateral beta declaration should receive legal deference.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the narrow beta reading vanished—i.e., if all software releases received standard product liability from day one—developers would be forced to conduct internal testing longer before release, or would conduct testing in secret. The testing-disclosure window would compress or disappear. Users would gain stronger liability protections at the cost of slower feature release and fewer opportunities to shape products during development.",
+    "founding_problem": "Early software development required a testing phase to identify defects before release to general users. Developers needed a way to signal that software was experimental and solicit feedback from willing testers without facing liability for every undisclosed bug. The founding problem is the gap between development and market readiness.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Software industry practice attests that testing is necessary; independent security researchers and usability engineers attest that external testing improves product quality. However, consumer protection advocates and liability researchers attest that the 'beta' label is routinely applied indefinitely (some software remains in 'beta' for years), rendering the testing-phase framing unmoored from reality. Regulatory agencies and tort reformers offer divergent readings: some accept the narrow testing window, others argue it is systematically abused."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.21,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The narrow-warning reading of the beta-designation kernel holds that a beta label legitimately creates a time-bounded, disclosed testing regime: developers receive temporary relief from strict liability for known defects, users who opt in receive clear disclosure and exit options, and the shield expires when the testing phase ends or a predetermined time limit is reached. This reading treats the beta window as coordination—a genuine transition mechanism—and assumes good-faith bounds. The constraint's extraction is low and its suppressiveness minimal because the reading does NOT permit indefinite liability evasion, does NOT hide defects from users who receive them, and DOES preserve baseline product liability once testing ends. The measurement series captures modest extraction that reflects the limited-duration relief itself: developers gain a window of reduced liability, but that window is bounded and transparent.",
+    "key_agents": [
+      "software_developers_during_testing: beneficiary of temporary liability relief during bounded testing window; rely on clear labeling and good-faith transition to stable release",
+      "testing_participants: beneficiary and secondary payer; receive early access and product influence in exchange for bearing risk of disclosed defects",
+      "post_beta_release_users: payer; expect standard liability after testing window ends",
+      "product_liability_system: observer; evaluates whether the beta designation preserves or erodes baseline accountability",
+      "liability_claimants: excluded; those harmed during or post-beta have limited or full recourse depending on timing, but do not participate in the beta decision"
+    ],
+    "logic_rationale": "Extractiveness is moderate-low (0.38 at interval end) because the liability relief is genuinely bounded: developers gain temporary shelter only for disclosed defects, and the shelter expires when the testing phase concludes. There is no indefinite rent collection or status-quo protection. Suppression is low (0.21) because the constraint's enforcement depends on good-faith disclosure and clear labeling, not on hiding information or trapping users—testing participants have mobile exit (they can wait for the stable release) and post-beta users have standard recourse. Theater is very low (0.12) because the beta label is meant to signal real testing activity, not to perform a function while doing something else. The measurement trajectory is essentially flat, reflecting that the constraint's operation does not substantially change as time passes within the testing window—the benefit and cost are stable until the window expires. This measurement pattern (flat extractiveness, stable suppression, minimal theater) is consistent with a genuine coordination mechanism operating normally, without drift toward capture or performance.",
+    "perspectival_gap": "The developer seat and the testing-participant seat should compute similarly under this reading: both benefit from the bounded window, both understand the shield is temporary. The post-beta user seat diverges: they expect standard liability and have no shield at all. The engine computes this from the structural data—developers and participants are coordinated around the testing function; post-beta users are outside the window and subject to full liability. The key divergence is TEMPORAL: the developer's beneficiary position expires when the testing window ends, whereas the post-beta user's payer position activates at that same moment. This temporal flip is the reading's core structure.",
+    "directionality_logic": "Developers receive low directionality (d near 0.2–0.3): they are coordinated around the testing function and the relief is temporary and disclosed. Testing participants receive symmetric directionality (d near 0.4–0.5): they benefit from early access and product influence but bear the risk of disclosed defects; their exit is mobile. Post-beta users receive high directionality (d near 0.7–0.8): they receive standard product liability and have no shelter—they are full targets of the liability regime, though the regime itself is presumed fair. Liability claimants are excluded, not seated—their interests are represented through the post-beta user seat and through the product liability system as observer.",
+    "mandatrophy_analysis": "The narrow reading addresses mandatrophy explicitly through the sunset-clause requirement and the good-faith testing bound. If a constraint claiming to be beta-testing relief persists for years without transitioning to stable release, the reading's core premise is violated: the mandate was testing, not indefinite protection. Under this reading, a software product in 'beta' for 5+ years without declared transition is no longer beta—it is a snare hiding behind beta language. The measurement trajectory would shift (theater_ratio would rise, extractiveness would climb) if the testing window were repeatedly extended beyond declared bounds. The current measurements (flat, stable) reflect a constraint operating as the narrow reading describes it: genuine bounded testing.",
+    "kernel_context": "This constraint is the narrow_warning_reading of the beta_designation_doctrine kernel. The contested kernel is the meaning and scope of beta designation in software liability law. Three sibling readings coexist: (1) expansive_shield_reading treats beta as an indefinite, comprehensive liability waiver applicable to all software contexts; (2) this reading (narrow_warning_reading) treats beta as time-bounded testing disclosure with preserved base liability and good-faith bounds; (3) severity_carve_out_reading categorically excludes beta designation from life-safety, financial, and other critical systems regardless of testing status. The narrow reading's core premise is that a time-bounded, disclosed testing phase is a legitimate coordination mechanism that does not eliminate liability, merely defers it during the testing window. The expansive reading's core premise is that developer discretion to declare beta is entitled to deference as a contractual choice. The severity reading's core premise is that some systems' failure modes justify mandatory liability regardless of testing status. These readings do not logically foreclose each other—they coexist as different legal factions' claims—but they do influence each other: a successful narrow reading constrains the scope of the expansive reading; a successful severity reading removes whole categories from the narrow reading's domain."
+  },
+  "omegas": [
+    {
+      "id": "genuine_testing_phase_bounds",
+      "question": "What duration and development milestones constitute a 'genuine testing phase' under this reading? Is 6 months sufficient? 18 months? Can a product be in beta indefinitely if development continues?",
+      "resolution_mechanism": "Regulatory or judicial precedent establishing explicit time limits or transition criteria (e.g., product must transition to stable release or full liability within X months, or testing-phase activity must meet documented goals). Industry-standard development timelines for comparable products provide empirical baseline.",
+      "impact": "If the boundary is vague, developers can exploit ambiguity by perpetually extending the 'testing' window, converting the reading into a shield that behaves like the expansive reading. If the boundary is clear, the narrow reading's core mandate-expiration mechanism functions as designed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The boundary between legitimate testing window and indefinite beta evasion."
+    },
+    {
+      "id": "good_faith_disclosure_scope",
+      "question": "What constitutes 'good faith' disclosure of known defects? Must developers list every bug, or only 'major' ones? Who decides what is major? Can a defect be withheld if the developer expects it will be fixed by release?",
+      "resolution_mechanism": "Case law or regulatory guidance on disclosure standards; empirical study of what information typical testers actually receive vs. what defects later emerge.",
+      "impact": "Narrow disclosure standards favor developers (shield covers more defects) and drift toward the expansive reading. Broad standards favor testers and approach strict liability. The reading's coherence depends on disclosure norms being sufficiently clear that testers can make informed choices.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The definition of adequate disclosure within the testing window."
+    },
+    {
+      "id": "liability_preservation_mechanics",
+      "question": "How is base product liability actually preserved after the testing window expires? If a defect persists from beta into stable release, can a post-beta user sue under strict liability, or must they prove the defect was negligently retained?",
+      "resolution_mechanism": "Statutory or case law clarifying the relationship between pre-release testing and post-release liability; empirical outcome tracking of product-liability cases involving formerly-beta software.",
+      "impact": "Strong preservation (strict liability applies to all defects, even those from beta) reinforces the reading's liability shield as truly temporary. Weak preservation (post-release users must prove negligence about retained defects) undermines the reading and slides toward indefinite protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether base product liability actually governs after the testing window ends."
+    },
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Which reading of the beta-designation kernel (narrow_warning, expansive_shield, or severity_carve_out) will prevail in regulatory and judicial interpretation?",
+      "resolution_mechanism": "Emerging statutory law, judicial precedent, regulatory guidance from consumer-protection agencies, and international harmonization (EU, China, other jurisdictions have begun regulating beta designation explicitly). The narrow reading is presently ascendant in newer regulations (e.g., EU Digital Products Act discourages indefinite beta), but the expansive reading remains dominant in US software licensing practice.",
+      "impact": "If the narrow reading prevails, this constraint remains stable at moderate extraction and low suppression. If the expansive reading prevails, the narrow reading's scope shrinks and this constraint may become obsolete (replaced by the expansive-shield constraint). If the severity reading prevails, critical systems are carved out and the narrow reading's domain is further restricted.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The broader contest among the three readings for legal and regulatory authority."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__severity_carve_out_reading",
+      "product_liability_general_regime",
+      "software_warranty_disclaimers"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the beta_designation_doctrine kernel. The three readings—narrow_warning, expansive_shield, and severity_carve_out—are structurally distinct constraints with different beneficiary sets, victim sets, and ε values. They are linked via network.affects_constraints to establish the constraint family. The narrow reading (this file) instantiates a bounded-testing-window regime with preserved base liability; the expansive reading instantiates indefinite liability waiver; the severity reading excises critical systems from beta eligibility entirely. See kernel_context in commentary and cs_structure for the reading relationships."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "bounded_testing_window_with_preserved_liability",
+    "drift_state": {
+      "moment": "contemporary_regulatory_escalation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__expansive_shield_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__severity_carve_out_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "testing_phase_is_time_bounded",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "liability_shield_expires_with_testing_window",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "user_consent_requires_clear_disclosure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "software_developers_during_testing",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

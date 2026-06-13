@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__vassal_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "414215da-a74a-4087-a5b8-4de5568bab8c"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.28,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Feudal Oath Reciprocity (Vassal Coordination Reading)",
+    "topic_domain": "medieval_political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vassal_class",
+      "lord_class"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "vassal_class",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Swears homage to a lord in exchange for land tenure (the fief) and military protection. The oath text specifies fixed obligations: military service for a set number of days per year, customary renders (grain, livestock, labor), and counsel on military campaigns. In return, the lord guarantees protection against external enemies and recognition of the vassal's hereditary claim to the fief. The vassal benefits from land tenure security and collective defense; the vassal pays through service obligations. Exit is constrained: breaking the oath forfeits the fief and invites military retaliation, but the oath itself defines what constitutes breach — the text is the mutual enforcement mechanism."
+    },
+    {
+      "name": "lord_class",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Sets the oath's terms and witnesses the vassals' swearing. Receives military service, renders, and counsel. Provides protection and recognition of the vassal's title. The lord benefits from organized vassal service and loyalty; the lord pays through the obligation to defend and respect the oath's terms. The charter text binds the lord as well: a lord who demands service beyond the customary amount or seizes the fief without cause violates the oath and can be lawfully resisted by the vassal's peers."
+    },
+    {
+      "name": "ecclesiastical_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Witnesses and blesses the oath, adds sacramental weight through the oath's status as a solemn act before God. The church does not adjudicate disputes but its authority undergirds the oath's perceived binding force. Bishops and abbots hold vassal positions themselves, creating overlapping jurisdictions; ecclesiastical judgment can be invoked as an outside arbiter when oath disputes arise."
+    },
+    {
+      "name": "peer_vassal_network",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Other vassals of the same lord form an informal enforcement coalition. If one vassal perceives a lord is violating the oath (extracting beyond the text), peer vassals can collectively withhold service or renounce their oaths as a lawful response — the charter's reciprocity clause is the ground for this collective action. The peer network is excluded from formal oath-drafting but their solidarity is the mechanism that keeps the charter text binding."
+    },
+    {
+      "name": "secular_royal_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A king or equivalent higher lord to whom some of the lords themselves are vassals. Royal authority can be invoked as an appellate arbiter in oath disputes, though appeal is costly and requires a sufficiently grave breach. The presence of a higher authority makes it risky for a lord to blatantly violate the oath, since the vassal can seek royal judgment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of how to organize military service, render obligations, and protective reciprocity across dispersed landholdings without a standing army or central tax apparatus. The oath text specifies the terms, duration, and amount of service in advance, reducing bargaining frictions and preventing arbitrary exaction.",
+    "transfer_function": "Moves military labor (fixed number of service days per year), agricultural renders (grain, animals, labor rents), and counsel-participation from vassal to lord; moves land tenure security and military protection from lord to vassal. The transfer is bounded and explicit in the charter text.",
+    "absent_voices": "Peasantry bound to the land (unfree serfs and free tenants) have no voice in the oath. They bear the extraction through render obligations and labor dues that their lord demands to meet his vassal duties. They would object to both the vassal's and lord's claims on their labor if present, but they are structurally excluded from the covenant.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the oath-charter system vanished, the mechanism for organizing cross-regional military obligation would collapse. Lords would face coordination costs in raising service; vassals would lose tenure security. The result would be either a return to scattered private wars (fragmentation) or the rise of an alternative centralized enforcement mechanism (royal absolutism, standing army). The feudal system as a practical arrangement depends on oath-reciprocity being the coordination solution.",
+    "founding_problem": "In the early medieval period, Roman administrative apparatus had collapsed. How do you organize military defense, land tenure, and obligation without a centralized state? The oath-charter system emerged as a solution: a localized reciprocal covenant text that both parties could invoke.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Medieval chroniclers, charter archives, and the surviving oath texts themselves attest the founding problem. Modern historians (Bloch, Hittable, Reynolds) corroborate that feudal oaths emerged to solve coordination problems of fragmented military and territorial organization. The problem is 'live' in the sense that the solution continued to adapt to changing circumstances (urbanization, royal centralization) for centuries — it was not a fixed response to a solved problem, but an evolving institutional practice."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "charter_text_enforceability",
+      "question": "Is the oath's reciprocal binding force grounded in the text itself (mutual written commitments that both parties invoke), or in the implicit threat of peer vassal coalition and royal appeal?",
+      "resolution_mechanism": "Historical analysis of oath-breach disputes: how often did vassals successfully invoke the charter text against lords? How often did disputes resolve through peer solidarity versus royal intervention versus military coercion?",
+      "impact": "If enforceability is primarily textual and mutual (vassal can hold lord to the charter's terms), the reading as pure coordination rope is strengthened. If enforceability depends on external threat (peer coalition or royal force), the constraint drifts toward tangled_rope with active enforcement by non-parties.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether oath reciprocity is self-enforcing through text or depends on external enforcement coalition."
+    },
+    {
+      "id": "lord_extraction_reading_contest",
+      "question": "Does the same oath-charter kernel instantiate a different constraint under the lord_extraction_reading, where 'custom' and 'capacity' are interpreted maximally by the lord, turning the apparent reciprocity into one-way extraction?",
+      "resolution_mechanism": "Comparison of this vassal_coordination_reading's measurement series (low extractiveness, flat trajectory) against the lord_extraction_reading's measurements. If the lord reading measures higher extractiveness and rising theater_ratio (custom claims becoming pretexts), the readings are genuinely distinct constraints on the same kernel.",
+      "impact": "If the readings diverge in measured extractiveness, the kernel contest is a structural fact — different actors read the same text as producing different constraints. This supports the ε-invariance principle: the kernel is one, but the constraints are two.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the oath-reciprocity kernel admits two structurally distinct constraint readings."
+    },
+    {
+      "id": "peasant_extraction_externality",
+      "question": "The measurable extractiveness of the oath constraint (0.35) applies to lord-vassal reciprocity. But the oath's operation cascades extraction downward to the peasantry who actually produce the renders. Is the peasant layer a separate constraint, or a structural externality of the vassal-level rope?",
+      "resolution_mechanism": "Conceptual decomposition: if the oath-charter between lord and vassal is separately analyzable (its own ε, its own beneficiaries/victims), then peasant extraction belongs in a second story (peasant_serfdom_or_tenancy constraint). The network link between the two stories (peasant_constraint affects vassal_constraint) records the structural hierarchy.",
+      "impact": "If decomposed, the vassal_coordination_reading remains a true low-ε rope at its level of analysis. The overall extraction from peasantry to lord is the sum of two constraints plus their interaction. If not decomposed, the claimed type must adjust for the fact that the oath's operation enables further downward extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether peasant-layer extraction is part of the feudal_oath constraint or a separate constraint linked by network dependency."
+    },
+    {
+      "id": "sibling_reading_mutual_foreclosure",
+      "question": "The ecclesiastical_mediation_reading introduces Christian charity and sacramental limits, while the lord_extraction_reading asserts maximal secular extraction. Can all three readings (ecclesiastical, extraction, coordination) coexist as held by different medieval actors, or does one foreclosure relation hold (e.g., does ecclesiastical mediation structurally foreclose unlimited extraction)?",
+      "resolution_mechanism": "Historical investigation: did ecclesiastical authority genuinely constrain lord extraction, or did ecclesiastical mediators themselves claim benefit from the arrangement? Did the three framings represent distinct institutional viewpoints (church vs. lords vs. vassals), or did individual actors hold contradictory framings simultaneously?",
+      "impact": "If the readings coexist (different actors, different institutional seats), all three remain live — the kernel admits three constraint instantiations. If one reading forecloses another (e.g., if ecclesiastical authority's actual practice was to preserve lord extraction), the reading_relations should reflect foreclosure rather than coexistence.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether sibling readings of the feudal oath kernel coexist or foreclose one another."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the vassal_coordination_reading of the feudal oath kernel. Under this reading, the oath-charter is a genuine mutual-benefit coordination mechanism: both lord and vassal bind themselves to fixed, bounded obligations specified in writing. The vassal gains land tenure security and collective defense; the lord gains organized military service and renders. Extraction is limited because the charter text specifies the obligations — the vassal can invoke the text against extraction beyond its terms. This reading emphasizes the reciprocity and textual enforceability. It is contested by the lord_extraction_reading (which reads the same charter as authorizing maximal extraction bounded only by 'custom' and 'capacity,' terms the lord interprets) and the ecclesiastical_mediation_reading (which emphasizes Christian charity limits). This story measures the constraint as a true rope: low extractiveness (0.35), low suppression (0.28), genuine coordination benefit to both parties, and relatively flat trajectory over 36 time units. The claim and metrics are aligned because the reading itself asserts coordination without extraction.",
+    "key_agents": [
+      "vassal_class: seeks tenure security and collective protection through oath-bound reciprocity",
+      "lord_class: organizes military service and territorial security through oath administration; benefits from organized vassals but constrained by charter reciprocity",
+      "ecclesiastical_authority: witnesses and adds sacramental force to the oath; observes from institutional seat with potential to mediate disputes",
+      "peer_vassal_network: excluded from oath-drafting but forms the implicit enforcement coalition that makes reciprocity binding",
+      "secular_royal_authority: observes from above; provides appellate recourse if oath breach is too egregious"
+    ],
+    "logic_rationale": "Extractiveness is low (0.35) because the covenant is genuinely reciprocal: both parties receive and pay. The vassal's obligation is fixed (customary days of service, standard renders), not arbitrary — the charter text is the constraint. Suppression is low (0.28) because compliance is not primarily coerced; it flows from mutual interest and the mutual invocation of the text. Theater ratio is low (0.18) because the oath's coordination function is genuine and primary — most activity is performing the actual obligations (service, renders, protection), not maintaining the appearance of legitimacy. Accessibility collapse is moderate (0.42): alternatives to feudal oath exist (private wars, local strongmen), but the oath is the most effective known coordination solution in the medieval period, so it becomes institutionally widespread. Resistance is moderate (0.38): some vassals resist specific obligations or lords resist specific reciprocity claims, but resistance is not systemic — both parties generally accept the framework. The measurement series is largely flat (0.32→0.35 extractiveness over 36 units, theater 0.12→0.18 with a slight dip at end) because the constraint is stable: no drift toward pure extraction (which would be the lord_extraction_reading), no rise in theater to indicate functional decay. The small rise in theater in the middle (to 0.19 at t=30) and dip at t=36 (0.18) reflects the normal oscillation of oath-keeping and breach-dispute cycles: some periods require more reassertion of reciprocal obligation, then equilibrium restores.",
+    "perspectival_gap": "The lord and vassal seats should compute differently from this story's authored metrics: the lord, as agenda-setter, experiences the oath as a constraint on extractiveness (the charter prevents unlimited seizure); the vassal, as a bound party, experiences the oath as a guarantee of tenure. Both benefit, but from different structural positions. The engine computes this divergence from power atom and role: the lord sits at institutional power and agenda-setter role (lower d because the lord sets terms), the vassal sits at moderate power and beneficiary-payer dual role (d near symmetric). Both seats should classify the constraint as rope (genuine coordination with no victim), but from different motivational angles. The ecclesiastical observer and royal observer seats compute as analytical (external perspective, not collecting or paying directly).",
+    "directionality_logic": "Directionality for vassal_class is near 0.5 (symmetric): the vassal benefits from tenure security and protection (low-d direction) but pays in service and renders (high-d direction). The offsetting obligations keep d symmetric. Directionality for lord_class is also near 0.5 (symmetric): the lord benefits from organized vassals (low-d) but pays in providing defense and respecting reciprocity (high-d). Exit options are constrained for both: a vassal breaking the oath loses the fief and faces military retaliation, but the oath text itself is the exit limit — if the lord violates the oath, the vassal can lawfully renounce it (it is written). A lord abandoning vassal oaths loses organized service and faces peer defection. The constraint is enforceable because both parties gain from mutual invocation of the text.",
+    "mandatrophy_analysis": "The vassal_coordination_reading avoids mandatrophy by maintaining alignment between the founding problem (how to organize military coordination without a state) and the constraint's operation (oath-text specifies and binds obligations). The founding problem is live because feudalism continues to evolve as the medieval period progresses — oaths adapt to urbanization, crusades, and royal centralization. The constraint persists because both parties continue to benefit from the coordination. This reading explicitly rejects the claim that the oath is a theater: the 0.18 theater_ratio reflects normal oscillation, not degraded function. The sibling lord_extraction_reading, by contrast, would have much higher theater: a constraint that claims reciprocity but operates as one-way extraction would show high theater_ratio as the coordination story becomes increasingly divorced from actual transfers. That reading would trigger mandatrophy warning (founding problem = coordination, but actual operation = extraction; disappearance_verdict = world_rearranges but only because extraction ends, not because coordination ceases).",
+    "kernel_context": "This constraint is the vassal_coordination_reading of the feudal_oath_reciprocity kernel. The kernel is the oath-charter text itself — a stabilized commitment claiming to bind lord and vassal reciprocally. This reading instantiates the constraint as a genuine rope: the reciprocal binding force of the charter text is the coordination mechanism. Sibling reading 1, lord_extraction_reading, instantiates the same kernel as a snare: the lord reads 'custom' and 'capacity' maximally and uses the oath to authorize extraction beyond the vassal's voluntary benefit. Sibling reading 2, ecclesiastical_mediation_reading, instantiates the kernel as a tangled_rope: the ecclesiastical authority mediation limits extraction through sacramental obligation to Christian charity, creating a hybrid coordination-extraction structure. The contest is not about whether the oath exists (all three readings grant that it does) but about what the text *binds*: does it bind reciprocally (coordination reading), maximally to lord advantage (extraction reading), or subject to ecclesiastical conscience (mediation reading)? Each reading has its own ε, beneficiary structure, and measurement series — they are three distinct constraints on one contested kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_oath_reciprocity__lord_extraction_reading",
+      "feudal_oath_reciprocity__ecclesiastical_mediation_reading",
+      "medieval_peasant_serfdom_extraction"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the feudal_oath_reciprocity kernel. The lord_extraction_reading and ecclesiastical_mediation_reading are sibling constraints on the same kernel, each with its own ε, beneficiary/victim structure, and measurement series. They are not alternative measurements of this constraint — they are structurally distinct constraints instantiated by different readings of the same oath-charter text. Network links show that all three readings affect each other (a shift in one reading's authority or credibility changes the contest across readings) and that the medieval_peasant_serfdom constraint operates at a lower institutional level, with feudal oath serving as the upper-level coordination that enables peasant extraction at the lower level."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "feudal_oath_reciprocity__lord_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "feudal_oath_reciprocity__ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocal_text_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "mutual_invocation_enforceability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "oath_text_mutual_binding",
+    "drift_state": {
+      "moment": "late_medieval_royal_centralization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

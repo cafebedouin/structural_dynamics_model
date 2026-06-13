@@ -1,0 +1,256 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_commandment__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "55f290ca-5d51-4428-bf18-2ab87b32844b",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Study of Sacrifice Law as Fulfillment of Divine Commandment",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "torah_scholar"
+    ],
+    "vindicated_propositions": [
+      "intellectual_engagement_is_worship",
+      "study_fulfills_commandment_without_temple"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_reading",
+      "question": "Is this constraint a structural property of halakhic logic itself (natural law to the halakhic system), or a constructed reading that benefits scholars by treating cognitive engagement as fulfilling obligations that originally required physical action?",
+      "resolution_mechanism": "Historical textual analysis: does the identification of study with sacrifice predate the Temple's destruction, or emerge as a compensatory doctrine after 70 CE? Does the halakhic tradition's own authorities claim the principle is logical necessity or innovative interpretation?",
+      "impact": "If natural to halakhic logic: mountain classification is justified; beneficiary declaration is FSM-level signal of how beneficiaries cluster around natural-law claims. If constructed post-hoc: the constraint may be tangled_rope (scholars benefit from the doctrine; laypeople bear the cost of intensified study obligation that substitutes for a simpler historical practice).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether study-as-performance is intrinsic to halakhic structure or a doctrine that benefits a specific stakeholder group."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one of three competing readings of the sacrifice_commandment kernel. How does this reading's core premise (study fulfills the obligation) relate logically to the sibling readings (performance_only: physical sacrifice alone counts; archive_maintenance: study preserves knowledge but does not fulfill)?",
+      "resolution_mechanism": "Formal analysis of the logical structure: Does study-as-performance logically foreclose performance_only (i.e., if study counts as fulfillment, can physical sacrifice simultaneously be required)? Or do the readings coexist as different parties' live positions? What structural conditions enable or suppress each reading?",
+      "impact": "If study-as-performance forecloses performance_only within a single halakhic framework, the relationship is foreclosure (rare). If both remain live options held by different Orthodox communities and their authorities, the relation is coexistence. The relation type feeds the cs_structure.reading_relations array and the engine's commitment-system drift analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical and institutional relationship between this reading and its siblings in the sacrifice_commandment kernel contest."
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "The measured suppression is zero (this reading treats study as intrinsically fulfilling). Is this an accurate description of how the obligation is experienced by Torah scholars, or does the reading obscure a suppression of lay dissent—i.e., non-scholars who cannot engage in advanced study are positioned as failing the obligation unless they defer to scholars?",
+      "resolution_mechanism": "Ethnographic and textual evidence: Do halakhic sources acknowledge legitimate alternative performances of the sacrifice obligation for those without study capacity? Or does the scholar-centered reading suppress non-intellectual paths to fulfillment?",
+      "impact": "If suppression is genuinely zero: mountain classification holds. If suppression is present (non-scholars are trapped in dependency on scholars' interpretation or excluded from fulfilling the obligation themselves), the constraint reclassifies toward tangled_rope or snare depending on whether coordination (collective study as communal worship) or pure extraction (scholars monopolize the fulfillment function) dominates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether study-as-performance suppresses non-intellectual paths to fulfilling the sacrifice obligation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.0,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates one reading of a contested halakhic kernel: the sacrifice_commandment. The reading is study_as_performance — the doctrine that intellectual study of sacrifice law IS the exercise of the commandment; engagement with the legal and theological texts fulfills the divine obligation that once required physical sacrifice. This reading emerged after the Second Temple's destruction (70 CE) and now functions as a core principle in rabbinic Judaism, validating continuous Torah study as a primary form of worship. The kernel contest includes two sibling readings: performance_only (physical sacrifice is required and study cannot substitute), and archive_maintenance (study preserves technical knowledge for future restoration but does not itself fulfill the obligation). This story models only the study_as_performance reading as a structurally clean constraint: zero extractiveness (the scholar genuinely fulfills the obligation through study); no victim set (all who engage benefit); a beneficiary set consisting of those who study. The claim and metrics are independent authored facts — the reading is CLAIMED as a mountain (natural to halakhic logic), and the metrics show zero extraction, zero suppression, and near-complete accessibility collapse (once the principle is understood, no alternatives remain; resistance is negligible because the principle is normatively binding on scholars).",
+    "key_agents": [
+      "torah_scholar: practitioner engaged in the study and interpretation of sacrifice law; fulfills the commandment through intellectual engagement",
+      "halakhic_authority: interpretive community that establishes and maintains the doctrine that study equals performance",
+      "lay_community: members whose relationship to the obligation is mediated through the scholars' interpretation",
+      "analytical_observer: studies the halakhic structure and its institutional implications"
+    ],
+    "logic_rationale": "Extractiveness is zero because study-as-performance is modeled as intrinsically valuable — no transfer of value occurs; the scholar's engagement benefits the scholar (fulfilling the obligation) and potentially the community (through transmitted knowledge), but no extraction from one party to another is present. Suppression is zero because the principle is presented as internally consistent and logically binding — once accepted within the halakhic framework, it does not require external coercion. Theater ratio is zero because the intellectual engagement is the substance of the practice, not a proxy for it. Accessibility collapse is near-complete (0.95) because once the principle is established in halakhic tradition, alternative performances of the obligation (for those who study) effectively vanish — the obligation IS study within this reading. Resistance is near-zero (0.05) because the principle is normatively binding within its authority structure; it generates virtually no organized resistance from those who accept the halakhic framework. The temporal measurements are flat across the interval because this reading models a structural principle whose force does not decay or intensify over time — it is either operative or not, and when operative, its metrics remain constant.",
+    "kernel_context": "This constraint is one reading (study_as_performance) of the sacrifice_commandment kernel. The kernel is the halakhic commitment to the sacrifice commandment, which persists after the Temple's physical destruction. Three structurally distinct readings compete: (1) performance_only: the commandment requires physical sacrifice; without the Temple, it is suspended. (2) archive_maintenance: study preserves technical knowledge for eventual Temple restoration (messianic preparation) but is not itself fulfillment. (3) study_as_performance (this reading): study of sacrifice law IS the exercise of the commandment; intellectual engagement fulfills the divine obligation. Each reading grounds itself in different halakhic sources, different interpretations of the kernel's authority, and different understandings of what counts as 'performance' of a commandment. The study_as_performance reading treats intellectual engagement as intrinsically sacred; the performance_only reading treats physical action as intrinsically sacred; the archive_maintenance reading treats knowledge preservation as a distinct (and less fulfilling) function. The kernel itself is fixed (the sacrifice commandment in Torah), but its operative meaning diverges across the readings.",
+    "directionality_logic": "The sole beneficiary is the torah_scholar — the agent who engages in study and thereby fulfills the obligation. There are no victims in this reading because the obligation is fulfilled through the scholar's own action (study), not through extraction from another party. The halakhic_authority (the interpretive community) is the agenda-setter, establishing and maintaining the doctrine that study counts as performance. The lay_community's relationship to the constraint is mediated — they benefit from the scholars' transmission of tradition and interpretation, but they are not direct targets of extraction. Within this reading, no asymmetric transfer occurs; the constraint is modeled as a natural structural principle of halakhic logic.",
+    "mandatrophy_analysis": "The study_as_performance reading faces a potential mandatrophy question: Was the doctrine developed to solve the founding problem (how to maintain the sacrifice commandment after the Temple's destruction), or has it outlived that problem through institutional and textual evolution? The FSM check flags this constraint as a candidate: it declares a beneficiary (torah_scholar) on a mountain claim (emerges_naturally). The natural-law-vs-constructed omega directly addresses this: is the principle intrinsic to halakhic logic, or is it a compensatory doctrine that benefits scholars by making study obligatory? The mandatrophy would be resolved if the tradition itself acknowledged that the principle was innovative and no longer necessary (e.g., if mainstream halakhic sources stated that Temple reconstruction would invalidate study-as-performance). Currently, the principle shows no mandatrophy signature because it remains functionally central to the religious life it governs. The measurement series are flat, indicating no temporal drift in the constraint's force — no theater creep, no extraction accumulation — which is consistent with a genuine mountain (principle) rather than an atrophied one (piton)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.0
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_commandment__performance_only",
+      "sacrifice_commandment__archive_maintenance"
+    ],
+    "dual_formulation_note": "The sacrifice_commandment kernel decomposes into three structurally distinct constraints, each instantiating a different reading of what counts as fulfilling the biblical sacrifice commandment after the Second Temple's destruction. study_as_performance (this story) models the intellectual-engagement reading: zero extractiveness, beneficiary is the scholar. performance_only models the physical-performance reading: would show higher resistance and a contested distinction between obligation and suspension. archive_maintenance models the knowledge-preservation reading: would show lower stakes for fulfillment and a future-oriented time horizon. All three readings share the kernel (the biblical commandment) but diverge in their ε values, beneficiary structures, and temporal horizons. The network links these as a family so that corpus analysis can track how a single kernel generates competing constraint types."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sacrifice_commandment__performance_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sacrifice_commandment__archive_maintenance",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_fulfills_commandment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intellectual_engagement_is_sacred_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "sacrificial_worship_through_study",
+    "drift_state": {
+      "moment": "contemporary_diaspora_judaism",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "stakeholders": [
+    {
+      "name": "torah_scholar",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Engages in intensive study of sacrifice law and related halakhic texts. The study itself is treated as fulfillment of the biblical commandment. The scholar benefits directly — their intellectual and spiritual engagement satisfies the divine obligation. Exit from the obligation is not available to a committed member of the halakhic tradition, but the scholar can choose the depth and form of engagement. The study is treated as intrinsically valuable, not instrumental to another goal."
+    },
+    {
+      "name": "halakhic_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The interpretive community (rabbinical tradition, yeshiva leadership, textual authorities) that established and maintains the doctrine that study-as-performance fulfills the sacrifice commandment. They set the framework within which the obligation is understood and interpreted. They do not enforce the obligation against resisters — the obligation is normatively binding on those who accept the halakhic system. The authority is exercised through textual interpretation, precedent, and communal norm-setting, not through external coercion."
+    },
+    {
+      "name": "lay_community",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "Members of the Jewish community for whom the sacrifice commandment would be binding but who do not engage in intensive halakhic study. They benefit from the scholars' interpretation and the legitimacy of the doctrine (it validates their religious life without requiring Temple sacrifice). However, they are structurally excluded from the fulfillment mechanism itself — they do not study at the level that constitutes performance of the obligation. Their relationship to the constraint is mediated; they depend on scholars for interpretation and validation."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Studies the halakhic structure from outside the commitment system. Analyzes how the kernel (sacrifice commandment) is read differently across the three readings and what institutional and logical implications each reading carries. Neither fulfills nor bears the obligation; observes the system's structural properties."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a continuous communal practice of sacred intellectual engagement with textual tradition in place of physical sacrifice. The constraint enables the fulfillment of the divine commandment within the conditions of diaspora (no Temple, no sacrifice possible) by treating study as the form that fulfillment takes. This allows the community to remain bound to an ancient obligation while adapting to new material conditions.",
+    "transfer_function": "No transfer occurs in this reading. The study flows from the scholar to the scholar's own fulfillment of the obligation and to the community's received tradition. There is no value extraction from one party to another; the constraint structures the form of fulfillment, not a distribution of gains.",
+    "absent_voices": "Critics who hold the performance_only reading (those who argue study cannot substitute for sacrifice and the commandment is suspended) are not in this story's conversation; they hold a different reading of the same kernel. Within this reading's authority structure, dissenters are those who deny that study has intrinsic sacred value — but such voices are structurally outside the halakhic framework this constraint operates within.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the doctrine that study-as-performance fulfills the sacrifice commandment disappeared, the halakhic system would reclassify the obligation as suspended (the performance_only reading) or as archive maintenance only. The communal religious life would not cease, but the normative status of study as fulfillment would shift. Whether the world would genuinely rearrange depends on whether the principle is intrinsic to halakhic logic (it would have to reappear) or constructed for institutional benefit (it could be abandoned). This is the natural-law-vs-constructed omega question.",
+    "founding_problem": "After the Second Temple's destruction (70 CE), the Jewish community faced a theological problem: the Torah contains commandments regarding sacrifice and the Temple service that can no longer be physically performed. How can the community remain faithful to these commandments without the Temple? The solution developed over centuries of interpretation: the study of sacrifice law, the detailed intellectual engagement with the texts describing sacrificial practice, IS the fulfillment of the commandment. The study preserves and perpetuates the knowledge, honors the original practice, and constitutes a form of worship that requires no Temple.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Rabbinic sources (Talmud, Midrash, medieval halakhic codes) attest that study serves as a replacement for sacrifice and is valued as such. However, the status of whether the founding problem is 'live' or 'dead' is contested: some sources and contemporary scholars argue that the principle remains essential (live), while others argue that if the Temple were restored, the original commandment to perform sacrifice would supersede study (dead). The principle_only reading holds the problem is dead; the archive_maintenance reading holds the problem is contested. No corroboration from outside the benefiting parties (scholars) exists; secular historians and non-halakhic observers do not attest to the existence or solution of a 'divine obligation problem.'"
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "dsm_taxonomy_kernel__biomedical_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "9a4d46a1-163e-4702-9e9c-ccb2ccfa66f7"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DSM Biomedical Model: Mental Disorders as Discoverable Disease Entities",
+    "topic_domain": "medical_epistemology/psychiatric_taxonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "psychiatric_establishment",
+      "pharmaceutical_industry",
+      "institutional_compliance_enforcers"
+    ],
+    "victims": [
+      "individuals_meeting_diagnostic_criteria",
+      "neurodivergent_populations",
+      "cultural_minorities_with_different_psychiatric_expression"
+    ]
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The biomedical reading of DSM categories asserts that psychiatric diagnoses map to objective neurobiological disease entities discoverable through empirical research. This reading frames mental disorders as brain diseases, treatment as medical intervention, and diagnosis as the scientific identification of underlying pathology. It coordinates a vast institutional ecosystem: psychiatric profession, pharmaceutical industry, insurance systems, schools, and courts all depend on DSM categories as scientifically grounded. The reading is not false — it has delivered standardization, coordination, and relief for many people. But it is also extractive: it routes authority to medical professionals, transforms human suffering into treatable pathology, medicalizes behavior that conflicts with institutional norms, and creates pharmaceutical markets by casting normal human variation as disorder. This story instantiates ONLY the biomedical reading; the sibling critical_psychiatry and neurodiversity readings are separate constraint stories linked by network.affects_constraints.",
+    "kernel_context": "This constraint is the biomedical_reading of the dsm_taxonomy_kernel — the contested claim that DSM categories discover objective neurobiological disease entities. The kernel is the DSM classification system itself, treated as a stabilized (periodically revised) commitment to diagnostic criteria. Sibling readings: critical_psychiatry_reading (DSM categories are reverse-engineered from available pharmaceutical treatments to construct drug markets) and neurodiversity_reading (DSM categories pathologize natural neurological variation that conflicts with institutional norms). This reading forecloses the critical_psychiatry reading within the biomedical framework — if DSM categories ARE discoveries of underlying brain disease, they cannot simultaneously be market constructions imposed for pharmaceutical profit. However, this reading coexists_with the neurodiversity reading in practice: different parties (psychiatric establishment vs. neurodiversity community) hold both simultaneously across different institutional contexts. The empirical question (are there biomarkers?) influences both: if biomarkers are found, biomedical reading gains evidential grounding and neurodiversity reading must shift to 'neurological difference that is not disease'; if biomarkers are not found despite decades of research, the critical reading gains force and neurodiversity reading is vindicated.",
+    "logic_rationale": "Extractiveness rises from 0.38 (1980, post-DSM-III when diagnostic standardization began) to 0.76 (2025, after decades of pharmaceutical expansion and neurodiversity critique). The rise tracks pharmaceutical market expansion, broadening diagnostic criteria (e.g., major depressive disorder spectrum, ADHD in adults), and increasing mandatory treatment pathways. Theater_ratio is low-to-moderate (0.12 → 0.42) because the biomedical research function is real — neurobiological investigations continue — but growing share of enforcement is devoted to securing diagnostic authority and pharmaceutical markets rather than discovering new disease mechanisms. Suppression is substantial (0.48 → 0.71) because the constraint requires active exclusion of alternative frameworks: critical psychiatry is marginalized in journals and funding, neurodiversity advocates are labeled as denying illness, cultural psychiatry is treated as less rigorous. The shared time grid ensures every metric is authored at every examined point; measurements are 'observed' (historical data on diagnosis rates, pharmaceutical spending, research publication trends, institutional enforcement actions).",
+    "directionality_logic": "The psychiatric establishment and pharmaceutical industry are clear beneficiaries (d near 0.0 → negative χ: they benefit). Institutional compliance enforcers benefit partly (schools use DSM to justify medication and special education categorization). Individuals meeting diagnostic criteria sit near symmetric or slightly toward target (d ≈ 0.4–0.6): they receive coordination benefit (disease framework explains suffering, treatment becomes possible) but bear extraction (loss of autonomy, medication mandates, identity fusion with diagnosis). Neurodivergent populations and cultural minorities are targets (d near 1.0): the biomedical reading pathologizes their variation, foreclosing alternatives, with minimal coordination benefit — they are harmed by the pathologization. Critical psychiatry researchers are trapped (d ≈ 0.95): they are excluded from authority structures and funding. The engine computes d from these beneficiary/victim declarations + exit options; the spatial_scope (universal: psychiatric diagnosis spans all borders) and power asymmetries (institutional vs. powerless) amplify effective extraction for the targets.",
+    "perspectival_gap": "The psychiatric establishment perceives this constraint as Rope (genuine coordination of scientific knowledge). The pharmaceutical industry perceives it as Rope (market enabling through disease categorization). Individuals meeting diagnostic criteria perceive it as Tangled Rope if they benefit from treatment (coordination + extraction bundled) or as Snare if treatment is coercive (extraction, minimal coordination). Neurodivergent populations perceive it as Snare (pathologization, identity loss, coercion). Critical psychiatrists perceive it as Snare with institutional theater (the disease-discovery research is performative; the real function is legitimizing suppression). The engine computes these divergences from power + exit + beneficiary/victim declarations; this is why per-seat classification matters.",
+    "mandatrophy_analysis": "The founding problem (incoherent, non-standardized diagnosis) is partially solved (standardization achieved) but the solution bundled in a biomedical framing that persists even as evidence for underlying disease entities remains weak. Decades of neurobiology research have not identified biomarkers for most DSM categories; the disease model is vindicating a proposition (mental illness IS brain disease) rather than discovering a fact. The theater_ratio rise (0.12 → 0.42) indicates the constraint increasingly performs disease-discovery while its actual function is legitimizing institutional control and pharmaceutical extraction. The mandatrophy is partial: the constraint is not dead (it delivers real coordination and some people genuinely benefit), but its justification (empirical discovery of disease entities) has outlived its empirical grounding. This is why the critical and neurodiversity readings emerge as challenges — they point to this gap between founding justification and present function."
+  },
+  "omegas": [
+    {
+      "id": "neurobiological_biomarker_discovery",
+      "question": "Do objective neurobiological biomarkers exist that validate the biomedical reading's claim that DSM categories map to discoverable disease entities?",
+      "resolution_mechanism": "Longitudinal meta-analysis of biomarker research across all major DSM categories; examination of whether proposed biomarkers replicate across populations and predict treatment response; assessment of biological heterogeneity within diagnostic categories.",
+      "impact": "If biomarkers are found for most DSM categories, the biomedical reading is vindicated and the critical reading loses empirical grounding. If biomarkers remain elusive despite 45+ years of research, the critical reading gains force: the categories may be pragmatic social constructs, not disease discoveries. If biomarkers are found for some categories but not others, all three readings remain viable — the constraint is a hybrid of genuine disease discovery and constructive categorization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether neurobiological discoveries support or undermine the biomedical reading's core claim."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) primarily structural (external barriers to alternative frameworks) or internalized (individuals with diagnoses have fused identity with diagnosis and resist alternatives)?",
+      "resolution_mechanism": "Longitudinal studies of service-user perspective shifts: do individuals diagnosed under the biomedical model maintain disease identity when exposed to neurodiversity-affirmative or critical psychiatry framings? Do researchers in critical psychiatry face publication barriers (structural) or self-censor due to fear of being labeled anti-psychiatry (internalized)? Interview studies with excluded populations about perceived barriers.",
+      "impact": "If suppression is primarily structural, the constraint could be altered by changing institutional access and publishing standards. If primarily internalized, the constraint persists even when structural barriers are removed — individuals carry the suppression with them. If mixed, fixing the constraint requires both architectural change and identity-work with those labeled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The mechanism maintaining the biomedical reading's dominance."
+    },
+    {
+      "id": "separation_of_standardization_from_disease_discovery",
+      "question": "Are the achievements of DSM standardization (coherent criteria, research aggregation, clinical communication) structurally separable from the claim that the categories discover underlying disease entities?",
+      "resolution_mechanism": "Philosophical and historical analysis of whether diagnostic standardization logically requires disease-entity discovery. Examination of whether alternative frameworks (neurodiversity, social construction, phenomenological) can deliver standardization without disease claims. Pilot use of alternative classification systems (ICD-11, dimensional models, neurodiversity-affirmative frameworks) in research and clinical settings.",
+      "impact": "If separable, standardization can be retained while the disease-discovery claim is dropped — the constraint could be reformed without abandoning coordination benefits. If inseparable, defending standardization requires defending the biomedical reading, and abandoning the reading means losing standardization. If hybrid, some coordination functions require disease claims and others do not — selective retention becomes possible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the coordination function depends on the extractive biomedical framing."
+    },
+    {
+      "id": "pharmaceutical_incentive_alignment",
+      "question": "To what extent does pharmaceutical industry funding and marketing shape which conditions are diagnosed, how broadly diagnostic criteria are applied, and whether biomedical frameworks are preferred over alternatives?",
+      "resolution_mechanism": "Analysis of DSM-revision task force funding sources and pharmaceutical company ties. Comparison of diagnostic expansion rates for conditions with available pharmacotherapies vs. conditions without. Examination of marketing messaging from pharmaceutical companies and its alignment with DSM diagnostic scope. Cross-national comparison of diagnosis rates in health systems with vs. without pharmaceutical incentive structures.",
+      "impact": "If pharmaceutical incentives substantially shape diagnostic expansion and biomedical framing preference, the critical reading gains credence: DSM categories are partly reverse-engineered from available treatments. If incentives are minimal, the biomedical reading is strengthened. If moderate, all three readings remain viable — the constraint is shaped by both scientific inquiry and market incentives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The extent of pharmaceutical influence on DSM categories and the biomedical framing."
+    },
+    {
+      "id": "identity_fusion_in_diagnostic_labeling",
+      "question": "When individuals are diagnosed under the biomedical reading, to what extent does the diagnosis become fused with self-identity, foreclosing alternative self-understandings?",
+      "resolution_mechanism": "Longitudinal studies of self-identity trajectories following psychiatric diagnosis; comparison of identity fusion rates for medical diagnoses (diabetes, hypertension) vs. psychiatric diagnoses; ethnographic studies of how individuals describe themselves before and after diagnosis; analysis of whether neurodiversity-affirmative frameworks reduce identity fusion.",
+      "impact": "If identity fusion is severe and persistent, the constraint's extraction of autonomy is substantial and the exit for individuals meeting criteria (identity_locked) is accurate. If identity fusion is reversible or avoidable with alternative framing, the exit might shift to 'constrained' and the extraction might be lower. Understanding the mechanism enables resistance strategies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which psychiatric diagnosis becomes fused with self-identity and forecloses alternatives."
+    },
+    {
+      "id": "committer_frame__biomedical_vs_critical_foreclosure",
+      "question": "Does the biomedical reading's core premise (DSM categories ARE discoveries of neurobiological disease entities) logically foreclose the critical reading's premise (DSM categories ARE reverse-engineered from available treatments to construct drug markets), or do both remain viable within different institutional frameworks?",
+      "resolution_mechanism": "Conceptual analysis: if DSM categories are discoveries, they cannot also be market constructions. But if the discovery process is shaped by market incentives (the biomedical reading does not claim the discovery process is free from incentives), both could be true simultaneously. The question is whether 'shaped by incentives' is compatible with 'genuine discovery.'",
+      "impact": "If the biomedical reading forecloses the critical reading, the three readings form a logical triplet where only one can be true. If they coexist (both true simultaneously in different aspects), the constraint family is a hybrid system. This affects how disputes over the readings are resolved: foreclosure suggests empirical adjudication can decide, coexistence suggests negotiation of institutional priorities is necessary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical relationship between the biomedical and critical readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "dsm_taxonomy_kernel__critical_psychiatry_reading",
+      "dsm_taxonomy_kernel__neurodiversity_reading",
+      "psychiatric_involuntary_treatment_authority",
+      "pharmaceutical_market_expansion_via_diagnostic_scope"
+    ],
+    "dual_formulation_note": "The dsm_taxonomy_kernel has three readings: biomedical_reading (this story — DSM categories are disease discoveries), critical_psychiatry_reading (DSM categories are market-driven constructions), and neurodiversity_reading (DSM categories pathologize natural variation). These are not different measurements of one constraint; they are structurally distinct claims about the same kernel (the DSM classification system). The biomedical_reading's ε (0.76 at interval end) reflects high extraction coupled with real coordination benefits. The critical_psychiatry_reading has higher ε (purely extractive; no coordination value). The neurodiversity_reading has lower beneficiary/victim asymmetry (neutral or benefit to those labeled). All three share the interval (1980–2025) and some stakeholders but differ in victim sets, beneficiary sets, and extracted values. The network edges indicate that shifts in one reading's institutional position influence the others: if biomarkers are discovered, neurodiversity reading must evolve; if pharmaceutical influence is exposed, critical reading gains credence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "objective_neurobiological_disease_model",
+    "drift_state": {
+      "moment": "contemporary_post_biomarker_absence",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dsm_taxonomy_kernel__critical_psychiatry_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dsm_taxonomy_kernel__neurodiversity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mental_disorders_are_brain_diseases",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "diagnostic_criteria_discover_underlying_pathology",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "psychiatric_expertise_is_medical_expertise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "dsm_taxonomy_kernel__critical_psychiatry_reading",
+      "dsm_taxonomy_kernel__neurodiversity_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

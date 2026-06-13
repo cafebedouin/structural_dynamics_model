@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__expansive_shield_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_beta_designation_doctrine__expansive_shield_reading",
+    "story_uid": "94aab5f9-2307-4a25-b610-7f9cf8ccbfe8"
+  },
+  "base_properties": {
+    "extractiveness": 0.87,
+    "suppression": 0.78,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Beta Designation as Comprehensive Liability Waiver (Expansive Reading)",
+    "topic_domain": "technology/law/consumer_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_developers",
+      "platform_operators"
+    ],
+    "victims": [
+      "beta_software_users",
+      "dependent_systems"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.87
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_omega",
+      "question": "Which reading of the beta_designation_doctrine kernel is structurally correct: the expansive_shield_reading (this constraint), the narrow_warning_reading, or the severity_carve_out_reading?",
+      "resolution_mechanism": "Legislative/regulatory intent from major jurisdictions; case law interpreting beta disclaimers and their interaction with product-liability law; practitioner testimony and software-release practice analysis; consumer-protection authority guidance and enforcement patterns.",
+      "impact": "If the narrow or carve_out readings are correct, this constraint (expansive) mislabels the doctrine as comprehensive when it is actually bounded. If the expansive reading is correct, the sibling readings misunderstand the scope of the doctrine. The readings produce mutually exclusive classifications: narrow → rope/scaffold, carve_out → tangled_rope, expansive → snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The kernel contest: which interpretation of beta designation is structurally correct?"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the expansive reading, the beta designation is interpreted as a blanket, indefinite, universal liability waiver: any software labeled beta is presumed to exempt developers from all product-liability, warranty, and negligence claims, regardless of how long the software remains beta, how critical its function, or how severe the defects. This reading treats beta status as a unilateral contractual assertion by developers, binding on users at download. The reading is one instantiation of a contested kernel (beta_designation_doctrine) with two sibling readings that interpret the same legal concept very differently: the narrow_warning_reading treats beta as time-bounded testing disclosure preserving base product liability; the severity_carve_out_reading carves out life-safety and critical systems from beta immunity. This constraint instantiates the expansive reading only—it is a clean, ε-invariant story of high extraction where developers externalize all defect costs and users (especially dependent systems) enter the victim set with no temporal or severity boundaries.",
+    "key_agents": [
+      "software_developers: developers of beta-labeled software set the terms unilaterally; they benefit from indefinite liability exemption.",
+      "platform_operators: institutional beneficiaries indirectly; they host the software and enforce the waiver by accepting TOS assertions.",
+      "beta_software_users: powerless victims bearing all defect costs; identity_locked (essential software fused with professional/social identity) makes exit practically impossible.",
+      "dependent_systems: systems relying on beta software as a component; they absorb cascading defects with no recourse.",
+      "competing_legal_regimes: excluded from the negotiation; their mandatory consumer protections are suppressed by global platform TOS.",
+      "consumer_protection_authorities: analytical observers investigating whether the waiver overrides mandatory law."
+    ],
+    "logic_rationale": "Extractiveness is high (0.87 at interval end) because the constraint systematically moves all product-liability risk from developers (who ship the code) to users (who absorb the defects), with no consideration for defect severity, duration of beta status, or essentiality of the software. The extraction accumulates over the interval (from 0.71 to 0.87) as developers increasingly treat beta as a permanent liability shield rather than a temporary developmental label—the founding problem (lack of testing infrastructure) is solved, but the doctrine persists and expands. Suppression is high (0.78) because the constraint's persistence depends on preventing users from organizing claims, enforcing the waiver adhesively through TOS, and suppressing competing legal regimes' mandatory protections. Theater is moderate-to-high (0.62): significant performance activity occurs around the 'beta testing' framing, but the actual function (genuine developmental testing) has atrophied—what remains is mostly the liability-shield story. Accessibility collapse is moderate (0.71): alternatives to beta software technically exist but are often unavailable for essential tools (communication, productivity, system utilities), making the collapse practical if not absolute. Resistance is moderate (0.58): users and consumer protection authorities mount real resistance through litigation, legislative pressure, and public criticism, but the constraint persists through institutional inertia and developer/platform power asymmetry.",
+    "perspectival_gap": "Developers and platform operators perceive this as legitimate risk allocation: beta labels are transparent; users can choose not to download; developers need shield from frivolous claims to innovate. Users and downstream dependents perceive it as coercive extraction: beta labels are non-negotiable contract terms, essential software is indefinitely beta, defect costs are real and irreversible (data loss, security breach, operational failure), and they have no recourse. Consumer protection authorities perceive it as an override of mandatory law: in their jurisdictions, product liability cannot be waived; the constraint conflicts with local statute. The engine computes each seat's classification from the structural data (power, exit_options, beneficiary/victim status, directionality); the perspectival gap is the observable difference when seats with different structural relationships compute different types.",
+    "directionality_logic": "Developers are beneficiaries (d near 0.0): they set the constraint, collect the liability exemption, have high power and arbitrage exit options (can choose to label software beta or not; can switch jurisdictions). Users are targets (d near 1.0): they bear the defect costs, have powerless/organized power (individually powerless, collectively organized only through litigation), and identity_locked exit (essential software fused with identity). Platform operators are secondary beneficiaries (d near 0.1): they host developers (whom they attract through permissive terms) and indirectly share the benefit by disclaiming responsibility. Dependent systems are forced targets (d = 1.0): they have no negotiating power, no choice about what software they depend on, and experience cascading defects as pure cost. Competing legal regimes have no d value within this constraint—they are excluded by the conflict mechanism itself (global TOS override local law).",
+    "mandatrophy_analysis": "The constraint shows classic mandatrophy: the founding problem (lack of private beta-testing infrastructure) is solved—modern software development has extensive internal QA, staged rollout, and user-research capabilities. Yet the beta-waiver doctrine persists and has expanded indefinitely in scope and duration. Developers continue to label mature software as beta specifically to retain the liability shield, long after the developmental justification has vanished. The constraint's manifest function (temporary testing disclosure) has atrophied; what remains is mostly performative maintenance of the liability shield. This is characteristic piton-adjacent behavior, but the high extractiveness (0.87) and high suppression (0.78) push it into snare territory: it persists not because everyone benefits moderately (piton signature) but because it extracts substantially from a large victim set and is actively defended by a powerful beneficiary.",
+    "kernel_context": "This constraint instantiates the expansive_shield_reading of the beta_designation_doctrine kernel. The kernel is a contested legal concept: what does the beta designation legitimately accomplish? The expansive reading interprets it as a comprehensive, indefinite, universal liability waiver—developers can label software beta at any time for any duration across all contexts, thereby exempting themselves from all product-liability claims. The sibling readings offer sharply different interpretations: the narrow_warning_reading treats beta as a time-bounded testing disclosure that preserves base product liability (the developer must disclose the software is unfinished, but cannot waive liability for defects); the severity_carve_out_reading accepts the waiver concept but carves out critical systems (life-safety, financial, critical infrastructure software cannot use beta as a shield). The three readings instantiate different constraint types: expansive → snare (pure extraction); narrow → rope or scaffold (genuine coordination with temporal limit); severity_carve_out → tangled_rope (coordination with mandatory carve-outs). The readings coexist as live positions in contemporary software law and practice; courts, regulators, and practitioners disagree about which reading is correct. This constraint is the expansive reading only—a clean, ε-invariant story of high extraction with no carve-outs, no temporal limits, and no recognition of the founding problem's solution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__narrow_warning_reading",
+      "beta_designation_doctrine__severity_carve_out_reading",
+      "software_release_maturity_signaling",
+      "adhesive_contract_liability_waiver"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the beta_designation_doctrine kernel. The three stories (expansive_shield_reading, narrow_warning_reading, severity_carve_out_reading) represent a kernel contest where a single legal concept (what beta designation legitimately accomplishes) instantiates structurally distinct constraints depending on which interpretation is adopted. The expansive reading asserts comprehensive, indefinite immunity; the narrow reading asserts time-bounded disclosure; the severity reading asserts categorical carve-outs for critical systems. Each story has its own ε value, beneficiary/victim structure, and constraint type. They coexist as live positions in law and practice—all three readings are claimed by some practitioners/courts, and none has universal acceptance. This is a constraint family under shared kernel identity, not a single constraint viewed from multiple angles (ε-invariance principle: if ε changes when interpretation changes, they are different constraints)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__narrow_warning_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__severity_carve_out_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "beta_label_authorizes_comprehensive_waiver",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "indefinite_beta_duration_permissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "developer_risk_externalization_framework",
+    "drift_state": {
+      "moment": "contemporary_indefinite_beta_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__rent_seeking_suppression",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "10419efa-162b-4849-91d6-65c06c9105ba"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.81,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.73,
+    "resistance": 0.54,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Licensing Mandate as Incumbent Rent Extraction",
+    "topic_domain": "economic/labor/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_practitioners"
+    ],
+    "victims": [
+      "labor_market_entrants",
+      "consumers_paying_inflated_prices"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.81
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Statutory licensing requirements exist in jurisdictions as regulatory mandates for entry into professions (law, medicine, accounting, real estate, plumbing, dentistry, and many others). This story instantiates the RENT-SEEKING SUPPRESSION reading of the licensing-statute-mandate kernel: the constraint exists to restrict labor supply and extract rents for incumbent practitioners. This is ONE of three structurally distinct readings of the same statutory framework. The public-safety-coordination reading interprets the statute as solving genuine consumer information problems through minimum competence standards. The graduated-access-filter reading interprets the statute as creating tiered market access where credential barriers correlate with class and prior resource access. This story treats only the rent-seeking reading: beneficiaries are incumbents; victims are entrants (bearing credential costs and foregone earnings) and consumers (bearing inflated prices). The constraint is CLAIMED as snare and the metrics describe snare-typical operation: high extraction sustained by active enforcement, substantial theater (safety rhetoric covers extraction machinery), collapsed alternatives. The three readings are linked as a constraint family; each is authored as a separate constraint story with its own ε, stakeholders, metrics, and claim-metric relationship. This decomposition follows DP-001 (ε-invariance principle): one observable (the statute) instantiates three different constraints depending on which causal mechanism you measure.",
+    "key_agents": [
+      "incumbent_practitioners (organized beneficiary): Set and maintain licensing standards through professional associations and board control. Benefit directly from labor scarcity rents (wage and fee premiums). Geographic arbitrage available but identity-locked.",
+      "labor_market_entrants (powerless victim, identity-locked): Bear credential costs and uncertainty; locked into profession by identity fusion with the intended career.",
+      "consumers_paying_inflated_prices (powerless victim, constrained exit): Carry scarcity rents via higher service prices; constrained exit (cannot access unlicensed alternatives).",
+      "professional_regulatory_board (institutional agenda-setter): Executes credential inflation through examination control, fee structure, reciprocity barriers. Board members typically incumbents.",
+      "legislature (institutional observer, mobile): Delegates credentialing; receives lobbying from incumbents; faces weak pressure from diffuse consumer interests.",
+      "alternative_service_providers (excluded, trapped): Would-be competitors entirely barred; excluded from negotiation frame.",
+      "enforcement_agencies (institutional agenda-setter): Sustains monopoly through prosecution of unlicensed practice and license revocation."
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because credential restrictions reduce labor supply, creating scarcity rents captured by incumbents; the constraint's primary function in this reading is extraction, not safety assurance. Suppression is very high (0.81) because persistence depends on active enforcement against unlicensed practice and on institutional control of examination standards—without enforcement, competitive entry would erode rents within months. Theater ratio rises from 0.48 to 0.62 over the interval, indicating that safety rhetoric increasingly functions as a cover story as credential requirements diverge from what is needed for safe practice; the ratio stabilizes at 0.62 once the enforcement infrastructure is mature and further inflation becomes slower (political costs rise). Accessibility collapse is high (0.73) because entrants face binary choice (meet rising standards or exit the profession entirely); consumers cannot access lower-cost unlicensed alternatives (statutory enforcement prevents this). Resistance is moderate (0.54) because entrants and consumer advocates push back through legislative testimony and market pressure, but incumbent beneficiaries and captured institutional actors (board, enforcement agencies) control the actual enforcement machinery. The measurement series tracks the ratchet mechanism: extractiveness rises as credential standards inflate and incumbent control solidifies; theater rises as the enforcement apparatus expands and requires narrative justification; suppression rises as enforcement infrastructure is built and applied more systematically. By year 30, metrics stabilize—the regime reaches maturity; further inflation slows because political resistance increases and incumbent gains are already captured. This trajectory is characteristic of a snare entering maturity.",
+    "perspectival_gap": "Incumbent practitioners perceive the constraint as legitimate professional regulation protecting public safety—this framing aligns with the public-safety-coordination reading and is operationally coherent within their worldview (they believe higher standards mean safer practice and that they are stewards of the profession). Entrants and consumer advocates perceive it as artificial labor restriction extracting rents—the rent-seeking reading captures their experience. The legislature perceives it as delegated regulation, nominally for safety but functionally captured by incumbents. The engine computes per-seat types from structural data: incumbents (high benefit, low constraint cost, organized power, control over rule-setting) experience a beneficiary type; entrants (high cost, low benefit, powerless, identity-locked) experience a victim/snare type; consumers (diffuse costs, no direct benefits, powerless, constrained exit) experience extraction. The perspectival gap IS the snare: different seats have fundamentally different structural relationships to the same constraint, and the snare's persistence depends on the agenda-setter's (incumbent) ability to control the narrative (safety rhetoric) while extracting from the payer seats (entrants and consumers).",
+    "directionality_logic": "Incumbent practitioners: d ≈ 0.12 (beneficiary end, override applied). They set the rules, dominate the professional board, benefit directly from scarcity rents, and have geographic arbitrage options. Directionality derivation from beneficiary status + organized power + arbitrage exit would produce d ≈ 0.08; override applied to 0.12 reflects that incumbents also bear some constraint costs (must maintain professional standards, face litigation risk, market pressure from internationalization) and some exits are unavailable (career capital sunk in this jurisdiction). Entrants: d ≈ 0.85 (target end). They bear credential costs (tuition, exam fees, opportunity costs of years in school), face uncertainty about admission, and exit is identity-locked (the field is core to their intended career and self-concept; leaving feels like abandonment). Consumers: d ≈ 0.80 (target end). They bear inflated prices passively; they gain no direct benefit and cannot easily access unlicensed alternatives; their exit is constrained (mobility limited, switching costs high). Professional board: d ≈ 0.15 (slight beneficiary). The board collects examination and licensing fees that depend on the credentialing monopoly; its institutional survival depends on credential inflation; it faces no direct cost from the constraint. Legislature: d ≈ 0.40 (near symmetric). Legislators face pressure from both incumbents (organized, well-resourced lobbying) and consumers (diffuse, weak); they are not direct payers or beneficiaries. Enforcement agencies: d ≈ 0.20 (slight beneficiary). They benefit from having a clear enforcement mandate; credential inflation creates more boundary-crossing cases to prosecute and justifies larger enforcement budgets; they are not direct beneficiaries of the scarcity rents but their institutional role depends on the credentialing boundary.",
+    "mandatrophy_analysis": "The founding problem (consumer safety via credible signals of practitioner competence) is legitimately solved by well-designed credential standards that maintain professional competence standards proportionate to actual risk. The rent-seeking reading captures how the constraint decouples from this founding problem over time: as credential standards inflate beyond what is needed for safe practice (measured by comparative outcomes, task-level competence analysis, or international benchmarking), the constraint's actual function becomes labor supply restriction, not safety assurance. Mandatrophy is not fully resolved here because the constraint retains some genuine coordination function (consumer information) alongside its primary extractive function, suggesting the constraint is tangled_rope rather than pure snare. However, this reading explicitly emphasizes extraction as primary and coordination as secondary/rhetorical, which justifies the snare classification. Theater ratio (0.62) is the diagnostic evidence of mandatrophy drift: the constraint requires sustained narrative work (repeated public claims about rising safety risks, professional complexity, consumer vulnerability) to justify credential inflation that economically functions to restrict supply. Without this narrative maintenance, entrant resistance and consumer pressure would force recognition that the founding problem has been solved and the constraint has become pure extraction. The rising theater trajectory (0.48 to 0.62) indicates that mandatrophy drift is ongoing—the constraint's legitimacy increasingly depends on narrative rather than on functional necessity."
+  },
+  "omegas": [
+    {
+      "id": "credential_sufficiency_empirical",
+      "question": "What is the minimum credential level needed for safe practice in this profession, and how does it compare to the current statutory requirement?",
+      "resolution_mechanism": "Comparative analysis of service outcomes (malpractice rates, consumer complaints, safety incidents) across jurisdictions with different credential levels. Deposition testimony from incumbents about credential necessity. Controlled study of task-level competence (what skills are actually needed for which services).",
+      "impact": "If current requirements substantially exceed what is needed for safety, the rent-seeking reading is supported and the constraint is snare. If requirements track actual competence needs closely, the public-safety-coordination reading is supported and the constraint is more rope-like or tangled-rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether statutory credential inflation exceeds what is needed for safe practice."
+    },
+    {
+      "id": "incumbent_control_of_standard_setting",
+      "question": "To what extent do incumbent practitioners and their associations control the professional board that sets credential standards, versus independent or consumer-representative control?",
+      "resolution_mechanism": "Analysis of board composition, voting rules, funding sources, and appointment procedures. Testimony from board members about agenda-setting processes. Comparison of credential changes to incumbent professional association positions over time.",
+      "impact": "High incumbent control supports the rent-seeking reading and snare classification. Distributed control or consumer representation would shift the interpretation toward public-safety or graduated-access readings.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the credentialing authority is captured by incumbent interests."
+    },
+    {
+      "id": "consumer_awareness_of_credential_inflation",
+      "question": "To what extent do consumers understand that rising credential requirements translate into higher service prices, and to what extent do they believe the inflation is justified by safety improvements?",
+      "resolution_mechanism": "Survey data on consumer perception of profession-specific credential requirements. Comparison of consumer stated reasons for accepting higher prices (safety concern vs. inevitable cost) to actual credential changes and safety outcome data.",
+      "impact": "If consumers are unaware that credential inflation drives price increases, suppression is higher (they are not resisting because they do not understand the mechanism). If consumers are aware but accept the inflation as justified, the public-safety reading gains support. If consumers are aware and skeptical, resistance should rise and suppression should decline over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is achieved through consumer awareness or consumer ignorance of the extraction mechanism."
+    },
+    {
+      "id": "identity_lock_vs_rational_choice",
+      "question": "For labor market entrants, is the decision to pursue the credential despite rising barriers a rational calculation about net lifetime benefits, or an identity-driven commitment that persists despite negative expected value?",
+      "resolution_mechanism": "Exit interviews with entrants who abandon the credential pursuit: what calculation changed? Longitudinal tracking of cohorts: do entrants' earnings after credentialing justify the investment, and has the justification deteriorated over time? Psychological studies on professional identity fusion in credential-intensive fields.",
+      "impact": "If entrants are making rational calculations that the credential investment still pays off, exit is more accurately described as 'constrained' than 'identity_locked'. If entrants persist in credential pursuit despite negative expected value, identity_lock is the operative mechanism and suppression is internalized (the entrants are enforcing the barrier against themselves). The distinction affects whether the suppression can be reduced by information provision or whether it requires identity-frame disruption.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether entrants' barrier compliance is rational or identity-driven."
+    },
+    {
+      "id": "reading_foreclosure_public_safety",
+      "question": "Does the rent-seeking-suppression reading FORECLOSE the public-safety-coordination reading, or do they coexist as competing interpretations held by different parties?",
+      "resolution_mechanism": "Logical analysis: can a credentialing statute be both a legitimate safety mechanism AND a rent-extraction mechanism simultaneously, or are these interpretations mutually exclusive? Historical evidence: was the statute originally enacted for public safety, and did incumbent rent-seeking capture it later, or was rent-seeking the operative motive from the outset, with safety rhetoric as cover?",
+      "impact": "If the readings foreclose each other (mutually exclusive), only one can be true and the other is ideology/cover. If they coexist (both true, different aspects), the constraint is tangled_rope (coordinating safety AND extracting rents), not pure snare. The boundary between snare and tangled_rope depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the rent-seeking and public-safety interpretations are logically compatible or mutually exclusive."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel (licensing_statute_mandate). Two sibling readings exist: public_safety_coordination (statute as legitimate safety mechanism) and graduated_access_filter (statute as class-sorting mechanism). The three readings share the same statutory text but differ in attributed primary function, beneficiary identification, and victim set. Each reading is a separate constraint story with distinct ε, metrics, and stakeholder structure. This story (rent_seeking_suppression) claims the statute's actual function is incumbent labor supply restriction; the public_safety reading claims it solves genuine consumer information problems; the graduated_access reading claims it sorts entrants by prior resource access. The readings are linked as a constraint family via network.affects_constraints. Decomposition follows DP-001 (ε-invariance): one observable (the statute) instantiates three different constraints depending on which causal mechanism you measure. Each story carries a separate omega documenting the reading contest."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.12
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__public_safety_coordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_supply_restriction_primary_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incumbent_capture_of_credentialing_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competitive_labor_market_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_credential_inflation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "licensing_statute_mandate__public_safety_coordination"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

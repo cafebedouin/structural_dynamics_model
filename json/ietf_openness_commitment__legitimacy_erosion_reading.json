@@ -1,0 +1,579 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5443f44d-7fb7-42d9-b2b3-6f78b1168e39",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Rough Consensus Legitimacy Erosion (Capture-Vulnerable Reading)",
+    "topic_domain": "institutional_governance/internet_standards",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "well_resourced_technology_vendors",
+      "corporate_standards_coalitions"
+    ],
+    "victims": [
+      "consensus_legitimacy_commons",
+      "resource_constrained_implementers",
+      "emerging_technology_communities"
+    ],
+    "vindicated_propositions": [
+      "procedural_legitimacy_as_extractive_asset",
+      "organizational_capture_of_consensus_machinery"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "well_resourced_technology_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large technology firms with dedicated standards teams, patent portfolios, and implementation capacity. They author proposals aligned with their product roadmaps, fund expensive liaison roles, and deploy organized voting blocs in working groups. They benefit from standards that encode their preferred interoperability boundaries and lock in compatibility constraints favoring their existing implementations. Can arbitrage across multiple standards bodies and geographies."
+    },
+    {
+      "name": "corporate_standards_coalitions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Formally organized groups of vendors coordinating their standards positions and voting strategies. They amplify their individual influence through collective action, negotiate bloc positions in working groups, and fund joint liaison teams. Their coordinated presence in deliberation changes the perception and actual weight of consensus."
+    },
+    {
+      "name": "resource_constrained_implementers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Smaller firms, nonprofit organizations, and individual engineers who implement standards but lack the capacity to participate in expensive multi-year standards negotiations. They implement what emerges but cannot steer it. Their absence from deliberation means the rough consensus that forms does not weigh their implementation costs or use-case constraints."
+    },
+    {
+      "name": "emerging_technology_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities around new protocols and technologies (decentralized systems, novel transport layers, alternative naming schemes) that depend on standardization for interoperability legitimacy but lack the institutional resources to shape the standards process. They are structurally identity-locked: their credibility depends on standards endorsement, but standards bodies are controlled by entrenched vendors who view the new work as threatening. Exit (proprietary standards, fragmented implementations) undermines their entire value proposition."
+    },
+    {
+      "name": "ietf_secretariat_and_chairs",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "IETF staff and working group chairs tasked with administering the consensus process. They interpret what 'rough consensus' means when factions are organized, decide when consensus exists despite explicit dissent, and enforce participation norms. Their procedural authority is real but bounded — chairs cannot simply reject a vendor coalition's bloc position without appearing partisan, yet accepting it without scrutiny endorses capture."
+    },
+    {
+      "name": "consensus_legitimacy_commons",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The shared epistemic asset: the collective belief that the IETF process produces technical consensus reflecting the merit of ideas rather than the power of factions. When vendors extract procedural legitimacy (vote in bloc, narrate defeat as consensus, capture agenda-setting), the commons erodes. This is not an agent but a non-agent entity whose degradation is the constraint's primary extraction target."
+    },
+    {
+      "name": "global_internet_users_indirectly_affected",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "End users whose network experience depends on standards that may encode vendor lock-in or compatibility tax rather than genuine interoperability. They bear the cost of standards capture in the form of higher switching costs, vendor-specific feature lock-in, and reduced innovation pressure. They have no voice in the process and no seat at the table."
+    },
+    {
+      "name": "academic_and_independent_researchers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Researchers in universities and independent labs who develop novel approaches but lack institutional affiliation with standards-steering firms. To get their work implemented at scale, they must navigate a standards process where rough consensus is increasingly shaped by vendors with competing product interests. Their identity as researchers is fused with contributions to open standards; exiting the process means losing professional legitimacy."
+    },
+    {
+      "name": "internet_standards_governance_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analysts, governance scholars, and policy researchers who study how standards bodies function and what legitimacy conditions they require. They measure whether consensus is genuine or manufactured, document the resource disparities in participation, and produce evidence about who is excluded and why. They take no position but record the structural data."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The IETF rough consensus mechanism is designed to solve the coordination problem of decentralized internet protocol development: how to converge on shared technical choices (packet formats, behavior rules, compatibility boundaries) without a central authority, so that independently-built systems can interoperate. The mechanism channels disagreement into working group deliberation, weight-balances by technical argument rather than organizational hierarchy, and produces standards that implementers can trust reflect engineering merit rather than political fiat.",
+    "transfer_function": "Well-resourced vendors extract procedural legitimacy by deploying organized blocs, funding intensive liaison roles, and narrating organized voting outcomes as evidence of 'rough consensus.' This converts the legitimacy of the mechanism itself (the belief that consensus reflects merit) into a private asset that ratifies vendor-preferred outcomes. The transfer is: from the consensus commons (the credibility of the entire process) to well-resourced institutional actors (who gain the ability to stamp their self-interested proposals as technically inevitable). Resource-constrained implementers and emerging communities are the victims because they lose the shield that legitimate consensus once provided against being railroaded by vendor coalitions.",
+    "absent_voices": "End users have no formal seat in the IETF and are entirely absent from deliberation; their interest in genuine interoperability (lower switching costs, more innovation pressure) is never voiced. Smaller implementers and nonprofit technology organizations are absent not by design but by cost: a working group role requires funding dedicated staff to attend multiple meetings per year, read hundreds of email threads, and maintain technical depth in contested topics — a cost structure that excludes anyone not backed by a large organization. Decentralized and alternative-technology communities are absent by institutional gatekeeping: chairs and established vendors discourage work that threatens incumbents as 'not ready for standards,' so emerging work remains unofficial and never accesses the legitimacy the formal process confers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rough consensus mechanism and its legitimacy claim vanished overnight, the internet standards landscape would splinter into multiple substrate layers: large vendors would encode proprietary compatibility requirements, technical minorities and emerging communities would establish parallel standards bodies with higher participation barriers for rivals, and implementers would navigate a fragmented standards ecosystem where technical choices became explicit corporate positions rather than cloaked in consensus language. The legitimacy shield that allowed resource-constrained actors to invoke 'IETF standard' as sufficient justification for implementation would be gone, shifting power entirely toward whoever controls deployment platforms.",
+    "founding_problem": "In the 1980s–1990s, internet standards development faced the risk that either a single government or corporation would control the process (like the ITU model, where national telecom monopolies set telephony standards) or standards would fragment across incompatible vendor silos with no coordination mechanism. The IETF was chartered to solve this by making standards development open, distributed, and based on technical merit: anyone could participate, rough consensus (not voting) would decide outcomes, and 'running code and rough consensus' (later formalized) would weigh implementation experience heavily against paper arguments.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IETF's founding documents and early histories (RFC 2026, Crocker's origin essays) confirm the problem was real in the era of closed, government-dominated telecom standards. Academic histories and internet governance scholars (Milton Mueller, Laura DeNardis) corroborate that decentralized, merit-based standards development was a genuine innovation. However, network economics research by Susan Crawford and others shows that the founding problem (centralized control) is SOLVED for large, profitable protocols but the mechanism now ENABLES a new problem: vendors with scale can make centralized choices (their proprietary implementations) appear decentralized (via organized consensus in working groups). So the founding problem is simultaneously dead (the IETF succeeded in preventing ITU-style monopoly) and live (the mechanism is now vulnerable to resource-concentrated capture). Dissenting voices from emerging-tech communities, smaller implementers, and governance scholars explicitly attest this shift."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 20,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.43
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 20,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 20,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 20,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 20,
+        "value": 0.48
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "procedural_capture_vs_genuine_consensus",
+      "question": "Is the measured loss of accessibility (consensus appearing despite substantive dissent) evidence of procedural capture by well-resourced vendors, or does rough consensus inherently favor organized coalitions regardless of organized malice?",
+      "resolution_mechanism": "Historical analysis of rejected proposals and exit interviews with resource-constrained participants: if rejection patterns track to vendor coalition opposition rather than technical argument, capture is the mechanism; if rejection tracks to genuine technical grounds, the outcome may be correct even if procedurally lopsided.",
+      "impact": "Structural capture (vendors organizing to win regardless of merit) justifies remedies like resource-equalization funding, quota participation rules, or split-vote counting. Procedural bias (rough consensus naturally favors organized coalitions even without malice) justifies softer remedies like transparency requirements and chair training.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consensus erosion is intentional capture or structural artifact of open process."
+    },
+    {
+      "id": "identity_lock_mechanism_in_emerging_communities",
+      "question": "For emerging-technology communities coded as identity_locked, is the lock structural (they genuinely cannot exit without losing technical viability) or internalized (they have internalized the narrative that IETF endorsement is necessary for legitimacy when it is actually optional)?",
+      "resolution_mechanism": "Counterfactual observation: if a community develops a competing standard body with vigorous participation, low cost-of-entry, and achieves adoption without IETF endorsement, the lock was partly internalized. If they remain trapped despite attempting parallel bodies, the lock is structural.",
+      "impact": "If structural, the constraint is genuinely coercive (they are forced to navigate capture risk because there is no alternative path to scale). If internalized, the constraint's suppression is partly psychological, and exit-path communication could reduce effective extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Degree to which emerging-community identity-lock is structural vs. internalized."
+    },
+    {
+      "id": "commons_degradation_vs_minor_malfunction",
+      "question": "Is the rising theater_ratio (0.28 → 0.52) evidence that the IETF consensus mechanism is becoming primarily theatrical—legitimacy extraction with minimal real coordination function—or does it reflect normal procedural overhead increasing as scale grows?",
+      "resolution_mechanism": "Compare participation diversity and idea diversity in winning standards across the interval: if diversity is collapsing (fewer voices, fewer novel proposals in final standards), theater_ratio rise is symptomatic of real commons degradation; if diversity persists, the overhead is procedural rather than extractive.",
+      "impact": "True commons degradation (high theater, low diversity) suggests the mechanism is past recovery and needs structural replacement (new governance models, new standards bodies). Procedural overhead (high theater, maintained diversity) suggests governance repairs (chair training, transparency, timeline management) are sufficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the rising theater ratio is evidence of commons degradation or scalable-procedural overhead."
+    },
+    {
+      "id": "legitimacy_reading_vs_stewardship_reading",
+      "question": "This reading frames the IETF mechanism as vulnerable to capture and increasingly extractive of legitimacy from the commons. The sibling stewardship_reading would frame the same mechanism as a shared commons that well-resourced actors are increasingly damaging through extractive behavior. Are these readings incommensurable (foreclosing each other) or do they coexist as different framings of the same underlying structure?",
+      "resolution_mechanism": "Test whether a party can coherently hold both readings: can one argue that 'the commons is being extracted from by organized vendors' AND 'the commons is being stewarded by well-intentioned but increasingly outnumbered gatekeepers'? If yes, coexistence; if the first reading's core (mechanism is a capture substrate) directly contradicts the second's (mechanism is a resilient commons), then foreclosure.",
+      "impact": "Coexistence means reform efforts can address capture without replacing the mechanism entirely. Foreclosure means choosing one reading commits you to either replacement (legitimacy reading, if adopted by majorities, implies the mechanism is unfixable) or renewed stewardship investment (stewardship reading, if adopted, implies capture is fixable via recommitment).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-to-reading structural relationship: whether the legitimacy_erosion and commons_stewardship readings of the kernel are logically compatible or mutually foreclosing."
+    },
+    {
+      "id": "measurement_timing_and_artifact",
+      "question": "The measurement series shows extractiveness and theater rising sharply from t=0 to t=5, then leveling off. Is this trajectory real (capture happened, then stabilized at a new equilibrium) or an artifact of data availability (early data is unavailable, so t=0 is actually the post-capture state)?",
+      "resolution_mechanism": "Historical reconstruction of IETF working group composition and decision patterns for t < -5 (early 2000s): if participation was more diverse and decisions less organized then, the rise is real; if early data was simply uncollected, the t=0 value was already post-capture.",
+      "impact": "Real rise suggests the mechanism degraded within the observation window and may continue degrading toward theater_ratio=1. Artifact (already captured at t=0) suggests the constraint has been in a stable extractive state longer than the measurements show, and the interval captures maintenance, not change.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether measured metric rise is real temporal change or data-availability artifact."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the LEGITIMACY_EROSION reading of the contested kernel: IETF_OPENNESS_COMMITMENT. The reading frames the rough consensus mechanism not as a shared commons (stewardship reading) or as a coordination substrate (capture substrate reading), but as a legitimacy-extraction target—a procedural mechanism whose authority to certify decisions as 'merit-based' has been increasingly captured by well-resourced vendor coalitions. Under this reading, vendors do not merely extract rents from the standards themselves (higher extractiveness of compatible products, lock-in boundaries); they extract the legitimacy of the process itself, converting organized bloc voting and procedural narration into evidence of 'consensus,' which ratifies vendor preferences as technically inevitable. The victim is not directly the implementers (though they suffer downstream) but the consensus commons—the shared belief that rough consensus reflects distributed technical merit rather than organized power.",
+    "key_agents": [
+      "well_resourced_technology_vendors: Institutional beneficiaries; author proposals aligned with product roadmaps; deploy organized voting blocs; capture procedural legitimacy",
+      "corporate_standards_coalitions: Institutional agenda-setters; amplify vendor influence via collective action; fund liaison teams; narrate bloc positions as evidence of consensus",
+      "resource_constrained_implementers: Moderate-power payers; absent due to cost of participation; implement what emerges; cannot steer; lose the shield of legitimate consensus",
+      "emerging_technology_communities: Powerless, identity-locked payers; depend on standards legitimacy for credibility; face institutional gatekeeping; cannot exit without undermining their own value proposition",
+      "IETF secretariat and working group chairs: Organized agenda-setters constrained by procedural authority; must interpret what rough consensus means when factions are organized; face pressure to accept bloc positions without appearing partisan",
+      "consensus_legitimacy_commons: The shared epistemic asset (non-agent entity); erodes when vendors extract procedural legitimacy; loss of this commons undermines the entire justification for open standards",
+      "academic_and_independent_researchers: Powerless, identity-locked payers; develop novel approaches; must navigate standards process controlled by vendors with competing interests; fused identity with open standards contribution"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.68) because the constraint does coordinate real work (IETF standards do get written and widely implemented), but that coordination function is increasingly being used to ratify vendor-preferred outcomes rather than to surface genuine technical merit. Suppression is correspondingly high (0.71) because the mechanism's persistence depends on actively suppressing alternatives (keeping emerging communities out of formal standards channels, ignoring resource-constrained implementer objections, narrating organized voting as consensus despite dissent). Theater_ratio is moderately elevated (0.52) and rising steeply in the early interval (t=0-5), indicating that a growing share of procedural activity is performative: chairs and vendors narrate closure even when dissent is substantial, liaisons issue press releases declaring consensus that internal deliberations did not support, and the 'rough' part of 'rough consensus' is increasingly used to suppress formal dissent without engaging it. Accessibility_collapse (0.48) is relatively low compared to suppression, capturing the fact that alternatives remain (parallel standards bodies, proprietary protocols, fragmented implementations) but they are costly and carry reputational penalties—not impossible exit, but heavily discouraged. Resistance (0.62) is substantial because emerging communities, smaller implementers, and independent researchers actively object to the capture, publish critiques, and attempt to form alternative governance structures, but they lack the institutional power to shift the mechanism without outside intervention (regulatory or financial). The measurement series track extractiveness rising from 0.42 (early period, based on historical accounts of more diverse participation) to 0.68 (contemporary); theater rising from 0.28 to 0.52; and suppression rising from 0.54 to 0.71. The grid shows individual-level resistance and stakes rising (emerging communities feeling pressure), class-level stakes inflating (resource-constrained implementers increasingly excluded), organizational-level suppression holding steady (vendors maintain bloc discipline), and structural-level accessibility paradoxically declining slightly (broader alternatives become visible even as formal IETF participation barriers rise). This pattern indicates a system where coercion is rising at multiple levels but is being expressed through procedural exclusion and reputational cost rather than formal prohibition—a classic capture dynamic where the captured process itself becomes the suppression mechanism.",
+    "perspectival_gap": "The well-resourced vendor seats should compute as beneficiaries experiencing modest effective extraction (d near 0.2–0.3: they pay dues and meet costs, but they capture procedural legitimacy that justifies their product choices). Resource-constrained implementer and emerging-community seats should compute as high-d targets (d near 0.75–0.95) because they bear the suppression cost (exclusion, procedural barriers, identity lock) and receive no offsetting coordination benefit (the standards that emerge do not reflect their interests). The IETF secretariat seats should compute differently from both: they are trapped between their procedural authority (supposed to oversee legitimacy) and their structural dependence (cannot operate without vendor participation funding and large-firm volunteer staff). Their d is likely moderate-to-high (0.5–0.7) because they are being used as the mechanism of legitimacy extraction—their role itself becomes the extracted asset. The engine computes these per-seat divergences from the structural data (who benefits, who pays, exit options, identity locks); the authored claim does not reconcile these seated views but rather names the theoretical reading (legitimacy_erosion) that makes sense of the structural asymmetry.",
+    "directionality_logic": "Beneficiary and payer declarations map to directionality as follows: (1) Well-resourced vendors are declared as beneficiaries because they gain procedural legitimacy that justifies their product choices and market positions—their d derives from organizational power (institutional) + arbitrage exit options, putting them at the beneficiary end (d ≈ 0.15–0.25). (2) Corporate coalitions are agenda-setters (administrative power) + beneficiaries of coordinated bloc advantage; their d derives from institutional power + arbitrage, slightly higher than individual vendors because they explicitly extract procedural advantage, (d ≈ 0.25–0.35). (3) Resource-constrained implementers are declared victims because they bear the cost of procedural exclusion without capturing coordin benefits; moderate power + constrained exit → d ≈ 0.65–0.75. (4) Emerging technology communities are declared victims and are identity_locked (cannot exit without destroying their own legitimacy claim); powerless + identity_locked → d ≈ 0.80–0.95, the highest extraction target. (5) The consensus_legitimacy_commons is declared as a victim (non-agent) because its degradation is the primary extraction target; it has no power and no exit (it is a collective epistemic state), so d ≈ 1.0 in the sense that it bears the full cost. (6) Academic and independent researchers are declared victims, identity_locked, and powerless; d ≈ 0.80–0.90. These directionality values are input to the engine's effective extraction (χ) computation, where χ scales base extractiveness (ε) by the target's directionality and scope. A resource-constrained implementer at constrained exit sees χ = 0.68 × d × scope_amplifier, where d is high; a vendor beneficiary sees χ negative or near-zero because their d places them as beneficiaries receiving the subsidy of procedural legitimacy.",
+    "mandatrophy_analysis": "The founding problem (decentralized standards development without government or corporate monopoly) was genuinely live when the IETF was chartered and has been substantially solved for the first 30 years of the organization's existence. However, the solving of that problem has exposed a new problem: the mechanism that solved monopoly risk (open process, rough consensus, no formal voting) has become vulnerable to a different form of monopoly—resource-concentrated capture. The rough consensus mechanism requires that organized factions NOT exist (or be kept weak relative to individual technical merit) in order to function as advertised. The founding problem would be satisfied by current IETF operation if vendors were participating as individual implementers on equal terms; instead, they are participating as coordinated coalitions with dedicated liaison staff, patent strategy alignment, and bloc voting. This is not a violation of IETF rules (the rules permit organized participation), but it is a violation of the founding problem's tacit assumption (that no faction would be powerful enough to coordinate procedural outcomes). The constraint avoids the Snare classification and stays in Tangled_Rope territory because there IS real coordination happening (IETF standards do achieve interoperability that would not exist without the mechanism). However, the coordination has become entangled with extraction: vendors coordinate among themselves to produce standards that favor their products, then extract the legitimacy of the mechanism to justify those standards as technically inevitable. The extractiveness metric (0.68) reflects this entanglement. Mandatrophy is NOT resolved in the sense of 'the constraint has outlived its function and should be removed'—the coordinating function is still live. But mandatrophy IS present in the sense of 'the original problem the constraint solved is now solved, and new problems have emerged that the constraint now enables.' A reformed constraint might separate the coordination function (still needed) from the legitimacy extraction (the new harm). This is why the constraint is plausibly a Scaffold (temporary structure meant to be replaced when its founding problem is solved) rather than a stable Tangled Rope; the founding_problem_status of 'contested' captures exactly this uncertainty.",
+    "kernel_context": "This constraint is the LEGITIMACY_EROSION_READING of the contested kernel IETF_OPENNESS_COMMITMENT. The reading instantiates the claim that rough consensus is increasingly vulnerable to organized capture despite procedural safeguards designed to prevent it. The sibling readings are: (1) COMMONS_STEWARDSHIP_READING: frames the mechanism as a shared epistemic commons that well-intentioned gatekeepers are working to preserve against erosion; (2) CAPTURE_SUBSTRATE_READING: frames the mechanism as a coordination substrate where resource advantage translates directly to encoded gatekeeping, with capture baked into the structure from the start. The legitimacy_erosion reading occupies a middle position: it agrees with capture_substrate that the mechanism is now a capture vehicle, but it asserts that this is a historical degradation, not a constitutive feature—the mechanism WAS a functioning commons and HAS BECOME a capture substrate through deliberate vendor coordination. This distinguishes it from capture_substrate (which would say the mechanism was always a substrate and we were fooled into believing it was open) and from commons_stewardship (which would say the commons is resilient and can be repaired through renewed commitment). The legitimacy_erosion reading implies that repair requires structural change—the mechanism as currently constituted cannot be reformed back to openness because vendors now have the incentive and capacity to maintain capture. This reading is live in contemporary internet governance discourse (it informs the arguments of activist technologists, emerging-protocol communities, and governance reformers)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__capture_substrate_reading"
+    ],
+    "dual_formulation_note": "This story is one reading of the contested IETF_OPENNESS_COMMITMENT kernel. The legitimacy_erosion reading emphasizes the mechanism's vulnerability to capture and its function as a legitimacy-extraction target. The commons_stewardship reading emphasizes the mechanism's resilience as a shared epistemic commons. The capture_substrate reading emphasizes that the mechanism was always a coordination substrate where power translates to gatekeeping. All three readings address the same institutional object (rough consensus in IETF working groups) but make different structural claims about its function and trajectory. The constraint families are linked because each reading's claim about the IETF mechanism depends on and influences the others: if legitimacy_erosion is correct (mechanism is being captured), it undermines commons_stewardship (which assumes repair is possible); if commons_stewardship is correct (mechanism is resilient), it forecloses legitimacy_erosion (which assumes the mechanism is past repair); if capture_substrate is correct (mechanism was always a substrate), both legitimacy_erosion and commons_stewardship are misidentifying a constitutional feature as a degradation or corruption."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.28
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ietf_openness_commitment__commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ietf_openness_commitment__capture_substrate_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rough_consensus_degrades_through_capture",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "procedural_legitimacy_is_extractable_asset",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "open_merit_based_standardization",
+    "drift_state": {
+      "moment": "contemporary_vendor_consolidation_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "well_resourced_technology_vendors",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__capture_substrate_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

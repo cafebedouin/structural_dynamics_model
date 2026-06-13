@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "climate_response_legitimacy__adaptation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_response_legitimacy__adaptation_priority",
+    "story_uid": "2d3a4938-6bb0-411d-a4bb-5bd203433ad2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Response: Adaptation-Priority Legitimacy Reading",
+    "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_developed_economies",
+      "adaptation_finance_intermediaries"
+    ],
+    "victims": [
+      "low_income_vulnerable_regions",
+      "future_generations_2100_onward"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mitigation_deferral_cost_nonlinearity",
+      "question": "What is the actual cumulative cost difference between pursuing mitigation now vs. adaptation-only to higher warming levels? Does the nonlinear tipping-point acceleration documented by climate models materialize in economic terms?",
+      "resolution_mechanism": "Integrated assessment models (IAMs) comparing mitigation-now pathways against adaptation-only pathways through 2100, with explicit tipping-point probability weighting and post-tipping impact costs. Cross-validation against observable climate response patterns (Amazon moisture feedback, ice-sheet acceleration, permafrost release) as the interval progresses.",
+      "impact": "If adaptation-only cumulative cost substantially exceeds mitigation-now cost, the reading's economic justification ('adaptation is more cost-effective') collapses; if costs are genuinely lower under adaptation-only, the reading's framing is vindicated. The high-sensitivity case reshuffles the victim set to include wealthy economies via intergenerational extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost trajectory comparison: mitigation-now vs. adaptation-to-higher-warming through tipping points"
+    },
+    {
+      "id": "adaptation_technology_sufficiency_boundary",
+      "question": "At what warming level does adaptation technology saturate and can no longer absorb impacts? Is there a threshold (e.g., 2.5°C, 3.0°C) above which adaptation becomes physically or economically impossible?",
+      "resolution_mechanism": "Physical climate modeling combined with engineering feasibility studies: can coastal defenses hold at 2m sea-level rise? Can irrigation replace rainfall at continental scale? Can permafrost thaw be arrested? Observable evidence from the 2020–2040 decade as warming accelerates.",
+      "impact": "If a hard saturation threshold exists below 4°C, the reading's assumption of 'unlimited adaptive capacity' is false, and the constraint becomes a snare (promising protection that is structurally impossible). If no threshold exists, the reading's technical optimism is supported.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Physical and economic saturation of adaptation capacity at high warming levels"
+    },
+    {
+      "id": "kernel_reading_alternative_framing_contest",
+      "question": "Is the climate response kernel fundamentally about choosing between mitigation-priority, adaptation-priority, and degrowth-transformation readings, or does the reading choice depend on unstated empirical claims about cost, feasibility, or equity that could be resolved by data?",
+      "resolution_mechanism": "The kernel contest itself is a preference/normative disagreement, but it rides on three empirical sub-claims: (1) mitigation technology cost trajectory (decoupling possible?), (2) adaptation capacity nonlinearity (cost multiplier as warming rises?), and (3) degrowth feasibility (can democracies sustain reduced consumption?). Resolve the empirical sub-questions; the preference-level disagreement persists independently.",
+      "impact": "This omega routes the committer-frame structure through the existing apparatus: the three readings coexist at the preference level, but they are not equivalent in empirical coherence. The adaptation-priority reading rests on high empirical confidence in technology sufficiency (omega 2, low-confidence) and low-warming-cost assumptions (omega 1, medium-confidence). If either fails, the reading's epistemic foundation weakens relative to siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel readings as preference-plus-empirical-claim bundles; sibling reading coherence depends on resolution of empirical sub-questions"
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the suppression of mitigation-priority and degrowth-transformation readings structural (gatekeeping by wealthy-economy institutions) or internalized (vulnerable regions have come to accept adaptation-only as realistic/inevitable)? Or both?",
+      "resolution_mechanism": "Post-suppression trajectory: if mitigation and degrowth advocates gain institutional voice (policy seats, funding access, UNFCCC standing), do vulnerable regions shift advocacy positions, or do they continue accepting adaptation-framing even when alternatives are present? Survey preference data before and after institutional opening.",
+      "impact": "If suppression is purely structural, removing it should shift policy consensus rapidly. If suppression is internalized (deprivation narratives, learned helplessness, identity-fusion to the adapted role), the constraint persists even after structural barriers fall. If both, fixing requires both institutional change and re-capacity-building.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of alternative climate response readings"
+    },
+    {
+      "id": "beneficiary_identity_wealthy_economies_vs_adaptation_finance_capture",
+      "question": "Do wealthy developed economies genuinely benefit from adaptation-priority (by deferring their own emissions reduction costs), or does the real beneficiary seat shift to adaptation finance intermediaries and technology exporters, with wealthy economies caught in a legitimacy-maintenance cost?",
+      "resolution_mechanism": "Trace the actual monetary flows of climate adaptation finance: who receives contracts, licensing fees, asset fees? Compare to GHG reduction commitments wealthy economies undertake under the reading vs. under mitigation-priority. If wealthy economies spend heavily on adaptation finance while evading emissions cuts, they benefit; if they spend heavily AND reduce emissions, they are partly targets bearing the cost of the reading's legitimacy.",
+      "impact": "If beneficiary is actually the intermediate class (finance institutions, technology exporters) and wealthy economies are partly targets bearing legitimacy costs, the reading's beneficiary set should be adjusted. The extraction pattern would be more complex — some wealthy-economy institutional actors benefit while others pay.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual beneficiary identification via cash flow and policy-cost analysis"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the adaptation-priority reading of climate-response legitimacy, wealthy developed economies and climate-finance institutions have framed 'pragmatic acceptance of inevitable warming' as the appropriate policy posture, prioritizing resilience infrastructure and technology transfer to vulnerable regions over aggressive emissions reduction. The reading presents the choice as realistic, cost-effective, and compassionate — adaptation prevents catastrophic impacts now while waiting for technology to enable painless mitigation. However, this reading carries high extractiveness: it defers intergenerational mitigation costs (compounded nonlinearly by higher warming), locks vulnerable regions into technology-dependent adaptation rather than structural transformation, and preserves the development model of wealthy economies that generated the crisis. The constraint is simultaneously a coordination mechanism (mobilizing adaptation finance) and an extraction mechanism (capturing the policy frame to avoid mitigation costs and structural economic change).",
+    "key_agents": [
+      "Wealthy developed economies (agenda_setter, institutional power) — set the adaptation-priority frame via UNFCCC, COP agreements, IPCC adaptation committees; preserve growth models; control climate finance conditions",
+      "Low-income vulnerable regions (payer, powerless) — bear immediate concentrated impacts; trapped in adaptation-dependency; $350B annual finance gap; cannot exit climate system or afford unilateral mitigation",
+      "Adaptation finance intermediaries (agenda_setter/beneficiary, institutional) — manage World Bank, IMF, bilateral flows; enforce the reading via policy conditions; benefit from expanding adaptation-finance asset bases",
+      "Technology exporters (beneficiary, powerful) — provide adaptation technologies (seeds, defenses, water, energy); capture licensing and IP rents; reading legitimizes endless technology purchasing",
+      "Future generations post-2080 (payer, powerless, civilizational time horizon) — inherit compounded warming and deferred mitigation costs; trapped; cannot participate in present negotiations",
+      "Climate scientists (observer, analytical) — document that adaptation-without-mitigation compounds future costs nonlinearly; model cost trajectories showing mitigation-now is cheaper; attest to tipping-point risks",
+      "Mitigation-priority and degrowth advocates (excluded, moderate power) — institutionally gatekept out of IPCC/COP processes; would argue for rapid emissions cessation and structural transformation",
+      "Indigenous and traditional knowledge systems (excluded, moderate power, identity-locked) — possess adaptive practice, excluded from adaptation planning; trapped to place even when adaptation fails"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the reading transfers costs to vulnerable regions ($350B adaptation gap) and future generations (cumulative warming damage rises nonlinearly with every decade of deferred mitigation). The trajectory shows extractiveness rising from 0.45 to 0.68 as the reading becomes institutionally entrenched — the initial period (0–10) shows the reading gaining policy authority despite pushback; the middle period (10–25) shows extractiveness stabilizing as alternative readings are suppressed; the end (25–40) shows extractiveness plateauing at high level because the intergen­erational costs compound outside the policy window. Suppression is high (0.71 at interval end) because the reading requires continuous institutional gatekeeping: mitigation-priority and degrowth readings must be kept from policy voice, indigenous knowledge must be overwritten by technology narratives, and vulnerable-region skepticism must be managed through finance conditions and technology-lock-in. Theater rises early (0.28–0.41 from 0–20) as adaptation finance becomes performative (pledges unmet, projects delayed, but framing maintained), then plateaus (0.41 from 20–40) at moderate-high level — enough theater that the underlying extraction is visible to experts but obscured for general publics by the humanitarian adaptation narrative. Accessibility collapse is moderate (0.52) because alternatives (mitigation-priority, degrowth transformation) remain live in academic and activist discourse, even if institutionally suppressed — the reading does not have monopoly epistemic authority. Resistance is high (0.73) from scientists, climate-justice movements, vulnerable-region governments, and degrowth advocates challenging the reading's cost assumptions and inequality structure. The measurement series share one time grid (t=0,5,10,15,20,25,30,40) so every metric is authored at every shared point.",
+    "perspectival_gap": "The gap between the reading's declared legitimacy (pragmatic, protective of vulnerable populations, cost-effective) and its structural operation (extraction from vulnerable regions and future generations, preservation of wealthy-economy growth models, suppression of systemic-change alternatives) is the core analytical content. Agenda-setter and intermediate-beneficiary seats should compute as rope or scaffold from their position (they experience coordination and transition); target seats should compute as snare or tangled rope (they experience extraction masked as protection). The engine's per-seat classification reveals this divergence; the authored metrics and beneficiary/victim declarations establish the structural asymmetry the computation reads.",
+    "directionality_logic": "Directionality derivation: (1) Wealthy developed economies are beneficiaries (collects deferred costs, control frame, preserve development model) + institutional power + arbitrage exit (can shift to mitigation if political pressure rises) → low d, near beneficiary end (~0.15–0.25). (2) Low-income vulnerable regions are victims (pay immediate costs, trapped adaptation-dependency, powerless) + powerless power + trapped exit (cannot leave climate system, cannot fund unilateral mitigation) → high d, near target end (~0.85–0.95). (3) Adaptation finance intermediaries are beneficiaries (expanding asset bases, policy authority) + institutional power + constrained exit (locked into the reading's institutional success) → low-moderate d (~0.30–0.40). (4) Technology exporters are beneficiaries + powerful power + mobile exit (can sell to any warming-adaptation scenario) → low d (~0.20–0.30). (5) Future generations are victims (inherit compounded costs) + powerless + trapped exit → very high d (~0.95). (6) Scientists and advocates are observers (analytical power, analytical exit) → d=0.5 by symmetry (neither collecting nor paying; measuring). No directionality overrides are needed — the structural derivation from beneficiary/victim + power + exit produces coherent d assignments across all seats.",
+    "mandatrophy_analysis": "The adaptation-priority reading's founding problem — protecting vulnerable populations from inevitable climate impacts — is live and urgent (evidenced by $350B annual adaptation finance gap, observable impacts 2020–2024, vulnerable-region climate vulnerability indices). However, the reading's mandate has been stretched to encompass a secondary function: providing cover for wealthy-economy avoidance of rapid mitigation costs. The primary mandate (protecting vulnerable populations) could be achieved through any climate-response reading; the reading's persistence is partly due to the secondary extraction function (deferring mitigation costs). A mandatrophy signal would trigger if the reading begins to fail on its primary function despite institutional entrenchment — e.g., adaptation finance continues underfunded while the reading remains policy orthodoxy, or adaptation infrastructure proves insufficient at higher warming levels, or vulnerable regions reject the reading explicitly. The reading is not yet mandatrophic (the primary function is still live, though underfunded), but it is at risk of mandatrophy if the nonlinear cost escalation (omega 1) and adaptation saturation (omega 2) materialize as projected.",
+    "kernel_context": "This constraint is the ADAPTATION_PRIORITY reading of the contested climate-response-legitimacy kernel. The kernel is the stabilized commitment that 'legitimate climate response' represents, grounded in post-2015 UNFCCC authority and IPCC scientific framing. The adaptation-priority reading instantiates one normative stance on that kernel: accepting warming trajectories above 1.5°C and prioritizing resilience infrastructure over rapid emissions reduction. Sibling readings instantiate different stances: MITIGATION_PRIORITY reading emphasizes technological decoupling and carbon pricing, preserving growth while cutting emissions; DEGROWTH_TRANSFORMATION reading rejects the growth-preservation frame and calls for structural economic transformation (basic services, work-time reduction, democratic ownership). These three readings coexist in policy discourse but occupy different institutional seats: adaptation-priority dominates UNFCCC and multilateral development institutions; mitigation-priority dominates IPCC WG3 and some wealthy-economy policy; degrowth-transformation dominates activist and academic critique but lacks institutional authority. This reading is not a measurement parameter — it is an authored constraint, with its own ε, beneficiary/victim structure, and type. The kernel contest is routed through omega variables (omega 3: why the readings coexist; omega 1 and 2: empirical sub-claims the readings rest on)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_legitimacy__mitigation_priority",
+      "climate_response_legitimacy__degrowth_transformation"
+    ],
+    "dual_formulation_note": "The climate-response-legitimacy kernel decomposes into three constraint stories, each instantiating a different reading: adaptation_priority (this file) emphasizes inevitable warming + technology adaptation; mitigation_priority emphasizes decoupling + economic growth preservation; degrowth_transformation emphasizes structural economic change + consumption reduction. The three readings coexist as live policy positions held by different institutional and activist coalitions. Each story carries its own ε, beneficiary/victim structure, and type — they are not measurements of the same constraint under different frames, but three distinct structural instantiations of the contested kernel. Links between the stories are routed through cs_structure.reading_relations in each file."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "climate_response_legitimacy__mitigation_priority",
+      "climate_response_legitimacy__degrowth_transformation"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "climate_response_legitimacy__mitigation_priority",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "climate_response_legitimacy__degrowth_transformation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "adaptation_sufficiency_hypothesis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "wealthy_economy_development_preservation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_2015_paris_agreement_adaptation_mainstreaming",
+    "drift_state": {
+      "moment": "contemporary_2024_high_impact_phase",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "efdf5ace-b9f4-460b-864c-bbc749c82129"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.18,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.89,
+    "resistance": 0.42,
+    "claimed_type": "mountain",
+    "human_readable": "Beta Designation Categorical Exclusion for Critical Systems (Severity Carve-Out Reading)",
+    "topic_domain": "technology_law/product_liability/consumer_protection",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "life_safety_system_users",
+      "financial_system_users",
+      "critical_infrastructure_operators"
+    ],
+    "vindicated_propositions": [
+      "harm_severity_overrides_contractual_allocation",
+      "domain_specific_product_liability_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_vendor",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develops and distributes software products. May wish to release experimental versions under beta designation to gather field data and defer liability exposure. Under this reading, the vendor cannot use beta designation for life-safety or financial critical systems; it must either wait for production-ready status or explicitly accept full product liability for any release into those domains."
+    },
+    {
+      "name": "life_safety_system_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users of software that controls or influences life-safety outcomes (medical devices, autonomous vehicle control, aviation systems, industrial safety interlocks). They depend on the constraint to prevent vendors from treating life-critical functionality as experimental. Their exit option is effectively absent—they cannot simply refuse a medical device or aircraft system."
+    },
+    {
+      "name": "financial_system_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users of financial infrastructure (banking platforms, payment systems, trading infrastructure, clearing systems). They rely on the constraint to prevent vendors from treating transaction processing, account management, or settlement systems as beta-stage experimental. Exit is limited to switching providers, which carries high switching costs and operational friction."
+    },
+    {
+      "name": "critical_infrastructure_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operators of power grids, water systems, telecommunications networks, transportation systems. They depend on the constraint to prevent the software they rely on from being classified as beta-stage in production deployment. Their exit is constrained by monopolistic or heavily consolidated vendor bases and the operational necessity of their infrastructure."
+    },
+    {
+      "name": "regulatory_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies and quasi-regulatory bodies (FDA, FAA, financial regulators, safety standard bodies) that enforce product liability, safety certification, and pre-market approval requirements. They enforce the constraint by prohibiting beta designation in high-stakes domains and by holding vendors liable for harms even if beta status was claimed."
+    },
+    {
+      "name": "general_purpose_software_users",
+      "role": "observer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users of non-critical software (productivity tools, games, consumer utilities) where beta designation remains permissible. They can opt to use or avoid beta releases based on personal risk tolerance; their stakes are lower and exit is available. They are not directly governed by this constraint but observe it apply to others."
+    },
+    {
+      "name": "vendor_liability_industry",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Insurance and legal industries built around software vendor liability. The constraint forces vendors to internalize risk by accepting full liability rather than deferring it via beta designation. This increases liability claims, litigation, and insurance demand in critical domains, but also clarifies exposure and pricing."
+    },
+    {
+      "name": "expansive_shield_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Vendors and industry groups advocating for broad beta-shield protections (unlimited duration, all domains). They would argue that severity-based carve-outs reduce innovation incentives and impose undue liability risk. They are excluded from the rule-making process in jurisdictions that adopt the severity carve-out reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes domain-specific product liability doctrine: separates domains where experimental beta designation is permissible (low-stakes consumer software) from domains where it is structurally unavailable (life-safety, financial, critical infrastructure). Coordinates on the principle that harm severity overrides contractual liability allocation mechanisms.",
+    "transfer_function": "Transfers liability exposure from software vendors in critical domains to the vendors themselves (they cannot defer via beta designation) and to product liability insurers and litigation systems. In non-critical domains, vendors retain the ability to allocate experimental-release risk to users via beta designation.",
+    "absent_voices": "Vendors advocating for expansive beta-shield protections are structurally excluded—they argue for the sibling reading but are locked out of jurisdictions enforcing the severity carve-out. End-users of non-critical software whose interests might differ from those of critical-system users are not explicitly represented in regulatory deliberations that produce this constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint disappeared, vendors could release life-safety and financial software under indefinite beta designation, deferring or eliminating liability for failures. The world rearranges: medical device regulation would shift from pre-market approval to post-market liability discovery; financial institutions would face uninsurable tail risk; critical infrastructure would operate with experimental software and no contractual recourse. Regulatory regimes would have to be rebuilt around explicit approval and inspection rather than liability allocation.",
+    "founding_problem": "Early software products released beta versions with broad liability disclaimers that were later enforced to eliminate vendor accountability for failures in life-safety and financial domains. Users of medical devices and banking systems discovered their recourse was nil—the vendor had disclaimed liability via beta status, and the user bore the loss. Regulators observed that contractual liability allocation (beta waiver) was being used to circumvent physical safety requirements and harm prevention duties.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Regulatory bodies (FDA, FAA, SEC, financial regulators across multiple jurisdictions) attest the founding problem is live and cite case histories of harm in critical domains traceable to vendors' use of beta designation to avoid liability. Medical and financial incident reports document the pattern. Vendor industry groups attest they did use beta designation in high-stakes domains but dispute that it was abusive. Independent analysis (product liability scholars, engineering ethics literature, regulatory impact assessments) corroborates the problem from outside the benefiting parties."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.18,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested beta designation kernel: the severity carve-out reading. The kernel is the question 'what does beta designation mean and what scope does it cover?' Three structurally distinct readings persist: (1) expansive_shield_reading: beta is a comprehensive, indefinite liability waiver in all contexts; (2) narrow_warning_reading: beta is time-bounded experimental disclosure, base product liability preserved; (3) severity_carve_out_reading (this constraint): beta is categorically unavailable for life-safety, financial, and critical-infrastructure domains regardless of testing status. Each reading produces a different ε and different stakeholder structure. This constraint models the severity carve-out: a domain-specific physical constraint that harm severity overrides contractual allocation. The constraint is authored as MOUNTAIN because this reading rests on the irreducible principle that causation of severe harm cannot be contracted away—it emerges as a natural limit from the physics and ethics of harm prevention, not as a negotiated coordination mechanism. However, the constraint carries declared beneficiaries because the 'natural law' claim is itself contested (omega variable captures this). The low extractiveness (0.31) reflects that the constraint redistributes liability exposure rather than extracting value per se; beneficiaries gain protection, vendors pay via liability internalization, but no seat monopolizes the constraint's operation for concentrated gain.",
+    "key_agents": [
+      "software_vendor: Institutional agenda_setter. Can no longer defer liability via beta designation in critical domains; must accept full product liability or wait for production-ready status.",
+      "life_safety_system_users: Powerless beneficiaries. Gain categorical protection from experimental software in medical, aviation, autonomous control systems.",
+      "financial_system_users: Moderate-power beneficiaries. Constrained exit; depend on constraint to prevent banking and trading infrastructure from being released as beta.",
+      "critical_infrastructure_operators: Organized beneficiaries. Gain assurance that power grids, water systems, telecommunications depend on production-grade software.",
+      "regulatory_authority: Institutional agenda_setter. Enforces the constraint via certification, pre-market review, and liability adjudication.",
+      "vendor_liability_industry: Organized payer. Absorbs increased liability claims; also gains clarity and pricing opportunity.",
+      "expansive_shield_advocates: Organized excluded. Would argue for broad beta protection but are locked out by the carve-out rule."
+    ],
+    "logic_rationale": "Extractiveness is LOW (0.31) because the constraint primarily redistributes liability exposure rather than extracting rent. The beneficiaries (life-safety users, financial-system users) gain protection, but that protection is achieved by forcing vendors to internalize risk, not by a third party capturing value. Suppression is LOW (0.18) because the constraint operates through legal doctrine and regulatory enforcement, not through coercion or behavioral control—vendors understand the rule and comply or litigate, but they are not suppressed into belief. Theater ratio is LOW (0.12) because the constraint's enforcement is substantive: regulators actually deny beta certification in critical domains, vendors actually face liability if they try, and the constraint's function is real. Accessibility collapse is HIGH (0.89) because once the constraint is understood—that beta designation is unavailable in critical domains—alternatives (trying to claim beta status anyway, lobbying for exceptions) effectively collapse; the rule is absolute for the class of systems. Resistance is MODERATE (0.42) because vendors mount real resistance (litigation, regulatory advocacy, industry pressure) but the constraint persists because the underlying principle (severity overrides contract) has deep grounding in tort law and safety ethics. The measurement series shows stability across the interval: the constraint has reached equilibrium enforcement; no drift in extractiveness or suppression is expected because the rule itself does not change. This is characteristic of a mountain constraint—natural limits do not erode.",
+    "perspectival_gap": "From the vendor's seat, the constraint feels like an imposed constraint that removes a valuable tool (beta designation) in exchange for increased liability exposure. From the life-safety user's seat, the same constraint is a protective natural law—it simply reflects the fact that you cannot sell someone a medical device that might kill them and disclaim responsibility via beta status. The engine computes both perspectives from the structural data: the vendor's directionality (d toward target, high extraction via internalized liability) diverges from the user's directionality (d toward beneficiary, protection without cost). This divergence is the measurement the corpus takes. The claim (mountain) and the metrics (low extraction, high collapse) are intentionally independent; a mountain with extracted costs is exactly a false summit, and the FSM gate catches this if beneficiaries are present (which they are, triggering FSM evaluation).",
+    "directionality_logic": "Vendors: institutional power but mobile exit options (can shift to non-critical domains, can litigate, can exit markets). They are targets under the constraint (internalized liability). Directionality near 0.7 (substantial target). Life-safety users: powerless, trapped exit. They are beneficiaries (protected). Directionality near 0.1 (clear beneficiary). Financial-system users: moderate power, constrained exit. Beneficiaries but with some negotiating position. Directionality near 0.2. Regulatory authority: institutional, analytical exit (they enforce, they do not suffer the constraint). Directionality near 0.5 (neutral administrator). The beneficiaries' directionality is derived from the fact that the constraint protects them without imposing cost; the vendors' directionality is derived from the fact that it imposes liability cost without reciprocal benefit.",
+    "mandatrophy_analysis": "The founding problem is LIVE (harm from experimental software in critical domains continues; the constraint persists because the problem persists). The world-rearranges verdict is CORRECT (removing the constraint would restructure liability, regulation, and user recourse). The constraint is classified as MOUNTAIN (natural limit: severity overrides contract), not SNARE (which would require victims and extraction). However, the constraint carries beneficiaries—users protected from experimental software. This triggers FALSE SUMMIT evaluation: is this a genuine natural law or a constructed allocation disguised as natural law? The omega variable addresses this directly: the 'natural law' reading (harm causation cannot be contracted away) is itself contested by the expansive-shield reading (which denies this principle in favor of broad contractual freedom). The constraint is mountain-shaped IF we accept that severity is an irreducible physical property that overrides contract; it is tangled_rope-shaped IF we accept the vendor's framing that contractual allocation (beta disclaimer) is a valid coordination mechanism even in high-stakes domains. The mandatrophy resolution: the founding problem is live, the constraint is structurally justified by the principle it rests on (severity override), and the constraint's persistence is explained by the ongoing problem and the legal/ethical principle, not by theater or inertia. This constraint is NOT a zombie—it is actively maintained because the underlying principle remains contested and the harms remain real.",
+    "kernel_context": "This constraint is ONE READING of the contested beta designation kernel. The kernel is the authoritative claim: 'What does beta designation mean, and in what domains/circumstances does it apply?' The reading instantiated here is the SEVERITY CARVE-OUT READING: beta designation is categorically unavailable for life-safety, financial, and critical-infrastructure systems regardless of testing status. Sibling readings: (1) expansive_shield_reading—beta is a comprehensive, indefinite liability waiver applicable to all software contexts; (2) narrow_warning_reading—beta is time-bounded experimental disclosure with base product liability preserved and genuine testing-phase duration required. Each reading produces structurally different ε and stakeholder sets. The severity carve-out reading treats harm severity as the overriding factor: in domains where failure causes severe, irreversible harm (death, financial ruin, infrastructure collapse), beta designation is not a permissible mechanism—the vendor must accept full liability or wait for production-ready status. The expansive-shield reading treats contractual freedom as primary: beta designation is a valid contract between vendor and user in ALL domains, indefinitely, because both parties consent. The narrow-warning reading treats time-boundedness as primary: beta is permissible only during a genuine testing phase with a known endpoint. These three readings coexist in contemporary legal and regulatory discourse; no single jurisdiction adopts all three, but all three are live positions held by different regulatory bodies, vendor groups, and user advocates. The structural delta: severity carve-out imposes a domain-based gate (life-safety, financial, critical → beta unavailable); expansive-shield imposes no gate (beta available everywhere); narrow-warning imposes a time-based gate (testing phase only). Only the severity carve-out reading is instantiated in this constraint."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_allocation",
+      "question": "Is the categorical unavailability of beta designation in critical domains a natural law (harm causation cannot be contracted away) or a constructed policy allocation (chosen to favor user protection over vendor contractual freedom)?",
+      "resolution_mechanism": "Examine whether the principle (severity overrides contract) is grounded in irreducible physical properties of harm causation, or whether alternative contractual regimes (expansive shield) could persist without logical contradiction. Test against comparative legal systems and historical vendor practices.",
+      "impact": "If natural law: the constraint is genuinely mountain-shaped (emerges naturally from the physics and ethics of harm prevention). If constructed: the constraint is tangled_rope-shaped (coordinates on the principle but requires active enforcement and beneficiaries to maintain). Reclassification affects whether the constraint is expected to persist indefinitely or erode under vendor pressure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether severity-override is a natural limit or a constructed policy choice."
+    },
+    {
+      "id": "domain_boundary_ambiguity",
+      "question": "What constitutes a 'critical system' for purposes of the beta unavailability rule? Where are the boundaries between critical (beta prohibited) and non-critical (beta permissible)?",
+      "resolution_mechanism": "Regulatory precedent and case law establish the domain boundary: life-safety systems (medical devices, aviation control, autonomous vehicle safety-critical functions) are always critical; financial systems (payment, settlement, account management) are generally critical; consumer entertainment software is non-critical. Boundary cases (productivity software with access to health data, consumer financial apps) remain contested in regulatory adjudication.",
+      "impact": "If the boundary is narrow (only explicit life-or-death functions), the constraint affects fewer vendors and has lower effective scope. If the boundary is broad (including health-adjacent, finance-adjacent consumer software), the constraint affects substantially more vendors and has higher scope. Scope affects effective extraction calculation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory definition of critical systems for beta carve-out purposes."
+    },
+    {
+      "id": "reading_foreclosure_status",
+      "question": "Does the severity carve-out reading logically foreclose the expansive-shield reading, or do they coexist as live but opposed positions?",
+      "resolution_mechanism": "The two readings have incompatible core premises: severity carve-out asserts harm severity overrides contract; expansive shield asserts contractual freedom is universal. In a single legal framework, only one can be canonical law. But the readings can coexist across different jurisdictions, different industry sectors, and different types of software—some jurisdictions adopt the carve-out, others enforce broad beta shields. Check whether any single party can consistently hold both readings or whether they are genuinely mutually exclusive.",
+      "impact": "If foreclosure: this reading makes the expansive-shield reading impossible in any framework that adopts it. If coexistence: they are live competing positions in the global regulatory landscape, and the constraint must expect ongoing challenge from the sibling reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading logically rules out the expansive-shield sibling or both coexist as live alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__narrow_warning_reading"
+    ],
+    "dual_formulation_note": "The beta designation kernel decomposes into three structurally distinct constraints corresponding to three readings of what beta designation means and what domains it governs. Each reading has different ε, different beneficiary/victim sets, and different classification. The severity carve-out reading (this constraint) treats harm severity as the overriding principle; the expansive-shield reading treats contractual freedom as primary; the narrow-warning reading treats time-boundedness as primary. All three are linked via network.affects_constraints to reflect that they are readings of the same contested kernel. Each story carries an omega variable documenting the committer structure and the relationship between readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__narrow_warning_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_overrides_contract",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "critical_domain_beta_categorically_unavailable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "strict_liability_doctrine",
+    "drift_state": {
+      "moment": "contemporary_regulatory_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

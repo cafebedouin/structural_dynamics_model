@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__option_value_preserving",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ba1aaa7c-c183-4d97-a46f-97d258d6d8db"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Option-Value-Preserving Acceptable Risk Framework",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "future_decision_makers",
+      "modular_energy_portfolio_investors"
+    ],
+    "victims": [
+      "advocates_for_rapid_decarbonization",
+      "advocates_for_nuclear_elimination",
+      "coal_dependent_regions"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of a contested kernel about acceptable risk in energy policy. The kernel conflict: what does 'acceptable risk' mean when energy pathways carry different risk types (catastrophic tail probability vs. expected aggregate mortality vs. decision-lock risk) and the optimal choice depends on assumptions about deep uncertainties that remain unresolved? This reading—option-value-preserving—argues that acceptable risk requires maintaining multiple energy pathways (nuclear, fossil with CCS, renewables) simultaneously to preserve the flexibility to pivot if empirical outcomes diverge from current assumptions. Two sibling readings contest this: catastrophic-tail-dominant prioritizes avoiding low-probability catastrophic climate outcomes even at higher expected harm; expected-value-dominant minimizes mortality-per-TWh using uniform metrics. The three readings are structurally distinct constraints with different beneficiary/victim sets, different suppression mechanisms, and different claims about what 'acceptable' means. This constraint models ONLY the option-value-preserving reading, not the contested kernel as a whole.",
+    "key_agents": [
+      "option_value_preserving_policymakers: agenda-setters maintaining portfolio diversification, moderate institutional power, generational time horizon, constrained exit (tied to energy policy consensus)",
+      "future_decision_makers: beneficiaries (analytical seat) gaining optionality to pivot if uncertainty resolves; analytical power, unbounded time horizon",
+      "modular_energy_portfolio_investors: beneficiaries with powerful institutional position and mobile exit (can reallocate across pathways without regulatory foreclosure)",
+      "advocates_for_rapid_decarbonization: victims bearing opportunity cost of delayed phase-out; organized power, constrained exit, biographical horizon",
+      "advocates_for_nuclear_elimination: victims bearing cost of continued nuclear viability; moderate power, constrained exit, biographical horizon",
+      "coal_dependent_regions: victims trapped in liminal status—coal neither phased out nor transitioned; moderate power, trapped exit (regional economic dependence)",
+      "catastrophic_risk_advocates (excluded): would prioritize tail-risk prevention over optionality; organized power, constrained exit, generational horizon",
+      "expected_value_minimizers (excluded): would apply mortality metrics uniformly; organized power, constrained exit, biographical horizon"
+    ],
+    "logic_rationale": "Extractiveness measures 0.52 at interval end, rising from 0.38 at start. The rise reflects increasing opportunity cost becoming visible as renewables scale and fossil pathways demonstrate competitive weakness (if climate remains stable, if technology costs fall as projected, if grids adapt to high renewable penetration—all uncertain). The framework's core extraction is that advocates for any major pathway change (decarbonization acceleration, nuclear elimination, catastrophic-risk prioritization) bear the cost of deferred decision in exchange for future optionality they may never use. Theater ratio is stable at ~0.31: the framework genuinely functions (maintains regulatory and investment structures for multiple pathways), but a growing fraction of that maintenance is performative—maintaining coal and nuclear viability despite competitive weakness, articulated as 'preserving options' rather than responding to live policy uncertainty. Suppression is moderate (0.48) and stable: the framework suppresses both rapid-decarbonization and catastrophic-risk-prioritizing coalitions through institutional consensus and research funding allocation patterns, but neither is fully coercively blocked (they retain organizing capacity and political voice, just not policy dominance). Measurement grid is shared across all three metrics at every time point, enabling temporal coherence analysis. Basis values note where measurements rest on empirical observation (post-2010) vs. projection forward from competition scenarios.",
+    "kernel_context": "This constraint instantiates the OPTION-VALUE-PRESERVING reading of the acceptable_risk_energy kernel. The kernel is a contested commitment: different parties read the foundational commitment to 'acceptable risk in energy' as mandating different decision rules. The option-value-preserving reading argues: acceptable risk requires maintaining multiple energy pathways to preserve flexibility under deep uncertainty about climate sensitivity, technology trajectories, and grid stability. Sibling reading 1, catastrophic-tail-dominant: acceptable risk prioritizes avoiding low-probability catastrophic outcomes even at cost of higher expected aggregate harm—demands rapid fossil phase-out regardless of opportunity cost. Sibling reading 2, expected-value-dominant: acceptable risk minimizes aggregate expected harm using mortality-per-TWh metrics applied uniformly across all pathways—demands deployment of provably lowest-harm pathway at scale. The three readings share the same kernel (commitment to energy risk acceptability) but instantiate different constraints because they answer 'acceptable to whom, under which assumptions, at what cost?' differently. The option-value-preserving reading treats uncertainty as irreducible and large; the catastrophic-tail reading treats catastrophic outcomes as dominated concern regardless of probability; the expected-value reading treats empirical mortality metrics as sufficient to resolve the question. Each reading has its own ε, beneficiary/victim set, and suppression mechanism.",
+    "directionality_logic": "The constraint benefits future decision-makers (analytical seat, high beneficiary directionality ~0.1) and modular energy investors (powerful institutional seat, moderate directionality ~0.35). It extracts from rapid-decarbonization advocates (organized seat, high target directionality ~0.8), nuclear-elimination advocates (moderate seat, high target directionality ~0.75), and coal-dependent regions (moderate powerless-adjacent seat, trapped exit, maximum target directionality ~0.95). The suppression mechanism is moderate because both extraction cohorts (rapid decarbonization and nuclear elimination) retain organizing capacity and political voice; they are constrained from dominance but not silenced. Policy-maker seats compute as symmetric (0.5): they benefit from portfolio stability they engineer, but bear cost of defending the framework against both excluded coalitions continuously. The framework's stability since 2010 despite rising renewable competitiveness and accelerating climate science suggests either that beneficiary alignment (investors, future flexibility) is stronger than victim organizing, or that the excluded coalitions lack political power to overthrow the consensus, or both.",
+    "perspectival_gap": "The option-value-preserving policymaker seat perceives this as genuine coordination: 'we are collectively protecting ourselves from premature lock-in by maintaining multiple viable pathways.' The rapid-decarbonization seat perceives extraction: 'they are using uncertainty as a pretext to continue fossil fuel viability and prevent the investment concentration that would accelerate zero-carbon transition.' The nuclear-elimination seat perceives pure extraction: 'the framework preserves nuclear as a viable policy option against our explicit preference and at cost of continued research funding and permitting complexity.' The coal-dependent-region seat perceives liminal entrapment: 'we are neither phased out (which would trigger transition resources) nor treated as viable (which would trigger investment). We are kept in permanent backup status.' From future decision-makers' analytical perspective, the constraint functions as genuine optionality insurance if uncertainty about climate and technology trajectories remains high; it functions as rent-seeking by energy incumbents if the uncertainty is smaller than claimed and the pathway optimization becomes obvious before the optionality is exercised. The engine computes these divergent perceptions from the structural data; the claim that the constraint is 'rope' (my authored position) may compute differently at different seats depending on their power atoms and exit options.",
+    "mandatrophy_analysis": "The founding problem—deep uncertainty about energy pathways and need to preserve flexibility—was live at the constraint's inception (~1995-2010, climate science uncertainty was substantially higher, technology roadmaps were more divergent). As of 2024, the empirical status is contested. The rapid-decarbonization coalition argues the founding problem is dead or dying: climate sensitivity estimates have converged, renewable cost curves have materialized as predicted, grid integration challenges are proving manageable, and the optimal path (rapid renewable deployment + nuclear as supplement, not coal as option) is now clear. The option-value coalition argues the founding problem is live: tipping points in Earth systems remain uncertain, renewable storage at planetary scale is still unproven, and geopolitical supply-chain risks for rare earths justify maintaining coal and nuclear backup. A classical mandatrophy signal would be: founding_problem_status = 'dead' but disappearance_verdict = 'world_rearranges' (the arrangement persists despite the problem that justified it being gone). Here the mandatrophy question is softer: if we empirically resolve that the optimal energy pathway is obvious and the optionality was never exercised because it was never needed, the constraint has become Piton-like (maintained by inertia despite its founding justification eroding). The measurement series showing extractiveness rising while theater ratio stays flat suggests the framework is shifting from 'genuinely preserving options' toward 'using optionality rhetoric to protect incumbent pathways'—a slow mandatrophy trajectory. No decisive mandatrophy verdict yet (founding_problem_status = 'contested' captures this), but the T17 temporal trigger (mountain_extraction_accumulation or tangled_rope_rent_accumulation) would flag investigation if extractiveness continues rising while founding problem clarity remains contested."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_uncertainty_magnitude",
+      "question": "How large is the irreducible uncertainty about energy pathways, climate sensitivity, and technology trajectories? Is it large enough to justify maintaining multiple pathways, or has empirical progress collapsed the decision space to one or two dominant options?",
+      "resolution_mechanism": "Empirical resolution of climate sensitivity via ice-core data and paleo-climate reconstruction; technology cost curves materializing as predicted or diverging; large-scale grid integration experience with 80%+ renewable penetration; CCS and long-duration storage deployment outcomes.",
+      "impact": "If uncertainty remains large (wide model divergence, climate tipping points unresolved, storage unproven), option preservation is genuine coordination. If uncertainty is small (convergent model consensus, climate sensitivity pinned down, storage cost-viable), option preservation becomes rent-seeking cover story and constraint reclassifies toward Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the founding problem remains live or has been empirically resolved."
+    },
+    {
+      "id": "kernel_reading_foreclosure",
+      "question": "Do the three kernel readings (option-value-preserving, catastrophic-tail-dominant, expected-value-dominant) logically foreclose each other within a single coherent decision framework, or do they coexist as valid positions held by different epistemic communities?",
+      "resolution_mechanism": "Analytical reconstruction of the decision-theory premises each reading rests on: does option-value-preserving require assuming uncertainty irreducibility, or is it compatible with resolved uncertainty if new contingencies emerge? Does catastrophic-tail-dominance require treating low-probability outcomes as *overriding* expected value, or can it coexist with expected-value minimization if the tail outcome is also the expected-value-maximal outcome?",
+      "impact": "If readings foreclose each other, one must be wrong and the others right—the kernel has a determinate correct reading. If they coexist, they are valid positions under different axioms and the constraint family remains genuinely contested (no single 'true' reading).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings are logically incompatible or represent valid alternative framings of the decision problem."
+    },
+    {
+      "id": "opportunity_cost_quantification",
+      "question": "What is the empirical opportunity cost of maintaining fossil and nuclear pathways viable while renewable deployment accelerates? How much slower does decarbonization proceed, or how much additional carbon is emitted, compared to a committed renewable-plus-limited-nuclear pathway?",
+      "resolution_mechanism": "Comparative cost and emissions modeling: hold the option-value framework fixed, model energy system deployment under its constraints, compare emissions and transition speed to counterfactual committed-pathway scenarios.",
+      "impact": "If opportunity cost is small (emissions pathway divergence within measurement error, deployment speed unchanged), the framework's extraction is minimal. If opportunity cost is large (multi-gigatonne cumulative emissions difference, 5-10 year decarbonization delay), the extraction is substantial and victim claims are quantified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The magnitude of the constraint's actual extractive impact on decarbonization speed and cumulative emissions."
+    },
+    {
+      "id": "identity_lock_suppression_mechanism",
+      "question": "Is the suppression of rapid-decarbonization advocates and coal-dependent regions structural (external barriers) or internalized (the groups have absorbed the optionality-preservation framing and now operate within it), or both?",
+      "resolution_mechanism": "Post-policy-reversal observation: if the framework were dismantled and committed decarbonization or nuclear phase-out became law, would advocates continue to believe their former position or immediately embrace the new consensus? If they immediately embrace it, suppression was structural; if they maintain resistance, suppression was partly internalized.",
+      "impact": "Structural suppression alone would persist as institutional constraint even if policy changed; internalized suppression would travel with the agent and maintain the framework's logic even absent institutional enforcement. High internalization suggests identity-fusion to the optionality-preservation premise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression reflects external institutional barriers or absorbed normative commitments or both."
+    },
+    {
+      "id": "modular_investor_beneficiary_asymmetry",
+      "question": "Do modular energy portfolio investors genuinely benefit from the option-value-preserving framework, or does their empirical investment behavior (capital flowing to renewable deployment, nuclear construction stopping, coal retirement accelerating despite framework permission) suggest the framework benefits institutional inertia rather than actual investor flexibility?",
+      "resolution_mechanism": "Portfolio analysis of major energy investors: measure actual capital allocation by pathway, note divergence between framework permission (multiple pathways viable) and actual deployment (capital concentrating in renewables). If investors behave as though the framework did NOT exist (flowing capital to lowest-cost, lowest-carbon pathways), the beneficiary designation is misplaced.",
+      "impact": "If investors are benefiting from portfolio maintenance they don't actually exercise, the constraint may be purely extractive on victims (advocates, coal regions) with no genuine beneficiary collecting. Reclassifies toward Snare. If investors genuinely maintain optionality portfolios (capital hedged across all pathways), beneficiary designation stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint's nominal beneficiaries actually exploit the optionality it preserves or merely benefit from its existence regardless of use."
+    },
+    {
+      "id": "reading_committer_kernel_identity",
+      "question": "This constraint is one reading of the acceptable_risk_energy kernel. Is the kernel itself well-defined, or is what counts as 'acceptable risk' so contested that the kernel dissolves into three independent constraint claims rather than three readings of one kernel?",
+      "resolution_mechanism": "Genealogical analysis: trace the three readings back to a common institutionalization moment (energy policy consensus ~1995-2010) and verify a shared commitment was established that all three readings purport to interpret. If no such shared moment exists, the readings are not variants of one kernel but independent constraint claims.",
+      "impact": "If kernel is real (shared historical commitment), the readings coexist as alternative interpretations and the constraint family is properly unified. If kernel is constructed retroactively (three independent claims bundled as 'readings of one thing'), the framing is incoherent and should be split into three independent stories with no 'kernel' language.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three sibling readings genuinely read from a shared kernel or represent independent constraint claims wrongly unified."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__expected_value_dominant"
+    ],
+    "dual_formulation_note": "This constraint is one reading (option_value_preserving) of a contested kernel (acceptable_risk_energy). Two sibling readings instantiate the same kernel under different axioms: catastrophic_tail_dominant prioritizes low-probability catastrophic outcomes over expected harm; expected_value_dominant applies uniform mortality metrics to collapse all pathways into a single optimal choice. The three readings are structurally distinct constraints with different epsilon values, different beneficiary/victim structures, and different suppression mechanisms. The kernel unification is justified by the shared institutional moment (energy policy consensus ~1995-2010) that all three readings purport to interpret. This story models ONLY the option-value-preserving reading; see sibling stories for the other readings' epsilon values and beneficiary decompositions."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "acceptable_risk_energy__expected_value_dominant",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "uncertainty_irreducibility_preserves_optionality_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "decision_lock_cost_exceeds_path_selection_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "multi_pathway_portfolio_maintenance",
+    "drift_state": {
+      "moment": "contemporary_2024",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

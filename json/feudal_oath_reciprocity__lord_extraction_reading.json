@@ -1,0 +1,285 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__lord_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_feudal_oath_reciprocity__lord_extraction_reading",
+    "story_uid": "90c5b0ff-c066-45c3-91d8-026eadf2c41e"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.77,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Oath as Maximum Extraction Authorization (Lord Reading)",
+    "topic_domain": "medieval_political_economy/legal_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "feudal_lords"
+    ],
+    "victims": [
+      "vassals",
+      "peasantry_under_vassal_jurisdiction"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 280
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 280,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 160,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 240,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 280,
+      "value": 0.77
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 280,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oath_interpretation_authority",
+      "question": "Does the sacramental oath itself constrain the lord's extraction to a fixed scope, or does it authorize the lord to interpret the oath's terms and adjust extraction demands within the vassal's practical capacity?",
+      "resolution_mechanism": "Historical analysis of oath formulas, Charter evidence on reciprocal obligations, and judicial records showing how disputes over oath-scope were adjudicated. Examination of whether lords or vassals (or ecclesiastical arbiters) held interpretation authority in practice.",
+      "impact": "If the oath is self-limiting (constrains extraction to fixed terms), the constraint reclassifies toward tangled_rope with bounded extraction; if the oath authorizes the lord to interpret, it remains snare with capacity-limited extraction. This is the central contested premise of the kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether feudal oath is interpretation-resistant (vassal_coordination reading) or lord-interpreted (lord_extraction reading)."
+    },
+    {
+      "id": "ecclesiastical_constraint_on_extraction",
+      "question": "Do the sacramental and Christian dimensions of the oath (oath-swearing as a sacred act, Christian charity obligations) constrain the lord's extraction, or are those dimensions ceremonial without effect on permissible extraction levels?",
+      "resolution_mechanism": "Ecclesiastical records (penitential literature, pastoral guidance, canon law rulings), disputes where the Church attempted to limit extraction on charitable grounds, and instances where lords were excommunicated or denounced for extraction deemed unchristian.",
+      "impact": "If ecclesiastical constraint is real and enforced, the extraction measured here (0.81) would be overstated; the actual ceiling would be lower, and the ecclesiastical_mediation_reading would apply. If ecclesiastical constraint is performative without effect, suppression at 0.77 is accurate and this reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Church authority imposed effective constraint on feudal extraction (ecclesiastical reading) or provided only ceremonial framing."
+    },
+    {
+      "id": "vassal_capacity_measurement",
+      "question": "What constitutes the practical capacity ceiling that bounds extraction in this reading — the upper limit of what a vassal can render without losing ability to maintain household, render military service, or sustain the next generation's claim to the fief?",
+      "resolution_mechanism": "Economic reconstruction of vassal household budgets, military service capacity under various extraction regimes, and historical analysis of when vassals actually rebelled or broke oath — what extraction level triggered the threshold?",
+      "impact": "If capacity ceiling is firm and historically observable, suppression is properly measured at 0.77 (lords rarely pushed past it because rebellion cost exceeded benefit); if capacity ceiling is flexible and often overshot (with rebellions followed by retrenchment), suppression should be higher and extraction claims less bounded than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The actual binding limit on extraction under the lord-reading interpretation of the oath."
+    },
+    {
+      "id": "charter_vs_custom_reading",
+      "question": "Over the interval, does the emergence of Charter evidence and written reciprocal-obligation texts (Magna Carta, vassal charters) create a competing reading that forecloses the lord's unfettered interpretation authority, or does it merely influence the terms of extraction without resolving the interpretation contest?",
+      "resolution_mechanism": "Historical textual analysis of Charter adoption and enforcement, disputes where vassals cited Charter text against lords' expansion attempts, and whether Charter evidence is accepted by courts or ignored as non-binding custom.",
+      "impact": "If Charter evidence forecloses the lord_extraction_reading, the constraint should be reclassified toward vassal_coordination_reading by the end of the interval; if Charter evidence influences but does not foreclose, theater_ratio rise to 0.42 (Charter-reading performance without changed extraction substance) is correct.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether written Charter text forecloses or merely influences the lord-reading of the oath."
+    },
+    {
+      "id": "resistance_mechanisms_development",
+      "question": "Does recorded vassal resistance (petitions, passive noncompliance, subtle defection, charter demands) increase over the interval in response to escalating extraction, or remain constant? If increasing, is it coordinated resistance or isolated incidents?",
+      "resolution_mechanism": "Archive records of vassal petitions, Charter-making moments, documented disputes, and rebellions. Pattern analysis of whether resistance becomes more organized and textually-grounded over time.",
+      "impact": "Rising organized resistance would indicate suppression is increasing (0.77 is an underestimate) and that the constraint approaches its instability point; constant or fragmented resistance would suggest the measured suppression and capacity-bounded extraction are accurate. This feeds both the accuracy of measured suppression and whether the constraint is trending toward reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Pattern of vassal resistance to extraction over the interval."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The feudal oath, sworn between lord and vassal, is a contested kernel that instantiates three distinct constraints depending on which party's interpretation framework is adopted. THIS story instantiates the LORDS' READING: the oath authorizes the lord to extract from the vassal up to the point the vassal cannot render military service or maintain the estate — there is no fixed extraction ceiling in the oath's terms, only a practical capacity limit. The extraction is bounded only by what rebels against, not by what the oath itself says. This reading vindicates absolute lordship doctrine and personalized sovereign authority. The feudal oath under the lord's reading is a snare: vassals are trapped in identity and location, suppression is high (rebellion courts as treason), and the constraint persists because its enforcement cost to lords is lower than the benefit of extraction and because exit costs for vassals are catastrophic.",
+    "key_agents": [
+      "feudal_lords (institutional): set and enforce extraction demands; claim interpretation authority over the oath's terms; use expulsion and military force to suppress resistance",
+      "vassals (moderate power, identity-locked): swear the oath expecting bounded, reciprocal obligations; experience escalating demands over time; resistance is suppressed by treason law and collective punishment threats",
+      "peasantry (powerless): cascade extraction from intensified vassal demands; have no appeal to the lord; trapped by serfdom law and subsistence dependency",
+      "king/sovereign (institutional): authorize feudal oaths as decentralized extraction mechanism; benefit from lords' service upward; call back the oath selectively when rebellion risk emerges",
+      "ecclesiastical authority (institutional, observer with partial exclusion): perform oath's sacramental dimension; claim jurisdiction over oath-breaking; structurally barred from enforcing extraction limits"
+    ],
+    "logic_rationale": "Base extractiveness at 0.81 reflects that the lord interprets the oath to authorize escalating demands bounded only by practical capacity — this is the highest ε reading of the oath. Suppression at 0.77 is high because vassal rebellion is criminalized (treason) and collective (village) punishment is the consequence; the constraint requires active threat of force to maintain. Theater_ratio at 0.42 reflects that the original coordination function (military organization and justice without bureaucracy) is genuine at the interval's start but declines over the 280-year span as written law and charters emerge (stage 0–120) and then stabilizes (120–280) because the constraint's form does not change even though its legitimacy erodes. The measurement series show base_extractiveness rising from 0.62 to 0.81 (lords escalate demands over time as their territorial consolidation allows), suppression rising from 0.58 to 0.77 (enforcement machinery hardens as resistance grows), and theater_ratio rising from 0.25 to 0.42 then plateauing (the constraint performs the coordination story even as extraction becomes its primary function). The shared time grid allows the engine to detect that extraction accelerates (early period) while suppression follows (later period) — a signature of extraction layered onto weakening coordination.",
+    "perspectival_gap": "From the LORD'S seat, the oath is a legitimate authority to extract up to vassal capacity; the sworn reciprocity is satisfied by the lord's provision of protection and justice. From the VASSAL'S seat, the oath specifies bounded obligations and the lord's escalation breaches reciprocity. The engine computes these as different classifications because the structural relationships differ: the lord has directionality ~1.0 (full target becomes beneficiary via extraction authority), the vassal has directionality ~0.9 (full target with identity_locked exit), and the sovereign has directionality ~0.3 (benefits from decentralized extraction without bearing enforcement cost). The same constraint structure — the oath — produces different seat-level types because d is not symmetric.",
+    "directionality_logic": "Feudal lords: beneficiaries who set the constraint and extract from it without running the military apparatus (they organize locally but extract upward). Vassals: victims who are trapped by identity (hereditary status), spatial immobility (tied to the fief), and legal disability (oath breach is treason). Their exit options are: rebellion (d stays high, costs catastrophic), abandonment (identity and property loss), or renegotiation (only credible when rebellion threat emerges, then temporary). Ecclesiastical authority: structurally excluded from enforcing extraction limits despite claiming jurisdiction over oath-breaking — they are observed in the constraint's operation but not decision-makers. The directionality derivation: lords as beneficiaries get low d (benefit from it, set it) unless their power is undermined; vassals as victims with identity_locked + trapped exit get d near 1.0; the peasantry with zero formal voice and powerless status also get d near 1.0. No directionality overrides are needed; the derivation chain produces accurate values.",
+    "mandatrophy_analysis": "The constraint shows classic mandatrophy dynamics: the founding problem (post-Carolingian military organization) is substantially solved by the 12th-13th century (feudal system is stable, states are consolidating, alternative mechanisms emerge), but the constraint persists because its extraction function now outweighs its coordination function. The theater_ratio rise from 0.25 to 0.42 shows the military-justice coordination story is invoked to justify extraction even as its functional necessity wanes. The founding_problem_status is 'contested' because the extraction readings (lord, vassal) disagree about whether the founding problem's resolution justifies ongoing extraction — lords say military necessity is eternal; vassals say necessity was temporary and extraction has become institutionalized rent. The mismatch (founding_problem_status=contested + disappearance_verdict=world_rearranges) correctly fires the mandatrophy flag: the constraint persists despite disputed necessity.",
+    "kernel_context": "This constraint is one reading of the feudal_oath_reciprocity kernel. The kernel is a contested authority structure: the feudal oath as a written (or oral-customary) commitment between lord and vassal. The reading is the lord_extraction_reading: the oath authorizes the lord to interpret its scope and extract up to the vassal's service capacity, with no fixed ceiling. Sibling readings include: (1) vassal_coordination_reading — the oath is interpretation-resistant and establishes fixed, bounded reciprocal obligations enforced by charter text; (2) ecclesiastical_mediation_reading — the oath is bound by Christian charity and sacramental oath obligations, limiting secular extraction. This reading forecloses the vassal_coordination_reading within the lord's institutional framework (a lord claiming absolute interpretation authority cannot simultaneously accept charter-fixed bounds) and coexists with the ecclesiastical_mediation_reading (lords and Church contest extraction limits in parallel, neither logically foreclosing the other). The three readings have different ε values and beneficiary structures because they instantiate different constraint-interpretation premises. The lord_extraction_reading produces high ε (0.81) because the lord's interpretation authority makes extraction unbounded-above; the vassal_coordination_reading would produce lower ε (estimated ~0.48) because charter text fixes obligations; the ecclesiastical_mediation_reading would produce intermediate ε (estimated ~0.55) because charity constraints are weaker than charter text but stronger than lord's unilateral authority."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_oath_reciprocity__vassal_coordination_reading",
+      "feudal_oath_reciprocity__ecclesiastical_mediation_reading",
+      "noble_rebellion_suppression",
+      "medieval_charter_limitation_authority"
+    ],
+    "dual_formulation_note": "The feudal_oath_reciprocity kernel instantiates three distinct constraints depending on interpretation frame: lord_extraction_reading (this file, ε=0.81, snare), vassal_coordination_reading (ε estimated 0.48, tangled_rope), ecclesiastical_mediation_reading (ε estimated 0.55, rope). Each reading has its own constraint_id and independent classification because their ε values are structurally determined by who holds interpretation authority (lord, vassal/charter, Church). The three stories are linked via network.affects_constraints to indicate the kernel contest — each reading influences the others' conditions but does not logically foreclose them (coexists_with relation holds across the family). The kernel itself — the feudal oath as a commitment structure — is preserved in cs_structure.kernel_codification as 'fixed_text' with authority_grounding as 'extraction' (lord authority derives from extraction benefit)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "lord_unilateral_interpretation_authority",
+    "drift_state": {
+      "moment": "charter_emergence_moment",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "feudal_oath_reciprocity__vassal_coordination_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "feudal_oath_reciprocity__ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "lord_holds_oath_interpretation_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "extraction_bounded_by_vassal_capacity_not_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "feudal_oath_reciprocity__vassal_coordination_reading",
+      "feudal_oath_reciprocity__ecclesiastical_mediation_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

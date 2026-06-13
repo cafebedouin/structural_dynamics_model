@@ -1,0 +1,363 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_avoidance_retention__hybrid_near_miss_learning",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "21f334c3-3f49-42fd-8dd8-5f6a39dc4e11"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.67,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Near-Miss Learning Constraint for Catastrophe Competence",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_learning_organizations",
+      "incident_reporting_networks"
+    ],
+    "victims": [
+      "organizations_without_incident_access",
+      "siloed_practitioners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_learning_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate the incident investigation and aggregation infrastructure (FAA, NTSB, ICAO, airline safety boards). They decide what gets investigated with depth, which incidents are worth reporting, and which corrective actions cascade as mandatory requirements. They set the selection pressure for competence maintenance."
+    },
+    {
+      "name": "incident_reporting_networks",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "ASRS, aviation safety reporting systems, accident investigation databases. They aggregate raw incident data, standardize taxonomies, and broadcast learning across organizational boundaries. They benefit by operating as the authoritative intermediary."
+    },
+    {
+      "name": "practitioners_with_incident_access",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pilots, air traffic controllers, nuclear operators, surgeons in domains with strong incident-sharing (aviation, nuclear). They gain access to near-miss learning from peer organizations and foreign sources, enabling competence maintenance without local catastrophes. They also bear reporting requirements, liability exposure from disclosure, and loss of operational autonomy."
+    },
+    {
+      "name": "siloed_practitioners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Healthcare providers, industrial workers, cybersecurity specialists in domains without robust cross-organizational incident-sharing. They cannot access the learning infrastructure available to aviation; they rediscover hazards locally or depend on surviving catastrophes. Their exit is locked by professional identity and by the absence of alternative learning networks."
+    },
+    {
+      "name": "regulators_and_investigative_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Government agencies (FAA, NTSB, medical boards) that determine investigation depth, mandatory corrective action, and enforcement velocity. They set the agenda for what counts as a learning-worthy incident and extract legitimacy from managing safety outcomes."
+    },
+    {
+      "name": "organizations_without_incident_access",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Organizations in domains with weak incident-sharing infrastructure or regulatory gaps. They pay the cost of not learning: higher local incident rates, slower corrective cycles, and degrading competence over time. Exit is constrained by regulatory requirement to operate in their domain."
+    },
+    {
+      "name": "simulation_and_drill_operators",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Training organizations, simulator manufacturers, high-fidelity drill coordinators. They see the constraint as incomplete: simulation alone lacks realism, incident-sharing alone lacks selection pressure. They provide the bridge between learning and competence maintenance."
+    },
+    {
+      "name": "catastrophe_survivors_and_bereaved",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals and families affected by preventable catastrophes that the learning network did not stop. They would testify that the constraint's learning velocity is insufficient and that competence gaps persist. They are structurally locked out of the agenda-setting layer that determines what gets learned and how fast."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aggregates near-miss and foreign incident data across organizational boundaries, preventing each organization from re-discovering the same hazards independently and enabling practitioners to learn without waiting for local catastrophes.",
+    "transfer_function": "Transfers operational autonomy and proprietary incident knowledge from individual organizations to regulatory authorities; transfers competence-maintenance risk from organizations with incident access to those without it; transfers investigative burden from organizations to authorities.",
+    "absent_voices": "Organizations in domains without incident-sharing infrastructure (much of healthcare, manufacturing, cybersecurity) and people harmed by preventable catastrophes that the network failed to stop. They would argue for mandatory participation, faster corrective action, and genuine transparency about why learning velocity is insufficient.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If incident-sharing networks disappeared, practitioners would lose access to peer and foreign incident data; competence maintenance would revert to local rediscovery and catastrophic selection. Incident rates would rise sharply in domains that rely on the network. Practitioners would require more intensive simulation or higher tolerance for catastrophic losses.",
+    "founding_problem": "High-reliability domains discovered that competence maintenance required learning from near-misses and incidents beyond any single organization's experience; catastrophic selection events were too frequent and too costly to be the sole competence maintenance mechanism.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Aviation safety authorities (FAA, ICAO, NTSB) and independent safety researchers attest the problem is live: incident-sharing prevents predictable catastrophes. Comparative studies of aviation versus healthcare show the correlation between incident-sharing strength and accident-rate reduction. Simulation operators and some practitioners attest the constraint is incomplete without additional mechanisms (catastrophic selection or high-realism drills), introducing the contested dimension about sufficiency."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability domains (aviation, nuclear energy) maintain practitioner competence through distributed learning networks that aggregate near-misses, foreign incidents, and high-fidelity drill scenarios. This reading of the catastrophe-avoidance kernel asserts that neither simulation alone (insufficient realism and selection pressure) nor catastrophe alone (too infrequent and costly) suffices for competence retention; the constraint is the orchestrated combination of near-miss aggregation, cross-organizational incident access, and regulatory enforcement of corrective action. This reading is in direct tension with siblings that privilege simulation as a proxy catastrophe or that argue only real catastrophes provide adequate selection pressure. The kernel contest reflects a fundamental disagreement about what constitutes sufficient evidence of competence and sufficient pressure to maintain it.",
+    "key_agents": [
+      "Safety learning organizations (FAA, NTSB, ICAO, medical quality boards) — set the agenda for what counts as a learning-worthy incident and enforce participation",
+      "Incident reporting networks (ASRS, aviation safety databases) — aggregate and broadcast near-miss and foreign incident data across organizational boundaries",
+      "Practitioners with incident access (pilots, controllers, surgeons in strong-sharing domains) — benefit from distributed learning; pay the cost of disclosure and external scrutiny",
+      "Siloed practitioners (medical, manufacturing domains without robust sharing) — trapped outside the learning network; depend on local rediscovery or catastrophic selection",
+      "Regulators and investigative authorities — select which incidents get investigated and which findings cascade as mandatory corrective action; dual agenda-setter/beneficiary role",
+      "Simulation and drill operators — provide the high-realism bridge between incident learning and catastrophic selection; they see the constraint as incomplete",
+      "Catastrophe survivors and bereaved (excluded) — would testify that learning velocity is insufficient; locked out of network governance"
+    ],
+    "logic_rationale": "Extractiveness is moderate and rising (0.35 → 0.58 over interval) because the constraint consolidates control over competence maintenance into the hands of regulatory authorities and incident-sharing networks; organizations and practitioners without incident access lose autonomy over their own learning. The rise reflects gradual expansion of what gets reported, investigated, and mandated as corrective action — the constraint's reach deepens. Suppression is lower than extractiveness (0.42) because participants generally view incident-sharing as legitimate and competence-enhancing; however, active suppression of certain incident types (organizational embarrassment, liability exposure) and of alternative learning pathways (proprietary incident databases, internal-only review) is necessary to maintain the network's coherence. Theater ratio is moderate (0.31) because a real coordination function (distributed learning) coexists with performative compliance (incidents reported but not acted on, corrective actions mandated but not implemented). The measurement series show steady increases, modeling the constraint's expansion and deepening enforcement over a 50-year interval consistent with the historical growth of aviation safety infrastructure post-1945.",
+    "perspectival_gap": "The agenda-setter seats (safety learning organizations, regulators) and the practitioner seats experience this constraint very differently. From the agenda-setter view, the constraint is essential coordination that prevents organizational insularity and catastrophic rediscovery. From the practitioner view, it is a asymmetric power grab: safety authorities control what counts as knowledge and what gets mandated, practitioners bear the cost of disclosure, and the constraint persists because it benefits authorities more than it benefits practitioners (who would prefer local autonomy). Organizations without incident access (siloed practitioners) experience it as pure extraction — they pay the cost of exclusion (higher risk, slower learning) without receiving the benefit. The engine computes directionality per-seat: beneficiaries (practitioners with access + authorities) get d near the beneficiary end; payers (siloed practitioners, organizations without access) get d near the target end. This divergence is the core of the tangled-rope structure: the same constraint coordinates learning for insiders and extracts competence-maintenance risk from outsiders.",
+    "directionality_logic": "Beneficiaries: practitioners_with_incident_access and safety_learning_organizations sit at d ≈ 0.15-0.35 (they benefit from the coordination; their exit is constrained but meaningful — they could exit the domain or the network). Regulators and authorities sit at d ≈ 0.20-0.40 (they benefit from control, constrained exit because they are institutionally committed to the domain). Victims: siloed_practitioners sit at d ≈ 0.75-0.85 (locked in by identity and regulatory requirement; extraction risk from being outside the learning network is structural). organizations_without_incident_access sit at d ≈ 0.70-0.80 (trapped by regulatory prohibition; they must operate in their domain but cannot access the learning infrastructure). The override for siloed_practitioners is identity_locked exit: they cannot leave medicine or their specialty without abandoning professional identity; the constraint's extraction pressure is sustained by that lock. This is not a directionality_overrides entry but rather a core feature of the story: identity lock is the mechanism that keeps them extractively positioned despite whatever other factors might lower d.",
+    "mandatrophy_analysis": "The founding problem (learning from near-misses without waiting for catastrophe) is live in aviation and remains the constraint's justification. However, the constraint has acquired secondary functions that complicate the mandate. Regulatory capture phenomena: authorities expand what counts as reportable to increase investigative scope (filling the space with work); organizations expand simulation and drill infrastructure to appear compliant while resisting deeper incident-sharing. The constraint could be reconfigured to increase learning velocity (mandatory real-time incident broadcast, expedited root-cause analysis, faster corrective cascading) but the current form has settled into a steady-state rhythm that benefits the authorities' administrative infrastructure more than practitioners' actual competence. The theater ratio rising from 0.15 to 0.31 models this: the operational core of learning (near-miss aggregation, corrective action) remains real, but an increasing share of the constraint's energy goes into performative reporting, compliance documentation, and maintaining the authorities' legitimacy. This is not mandatrophy-resolved (the founding problem is still live and still driving the structure), but it shows the early stages of what could become mandatrophy: the authorities running the network are now the primary beneficiaries, and practitioners are paying costs that exceed the learning benefits they receive."
+  },
+  "omegas": [
+    {
+      "id": "simulation_as_proxy_catastrophe",
+      "question": "Is high-fidelity simulation a functionally equivalent proxy for catastrophic selection, or does it systematically fail to generate the psychological, organizational, and systemic learning that real catastrophes produce?",
+      "resolution_mechanism": "Comparative competence outcome studies: measure practitioner and organizational competence (error rates, incident rates, recovery time) in domains that rely heavily on simulation versus those that have experienced recent real catastrophes. Track whether simulated catastrophes generate the same corrective urgency and cultural change as real ones.",
+      "impact": "If simulation IS equivalent, near-miss learning networks could be supplemented or partially replaced by cheaper, more accessible simulation infrastructure, reducing the constraint's extraction intensity and unlocking domains without incident-sharing networks. If simulation is NOT equivalent, the constraint's necessity becomes stronger and its reach justifiably expands; the constraint may even fail to maintain competence in domains that rely on simulation alone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation constitutes genuine practice or a fundamentally different learning modality."
+    },
+    {
+      "id": "catastrophe_necessity_ambiguity",
+      "question": "Is actual catastrophic selection pressure necessary for competence maintenance, or is it merely historically how competence was maintained before incident-sharing networks existed?",
+      "resolution_mechanism": "Long-term comparative analysis: aviation (with strong incident-sharing networks) versus hypothetical counterfactual domain where near-miss access is restricted but catastrophes continue. Track whether competence degradation occurs in absence of incident-sharing, controlling for catastrophic selection.",
+      "impact": "If catastrophe IS necessary (even with near-miss access), the constraint is incomplete; practitioners in domains without catastrophe experience (nascent nuclear energy, novel aerospace designs) will suffer competence degradation regardless of incident-sharing. If catastrophe is NOT necessary, the constraint's power to maintain competence without catastrophic selection is vindicated, and the sibling reading (catastrophe_as_necessary_selector) is largely foreclosed. This directly challenges the kernel contest.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether catastrophic selection is inherently necessary or was historically contingent."
+    },
+    {
+      "id": "learning_velocity_sufficiency",
+      "question": "Is the current velocity of near-miss learning sufficient to prevent competence degradation over the time horizons practitioners operate in (decades for individuals, centuries for organizations)?",
+      "resolution_mechanism": "Measure incident-to-corrective-action cycle times and compare against the decay timescale of competence in absence of reinforcement. Track whether organizations that miss the incident-sharing network (by geographic isolation, regulatory gaps, or proprietary barriers) show competence degradation relative to those with full access.",
+      "impact": "If velocity is insufficient, the constraint fails its core function; practitioners will still require catastrophic selection or more intensive simulation. If velocity is sufficient for some domains but not others (aviation yes, healthcare no), it suggests the constraint is necessary but not evenly distributed — some seats are buying competence maintenance cheaply while others are denied access.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the near-miss learning rate sustains competence maintenance."
+    },
+    {
+      "id": "incident_access_exclusion_mechanism",
+      "question": "Why are incident-sharing networks strong in aviation and weak in healthcare, despite both being high-consequence domains? Is it regulatory structure, cultural commitment to safety, or economic incentives?",
+      "resolution_mechanism": "Institutional historical analysis: trace the founding of aviation safety investigations versus medical error reporting; examine whether legal liability structures, professional culture, or regulatory mandates drive the difference.",
+      "impact": "If the difference is regulatory mandate (FAA requires participation in ASRS; no medical equivalent), the constraint is contingent and could be extended. If it is professional culture or economic incentive structure, extending incident-sharing to healthcare would require cultural shift or incentive realignment. The answer determines whether the sibling reading (catastrophe_as_necessary_selector) is actually describing a structural necessity or just the outcome of regulatory weakness.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Why incident-sharing infrastructure varies across high-reliability domains."
+    },
+    {
+      "id": "regulatory_capture_in_incident_networks",
+      "question": "Do safety authorities benefit from maintaining the scarcity of incident access (strong gatekeeping, slow corrective cycles) because it preserves their legitimacy and administrative infrastructure, rather than optimizing for practitioner competence?",
+      "resolution_mechanism": "Analyze corrective action timelines: measure how quickly incidents cascade from discovery to mandatory corrective action across different regulatory regimes. Compare against what technological constraints would suggest (communication speed, analysis capacity). Look for systematic delays that benefit authorities more than practitioners.",
+      "impact": "If capture is present, the theater_ratio will continue rising and the constraint will evolve into a piton: maintained by performance rather than function, benefiting authorities more than practitioners. If capture is absent, the constraint's extraction is legitimately the cost of coordination rather than institutional rent-seeking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incident-sharing authorities optimize for learning or for institutional preservation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "catastrophe_as_necessary_selector",
+      "simulation_as_proxy_catastrophe"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the catastrophe-avoidance-retention kernel. The sibling readings (catastrophe_as_necessary_selector, simulation_as_proxy_catastrophe) instantiate structurally distinct claims about what maintains competence: real catastrophes only, versus simulation, versus distributed near-miss learning. Each reading has a different ε (measured extractiveness), different beneficiary/victim structure, and different core axiom. This story (hybrid_near_miss_learning) claims ε ≈ 0.58 with extractiveness rising over time as regulatory authority consolidates; it carries the axiom that NEITHER simulation alone NOR catastrophe alone suffices. The sibling simulation_as_proxy_catastrophe carries the axiom that simulation DOES suffice, and would measure lower extraction if practitioner autonomy is preserved through optional drill participation. The sibling catastrophe_as_necessary_selector carries the axiom that actual catastrophe provides irreplaceable selection pressure, and would measure competence degradation in domains without it regardless of incident-sharing. All three stories are empirically contestable and structurally distinct; they are not the same constraint viewed from different angles. The network links show mutual influence: stronger incident-sharing networks (this reading) displace the necessity for catastrophic selection (sibling 1) but do not fully displace the need for high-realism drills (sibling 2)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "distributed_incident_learning_as_sufficient",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_selector",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "distributed_incident_learning_suffices_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "regulatory_incident_aggregation_necessary_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "catastrophe_avoidable_through_near_miss_learning",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ],
+  "gain_flow": "safety_learning_organizations",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

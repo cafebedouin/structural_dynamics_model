@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "2b99c6c7-c39d-403f-8eff-a5f2468df958"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.72,
+    "claimed_type": "rope",
+    "human_readable": "GPL Broad Copyleft Linking-as-Derivation Reading",
+    "topic_domain": "legal/intellectual-property/open-source",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "open_source_commons_beneficiaries",
+      "downstream_users"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "closed_source_libraries"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 28
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The GPL defines software as a derivative work if it links (statically or dynamically) to GPL-licensed code. This reading — the broad copyleft interpretation — treats the act of linking as creating a derivative work, triggering the obligation to disclose source code to all recipients. The constraint pulls dependent code into the open-source commons by making proprietary integration costly unless vendors accept source disclosure. The reading is contested by proponents of narrower interpretations (permissive licenses, interface-boundary readings) who argue that linking through stable APIs is aggregation, not derivation. The broad reading persists through organizational enforcement (GPL maintainers, Free Software Foundation) despite legal uncertainty — no court has definitively confirmed that dynamic linking constitutes derivation under copyright law.",
+    "key_agents": [
+      "gpl_maintainers_and_advocates: Agenda-setter (organized/generational/mobile) — interprets and enforces the broad reading",
+      "proprietary_software_vendors: Payer (powerful/biographical/constrained) — bears the cost of source disclosure or avoidance",
+      "downstream_users: Beneficiary (organized/biographical/mobile) — gains source-access rights from the obligation",
+      "independent_library_developers: Beneficiary+payer (moderate/biographical/constrained) — protected by copyleft but limited in market reach",
+      "permissive_license_maintainers: Excluded (moderate/biographical/mobile) — would argue narrower linking definitions",
+      "courts_and_legal_authorities: Observer (institutional/generational/analytical) — legal uncertainty is the suppression mechanism"
+    ],
+    "logic_rationale": "Extractiveness starts moderate (0.48) because the GPL's coordination function is genuine — it solves a real collective-action problem for open-source developers. But extractiveness rises over the interval (to 0.68) because the broad reading's reach expands: as the industry matured, GPL maintainers increasingly asserted the broadest interpretation (dynamic linking as derivation), and proprietary vendors faced mounting compliance pressure despite legal uncertainty. The theater ratio (0.42) reflects a growing proportion of enforcement activity devoted to defending the broad interpretation against narrower readings, rather than purely protecting source access. Suppression (0.71) is high because the constraint's persistence depends on legal uncertainty: vendors cannot legally challenge the reading without court action, and no court has ruled decisively. The organization and enforcement infrastructure (GPL maintainers, license-enforcement pressure on distributors) suppress alternatives.",
+    "perspectival_gap": "From the GPL maintainers' and downstream users' perspective, the constraint is genuine coordination: source disclosure is the price of access to a shared commons, and everyone benefits. From proprietary vendors' perspective, the constraint operates as enforced extraction: they are forced to choose between source disclosure and avoidance, both costly. The broad reading is the mechanism that creates this asymmetry. Independent library developers sit between: they benefit from copyleft protection but bear the cost of reduced market reach. The engine should compute divergent classifications across these seats — maintainers might classify it as rope (coordination with mutual benefit), vendors as snare or tangled_rope (asymmetric extraction), and developers as tangled_rope (hybrid with asymmetric downstream impact).",
+    "directionality_logic": "GPL maintainers (beneficiaries) have high exit options and institutional power — they can fork the GPL, modify enforcement strategy, or shift to permissive licensing. Their d is low (beneficiary end, ~0.15). Proprietary vendors (payers/victims) have constrained exit: they must either accept source disclosure (which damages their business model), avoid GPL libraries entirely (which limits functionality), or invest in proprietary alternatives (expensive). Their d is high (target end, ~0.85). Downstream users are near symmetric (d~0.5): they benefit from source access and freedom, but bear the cost if proprietary vendors withdraw useful libraries or price increases ripple through the ecosystem. Independent library developers are asymmetrically positioned: they capture some benefits (copyleft protection) but also pay penalties (reduced adoption by vendors). No directionality override is needed — the derivation chain correctly models the structural relationship.",
+    "mandatrophy_analysis": "The constraint is NOT suffering mandatrophy — the founding problem (preventing proprietary capture of open-source work) remains live, and the broad reading is actively maintained to serve it. However, there is a secondary question about whether the broad reading is the minimal necessary mechanism to solve the founding problem, or whether narrower readings (interface boundaries, aggregation-vs-derivation) could achieve the same outcome with less extraction. The engine's classification should detect this as a constraint whose mandate remains live but whose enforcement mechanism is contested — a rope that some seats experience as tangled (coordination + asymmetric cost) or snare (pure extraction).",
+    "kernel_context": "This constraint instantiates the BROAD_COPYLEFT_READING of the GPL derivative-work kernel. The kernel is the GPL's definition of derivation — specifically, whether linking (static or dynamic, through clean interfaces or tight coupling) constitutes creating a derivative work triggering source disclosure. The broad reading asserts: linking is derivation. The sibling readings are: (1) NARROW_LINKING_PERMISSIVE_READING: linking is aggregation; only modifications to GPL code trigger obligations. (2) INTERFACE_BOUNDARY_READING: clean API boundaries constitute non-derivative aggregation even with tight coupling. This reading enforces the broadest scope of copyleft: any linking pulls dependent code into the commons. The narrow and interface readings would permit proprietary vendors to integrate GPL libraries without disclosure, which this reading forecloses structurally."
+  },
+  "omegas": [
+    {
+      "id": "legal_derivation_definition_ambiguity",
+      "question": "Does copyright law's definition of 'derivative work' include dynamic linking through stable APIs, or only modifications to the original source?",
+      "resolution_mechanism": "Court ruling in a copyright case challenging the GPL's linking interpretation (e.g., a vendor defending against GPL enforcement action). The threshold test: does the court treat linking as a technical fact or a legal construct? If technical, narrow linking definitions prevail; if legal, the broad reading's expansionist approach wins.",
+      "impact": "A court ruling that dynamic linking is NOT derivation would immediately collapse the broad reading's enforcement and shift classification from rope/tangled_rope to snare (asymmetric extraction without legal foundation). A ruling confirming the broad reading would legitimize the organizational enforcement infrastructure.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether copyright law's definition of derivation includes linking."
+    },
+    {
+      "id": "commons_benefit_vs_proprietary_cost_asymmetry",
+      "question": "Is the distribution of benefits and costs between open-source commons-builders and proprietary vendors structurally necessary to solve the founding problem, or does the broad reading overreach?",
+      "resolution_mechanism": "Natural experiment: jurisdictions that adopt narrower linking definitions (interface-boundary or aggregation-based) and observe whether (a) open-source development remains robust, (b) proprietary integration expands without damaging the commons, (c) GPL projects shift to permissive licensing. If the commons thrives under narrower readings, the asymmetry was not necessary.",
+      "impact": "If the commons thrives under narrower readings, the broad reading is revealed as extractive rent-seeking by GPL maintainers rather than necessary coordination. Classification would shift toward snare. If narrower readings cause open-source development to collapse or proprietary capture to accelerate, the broad reading is validated as the minimal necessary mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the broad linking interpretation is necessary to sustain the open-source commons."
+    },
+    {
+      "id": "organizational_entrenchment_vs_principle",
+      "question": "Is the broad reading sustained by genuine principle (linking IS derivation under a coherent theory) or by organizational entrenchment (GPL maintainers enforce it regardless of legal ambiguity)?",
+      "resolution_mechanism": "Comparative discourse analysis: examine GPL maintainers' legal arguments over time. Have they refined the argument as courts and language communities developed narrower technical definitions of linking? Or have they doubled down on the broadest reading despite technical drift? Examine licensing decisions by GPL-adjacent projects (Linux, GNOME, etc.): have they adopted narrower readings under pressure, or maintained the broad interpretation? Examine organizational incentives: does the FSF's funding and influence increase as copyleft enforcement tightens?",
+      "impact": "If the reading is principle-driven, the constraint is a contested but coherent legal position. If organizational entrenchment drives it, the constraint is revealed as institutional capture — GPL maintainers enforcing the broadest reading not because law or morality requires it, but because it maximizes their institutional control over dependent code. Classification would shift toward snare if entrenchment dominates.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the broad reading is sustained by principle or organizational entrenchment."
+    },
+    {
+      "id": "reading_foreclosure_vs_coexistence",
+      "question": "Does the broad copyleft reading logically foreclose the narrow-linking reading, or can both coexist as live positions held by different parties?",
+      "resolution_mechanism": "Examine the logical relationship: if linking is NOT derivation (narrow reading's core premise), can the broad reading's core premise (linking IS derivation) be held in the same legal framework? Answer: no — they directly contradict. Within a single copyright law framework, only one can be true. However, different jurisdictions could adopt different readings, and different communities could voluntarily choose different licenses. The question is whether the broad reading actively forecloses the narrow reading or coexists with it through organizational separation.",
+      "impact": "If the readings foreclose each other, the broad reading's enforcement represents a direct conflict over legal truth, not organizational coexistence. If they coexist, the constraint is an organizational choice (GPL projects use broad linking; permissive-license projects use narrow linking) rather than a universal legal fact. This affects how the engine classifies the constraint at different seats.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between broad and narrow linking readings in GPL derivative-work interpretation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading",
+      "open_source_commons_sustainability",
+      "proprietary_library_adoption_dynamics"
+    ],
+    "dual_formulation_note": "The GPL derivative-work kernel admits three structurally distinct readings: the BROAD_COPYLEFT_READING (this story) asserts linking is derivation; the NARROW_LINKING_PERMISSIVE_READING asserts linking is aggregation; the INTERFACE_BOUNDARY_READING asserts API boundaries decouple derivation from linking. Each reading instantiates different ε values, different beneficiary/victim sets, and different classifications. The readings are siblings in a constraint family, linked by network.affects_constraints. The broad reading pulls dependent code into the commons and is strongly enforced by GPL maintainers. The narrow reading permits proprietary integration and is maintained by permissive-license communities. The interface reading attempts a middle ground. All three readings coexist organizationally, though they foreclose each other logically within any single legal framework. Stories for the narrow and interface readings document the same kernel from different epistemic seats."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linking_creates_derivative_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "copyleft_gravity_well_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "derivative_work_expansionist_commons_protection",
+    "drift_state": {
+      "moment": "contemporary_industrial_integration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

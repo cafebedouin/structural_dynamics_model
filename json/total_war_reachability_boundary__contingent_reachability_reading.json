@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "total_war_reachability_boundary__contingent_reachability_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8dd4125c-81ba-443c-a9b5-8bff5e40de99"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.28,
+    "theater_ratio": 0.68,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.55,
+    "claimed_type": "piton",
+    "human_readable": "Total War Reachability Constraint (Contingent Technological Reading)",
+    "topic_domain": "international_relations/strategic_studies/nuclear_deterrence",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "states_developing_destabilizing_technologies"
+    ],
+    "victims": [
+      "global_civilian_populations"
+    ]
+  },
+  "interval": {
+    "start": 1945,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.28
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "Is the reachability boundary a technological fact (contingent on current equilibrium) or a strategic doctrine that persists through political commitment?",
+      "resolution_mechanism": "Historical analysis of technological inflection points (Cuban Missile Crisis, introduction of submarine-launched ballistic missiles, satellite verification systems, hypersonic weapons tests, AI-enabled targeting) and how states responded: did reachability windows open and states consciously choose not to exploit them, or was the boundary truly technologically immutable?",
+      "impact": "If the boundary is doctrine, it can persist through commitment even as technology erodes it (becomes more piton-like, purely performative). If the boundary is technological, its reversal is inevitable as technology advances — the reading's core premise. The classification turns on this distinction: doctrine-as-boundary reads as snare (coordinating states extract deterrence rent from populations); technology-as-boundary reads as piton (the function atrophies as tech makes it obsolete).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reachability boundary is contingent on technology or sustained by political commitment."
+    },
+    {
+      "id": "piton_versus_scaffold_timeline",
+      "question": "If the boundary reverses through technological change, does it do so abruptly (piton scenario: sudden obsolescence, no warning) or gradually (scaffold scenario: declining effectiveness over years, time for policy adjustment)?",
+      "resolution_mechanism": "Monitoring of dual-use technology trajectories (AI, quantum computing, hypersonics, autonomous systems) and prediction intervals for when each could contract reachability windows. Cross-checked against historical rates of strategic doctrine change and arms-control negotiation cycles.",
+      "impact": "Abrupt reversal supports piton (the constraint persists through inertia and no one is maintaining it for its original function). Gradual reversal supports scaffold (there is still time to consciously transition, so the constraint retains intentional architecture). The temporal structure of breakdown determines which constraint-type correctly models the situation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The timeline and mechanism of technological boundary erosion."
+    },
+    {
+      "id": "beneficiary_structure_ambiguity",
+      "question": "Who truly benefits from the reachability boundary holding: nuclear powers (deterrence), populations (survival), or states developing destabilizing tech (the arbitrage window the boundary is beginning to provide)?",
+      "resolution_mechanism": "Analysis of weapons development budgets, strategic doctrine statements, crisis-period decision-making, and resource allocation to deterrence maintenance versus destabilizing technology development. If resources are flowing to both with equal institutional priority, the boundary serves multiple beneficiaries; if resources flow to destabilization, the piton reading (atrophied function, maintained for theater) is supported.",
+      "impact": "If the constraint is genuinely coordinating deterrence (all parties benefit from the boundary holding), it is a rope. If only nuclear powers benefit and populations bear cost, it is a tangled rope. If destabilizing-tech states benefit from its erosion, it is piton (maintained for show, not function). The beneficiary structure is the test.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's benefits are distributed or captured."
+    },
+    {
+      "id": "reading_contest_structural_delta",
+      "question": "This reading (contingent_reachability_reading) contests two sibling readings with mutually exclusive core premises. How would the classification differ under each reading?",
+      "resolution_mechanism": "Compare the constraint's computed type under each reading's metrics and beneficiary structure: contraction_reading would classify as mountain (reachability is permanently off the table, no beneficiaries, no victims from reachability); dropping_reading would classify as rope (reachability is a coordination equilibrium, all parties benefit from the boundary). This reading classifies as piton (function atrophied, could reverse with tech). The divergence is the signal.",
+      "impact": "If contraction_reading is true, the policy implication is acceptance of permanent deterrence equilibrium. If dropping_reading is true, the implication is stabilizing the coordination. If contingent_reachability_reading is true, the implication is governance of dual-use technology and explicit decision-making about the boundary before it reverses. The reading determines the remediation class.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel admits one reading or multiple coexisting readings."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The total war reachability boundary is a constraint on strategic action: the shared understanding that nuclear weapons have made total war between peer powers technically reachable but outcome-indeterminate and catastrophically costly. This reading (contingent_reachability_reading) asserts the boundary is contingent on current technological equilibrium. Current weapons systems (submarine-launched ballistic missiles, distributed command-and-control, verification via satellite) make second-strike retaliation sufficiently survivable that a first strike cannot guarantee victory. But this equilibrium is not permanent. Hypersonic delivery, AI-enabled targeting, autonomous systems, and quantum cryptanalysis could contract the window for retaliation sufficiently that a first strike becomes strategically rational. The constraint is a piton: the function (deterrence coordination) has atrophied as the threat has receded into abstraction (no nuclear war has occurred in 80 years), but the machinery persists through institutional inertia and performative maintenance (doctrinal statements, force postures, arms-control theater). It could reverse with technological change, making reachability windows reappear and deterrence logic unstable.",
+    "key_agents": [
+      "nuclear_weapons_states: maintain the deterrence framework and benefit from current stalemate; agenda-setter role",
+      "global_civilian_populations: depend on the boundary holding, bear existential risk if it reverses; payer role",
+      "states_developing_destabilizing_technologies: invest in technologies that could breach the boundary; beneficiary of current arbitrage window; organized power",
+      "arms_control_verifiers: measure technological change and detect boundary shifts; observer role",
+      "conventional_military_planners: operate under assumption that escalation is bounded; benefit from the constraint",
+      "technology_researchers: excluded from deterrence governance; develop dual-use systems that threaten the boundary"
+    ],
+    "logic_rationale": "Theater ratio is high (0.68 at 2026) because enforcement is now predominantly doctrinal performance rather than technological necessity. The constraint persists largely through strategic command posture statements, arms-control treaty text, and military training regimen — but actual maintenance of the reachability boundary is no longer active. Extraction is low-to-moderate (0.42) because the constraint does not transfer significant resources; it transfers existential risk from states to populations. Suppression is low (0.28) because there is no active coercive enforcement of the boundary — it persists by inertia. Resistance is moderate (0.55) at the structural level but much lower at class and individual levels, indicating that the constraint is widely accepted (populations do not actively resist nuclear deterrence doctrine) but strategically contested (emerging powers and dual-use technology developers resist the exclusionary frame). The measurement series shows theater ratio rising dramatically from 1945 to 2000, then stabilizing — this is the signature of a piton: functional value diminished but maintenance continued at high cost. Suppression requirement tracks theater loosely but lower: the constraint requires less active suppression as it becomes more performative (no one questions the deterrence doctrine at the class level; strategic questioning only occurs at the institutional level among states developing alternative technologies).",
+    "perspectival_gap": "From the nuclear-weapons-states seat, the reachability boundary is a functional coordination mechanism they maintain through doctrine and force structure — it is a rope or tangled rope depending on how one weights the deterrence benefit to themselves versus the existential risk to populations. From the civilian-population seat, it is a constraint they depend on but have no control over — a pure structural fact that either holds or does not. From the states-developing-destabilizing-technologies seat, it is a boundary they are actively testing and preparing to breach — a barrier that will reverse, and they benefit from planning in that direction. From the arms-control-verifiers seat, it is a measurable technical equilibrium that is slowly eroding. These seats should compute different directionalities (d_values) from the structural data: nuclear weapons states near d=0.3 (modest beneficiary), populations near d=1.0 (full targets of the risk), destabilizing-tech states near d=-0.2 (arbitrage beneficiaries of its eventual reversal), verifiers near d=0.5 (symmetric, neither benefiting nor paying).",
+    "directionality_logic": "Beneficiaries are states developing destabilizing technologies (they benefit from the current window where deterrence holds but they can prepare breaching strategies without consequence) and nuclear weapons states (they benefit from deterrence equilibrium, though their benefit is diminishing as they recognize the boundary is eroding). Victims are global civilian populations (they bear the existential risk if the boundary reverses and no backup deterrence mechanism exists). The directionality for nuclear weapons states is near the symmetric point (d ≈ 0.35) because they benefit from coordination (the deterrence framework) but are also targets if the system fails. Civilian populations get d ≈ 0.95 (nearly pure targets). States developing destabilizing tech get d ≈ -0.1 (they are structural beneficiaries of the boundary's eventual reversal, even though they appear as payers in the current moment). This asymmetry is the piton signature: beneficiaries are diffuse and distant (future states exploiting the breach), payers are universal and immediate (populations), and the agenda-setter (nuclear weapons states) is slowly realizing they are trapped by the constraint rather than protected by it.",
+    "mandatrophy_analysis": "The founding problem was real and live during the Cold War: how to prevent escalation into total war between peers with mutual annihilation capability. The founding problem status is now contested. Deterrence orthodoxy asserts the problem remains live and the coordination (reachability boundary) still works. Arms-control analysts and technology researchers assert the problem is dead (no peer has seriously moved toward initiating total war in decades) but the coordination persists as zombie inertia. The constraint exhibits classic mandatrophy: the original function (coordinating deterrence in the face of an active threat) has given way to performative maintenance (doctrinal statements, force postures, arms-control theater) because no one wants to explicitly abandon it (abandonment would require renegotiating the entire international security architecture) but the primary threat (mutual escalation spiral) is no longer the organizing principle of strategic life. The piton classification captures this: the function has atrophied, but the machinery persists. Fixing the mandatrophy would require either (a) explicit re-coordination around a new doctrine (defense dominance, technology governance, graduated deterrence) or (b) acceptance of the boundary's reversal and preparation for a post-deterrence strategic world. Neither is politically feasible at institutional scale.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'total_war_reachability_boundary'. This reading (contingent_reachability_reading) instantiates the claim that reachability is contingent on current technological equilibrium and the constraint is a PITON (atrophied capability that could reverse). The sibling readings are: (1) contraction_reading — Nuclear weapons contracted the strategic space; winnable total war left the feasible set entirely (MOUNTAIN, irreversible, no beneficiaries, no victims from reachability because the threat is gone). (2) dropping_reading — Total war dropped in probability but remains reachable; deterrence is a ROPE (coordination equilibrium, all parties benefit from the boundary holding, no victims). The three readings instantiate fundamentally different strategic ontologies and have different policy implications: contingent_reachability_reading implies governance of dual-use technology and explicit decision-making before the boundary reverses; contraction_reading implies acceptance of permanent deterrence equilibrium; dropping_reading implies stabilization of the coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__contraction_reading",
+      "total_war_reachability_boundary__dropping_reading"
+    ],
+    "dual_formulation_note": "The total_war_reachability_boundary kernel decomposes into three constraint stories with structurally distinct ε values and beneficiary/victim structures. The contingent_reachability_reading (this file) models reachability as technology-dependent and the constraint as a piton. The contraction_reading (sibling) models reachability as permanently blocked and the constraint as a mountain. The dropping_reading (sibling) models reachability as a coordinated equilibrium and the constraint as a rope. The three readings coexist as live positions held by different institutional actors (nuclear weapons states, arms-control analysts, technology researchers); they do not logically foreclose each other within different parties' frameworks. The ε values differ markedly: piton reading has moderate extraction (0.42) because the boundary transfers existential risk but not resources; contraction reading has near-zero extraction (mountain); dropping reading has low extraction because the coordination is mutual benefit. The boundary between readings is not measurement-dependent — it is ontologically distinct claims about what reachability IS and whether it can reverse."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.0
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "total_war_reachability_boundary__contraction_reading",
+      "total_war_reachability_boundary__dropping_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "total_war_reachability_boundary__contraction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "total_war_reachability_boundary__dropping_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reachability_contingent_on_technology",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "boundary_reversal_possible_with_tech_change",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "mutual_assured_destruction_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_dual_use_technology_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__public_safety_coordination",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fc18a97e-137c-4f5d-abf4-a9565425727e"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Statutory Credential Mandate for Public Safety Coordination",
+    "topic_domain": "labor/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consumer_protection_framework",
+      "quality_assured_practitioners"
+    ],
+    "victims": [
+      "incompetent_or_unqualified_practitioners",
+      "excluded_populations_facing_barriers"
+    ],
+    "vindicated_propositions": [
+      "minimum_competence_prevents_consumer_harm",
+      "shared_quality_threshold_coordination_necessity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_licensing_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and enforces the credential requirements (education, exam, continuing competence standards). Administers the licensing system, revokes licenses for incompetence or misconduct, maintains the credential registry. Justifies the mandate as preventing consumer harm from unqualified practitioners. Does not collect rents directly but derives institutional authority and budgetary support from the mandate's existence."
+    },
+    {
+      "name": "consumers_requiring_service",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive the coordination benefit: assurance that any licensed practitioner meets a baseline competence threshold, reducing search costs and quality variance. They do not verify credentials themselves but rely on the licensing system's filtering function. They may face slightly higher service costs (licensing overhead passed through) but gain predictability and recourse if a licensed practitioner harms them."
+    },
+    {
+      "name": "quality_assured_practitioners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Practitioners who meet the credential standard benefit from market signaling: the license certifies their competence to consumers and employers, reducing information asymmetry. The credential becomes a credential good that commands premium compensation and customer trust. They support the mandate actively because it sets a floor below which competitors cannot undercut through quality abandonment."
+    },
+    {
+      "name": "incompetent_or_unqualified_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot legally practice without meeting the credential standard, even if they believe they have the skill. The mandate bars them from the market. They are the objects of the filtering mechanism: their exclusion is necessary for the coordination function to work. They bear the cost of being barred; they have no remedy, no appeal beyond the credential pathway itself."
+    },
+    {
+      "name": "excluded_populations_facing_barriers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups (low-income, racial/ethnic minorities, immigrants, rural populations, workers with non-standard education histories) face higher barriers to credential attainment due to cost, geographic distance to testing/training, prior credential non-recognition, or credential-inflation (the standard rises faster than the underlying competence requirement). They are victims not of incompetence filtering but of differential barrier height that the mandate's design enables."
+    },
+    {
+      "name": "incumbent_profession_gatekeepers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Professional associations and legacy credential holders who design or administer the credential standard. They benefit by controlling entry: the standard can be inflated beyond the minimum competence needed, restricting labor supply and raising incumbent compensation. They are often seat at the regulation table and influence credential design. The dual role captures that they set the standard AND benefit from it — a structural recursion."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Evaluate whether the credential mandate serves legitimate consumer protection or functions as labor supply restriction. They investigate rent-seeking layered onto coordination and can recommend credential reform or prohibition if the restriction exceeds the legitimate safety function."
+    },
+    {
+      "name": "alternative_credential_providers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Employers, educational institutions, or certification bodies outside the statutory system that could provide alternative credentials or competence signaling (apprenticeship, employer certification, blockchain-based skill badges, portfolio evidence). They are structurally barred from substituting for the statutory credential; the mandate makes their alternative signals legally inert. They would argue for credential pluralism but are excluded by the statutory system's legal monopoly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates a shared quality threshold that consumers and employers can rely on without individual verification of every practitioner's competence. Practitioners who meet the threshold credibly signal competence; consumers pay for this coordination benefit through slightly higher service costs (licensing overhead) but gain predictability and recourse. The threshold solves the market failure of information asymmetry in credence goods — services where quality is hard for consumers to verify even after purchase.",
+    "transfer_function": "Moves compliance costs (education, exams, licensing fees, continuing competence maintenance) from consumers to practitioners as the price of legal market access. Moves administrative and enforcement costs to the public budget or regulatory body. Moves market access itself from anyone willing to practice to only those who meet the credential standard. Moves a small fraction of the service fees to incumbent practitioners who benefit from supply restriction.",
+    "absent_voices": "Alternative credential providers (employers, educational institutions, certification bodies outside the statutory system) would argue for credential pluralism and open recognition of equivalent signals but are barred by the statutory monopoly. Excluded populations facing differential barriers (low-income, racial/ethnic minorities, immigrants, workers with non-standard education histories) would argue for differential pathways, subsidies, or reciprocal recognition but are not typically represented in credential design. Consumers who would prefer lower-cost, lower-assurance services (trading off some quality certainty for affordability) are not organized into the regulatory table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the statutory credential mandate disappeared overnight, unqualified practitioners would re-enter the market, service costs would likely fall (reduced legal restriction on labor supply), and consumer quality assurance would fragment into reputation systems, employer screening, alternative certifications, and portfolio-based signals. Some markets with high liability exposure (surgery, aviation, structural engineering) would likely rebuild credential systems (liability pressure would recreate filtering); others (personal services, trades) might stabilize into employer-managed quality signals and word-of-mouth reputation. The unified legal mandate is not inevitable; its disappearance is rearrangement of the market, not collapse.",
+    "founding_problem": "Consumers cannot verify practitioner competence before or even after purchase (credence goods problem); incompetent or negligent practitioners harm consumers; unregulated markets do not naturally filter incompetent practitioners because reputation signals lag harm and switching costs are high. The founding problem is the information asymmetry and market-failure dimension of labor markets for professional services.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economists studying credence goods (Darby & Karni, Dulleck & Kerschbamer meta-analyses) independently corroborate that information asymmetry is a genuine market failure in professional services. Malpractice litigation data and consumer protection agency records attest that incompetent practitioners cause documented harm that market reputation does not prevent. Health ministries, consumer affairs departments, and regulatory bodies outside the credentialing system independently attest to documented consumer harms in unregulated or weakly regulated markets. Incumbent practitioners' own professional associations initially argued for licensing as a consumer protection tool in historical legislative testimony (early 20th century), though they now benefit from it as a supply-restriction mechanism — the founding problem is attested from the defense as well."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the public_safety_coordination reading of the licensing_statute_mandate kernel. The constraint is a statutory requirement that practitioners meet defined competence standards (education, examination, continuous training) before legally serving consumers. Under THIS reading, the mandate exists to solve a genuine market failure: information asymmetry in credence goods. Consumers cannot verify practitioner competence before or after purchase; incompetent practitioners harm consumers; unregulated markets do not filter them out because reputation signals lag harm and switching costs are high. The mandate creates a shared quality threshold that coordinates consumer expectations and practitioner signaling. This reading coexists with two sibling readings: the rent_seeking_suppression reading (same statute, read as labor supply restriction for incumbent benefit) and the graduated_access_filter reading (same statute, read as differential barrier maintenance by class). This story author the public_safety_coordination reading as a clean, ε-invariant constraint — the reading's own structural claim about what the mandate is FOR and HOW it works. The metrics describe that reading's actual operation: moderate extractiveness (some rents captured by incumbents, some costs borne by excluded populations), moderate suppression (legal barriers with real force, but not totalizing), rising theater ratio (increasing share of enforcement energy defending credential inflation rather than consumer protection), and substantial accessibility collapse (alternatives barred by law).",
+    "key_agents": [
+      "regulatory_licensing_authority: institutional, agenda-setter; administers the standard; derives authority from public mandate",
+      "consumers_requiring_service: organized, beneficiary; receive coordination benefit; bear slightly higher service costs",
+      "quality_assured_practitioners: powerful, beneficiary; gain market signaling and premium compensation; support the mandate; shape credential design",
+      "incompetent_or_unqualified_practitioners: powerless, victim; barred from market by design; essential to filtering function",
+      "excluded_populations_facing_barriers: powerless, victim; face differential barrier height; excluded from professional entry; side effect of mandate design",
+      "incumbent_profession_gatekeepers: organized, agenda-setter + beneficiary (dual); control credential design; benefit from supply restriction; incentive to inflate standard",
+      "alternative_credential_providers: moderate, excluded; barred by statutory monopoly; would offer competing signals but are legally inert",
+      "competition_authorities: institutional, observer; evaluate whether restriction exceeds legitimate safety function; can recommend reform"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) because the constraint solves a real coordination problem (information asymmetry in credence goods) but its implementation captures rents through supply restriction and credential inflation. The measurement series shows extractiveness rising from 0.28 to 0.37 over the first 20 time-units, then plateauing, consistent with credential standards accumulating restrictions (continuing education requirements rising, exam pass-rates tightening) until legal/political pushback stabilizes the system. Suppression (0.42 at end) is moderate: the credential requirement is legally enforced and bars practitioners, but the barrier is not totalizing — unqualified practitioners cannot legally practice, but excluded populations can theoretically attempt the credential pathway, unlike truly identity-locked or geographically trapped populations. Theater ratio rises from 0.12 to 0.28, consistent with the constraint's enforcement energy gradually shifting from protecting consumers (early focus) toward defending credential inflation and supply restriction (mature phase). Accessibility collapse (0.68) reflects the legal monopoly: alternatives are barred by statute, not by market pressure, so exits are heavily constricted. Resistance (0.55) is substantial: consumers and alternative providers push back; some unqualified practitioners attempt to practice illegally; competition authorities scrutinize the system; incumbent practitioners defend it fiercely. The claim/metric independence is preserved: the constraint is CLAIMED as rope (public safety coordination) while metrics describe moderate-extractive, actively-enforced operation — the engine's classification reads the metrics, and where the computed type diverges from the claimed rope, that divergence indicates the public-safety story is carrying hidden extraction.",
+    "directionality_logic": "Consumers (organized, mobile exit, national scope) are structural beneficiaries: they receive the coordination benefit (quality assurance without individual verification) at the cost of slightly higher service fees. Their directionality is near the beneficiary end (d ~ 0.2–0.3) because the constraint produces net benefits for them, though they pay diffusely. Quality-assured practitioners (powerful, arbitrage exit) are beneficiaries who actively defend the system: they gain market signaling and premium compensation from the credential good. Their directionality is beneficiary (d ~ 0.15–0.25) because they benefit without running the system (the regulatory authority runs it), though they influence its design. Regulatory authority (institutional, analytical exit) is the agenda-setter: it administers the credential, but it does not collect rents directly — its d is near symmetric (0.45–0.55) because it bears administrative costs and gains legitimacy from the mandate's public framing. Incompetent practitioners (powerless, trapped exit) and excluded populations (powerless, constrained exit) are the structural victims: they bear the mandate's filtering function — they are barred from market access. Their directionality is near the target end (d ~ 0.75–0.85) because the mandate's entire force bears on them as the objects of filtering. Incumbent profession gatekeepers (organized, arbitrage exit) have the most ambiguous directionality: they are listed as dual-positioned (beneficiary + agenda-setter) because they profit from supply restriction AND they shape the standard that creates that restriction. Their d would be beneficiary-low (0.20–0.30) from the profit side but shifted higher (0.40–0.50) by their control of the standard's inflation — the override captures this ambiguity.",
+    "perspectival_gap": "From the regulatory authority's seat, the constraint is genuine public-safety coordination — the mandate prevents consumer harm by filtering incompetent practitioners, and the authority's job is calibrating the filter's sensitivity. From the consumer's seat, the constraint provides coordination benefit (quality assurance) but also imposes diffuse costs (higher service fees, restricted access to low-cost alternatives). From the quality-assured practitioner's seat, the constraint is a market-signaling tool and a supply-restriction mechanism — they benefit from both, but their framing emphasizes the public-safety rationale because it provides political cover. From the excluded-population seat, the constraint is a barrier-maintenance mechanism: the public-safety framing is the legitimate rationale, but the ACTUAL barriers (cost of training, distance to testing, prior credential non-recognition, credential inflation beyond the minimum safety threshold) are not addressed by the coordination function — they are side effects of HOW the standard is designed and administered. From the incumbent-profession seat, the constraint is both a legitimate safety mechanism AND a supply-restriction tool, and these are intentionally conflated in advocacy — arguing for supply restriction would be politically unacceptable, so the supply-restriction argument is embedded in the public-safety framing. The engine computes these divergent directionalities from the structural data (beneficiary/victim, power, exit options, scope) and produces per-seat classification that reveals the perspectival gap: a payer seat might compute tangled_rope or snare while the agenda-setter seat computes rope.",
+    "mandatrophy_analysis": "This constraint is not mandatrophic in the classical sense (mandate dead, function persists theatrically). Rather, the constraint shows EXTRACTION ACCUMULATION layered onto a live founding mandate. The founding problem (information asymmetry in credence goods) remains live — consumers still cannot verify practitioner competence, and unregulated markets still produce harms. But the extraction component (credential inflation, supply restriction, barrier maintenance) has grown over time as incumbent gatekeepers captured the standard-setting process. The theater_ratio rising from 0.12 to 0.28 captures this: early enforcement energy focused on consumer protection (low theater); mature enforcement energy defends credential inflation and alternative-provider exclusion (higher theater — enforcement actions that protect supply restriction, not consumers). The constraint is a HYBRID: genuine coordination with growing extraction. It is not rope-turning-to-snare (which would show rising extractiveness and declining consumer coordination benefit) — the coordination benefit persists, but extraction-per-unit-of-coordination is rising, indicating regulatory capture by incumbents. The founding mandate is live, but it has been hijacked for rent extraction. Classification implications: from a consumer or authority seat, this could compute as rope or tangled_rope (coordination + extraction, both active). From an excluded-population or alternative-provider seat, it computes as snare (pure extraction, no beneficiary story from their position). The Boltzmann floor for resource_allocation type is 0.15; the base extractiveness of 0.38 suggests ~0.23 of excess extraction above the coordination floor, consistent with regulatory capture. The T17 accumulation trigger should fire on this constraint: extraction rising from 0.28 to 0.37 (Phase A, early compliance phase) then stabilizing (Phase B, capture equilibrium) is a classic rent-accumulation pattern.",
+    "kernel_context": "This constraint instantiates the public_safety_coordination reading of the licensing_statute_mandate kernel. The kernel is the stable statutory commitment to credential requirements; the reading is the interpretation of WHAT THOSE REQUIREMENTS ARE FOR and HOW they work. The public_safety_coordination reading asserts that the mandate exists to solve information asymmetry in credence goods — consumers cannot verify competence, incompetent practitioners harm consumers, unregulated markets do not filter them, so a statutory threshold coordinates consumer expectations and practitioner signaling. This reading coexists with two siblings: rent_seeking_suppression (same statute, read as incumbents using public-safety framing to restrict labor supply and extract rents), and graduated_access_filter (same statute, read as a class-sorting mechanism that maintains differential barriers). All three readings apply the same statutory text; they differ in WHAT PROBLEM THE TEXT IS SOLVING and WHO BENEFITS/BEARS COSTS. The sibling readings are distinct constraints with different ε values, different beneficiary/victim structures, and different classifications. This story authors ONLY the public_safety_coordination reading as a clean, complete constraint — the other readings are other JSON files, not described here."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_capture_boundary",
+      "question": "How much of the measured extractiveness (0.38) represents legitimate coordination cost, and how much represents incumbent rent-seeking layered onto coordination?",
+      "resolution_mechanism": "Decompose extractiveness by examining: (1) credential standards relative to demonstrable minimum competence for consumer protection (are continuing education hours beyond safety requirements?), (2) exam pass-rates and their trend (are they tightening beyond competence filtering?), (3) market impact (do service costs rise faster than inflation after the mandate?), (4) alternative-credential suppression (is enforcement energy concentrated on barring alternatives or on filtering incompetents?).",
+      "impact": "If captured rent exceeds 0.15 of the extractiveness, the constraint should compute as tangled_rope or snare (coordination story is cover for extraction). If captured rent is under 0.08, the constraint is genuine rope (coordination cost exceeds extraction). The boundary sits around 0.12–0.15.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's extractiveness is primarily coordination cost or incumbent capture."
+    },
+    {
+      "id": "excluded_populations_structural_vs_incidental",
+      "question": "Are the differential barriers faced by excluded populations (high education costs, geographic distance to testing, prior credential non-recognition) incidental effects of the mandate's implementation, or structural features the mandate enables?",
+      "resolution_mechanism": "Compare barrier profiles across jurisdictions with different credential designs (e.g., apprenticeship-heavy systems vs. exam-heavy systems) and across income groups within the same jurisdiction. If excluded populations face barriers disproportionate to the competence filtering rationale, the mandate is structurally enabling class sorting.",
+      "impact": "If barriers are structural, the constraint functions as graduated_access_filter (sibling reading) alongside public_safety_coordination — the same statute serves both. If barriers are incidental and remediable through design (lower testing costs, remote exams, prior-credential reciprocity), the constraint remains pure public_safety_coordination but with design defects. This omega determines whether to author a separate graduated_access_filter constraint linked via network.affects_constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether differential barriers are incidental to the coordination function or structural class-sorting features."
+    },
+    {
+      "id": "alternative_credential_viability",
+      "question": "Could alternative credentials (employer certification, apprenticeship, portfolio-based signaling, blockchain credentials) perform the same consumer-protection function as the statutory credential, if legal barriers were removed?",
+      "resolution_mechanism": "Natural experiments from jurisdictions that permit alternative credentials or that phase statutory monopolies (EU mutual recognition directives, some US state licenses accepting apprenticeship in lieu of formal education). Examine consumer harm rates and labor-market outcomes under permissive vs. restrictive credential regimes.",
+      "impact": "If alternatives could perform the function equally, the statutory monopoly is pure extraction (the coordination benefit is separable from the legal restriction). If statutory monopoly is necessary for the function, the barrier is legitimate coordination cost. This determines whether the constraint is rope (irreducible) or tangled_rope (the coordination COULD operate without the extraction, but doesn't).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the statutory monopoly is necessary for the coordination function or is pure extraction riding on coordination."
+    },
+    {
+      "id": "incompetent_practitioner_harm_baseline",
+      "question": "What is the measurable consumer harm rate from incompetent or unqualified practitioners in unregulated markets or before statutory licensing? How does the harm rate compare to current (post-mandate) rates?",
+      "resolution_mechanism": "Historical data from markets before licensure was introduced (some US states have pre-licensing records; some professions have data from unlicensed periods). Comparison to contemporary unregulated markets (e.g., unlicensed home services in jurisdictions without credential requirements, illegal practice in regulated jurisdictions). Malpractice litigation rates, consumer complaints, documented injuries.",
+      "impact": "If baseline harm is high and post-mandate harm is low, the coordination function is real and valuable. If harm rates are similar pre- and post-mandate, the mandate is theater (legitimate rationale, minimal real effect, primarily extraction). If harm is reduced but not eliminated, the mandate is a partial solution (rope with some extractive overlay).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the mandate materially reduces consumer harm from incompetent practitioners."
+    },
+    {
+      "id": "reading_contest_empirical_signature",
+      "question": "Which observable patterns would distinguish the public_safety_coordination reading from the rent_seeking_suppression sibling reading?",
+      "resolution_mechanism": "Examine the credential system's design choices: (1) Does the standard track minimum competence needed to prevent consumer harm, or does it inflate beyond that point? (2) Does enforcement focus on filtering incompetent practitioners, or on barring competitors and protecting incumbent supply? (3) Do continuing education requirements correlate with new competence-relevant knowledge, or with gatekeeping? (4) Is the system permissive to alternative credentials that provide equivalent consumer protection, or restrictive? These patterns distinguish the two readings empirically.",
+      "impact": "This omega documents the committer frame (Kernels and Readings Rule 2): the public_safety_coordination and rent_seeking_suppression readings use the SAME statute but interpret it differently. The empirical signature of WHICH reading is operative shows up in enforcement behavior, credential inflation, and alternative-credential suppression, not in the statute's text.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical patterns that distinguish public-safety-coordination from rent-seeking-suppression reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__rent_seeking_suppression",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "The licensing_statute_mandate kernel has three structurally distinct readings: (1) public_safety_coordination (THIS constraint) — the statute solves information asymmetry in credence goods by creating a shared quality threshold; (2) rent_seeking_suppression — the statute restricts labor supply and extracts rents for incumbent practitioners under the guise of public safety; (3) graduated_access_filter — the statute creates differential barriers that sort by class and prior resource access. These three readings apply the SAME statutory text but have different ε values, different beneficiary/victim structures, and different classifications. The public_safety_coordination reading has moderate extractiveness (0.38) and is claimed as rope; the rent_seeking_suppression reading has high extractiveness (0.70+) and is claimed as snare; the graduated_access_filter reading has moderate-to-high extractiveness (0.55+) and is claimed as snare or tangled_rope. The three stories are linked via network.affects_constraints to reflect their kernel kinship."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "incumbent_profession_gatekeepers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__rent_seeking_suppression",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "minimum_competence_prevents_consumer_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "information_asymmetry_market_failure_in_credence_goods",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "market_with_asymmetric_information_failure",
+    "drift_state": {
+      "moment": "contemporary_regulatory_capture_phase",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
