@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — OQ-109 Phase C analytical tail CLOSED to partial: population correction (Iran pair → separate cohort, n=7→n=5) + stability/σ-seat instruments wired & witnessed; two named residuals (gated σ/seat spend, cohort-one reading_diff)
+**Files:** prolog/testsets/ (n=5 restored), prolog/archives/datasets/iran_essay_2026-06-11/, python/cohort_stability.py, python/cohort_sigma_seat_eval.py, ISSUES.md, audits/2026-06-12_cohort_zero/
+**Tier:** landed
+
+Phase C wire-only close (operator spend boundary = gate the replicate draws). Branch
+`oq109-phasec-closeout`; WRITEUP `audits/2026-06-12_cohort_zero/WRITEUP.md`.
+
+- **Step 0 population correction (RESOLVED, witnessed):** two untracked Iran-essay stories
+  (`proxy_integration_narrative`, `strategic_victory_narrative`) were loading the live corpus at
+  **n=7**. Different generation regime than cohort zero (sonnet-4 / temp 1.0 / `seeded_from=none`
+  vs `_c0`'s sonnet-4-5 / temp 0.2 / archive-seeded) ⇒ NOT cohort-zero-homogeneous. Iran-count
+  fork CLOSED positive-controlled (genuine 2-story essay: `tensions_ledger.md` + grep both return
+  exactly two — possibility 2, not an interrupted-run fragment). Archived to
+  `prolog/archives/datasets/iran_essay_2026-06-11/` (commit `d26d04a2`, byte-identity proven before
+  live removal); corpus restored to clean **n=5** (pipeline manifest `2026-06-13T03:01:15Z`,
+  `1f517a0`). NEVER mix into cohort-zero denominators.
+- **Step 1 instruments (LANDED, commit `1f517a08`):** `cohort_stability.py` (per-field
+  draw-stability + within-vs-between distance; **Pattern-5 absence-split** — agreement-in-absence
+  reported separately, never as positive-stable; witnessed on `organization_floor`×3 + `--selftest`
+  PASS) and `cohort_sigma_seat_eval.py` (parse-check reproduces the frozen `SIGMA_SEAT_PREDICTION.md`
+  buckets with **zero drift**; population gate **REFUSES a verdict below 3 stories × 2 draws**,
+  returns NO TEST at n=1 — operator ruling: a degenerate "insufficient power" number would be a
+  counterfeit witness).
+- **Two named residuals (status `partial`):** (1) σ/seat partition test awaits the GATED replicate
+  spend (`agent/cohort_zero_regen.py --replicates <set>`, set chosen against the seat-side
+  prediction fields; then re-run both instruments); (2) `reading_diff` re-point is COHORT-ONE —
+  `constraint_stakeholder/7` is Unknown procedure on the corpus, so it has no live positive control
+  (inert-proving-inert); deferred until a stakeholder-cell story lands. Homogeneity falsifier
+  (item 6) threads to cohort two.
+
+---
+
 ## 2026-06-12 — design_discipline v1.3: §9 recorded — engine's pipeline seat is discovery not justification; no-verdict-skips-adjudication; benign-constraint bias control independently re-derived
 **Files:** docs/design/design_discipline.md, essays/2026-06/marked_to_market.md
 **Tier:** landed

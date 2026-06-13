@@ -4701,9 +4701,38 @@ verdicts. Cross-refs: OQ-107, OQ-101 (the tensions ledger is the natural place t
 **Ω-type:** Ω_E (engineering follow-through with witnessable cutover effects; one embedded
 re-witnessing obligation — the FNL regime resets at the example cutover).
 
-**Status:** open — filed 2026-06-11 at the OQ-83 close. Not gated on any further measurement:
-R4 was ruled SATISFIED (operator, 2026-06-11) and the corpus-scale census recorded
-declined-with-reason in the OQ-83 close.
+**Status:** partial — Phase C mechanical (archive / schema removal / cohort-zero swap / battery)
+AND the analytical-tail instruments LANDED (2026-06-12/13, branch `oq109-phasec-closeout`,
+`audits/2026-06-12_cohort_zero/WRITEUP.md`). TWO named residuals remain: (1) the σ/seat evaluation
+awaits the GATED replicate spend (instruments wired + parse-checked + witnessed; the partition test
+refuses a verdict below 3 stories × 2 draws); (2) the `reading_diff` re-point is a COHORT-ONE item
+(no live stakeholder-cell target — `constraint_stakeholder/7` is Unknown procedure on the corpus).
+Filed 2026-06-11 at the OQ-83 close; R4 ruled SATISFIED (operator, 2026-06-11); corpus-scale census
+recorded declined-with-reason in the OQ-83 close.
+
+**CLOSE-OUT (2026-06-12/13, branch `oq109-phasec-closeout`; `audits/2026-06-12_cohort_zero/WRITEUP.md`):**
+- **Step 0 population correction (RESOLVED):** two untracked Iran-essay stories
+  (`proxy_integration_narrative`, `strategic_victory_narrative`) were loading the live corpus at
+  n=7. Different generation regime than cohort zero (sonnet-4 / temp 1.0 / `seeded_from=none` vs
+  `_c0`'s sonnet-4-5 / temp 0.2 / archive-seeded) ⇒ NOT cohort-zero-homogeneous. Iran-count fork
+  CLOSED positive-controlled (genuine 2-story essay, not a fragment: `tensions_ledger.md` +
+  `grep -l strategic_communications_geopolitical_narrative json/*.json` both return exactly two).
+  Disposition = separate cohort, archived to `prolog/archives/datasets/iran_essay_2026-06-11/`
+  (commit `d26d04a2`, byte-identity proven before live removal); corpus restored to clean n=5
+  (pipeline manifest `2026-06-13T03:01:15Z`, `1f517a0`). NEVER mix into cohort-zero denominators.
+- **Step 1 instruments (LANDED, wire-only, commit `1f517a08`):** `python/cohort_stability.py`
+  (per-field draw-stability + within-vs-between distance; Pattern-5 absence-split; witnessed on
+  `organization_floor`×3 + `--selftest` PASS) and `python/cohort_sigma_seat_eval.py` (parse-check
+  reproduces the frozen prediction with zero drift; population gate REFUSES a verdict below 3×2,
+  returns NO TEST at n=1 — never a degenerate "insufficient power" number).
+- **σ/seat at n=1 = NO TEST (not a verdict):** the degenerate `organization_floor`×3 table is
+  analysis SUBSTRATE, not a finding. The partition test is the GATED replicate spend's deliverable
+  (run `agent/cohort_zero_regen.py --replicates <set>`, set chosen against the seat-side prediction
+  fields; then re-run both instruments). This is the σ/seat residual.
+- **`reading_diff` re-point → COHORT-ONE (residual 2):** `constraint_stakeholder/7` is Unknown
+  procedure on the live corpus and the `_c0` stories are perspectives-free, so the re-point has no
+  live fireable positive control. Deferred to when a stakeholder-cell-bearing story lands; do not
+  ship a re-point whose only "witness" is that nothing fired (inert-proving-inert).
 
 **Inheritance (explicit):** the four-tuple surface is retirable — the cross-framing diff is
 produced and preserved (18 tracked pilot-arm JSONs + `STEP4C_PARTITION.md`,
