@@ -1,6 +1,6 @@
 {
-  "stories_total": 5,
-  "stories_with_replicates": 1,
+  "stories_total": 10,
+  "stories_with_replicates": 6,
   "min_population_for_sigma_seat_verdict": {
     "stories": 3,
     "draws_per_story": 2
@@ -497,6 +497,2466 @@
           ]
         }
       ]
+    },
+    "free_market_naturalization": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.71",
+            "0.71",
+            "0.71"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.42",
+            "0.42",
+            "0.42"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.73",
+            "0.78",
+            "0.73"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.58",
+            "0.54",
+            "0.58"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.68",
+            "0.68",
+            "0.68"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "False",
+            "False",
+            "False"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('financial_intermediaries', 'incumbent_capital_holders', 'market_infrastructure_operators')",
+            "('financial_sector_institutions', 'incumbent_capital_holders', 'market_ideology_advocates')",
+            "('financial_sector_institutions', 'incumbent_capital_holders', 'market_ideology_advocates')"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('allocative_efficiency_doctrine', 'spontaneous_order_thesis')",
+            "('allocative_efficiency_doctrine', 'spontaneous_order_thesis')",
+            "('market_efficiency_hypothesis', 'spontaneous_order_doctrine')"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "8",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('agenda_setter', 1), ('beneficiary', 2), ('excluded', 1), ('observer', 2), ('payer', 2))",
+            "(('agenda_setter', 1), ('beneficiary', 2), ('excluded', 1), ('observer', 1), ('payer', 2))",
+            "(('agenda_setter', 1), ('beneficiary', 2), ('excluded', 1), ('observer', 1), ('payer', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 2), ('institutional', 2), ('moderate', 1), ('organized', 1), ('powerful', 1), ('powerless', 1))",
+            "(('institutional', 1), ('moderate', 2), ('organized', 2), ('powerful', 1), ('powerless', 1))",
+            "(('analytical', 1), ('institutional', 2), ('moderate', 1), ('organized', 1), ('powerful', 1), ('powerless', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('biographical', 2), ('civilizational', 1), ('generational', 4), ('immediate', 1))",
+            "(('biographical', 2), ('generational', 4), ('immediate', 1))",
+            "(('biographical', 1), ('civilizational', 1), ('generational', 4), ('immediate', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 2), ('arbitrage', 1), ('constrained', 2), ('mobile', 2), ('trapped', 1))",
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 2), ('mobile', 2), ('trapped', 1))",
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 2), ('mobile', 2), ('trapped', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('global', 6), ('local', 1), ('regional', 1))",
+            "(('global', 5), ('national', 2))",
+            "(('global', 3), ('local', 1), ('regional', 2), ('universal', 1))"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "world_rearranges",
+            "world_rearranges",
+            "contested"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "dead",
+            "contested",
+            "contested"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('beneficiary_dependence_strength', 'coordination_extraction_separability', 'engineered_versus_lapsed_closure')",
+            "('coordination_vs_extraction_boundary', 'lapsed_vs_engineered_closure', 'naturalization_mechanism')",
+            "('coordination_extraction_separability', 'engineered_vs_lapsed_closure', 'naturalization_funding_dependence')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "18",
+            "18",
+            "18"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "(6, 6, 6)",
+            "(6, 6, 6)",
+            "(6, 6, 6)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<empty>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "Free Market as Natural Default Economic Order",
+            "Free Market as Natural Default Economic Order",
+            "Free Market as Natural Default Economic Order"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "economic/political",
+            "economic/political",
+            "economic/political"
+          ]
+        }
+      ]
+    },
+    "printing_press_reformation": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.42",
+            "0.38",
+            "0.72"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.18",
+            "0.25",
+            "0.28"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.72",
+            "0.68",
+            "0.62"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.58",
+            "0.52",
+            "0.58"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.38",
+            "0.42",
+            "0.68"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "False"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('commercial_printers', 'literate_laity', 'protestant_reformers')",
+            "('commercial_printers', 'literate_laity', 'protestant_reformers')",
+            "('commercial_printers', 'protestant_reformers', 'vernacular_reading_laity')"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "('ecclesiastical_hierarchy', 'latin_scribal_guilds')"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "('information_wants_to_be_free', 'technological_determinism_thesis')",
+            "('information_wants_to_be_free', 'technological_determinism_thesis')",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "6",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('agenda_setter', 1), ('beneficiary', 2), ('excluded', 1), ('observer', 1), ('payer', 1))",
+            "(('agenda_setter', 1), ('beneficiary', 2), ('excluded', 1), ('observer', 1), ('payer', 1))",
+            "(('agenda_setter', 1), ('beneficiary', 3), ('observer', 1), ('payer', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('institutional', 1), ('moderate', 2), ('organized', 1), ('powerless', 1))",
+            "(('analytical', 1), ('institutional', 1), ('moderate', 2), ('organized', 1), ('powerless', 1))",
+            "(('analytical', 1), ('institutional', 2), ('moderate', 1), ('organized', 2), ('powerless', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('biographical', 2), ('civilizational', 2), ('generational', 1), ('immediate', 1))",
+            "(('biographical', 2), ('civilizational', 2), ('generational', 1), ('immediate', 1))",
+            "(('biographical', 3), ('civilizational', 2), ('generational', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('constrained', 2), ('mobile', 2), ('trapped', 1))",
+            "(('analytical', 1), ('constrained', 2), ('mobile', 2), ('trapped', 1))",
+            "(('analytical', 1), ('constrained', 2), ('identity_locked', 1), ('mobile', 3))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('continental', 2), ('local', 1), ('regional', 2), ('universal', 1))",
+            "(('continental', 2), ('local', 1), ('regional', 2), ('universal', 1))",
+            "(('continental', 2), ('national', 1), ('regional', 3), ('universal', 1))"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "contested",
+            "contested",
+            "world_rearranges"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "dead",
+            "dead",
+            "dead"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('commercial_incentive_necessity', 'literacy_gate_exclusion', 'technological_inevitability_vs_coordinated_exploitation')",
+            "('coordination_extraction_separation', 'false_summit_beneficiary_structure', 'technological_determinism_vs_agency')",
+            "('coordination_floor_vs_extractive_overhead', 'identity_lock_persistence', 'technological_inevitability_vs_strategic_capture')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "21",
+            "18",
+            "18"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(7, 7, 7)",
+            "(6, 6, 6)",
+            "(6, 6, 6)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<empty>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "Printing Press Vernacular Scripture Diffusion",
+            "Printing Press Vernacular Scripture Diffusion",
+            "Printing Press Vernacular Scripture Diffusion"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "religious/technological",
+            "religious/technological",
+            "religious/technological"
+          ]
+        }
+      ]
+    },
+    "qwerty_path_naturalization": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.22",
+            "0.22",
+            "0.22"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.12",
+            "0.12",
+            "0.08"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.78",
+            "0.78",
+            "0.78"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.15",
+            "0.15",
+            "0.12"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.18",
+            "0.18",
+            "0.18"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('incumbent_software_platforms', 'keyboard_manufacturers', 'typing_instruction_industry')",
+            "('keyboard_manufacturers', 'legacy_software_vendors', 'typing_instruction_industry')",
+            "('keyboard_manufacturers', 'qwerty_trained_workforce', 'typing_instruction_industry')"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "('network_effects_determinism', 'path_dependence_inevitability')",
+            "('network_effect_lock_in', 'path_dependence_inevitability')"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "7",
+            "6",
+            "6"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('beneficiary', 4), ('excluded', 1), ('observer', 1), ('payer', 1))",
+            "(('beneficiary', 3), ('excluded', 1), ('observer', 1), ('payer', 1))",
+            "(('beneficiary', 3), ('excluded', 1), ('observer', 1), ('payer', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('institutional', 1), ('moderate', 2), ('organized', 3), ('powerless', 1))",
+            "(('analytical', 1), ('institutional', 2), ('moderate', 1), ('organized', 2))",
+            "(('analytical', 1), ('institutional', 1), ('moderate', 1), ('organized', 2), ('powerless', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('biographical', 5), ('generational', 2))",
+            "(('biographical', 3), ('generational', 3))",
+            "(('biographical', 3), ('generational', 3))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 1), ('identity_locked', 1), ('mobile', 2), ('trapped', 1))",
+            "(('analytical', 1), ('constrained', 1), ('mobile', 4))",
+            "(('analytical', 1), ('constrained', 2), ('identity_locked', 1), ('mobile', 1), ('trapped', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('global', 7),)",
+            "(('global', 5), ('national', 1))",
+            "(('global', 5), ('regional', 1))"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "world_rearranges",
+            "world_rearranges",
+            "world_rearranges"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "dead",
+            "dead",
+            "dead"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('beneficiary_inaction_vs_natural_persistence', 'clean_slate_re_emergence', 'efficiency_cost_magnitude')",
+            "('network_effects_sufficiency', 'path_dependence_naturalization', 'qwerty_efficiency_vs_alternatives')",
+            "('ergonomic_suboptimality_magnitude', 'identity_lock_vs_rational_inertia', 'natural_equilibrium_vs_beneficiary_capture')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "24",
+            "15",
+            "18"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(8, 8, 8)",
+            "(5, 5, 5)",
+            "(6, 6, 6)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<empty>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "QWERTY Keyboard Layout as Natural Standard",
+            "QWERTY Keyboard Layout as Natural Standard",
+            "QWERTY Keyboard Layout as Natural Standard"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "technological/economic",
+            "technological/economic",
+            "technological/economic"
+          ]
+        }
+      ]
+    },
+    "total_war_unthinkability": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.22",
+            "0.22",
+            "0.22"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "0.15",
+            "0.12",
+            "0.12"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.88",
+            "0.88",
+            "0.88"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.08",
+            "0.08",
+            "0.08"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.18",
+            "0.18",
+            "0.18"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "False",
+            "False",
+            "False"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('global_trade_networks', 'international_institutions', 'nuclear_armed_states')",
+            "('defense_industrial_complex', 'international_institutions', 'nuclear_armed_states')",
+            "('defense_industrial_complex', 'international_institutions', 'nuclear_armed_states')"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "('mutual_assured_destruction_doctrine', 'nuclear_deterrence_theory')",
+            "('mutual_assured_destruction_doctrine', 'nuclear_deterrence_stability')"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "6",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('beneficiary', 4), ('observer', 1), ('payer', 1))",
+            "(('beneficiary', 5), ('observer', 1), ('payer', 1))",
+            "(('beneficiary', 5), ('observer', 1), ('payer', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('institutional', 4), ('organized', 2))",
+            "(('analytical', 1), ('institutional', 3), ('organized', 1), ('powerful', 1), ('powerless', 1))",
+            "(('analytical', 1), ('institutional', 3), ('organized', 1), ('powerful', 1), ('powerless', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('biographical', 2), ('generational', 4))",
+            "(('biographical', 3), ('generational', 4))",
+            "(('biographical', 3), ('generational', 4))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('constrained', 2), ('mobile', 1), ('trapped', 2))",
+            "(('analytical', 1), ('arbitrage', 1), ('constrained', 1), ('mobile', 2), ('trapped', 2))",
+            "(('analytical', 1), ('constrained', 2), ('mobile', 2), ('trapped', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('global', 6),)",
+            "(('global', 7),)",
+            "(('global', 7),)"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "world_rearranges",
+            "world_rearranges",
+            "world_rearranges"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "live",
+            "live",
+            "live"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "PRESENT",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "PRESENT",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "3",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('interdependence_vs_deterrence', 'natural_law_vs_constructed_constraint', 'reading_contraction_vs_drop')",
+            "('beneficiary_maintenance_role', 'physical_vs_social_construction', 'reading_space_contraction', 'technological_obsolescence_risk')",
+            "('beneficiary_maintenance_role', 'natural_law_vs_constructed_stability', 'reading_space_contraction', 'second_strike_capability_requirement')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "12",
+            "18",
+            "21"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('base_extractiveness', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(6, 6)",
+            "(6, 6, 6)",
+            "(7, 7, 7)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "PRESENT",
+            "<empty>"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "PRESENT",
+            "<absent>",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "Post-1945 Unthinkability of Winnable Great-Power Total War",
+            "Post-1945 Disappearance of Winnable Great-Power Total War",
+            "Post-1945 Disappearance of Winnable Great-Power Total War"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "political/military",
+            "political/military",
+            "political/military"
+          ]
+        }
+      ]
+    },
+    "zero_as_number": {
+      "n_draws": 3,
+      "draw_indices": [
+        1,
+        2,
+        3
+      ],
+      "fields": [
+        {
+          "field": "base_properties.suppression",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.12",
+            "0.12",
+            "0.12"
+          ]
+        },
+        {
+          "field": "base_properties.theater_ratio",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.05",
+            "0.05",
+            "0.05"
+          ]
+        },
+        {
+          "field": "base_properties.accessibility_collapse",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.92",
+            "0.92",
+            "0.92"
+          ]
+        },
+        {
+          "field": "base_properties.resistance",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.03",
+            "0.03",
+            "0.03"
+          ]
+        },
+        {
+          "field": "base_properties.extractiveness",
+          "predicted_bucket": "sigma",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "0.08",
+            "0.08",
+            "0.08"
+          ]
+        },
+        {
+          "field": "base_properties.requires_active_enforcement",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "False",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.emerges_naturally",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "True",
+            "True",
+            "True"
+          ]
+        },
+        {
+          "field": "base_properties.has_sunset_clause",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.beneficiaries",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('algebraic_formalism_tradition', 'computational_mathematics')",
+            "('algebraic_formalism_tradition', 'computational_mathematics')",
+            "('western_mathematical_tradition',)"
+          ]
+        },
+        {
+          "field": "base_properties.victims",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "base_properties.vindicated_propositions",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('algebraic_closure_completeness', 'place_value_notation_superiority')",
+            "('algebraic_closure_completeness', 'place_value_notation_necessity')",
+            "('algebraic_completeness_doctrine', 'place_value_notation_superiority')"
+          ]
+        },
+        {
+          "field": "base_properties.claimed_type",
+          "predicted_bucket": "seat",
+          "flags": [
+            "known"
+          ],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mountain",
+            "mountain",
+            "mountain"
+          ]
+        },
+        {
+          "field": "stakeholders.roster_card",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "field": "stakeholders.role_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('beneficiary', 2), ('observer', 1), ('payer', 1))",
+            "(('beneficiary', 2), ('excluded', 1), ('observer', 1))",
+            "(('beneficiary', 2), ('excluded', 1), ('observer', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.power_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 1), ('institutional', 3))",
+            "(('institutional', 3), ('moderate', 1))",
+            "(('institutional', 2), ('organized', 2))"
+          ]
+        },
+        {
+          "field": "stakeholders.time_horizon_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('civilizational', 3), ('generational', 1))",
+            "(('biographical', 2), ('civilizational', 1), ('generational', 1))",
+            "(('biographical', 1), ('civilizational', 2), ('generational', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.exit_options_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('analytical', 3), ('constrained', 1))",
+            "(('analytical', 4),)",
+            "(('analytical', 3), ('trapped', 1))"
+          ]
+        },
+        {
+          "field": "stakeholders.spatial_scope_multiset",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(('global', 1), ('universal', 3))",
+            "(('global', 2), ('regional', 1), ('universal', 1))",
+            "(('global', 3), ('regional', 1))"
+          ]
+        },
+        {
+          "field": "six_questions.coordination_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.transfer_function",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.absent_voices",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.disappearance_verdict",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "world_rearranges",
+            "world_rearranges",
+            "world_rearranges"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_status",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "dead",
+            "live",
+            "dead"
+          ]
+        },
+        {
+          "field": "six_questions.founding_problem_corroboration",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "gain_flow",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "fixing_cost",
+          "predicted_bucket": "sigma",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "omegas.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "3",
+            "3",
+            "3"
+          ]
+        },
+        {
+          "field": "omegas.id_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "('beneficiary_identification_ambiguity', 'discovery_vs_construction', 'geometric_tradition_displacement')",
+            "('beneficiary_structure_significance', 'natural_law_vs_convention', 'thinkability_vs_first_held')",
+            "('framework_lock_in', 'mathematical_necessity_vs_contingency', 'transmission_vs_discovery')"
+          ]
+        },
+        {
+          "field": "measurements.count",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "15",
+            "15",
+            "21"
+          ]
+        },
+        {
+          "field": "measurements.metric_set",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')",
+            "('base_extractiveness', 'suppression_requirement', 'theater_ratio')"
+          ]
+        },
+        {
+          "field": "measurements.grid_shape",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "value-shift",
+          "values": [
+            "(5, 5, 5)",
+            "(5, 5, 5)",
+            "(7, 7, 7)"
+          ]
+        },
+        {
+          "field": "interval",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "boltzmann.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "network.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "PRESENT",
+            "PRESENT",
+            "PRESENT"
+          ]
+        },
+        {
+          "field": "directionality_overrides.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "<absent>",
+            "<empty>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "cs_structure.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "unstable",
+          "agreement_kind": "presence-flip",
+          "values": [
+            "PRESENT",
+            "<absent>",
+            "<absent>"
+          ]
+        },
+        {
+          "field": "coercion_grid.presence",
+          "predicted_bucket": "seat",
+          "flags": [],
+          "status": "stable",
+          "agreement_kind": "absence",
+          "values": [
+            "<absent>",
+            "<absent>",
+            "<absent>"
+          ]
+        }
+      ],
+      "seed_supplied": [
+        {
+          "field": "base_properties.human_readable",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "Zero as a Number in Western Mathematics",
+            "Zero as a Number in Western Mathematics",
+            "Zero as a Number in Western Mathematics"
+          ]
+        },
+        {
+          "field": "base_properties.topic_domain",
+          "status": "stable",
+          "agreement_kind": "positive",
+          "values": [
+            "mathematical/conceptual",
+            "mathematical/conceptual",
+            "mathematical/conceptual"
+          ]
+        }
+      ]
     }
   },
   "within_vs_between": {
@@ -533,8 +2993,324 @@
         "n_comparable": 31,
         "n_positive_agree": 24,
         "n_absence_agree": 7
+      },
+      {
+        "story": "free_market_naturalization",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.3548387096774194,
+        "n_comparable": 31,
+        "n_positive_agree": 20,
+        "n_absence_agree": 7
+      },
+      {
+        "story": "free_market_naturalization",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.4117647058823529,
+        "n_comparable": 34,
+        "n_positive_agree": 20,
+        "n_absence_agree": 4
+      },
+      {
+        "story": "free_market_naturalization",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.3235294117647059,
+        "n_comparable": 34,
+        "n_positive_agree": 23,
+        "n_absence_agree": 4
+      },
+      {
+        "story": "printing_press_reformation",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.25,
+        "n_comparable": 32,
+        "n_positive_agree": 24,
+        "n_absence_agree": 6
+      },
+      {
+        "story": "printing_press_reformation",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.5428571428571428,
+        "n_comparable": 35,
+        "n_positive_agree": 16,
+        "n_absence_agree": 3
+      },
+      {
+        "story": "printing_press_reformation",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.5142857142857142,
+        "n_comparable": 35,
+        "n_positive_agree": 17,
+        "n_absence_agree": 3
+      },
+      {
+        "story": "qwerty_path_naturalization",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.36666666666666664,
+        "n_comparable": 30,
+        "n_positive_agree": 19,
+        "n_absence_agree": 8
+      },
+      {
+        "story": "qwerty_path_naturalization",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.43333333333333335,
+        "n_comparable": 30,
+        "n_positive_agree": 17,
+        "n_absence_agree": 8
+      },
+      {
+        "story": "qwerty_path_naturalization",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.3333333333333333,
+        "n_comparable": 30,
+        "n_positive_agree": 20,
+        "n_absence_agree": 8
+      },
+      {
+        "story": "total_war_unthinkability",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.5142857142857142,
+        "n_comparable": 35,
+        "n_positive_agree": 17,
+        "n_absence_agree": 3
+      },
+      {
+        "story": "total_war_unthinkability",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.4375,
+        "n_comparable": 32,
+        "n_positive_agree": 18,
+        "n_absence_agree": 6
+      },
+      {
+        "story": "total_war_unthinkability",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.2571428571428571,
+        "n_comparable": 35,
+        "n_positive_agree": 26,
+        "n_absence_agree": 3
+      },
+      {
+        "story": "zero_as_number",
+        "pair": [
+          1,
+          2
+        ],
+        "distance": 0.3125,
+        "n_comparable": 32,
+        "n_positive_agree": 22,
+        "n_absence_agree": 6
+      },
+      {
+        "story": "zero_as_number",
+        "pair": [
+          1,
+          3
+        ],
+        "distance": 0.3548387096774194,
+        "n_comparable": 31,
+        "n_positive_agree": 20,
+        "n_absence_agree": 7
+      },
+      {
+        "story": "zero_as_number",
+        "pair": [
+          2,
+          3
+        ],
+        "distance": 0.3548387096774194,
+        "n_comparable": 31,
+        "n_positive_agree": 20,
+        "n_absence_agree": 7
       }
     ],
-    "between_pairs": []
+    "between_pairs": [
+      {
+        "stories": [
+          "organization_floor",
+          "free_market_naturalization"
+        ],
+        "distance": 0.625,
+        "n_comparable": 32,
+        "n_positive_agree": 12,
+        "n_absence_agree": 6
+      },
+      {
+        "stories": [
+          "organization_floor",
+          "printing_press_reformation"
+        ],
+        "distance": 0.6470588235294118,
+        "n_comparable": 34,
+        "n_positive_agree": 12,
+        "n_absence_agree": 4
+      },
+      {
+        "stories": [
+          "organization_floor",
+          "qwerty_path_naturalization"
+        ],
+        "distance": 0.6129032258064516,
+        "n_comparable": 31,
+        "n_positive_agree": 12,
+        "n_absence_agree": 7
+      },
+      {
+        "stories": [
+          "organization_floor",
+          "total_war_unthinkability"
+        ],
+        "distance": 0.5,
+        "n_comparable": 32,
+        "n_positive_agree": 16,
+        "n_absence_agree": 6
+      },
+      {
+        "stories": [
+          "organization_floor",
+          "zero_as_number"
+        ],
+        "distance": 0.6666666666666666,
+        "n_comparable": 33,
+        "n_positive_agree": 11,
+        "n_absence_agree": 5
+      },
+      {
+        "stories": [
+          "free_market_naturalization",
+          "printing_press_reformation"
+        ],
+        "distance": 0.5757575757575758,
+        "n_comparable": 33,
+        "n_positive_agree": 14,
+        "n_absence_agree": 5
+      },
+      {
+        "stories": [
+          "free_market_naturalization",
+          "qwerty_path_naturalization"
+        ],
+        "distance": 0.5483870967741935,
+        "n_comparable": 31,
+        "n_positive_agree": 14,
+        "n_absence_agree": 7
+      },
+      {
+        "stories": [
+          "free_market_naturalization",
+          "total_war_unthinkability"
+        ],
+        "distance": 0.59375,
+        "n_comparable": 32,
+        "n_positive_agree": 13,
+        "n_absence_agree": 6
+      },
+      {
+        "stories": [
+          "free_market_naturalization",
+          "zero_as_number"
+        ],
+        "distance": 0.5625,
+        "n_comparable": 32,
+        "n_positive_agree": 14,
+        "n_absence_agree": 6
+      },
+      {
+        "stories": [
+          "printing_press_reformation",
+          "qwerty_path_naturalization"
+        ],
+        "distance": 0.59375,
+        "n_comparable": 32,
+        "n_positive_agree": 13,
+        "n_absence_agree": 6
+      },
+      {
+        "stories": [
+          "printing_press_reformation",
+          "total_war_unthinkability"
+        ],
+        "distance": 0.6470588235294118,
+        "n_comparable": 34,
+        "n_positive_agree": 12,
+        "n_absence_agree": 4
+      },
+      {
+        "stories": [
+          "printing_press_reformation",
+          "zero_as_number"
+        ],
+        "distance": 0.6060606060606061,
+        "n_comparable": 33,
+        "n_positive_agree": 13,
+        "n_absence_agree": 5
+      },
+      {
+        "stories": [
+          "qwerty_path_naturalization",
+          "total_war_unthinkability"
+        ],
+        "distance": 0.5483870967741935,
+        "n_comparable": 31,
+        "n_positive_agree": 14,
+        "n_absence_agree": 7
+      },
+      {
+        "stories": [
+          "qwerty_path_naturalization",
+          "zero_as_number"
+        ],
+        "distance": 0.5483870967741935,
+        "n_comparable": 31,
+        "n_positive_agree": 14,
+        "n_absence_agree": 7
+      },
+      {
+        "stories": [
+          "total_war_unthinkability",
+          "zero_as_number"
+        ],
+        "distance": 0.59375,
+        "n_comparable": 32,
+        "n_positive_agree": 13,
+        "n_absence_agree": 6
+      }
+    ]
   }
 }

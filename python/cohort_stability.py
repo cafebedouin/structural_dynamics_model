@@ -292,9 +292,12 @@ def pair_distance(s1, s2):
 
 
 def discover():
-    """Returns {story_id: [(draw_idx, path), ...]} grouped by provenance.seeded_from."""
-    groups = {}
-    cands = list(JSON_DIR.glob("*_c0.json")) + list(REPLICATE_DIR.glob("*_c0_d*.json"))
+    """Returns {story_id: [(draw_idx, path), ...]} grouped by provenance.seeded_from.
+    Draws live in json/<id>_c0.json (corpus-member draw 1 of an _c0 story) and the replicate
+    dir (every draw of a replicate-probe story, incl. kernel-seeded triples). Group by
+    seeded_from; dedup on (seeded_from, draw) preferring the json/ corpus member."""
+    groups, seen = {}, {}
+    cands = list(JSON_DIR.glob("*_c0.json")) + sorted(REPLICATE_DIR.glob("*.json"))
     for p in cands:
         try:
             d = json.load(open(p))
@@ -305,6 +308,9 @@ def discover():
         draw = prov.get("draw")
         if sid is None or sid == "none" or draw is None:
             continue
+        if (sid, draw) in seen:      # first writer wins (json/ enumerated before replicates)
+            continue
+        seen[(sid, draw)] = p
         groups.setdefault(sid, []).append((draw, p))
     for sid in groups:
         groups[sid].sort()

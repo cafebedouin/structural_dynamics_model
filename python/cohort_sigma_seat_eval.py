@@ -158,31 +158,108 @@ def population_gate():
     return True
 
 
+def _logfact_cache(n, _c=[0.0]):
+    import math
+    while len(_c) <= n:
+        _c.append(_c[-1] + math.log(len(_c)))
+    return _c[n]
+
+
+def fisher_exact_2x2(a, b, c, d):
+    """Two-sided Fisher exact p for [[a,b],[c,d]]. Self-contained (no scipy)."""
+    import math
+    n = a + b + c + d
+    if n == 0:
+        return 1.0
+    r1, r2, c1 = a + b, c + d, a + c
+
+    def lp(x):  # log P(A=x) under hypergeometric with fixed margins
+        y, z, w = r1 - x, c1 - x, r2 - (c1 - x)
+        if min(x, y, z, w) < 0:
+            return None
+        lf = _logfact_cache
+        return (lf(r1) + lf(r2) + lf(c1) + lf(n - c1) - lf(n)
+                - lf(x) - lf(y) - lf(z) - lf(w))
+    p_obs = lp(a)
+    total = 0.0
+    for x in range(0, min(r1, c1) + 1):
+        px = lp(x)
+        if px is not None and px <= p_obs + 1e-9:
+            total += math.exp(px)
+    return min(1.0, total)
+
+
 def run_verdict():
-    """Post-spend partition test. Only reached when population_gate() passes."""
+    """Post-spend partition test. Only reached when population_gate() passes.
+    Unit = one (field, story) cell over non-seed, non-known, in-scope fields. σ-side evidence =
+    positive-stable; seat-side evidence = unstable; agreement-in-absence excluded (Pattern-5)."""
     tbl = json.load(open(STABILITY_JSON))
-    md = parse_prediction_md()
-    # contingency over non-seed, non-known, in-scope fields, aggregated across stories
     cells = {("sigma", "stable"): 0, ("sigma", "unstable"): 0,
              ("seat", "stable"): 0, ("seat", "unstable"): 0}
     known_rows = []
+    per_field = {}  # field -> {"bucket":, "stable":n, "unstable":n}
+    n_stories = 0
     for sid, sdata in tbl["per_story"].items():
+        n_stories += 1
         for r in sdata["fields"]:
             if "known" in r["flags"]:
-                known_rows.append((sid, r["field"], r["status"]))
+                known_rows.append((sid, r["field"], r["status"], r["agreement_kind"]))
                 continue
             if r["agreement_kind"] == "absence":
-                continue  # Pattern-5: absence carries no σ/seat evidence
-            cells[(r["predicted_bucket"], r["status"])] = \
-                cells.get((r["predicted_bucket"], r["status"]), 0) + 1
-    print("\n=== σ/seat PARTITION (non-seed, non-known, in-scope; absence excluded) ===")
-    print(f"  predicted-σ   : stable(=σ-side) {cells[('sigma','stable')]}  "
-          f"unstable(=seat-side) {cells[('sigma','unstable')]}")
-    print(f"  predicted-seat: stable        {cells[('seat','stable')]}  "
-          f"unstable             {cells[('seat','unstable')]}")
-    print(f"  KNOWN-IN-ADVANCE (reported, NO blind credit): {known_rows}")
-    print("  NOTE: match-beyond-chance test (Fisher/χ²) + per-field seat-boundary findings to be")
-    print("  computed here when this path is first exercised post-spend.")
+                continue
+            cells[(r["predicted_bucket"], r["status"])] += 1
+            pf = per_field.setdefault(r["field"], {"bucket": r["predicted_bucket"],
+                                                   "stable": 0, "unstable": 0})
+            pf[r["status"]] += 1
+
+    a = cells[("sigma", "stable")]    # predicted-σ AND observed stable  (hit)
+    b = cells[("sigma", "unstable")]  # predicted-σ AND observed unstable (miss)
+    c = cells[("seat", "stable")]     # predicted-seat AND observed stable (miss)
+    d = cells[("seat", "unstable")]   # predicted-seat AND observed unstable (hit)
+    p = fisher_exact_2x2(a, b, c, d)
+    hits, total = a + d, a + b + c + d
+
+    print(f"\n=== σ/seat PARTITION TEST (n_stories={n_stories}; non-seed, non-known, "
+          f"in-scope; absence excluded) ===")
+    print(f"  contingency [(field,story) cells]:")
+    print(f"                     observed-stable   observed-unstable")
+    print(f"    predicted-σ          {a:>3} (hit)         {b:>3} (miss)")
+    print(f"    predicted-seat       {c:>3} (miss)        {d:>3} (hit)")
+    print(f"  prediction-consistent cells: {hits}/{total} = {hits/total:.2%}")
+    print(f"  Fisher exact (two-sided) p = {p:.4g}")
+    direction_ok = (a / max(1, a + b)) > (c / max(1, c + d))  # σ more stable than seat
+    if p < 0.05 and direction_ok:
+        verdict = ("PREDICTION SURVIVES — stability partitions by predicted σ/seat beyond chance, "
+                   "in the predicted direction (σ-fields more draw-stable than seat-fields).")
+    elif p < 0.05 and not direction_ok:
+        verdict = ("FINDING — significant association in the WRONG direction; the seat boundary "
+                   "sits opposite to the prediction. Record as a seat-boundary finding; do NOT "
+                   "redraw the frozen prediction.")
+    else:
+        verdict = (f"NO SEPARATION at p<0.05 (p={p:.3g}) — the partition does not beat chance on "
+                   f"this population. Either underpowered or σ/seat does not track draw-stability "
+                   f"here; record as-is, escalate, do not redraw the prediction.")
+    print(f"  VERDICT: {verdict}")
+
+    print(f"\n  per-field surprises (the seat-boundary findings the prediction cares about):")
+    for f, pf in sorted(per_field.items()):
+        n = pf["stable"] + pf["unstable"]
+        if n == 0:
+            continue
+        frac_unstable = pf["unstable"] / n
+        tag = None
+        if pf["bucket"] == "sigma" and frac_unstable >= 0.5:
+            tag = "predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)"
+        elif pf["bucket"] == "seat" and frac_unstable <= 0.5:
+            tag = "predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)"
+        if tag:
+            print(f"    [{pf['bucket']:5}] {f}: stable={pf['stable']} unstable={pf['unstable']} "
+                  f"-> {tag}")
+    print(f"\n  KNOWN-IN-ADVANCE (reported, NO blind credit): "
+          f"{[(s, f, st) for s, f, st, _ in known_rows]}")
+    print(f"\n  Noise-hypothesis note: a SIGNIFICANT, direction-correct association is evidence "
+          f"AGAINST the noise model (which predicts instability smears across the σ/seat line); a "
+          f"null is consistent with either underpower or noise — see n_stories.")
 
 
 def main():

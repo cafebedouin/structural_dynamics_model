@@ -29,8 +29,41 @@
   PARSE-CHECK PASS — instrument buckets reproduce the frozen prediction
 
 === POPULATION GATE (min: 3 stories x 2 draws) ===
-  replicate stories with >=2 draws: 1
-  *** NO TEST — gated. 1 < 3 stories. ***
-  The σ/seat partition test has no between-story denominator below minimum
-  population; emitting a verdict here would be a counterfeit witness. The σ/seat
-  line is OPEN (partial-with-named-residual) until the replicate spend lands.
+  replicate stories with >=2 draws: 6
+  population sufficient — running the partition test.
+
+=== σ/seat PARTITION TEST (n_stories=6; non-seed, non-known, in-scope; absence excluded) ===
+  contingency [(field,story) cells]:
+                     observed-stable   observed-unstable
+    predicted-σ           58 (hit)          62 (miss)
+    predicted-seat        36 (miss)         32 (hit)
+  prediction-consistent cells: 90/188 = 47.87%
+  Fisher exact (two-sided) p = 0.649
+  VERDICT: NO SEPARATION at p<0.05 (p=0.649) — the partition does not beat chance on this population. Either underpowered or σ/seat does not track draw-stability here; record as-is, escalate, do not redraw the prediction.
+
+  per-field surprises (the seat-boundary findings the prediction cares about):
+    [sigma] base_properties.beneficiaries: stable=0 unstable=6 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] base_properties.requires_active_enforcement: stable=2 unstable=3 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] base_properties.resistance: stable=3 unstable=3 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] base_properties.theater_ratio: stable=3 unstable=3 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] base_properties.victims: stable=0 unstable=2 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] base_properties.vindicated_propositions: stable=0 unstable=5 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [seat ] boltzmann.presence: stable=6 unstable=0 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [sigma] fixing_cost: stable=1 unstable=2 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] gain_flow: stable=1 unstable=2 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [seat ] interval: stable=6 unstable=0 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [seat ] measurements.metric_set: stable=4 unstable=2 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [seat ] network.presence: stable=6 unstable=0 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [seat ] omegas.count: stable=5 unstable=1 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [seat ] six_questions.disappearance_verdict: stable=4 unstable=2 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [seat ] six_questions.founding_problem_status: stable=3 unstable=3 -> predicted-seat but mostly STABLE -> candidate situation-fixed (theory overbounds)
+    [sigma] stakeholders.exit_options_multiset: stable=0 unstable=6 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] stakeholders.power_multiset: stable=0 unstable=6 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] stakeholders.role_multiset: stable=0 unstable=6 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] stakeholders.roster_card: stable=2 unstable=4 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] stakeholders.spatial_scope_multiset: stable=0 unstable=6 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+    [sigma] stakeholders.time_horizon_multiset: stable=1 unstable=5 -> predicted-σ but mostly UNSTABLE -> candidate seat-boundary (theory underbounds)
+
+  KNOWN-IN-ADVANCE (reported, NO blind credit): [('organization_floor', 'base_properties.extractiveness', 'stable'), ('organization_floor', 'base_properties.claimed_type', 'stable'), ('free_market_naturalization', 'base_properties.extractiveness', 'stable'), ('free_market_naturalization', 'base_properties.claimed_type', 'stable'), ('printing_press_reformation', 'base_properties.extractiveness', 'unstable'), ('printing_press_reformation', 'base_properties.claimed_type', 'stable'), ('qwerty_path_naturalization', 'base_properties.extractiveness', 'stable'), ('qwerty_path_naturalization', 'base_properties.claimed_type', 'stable'), ('total_war_unthinkability', 'base_properties.extractiveness', 'stable'), ('total_war_unthinkability', 'base_properties.claimed_type', 'stable'), ('zero_as_number', 'base_properties.extractiveness', 'stable'), ('zero_as_number', 'base_properties.claimed_type', 'stable')]
+
+  Noise-hypothesis note: a SIGNIFICANT, direction-correct association is evidence AGAINST the noise model (which predicts instability smears across the σ/seat line); a null is consistent with either underpower or noise — see n_stories.
