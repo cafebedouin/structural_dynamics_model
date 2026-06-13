@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — Branch cleanup: merged oq117-evidence-block into main; landed the China-legitimacy topic-run artifacts; gitignored *.pdf
+**Files:** KNOWN_STATE.md, ISSUES.md (merge), .gitignore, prolog/testsets/{demographic_resource_allocation,livelihood_security_reading,performance_legitimacy_contradictions,performance_legitimacy_flat_control,property_sector_overhang,qualitative_development_reading,quantitative_growth_reading,techno_nationalist_reading}.pl, json/ (7 matching), essays/2026-06/captive_on_both_ends_v3.md
+**Tier:** landed
+
+`oq117-evidence-block` (8 OQ-117 audit/docs commits, never pushed) had diverged at `f3f347fe`
+while `main` did the twin-corpus rebuild. Merged with `--no-ff`; the only conflict was
+`KNOWN_STATE.md` (both branches prepended a dated section — resolved by keeping BOTH, the
+twin-corpus and the essay-synthesis entries). ISSUES.md auto-merged; `issues_status.py --check`
+passed (120 parsed, 0 malformed). Then committed the China-legitimacy c-orchestrator artifacts the
+prior branch documented but never committed (8 testsets + 7 json + the v3 essay). Stale local
+pipeline edits to `validation_suite.pl` and `cs_reading_relation_quarantine.json` were DISCARDED
+(both are pipeline-regenerated, and main's rebuild had moved them on; the local copies were
+pre-rebuild). `.gitignore` now excludes `*.pdf` on principle (already-tracked PDFs unaffected;
+the 26MB GO-MAD.pdf and the other untracked `agent/analysis/originals/*.md` source articles were
+LEFT in the tree, not committed). Branch deleted post-merge.
+
+**NEXT STEP (not done — operator's call to run):** `python3 python/run_pipeline.py` so
+`validation_suite.pl` + classifications pick up the 8 new testsets — they were committed
+generate-only, so pipeline outputs are stale w.r.t. them until a run.
+
+---
+
 ## 2026-06-13 — Two-model TWIN CORPUS: full never-generated rebuild (Haiku, 988) + Gemini Flash twin (971) reconciled into testsets_haiku/ + testsets_flash/ + testsets/ (branch corpus-rebuild-fresh, merged to main)
 **Files:** agent/run_no_scope_gemini.py, agent/_pilot_ladder_strip.py, agent/generate_kernel_corpus.py, prolog/testsets_haiku/, prolog/testsets_flash/, prolog/testsets/, json_haiku/, json_flash/, prolog/beta_processed_flash.txt, ISSUES.md (OQ-75), CLAUDE.md (Corpus Loading)
 **Tier:** landed
