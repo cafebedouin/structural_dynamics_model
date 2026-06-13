@@ -5812,12 +5812,38 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 **Ω-type:** Ω_E (the discriminating test is a measurable single-field intervention) + Ω_C (whether
 claim-only RED-capping is the intended semantics is a design ruling).
 
-**Status:** open — filed 2026-06-13 from the Przybylski's-star stress run
+**Status:** investigating — filed 2026-06-13 from the Przybylski's-star stress run
 (`agent/analysis/originals/przybylskis_star.md`; testsets `actinide_replenishment_mechanism_*`,
 `neutron_star_bombardment_reading`, `radiative_levitation_stratification`, `superheavy_decay_reading`,
 `performance_legitimacy_flat_control`; reports in `outputs/constraint_reports/`). Surfaced by a
 web-Claude read of the five reports; structural claims independently witnessed against code/reports
-below.
+below. **Empirical half settled 2026-06-13** by the discriminating probe
+(`audits/2026-06-13_oq122_retype_discriminator/`, FINDINGS.md + probe.pl + probe_output.txt);
+**the remaining open item is the Ω_C design ruling** (concealment-semantics vs over-broad
+author-tax), the operator's call — see "Witnessed result" below.
+
+**Witnessed result (2026-06-13 probe — supersedes the pre-registered control's framing):**
+The re-type control proposed below (and by web-Claude as "the sharpest single next step") is
+**confirmatory, not discriminating** — `type_1_false_summit` is gated on `constraint_claim(C, mountain)`
+by construction (drl_core.pl:614), so re-typing mountain→tangled_rope removes the cap *a priori* and
+the outcome is consistent with BOTH readings (Intervention B: `dr_type` and the `false_summit_mountain`
+signature both UNCHANGED, only the claim-precondition vanished). The **actual** discriminator is the
+beneficiary toggle (hold `claim=mountain`, retract `constraint_beneficiary`):
+1. **RED is beneficiary-driven, NOT extraction-driven.** `false_summit_mountain` REQUIRES
+   `ε ≤ mountain_extractiveness_max` (0.25); measured ε = **0.03** — high extraction would *fail* the
+   gate. Near-zero extraction is a precondition; named **agent** beneficiaries (institutions, via the
+   agency gate) are what trip it. Confirms the artifact reading at metric level.
+2. **The RED is OVERDETERMINED** — removing beneficiaries does NOT clear it: even beneficiary-free,
+   moderate & institutional seats classify `rope` → 2 `type_1` firings persist (the claim-independent
+   power-scaling residue, χ=ε·f(d)·σ(S), OQ-50 comment drl_core.pl:605–612). **Only not-claiming-mountain
+   clears the cap; neither the physics nor the beneficiaries alone does.** So web-Claude's "it's the
+   type-claim" instinct is *more* right than "it's the beneficiaries," for a second reason neither read
+   isolated.
+
+**Remaining open (Ω_C, operator):** engine doctrine "genuine natural laws have zero agent beneficiaries"
+(signature_detection.pl:1520) applied to real science (always funded) flags all of it. Is RED-capping a
+pristine-metric mountain-claim-with-institutional-beneficiaries the intended concealment semantics, or an
+over-broad author-tax? Not settleable by probe — design judgment.
 
 **The witnessed inversion (two calibration controls land backwards):**
 - `actinide_replenishment_mechanism_flat_control` — purity **0.996** (pristine), independent,

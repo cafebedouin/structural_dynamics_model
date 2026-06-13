@@ -1,0 +1,34 @@
+================ BASELINE (probe positive control) ================
+    base_extractiveness = 0.03   (mountain_extractiveness_max = 0.25)
+    constraint_claim = [mountain]
+    agent_beneficiaries = [stellar_evolution_theorists,atomic_physics_laboratories,high_resolution_spectroscopy_facilities]
+    constraint_signature = false_summit_mountain
+    dr_type @ powerless = tangled_rope
+    dr_type @ moderate = scaffold
+    dr_type @ institutional = scaffold
+    dr_type @ analytical = tangled_rope
+    type_1_false_summit FIRES at 4 context(s)
+
+========= INTERVENTION A: retract beneficiaries, claim STILL mountain =========
+    constraint_claim = [mountain]
+    agent_beneficiaries = []
+    constraint_signature = ambiguous
+    dr_type @ powerless = mountain
+    dr_type @ moderate = rope
+    dr_type @ institutional = rope
+    dr_type @ analytical = mountain
+    type_1_false_summit FIRES at 2 context(s)
+
+========= INTERVENTION B (Web C): re-type claim mountain -> tangled_rope =========
+    constraint_claim = [tangled_rope]
+    agent_beneficiaries = [stellar_evolution_theorists,atomic_physics_laboratories,high_resolution_spectroscopy_facilities]
+    constraint_signature = false_summit_mountain
+    dr_type @ powerless = tangled_rope
+    dr_type @ moderate = scaffold
+    dr_type @ institutional = scaffold
+    dr_type @ analytical = tangled_rope
+    type_1_false_summit does NOT fire
+
+========= POST-RESTORE SANITY (caches cleared, baseline must return) =========
+    constraint_claim = [mountain]
+    type_1_false_summit FIRES at 4 context(s)
